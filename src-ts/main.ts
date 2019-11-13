@@ -2,7 +2,7 @@ import { MapPlayer, Unit } from 'w3ts';
 import { LibraryLoader } from 'war3-library-loader';
 
 function tsMain() {
-  const unit = new Unit(MapPlayer.fromIndex(0), FourCC('hfoo'), 0, 0, 0);
+  const unit = new Unit(MapPlayer.fromIndex(0), FourCC('Hblm'), 0, 0, 0);
   unit.name = "TypeScript!";
 }
 
