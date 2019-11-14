@@ -502,19 +502,6 @@ function InitGlobals()
     udg_Angle = 0.0
 end
 
-
-function Trig_Basic_Example_Actions()
-    local t = CreateTimer()
-    TimerStart(t, 1.00, false, function()
-        print("Lua!")
-        DestroyTimer(t)
-    end)
-end
-
-gg_trg_Basic_Example = CreateTrigger()
-TriggerRegisterTimerEventSingle(gg_trg_Basic_Example, 0.00)
-TriggerAddAction(gg_trg_Basic_Example, Trig_Basic_Example_Actions)
-
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
     SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
