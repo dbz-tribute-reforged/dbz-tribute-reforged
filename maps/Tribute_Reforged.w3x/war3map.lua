@@ -253,7 +253,6 @@ gg_trg_Hero_Pick_Timer_Start = nil
 gg_trg_Hero_Pick_Timer_Complete = nil
 gg_trg_Hero_Pick_Repick_Start = nil
 gg_trg_Hero_Pick_Repick_Complete = nil
-gg_trg_Hero_Pick_Disable_Picking = nil
 gg_trg_Hero_Pick_Setup_Selected_Heroes = nil
 gg_trg_Hero_Pick_Completion = nil
 gg_trg_Test_force_upg_saiyan_saga = nil
@@ -309,6 +308,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
+gg_trg_Hero_Pick_Disable_Pick_Modes = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -504,52 +504,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 629)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -3171,6 +3171,85 @@ function InitTrig_Hero_Pick_End_Bans_Command()
     TriggerAddAction(gg_trg_Hero_Pick_End_Bans_Command, Trig_Hero_Pick_End_Bans_Command_Actions)
 end
 
+function Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()
+    if (not (CountPlayersInForceBJ(udg_TempPlayerGroup) > 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Show_Pickable_Heroes_Actions()
+        udg_TempLoc = Location(2820, 22009)
+    udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
+    udg_TempString = ""
+    udg_RandomHeroIndex = 0
+    udg_RandomHeroCounter = 0
+        while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
+    udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+    if (Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()) then
+        CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+        udg_TempUnit = GetLastCreatedUnit()
+        udg_TempString = (udg_TempString .. (GetHeroProperName(udg_TempUnit) .. " | "))
+        RemoveUnit(udg_TempUnit)
+    else
+    end
+    udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+        end
+        RemoveLocation(udg_TempLoc)
+    udg_TempString = (udg_TempString .. "Random Hero")
+    udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
+    if (Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()) then
+        DisplayTextToForce(udg_TempPlayerGroup, ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
+    else
+        DisplayTextToForce(GetPlayersAll(), ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
+    end
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Hero_Pick_Show_Pickable_Heroes()
+    gg_trg_Hero_Pick_Show_Pickable_Heroes = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(0), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(1), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(2), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(3), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(4), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(5), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(6), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(7), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(8), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(9), "-picks", true)
+    TriggerAddAction(gg_trg_Hero_Pick_Show_Pickable_Heroes, Trig_Hero_Pick_Show_Pickable_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Repick_Randomly_Actions()
+    udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
+    TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
+    TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
+end
+
+function InitTrig_Hero_Pick_Repick_Randomly()
+    gg_trg_Hero_Pick_Repick_Randomly = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(0), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(1), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(2), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(3), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(4), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(5), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(6), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(7), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(8), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(9), "-repick", true)
+    TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
+end
+
 function Trig_Hero_Pick_Mode_Default_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9964")
     udg_HeroPickMode = "default"
@@ -3580,6 +3659,7 @@ function Trig_Hero_Pick_Pick_A_Hero_Actions()
     udg_TempUnit = GetSoldUnit()
     if (Trig_Hero_Pick_Pick_A_Hero_Func004C()) then
         RemoveUnit(udg_TempUnit)
+        TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
     else
         udg_TempLoc = GetUnitLoc(GetBuyingUnit())
                 SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc))
@@ -3603,7 +3683,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Conditions()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
     if (not (udg_TempInt2 == 1)) then
         return false
     end
@@ -3613,7 +3693,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()
     if (not (udg_TempInt2 == 6)) then
         return false
     end
@@ -3623,17 +3703,17 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001C()
-    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()) then
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()
+    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()) then
         return true
     end
-    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()) then
+    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()) then
         return true
     end
     return false
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()
     if (not (udg_TempInt2 == 1)) then
         return false
     end
@@ -3641,7 +3721,10 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004C()
-    if (not Trig_Hero_Pick_Ban_A_Hero_Func004Func001C()) then
+    if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("H04F"))) then
+        return false
+    end
+    if (not Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()) then
         return false
     end
     return true
@@ -3670,7 +3753,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Actions()
             TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
             udg_TempInt = udg_TempInt + 1
         end
-        if (Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()) then
+        if (Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()) then
             udg_NumGoodBans = (udg_NumGoodBans - 1)
             DisplayTextToForce(GetPlayersAll(), ("Team 1 has Banned " .. GetHeroProperName(udg_TempUnit)))
             DisplayTextToForce(GetPlayersAll(), ("Team 1 has " .. (I2S(udg_NumGoodBans) .. " bans remaining.")))
@@ -3718,6 +3801,134 @@ end
 function InitTrig_Hero_Pick_Remove_Picked_Heroes()
     gg_trg_Hero_Pick_Remove_Picked_Heroes = CreateTrigger()
     TriggerAddAction(gg_trg_Hero_Pick_Remove_Picked_Heroes, Trig_Hero_Pick_Remove_Picked_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions()
+    udg_RandomHeroSkipNum = 0
+    udg_RandomHeroIndex = 0
+    udg_RandomHeroCounter = 0
+        while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
+    udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+    if (Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()) then
+        udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum + 1)
+    else
+    end
+    udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+        end
+end
+
+function InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
+    gg_trg_Hero_Pick_Get_Num_Pickable_Heroes = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes, Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()
+    if (not (udg_TempInt <= (udg_MaxNumPlayers // 2))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func001C()
+    if (not (udg_RandomHeroSkipNum <= 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()
+    if (not (udg_HeroPickMode ~= "ar")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()
+    if (not (udg_HeroPickMode ~= "ar")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions()
+        udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
+    ConditionalTriggerExecute(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes)
+    udg_RandomHeroIndex = 0
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()) then
+        udg_RandomHeroIndex = udg_TempInt
+    else
+        udg_RandomHeroIndex = (udg_NumGoodHeroes + (udg_TempInt - (udg_MaxNumPlayers // 2)))
+    end
+    udg_RandomHeroCounter = 0
+    udg_RandomHeroSkipNum = (GetRandomInt(0, (udg_RandomHeroSkipNum - 1)) + 0)
+    udg_TempBool = false
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()) then
+        if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()) then
+            udg_RandomHeroMaxCounter = (udg_NumAvailableHeroes * 2)
+                        while (udg_RandomHeroCounter < udg_RandomHeroMaxCounter) do
+            udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+                        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+            if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()) then
+                if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func001C()) then
+                    CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+                    udg_RandomHeroCounter = udg_RandomHeroMaxCounter
+                    udg_TempBool = true
+                else
+                    udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum - 1)
+                end
+            else
+            end
+            udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+                        end
+        else
+        end
+    else
+    end
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()) then
+        if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()) then
+            DisplayTextToForce(GetPlayersAll(), ("Could not find a valid random hero for Player " .. (I2S(udg_TempInt) .. " that was also pickable (i.e. not banned/blocked)")))
+        else
+        end
+        CreateNUnitsAtLoc(1, udg_AvailableHeroTypesArray[GetRandomInt(0, (udg_NumAvailableHeroes - 1))], ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+    else
+    end
+    udg_TempUnit = GetLastCreatedUnit()
+        RemoveLocation(udg_TempLoc)
+    TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
+end
+
+function InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
+    gg_trg_Hero_Pick_Give_Random_Hero_to_Player = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Give_Random_Hero_to_Player, Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions)
 end
 
 function Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func001C()
@@ -3775,7 +3986,7 @@ function Trig_Hero_Pick_Timer_Complete_Func004Func002A()
     SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_PASSIVE), true)
 end
 
-function Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()
+function Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()
     if (GetPlayerController(ConvertedPlayer(udg_TempInt)) ~= MAP_CONTROL_USER) then
         return true
     end
@@ -3786,7 +3997,7 @@ function Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()
 end
 
 function Trig_Hero_Pick_Timer_Complete_Func004Func004C()
-    if (not Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()) then
+    if (not Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()) then
         return false
     end
     if (not (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]) == 0)) then
@@ -3806,11 +4017,12 @@ function Trig_Hero_Pick_Timer_Complete_Actions()
         ForGroupBJ(udg_TempGroup, Trig_Hero_Pick_Timer_Complete_Func004Func002A)
                 DestroyGroup(udg_TempGroup)
         if (Trig_Hero_Pick_Timer_Complete_Func004Func004C()) then
+            TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
         else
         end
         udg_TempInt = udg_TempInt + 1
     end
-    TriggerExecute(gg_trg_Hero_Pick_Disable_Picking)
+    TriggerExecute(gg_trg_Hero_Pick_Disable_Pick_Modes)
     TriggerExecute(gg_trg_Hero_Pick_Repick_Start)
     EnableTrigger(gg_trg_Hero_Pick_Repick_Complete)
 end
@@ -3852,18 +4064,17 @@ function InitTrig_Hero_Pick_Repick_Complete()
     TriggerAddAction(gg_trg_Hero_Pick_Repick_Complete, Trig_Hero_Pick_Repick_Complete_Actions)
 end
 
-function Trig_Hero_Pick_Disable_Picking_Actions()
+function Trig_Hero_Pick_Disable_Pick_Modes_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Mode_Default)
     DisableTrigger(gg_trg_Hero_Pick_Mode_All_Pick)
     DisableTrigger(gg_trg_Hero_Pick_Mode_All_Random)
     DisableTrigger(gg_trg_Hero_Pick_Mode_Single_Draft)
     DisableTrigger(gg_trg_Hero_Pick_Mode_Captains_Mode_UNFINISHED)
-    DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
 end
 
-function InitTrig_Hero_Pick_Disable_Picking()
-    gg_trg_Hero_Pick_Disable_Picking = CreateTrigger()
-    TriggerAddAction(gg_trg_Hero_Pick_Disable_Picking, Trig_Hero_Pick_Disable_Picking_Actions)
+function InitTrig_Hero_Pick_Disable_Pick_Modes()
+    gg_trg_Hero_Pick_Disable_Pick_Modes = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
@@ -3893,7 +4104,7 @@ function InitTrig_Hero_Pick_Setup_Selected_Heroes()
 end
 
 function Trig_Hero_Pick_Completion_Actions()
-    TriggerExecute(gg_trg_Hero_Pick_Disable_Picking)
+    DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
     EnableTrigger(gg_trg_Zanzo_Cooldown)
     EnableTrigger(gg_trg_Zanzo_Move)
@@ -4800,31 +5011,20 @@ function InitTrig_Test_Apply_super_saiyan_sfx()
     TriggerAddAction(gg_trg_Test_Apply_super_saiyan_sfx, Trig_Test_Apply_super_saiyan_sfx_Actions)
 end
 
-function Trig_Test_LVL_command_Func003Func003C()
-    if (not (udg_TempInt > udg_TempInt2)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_LVL_command_Func003A()
+function Trig_Test_LVL_command_Func004A()
     udg_TempUnit = GetEnumUnit()
-    udg_TempInt2 = GetHeroLevel(udg_TempUnit)
-    if (Trig_Test_LVL_command_Func003Func003C()) then
-        udg_TempInt3 = udg_TempInt2
-        while (true) do
-            if (udg_TempInt3 > udg_TempInt) then break end
-            SetHeroLevelBJ(udg_TempUnit, udg_TempInt3, false)
-            udg_TempInt3 = udg_TempInt3 + 1
+        j = GetHeroLevel(udg_TempUnit)
+        while (j < udg_TempInt3) do
+        j=j+1
+        SetHeroLevel(udg_TempUnit, j, false)
         end
-    else
-    end
 end
 
 function Trig_Test_LVL_command_Actions()
-    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8))
+    udg_TempInt3 = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8))
+        local j
     udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func003A)
+    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func004A)
         DestroyGroup(udg_TempGroup)
 end
 
@@ -5014,8 +5214,8 @@ end
 function Trig_Check_Walkability_Actions()
         local x = GetLocationX(udg_CP_Point)
         local y = GetLocationY(udg_CP_Point)
-        local x2 = 0
-        local y2 = 0
+        local x2 = 0.0
+        local y2 = 0.0
         MoveRectTo(udg_CP_Rect, x, y)
     EnumItemsInRectBJ(udg_CP_Rect, Trig_Check_Walkability_Func006A)
         SetItemPosition(udg_CP_Item, x, y)
@@ -5423,6 +5623,8 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Rush()
     InitTrig_Hero_Pick_Rush_Repick()
     InitTrig_Hero_Pick_End_Bans_Command()
+    InitTrig_Hero_Pick_Show_Pickable_Heroes()
+    InitTrig_Hero_Pick_Repick_Randomly()
     InitTrig_Hero_Pick_Mode_Default()
     InitTrig_Hero_Pick_Mode_All_Pick()
     InitTrig_Hero_Pick_Mode_All_Random()
@@ -5437,12 +5639,14 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Ban_A_Hero()
     InitTrig_Hero_Pick_End_Bans()
     InitTrig_Hero_Pick_Remove_Picked_Heroes()
+    InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
+    InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
     InitTrig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED()
     InitTrig_Hero_Pick_Timer_Start()
     InitTrig_Hero_Pick_Timer_Complete()
     InitTrig_Hero_Pick_Repick_Start()
     InitTrig_Hero_Pick_Repick_Complete()
-    InitTrig_Hero_Pick_Disable_Picking()
+    InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
     InitTrig_Test_force_upg_saiyan_saga()
