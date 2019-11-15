@@ -3528,54 +3528,6 @@ STRING 585
 Dummy Fire Ring
 }
 
-STRING 586
-// Units: n00U (Mysterious Frog), Name (Name)
-{
-Mysterious Frog
-}
-
-STRING 587
-// Units: n00V (ikcilapmada), Name (Name)
-{
-ikcilapmada
-}
-
-STRING 588
-// Units: n00W (Jangness), Name (Name)
-{
-Jangness
-}
-
-STRING 589
-// Units: n00X (Drakenking), Name (Name)
-{
-Drakenking
-}
-
-STRING 590
-// Units: n00Y (Gotenkz), Name (Name)
-{
-Gotenkz
-}
-
-STRING 591
-// Units: n00Z (Womplord), Name (Name)
-{
-Womplord
-}
-
-STRING 592
-// Units: n010 (Orgrim), Name (Name)
-{
-Orgrim
-}
-
-STRING 593
-// Units: n011 (Sean_D), Name (Name)
-{
-Sean_D
-}
-
 STRING 594
 // Units: h03R (New Dummy Nuke Explosion), Name (Name)
 {
@@ -3634,12 +3586,6 @@ STRING 603
 // Units: h03X (Ki Transmitter), Name (Name)
 {
 Ki Transmitter
-}
-
-STRING 604
-// Units: n012 (Gunthers), Name (Name)
-{
-Gunthers
 }
 
 STRING 605
@@ -4808,7 +4754,7 @@ Dummy Flash Bomber
 }
 
 STRING 790
-// Units: h05L ( ), Name (Name)
+// Units: H05Y ( ), Name (Name)
 {
  
 }
@@ -5252,7 +5198,7 @@ Gotenks
 }
 
 STRING 858
-// Units: H05Y ( ), Name (Name)
+// Units: H06L ( ), Name (Name)
 {
  
 }
@@ -5512,7 +5458,7 @@ Supernova
 }
 
 STRING 900
-// Units: H06L ( ), Name (Name)
+// Units: U01M ( ), Name (Name)
 {
  
 }
@@ -5947,7 +5893,7 @@ STRING 971
 }
 
 STRING 972
-// Units: U01M ( ), Name (Name)
+// Units: U01N ( ), Name (Name)
 {
  
 }
@@ -5977,7 +5923,7 @@ Warrior Soul
 }
 
 STRING 977
-// Units: U01N ( ), Name (Name)
+// Units: U01O ( ), Name (Name)
 {
  
 }
@@ -5995,7 +5941,7 @@ STRING 979
 }
 
 STRING 980
-// Units: U01O ( ), Name (Name)
+// Units: e00A ( ), Name (Name)
 {
  
 }
@@ -6010,12 +5956,6 @@ STRING 982
 // Units: U01N ( ), Ubertip (Tooltip - Extended)
 {
 4
-}
-
-STRING 983
-// Units: e00A ( ), Name (Name)
-{
- 
 }
 
 STRING 984
