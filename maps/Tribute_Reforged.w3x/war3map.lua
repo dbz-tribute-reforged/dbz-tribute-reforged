@@ -504,52 +504,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 629)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -4800,13 +4800,31 @@ function InitTrig_Test_Apply_super_saiyan_sfx()
     TriggerAddAction(gg_trg_Test_Apply_super_saiyan_sfx, Trig_Test_Apply_super_saiyan_sfx_Actions)
 end
 
-function Trig_Test_LVL_command_Func002A()
-    SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)), false)
+function Trig_Test_LVL_command_Func003Func003C()
+    if (not (udg_TempInt > udg_TempInt2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Test_LVL_command_Func003A()
+    udg_TempUnit = GetEnumUnit()
+    udg_TempInt2 = GetHeroLevel(udg_TempUnit)
+    if (Trig_Test_LVL_command_Func003Func003C()) then
+        udg_TempInt3 = udg_TempInt2
+        while (true) do
+            if (udg_TempInt3 > udg_TempInt) then break end
+            SetHeroLevelBJ(udg_TempUnit, udg_TempInt3, false)
+            udg_TempInt3 = udg_TempInt3 + 1
+        end
+    else
+    end
 end
 
 function Trig_Test_LVL_command_Actions()
+    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8))
     udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func002A)
+    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func003A)
         DestroyGroup(udg_TempGroup)
 end
 
