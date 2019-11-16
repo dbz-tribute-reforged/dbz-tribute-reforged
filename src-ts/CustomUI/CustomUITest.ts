@@ -22,8 +22,8 @@ let helloWorldBackdrop: Backdrop;
 let catches: number = 0;
 
 function moveButton3Around() {
-	const x = Math.min(0.75, Math.max(0.05, Math.random()));
-	const y = Math.min(0.55, Math.max(0.05, Math.random()));
+	const x = Math.min(0.75, Math.max(0.04, Math.random()));
+	const y = Math.min(0.55, Math.max(0.2, Math.random()));
 	const handle = BlzGetFrameByName("helloWorldButton3", 0);
 	BlzFrameClearAllPoints(handle);
 	BlzFrameSetAbsPoint(handle, FRAMEPOINT_CENTER, x, y);
