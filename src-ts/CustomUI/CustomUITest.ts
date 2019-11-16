@@ -96,8 +96,11 @@ export function CustomUiTest() {
 		let handle = BlzGetFrameByName("helloWorldBackdrop", 0);
 		BlzFrameSetVisible(handle, !BlzFrameIsVisible(handle));
 		
-		handle = BlzGetFrameByName("helloWorldText", 0);
-		BlzFrameSetVisible(handle, !BlzFrameIsVisible(handle));
+		// since we make helloWorldText a child of helloWorldBackdrop
+		// any visiblity changes to backdrop also affect text
+		
+		// handle = BlzGetFrameByName("helloWorldText", 0);
+		// BlzFrameSetVisible(handle, !BlzFrameIsVisible(handle));
 	});
 	t.addAction(loseFocusFromTriggeringFrame);
 
