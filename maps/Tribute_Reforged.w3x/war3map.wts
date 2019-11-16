@@ -13621,115 +13621,61 @@ STRING 2228
 }
 
 STRING 2229
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2230
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2231
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2232
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2233
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2234
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 2235
-// Abilities: A084 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
-STRING 2236
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 1|r]
-}
-
-STRING 2237
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 2|r]
-}
-
-STRING 2238
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 3|r]
-}
-
-STRING 2239
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 4|r]
-}
-
-STRING 2240
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 5|r]
-}
-
-STRING 2241
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 6|r]
-}
-
-STRING 2242
-// Abilities: A084 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00D|r] Galick Gun - [|cffffcc00Level 7|r]
-}
-
 STRING 2243
-// Abilities: A084 (Gallet Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
-STRING 2244
-// Abilities: A084 (Gallet Gun), Name (Name)
-{
-Gallet Gun
-}
-
-STRING 2245
-// Abilities: A084 (Gallet Gun), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00Q|r] Learn Gallet Gun - [|cffffcc00Level %d|r]
-}
-
 STRING 2246
-// Abilities: A084 (Gallet Gun), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A05E (Mass Attack Order), Researchubertip (Tooltip - Learn - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases the energy blast. |n[|cffffcc00History|r] - |cff0066CCThis is one of Vegeta's Trademark attacks. It is first used in the Saiyan Saga against Goku.|r
 }
 
 STRING 2247
-// Abilities: A084 (Gallet Gun), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13861,7 +13807,7 @@ STRING 2268
 }
 
 STRING 2269
-// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13885,7 +13831,7 @@ Piccolo fires alot of energy blasts hitting any nearby creatures.
 }
 
 STRING 2273
-// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
+// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14539,7 +14485,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14563,7 +14509,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14931,7 +14877,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14943,7 +14889,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15585,7 +15531,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16527,7 +16473,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -16551,7 +16497,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17241,7 +17187,7 @@ STRING 2831
 }
 
 STRING 2832
-// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17265,7 +17211,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2836
-// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -18933,7 +18879,7 @@ Learn |cffffcc00G|rallet Gun - [|cffffcc00Level %d|r]
 }
 
 STRING 3114
-// Abilities: A05E (Mass Attack Order), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A03N (Galick Gun), Researchubertip (Tooltip - Learn - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases the energy blast. |n[|cffffcc00History|r] - |cff0066CCThis is one of Vegeta's Trademark attacks. It is first used in the Saiyan Saga against Goku.|r
 }
@@ -19569,7 +19515,7 @@ STRING 3219
 }
 
 STRING 3220
-// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19593,7 +19539,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 3224
-// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19768,7 +19714,7 @@ Power Level |cffffcc00R|rising - [|cffffcc00Level 5|r]
 }
 
 STRING 3253
-// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
+// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19792,7 +19738,7 @@ The Geti Star scans for high power levels.|n|n|cff00ff00Shows the location of al
 }
 
 STRING 3257
-// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
+// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -20920,7 +20866,7 @@ Galick gun mastery - [|cffffcc00Level 1|r]
 }
 
 STRING 3445
-// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -21922,43 +21868,43 @@ For every level of this spell your control over this body and power grows.
 }
 
 STRING 3612
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3613
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3614
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3615
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3616
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3617
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 3618
-// Abilities: A03N (Galick Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
@@ -22024,7 +21970,7 @@ STRING 3628
 }
 
 STRING 3629
-// Abilities: A03N (Galick Gun), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GM (Galick Gun), Researchubertip (Tooltip - Learn - Extended)
 {
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases the energy blast. |n[|cffffcc00History|r] - |cff0066CCThis is one of Vegeta's Trademark attacks. It is first used in the Saiyan Saga against Goku.|r
 }
@@ -22431,7 +22377,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 3696
-// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -23457,7 +23403,7 @@ STRING 3867
 }
 
 STRING 3868
-// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
+// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -23481,7 +23427,7 @@ Creates Android 19 using spare parts from Gero's other projects.
 }
 
 STRING 3872
-// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
+// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26302,7 +26248,7 @@ STRING 4346
 }
 
 STRING 4347
-// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -26326,7 +26272,7 @@ Buu punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cool
 }
 
 STRING 4351
-// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26860,7 +26806,7 @@ STRING 4439
 }
 
 STRING 4440
-// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -26884,7 +26830,7 @@ After Guru unlocked his potential, Dende gained the ability to heal others.
 }
 
 STRING 4444
-// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27598,7 +27544,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27622,7 +27568,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 4567
-// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27791,7 +27737,7 @@ STRING 4594
 }
 
 STRING 4595
-// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27803,7 +27749,7 @@ Detonate
 }
 
 STRING 4597
-// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -29085,7 +29031,7 @@ STRING 4808
 }
 
 STRING 4809
-// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -29109,7 +29055,7 @@ Buu swings his arms so fast they appear to be windmills on his shoulder and pumm
 }
 
 STRING 4813
-// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -30719,7 +30665,7 @@ STRING 5080
 }
 
 STRING 5081
-// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -30743,7 +30689,7 @@ Cooler transforms into his final, most powerful form.
 }
 
 STRING 5085
-// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -30965,7 +30911,7 @@ STRING 5121
 }
 
 STRING 5122
-// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -30989,7 +30935,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 5126
-// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -36490,7 +36436,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6039
-// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
+// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -36856,13 +36802,13 @@ STRING 6099
 }
 
 STRING 6100
-// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 6101
-// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37494,7 +37440,7 @@ STRING 6205
 }
 
 STRING 6206
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37518,7 +37464,7 @@ Buu creates ghost clones of Gotenks that will travel to the target location and 
 }
 
 STRING 6210
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38574,7 +38520,7 @@ STRING 6385
 }
 
 STRING 6386
-// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -39258,7 +39204,7 @@ STRING 6499
 }
 
 STRING 6500
-// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39822,7 +39768,7 @@ STRING 6593
 }
 
 STRING 6594
-// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -39840,7 +39786,7 @@ STRING 6596
 }
 
 STRING 6597
-// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -39983,13 +39929,13 @@ Deactivate Distortion Field
 }
 
 STRING 6620
-// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6621
-// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40013,7 +39959,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 6625
-// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40103,7 +40049,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40127,7 +40073,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40193,7 +40139,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40217,7 +40163,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 6659
-// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40307,7 +40253,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40331,7 +40277,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40421,7 +40367,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40445,7 +40391,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 6697
-// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40559,7 +40505,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40583,7 +40529,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40679,7 +40625,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40703,7 +40649,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -43867,7 +43813,7 @@ STRING 7265
 }
 
 STRING 7266
-// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -43891,7 +43837,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 7270
-// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44143,7 +44089,7 @@ STRING 7311
 }
 
 STRING 7312
-// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44167,7 +44113,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7316
-// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44286,48 +44232,6 @@ STRING 7335
 [|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
 }
 
-STRING 7336
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7337
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7338
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7339
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7340
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7341
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7342
-// Abilities: A0GM (Galick Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
 STRING 7343
 // Abilities: A0GM (Galick Gun), Tip (Tooltip - Normal)
 {
@@ -44386,12 +44290,6 @@ STRING 7352
 // Abilities: A0GM (Galick Gun), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Galick Gun - [|cffffcc00Level %d|r]
-}
-
-STRING 7353
-// Abilities: A0GM (Galick Gun), Researchubertip (Tooltip - Learn - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases the energy blast. |n[|cffffcc00History|r] - |cff0066CCThis is one of Vegeta's Trademark attacks. It is first used in the Saiyan Saga against Goku.|r
 }
 
 STRING 7354
@@ -44809,7 +44707,7 @@ STRING 7422
 }
 
 STRING 7423
-// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44833,7 +44731,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7427
-// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45055,7 +44953,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45079,7 +44977,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45169,7 +45067,7 @@ STRING 7482
 }
 
 STRING 7483
-// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45193,7 +45091,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7487
-// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45307,7 +45205,7 @@ STRING 7505
 }
 
 STRING 7506
-// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45331,7 +45229,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7510
-// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46081,7 +45979,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46105,7 +46003,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46560,116 +46458,14 @@ STRING 7714
 Dummy Stun
 }
 
-STRING 7715
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7716
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7717
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7718
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7719
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7720
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7721
-// Abilities: A0H6 (Gallet Gun), Ubertip (Tooltip - Normal - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7722
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 1|r]
-}
-
-STRING 7723
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 2|r]
-}
-
-STRING 7724
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 3|r]
-}
-
-STRING 7725
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 4|r]
-}
-
-STRING 7726
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 5|r]
-}
-
-STRING 7727
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Gallet Gun - [|cffffcc00Level 6|r]
-}
-
-STRING 7728
-// Abilities: A0H6 (Gallet Gun), Tip (Tooltip - Normal)
-{
-[|cff00FF00D|r] Galick Gun - [|cffffcc00Level 7|r]
-}
-
 STRING 7729
-// Abilities: A0H6 (Gallet Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
 }
 
-STRING 7730
-// Abilities: A0H6 (Gallet Gun), Name (Name)
-{
-Gallet Gun
-}
-
-STRING 7731
-// Abilities: A0H6 (Gallet Gun), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00Q|r] Learn Gallet Gun - [|cffffcc00Level %d|r]
-}
-
-STRING 7732
-// Abilities: A0H6 (Gallet Gun), Researchubertip (Tooltip - Learn - Extended)
-{
-The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases the energy blast. |n[|cffffcc00History|r] - |cff0066CCThis is one of Vegeta's Trademark attacks. It is first used in the Saiyan Saga against Goku.|r
-}
-
 STRING 7733
-// Abilities: A0H6 (Gallet Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47353,7 +47149,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47377,7 +47173,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -50864,7 +50660,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -52317,7 +52113,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54519,7 +54315,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -55155,7 +54951,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -55944,12 +55740,6 @@ STRING 9267
 [|cff00FF00R|r] Moonlight 
 }
 
-STRING 9268
-// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
-{
-D
-}
-
 STRING 9269
 // Abilities: A0KR (Ultra Instinct), Name (Name)
 {
@@ -55966,12 +55756,6 @@ STRING 9271
 // Abilities: A0KR (Ultra Instinct), Researchubertip (Tooltip - Learn - Extended)
 {
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
-}
-
-STRING 9272
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
-{
-D
 }
 
 STRING 9273
@@ -56130,12 +55914,6 @@ STRING 9298
 [|cff00FF00R|r] Moonlight 
 }
 
-STRING 9299
-// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
-{
-D
-}
-
 STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
@@ -56152,12 +55930,6 @@ STRING 9302
 // Abilities: A0KT (Super Saiyan Rage), Researchubertip (Tooltip - Learn - Extended)
 {
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
-}
-
-STRING 9303
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
-{
-D
 }
 
 STRING 9304
