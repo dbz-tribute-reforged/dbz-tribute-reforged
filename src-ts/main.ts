@@ -1,9 +1,12 @@
 import { MapPlayer, Unit } from 'w3ts';
 import { LibraryLoader } from 'war3-library-loader';
+import { CustomUiTest } from './CustomUI/CustomUITest';
 
 function tsMain() {
   const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
   unit.name = "TypeScript!";
+
+  CustomUiTest();
 }
 
 // Configure libraries
