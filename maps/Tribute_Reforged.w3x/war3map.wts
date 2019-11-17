@@ -5,7 +5,7 @@ Player 1
 
 STRING 3
 {
-TR 0.13b
+TR 0.16d
 }
 
 STRING 4
@@ -59443,27 +59443,27 @@ STRING 9977
 
 STRING 9978
 {
-
+Default Mode Enabled
 }
 
 STRING 9979
 {
-
+All Pick Mode Enabled
 }
 
 STRING 9980
 {
-
+All Random Mode Enabled
 }
 
 STRING 9981
 {
-
+Single Draft Mode Enabled
 }
 
 STRING 9982
 {
-
+Captains Mode (Unfinished) Enabled
 }
 
 STRING 9983
@@ -59473,16 +59473,16 @@ STRING 9983
 
 STRING 9984
 {
-
+Pick Time:
 }
 
 STRING 9985
 {
-
+Pick Time Up! You will be assigned a random hero if you have not selected one yet.
 }
 
 STRING 9986
 {
-
+Game Start:
 }
 
