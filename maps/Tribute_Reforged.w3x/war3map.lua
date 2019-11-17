@@ -5778,7 +5778,7 @@ function Trig_Transformations_Broly_Func011C()
     if (not (udg_TransformationString == "lss")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
@@ -5788,7 +5788,7 @@ function Trig_Transformations_Broly_Func012C()
     if (not (udg_TransformationString == "luss")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
@@ -5866,13 +5866,13 @@ function Trig_Transformations_Broly_Actions()
     else
     end
     if (Trig_Transformations_Broly_Func011C()) then
-        udg_StatMultReal = 2.25
+        udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0AZ")
         udg_TransformationSFXString = "AuraDarkGreen.mdx"
     else
     end
     if (Trig_Transformations_Broly_Func012C()) then
-        udg_StatMultReal = 2.50
+        udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0AZ")
         udg_TransformationSFXString = "AuraYellow.mdx"
         udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
