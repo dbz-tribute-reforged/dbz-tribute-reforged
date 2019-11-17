@@ -141,6 +141,7 @@ udg_GiruEdmg = 0.0
 udg_GiruEpoint = nil
 udg_Angle = 0.0
 udg_MoveToPoint = nil
+udg_TransformationCommands = __jarray("")
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -253,7 +254,7 @@ gg_trg_Hero_Pick_Timer_Start = nil
 gg_trg_Hero_Pick_Timer_Complete = nil
 gg_trg_Hero_Pick_Repick_Start = nil
 gg_trg_Hero_Pick_Repick_Complete = nil
-gg_trg_Hero_Pick_Disable_Picking = nil
+gg_trg_Hero_Pick_Disable_Pick_Modes = nil
 gg_trg_Hero_Pick_Setup_Selected_Heroes = nil
 gg_trg_Hero_Pick_Completion = nil
 gg_trg_Test_force_upg_saiyan_saga = nil
@@ -274,27 +275,27 @@ gg_trg_Turles_Saga_Init = nil
 gg_trg_Turles_Saga_Activate = nil
 gg_trg_Turles_Saga_Completion = nil
 gg_trg_Turles_Saga_VI = nil
-gg_trg_Test_super_saiyan_1_to_99_Copy = nil
-gg_trg_Test_goku_transformations_Copy = nil
-gg_trg_Test_vegeta_transformations = nil
-gg_trg_Test_gohan_transformations = nil
-gg_trg_Test_goten_transformations = nil
-gg_trg_Test_kid_trunks_transformations = nil
-gg_trg_Test_future_trunks_transformations = nil
-gg_trg_Test_broly_transformations = nil
-gg_trg_Test_revert_Copy = nil
-gg_trg_Test_goku_meme_transformations = nil
 gg_trg_show_me_the_ss = nil
 gg_trg_show_me_the_ss_Copy = nil
-gg_trg_Test_goku_apply_sfx_transformations = nil
-gg_trg_Test_Apply_super_saiyan_sfx = nil
 gg_trg_Test_LVL_command = nil
+gg_trg_Transformations_Init_Commands = nil
+gg_trg_Transformations_Entry_Point = nil
+gg_trg_Transformations_Goku = nil
+gg_trg_Goku_Meme_Transformations = nil
+gg_trg_Transformations_Vegeta = nil
+gg_trg_Transformations_Gohan = nil
+gg_trg_Transformations_Goten = nil
+gg_trg_Transformations_Kid_Trunks = nil
+gg_trg_Transformations_Future_Trunks = nil
+gg_trg_Transformations_Broly = nil
+gg_trg_Transformations_Apply_SFX = nil
 gg_trg_Test_StatMult_Init = nil
 gg_trg_Test_Stats_Add_Command = nil
 gg_trg_Add_Unit_To_StatMult = nil
 gg_trg_Remove_Unit_From_StatMult = nil
 gg_trg_Add_To_Base_Stats = nil
 gg_trg_Set_Stat_Multiplier = nil
+gg_trg_Get_Stat_Multiplier = nil
 gg_trg_Set_Varied_Stat_Multiplier = nil
 gg_trg_Update_Current_Stats = nil
 gg_trg_Clear_Stat_Mult_SFX = nil
@@ -506,56 +507,62 @@ function InitGlobals()
     udg_Etimer = CreateTimer()
     udg_GiruEdmg = 0.0
     udg_Angle = 0.0
+    i = 0
+    while (true) do
+        if ((i > 255)) then break end
+        udg_TransformationCommands[i] = ""
+        i = i + 1
+    end
 end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 697)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -2081,18 +2088,29 @@ function Trig_Map_Setup_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), ConvertedPlayer(udg_TempInt))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), ConvertedPlayer(udg_TempInt))
-        SetPlayerHandicapXPBJ(ConvertedPlayer(udg_TempInt), 400.00)
-        ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_ActivePlayerGroup)
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), ConvertedPlayer(udg_TempInt), bj_ALLIANCE_ALLIED)
-        SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt), Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
+        SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
+        ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
+        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
+        SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempInt = 0
@@ -2179,6 +2197,7 @@ function Trig_Map_Setup_Actions()
     udg_HeroPickSpawnY[udg_TempInt] = GetLocationY(udg_TempLoc)
         RemoveLocation(udg_TempLoc)
     udg_TempInt = (udg_TempInt + 1)
+    TriggerExecute(gg_trg_Transformations_Init_Commands)
 end
 
 function InitTrig_Map_Setup()
@@ -3166,8 +3185,87 @@ function InitTrig_Hero_Pick_End_Bans_Command()
     TriggerAddAction(gg_trg_Hero_Pick_End_Bans_Command, Trig_Hero_Pick_End_Bans_Command_Actions)
 end
 
+function Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()
+    if (not (CountPlayersInForceBJ(udg_TempPlayerGroup) > 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Show_Pickable_Heroes_Actions()
+        udg_TempLoc = Location(2820, 22009)
+    udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
+    udg_TempString = ""
+    udg_RandomHeroIndex = 0
+    udg_RandomHeroCounter = 0
+        while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
+    udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+    if (Trig_Hero_Pick_Show_Pickable_Heroes_Func009C()) then
+        CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+        udg_TempUnit = GetLastCreatedUnit()
+        udg_TempString = (udg_TempString .. (GetHeroProperName(udg_TempUnit) .. " | "))
+        RemoveUnit(udg_TempUnit)
+    else
+    end
+    udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+        end
+        RemoveLocation(udg_TempLoc)
+    udg_TempString = (udg_TempString .. "Random Hero")
+    udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
+    if (Trig_Hero_Pick_Show_Pickable_Heroes_Func015C()) then
+        DisplayTextToForce(udg_TempPlayerGroup, ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
+    else
+        DisplayTextToForce(GetPlayersAll(), ((("Player " .. I2S(udg_TempInt)) .. " Heroes: ") .. udg_TempString))
+    end
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Hero_Pick_Show_Pickable_Heroes()
+    gg_trg_Hero_Pick_Show_Pickable_Heroes = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(0), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(1), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(2), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(3), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(4), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(5), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(6), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(7), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(8), "-picks", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Show_Pickable_Heroes, Player(9), "-picks", true)
+    TriggerAddAction(gg_trg_Hero_Pick_Show_Pickable_Heroes, Trig_Hero_Pick_Show_Pickable_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Repick_Randomly_Actions()
+    udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
+    TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
+    TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
+end
+
+function InitTrig_Hero_Pick_Repick_Randomly()
+    gg_trg_Hero_Pick_Repick_Randomly = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(0), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(1), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(2), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(3), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(4), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(5), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(6), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(7), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(8), "-repick", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Repick_Randomly, Player(9), "-repick", true)
+    TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
+end
+
 function Trig_Hero_Pick_Mode_Default_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9964")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9978")
     udg_HeroPickMode = "default"
     ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
     udg_TempInt = 1
@@ -3219,7 +3317,7 @@ function InitTrig_Hero_Pick_Mode_Default()
 end
 
 function Trig_Hero_Pick_Mode_All_Pick_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9965")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9979")
     udg_HeroPickMode = "ap"
     ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
     udg_TempInt = 1
@@ -3246,7 +3344,7 @@ function InitTrig_Hero_Pick_Mode_All_Pick()
 end
 
 function Trig_Hero_Pick_Mode_All_Random_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9966")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9980")
     udg_HeroPickMode = "ar"
     ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
     udg_TempInt = 1
@@ -3273,7 +3371,7 @@ function InitTrig_Hero_Pick_Mode_All_Random()
 end
 
 function Trig_Hero_Pick_Mode_Single_Draft_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9967")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9981")
     udg_HeroPickMode = "sd"
     ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
     udg_TempInt = 1
@@ -3306,7 +3404,7 @@ function InitTrig_Hero_Pick_Mode_Single_Draft()
 end
 
 function Trig_Hero_Pick_Mode_Captains_Mode_UNFINISHED_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9968")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9982")
     udg_HeroPickMode = "cm"
     ConditionalTriggerExecute(gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio)
     udg_TempInt = 1
@@ -3412,37 +3510,27 @@ function Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Actions()
     udg_TempInt = GetRandomInt(0, 1)
     if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002C()) then
         if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func002C()) then
-            PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode)
         else
-            PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode)
         end
     else
         if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001C()) then
             if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func002C()) then
-                PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01)
             else
-                PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03)
             end
         else
             if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001C()) then
                 if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func002C()) then
-                    PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_random_01)
                 else
-                    PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_all_random_02)
                 end
             else
                 if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001C()) then
                     if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func002C()) then
-                        PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01)
                     else
-                        PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02)
                     end
                 else
                     if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001C()) then
                         if (Trig_Hero_Pick_Mode_RandM_Announcer_Audio_Func002Func001Func001Func001Func001Func001C()) then
-                            PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this)
                         else
-                            PlaySoundBJ(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03)
                         end
                     else
                     end
@@ -3575,6 +3663,7 @@ function Trig_Hero_Pick_Pick_A_Hero_Actions()
     udg_TempUnit = GetSoldUnit()
     if (Trig_Hero_Pick_Pick_A_Hero_Func004C()) then
         RemoveUnit(udg_TempUnit)
+        TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
     else
         udg_TempLoc = GetUnitLoc(GetBuyingUnit())
                 SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc))
@@ -3598,7 +3687,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Conditions()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
     if (not (udg_TempInt2 == 1)) then
         return false
     end
@@ -3608,7 +3697,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()
     if (not (udg_TempInt2 == 6)) then
         return false
     end
@@ -3618,17 +3707,17 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()
     return true
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func001C()
-    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func001C()) then
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()
+    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()) then
         return true
     end
-    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func001Func002C()) then
+    if (Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()) then
         return true
     end
     return false
 end
 
-function Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()
+function Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()
     if (not (udg_TempInt2 == 1)) then
         return false
     end
@@ -3636,7 +3725,10 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004C()
-    if (not Trig_Hero_Pick_Ban_A_Hero_Func004Func001C()) then
+    if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("H04F"))) then
+        return false
+    end
+    if (not Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()) then
         return false
     end
     return true
@@ -3665,7 +3757,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Actions()
             TriggerExecute(gg_trg_Hero_Pick_Set_HeroPickUnitType_availability)
             udg_TempInt = udg_TempInt + 1
         end
-        if (Trig_Hero_Pick_Ban_A_Hero_Func004Func003C()) then
+        if (Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()) then
             udg_NumGoodBans = (udg_NumGoodBans - 1)
             DisplayTextToForce(GetPlayersAll(), ("Team 1 has Banned " .. GetHeroProperName(udg_TempUnit)))
             DisplayTextToForce(GetPlayersAll(), ("Team 1 has " .. (I2S(udg_NumGoodBans) .. " bans remaining.")))
@@ -3691,7 +3783,7 @@ function InitTrig_Hero_Pick_Ban_A_Hero()
 end
 
 function Trig_Hero_Pick_End_Bans_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9969")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9983")
     EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Ban_A_Hero)
 end
@@ -3713,6 +3805,134 @@ end
 function InitTrig_Hero_Pick_Remove_Picked_Heroes()
     gg_trg_Hero_Pick_Remove_Picked_Heroes = CreateTrigger()
     TriggerAddAction(gg_trg_Hero_Pick_Remove_Picked_Heroes, Trig_Hero_Pick_Remove_Picked_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions()
+    udg_RandomHeroSkipNum = 0
+    udg_RandomHeroIndex = 0
+    udg_RandomHeroCounter = 0
+        while (udg_RandomHeroCounter < udg_NumAvailableHeroes) do
+    udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+    if (Trig_Hero_Pick_Get_Num_Pickable_Heroes_Func007C()) then
+        udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum + 1)
+    else
+    end
+    udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+        end
+end
+
+function InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
+    gg_trg_Hero_Pick_Get_Num_Pickable_Heroes = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes, Trig_Hero_Pick_Get_Num_Pickable_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()
+    if (not (udg_TempInt <= (udg_MaxNumPlayers // 2))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func001C()
+    if (not (udg_RandomHeroSkipNum <= 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()
+    if (not (udg_HeroPickMode ~= "ar")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()
+    if (not (udg_HeroPickMode ~= "ar")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions()
+        udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
+    ConditionalTriggerExecute(gg_trg_Hero_Pick_Get_Num_Pickable_Heroes)
+    udg_RandomHeroIndex = 0
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()) then
+        udg_RandomHeroIndex = udg_TempInt
+    else
+        udg_RandomHeroIndex = (udg_NumGoodHeroes + (udg_TempInt - (udg_MaxNumPlayers // 2)))
+    end
+    udg_RandomHeroCounter = 0
+    udg_RandomHeroSkipNum = (GetRandomInt(0, (udg_RandomHeroSkipNum - 1)) + 0)
+    udg_TempBool = false
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009C()) then
+        if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001C()) then
+            udg_RandomHeroMaxCounter = (udg_NumAvailableHeroes * 2)
+                        while (udg_RandomHeroCounter < udg_RandomHeroMaxCounter) do
+            udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
+                        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+            if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()) then
+                if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func001C()) then
+                    CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+                    udg_RandomHeroCounter = udg_RandomHeroMaxCounter
+                    udg_TempBool = true
+                else
+                    udg_RandomHeroSkipNum = (udg_RandomHeroSkipNum - 1)
+                end
+            else
+            end
+            udg_RandomHeroCounter = (udg_RandomHeroCounter + 1)
+                        end
+        else
+        end
+    else
+    end
+    if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010C()) then
+        if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func010Func001C()) then
+            DisplayTextToForce(GetPlayersAll(), ("Could not find a valid random hero for Player " .. (I2S(udg_TempInt) .. " that was also pickable (i.e. not banned/blocked)")))
+        else
+        end
+        CreateNUnitsAtLoc(1, udg_AvailableHeroTypesArray[GetRandomInt(0, (udg_NumAvailableHeroes - 1))], ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
+    else
+    end
+    udg_TempUnit = GetLastCreatedUnit()
+        RemoveLocation(udg_TempLoc)
+    TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
+end
+
+function InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
+    gg_trg_Hero_Pick_Give_Random_Hero_to_Player = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Give_Random_Hero_to_Player, Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions)
 end
 
 function Trig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED_Func001C()
@@ -3754,7 +3974,7 @@ function InitTrig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED()
 end
 
 function Trig_Hero_Pick_Timer_Start_Actions()
-    CreateTimerDialogBJ(udg_HeroPickTimer, "TRIGSTR_9970")
+    CreateTimerDialogBJ(udg_HeroPickTimer, "TRIGSTR_9984")
     udg_HeroPickTimerWindow = GetLastCreatedTimerDialogBJ()
     TimerDialogDisplayBJ(true, udg_HeroPickTimerWindow)
     StartTimerBJ(udg_HeroPickTimer, false, udg_HeroPickTime)
@@ -3770,7 +3990,7 @@ function Trig_Hero_Pick_Timer_Complete_Func004Func002A()
     SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_PASSIVE), true)
 end
 
-function Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()
+function Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()
     if (GetPlayerController(ConvertedPlayer(udg_TempInt)) ~= MAP_CONTROL_USER) then
         return true
     end
@@ -3781,7 +4001,7 @@ function Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()
 end
 
 function Trig_Hero_Pick_Timer_Complete_Func004Func004C()
-    if (not Trig_Hero_Pick_Timer_Complete_Func004Func004Func002C()) then
+    if (not Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()) then
         return false
     end
     if (not (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]) == 0)) then
@@ -3793,7 +4013,7 @@ end
 function Trig_Hero_Pick_Timer_Complete_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Timer_Complete)
     DestroyTimerDialogBJ(udg_HeroPickTimerWindow)
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9971")
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9985")
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -3801,11 +4021,12 @@ function Trig_Hero_Pick_Timer_Complete_Actions()
         ForGroupBJ(udg_TempGroup, Trig_Hero_Pick_Timer_Complete_Func004Func002A)
                 DestroyGroup(udg_TempGroup)
         if (Trig_Hero_Pick_Timer_Complete_Func004Func004C()) then
+            TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
         else
         end
         udg_TempInt = udg_TempInt + 1
     end
-    TriggerExecute(gg_trg_Hero_Pick_Disable_Picking)
+    TriggerExecute(gg_trg_Hero_Pick_Disable_Pick_Modes)
     TriggerExecute(gg_trg_Hero_Pick_Repick_Start)
     EnableTrigger(gg_trg_Hero_Pick_Repick_Complete)
 end
@@ -3818,7 +4039,7 @@ end
 
 function Trig_Hero_Pick_Repick_Start_Actions()
     DisplayTextToForce(GetPlayersAll(), ("If you would like to randomly repick type -repick in the next " .. (I2S(R2I(udg_HeroRepickTime)) .. " seconds.")))
-    CreateTimerDialogBJ(udg_HeroRepickTimer, "TRIGSTR_9972")
+    CreateTimerDialogBJ(udg_HeroRepickTimer, "TRIGSTR_9986")
     udg_HeroRepickTimerWindow = GetLastCreatedTimerDialogBJ()
     TimerDialogDisplayBJ(true, udg_HeroRepickTimerWindow)
     StartTimerBJ(udg_HeroRepickTimer, false, udg_HeroRepickTime)
@@ -3847,18 +4068,17 @@ function InitTrig_Hero_Pick_Repick_Complete()
     TriggerAddAction(gg_trg_Hero_Pick_Repick_Complete, Trig_Hero_Pick_Repick_Complete_Actions)
 end
 
-function Trig_Hero_Pick_Disable_Picking_Actions()
+function Trig_Hero_Pick_Disable_Pick_Modes_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Mode_Default)
     DisableTrigger(gg_trg_Hero_Pick_Mode_All_Pick)
     DisableTrigger(gg_trg_Hero_Pick_Mode_All_Random)
     DisableTrigger(gg_trg_Hero_Pick_Mode_Single_Draft)
     DisableTrigger(gg_trg_Hero_Pick_Mode_Captains_Mode_UNFINISHED)
-    DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
 end
 
-function InitTrig_Hero_Pick_Disable_Picking()
-    gg_trg_Hero_Pick_Disable_Picking = CreateTrigger()
-    TriggerAddAction(gg_trg_Hero_Pick_Disable_Picking, Trig_Hero_Pick_Disable_Picking_Actions)
+function InitTrig_Hero_Pick_Disable_Pick_Modes()
+    gg_trg_Hero_Pick_Disable_Pick_Modes = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
@@ -3888,7 +4108,7 @@ function InitTrig_Hero_Pick_Setup_Selected_Heroes()
 end
 
 function Trig_Hero_Pick_Completion_Actions()
-    TriggerExecute(gg_trg_Hero_Pick_Disable_Picking)
+    DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
     EnableTrigger(gg_trg_Zanzo_Cooldown)
     EnableTrigger(gg_trg_Zanzo_Move)
@@ -4080,56 +4300,6 @@ end
 function InitTrig_Saga_Stat_Reward()
     gg_trg_Saga_Stat_Reward = CreateTrigger()
     TriggerAddAction(gg_trg_Saga_Stat_Reward, Trig_Saga_Stat_Reward_Actions)
-end
-
-function Trig_SS_Raditz_Test_Actions()
-    udg_StatMultReal = 1.50
-    udg_TempInt = 1
-    TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-    TriggerExecute(gg_trg_Test_Apply_super_saiyan_sfx)
-    SetUnitVertexColorBJ(udg_StatMultUnit, 100, 85.00, 25.00, 0)
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9974")
-end
-
-function InitTrig_SS_Raditz_Test()
-    gg_trg_SS_Raditz_Test = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_SS_Raditz_Test, Player(0), "raditz ss", true)
-    TriggerAddAction(gg_trg_SS_Raditz_Test, Trig_SS_Raditz_Test_Actions)
-end
-
-function Trig_SS_Turles_Test_Actions()
-    udg_StatMultReal = 1.50
-    udg_TempInt = 1
-    TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-    TriggerExecute(gg_trg_Test_Apply_super_saiyan_sfx)
-    SetUnitVertexColorBJ(udg_StatMultUnit, 100, 85.00, 25.00, 0)
-end
-
-function InitTrig_SS_Turles_Test()
-    gg_trg_SS_Turles_Test = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_SS_Turles_Test, Player(0), "turles ss", true)
-    TriggerAddAction(gg_trg_SS_Turles_Test, Trig_SS_Turles_Test_Actions)
-end
-
-function Trig_SS2_Turles_Test_Copy_Actions()
-    udg_StatMultReal = 2.00
-    udg_TempInt = 2
-    TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-    TriggerExecute(gg_trg_Test_Apply_super_saiyan_sfx)
-    SetUnitVertexColorBJ(udg_StatMultUnit, 100, 85.00, 25.00, 0)
-    SetUnitScalePercent(udg_StatMultUnit, 130.00, 130.00, 130.00)
-end
-
-function InitTrig_SS2_Turles_Test_Copy()
-    gg_trg_SS2_Turles_Test_Copy = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_SS2_Turles_Test_Copy, Player(0), "turles ss2", true)
-    TriggerAddAction(gg_trg_SS2_Turles_Test_Copy, Trig_SS2_Turles_Test_Copy_Actions)
 end
 
 function Trig_Saiyan_Saga_Init_Actions()
@@ -4342,1186 +4512,6 @@ function InitTrig_Turles_Saga_VI()
     TriggerAddAction(gg_trg_Turles_Saga_VI, Trig_Turles_Saga_VI_Actions)
 end
 
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00K"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func008C()
-    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H000")) then
-        return true
-    end
-    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H03G")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005C()
-    if (not Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func008C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005A()
-    udg_StatMultUnit = GetEnumUnit()
-    if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005C()) then
-        TriggerExecute(gg_trg_Test_goku_transformations_Copy)
-    else
-        if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001C()) then
-            TriggerExecute(gg_trg_Test_vegeta_transformations)
-        else
-            if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001C()) then
-                TriggerExecute(gg_trg_Test_gohan_transformations)
-            else
-                if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001C()) then
-                    TriggerExecute(gg_trg_Test_goten_transformations)
-                else
-                    if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001C()) then
-                        TriggerExecute(gg_trg_Test_kid_trunks_transformations)
-                    else
-                        if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001Func001C()) then
-                            TriggerExecute(gg_trg_Test_future_trunks_transformations)
-                        else
-                            if (Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005Func005Func001Func001Func001Func001Func001Func001C()) then
-                                TriggerExecute(gg_trg_Test_broly_transformations)
-                            else
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Func001C()
-    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 2) == "ss")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_super_saiyan_1_to_99_Copy_Actions()
-    if (Trig_Test_super_saiyan_1_to_99_Copy_Func001C()) then
-        udg_TransformationPlayer = GetTriggerPlayer()
-        udg_TransformationString = GetEventPlayerChatString()
-        udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 3, 4))
-        udg_TempReal = RMaxBJ(1.00, I2R(udg_TempInt))
-        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Test_super_saiyan_1_to_99_Copy_Func001Func005A)
-    else
-    end
-end
-
-function InitTrig_Test_super_saiyan_1_to_99_Copy()
-    gg_trg_Test_super_saiyan_1_to_99_Copy = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(0), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(1), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(2), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(3), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(4), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(5), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(6), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(7), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(8), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(9), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(10), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(11), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(12), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(13), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(14), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(15), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(16), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(17), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(18), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(19), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(20), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(21), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(22), "ss", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_super_saiyan_1_to_99_Copy, Player(23), "ss", false)
-    TriggerAddAction(gg_trg_Test_super_saiyan_1_to_99_Copy, Trig_Test_super_saiyan_1_to_99_Copy_Actions)
-end
-
-function Trig_Test_goku_transformations_Copy_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func008C()
-    if (not (udg_TransformationString == "ss2")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func009C()
-    if (not (udg_TransformationString == "ss3")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func010C()
-    if (not (udg_TransformationString == "ssg")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func011C()
-    if (not (udg_TransformationString == "ssb")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func012C()
-    if (not (udg_TransformationString == "ssbkao")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func016Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_goku_transformations_Copy_Func016C()
-    if (not Trig_Test_goku_transformations_Copy_Func016Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Func018C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_transformations_Copy_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_goku_transformations_Copy_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0A9")
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AB")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func008C()) then
-        udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AA")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func009C()) then
-        udg_StatMultReal = 2.25
-        udg_TransformationAbility = FourCC("A0AC")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func010C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0DQ")
-        udg_TransformationSFXString = "AuraKaox10.mdx"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func011C()) then
-        udg_StatMultReal = 2.60
-        udg_TransformationAbility = FourCC("A0DP")
-        udg_TransformationSFXString = "AuraBlue.mdx"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func012C()) then
-        udg_StatMultReal = 2.70
-        udg_TransformationAbility = FourCC("A0DP")
-        udg_TransformationSFXString = "AuraBlue.mdx"
-        udg_TransformationSFXString2 = "AuraKaox10.mdx"
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func016C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_goku_transformations_Copy_Func018C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_goku_transformations_Copy()
-    gg_trg_Test_goku_transformations_Copy = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_goku_transformations_Copy, Trig_Test_goku_transformations_Copy_Actions)
-end
-
-function Trig_Test_vegeta_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func008C()
-    if (not (udg_TransformationString == "ss2")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func009C()
-    if (not (udg_TransformationString == "ssg")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func010C()
-    if (not (udg_TransformationString == "ssb")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func011C()
-    if (not (udg_TransformationString == "ssbe")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func015Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_vegeta_transformations_Func015C()
-    if (not Trig_Test_vegeta_transformations_Func015Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Func017C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_vegeta_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_vegeta_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0AG")
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AH")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func008C()) then
-        udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AH")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func009C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0JD")
-        udg_TransformationSFXString = "AuraKaox10.mdx"
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func010C()) then
-        udg_StatMultReal = 2.60
-        udg_TransformationAbility = FourCC("A0DR")
-        udg_TransformationSFXString = "AuraBlue.mdx"
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func011C()) then
-        udg_StatMultReal = 2.70
-        udg_TransformationAbility = FourCC("A0JR")
-        udg_TransformationSFXString = "AuraBlue.mdx"
-        udg_TransformationSFXString2 = "AuraRoyalBlue2.mdx"
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func015C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AG"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_vegeta_transformations_Func017C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_vegeta_transformations()
-    gg_trg_Test_vegeta_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_vegeta_transformations, Trig_Test_vegeta_transformations_Actions)
-end
-
-function Trig_Test_gohan_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Func008C()
-    if (not (udg_TransformationString == "ss2")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Func009C()
-    if (not (udg_TransformationString == "ult")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Func013Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_gohan_transformations_Func013C()
-    if (not Trig_Test_gohan_transformations_Func013Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Func015C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_gohan_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_gohan_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0AJ")
-    else
-    end
-    if (Trig_Test_gohan_transformations_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AK")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_gohan_transformations_Func008C()) then
-        udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AL")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
-    else
-    end
-    if (Trig_Test_gohan_transformations_Func009C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0AJ")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-    if (Trig_Test_gohan_transformations_Func013C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_gohan_transformations_Func015C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_gohan_transformations()
-    gg_trg_Test_gohan_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_gohan_transformations, Trig_Test_gohan_transformations_Actions)
-end
-
-function Trig_Test_goten_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goten_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goten_transformations_Func011Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_goten_transformations_Func011C()
-    if (not Trig_Test_goten_transformations_Func011Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goten_transformations_Func013C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goten_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_goten_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0A9")
-    else
-    end
-    if (Trig_Test_goten_transformations_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AB")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_goten_transformations_Func011C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_goten_transformations_Func013C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_goten_transformations()
-    gg_trg_Test_goten_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_goten_transformations, Trig_Test_goten_transformations_Actions)
-end
-
-function Trig_Test_kid_trunks_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_kid_trunks_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_kid_trunks_transformations_Func011Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_kid_trunks_transformations_Func011C()
-    if (not Trig_Test_kid_trunks_transformations_Func011Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_kid_trunks_transformations_Func013C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_kid_trunks_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_kid_trunks_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0AR")
-    else
-    end
-    if (Trig_Test_kid_trunks_transformations_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AS")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_kid_trunks_transformations_Func011C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AR"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_kid_trunks_transformations_Func013C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_kid_trunks_transformations()
-    gg_trg_Test_kid_trunks_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_kid_trunks_transformations, Trig_Test_kid_trunks_transformations_Actions)
-end
-
-function Trig_Test_future_trunks_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func008C()
-    if (not (udg_TransformationString == "uss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func009C()
-    if (not (udg_TransformationString == "uss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func010C()
-    if (not (udg_TransformationString == "ssr")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func014Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_future_trunks_transformations_Func014C()
-    if (not Trig_Test_future_trunks_transformations_Func014Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Func016C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_future_trunks_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_future_trunks_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0AU")
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func007C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AV")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func008C()) then
-        udg_StatMultReal = 1.75
-        udg_TransformationAbility = FourCC("A0AV")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func009C()) then
-        udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AV")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func010C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0AV")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func014C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AU"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_future_trunks_transformations_Func016C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_future_trunks_transformations()
-    gg_trg_Test_future_trunks_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_future_trunks_transformations, Trig_Test_future_trunks_transformations_Actions)
-end
-
-function Trig_Test_broly_transformations_Func006C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func007C()
-    if (not (udg_TransformationString == "ss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func008C()
-    if (not (udg_TransformationString == "uss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func009C()
-    if (not (udg_TransformationString == "lss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func010C()
-    if (not (udg_TransformationString == "luss")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func014Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_broly_transformations_Func014C()
-    if (not Trig_Test_broly_transformations_Func014Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Func016C()
-    if (not (udg_StatMultReal > 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_broly_transformations_Actions()
-    udg_TransformationSFXString = ""
-    udg_TransformationSFXString2 = ""
-    udg_TransformationAbility = FourCC("ANcl")
-    udg_TransformationAbility2 = FourCC("ANcl")
-    udg_StatMultReal = 0.00
-    if (Trig_Test_broly_transformations_Func006C()) then
-        udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0AX")
-    else
-    end
-    if (Trig_Test_broly_transformations_Func007C()) then
-        udg_StatMultReal = 1.65
-        udg_TransformationAbility = FourCC("A0AY")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_broly_transformations_Func008C()) then
-        udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AY")
-        udg_TransformationSFXString = "AuraSS.mdx"
-    else
-    end
-    if (Trig_Test_broly_transformations_Func009C()) then
-        udg_StatMultReal = 2.25
-        udg_TransformationAbility = FourCC("A0AZ")
-        udg_TransformationSFXString = "AuraDarkGreen.mdx"
-    else
-    end
-    if (Trig_Test_broly_transformations_Func010C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0AZ")
-        udg_TransformationSFXString = "AuraDarkGreen.mdx"
-    else
-    end
-    if (Trig_Test_broly_transformations_Func014C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AX"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-    else
-    end
-    if (Trig_Test_broly_transformations_Func016C()) then
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-        TriggerExecute(gg_trg_Test_goku_apply_sfx_transformations)
-    else
-    end
-end
-
-function InitTrig_Test_broly_transformations()
-    gg_trg_Test_broly_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_broly_transformations, Trig_Test_broly_transformations_Actions)
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00K"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003Func005Func008C()
-    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H000")) then
-        return true
-    end
-    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H03G")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Test_revert_Copy_Func003Func005C()
-    if (not Trig_Test_revert_Copy_Func003Func005Func008C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_revert_Copy_Func003A()
-    udg_StatMultUnit = GetEnumUnit()
-    if (Trig_Test_revert_Copy_Func003Func005C()) then
-        TriggerExecute(gg_trg_Test_goku_transformations_Copy)
-    else
-        if (Trig_Test_revert_Copy_Func003Func005Func001C()) then
-            TriggerExecute(gg_trg_Test_vegeta_transformations)
-        else
-            if (Trig_Test_revert_Copy_Func003Func005Func001Func001C()) then
-                TriggerExecute(gg_trg_Test_gohan_transformations)
-            else
-                if (Trig_Test_revert_Copy_Func003Func005Func001Func001Func001C()) then
-                    TriggerExecute(gg_trg_Test_goten_transformations)
-                else
-                    if (Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001C()) then
-                        TriggerExecute(gg_trg_Test_kid_trunks_transformations)
-                    else
-                        if (Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001Func001C()) then
-                            TriggerExecute(gg_trg_Test_future_trunks_transformations)
-                        else
-                            if (Trig_Test_revert_Copy_Func003Func005Func001Func001Func001Func001Func001Func001C()) then
-                                TriggerExecute(gg_trg_Test_broly_transformations)
-                            else
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-function Trig_Test_revert_Copy_Actions()
-    udg_TransformationPlayer = GetTriggerPlayer()
-    udg_TransformationString = GetEventPlayerChatString()
-    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Test_revert_Copy_Func003A)
-end
-
-function InitTrig_Test_revert_Copy()
-    gg_trg_Test_revert_Copy = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(0), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(1), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(2), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(3), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(4), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(5), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(6), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(7), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(8), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(9), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(10), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(11), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(12), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(13), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(14), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(15), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(16), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(17), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(18), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(19), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(20), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(21), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(22), "r", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_revert_Copy, Player(23), "r", true)
-    TriggerAddAction(gg_trg_Test_revert_Copy, Trig_Test_revert_Copy_Actions)
-end
-
-function Trig_Test_goku_meme_transformations_Func001C()
-    if (not (udg_TransformationString == "ssg3")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_meme_transformations_Func002C()
-    if (not (udg_TransformationString == "ssb3")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 350)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_meme_transformations_Func003C()
-    if (not (udg_TransformationString == "sscalvo")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 400)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_meme_transformations_Func004C()
-    if (not (udg_TransformationString == "ssblanco")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 500)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_goku_meme_transformations_Actions()
-    if (Trig_Test_goku_meme_transformations_Func001C()) then
-        udg_StatMultReal = 3.00
-        udg_TransformationAbility = FourCC("A0DQ")
-        udg_TransformationAbility2 = FourCC("A0AC")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "AuraJirenCounter.mdx"
-    else
-    end
-    if (Trig_Test_goku_meme_transformations_Func002C()) then
-        udg_StatMultReal = 3.50
-        udg_TransformationAbility = FourCC("A0DP")
-        udg_TransformationAbility2 = FourCC("A0AC")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "AuraRoyalBlue.mdx"
-    else
-    end
-    if (Trig_Test_goku_meme_transformations_Func003C()) then
-        udg_StatMultReal = 4.00
-        udg_TransformationAbility = FourCC("ACad")
-        udg_TransformationSFXString = "AuraPink.mdx"
-    else
-    end
-    if (Trig_Test_goku_meme_transformations_Func004C()) then
-        udg_StatMultReal = 5.00
-        udg_TransformationAbility = FourCC("ACad")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-end
-
-function InitTrig_Test_goku_meme_transformations()
-    gg_trg_Test_goku_meme_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_goku_meme_transformations, Trig_Test_goku_meme_transformations_Actions)
-end
-
 function Trig_show_me_the_ss_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0AB"), GetTriggerPlayer())
 end
@@ -5542,23 +4532,1373 @@ function InitTrig_show_me_the_ss_Copy()
     TriggerAddAction(gg_trg_show_me_the_ss_Copy, Trig_show_me_the_ss_Copy_Actions)
 end
 
-function Trig_Test_goku_apply_sfx_transformations_Func002C()
+function Trig_Test_LVL_command_Func004A()
+    udg_TempUnit = GetEnumUnit()
+        j = GetHeroLevel(udg_TempUnit)
+        while (j < udg_TempInt3) do
+        j=j+1
+        SetHeroLevel(udg_TempUnit, j, false)
+        end
+end
+
+function Trig_Test_LVL_command_Actions()
+    udg_TempInt3 = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8))
+        local j
+    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
+    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func004A)
+        DestroyGroup(udg_TempGroup)
+end
+
+function InitTrig_Test_LVL_command()
+    gg_trg_Test_LVL_command = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_LVL_command, Player(0), "-lvl", false)
+    TriggerAddAction(gg_trg_Test_LVL_command, Trig_Test_LVL_command_Actions)
+end
+
+function Trig_Transformations_Init_Commands_Actions()
+    udg_TempInt = 0
+    udg_TransformationCommands[udg_TempInt] = "r"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "kao"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ss2"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ss3"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ssr"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ssg"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ssb"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ssbkao"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ssbe"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ult"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "uss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "uss2"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ws"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "lss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "luss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TempInt2 = 1
+    while (true) do
+        if (udg_TempInt2 > udg_MaxNumPlayers) then break end
+        udg_TempInt3 = 0
+        while (true) do
+            if (udg_TempInt3 > (udg_TempInt - 1)) then break end
+            TriggerRegisterPlayerChatEvent(gg_trg_Transformations_Entry_Point, ConvertedPlayer(udg_TempInt2), udg_TransformationCommands[udg_TempInt3], true)
+            udg_TempInt3 = udg_TempInt3 + 1
+        end
+        udg_TempInt2 = udg_TempInt2 + 1
+    end
+end
+
+function InitTrig_Transformations_Init_Commands()
+    gg_trg_Transformations_Init_Commands = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Init_Commands, Trig_Transformations_Init_Commands_Actions)
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00K"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func003C()
+    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H000")) then
+        return true
+    end
+    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H03G")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002C()
+    if (not Trig_Transformations_Entry_Point_Func003Func002Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003A()
+    udg_StatMultUnit = GetEnumUnit()
+    if (Trig_Transformations_Entry_Point_Func003Func002C()) then
+        TriggerExecute(gg_trg_Transformations_Goku)
+    else
+        if (Trig_Transformations_Entry_Point_Func003Func002Func001C()) then
+            TriggerExecute(gg_trg_Transformations_Vegeta)
+        else
+            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001C()) then
+                TriggerExecute(gg_trg_Transformations_Gohan)
+            else
+                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001C()) then
+                    TriggerExecute(gg_trg_Transformations_Goten)
+                else
+                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001C()) then
+                        TriggerExecute(gg_trg_Transformations_Kid_Trunks)
+                    else
+                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001C()) then
+                            TriggerExecute(gg_trg_Transformations_Future_Trunks)
+                        else
+                            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()) then
+                                TriggerExecute(gg_trg_Transformations_Broly)
+                            else
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function Trig_Transformations_Entry_Point_Actions()
+    udg_TransformationPlayer = GetTriggerPlayer()
+    udg_TransformationString = GetEventPlayerChatString()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Entry_Point_Func003A)
+end
+
+function InitTrig_Transformations_Entry_Point()
+    gg_trg_Transformations_Entry_Point = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Entry_Point, Trig_Transformations_Entry_Point_Actions)
+end
+
+function Trig_Transformations_Goku_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func008C()
+    if (not (udg_TransformationString == "kao")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func009C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func010C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func011C()
+    if (not (udg_TransformationString == "ss3")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func012C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func013C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func014C()
+    if (not (udg_TransformationString == "ssbkao")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func018Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Goku_Func018C()
+    if (not Trig_Transformations_Goku_Func018Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func020Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func020Func001C()
+    if (not Trig_Transformations_Goku_Func020Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func020C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Goku_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0A9")
+    else
+    end
+    if (Trig_Transformations_Goku_Func008C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationAbility = FourCC("A0A9")
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Goku_Func009C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Goku_Func010C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AA")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Goku_Func011C()) then
+        udg_StatMultReal = 2.25
+        udg_TransformationAbility = FourCC("A0AC")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Goku_Func012C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0DQ")
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Goku_Func013C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("A0DP")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+    else
+    end
+    if (Trig_Transformations_Goku_Func014C()) then
+        udg_StatMultReal = 2.70
+        udg_TransformationAbility = FourCC("A0DP")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+        udg_TransformationSFXString2 = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Goku_Func018C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Goku_Func020C()) then
+        if (Trig_Transformations_Goku_Func020Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Goku()
+    gg_trg_Transformations_Goku = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Goku, Trig_Transformations_Goku_Actions)
+end
+
+function Trig_Goku_Meme_Transformations_Func001C()
+    if (not (udg_TransformationString == "ssg3")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Goku_Meme_Transformations_Func002C()
+    if (not (udg_TransformationString == "ssb3")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 350)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Goku_Meme_Transformations_Func003C()
+    if (not (udg_TransformationString == "sscalvo")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 400)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Goku_Meme_Transformations_Func004C()
+    if (not (udg_TransformationString == "ssblanco")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 500)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Goku_Meme_Transformations_Actions()
+    if (Trig_Goku_Meme_Transformations_Func001C()) then
+        udg_StatMultReal = 3.00
+        udg_TransformationAbility = FourCC("A0DQ")
+        udg_TransformationAbility2 = FourCC("A0AC")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "AuraJirenCounter.mdx"
+    else
+    end
+    if (Trig_Goku_Meme_Transformations_Func002C()) then
+        udg_StatMultReal = 3.50
+        udg_TransformationAbility = FourCC("A0DP")
+        udg_TransformationAbility2 = FourCC("A0AC")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "AuraRoyalBlue.mdx"
+    else
+    end
+    if (Trig_Goku_Meme_Transformations_Func003C()) then
+        udg_StatMultReal = 4.00
+        udg_TransformationAbility = FourCC("ACad")
+        udg_TransformationSFXString = "AuraPink.mdx"
+    else
+    end
+    if (Trig_Goku_Meme_Transformations_Func004C()) then
+        udg_StatMultReal = 5.00
+        udg_TransformationAbility = FourCC("ACad")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+end
+
+function InitTrig_Goku_Meme_Transformations()
+    gg_trg_Goku_Meme_Transformations = CreateTrigger()
+    DisableTrigger(gg_trg_Goku_Meme_Transformations)
+    TriggerAddAction(gg_trg_Goku_Meme_Transformations, Trig_Goku_Meme_Transformations_Actions)
+end
+
+function Trig_Transformations_Vegeta_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func008C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func009C()
+    if (not (udg_TransformationString == "uss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func010C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func011C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func012C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func013C()
+    if (not (udg_TransformationString == "ssbe")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func015Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Vegeta_Func015C()
+    if (not Trig_Transformations_Vegeta_Func015Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func017Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func017Func001C()
+    if (not Trig_Transformations_Vegeta_Func017Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func017C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Vegeta_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0AG")
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func008C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AH")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func009C()) then
+        udg_StatMultReal = 1.75
+        udg_TransformationAbility = FourCC("A0AH")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func010C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AH")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func011C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0JD")
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func012C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("A0DR")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func013C()) then
+        udg_StatMultReal = 2.70
+        udg_TransformationAbility = FourCC("A0JR")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+        udg_TransformationSFXString2 = "AuraRoyalBlue2.mdx"
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func015C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AG"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func017C()) then
+        if (Trig_Transformations_Vegeta_Func017Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Vegeta()
+    gg_trg_Transformations_Vegeta = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Vegeta, Trig_Transformations_Vegeta_Actions)
+end
+
+function Trig_Transformations_Gohan_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func008C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func009C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func010C()
+    if (not (udg_TransformationString == "ult")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func012Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Gohan_Func012C()
+    if (not Trig_Transformations_Gohan_Func012Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func014Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func014Func001C()
+    if (not Trig_Transformations_Gohan_Func014Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func014C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Gohan_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0AJ")
+    else
+    end
+    if (Trig_Transformations_Gohan_Func008C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AK")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Gohan_Func009C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AL")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Gohan_Func010C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0AJ")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Gohan_Func012C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Gohan_Func014C()) then
+        if (Trig_Transformations_Gohan_Func014Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Gohan()
+    gg_trg_Transformations_Gohan = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Gohan, Trig_Transformations_Gohan_Actions)
+end
+
+function Trig_Transformations_Goten_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func008C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func009C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func011Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Goten_Func011C()
+    if (not Trig_Transformations_Goten_Func011Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func013Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func013Func001C()
+    if (not Trig_Transformations_Goten_Func013Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Func013C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goten_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Goten_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0A9")
+    else
+    end
+    if (Trig_Transformations_Goten_Func008C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Goten_Func009C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Goten_Func011C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Goten_Func013C()) then
+        if (Trig_Transformations_Goten_Func013Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Goten()
+    gg_trg_Transformations_Goten = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Goten, Trig_Transformations_Goten_Actions)
+end
+
+function Trig_Transformations_Kid_Trunks_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func008C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func009C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func011Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Kid_Trunks_Func011C()
+    if (not Trig_Transformations_Kid_Trunks_Func011Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func013Func002Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func013Func002C()
+    if (not Trig_Transformations_Kid_Trunks_Func013Func002Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Func013C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Trunks_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Kid_Trunks_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0AR")
+    else
+    end
+    if (Trig_Transformations_Kid_Trunks_Func008C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AS")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Kid_Trunks_Func009C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AS")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Kid_Trunks_Func011C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AR"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Kid_Trunks_Func013C()) then
+        if (Trig_Transformations_Kid_Trunks_Func013Func002C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Kid_Trunks()
+    gg_trg_Transformations_Kid_Trunks = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Kid_Trunks, Trig_Transformations_Kid_Trunks_Actions)
+end
+
+function Trig_Transformations_Future_Trunks_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func008C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func009C()
+    if (not (udg_TransformationString == "uss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func010C()
+    if (not (udg_TransformationString == "uss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func011C()
+    if (not (udg_TransformationString == "uss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func012C()
+    if (not (udg_TransformationString == "ssr")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func014Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Future_Trunks_Func014C()
+    if (not Trig_Transformations_Future_Trunks_Func014Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func016Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func016Func001C()
+    if (not Trig_Transformations_Future_Trunks_Func016Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func016C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Future_Trunks_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0AU")
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func008C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func009C()) then
+        udg_StatMultReal = 1.75
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func010C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func011C()) then
+        udg_StatMultReal = 2.00
+        udg_StatMultStr = 3.00
+        udg_StatMultAgi = 2.00
+        udg_StatMultInt = 2.00
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func012C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func014C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AU"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func016C()) then
+        if (Trig_Transformations_Future_Trunks_Func016Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Future_Trunks()
+    gg_trg_Transformations_Future_Trunks = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Future_Trunks, Trig_Transformations_Future_Trunks_Actions)
+end
+
+function Trig_Transformations_Broly_Func007C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func008C()
+    if (not (udg_TransformationString == "ws")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func009C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func010C()
+    if (not (udg_TransformationString == "uss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func011C()
+    if (not (udg_TransformationString == "lss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func012C()
+    if (not (udg_TransformationString == "luss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func014Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Broly_Func014C()
+    if (not Trig_Transformations_Broly_Func014Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func016Func001Func003C()
+    if (not (udg_StatMultAgi == udg_StatMultInt)) then
+        return false
+    end
+    if (not (udg_StatMultAgi == udg_StatMultStr)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func016Func001C()
+    if (not Trig_Transformations_Broly_Func016Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func016C()
+    if (not (udg_StatMultReal > 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Transformations_Broly_Func007C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("A0AX")
+    else
+    end
+    if (Trig_Transformations_Broly_Func008C()) then
+        udg_StatMultReal = 1.20
+        udg_TransformationAbility = FourCC("A0AX")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
+    if (Trig_Transformations_Broly_Func009C()) then
+        udg_StatMultReal = 1.65
+        udg_TransformationAbility = FourCC("A0AY")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Broly_Func010C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AY")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Broly_Func011C()) then
+        udg_StatMultReal = 2.25
+        udg_TransformationAbility = FourCC("A0AZ")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
+    if (Trig_Transformations_Broly_Func012C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0AZ")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
+    if (Trig_Transformations_Broly_Func014C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AX"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Broly_Func016C()) then
+        if (Trig_Transformations_Broly_Func016Func001C()) then
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        else
+            TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        end
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        TriggerExecute(gg_trg_Transformations_Apply_SFX)
+    else
+    end
+end
+
+function InitTrig_Transformations_Broly()
+    gg_trg_Transformations_Broly = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Broly, Trig_Transformations_Broly_Actions)
+end
+
+function Trig_Transformations_Apply_SFX_Func002C()
     if (not (udg_TransformationSFXString ~= "")) then
         return false
     end
     return true
 end
 
-function Trig_Test_goku_apply_sfx_transformations_Func003C()
+function Trig_Transformations_Apply_SFX_Func003C()
     if (not (udg_TransformationSFXString2 ~= "")) then
         return false
     end
     return true
 end
 
-function Trig_Test_goku_apply_sfx_transformations_Actions()
+function Trig_Transformations_Apply_SFX_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Test_goku_apply_sfx_transformations_Func002C()) then
+    if (Trig_Transformations_Apply_SFX_Func002C()) then
         AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
         AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl")
@@ -5568,62 +5908,17 @@ function Trig_Test_goku_apply_sfx_transformations_Actions()
         SaveEffectHandleBJ(udg_TempSpecialEffect, 6, udg_ID, udg_StatMultHashtable)
     else
     end
-    if (Trig_Test_goku_apply_sfx_transformations_Func003C()) then
-        AddSpecialEffectTargetUnitBJ("chest", udg_StatMultUnit, udg_TransformationSFXString2)
+    if (Trig_Transformations_Apply_SFX_Func003C()) then
+        AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, udg_TransformationSFXString2)
         udg_TempSpecialEffect = GetLastCreatedEffectBJ()
         SaveEffectHandleBJ(udg_TempSpecialEffect, 7, udg_ID, udg_StatMultHashtable)
     else
     end
 end
 
-function InitTrig_Test_goku_apply_sfx_transformations()
-    gg_trg_Test_goku_apply_sfx_transformations = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_goku_apply_sfx_transformations, Trig_Test_goku_apply_sfx_transformations_Actions)
-end
-
-function Trig_Test_Apply_super_saiyan_sfx_Func009C()
-    if (not (udg_TempInt > 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Test_Apply_super_saiyan_sfx_Actions()
-        udg_ID = GetHandleId(udg_StatMultUnit)
-    AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
-    DestroyEffectBJ(GetLastCreatedEffectBJ())
-    AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl")
-    DestroyEffectBJ(GetLastCreatedEffectBJ())
-    AddSpecialEffectTargetUnitBJ("origin", udg_StatMultUnit, "Effects\\AuraSS.mdx")
-    udg_TempSpecialEffect = GetLastCreatedEffectBJ()
-    SaveEffectHandleBJ(udg_TempSpecialEffect, 6, udg_ID, udg_StatMultHashtable)
-    if (Trig_Test_Apply_super_saiyan_sfx_Func009C()) then
-        AddSpecialEffectTargetUnitBJ("chest", udg_StatMultUnit, "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl")
-        udg_TempSpecialEffect = GetLastCreatedEffectBJ()
-        SaveEffectHandleBJ(udg_TempSpecialEffect, 7, udg_ID, udg_StatMultHashtable)
-    else
-    end
-end
-
-function InitTrig_Test_Apply_super_saiyan_sfx()
-    gg_trg_Test_Apply_super_saiyan_sfx = CreateTrigger()
-    TriggerAddAction(gg_trg_Test_Apply_super_saiyan_sfx, Trig_Test_Apply_super_saiyan_sfx_Actions)
-end
-
-function Trig_Test_LVL_command_Func002A()
-    SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)), false)
-end
-
-function Trig_Test_LVL_command_Actions()
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func002A)
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_Test_LVL_command()
-    gg_trg_Test_LVL_command = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_LVL_command, Player(0), "-lvl", false)
-    TriggerAddAction(gg_trg_Test_LVL_command, Trig_Test_LVL_command_Actions)
+function InitTrig_Transformations_Apply_SFX()
+    gg_trg_Transformations_Apply_SFX = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Apply_SFX, Trig_Transformations_Apply_SFX_Actions)
 end
 
 function Trig_Test_StatMult_Init_Func001002002()
@@ -5736,6 +6031,18 @@ end
 function InitTrig_Set_Stat_Multiplier()
     gg_trg_Set_Stat_Multiplier = CreateTrigger()
     TriggerAddAction(gg_trg_Set_Stat_Multiplier, Trig_Set_Stat_Multiplier_Actions)
+end
+
+function Trig_Get_Stat_Multiplier_Actions()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_StatMultStr = LoadRealBJ(3, udg_ID, udg_StatMultHashtable)
+    udg_StatMultAgi = LoadRealBJ(4, udg_ID, udg_StatMultHashtable)
+    udg_StatMultInt = LoadRealBJ(5, udg_ID, udg_StatMultHashtable)
+end
+
+function InitTrig_Get_Stat_Multiplier()
+    gg_trg_Get_Stat_Multiplier = CreateTrigger()
+    TriggerAddAction(gg_trg_Get_Stat_Multiplier, Trig_Get_Stat_Multiplier_Actions)
 end
 
 function Trig_Set_Varied_Stat_Multiplier_Actions()
@@ -6215,6 +6522,8 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Rush()
     InitTrig_Hero_Pick_Rush_Repick()
     InitTrig_Hero_Pick_End_Bans_Command()
+    InitTrig_Hero_Pick_Show_Pickable_Heroes()
+    InitTrig_Hero_Pick_Repick_Randomly()
     InitTrig_Hero_Pick_Mode_Default()
     InitTrig_Hero_Pick_Mode_All_Pick()
     InitTrig_Hero_Pick_Mode_All_Random()
@@ -6229,12 +6538,14 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Ban_A_Hero()
     InitTrig_Hero_Pick_End_Bans()
     InitTrig_Hero_Pick_Remove_Picked_Heroes()
+    InitTrig_Hero_Pick_Get_Num_Pickable_Heroes()
+    InitTrig_Hero_Pick_Give_Random_Hero_to_Player()
     InitTrig_Hero_Pick_Add_Secondary_Heroes_UNFINISHED()
     InitTrig_Hero_Pick_Timer_Start()
     InitTrig_Hero_Pick_Timer_Complete()
     InitTrig_Hero_Pick_Repick_Start()
     InitTrig_Hero_Pick_Repick_Complete()
-    InitTrig_Hero_Pick_Disable_Picking()
+    InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
     InitTrig_Test_force_upg_saiyan_saga()
@@ -6244,9 +6555,6 @@ function InitCustomTriggers()
     InitTrig_Saga_Countdown()
     InitTrig_Saga_Completion_Message()
     InitTrig_Saga_Stat_Reward()
-    InitTrig_SS_Raditz_Test()
-    InitTrig_SS_Turles_Test()
-    InitTrig_SS2_Turles_Test_Copy()
     InitTrig_Saiyan_Saga_Init()
     InitTrig_Saiyan_Saga_Activate()
     InitTrig_Saiyan_Saga_Completion()
@@ -6255,27 +6563,27 @@ function InitCustomTriggers()
     InitTrig_Turles_Saga_Activate()
     InitTrig_Turles_Saga_Completion()
     InitTrig_Turles_Saga_VI()
-    InitTrig_Test_super_saiyan_1_to_99_Copy()
-    InitTrig_Test_goku_transformations_Copy()
-    InitTrig_Test_vegeta_transformations()
-    InitTrig_Test_gohan_transformations()
-    InitTrig_Test_goten_transformations()
-    InitTrig_Test_kid_trunks_transformations()
-    InitTrig_Test_future_trunks_transformations()
-    InitTrig_Test_broly_transformations()
-    InitTrig_Test_revert_Copy()
-    InitTrig_Test_goku_meme_transformations()
     InitTrig_show_me_the_ss()
     InitTrig_show_me_the_ss_Copy()
-    InitTrig_Test_goku_apply_sfx_transformations()
-    InitTrig_Test_Apply_super_saiyan_sfx()
     InitTrig_Test_LVL_command()
+    InitTrig_Transformations_Init_Commands()
+    InitTrig_Transformations_Entry_Point()
+    InitTrig_Transformations_Goku()
+    InitTrig_Goku_Meme_Transformations()
+    InitTrig_Transformations_Vegeta()
+    InitTrig_Transformations_Gohan()
+    InitTrig_Transformations_Goten()
+    InitTrig_Transformations_Kid_Trunks()
+    InitTrig_Transformations_Future_Trunks()
+    InitTrig_Transformations_Broly()
+    InitTrig_Transformations_Apply_SFX()
     InitTrig_Test_StatMult_Init()
     InitTrig_Test_Stats_Add_Command()
     InitTrig_Add_Unit_To_StatMult()
     InitTrig_Remove_Unit_From_StatMult()
     InitTrig_Add_To_Base_Stats()
     InitTrig_Set_Stat_Multiplier()
+    InitTrig_Get_Stat_Multiplier()
     InitTrig_Set_Varied_Stat_Multiplier()
     InitTrig_Update_Current_Stats()
     InitTrig_Clear_Stat_Mult_SFX()

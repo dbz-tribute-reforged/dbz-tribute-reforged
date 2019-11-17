@@ -59416,52 +59416,6 @@ STRING 9963
 |cffe60000M|r|cffe20101o|r|cffde0302v|r|cffda0503e|r|cffd60605 |r|cffd20806h|r|cffce0a07e|r|cffca0b09r|r|cffc60d0ae|r|cffc20f0b |r|cffbe110dt|r|cffba120eo|r|cffb6140f |r|cffb31610R|r|cffaf1812e|r|cffab1913s|r|cffa71b14p|r|cffa31d16a|r|cff9f1f17w|r|cff9b2018n|r
 }
 
-STRING 9964
-{
-Default Mode Enabled (Z Fighters vs Evil)
-}
-
-STRING 9965
-{
-All Pick Mode Enabled
-}
-
-STRING 9966
-{
-All Random Mode Enabled
-}
-
-STRING 9967
-{
-Single Draft Mode Enabled
-}
-
-STRING 9968
-{
-Captains Mode Enabled (Under Construction).
-Both sides ban 2 heroes before they can pick.
-}
-
-STRING 9969
-{
-Banning Phase is over. Please select your hero (pick drafting not implemented yet)
-}
-
-STRING 9970
-{
-Pick Time:
-}
-
-STRING 9971
-{
-Hero Picking Finished
-}
-
-STRING 9972
-{
-Game starts in:
-}
-
 STRING 9973
 {
 Upgrading Creeps...
@@ -59485,5 +59439,50 @@ STRING 9976
 STRING 9977
 {
 |cff800000Error: Invalid Destination|r
+}
+
+STRING 9978
+{
+
+}
+
+STRING 9979
+{
+
+}
+
+STRING 9980
+{
+
+}
+
+STRING 9981
+{
+
+}
+
+STRING 9982
+{
+
+}
+
+STRING 9983
+{
+
+}
+
+STRING 9984
+{
+
+}
+
+STRING 9985
+{
+
+}
+
+STRING 9986
+{
+
 }
 
