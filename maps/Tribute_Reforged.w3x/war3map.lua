@@ -2092,6 +2092,13 @@ function Trig_Map_Setup_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AI"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AM"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AD"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AN"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AT"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AW"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0B0"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TempPlayer)
@@ -2197,7 +2204,6 @@ function Trig_Map_Setup_Actions()
     udg_HeroPickSpawnY[udg_TempInt] = GetLocationY(udg_TempLoc)
         RemoveLocation(udg_TempLoc)
     udg_TempInt = (udg_TempInt + 1)
-    TriggerExecute(gg_trg_Transformations_Init_Commands)
 end
 
 function InitTrig_Map_Setup()
@@ -5402,25 +5408,25 @@ function Trig_Transformations_Goten_Actions()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     if (Trig_Transformations_Goten_Func007C()) then
         udg_StatMultReal = 1.00
-        udg_TransformationAbility = FourCC("A0A9")
+        udg_TransformationAbility = FourCC("A0AF")
     else
     end
     if (Trig_Transformations_Goten_Func008C()) then
         udg_StatMultReal = 1.50
-        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationAbility = FourCC("A0AE")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
     if (Trig_Transformations_Goten_Func009C()) then
         udg_StatMultReal = 2.00
-        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationAbility = FourCC("A0AE")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
     if (Trig_Transformations_Goten_Func011C()) then
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AF"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AE"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -6617,6 +6623,7 @@ end
 
 function RunInitializationTriggers()
     ConditionalTriggerExecute(gg_trg_Map_Setup)
+    ConditionalTriggerExecute(gg_trg_Transformations_Init_Commands)
 end
 
 function InitCustomPlayerSlots()
