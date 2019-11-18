@@ -8,18 +8,18 @@ export class TextFrame extends Frame {
     name: string, 
     frameType: string, 
     owner: framehandle = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0),
-    inherits: string = "", 
-    index: number = 0, 
+    inherits: string = "EscMenuLabelTextTemplate", 
+    createContext: number = 0, 
     size: Vector2D, 
     position: FramePosition,
-    public text: TextFrameData
+    text: TextFrameData
   ) {
-    super(name, frameType, owner, inherits, index, size, position);
-    this.setRenderedText();
+    super(name, frameType, owner, inherits, createContext, size, position);
+    this.setRenderedText(text.value);
   }
 
-  public setRenderedText(): this {
-    BlzFrameSetText(this.frameHandle, this.text.value);
+  public setRenderedText(text: string): this {
+    BlzFrameSetText(this.frameHandle, text);
     return this;
   }
   
@@ -27,4 +27,13 @@ export class TextFrame extends Frame {
     return BlzFrameGetText(this.frameHandle);
   }
 
+  public setTextAlignment(verticalAlignment: textaligntype, horizontalAlignment: textaligntype): this {
+    BlzFrameSetTextAlignment(this.frameHandle, verticalAlignment, horizontalAlignment); 
+    return this;
+  }
+
+  public setFont(fileName: string, height: number, flags: number): this {
+    BlzFrameSetFont(this.frameHandle, fileName, height, flags);
+    return this;
+  }
 }

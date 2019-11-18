@@ -12,8 +12,56 @@ export enum Color {
   DarkGreen = "|cFF0F6145",
   Brown = "|cFF4D2903",
   White = "|cFFFFFFFF",
+  Default = "|r",
 }
 
+// seems buggy?
 export function colorize(inputString: string, color: Color): string {
   return color + string + "|r";
+}
+
+export function randomColor(): string {
+  const index = Math.floor(Math.random() * Object.keys(Color).length);
+  let color = Color.Red;
+  switch(index){
+    case 0:
+      color = Color.Red;
+      break;
+    case 1:
+      color = Color.Blue;
+      break;
+    case 2:
+      color = Color.Aqua;
+      break;
+    case 3:
+      color = Color.Purple;
+      break;
+    case 4:
+      color = Color.Yellow;
+      break;
+    case 5:
+      color = Color.Orange;
+      break;
+    case 6:
+      color = Color.Green;
+      break;
+    case 7:
+      color = Color.Pink;
+      break;
+    case 8:
+      color = Color.Grey;
+      break;
+    case 9:
+      color = Color.LightBlue;
+      break;
+    case 10:
+      color = Color.DarkGreen;
+      break;
+    case 11:
+      color = Color.Brown;
+      break;
+    default:
+      color = Color.Default;
+  }
+  return color;
 }
