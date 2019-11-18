@@ -9,7 +9,7 @@ export class Button extends TextFrame {
     name: string, 
     frameType: string, 
     owner: framehandle = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0),
-    inherits: string = "", 
+    inherits: string = "ScriptDialogButton", 
     index: number = 0, 
     size: Vector2D, 
     position: FramePosition,

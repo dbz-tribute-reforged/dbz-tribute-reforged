@@ -1,22 +1,19 @@
-import { Vector2D } from './Vector2D';
-import { FramePosition } from './FramePosition';
-/**
- * Stores what you can't retrieve back from the BlzFrame natives
- */
-export abstract class Frame {
+import { FramePosition } from "./FramePosition";
+import { Vector2D } from "./Vector2D";
+
+// implements frame stuff
+export class SimpleFrame {
   public readonly frameHandle: framehandle;
 
   constructor(
-    public readonly name: string, 
-    public readonly frameType: string, 
-    public readonly owner: framehandle = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0),
-    public readonly inherits: string = "", 
-    public readonly createContext: number = 0, 
-    public size: Vector2D, 
+    frameType: string,
+    owner: framehandle, 
+    createContext: number,
+    public size: Vector2D,
     public position: FramePosition
   ) {
-    this.frameHandle = BlzCreateFrameByType(frameType, name, owner, inherits, createContext);
-    this.setRenderSize(size).setRenderPosition(position).setRenderEnable(false).setRenderEnable(true);
+    this.frameHandle = BlzCreateSimpleFrame(frameType, owner, createContext);
+    this.setRenderSize(size).setRenderPosition(position);
   }
   
   public setRenderSize(size: Vector2D): this {
@@ -58,4 +55,5 @@ export abstract class Frame {
     BlzFrameSetEnable(this.frameHandle, enable);
     return this;
   }
+
 }
