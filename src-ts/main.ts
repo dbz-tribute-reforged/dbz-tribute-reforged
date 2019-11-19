@@ -1,6 +1,7 @@
 import { MapPlayer, Unit } from 'w3ts';
 import { LibraryLoader } from 'war3-library-loader';
 import { CustomUiTest } from './CustomUI/CustomUITest';
+import { CustomPlayerTest } from 'CustomPlayer/CustomPlayerTest';
 
 function tsMain() {
   const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
