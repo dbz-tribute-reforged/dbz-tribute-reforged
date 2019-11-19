@@ -4,15 +4,16 @@ import { Icon } from "Common/Icon";
 import { Tooltip } from "Common/Tooltip";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
+import { PathingCheck } from "Common/PathingCheck";
 
 export class ZanzoDash implements CustomAbility {
   static readonly defaultName = "Zanzo Dash"; 
   static readonly defaultCD = 4; 
   static readonly defaultCostType = CostType.MP; 
   static readonly defaultCostAmount = 25; 
-  static readonly defaultDuration = 21; 
+  static readonly defaultDuration = 25; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultDistance = 30.0;
+  static readonly defaultDistance = 35.0;
   static readonly defaultSfx = "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl";
 
 
@@ -95,7 +96,11 @@ export class ZanzoDash implements CustomAbility {
 
       // if walkable targetCoord
       // probs need a better / actual pathing check
-      if (IsTerrainPathable(targetCoord.x, targetCoord.y, PATHING_TYPE_FLYABILITY)) {
+      if (
+        PathingCheck.IsWalkable(targetCoord) 
+        && 
+        !IsTerrainPathable(targetCoord.x, targetCoord.y, PATHING_TYPE_WALKABILITY) 
+      ) {
         SetUnitX(this.abilityData.caster.unit, targetCoord.x);
         SetUnitY(this.abilityData.caster.unit, targetCoord.y);
       }

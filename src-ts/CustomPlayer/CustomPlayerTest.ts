@@ -66,18 +66,21 @@ export function CustomPlayerTest() {
   TriggerAddAction(zanzoActivate, () => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
-    if (customHero) {
-      customHero.useAbility(
-        "Zanzo Dash",
-        new CustomAbilityData(
-          customHero,
-          player,
-          undefined,
-          undefined,
-          customPlayers[playerId].mouseData,
-        ),
-      );
-    }
+    const zanzoGroup = GetUnitsSelectedAll(GetTriggerPlayer());
+    ForGroup(zanzoGroup, () => {
+      const customHero = customPlayers[playerId].getCustomHero(GetEnumUnit());
+      if (customHero) {
+        customHero.useAbility(
+          "Zanzo Dash",
+          new CustomAbilityData(
+            customHero,
+            player,
+            undefined,
+            undefined,
+            customPlayers[playerId].mouseData,
+          ),
+        );
+      }
+    })
   });
 }
