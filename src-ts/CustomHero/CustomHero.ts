@@ -1,6 +1,7 @@
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 import { ZanzoDash } from "CustomAbility/ZanzoDash";
 import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
+import { BlueHurricane } from "CustomAbility/BlueHurricane";
 
 export class CustomHero {
   public abilities: CustomAbilityManager;
@@ -11,6 +12,7 @@ export class CustomHero {
     this.abilities = new CustomAbilityManager(
       [
         new ZanzoDash(),
+        new BlueHurricane(),
       ]
     )
   }

@@ -13,12 +13,19 @@ export class ZanzoDash implements CustomAbility {
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 25; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultDistance = 35.0;
+  static readonly defaultDistance = 40.0;
   static readonly defaultSfx = "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl";
+  static readonly defaultIcon = new Icon(
+    "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+    "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp"
+  );
+  static readonly defaultTooltip = new Tooltip(
+    "Zanzo Dash",
+    "Does a contiguous dash to your mouse cursor" + 
+    "|nCost: " + ZanzoDash.defaultCostAmount + " " + ZanzoDash.defaultCostType + 
+    "|nCD: " + ZanzoDash.defaultCD,
+  );
 
-
-  public icon: Icon;
-  public tooltip: Tooltip;
   protected currentTick: number;
   protected abilityData: CustomAbilityData | undefined;
   protected abilityTimer: timer;
@@ -33,11 +40,9 @@ export class ZanzoDash implements CustomAbility {
     public updateRate: number = ZanzoDash.defaultUpdateRate,
     public distance: number = ZanzoDash.defaultDistance,
     public sfx: string = ZanzoDash.defaultSfx,
+    public icon: Icon = ZanzoDash.defaultIcon,
+    public tooltip: Tooltip = ZanzoDash.defaultTooltip,
   ) {
-    this.icon = new Icon(
-      "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
-      "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp"
-    );
     this.tooltip = new Tooltip(
       "Zanzo Dash",
       "Does a contiguous dash to your mouse cursor" + "|nCost: " + costAmount + " " + costType + "|nCD: " + maxCd,
@@ -49,7 +54,7 @@ export class ZanzoDash implements CustomAbility {
   public canCastAbility(data: CustomAbilityData): boolean {
     if (this.currentCd > 0) return false;
     if (this.currentTick > 0) return false;
-    if (!data.mouseData) return false;
+    if (!data || !data.caster || !data.mouseData) return false;
     if (
         (this.costType == CostType.HP && GetUnitState(data.caster.unit, UNIT_STATE_LIFE) < this.costAmount)
         ||
@@ -94,8 +99,6 @@ export class ZanzoDash implements CustomAbility {
         RemoveLocation(sfxLoc);
       }
 
-      // if walkable targetCoord
-      // probs need a better / actual pathing check
       if (
         PathingCheck.IsWalkable(targetCoord) 
         && 

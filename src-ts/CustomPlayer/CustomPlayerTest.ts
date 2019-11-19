@@ -83,4 +83,31 @@ export function CustomPlayerTest() {
       }
     })
   });
+
+  // zanzo activation trigger
+  // tied to shift+z for now
+  const blueHurricaneActivate = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    BlzTriggerRegisterPlayerKeyEvent(blueHurricaneActivate, Player(i), OSKEY_B, 1, true);
+	}
+  TriggerAddAction(blueHurricaneActivate, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    const zanzoGroup = GetUnitsSelectedAll(GetTriggerPlayer());
+    ForGroup(zanzoGroup, () => {
+      const customHero = customPlayers[playerId].getCustomHero(GetEnumUnit());
+      if (customHero) {
+        customHero.useAbility(
+          "Blue Hurricane",
+          new CustomAbilityData(
+            customHero,
+            player,
+            undefined,
+            undefined,
+            undefined,
+          ),
+        );
+      }
+    })
+  });
 }
