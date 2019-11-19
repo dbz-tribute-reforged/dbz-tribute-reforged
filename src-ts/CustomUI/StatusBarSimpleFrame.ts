@@ -1,5 +1,5 @@
 import { TexturedSimpleFrame } from "./TexturedSimpleFrame";
-import { Vector2D } from "./Vector2D";
+import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
 import { StatusBarData } from "./StatusBarData";
 import { TextureData } from "./TextureData";

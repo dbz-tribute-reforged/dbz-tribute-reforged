@@ -1,5 +1,5 @@
 import { Frame } from "./Frame";
-import { Vector2D } from "./Vector2D";
+import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
 import { SliderData } from "./SliderData";
 

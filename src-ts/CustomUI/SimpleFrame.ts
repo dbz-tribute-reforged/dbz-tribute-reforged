@@ -1,5 +1,5 @@
 import { FramePosition } from "./FramePosition";
-import { Vector2D } from "./Vector2D";
+import { Vector2D } from "Common/Vector2D";
 
 // implements frame stuff
 export class SimpleFrame {

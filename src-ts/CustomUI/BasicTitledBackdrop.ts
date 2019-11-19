@@ -1,8 +1,7 @@
 import { Backdrop } from './Backdrop';
-import { Vector2D } from './Vector2D';
+import { Vector2D } from 'Common/Vector2D';
 import { FramePosition } from './FramePosition';
 import { TextFrame } from './TextFrame';
-import { TextFrameData } from './TextFrameData';
 import { BasicTextFrame } from './BasicTextFrame';
 
 export class BasicTitledBackdrop extends Backdrop {

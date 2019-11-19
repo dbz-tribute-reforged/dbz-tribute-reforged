@@ -6,6 +6,8 @@ function tsMain() {
   const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
   unit.name = "TypeScript!";
 
+
+  CustomPlayerTest();
   CustomUiTest();
 }
 

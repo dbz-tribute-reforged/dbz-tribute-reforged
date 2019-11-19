@@ -1,6 +1,6 @@
 import { Backdrop } from "./Backdrop";
 import { Button } from "./Button";
-import { Vector2D } from "./Vector2D";
+import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
 import { BasicTitledBackdrop } from "./BasicTitledBackdrop";
 

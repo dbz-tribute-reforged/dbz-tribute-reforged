@@ -1,6 +1,6 @@
 import { TextFrame } from './TextFrame';
 import { FramePosition } from './FramePosition';
-import { Vector2D } from './Vector2D';
+import { Vector2D } from 'Common/Vector2D';
 import { TextFrameData } from './TextFrameData';
 import { Backdrop } from './Backdrop';
 import { Button } from './Button';
@@ -332,5 +332,4 @@ export function CustomUiTest() {
 		BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
 		BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + I2S(level));
 	});
-
 }
