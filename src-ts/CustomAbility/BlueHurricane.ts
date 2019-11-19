@@ -13,7 +13,7 @@ export class BlueHurricane implements CustomAbility {
   static readonly defaultCostAmount = 120; 
   static readonly defaultDuration = 250; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultDamageAmount = 0.03;
+  static readonly defaultDamageAmount = 0.06;
   static readonly defaultDamageAttribute = bj_HEROSTAT_AGI;
   static readonly defaultAttackType = ATTACK_TYPE_MELEE;
   static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
