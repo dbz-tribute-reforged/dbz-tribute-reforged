@@ -1,4 +1,5 @@
 # DBZ Tribute Reforged
+[![Build Status](https://travis-ci.com/ttay24/dbz-tribute-reforged.svg?branch=develop)](https://travis-ci.com/ttay24/dbz-tribute-reforged)
  A TypeScript repository for the Warcraft III map DBZ Tribute Reforged.
 
 Based on the typescript template by Trigger Happy. Setup guide for wc3 TS stuff & other information on the [wiki](https://github.com/triggerhappy187/wc3-ts-template/wiki).
