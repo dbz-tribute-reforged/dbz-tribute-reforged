@@ -6,7 +6,7 @@ node_js:
 branches:
   only:
   - master
-  - /^feature\/.*/
+  - develop
 
 script: npm run build
 
