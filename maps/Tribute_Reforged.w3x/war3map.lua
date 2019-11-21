@@ -2085,6 +2085,7 @@ function Trig_Map_Setup_Actions()
     udg_TempGroup = GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(PLAYER_NEUTRAL_AGGRESSIVE))
     udg_CreepMaxNum = 0
     ForGroupBJ(udg_TempGroup, Trig_Map_Setup_Func004A)
+        DestroyGroup(udg_TempGroup)
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -2141,11 +2142,10 @@ function Trig_Map_Setup_Actions()
     udg_PlayerColorString[8] = "|cffff8080"
     udg_PlayerColorString[9] = "|cff808080"
     udg_PlayerColorString[10] = "|cff8080ff"
-        DestroyGroup(udg_TempGroup)
     udg_CP_Rect = Rect(0, 0, 128.00, 128.00)
         udg_CP_Item = CreateItem('wtlg', 0, 0)
     SetItemVisibleBJ(false, udg_CP_Item)
-    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    udg_CP_HiddenItemsIndex = 0
     udg_PlayerSpawnX[1] = 18103.00
     udg_PlayerSpawnY[1] = -4482.00
     udg_PlayerSpawnX[2] = -3312.00

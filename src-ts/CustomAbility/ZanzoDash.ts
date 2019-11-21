@@ -22,7 +22,7 @@ export class ZanzoDash implements CustomAbility {
   );
   static readonly defaultTooltip = new Tooltip(
     "Zanzo Dash",
-    "Does a contiguous dash to your mouse cursor" + 
+    "Dashes towards your mouse cursor" + 
     "|nCost: " + ZanzoDash.defaultCostAmount + " " + ZanzoDash.defaultCostType + 
     "|nCD: " + ZanzoDash.defaultCD,
   );
