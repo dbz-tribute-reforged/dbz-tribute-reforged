@@ -14,7 +14,7 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 100; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultDamageAmount = 0.5;
+  static readonly defaultDamageAmount = 1.0;
   static readonly defaultDamageAttribute = bj_HEROSTAT_AGI;
   static readonly defaultAttackType = ATTACK_TYPE_HERO;
   static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
@@ -25,6 +25,7 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultDelayBetweenDamageTicks = 3;
   static readonly defaultAnimation = "attack";
   static readonly defaultSfx = "BladeBeamFinal.mdl";
+  static readonly defaultSfxHeight = 75;
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
   static readonly defaultIcon = new Icon(
     "ReplaceableTextures\\CommandButtons\\BTNArcaniteMelee.blp",
@@ -64,6 +65,7 @@ export class ShiningSwordAttack implements CustomAbility {
     public delayBetweenDamageTicks: number = ShiningSwordAttack.defaultDelayBetweenDamageTicks,
     public animation: string = ShiningSwordAttack.defaultAnimation,
     public sfx: string = ShiningSwordAttack.defaultSfx,
+    public sfxHeight: number = ShiningSwordAttack.defaultSfxHeight,
     public attachedSfxName: string = ShiningSwordAttack.defaultAttachedSfxName,
     public icon: Icon = ShiningSwordAttack.defaultIcon,
     public tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
@@ -122,6 +124,7 @@ export class ShiningSwordAttack implements CustomAbility {
         let sfxLoc = Location(middleCoord.x, middleCoord.y);
         let slash = AddSpecialEffectLoc(this.sfx, sfxLoc);
         BlzSetSpecialEffectScale(slash, 1.5);
+        BlzSetSpecialEffectHeight(slash, BlzGetUnitZ(this.abilityData.caster.unit) + this.sfxHeight);
         BlzSetSpecialEffectYaw(slash, sfxAngle * CoordMath.degreesToRadians);
         DestroyEffect(slash);
         RemoveLocation(sfxLoc);
