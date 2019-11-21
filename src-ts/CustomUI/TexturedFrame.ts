@@ -1,9 +1,9 @@
 import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
-import { Frame } from "./Frame";
+import { TypedFrame } from "./TypedFrame";
 import { TextureData } from "./TextureData";
 
-export class TexturedFrame extends Frame {
+export class TexturedFrame extends TypedFrame {
   constructor(
     name: string, 
     frameType: string, 
@@ -16,10 +16,5 @@ export class TexturedFrame extends Frame {
   ) {
     super(name, frameType, owner, inherits, createContext, size, position);
     this.setTexture(texture);
-  }
-  
-  public setTexture(texture: TextureData): this {
-    BlzFrameSetTexture(this.frameHandle, texture.fileName, texture.flag, texture.blend);
-    return this; 
   }
 }

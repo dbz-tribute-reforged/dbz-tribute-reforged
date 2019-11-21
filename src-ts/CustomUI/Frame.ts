@@ -1,5 +1,8 @@
 import { Vector2D } from 'Common/Vector2D';
 import { FramePosition } from './FramePosition';
+import { TextureData } from './TextureData';
+import { StatusBarData } from './StatusBarData';
+import { SliderData } from './SliderData';
 /**
  * Stores what you can't retrieve back from the BlzFrame natives
  */
@@ -15,11 +18,19 @@ export abstract class Frame {
     public size: Vector2D, 
     public position: FramePosition
   ) {
-    this.frameHandle = BlzCreateFrameByType(frameType, name, owner, inherits, createContext);
-    this.setRenderSize(size).setRenderPosition(position).setRenderEnable(false).setRenderEnable(true);
+    this.frameHandle = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0);
   }
   
+  public setup(): this {
+    return this.
+      setRenderSize(this.size).
+      setRenderPosition(this.position).
+      setRenderEnable(false).
+      setRenderEnable(true);
+  }
+
   public setRenderSize(size: Vector2D): this {
+    this.size = size;
     BlzFrameSetSize(this.frameHandle, size.x, size.y)
     return this;
   }
@@ -30,6 +41,7 @@ export abstract class Frame {
   }
 
   public setRenderPosition(position: FramePosition): this {
+    this.position = position;
     BlzFrameSetPoint(
       this.frameHandle, 
       position.sourcePoint, 
@@ -57,5 +69,44 @@ export abstract class Frame {
   public setRenderEnable(enable: boolean): this {
     BlzFrameSetEnable(this.frameHandle, enable);
     return this;
+  }
+
+  public setRenderedText(text: string): this {
+    BlzFrameSetText(this.frameHandle, text);
+    return this;
+  }
+  
+  public getRenderedText(): string {
+    return BlzFrameGetText(this.frameHandle);
+  }
+
+  public setTextAlignment(verticalAlignment: textaligntype, horizontalAlignment: textaligntype): this {
+    BlzFrameSetTextAlignment(this.frameHandle, verticalAlignment, horizontalAlignment); 
+    return this;
+  }
+
+  public setFont(fileName: string, height: number, flags: number): this {
+    BlzFrameSetFont(this.frameHandle, fileName, height, flags);
+    return this;
+  }
+
+  public setValue(value: number): this {
+    BlzFrameSetValue(this.frameHandle, value);
+    return this;
+  }
+
+  public setMinMaxValue(statusBar: StatusBarData | SliderData): this  {
+    BlzFrameSetMinMaxValue(this.frameHandle, statusBar.minValue, statusBar.maxValue);
+    return this;
+  }
+
+  public setStepSize(stepSize: number): this  {
+    BlzFrameSetStepSize(this.frameHandle, stepSize);
+    return this;
+  }
+  
+  public setTexture(texture: TextureData): this {
+    BlzFrameSetTexture(this.frameHandle, texture.fileName, texture.flag, texture.blend);
+    return this; 
   }
 }

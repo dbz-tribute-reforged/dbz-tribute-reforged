@@ -16,9 +16,4 @@ export class TexturedSimpleFrame extends SimpleFrame {
     super(frameType, owner, createContext, size, position);
     texture?this.setTexture(texture):texture;
   }
-  
-  public setTexture(texture: TextureData): this {
-    BlzFrameSetTexture(this.frameHandle, texture.fileName, texture.flag, texture.blend);
-    return this; 
-  }
 }

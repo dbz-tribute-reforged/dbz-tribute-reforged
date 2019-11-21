@@ -4,7 +4,8 @@ import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {
   protected heroes: CustomHero[];
-  public currentlySelectedUnit: unit;
+  protected currentlySelectedUnit: unit;
+  protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;
 
   constructor(
@@ -14,6 +15,7 @@ export class CustomPlayer {
   ) {
     this.heroes = [];
     this.currentlySelectedUnit = GetEnumUnit();
+    this.lastSelectedOwnedHero = GetEnumUnit();
     this.mouseData = new Vector2D(0, 0);
   }
 
@@ -48,5 +50,20 @@ export class CustomPlayer {
 
   public getCurrentlySelectedCustomHero(): CustomHero | undefined {
     return this.heroes.find(e => e.unit == this.currentlySelectedUnit);
+  }
+
+  public getLastSelectedOwnedCustomHero(): CustomHero | undefined {
+    return this.heroes.find(e => e.unit == this.lastSelectedOwnedHero);
+  }
+
+  get selectedUnit(): unit {
+    return this.currentlySelectedUnit;
+  }
+
+  set selectedUnit(unit: unit) {
+    this.currentlySelectedUnit = unit;
+    if (this.getCustomHero(unit) != undefined) {
+      this.lastSelectedOwnedHero = unit;;
+    }
   }
 }

@@ -14,8 +14,11 @@ export interface CustomAbility {
   maxCd: number;
   costType: CostType;
   costAmount: number;
+  updateRate: number;
   icon: Icon;
   tooltip: Tooltip;
+  currentTick: number;
+  abilityTimer: timer;
 
   activate(abilityData: CustomAbilityData): void;
 

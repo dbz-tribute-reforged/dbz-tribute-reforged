@@ -1,0 +1,39 @@
+// -- LOCAL TEMPLATES -------------------------------------------------------
+Frame "BACKDROP" "MyToolTipTextBackgroundTemplate" {
+        DecorateFileNames, //Look-Up Names in some String table (for example gameinterface)
+        BackdropTileBackground, //Tile mode enabled
+        BackdropBackground  "ToolTipBackground", //BackgroundFile
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.008, //higher numbers make the corners bigger.
+        BackdropBackgroundInsets 0.0022 0.0022 0.0022 0.0022, //makes the background smaller, from the outside.
+        BackdropEdgeFile  "ToolTipBorder", //the border File
+        BackdropBlendAll,
+}
+// -- Frames -------------------------------------------------------
+Frame "BACKDROP" "MyToolTipText" INHERITS "MyToolTipTextBackgroundTemplate" {
+   UseActiveContext,
+ 
+   Frame "TEXT" "MyToolTipTextTitle" {
+       UseActiveContext,
+       DecorateFileNames,
+       SetPoint TOPLEFT, "MyToolTipText", TOPLEFT, 0.005, -0.005, //Positionate "MyToolTipTextSimpleTitle"'s TOPLEFT to "MyToolTipText"'s TOPLEFT with an offset
+       SetPoint TOPRIGHT, "MyToolTipText", TOPRIGHT, -0.005, -0.005,
+       FontFlags "FIXEDSIZE",
+       FrameFont "MasterFont", 0.013, "",
+       FontColor 1.0 1.0 1.0 1.0, //Red Green Blue Alpha 0.0 to 1.0
+       FontShadowColor 0.0 0.0 0.0 0.9,
+       FontShadowOffset 0.001 -0.001,
+   }
+ 
+   Frame "TEXT" "MyToolTipTextValue" {
+       UseActiveContext,
+       DecorateFileNames,
+       SetPoint TOPLEFT, "MyToolTipText", TOPLEFT, 0.005, -0.02,
+       SetPoint BOTTOMRIGHT,  "MyToolTipText", BOTTOMRIGHT, -0.01, 0.005,
+       FontFlags "FIXEDSIZE",
+       FrameFont "MasterFont", 0.011, "",
+       FontColor 1.0 1.0 1.0 1.0,
+       FontShadowColor 0.0 0.0 0.0 0.9,
+       FontShadowOffset 0.001 -0.001,
+   }
+}

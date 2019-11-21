@@ -16,6 +16,5 @@ export class LevelBar extends StatusBarSimpleFrame {
     texture?: TextureData,
   ) {
     super(LevelBar.frameType, owner, createContext, size, position, statusBar, texture);
-    this.setValue(statusBar.value);
   }
 }

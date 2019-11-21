@@ -17,6 +17,13 @@ import { TextureData } from './TextureData';
 import { HPBar } from './HPBar';
 import { MPBar } from './MPBar';
 import { LevelBar } from './LevelBar';
+import { ToolTipFrame } from './TooltipFrame';
+import { StatusBarSimpleFrame } from './StatusBarSimpleFrame';
+import { AbilityButton } from './AbilityButton';
+import { Icon } from 'Common/Icon';
+import { AbilityButtonHotbar } from './AbilityButtonHotbar';
+import { FrameHelper } from 'Common/FrameHelper';
+import { Constants } from 'Common/Constants';
 
 
 // need to add promise + error catching
@@ -30,17 +37,12 @@ function LoadToc(path: string): boolean {
 	return loaded;
 }
 
-function loseFocusFromTriggeringFrame() {
-	BlzFrameSetEnable(BlzGetTriggerFrame(), false);
-	BlzFrameSetEnable(BlzGetTriggerFrame(), true);
-}
-
 const smallButtonSize = new Vector2D(0.085, 0.021);
 const defaultSliderSize = new Vector2D(0.139, 0.012);
+const defaultToolTipSize = new Vector2D(0.287, 0.1);
+
 
 // perhaps a map of all ui elements, instead of these globals
-let helloWorldBackdrop: Backdrop;
-let catches: number = 0;
 let mainMenu: ButtonMenu;
 const buttonMenus: Map<String, ButtonMenu> = new Map();
 
@@ -56,10 +58,12 @@ export function CustomUiTest() {
 	BJDebugMsg("Testing ui ... ");
 
 	let loaded = LoadToc("CustomUI\\templates.toc");
+	
 
 	const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0);
 	const questButtonHandle = BlzGetFrameByName("UpperButtonBarQuestsButton", 0);
 	const chatButtonHandle = BlzGetFrameByName("UpperButtonBarChatButton", 0);
+	const defaultToolTipPosition = new FramePosition(FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOMRIGHT, 0, 0.1639);
 	
 	/*
 		constant textaligntype TEXT_JUSTIFY_TOP = ConvertTextAlignType(0)
@@ -72,6 +76,7 @@ export function CustomUiTest() {
 		3, 4, 5 are for textaligntype horz
 	*/
 
+	/*
 	BJDebugMsg("Setting up button3");
 	const helloButton3 = new Button(
 		"helloWorldButton3",
@@ -91,10 +96,9 @@ export function CustomUiTest() {
 	t3.addAction(() => {
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			moveButton3Around();
-			loseFocusFromTriggeringFrame();
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
-
 
 	BJDebugMsg("Setting up button4 trigger");
 	const t4 = new FrameTrigger();
@@ -102,9 +106,10 @@ export function CustomUiTest() {
 	t4.addAction(() => {
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			moveButton3Around();
-			loseFocusFromTriggeringFrame();
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
+	*/
 	
 	BJDebugMsg("making main menu");
 	mainMenu = new ButtonMenu(
@@ -128,11 +133,11 @@ export function CustomUiTest() {
 	);
 
 	const mt = new FrameTrigger();
-	mt.registerFrameEvent(BlzGetFrameByName("mainMenuToggleButton", 0), FRAMEEVENT_CONTROL_CLICK);
+	mt.registerFrameEvent(mainMenuToggleButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
 	mt.addAction(() => {
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			BlzFrameSetVisible(mainMenu.frameHandle, !BlzFrameIsVisible(mainMenu.frameHandle));
-			loseFocusFromTriggeringFrame();
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
 
@@ -184,7 +189,7 @@ export function CustomUiTest() {
 		st.addAction(() => {
 			if (GetTriggerPlayer() == GetLocalPlayer()) {
 				BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
-				loseFocusFromTriggeringFrame();
+				FrameHelper.loseFocusFromTriggeringFrame();
 			}
 		});
 
@@ -193,7 +198,7 @@ export function CustomUiTest() {
 		rt.addAction(() => {
 			if (GetTriggerPlayer() == GetLocalPlayer()) {
 				BlzFrameSetVisible(subMenu.frameHandle, !BlzFrameIsVisible(subMenu.frameHandle));
-				loseFocusFromTriggeringFrame();
+				FrameHelper.loseFocusFromTriggeringFrame();
 			}
 		});
 
@@ -247,9 +252,9 @@ export function CustomUiTest() {
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			BlzFrameSetText(camDistanceSlider.title.frameHandle, "Distance: " + Color.White + value);
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
-	distanceTrigger.addAction(loseFocusFromTriggeringFrame);
 
 	const angleTrigger = new FrameTrigger();
 	angleTrigger.registerFrameEvent(BlzGetFrameByName("camAngleSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
@@ -263,9 +268,9 @@ export function CustomUiTest() {
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			BlzFrameSetText(camAngleSlider.title.frameHandle, "Angle: " + Color.White + (value - camAngleSlider.slider.minValue));
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
-	angleTrigger.addAction(loseFocusFromTriggeringFrame);
 
 	const rotationTrigger = new FrameTrigger();
 	rotationTrigger.registerFrameEvent(BlzGetFrameByName("camRotationSlider", 0), FRAMEEVENT_SLIDER_VALUE_CHANGED);
@@ -279,9 +284,9 @@ export function CustomUiTest() {
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
 			BlzFrameSetText(camRotationSlider.title.frameHandle, "Rotation: " + Color.White + (value - camRotationSlider.slider.minValue));
+			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
-	rotationTrigger.addAction(loseFocusFromTriggeringFrame);
 
 	// status bars
 	BJDebugMsg("Setting up status bars");
@@ -309,6 +314,14 @@ export function CustomUiTest() {
 		new StatusBarData(0, 0, 100)
 	)
 
+  BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), 0);
+  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
+
+	/*
 	let playerSelectedUnit: unit[] = [];
 	let selectAUnitTrigger = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -327,9 +340,136 @@ export function CustomUiTest() {
 		const level = GetUnitLevel(unit);
 		BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
 		BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
-		BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.floor(level*0.1));
+		BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, Math.floor(level*0.2)));
 		BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
 		BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
 		BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + I2S(level));
 	});
+	*/
+
+	/*
+	const boxTest2 = BlzCreateFrame("MyToolTipText", grandpa, 0, 1);
+	BlzFrameSetText(BlzGetFrameByName("MyToolTipTextTitle", 1), "Title Here");
+	BlzFrameSetText(BlzGetFrameByName("MyToolTipTextValue", 1), "Value goes here");
+	BlzFrameSetPoint(boxTest2, FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_RIGHT, -0.01, 0.1);
+	BlzFrameSetSize(boxTest2, 0.23, 0.1);
+	*/
+	/*
+	const tooltipTest = new ToolTipFrame(
+		"tooltipTest",
+		grandpa,
+		0,
+		defaultToolTipSize,
+		defaultToolTipPosition,
+		"01234567890123456789012345678901234567890123456789012345678901234567890123456780", 
+		"---------|n012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",
+	);
+	*/
+	
+	/*
+	const abilButton = new StatusBarSimpleFrame(
+		"MyAbilityIconBar", 
+		grandpa,
+		0,
+		new Vector2D(0.1, 0.1),
+		new FramePosition(FRAMEPOINT_CENTER, grandpa, FRAMEPOINT_CENTER, 0.1, 0.1),
+		new StatusBarData(25, 0, 100),
+	);  
+	BlzFrameSetTexture(
+		BlzGetFrameByName("MyAbilityIconBarBorder", 0), 
+		"CustomUI\\IconBorder.blp", 
+		0, 
+		true
+	);
+	*/
+
+/* 	
+	BlzFrameSetTexture(
+		BlzGetFrameByName("MyAbilityIconBarBackground", 0), 
+		"ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHeroBloodElfPrince.blp", 
+		0, 
+		true
+	);
+ */
+	
+ /*
+	const abilityButton = new AbilityButton(
+		"abilityButtonTest",
+		grandpa, 
+		0,
+		new Vector2D(0.05, 0.05), 
+		new FramePosition(FRAMEPOINT_CENTER, grandpa, FRAMEPOINT_CENTER, 0, 0), 
+		new Icon(),
+		"An ability test",
+		"lots of stuff this ability will doo we doo"
+	);
+	
+	const abilityButtonTrigger = new FrameTrigger();
+	abilityButtonTrigger.registerFrameEvent(abilityButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
+	abilityButtonTrigger.addAction(() => {
+		if (GetTriggerPlayer() == GetLocalPlayer()) {
+			BlzFrameSetValue(BlzGetFrameByName("MyAbilityIconBar", 0), Math.random() * 100);
+			BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", 0), Math.random() * 10 + "s");
+		}
+	});
+	abilityButtonTrigger.addAction(loseFocusFromTriggeringFrame);
+	*/
+	const abilityHotBar = new AbilityButtonHotbar(
+		"abilityButtonHotBar", 
+		grandpa,
+		0,
+		new Vector2D(0.4, 0.04),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0.005),
+	)
+	
+	for (let i = 0; i < Constants.maxSubAbilities; ++i) {
+		const abilityButton = new AbilityButton(
+			"abilityButton" + i,
+			abilityHotBar.frameHandle, 
+			i,
+			new Vector2D(0.04, 0.04), 
+			new FramePosition(FRAMEPOINT_CENTER, grandpa, FRAMEPOINT_CENTER, i*0.04, 0), 
+			new Icon(),
+			"No Ability",
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"+
+			"I have no ability so I must scream.|n"
+		);
+
+		const abilityButtonTrigger = new FrameTrigger();
+		abilityButtonTrigger.registerFrameEvent(abilityButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
+		abilityButtonTrigger.addAction(() => {
+			if (GetTriggerPlayer() == GetLocalPlayer()) {
+				FrameHelper.loseFocusFromTriggeringFrame();
+			}
+		});
+		
+		BlzFrameSetText(BlzGetFrameByName("MyAbilitIconBarText", i), "");
+
+		abilityHotBar.addButton(abilityButton);
+	}
+
+	abilityHotBar.autoAlignButtonPositions();
+
+
+	const hideTrig = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "iseedeadui", true);
+	}
+	TriggerAddAction(hideTrig, () => {
+		if (GetLocalPlayer() == GetTriggerPlayer()) {
+			BlzHideOriginFrames(true);
+			BlzFrameSetAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0), grandpa);
+			// let frame = BlzGetFrameByName("ConsoleUI", 0);
+			// BlzFrameSetAllPoints(frame, grandpa);
+			// BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
+			let rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
+			BlzFrameSetVisible(rm, false);
+		}
+	});
+
 }
