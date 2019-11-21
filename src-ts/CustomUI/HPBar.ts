@@ -16,6 +16,5 @@ export class HPBar extends StatusBarSimpleFrame {
     texture?: TextureData,
   ) {
     super(HPBar.frameType, owner, createContext, size, position, statusBar, texture);
-    this.setValue(statusBar.value);
   }
 }

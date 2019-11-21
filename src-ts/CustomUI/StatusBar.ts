@@ -4,7 +4,6 @@ import { StatusBarData } from "./StatusBarData";
 import { TexturedFrame } from "./TexturedFrame";
 import { TextureData } from "./TextureData";
 
-// implements value, minmaxvalue
 export class StatusBar extends TexturedFrame {
 
   constructor(
@@ -19,17 +18,7 @@ export class StatusBar extends TexturedFrame {
     public statusBar: StatusBarData,
   ) {
     super(name, frameType, owner, inherits, createContext, size, position, texture);
-    this.setMinMaxValue().setValue(statusBar.value).setTexture(texture);
-  }
-
-  setValue(value: number): this {
-    BlzFrameSetValue(this.frameHandle, value);
-    return this;
-  }
-
-  setMinMaxValue(): this  {
-    BlzFrameSetMinMaxValue(this.frameHandle, this.statusBar.minValue, this.statusBar.maxValue);
-    return this;
+    this.setMinMaxValue(statusBar).setValue(statusBar.value);
   }
 
 }

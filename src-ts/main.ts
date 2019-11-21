@@ -11,8 +11,8 @@ function tsMain() {
 
   PathingCheck.Init();
   
-  CustomPlayerTest();
   CustomUiTest();
+  CustomPlayerTest();
 }
 
 // Configure libraries

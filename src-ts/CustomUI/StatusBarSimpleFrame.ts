@@ -18,14 +18,4 @@ export class StatusBarSimpleFrame extends TexturedSimpleFrame {
     super(frameType, owner, createContext, size, position);
     this.setValue(statusBar.value);
   }
-
-  setValue(value: number): this {
-    BlzFrameSetValue(this.frameHandle, value);
-    return this;
-  }
-
-  setMinMaxValue(statusBar: StatusBarData): this  {
-    BlzFrameSetMinMaxValue(this.frameHandle, statusBar.minValue, statusBar.maxValue);
-    return this;
-  }
 }

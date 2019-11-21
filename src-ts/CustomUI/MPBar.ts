@@ -16,6 +16,5 @@ export class MPBar extends StatusBarSimpleFrame {
     texture?: TextureData,
   ) {
     super(MPBar.frameType, owner, createContext, size, position, statusBar, texture);
-    this.setValue(statusBar.value);
   }
 }

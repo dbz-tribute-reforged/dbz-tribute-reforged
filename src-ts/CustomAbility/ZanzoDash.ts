@@ -5,6 +5,7 @@ import { Tooltip } from "Common/Tooltip";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
+import { CustomAbilityHelper } from "./CustomAbilityHelper";
 
 export class ZanzoDash implements CustomAbility {
   static readonly defaultName = "Zanzo Dash"; 
@@ -26,9 +27,9 @@ export class ZanzoDash implements CustomAbility {
     "|nCD: " + ZanzoDash.defaultCD,
   );
 
-  protected currentTick: number;
+  public currentTick: number;
+  public abilityTimer: timer;
   protected abilityData: CustomAbilityData | undefined;
-  protected abilityTimer: timer;
 
   constructor(
     public readonly name: string = ZanzoDash.defaultName,
@@ -43,47 +44,21 @@ export class ZanzoDash implements CustomAbility {
     public icon: Icon = ZanzoDash.defaultIcon,
     public tooltip: Tooltip = ZanzoDash.defaultTooltip,
   ) {
-    this.tooltip = new Tooltip(
-      "Zanzo Dash",
-      "Does a contiguous dash to your mouse cursor" + "|nCost: " + costAmount + " " + costType + "|nCD: " + maxCd,
-    );
     this.currentTick = 0;
     this.abilityTimer = CreateTimer();
   }
 
   public canCastAbility(data: CustomAbilityData): boolean {
-    if (this.currentCd > 0) return false;
-    if (this.currentTick > 0) return false;
-    if (!data || !data.caster || !data.mouseData) return false;
-    if (
-        (this.costType == CostType.HP && GetUnitState(data.caster.unit, UNIT_STATE_LIFE) < this.costAmount)
-        ||
-        (this.costType == CostType.MP && GetUnitState(data.caster.unit, UNIT_STATE_MANA) < this.costAmount)
-    ) {
-      return false;
-    }
-    return true;
+    return CustomAbilityHelper.canCast(this, data);
   }
 
-  public takeAbilityCosts(): this {
-    this.currentCd = this.maxCd;
-    if (this.abilityData) {
-      if (this.costType == CostType.HP) {
-        SetUnitState(
-          this.abilityData.caster.unit, 
-          UNIT_STATE_LIFE,
-          GetUnitState(this.abilityData.caster.unit, UNIT_STATE_LIFE) - this.costAmount
-        );
-      } else if (this.costType == CostType.MP) {
-        SetUnitState(
-          this.abilityData.caster.unit, 
-          UNIT_STATE_MANA,
-          GetUnitState(this.abilityData.caster.unit, UNIT_STATE_MANA) - this.costAmount
-        );
-      } else {
-        // stamina
-      }
-    }
+  public takeAbilityCosts(data: CustomAbilityData): this {
+    CustomAbilityHelper.takeCosts(this, data);
+    return this;
+  }
+
+  public updateCd(): this {
+    CustomAbilityHelper.updateCD(this);
     return this;
   }
 
@@ -112,20 +87,11 @@ export class ZanzoDash implements CustomAbility {
     return this;
   }
 
-  public updateCd(): this {
-    if (this.currentCd <= 0) {
-      this.currentTick = 0;
-      PauseTimer(this.abilityTimer);
-    } else {
-      this.currentCd -= this.updateRate;
-    }
-    return this;
-  }
-
   // assume can cast ability
   public activate(data: CustomAbilityData): void {
     this.abilityData = data;
-    this.takeAbilityCosts();
+    this.takeAbilityCosts(data);
+    IssueImmediateOrder(data.caster.unit, "stop");
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
       if (this.currentTick < this.duration) {

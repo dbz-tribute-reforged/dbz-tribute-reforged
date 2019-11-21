@@ -141,3 +141,23 @@ Frame "SIMPLESTATUSBAR" "MyMPBar" {
        }
    }
 }
+
+Frame "SIMPLESTATUSBAR" "MyAbilityIconBar" {
+   Width 0.04,
+   Height 0.04,
+   BarTexture "Replaceabletextures\Teamcolor\Teamcolor10.blp",
+   Layer "BACKGROUND" {
+       Texture "MyAbilityIconBarBackground" {
+           File "Replaceabletextures\Teamcolor\Teamcolor27.blp",
+       }
+   }
+   Frame "SIMPLEFRAME" "MyAbilityIconBarFrame" {
+       SetAllPoints,
+       DecorateFileNames,
+       Layer "ARTWORK" {
+           String "MyAbilityIconBarText" INHERITS "MyBarTextTemplate" {
+               Text "",
+           }
+       }
+   }
+}

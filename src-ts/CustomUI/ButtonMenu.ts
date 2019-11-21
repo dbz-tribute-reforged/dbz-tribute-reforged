@@ -3,6 +3,7 @@ import { Button } from "./Button";
 import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
 import { BasicTitledBackdrop } from "./BasicTitledBackdrop";
+import { ButtonOrganizer } from "Common/ButtonOrganizer";
 
 export class ButtonMenu extends BasicTitledBackdrop{
   static readonly initialButtonXOffset = 0.02;
@@ -38,56 +39,13 @@ export class ButtonMenu extends BasicTitledBackdrop{
   }
 
   public autoAlignButtonPositions(): this {
-    const maxX = this.size.x;
-    let xOffset = 0;
-    let yOffset = 0;
-    let topLeftHandle = this.frameHandle;
-    let leftHandle = topLeftHandle;
-    let isFirstButton = true;
-
-    // will abstract this later, probably
-    for (const [name, button] of this.buttons) {
-      if (isFirstButton) {
-        button.position = new FramePosition(
-          FRAMEPOINT_TOPLEFT, 
-          topLeftHandle, 
-          FRAMEPOINT_TOPLEFT, 
-          ButtonMenu.initialButtonXOffset,
-          ButtonMenu.initialButtonYOffset
-        );
-        isFirstButton = false;
-        topLeftHandle = button.frameHandle;
-        leftHandle = button.frameHandle;
-        xOffset = button.size.x + ButtonMenu.initialButtonXOffset;
-        yOffset = -ButtonMenu.initialButtonYOffset;
-      } else {
-        if (xOffset + button.size.x < maxX) {
-          button.position = new FramePosition(
-            FRAMEPOINT_LEFT, 
-            leftHandle, 
-            FRAMEPOINT_RIGHT, 
-            0,
-            0
-          );
-          leftHandle = button.frameHandle;
-          xOffset += button.size.x;
-          yOffset = button.size.y > yOffset ? button.size.y : yOffset;
-        } else {
-          button.position = new FramePosition(
-            FRAMEPOINT_TOP, 
-            topLeftHandle, 
-            FRAMEPOINT_BOTTOM, 
-            0,
-            0
-          );
-          topLeftHandle = button.frameHandle;
-          leftHandle = button.frameHandle;
-          xOffset = button.size.x + ButtonMenu.initialButtonXOffset;
-          yOffset = button.size.y;
-        }
-      }
-      button.resetRenderPosition().setRenderPosition(button.position);
-    }
+    ButtonOrganizer.autoAlignButtonPositions(
+      this.frameHandle, 
+      this.buttons, 
+      this.size.x, 
+      ButtonMenu.initialButtonXOffset,
+      ButtonMenu.initialButtonYOffset,
+    );
     return this;
   }
 
