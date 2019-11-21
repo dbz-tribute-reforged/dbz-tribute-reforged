@@ -3,7 +3,7 @@ import { Vector2D } from "Common/Vector2D";
 import { FramePosition } from "./FramePosition";
 import { TextFrameData } from "./TextFrameData";
 import { StatusBarSimpleFrame } from "./StatusBarSimpleFrame";
-import { ToolTipFrame } from "./TooltipFrame";
+import { ToolTipFrame } from "./ToolTipFrame";
 import { StatusBarData } from "./StatusBarData";
 import { Icon } from "Common/Icon";
 
