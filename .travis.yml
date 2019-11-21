@@ -1,0 +1,15 @@
+os: windows
+language: node_js
+node_js:
+  - 9
+
+branches:
+  only:
+  - master
+  - develop
+
+script: npm run build
+
+cache:
+  directories:
+    - node_modules
