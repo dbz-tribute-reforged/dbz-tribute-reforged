@@ -173,6 +173,11 @@ export function CustomPlayerTest() {
   addKeyEvent(blueHurricaneActivate, OSKEY_B, 0, true);
   addAbilityAction(blueHurricaneActivate, "Blue Hurricane");
 
+  const shiningSwordActivate = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(shiningSwordActivate, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(shiningSwordActivate, OSKEY_X, 0, true);
+  addAbilityAction(shiningSwordActivate, "Shining Sword Attack");
+
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
