@@ -41,7 +41,6 @@ export class AbilityButton extends Button {
       position, 
       new TextFrameData("", TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
     );
-    BJDebugMsg("my name is: " + name);
 
     this.abilityIconFrame = new StatusBarSimpleFrame(
       AbilityButton.abilityIconFrameType, 

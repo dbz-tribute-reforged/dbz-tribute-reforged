@@ -76,6 +76,7 @@ export function CustomUiTest() {
 		3, 4, 5 are for textaligntype horz
 	*/
 
+	/*
 	BJDebugMsg("Setting up button3");
 	const helloButton3 = new Button(
 		"helloWorldButton3",
@@ -99,7 +100,6 @@ export function CustomUiTest() {
 		}
 	});
 
-
 	BJDebugMsg("Setting up button4 trigger");
 	const t4 = new FrameTrigger();
 	t4.registerFrameEvent(helloButton3.frameHandle, FRAMEEVENT_CONTROL_CLICK);
@@ -109,6 +109,7 @@ export function CustomUiTest() {
 			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
+	*/
 	
 	BJDebugMsg("making main menu");
 	mainMenu = new ButtonMenu(
@@ -313,6 +314,13 @@ export function CustomUiTest() {
 		new StatusBarData(0, 0, 100)
 	)
 
+  BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), 0);
+  BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
+
 	/*
 	let playerSelectedUnit: unit[] = [];
 	let selectAUnitTrigger = CreateTrigger();
@@ -431,18 +439,16 @@ export function CustomUiTest() {
 			"I have no ability so I must scream.|n"+
 			"I have no ability so I must scream.|n"
 		);
-		/*
+
 		const abilityButtonTrigger = new FrameTrigger();
 		abilityButtonTrigger.registerFrameEvent(abilityButton.frameHandle, FRAMEEVENT_CONTROL_CLICK);
 		abilityButtonTrigger.addAction(() => {
 			if (GetTriggerPlayer() == GetLocalPlayer()) {
-				// doesnt understand i
-				BlzFrameSetValue(BlzGetFrameByName("MyAbilityIconBar", 0), 25 + Math.random() * 50);
-				BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", 0), Math.random() * 10 + "s");
+				FrameHelper.loseFocusFromTriggeringFrame();
 			}
 		});
-		abilityButtonTrigger.addAction(loseFocusFromTriggeringFrame);
-		*/
+		
+		BlzFrameSetText(BlzGetFrameByName("MyAbilitIconBarText", i), "");
 
 		abilityHotBar.addButton(abilityButton);
 	}

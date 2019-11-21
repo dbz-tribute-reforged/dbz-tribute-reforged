@@ -40,46 +40,42 @@ export function addKeyEvent(trigger: trigger, oskey: oskeytype, metaKey: number,
   }
 }
 
-export function setAbilityUIToAbility(hero: CustomHero, index: number) {
-  let heroAbility = hero.getAbilityByIndex(index);
-  if (heroAbility) {
-    BlzFrameSetTexture(BlzGetFrameByName("MyAbilityIconBar", index), heroAbility.icon.enabled, 0, true);
-    BlzFrameSetTexture(BlzGetFrameByName("MyAbilityIconBarBackground", index), heroAbility.icon.disabled, 0, true);
-    BlzFrameSetText(BlzGetFrameByName("MyToolTipTextTitle", index), heroAbility.tooltip.title);
-    BlzFrameSetText(BlzGetFrameByName("MyToolTipTextValue", index), heroAbility.tooltip.body);
-    ToolTipOrganizer.resizeToolTipHeightByValue(BlzGetFrameByName("abilityButton" + index + "ToolTip", index), heroAbility.tooltip.body);
-  }
+export function setAbilityUIToAbility(
+  hero: CustomHero, 
+  index: number, 
+  tooltipName: string,
+  tooltipTitle: string,
+  tooltipBody: string,
+  iconEnabled: string,
+  iconDisabled: string,
+) {
+  BlzFrameSetTexture(BlzGetFrameByName("MyAbilityIconBar", index), iconEnabled, 0, true);
+  BlzFrameSetTexture(BlzGetFrameByName("MyAbilityIconBarBackground", index), iconDisabled, 0, true);
+  BlzFrameSetText(BlzGetFrameByName("MyToolTipTextTitle", index), tooltipTitle);
+  BlzFrameSetText(BlzGetFrameByName("MyToolTipTextValue", index), tooltipBody);
+  ToolTipOrganizer.resizeToolTipHeightByValue(BlzGetFrameByName(tooltipName, index), tooltipBody);
 }
 
-export function updateHeroAbilityCD(hero: CustomHero) {
-  for (let i = 0; i < Constants.maxSubAbilities; ++i) {
-    let heroAbility = hero.getAbilityByIndex(i);
-    if (heroAbility) {
-      BlzFrameSetValue(
-        BlzGetFrameByName("MyAbilityIconBar", i), 
-        100 * (1 - heroAbility.currentCd / heroAbility.maxCd)
-      );
-      let cdText = R2SW(heroAbility.currentCd,2,2) + "s"
-      if (heroAbility.currentCd <= 0) {
-        cdText = "";
-      }
-      BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", i), cdText);
-    }
-  }
+export function updateHeroAbilityCD(heroAbility: CustomAbility, index: number, cdText: string, cdValue: number) {
+  BlzFrameSetValue(BlzGetFrameByName("MyAbilityIconBar", index), cdValue);
+  // will cause a desync
+  // BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", index), cdText);
 }
 
-export function updateSelectedUnitBars(unit: unit) {
-  const currentHp = Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_LIFE)));
-  const maxHp = I2S(BlzGetUnitMaxHP(unit));
-  const currentMp = Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA)));
-  const maxMp = I2S(BlzGetUnitMaxMana(unit));
-  const level = GetUnitLevel(unit);
+export function updateSelectedUnitBars(
+  unit: unit,
+  currentHp: string, 
+  maxHp: string, 
+  currentMp: string,
+  maxMp: string,
+  level: string,
+) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, Math.floor(level*0.2)));
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, Math.floor(GetUnitLevel(unit)*0.2)));
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
-  BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + I2S(level));
+  BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
 }
 
 export function CustomPlayerTest() {
@@ -96,8 +92,8 @@ export function CustomPlayerTest() {
   // need better way to add heroes of player to their hero list
   const addHeroToPlayer = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
-	}
+    TriggerRegisterPlayerSelectionEventBJ(addHeroToPlayer, Player(i), true);
+  }
 	TriggerAddAction(addHeroToPlayer, () => {
     const addedHero = GetTriggerUnit();
     const player = GetTriggerPlayer();
@@ -105,12 +101,31 @@ export function CustomPlayerTest() {
     customPlayers[playerId].addHero(addedHero);
     customPlayers[playerId].selectedUnit = GetTriggerUnit();
 
-    if (GetTriggerPlayer() == GetLocalPlayer()) {
-      // register abilities to UI frames
+    for (let i = 0 ; i < Constants.maxSubAbilities; ++i) {
       let customHero = customPlayers[playerId].getLastSelectedOwnedCustomHero();
+      // prevent string table desyncs
+      let tooltipName = "abilityButton" + i + "ToolTip";
       if (customHero) {
-        for (let i = 0 ; i < Constants.maxSubAbilities; ++i) {
-          setAbilityUIToAbility(customHero, i);
+        let heroAbility = customHero.getAbilityByIndex(i);
+        if (heroAbility) {
+          let tooltipTitle = heroAbility.tooltip.title;
+          let tooltipBody = heroAbility.tooltip.body;
+          let iconEnabled = heroAbility.icon.enabled;
+          let iconDisabled = heroAbility.icon.disabled;
+          // BJDebugMsg(tooltipName + " " + tooltipTitle + " " + tooltipBody + " " + iconEnabled + " " + iconDisabled);
+          
+          // register abilities to UI frames
+          if (GetTriggerPlayer() == GetLocalPlayer()) {
+            setAbilityUIToAbility(
+              customHero, 
+              i, 
+              tooltipName, 
+              tooltipTitle, 
+              tooltipBody, 
+              iconEnabled, 
+              iconDisabled
+            );
+          }
         }
       }
     }
@@ -160,15 +175,43 @@ export function CustomPlayerTest() {
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {
-    let playerId = GetPlayerId(GetLocalPlayer());
-    let unit = customPlayers[playerId].selectedUnit;
-    if (unit) {
-      updateSelectedUnitBars(unit);
-      // POSSIBLY LAGGY
-      // might be a bit slow having to constantly update text and icon, but we'll see
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      let playerId = i;
+      let unit = customPlayers[playerId].selectedUnit;
+
+      if (unit) {
+        // make sure strings dont desync
+        const currentHp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_LIFE))));
+        const maxHp = I2S(BlzGetUnitMaxHP(unit));
+        const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
+        const maxMp = I2S(BlzGetUnitMaxMana(unit));
+        const level = I2S(GetUnitLevel(unit));
+
+        if (GetPlayerId(GetLocalPlayer()) == playerId) {
+          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level);
+        }
+      }
+
+      // make sure strings dont desync
       let ownedHero = customPlayers[playerId].getLastSelectedOwnedCustomHero();
       if (ownedHero) {
-        updateHeroAbilityCD(ownedHero);
+        for (let j = 0; j < Constants.maxSubAbilities; ++j) {
+          let heroAbility = ownedHero.getAbilityByIndex(j);
+          if (heroAbility) {
+            let cdText = "";
+            // let abilityCd = heroAbility.currentCd;
+            // if (abilityCd > 0) {
+            //   cdText = R2SW(abilityCd,2,2) + "s";
+            // }
+            // BJDebugMsg(cdText);
+            if (GetPlayerId(GetLocalPlayer()) == playerId) {
+              // POSSIBLY LAGGY
+              // might be a bit slow having to constantly update text and icon, but we'll see
+              let cdValue = 100 * (1 - heroAbility.currentCd / heroAbility.maxCd);
+              updateHeroAbilityCD(heroAbility, j, cdText, cdValue);
+            }
+          }
+        }
       }
     }
   });
