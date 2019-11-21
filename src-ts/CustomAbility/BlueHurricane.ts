@@ -135,7 +135,7 @@ export class BlueHurricane implements CustomAbility {
           // the closer you are, the less you move towards the centre
           const projectionAngle = 
             this.angle + 
-            (90 - this.angle - 3) * closenessRatio + 
+            (105 - this.angle - 3) * closenessRatio + 
             CoordMath.angleBetweenCoords(targetCurrentCoord, currentCoord);
           const projectionDistance = 
             this.distance + 
