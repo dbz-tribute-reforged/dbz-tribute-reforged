@@ -75,7 +75,7 @@ export class ShiningSwordAttack implements CustomAbility {
     this.abilityTimer = CreateTimer();
     this.previousCoord = new Vector2D(0, 0);
     this.nextDamageTick = 0;
-    this.attachedSfx = AddSpecialEffect(attachedSfxName, 0, 0);
+    this.attachedSfx = GetLastCreatedEffectBJ();
   }
 
   public canCastAbility(data: CustomAbilityData): boolean {
@@ -120,16 +120,14 @@ export class ShiningSwordAttack implements CustomAbility {
         
         const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord);
 
-        SetUnitAnimation(this.abilityData.caster.unit, "attack");
-
-        let sfxLoc = Location(middleCoord.x, middleCoord.y);
-        let slash = AddSpecialEffectLoc(this.sfx, sfxLoc);
+        SetUnitAnimation(this.abilityData.caster.unit, this.animation);
+        
+        let slash = AddSpecialEffect(this.sfx, middleCoord.x, middleCoord.y);
         BlzSetSpecialEffectScale(slash, 1.5);
         BlzSetSpecialEffectHeight(slash, BlzGetUnitZ(this.abilityData.caster.unit) + this.sfxHeight);
         BlzSetSpecialEffectColor(slash, 255, 155, 55);
         BlzSetSpecialEffectYaw(slash, sfxAngle * CoordMath.degreesToRadians);
         DestroyEffect(slash);
-        RemoveLocation(sfxLoc);
 
         
         const affectedGroup = CreateGroup();
@@ -185,7 +183,7 @@ export class ShiningSwordAttack implements CustomAbility {
     this.nextDamageTick = 0;
     if (data && data.caster && data.mouseData) {
       // SetUnitAnimationByIndex(data.caster.unit, 1);
-      SetUnitAnimation(data.caster.unit, "attack");
+      SetUnitAnimation(data.caster.unit, this.animation);
 
       let targetCoord = data.mouseData;
       const casterCoord = new Vector2D(GetUnitX(this.abilityData.caster.unit), GetUnitY(this.abilityData.caster.unit));

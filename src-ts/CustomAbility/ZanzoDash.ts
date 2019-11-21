@@ -22,7 +22,7 @@ export class ZanzoDash implements CustomAbility {
     "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp"
   );
   static readonly defaultTooltip = new Tooltip(
-    "Zanzo Dash",
+    ZanzoDash.defaultName,
     "Dashes towards your last right click." + 
     "|nCost: " + ZanzoDash.defaultCostAmount + " " + ZanzoDash.defaultCostType + 
     "|nCD: " + ZanzoDash.defaultCD,

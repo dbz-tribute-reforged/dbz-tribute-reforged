@@ -2,8 +2,11 @@ import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 import { ZanzoDash } from "CustomAbility/ZanzoDash";
 import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { BlueHurricane } from "CustomAbility/BlueHurricane";
-import { CustomAbility } from "CustomAbility/CustomAbility";
+import { CustomAbility, CostType } from "CustomAbility/CustomAbility";
 import { ShiningSwordAttack } from "CustomAbility/ShiningSwordAttack";
+import { Beam } from "CustomAbility/Beam";
+import { BeamPurple } from "CustomAbility/BeamPurple";
+import { BeamRed } from "CustomAbility/BeamRed";
 
 export class CustomHero {
   public abilities: CustomAbilityManager;
@@ -11,11 +14,15 @@ export class CustomHero {
   constructor(
     public readonly unit: unit,
   ) {
+    // remove these defaults for actual heroes, i think
     this.abilities = new CustomAbilityManager(
       [
         new ZanzoDash(),
         new BlueHurricane(),
         new ShiningSwordAttack(),
+        new Beam(),
+        new BeamPurple(),
+        new BeamRed(),
       ]
     )
   }

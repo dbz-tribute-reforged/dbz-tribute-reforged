@@ -29,7 +29,7 @@ export class BlueHurricane implements CustomAbility {
     "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNTornado.blp"
   );
   static readonly defaultTooltip = new Tooltip(
-    "Blue Hurricane",
+    BlueHurricane.defaultName,
     "The fastest attack in the universe!" + 
     "|nDeals " + BlueHurricane.defaultDamageAmount + " * AGI per tick " + 
     "(x2 when closer, and another x2 over the duration of the ability)" + 
