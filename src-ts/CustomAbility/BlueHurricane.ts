@@ -16,7 +16,7 @@ export class BlueHurricane implements CustomAbility {
   static readonly defaultUpdateRate = 0.03;
   static readonly defaultDamageAmount = 0.02;
   static readonly defaultDamageAttribute = bj_HEROSTAT_AGI;
-  static readonly defaultAttackType = ATTACK_TYPE_MELEE;
+  static readonly defaultAttackType = ATTACK_TYPE_HERO;
   static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
   static readonly defaultWeaponType = WEAPON_TYPE_WHOKNOWS;
   static readonly defaultAngle = 70;
@@ -82,11 +82,7 @@ export class BlueHurricane implements CustomAbility {
 
   private isValidTarget(unit: unit) {
     if (this.abilityData) {
-      return (
-        IsUnitEnemy(unit, this.abilityData.casterPlayer) == true
-        &&
-        !BlzIsUnitInvulnerable(unit)
-      )
+      return CustomAbilityHelper.basicIsValidTarget(unit, this.abilityData);
     }
     return false;
   }

@@ -3,6 +3,7 @@ import { ZanzoDash } from "CustomAbility/ZanzoDash";
 import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { BlueHurricane } from "CustomAbility/BlueHurricane";
 import { CustomAbility } from "CustomAbility/CustomAbility";
+import { ShiningSwordAttack } from "CustomAbility/ShiningSwordAttack";
 
 export class CustomHero {
   public abilities: CustomAbilityManager;
@@ -14,6 +15,7 @@ export class CustomHero {
       [
         new ZanzoDash(),
         new BlueHurricane(),
+        new ShiningSwordAttack(),
       ]
     )
   }

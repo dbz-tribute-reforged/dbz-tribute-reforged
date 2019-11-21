@@ -57,4 +57,12 @@ export module CustomAbilityHelper {
       customAbility.currentCd -= customAbility.updateRate;
     }
   }
+  
+  export function basicIsValidTarget(unit: unit, data: CustomAbilityData) {
+    return (
+      IsUnitEnemy(unit, data.casterPlayer) == true
+      &&
+      !BlzIsUnitInvulnerable(unit)
+    );
+  }
 }

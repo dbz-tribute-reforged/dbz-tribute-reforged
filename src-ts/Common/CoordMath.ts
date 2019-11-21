@@ -1,8 +1,8 @@
 import { Vector2D } from "./Vector2D";
 
 export module CoordMath {
-  const degreesToRadians = Math.PI / 180.0;
-  const radiansToDegrees = 180.0 / Math.PI;
+  export const degreesToRadians = Math.PI / 180.0;
+  export const radiansToDegrees = 180.0 / Math.PI;
 
 
   export function angleBetweenCoords(source: Vector2D, target: Vector2D): number {
