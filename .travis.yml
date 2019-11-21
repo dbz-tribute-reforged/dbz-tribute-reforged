@@ -7,10 +7,7 @@ branches:
   - master
   - /^feature\/.*/
 
-install:
-  - npm install
-
-script: echo "npm test temporarily disabled"
+script: npm run build
 
 cache:
   directories:
