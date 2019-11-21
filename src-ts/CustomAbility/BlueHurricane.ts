@@ -94,7 +94,7 @@ export class BlueHurricane implements CustomAbility {
       if (this.currentTick % 75 == 0) {
         let sfxLoc = Location(currentCoord.x, currentCoord.y);
         let tornado = AddSpecialEffectLoc(this.sfx, sfxLoc);
-        BlzSetSpecialEffectScale(tornado, 3.0);
+        BlzSetSpecialEffectScale(tornado, 2.0);
         BlzSetSpecialEffectColor(tornado, 15, 55, 255);
         DestroyEffect(tornado);
         RemoveLocation(sfxLoc);

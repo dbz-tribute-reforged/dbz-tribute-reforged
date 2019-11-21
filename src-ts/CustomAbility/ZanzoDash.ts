@@ -15,14 +15,15 @@ export class ZanzoDash implements CustomAbility {
   static readonly defaultDuration = 25; 
   static readonly defaultUpdateRate = 0.03;
   static readonly defaultDistance = 40.0;
-  static readonly defaultSfx = "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl";
+  // static readonly defaultSfx = "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl";
+  static readonly defaultSfx = "WindCirclefaster.mdl";
   static readonly defaultIcon = new Icon(
     "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
     "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp"
   );
   static readonly defaultTooltip = new Tooltip(
     "Zanzo Dash",
-    "Dashes towards your mouse cursor" + 
+    "Dashes towards your last right click." + 
     "|nCost: " + ZanzoDash.defaultCostAmount + " " + ZanzoDash.defaultCostType + 
     "|nCD: " + ZanzoDash.defaultCD,
   );
@@ -63,9 +64,9 @@ export class ZanzoDash implements CustomAbility {
   }
 
   private performTickAction(): this {
-    if (this.abilityData && this.abilityData.mouseData) {
+    if (this.abilityData && this.abilityData.targetPoint) {
       const currentCoord = new Vector2D(GetUnitX(this.abilityData.caster.unit), GetUnitY(this.abilityData.caster.unit));
-      const direction = CoordMath.angleBetweenCoords(currentCoord, this.abilityData.mouseData);
+      const direction = CoordMath.angleBetweenCoords(currentCoord, this.abilityData.targetPoint);
       const targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, this.distance);
       
       if (this.currentTick == 0) {

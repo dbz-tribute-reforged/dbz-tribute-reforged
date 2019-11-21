@@ -12,7 +12,7 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultCD = 4; 
   static readonly defaultCostType = CostType.MP; 
   static readonly defaultCostAmount = 25; 
-  static readonly defaultDuration = 100; 
+  static readonly defaultDuration = 67; 
   static readonly defaultUpdateRate = 0.03;
   static readonly defaultDamageAmount = 1.0;
   static readonly defaultDamageAttribute = bj_HEROSTAT_AGI;
@@ -20,11 +20,12 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
   static readonly defaultWeaponType = WEAPON_TYPE_WHOKNOWS;
   static readonly defaultMaxDistance = 500.0;
-  static readonly defaultMinDistance = 175.0;
+  static readonly defaultMinDistance = 120.0;
   static readonly defaultAOE = 225;
   static readonly defaultDelayBetweenDamageTicks = 3;
   static readonly defaultAnimation = "attack";
-  static readonly defaultSfx = "BladeBeamFinal.mdl";
+  // static readonly defaultSfx = "BladeBeamFinal.mdl";
+  static readonly defaultSfx = "animeslashfinal.mdl";
   static readonly defaultSfxHeight = 75;
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
   static readonly defaultIcon = new Icon(
@@ -125,6 +126,7 @@ export class ShiningSwordAttack implements CustomAbility {
         let slash = AddSpecialEffectLoc(this.sfx, sfxLoc);
         BlzSetSpecialEffectScale(slash, 1.5);
         BlzSetSpecialEffectHeight(slash, BlzGetUnitZ(this.abilityData.caster.unit) + this.sfxHeight);
+        BlzSetSpecialEffectColor(slash, 255, 155, 55);
         BlzSetSpecialEffectYaw(slash, sfxAngle * CoordMath.degreesToRadians);
         DestroyEffect(slash);
         RemoveLocation(sfxLoc);

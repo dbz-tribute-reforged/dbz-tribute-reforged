@@ -24,7 +24,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
             player,
             1,
             undefined,
-            undefined,
+            customPlayers[playerId].orderPoint,
             customPlayers[playerId].mouseData,
           ),
         );
@@ -136,7 +136,6 @@ export function CustomPlayerTest() {
   const updatePlayerMouseData = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
-    TriggerRegisterPlayerUnitEventSimple(updatePlayerMouseData, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
 	}
 	TriggerAddAction(updatePlayerMouseData, () => {
     const player = GetTriggerPlayer();
@@ -145,8 +144,8 @@ export function CustomPlayerTest() {
       const x = BlzGetTriggerPlayerMouseX();
       const y = BlzGetTriggerPlayerMouseY();
       if (x != 0 && y != 0) {
-        customPlayers[playerId].mouseData.x = BlzGetTriggerPlayerMouseX();
-        customPlayers[playerId].mouseData.y = BlzGetTriggerPlayerMouseY();
+        customPlayers[playerId].mouseData.x = x;
+        customPlayers[playerId].mouseData.y = y;
         /*
         BJDebugMsg(
           GetPlayerName(player) + " mouse : " + 
@@ -157,7 +156,32 @@ export function CustomPlayerTest() {
         */
       }
     }
-	});
+  });
+  
+  const updatePlayerTargetPoint = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
+  }
+  TriggerAddAction(updatePlayerTargetPoint, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
+      const x = GetOrderPointX();
+      const y = GetOrderPointY();
+      if (x != 0 && y != 0) {
+        customPlayers[playerId].orderPoint.x = x;
+        customPlayers[playerId].orderPoint.y = y;
+        /*
+        BJDebugMsg(
+          GetPlayerName(player) + " mouse : " + 
+          R2SW(customPlayers[playerId].mouseData.x, 1, 1) + 
+          " " + 
+          R2SW(customPlayers[playerId].mouseData.y, 1, 1)
+        )
+        */
+      }
+    }
+  });
 
 
   // zanzo activation trigger
@@ -220,4 +244,22 @@ export function CustomPlayerTest() {
       }
     }
   });
+
+
+  // revive heroes for free
+  const revoiveSpam = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
+  TriggerAddAction(revoiveSpam, () => {
+    const dead = GetTriggerUnit();
+    if (IsUnitType(dead, UNIT_TYPE_HERO)) {
+      TimerStart(CreateTimer(), 5.0, false, () => {
+        const t = GetExpiredTimer();
+        ReviveHero(dead, Math.random()*640, Math.random()*640, true);
+        BJDebugMsg("revoive spam");
+        SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
+        SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));
+        DestroyTimer(t);
+      })
+    }
+  })
 }

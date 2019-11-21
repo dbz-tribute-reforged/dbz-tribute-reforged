@@ -7,6 +7,7 @@ export class CustomPlayer {
   protected currentlySelectedUnit: unit;
   protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;
+  public orderPoint: Vector2D;
 
   constructor(
     public id: number, 
@@ -17,6 +18,7 @@ export class CustomPlayer {
     this.currentlySelectedUnit = GetEnumUnit();
     this.lastSelectedOwnedHero = GetEnumUnit();
     this.mouseData = new Vector2D(0, 0);
+    this.orderPoint = new Vector2D(0, 0);
   }
 
   public addHero(hero: unit): this {
