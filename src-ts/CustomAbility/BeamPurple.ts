@@ -3,7 +3,15 @@ import { Tooltip } from "Common/Tooltip";
 import { CostType } from "./CustomAbility";
 import { HeroStatToString } from "Common/HeroStatToString";
 import { Beam } from "./Beam";
+import { DamageTypeData } from "./DamageTypeData";
+import { SfxData } from "./SfxData";
+import { Vector3D } from "Common/Vector3D";
 
+// probs not do this
+// only use classes if there is going to be
+// additional functionality
+// just demonstrating it's easy to replace the
+// contents of the beam class with other data (sfx,dmg) etc
 export class BeamPurple extends Beam {
 
   constructor(
@@ -16,28 +24,41 @@ export class BeamPurple extends Beam {
     public updateRate: number = 0.03,
     public damageAmount: number = 1.0,
     public damageAttribute: number = bj_HEROSTAT_INT,
-    public attackType: attacktype = ATTACK_TYPE_HERO,
-    public damageType: damagetype = DAMAGE_TYPE_NORMAL,
-    public weaponType: weapontype = WEAPON_TYPE_WHOKNOWS,
-    public beamHpMult: number = 4.0,
+    public damageTypeData: DamageTypeData = new DamageTypeData(
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL,
+      WEAPON_TYPE_WHOKNOWS
+    ),
+    public beamHpMult: number = 0.4,
     public speed: number = 25.0,
     public aoe: number = 125,
     public clashingDelayTicks: number = 2,
     public maxDelayTicks: number = 8,
     public durationIncPerDelay: number = 1,
-    public animation: string = "walk",
-    public sfx: string = "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
-    public sfxInterval: number = 2,
-    public sfxScale: number = 1.0,
-    public sfxHeight: number = 75,
+    public isTracking: boolean = true,
     public beamUnitType: number = FourCC('hpea'),
+    public animation: string = "walk",
+    public sfx = [
+      new SfxData(
+        "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
+        2, 
+        1.2,
+        75, 
+        75,
+        90,
+        new Vector3D(
+          255, 255, 255  
+        ),
+        true,
+      ),
+    ],
     public icon: Icon = new Icon(
       "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
       "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPurge.blp"
     ),
     public tooltip: Tooltip = new Tooltip(
       name,
-      "Fires a medium speed purple beam" + 
+      "Fires a medium speed purple beam with tracking" + 
       "|nDeals " + damageAmount + " * " + HeroStatToString(damageAttribute) + " per Damage Tick"+ 
       "|nCost: " + costAmount + " " + costType + 
       "|nCD: " + maxCd,
@@ -53,21 +74,17 @@ export class BeamPurple extends Beam {
       updateRate,
       damageAmount,
       damageAttribute,
-      attackType,
-      damageType,
-      weaponType,
+      damageTypeData,
       beamHpMult,
       speed,
       aoe,
       clashingDelayTicks,
       maxDelayTicks,
       durationIncPerDelay,
+      isTracking,
+      beamUnitType,
       animation,
       sfx,
-      sfxInterval,
-      sfxScale,
-      sfxHeight,
-      beamUnitType,
       icon,
       tooltip,
     );

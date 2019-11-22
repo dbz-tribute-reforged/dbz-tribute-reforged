@@ -3,6 +3,9 @@ import { Tooltip } from "Common/Tooltip";
 import { CostType } from "./CustomAbility";
 import { HeroStatToString } from "Common/HeroStatToString";
 import { Beam } from "./Beam";
+import { DamageTypeData } from "./DamageTypeData";
+import { SfxData } from "./SfxData";
+import { Vector3D } from "Common/Vector3D";
 
 export class BeamRed extends Beam {
 
@@ -18,21 +21,46 @@ export class BeamRed extends Beam {
     public updateRate: number = 0.03,
     public damageAmount: number = 2.0,
     public damageAttribute: number = bj_HEROSTAT_STR,
-    public attackType: attacktype = ATTACK_TYPE_HERO,
-    public damageType: damagetype = DAMAGE_TYPE_NORMAL,
-    public weaponType: weapontype = WEAPON_TYPE_WHOKNOWS,
-    public beamHpMult: number = 3.0,
-    public speed: number = 40.0,
+    public damageTypeData: DamageTypeData = new DamageTypeData(
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL,
+      WEAPON_TYPE_WHOKNOWS
+    ),
+    public beamHpMult: number = 0.2,
+    public speed: number = 50.0,
     public aoe: number = 175,
     public clashingDelayTicks: number = 2,
     public maxDelayTicks: number = 4,
     public durationIncPerDelay: number = 1,
-    public animation: string = "death",
-    public sfx: string = "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
-    public sfxInterval: number = 2,
-    public sfxScale: number = 1.75,
-    public sfxHeight: number = 75,
+    public isTracking: boolean = false,
     public beamUnitType: number = FourCC('hpea'),
+    public animation: string = "death",
+    public sfx = [
+      new SfxData(
+        "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
+        2, 
+        1.2,
+        75, 
+        75,
+        0,
+        new Vector3D(
+          255, 255, 255  
+        ),
+        false,
+      ),
+      new SfxData(
+        "Abilities\\Spells\\Other\\Volcano\\VolcanoMissile.mdl",
+        4, 
+        0.5,
+        0, 
+        0,
+        0,
+        new Vector3D(
+          255, 205, 155  
+        ),
+        false,
+      ),
+    ],
     public icon: Icon = new Icon(
       "ReplaceableTextures\\CommandButtons\\BTNSoulBurn.blp",
       "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSoulBurn.blp"
@@ -55,21 +83,17 @@ export class BeamRed extends Beam {
       updateRate,
       damageAmount,
       damageAttribute,
-      attackType,
-      damageType,
-      weaponType,
+      damageTypeData,
       beamHpMult,
       speed,
       aoe,
       clashingDelayTicks,
       maxDelayTicks,
       durationIncPerDelay,
-      animation,
-      sfx,
-      sfxInterval,
-      sfxScale,
-      sfxHeight,
+      isTracking,
       beamUnitType,
+      animation,
+      sfx, 
       icon,
       tooltip,
     );

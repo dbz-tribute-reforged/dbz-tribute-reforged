@@ -1,5 +1,6 @@
 import { CustomAbility, CostType } from "./CustomAbility";
 import { CustomAbilityData } from "./CustomAbilityData";
+import { Beam } from "./Beam";
 
 export module CustomAbilityHelper {
   export function canCast(customAbility: CustomAbility, data: CustomAbilityData): boolean {
@@ -19,7 +20,7 @@ export module CustomAbilityHelper {
     return true;
   }
 
-  export function isUnitStunned(unit: unit) {
+  export function isUnitStunned(unit: unit): boolean {
     return (
       IsUnitType(unit, UNIT_TYPE_POLYMORPHED) 
       ||
@@ -53,20 +54,26 @@ export module CustomAbilityHelper {
   }
 
   export function updateCD(customAbility: CustomAbility) {
-    if (customAbility.currentCd <= 0) {
+    if (customAbility.currentCd <= 0 && customAbility.currentTick >= customAbility.duration) {
       customAbility.currentCd = 0;
       customAbility.currentTick = 0;
+      customAbility.delayTicks = 0;
       PauseTimer(customAbility.abilityTimer);
     } else {
       customAbility.currentCd -= customAbility.updateRate;
     }
   }
+
+  export function calculateBeamMaxHp(beam: Beam, damage: number): number {
+    return Math.max(150, Math.floor(damage * beam.beamHpMult) * 50);
+  }
   
-  export function basicIsValidTarget(unit: unit, data: CustomAbilityData) {
+  export function basicIsValidTarget(unit: unit, data: CustomAbilityData): boolean {
     return (
       IsUnitEnemy(unit, data.casterPlayer) == true
       &&
       !BlzIsUnitInvulnerable(unit)
     );
   }
+
 }

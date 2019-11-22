@@ -38,6 +38,7 @@ export class BlueHurricane implements CustomAbility {
   );
 
   public currentTick: number;
+  public delayTicks: number;
   public abilityTimer: timer;
   protected abilityData: CustomAbilityData | undefined;
 
@@ -63,6 +64,7 @@ export class BlueHurricane implements CustomAbility {
     public tooltip: Tooltip = BlueHurricane.defaultTooltip,
   ) {
     this.currentTick = 0;
+    this.delayTicks = 0;
     this.abilityTimer = CreateTimer();
   }
 

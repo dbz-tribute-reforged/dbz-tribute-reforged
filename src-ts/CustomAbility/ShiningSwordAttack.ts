@@ -20,7 +20,7 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
   static readonly defaultWeaponType = WEAPON_TYPE_WHOKNOWS;
   static readonly defaultMaxDistance = 500.0;
-  static readonly defaultMinDistance = 120.0;
+  static readonly defaultMinDistance = 100.0;
   static readonly defaultAOE = 225;
   static readonly defaultDelayBetweenDamageTicks = 3;
   static readonly defaultAnimation = "attack";
@@ -41,6 +41,7 @@ export class ShiningSwordAttack implements CustomAbility {
   );
 
   public currentTick: number;
+  public delayTicks: number;
   public abilityTimer: timer;
   protected abilityData: CustomAbilityData | undefined;
   protected previousCoord: Vector2D;
@@ -72,6 +73,7 @@ export class ShiningSwordAttack implements CustomAbility {
     public tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
   ) {
     this.currentTick = 0;
+    this.delayTicks = 0;
     this.abilityTimer = CreateTimer();
     this.previousCoord = new Vector2D(0, 0);
     this.nextDamageTick = 0;
