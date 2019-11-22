@@ -13,10 +13,13 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
   TriggerAddAction(abilityTrigger, () => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    const selectedGroup = GetUnitsSelectedAll(GetTriggerPlayer());
-    ForGroup(selectedGroup, () => {
-      const customHero = customPlayers[playerId].getCustomHero(GetEnumUnit());
-      if (customHero) {
+    // NOTE: do not use GetUnitsSelectedAll(GetTriggerPlayer())
+    // it will cause weird selection bugs during multiplayer
+    // that is not normally testable via singleplayer
+
+    // const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+    for (const customHero of customPlayers[playerId].allHeroes) {
+      if (customHero && IsUnitSelected(customHero.unit, player)) {
         customHero.useAbility(
           name,
           new CustomAbilityData(
@@ -29,8 +32,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           ),
         );
       }
-    })
-    FrameHelper.loseFocusFromTriggeringFrame();
+    }
   });
 }
 
@@ -131,8 +133,6 @@ export function CustomPlayerTest() {
     }
 	});
   
-  const mouseDelayTimer = CreateTimer();
-  TimerStart(mouseDelayTimer, 0.2, false, () => {});
 
   // update mouse positions for now
   // might be a bit laggy?
@@ -143,28 +143,17 @@ export function CustomPlayerTest() {
 	TriggerAddAction(updatePlayerMouseData, () => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING &&
-        TimerGetRemaining(mouseDelayTimer) == 0) {
+    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
       const x = BlzGetTriggerPlayerMouseX();
       const y = BlzGetTriggerPlayerMouseY();
       if (x != 0 && y != 0) {
         customPlayers[playerId].mouseData.x = x;
         customPlayers[playerId].mouseData.y = y;
-        TimerStart(mouseDelayTimer, 0.2, false, ()=>{});
-        /*
-        BJDebugMsg(
-          GetPlayerName(player) + " mouse : " + 
-          R2SW(customPlayers[playerId].mouseData.x, 1, 1) + 
-          " " + 
-          R2SW(customPlayers[playerId].mouseData.y, 1, 1)
-        )
-        */
       }
     }
   });
 
 
-  
   const updatePlayerTargetPoint = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
@@ -178,14 +167,6 @@ export function CustomPlayerTest() {
       if (x != 0 && y != 0) {
         customPlayers[playerId].orderPoint.x = x;
         customPlayers[playerId].orderPoint.y = y;
-        /*
-        BJDebugMsg(
-          GetPlayerName(player) + " mouse : " + 
-          R2SW(customPlayers[playerId].mouseData.x, 1, 1) + 
-          " " + 
-          R2SW(customPlayers[playerId].mouseData.y, 1, 1)
-        )
-        */
       }
     }
   });
@@ -201,27 +182,27 @@ export function CustomPlayerTest() {
 
   const blueHurricaneActivate = CreateTrigger();
   BlzTriggerRegisterFrameEvent(blueHurricaneActivate, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(blueHurricaneActivate, OSKEY_B, 0, true);
+  addKeyEvent(blueHurricaneActivate, OSKEY_X, 0, true);
   addAbilityAction(blueHurricaneActivate, "Blue Hurricane");
 
   const shiningSwordActivate = CreateTrigger();
   BlzTriggerRegisterFrameEvent(shiningSwordActivate, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(shiningSwordActivate, OSKEY_X, 0, true);
+  addKeyEvent(shiningSwordActivate, OSKEY_C, 0, true);
   addAbilityAction(shiningSwordActivate, "Shining Sword Attack");
 
   const beamTest = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest, OSKEY_C, 0, true);
+  addKeyEvent(beamTest, OSKEY_Q, 0, true);
   addAbilityAction(beamTest, "Beam Base");
 
   const beamTest2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest2, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest2, OSKEY_V, 0, true);
+  addKeyEvent(beamTest2, OSKEY_W, 0, true);
   addAbilityAction(beamTest2, "Purple Beam");
 
   const beamTest3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest3, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest3, OSKEY_D, 0, true);
+  addKeyEvent(beamTest3, OSKEY_E, 0, true);
   addAbilityAction(beamTest3, "Beam Red");
 
   // update hp/mp bars for current custom player

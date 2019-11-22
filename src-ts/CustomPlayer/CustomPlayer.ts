@@ -68,4 +68,8 @@ export class CustomPlayer {
       this.lastSelectedOwnedHero = unit;;
     }
   }
+
+  get allHeroes(): CustomHero[] {
+    return this.heroes;
+  }
 }

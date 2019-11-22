@@ -14,18 +14,22 @@ export class Beam implements CustomAbility {
   private static readonly defaultCD = 6; 
   private static readonly defaultCostType = CostType.MP; 
   private static readonly defaultCostAmount = 25; 
-  private static readonly defaultDuration = 120; 
+  private static readonly defaultDuration = 160; 
   private static readonly defaultUpdateRate = 0.03;
-  private static readonly defaultDamageAmount = 0.3;
+  private static readonly defaultDamageAmount = 0.4;
   private static readonly defaultDamageAttribute = bj_HEROSTAT_INT;
   private static readonly defaultAttackType = ATTACK_TYPE_HERO;
   private static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
   private static readonly defaultWeaponType = WEAPON_TYPE_WHOKNOWS;
-  private static readonly defaultBeamHpMult = 16.0;
+  private static readonly defaultBeamHpMult = 3.0;
   private static readonly defaultSpeed = 16.0;
   private static readonly defaultAOE = 250;
   private static readonly defaultClashingDelayTicks = 3;
   private static readonly defaultMaxDelayTicks = 10;
+  private static readonly defaultDurationIncPerDelay = 1;
+  private static readonly defaultCastTime = 8;
+  private static readonly defaultKnockbackSpeed = 5;
+  private static readonly defaultKnockbackAOE = 1;
   private static readonly defaultAnimation = "spell";
   // repalce with SfxData
   // so to have multiple sfx able to render easily
@@ -72,6 +76,7 @@ export class Beam implements CustomAbility {
     public aoe: number = Beam.defaultAOE,
     public clashingDelayTicks: number = Beam.defaultClashingDelayTicks,
     public maxDelayTicks: number = Beam.defaultMaxDelayTicks,
+    public durationIncPerDelay: number = Beam.defaultDurationIncPerDelay,
     public animation: string = Beam.defaultAnimation,
     public sfx: string = Beam.defaultSfx,
     public sfxInterval: number = Beam.defaultSfxInterval,
@@ -147,6 +152,7 @@ export class Beam implements CustomAbility {
       }
     } else {
       --this.delayTicks;
+      this.currentTick = Math.max(2, this.currentTick + this.durationIncPerDelay);
     }
     return this;
   }
@@ -184,6 +190,9 @@ export class Beam implements CustomAbility {
     if (this.currentTick % this.sfxInterval == 0) {
       const firstSfx = AddSpecialEffect(this.sfx, GetUnitX(beamUnit), GetUnitY(beamUnit));
       BlzSetSpecialEffectScale(firstSfx, this.sfxScale);
+      if (this.sfxHeight > 0) {
+        BlzSetSpecialEffectZ(firstSfx, BlzGetUnitZ(data.caster.unit) + this.sfxHeight);
+      }
       BlzSetSpecialEffectYaw(firstSfx, this.angle);
       DestroyEffect(firstSfx);
     }
@@ -209,13 +218,14 @@ export class Beam implements CustomAbility {
     this.angle = CoordMath.angleBetweenCoords(casterCoord, data.targetPoint);
 
     this.beamUnit = CreateUnit(data.casterPlayer, this.beamUnitType, casterCoord.x, casterCoord.y, this.angle);
-    const maxHp = Math.max(250, 100 + this.calculateDamage(data) * this.beamHpMult);
+    const maxHp = Math.max(150, Math.floor(this.calculateDamage(data) * this.beamHpMult * 0.1) * 50);
+    // const maxHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
     BlzSetUnitMaxHP(this.beamUnit, maxHp);
     // SetUnitState(this.beamUnit, UNIT_STATE_LIFE, maxHp);
     SetUnitLifePercentBJ(this.beamUnit, 100);
     this.previousBeamHp = maxHp;
     // BlzSetUnitName(this.beamUnit, this.name);
-    PauseUnit(this.beamUnit, true);
+    // PauseUnit(this.beamUnit, true);
 
     this.delayTicks = 0;
   }
@@ -224,18 +234,51 @@ export class Beam implements CustomAbility {
   public activate(data: CustomAbilityData): void {
     this.abilityData = data;
     this.takeAbilityCosts(data);
-    this.preactivationEffects(data);
 
+    // dont go unless player right clicks one more time
+    // er maybe expand for also clicking a unit
+    this.currentTick = 1;
+    let isReady = false;
+    const readyTrigger = CreateTrigger();
+    TriggerRegisterPlayerUnitEvent(
+      readyTrigger, 
+      data.casterPlayer, 
+      EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
+      Condition(()=>{
+        return GetFilterUnit() == data.caster.unit && !CustomAbilityHelper.isUnitStunned(data.caster.unit);
+      })
+    );
+
+    TriggerAddAction(readyTrigger, () => {
+      const x = GetOrderPointX();
+      const y = GetOrderPointY();
+      this.abilityData = new CustomAbilityData(
+        data.caster,
+        data.casterPlayer,
+        data.level,
+        new Vector2D(x, y), 
+        data.mouseData,
+        data.target?data.target:undefined,
+      );
+      isReady = true;
+      DestroyTrigger(readyTrigger);
+    })
+    
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (this.currentTick < this.duration) {
-        this.performTickAction();
-      } else {
-        if (this.beamUnit) {
-          RemoveUnit(this.beamUnit);
+      if (isReady) {
+        if (this.currentTick == 1) {
+          this.preactivationEffects(data);
         }
-        this.delayTicks = 0;
+        if (this.currentTick < this.duration) {
+          this.performTickAction();
+        } else {
+          if (this.beamUnit) {
+            RemoveUnit(this.beamUnit);
+          }
+          this.delayTicks = 0;
+        }
+        this.updateCd();
       }
-      this.updateCd();
     });
   }
 }

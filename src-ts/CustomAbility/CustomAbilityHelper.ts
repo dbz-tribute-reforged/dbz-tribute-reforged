@@ -6,15 +6,7 @@ export module CustomAbilityHelper {
     if (customAbility.currentCd > 0) return false;
     if (customAbility.currentTick > 0) return false;
     if (!data || !data.caster || !data.casterPlayer || !data.mouseData) return false;
-    if (
-      IsUnitType(data.caster.unit, UNIT_TYPE_POLYMORPHED) 
-      ||
-      IsUnitType(data.caster.unit, UNIT_TYPE_SNARED)
-      ||
-      IsUnitType(data.caster.unit, UNIT_TYPE_SLEEPING)
-      ||
-      IsUnitType(data.caster.unit, UNIT_TYPE_STUNNED)
-    ) {
+    if (isUnitStunned(data.caster.unit)) {
       return false;
     }
     if (
@@ -25,6 +17,18 @@ export module CustomAbilityHelper {
       return false;
     }
     return true;
+  }
+
+  export function isUnitStunned(unit: unit) {
+    return (
+      IsUnitType(unit, UNIT_TYPE_POLYMORPHED) 
+      ||
+      IsUnitType(unit, UNIT_TYPE_SNARED)
+      ||
+      IsUnitType(unit, UNIT_TYPE_SLEEPING)
+      ||
+      IsUnitType(unit, UNIT_TYPE_STUNNED)
+    );
   }
 
   export function takeCosts(customAbility: CustomAbility, data: CustomAbilityData) {
