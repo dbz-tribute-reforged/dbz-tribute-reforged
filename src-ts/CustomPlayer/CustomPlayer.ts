@@ -1,5 +1,4 @@
 import { CustomHero } from "CustomHero/CustomHero";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {

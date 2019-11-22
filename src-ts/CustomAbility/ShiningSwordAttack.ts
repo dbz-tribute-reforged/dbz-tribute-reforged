@@ -1,33 +1,42 @@
 import { CustomAbility, CostType } from "./CustomAbility";
-import { CustomAbilityData } from "./CustomAbilityData";
 import { Icon } from "Common/Icon";
 import { Tooltip } from "Common/Tooltip";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
-import { PathingCheck } from "Common/PathingCheck";
-import { CustomAbilityHelper } from "./CustomAbilityHelper";
+import { DamageData } from "./DamageData";
+import { SfxData } from "./SfxData";
+import { HeroStatToString } from "Common/HeroStatToString";
+import { CustomAbilityInput } from "./CustomAbilityInput";
+import { UnitHelper } from "Common/UnitHelper";
+import { Vector3D } from "Common/Vector3D";
 
-export class ShiningSwordAttack implements CustomAbility {
+export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultName = "Shining Sword Attack"; 
   static readonly defaultCD = 4; 
   static readonly defaultCostType = CostType.MP; 
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 67; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultDamageAmount = 1.0;
-  static readonly defaultDamageAttribute = bj_HEROSTAT_AGI;
-  static readonly defaultAttackType = ATTACK_TYPE_HERO;
-  static readonly defaultDamageType = DAMAGE_TYPE_NORMAL;
-  static readonly defaultWeaponType = WEAPON_TYPE_WHOKNOWS;
+  static readonly defaultDamageData = new DamageData(
+    0.3,
+    bj_HEROSTAT_AGI,
+    ATTACK_TYPE_HERO,
+    DAMAGE_TYPE_NORMAL,
+    WEAPON_TYPE_WHOKNOWS
+  );
   static readonly defaultMaxDistance = 500.0;
   static readonly defaultMinDistance = 100.0;
   static readonly defaultAOE = 225;
   static readonly defaultDelayBetweenDamageTicks = 3;
   static readonly defaultAnimation = "attack";
-  // static readonly defaultSfx = "BladeBeamFinal.mdl";
-  static readonly defaultSfx = "animeslashfinal.mdl";
-  static readonly defaultSfxHeight = 75;
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
+  static readonly defaultSfxList = [
+    new SfxData(
+      "animeslashfinal.mdl", 1, 1.5, 75, 75, 0, 
+      new Vector3D(255, 155, 55), 
+      false
+    ),
+  ];
   static readonly defaultIcon = new Icon(
     "ReplaceableTextures\\CommandButtons\\BTNArcaniteMelee.blp",
     "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArcaniteMelee.blp"
@@ -35,175 +44,144 @@ export class ShiningSwordAttack implements CustomAbility {
   static readonly defaultTooltip = new Tooltip(
     "Shining Sword Attack",
     "Performs multipe sword slashes at your cursor location" + 
-    "|nDeals " + ShiningSwordAttack.defaultDamageAmount + " * AGI per Damage Tick (minimum 0.9s)"+ 
+    "|nDeals " + 
+    ShiningSwordAttack.defaultDamageData.multiplier + " * " + 
+    HeroStatToString(ShiningSwordAttack.defaultDamageData.attribute) +
+    " per damage tick (minimum " + 
+    ShiningSwordAttack.defaultDelayBetweenDamageTicks * ShiningSwordAttack.defaultUpdateRate +
+    "s)" +
     "|nCost: " + ShiningSwordAttack.defaultCostAmount + " " + ShiningSwordAttack.defaultCostType + 
     "|nCD: " + ShiningSwordAttack.defaultCD,
   );
 
-  public currentTick: number;
-  public delayTicks: number;
-  public abilityTimer: timer;
-  protected abilityData: CustomAbilityData | undefined;
   protected previousCoord: Vector2D;
   protected nextDamageTick: number;
   protected attachedSfx: effect;
 
   constructor(
-    public readonly name: string = ShiningSwordAttack.defaultName,
-    public currentCd: number = 0,
-    public maxCd: number = ShiningSwordAttack.defaultCD, 
-    public costType: CostType = ShiningSwordAttack.defaultCostType,
-    public costAmount: number = ShiningSwordAttack.defaultCostAmount,
-    public duration: number = ShiningSwordAttack.defaultDuration,
-    public updateRate: number = ShiningSwordAttack.defaultUpdateRate,
-    public damageAmount: number = ShiningSwordAttack.defaultDamageAmount,
-    public damageAttribute: number = ShiningSwordAttack.defaultDamageAttribute,
-    public attackType: attacktype = ShiningSwordAttack.defaultAttackType,
-    public damageType: damagetype = ShiningSwordAttack.defaultDamageType,
-    public weaponType: weapontype = ShiningSwordAttack.defaultWeaponType,
+    name: string = ShiningSwordAttack.defaultName,
+    currentCd: number = 0,
+    maxCd: number = ShiningSwordAttack.defaultCD, 
+    costType: CostType = ShiningSwordAttack.defaultCostType,
+    costAmount: number = ShiningSwordAttack.defaultCostAmount,
+    duration: number = ShiningSwordAttack.defaultDuration,
+    updateRate: number = ShiningSwordAttack.defaultUpdateRate,
+    icon: Icon = ShiningSwordAttack.defaultIcon,
+    tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
+    public damageData: DamageData = ShiningSwordAttack.defaultDamageData,
     public maxDistance: number = ShiningSwordAttack.defaultMaxDistance,
     public minDistance: number = ShiningSwordAttack.defaultMinDistance,
     public aoe: number = ShiningSwordAttack.defaultAOE,
     public delayBetweenDamageTicks: number = ShiningSwordAttack.defaultDelayBetweenDamageTicks,
     public animation: string = ShiningSwordAttack.defaultAnimation,
-    public sfx: string = ShiningSwordAttack.defaultSfx,
-    public sfxHeight: number = ShiningSwordAttack.defaultSfxHeight,
+    public sfxList: SfxData[] = ShiningSwordAttack.defaultSfxList,
     public attachedSfxName: string = ShiningSwordAttack.defaultAttachedSfxName,
-    public icon: Icon = ShiningSwordAttack.defaultIcon,
-    public tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
   ) {
-    this.currentTick = 0;
-    this.delayTicks = 0;
-    this.abilityTimer = CreateTimer();
+    super(
+      name, 
+      currentCd, 
+      maxCd, 
+      costType,
+      costAmount,
+      duration,
+      updateRate,
+      icon,
+      tooltip
+    );
     this.previousCoord = new Vector2D(0, 0);
     this.nextDamageTick = 0;
     this.attachedSfx = GetLastCreatedEffectBJ();
   }
 
-  public canCastAbility(data: CustomAbilityData): boolean {
-    return CustomAbilityHelper.canCast(this, data);
-  }
+  private getMouseCoordWithinRange(input: CustomAbilityInput) {
+    let targetCoord = input.mouseData;
+    const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+    const casterDistance = CoordMath.distance(casterCoord, targetCoord);
 
-  public takeAbilityCosts(data: CustomAbilityData): this {
-    CustomAbilityHelper.takeCosts(this, data);
-    return this;
-  }
-
-  public updateCd(): this {
-    CustomAbilityHelper.updateCD(this);
-    return this;
-  }
-
-  private isValidTarget(unit: unit) {
-    if (this.abilityData) {
-      return CustomAbilityHelper.basicIsValidTarget(unit, this.abilityData);
+    if (casterDistance > this.maxDistance) {
+      const casterDirection = CoordMath.angleBetweenCoords(casterCoord, targetCoord);
+      targetCoord = CoordMath.polarProjectCoords(casterCoord, casterDirection, this.maxDistance);
     }
-    return false;
+    return new Vector2D(targetCoord.x, targetCoord.y);
   }
 
-  private performTickAction(): this {
-    if (this.abilityData && this.abilityData.mouseData) {
-      const currentCoord = this.previousCoord;
-      let targetCoord = this.abilityData.mouseData;
-      let slashDistance = CoordMath.distance(currentCoord, targetCoord);
+  private dealDamageToGroup(source: unit, affectedGroup: group, damage: number): this {
+    ForGroup(affectedGroup, () => {
+      const target = GetEnumUnit();
+      UnitDamageTarget(
+        source, 
+        target,
+        damage,
+        true,
+        false,
+        this.damageData.attackType,
+        this.damageData.damageType,
+        this.damageData.weaponType
+      );
+    });
+    return this;
+  }
 
-      const casterCoord = new Vector2D(GetUnitX(this.abilityData.caster.unit), GetUnitY(this.abilityData.caster.unit));
-      const casterDistance = CoordMath.distance(casterCoord, targetCoord);
+  private performTickAction(input: CustomAbilityInput): this {
+    const currentCoord = this.previousCoord;
+    const targetCoord = this.getMouseCoordWithinRange(input);
+    const slashDistance = CoordMath.distance(currentCoord, targetCoord);
 
-      if (casterDistance > this.maxDistance) {
-        const casterDirection = CoordMath.angleBetweenCoords(casterCoord, targetCoord);
-        targetCoord = CoordMath.polarProjectCoords(casterCoord, casterDirection, this.maxDistance);
-        slashDistance = CoordMath.distance(currentCoord, targetCoord);
-      }
+    if (slashDistance > this.minDistance && this.currentTick > this.nextDamageTick) {
+      const slashDirection = CoordMath.angleBetweenCoords(currentCoord, targetCoord);
+      const middleCoord = CoordMath.polarProjectCoords(currentCoord, slashDirection, slashDistance/2);
+      
+      const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord);
 
-      if (slashDistance > this.minDistance && this.currentTick > this.nextDamageTick) {
-        const slashDirection = CoordMath.angleBetweenCoords(currentCoord, targetCoord);
-        const middleCoord = CoordMath.polarProjectCoords(currentCoord, slashDirection, slashDistance/2);
-        
-        const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord);
+      SetUnitAnimation(input.caster.unit, this.animation);
 
-        SetUnitAnimation(this.abilityData.caster.unit, this.animation);
-        
-        let slash = AddSpecialEffect(this.sfx, middleCoord.x, middleCoord.y);
-        BlzSetSpecialEffectScale(slash, 1.5);
-        BlzSetSpecialEffectHeight(slash, BlzGetUnitZ(this.abilityData.caster.unit) + this.sfxHeight);
-        BlzSetSpecialEffectColor(slash, 255, 155, 55);
-        BlzSetSpecialEffectYaw(slash, sfxAngle * CoordMath.degreesToRadians);
-        DestroyEffect(slash);
+      this.displaySfxListAtCoord(
+        this.sfxList, 
+        middleCoord, 
+        sfxAngle, 
+        BlzGetUnitZ(input.caster.unit)
+      );
 
-        
-        const affectedGroup = CreateGroup();
-        GroupEnumUnitsInRange(
-          affectedGroup, 
-          middleCoord.x, 
-          middleCoord.y, 
-          this.aoe, 
-          Condition(() => {
-            return this.isValidTarget(GetFilterUnit());
-          }),
-        );
-        
-        const damageThisTick = 
-          this.damageAmount * 
-          GetHeroStatBJ(this.damageAttribute, this.abilityData.caster.unit, true);
+      const affectedGroup = UnitHelper.getNearbyValidUnits(
+        middleCoord, 
+        this.aoe, 
+        () => {
+          return this.isBasicValidTarget(GetFilterUnit(), input.casterPlayer);
+        }
+      );
+      
+      const damageThisTick = 
+        this.damageData.multiplier * 
+        GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true);
 
-        ForGroup(affectedGroup, () => {
-          const target = GetEnumUnit();
-
-          if (this.abilityData) {
-            UnitDamageTarget(
-              this.abilityData.caster.unit, 
-              target,
-              damageThisTick,
-              true,
-              false,
-              this.attackType,
-              this.damageType,
-              this.weaponType
-            );
-          }
-        })
-        
-        DestroyGroup(affectedGroup);
-        
-        this.previousCoord = new Vector2D(targetCoord.x, targetCoord.y);
-        this.nextDamageTick = this.currentTick + this.delayBetweenDamageTicks;
-      }
+      this.dealDamageToGroup(input.caster.unit, affectedGroup, damageThisTick);
+      DestroyGroup(affectedGroup);
+      
+      this.previousCoord = new Vector2D(targetCoord.x, targetCoord.y);
+      this.nextDamageTick = this.currentTick + this.delayBetweenDamageTicks;
     }
     ++this.currentTick;
-    if (this.currentTick >= this.duration) {
-      DestroyEffect(this.attachedSfx);
-    }
     return this;
   }
 
   // assume can cast ability
-  public activate(data: CustomAbilityData): void {
-    this.abilityData = data;
-    this.takeAbilityCosts(data);
-
+  public activate(input: CustomAbilityInput): void {
+    this.takeCosts(input);
     this.nextDamageTick = 0;
-    if (data && data.caster && data.mouseData) {
-      // SetUnitAnimationByIndex(data.caster.unit, 1);
-      SetUnitAnimation(data.caster.unit, this.animation);
+    this.previousCoord = this.getMouseCoordWithinRange(input);
 
-      let targetCoord = data.mouseData;
-      const casterCoord = new Vector2D(GetUnitX(this.abilityData.caster.unit), GetUnitY(this.abilityData.caster.unit));
-      const casterDistance = CoordMath.distance(casterCoord, targetCoord);
-
-      if (casterDistance > this.maxDistance) {
-        const casterDirection = CoordMath.angleBetweenCoords(casterCoord, targetCoord);
-        targetCoord = CoordMath.polarProjectCoords(casterCoord, casterDirection, this.maxDistance);
-      }
-
-      this.previousCoord = new Vector2D(targetCoord.x, targetCoord.y);
-
-      this.attachedSfx = AddSpecialEffectTargetUnitBJ("weapon", this.abilityData.caster.unit, this.attachedSfxName);
-    }
+    // SetUnitAnimationByIndex(data.caster.unit, 1);
+    SetUnitAnimation(input.caster.unit, this.animation);
+    this.attachedSfx = AddSpecialEffectTargetUnitBJ("weapon", input.caster.unit, this.attachedSfxName);
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
       if (this.currentTick < this.duration) {
-        this.performTickAction();
+        this.performTickAction(input);
+      }
+      if (this.currentTick >= this.duration) {
+        DestroyEffect(this.attachedSfx);
+        this.cleanupPersistentSfx();
       }
       this.updateCd();
     });

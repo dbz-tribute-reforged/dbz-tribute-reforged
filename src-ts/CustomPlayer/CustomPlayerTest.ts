@@ -1,10 +1,9 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { Constants } from "Common/Constants";
-import { FrameHelper } from "Common/FrameHelper";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
+import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -22,7 +21,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
       if (customHero && IsUnitSelected(customHero.unit, player)) {
         customHero.useAbility(
           name,
-          new CustomAbilityData(
+          new CustomAbilityInput(
             customHero,
             player,
             1,
@@ -257,7 +256,7 @@ export function CustomPlayerTest() {
     if (IsUnitType(dead, UNIT_TYPE_HERO)) {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
-        ReviveHero(dead, Math.random()*640, Math.random()*640, true);
+        ReviveHero(dead, 64 + Math.random()*1280, 64 + Math.random()*1280, true);
         BJDebugMsg("revoive spam");
         SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
         SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));

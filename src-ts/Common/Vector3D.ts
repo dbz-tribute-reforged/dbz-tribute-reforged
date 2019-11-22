@@ -6,4 +6,29 @@ export class Vector3D {
   ){
 
   }
+
+  // alternate access format
+  get r(): number {
+    return this.x;
+  }
+
+  set r(red: number) {
+    this.x = red;
+  }
+
+  get g(): number {
+    return this.y;
+  }
+
+  set g(green: number) {
+    this.y = green;
+  }
+
+  get b(): number {
+    return this.z;
+  }
+
+  set b(blue: number) {
+    this.z = blue;
+  }
 }

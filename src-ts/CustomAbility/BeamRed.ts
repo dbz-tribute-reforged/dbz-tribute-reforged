@@ -3,39 +3,39 @@ import { Tooltip } from "Common/Tooltip";
 import { CostType } from "./CustomAbility";
 import { HeroStatToString } from "Common/HeroStatToString";
 import { Beam } from "./Beam";
-import { DamageTypeData } from "./DamageTypeData";
 import { SfxData } from "./SfxData";
 import { Vector3D } from "Common/Vector3D";
+import { DamageData } from "./DamageData";
 
 export class BeamRed extends Beam {
 
 
   // replace with config file stuff later
   constructor(
-    public readonly name: string = "Beam Red",
-    public currentCd: number = 0,
-    public maxCd: number = 6, 
-    public costType: CostType = CostType.HP,
-    public costAmount: number = 75,
-    public duration: number = 30,
-    public updateRate: number = 0.03,
-    public damageAmount: number = 2.0,
-    public damageAttribute: number = bj_HEROSTAT_STR,
-    public damageTypeData: DamageTypeData = new DamageTypeData(
+    name: string = "Beam Red",
+    currentCd: number = 0,
+    maxCd: number = 6, 
+    costType: CostType = CostType.HP,
+    costAmount: number = 75,
+    duration: number = 40,
+    updateRate: number = 0.03,
+    damageData: DamageData = new DamageData(
+      2.0,
+      bj_HEROSTAT_STR,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ),
-    public beamHpMult: number = 0.2,
-    public speed: number = 50.0,
-    public aoe: number = 175,
-    public clashingDelayTicks: number = 2,
-    public maxDelayTicks: number = 4,
-    public durationIncPerDelay: number = 1,
-    public isTracking: boolean = false,
-    public beamUnitType: number = FourCC('hpea'),
-    public animation: string = "death",
-    public sfx = [
+    beamHpMult: number = 0.2,
+    speed: number = 50.0,
+    aoe: number = 175,
+    clashingDelayTicks: number = 2,
+    maxDelayTicks: number = 4,
+    durationIncPerDelay: number = 1,
+    isTracking: boolean = false,
+    beamUnitType: number = FourCC('hpea'),
+    animation: string = "death",
+    sfxList = [
       new SfxData(
         "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
         2, 
@@ -68,22 +68,25 @@ export class BeamRed extends Beam {
     public tooltip: Tooltip = new Tooltip(
       name,
       "Fires a fast red beam" + 
-      "|nDeals " + damageAmount + " * " + HeroStatToString(damageAttribute) + " per Damage Tick"+ 
+      "|nDeals " + 
+      damageData.multiplier + " * " + 
+      HeroStatToString(damageData.attribute) +
+      " per Damage Tick" + 
       "|nCost: " + costAmount + " " + costType + 
       "|nCD: " + maxCd,
     ),
   ) {
     super(
-      name,
-      currentCd,
-      maxCd,
+      name, 
+      currentCd, 
+      maxCd, 
       costType,
       costAmount,
       duration,
       updateRate,
-      damageAmount,
-      damageAttribute,
-      damageTypeData,
+      icon,
+      tooltip,
+      damageData,
       beamHpMult,
       speed,
       aoe,
@@ -93,9 +96,7 @@ export class BeamRed extends Beam {
       isTracking,
       beamUnitType,
       animation,
-      sfx, 
-      icon,
-      tooltip,
+      sfxList,
     );
   }
 }

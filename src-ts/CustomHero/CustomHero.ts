@@ -1,12 +1,12 @@
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 import { ZanzoDash } from "CustomAbility/ZanzoDash";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { BlueHurricane } from "CustomAbility/BlueHurricane";
 import { CustomAbility, CostType } from "CustomAbility/CustomAbility";
 import { ShiningSwordAttack } from "CustomAbility/ShiningSwordAttack";
 import { Beam } from "CustomAbility/Beam";
 import { BeamPurple } from "CustomAbility/BeamPurple";
 import { BeamRed } from "CustomAbility/BeamRed";
+import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class CustomHero {
   public abilities: CustomAbilityManager;
@@ -27,17 +27,17 @@ export class CustomHero {
     )
   }
 
-  public useAbility(name: string, data: CustomAbilityData) {
+  public useAbility(name: string, input: CustomAbilityInput) {
     let customAbility = this.abilities.getCustomAbilityByName(name);
-    if (customAbility && customAbility.canCastAbility(data)) {
-      customAbility.activate(data);
+    if (customAbility && customAbility.canCastAbility(input)) {
+      customAbility.activate(input);
     }
   }
 
-  public canCastAbility(name: string, data: CustomAbilityData): boolean {
+  public canCastAbility(name: string, input: CustomAbilityInput): boolean {
     let customAbility = this.abilities.getCustomAbilityByName(name);
     if (customAbility) {
-      return customAbility.canCastAbility(data);
+      return customAbility.canCastAbility(input);
     }
     return false;
   }
