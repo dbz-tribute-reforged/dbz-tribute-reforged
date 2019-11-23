@@ -10,8 +10,10 @@ import { Vector3D } from "Common/Vector3D";
 import { DamageData } from "./DamageData";
 import { CustomAbilityInput } from "./CustomAbilityInput";
 import { UnitHelper } from "Common/UnitHelper";
+import { HeightVariation, VariationTypes } from "Common/HeightVariation";
 
 export class Beam extends CustomAbility {
+
   private static readonly defaultName = "Beam Base"; 
   private static readonly defaultCD = 6; 
   private static readonly defaultCostType = CostType.MP; 
@@ -19,40 +21,64 @@ export class Beam extends CustomAbility {
   private static readonly defaultDuration = 160; 
   private static readonly defaultUpdateRate = 0.03;
   private static readonly defaultDamageData = new DamageData(
-    0.4,
+    0.25,
     bj_HEROSTAT_INT,
     ATTACK_TYPE_HERO, 
     DAMAGE_TYPE_NORMAL,
     WEAPON_TYPE_WHOKNOWS
-  )
-  private static readonly defaultBonusFinishDamage = 0.4;
-  private static readonly defaultBonusFinishAOE = 0.4;
-  private static readonly defaultBeamHpMult = 0.4;
+  );
+  private static readonly defaultBeamHpMult = 0.5;
   private static readonly defaultSpeed = 16.0;
   private static readonly defaultAOE = 250;
-  private static readonly defaultClashingDelayTicks = 3;
-  private static readonly defaultMaxDelayTicks = 10;
-  private static readonly defaultDurationIncPerDelay = 1;
+  private static readonly defaultClashingDelayTicks = 1;
+  private static readonly defaultMaxDelayTicks = 8;
+  private static readonly defaultDurationIncPerDelay = 15;
+  private static readonly defaultFinishDamageData = new DamageData(
+    5,
+    bj_HEROSTAT_INT,
+    ATTACK_TYPE_HERO, 
+    DAMAGE_TYPE_NORMAL,
+    WEAPON_TYPE_WHOKNOWS
+  );
+  private static readonly defaultFinishAOE = 500;
   private static readonly defaultCastTime = 8;
   private static readonly defaultKnockbackSpeed = 5;
+  private static readonly defaultKnockbackAngle = 1;
   private static readonly defaultKnockbackAOE = 1;
-  private static readonly beamStartHeight = 0;
-  private static readonly beamEndHeight = 0;
+  private static readonly defaultBeamHeightVariationType = VariationTypes.LINEAR_VARIATION;
+  private static readonly defaultBeamHeightStart = 300;
+  private static readonly defaultBeamHeightEnd = 0;
   private static readonly defaultIsTracking = false;
+  private static readonly defaultIsFixedAngle = true;
+  private static readonly defaultIsClashWithHero = true;
   private static readonly defaultBeamUnitType = FourCC('hpea');
   private static readonly defaultAnimation = "spell";
   private static readonly defaultSfx = [
     new SfxData(
-      "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
-      5, 
-      1.5,
-      0,
-      0, 
-      0,
+      "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
+      8, 0, 1.2, 0, 0, 0,
       new Vector3D(
         255, 255, 255  
       ),
       false,
+    ),
+    new SfxData(
+      "Abilities\\Spells\\Undead\\ReplenishMana\\ReplenishManaCasterOverhead.mdl",
+      Beam.defaultDuration, 1, 2, 0, 0, 0,
+      new Vector3D(
+        255, 255, 255  
+      ),
+      false,
+    ),
+  ];
+  private static readonly defaultAttachedSfx = [
+    new SfxData(
+      "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
+      5, 0, 1.5, 0, 0, 0,
+      new Vector3D(
+        255, 255, 255  
+      ),
+      false,"origin",
     ),
   ];
   private static readonly defaultIcon = new Icon(
@@ -72,6 +98,7 @@ export class Beam extends CustomAbility {
 
   protected angle: number;
   protected previousBeamHp: number;
+  protected affectedEnemyHeroes: number;
   protected persistentSfx: effect[];
 
   constructor(
@@ -91,10 +118,18 @@ export class Beam extends CustomAbility {
     public clashingDelayTicks: number = Beam.defaultClashingDelayTicks,
     public maxDelayTicks: number = Beam.defaultMaxDelayTicks,
     public durationIncPerDelay: number = Beam.defaultDurationIncPerDelay,
+    public finishDamageData: DamageData = Beam.defaultFinishDamageData,
+    public finishAoe: number = Beam.defaultFinishAOE,
+    public beamHeightVariationType: number = Beam.defaultBeamHeightVariationType,
+    public beamHeightStart: number = Beam.defaultBeamHeightStart,
+    public beamHeightEnd: number = Beam.defaultBeamHeightEnd,
     public isTracking : boolean = Beam.defaultIsTracking,
+    public isFixedAngle : boolean = Beam.defaultIsFixedAngle,
+    public isClashWithHero : boolean = Beam.defaultIsClashWithHero,
     public beamUnitType: number = Beam.defaultBeamUnitType,
     public animation: string = Beam.defaultAnimation,
     public sfxList: SfxData[] = Beam.defaultSfx,
+    public attachedSfxList: SfxData[] = Beam.defaultAttachedSfx,
   ) {
     super(
       name, 
@@ -109,6 +144,7 @@ export class Beam extends CustomAbility {
     );
     this.angle = 0;
     this.previousBeamHp = 0;
+    this.affectedEnemyHeroes = 0;
     this.persistentSfx = [];
   }
 
@@ -116,27 +152,13 @@ export class Beam extends CustomAbility {
     return Math.max(150, Math.floor(damage * this.beamHpMult) * 50);
   }
 
-  protected dealDamageToGroup(source: unit, affectedGroup: group, damage: number): this {
-    ForGroup(affectedGroup, () => {
-      const target = GetEnumUnit();
-      UnitDamageTarget(
-        source, 
-        target, 
-        damage,
-        true,
-        false,
-        this.damageData.attackType,
-        this.damageData.damageType,
-        this.damageData.weaponType,
-      )
-    })
-    return this;
-  }
-
   protected checkForBeamClash(beamUnit: unit): this {
     if (this.clashingDelayTicks > 0) {
       const currentBeamHp = GetUnitState(beamUnit, UNIT_STATE_LIFE);
-      if (currentBeamHp < this.previousBeamHp) {
+      if (
+        currentBeamHp < this.previousBeamHp || 
+        (this.isClashWithHero && this.affectedEnemyHeroes > 0)
+      ) {
         this.delayTicks = Math.min(this.maxDelayTicks, (this.delayTicks + this.clashingDelayTicks));
       }
       this.previousBeamHp = currentBeamHp;
@@ -149,93 +171,147 @@ export class Beam extends CustomAbility {
     
     if (this.delayTicks <= 0) {
       const currentCoord = new Vector2D(GetUnitX(beamUnit), GetUnitY(beamUnit));
-      if (this.isTracking) {
+      if (!this.isFixedAngle) {
         this.angle = GetUnitFacing(beamUnit);
       }
       const targetCoord = CoordMath.polarProjectCoords(currentCoord, this.angle, this.speed);
 
-      if (PathingCheck.IsWalkable(targetCoord)) {
-        SetUnitX(beamUnit, targetCoord.x);
-        SetUnitY(beamUnit, targetCoord.y);
-      }
+     PathingCheck.moveFlyingUnitToCoord(beamUnit, targetCoord);
     } else {
       --this.delayTicks;
-      this.currentTick = Math.max(2, this.currentTick + this.durationIncPerDelay);
+      // when delaying movement, if duration inc per delay > 0
+      // there is a chance that the current tick is reduced by 1
+      // i.e. total duration of beam is increased by 1
+      // e.g. a durationIncPerDelay of 1, would on average 
+      // increase the beam duration by 1 per 100 ticks
+      // thus duractionIncPerDelay X produces a +X% incerease in total duration
+      if (this.durationIncPerDelay > Math.random()*99 + 0.0001) {
+        this.currentTick = Math.max(2, this.currentTick - 1);
+      }
     }
     return this;
   }
 
-  protected calculateDamage(source: unit): number {
+  protected calculateDamage(source: unit, damageData: DamageData): number {
     return (
-      this.damageData.multiplier * 
-      GetHeroStatBJ(this.damageData.attribute, source, true)
+      damageData.multiplier * 
+      GetHeroStatBJ(damageData.attribute, source, true)
     );
   }
 
-  protected dealAOEDamage(input: CustomAbilityInput, beamUnit: unit) {
+  protected dealDamageToGroup(source: unit, affectedGroup: group, damageData: DamageData): this {
+    ForGroup(affectedGroup, () => {
+      const target = GetEnumUnit();
+      UnitDamageTarget(
+        source, 
+        target, 
+        this.calculateDamage(source, damageData),
+        true,
+        false,
+        damageData.attackType,
+        damageData.damageType,
+        damageData.weaponType,
+      )
+    })
+    return this;
+  }
+
+  protected dealAOEDamage(
+    input: CustomAbilityInput, 
+    beamUnit: unit, 
+    aoe: number, 
+    damageData: DamageData) 
+  {
     const beamCoords = new Vector2D(GetUnitX(beamUnit), GetUnitY(beamUnit));
     const affectedGroup = UnitHelper.getNearbyValidUnits(
       beamCoords, 
-      this.aoe,
+      aoe,
       () => {
         return this.isBasicValidTarget(GetFilterUnit(), input.casterPlayer);
       }
     );
     
-    const damage = this.calculateDamage(input.caster.unit);
-    this.dealDamageToGroup(input.caster.unit, affectedGroup, damage);
+    this.dealDamageToGroup(input.caster.unit, affectedGroup, damageData);
+    this.affectedEnemyHeroes = UnitHelper.countEnemyHeroes(affectedGroup, input.casterPlayer);
 
     DestroyGroup(affectedGroup);
   }
 
-  private performTickAction(input: CustomAbilityInput, beamUnit: unit): this {
-    this.moveBeamUnit(input, beamUnit);
-    this.dealAOEDamage(input, beamUnit);
+  protected displaySfxList(input: CustomAbilityInput, beamUnit: unit): this {
     this.displaySfxListAtCoord(
       this.sfxList, 
       new Vector2D(GetUnitX(beamUnit), GetUnitY(beamUnit)), 
+      SfxData.SHOW_ALL_GROUPS,
       this.angle, 
       BlzGetUnitZ(beamUnit),
     );
     return this;
   }
 
+  protected displayAttachedSfxList(input: CustomAbilityInput, beamUnit: unit): this {
+    this.displaySfxListOnUnit(
+      this.attachedSfxList,
+      beamUnit,
+      SfxData.SHOW_ALL_GROUPS,
+      this.angle,
+      BlzGetUnitZ(beamUnit),
+    )
+    return this;
+  }
+
+  private performTickAction(input: CustomAbilityInput, beamUnit: unit): this {
+    this.moveBeamUnit(input, beamUnit);
+    this.dealAOEDamage(
+      input, 
+      beamUnit, 
+      this.aoe, 
+      this.damageData,
+    );
+    if (this.finishAoe > 0 && this.currentTick == this.duration) {
+      this.dealAOEDamage(
+        input, 
+        beamUnit, 
+        this.finishAoe, 
+        this.finishDamageData,
+      );
+    }
+    this.displaySfxList(input, beamUnit);
+    this.displayAttachedSfxList(input, beamUnit);
+    return this;
+  }
+
   protected setupBeamUnit(input: CustomAbilityInput): unit {
+    const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+    this.angle = CoordMath.angleBetweenCoords(casterCoord, input.targetPoint);
+
     let beamUnit = CreateUnit(
       input.casterPlayer, 
       this.beamUnitType, 
       GetUnitX(input.caster.unit), 
       GetUnitY(input.caster.unit), 
-      0
+      this.angle,
+    );
+    
+    UnitHelper.giveUnitFlying(beamUnit);
+    
+    SetUnitFlyHeight(beamUnit, BlzGetUnitZ(input.caster.unit) + this.beamHeightStart, 0);
+
+    SetUnitFlyHeight(
+      beamUnit, 
+      this.beamHeightEnd, 
+      Math.abs((this.beamHeightEnd - this.beamHeightStart) / (this.duration * this.updateRate)),
     );
     
     // hp MUST be a multiple of 50??? or something
     // else it causes a crash / uncatched exception
     // and prevents the rest of the beam code from firing
     let maxHp = GetUnitState(beamUnit, UNIT_STATE_LIFE);
-    maxHp = this.calculateBeamMaxHp(this.calculateDamage(input.caster.unit));
+    maxHp = this.calculateBeamMaxHp(this.calculateDamage(input.caster.unit, this.damageData));
     BlzSetUnitMaxHP(beamUnit, maxHp);
     // SetUnitState(this.beamUnit, UNIT_STATE_LIFE, maxHp);
     SetUnitLifePercentBJ(beamUnit, 100);
-    this.previousBeamHp = maxHp;
+    this.previousBeamHp = GetUnitState(beamUnit, UNIT_STATE_LIFE);
     BlzSetUnitName(beamUnit, this.name);
-
-    SetUnitInvulnerable(beamUnit, true);
-    ShowUnit(beamUnit, false);
-
-    return beamUnit;
-  }
-
-  protected preactivationEffects(input: CustomAbilityInput, beamUnit: unit) {
-    const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-    this.angle = CoordMath.angleBetweenCoords(casterCoord, input.targetPoint);
-
-    SetUnitInvulnerable(beamUnit, false);
-    ShowUnit(beamUnit, true);
-
-    SetUnitX(beamUnit, casterCoord.x);
-    SetUnitY(beamUnit, casterCoord.y);
-    SetUnitFacing(beamUnit, this.angle);
 
     if (!this.isTracking) {
       PauseUnit(beamUnit, true);
@@ -244,6 +320,10 @@ export class Beam extends CustomAbility {
       SelectUnitAddForPlayer(beamUnit, input.casterPlayer);
     }
 
+    return beamUnit;
+  }
+
+  protected preactivationEffects(input: CustomAbilityInput, beamUnit: unit) {
     SetUnitAnimation(input.caster.unit, this.animation);
     this.delayTicks = 0;
   }
@@ -268,26 +348,28 @@ export class Beam extends CustomAbility {
     TriggerAddAction(readyTrigger, () => {
       const x = GetOrderPointX();
       const y = GetOrderPointY();
-      input.targetPoint = new Vector2D(x, y);
+      // input.targetPoint = new Vector2D(x, y);
       isReady = true;
       DestroyTrigger(readyTrigger);
     })
 
-    let beamUnit = this.setupBeamUnit(input);
+    let beamUnit: unit;
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
       if (isReady) {
         if (this.currentTick == 0) {
+          beamUnit = this.setupBeamUnit(input);;
           this.preactivationEffects(input, beamUnit);
         }
-        if (this.currentTick < this.duration) {
+        // assume beam unit is created after this point
+        if (this.currentTick <= this.duration) {
           if (beamUnit && IsUnitType(beamUnit, UNIT_TYPE_DEAD) == true) {
             this.currentTick = this.duration;
           }
           this.performTickAction(input, beamUnit);
           ++this.currentTick;
         } 
-        if (this.currentTick >= this.duration) {
+        if (this.currentTick > this.duration) {
           RemoveUnit(beamUnit);
           this.cleanupPersistentSfx();
         }

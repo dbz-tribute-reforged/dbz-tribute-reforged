@@ -6,6 +6,7 @@ import { Beam } from "./Beam";
 import { SfxData } from "./SfxData";
 import { Vector3D } from "Common/Vector3D";
 import { DamageData } from "./DamageData";
+import { HeightVariation, VariationTypes } from "Common/HeightVariation";
 
 export class BeamRed extends Beam {
 
@@ -20,29 +21,38 @@ export class BeamRed extends Beam {
     duration: number = 40,
     updateRate: number = 0.03,
     damageData: DamageData = new DamageData(
-      2.0,
+      0.4,
       bj_HEROSTAT_STR,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ),
-    beamHpMult: number = 0.2,
+    beamHpMult: number = 0.3,
     speed: number = 50.0,
     aoe: number = 175,
-    clashingDelayTicks: number = 2,
+    clashingDelayTicks: number = 3,
     maxDelayTicks: number = 4,
-    durationIncPerDelay: number = 1,
+    durationIncPerDelay: number = 8,
+    finishDamageData: DamageData = new DamageData(
+      5,
+      bj_HEROSTAT_STR,
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL,
+      WEAPON_TYPE_WHOKNOWS
+    ),
+    finishAoe: number = 350,
+    beamHeightVariationType: VariationTypes = VariationTypes.LINEAR_VARIATION,
+    beamHeightStart: number = 0,
+    beamHeightEnd: number = 300,
     isTracking: boolean = false,
+    isFixedAngle: boolean = false,
+    isClashWithHero: boolean = true,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "death",
     sfxList = [
       new SfxData(
         "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
-        2, 
-        1.2,
-        75, 
-        75,
-        0,
+        2, 0, 1.3, 75, 75, 0,
         new Vector3D(
           255, 255, 255  
         ),
@@ -50,15 +60,37 @@ export class BeamRed extends Beam {
       ),
       new SfxData(
         "Abilities\\Spells\\Other\\Volcano\\VolcanoMissile.mdl",
-        4, 
-        0.5,
-        0, 
-        0,
-        0,
+        4, 0, 0.5, 0, 0, 0,
         new Vector3D(
           255, 205, 155  
         ),
         false,
+      ),
+      new SfxData(
+        "NuclearExplosion.mdl",
+        duration, 0, 0.5, 0, 0, 0,
+        new Vector3D(
+          255, 205, 155  
+        ),
+        false,
+      ),
+    ],
+    attachedSfxList = [
+      new SfxData(
+        "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        0, 0, 1.5, 75, 75, 0,
+        new Vector3D(
+          255, 255, 255  
+        ),
+        true, "origin",
+      ),
+      new SfxData(
+        "Abilities\\Weapons\\LordofFlameMissile\\LordofFlameMissile.mdl",
+        0, 0, 1.5, 0, 0, 0,
+        new Vector3D(
+          255, 205, 155  
+        ),
+        true, "origin",
       ),
     ],
     public icon: Icon = new Icon(
@@ -93,10 +125,18 @@ export class BeamRed extends Beam {
       clashingDelayTicks,
       maxDelayTicks,
       durationIncPerDelay,
+      finishDamageData,
+      finishAoe,
+      beamHeightVariationType,
+      beamHeightStart,
+      beamHeightEnd,
       isTracking,
+      isFixedAngle,
+      isClashWithHero,
       beamUnitType,
       animation,
       sfxList,
+      attachedSfxList,
     );
   }
 }

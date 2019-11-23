@@ -39,7 +39,7 @@ export class BlueHurricane extends CustomAbility {
   static readonly defaultSfxList = [
     new SfxData(
       "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl", 
-      75, 3.0, 0, 0, 0, 
+      75, 0, 3.0, 0, 0, 0, 
       new Vector3D(55, 155, 255),
       false
     ),
@@ -142,7 +142,7 @@ export class BlueHurricane extends CustomAbility {
         projectionDistance
       );
 
-      PathingCheck.moveUnitToCoord(target, targetNewCoord, true);
+      PathingCheck.moveGroundUnitToCoord(target, targetNewCoord);
       this.dealDamageToUnit(input.caster.unit, target, closenessRatio);
     });
     return this;
@@ -152,6 +152,7 @@ export class BlueHurricane extends CustomAbility {
     this.displaySfxListAtCoord(
       this.sfxList, 
       new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit)), 
+      SfxData.SHOW_ALL_GROUPS,
       0, 
       BlzGetUnitZ(input.caster.unit),
     );
@@ -176,10 +177,10 @@ export class BlueHurricane extends CustomAbility {
     this.takeCosts(input);
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (this.currentTick < this.duration) {
+      if (this.currentTick <= this.duration) {
         this.performTickAction(input);
       }
-      if (this.currentTick >= this.duration) {
+      if (this.currentTick > this.duration) {
         this.cleanupPersistentSfx();
       }
       this.updateCd();

@@ -6,6 +6,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { CustomAbilityInput } from "./CustomAbilityInput";
 import { SfxData } from "./SfxData";
+import { Vector3D } from "Common/Vector3D";
 
 export class ZanzoDash extends CustomAbility {
   static readonly defaultName = "Zanzo Dash"; 
@@ -16,7 +17,17 @@ export class ZanzoDash extends CustomAbility {
   static readonly defaultUpdateRate = 0.03;
   static readonly defaultDistance = 40.0;
   static readonly defaultSfxList = [
-    new SfxData("WindCirclefaster.mdl", 0, 1.0),
+    new SfxData("WindCirclefaster.mdl", 0, 0, 1.0),
+  ];
+  private static readonly defaultAttachedSfx = [
+    new SfxData(
+      "DustWindFasterExact.mdl",
+      0, 0, 1.0, 0, 0, 0,
+      new Vector3D(
+        255, 255, 255  
+      ),
+      false, "origin",
+    ),
   ];
   static readonly defaultIcon = new Icon(
     "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
@@ -39,8 +50,9 @@ export class ZanzoDash extends CustomAbility {
     updateRate: number = ZanzoDash.defaultUpdateRate,
     icon: Icon = ZanzoDash.defaultIcon,
     tooltip: Tooltip = ZanzoDash.defaultTooltip,
-    protected sfxList: SfxData[] = ZanzoDash.defaultSfxList,
     protected distance: number = ZanzoDash.defaultDistance,
+    protected sfxList: SfxData[] = ZanzoDash.defaultSfxList,
+    protected attachedSfxList: SfxData[] = ZanzoDash.defaultAttachedSfx,
   ) {
     super(
       name, 
@@ -59,7 +71,7 @@ export class ZanzoDash extends CustomAbility {
     const currentCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
     const direction = CoordMath.angleBetweenCoords(currentCoord, input.targetPoint);
     const targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, this.distance);
-    PathingCheck.moveUnitToCoord(input.caster.unit, targetCoord, true);
+    PathingCheck.moveGroundUnitToCoord(input.caster.unit, targetCoord);
     return this;
   }
 
@@ -68,9 +80,17 @@ export class ZanzoDash extends CustomAbility {
     this.displaySfxListAtCoord(
       this.sfxList, 
       new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit)), 
+      SfxData.SHOW_ALL_GROUPS,
       0, 
       0
     );
+    this.displaySfxListOnUnit(
+      this.attachedSfxList,
+      input.caster.unit,
+      SfxData.SHOW_ALL_GROUPS,
+      0,
+      0,
+    )
     this.moveCaster(input);
     ++this.currentTick;
     return this;
@@ -82,10 +102,10 @@ export class ZanzoDash extends CustomAbility {
     IssueImmediateOrder(input.caster.unit, "stop");
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (this.currentTick < this.duration) {
+      if (this.currentTick <= this.duration) {
         this.performTickAction(input);
       }
-      if (this.currentTick >= this.duration) {
+      if (this.currentTick > this.duration) {
         this.cleanupPersistentSfx();
       }
       this.updateCd();

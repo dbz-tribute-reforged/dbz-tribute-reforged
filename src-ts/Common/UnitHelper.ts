@@ -25,4 +25,26 @@ export module UnitHelper {
     );
     return affectedGroup;
   }
+
+  export function giveUnitFlying(unit: unit) {
+    const flyingAbility = FourCC('Arav');
+    if (UnitAddAbility(unit, flyingAbility)) {
+      UnitRemoveAbility(unit, flyingAbility);
+    }
+  }
+  
+  export function countEnemyHeroes(group: group, player: player): number {
+    let numEnemies = 0;
+    ForGroup(group, () => {
+      const unit = GetEnumUnit();
+      if (
+        IsUnitType(unit, UNIT_TYPE_HERO) &&
+        IsUnitEnemy(unit, player) &&
+        !IsUnitType(unit, UNIT_TYPE_DEAD)
+      ) {
+        ++numEnemies;
+      }
+    });
+    return numEnemies;
+  }
 }

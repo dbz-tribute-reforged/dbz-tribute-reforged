@@ -94,6 +94,7 @@ export abstract class CustomAbility {
     );
   }
 
+  // probably move sfx stuff to a sfx displaying class
   // TODO: vary height of the sfx over their lifetime...
   // also expand to cover more sfx attributes for greater customisability
   displaySfxAtCoord(
@@ -108,7 +109,7 @@ export abstract class CustomAbility {
     if (newYaw > 0) {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);
     }
-    if (displayedSfx.startHeight > 0) {
+    if (height + displayedSfx.startHeight > 0) {
       BlzSetSpecialEffectHeight(createdSfx, height + displayedSfx.startHeight);
     }
     if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
@@ -122,18 +123,52 @@ export abstract class CustomAbility {
     }
   }
 
+  isSfxReadyToDisplay(sfx: SfxData): boolean {
+    return (sfx.repeatInterval != 0 && this.currentTick != 0 && this.currentTick % sfx.repeatInterval == 0) ||
+      (sfx.repeatInterval == 0 && this.currentTick == 0) || 
+      (sfx.repeatInterval == this.duration && this.currentTick == this.duration)
+    ;
+  }
+
   // displays the sfx at the caster's location
   // if the current tick is divisible by the repeat interval
-  displaySfxListAtCoord(sfxList: SfxData[], target: Vector2D, angle: number, height: number) {
+  displaySfxListAtCoord(sfxList: SfxData[], target: Vector2D, group: number, angle: number, height: number) {
     for (const sfx of sfxList) {
+      if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       // NOTE: avoid mod by 0 
-      if (
-        this.currentTick == 0 || 
-        (sfx.repeatInterval != 0 && this.currentTick % sfx.repeatInterval == 0)
-      ) {
+      if (this.isSfxReadyToDisplay(sfx)) {
         this.displaySfxAtCoord(
           sfx, 
           target,
+          angle,
+          height,
+        );
+      };
+    }
+  }
+
+  displaySfxOnUnit(displayedSfx: SfxData, unit: unit, angle: number, height: number) {
+    const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
+
+    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
+      BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
+    }
+
+    if (displayedSfx.persistent) {
+      this.persistentSfx.push(createdSfx);
+    } else {
+      DestroyEffect(createdSfx);
+    }
+  }
+
+  displaySfxListOnUnit(sfxList: SfxData[], unit: unit, group: number, angle: number, height: number) {
+    for (const sfx of sfxList) {
+      if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
+
+      if (this.isSfxReadyToDisplay(sfx)) {
+        this.displaySfxOnUnit(
+          sfx,
+          unit,
           angle,
           height,
         );

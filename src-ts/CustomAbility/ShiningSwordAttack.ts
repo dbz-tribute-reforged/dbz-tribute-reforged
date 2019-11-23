@@ -18,7 +18,7 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultDuration = 67; 
   static readonly defaultUpdateRate = 0.03;
   static readonly defaultDamageData = new DamageData(
-    0.3,
+    0.6,
     bj_HEROSTAT_AGI,
     ATTACK_TYPE_HERO,
     DAMAGE_TYPE_NORMAL,
@@ -32,7 +32,7 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
   static readonly defaultSfxList = [
     new SfxData(
-      "animeslashfinal.mdl", 1, 1.5, 75, 75, 0, 
+      "animeslashfinal.mdl", 1, 0, 1.5, 75, 75, 0, 
       new Vector3D(255, 155, 55), 
       false
     ),
@@ -139,6 +139,7 @@ export class ShiningSwordAttack extends CustomAbility {
       this.displaySfxListAtCoord(
         this.sfxList, 
         middleCoord, 
+        SfxData.SHOW_ALL_GROUPS,
         sfxAngle, 
         BlzGetUnitZ(input.caster.unit)
       );
@@ -176,10 +177,10 @@ export class ShiningSwordAttack extends CustomAbility {
     this.attachedSfx = AddSpecialEffectTargetUnitBJ("weapon", input.caster.unit, this.attachedSfxName);
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (this.currentTick < this.duration) {
+      if (this.currentTick <= this.duration) {
         this.performTickAction(input);
       }
-      if (this.currentTick >= this.duration) {
+      if (this.currentTick > this.duration) {
         DestroyEffect(this.attachedSfx);
         this.cleanupPersistentSfx();
       }

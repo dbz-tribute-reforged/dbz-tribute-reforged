@@ -6,6 +6,7 @@ import { Beam } from "./Beam";
 import { SfxData } from "./SfxData";
 import { Vector3D } from "Common/Vector3D";
 import { DamageData } from "./DamageData";
+import { HeightVariation, VariationTypes } from "Common/HeightVariation";
 
 // probs not do this
 // only use classes if there is going to be
@@ -23,33 +24,60 @@ export class BeamPurple extends Beam {
     duration: number = 60,
     updateRate: number = 0.03,
     damageData: DamageData = new DamageData(
-      1.0,
+      0.6,
       bj_HEROSTAT_INT,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ),
-    beamHpMult: number = 0.4,
+    beamHpMult: number = 0.6,
     speed: number = 25.0,
     aoe: number = 125,
     clashingDelayTicks: number = 2,
-    maxDelayTicks: number = 8,
-    durationIncPerDelay: number = 1,
+    maxDelayTicks: number = 6,
+    durationIncPerDelay: number = 10,
+    finishDamageData: DamageData = new DamageData(
+      6,
+      bj_HEROSTAT_INT,
+      ATTACK_TYPE_HERO, 
+      DAMAGE_TYPE_NORMAL,
+      WEAPON_TYPE_WHOKNOWS
+    ),
+    finishAoe: number = 250,
+    beamHeightVariationType: VariationTypes = VariationTypes.LINEAR_VARIATION,
+    beamHeightStart: number = 0,
+    beamHeightEnd: number = 0,
     isTracking: boolean = true,
+    isFixedAngle: boolean = false,
+    isClashWithHero: boolean = false,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "walk",
     sfxList = [
       new SfxData(
         "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
-        2, 
-        1.2,
-        75, 
-        75,
-        90,
+        2, 0, 1.2, 0, 0, 0,
         new Vector3D(
           255, 155, 255  
         ),
         true,
+      ),
+      new SfxData(
+        "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        duration, 0, 1.2, 0, 0, 0,
+        new Vector3D(
+          255, 125, 255  
+        ),
+        false,
+      ),
+    ],
+    attachedSfxList = [
+      new SfxData(
+        "Abilities\Spells\Orc\Purge\PurgeBuffTarget.mdl",
+        4, 0, 3.0, 0, 0, 0,
+        new Vector3D(
+          255, 155, 255  
+        ),
+        false, "origin"
       ),
     ],
     icon: Icon = new Icon(
@@ -84,10 +112,18 @@ export class BeamPurple extends Beam {
       clashingDelayTicks,
       maxDelayTicks,
       durationIncPerDelay,
+      finishDamageData,
+      finishAoe,
+      beamHeightVariationType,
+      beamHeightStart,
+      beamHeightEnd,
       isTracking,
+      isFixedAngle,
+      isClashWithHero,
       beamUnitType,
       animation,
       sfxList,
+      attachedSfxList,
     );
   }
 }

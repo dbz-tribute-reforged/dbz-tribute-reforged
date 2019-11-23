@@ -59,8 +59,7 @@ export function setAbilityUIToAbility(
 
 export function updateHeroAbilityCD(heroAbility: CustomAbility, index: number, cdText: string, cdValue: number) {
   BlzFrameSetValue(BlzGetFrameByName("MyAbilityIconBar", index), cdValue);
-  // will cause a desync
-  // BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", index), cdText);
+  BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", index), cdText);
 }
 
 export function updateSelectedUnitBars(
@@ -230,10 +229,10 @@ export function CustomPlayerTest() {
           let heroAbility = ownedHero.getAbilityByIndex(j);
           if (heroAbility) {
             let cdText = "";
-            // let abilityCd = heroAbility.currentCd;
-            // if (abilityCd > 0) {
-            //   cdText = R2SW(abilityCd,2,2) + "s";
-            // }
+            let abilityCd = heroAbility.currentCd;
+            if (abilityCd > 0) {
+              cdText = R2SW(abilityCd,2,2) + "s";
+            }
             // BJDebugMsg(cdText);
             if (GetPlayerId(GetLocalPlayer()) == playerId) {
               // POSSIBLY LAGGY
@@ -256,7 +255,7 @@ export function CustomPlayerTest() {
     if (IsUnitType(dead, UNIT_TYPE_HERO)) {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
-        ReviveHero(dead, 64 + Math.random()*1280, 64 + Math.random()*1280, true);
+        ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);
         BJDebugMsg("revoive spam");
         SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
         SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));

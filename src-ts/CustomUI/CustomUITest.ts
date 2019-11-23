@@ -320,7 +320,7 @@ export function CustomUiTest() {
 			}
 		});
 		
-		BlzFrameSetText(BlzGetFrameByName("MyAbilitIconBarText", i), "");
+		BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", i), "");
 
 		abilityHotBar.addButton(abilityButton);
 	}
