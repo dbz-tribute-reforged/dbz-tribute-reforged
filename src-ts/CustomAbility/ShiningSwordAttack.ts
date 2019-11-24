@@ -17,8 +17,9 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 67; 
   static readonly defaultUpdateRate = 0.03;
+  static readonly defaultCastTime = 0.25;
   static readonly defaultDamageData = new DamageData(
-    0.6,
+    0.9,
     bj_HEROSTAT_AGI,
     ATTACK_TYPE_HERO,
     DAMAGE_TYPE_NORMAL,
@@ -28,11 +29,12 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultMinDistance = 100.0;
   static readonly defaultAOE = 225;
   static readonly defaultDelayBetweenDamageTicks = 3;
+  static readonly defaultCanMultiCast = false;
   static readonly defaultAnimation = "attack";
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
   static readonly defaultSfxList = [
     new SfxData(
-      "animeslashfinal.mdl", 1, 0, 1.5, 75, 75, 0, 
+      "animeslashfinal.mdl", 1, 0, 1.5, 25, 25, 0, 
       new Vector3D(255, 155, 55), 
       false
     ),
@@ -66,6 +68,9 @@ export class ShiningSwordAttack extends CustomAbility {
     costAmount: number = ShiningSwordAttack.defaultCostAmount,
     duration: number = ShiningSwordAttack.defaultDuration,
     updateRate: number = ShiningSwordAttack.defaultUpdateRate,
+    castTime: number = ShiningSwordAttack.defaultCastTime,
+    canMultiCast: boolean = ShiningSwordAttack.defaultCanMultiCast,
+    animation: string = ShiningSwordAttack.defaultAnimation,
     icon: Icon = ShiningSwordAttack.defaultIcon,
     tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
     public damageData: DamageData = ShiningSwordAttack.defaultDamageData,
@@ -73,7 +78,6 @@ export class ShiningSwordAttack extends CustomAbility {
     public minDistance: number = ShiningSwordAttack.defaultMinDistance,
     public aoe: number = ShiningSwordAttack.defaultAOE,
     public delayBetweenDamageTicks: number = ShiningSwordAttack.defaultDelayBetweenDamageTicks,
-    public animation: string = ShiningSwordAttack.defaultAnimation,
     public sfxList: SfxData[] = ShiningSwordAttack.defaultSfxList,
     public attachedSfxName: string = ShiningSwordAttack.defaultAttachedSfxName,
   ) {
@@ -85,6 +89,9 @@ export class ShiningSwordAttack extends CustomAbility {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip
     );

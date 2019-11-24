@@ -7,6 +7,7 @@ import { SfxData } from "./SfxData";
 import { Vector3D } from "Common/Vector3D";
 import { DamageData } from "./DamageData";
 import { HeightVariation, VariationTypes } from "Common/HeightVariation";
+import { KnockbackData } from "./KnockbackData";
 
 export class BeamRed extends Beam {
 
@@ -21,7 +22,7 @@ export class BeamRed extends Beam {
     duration: number = 40,
     updateRate: number = 0.03,
     damageData: DamageData = new DamageData(
-      0.4,
+      0.5,
       bj_HEROSTAT_STR,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
@@ -41,12 +42,17 @@ export class BeamRed extends Beam {
       WEAPON_TYPE_WHOKNOWS
     ),
     finishAoe: number = 350,
+    castTime: number = 0.25,
+    knockbackData = new KnockbackData (
+      15, 0, 175
+    ),
     beamHeightVariationType: VariationTypes = VariationTypes.LINEAR_VARIATION,
     beamHeightStart: number = 0,
     beamHeightEnd: number = 300,
     isTracking: boolean = false,
     isFixedAngle: boolean = false,
-    isClashWithHero: boolean = true,
+    canClashWithHero: boolean = true,
+    canMultiCast = false,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "death",
     sfxList = [
@@ -116,6 +122,9 @@ export class BeamRed extends Beam {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip,
       damageData,
@@ -127,14 +136,14 @@ export class BeamRed extends Beam {
       durationIncPerDelay,
       finishDamageData,
       finishAoe,
+      knockbackData,
       beamHeightVariationType,
       beamHeightStart,
       beamHeightEnd,
       isTracking,
       isFixedAngle,
-      isClashWithHero,
+      canClashWithHero,
       beamUnitType,
-      animation,
       sfxList,
       attachedSfxList,
     );

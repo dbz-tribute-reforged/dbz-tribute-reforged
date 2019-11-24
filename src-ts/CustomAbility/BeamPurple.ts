@@ -7,6 +7,7 @@ import { SfxData } from "./SfxData";
 import { Vector3D } from "Common/Vector3D";
 import { DamageData } from "./DamageData";
 import { HeightVariation, VariationTypes } from "Common/HeightVariation";
+import { KnockbackData } from "./KnockbackData";
 
 // probs not do this
 // only use classes if there is going to be
@@ -24,7 +25,7 @@ export class BeamPurple extends Beam {
     duration: number = 60,
     updateRate: number = 0.03,
     damageData: DamageData = new DamageData(
-      0.6,
+      0.4,
       bj_HEROSTAT_INT,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
@@ -37,19 +38,24 @@ export class BeamPurple extends Beam {
     maxDelayTicks: number = 6,
     durationIncPerDelay: number = 10,
     finishDamageData: DamageData = new DamageData(
-      6,
+      5,
       bj_HEROSTAT_INT,
       ATTACK_TYPE_HERO, 
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ),
     finishAoe: number = 250,
+    castTime: number = 0.25,
+    knockbackData = new KnockbackData (
+      22, 180, 125
+    ),
     beamHeightVariationType: VariationTypes = VariationTypes.LINEAR_VARIATION,
     beamHeightStart: number = 0,
     beamHeightEnd: number = 0,
     isTracking: boolean = true,
     isFixedAngle: boolean = false,
-    isClashWithHero: boolean = false,
+    canClashWithHero: boolean = false,
+    canMultiCast = false,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "walk",
     sfxList = [
@@ -103,6 +109,9 @@ export class BeamPurple extends Beam {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip,
       damageData,
@@ -114,14 +123,14 @@ export class BeamPurple extends Beam {
       durationIncPerDelay,
       finishDamageData,
       finishAoe,
+      knockbackData,
       beamHeightVariationType,
       beamHeightStart,
       beamHeightEnd,
       isTracking,
       isFixedAngle,
-      isClashWithHero,
+      canClashWithHero,
       beamUnitType,
-      animation,
       sfxList,
       attachedSfxList,
     );

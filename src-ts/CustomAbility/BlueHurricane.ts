@@ -18,6 +18,7 @@ export class BlueHurricane extends CustomAbility {
   static readonly defaultCostAmount = 120; 
   static readonly defaultDuration = 250; 
   static readonly defaultUpdateRate = 0.03;
+  static readonly defaultCastTime = 0.25;
   static readonly defaultDamageData = new DamageData(
     0.02,
     bj_HEROSTAT_AGI,
@@ -36,6 +37,8 @@ export class BlueHurricane extends CustomAbility {
   // multiplies damage by 1 + mult when at max closeness / duration
   static readonly defaultClosenessDamageMult = 1.0;
   static readonly defaultDurationDamageMult = 1.0;
+  static readonly defaultCanMultiCast = false;
+  static readonly defaultAnimation = "spell";
   static readonly defaultSfxList = [
     new SfxData(
       "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl", 
@@ -71,6 +74,9 @@ export class BlueHurricane extends CustomAbility {
     costAmount: number = BlueHurricane.defaultCostAmount,
     duration: number = BlueHurricane.defaultDuration,
     updateRate: number = BlueHurricane.defaultUpdateRate,
+    castTime: number = BlueHurricane.defaultCastTime,
+    canMultiCast: boolean = BlueHurricane.defaultCanMultiCast,
+    animation: string = BlueHurricane.defaultAnimation,
     icon: Icon = BlueHurricane.defaultIcon,
     tooltip: Tooltip = BlueHurricane.defaultTooltip,
     public damageData: DamageData = BlueHurricane.defaultDamageData, 
@@ -91,6 +97,9 @@ export class BlueHurricane extends CustomAbility {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip
     );

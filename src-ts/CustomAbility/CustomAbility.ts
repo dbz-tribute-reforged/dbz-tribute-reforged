@@ -26,6 +26,9 @@ export abstract class CustomAbility {
     public costAmount: number,
     public duration: number,
     public updateRate: number,
+    public castTime: number,
+    public canMultiCast: boolean,
+    public animation: string,
     public icon: Icon,
     public tooltip: Tooltip,
   ) {

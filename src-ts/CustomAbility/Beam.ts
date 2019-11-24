@@ -11,6 +11,7 @@ import { DamageData } from "./DamageData";
 import { CustomAbilityInput } from "./CustomAbilityInput";
 import { UnitHelper } from "Common/UnitHelper";
 import { HeightVariation, VariationTypes } from "Common/HeightVariation";
+import { KnockbackData } from "./KnockbackData";
 
 export class Beam extends CustomAbility {
 
@@ -20,6 +21,7 @@ export class Beam extends CustomAbility {
   private static readonly defaultCostAmount = 25; 
   private static readonly defaultDuration = 160; 
   private static readonly defaultUpdateRate = 0.03;
+  private static readonly defaultCastTime = 0.25;
   private static readonly defaultDamageData = new DamageData(
     0.25,
     bj_HEROSTAT_INT,
@@ -41,16 +43,16 @@ export class Beam extends CustomAbility {
     WEAPON_TYPE_WHOKNOWS
   );
   private static readonly defaultFinishAOE = 500;
-  private static readonly defaultCastTime = 8;
-  private static readonly defaultKnockbackSpeed = 5;
-  private static readonly defaultKnockbackAngle = 1;
-  private static readonly defaultKnockbackAOE = 1;
+  private static readonly defaultKnockbackData = new KnockbackData (
+    16, 0, 250
+  );
   private static readonly defaultBeamHeightVariationType = VariationTypes.LINEAR_VARIATION;
   private static readonly defaultBeamHeightStart = 300;
   private static readonly defaultBeamHeightEnd = 0;
   private static readonly defaultIsTracking = false;
   private static readonly defaultIsFixedAngle = true;
-  private static readonly defaultIsClashWithHero = true;
+  private static readonly defaultCanClashWithHero = true;
+  private static readonly defaultCanMultiCast = false;
   private static readonly defaultBeamUnitType = FourCC('hpea');
   private static readonly defaultAnimation = "spell";
   private static readonly defaultSfx = [
@@ -109,6 +111,9 @@ export class Beam extends CustomAbility {
     costAmount: number = Beam.defaultCostAmount,
     duration: number = Beam.defaultDuration,
     updateRate: number = Beam.defaultUpdateRate,
+    castTime: number = Beam.defaultCastTime,
+    canMultiCast: boolean = Beam.defaultCanMultiCast,
+    animation: string = Beam.defaultAnimation,
     icon: Icon = Beam.defaultIcon,
     tooltip: Tooltip = Beam.defaultTooltip,
     public damageData: DamageData = Beam.defaultDamageData,
@@ -120,14 +125,14 @@ export class Beam extends CustomAbility {
     public durationIncPerDelay: number = Beam.defaultDurationIncPerDelay,
     public finishDamageData: DamageData = Beam.defaultFinishDamageData,
     public finishAoe: number = Beam.defaultFinishAOE,
+    public knockbackData: KnockbackData = Beam.defaultKnockbackData,
     public beamHeightVariationType: number = Beam.defaultBeamHeightVariationType,
     public beamHeightStart: number = Beam.defaultBeamHeightStart,
     public beamHeightEnd: number = Beam.defaultBeamHeightEnd,
     public isTracking : boolean = Beam.defaultIsTracking,
     public isFixedAngle : boolean = Beam.defaultIsFixedAngle,
-    public isClashWithHero : boolean = Beam.defaultIsClashWithHero,
+    public canClashWithHero : boolean = Beam.defaultCanClashWithHero,
     public beamUnitType: number = Beam.defaultBeamUnitType,
-    public animation: string = Beam.defaultAnimation,
     public sfxList: SfxData[] = Beam.defaultSfx,
     public attachedSfxList: SfxData[] = Beam.defaultAttachedSfx,
   ) {
@@ -139,6 +144,9 @@ export class Beam extends CustomAbility {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip,
     );
@@ -157,7 +165,7 @@ export class Beam extends CustomAbility {
       const currentBeamHp = GetUnitState(beamUnit, UNIT_STATE_LIFE);
       if (
         currentBeamHp < this.previousBeamHp || 
-        (this.isClashWithHero && this.affectedEnemyHeroes > 0)
+        (this.canClashWithHero && this.affectedEnemyHeroes > 0)
       ) {
         this.delayTicks = Math.min(this.maxDelayTicks, (this.delayTicks + this.clashingDelayTicks));
       }
@@ -259,8 +267,7 @@ export class Beam extends CustomAbility {
     return this;
   }
 
-  private performTickAction(input: CustomAbilityInput, beamUnit: unit): this {
-    this.moveBeamUnit(input, beamUnit);
+  protected dealDamage(input: CustomAbilityInput, beamUnit: unit): this {
     this.dealAOEDamage(
       input, 
       beamUnit, 
@@ -275,6 +282,35 @@ export class Beam extends CustomAbility {
         this.finishDamageData,
       );
     }
+    return this;
+  }
+
+  protected performKnockback(input: CustomAbilityInput, beamUnit: unit) {
+    if (this.knockbackData.aoe > 0) {
+      const beamCoords = new Vector2D(GetUnitX(beamUnit), GetUnitY(beamUnit));
+      const affectedGroup = UnitHelper.getNearbyValidUnits(
+        beamCoords, 
+        this.knockbackData.aoe,
+        () => {
+          return this.isBasicValidTarget(GetFilterUnit(), input.casterPlayer);
+        }
+      );
+
+      ForGroup(affectedGroup, () => {
+        const target = GetEnumUnit();
+        const targetCoord = new Vector2D(GetUnitX(target), GetUnitY(target));
+        const knockbackAngle = this.knockbackData.angle + CoordMath.angleBetweenCoords(beamCoords, targetCoord);
+        const newTargetCoord = CoordMath.polarProjectCoords(targetCoord, knockbackAngle, this.knockbackData.speed);
+        PathingCheck.moveGroundUnitToCoord(target, newTargetCoord);
+      });
+      return this;
+    }
+  }
+
+  private performTickAction(input: CustomAbilityInput, beamUnit: unit): this {
+    this.moveBeamUnit(input, beamUnit);
+    this.dealDamage(input, beamUnit);
+    this.performKnockback(input, beamUnit);
     this.displaySfxList(input, beamUnit);
     this.displayAttachedSfxList(input, beamUnit);
     return this;
@@ -324,7 +360,6 @@ export class Beam extends CustomAbility {
   }
 
   protected preactivationEffects(input: CustomAbilityInput, beamUnit: unit) {
-    SetUnitAnimation(input.caster.unit, this.animation);
     this.delayTicks = 0;
   }
 
@@ -332,49 +367,23 @@ export class Beam extends CustomAbility {
   public activate(input: CustomAbilityInput): void {
     this.takeCosts(input);
 
-    // dont go unless player right clicks one more time
-    // er maybe expand for also clicking a unit
-    let isReady = false;
-    const readyTrigger = CreateTrigger();
-    TriggerRegisterPlayerUnitEvent(
-      readyTrigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit && !UnitHelper.isUnitStunned(input.caster.unit);
-      })
-    );
-
-    TriggerAddAction(readyTrigger, () => {
-      const x = GetOrderPointX();
-      const y = GetOrderPointY();
-      // input.targetPoint = new Vector2D(x, y);
-      isReady = true;
-      DestroyTrigger(readyTrigger);
-    })
-
-    let beamUnit: unit;
+    let beamUnit: unit = this.setupBeamUnit(input);
+    this.preactivationEffects(input, beamUnit);
 
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
-      if (isReady) {
-        if (this.currentTick == 0) {
-          beamUnit = this.setupBeamUnit(input);;
-          this.preactivationEffects(input, beamUnit);
+      // assume beam unit is created after this point
+      if (this.currentTick <= this.duration) {
+        if (beamUnit && IsUnitType(beamUnit, UNIT_TYPE_DEAD) == true) {
+          this.currentTick = this.duration;
         }
-        // assume beam unit is created after this point
-        if (this.currentTick <= this.duration) {
-          if (beamUnit && IsUnitType(beamUnit, UNIT_TYPE_DEAD) == true) {
-            this.currentTick = this.duration;
-          }
-          this.performTickAction(input, beamUnit);
-          ++this.currentTick;
-        } 
-        if (this.currentTick > this.duration) {
-          RemoveUnit(beamUnit);
-          this.cleanupPersistentSfx();
-        }
-        this.updateCd();
+        this.performTickAction(input, beamUnit);
+        ++this.currentTick;
+      } 
+      if (this.currentTick > this.duration) {
+        RemoveUnit(beamUnit);
+        this.cleanupPersistentSfx();
       }
+      this.updateCd();
     });
   }
 }

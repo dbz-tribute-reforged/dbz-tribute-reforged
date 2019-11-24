@@ -15,7 +15,10 @@ export class ZanzoDash extends CustomAbility {
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 25; 
   static readonly defaultUpdateRate = 0.03;
+  static readonly defaultCastTime = 0.03;
   static readonly defaultDistance = 40.0;
+  static readonly defaultCanMultiCast = true;
+  static readonly defaultAnimation = "attack";
   static readonly defaultSfxList = [
     new SfxData("WindCirclefaster.mdl", 0, 0, 1.0),
   ];
@@ -48,6 +51,9 @@ export class ZanzoDash extends CustomAbility {
     costAmount: number = ZanzoDash.defaultCostAmount,
     duration: number = ZanzoDash.defaultDuration,
     updateRate: number = ZanzoDash.defaultUpdateRate,
+    castTime: number = ZanzoDash.defaultCastTime,
+    canMultiCast: boolean = ZanzoDash.defaultCanMultiCast,
+    animation: string = ZanzoDash.defaultAnimation,
     icon: Icon = ZanzoDash.defaultIcon,
     tooltip: Tooltip = ZanzoDash.defaultTooltip,
     protected distance: number = ZanzoDash.defaultDistance,
@@ -62,6 +68,9 @@ export class ZanzoDash extends CustomAbility {
       costAmount,
       duration,
       updateRate,
+      castTime,
+      canMultiCast,
+      animation,
       icon,
       tooltip,
     );
