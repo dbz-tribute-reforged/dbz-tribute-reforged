@@ -17,7 +17,7 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultCostAmount = 25; 
   static readonly defaultDuration = 67; 
   static readonly defaultUpdateRate = 0.03;
-  static readonly defaultCastTime = 0.25;
+  static readonly defaultCastTime = 0.0;
   static readonly defaultDamageData = new DamageData(
     0.9,
     bj_HEROSTAT_AGI,
@@ -30,6 +30,7 @@ export class ShiningSwordAttack extends CustomAbility {
   static readonly defaultAOE = 225;
   static readonly defaultDelayBetweenDamageTicks = 3;
   static readonly defaultCanMultiCast = false;
+  static readonly defaultWaitsForNextClick = false;
   static readonly defaultAnimation = "attack";
   static readonly defaultAttachedSfxName = "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl";
   static readonly defaultSfxList = [
@@ -70,6 +71,7 @@ export class ShiningSwordAttack extends CustomAbility {
     updateRate: number = ShiningSwordAttack.defaultUpdateRate,
     castTime: number = ShiningSwordAttack.defaultCastTime,
     canMultiCast: boolean = ShiningSwordAttack.defaultCanMultiCast,
+    waitsForNextClick: boolean = ShiningSwordAttack.defaultWaitsForNextClick,
     animation: string = ShiningSwordAttack.defaultAnimation,
     icon: Icon = ShiningSwordAttack.defaultIcon,
     tooltip: Tooltip = ShiningSwordAttack.defaultTooltip,
@@ -91,6 +93,7 @@ export class ShiningSwordAttack extends CustomAbility {
       updateRate,
       castTime,
       canMultiCast,
+      waitsForNextClick,
       animation,
       icon,
       tooltip

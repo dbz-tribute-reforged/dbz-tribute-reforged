@@ -28,6 +28,7 @@ export abstract class CustomAbility {
     public updateRate: number,
     public castTime: number,
     public canMultiCast: boolean,
+    public waitsForNextClick: boolean,
     public animation: string,
     public icon: Icon,
     public tooltip: Tooltip,

@@ -53,6 +53,7 @@ export class Beam extends CustomAbility {
   private static readonly defaultIsFixedAngle = true;
   private static readonly defaultCanClashWithHero = true;
   private static readonly defaultCanMultiCast = false;
+  private static readonly defaultWaitsForNextClick = true;
   private static readonly defaultBeamUnitType = FourCC('hpea');
   private static readonly defaultAnimation = "spell";
   private static readonly defaultSfx = [
@@ -113,6 +114,7 @@ export class Beam extends CustomAbility {
     updateRate: number = Beam.defaultUpdateRate,
     castTime: number = Beam.defaultCastTime,
     canMultiCast: boolean = Beam.defaultCanMultiCast,
+    waitsForNextClick: boolean = Beam.defaultWaitsForNextClick,
     animation: string = Beam.defaultAnimation,
     icon: Icon = Beam.defaultIcon,
     tooltip: Tooltip = Beam.defaultTooltip,
@@ -146,6 +148,7 @@ export class Beam extends CustomAbility {
       updateRate,
       castTime,
       canMultiCast,
+      waitsForNextClick,
       animation,
       icon,
       tooltip,

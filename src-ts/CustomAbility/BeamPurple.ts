@@ -56,6 +56,7 @@ export class BeamPurple extends Beam {
     isFixedAngle: boolean = false,
     canClashWithHero: boolean = false,
     canMultiCast = false,
+    waitsForNextClick: boolean = true,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "walk",
     sfxList = [
@@ -111,6 +112,7 @@ export class BeamPurple extends Beam {
       updateRate,
       castTime,
       canMultiCast,
+      waitsForNextClick,
       animation,
       icon,
       tooltip,

@@ -8,7 +8,7 @@ export class CustomAbilityInput {
     public level: number,
     public targetPoint: Vector2D,
     public mouseData: Vector2D, 
-    public target?: unit,
+    public targetUnit?: unit,
   ) {
 
   }

@@ -14,7 +14,7 @@ export class BeamRed extends Beam {
 
   // replace with config file stuff later
   constructor(
-    name: string = "Beam Red",
+    name: string = "Red Beam",
     currentCd: number = 0,
     maxCd: number = 6, 
     costType: CostType = CostType.HP,
@@ -53,6 +53,7 @@ export class BeamRed extends Beam {
     isFixedAngle: boolean = false,
     canClashWithHero: boolean = true,
     canMultiCast = false,
+    waitsForNextClick: boolean = true,
     beamUnitType: number = FourCC('hpea'),
     animation: string = "death",
     sfxList = [
@@ -124,6 +125,7 @@ export class BeamRed extends Beam {
       updateRate,
       castTime,
       canMultiCast,
+      waitsForNextClick,
       animation,
       icon,
       tooltip,

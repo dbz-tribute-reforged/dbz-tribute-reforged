@@ -27,7 +27,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
             1,
             customPlayers[playerId].orderPoint,
             customPlayers[playerId].mouseData,
-            undefined,
+            customPlayers[playerId].targetUnit,
           ),
         );
       }
@@ -152,21 +152,35 @@ export function CustomPlayerTest() {
   });
 
 
+  const updatePlayerOrderPoint = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
+  }
+  TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
+    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+  }));
+  TriggerAddAction(updatePlayerOrderPoint, () => {
+    const x = GetOrderPointX();
+    const y = GetOrderPointY();
+    if (x != 0 && y != 0) {
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      customPlayers[playerId].orderPoint.x = x;
+      customPlayers[playerId].orderPoint.y = y;
+    }
+  });
+
   const updatePlayerTargetPoint = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
+  TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
+    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+  }));
   TriggerAddAction(updatePlayerTargetPoint, () => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
-    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
-      const x = GetOrderPointX();
-      const y = GetOrderPointY();
-      if (x != 0 && y != 0) {
-        customPlayers[playerId].orderPoint.x = x;
-        customPlayers[playerId].orderPoint.y = y;
-      }
-    }
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+    customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
+    customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
   });
 
 
@@ -201,7 +215,7 @@ export function CustomPlayerTest() {
   const beamTest3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest3, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(beamTest3, OSKEY_E, 0, true);
-  addAbilityAction(beamTest3, "Beam Red");
+  addAbilityAction(beamTest3, "Red Beam");
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {

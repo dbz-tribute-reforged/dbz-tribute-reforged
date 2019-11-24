@@ -38,6 +38,7 @@ export class BlueHurricane extends CustomAbility {
   static readonly defaultClosenessDamageMult = 1.0;
   static readonly defaultDurationDamageMult = 1.0;
   static readonly defaultCanMultiCast = false;
+  static readonly defaultWaitsForNextClick = false;
   static readonly defaultAnimation = "spell";
   static readonly defaultSfxList = [
     new SfxData(
@@ -76,6 +77,7 @@ export class BlueHurricane extends CustomAbility {
     updateRate: number = BlueHurricane.defaultUpdateRate,
     castTime: number = BlueHurricane.defaultCastTime,
     canMultiCast: boolean = BlueHurricane.defaultCanMultiCast,
+    waitsForNextClick: boolean = BlueHurricane.defaultWaitsForNextClick,
     animation: string = BlueHurricane.defaultAnimation,
     icon: Icon = BlueHurricane.defaultIcon,
     tooltip: Tooltip = BlueHurricane.defaultTooltip,
@@ -99,6 +101,7 @@ export class BlueHurricane extends CustomAbility {
       updateRate,
       castTime,
       canMultiCast,
+      waitsForNextClick,
       animation,
       icon,
       tooltip
