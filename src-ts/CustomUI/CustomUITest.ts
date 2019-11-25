@@ -17,7 +17,7 @@ import { TextureData } from './TextureData';
 import { HPBar } from './HPBar';
 import { MPBar } from './MPBar';
 import { LevelBar } from './LevelBar';
-import { ToolTipFrame } from './TooltipFrame';
+import { ToolTipFrame } from './ToolTipFrame';
 import { StatusBarSimpleFrame } from './StatusBarSimpleFrame';
 import { AbilityButton } from './AbilityButton';
 import { Icon } from 'Common/Icon';
