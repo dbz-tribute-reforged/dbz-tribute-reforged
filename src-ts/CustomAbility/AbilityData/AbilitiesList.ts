@@ -141,7 +141,7 @@ export const AbilitiesList = [
         "|nCost: 75 MP |nCD: 6",
     },
     components: [
-      { name: "beam red" },
+      { name: "beam purple" },
     ],
   },
   // -------------------------------------------

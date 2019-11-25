@@ -132,6 +132,7 @@ export const BeamComponents = [
       { name: "ground vortex fast spin" },
       { name: "sfx beam red" },
       { name: "sfx blue hurricane" },
+      { name: "beam red" },
     ],
   },
   // -------------------------------------------
