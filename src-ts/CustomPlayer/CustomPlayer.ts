@@ -1,5 +1,4 @@
 import { CustomHero } from "CustomHero/CustomHero";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
 import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {
@@ -7,16 +6,19 @@ export class CustomPlayer {
   protected currentlySelectedUnit: unit;
   protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;
+  public orderPoint: Vector2D;
+  public targetUnit: unit;
 
   constructor(
     public id: number, 
     public name: string,
-
   ) {
     this.heroes = [];
     this.currentlySelectedUnit = GetEnumUnit();
     this.lastSelectedOwnedHero = GetEnumUnit();
     this.mouseData = new Vector2D(0, 0);
+    this.orderPoint = new Vector2D(0, 0);
+    this.targetUnit = GetEnumUnit();
   }
 
   public addHero(hero: unit): this {
@@ -65,5 +67,9 @@ export class CustomPlayer {
     if (this.getCustomHero(unit) != undefined) {
       this.lastSelectedOwnedHero = unit;;
     }
+  }
+
+  get allHeroes(): CustomHero[] {
+    return this.heroes;
   }
 }

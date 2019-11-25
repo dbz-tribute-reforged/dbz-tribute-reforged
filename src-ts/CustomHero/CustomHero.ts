@@ -1,41 +1,81 @@
-import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
-import { ZanzoDash } from "CustomAbility/ZanzoDash";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
-import { BlueHurricane } from "CustomAbility/BlueHurricane";
+import { CustomHeroAbilityManager } from "CustomHero/CustomHeroAbilityManager";
+import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
+import { CastTimeHelper } from "./CastTimeHelper";
 import { CustomAbility } from "CustomAbility/CustomAbility";
-import { ShiningSwordAttack } from "CustomAbility/ShiningSwordAttack";
+import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityComponentHelper";
+import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 
 export class CustomHero {
-  public abilities: CustomAbilityManager;
+  public abilities: CustomHeroAbilityManager;
+
+  public isCasting: boolean;
 
   constructor(
     public readonly unit: unit,
   ) {
-    this.abilities = new CustomAbilityManager(
+    // remove these defaults for actual heroes, i think
+    this.abilities = new CustomHeroAbilityManager(
       [
-        new ZanzoDash(),
-        new BlueHurricane(),
-        new ShiningSwordAttack(),
+        
       ]
-    )
+    );
+    this.isCasting = false;
+
+    // TODO: assign basic abilities to all heroes
+    // then read some data and apply special abilities for
+    // relevant heroes
+    this.addAbilityFromAll("Zanzo Dash");
+    this.addAbilityFromAll("Blue Hurricane");
+    this.addAbilityFromAll("Shining Sword Attack");
+    this.addAbilityFromAll("Beam Blue");
+    this.addAbilityFromAll("Beam Purple");
+    this.addAbilityFromAll("Beam Red");
+    this.addAbilityFromAll("Test Ability");
+    this.addAbilityFromAll("Test Ability 2");
+    this.addAbilityFromAll("Test Ability 3");
   }
 
-  public useAbility(name: string, data: CustomAbilityData) {
+  public addAbilityFromAll(name: string) {
+    const abil = AllCustomAbilities.getAbility(name);
+    if (abil) {
+      // possiblity that ability was not fully copied correctly
+      const abilCopy = new CustomAbility(
+        abil.name, 0, abil.maxCd, abil.costType, 
+        abil.costAmount, abil.duration,
+        abil.updateRate, abil.castTime, 
+        abil.canMultiCast, abil.waitsForNextClick,
+        abil.animation, abil.icon, abil.tooltip,
+        AbilityComponentHelper.clone(abil.components),
+      )
+      this.abilities.add(abilCopy.name, abilCopy);
+    }
+    return (abil != undefined);
+  }
+
+  public useAbility(name: string, input: CustomAbilityInput) {
     let customAbility = this.abilities.getCustomAbilityByName(name);
-    if (customAbility && customAbility.canCastAbility(data)) {
-      customAbility.activate(data);
+    if (customAbility && customAbility.canCastAbility(input)) {
+      if (!this.isCasting || customAbility.canMultiCast) {
+          this.isCasting = true;
+          CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
+      }
     }
   }
 
-  public canCastAbility(name: string, data: CustomAbilityData): boolean {
+  public canCastAbility(name: string, input: CustomAbilityInput): boolean {
     let customAbility = this.abilities.getCustomAbilityByName(name);
     if (customAbility) {
-      return customAbility.canCastAbility(data);
+      return customAbility.canCastAbility(input);
     }
     return false;
   }
 
   public getAbilityByIndex(index: number): CustomAbility | undefined {
     return this.abilities.getCustomAbilityByIndex(index);
+  }
+
+  public addAbility(name: string, ability: CustomAbility): this {
+    this.abilities.add(name, ability);
+    return this;
   }
 }
