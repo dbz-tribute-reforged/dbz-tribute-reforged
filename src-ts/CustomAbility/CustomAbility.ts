@@ -170,14 +170,6 @@ export class CustomAbility implements Serializable<CustomAbility> {
     this.animation = input.animation;
     this.icon = new Icon().deserialize(input.icon);
     this.tooltip = new Tooltip().deserialize(input.tooltip);
-    /*
-    for (const component of input.components) {
-      const retrievedComponent = AllCustomAbilities.getComponent(component.name);
-      if (retrievedComponent) {
-        this.components.push(retrievedComponent);
-      }
-    }
-    */
     return this;
   }
 

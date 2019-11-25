@@ -9,118 +9,72 @@ import { SfxData } from "Common/SfxData";
 import { GroundVortex } from "./AbilityComponent/GroundVortex";
 import { Vector3D } from "Common/Vector3D";
 import { AOEDamage } from "./AbilityComponent/AOEDamage";
+import { AOEDamageComponents } from "./AbilityData/AOEDamageComponents";
+import { AOEKnockbackComponents } from "./AbilityData/AOEKnockbackComponents";
+import { AOEKnockback } from "./AbilityComponent/AOEKnockback";
+import { FlyingForwardDashComponents } from "./AbilityData/FlyingForwardDashComponents";
+import { FlyingForwardDash } from "./AbilityComponent/FlyingForwardDash";
+import { GroundTargetDashComponents } from "./AbilityData/GroundTargetDashComponents";
+import { GroundVortexComponents } from "./AbilityData/GroundVortexComponents";
+import { SwordSlashComponents } from "./AbilityData/SwordSlashComponents";
+import { SwordSlash } from "./AbilityComponent/SwordSlash";
+import { BeamComponents } from "./AbilityData/BeamComponents";
+import { SfxComponents } from "./AbilityData/SfxComponents";
+import { AbilitiesList } from "./AbilityData/AbilitiesList";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
   public abilities: Map<string, CustomAbility>;
 
-  constructor(
-    componentFiles: string[] = [],
-    abilityFiles: string[] = [],
-  ) {
+  constructor() {
     this.abilities = new Map();
     this.components = new Map();
 
-    for (const componentFile of componentFiles) {
-      // create component
-      // save components into the components map
+    // load sfx components first
+    for (const component of SfxComponents) {
+      this.setComponent(new SfxComponent().deserialize(component));
     }
 
-    // make abilities
-    // save abilities into abilities map
+    // create components then
+    // save components into the components map
+    for (const component of AOEDamageComponents) {
+      this.setComponent(new AOEDamage().deserialize(component));
+    }
 
-    const zanzoDashComponent = new GroundTargetDash(
-      "zanzoDashComponent", 1, 40.0,
-    );
-    const zanzoSfxComponent = new SfxComponent(
-      "ZanzoSfx", 0,
-      [
-        new SfxData(
-          "WindCircleFaster.mdl", 0, 0, 1.1
-        ),
-      ],
-      [
-        new SfxData(
-          "DustWindFasterExact.mdl"
-        )
-      ],
-    );
+    for (const component of AOEKnockbackComponents) {
+      this.setComponent(new AOEKnockback().deserialize(component));
+    }
 
-    const zanzoAbility = new CustomAbility(
-      "Zanzo Dash", 0, 4, CostType.MP, 25, 25, 0.03, 0.03, true, true, "attack", 
-      new Icon(
-        "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
-        "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp"
-      ),
-      new Tooltip(
-        "Zanzo Dash",
-        "Dashes towards your last right click." + 
-        "|nCost: 25 MP |nCD: 4",
-      ),
-      [zanzoDashComponent, zanzoSfxComponent],
-    );
-    this.setComponent(zanzoDashComponent).setAbility(zanzoAbility);
+    for (const component of FlyingForwardDashComponents) {
+      this.setComponent(new FlyingForwardDash().deserialize(component));
+    }
 
-      
-    const hurricaneComponent = new GroundVortex();
-    const hurricaneSfxComponent = new SfxComponent(
-      "hurricaneSfxComponent", 25,
-      [
+    for (const component of GroundTargetDashComponents) {
+      this.setComponent(new GroundTargetDash().deserialize(component));
+    }
 
-      ],
-      [
-        new SfxData(
-          "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl", 
-          75, 0, 3.0, 0, 0, 0, 
-          new Vector3D(55, 155, 255),
-          false
-        ),
-        new SfxData("Objects\Spawnmodels\Naga\NagaDeath\NagaDeath.mdl", 50, 1.5),
-      ],
-    );
-    const hurricaneAbility = new CustomAbility(
-      "Blue Hurricane", 0, 10, CostType.MP,
-      120, 250, 0.03, 0.25, false, false, 
-      "spell", 
-      new Icon(
-        "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
-        "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNTornado.blp"
-      ),
-      new Tooltip(
-        "Blue Hurricane",
-        "The fastest attack in the universe!" + 
-        "|nDeals 0.02 * AGI per tick " + 
-        "(x2 when closer," + 
-        "and another x2 over the duration of the ability)" + 
-        "|nCost: 120 MP |nCD: 10",
-      ),
-      [hurricaneComponent, hurricaneSfxComponent],
-    )
-    this.setComponent(hurricaneComponent).setComponent(hurricaneSfxComponent).setAbility(hurricaneAbility);
+    for (const component of GroundVortexComponents) {
+      this.setComponent(new GroundVortex().deserialize(component));
+    }
+
+    for (const component of SwordSlashComponents) {
+      this.setComponent(new SwordSlash().deserialize(component));
+    }
 
 
-    const beamComponent = new BeamComponent();
-    const beamAbility = new CustomAbility(
-      "Beam Base", 0, 4, CostType.HP, 50, 160, 0.03, 0.03, 
-      false, true, "spell", 
-      new Icon(
-        "ReplaceableTextures\\CommandButtons\\BTNBreathOfFrost.blp",
-        "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBreathOfFrost.blp"
-      ),
-      new Tooltip(
-        "Beam Base",
-        "Fires a beam" + 
-        "|nDeals ? * INT per Damage Tick" + 
-        "|nCost: 50 HP |nCD: 4",
-      ),
-      [beamComponent],
-    )
-    this.setComponent(beamComponent).setAbility(beamAbility);
+    // load beam components after all other components
+    for (const beam of BeamComponents) {
+      const beamComponent = new BeamComponent().deserialize(beam);
+      this.beamComponentAddComponent(beamComponent, beam.components);
+      this.setComponent(beamComponent);
+    }
 
-
-
-
-
+    // load abilities after all other components
+    for (const abilityData of AbilitiesList) {
+      const ability = new CustomAbility().deserialize(abilityData);
+      this.abilityAddComponent(ability, abilityData.components);
+      this.setAbility(ability);
+    }
 
     // load component
 
@@ -147,7 +101,7 @@ export class CustomAbilityManager {
       maxCd: 4,
       costType: "MP",
       costAmount: 20,
-      duration: 50,
+      duration: 67,
       updateRate: 0.03,
       castTime: 0.4,
       canMultiCast: true,
@@ -162,9 +116,8 @@ export class CustomAbilityManager {
         body: "Body Text.",
       },
       components: [
-        {name: "AOE DMG TEST"},
-        {name: "zanzoDashComponent"},
-        {name: "hurricaneSfxComponent"},
+        {name: "beam kamehameha"},
+        {name: "sword slash orange"},
       ],
     };
 
@@ -172,6 +125,12 @@ export class CustomAbilityManager {
     this.abilityAddComponent(testAbility, jsonAbility.components);
 
     this.setAbility(testAbility);
+
+
+
+
+
+
   }
 
   setComponent(component: AbilityComponent): this {
@@ -196,7 +155,7 @@ export class CustomAbilityManager {
     for (const component of components) {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
-        beam.addComponent(retrievedComponent);
+        beam.addComponent(retrievedComponent.clone());
       }
     }
   }
@@ -205,7 +164,7 @@ export class CustomAbilityManager {
     for (const component of components) {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
-        ability.addComponent(retrievedComponent);
+        ability.addComponent(retrievedComponent.clone());
       }
     }
   }

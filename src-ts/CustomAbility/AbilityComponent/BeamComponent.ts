@@ -1,12 +1,5 @@
 import { AbilityComponent } from "./AbilityComponent";
 import { HeightVariation } from "Common/HeightVariation";
-import { AOEDamage } from "./AOEDamage";
-import { DamageData } from "Common/DamageData";
-import { AOEKnockback } from "./AOEKnockback";
-import { KnockbackData } from "Common/KnockbackData";
-import { SfxComponent } from "./SfxComponent";
-import { SfxData } from "Common/SfxData";
-import { Vector3D } from "Common/Vector3D";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
@@ -14,7 +7,6 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
-import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 
 export class BeamComponent implements AbilityComponent, Serializable<BeamComponent> {
 
@@ -40,65 +32,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     public isFixedAngle : boolean = true,
     public canClashWithHero : boolean = true,
     public beamUnitType: number = FourCC('hpea'),
-    public components: AbilityComponent[] = [
-      new AOEDamage(
-        "BeamDPS", 1, 
-        new DamageData(
-          0.25,
-          bj_HEROSTAT_INT,
-          ATTACK_TYPE_HERO,
-          DAMAGE_TYPE_NORMAL,
-          WEAPON_TYPE_WHOKNOWS
-        ), 
-        250,
-      ),
-      new AOEDamage(
-        "BeamFinishDamage", CustomAbility.MAX_DURATION, 
-        new DamageData(
-          5.0,
-          bj_HEROSTAT_INT,
-          ATTACK_TYPE_HERO,
-          DAMAGE_TYPE_NORMAL,
-          WEAPON_TYPE_WHOKNOWS
-        ), 
-        300,
-      ),
-      new AOEKnockback(
-        "BeamKnockback", 1, 
-        new KnockbackData(16, 0, 250),
-      ),
-      new SfxComponent(
-        "BeamSfx", 1, 
-        [
-          new SfxData(
-            "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
-            8, 0, 1.2, 0, 0, 0,
-            new Vector3D(
-              255, 255, 255  
-            ),
-            false,
-          ),
-          new SfxData(
-            "Abilities\\Spells\\Undead\\ReplenishMana\\ReplenishManaCasterOverhead.mdl",
-            CustomAbility.MAX_DURATION, 1, 2, 0, 0, 0,
-            new Vector3D(
-              255, 255, 255  
-            ),
-            false,
-          ),
-        ],
-        [
-          new SfxData(
-            "Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl",
-            5, 0, 1.5, 0, 0, 0,
-            new Vector3D(
-              155, 205, 255  
-            ),
-            false, "origin",
-          ),
-        ],
-      ),
-    ],
+    public components: AbilityComponent[] = [],
   ) {
     this.beamUnit = GetEnumUnit();
     this.delayTicks = 0;
@@ -172,7 +106,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     );
 
     UnitHelper.giveUnitFlying(this.beamUnit);
-    SetUnitFlyHeight(this.beamUnit, BlzGetUnitZ(input.caster.unit) + this.heightVariation.start, 0);
+    SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
     SetUnitFlyHeight(
       this.beamUnit, 
       this.heightVariation.finish, 
@@ -249,9 +183,9 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
         finish: number;
         scaling: number;
       };
-      isTracking : boolean;
-      isFixedAngle : boolean;
-      canClashWithHero : boolean;
+      isTracking: boolean;
+      isFixedAngle: boolean;
+      canClashWithHero: boolean;
       beamUnitType: string;
       components: {
         name: string,
@@ -272,14 +206,6 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     this.isFixedAngle = input.isFixedAngle;
     this.canClashWithHero = input.canClashWithHero;
     this.beamUnitType = FourCC(input.beamUnitType);
-    /*
-    for (const component of input.components) {
-      const retrievedComponent = AllCustomAbilities.getComponent(component.name);
-      if (retrievedComponent) {
-        this.components.push(retrievedComponent);
-      }
-    }
-    */
     return this;
   }
 

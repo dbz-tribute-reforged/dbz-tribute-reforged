@@ -205,22 +205,32 @@ export function CustomPlayerTest() {
   const beamTest = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(beamTest, OSKEY_Q, 0, true);
-  addAbilityAction(beamTest, "Beam Base");
+  addAbilityAction(beamTest, "Beam Blue");
 
   const beamTest2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest2, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(beamTest2, OSKEY_W, 0, true);
-  addAbilityAction(beamTest2, "Purple Beam");
+  addAbilityAction(beamTest2, "Beam Purple");
 
   const beamTest3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(beamTest3, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(beamTest3, OSKEY_E, 0, true);
-  addAbilityAction(beamTest3, "Red Beam");
+  addAbilityAction(beamTest3, "Beam Red");
 
-  const jsonAbil = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(jsonAbil, BlzGetFrameByName("abilityButton6", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(jsonAbil, OSKEY_R, 0, true);
-  addAbilityAction(jsonAbil, "Test Ability");
+  const testAbil = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(testAbil, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(testAbil, OSKEY_R, 0, true);
+  addAbilityAction(testAbil, "Test Ability");
+
+  const testAbil2 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(testAbil2, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(testAbil2, OSKEY_D, 0, true);
+  addAbilityAction(testAbil2, "Test Ability 2");
+
+  const testAbil3 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(testAbil3, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(testAbil3, OSKEY_F, 0, true);
+  addAbilityAction(testAbil3, "Test Ability 3");
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {

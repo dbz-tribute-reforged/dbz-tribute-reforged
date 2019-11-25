@@ -28,22 +28,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
     public minDistance: number = 100,
     public aoe: number = 225,
     public delayBetweenDamageTicks: number = 3,
-    public sfxList: SfxData[] = [
-      new SfxData(
-        "animeslashfinal.mdl", 
-        1, 0, 1.5, 25, 25, 0, 
-        new Vector3D(255, 155, 55), 
-        false
-      ),
-    ],
-    public attachedSfxList: SfxData[]= [
-      new SfxData(
-        "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl", 
-        1, 0, 1.5, 25, 25, 0, 
-        new Vector3D(255, 155, 55), 
-        true, "weapon"
-      ),
-    ],
+    public sfxList: SfxData[] = [],
+    public attachedSfxList: SfxData[] = [],
   ) {
     this.previousCoord = new Vector2D(0, 0);
     this.nextDamageTick = 0;
@@ -79,9 +65,14 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+    if (ability.currentTick == CustomAbility.START_TICK) {
+      this.previousCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      this.nextDamageTick = 0;
+    }
+    
     AbilitySfxHelper.displaySfxListOnUnit(
       ability,
-      this.sfxList, 
+      this.attachedSfxList, 
       source, 
       SfxData.SHOW_ALL_GROUPS,
       0, 
@@ -105,7 +96,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         middleCoord, 
         SfxData.SHOW_ALL_GROUPS,
         sfxAngle, 
-        BlzGetUnitZ(input.caster.unit)
+        0
       );
 
       const affectedGroup = UnitHelper.getNearbyValidUnits(
@@ -195,8 +186,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));
     }
-    for (const sfx of input.attachedSfxList) {
-      this.attachedSfxList.push(new SfxData().deserialize(sfx));
+    for (const attachedSfx of input.attachedSfxList) {
+      this.attachedSfxList.push(new SfxData().deserialize(attachedSfx));
     }
     return this;
   }

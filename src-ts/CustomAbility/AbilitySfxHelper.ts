@@ -22,7 +22,7 @@ export module AbilitySfxHelper {
     if (height + displayedSfx.startHeight > 0) {
       BlzSetSpecialEffectHeight(createdSfx, height + displayedSfx.startHeight);
     }
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
+    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
       BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
     }
 
@@ -53,8 +53,8 @@ export module AbilitySfxHelper {
 
   export function displaySfxOnUnit(displayedSfx: SfxData, unit: unit, angle: number, height: number, persistentSfx: effect[]) {
     const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
-
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
+    
+    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
       BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
     }
 

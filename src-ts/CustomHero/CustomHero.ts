@@ -21,10 +21,18 @@ export class CustomHero {
     );
     this.isCasting = false;
 
+    // TODO: assign basic abilities to all heroes
+    // then read some data and apply special abilities for
+    // relevant heroes
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Blue Hurricane");
-    this.addAbilityFromAll("Beam Base");
+    this.addAbilityFromAll("Shining Sword Attack");
+    this.addAbilityFromAll("Beam Blue");
+    this.addAbilityFromAll("Beam Purple");
+    this.addAbilityFromAll("Beam Red");
     this.addAbilityFromAll("Test Ability");
+    this.addAbilityFromAll("Test Ability 2");
+    this.addAbilityFromAll("Test Ability 3");
   }
 
   public addAbilityFromAll(name: string) {
