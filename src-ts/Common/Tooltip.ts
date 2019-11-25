@@ -1,4 +1,4 @@
-export class Tooltip {
+export class Tooltip implements Serializable<Tooltip> {
   static readonly defaultTitle = "Tooltip Title";
   static readonly defaultBody = "Tooltip Body";
   
@@ -8,4 +8,16 @@ export class Tooltip {
   ) {
 
   }
+
+  deserialize(
+    input: {
+      title: string;
+      body: string;
+    },
+  ) {
+    this.title = input.title;
+    this.body = input.body;
+    return this;
+  }
+
 }

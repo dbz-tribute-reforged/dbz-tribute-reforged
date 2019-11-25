@@ -1,9 +1,9 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { CustomAbility } from "CustomAbility/CustomAbility";
 import { Constants } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
+import { CustomAbility } from "CustomAbility/CustomAbility";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -216,6 +216,11 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(beamTest3, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(beamTest3, OSKEY_E, 0, true);
   addAbilityAction(beamTest3, "Red Beam");
+
+  const jsonAbil = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(jsonAbil, BlzGetFrameByName("abilityButton6", 5), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(jsonAbil, OSKEY_R, 0, true);
+  addAbilityAction(jsonAbil, "Test Ability");
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {

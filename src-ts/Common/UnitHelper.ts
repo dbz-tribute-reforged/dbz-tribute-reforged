@@ -47,4 +47,12 @@ export module UnitHelper {
     });
     return numEnemies;
   }
+  
+  export function isUnitTargetableForPlayer(unit: unit, caster: player): boolean {
+    return (
+      IsUnitEnemy(unit, caster) == true
+      &&
+      !BlzIsUnitInvulnerable(unit)
+    );
+  }
 }

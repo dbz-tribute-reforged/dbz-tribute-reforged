@@ -1,9 +1,9 @@
-import { UnitHelper } from "Common/UnitHelper";
-import { CustomAbilityInput } from "./CustomAbilityInput";
 import { Icon } from "Common/Icon";
 import { Tooltip } from "Common/Tooltip";
-import { SfxData } from "./SfxData";
-import { Vector2D } from "Common/Vector2D";
+import { AbilityComponent } from "./AbilityComponent/AbilityComponent";
+import { CustomAbilityInput } from "./CustomAbilityInput";
+import { AbilitySfxHelper } from "./AbilitySfxHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export enum CostType {
   HP = "Life",
@@ -11,36 +11,61 @@ export enum CostType {
   STAMINA = "Stamina",
 }
 
-export abstract class CustomAbility {
+export function stringToCostType(costType: string): CostType {
+  if (costType == "Life" || costType == "HP") {
+    return CostType.HP;
+  } else if (costType == "Mana" || costType == "MP") {
+    return CostType.MP;
+  }
+  return CostType.STAMINA;
+}
 
-  protected currentTick: number;
-  protected delayTicks: number;
+export class CustomAbility implements Serializable<CustomAbility> {
+  static readonly MAX_DURATION = -1;
+  static readonly START_TICK = 0;
+
+  public currentTick: number;
   protected abilityTimer: timer;
-  protected persistentSfx: effect[];
+  public persistentSfx: effect[];
 
   constructor(
-    public name: string, 
-    public currentCd: number,
-    public maxCd: number,
-    public costType: CostType,
-    public costAmount: number,
-    public duration: number,
-    public updateRate: number,
-    public castTime: number,
-    public canMultiCast: boolean,
-    public waitsForNextClick: boolean,
-    public animation: string,
-    public icon: Icon,
-    public tooltip: Tooltip,
+    public name: string = "No Ability", 
+    public currentCd: number = 0,
+    public maxCd: number = 1,
+    public costType: CostType = CostType.MP,
+    public costAmount: number = 25,
+    public duration: number = 25,
+    public updateRate: number = 0.03,
+    public castTime: number = 0.25,
+    public canMultiCast: boolean = false,
+    public waitsForNextClick: boolean = false,
+    public animation: string = "spell",
+    public icon: Icon = new Icon(),
+    public tooltip: Tooltip = new Tooltip(),
+    public components: AbilityComponent[] = [],
   ) {
     this.currentTick = 0;
-    this.delayTicks = 0;
     this.abilityTimer = CreateTimer();
     this.persistentSfx = [];
   }
 
-  activate(abilityInput: CustomAbilityInput): void {
-    // fill this out on a per-ability basis
+  activate(input: CustomAbilityInput): void {
+    this.takeCosts(input);
+
+    TimerStart(this.abilityTimer, this.updateRate, true, () => {
+      if (this.currentTick <= this.duration) {
+        for (const component of this.components) {
+          if (this.isReadyToUse(component.repeatInterval)) {
+            component.performTickAction(this, input, input.caster.unit);
+          }
+        }
+        ++this.currentTick;
+      }
+      if (this.currentTick > this.duration) {
+        AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx);
+      }
+      this.updateCd();
+    });
   }
 
   canCastAbility(input: CustomAbilityInput): boolean {
@@ -80,111 +105,83 @@ export abstract class CustomAbility {
   }
 
   updateCd() {
-    if (this.currentCd <= 0 && this.currentTick >= this.duration) {
+    if (this.currentCd <= 0 && this.currentTick > this.duration) {
       this.currentCd = 0;
       this.currentTick = 0;
-      this.delayTicks = 0;
       PauseTimer(this.abilityTimer);
     } else {
       this.currentCd -= this.updateRate;
     }
   }
-  
-  isBasicValidTarget(unit: unit, caster: player): boolean {
-    return (
-      IsUnitEnemy(unit, caster) == true
-      &&
-      !BlzIsUnitInvulnerable(unit)
-    );
+
+  reduceCurrentTick(amount: number) {
+    this.currentTick = Math.max(2, this.currentTick - amount);
   }
 
-  // probably move sfx stuff to a sfx displaying class
-  // TODO: vary height of the sfx over their lifetime...
-  // also expand to cover more sfx attributes for greater customisability
-  displaySfxAtCoord(
-    displayedSfx: SfxData, 
-    target: Vector2D, 
-    yaw: number,
-    height: number,
-  ) {
-    const createdSfx = AddSpecialEffect(displayedSfx.model, target.x, target.y);
-    BlzSetSpecialEffectScale(createdSfx, displayedSfx.scale);
-    const newYaw = yaw + displayedSfx.extraDirectionalYaw;
-    if (newYaw > 0) {
-      BlzSetSpecialEffectYaw(createdSfx, newYaw);
-    }
-    if (height + displayedSfx.startHeight > 0) {
-      BlzSetSpecialEffectHeight(createdSfx, height + displayedSfx.startHeight);
-    }
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
-      BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
-    }
-
-    if (displayedSfx.persistent) {
-      this.persistentSfx.push(createdSfx);
-    } else {
-      DestroyEffect(createdSfx);
-    }
-  }
-
-  isSfxReadyToDisplay(sfx: SfxData): boolean {
-    return (sfx.repeatInterval != 0 && this.currentTick != 0 && this.currentTick % sfx.repeatInterval == 0) ||
-      (sfx.repeatInterval == 0 && this.currentTick == 0) || 
-      (sfx.repeatInterval == this.duration && this.currentTick == this.duration)
+  isReadyToUse(repeatInterval: number): boolean {
+    // return (repeatInterval > 0 && this.currentTick != 0 && this.currentTick % repeatInterval == 0) ||
+    //   (repeatInterval == 0 && this.currentTick == 0) || 
+    //   ((repeatInterval == this.duration || repeatInterval == CustomAbility.MAX_DURATION) && 
+    //   this.currentTick == this.duration)
+    // ;
+    return (repeatInterval > 0 && this.currentTick % repeatInterval == 0) ||
+      (repeatInterval == 0 && this.currentTick == 0) || 
+      ((repeatInterval == this.duration || repeatInterval == CustomAbility.MAX_DURATION) && 
+      this.currentTick == this.duration)
     ;
   }
 
-  // displays the sfx at the caster's location
-  // if the current tick is divisible by the repeat interval
-  displaySfxListAtCoord(sfxList: SfxData[], target: Vector2D, group: number, angle: number, height: number) {
-    for (const sfx of sfxList) {
-      if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
-      // NOTE: avoid mod by 0 
-      if (this.isSfxReadyToDisplay(sfx)) {
-        this.displaySfxAtCoord(
-          sfx, 
-          target,
-          angle,
-          height,
-        );
+  deserialize(
+    input: {
+      name: string;
+      currentCd: number;
+      maxCd: number;
+      costType: string;
+      costAmount: number;
+      duration: number;
+      updateRate: number;
+      castTime: number;
+      canMultiCast: boolean;
+      waitsForNextClick: boolean;
+      animation: string;
+      icon: {
+        enabled: string;
+        disabled: string;
       };
-    }
-  }
-
-  displaySfxOnUnit(displayedSfx: SfxData, unit: unit, angle: number, height: number) {
-    const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
-
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z != 255 * 3) {
-      BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
-    }
-
-    if (displayedSfx.persistent) {
-      this.persistentSfx.push(createdSfx);
-    } else {
-      DestroyEffect(createdSfx);
-    }
-  }
-
-  displaySfxListOnUnit(sfxList: SfxData[], unit: unit, group: number, angle: number, height: number) {
-    for (const sfx of sfxList) {
-      if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
-
-      if (this.isSfxReadyToDisplay(sfx)) {
-        this.displaySfxOnUnit(
-          sfx,
-          unit,
-          angle,
-          height,
-        );
+      tooltip: {
+        title: string;
+        body: string;
+      };
+      components: {
+        name: string;
+      }[];
+    },
+  ) {
+    this.name = input.name;
+    this.currentCd = input.currentCd;
+    this.maxCd = input.maxCd;
+    this.costType = stringToCostType(input.costType);
+    this.costAmount = input.costAmount;
+    this.duration = input.duration;
+    this.updateRate = input.updateRate;
+    this.castTime = input.castTime;
+    this.canMultiCast = input.canMultiCast;
+    this.waitsForNextClick = input.waitsForNextClick;
+    this.animation = input.animation;
+    this.icon = new Icon().deserialize(input.icon);
+    this.tooltip = new Tooltip().deserialize(input.tooltip);
+    /*
+    for (const component of input.components) {
+      const retrievedComponent = AllCustomAbilities.getComponent(component.name);
+      if (retrievedComponent) {
+        this.components.push(retrievedComponent);
       }
     }
+    */
+    return this;
   }
 
-  cleanupPersistentSfx(): this {
-    for (const currentSfx of this.persistentSfx) {
-      DestroyEffect(currentSfx);
-    }
-    this.persistentSfx = [];
-    return this;
+  addComponent(component: AbilityComponent) {
+    return this.components.push(component);
   }
 }
