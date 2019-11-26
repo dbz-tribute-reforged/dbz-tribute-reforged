@@ -610,4 +610,61 @@ export const SfxComponents = [
     ],
   },
   // --------------------------------------------
+  { 
+    name: "sfx ultra instinct", 
+    repeatInterval: 1,
+    sfxList: [
+      {
+        model: "DustWindFasterExact.mdl",
+        repeatInterval: 15,
+        group: 0,
+        scale: 0.25,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        repeatInterval: 10,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageCaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // --------------------------------------------
 ];

@@ -33,6 +33,7 @@ export class CustomHero {
     this.addAbilityFromAll("Test Ability");
     this.addAbilityFromAll("Test Ability 2");
     this.addAbilityFromAll("Test Ability 3");
+    this.addAbilityFromAll("Test Ability 4");
   }
 
   public addAbilityFromAll(name: string) {

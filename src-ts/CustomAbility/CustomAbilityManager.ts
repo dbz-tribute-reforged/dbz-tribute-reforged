@@ -1,13 +1,9 @@
 import { CustomAbility, CostType } from "./CustomAbility";
 import { AbilityComponent } from "./AbilityComponent/AbilityComponent";
 import { GroundTargetDash } from "./AbilityComponent/GroundTargetDash";
-import { Icon } from "Common/Icon";
-import { Tooltip } from "Common/Tooltip";
 import { BeamComponent } from "./AbilityComponent/BeamComponent";
 import { SfxComponent } from "./AbilityComponent/SfxComponent";
-import { SfxData } from "Common/SfxData";
 import { GroundVortex } from "./AbilityComponent/GroundVortex";
-import { Vector3D } from "Common/Vector3D";
 import { AOEDamage } from "./AbilityComponent/AOEDamage";
 import { AOEDamageComponents } from "./AbilityData/AOEDamageComponents";
 import { AOEKnockbackComponents } from "./AbilityData/AOEKnockbackComponents";
@@ -21,6 +17,10 @@ import { SwordSlash } from "./AbilityComponent/SwordSlash";
 import { BeamComponents } from "./AbilityData/BeamComponents";
 import { SfxComponents } from "./AbilityData/SfxComponents";
 import { AbilitiesList } from "./AbilityData/AbilitiesList";
+import { DodgeComponents } from "./AbilityData/DodgeComponents";
+import { Dodge } from "./AbilityComponent/Dodge";
+import { DamageBlockComponents } from "./AbilityData/DamageBlockComponents";
+import { DamageBlock } from "./AbilityComponent/DamageBlock";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -43,6 +43,14 @@ export class CustomAbilityManager {
 
     for (const component of AOEKnockbackComponents) {
       this.setComponent(new AOEKnockback().deserialize(component));
+    }
+
+    for (const component of DamageBlockComponents) {
+      this.setComponent(new DamageBlock().deserialize(component));
+    }
+
+    for (const component of DodgeComponents) {
+      this.setComponent(new Dodge().deserialize(component));
     }
 
     for (const component of FlyingForwardDashComponents) {

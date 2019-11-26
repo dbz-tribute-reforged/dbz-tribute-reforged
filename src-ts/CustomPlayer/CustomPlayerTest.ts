@@ -232,6 +232,11 @@ export function CustomPlayerTest() {
   addKeyEvent(testAbil3, OSKEY_F, 0, true);
   addAbilityAction(testAbil3, "Test Ability 3");
 
+  const testAbil4 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(testAbil4, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(testAbil4, OSKEY_V, 0, true);
+  addAbilityAction(testAbil4, "Test Ability 4");
+
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {

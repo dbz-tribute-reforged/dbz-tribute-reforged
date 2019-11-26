@@ -176,14 +176,14 @@ export const AbilitiesList = [
   {
     name: "Test Ability",
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 7,
     costType: "HP",
     costAmount: 25,
-    duration: 67,
+    duration: 150,
     updateRate: 0.03,
-    castTime: 0.5,
+    castTime: 0.03,
     canMultiCast: false,
-    waitsForNextClick: true,
+    waitsForNextClick: false,
     animation: "spell",
     icon: {
       enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",
@@ -192,11 +192,15 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability (R)",
       body: 
-        "Spirit Bomb Test. 25hp, cd4"
+        "Ultra Instinct (dodging randomly + blocking 10*INT). 25hp, cd7"
     },
     components: [
-      { name: "sfx blue wind aura" },
-      { name: "beam spirit bomb" },
+      // { name: "sfx blue wind aura" },
+      // { name: "beam spirit bomb" },
+      { name: "dodge ultra instinct" },
+      { name: "sfx ultra instinct" },
+      { name: "block ultra instinct" },
+      // { name: "beam homing kamehameha" },
     ],
   },
   // -------------------------------------------
@@ -254,6 +258,33 @@ export const AbilitiesList = [
     components: [
       { name: "beam kamehameha" },
       { name: "sfx blue wind aura" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Test Ability 4",
+    currentCd: 0,
+    maxCd: 7,
+    costType: "MP",
+    costAmount: 25,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
+    },
+    tooltip: {
+      title: "Test Ability 4 (V)",
+      body: 
+        "Basic Guard, blocks 50% of incoming dmg until the dmg block exceeds 5*AGI. 25 mp, cd 7"
+    },
+    components: [
+      { name: "block basic guard" },
+      // { name: "block energy absorption" },
     ],
   },
   // -------------------------------------------
