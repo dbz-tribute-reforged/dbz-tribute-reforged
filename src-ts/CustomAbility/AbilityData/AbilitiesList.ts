@@ -180,8 +180,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNKame2.blp",
-      disabled: "BTNKame2.blp",
+      enabled: "BTNGalicGun.blp",
+      disabled: "BTNGalicGun.blp",
     },
     tooltip: {
       title: "galick gun",
@@ -201,13 +201,13 @@ export const AbilitiesList = [
     costAmount: 0,
     duration: 30,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: false,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNSpiritbomb.blp",
-      disabled: "BTNSpiritbomb.blp",
+      enabled: "BTNBigBangAttack.blp",
+      disabled: "BTNBigBangAttack.blp",
     },
     tooltip: {
       title: "Big Bang Attack",
@@ -227,13 +227,13 @@ export const AbilitiesList = [
     costAmount: 0,
     duration: 50,
     updateRate: 0.03,
-    castTime: 0.3,
+    castTime: 0.0,
     canMultiCast: false,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNKame2.blp",
-      disabled: "BTNKame2.blp",
+      enabled: "BTNFinalFlash.blp",
+      disabled: "BTNFinalFlash.blp",
     },
     tooltip: {
       title: "Final Flash",
@@ -242,6 +242,61 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam final flash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Twin Dragon Shot",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTwinDragonShot.blp",
+      disabled: "BTNTwinDragonShot.blp",
+    },
+    tooltip: {
+      title: "Twin dragon shot",
+      body: 
+        "Twin dragon shot"
+    },
+    components: [
+      // TODO: probs make a multi-beam component for this ability
+      { name: "beam twin dragon shot" },
+      { name: "beam twin dragon shot" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Masenko",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMasenko.blp",
+      disabled: "BTNMasenko.blp",
+    },
+    tooltip: {
+      title: "Masenko",
+      body: 
+        "Masenko"
+    },
+    components: [
+      // TODO: need to add stun for masenko
+      { name: "beam masenko" },
     ],
   },
   // -------------------------------------------

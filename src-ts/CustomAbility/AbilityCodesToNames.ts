@@ -7,10 +7,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A03N'), "Galick Gun"],
     [FourCC('A0GO'), "Big Bang Attack"],
     [FourCC('A01B'), "Final Flash"],
-
-    // test
-    [FourCC('AOwk'), "Galick Gun"],
-    [FourCC('AOmi'), "Big Bang Attack"],
-    [FourCC('AOww'), "Final Flash"],
+    [FourCC('A0IS'), "Twin Dragon Shot"],
+    [FourCC('A0H8'), "Masenko"],
   ]
 );

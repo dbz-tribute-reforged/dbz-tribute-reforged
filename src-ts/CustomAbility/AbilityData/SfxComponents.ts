@@ -44,7 +44,7 @@ export const SfxComponents = [
   },
   // to here, and replace with unique name
   { 
-    name: "sfx kamehameha", 
+    name: "sfx beam kamehameha", 
     repeatInterval: 1,
     sfxList: [
       {
@@ -226,6 +226,22 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
+        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        repeatInterval: 4,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
         model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
@@ -242,10 +258,10 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
-        repeatInterval: 4,
+        model: "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl",
+        repeatInterval: -1,
         group: 0,
-        scale: 1.5,
+        scale: 2.5,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
@@ -260,7 +276,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        model: "Abilities\\Weapons\\SearingArrow\\SearingArrowMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -331,12 +347,12 @@ export const SfxComponents = [
     repeatInterval: 1,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionMissile.mdl",
+        model: "CalamityParticle3.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 1.5,
-        startHeight: 100,
-        endHeight: 100,
+        scale: 2.5,
+        startHeight: 125,
+        endHeight: 125,
         extraDirectionalYaw: 0,
         color: {
           x: 255,
@@ -348,7 +364,7 @@ export const SfxComponents = [
       },
       {
         model: "Abilities\\Spells\\Items\\AIre\\AIreTarget.mdl",
-        repeatInterval: -1,
+        repeatInterval: 1,
         group: 0,
         scale: 3,
         startHeight: 100,
@@ -363,24 +379,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
     ],
-    attachedSfxList: [
-      {
-        model: "Abilities\\Spells\\Human\\SpellSteal\\SpellStealTarget.mdl",
-        repeatInterval: 5,
-        group: 0,
-        scale: 1.0,
-        startHeight: 0,
-        endHeight: 0,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 155,
-          z: 255,
-        },
-        persistent: false,
-        attachmentPoint: "origin",
-      },
-    ],
+    attachedSfxList: [],
   },
   // --------------------------------------------
   { 
@@ -392,8 +391,8 @@ export const SfxComponents = [
         repeatInterval: -1,
         group: 0,
         scale: 3,
-        startHeight: 50,
-        endHeight: 50,
+        startHeight: 200,
+        endHeight: 200,
         extraDirectionalYaw: 0,
         color: {
           x: 55,
@@ -404,26 +403,10 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\FrostDamage\\FrostDamage.mdl",
-        repeatInterval: -1,
-        group: 0,
-        scale: 4,
-        startHeight: 0,
-        endHeight: 0,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 25,
-          y: 105,
-          z: 225,
-        },
-        persistent: false,
-        attachmentPoint: "",
-      },
-      {
         model: "Firaga.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 2,
+        scale: 2.5,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
@@ -451,7 +434,7 @@ export const SfxComponents = [
           z: 255,
         },
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "overhead",
       },
     ],
   },
@@ -461,7 +444,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     sfxList: [
       {
-        model: "Abilities\Spells\Human\Invisibility\InvisibilityTarget.mdl",
+        model: "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl",
         repeatInterval: 2,
         group: 0,
         scale: 2.5,
@@ -477,12 +460,12 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "PhotonFlash2.mdl",
+        model: "Des.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 1.5,
-        startHeight: 75,
-        endHeight: 75,
+        scale: 3,
+        startHeight: 150,
+        endHeight: 150,
         extraDirectionalYaw: 0,
         color: {
           x: 255,
@@ -512,7 +495,7 @@ export const SfxComponents = [
         model: "NewDirtEXNofire.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 1.5,
+        scale: 2,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
@@ -527,7 +510,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        model: "Abilities\\Spells\\Undead\\CarrionSwarm\\CarrionSwarmMissile.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -539,7 +522,80 @@ export const SfxComponents = [
           y: 205,
           z: 155,
         },
-        persistent: true,
+        persistent: false,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam masenko", 
+    repeatInterval: 1,
+    sfxList: [
+      {
+        model: "Des.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 2.5,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 175,
+          z: 105,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Items\\AIhe\\AIheTarget.mdl",
+        repeatInterval: 5,
+        group: 0,
+        scale: 2.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 155,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "NewDirtEXNofire.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\LightningBolt\\LightningBoltMissile.mdl",
+        repeatInterval: 5,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 155,
+        },
+        persistent: false,
         attachmentPoint: "origin",
       },
     ],

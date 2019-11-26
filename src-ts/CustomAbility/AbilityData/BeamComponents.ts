@@ -23,7 +23,7 @@ export const BeamComponents = [
       { name: "damage 1tick 0.02int 400aoe" },
       { name: "damage final 2int 500aoe" },
       { name: "knockback 1tick 10speed 0angle 250aoe" },
-      { name: "sfx kamehameha" },
+      { name: "sfx beam kamehameha" },
     ],
   },
   // to here, and replace with unique name
@@ -135,6 +135,59 @@ export const BeamComponents = [
   },
   // -------------------------------------------
   { 
+    name: "beam twin dragon shot",
+    repeatInterval: 1,
+    beamHpMult: 0.02,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 35,
+    aoe: 300,
+    clashingDelayTicks: 2,
+    maxDelayTicks: 7,
+    durationIncPerDelay: 25,
+    heightVariation: {
+      start: 100,
+      finish: 100,
+      scaling: 0,
+    },
+    isTracking: true,
+    isFixedAngle: false,
+    canClashWithHero: true,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage 1tick 0.01int 400aoe" },
+      { name: "damage final 1.5int 500aoe" },
+      { name: "dodge homing beam 120angle" },
+      { name: "sfx beam kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  { 
+    name: "beam masenko",
+    repeatInterval: 1,
+    beamHpMult: 0.05,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 40,
+    aoe: 300,
+    clashingDelayTicks: 1,
+    maxDelayTicks: 4,
+    durationIncPerDelay: 17,
+    heightVariation: {
+      start: 100,
+      finish: 100,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: true,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage 1tick 0.04int 500aoe" },
+      { name: "damage final 2int 500aoe" },
+      { name: "sfx beam masenko" },
+    ],
+  },
+  // -------------------------------------------
+  { 
     name: "beam homing kamehameha",
     repeatInterval: 1,
     beamHpMult: 0.5,
@@ -154,10 +207,10 @@ export const BeamComponents = [
     canClashWithHero: true,
     beamUnitType: "hpea",
     components: [
-      { name: "damage 1tick 0.5int 250aoe" },
-      { name: "damage final 5int 300aoe" },
-      { name: "sfx kamehameha" },
-      { name: "dodge homing beam" },
+      { name: "damage 1tick 0.02int 400aoe" },
+      { name: "damage final 2int 500aoe" },
+      { name: "dodge homing beam 120angle" },
+      { name: "sfx beam kamehameha" },
     ],
   },
   // -------------------------------------------

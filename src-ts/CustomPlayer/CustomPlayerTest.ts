@@ -229,47 +229,47 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil1, OSKEY_X, 0, true);
   addAbilityAction(abil1, "Guard");
-  
+
   /*
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_Q, 0, true);
-  addAbilityAction(abil2, "Kamehameha");
+  addAbilityAction(abil2, "Galick Gun");
 
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_W, 0, true);
-  addAbilityAction(abil3, "Spirit Bomb");
+  addAbilityAction(abil3, "Big Bang Attack");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_E, 0, true);
-  addAbilityAction(abil4, "Dragon Fist");
+  addAbilityAction(abil4, "Final Flash");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil5, OSKEY_R, 0, true);
-  addAbilityAction(abil5, "Ultra Instinct");
+  addAbilityAction(abil5, "Twin Dragon Shot");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil6, OSKEY_D, 0, true);
-  addAbilityAction(abil6, "Test Ability");
+  addAbilityAction(abil6, "Masenko");
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil7, OSKEY_F, 0, true);
-  addAbilityAction(abil7, "Test Ability 2");
+  addAbilityAction(abil7, "Kamehameha");
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil8, OSKEY_C, 0, true);
-  addAbilityAction(abil8, "Test Ability 3");
+  addAbilityAction(abil8, "Spirit Bomb");
 
   const abil9 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil9, OSKEY_V, 0, true);
-  addAbilityAction(abil9, "Blue Hurricane");
+  addAbilityAction(abil9, "Dragon Fist");
   */
 
   // update hp/mp bars for current custom player

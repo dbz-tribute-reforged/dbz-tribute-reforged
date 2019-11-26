@@ -27,6 +27,16 @@ export class CustomHero {
     // relevant heroes
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Guard");
+    /*
+    this.addAbilityFromAll("Galick Gun");
+    this.addAbilityFromAll("Big Bang Attack");
+    this.addAbilityFromAll("Final Flash");
+    this.addAbilityFromAll("Twin Dragon Shot");
+    this.addAbilityFromAll("Masenko");
+    this.addAbilityFromAll("Kamehameha");
+    this.addAbilityFromAll("Spirit Bomb");
+    this.addAbilityFromAll("Dragon Fist");
+    */
     
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {

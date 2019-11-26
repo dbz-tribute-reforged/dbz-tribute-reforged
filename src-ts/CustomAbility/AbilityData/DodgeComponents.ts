@@ -13,12 +13,12 @@ export const DodgeComponents = [
   },
   // to here, and replace with unique name
   {
-    name: "dodge homing beam",
+    name: "dodge homing beam 120angle",
     repeatInterval: 1, 
     knockbackData: {
       speed: 15, 
-      angle: 110, 
-      aoe: 700,
+      angle: 120, 
+      aoe: 800,
     },
     maxEnemies: 3,
     addRandomAngle: false,

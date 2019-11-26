@@ -157,4 +157,42 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // twin dragon shot
+  {
+    name: "damage 1tick 0.01int 400aoe",
+    repeatInterval: 1,
+    aoe: 400,
+    damageData: {
+      multiplier: 0.01,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage final 1.5int 500aoe",
+    repeatInterval: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 1.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // masenko
+  {
+    name: "damage 1tick 0.04int 500aoe",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.04,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
 ];

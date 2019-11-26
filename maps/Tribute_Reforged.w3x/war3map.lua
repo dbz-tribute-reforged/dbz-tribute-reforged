@@ -3481,6 +3481,7 @@ end
 
 function InitTrig_Hero_Pick_Disable_Spellcasting()
     gg_trg_Hero_Pick_Disable_Spellcasting = CreateTrigger()
+    DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Disable_Spellcasting, EVENT_PLAYER_UNIT_SPELL_CAST)
     TriggerAddCondition(gg_trg_Hero_Pick_Disable_Spellcasting, Condition(Trig_Hero_Pick_Disable_Spellcasting_Conditions))
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Spellcasting, Trig_Hero_Pick_Disable_Spellcasting_Actions)
