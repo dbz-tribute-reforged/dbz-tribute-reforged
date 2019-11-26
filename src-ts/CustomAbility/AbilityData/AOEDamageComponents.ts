@@ -42,138 +42,119 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 */
 
 export const AOEDamageComponents = [
+  // used for kame
   // copy from here
   {
-    name: "damage 1tick 0.1int 300aoe",
+    name: "damage 1tick 0.02int 400aoe",
     repeatInterval: 1,
+    aoe: 400,
     damageData: {
-      multiplier: 0.1,
+      multiplier: 0.02,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
-    aoe: 300,
   },
   // to here, and replace with unique name
   {
-    name: "damage 1tick 0.1str 300aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.1,
-      attribute: bj_HEROSTAT_STR,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage 1tick 0.1agi 300aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.1,
-      attribute: bj_HEROSTAT_AGI,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage 1tick 0.05str 300aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.05,
-      attribute: bj_HEROSTAT_STR,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage 1tick 0.05agi 300aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.05,
-      attribute: bj_HEROSTAT_AGI,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage 1tick 0.05int 300aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.05,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage 1tick 0.1int 400aoe",
-    repeatInterval: 1,
-    damageData: {
-      multiplier: 0.1,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 400,
-  },
-  {
-    name: "damage final 5str 400aoe",
+    name: "damage final 2int 500aoe",
     repeatInterval: -1,
-    damageData: {
-      multiplier: 5,
-      attribute: bj_HEROSTAT_STR,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage final 5agi 400aoe",
-    repeatInterval: -1,
-    damageData: {
-      multiplier: 5,
-      attribute: bj_HEROSTAT_AGI,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage final 5int 400aoe",
-    repeatInterval: -1,
-    damageData: {
-      multiplier: 5,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 300,
-  },
-  {
-    name: "damage final 10int 500aoe",
-    repeatInterval: -1,
-    damageData: {
-      multiplier: 10,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
     aoe: 500,
+    damageData: {
+      multiplier: 2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // used for spirit bomb
+  {
+    name: "damage 1tick 0.03int 500aoe",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.03,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage final 3int 600aoe",
+    repeatInterval: -1,
+    aoe: 600,
+    damageData: {
+      multiplier: 3,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // used for dfist
+  {
+    name: "damage 1tick 0.15int 300aoe",
+    repeatInterval: 1,
+    aoe: 300,
+    damageData: {
+      multiplier: 0.15,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage final 5int 500aoe",
+    repeatInterval: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // big bang attack
+  {
+    name: "damage final 4int 500aoe",
+    repeatInterval: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 4,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // final flash
+  {
+    name: "damage 1tick 0.05int 500aoe",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.05,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage final 3.5int 500aoe",
+    repeatInterval: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 3.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
   },
 ];

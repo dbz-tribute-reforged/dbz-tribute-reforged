@@ -8,7 +8,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 5,
+    multiplier: 10,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -29,11 +29,11 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
-        repeatInterval: 0,
+        model: "Abilities\\Spells\\Items\\AIda\\AIdaTarget.mdl",
+        repeatInterval: 3,
         group: 0,
         scale: 1.0,
-        startHeight: 0,
+        startHeight: 50,
         endHeight: 0,
         extraDirectionalYaw: 0,
         color: {
@@ -41,8 +41,8 @@ export const DamageBlockComponents = [
           y: 255,
           z: 255,
         },
-        persistent: true,
-        attachmentPoint: "origin",
+        persistent: false,
+        attachmentPoint: "overhead",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 150,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 10,
+    multiplier: 50,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",

@@ -48,7 +48,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 50% of incoming dmg until the damage blocked exceeds 5 * STR." + 
+        "Basic Guard ability that blocks 50% of incoming damage until more than 10 * STR damage is blocked." + 
         "|nCost:25 MP|nCD: 9"
     },
     components: [
@@ -89,7 +89,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 132,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: false,
@@ -105,7 +105,6 @@ export const AbilitiesList = [
         "spirit bomb stuff"
     },
     components: [
-      { name: "sfx blue wind aura" },
       { name: "beam spirit bomb" },
     ],
   },
@@ -133,8 +132,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "ground dash 25dist" },
-      { name: "damage 1tick 0.15agi 300aoe" },
-      { name: "damage final 5agi 400aoe" },
+      { name: "damage 1tick 0.15int 300aoe" },
+      { name: "damage final 5int 500aoe" },
       { name: "knockback 1tick 25speed 180angle 250aoe" },
       { name: "sfx dragon fist" },
     ],
@@ -146,7 +145,7 @@ export const AbilitiesList = [
     maxCd: 6,
     costType: "HP",
     costAmount: 0,
-    duration: 150,
+    duration: 180,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: false,
@@ -165,6 +164,84 @@ export const AbilitiesList = [
       { name: "dodge ultra instinct" },
       { name: "block ultra instinct" },
       { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Galick Gun",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: "galick gun",
+      body: 
+        "galick gun stuff"
+    },
+    components: [
+      { name: "beam galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Big Bang Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSpiritbomb.blp",
+      disabled: "BTNSpiritbomb.blp",
+    },
+    tooltip: {
+      title: "Big Bang Attack",
+      body: 
+        "Big Bang Attack stuff"
+    },
+    components: [
+      { name: "beam big bang attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Final Flash",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.3,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: "Final Flash",
+      body: 
+        "Final Flash stuff"
+    },
+    components: [
+      { name: "beam final flash" },
     ],
   },
   // -------------------------------------------

@@ -1,7 +1,10 @@
-export const HeroAbilitiesList: Map<string, string[]> = new Map(
+export const HeroAbilitiesList: Map<number, string[]> = new Map(
   [
-    ["Goku", ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
-    ["Vegeta", ["Galick Gun", "Big Bang Attack", "Final Flash"]],
-    ["Gohan", ["Kamehameha", "Twin Dragon Shot", "Masenko"]],
+    [FourCC("H000"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
+    [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
+    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash"]],
+    [FourCC("H00K"), ["Kamehameha", "Twin Dragon Shot", "Masenko"]],
+    
+    [FourCC("Oblm"), ["Galick Gun", "Big Bang Attack", "Final Flash"]],
   ]
 )

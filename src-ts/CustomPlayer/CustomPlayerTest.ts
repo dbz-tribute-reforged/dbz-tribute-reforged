@@ -192,19 +192,12 @@ export function CustomPlayerTest() {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
     const abilityId = GetSpellAbilityId();
-    const caster = GetTriggerUnit();
-    const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
-    let spellName = null;
 
-    // Inverse FourCC and then get that key, else do it the slow way
-    for (const key of abilityCodesToNames.keys()) {
-      if (abilityId == FourCC(key)) {
-        spellName = abilityCodesToNames.get(key);
-        break;
-      }
-    }
+    const spellName = abilityCodesToNames.get(abilityId);
 
     if (spellName) {
+      const caster = GetTriggerUnit();
+      const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero && IsUnitSelected(customHero.unit, player)) {
         customHero.useAbility(
@@ -223,7 +216,7 @@ export function CustomPlayerTest() {
 
   });
 
-
+  
   // zanzo activation trigger
   // tied to z for now
   const abil0 = CreateTrigger();
@@ -236,7 +229,8 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil1, OSKEY_X, 0, true);
   addAbilityAction(abil1, "Guard");
-
+  
+  /*
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_Q, 0, true);
@@ -276,6 +270,7 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil9, OSKEY_V, 0, true);
   addAbilityAction(abil9, "Blue Hurricane");
+  */
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {

@@ -28,7 +28,7 @@ export class CustomHero {
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Guard");
     
-    const abilities = HeroAbilitiesList.get(GetHeroProperName(unit));
+    const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {
       for (const ability of abilities) {
         this.addAbilityFromAll(ability);

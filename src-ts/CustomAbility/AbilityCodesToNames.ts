@@ -1,11 +1,16 @@
-export const abilityCodesToNames = new Map<string, string>(
+export const abilityCodesToNames = new Map<number, string>(
   [
-    ['A00R', "Kamehameha"],
-    ['A0JP', "Spirit Bomb"],
-    ['A00U', "Dragon Fist"],
-    ['A0KR', "Ultra Instinct"],
-    ['A03N', "Kamehameha"],
-    ['A0GO', "Galick Gun"],
-    ['A01B', "Ultra Instinct"],
+    [FourCC('A00R'), "Kamehameha"],
+    [FourCC('A0JP'), "Spirit Bomb"],
+    [FourCC('A00U'), "Dragon Fist"],
+    [FourCC('A0KR'), "Ultra Instinct"],
+    [FourCC('A03N'), "Galick Gun"],
+    [FourCC('A0GO'), "Big Bang Attack"],
+    [FourCC('A01B'), "Final Flash"],
+
+    // test
+    [FourCC('AOwk'), "Galick Gun"],
+    [FourCC('AOmi'), "Big Bang Attack"],
+    [FourCC('AOww'), "Final Flash"],
   ]
 );
