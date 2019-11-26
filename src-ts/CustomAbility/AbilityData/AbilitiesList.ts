@@ -181,9 +181,9 @@ export const AbilitiesList = [
     costAmount: 25,
     duration: 67,
     updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: true,
-    waitsForNextClick: false,
+    castTime: 0.5,
+    canMultiCast: false,
+    waitsForNextClick: true,
     animation: "spell",
     icon: {
       enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",
@@ -192,12 +192,11 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability (R)",
       body: 
-        "Lorem Ips. 25hp, cd4"
+        "Spirit Bomb Test. 25hp, cd4"
     },
     components: [
-      {name: "beam kamehameha"},
-      {name: "sword slash pink"},
-      {name: "flying dash 5dist"},
+      { name: "sfx blue wind aura" },
+      { name: "beam spirit bomb" },
     ],
   },
   // -------------------------------------------
@@ -220,10 +219,14 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability 2 (D)",
       body: 
-        "Lorem Ips 2. 25mp, cd4"
+        "Dragon Fisto. 25mp, cd4"
     },
     components: [
-      {name: "flying dash 20dist"},
+      { name: "ground dash 25dist" },
+      { name: "damage 1tick 1int 250aoe" },
+      { name: "damage final 10int 500aoe" },
+      { name: "knockback 1tick 25speed 180angle 200aoe" },
+      { name: "sfx dragon fist" },
     ],
   },
   // -------------------------------------------
@@ -233,7 +236,7 @@ export const AbilitiesList = [
     maxCd: 12,
     costType: "MP",
     costAmount: 125,
-    duration: 150,
+    duration: 67,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: false,
@@ -246,10 +249,11 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability 3 (F)",
       body: 
-        "Lorem Ips 3. 125 mp, cd 12"
+        "Beam kame. 125 mp, cd 12"
     },
     components: [
-      {name: "beam vortex test"},
+      { name: "beam kamehameha" },
+      { name: "sfx blue wind aura" },
     ],
   },
   // -------------------------------------------

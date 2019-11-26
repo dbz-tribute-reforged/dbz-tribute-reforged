@@ -136,4 +136,31 @@ export const BeamComponents = [
     ],
   },
   // -------------------------------------------
+  { 
+    name: "beam spirit bomb",
+    repeatInterval: 1,
+    beamHpMult: 1.5,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 20,
+    aoe: 400,
+    clashingDelayTicks: 2,
+    maxDelayTicks: 10,
+    durationIncPerDelay: 15,
+    heightVariation: {
+      start: 450,
+      finish: 0,
+      scaling: 1,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: true,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage 2tick 1int 400aoe" },
+      { name: "damage final 10int 500aoe" },
+      { name: "knockback 1tick 15speed 0angle 300aoe" },
+      { name: "sfx beam spirit bomb" },
+    ],
+  },
+  // -------------------------------------------
 ];

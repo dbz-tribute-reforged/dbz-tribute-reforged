@@ -75,62 +75,6 @@ export class CustomAbilityManager {
       this.abilityAddComponent(ability, abilityData.components);
       this.setAbility(ability);
     }
-
-    // load component
-
-    var jsonComponent = {
-      type: "AOEDamage",
-      name: "AOE DMG TEST",
-      repeatInterval: 5,
-      damageData: {
-        multiplier: 2,
-        attribute: 1,
-        attackType: 6,
-        damageType: 0,
-        weaponType: 0,
-      },
-      aoe: 500,
-    };
-
-    const testComponent = new AOEDamage().deserialize(jsonComponent);
-    this.setComponent(testComponent);
-    
-    var jsonAbility = {
-      name: "Test Ability",
-      currentCd: 0,
-      maxCd: 4,
-      costType: "MP",
-      costAmount: 20,
-      duration: 67,
-      updateRate: 0.03,
-      castTime: 0.4,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",
-        disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNAcolyte.blp",
-      },
-      tooltip: {
-        title: "Test Ability",
-        body: "Body Text.",
-      },
-      components: [
-        {name: "beam kamehameha"},
-        {name: "sword slash orange"},
-      ],
-    };
-
-    const testAbility = new CustomAbility().deserialize(jsonAbility);
-    this.abilityAddComponent(testAbility, jsonAbility.components);
-
-    this.setAbility(testAbility);
-
-
-
-
-
-
   }
 
   setComponent(component: AbilityComponent): this {

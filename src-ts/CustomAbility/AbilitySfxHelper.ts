@@ -68,7 +68,7 @@ export module AbilitySfxHelper {
   export function displaySfxListOnUnit(ability: CustomAbility, sfxList: SfxData[], unit: unit, group: number, angle: number, height: number) {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
-
+      
       if (ability.isReadyToUse(sfx.repeatInterval)) {
         AbilitySfxHelper.displaySfxOnUnit(
           sfx,

@@ -68,7 +68,6 @@ export const AOEDamageComponents = [
     },
     aoe: 250,
   },
-  // to here, and replace with unique name
   {
     name: "damage 1tick 0.5agi 250aoe",
     repeatInterval: 1,
@@ -80,6 +79,30 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
     aoe: 250,
+  },
+  {
+    name: "damage 1tick 1int 250aoe",
+    repeatInterval: 1,
+    damageData: {
+      multiplier: 1,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    aoe: 250,
+  },
+  {
+    name: "damage 2tick 1int 400aoe",
+    repeatInterval: 2,
+    damageData: {
+      multiplier: 1,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    aoe: 400,
   },
   {
     name: "damage 5tick 2int 250aoe",
@@ -128,5 +151,17 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
     aoe: 300,
+  },
+  {
+    name: "damage final 10int 500aoe",
+    repeatInterval: -1,
+    damageData: {
+      multiplier: 10,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    aoe: 500,
   },
 ];
