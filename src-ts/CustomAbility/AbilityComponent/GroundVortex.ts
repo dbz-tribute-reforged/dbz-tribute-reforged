@@ -31,15 +31,15 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
 
   }
 
-  private dealDamageToUnit(ability: CustomAbility, source: unit, target: unit, closenessRatio: number): this {
+  private dealDamageToUnit(ability: CustomAbility, input: CustomAbilityInput, target: unit, closenessRatio: number): this {
     const damageThisTick = 
-      this.damageData.multiplier * 
+      this.damageData.multiplier * input.level *
       (1 + this.closenessDamageMult * closenessRatio) * 
       (1 + this.durationDamageMult * ability.currentTick / ability.duration) * 
-      GetHeroStatBJ(this.damageData.attribute, source, true);
+      GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true);
 
     UnitDamageTarget(
-      source, 
+      input.caster.unit, 
       target,
       damageThisTick,
       true,
@@ -86,7 +86,7 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
       );
 
       PathingCheck.moveGroundUnitToCoord(target, targetNewCoord);
-      this.dealDamageToUnit(ability, input.caster.unit, target, closenessRatio);
+      this.dealDamageToUnit(ability, input, target, closenessRatio);
     });
   }
 

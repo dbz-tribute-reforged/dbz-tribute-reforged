@@ -4,6 +4,7 @@ import { Constants } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
+import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -183,59 +184,98 @@ export function CustomPlayerTest() {
     customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
   });
 
+  const linkNormalAbilityToCustomAbility = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(linkNormalAbilityToCustomAbility, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  }
+  TriggerAddAction(linkNormalAbilityToCustomAbility, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    const abilityId = GetSpellAbilityId();
+    const caster = GetTriggerUnit();
+    const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+    let spellName = null;
+
+    // Inverse FourCC and then get that key, else do it the slow way
+    for (const key of abilityCodesToNames.keys()) {
+      if (abilityId == FourCC(key)) {
+        spellName = abilityCodesToNames.get(key);
+        break;
+      }
+    }
+
+    if (spellName) {
+      const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+      if (customHero && IsUnitSelected(customHero.unit, player)) {
+        customHero.useAbility(
+          spellName,
+          new CustomAbilityInput(
+            customHero,
+            player,
+            abilityLevel,
+            customPlayers[playerId].orderPoint,
+            customPlayers[playerId].mouseData,
+            customPlayers[playerId].targetUnit,
+          ),
+        );
+      }
+    }
+
+  });
+
 
   // zanzo activation trigger
   // tied to z for now
-  const zanzoActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(zanzoActivate, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
+  const abil0 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
   // replace key events with more organized method of key reading
-  addKeyEvent(zanzoActivate, OSKEY_Z, 0, true);
-  addAbilityAction(zanzoActivate, "Zanzo Dash");
+  addKeyEvent(abil0, OSKEY_Z, 0, true);
+  addAbilityAction(abil0, "Zanzo Dash");
 
-  const blueHurricaneActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(blueHurricaneActivate, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(blueHurricaneActivate, OSKEY_X, 0, true);
-  addAbilityAction(blueHurricaneActivate, "Blue Hurricane");
+  const abil1 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil1, OSKEY_X, 0, true);
+  addAbilityAction(abil1, "Guard");
 
-  const shiningSwordActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(shiningSwordActivate, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(shiningSwordActivate, OSKEY_C, 0, true);
-  addAbilityAction(shiningSwordActivate, "Shining Sword Attack");
+  const abil2 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil2, OSKEY_Q, 0, true);
+  addAbilityAction(abil2, "Kamehameha");
 
-  const beamTest = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(beamTest, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest, OSKEY_Q, 0, true);
-  addAbilityAction(beamTest, "Beam Blue");
+  const abil3 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil3, OSKEY_W, 0, true);
+  addAbilityAction(abil3, "Spirit Bomb");
 
-  const beamTest2 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(beamTest2, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest2, OSKEY_W, 0, true);
-  addAbilityAction(beamTest2, "Beam Purple");
+  const abil4 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil4, OSKEY_E, 0, true);
+  addAbilityAction(abil4, "Dragon Fist");
 
-  const beamTest3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(beamTest3, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(beamTest3, OSKEY_E, 0, true);
-  addAbilityAction(beamTest3, "Beam Red");
+  const abil5 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil5, OSKEY_R, 0, true);
+  addAbilityAction(abil5, "Ultra Instinct");
 
-  const testAbil = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(testAbil, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(testAbil, OSKEY_R, 0, true);
-  addAbilityAction(testAbil, "Test Ability");
+  const abil6 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil6, OSKEY_D, 0, true);
+  addAbilityAction(abil6, "Test Ability");
 
-  const testAbil2 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(testAbil2, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(testAbil2, OSKEY_D, 0, true);
-  addAbilityAction(testAbil2, "Test Ability 2");
+  const abil7 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil7, OSKEY_F, 0, true);
+  addAbilityAction(abil7, "Test Ability 2");
 
-  const testAbil3 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(testAbil3, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(testAbil3, OSKEY_F, 0, true);
-  addAbilityAction(testAbil3, "Test Ability 3");
+  const abil8 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil8, OSKEY_C, 0, true);
+  addAbilityAction(abil8, "Test Ability 3");
 
-  const testAbil4 = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(testAbil4, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(testAbil4, OSKEY_V, 0, true);
-  addAbilityAction(testAbil4, "Test Ability 4");
+  const abil9 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil9, OSKEY_V, 0, true);
+  addAbilityAction(abil9, "Blue Hurricane");
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {

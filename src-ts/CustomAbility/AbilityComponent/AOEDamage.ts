@@ -22,10 +22,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   }
 
-  protected calculateDamage(source: unit): number {
+  protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      this.damageData.multiplier * 
-      GetHeroStatBJ(this.damageData.attribute, source, true)
+      this.damageData.multiplier * input.level *
+      GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
     );
   }
 
@@ -44,7 +44,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       UnitDamageTarget(
         source, 
         target, 
-        this.calculateDamage(input.caster.unit),
+        this.calculateDamage(input),
         true,
         false,
         this.damageData.attackType,

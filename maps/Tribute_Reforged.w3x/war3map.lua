@@ -182,7 +182,6 @@ gg_trg_Pan_E_cast = nil
 gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
-gg_trg_Skin_Change = nil
 gg_trg_Solar_Flare_Test = nil
 gg_trg_SolarFlare = nil
 gg_trg_Kame = nil
@@ -995,7 +994,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -2519.6, 4750.0, 187.356, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("H000"), 5308.3, 2631.6, 95.869, FourCC("H000"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H000"), 102.7, 21448.3, 95.869, FourCC("H000"))
     SetHeroLevel(u, 10, false)
     SetUnitState(u, UNIT_STATE_MANA, 560)
     SelectHeroSkill(u, FourCC("A0KO"))
@@ -1746,16 +1745,6 @@ function InitTrig_Lookout_Exit()
     TriggerAddAction(gg_trg_Lookout_Exit, Trig_Lookout_Exit_Actions)
 end
 
-function Trig_Skin_Change_Actions()
-        BlzSetUnitSkin( gg_unit_H000_0312, 'H08J' )
-end
-
-function InitTrig_Skin_Change()
-    gg_trg_Skin_Change = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Skin_Change, Player(0), "skin", true)
-    TriggerAddAction(gg_trg_Skin_Change, Trig_Skin_Change_Actions)
-end
-
 function Trig_SolarFlare_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0KO"))) then
         return false
@@ -1800,155 +1789,6 @@ function InitTrig_SolarFlare()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SolarFlare, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_SolarFlare, Condition(Trig_SolarFlare_Conditions))
     TriggerAddAction(gg_trg_SolarFlare, Trig_SolarFlare_Actions)
-end
-
-function Trig_Kame_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A00R"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kame_Actions()
-    udg_KameDMG[GetConvertedPlayerId(GetTriggerPlayer())] = ((I2R((GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), false) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 2.00) + 100.00)
-    udg_KameCaster[GetConvertedPlayerId(GetTriggerPlayer())] = GetTriggerUnit()
-    udg_KameTicks[GetConvertedPlayerId(GetTriggerPlayer())] = 1
-    udg_KameLoc[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitLoc(GetTriggerUnit())
-    udg_TempLoc2 = GetSpellTargetLoc()
-    udg_KameAngle[GetConvertedPlayerId(GetTriggerPlayer())] = AngleBetweenPoints(udg_KameLoc[GetConvertedPlayerId(GetTriggerPlayer())], udg_TempLoc2)
-        RemoveLocation(udg_TempLoc2)
-end
-
-function InitTrig_Kame()
-    gg_trg_Kame = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Kame, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Kame, Condition(Trig_Kame_Conditions))
-    TriggerAddAction(gg_trg_Kame, Trig_Kame_Actions)
-end
-
-function Trig_KameLoop_Func001Func001Func001C()
-    if (not (udg_KameTicks[udg_TempInt] >= 34)) then
-        return false
-    end
-    return true
-end
-
-function Trig_KameLoop_Func001Func001Func009Func001C()
-    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), ConvertedPlayer(udg_TempInt)) == true)) then
-        return false
-    end
-    if (not (IsUnitInGroup(GetEnumUnit(), udg_KameDMGGroup[udg_TempInt]) == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_KameLoop_Func001Func001Func009A()
-    if (Trig_KameLoop_Func001Func001Func009Func001C()) then
-        GroupAddUnitSimple(GetEnumUnit(), udg_KameDMGGroup[udg_TempInt])
-        UnitDamageTargetBJ(udg_KameCaster[udg_TempInt], GetEnumUnit(), udg_KameDMG[udg_TempInt], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    else
-    end
-end
-
-function Trig_KameLoop_Func001Func001C()
-    if (not (udg_KameTicks[udg_TempInt] >= 1)) then
-        return false
-    end
-    if (not (udg_KameTicks[udg_TempInt] < 34)) then
-        return false
-    end
-    return true
-end
-
-function Trig_KameLoop_Actions()
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > 10) then break end
-        if (Trig_KameLoop_Func001Func001C()) then
-            udg_TempLoc = PolarProjectionBJ(udg_KameLoc[udg_TempInt], (I2R(udg_KameTicks[udg_TempInt]) * 45.45), udg_KameAngle[udg_TempInt])
-            AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-            BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-            BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), 100.00)
-            BlzSetSpecialEffectZ(GetLastCreatedEffectBJ(), (BlzGetLocalUnitZ(udg_KameCaster[udg_TempInt]) + 100.00))
-            DestroyEffectBJ(GetLastCreatedEffectBJ())
-            udg_TempGroup = GetUnitsInRangeOfLocAll(400.00, udg_TempLoc)
-            ForGroupBJ(udg_TempGroup, Trig_KameLoop_Func001Func001Func009A)
-                        DestroyGroup(udg_TempGroup)
-                        RemoveLocation(udg_TempLoc)
-            udg_KameTicks[udg_TempInt] = (udg_KameTicks[udg_TempInt] + 1)
-        else
-            if (Trig_KameLoop_Func001Func001Func001C()) then
-                udg_KameTicks[udg_TempInt] = 0
-                                RemoveLocation(udg_KameLoc[udg_TempInt])
-                GroupClear(udg_KameDMGGroup[udg_TempInt])
-            else
-            end
-        end
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_KameLoop()
-    gg_trg_KameLoop = CreateTrigger()
-    TriggerRegisterTimerEventPeriodic(gg_trg_KameLoop, 0.03)
-    TriggerAddAction(gg_trg_KameLoop, Trig_KameLoop_Actions)
-end
-
-function Trig_Dragon_Fist_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A00U"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Dragon_Fist_Func004Func001C()
-    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetTriggerPlayer()) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Dragon_Fist_Func004A()
-    if (Trig_Dragon_Fist_Func004Func001C()) then
-        UnitDamageTargetBJ(GetTriggerUnit(), GetEnumUnit(), ((I2R((GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), false) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 5.00) + 100.00), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    else
-    end
-end
-
-function Trig_Dragon_Fist_Actions()
-    udg_TempLoc = GetSpellTargetLoc()
-    udg_TempGroup = GetUnitsInRangeOfLocAll(650.00, udg_TempLoc)
-        local loc = GetSpellTargetLoc()
-    ForGroupBJ(udg_TempGroup, Trig_Dragon_Fist_Func004A)
-        DestroyGroup(udg_TempGroup)
-    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl")
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.50)
-    BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 0.25)
-    DestroyEffectBJ(GetLastCreatedEffectBJ())
-    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.50)
-    DestroyEffectBJ(GetLastCreatedEffectBJ())
-    CreateNUnitsAtLoc(1, FourCC("h02K"), GetTriggerPlayer(), udg_TempLoc, GetUnitFacing(GetTriggerUnit()))
-    SetUnitFlyHeightBJ(GetLastCreatedUnit(), 0.00, 800.00)
-    UnitApplyTimedLifeBJ(5.00, FourCC("BTLF"), GetLastCreatedUnit())
-        RemoveLocation(udg_TempLoc)
-    TriggerSleepAction(1.00)
-    CreateNUnitsAtLoc(1, FourCC("h02L"), GetTriggerPlayer(), udg_TempLoc, GetUnitFacing(GetTriggerUnit()))
-    SetUnitAnimation(GetLastCreatedUnit(), "birth")
-    UnitApplyTimedLifeBJ(3.00, FourCC("BTLF"), GetLastCreatedUnit())
-        RemoveLocation(loc)
-    AddSpecialEffectLocBJ(udg_TempLoc, "units\\creeps\\BronzeDragon\\BronzeDragon.mdl")
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.50)
-    BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), (BlzGetLocalUnitZ(GetTriggerUnit()) + 800.00))
-    DestroyEffectBJ(GetLastCreatedEffectBJ())
-end
-
-function InitTrig_Dragon_Fist()
-    gg_trg_Dragon_Fist = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Dragon_Fist, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dragon_Fist, Condition(Trig_Dragon_Fist_Conditions))
-    TriggerAddAction(gg_trg_Dragon_Fist, Trig_Dragon_Fist_Actions)
 end
 
 function Trig_Cam_Dist_Func001Func001C()
@@ -6515,11 +6355,7 @@ function InitCustomTriggers()
     InitTrig_Pan_E_Effect()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
-    InitTrig_Skin_Change()
     InitTrig_SolarFlare()
-    InitTrig_Kame()
-    InitTrig_KameLoop()
-    InitTrig_Dragon_Fist()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
     InitTrig_Map_Setup()

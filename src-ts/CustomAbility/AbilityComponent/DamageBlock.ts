@@ -17,7 +17,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     public blockPerDamage: number = 25,
     public isPercentageBlock: boolean = true,
     public attribute: number = bj_HEROSTAT_STR,
-    public multiplier: number = 5,
+    public multiplier: number = 3,
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
   ) {
@@ -25,15 +25,16 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     this.remainingBlock = 0;
   }
 
-  calculateMaxBlock(unit: unit) {
-    return this.multiplier * GetHeroStatBJ(this.attribute, unit, true);
+  calculateMaxBlock(input: CustomAbilityInput): number {
+    return this.multiplier * input.level * 
+      GetHeroStatBJ(this.attribute, input.caster.unit, true);
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     let currentHp = GetUnitState(source, UNIT_STATE_LIFE);
     if (ability.currentTick == CustomAbility.START_TICK) {
       this.previousHp = currentHp;
-      this.remainingBlock = this.calculateMaxBlock(input.caster.unit);
+      this.remainingBlock = this.calculateMaxBlock(input);
     }
     
     if (this.remainingBlock > 0) {

@@ -4,6 +4,7 @@ import { CastTimeHelper } from "./CastTimeHelper";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityComponentHelper";
 import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
+import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -25,15 +26,15 @@ export class CustomHero {
     // then read some data and apply special abilities for
     // relevant heroes
     this.addAbilityFromAll("Zanzo Dash");
-    this.addAbilityFromAll("Blue Hurricane");
-    this.addAbilityFromAll("Shining Sword Attack");
-    this.addAbilityFromAll("Beam Blue");
-    this.addAbilityFromAll("Beam Purple");
-    this.addAbilityFromAll("Beam Red");
-    this.addAbilityFromAll("Test Ability");
-    this.addAbilityFromAll("Test Ability 2");
-    this.addAbilityFromAll("Test Ability 3");
-    this.addAbilityFromAll("Test Ability 4");
+    this.addAbilityFromAll("Guard");
+    
+    const abilities = HeroAbilitiesList.get(GetHeroProperName(unit));
+    if (abilities) {
+      for (const ability of abilities) {
+        this.addAbilityFromAll(ability);
+      }
+    }
+
   }
 
   public addAbilityFromAll(name: string) {

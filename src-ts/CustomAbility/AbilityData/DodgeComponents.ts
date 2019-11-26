@@ -5,7 +5,7 @@ export const DodgeComponents = [
     repeatInterval: 2, 
     knockbackData: {
       speed: 100, 
-      angle: 360, 
+      angle: 270, 
       aoe: 500,
     },
     maxEnemies: 3,

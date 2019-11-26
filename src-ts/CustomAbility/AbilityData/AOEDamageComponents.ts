@@ -44,59 +44,83 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 export const AOEDamageComponents = [
   // copy from here
   {
-    name: "damage 1tick 0.5int 250aoe",
+    name: "damage 1tick 0.1int 300aoe",
     repeatInterval: 1,
     damageData: {
-      multiplier: 0.5,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
-    aoe: 250,
+    aoe: 300,
   },
   // to here, and replace with unique name
   {
-    name: "damage 1tick 0.5str 250aoe",
+    name: "damage 1tick 0.1str 300aoe",
     repeatInterval: 1,
     damageData: {
-      multiplier: 0.5,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
-    aoe: 250,
+    aoe: 300,
   },
   {
-    name: "damage 1tick 0.5agi 250aoe",
+    name: "damage 1tick 0.1agi 300aoe",
     repeatInterval: 1,
     damageData: {
-      multiplier: 0.5,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
-    aoe: 250,
+    aoe: 300,
   },
   {
-    name: "damage 1tick 1int 250aoe",
+    name: "damage 1tick 0.05str 300aoe",
     repeatInterval: 1,
     damageData: {
-      multiplier: 1,
+      multiplier: 0.05,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    aoe: 300,
+  },
+  {
+    name: "damage 1tick 0.05agi 300aoe",
+    repeatInterval: 1,
+    damageData: {
+      multiplier: 0.05,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    aoe: 300,
+  },
+  {
+    name: "damage 1tick 0.05int 300aoe",
+    repeatInterval: 1,
+    damageData: {
+      multiplier: 0.05,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
-    aoe: 250,
+    aoe: 300,
   },
   {
-    name: "damage 2tick 1int 400aoe",
-    repeatInterval: 2,
+    name: "damage 1tick 0.1int 400aoe",
+    repeatInterval: 1,
     damageData: {
-      multiplier: 1,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -105,19 +129,7 @@ export const AOEDamageComponents = [
     aoe: 400,
   },
   {
-    name: "damage 5tick 2int 250aoe",
-    repeatInterval: 5,
-    damageData: {
-      multiplier: 2,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-    aoe: 250,
-  },
-  {
-    name: "damage final 5str 300aoe",
+    name: "damage final 5str 400aoe",
     repeatInterval: -1,
     damageData: {
       multiplier: 5,
@@ -129,7 +141,7 @@ export const AOEDamageComponents = [
     aoe: 300,
   },
   {
-    name: "damage final 5agi 300aoe",
+    name: "damage final 5agi 400aoe",
     repeatInterval: -1,
     damageData: {
       multiplier: 5,
@@ -141,7 +153,7 @@ export const AOEDamageComponents = [
     aoe: 300,
   },
   {
-    name: "damage final 5int 300aoe",
+    name: "damage final 5int 400aoe",
     repeatInterval: -1,
     damageData: {
       multiplier: 5,
