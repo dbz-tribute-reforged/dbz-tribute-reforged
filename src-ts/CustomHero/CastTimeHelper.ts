@@ -109,6 +109,12 @@ export module CastTimeHelper {
     const castTimeTimer = CreateTimer();
     const stopCastingTrigger = CreateTrigger();
     
+    addEventStopCasting(stopCastingTrigger, input);
+    TriggerAddAction(stopCastingTrigger, ()=> {
+      DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
+      cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
+    })
+    
     if (ability.waitsForNextClick) {
       // TODO: make this into UI instead of just print to screen
       DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " on next right click.");
@@ -118,13 +124,9 @@ export module CastTimeHelper {
       });
     } else {
       DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " instantly.");
-      startCastTimeTimer(castTimeTimer, hero, ability, input, readyTrigger, stopCastingTrigger);
+      ability.activate(input);
+      cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
     }
 
-    addEventStopCasting(stopCastingTrigger, input);
-    TriggerAddAction(stopCastingTrigger, ()=> {
-      DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
-      cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
-    })
   }
 }

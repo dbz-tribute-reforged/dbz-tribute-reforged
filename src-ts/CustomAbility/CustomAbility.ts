@@ -63,6 +63,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
       }
       if (this.currentTick > this.duration) {
         AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx);
+        this.persistentSfx = [];
       }
       this.updateCd();
     });

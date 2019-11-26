@@ -110,7 +110,11 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     SetUnitFlyHeight(
       this.beamUnit, 
       this.heightVariation.finish, 
-      Math.abs((this.heightVariation.finish - this.heightVariation.start) / (ability.duration * ability.updateRate)),
+      Math.abs(
+        (this.heightVariation.finish - this.heightVariation.start) 
+        / 
+        (ability.duration * ability.updateRate)
+      ),
     );
     // hp MUST be a multiple of 50??? or something
     // else it causes a crash / uncatched exception
@@ -119,9 +123,8 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
 
     maxHp = Math.max(
       150, 
-      50 * Math.floor(
-        this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true)
-      )
+      50 * input.level *
+      Math.floor(this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true))
     );
 
     BlzSetUnitMaxHP(this.beamUnit, maxHp);

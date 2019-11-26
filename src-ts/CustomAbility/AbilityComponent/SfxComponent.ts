@@ -23,7 +23,7 @@ export class SfxComponent implements AbilityComponent {
       new Vector2D(GetUnitX(source), GetUnitY(source)), 
       SfxData.SHOW_ALL_GROUPS,
       0, 
-      BlzGetUnitZ(source)
+      BlzGetUnitZ(source),
     );
     AbilitySfxHelper.displaySfxListOnUnit(
       ability,
@@ -31,7 +31,7 @@ export class SfxComponent implements AbilityComponent {
       source,
       SfxData.SHOW_ALL_GROUPS,
       0,
-      BlzGetUnitZ(source)
+      BlzGetUnitZ(source),
     )
   }
 

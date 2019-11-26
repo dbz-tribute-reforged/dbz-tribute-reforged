@@ -10,6 +10,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   constructor(
     public name: string = "AOEDamage",
     public repeatInterval: number = 1,
+    public aoe: number = 250,
     public damageData: DamageData = new DamageData(
       0.02,
       bj_HEROSTAT_AGI,
@@ -17,15 +18,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ), 
-    public aoe: number = 250,
   ) {
 
   }
 
-  protected calculateDamage(source: unit): number {
+  protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      this.damageData.multiplier * 
-      GetHeroStatBJ(this.damageData.attribute, source, true)
+      this.damageData.multiplier * input.level *
+      GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
     );
   }
 
@@ -44,7 +44,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       UnitDamageTarget(
         source, 
         target, 
-        this.calculateDamage(input.caster.unit),
+        this.calculateDamage(input),
         true,
         false,
         this.damageData.attackType,
@@ -59,7 +59,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   clone(): AbilityComponent {
     return new AOEDamage(
-      this.name, this.repeatInterval, this.damageData, this.aoe,
+      this.name, this.repeatInterval, this.aoe, this.damageData,
     );
   }
 
@@ -67,6 +67,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     input: { 
       name: string; 
       repeatInterval: number; 
+      aoe: number; 
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -74,13 +75,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         damageType: number; 
         weaponType: number; 
       }; 
-      aoe: number; 
     }
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
-    this.damageData = new DamageData().deserialize(input.damageData);
     this.aoe = input.aoe;
+    this.damageData = new DamageData().deserialize(input.damageData);
     return this;
   }
 }

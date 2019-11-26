@@ -3,12 +3,12 @@ export const AbilitiesList = [
   {
     name: "Zanzo Dash",
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 19,
     costType: "MP",
-    costAmount: 25,
+    costAmount: 75,
     duration: 25,
     updateRate: 0.03,
-    castTime: 0.06,
+    castTime: 0.03,
     canMultiCast: true,
     waitsForNextClick: true,
     // NOTE: animations aren't implemented yet
@@ -20,8 +20,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "Zanzo Dash",
       body: 
-        "Dashes towards your last right click." + 
-        "|nCost: 25 MP |nCD: 4",
+        "Dashes towards your next right click." + 
+        "|nCost: 75 MP |nCD: 19",
     },
     components: [
       { name: "ground dash 40dist" },
@@ -29,6 +29,277 @@ export const AbilitiesList = [
     ],
   },
   // to here, and replace with unique name
+  {
+    name: "Guard",
+    currentCd: 0,
+    maxCd: 9,
+    costType: "MP",
+    costAmount: 25,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
+    },
+    tooltip: {
+      title: "(X) Guard",
+      body: 
+        "Basic Guard ability that blocks 50% of incoming damage until more than 10 * STR damage is blocked." + 
+        "|nCost:25 MP|nCD: 9"
+    },
+    components: [
+      { name: "block basic guard" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Kamehameha", // Goku's Kame
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: "kame",
+      body: 
+        "kame stuff"
+    },
+    components: [
+      { name: "beam kamehameha" },
+      { name: "sfx blue wind aura" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Spirit Bomb",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSpiritbomb.blp",
+      disabled: "BTNSpiritbomb.blp",
+    },
+    tooltip: {
+      title: "Spirit bomb",
+      body: 
+        "spirit bomb stuff"
+    },
+    components: [
+      { name: "beam spirit bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Dragon Fist",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDragonFist.blp",
+      disabled: "BTNDragonFist.blp",
+    },
+    tooltip: {
+      title: "Dragon fist",
+      body: 
+        "Dragon Fisto"
+    },
+    components: [
+      { name: "ground dash 25dist" },
+      { name: "damage 1tick 0.15int 300aoe" },
+      { name: "damage final 5int 500aoe" },
+      { name: "knockback 1tick 25speed 180angle 250aoe" },
+      { name: "sfx dragon fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Ultra Instinct",
+    currentCd: 0,
+    maxCd: 6,
+    costType: "HP",
+    costAmount: 0,
+    duration: 180,
+    updateRate: 0.03,
+    castTime: 0.03,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNAcolyte.blp",
+    },
+    tooltip: {
+      title: "Ultra Instinct",
+      body: 
+        "Ultra Instinct (dodging randomly + blocking 20*INT). 25hp, cd7"
+    },
+    components: [
+      { name: "dodge ultra instinct" },
+      { name: "block ultra instinct" },
+      { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Galick Gun",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGalicGun.blp",
+      disabled: "BTNGalicGun.blp",
+    },
+    tooltip: {
+      title: "galick gun",
+      body: 
+        "galick gun stuff"
+    },
+    components: [
+      { name: "beam galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Big Bang Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBigBangAttack.blp",
+      disabled: "BTNBigBangAttack.blp",
+    },
+    tooltip: {
+      title: "Big Bang Attack",
+      body: 
+        "Big Bang Attack stuff"
+    },
+    components: [
+      { name: "beam big bang attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Final Flash",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFinalFlash.blp",
+      disabled: "BTNFinalFlash.blp",
+    },
+    tooltip: {
+      title: "Final Flash",
+      body: 
+        "Final Flash stuff"
+    },
+    components: [
+      { name: "beam final flash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Twin Dragon Shot",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTwinDragonShot.blp",
+      disabled: "BTNTwinDragonShot.blp",
+    },
+    tooltip: {
+      title: "Twin dragon shot",
+      body: 
+        "Twin dragon shot"
+    },
+    components: [
+      // TODO: probs make a multi-beam component for this ability
+      { name: "beam twin dragon shot" },
+      { name: "beam twin dragon shot" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Masenko",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMasenko.blp",
+      disabled: "BTNMasenko.blp",
+    },
+    tooltip: {
+      title: "Masenko",
+      body: 
+        "Masenko"
+    },
+    components: [
+      // TODO: need to add stun for masenko
+      { name: "beam masenko" },
+    ],
+  },
+  // -------------------------------------------
   {
     name: "Blue Hurricane",
     currentCd: 0,
@@ -90,99 +361,15 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Beam Blue",
-    currentCd: 0,
-    maxCd: 6,
-    costType: "MP",
-    costAmount: 25,
-    duration: 160,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: false,
-    waitsForNextClick: true,
-    animation: "spell",
-    icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNBreathOfFrost.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBreathOfFrost.blp"
-    },
-    tooltip: {
-      title: "Beam Blue",
-      body: 
-        "Fires a slow-moving blue beam. " + 
-        "|nDeals 0.5 * INT per Damage Tick in 250 AOE and 5 * INT in 300 AOE at the end." + 
-        "|nCost: 25 MP |nCD: 6",
-    },
-    components: [
-      { name: "beam blue" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Beam Purple",
-    currentCd: 0,
-    maxCd: 6,
-    costType: "MP",
-    costAmount: 75,
-    duration: 60,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: false,
-    waitsForNextClick: true,
-    animation: "spell",
-    icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPurge.blp"
-    },
-    tooltip: {
-      title: "Beam Purple",
-      body: 
-        "Fires a medium-speed purple beam that sucks in nearby enemies and can be redirected with right clicks." + 
-        "|nDeals 0.5 * INT per Damage Tick in 250 AOE and 5 * INT in 300 AOE at the end." + 
-        "|nCost: 75 MP |nCD: 6",
-    },
-    components: [
-      { name: "beam red" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Beam Red",
-    currentCd: 0,
-    maxCd: 6,
-    costType: "HP",
-    costAmount: 75,
-    duration: 40,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: false,
-    waitsForNextClick: true,
-    animation: "spell",
-    icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNSoulBurn.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSoulBurn.blp"
-    },
-    tooltip: {
-      title: "Beam Red",
-      body: 
-        "Fires a fast-moving red beam. " + 
-        "|nDeals 0.5 * STR per Damage Tick in 250 AOE and 5 * STR in 300 AOE at the end." + 
-        "|nCost: 75 MP |nCD: 6",
-    },
-    components: [
-      { name: "beam red" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: "Test Ability",
     currentCd: 0,
-    maxCd: 4,
+    maxCd: 7,
     costType: "HP",
     costAmount: 25,
-    duration: 67,
+    duration: 150,
     updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: true,
+    castTime: 0.03,
+    canMultiCast: false,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -192,12 +379,15 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability (R)",
       body: 
-        "Lorem Ips. 25hp, cd4"
+        "Ultra Instinct (dodging randomly + blocking 10*INT). 25hp, cd7"
     },
     components: [
-      {name: "beam kamehameha"},
-      {name: "sword slash pink"},
-      {name: "flying dash 5dist"},
+      // { name: "sfx blue wind aura" },
+      // { name: "beam spirit bomb" },
+      { name: "dodge ultra instinct" },
+      { name: "sfx ultra instinct" },
+      { name: "block ultra instinct" },
+      // { name: "beam homing kamehameha" },
     ],
   },
   // -------------------------------------------
@@ -220,10 +410,14 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability 2 (D)",
       body: 
-        "Lorem Ips 2. 25mp, cd4"
+        "Dragon Fisto. 25mp, cd4"
     },
     components: [
-      {name: "flying dash 20dist"},
+      { name: "ground dash 25dist" },
+      { name: "damage 1tick 1int 250aoe" },
+      { name: "damage final 10int 500aoe" },
+      { name: "knockback 1tick 25speed 180angle 200aoe" },
+      { name: "sfx dragon fist" },
     ],
   },
   // -------------------------------------------
@@ -233,7 +427,7 @@ export const AbilitiesList = [
     maxCd: 12,
     costType: "MP",
     costAmount: 125,
-    duration: 150,
+    duration: 67,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: false,
@@ -246,10 +440,37 @@ export const AbilitiesList = [
     tooltip: {
       title: "Test Ability 3 (F)",
       body: 
-        "Lorem Ips 3. 125 mp, cd 12"
+        "Beam kame. 125 mp, cd 12"
     },
     components: [
-      {name: "beam vortex test"},
+      { name: "beam kamehameha" },
+      { name: "sfx blue wind aura" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Test Ability 4",
+    currentCd: 0,
+    maxCd: 7,
+    costType: "MP",
+    costAmount: 25,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
+    },
+    tooltip: {
+      title: "Test Ability 4 (V)",
+      body: 
+        "Energy Absorption Guard, blocks 150% of incoming dmg until the dmg block exceeds 10*INT. 25 mp, cd 7"
+    },
+    components: [
+      { name: "block energy absorption" },
     ],
   },
   // -------------------------------------------
