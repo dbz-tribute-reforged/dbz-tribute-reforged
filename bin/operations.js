@@ -66,6 +66,11 @@ switch (operation) {
     break;
 
   case "package": {
-    console.log('TODO: package mpq');
+    exec("./bin/mpqtool", ["new", `${cwd}\\target\\${config.mapFolder}`, `build/${config.mapFolder}`], { maxBuffer: 1024/*bytes*/ * 2048 /*KB = 2MB total*/ }, function(err, data) {
+      if (err != null) {
+        console.log(err);
+        console.log("There was an error launching mpq tool.");
+      }
+    });
   }
 }
