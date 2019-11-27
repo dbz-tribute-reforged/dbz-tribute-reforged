@@ -202,7 +202,7 @@ export const AOEDamageComponents = [
   {
     name: "damage energy punch dps",
     repeatInterval: 1,
-    aoe: 300,
+    aoe: 400,
     damageData: {
       multiplier: 0.1,
       attribute: bj_HEROSTAT_AGI,

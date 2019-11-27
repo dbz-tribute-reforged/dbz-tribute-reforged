@@ -40,7 +40,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0JQ'), "Babidi's Magic"],
     [FourCC('A01A'), "Summon Yakon"],
 
-
     // broly
     [FourCC('A0G8'), "Energy Punch"],
     [FourCC('A00J'), "Power Level Rising"],
@@ -49,6 +48,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0H6'), "Gigantic Omegastorm"],
 
 
+    // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7
   ]

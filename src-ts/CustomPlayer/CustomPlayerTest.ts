@@ -230,6 +230,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil1, OSKEY_X, 0, true);
   addAbilityAction(abil1, "Guard");
 
+  
   /*
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
@@ -239,7 +240,8 @@ export function CustomPlayerTest() {
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_W, 0, true);
-  addAbilityAction(abil3, "Power Level Rising");
+  addAbilityAction(abil3, "Masenko");
+
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);

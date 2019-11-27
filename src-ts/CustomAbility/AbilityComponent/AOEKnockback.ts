@@ -20,24 +20,22 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (this.knockbackData.aoe > 0) {
-      const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
-      const affectedGroup = UnitHelper.getNearbyValidUnits(
-        sourceCoord, 
-        this.knockbackData.aoe,
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
-        }
-      );
+    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    const affectedGroup = UnitHelper.getNearbyValidUnits(
+      sourceCoord, 
+      this.knockbackData.aoe,
+      () => {
+        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
+      }
+    );
 
-      ForGroup(affectedGroup, () => {
-        const target = GetEnumUnit();
-        const targetCoord = new Vector2D(GetUnitX(target), GetUnitY(target));
-        const knockbackAngle = this.knockbackData.angle + CoordMath.angleBetweenCoords(sourceCoord, targetCoord);
-        const newTargetCoord = CoordMath.polarProjectCoords(targetCoord, knockbackAngle, this.knockbackData.speed);
-        PathingCheck.moveGroundUnitToCoord(target, newTargetCoord);
-      });
-    }
+    ForGroup(affectedGroup, () => {
+      const target = GetEnumUnit();
+      const targetCoord = new Vector2D(GetUnitX(target), GetUnitY(target));
+      const knockbackAngle = this.knockbackData.angle + CoordMath.angleBetweenCoords(sourceCoord, targetCoord);
+      const newTargetCoord = CoordMath.polarProjectCoords(targetCoord, knockbackAngle, this.knockbackData.speed);
+      PathingCheck.moveGroundUnitToCoord(target, newTargetCoord);
+    });
   }
 
   clone(): AbilityComponent {

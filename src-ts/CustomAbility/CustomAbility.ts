@@ -74,6 +74,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
       }
       if (this.currentTick > this.duration) {
         AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx);
+        // TODO: investigate if this causes a memory leak ...
         this.persistentSfx = [];
       }
       this.updateCd();

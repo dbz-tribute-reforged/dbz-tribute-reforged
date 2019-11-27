@@ -183,6 +183,7 @@ export const BeamComponents = [
     components: [
       { name: "damage masenko dps" },
       { name: "damage kame explosion" },
+      { name: "stun masenko" },
       { name: "sfx beam masenko" },
     ],
   },
