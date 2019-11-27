@@ -1,10 +1,10 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { CustomAbilityData } from "CustomAbility/CustomAbilityData";
-import { CustomAbility } from "CustomAbility/CustomAbility";
 import { Constants } from "Common/Constants";
-import { FrameHelper } from "Common/FrameHelper";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
+import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
+import { CustomAbility } from "CustomAbility/CustomAbility";
+import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -13,24 +13,26 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
   TriggerAddAction(abilityTrigger, () => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    const zanzoGroup = GetUnitsSelectedAll(GetTriggerPlayer());
-    ForGroup(zanzoGroup, () => {
-      const customHero = customPlayers[playerId].getCustomHero(GetEnumUnit());
-      if (customHero) {
+    // NOTE: do not use GetUnitsSelectedAll(GetTriggerPlayer())
+    // it will cause weird selection bugs during multiplayer
+    // that is not normally testable via singleplayer
+
+    // const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+    for (const customHero of customPlayers[playerId].allHeroes) {
+      if (customHero && IsUnitSelected(customHero.unit, player)) {
         customHero.useAbility(
           name,
-          new CustomAbilityData(
+          new CustomAbilityInput(
             customHero,
             player,
             1,
-            undefined,
-            undefined,
+            customPlayers[playerId].orderPoint,
             customPlayers[playerId].mouseData,
+            customPlayers[playerId].targetUnit,
           ),
         );
       }
-    })
-    FrameHelper.loseFocusFromTriggeringFrame();
+    }
   });
 }
 
@@ -58,8 +60,7 @@ export function setAbilityUIToAbility(
 
 export function updateHeroAbilityCD(heroAbility: CustomAbility, index: number, cdText: string, cdValue: number) {
   BlzFrameSetValue(BlzGetFrameByName("MyAbilityIconBar", index), cdValue);
-  // will cause a desync
-  // BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", index), cdText);
+  BlzFrameSetText(BlzGetFrameByName("MyAbilityIconBarText", index), cdText);
 }
 
 export function updateSelectedUnitBars(
@@ -131,12 +132,12 @@ export function CustomPlayerTest() {
     }
 	});
   
+
   // update mouse positions for now
   // might be a bit laggy?
   const updatePlayerMouseData = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
-    TriggerRegisterPlayerUnitEventSimple(updatePlayerMouseData, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
 	}
 	TriggerAddAction(updatePlayerMouseData, () => {
     const player = GetTriggerPlayer();
@@ -145,38 +146,133 @@ export function CustomPlayerTest() {
       const x = BlzGetTriggerPlayerMouseX();
       const y = BlzGetTriggerPlayerMouseY();
       if (x != 0 && y != 0) {
-        customPlayers[playerId].mouseData.x = BlzGetTriggerPlayerMouseX();
-        customPlayers[playerId].mouseData.y = BlzGetTriggerPlayerMouseY();
-        /*
-        BJDebugMsg(
-          GetPlayerName(player) + " mouse : " + 
-          R2SW(customPlayers[playerId].mouseData.x, 1, 1) + 
-          " " + 
-          R2SW(customPlayers[playerId].mouseData.y, 1, 1)
-        )
-        */
+        customPlayers[playerId].mouseData.x = x;
+        customPlayers[playerId].mouseData.y = y;
       }
     }
-	});
+  });
 
 
+  const updatePlayerOrderPoint = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
+  }
+  TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
+    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+  }));
+  TriggerAddAction(updatePlayerOrderPoint, () => {
+    const x = GetOrderPointX();
+    const y = GetOrderPointY();
+    if (x != 0 && y != 0) {
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      customPlayers[playerId].orderPoint.x = x;
+      customPlayers[playerId].orderPoint.y = y;
+    }
+  });
+
+  const updatePlayerTargetPoint = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
+  }
+  TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
+    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+  }));
+  TriggerAddAction(updatePlayerTargetPoint, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+    customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
+    customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
+  });
+
+  const linkNormalAbilityToCustomAbility = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(linkNormalAbilityToCustomAbility, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  }
+  TriggerAddAction(linkNormalAbilityToCustomAbility, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    const abilityId = GetSpellAbilityId();
+
+    const spellName = abilityCodesToNames.get(abilityId);
+
+    if (spellName) {
+      const caster = GetTriggerUnit();
+      const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+      const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+      if (customHero && IsUnitSelected(customHero.unit, player)) {
+        customHero.useAbility(
+          spellName,
+          new CustomAbilityInput(
+            customHero,
+            player,
+            abilityLevel,
+            customPlayers[playerId].orderPoint,
+            customPlayers[playerId].mouseData,
+            customPlayers[playerId].targetUnit,
+          ),
+        );
+      }
+    }
+
+  });
+
+  
   // zanzo activation trigger
   // tied to z for now
-  const zanzoActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(zanzoActivate, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
+  const abil0 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
   // replace key events with more organized method of key reading
-  addKeyEvent(zanzoActivate, OSKEY_Z, 0, true);
-  addAbilityAction(zanzoActivate, "Zanzo Dash");
+  addKeyEvent(abil0, OSKEY_Z, 0, true);
+  addAbilityAction(abil0, "Zanzo Dash");
 
-  const blueHurricaneActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(blueHurricaneActivate, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(blueHurricaneActivate, OSKEY_B, 0, true);
-  addAbilityAction(blueHurricaneActivate, "Blue Hurricane");
+  const abil1 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil1, OSKEY_X, 0, true);
+  addAbilityAction(abil1, "Guard");
 
-  const shiningSwordActivate = CreateTrigger();
-  BlzTriggerRegisterFrameEvent(shiningSwordActivate, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(shiningSwordActivate, OSKEY_X, 0, true);
-  addAbilityAction(shiningSwordActivate, "Shining Sword Attack");
+
+  /*
+  const abil2 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil2, OSKEY_Q, 0, true);
+  addAbilityAction(abil2, "Energy Punch");
+
+  const abil3 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil3, OSKEY_W, 0, true);
+  addAbilityAction(abil3, "Power Level Rising");
+
+  const abil4 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil4, OSKEY_E, 0, true);
+  addAbilityAction(abil4, "Planet Crusher");
+
+  const abil5 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil5, OSKEY_R, 0, true);
+  addAbilityAction(abil5, "Gigantic Roar");
+
+  const abil6 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil6, OSKEY_D, 0, true);
+  addAbilityAction(abil6, "Gigantic Omegastorm");
+
+  const abil7 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil7, OSKEY_F, 0, true);
+  addAbilityAction(abil7, "Big Bang Kamehameha");
+
+  const abil8 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil8, OSKEY_C, 0, true);
+  addAbilityAction(abil8, "Spirit Bomb");
+
+  const abil9 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil9, OSKEY_V, 0, true);
+  addAbilityAction(abil9, "Dragon Fist");
+  */
+
 
   // update hp/mp bars for current custom player
 	TimerStart(CreateTimer(), 0.03, true, () => {
@@ -204,10 +300,10 @@ export function CustomPlayerTest() {
           let heroAbility = ownedHero.getAbilityByIndex(j);
           if (heroAbility) {
             let cdText = "";
-            // let abilityCd = heroAbility.currentCd;
-            // if (abilityCd > 0) {
-            //   cdText = R2SW(abilityCd,2,2) + "s";
-            // }
+            let abilityCd = heroAbility.currentCd;
+            if (abilityCd > 0) {
+              cdText = R2SW(abilityCd,2,2) + "s";
+            }
             // BJDebugMsg(cdText);
             if (GetPlayerId(GetLocalPlayer()) == playerId) {
               // POSSIBLY LAGGY
@@ -220,4 +316,22 @@ export function CustomPlayerTest() {
       }
     }
   });
+
+
+  // revive heroes for free
+  const revoiveSpam = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
+  TriggerAddAction(revoiveSpam, () => {
+    const dead = GetTriggerUnit();
+    if (IsUnitType(dead, UNIT_TYPE_HERO)) {
+      TimerStart(CreateTimer(), 5.0, false, () => {
+        const t = GetExpiredTimer();
+        ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);
+        BJDebugMsg("revoive spam");
+        SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
+        SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));
+        DestroyTimer(t);
+      })
+    }
+  })
 }
