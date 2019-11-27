@@ -13,8 +13,8 @@ export const AOEStunComponents = [
   {
     name: "stun energy punch",
     repeatInterval: 1,
-    startTick: 19,
-    endTick: 20,
+    startTick: 17,
+    endTick: 23,
     duration: 1,
     aoe: 400,
     keepStunning: false, 
