@@ -51,4 +51,15 @@ export const GroundTargetDashComponents = [
     repeatInterval: 1, 
     distance: 50,
   },
+  // ----------------------------
+  {
+    name: "ground dash -5dist",
+    repeatInterval: 1, 
+    distance: -5,
+  },
+  {
+    name: "ground dash -50dist initial",
+    repeatInterval: 0, 
+    distance: -50,
+  },
 ];

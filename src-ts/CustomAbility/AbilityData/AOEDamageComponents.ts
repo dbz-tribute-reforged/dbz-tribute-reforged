@@ -43,9 +43,12 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 
 export const AOEDamageComponents = [
   // used for kame
+  // note: i named the dmg components differently
+  // so it'd be easier to fiddle with the numbers without having to constantly
+  // rechange the name of the component in the beam/ability
   // copy from here
   {
-    name: "damage 1tick 0.02int 400aoe",
+    name: "damage kame dps",
     repeatInterval: 1,
     aoe: 400,
     damageData: {
@@ -58,7 +61,7 @@ export const AOEDamageComponents = [
   },
   // to here, and replace with unique name
   {
-    name: "damage final 2int 500aoe",
+    name: "damage kame explosion",
     repeatInterval: -1,
     aoe: 500,
     damageData: {
@@ -71,7 +74,7 @@ export const AOEDamageComponents = [
   },
   // used for spirit bomb
   {
-    name: "damage 1tick 0.03int 500aoe",
+    name: "damage spirit bomb dps",
     repeatInterval: 1,
     aoe: 500,
     damageData: {
@@ -83,7 +86,7 @@ export const AOEDamageComponents = [
     },
   },
   {
-    name: "damage final 3int 600aoe",
+    name: "damage spirit bomb explosion",
     repeatInterval: -1,
     aoe: 600,
     damageData: {
@@ -96,7 +99,7 @@ export const AOEDamageComponents = [
   },
   // used for dfist
   {
-    name: "damage 1tick 0.15int 300aoe",
+    name: "damage dragon fist dps",
     repeatInterval: 1,
     aoe: 300,
     damageData: {
@@ -108,7 +111,7 @@ export const AOEDamageComponents = [
     },
   },
   {
-    name: "damage final 5int 500aoe",
+    name: "damage dragon fist explosion",
     repeatInterval: -1,
     aoe: 500,
     damageData: {
@@ -121,7 +124,7 @@ export const AOEDamageComponents = [
   },
   // big bang attack
   {
-    name: "damage final 4int 500aoe",
+    name: "damage big bang attack explosion",
     repeatInterval: -1,
     aoe: 500,
     damageData: {
@@ -134,11 +137,11 @@ export const AOEDamageComponents = [
   },
   // final flash
   {
-    name: "damage 1tick 0.05int 500aoe",
+    name: "damage final flash dps",
     repeatInterval: 1,
     aoe: 500,
     damageData: {
-      multiplier: 0.05,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -146,7 +149,7 @@ export const AOEDamageComponents = [
     },
   },
   {
-    name: "damage final 3.5int 500aoe",
+    name: "damage final flash explosion",
     repeatInterval: -1,
     aoe: 500,
     damageData: {
@@ -159,7 +162,7 @@ export const AOEDamageComponents = [
   },
   // twin dragon shot
   {
-    name: "damage 1tick 0.01int 400aoe",
+    name: "damage twin dragon shot dps",
     repeatInterval: 1,
     aoe: 400,
     damageData: {
@@ -171,7 +174,7 @@ export const AOEDamageComponents = [
     },
   },
   {
-    name: "damage final 1.5int 500aoe",
+    name: "damage twin dragon shot explosion",
     repeatInterval: -1,
     aoe: 500,
     damageData: {
@@ -184,12 +187,101 @@ export const AOEDamageComponents = [
   },
   // masenko
   {
-    name: "damage 1tick 0.04int 500aoe",
+    name: "damage masenko dps",
     repeatInterval: 1,
     aoe: 500,
     damageData: {
       multiplier: 0.04,
       attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // energy punch
+  {
+    name: "damage energy punch dps",
+    repeatInterval: 1,
+    aoe: 300,
+    damageData: {
+      multiplier: 0.1,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // power level rising
+  {
+    name: "damage power level rising explosion",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.66,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // planet crusher
+  {
+    name: "damage planet crusher dps",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.03,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage planet crusher explosion",
+    repeatInterval: -1,
+    aoe: 600,
+    damageData: {
+      multiplier: 3,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // gigantic roar dps
+  {
+    name: "damage gigantic roar dps",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.1,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // gigantic omegastorm
+  {
+    name: "damage gigantic omegastorm dps",
+    repeatInterval: 1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.1,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage gigantic omegastorm explosion",
+    repeatInterval: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 2.0,
+      attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
