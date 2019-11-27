@@ -1,6 +1,7 @@
 import { SfxData } from "Common/SfxData";
 import { Vector2D } from "Common/Vector2D";
 import { CustomAbility } from "./CustomAbility";
+import { ComponentConstants } from "./AbilityComponent/AbilityComponent";
 
 export module AbilitySfxHelper {
   // probably move sfx stuff to a sfx displaying class
@@ -39,7 +40,7 @@ export module AbilitySfxHelper {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       // NOTE: avoid mod by 0 
-      if (ability.isReadyToUse(sfx.repeatInterval)) {
+      if (ability.isReadyToUse(sfx.repeatInterval, ComponentConstants.MIN_DURATION, ComponentConstants.MAX_DURATION)) {
         AbilitySfxHelper.displaySfxAtCoord(
           sfx, 
           target,
@@ -69,7 +70,7 @@ export module AbilitySfxHelper {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       
-      if (ability.isReadyToUse(sfx.repeatInterval)) {
+      if (ability.isReadyToUse(sfx.repeatInterval, ComponentConstants.MIN_DURATION, ComponentConstants.MAX_DURATION)) {
         AbilitySfxHelper.displaySfxOnUnit(
           sfx,
           unit,

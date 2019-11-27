@@ -306,15 +306,15 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 45,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNEnergyPunch.blp",
-      disabled: "BTNEnergyPunch.blp",
+      enabled: "BTNBrolyEnergyPunch.blp",
+      disabled: "BTNBrolyEnergyPunch.blp",
     },
     tooltip: {
       title: "Energy Punch",
@@ -322,9 +322,9 @@ export const AbilitiesList = [
         "Energy Puncho"
     },
     components: [
-      { name: "ground dash 25dist" },
       { name: "damage energy punch dps" },
-      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "knockback energy punch" },
+      { name: "ground dash energy punch" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
       { name: "block broly" },
@@ -345,8 +345,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNBroly.blp",
-      disabled: "BTNBroly.blp",
+      enabled: "BTNPowerLevelRising.blp",
+      disabled: "BTNPowerLevelRising.blp",
     },
     tooltip: {
       title: "Power Level Rising",
@@ -374,8 +374,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNDS.blp",
-      disabled: "BTNBTNDS.blp",
+      enabled: "BTNPlanetCrusher.blp",
+      disabled: "BTNPlanetCrusher.blp",
     },
     tooltip: {
       title: "Planet Crusher",
@@ -411,8 +411,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam gigantic roar" },
-      { name: "ground dash -5dist" },
-      { name: "ground dash -50dist initial" },
+      { name: "ground dash gigantic roar pushback" },
       { name: "block broly" },
     ],
   },
@@ -501,6 +500,32 @@ export const AbilitiesList = [
     },
     components: [
       { name: "sword slash orange" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Big Bang Kamehameha",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: true,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBigBangKamehameha.blp",
+      disabled: "BTNBigBangKamehameha.blp",
+    },
+    tooltip: {
+      title: "Big Bang Kamehameha",
+      body: 
+        "Big Bang Kamehameha stuff"
+    },
+    components: [
+      { name: "beam big bang kamehameha" },
     ],
   },
   // -------------------------------------------

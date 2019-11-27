@@ -46,6 +46,8 @@ export const SwordSlashComponents = [
   { 
     name: "sword slash orange",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     damageData: {
       multiplier: 1.0,
       attribute: bj_HEROSTAT_AGI,
@@ -98,6 +100,8 @@ export const SwordSlashComponents = [
   { 
     name: "sword slash pink",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     damageData: {
       multiplier: 0.5,
       attribute: bj_HEROSTAT_AGI,

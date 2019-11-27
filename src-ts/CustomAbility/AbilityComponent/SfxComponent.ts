@@ -10,6 +10,8 @@ export class SfxComponent implements AbilityComponent {
   constructor(
     public name: string = "SfxComponent",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
   ) {
@@ -37,7 +39,8 @@ export class SfxComponent implements AbilityComponent {
 
   clone(): AbilityComponent {
     return new SfxComponent(
-      this.name, this.repeatInterval, this.sfxList, this.attachedSfxList,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.sfxList, this.attachedSfxList,
     );
   }
 
@@ -45,6 +48,8 @@ export class SfxComponent implements AbilityComponent {
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       sfxList: {
         model: string;
         repeatInterval: number;
@@ -81,6 +86,8 @@ export class SfxComponent implements AbilityComponent {
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.sfxList = [];
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));

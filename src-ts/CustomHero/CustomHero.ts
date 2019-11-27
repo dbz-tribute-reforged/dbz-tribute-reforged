@@ -43,6 +43,7 @@ export class CustomHero {
     this.addAbilityFromAll("Planet Crusher");
     this.addAbilityFromAll("Gigantic Roar");
     this.addAbilityFromAll("Gigantic Omegastorm");
+    this.addAbilityFromAll("Big Bang Kamehameha");
     */
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));

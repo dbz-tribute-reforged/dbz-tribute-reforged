@@ -14,6 +14,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
   constructor(
     public name: string = "Dodge",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public knockbackData: KnockbackData = new KnockbackData(
       20, 0, 200
     ),
@@ -68,8 +70,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
 
   clone(): AbilityComponent {
     return new Dodge(
-      this.name, this.repeatInterval, this.knockbackData, 
-      this.maxEnemies, this.addRandomAngle
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.knockbackData, this.maxEnemies, this.addRandomAngle
     );
   }
   
@@ -77,6 +79,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       knockbackData: {
         speed: number; 
         angle: number; 
@@ -88,6 +92,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
     this.maxEnemies = input.maxEnemies;
     this.addRandomAngle = input.addRandomAngle;

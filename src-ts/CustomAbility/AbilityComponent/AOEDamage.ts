@@ -10,6 +10,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   constructor(
     public name: string = "AOEDamage",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public aoe: number = 250,
     public damageData: DamageData = new DamageData(
       0.02,
@@ -59,7 +61,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   clone(): AbilityComponent {
     return new AOEDamage(
-      this.name, this.repeatInterval, this.aoe, this.damageData,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.aoe, this.damageData,
     );
   }
 
@@ -67,6 +70,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       aoe: number; 
       damageData: {
         multiplier: number; 
@@ -79,6 +84,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.aoe = input.aoe;
     this.damageData = new DamageData().deserialize(input.damageData);
     return this;

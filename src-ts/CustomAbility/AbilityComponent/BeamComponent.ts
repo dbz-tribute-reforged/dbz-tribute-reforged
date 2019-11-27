@@ -1,4 +1,4 @@
-import { AbilityComponent } from "./AbilityComponent";
+import { AbilityComponent, ComponentConstants } from "./AbilityComponent";
 import { HeightVariation } from "Common/HeightVariation";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
@@ -14,10 +14,13 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
   public delayTicks: number;
   public angle: number;
   public previousHp: number;
+  protected hasBeamUnit: boolean;
 
   constructor(
     public name: string = "BeamComponent",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public beamHpMult: number = 0.5,
     public beamHpAttribute: number = bj_HEROSTAT_INT,
     public speed: number = 16,
@@ -38,6 +41,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     this.delayTicks = 0;
     this.angle = 0;
     this.previousHp = 0;
+    this.hasBeamUnit = false;
   }
 
   protected getNearbyEnemies(input: CustomAbilityInput) {
@@ -142,8 +146,9 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (ability.currentTick == CustomAbility.START_TICK) {
+    if (!this.hasBeamUnit) {
       this.setupBeamUnit(ability, input, source);
+      this.hasBeamUnit = true;
     }
     if (this.beamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == true) {
       ability.currentTick = ability.duration;
@@ -151,18 +156,20 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     this.checkForBeamClash(input);
     this.moveBeamUnit(ability, input);
     for (const component of this.components) {
-      if (ability.isReadyToUse(component.repeatInterval)) {
+      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
         component.performTickAction(ability, input, this.beamUnit);
       }
     }
-    if (ability.currentTick >= ability.duration) {
+    if (ability.isFinishedUsing(this)) {
+      this.hasBeamUnit = false;
       RemoveUnit(this.beamUnit);
     }
   }
 
   clone(): AbilityComponent {
     return new BeamComponent(
-      this.name, this.repeatInterval, this.beamHpMult, this.beamHpMult, 
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.beamHpMult, this.beamHpMult, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
       this.isFixedAngle, this.canClashWithHero, this.beamUnitType, 
@@ -174,6 +181,8 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     input: {
       name: string;
       repeatInterval: number;
+      startTick: number;
+      endTick: number;
       beamHpMult: number;
       beamHpAttribute: number;
       speed: number;
@@ -197,6 +206,8 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.beamHpMult = input.beamHpMult;
     this.beamHpAttribute = input.beamHpAttribute;
     this.speed = input.speed;

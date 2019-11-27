@@ -2,7 +2,9 @@ export const SfxComponents = [
   // copy from here
   { 
     name: "sfx zanzo dash", 
-    repeatInterval: 0,
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -46,6 +48,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam kamehameha", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
@@ -103,6 +107,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam spirit bomb", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -208,6 +214,8 @@ export const SfxComponents = [
   { 
     name: "sfx dragon fist", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -345,6 +353,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam galick gun", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "CalamityParticle3.mdl",
@@ -385,6 +395,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam big bang attack", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl",
@@ -442,6 +454,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam final flash", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl",
@@ -531,6 +545,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam masenko", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Des.mdl",
@@ -604,6 +620,8 @@ export const SfxComponents = [
   { 
     name: "sfx energy punch", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -677,6 +695,8 @@ export const SfxComponents = [
   { 
     name: "sfx power level rising", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "AuraDarkGreen.mdl",
@@ -718,6 +738,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam planet crusher", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -808,6 +830,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam gigantic roar", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Banish\\BanishTarget.mdl",
@@ -896,6 +920,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam gigantic omegastorm", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Weapons\\DemonHunterMissile\\DemonHunterMissile.mdl",
@@ -986,6 +1012,8 @@ export const SfxComponents = [
   { 
     name: "sfx blue hurricane", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1043,6 +1071,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam blue", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
@@ -1100,6 +1130,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam purple", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
@@ -1157,6 +1189,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam red", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
@@ -1246,6 +1280,8 @@ export const SfxComponents = [
   { 
     name: "sfx blue wind aura", 
     repeatInterval: 0,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1303,6 +1339,8 @@ export const SfxComponents = [
   { 
     name: "sfx ultra instinct", 
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     sfxList: [
       {
         model: "BlackBlink.mdl",

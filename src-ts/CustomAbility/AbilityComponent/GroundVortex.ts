@@ -13,6 +13,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
   constructor(
     public name: string = "GroundVortex",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public damageData: DamageData = new DamageData(
       0.02,
       bj_HEROSTAT_AGI,
@@ -92,7 +94,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
 
   clone(): AbilityComponent {
     return new GroundVortex(
-      this.name, this.repeatInterval, this.damageData, this.angle,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.damageData, this.angle,
       this.distance, this.aoe, this.closenessAngle, this.closenessDamageMult,
       this.closenessDamageMult, this.durationDamageMult,
     );
@@ -102,6 +105,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -120,6 +125,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.damageData = new DamageData().deserialize(input.damageData);
     this.angle = input.angle;
     this.distance = input.distance;

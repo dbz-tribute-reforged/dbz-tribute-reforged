@@ -4,6 +4,8 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback 1tick 15speed 0angle 300aoe",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -15,16 +17,32 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback 1tick 10speed 0angle 250aoe",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     knockbackData: {
       speed: 10, 
       angle: 0, 
       aoe: 250,
     },
   },
+  // broly energy punch
+  {
+    name: "knockback energy punch",
+    repeatInterval: 1, 
+    startTick: 19,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 500,
+    },
+  },
   // broly power level rising
   {
     name: "knockback 1tick 25speed 0angle 400aoe",
     repeatInterval: 1, 
+    startTick: 1,
+    endTick: -1,
     knockbackData: {
       speed: 15, 
       angle: 0, 
@@ -35,6 +53,8 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback 1tick 25speed 0angle 300aoe",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     knockbackData: {
       speed: 25, 
       angle: 0, 
@@ -45,6 +65,8 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback 1tick 15speed 180angle 400aoe",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     knockbackData: {
       speed: 15, 
       angle: 180, 
@@ -54,6 +76,8 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback 1tick 25speed 180angle 250aoe",
     repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
