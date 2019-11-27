@@ -64,4 +64,8 @@ switch (operation) {
     }
 
     break;
+
+  case "package": {
+    console.log('TODO: package mpq');
+  }
 }
