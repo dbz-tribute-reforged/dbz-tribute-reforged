@@ -480,8 +480,8 @@ export const SfxComponents = [
         repeatInterval: 5,
         group: 0,
         scale: 3,
-        startHeight: 0,
-        endHeight: 0,
+        startHeight: 100,
+        endHeight: 100,
         extraDirectionalYaw: 0,
         color: {
           x: 255,
@@ -583,7 +583,7 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Orc\\LightningBolt\\LightningBoltMissile.mdl",
+        model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
         repeatInterval: 5,
         group: 0,
         scale: 1.0,

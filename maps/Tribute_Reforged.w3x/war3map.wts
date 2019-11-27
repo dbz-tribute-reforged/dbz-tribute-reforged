@@ -1,11 +1,23 @@
-﻿STRING 1
+﻿STRING 0
+// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 1
 {
 Player 1
 }
 
+STRING 2
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 3
 {
-TR 0.17b
+TR 0.17c
 }
 
 STRING 4
@@ -84,6 +96,30 @@ STRING 18
 Q
 }
 
+STRING 19
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 20
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 21
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 22
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 23
 // Abilities: A081 (Kamehameha), Name (Name)
 {
@@ -94,6 +130,30 @@ STRING 24
 // Units: E003 (Prince of all Saiyans), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 25
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 26
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 27
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 2|r]
+}
+
+STRING 28
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 3|r]
 }
 
 STRING 29
@@ -108,10 +168,22 @@ STRING 30
 W
 }
 
+STRING 31
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 4|r]
+}
+
 STRING 32
 // Units: h07P (Dummy), Name (Name)
 {
 Dummy
+}
+
+STRING 33
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 5|r]
 }
 
 STRING 34
@@ -524,6 +596,12 @@ STRING 94
 // Units: h00B (Kamikaze Ghost), Name (Name)
 {
 Kamikaze Ghost
+}
+
+STRING 95
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 6|r]
 }
 
 STRING 96
@@ -3528,6 +3606,54 @@ STRING 585
 Dummy Fire Ring
 }
 
+STRING 586
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 1|r]
+}
+
+STRING 587
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 7|r]
+}
+
+STRING 588
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 589
+// Abilities: A084 (Gigantic Roar), Name (Name)
+{
+Gigantic Roar
+}
+
+STRING 590
+// Abilities: A084 (Gigantic Roar), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Gigantic Roar - [|cffffcc00Level %d|r]
+}
+
+STRING 591
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 592
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 9|r]
+}
+
+STRING 593
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 8|r]
+}
+
 STRING 594
 // Units: h03R (New Dummy Nuke Explosion), Name (Name)
 {
@@ -3586,6 +3712,12 @@ STRING 603
 // Units: h03X (Ki Transmitter), Name (Name)
 {
 Ki Transmitter
+}
+
+STRING 604
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 10|r]
 }
 
 STRING 605
@@ -3896,6 +4028,18 @@ STRING 653
 // Units: h04E (Popo's Magic Carpet), Name (Name)
 {
 Popo's Magic Carpet
+}
+
+STRING 654
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 655
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 656
@@ -5632,6 +5776,12 @@ STRING 927
 Saibaman
 }
 
+STRING 928
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 929
 // Units: n039 (Bull), Name (Name)
 {
@@ -5814,6 +5964,12 @@ STRING 957
 m
 }
 
+STRING 958
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 959
 // Units: H073 (Frieza's Ship), Name (Name)
 {
@@ -5956,6 +6112,12 @@ STRING 982
 // Units: U01N ( ), Ubertip (Tooltip - Extended)
 {
 4
+}
+
+STRING 983
+// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 
 STRING 984
@@ -6121,6 +6283,12 @@ STRING 1009
 // Units: e009 (Flower Dummy), Name (Name)
 {
 Flower Dummy
+}
+
+STRING 1010
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 1011
@@ -7484,6 +7652,12 @@ STRING 1215
 // Units: E01Q (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 2
+}
+
+STRING 1216
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 1217
@@ -13662,10 +13836,64 @@ STRING 2235
 The user gathers some energy with both arms behind his shoulder, then he brings them forward and releases an energy blast. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
+STRING 2236
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 2237
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 2238
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 2239
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 2240
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 2241
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 2|r]
+}
+
+STRING 2242
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 3|r]
+}
+
 STRING 2243
 // Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
 D
+}
+
+STRING 2244
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 4|r]
+}
+
+STRING 2245
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 5|r]
 }
 
 STRING 2246
@@ -22448,6 +22676,12 @@ STRING 3707
 Revive Wish
 }
 
+STRING 3708
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 6|r]
+}
+
 STRING 3709
 // Abilities: A05P (Cam Distance Down), Name (Name)
 {
@@ -24189,6 +24423,30 @@ STRING 3998
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 1|r]
 }
 
+STRING 3999
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 1|r]
+}
+
+STRING 4000
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 7|r]
+}
+
+STRING 4001
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 4002
+// Abilities: A0H6 (Gigantic Omegastorm), Name (Name)
+{
+Gigantic Omegastorm
+}
+
 STRING 4003
 // Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
@@ -24229,6 +24487,12 @@ STRING 4009
 // Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 4010
+// Abilities: A0H6 (Gigantic Omegastorm), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Gigantic Omegastorm - [|cffffcc00Level %d|r]
 }
 
 STRING 4011
@@ -33348,151 +33612,139 @@ R
 }
 
 STRING 5526
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5527
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5528
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5529
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5530
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5531
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5532
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5533
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5534
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5535
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5536
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5537
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5538
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5539
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5540
-// Abilities: A0BZ (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
-STRING 5541
-// Abilities: A0BZ (Destruction Sphere), Name (Name)
-{
-Destruction Sphere
-}
-
 STRING 5542
-// Abilities: A0BZ (Destruction Sphere), Researchtip (Tooltip - Learn)
+// Abilities: A0C3 (BeerusBall), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Destruction Sphere
 }
 
 STRING 5543
-// Abilities: A0BZ (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5544
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5545
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5546
-// Abilities: A0BZ (Destruction Sphere), Tip (Tooltip - Normal)
+// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5547
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5548
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5549
-// Abilities: A0BZ (Destruction Sphere), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 5550
-// Abilities: A0BZ (Destruction Sphere), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0BZ (Planet Crusher), Researchubertip (Tooltip - Learn - Extended)
 {
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
@@ -33845,48 +34097,6 @@ STRING 5608
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
-STRING 5609
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5610
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5611
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5612
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5613
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5614
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5615
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
 STRING 5616
 // Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
@@ -33899,28 +34109,10 @@ STRING 5617
 BeerusBall
 }
 
-STRING 5618
-// Abilities: A0C3 (BeerusBall), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00E|r] Learn Destruction Sphere
-}
-
 STRING 5619
 // Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 5620
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
-}
-
-STRING 5621
-// Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Destruction Sphere
 }
 
 STRING 5622
@@ -44232,6 +44424,48 @@ STRING 7335
 [|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
 }
 
+STRING 7336
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 7337
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 9|r]
+}
+
+STRING 7338
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 8|r]
+}
+
+STRING 7339
+// Abilities: A0H6 (Gigantic Omegastorm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Gigantic Omegastorm - [|cffffcc00Level 10|r]
+}
+
+STRING 7340
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 7341
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 7342
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 7343
 // Abilities: A0GM (Galick Gun), Tip (Tooltip - Normal)
 {
@@ -44290,6 +44524,12 @@ STRING 7352
 // Abilities: A0GM (Galick Gun), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Galick Gun - [|cffffcc00Level %d|r]
+}
+
+STRING 7353
+// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
 STRING 7354
@@ -46456,6 +46696,12 @@ STRING 7714
 // Abilities: A0H5 (Dummy Stun), Name (Name)
 {
 Dummy Stun
+}
+
+STRING 7715
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 
 STRING 7729
@@ -59484,5 +59730,83 @@ Pick Time Up! You will be assigned a random hero if you have not selected one ye
 STRING 9986
 {
 Game Start:
+}
+
+STRING 9987
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9988
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9989
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9990
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9991
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9992
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9993
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9994
+// Abilities: A0BZ (Planet Crusher), Name (Name)
+{
+Planet Crusher
+}
+
+STRING 9995
+// Abilities: A0BZ (Planet Crusher), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9996
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9997
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9998
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9999
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 
