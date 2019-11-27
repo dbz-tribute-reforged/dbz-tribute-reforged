@@ -1,6 +1,6 @@
 import { Icon } from "Common/Icon";
 import { Tooltip } from "Common/Tooltip";
-import { AbilityComponent } from "./AbilityComponent/AbilityComponent";
+import { AbilityComponent, ComponentConstants } from "./AbilityComponent/AbilityComponent";
 import { CustomAbilityInput } from "./CustomAbilityInput";
 import { AbilitySfxHelper } from "./AbilitySfxHelper";
 import { UnitHelper } from "Common/UnitHelper";
@@ -21,9 +21,6 @@ export function stringToCostType(costType: string): CostType {
 }
 
 export class CustomAbility implements Serializable<CustomAbility> {
-  static readonly MAX_DURATION = -1;
-  static readonly START_TICK = 0;
-
   public currentTick: number;
   protected abilityTimer: timer;
   public persistentSfx: effect[];
@@ -55,7 +52,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
     // instant activate, bypasses 0.03s delay for ability to start
     if (this.currentTick <= this.duration) {
       for (const component of this.components) {
-        if (this.isReadyToUse(component.repeatInterval)) {
+        if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
           component.performTickAction(this, input, input.caster.unit);
         }
       }
@@ -66,7 +63,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
       if (this.currentTick <= this.duration) {
         for (const component of this.components) {
-          if (this.isReadyToUse(component.repeatInterval)) {
+          if (this.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
             component.performTickAction(this, input, input.caster.unit);
           }
         }
@@ -131,17 +128,44 @@ export class CustomAbility implements Serializable<CustomAbility> {
     this.currentTick = Math.max(2, this.currentTick - amount);
   }
 
-  isReadyToUse(repeatInterval: number): boolean {
-    // return (repeatInterval > 0 && this.currentTick != 0 && this.currentTick % repeatInterval == 0) ||
-    //   (repeatInterval == 0 && this.currentTick == 0) || 
-    //   ((repeatInterval == this.duration || repeatInterval == CustomAbility.MAX_DURATION) && 
-    //   this.currentTick == this.duration)
-    // ;
-    return (repeatInterval > 0 && this.currentTick % repeatInterval == 0) ||
-      (repeatInterval == 0 && this.currentTick == 0) || 
-      ((repeatInterval == this.duration || repeatInterval == CustomAbility.MAX_DURATION) && 
-      this.currentTick == this.duration)
-    ;
+  isReadyToUse(repeatInterval: number, startTick: number, endTick: number): boolean {
+    return (
+      (
+        (this.currentTick >= startTick) 
+        &&
+        (startTick != ComponentConstants.MAX_DURATION ||
+          (
+            startTick == ComponentConstants.MAX_DURATION && 
+            (this.currentTick == endTick || this.currentTick == this.duration)
+          ) 
+        )
+        && 
+        (this.currentTick <= endTick || endTick == ComponentConstants.MAX_DURATION)
+      ) 
+        && 
+      (
+        (repeatInterval > 0 && this.currentTick % repeatInterval == 0) ||
+        (
+          (repeatInterval == startTick || repeatInterval == 0) && 
+          this.currentTick == startTick
+        ) 
+        || 
+        (
+          (repeatInterval == this.duration || repeatInterval == ComponentConstants.MAX_DURATION) && 
+          this.currentTick == this.duration
+        )
+      )
+    );
+  }
+
+  isFinishedUsing(component: AbilityComponent): boolean {
+    return (
+      this.currentTick >= component.endTick && 
+      (
+        component.endTick != ComponentConstants.MAX_DURATION ||
+        this.currentTick == this.duration
+      )
+    );
   }
 
   deserialize(

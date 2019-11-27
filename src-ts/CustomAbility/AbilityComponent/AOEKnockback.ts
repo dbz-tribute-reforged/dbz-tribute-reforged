@@ -12,6 +12,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   constructor(
     public name: string = "AOEKnockback",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public knockbackData: KnockbackData = new KnockbackData(
       16, 0, 250,
     )
@@ -40,7 +42,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
 
   clone(): AbilityComponent {
     return new AOEKnockback(
-      this.name, this.repeatInterval, this.knockbackData,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.knockbackData,
     );
   }
 
@@ -48,6 +51,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       knockbackData: {
         speed: number; 
         angle: number; 
@@ -57,6 +62,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
     return this;
   }

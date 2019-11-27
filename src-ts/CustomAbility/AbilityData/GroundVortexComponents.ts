@@ -49,6 +49,8 @@ export const GroundVortexComponents = [
   {
     name: "ground vortex blue hurricane",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     damageData: {
       multiplier: 0.02,
       attribute: bj_HEROSTAT_AGI,
@@ -68,6 +70,8 @@ export const GroundVortexComponents = [
   {
     name: "ground vortex fast spin",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     damageData: {
       multiplier: 0.06,
       attribute: bj_HEROSTAT_AGI,

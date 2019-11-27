@@ -1,4 +1,4 @@
-import { AbilityComponent } from "./AbilityComponent";
+import { AbilityComponent, ComponentConstants } from "./AbilityComponent";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
@@ -15,6 +15,8 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   constructor(
     public name: string = "AOEStun",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public duration: number = AOEStun.ONE_SECOND,
     public aoe: number = 500,
     public keepStunning: boolean = false,
@@ -25,7 +27,7 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
-    if (ability.currentTick == CustomAbility.START_TICK) {
+    if (ability.currentTick == this.startTick) {
 
       // just for testing
       // this.stunDummy = CreateUnit(input.casterPlayer, FourCC('Hmkg'), sourceCoord.x, sourceCoord.y, 0);
@@ -61,7 +63,9 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
       }
     });
 
-    if (ability.currentTick == ability.duration) {
+    // Note: there is an underlying assumption
+    // that the repeatInterval will allow this ability to be called at its end tick
+    if (ability.isFinishedUsing(this)) {
       RemoveUnit(this.stunDummy);
     }
   }
@@ -69,7 +73,8 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
 
   clone(): AbilityComponent {
     return new AOEStun(
-      this.name, this.repeatInterval, this.duration, this.aoe, this.keepStunning,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.duration, this.aoe, this.keepStunning,
     );
   }
   
@@ -77,6 +82,8 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       duration: number; 
       aoe: number; 
       keepStunning: boolean; 
@@ -84,6 +91,8 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.duration = input.duration;
     this.aoe = input.aoe;
     this.keepStunning = input.keepStunning;

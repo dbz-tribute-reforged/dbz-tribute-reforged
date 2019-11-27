@@ -50,6 +50,8 @@ export const AOEDamageComponents = [
   {
     name: "damage kame dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 400,
     damageData: {
       multiplier: 0.02,
@@ -62,7 +64,9 @@ export const AOEDamageComponents = [
   // to here, and replace with unique name
   {
     name: "damage kame explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 2,
@@ -76,6 +80,8 @@ export const AOEDamageComponents = [
   {
     name: "damage spirit bomb dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.03,
@@ -87,7 +93,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage spirit bomb explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 600,
     damageData: {
       multiplier: 3,
@@ -101,6 +109,8 @@ export const AOEDamageComponents = [
   {
     name: "damage dragon fist dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 300,
     damageData: {
       multiplier: 0.15,
@@ -112,7 +122,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage dragon fist explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 5,
@@ -125,7 +137,9 @@ export const AOEDamageComponents = [
   // big bang attack
   {
     name: "damage big bang attack explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 4,
@@ -139,6 +153,8 @@ export const AOEDamageComponents = [
   {
     name: "damage final flash dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.1,
@@ -150,7 +166,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage final flash explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 3.5,
@@ -164,6 +182,8 @@ export const AOEDamageComponents = [
   {
     name: "damage twin dragon shot dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 400,
     damageData: {
       multiplier: 0.01,
@@ -175,7 +195,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage twin dragon shot explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 1.5,
@@ -189,6 +211,8 @@ export const AOEDamageComponents = [
   {
     name: "damage masenko dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.04,
@@ -202,6 +226,8 @@ export const AOEDamageComponents = [
   {
     name: "damage energy punch dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: 20,
     aoe: 400,
     damageData: {
       multiplier: 0.1,
@@ -215,9 +241,11 @@ export const AOEDamageComponents = [
   {
     name: "damage power level rising explosion",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
     aoe: 500,
     damageData: {
-      multiplier: 0.66,
+      multiplier: 2,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -228,6 +256,8 @@ export const AOEDamageComponents = [
   {
     name: "damage planet crusher dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.03,
@@ -239,7 +269,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage planet crusher explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 600,
     damageData: {
       multiplier: 3,
@@ -253,6 +285,8 @@ export const AOEDamageComponents = [
   {
     name: "damage gigantic roar dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.1,
@@ -266,6 +300,8 @@ export const AOEDamageComponents = [
   {
     name: "damage gigantic omegastorm dps",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 0.1,
@@ -277,7 +313,9 @@ export const AOEDamageComponents = [
   },
   {
     name: "damage gigantic omegastorm explosion",
-    repeatInterval: -1,
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
     aoe: 500,
     damageData: {
       multiplier: 2.0,

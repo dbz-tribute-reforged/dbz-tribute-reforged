@@ -17,6 +17,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   constructor(
     public name: string = "SwordSlash",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public damageData: DamageData = new DamageData(
       0.9,
       bj_HEROSTAT_AGI,
@@ -65,7 +67,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (ability.currentTick == CustomAbility.START_TICK) {
+    if (ability.currentTick == this.startTick) {
       this.previousCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       this.nextDamageTick = 0;
     }
@@ -121,7 +123,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
 
   clone(): AbilityComponent {
     return new SwordSlash(
-      this.name, this.repeatInterval, this.damageData, this.maxDistance,
+      this.name, this.repeatInterval, this.startTick, this.endTick,
+      this.damageData, this.maxDistance,
       this.minDistance, this.aoe, this.delayBetweenDamageTicks, this.sfxList,
       this.attachedSfxList,
     );
@@ -131,6 +134,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -178,6 +183,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.damageData = new DamageData().deserialize(input.damageData);
     this.maxDistance = input.maxDistance;
     this.minDistance = input.minDistance;

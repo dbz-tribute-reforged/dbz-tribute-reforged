@@ -14,6 +14,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   constructor(
     public name: string = "DamageBlock",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public blockPerDamage: number = 25,
     public isPercentageBlock: boolean = true,
     public attribute: number = bj_HEROSTAT_STR,
@@ -32,7 +34,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     let currentHp = GetUnitState(source, UNIT_STATE_LIFE);
-    if (ability.currentTick == CustomAbility.START_TICK) {
+    if (ability.currentTick == this.startTick) {
       this.previousHp = currentHp;
       this.remainingBlock = this.calculateMaxBlock(input);
     }
@@ -101,8 +103,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
 
   clone(): AbilityComponent {
     return new DamageBlock(
-      this.name, 
-      this.repeatInterval,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.blockPerDamage,
       this.isPercentageBlock,
       this.attribute,
@@ -116,6 +117,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       blockPerDamage: number;
       isPercentageBlock: boolean;
       attribute: number;
@@ -156,6 +159,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.blockPerDamage = input.blockPerDamage;
     this.isPercentageBlock = input.isPercentageBlock;
     this.attribute = input.attribute;

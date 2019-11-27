@@ -10,6 +10,8 @@ export class GroundTargetDash implements AbilityComponent, Serializable<GroundTa
   constructor(
     public name: string = "GroundTargetDash",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
     public distance: number = 40.0,
   ) {
 
@@ -23,7 +25,8 @@ export class GroundTargetDash implements AbilityComponent, Serializable<GroundTa
 
   clone(): AbilityComponent {
     return new GroundTargetDash(
-      this.name, this.repeatInterval, this.distance,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.distance,
     );
   }
   
@@ -31,11 +34,15 @@ export class GroundTargetDash implements AbilityComponent, Serializable<GroundTa
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
       distance: number; 
     }
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     this.distance = input.distance;
     return this;
   }

@@ -5,6 +5,8 @@ export const DamageBlockComponents = [
   {
     name: "block basic guard",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
@@ -51,6 +53,8 @@ export const DamageBlockComponents = [
   {
     name: "block energy absorption",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     blockPerDamage: 150,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
@@ -96,6 +100,8 @@ export const DamageBlockComponents = [
   {
     name: "block broly",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     blockPerDamage: 15,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
@@ -141,6 +147,8 @@ export const DamageBlockComponents = [
   {
     name: "block ultra instinct",
     repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,

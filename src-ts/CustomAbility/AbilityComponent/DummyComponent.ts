@@ -7,6 +7,8 @@ export class DummyComponent implements AbilityComponent, Serializable<DummyCompo
   constructor(
     public name: string = "DummyComponent",
     public repeatInterval: number = 1,
+    public startTick: number = 0,
+    public endTick: number = -1,
   ) {
 
   }
@@ -18,7 +20,7 @@ export class DummyComponent implements AbilityComponent, Serializable<DummyCompo
 
   clone(): AbilityComponent {
     return new DummyComponent(
-      this.name, this.repeatInterval,
+      this.name, this.repeatInterval, this.startTick, this.endTick, 
     );
   }
   
@@ -26,10 +28,14 @@ export class DummyComponent implements AbilityComponent, Serializable<DummyCompo
     input: { 
       name: string; 
       repeatInterval: number; 
+      startTick: number;
+      endTick: number;
     }
   ) {
     this.name = input.name;
     this.repeatInterval = input.repeatInterval;
+    this.startTick = input.startTick;
+    this.endTick = input.endTick;
     return this;
   }
 }
