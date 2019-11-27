@@ -21,6 +21,8 @@ import { DodgeComponents } from "./AbilityData/DodgeComponents";
 import { Dodge } from "./AbilityComponent/Dodge";
 import { DamageBlockComponents } from "./AbilityData/DamageBlockComponents";
 import { DamageBlock } from "./AbilityComponent/DamageBlock";
+import { AOEStunComponents } from "./AbilityData/AOEStunComponents";
+import { AOEStun } from "./AbilityComponent/AOEStun";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -43,6 +45,10 @@ export class CustomAbilityManager {
 
     for (const component of AOEKnockbackComponents) {
       this.setComponent(new AOEKnockback().deserialize(component));
+    }
+
+    for (const component of AOEStunComponents) {
+      this.setComponent(new AOEStun().deserialize(component));
     }
 
     for (const component of DamageBlockComponents) {

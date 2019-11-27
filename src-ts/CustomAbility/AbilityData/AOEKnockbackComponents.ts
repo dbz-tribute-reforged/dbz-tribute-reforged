@@ -21,6 +21,26 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
   },
+  // broly power level rising
+  {
+    name: "knockback 1tick 25speed 0angle 400aoe",
+    repeatInterval: 1, 
+    knockbackData: {
+      speed: 15, 
+      angle: 0, 
+      aoe: 400,
+    },
+  },
+  // broly gigantic omegastorm
+  {
+    name: "knockback 1tick 25speed 0angle 300aoe",
+    repeatInterval: 1, 
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 300,
+    },
+  },
   // big bang attack reverse knockback
   {
     name: "knockback 1tick 15speed 180angle 400aoe",

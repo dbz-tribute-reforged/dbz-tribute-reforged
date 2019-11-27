@@ -24,46 +24,44 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (this.knockbackData.aoe > 0) {
-      const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
-      const affectedGroup = UnitHelper.getNearbyValidUnits(
-        sourceCoord, 
-        this.knockbackData.aoe,
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(GetFilterUnit()));
-        }
-      );
-      
-      let currentEnemies = 0;
-      let dodgeVector = new Vector2D(0,0);
-
-      ForGroup(affectedGroup, () => {
-        if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
-          const enemy = GetEnumUnit();
-          const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
-          let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
-          if (this.addRandomAngle) {
-            dodgeAngle += Math.random() * this.knockbackData.angle - 90;
-          } else {
-            dodgeAngle += this.knockbackData.angle;
-          }
-          const dodgeCoord = CoordMath.polarProjectCoords(sourceCoord, dodgeAngle, this.knockbackData.speed);
-          dodgeVector.add(dodgeCoord);
-          /*
-          const newDodgeAngle = CoordMath.angleBetweenCoords(newSourceCoord, dodgeCoord);
-          const newDodgeDistance = CoordMath.distance(newSourceCoord, dodgeCoord);
-          newSourceCoord = CoordMath.polarProjectCoords(newSourceCoord, newDodgeAngle, newDodgeDistance / 2);
-          */
-          ++currentEnemies;
-        }
-      });
-
-      if (currentEnemies > 0) {
-        dodgeVector.x = dodgeVector.x / currentEnemies;
-        dodgeVector.y = dodgeVector.y / currentEnemies;
-
-        PathingCheck.moveGroundUnitToCoord(source, dodgeVector);
+    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    const affectedGroup = UnitHelper.getNearbyValidUnits(
+      sourceCoord, 
+      this.knockbackData.aoe,
+      () => {
+        return UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(GetFilterUnit()));
       }
+    );
+    
+    let currentEnemies = 0;
+    let dodgeVector = new Vector2D(0,0);
+
+    ForGroup(affectedGroup, () => {
+      if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
+        const enemy = GetEnumUnit();
+        const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
+        let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
+        if (this.addRandomAngle) {
+          dodgeAngle += Math.random() * this.knockbackData.angle - 90;
+        } else {
+          dodgeAngle += this.knockbackData.angle;
+        }
+        const dodgeCoord = CoordMath.polarProjectCoords(sourceCoord, dodgeAngle, this.knockbackData.speed);
+        dodgeVector.add(dodgeCoord);
+        /*
+        const newDodgeAngle = CoordMath.angleBetweenCoords(newSourceCoord, dodgeCoord);
+        const newDodgeDistance = CoordMath.distance(newSourceCoord, dodgeCoord);
+        newSourceCoord = CoordMath.polarProjectCoords(newSourceCoord, newDodgeAngle, newDodgeDistance / 2);
+        */
+        ++currentEnemies;
+      }
+    });
+
+    if (currentEnemies > 0) {
+      dodgeVector.x = dodgeVector.x / currentEnemies;
+      dodgeVector.y = dodgeVector.y / currentEnemies;
+
+      PathingCheck.moveGroundUnitToCoord(source, dodgeVector);
     }
   }
   

@@ -52,6 +52,17 @@ export class CustomAbility implements Serializable<CustomAbility> {
   activate(input: CustomAbilityInput): void {
     this.takeCosts(input);
 
+    // instant activate, bypasses 0.03s delay for ability to start
+    if (this.currentTick <= this.duration) {
+      for (const component of this.components) {
+        if (this.isReadyToUse(component.repeatInterval)) {
+          component.performTickAction(this, input, input.caster.unit);
+        }
+      }
+      ++this.currentTick;
+    }
+    this.updateCd();
+    // activate over time every 0.03s
     TimerStart(this.abilityTimer, this.updateRate, true, () => {
       if (this.currentTick <= this.duration) {
         for (const component of this.components) {
@@ -63,6 +74,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
       }
       if (this.currentTick > this.duration) {
         AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx);
+        // TODO: investigate if this causes a memory leak ...
         this.persistentSfx = [];
       }
       this.updateCd();

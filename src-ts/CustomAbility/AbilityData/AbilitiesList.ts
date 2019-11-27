@@ -91,7 +91,7 @@ export const AbilitiesList = [
     costAmount: 0,
     duration: 99,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: false,
     waitsForNextClick: false,
     animation: "spell",
@@ -132,8 +132,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "ground dash 25dist" },
-      { name: "damage 1tick 0.15int 300aoe" },
-      { name: "damage final 5int 500aoe" },
+      { name: "damage dragon fist dps" },
+      { name: "damage dragon fist explosion" },
       { name: "knockback 1tick 25speed 180angle 250aoe" },
       { name: "sfx dragon fist" },
     ],
@@ -297,6 +297,150 @@ export const AbilitiesList = [
     components: [
       // TODO: need to add stun for masenko
       { name: "beam masenko" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Energy Punch",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEnergyPunch.blp",
+      disabled: "BTNEnergyPunch.blp",
+    },
+    tooltip: {
+      title: "Energy Punch",
+      body: 
+        "Energy Puncho"
+    },
+    components: [
+      { name: "ground dash 25dist" },
+      { name: "damage energy punch dps" },
+      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "stun energy punch" },
+      // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
+      { name: "block broly" },
+      { name: "sfx energy punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Power Level Rising",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 2,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBroly.blp",
+      disabled: "BTNBroly.blp",
+    },
+    tooltip: {
+      title: "Power Level Rising",
+      body: 
+        "Power Level Rising"
+    },
+    components: [
+      { name: "damage power level rising explosion" },
+      { name: "knockback 1tick 25speed 0angle 400aoe" },
+      { name: "block broly" },
+      { name: "sfx power level rising" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Planet Crusher",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDS.blp",
+      disabled: "BTNBTNDS.blp",
+    },
+    tooltip: {
+      title: "Planet Crusher",
+      body: 
+        "Planet Crusher"
+    },
+    components: [
+      { name: "beam planet crusher" },
+      { name: "block broly" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Gigantic Roar",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGiganticRoar.blp",
+      disabled: "BTNGiganticRoar.blp",
+    },
+    tooltip: {
+      title: "Gigantic Roar",
+      body: 
+        "Gigantic Roar"
+    },
+    components: [
+      { name: "beam gigantic roar" },
+      { name: "ground dash -5dist" },
+      { name: "ground dash -50dist initial" },
+      { name: "block broly" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Gigantic Omegastorm",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGiganticOmegastorm.blp",
+      disabled: "BTNGiganticOmegastorm.blp",
+    },
+    tooltip: {
+      title: "Gigantic Omegastorm",
+      body: 
+        "Gigantic Omegastorm"
+    },
+    components: [
+      { name: "beam gigantic omegastorm" },
+      { name: "block broly" },
     ],
   },
   // -------------------------------------------
