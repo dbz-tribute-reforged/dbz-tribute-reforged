@@ -310,6 +310,7 @@ gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_Transformations_Future_Trunks = nil
 gg_trg_Transformations_Broly = nil
 gg_trg_Set_Transformation_Stat_Mult = nil
+gg_trg_Cooler_Give_Transform = nil
 gg_trg_Cooler_Transform_Into_Final_Form = nil
 gg_trg_Metal_Cooler_Stat_Mult_On_Kill = nil
 gg_trg_Metal_Cooler_Stat_Mult_On_Death = nil
@@ -335,7 +336,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Cooler_Give_Transform = nil
+gg_trg_Metal_Cooler_Add_Stat_Mult = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -543,52 +544,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 536)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 511)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1785,15 +1786,15 @@ function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
     return true
 end
 
-function Trig_Metal_Cooler_Scan_For_Powers_Func002Func001Func001C()
-    if (not (IsUnitEnemy(GetEnumUnit(), GetTriggerPlayer()) == true)) then
+function Trig_Metal_Cooler_Scan_For_Powers_Func003Func001Func001C()
+    if (not (IsUnitEnemy(GetEnumUnit(), udg_TempPlayer) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Metal_Cooler_Scan_For_Powers_Func002Func001A()
-    if (Trig_Metal_Cooler_Scan_For_Powers_Func002Func001Func001C()) then
+function Trig_Metal_Cooler_Scan_For_Powers_Func003Func001A()
+    if (Trig_Metal_Cooler_Scan_For_Powers_Func003Func001Func001C()) then
         udg_TempLoc = GetUnitLoc(GetEnumUnit())
         PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_ATTACK, 100, 0.00, 0.00)
                 RemoveLocation(udg_TempLoc)
@@ -1802,11 +1803,12 @@ function Trig_Metal_Cooler_Scan_For_Powers_Func002Func001A()
 end
 
 function Trig_Metal_Cooler_Scan_For_Powers_Actions()
-    udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
+    udg_TempPlayer = GetTriggerPlayer()
+    udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
-        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Metal_Cooler_Scan_For_Powers_Func002Func001A)
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Metal_Cooler_Scan_For_Powers_Func003Func001A)
         udg_TempInt = udg_TempInt + 1
     end
         DestroyForce(udg_TempPlayerGroup)
@@ -2035,7 +2037,7 @@ function Trig_Map_Setup_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
         SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
@@ -4794,9 +4796,9 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "luss"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "metal"
-    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "fp"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "metal"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "upg"
     udg_TempInt = (udg_TempInt + 1)
@@ -5963,7 +5965,7 @@ function Trig_Cooler_Give_Transform_Conditions()
 end
 
 function Trig_Cooler_Give_Transform_Actions()
-    SetPlayerAbilityAvailableBJ(true, FourCC("A06D"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A06D"), GetOwningPlayer(GetKillingUnitBJ()))
 end
 
 function InitTrig_Cooler_Give_Transform()
@@ -5981,8 +5983,7 @@ function Trig_Cooler_Transform_Into_Final_Form_Conditions()
 end
 
 function Trig_Cooler_Transform_Into_Final_Form_Actions()
-    SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), GetTriggerPlayer())
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), GetTriggerPlayer())
     udg_StatMultUnit = GetTriggerUnit()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
@@ -5992,6 +5993,8 @@ function Trig_Cooler_Transform_Into_Final_Form_Actions()
         udg_TransformationID = FourCC('H043')
     udg_TransformationPlayer = GetTriggerPlayer()
     TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), GetTriggerPlayer())
 end
 
 function InitTrig_Cooler_Transform_Into_Final_Form()
@@ -5999,6 +6002,28 @@ function InitTrig_Cooler_Transform_Into_Final_Form()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cooler_Transform_Into_Final_Form, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Cooler_Transform_Into_Final_Form, Condition(Trig_Cooler_Transform_Into_Final_Form_Conditions))
     TriggerAddAction(gg_trg_Cooler_Transform_Into_Final_Form, Trig_Cooler_Transform_Into_Final_Form_Actions)
+end
+
+function Trig_Metal_Cooler_Add_Stat_Mult_Func002C()
+    if (not (udg_StatMultInt < 2.50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Metal_Cooler_Add_Stat_Mult_Actions()
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    if (Trig_Metal_Cooler_Add_Stat_Mult_Func002C()) then
+        udg_StatMultReal = RMaxBJ(2.50, (udg_TempReal + udg_StatMultInt))
+        TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+    else
+    end
+end
+
+function InitTrig_Metal_Cooler_Add_Stat_Mult()
+    gg_trg_Metal_Cooler_Add_Stat_Mult = CreateTrigger()
+    TriggerAddAction(gg_trg_Metal_Cooler_Add_Stat_Mult, Trig_Metal_Cooler_Add_Stat_Mult_Actions)
 end
 
 function Trig_Metal_Cooler_Stat_Mult_On_Kill_Conditions()
@@ -6014,20 +6039,41 @@ function Trig_Metal_Cooler_Stat_Mult_On_Kill_Conditions()
     return true
 end
 
-function Trig_Metal_Cooler_Stat_Mult_On_Kill_Func003C()
-    if (not (udg_StatMultInt < 2.50)) then
+function Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01A"))) then
+        return false
+    end
+    if (not (IsUnitAlly(GetEnumUnit(), udg_TempPlayer) == true)) then
         return false
     end
     return true
 end
 
+function Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001A()
+    if (Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001Func001C()) then
+        udg_StatMultUnit = GetEnumUnit()
+        udg_TempReal = 0.05
+        TriggerExecute(gg_trg_Metal_Cooler_Add_Stat_Mult)
+        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_022")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
 function Trig_Metal_Cooler_Stat_Mult_On_Kill_Actions()
     udg_StatMultUnit = GetKillingUnitBJ()
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    if (Trig_Metal_Cooler_Stat_Mult_On_Kill_Func003C()) then
-        udg_StatMultReal = RMaxBJ(2.50, (0.10 + udg_StatMultInt))
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    else
+    udg_TempReal = 0.10
+    TriggerExecute(gg_trg_Metal_Cooler_Add_Stat_Mult)
+    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_637")
+        DestroyForce(udg_TempPlayerGroup)
+    udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001A)
+        udg_TempInt = udg_TempInt + 1
     end
 end
 
@@ -6048,20 +6094,41 @@ function Trig_Metal_Cooler_Stat_Mult_On_Death_Conditions()
     return true
 end
 
-function Trig_Metal_Cooler_Stat_Mult_On_Death_Func003C()
-    if (not (udg_StatMultInt < 2.50)) then
+function Trig_Metal_Cooler_Stat_Mult_On_Death_Func008Func001Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01A"))) then
+        return false
+    end
+    if (not (IsUnitAlly(GetEnumUnit(), udg_TempPlayer) == true)) then
         return false
     end
     return true
 end
 
+function Trig_Metal_Cooler_Stat_Mult_On_Death_Func008Func001A()
+    if (Trig_Metal_Cooler_Stat_Mult_On_Death_Func008Func001Func001C()) then
+        udg_StatMultUnit = GetEnumUnit()
+        udg_TempReal = 0.01
+        TriggerExecute(gg_trg_Metal_Cooler_Add_Stat_Mult)
+        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5402")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
 function Trig_Metal_Cooler_Stat_Mult_On_Death_Actions()
     udg_StatMultUnit = GetDyingUnit()
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    if (Trig_Metal_Cooler_Stat_Mult_On_Death_Func003C()) then
-        udg_StatMultReal = RMaxBJ(2.50, (0.02 + udg_StatMultInt))
-        TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    else
+    udg_TempReal = 0.02
+    ConditionalTriggerExecute(gg_trg_Metal_Cooler_Add_Stat_Mult)
+    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5182")
+        DestroyForce(udg_TempPlayerGroup)
+    udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Metal_Cooler_Stat_Mult_On_Death_Func008Func001A)
+        udg_TempInt = udg_TempInt + 1
     end
 end
 
@@ -6340,6 +6407,9 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('H01A')
         udg_TransformationStatMult = 2.00
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A07S"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
         udg_StatMultReal = 0.00
     else
@@ -7069,6 +7139,7 @@ function InitCustomTriggers()
     InitTrig_Set_Transformation_Stat_Mult()
     InitTrig_Cooler_Give_Transform()
     InitTrig_Cooler_Transform_Into_Final_Form()
+    InitTrig_Metal_Cooler_Add_Stat_Mult()
     InitTrig_Metal_Cooler_Stat_Mult_On_Kill()
     InitTrig_Metal_Cooler_Stat_Mult_On_Death()
     InitTrig_Transformations_Cooler_Base()

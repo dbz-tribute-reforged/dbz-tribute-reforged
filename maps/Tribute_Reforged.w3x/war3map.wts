@@ -121,6 +121,11 @@ STRING 21
 (Final Form)
 }
 
+STRING 22
+{
+You have received +0.05x multiplier from another Metal Cooler gathering combat data.
+}
+
 STRING 23
 // Abilities: A081 (Kamehameha), Name (Name)
 {
@@ -3831,7 +3836,7 @@ Rebuild Metal Koola
 }
 
 STRING 622
-// Abilities: A06D (Transform), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
 Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.
 }
@@ -3920,6 +3925,11 @@ STRING 636
 Quickly constructs 10 Metal Cooler Copies. Because they are put together so quickly, many resources are wasted in the process.
 
 |cffff00ffBuild time: 50 seconds|r
+}
+
+STRING 637
+{
+You have received +0.1x multiplier from gathering combat data.
 }
 
 STRING 638
@@ -4026,7 +4036,7 @@ Popo's Magic Carpet
 }
 
 STRING 654
-// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Researchubertip (Tooltip - Learn - Extended)
 {
 Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.
 }
@@ -31529,6 +31539,11 @@ STRING 5181
 [|cff00ff00R|r] Learn Transform
 }
 
+STRING 5182
+{
+You have received +0.02x multiplier from gathering combat data.
+}
+
 STRING 5183
 // Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
@@ -32844,6 +32859,11 @@ STRING 5401
 // Abilities: A0BT (Transform), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba transforms into his ultimate form.|n|cff00FF00Consumes all souls. Requires 300 souls. The more souls consumed, the stronger Janemba will be.|r
+}
+
+STRING 5402
+{
+You have received +0.01x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 5403

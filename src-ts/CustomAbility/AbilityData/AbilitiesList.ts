@@ -526,6 +526,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Deafening Wave",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPurge.blp",
+    },
+    tooltip: {
+      title: "Deafening Wave",
+      body: 
+        "Deafening Wave"
+    },
+    components: [
+      { name: "knockback 1tick 25speed 0angle 400aoe" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Geti Star Repair",
     currentCd: 0,
     maxCd: 5,

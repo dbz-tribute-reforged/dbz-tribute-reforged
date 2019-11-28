@@ -44,9 +44,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00G"), ["Kamehameha", "Special Beam Cannon", "Masenko"]],
 
     // fourth form cooler
-    [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Supernova Golden"]],
+    [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
     // final form cooler
-    [FourCC("H043"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Supernova Golden"]],
+    [FourCC("H043"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
     // metal cooler
     [FourCC("H01A"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Geti Star Repair", "Supernova Golden"]],
 
