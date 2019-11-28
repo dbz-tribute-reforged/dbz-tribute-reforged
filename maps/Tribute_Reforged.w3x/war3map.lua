@@ -337,6 +337,7 @@ gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
 gg_trg_Metal_Cooler_Add_Stat_Mult = nil
+gg_trg_Disable_heads = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2002,6 +2003,36 @@ function Trig_Map_Setup_Actions()
     udg_CreepMaxNum = 0
     ForGroupBJ(udg_TempGroup, Trig_Map_Setup_Func004A)
         DestroyGroup(udg_TempGroup)
+    udg_TempInt = 0
+    while (true) do
+        if (udg_TempInt > 29) then break end
+        InitHashtableBJ()
+        udg_HeroAvailabilityHashtable[udg_TempInt] = GetLastCreatedHashtableBJ()
+        udg_PlayerColorString[udg_TempInt] = "|cffffffff"
+        udg_TempInt = udg_TempInt + 1
+    end
+    udg_PlayerColorString[1] = "|cffff0000"
+    udg_PlayerColorString[2] = "|cff0000ff"
+    udg_PlayerColorString[3] = "|cff00ffff"
+    udg_PlayerColorString[4] = "|cff8f00ff"
+    udg_PlayerColorString[5] = "|cfffffc00"
+    udg_PlayerColorString[6] = "|cffff9a00"
+    udg_PlayerColorString[7] = "|cff00ff00"
+    udg_PlayerColorString[8] = "|cffff8080"
+    udg_PlayerColorString[9] = "|cff808080"
+    udg_PlayerColorString[10] = "|cff8080ff"
+    udg_CP_Rect = Rect(0, 0, 128.00, 128.00)
+        udg_CP_Item = CreateItem('wtlg', 0, 0)
+    SetItemVisibleBJ(false, udg_CP_Item)
+    udg_CP_HiddenItemsIndex = 0
+end
+
+function InitTrig_Map_Setup()
+    gg_trg_Map_Setup = CreateTrigger()
+    TriggerAddAction(gg_trg_Map_Setup, Trig_Map_Setup_Actions)
+end
+
+function Trig_Disable_heads_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -2038,6 +2069,7 @@ function Trig_Map_Setup_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
         SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
@@ -2045,33 +2077,12 @@ function Trig_Map_Setup_Actions()
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
         udg_TempInt = udg_TempInt + 1
     end
-    udg_TempInt = 0
-    while (true) do
-        if (udg_TempInt > 29) then break end
-        InitHashtableBJ()
-        udg_HeroAvailabilityHashtable[udg_TempInt] = GetLastCreatedHashtableBJ()
-        udg_PlayerColorString[udg_TempInt] = "|cffffffff"
-        udg_TempInt = udg_TempInt + 1
-    end
-    udg_PlayerColorString[1] = "|cffff0000"
-    udg_PlayerColorString[2] = "|cff0000ff"
-    udg_PlayerColorString[3] = "|cff00ffff"
-    udg_PlayerColorString[4] = "|cff8f00ff"
-    udg_PlayerColorString[5] = "|cfffffc00"
-    udg_PlayerColorString[6] = "|cffff9a00"
-    udg_PlayerColorString[7] = "|cff00ff00"
-    udg_PlayerColorString[8] = "|cffff8080"
-    udg_PlayerColorString[9] = "|cff808080"
-    udg_PlayerColorString[10] = "|cff8080ff"
-    udg_CP_Rect = Rect(0, 0, 128.00, 128.00)
-        udg_CP_Item = CreateItem('wtlg', 0, 0)
-    SetItemVisibleBJ(false, udg_CP_Item)
-    udg_CP_HiddenItemsIndex = 0
 end
 
-function InitTrig_Map_Setup()
-    gg_trg_Map_Setup = CreateTrigger()
-    TriggerAddAction(gg_trg_Map_Setup, Trig_Map_Setup_Actions)
+function InitTrig_Disable_heads()
+    gg_trg_Disable_heads = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Disable_heads, 0.00)
+    TriggerAddAction(gg_trg_Disable_heads, Trig_Disable_heads_Actions)
 end
 
 function Trig_Setup_Spawns_Actions()
@@ -2130,7 +2141,7 @@ end
 
 function InitTrig_Setup_Spawns()
     gg_trg_Setup_Spawns = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Setup_Spawns, 0.01)
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Spawns, 0.02)
     TriggerAddAction(gg_trg_Setup_Spawns, Trig_Setup_Spawns_Actions)
 end
 
@@ -4937,7 +4948,7 @@ function Trig_Transformations_Entry_Point_Func003A()
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func004C()) then
-        TriggerExecute(gg_trg_Transformations_Cooler_Base)
+        TriggerExecute(gg_trg_Transformations_Cooler_Final_Form)
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func005C()) then
@@ -5987,7 +5998,7 @@ function Trig_Cooler_Transform_Into_Final_Form_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), GetTriggerPlayer())
     udg_StatMultUnit = GetTriggerUnit()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_StatMultReal = udg_StatMultInt
+    udg_StatMultReal = RMinBJ(2.50, udg_StatMultInt)
     udg_TransformationStatMult = udg_StatMultReal
     GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
         udg_TransformationID = FourCC('H043')
@@ -7029,6 +7040,7 @@ function InitCustomTriggers()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
     InitTrig_Map_Setup()
+    InitTrig_Disable_heads()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New()
