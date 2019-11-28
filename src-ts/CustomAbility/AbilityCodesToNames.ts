@@ -47,11 +47,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A084'), "Gigantic Roar"],
     [FourCC('A0H6'), "Gigantic Omegastorm"],
 
-    // metal cooler
-    [FourCC('A06C'), "Death Beam"],
-    [FourCC('A0C1'), "Supernova"],
+    // cooler
+    [FourCC('A06C'), "Death Beam Frieza"],
+    [FourCC('A0C1'), "Supernova Cooler"],
+    [FourCC('A0KY'), "Nova Chariot"],
     [FourCC('A063'), "Geti Star Repair"],
-    [FourCC('A00H'), "Scan"],
+    [FourCC('A0L2'), "Supernova Golden"],
 
 
     // dummy caster FourCC("h054")

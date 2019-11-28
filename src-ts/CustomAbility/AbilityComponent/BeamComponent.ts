@@ -126,7 +126,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
     let maxHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
 
     maxHp = Math.max(
-      150, 
+      50, 
       50 * input.level *
       Math.floor(this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true))
     );
@@ -151,7 +151,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
       this.hasBeamUnit = true;
     }
     if (this.beamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == true) {
-      ability.currentTick = ability.duration;
+      ability.currentTick = Math.max(ability.currentTick, ability.duration - 1);
     }
     this.checkForBeamClash(input);
     this.moveBeamUnit(ability, input);

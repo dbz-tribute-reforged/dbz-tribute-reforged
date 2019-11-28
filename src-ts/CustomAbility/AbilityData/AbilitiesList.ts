@@ -142,7 +142,7 @@ export const AbilitiesList = [
   {
     name: "Ultra Instinct",
     currentCd: 0,
-    maxCd: 6,
+    maxCd: 25,
     costType: "HP",
     costAmount: 0,
     duration: 180,
@@ -152,8 +152,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNAcolyte.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNAcolyte.blp",
+      enabled: "Replaceabletextures\\CommandButtons\\BTNMirrorImage.tga",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNMirrorImage.tga",
     },
     tooltip: {
       title: "Ultra Instinct",
@@ -444,6 +444,140 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Death Beam Frieza",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBeam.blp",
+      disabled: "BTNFriezaDeathBeam.blp",
+    },
+    tooltip: {
+      title: "Death Beam Frieza",
+      body: 
+        "Death Beam Frieza"
+    },
+    components: [
+      { name: "beam death beam frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Supernova Cooler",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCoolerSupernova.blp",
+      disabled: "BTNCoolerSupernova.blp",
+    },
+    tooltip: {
+      title: "Supernova Cooler",
+      body: 
+        "Supernova Cooler"
+    },
+    components: [
+      { name: "beam supernova cooler" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Nova Chariot",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCoolerNovaChariot.blp",
+      disabled: "BTNCoolerNovaChariot.blp",
+    },
+    tooltip: {
+      title: "Nova Chariot",
+      body: 
+        "Nova Chariot"
+    },
+    components: [
+      { name: "ground dash 25dist" },
+      { name: "damage nova chariot dps" },
+      { name: "block nova chariot" },
+      { name: "sfx nova chariot" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Geti Star Repair",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNEngineeringUpgrade.blp",
+    },
+    tooltip: {
+      title: "Geti Star Repair",
+      body: 
+        "Geti Star Repair"
+    },
+    components: [
+      { name: "block geti star repair" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Supernova Golden",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCoolerGoldenSupernova.blp",
+      disabled: "BTNCoolerGoldenSupernova.blp",
+    },
+    tooltip: {
+      title: "Supernova Golden",
+      body: 
+        "Supernova Golden"
+    },
+    components: [
+      { name: "beam supernova golden" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Blue Hurricane",
     currentCd: 0,
     maxCd: 10,
@@ -532,7 +666,7 @@ export const AbilitiesList = [
   {
     name: "Test Ability",
     currentCd: 0,
-    maxCd: 7,
+    maxCd: 5,
     costType: "HP",
     costAmount: 25,
     duration: 150,

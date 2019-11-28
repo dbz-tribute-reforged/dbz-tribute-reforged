@@ -147,6 +147,7 @@ udg_TempReal2 = 0.0
 udg_TempReal3 = 0.0
 udg_TransformationID = 0
 udg_TransformationStatMult = 0.0
+udg_TempReal4 = 0.0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -187,6 +188,7 @@ gg_trg_Pan_E_cast = nil
 gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
+gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Solar_Flare_Test = nil
 gg_trg_SolarFlare = nil
 gg_trg_Kame = nil
@@ -195,6 +197,7 @@ gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Map_Setup = nil
+gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
@@ -222,6 +225,7 @@ gg_trg_Revive_and_Move_Unit_to_HeroInit = nil
 gg_trg_Lower_Hell_Saga_Timer_Expire = nil
 gg_trg_Hero_Respawn_Init = nil
 gg_trg_Add_Unit_to_HeroRespawn = nil
+gg_trg_Remove_Unit_From_HeroRespawn = nil
 gg_trg_Move_and_Revive_Hero_To_Dead_Zone = nil
 gg_trg_Hero_Respawn_Timer_Expire = nil
 gg_trg_Hero_Leaves_Heaven = nil
@@ -279,9 +283,22 @@ gg_trg_Turles_Saga_Init = nil
 gg_trg_Turles_Saga_Activate = nil
 gg_trg_Turles_Saga_Completion = nil
 gg_trg_Turles_Saga_VI = nil
+gg_trg_Test_StatMult_Init = nil
+gg_trg_Test_Stats_Add_Command = nil
+gg_trg_Test_Stats_Get_Stats_Command = nil
+gg_trg_Add_Unit_To_StatMult = nil
+gg_trg_Remove_Unit_From_StatMult = nil
+gg_trg_Add_To_Base_Stats = nil
+gg_trg_Get_Base_Stats = nil
+gg_trg_Set_Stat_Multiplier = nil
+gg_trg_Get_Stat_Multiplier = nil
+gg_trg_Set_Varied_Stat_Multiplier = nil
+gg_trg_Update_Current_Stats = nil
+gg_trg_Clear_Stat_Mult_SFX = nil
 gg_trg_show_me_the_ss = nil
 gg_trg_show_me_the_ss_Copy = nil
 gg_trg_Test_LVL_command = nil
+gg_trg_Test_LVL_command_Copy = nil
 gg_trg_Transformations_Init_Commands = nil
 gg_trg_Transformations_Entry_Point = nil
 gg_trg_Transformations_Goku = nil
@@ -292,18 +309,15 @@ gg_trg_Transformations_Goten = nil
 gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_Transformations_Future_Trunks = nil
 gg_trg_Transformations_Broly = nil
+gg_trg_Set_Transformation_Stat_Mult = nil
+gg_trg_Cooler_Transform_Into_Final_Form = nil
+gg_trg_Metal_Cooler_Stat_Mult_On_Kill = nil
+gg_trg_Metal_Cooler_Stat_Mult_On_Death = nil
+gg_trg_Transformations_Cooler_Base = nil
+gg_trg_Transformations_Cooler_Final_Form = nil
 gg_trg_Transformations_Metal_Cooler = nil
 gg_trg_Transformations_Apply_SFX = nil
-gg_trg_Test_StatMult_Init = nil
-gg_trg_Test_Stats_Add_Command = nil
-gg_trg_Add_Unit_To_StatMult = nil
-gg_trg_Remove_Unit_From_StatMult = nil
-gg_trg_Add_To_Base_Stats = nil
-gg_trg_Set_Stat_Multiplier = nil
-gg_trg_Get_Stat_Multiplier = nil
-gg_trg_Set_Varied_Stat_Multiplier = nil
-gg_trg_Update_Current_Stats = nil
-gg_trg_Clear_Stat_Mult_SFX = nil
+gg_trg_Replace_Transformation_Group_with_New_Hero = nil
 gg_trg_Check_Walkability = nil
 gg_trg_Zanzo_Test = nil
 gg_trg_Zanzo_Test_2 = nil
@@ -321,19 +335,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Transformations_Cooler_Base = nil
-gg_trg_Setup_Spawns = nil
-gg_trg_Transformations_Cooler_Final_Form = nil
-gg_trg_Cooler_Transform_Into_Final_Form = nil
-gg_trg_Set_Transformation_Stat_Mult = nil
-gg_trg_Replace_Transformation_Group_with_New_Hero = nil
-gg_trg_Cooler_Final_Form_Level_Up = nil
-gg_trg_Cooler_Calculate_Final_Form_Stat_Mult = nil
-gg_trg_Cooler_Fourth_Form_Level_Up = nil
-gg_trg_Get_Base_Stats = nil
-gg_trg_Remove_Unit_From_HeroRespawn = nil
-gg_trg_Metal_Cooler_Stat_Mult_On_Kill = nil
-gg_trg_Metal_Cooler_Stat_Mult_On_Death = nil
+gg_trg_Cooler_Give_Transform = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -536,56 +538,57 @@ function InitGlobals()
     udg_TempReal3 = 0.0
     udg_TransformationID = 0
     udg_TransformationStatMult = 0.0
+    udg_TempReal4 = 0.0
 end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 536)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1775,6 +1778,47 @@ function InitTrig_Lookout_Exit()
     TriggerAddAction(gg_trg_Lookout_Exit, Trig_Lookout_Exit_Actions)
 end
 
+function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A00H"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Metal_Cooler_Scan_For_Powers_Func002Func001Func001C()
+    if (not (IsUnitEnemy(GetEnumUnit(), GetTriggerPlayer()) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Metal_Cooler_Scan_For_Powers_Func002Func001A()
+    if (Trig_Metal_Cooler_Scan_For_Powers_Func002Func001Func001C()) then
+        udg_TempLoc = GetUnitLoc(GetEnumUnit())
+        PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_ATTACK, 100, 0.00, 0.00)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+end
+
+function Trig_Metal_Cooler_Scan_For_Powers_Actions()
+    udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Metal_Cooler_Scan_For_Powers_Func002Func001A)
+        udg_TempInt = udg_TempInt + 1
+    end
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Metal_Cooler_Scan_For_Powers()
+    gg_trg_Metal_Cooler_Scan_For_Powers = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Metal_Cooler_Scan_For_Powers, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Metal_Cooler_Scan_For_Powers, Condition(Trig_Metal_Cooler_Scan_For_Powers_Conditions))
+    TriggerAddAction(gg_trg_Metal_Cooler_Scan_For_Powers, Trig_Metal_Cooler_Scan_For_Powers_Actions)
+end
+
 function Trig_SolarFlare_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0KO"))) then
         return false
@@ -2217,28 +2261,38 @@ function Trig_Player_Level_up_New_Conditions()
     return true
 end
 
-function Trig_Player_Level_up_New_Func001Func005C()
+function Trig_Player_Level_up_New_Func001Func002Func005C()
     if (not (ModuloInteger(udg_TempInt, 3) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Player_Level_up_New_Actions()
-    udg_TempInt = (udg_PlayerLevel[GetConvertedPlayerId(GetTriggerPlayer())] + 1)
-    while (true) do
-        if (udg_TempInt > GetHeroLevel(GetTriggerUnit())) then break end
-        udg_StatMultUnit = GetTriggerUnit()
-        udg_StatMultReal = 4.00
-        TriggerExecute(gg_trg_Add_To_Base_Stats)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        if (Trig_Player_Level_up_New_Func001Func005C()) then
-        else
-            ModifyHeroSkillPoints(GetTriggerUnit(), bj_MODIFYMETHOD_SUB, 1)
-        end
-        udg_TempInt = udg_TempInt + 1
+function Trig_Player_Level_up_New_Func001C()
+    if (not (udg_PlayerLevel[GetConvertedPlayerId(GetTriggerPlayer())] <= (GetHeroLevel(GetTriggerUnit()) - 1))) then
+        return false
     end
-    udg_PlayerLevel[GetConvertedPlayerId(GetTriggerPlayer())] = GetHeroLevel(GetTriggerUnit())
+    return true
+end
+
+function Trig_Player_Level_up_New_Actions()
+    if (Trig_Player_Level_up_New_Func001C()) then
+        udg_TempInt = (udg_PlayerLevel[GetConvertedPlayerId(GetTriggerPlayer())] + 1)
+        while (true) do
+            if (udg_TempInt > GetHeroLevel(GetTriggerUnit())) then break end
+            udg_StatMultUnit = GetTriggerUnit()
+            udg_StatMultReal = 4.00
+            TriggerExecute(gg_trg_Add_To_Base_Stats)
+            TriggerExecute(gg_trg_Update_Current_Stats)
+            if (Trig_Player_Level_up_New_Func001Func002Func005C()) then
+            else
+                ModifyHeroSkillPoints(GetTriggerUnit(), bj_MODIFYMETHOD_SUB, 1)
+            end
+            udg_TempInt = udg_TempInt + 1
+        end
+        udg_PlayerLevel[GetConvertedPlayerId(GetTriggerPlayer())] = GetHeroLevel(GetTriggerUnit())
+    else
+    end
 end
 
 function InitTrig_Player_Level_up_New()
@@ -3495,7 +3549,7 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("N00Q")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01A")
+    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H042")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H04Z")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -4472,6 +4526,26 @@ function InitTrig_Test_Stats_Add_Command()
     TriggerAddAction(gg_trg_Test_Stats_Add_Command, Trig_Test_Stats_Add_Command_Actions)
 end
 
+function Trig_Test_Stats_Get_Stats_Command_Func002A()
+    udg_StatMultUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Get_Base_Stats)
+    DisplayTextToForce(GetPlayersAll(), ("Base Stats:" .. ((R2S(udg_StatMultStr) .. " / ") .. ((R2S(udg_StatMultAgi) .. " / ") .. R2S(udg_StatMultInt)))))
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    DisplayTextToForce(GetPlayersAll(), ("Stat Mult: " .. ((R2S(udg_StatMultStr) .. " / ") .. ((R2S(udg_StatMultAgi) .. " / ") .. R2S(udg_StatMultInt)))))
+end
+
+function Trig_Test_Stats_Get_Stats_Command_Actions()
+    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
+    ForGroupBJ(udg_TempGroup, Trig_Test_Stats_Get_Stats_Command_Func002A)
+        DestroyGroup(udg_TempGroup)
+end
+
+function InitTrig_Test_Stats_Get_Stats_Command()
+    gg_trg_Test_Stats_Get_Stats_Command = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(0), "-getstats", false)
+    TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
+end
+
 function Trig_Add_Unit_To_StatMult_Func001C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == false)) then
         return false
@@ -4668,6 +4742,24 @@ function InitTrig_Test_LVL_command()
     TriggerAddAction(gg_trg_Test_LVL_command, Trig_Test_LVL_command_Actions)
 end
 
+function Trig_Test_LVL_command_Copy_Func003A()
+    udg_TempUnit = GetEnumUnit()
+    SetHeroLevelBJ(GetEnumUnit(), udg_TempInt3, false)
+end
+
+function Trig_Test_LVL_command_Copy_Actions()
+    udg_TempInt3 = S2I(SubStringBJ(GetEventPlayerChatString(), 7, 9))
+    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
+    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Copy_Func003A)
+        DestroyGroup(udg_TempGroup)
+end
+
+function InitTrig_Test_LVL_command_Copy()
+    gg_trg_Test_LVL_command_Copy = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_LVL_command_Copy, Player(0), "-vllv", false)
+    TriggerAddAction(gg_trg_Test_LVL_command_Copy, Trig_Test_LVL_command_Copy_Actions)
+end
+
 function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = 0
     udg_TransformationCommands[udg_TempInt] = "r"
@@ -4703,6 +4795,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "luss"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "metal"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "fp"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "upg"
     udg_TempInt = (udg_TempInt + 1)
@@ -5855,101 +5949,28 @@ function InitTrig_Set_Transformation_Stat_Mult()
     TriggerAddAction(gg_trg_Set_Transformation_Stat_Mult, Trig_Set_Transformation_Stat_Mult_Actions)
 end
 
-function Trig_Cooler_Fourth_Form_Level_Up_Conditions()
-    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H042"))) then
+function Trig_Cooler_Give_Transform_Conditions()
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H042"))) then
+        return false
+    end
+    if (not (GetHeroLevel(GetKillingUnitBJ()) > 20)) then
         return false
     end
     return true
 end
 
-function Trig_Cooler_Fourth_Form_Level_Up_Func001Func006Func002C()
-    if (not (udg_StatMultReal >= 1.50)) then
-        return false
-    end
-    return true
+function Trig_Cooler_Give_Transform_Actions()
+    SetPlayerAbilityAvailableBJ(true, FourCC("A06D"), GetTriggerPlayer())
 end
 
-function Trig_Cooler_Fourth_Form_Level_Up_Func001Func006C()
-    if (not (udg_StatMultReal > udg_StatMultInt)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Fourth_Form_Level_Up_Func001C()
-    if (not (GetUnitLevel(GetTriggerUnit()) > 20)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Fourth_Form_Level_Up_Actions()
-    if (Trig_Cooler_Fourth_Form_Level_Up_Func001C()) then
-        SetPlayerAbilityAvailableBJ(true, FourCC("A06D"), GetTriggerPlayer())
-        udg_StatMultUnit = GetTriggerUnit()
-        TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        TriggerExecute(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult)
-        udg_StatMultReal = (1 + (udg_StatMultReal * 0.80))
-        if (Trig_Cooler_Fourth_Form_Level_Up_Func001Func006C()) then
-            if (Trig_Cooler_Fourth_Form_Level_Up_Func001Func006Func002C()) then
-                udg_TransformationSFXString = "AuraPink2.mdx"
-            else
-            end
-            TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
-        else
-        end
-    else
-    end
-end
-
-function InitTrig_Cooler_Fourth_Form_Level_Up()
-    gg_trg_Cooler_Fourth_Form_Level_Up = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Cooler_Fourth_Form_Level_Up, EVENT_PLAYER_HERO_LEVEL)
-    TriggerAddCondition(gg_trg_Cooler_Fourth_Form_Level_Up, Condition(Trig_Cooler_Fourth_Form_Level_Up_Conditions))
-    TriggerAddAction(gg_trg_Cooler_Fourth_Form_Level_Up, Trig_Cooler_Fourth_Form_Level_Up_Actions)
-end
-
-function Trig_Cooler_Final_Form_Level_Up_Conditions()
-    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H043"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Final_Form_Level_Up_Func005Func002C()
-    if (not (udg_StatMultReal >= 2.50)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Final_Form_Level_Up_Func005C()
-    if (not (udg_StatMultReal > udg_StatMultInt)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Final_Form_Level_Up_Actions()
-    udg_StatMultUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    TriggerExecute(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult)
-    udg_StatMultReal = (udg_StatMultReal + 1.00)
-    if (Trig_Cooler_Final_Form_Level_Up_Func005C()) then
-        if (Trig_Cooler_Final_Form_Level_Up_Func005Func002C()) then
-            udg_TransformationSFXString = "AuraPink2.mdx"
-        else
-        end
-        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
-    else
-    end
-end
-
-function InitTrig_Cooler_Final_Form_Level_Up()
-    gg_trg_Cooler_Final_Form_Level_Up = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Cooler_Final_Form_Level_Up, EVENT_PLAYER_HERO_LEVEL)
-    TriggerAddCondition(gg_trg_Cooler_Final_Form_Level_Up, Condition(Trig_Cooler_Final_Form_Level_Up_Conditions))
-    TriggerAddAction(gg_trg_Cooler_Final_Form_Level_Up, Trig_Cooler_Final_Form_Level_Up_Actions)
+function InitTrig_Cooler_Give_Transform()
+    gg_trg_Cooler_Give_Transform = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Cooler_Give_Transform, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Cooler_Give_Transform, Condition(Trig_Cooler_Give_Transform_Conditions))
+    TriggerAddAction(gg_trg_Cooler_Give_Transform, Trig_Cooler_Give_Transform_Actions)
 end
 
 function Trig_Cooler_Transform_Into_Final_Form_Conditions()
@@ -5959,27 +5980,18 @@ function Trig_Cooler_Transform_Into_Final_Form_Conditions()
     return true
 end
 
-function Trig_Cooler_Transform_Into_Final_Form_Func009C()
-    if (not (udg_StatMultReal >= 2.50)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Cooler_Transform_Into_Final_Form_Actions()
-        udg_ID = FourCC('H043')
-    BlzSetUnitSkin(GetTriggerUnit(), udg_ID)
     SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), GetTriggerPlayer())
     udg_StatMultUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult)
-    udg_StatMultReal = (udg_StatMultReal + 1.00)
-    if (Trig_Cooler_Transform_Into_Final_Form_Func009C()) then
-        udg_TransformationSFXString = "AuraPink2.mdx"
-    else
-    end
-    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    udg_StatMultReal = udg_StatMultInt
+    udg_TransformationStatMult = udg_StatMultReal
+    GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
+        udg_TransformationID = FourCC('H043')
+    udg_TransformationPlayer = GetTriggerPlayer()
+    TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
 end
 
 function InitTrig_Cooler_Transform_Into_Final_Form()
@@ -5987,35 +5999,6 @@ function InitTrig_Cooler_Transform_Into_Final_Form()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cooler_Transform_Into_Final_Form, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Cooler_Transform_Into_Final_Form, Condition(Trig_Cooler_Transform_Into_Final_Form_Conditions))
     TriggerAddAction(gg_trg_Cooler_Transform_Into_Final_Form, Trig_Cooler_Transform_Into_Final_Form_Actions)
-end
-
-function Trig_Cooler_Calculate_Final_Form_Stat_Mult_Func004Func001C()
-    if (not (udg_TempInt2 >= 30)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cooler_Calculate_Final_Form_Stat_Mult_Actions()
-    udg_TempInt = 1
-    udg_TempInt2 = GetHeroLevel(udg_StatMultUnit)
-    udg_TempInt2 = (udg_TempInt - 20)
-    udg_TempInt3 = 1
-    while (true) do
-        if (udg_TempInt3 > 5) then break end
-        if (Trig_Cooler_Calculate_Final_Form_Stat_Mult_Func004Func001C()) then
-            udg_TempInt2 = (udg_TempInt2 - 30)
-            udg_TempInt = (udg_TempInt + 1)
-        else
-        end
-        udg_TempInt3 = udg_TempInt3 + 1
-    end
-    udg_StatMultReal = (0.00 + (0.30 * I2R(udg_TempInt)))
-end
-
-function InitTrig_Cooler_Calculate_Final_Form_Stat_Mult()
-    gg_trg_Cooler_Calculate_Final_Form_Stat_Mult = CreateTrigger()
-    TriggerAddAction(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult, Trig_Cooler_Calculate_Final_Form_Stat_Mult_Actions)
 end
 
 function Trig_Metal_Cooler_Stat_Mult_On_Kill_Conditions()
@@ -6073,7 +6056,7 @@ function Trig_Metal_Cooler_Stat_Mult_On_Death_Func003C()
 end
 
 function Trig_Metal_Cooler_Stat_Mult_On_Death_Actions()
-    udg_StatMultUnit = GetKillingUnitBJ()
+    udg_StatMultUnit = GetDyingUnit()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     if (Trig_Metal_Cooler_Stat_Mult_On_Death_Func003C()) then
         udg_StatMultReal = RMaxBJ(2.50, (0.02 + udg_StatMultInt))
@@ -6097,6 +6080,56 @@ function Trig_Transformations_Cooler_Base_Func009C()
 end
 
 function Trig_Transformations_Cooler_Base_Func010C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func011C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 140)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func015C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
@@ -6106,7 +6139,7 @@ function Trig_Transformations_Cooler_Base_Func010C()
     return true
 end
 
-function Trig_Transformations_Cooler_Base_Func012Func003C()
+function Trig_Transformations_Cooler_Base_Func017Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -6116,8 +6149,8 @@ function Trig_Transformations_Cooler_Base_Func012Func003C()
     return false
 end
 
-function Trig_Transformations_Cooler_Base_Func012C()
-    if (not Trig_Transformations_Cooler_Base_Func012Func003C()) then
+function Trig_Transformations_Cooler_Base_Func017C()
+    if (not Trig_Transformations_Cooler_Base_Func017Func003C()) then
         return false
     end
     return true
@@ -6133,19 +6166,52 @@ function Trig_Transformations_Cooler_Base_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cooler_Base_Func009C()) then
-        TriggerExecute(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult)
-        udg_StatMultReal = (1 + (udg_StatMultReal * 0.80))
+        udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0KZ")
     else
     end
     if (Trig_Transformations_Cooler_Base_Func010C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationAbility = FourCC("A0KZ")
+        udg_TransformationSFXString = "White.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func011C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0KZ")
+        udg_TransformationSFXString = "White.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func012C()) then
+        udg_StatMultReal = 1.75
+        udg_TransformationAbility = FourCC("A0KZ")
+        udg_TransformationSFXString = "White.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func013C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0KZ")
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func014C()) then
+        udg_StatMultReal = 2.20
+        udg_TransformationAbility = FourCC("A0KZ")
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func015C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "AuraPink2.mdx"
+        UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func012C()) then
+    if (Trig_Transformations_Cooler_Base_Func017C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
@@ -6161,6 +6227,13 @@ function InitTrig_Transformations_Cooler_Base()
 end
 
 function Trig_Transformations_Cooler_Final_Form_Func009C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func010C()
     if (not (udg_TransformationString == "metal")) then
         return false
     end
@@ -6173,31 +6246,67 @@ function Trig_Transformations_Cooler_Final_Form_Func009C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func010Func005C()
-    if (not (udg_StatMultReal >= 2.50)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Cooler_Final_Form_Func010C()
-    if (not (udg_TransformationString == "r")) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_Cooler_Final_Form_Func011C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 140)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func016C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func013Func003C()
+function Trig_Transformations_Cooler_Final_Form_Func018Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -6207,8 +6316,8 @@ function Trig_Transformations_Cooler_Final_Form_Func013Func003C()
     return false
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func013C()
-    if (not Trig_Transformations_Cooler_Final_Form_Func013Func003C()) then
+function Trig_Transformations_Cooler_Final_Form_Func018C()
+    if (not Trig_Transformations_Cooler_Final_Form_Func018Func003C()) then
         return false
     end
     return true
@@ -6224,6 +6333,10 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cooler_Final_Form_Func009C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func010C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('H01A')
         udg_TransformationStatMult = 2.00
@@ -6231,24 +6344,42 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         udg_StatMultReal = 0.00
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func010C()) then
-        TriggerExecute(gg_trg_Cooler_Calculate_Final_Form_Stat_Mult)
-        udg_StatMultReal = (udg_StatMultReal + 1.00)
-        udg_TransformationAbility = FourCC("AUan")
-        if (Trig_Transformations_Cooler_Final_Form_Func010Func005C()) then
-            udg_TransformationSFXString = "AuraPink2.mdx"
-        else
-        end
+    if (Trig_Transformations_Cooler_Final_Form_Func011C()) then
+        udg_StatMultReal = 1.30
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func011C()) then
-        udg_StatMultReal = 2.70
-        udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraSS.mdx"
-        udg_TransformationSFXString2 = "AuraPink2.mdx"
+    if (Trig_Transformations_Cooler_Final_Form_Func012C()) then
+        udg_StatMultReal = 1.60
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func013C()) then
+        udg_StatMultReal = 1.90
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func014C()) then
+        udg_StatMultReal = 2.20
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func015C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationSFXString = "AuraPink2.mdx"
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func016C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "AuraPink2.mdx"
+        UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func018C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
@@ -6322,8 +6453,13 @@ function Trig_Transformations_Metal_Cooler_Actions()
     if (Trig_Transformations_Metal_Cooler_Func010C()) then
         udg_StatMultReal = 2.70
         udg_TransformationAbility = FourCC("A07S")
+        udg_TransformationAbility2 = FourCC("A0L2")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "AuraPink2.mdx"
+        UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
     else
     end
     if (Trig_Transformations_Metal_Cooler_Func012C()) then
@@ -6380,7 +6516,7 @@ function InitTrig_Transformations_Apply_SFX()
     TriggerAddAction(gg_trg_Transformations_Apply_SFX, Trig_Transformations_Apply_SFX_Actions)
 end
 
-function Trig_Replace_Transformation_Group_with_New_Hero_Func006A()
+function Trig_Replace_Transformation_Group_with_New_Hero_Func007A()
         RemoveLocation(udg_TempLoc)
     udg_TempInt = (udg_TempInt + GetHeroLevel(GetEnumUnit()))
     udg_StatMultUnit = GetEnumUnit()
@@ -6388,10 +6524,11 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Func006A()
     udg_TempReal = (udg_TempReal + udg_StatMultStr)
     udg_TempReal2 = (udg_TempReal2 + udg_StatMultAgi)
     udg_TempReal3 = (udg_TempReal3 + udg_StatMultInt)
+    udg_TempReal4 = (udg_TempReal4 + GetUnitLifePercent(udg_StatMultUnit))
         udg_TempLoc = Location(GetUnitX(udg_StatMultUnit), GetUnitY(udg_StatMultUnit))
 end
 
-function Trig_Replace_Transformation_Group_with_New_Hero_Func019A()
+function Trig_Replace_Transformation_Group_with_New_Hero_Func024A()
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > 6) then break end
@@ -6401,7 +6538,9 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Func019A()
     end
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Remove_Unit_From_StatMult)
-    RemoveUnit(udg_StatMultUnit)
+    udg_HeroRespawnUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Remove_Unit_From_HeroRespawn)
+    RemoveUnit(GetEnumUnit())
 end
 
 function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
@@ -6409,12 +6548,13 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
     udg_TempReal = 0.00
     udg_TempReal2 = 0.00
     udg_TempReal3 = 0.00
+    udg_TempReal4 = 0.00
     udg_TempLoc = GetRectCenter(GetPlayableMapRect())
-    ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func006A)
-        udg_TempUnit = CreateUnit(udg_TransformationPlayer, udg_TransformationID, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc), 0)
+    ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func007A)
+        udg_TempUnit = CreateUnit(udg_TransformationPlayer, udg_TransformationID, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc), 90)
         RemoveLocation(udg_TempLoc)
-    udg_PlayerLevel[GetConvertedPlayerId(udg_TransformationPlayer)] = udg_TempInt
-    SetHeroLevelBJ(udg_TempUnit, udg_TempInt, false)
+    udg_PlayerLevel[GetConvertedPlayerId(udg_TransformationPlayer)] = (udg_TempInt - 1)
+        SetHeroLevel(udg_TempUnit, udg_TempInt, false)
     ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
     ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
     ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
@@ -6423,13 +6563,16 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
     TriggerExecute(gg_trg_Add_Unit_To_StatMult)
     udg_StatMultReal = udg_TransformationStatMult
     TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func019A)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_HeroRespawnUnit = udg_TempUnit
+    TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
+    SetUnitLifePercentBJ(udg_TempUnit, (udg_TempReal4 / I2R(CountUnitsInGroup(udg_TransformationUnitGroup))))
+    ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func024A)
     GroupClear(udg_TransformationUnitGroup)
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
     PanCameraToTimedLocForPlayer(udg_TransformationPlayer, udg_TempLoc, 0)
         RemoveLocation(udg_TempLoc)
-    udg_HeroRespawnUnit = udg_TempUnit
-    TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
+    SelectUnitAddForPlayer(udg_TempUnit, udg_TransformationPlayer)
 end
 
 function InitTrig_Replace_Transformation_Group_with_New_Hero()
@@ -6811,6 +6954,7 @@ function InitCustomTriggers()
     InitTrig_Pan_E_Effect()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
+    InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
@@ -6898,6 +7042,7 @@ function InitCustomTriggers()
     InitTrig_Turles_Saga_VI()
     InitTrig_Test_StatMult_Init()
     InitTrig_Test_Stats_Add_Command()
+    InitTrig_Test_Stats_Get_Stats_Command()
     InitTrig_Add_Unit_To_StatMult()
     InitTrig_Remove_Unit_From_StatMult()
     InitTrig_Add_To_Base_Stats()
@@ -6910,6 +7055,7 @@ function InitCustomTriggers()
     InitTrig_show_me_the_ss()
     InitTrig_show_me_the_ss_Copy()
     InitTrig_Test_LVL_command()
+    InitTrig_Test_LVL_command_Copy()
     InitTrig_Transformations_Init_Commands()
     InitTrig_Transformations_Entry_Point()
     InitTrig_Transformations_Goku()
@@ -6921,10 +7067,8 @@ function InitCustomTriggers()
     InitTrig_Transformations_Future_Trunks()
     InitTrig_Transformations_Broly()
     InitTrig_Set_Transformation_Stat_Mult()
-    InitTrig_Cooler_Fourth_Form_Level_Up()
-    InitTrig_Cooler_Final_Form_Level_Up()
+    InitTrig_Cooler_Give_Transform()
     InitTrig_Cooler_Transform_Into_Final_Form()
-    InitTrig_Cooler_Calculate_Final_Form_Stat_Mult()
     InitTrig_Metal_Cooler_Stat_Mult_On_Kill()
     InitTrig_Metal_Cooler_Stat_Mult_On_Death()
     InitTrig_Transformations_Cooler_Base()

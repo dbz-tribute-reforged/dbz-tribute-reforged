@@ -76,7 +76,7 @@ export const FlyingForwardDashComponents = [
     name: "flying dash big bang kamehameha",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 30,
+    endTick: 20,
     distance: 25,
   },
 ];

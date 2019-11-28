@@ -235,22 +235,22 @@ export function CustomPlayerTest() {
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_Q, 0, true);
-  addAbilityAction(abil2, "Energy Punch");
+  addAbilityAction(abil2, "Death Beam Frieza");
 
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_W, 0, true);
-  addAbilityAction(abil3, "Power Level Rising");
+  addAbilityAction(abil3, "Supernova Cooler");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_E, 0, true);
-  addAbilityAction(abil4, "Planet Crusher");
+  addAbilityAction(abil4, "Nova Chariot");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil5, OSKEY_R, 0, true);
-  addAbilityAction(abil5, "Gigantic Roar");
+  addAbilityAction(abil5, "Geti Star Repair");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
@@ -265,12 +265,12 @@ export function CustomPlayerTest() {
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil8, OSKEY_C, 0, true);
-  addAbilityAction(abil8, "Spirit Bomb");
+  addAbilityAction(abil8, "Masenko");
 
   const abil9 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil9, OSKEY_V, 0, true);
-  addAbilityAction(abil9, "Dragon Fist");
+  addAbilityAction(abil9, "Ultra Instinct");
   */
 
 

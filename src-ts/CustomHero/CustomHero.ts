@@ -28,22 +28,31 @@ export class CustomHero {
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Guard");
 
-    
     /*
-    this.addAbilityFromAll("Galick Gun");
-    this.addAbilityFromAll("Big Bang Attack");
-    this.addAbilityFromAll("Final Flash");
+    this.addAbilityFromAll("Death Beam Frieza");
+    this.addAbilityFromAll("Supernova Cooler");
+    this.addAbilityFromAll("Nova Chariot");
+    this.addAbilityFromAll("Geti Star Repair");
+
+
+    this.addAbilityFromAll("Gigantic Omegastorm");
+    this.addAbilityFromAll("Big Bang Kamehameha");
     this.addAbilityFromAll("Masenko");
-    this.addAbilityFromAll("Twin Dragon Shot");
+    this.addAbilityFromAll("Ultra Instinct");
+
+    
     this.addAbilityFromAll("Kamehameha");
     this.addAbilityFromAll("Spirit Bomb");
     this.addAbilityFromAll("Dragon Fist");
-    this.addAbilityFromAll("Energy Punch");
-    this.addAbilityFromAll("Power Level Rising");
+
+    this.addAbilityFromAll("Galick Gun");
+    this.addAbilityFromAll("Big Bang Attack");
+    this.addAbilityFromAll("Final Flash");
+
+    this.addAbilityFromAll("Twin Dragon Shot");
+
     this.addAbilityFromAll("Planet Crusher");
     this.addAbilityFromAll("Gigantic Roar");
-    this.addAbilityFromAll("Gigantic Omegastorm");
-    this.addAbilityFromAll("Big Bang Kamehameha");
     */
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
