@@ -6057,6 +6057,9 @@ function Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001Func001C()
     if (not (IsUnitAlly(GetEnumUnit(), udg_TempPlayer) == true)) then
         return false
     end
+    if (not (udg_TempPlayer ~= GetOwningPlayer(GetEnumUnit()))) then
+        return false
+    end
     return true
 end
 
@@ -6110,6 +6113,9 @@ function Trig_Metal_Cooler_Stat_Mult_On_Death_Func008Func001Func001C()
         return false
     end
     if (not (IsUnitAlly(GetEnumUnit(), udg_TempPlayer) == true)) then
+        return false
+    end
+    if (not (udg_TempPlayer ~= GetOwningPlayer(GetEnumUnit()))) then
         return false
     end
     return true

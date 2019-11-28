@@ -45,7 +45,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
       UnitDamageTarget(
-        source, 
+        input.caster.unit, 
         target, 
         this.calculateDamage(input),
         true,
