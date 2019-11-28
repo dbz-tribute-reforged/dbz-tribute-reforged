@@ -2,6 +2,7 @@ const fs = require("fs");
 const War3TSTLHelper = require("war3tstlhelper");
 const exec = require("child_process").execFile;
 const cwd = process.cwd();
+const lineReader = require('line-reader');
 
 // Parse configuration
 let config = {};
@@ -66,6 +67,22 @@ switch (operation) {
     break;
 
   case "package": {
+    // get the current map desc name
+    let currLine = 1;
+    let isLineSixString3 = false;
+    lineReader.eachLine(`${cwd}/target/Tribute_Reforged.w3x/war3map.wts`, function(line) {
+      if (currLine === 6 && line === 'STRING 3')
+        isLineSixString3 = true;
+
+      if (currLine === 8 && isLineSixString3)
+        fs.writeFileSync(`${cwd}/build/version.txt`, line);
+
+      if (currLine > 8) 
+        return;
+
+      currLine++;
+    });
+
     exec("./bin/mpqtool", ["new", `${cwd}\\target\\${config.mapFolder}`, `build/${config.mapFolder}`], { maxBuffer: 1024/*bytes*/ * 2048 /*KB = 2MB total*/ }, function(err, data) {
       if (err != null) {
         console.log(err);
