@@ -1,6 +1,7 @@
 const fs = require('fs');
 const lineByLine = require('n-readlines');
 const cwd = process.cwd();
+const { exec } = require('child_process');
 
 // get the current map desc name
 let currLineIndex = 1;
@@ -25,6 +26,15 @@ while (lineBuf = liner.next()) {
   currLineIndex++;
 }
 
-console.log('setting RELEASE_TITLE env variable');
-process.env.RELEASE_TITLE = mapDescription;
-console.log(process.env.RELEASE_TITLE);
+// set environment variable
+exec(`export RELEASE_TITLE="${mapDescription}"`, (err, stdout, stderr) => {
+  if (err) {
+    //some err occurred
+    console.error(err)
+  } else {
+    // the *entire* stdout and stderr (buffered)
+    console.log(`stdout: ${stdout}`);
+    console.log(`stderr: ${stderr}`);
+  }
+});
+//console.log(process.env.RELEASE_TITLE);
