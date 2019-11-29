@@ -48,7 +48,7 @@ export class CustomAbility implements Serializable<CustomAbility> {
 
   activate(input: CustomAbilityInput): void {
     this.takeCosts(input);
-
+    
     // instant activate, bypasses 0.03s delay for ability to start
     if (this.currentTick <= this.duration) {
       for (const component of this.components) {
