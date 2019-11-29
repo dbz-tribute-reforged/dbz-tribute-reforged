@@ -84,4 +84,28 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
   },
+  // energy blast volley minor knockback
+  {
+    name: "knockback 1tick 5speed 0angle 250aoe",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 5, 
+      angle: 0, 
+      aoe: 250,
+    },
+  },
+  // cooler deafening wave
+  {
+    name: "knockback 1tick 25speed 0angle 500aoe",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 500,
+    },
+  },
 ];

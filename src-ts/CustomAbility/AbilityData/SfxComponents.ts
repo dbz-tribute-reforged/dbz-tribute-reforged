@@ -361,8 +361,8 @@ export const SfxComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
-        startHeight: 75,
-        endHeight: 75,
+        startHeight: 50,
+        endHeight: 50,
         extraDirectionalYaw: 0,
         color: {
           x: 255,
@@ -526,6 +526,34 @@ export const SfxComponents = [
       {
         model: "Abilities\\Spells\\Undead\\CarrionSwarm\\CarrionSwarmMissile.mdl",
         repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 155,
+        },
+        persistent: false,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam energy blast volley", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxList: [
+
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\CarrionSwarm\\CarrionSwarmMissile.mdl",
+        repeatInterval: 10,
         group: 0,
         scale: 1.0,
         startHeight: 0,
@@ -1236,6 +1264,49 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam deafening wave", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxList: [
+      {
+        model: "WindCircleFaster.mdl",
+        repeatInterval: 7,
+        group: 0,
+        scale: 1.2,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "DustWindFasterExact.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 0.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "overhead",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx beam supernova golden", 
     repeatInterval: 1,
     startTick: 0,
@@ -1650,22 +1721,22 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [
-      {
-        model: "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl",
-        repeatInterval: 0,
-        group: 0,
-        scale: 1.5,
-        startHeight: 0,
-        endHeight: 0,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 155,
-          y: 205,
-          z: 255,
-        },
-        persistent: true,
-        attachmentPoint: "origin",
-      },
+      // {
+      //   model: "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl",
+      //   repeatInterval: 0,
+      //   group: 0,
+      //   scale: 1.5,
+      //   startHeight: 0,
+      //   endHeight: 0,
+      //   extraDirectionalYaw: 0,
+      //   color: {
+      //     x: 155,
+      //     y: 205,
+      //     z: 255,
+      //   },
+      //   persistent: true,
+      //   attachmentPoint: "origin",
+      // },
     ],
   },
   // --------------------------------------------

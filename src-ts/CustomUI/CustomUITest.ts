@@ -5,7 +5,7 @@ import { TextFrameData } from './TextFrameData';
 import { Backdrop } from './Backdrop';
 import { Button } from './Button';
 import { FrameTrigger } from './FrameTrigger';
-import { Color, randomColor } from './Colorizer';
+import { Colorizer } from 'Common/Colorizer';
 import { SliderData } from './SliderData';
 import { Timer } from 'w3ts';
 import { ButtonMenu } from './ButtonMenu';
@@ -83,7 +83,7 @@ export function CustomUiTest() {
 		0, 
 		new Vector2D(0.3, 0.45), 
 		new FramePosition(FRAMEPOINT_TOPLEFT, grandpa, FRAMEPOINT_TOPLEFT, 0, -0.035), 
-		Color.White + "Tribute Reforged Menu"
+		Colorizer.Color.White + "Tribute Reforged Menu"
 	).setRenderVisible(false);
 
 	BJDebugMsg("Setting up Main Menu Button");
@@ -93,7 +93,7 @@ export function CustomUiTest() {
 		0, 
 		smallButtonSize,
 		new FramePosition(FRAMEPOINT_TOP, questButtonHandle, FRAMEPOINT_BOTTOM, 0, 0),
-		Color.White + "TR Menu"
+		Colorizer.Color.White + "TR Menu"
 	);
 
 	const mt = new FrameTrigger();
@@ -113,7 +113,7 @@ export function CustomUiTest() {
 			0, 
 			smallButtonSize, 
 			new FramePosition(FRAMEPOINT_TOPLEFT, mainMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
-			randomColor() + "Button " + i
+			Colorizer.randomColor() + "Button " + i
 		);
 		
 		const subMenu = new ButtonMenu(
@@ -142,7 +142,7 @@ export function CustomUiTest() {
 			0, 
 			smallButtonSize, 
 			new FramePosition(FRAMEPOINT_TOPLEFT, subMenu.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0),
-			randomColor() + "Back " + i
+			Colorizer.randomColor() + "Back " + i
 		);
 		subMenu.addButton(subMenuBackButton);
 		subMenu.autoAlignButtonPositions();
@@ -179,7 +179,7 @@ export function CustomUiTest() {
 		defaultSliderSize, 
 		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("subMenu1", 0), FRAMEPOINT_TOPLEFT, 0.03, -0.1),
 		new SliderData(1400, 200, 4000, 50),
-		"Distance: " + Color.White + "1400"
+		"Distance: " + Colorizer.Color.White + "1400"
 	)
 	
 	const camAngleSlider = new BasicTitledSlider(
@@ -190,7 +190,7 @@ export function CustomUiTest() {
 		defaultSliderSize, 
 		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camDistanceSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
 		new SliderData(304, 270, 360, 0.5),
-		"Angle: " + Color.White + "34.0"
+		"Angle: " + Colorizer.Color.White + "34.0"
 	)
 	
 	const camRotationSlider = new BasicTitledSlider(
@@ -201,7 +201,7 @@ export function CustomUiTest() {
 		defaultSliderSize, 
 		new FramePosition(FRAMEPOINT_TOPLEFT, BlzGetFrameByName("camAngleSlider", 0), FRAMEPOINT_BOTTOMLEFT, 0.0, -0.03),
 		new SliderData(90, 90, 450, 5),
-		"Rotation: " + Color.White + "90.0"
+		"Rotation: " + Colorizer.Color.White + "90.0"
 	)
 
 	const distanceTrigger = new FrameTrigger();
@@ -215,7 +215,7 @@ export function CustomUiTest() {
 			0
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camDistanceSlider.title.frameHandle, "Distance: " + Color.White + value);
+			BlzFrameSetText(camDistanceSlider.title.frameHandle, "Distance: " + Colorizer.Color.White + value);
 			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
@@ -231,7 +231,7 @@ export function CustomUiTest() {
 			0
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camAngleSlider.title.frameHandle, "Angle: " + Color.White + (value - camAngleSlider.slider.minValue));
+			BlzFrameSetText(camAngleSlider.title.frameHandle, "Angle: " + Colorizer.Color.White + (value - camAngleSlider.slider.minValue));
 			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});
@@ -247,7 +247,7 @@ export function CustomUiTest() {
 			0
 		);
 		if (GetTriggerPlayer() == GetLocalPlayer()) {
-			BlzFrameSetText(camRotationSlider.title.frameHandle, "Rotation: " + Color.White + (value - camRotationSlider.slider.minValue));
+			BlzFrameSetText(camRotationSlider.title.frameHandle, "Rotation: " + Colorizer.Color.White + (value - camRotationSlider.slider.minValue));
 			FrameHelper.loseFocusFromTriggeringFrame();
 		}
 	});

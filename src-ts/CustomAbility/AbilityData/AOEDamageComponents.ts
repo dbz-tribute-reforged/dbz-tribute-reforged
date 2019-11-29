@@ -178,6 +178,21 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // energy blast volley
+  {
+    name: "damage energy blast volley dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 325,
+    damageData: {
+      multiplier: 0.04,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // twin dragon shot
   {
     name: "damage twin dragon shot dps",
@@ -333,7 +348,7 @@ export const AOEDamageComponents = [
     endTick: -1,
     aoe: 325,
     damageData: {
-      multiplier: 0.01,
+      multiplier: 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -348,7 +363,7 @@ export const AOEDamageComponents = [
     endTick: -1,
     aoe: 300,
     damageData: {
-      multiplier: 0.15,
+      multiplier: 0.2,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,

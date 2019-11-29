@@ -32878,6 +32878,18 @@ STRING 5404
 Transform
 }
 
+STRING 5405
+// Units: H004 (Oozaru), EditorSuffix (Name - Editor Suffix)
+{
+(vegeta)
+}
+
+STRING 5406
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
 STRING 5407
 // Abilities: A0CI (Revive - Default Respawn), Hotkey (Hotkey - Normal)
 {
@@ -60555,5 +60567,155 @@ STRING 10005
 // Buffs/Effects: B01K (), EditorSuffix (Editor Suffix)
 {
 (Cooler)
+}
+
+STRING 10006
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10007
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10008
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10009
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10010
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10011
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10012
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 2|r]
+}
+
+STRING 10013
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 3|r]
+}
+
+STRING 10014
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 4|r]
+}
+
+STRING 10015
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 5|r]
+}
+
+STRING 10016
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 6|r]
+}
+
+STRING 10017
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 1|r]
+}
+
+STRING 10018
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 7|r]
+}
+
+STRING 10019
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 10020
+// Abilities: A0L3 (Energy Blast Volley), Name (Name)
+{
+Energy Blast Volley
+}
+
+STRING 10021
+// Abilities: A0L3 (Energy Blast Volley), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Energy Blast Volley - [|cffffcc00Level %d|r]
+}
+
+STRING 10022
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 10023
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 9|r]
+}
+
+STRING 10024
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 8|r]
+}
+
+STRING 10025
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 10|r]
+}
+
+STRING 10026
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10027
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10028
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10029
+// Abilities: A0L3 (Energy Blast Volley), Researchubertip (Tooltip - Learn - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10030
+// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 

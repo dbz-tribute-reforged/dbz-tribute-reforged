@@ -127,8 +127,8 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
 
     maxHp = Math.max(
       50, 
-      50 * input.level *
-      Math.floor(this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true))
+      50 * 
+      Math.floor(input.level * this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true))
     );
 
     BlzSetUnitMaxHP(this.beamUnit, maxHp);
@@ -150,14 +150,13 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
     }
-    if (this.beamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == true) {
-      ability.currentTick = Math.max(ability.currentTick, ability.duration - 1);
-    }
-    this.checkForBeamClash(input);
-    this.moveBeamUnit(ability, input);
-    for (const component of this.components) {
-      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-        component.performTickAction(ability, input, this.beamUnit);
+    if (this.hasBeamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == false) {
+      this.checkForBeamClash(input);
+      this.moveBeamUnit(ability, input);
+      for (const component of this.components) {
+        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          component.performTickAction(ability, input, this.beamUnit);
+        }
       }
     }
     if (ability.isFinishedUsing(this)) {
@@ -169,7 +168,7 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
   clone(): AbilityComponent {
     return new BeamComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.beamHpMult, this.beamHpMult, 
+      this.beamHpMult, this.beamHpAttribute, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
       this.isFixedAngle, this.canClashWithHero, this.beamUnitType, 

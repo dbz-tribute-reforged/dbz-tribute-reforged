@@ -180,8 +180,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNGalicGun.blp",
-      disabled: "BTNGalicGun.blp",
+      enabled: "BTNGalickGun.blp",
+      disabled: "BTNGalickGun.blp",
     },
     tooltip: {
       title: "galick gun",
@@ -246,12 +246,38 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Energy Blast Volley",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVegetaEnergyBlastVolley.blp",
+      disabled: "BTNVegetaEnergyBlastVolley.blp",
+    },
+    tooltip: {
+      title: "Energy Blast Volley",
+      body: 
+        "Energy Blast Volley"
+    },
+    components: [
+      { name: "multi energy blast volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Twin Dragon Shot",
     currentCd: 0,
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -268,8 +294,7 @@ export const AbilitiesList = [
     },
     components: [
       // TODO: probs make a multi-beam component for this ability
-      { name: "beam twin dragon shot" },
-      { name: "beam twin dragon shot" },
+      { name: "multi twin dragon shot" },
     ],
   },
   // -------------------------------------------
@@ -531,7 +556,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 45,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -547,7 +572,7 @@ export const AbilitiesList = [
         "Deafening Wave"
     },
     components: [
-      { name: "knockback 1tick 25speed 0angle 400aoe" },
+      { name: "beam deafening wave" },
     ],
   },
   // -------------------------------------------
@@ -686,6 +711,32 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam big bang kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Death Beam Barrage",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBeam.blp",
+      disabled: "BTNFriezaDeathBeam.blp",
+    },
+    tooltip: {
+      title: "Death Beam Barrage",
+      body: 
+        "Death Beam Barrage"
+    },
+    components: [
+      { name: "multi death beam barrage" },
     ],
   },
   // -------------------------------------------

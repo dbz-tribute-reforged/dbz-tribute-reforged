@@ -4,6 +4,8 @@ import { AbilityComponent, ComponentConstants } from "./AbilityComponent/Ability
 import { CustomAbilityInput } from "./CustomAbilityInput";
 import { AbilitySfxHelper } from "./AbilitySfxHelper";
 import { UnitHelper } from "Common/UnitHelper";
+import { TextTagHelper } from "Common/TextTagHelper";
+import { Colorizer } from "Common/Colorizer";
 
 export enum CostType {
   HP = "Life",
@@ -48,7 +50,14 @@ export class CustomAbility implements Serializable<CustomAbility> {
 
   activate(input: CustomAbilityInput): void {
     this.takeCosts(input);
-    
+
+    // show ability name on activation
+    TextTagHelper.showTempText(
+      Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + this.name + "|r", 
+      GetUnitX(input.caster.unit), 
+      GetUnitY(input.caster.unit),
+    );
+
     // instant activate, bypasses 0.03s delay for ability to start
     if (this.currentTick <= this.duration) {
       for (const component of this.components) {

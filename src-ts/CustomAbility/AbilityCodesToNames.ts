@@ -6,10 +6,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A00U'), "Dragon Fist"],
     [FourCC('A0KR'), "Ultra Instinct"],
 
-    // vege
+    // vegeta
     [FourCC('A03N'), "Galick Gun"],
     [FourCC('A0GO'), "Big Bang Attack"],
     [FourCC('A01B'), "Final Flash"],
+    [FourCC('A0L3'), "Energy Blast Volley"],
+    [FourCC('A035'), "Moonlight"],
 
     // gohan
     [FourCC('A0IS'), "Twin Dragon Shot"],
