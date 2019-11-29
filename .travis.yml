@@ -13,6 +13,7 @@ script: npm run build:w3x
 before_deploy:
   # set release name
   - node build/set-release-title.js
+  - build/set-release-title.sh
   - echo ${RELEASE_TITLE}
   # Set up git user name and tag this commit
   - git config --local user.name "ttay24"
