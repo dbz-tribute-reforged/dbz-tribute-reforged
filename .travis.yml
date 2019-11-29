@@ -13,6 +13,7 @@ script: npm run build:w3x
 before_deploy:
   # set release name
   - node build/set-release-title.js
+  - echo ${RELEASE_TITLE}
   # Set up git user name and tag this commit
   - git config --local user.name "ttay24"
   - git config --local user.email "$GITHUB_TAG_EMAIL"
@@ -22,7 +23,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: '$GITHUB_API_KEY'
-  name: $RELEASE_TITLE
+  name: "$RELEASE_TITLE"
   file: 
     - "build/Tribute_Reforged.w3x"
   skip_cleanup: true
