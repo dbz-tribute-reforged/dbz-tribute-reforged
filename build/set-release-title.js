@@ -26,15 +26,6 @@ while (lineBuf = liner.next()) {
   currLineIndex++;
 }
 
-// set environment variable
-exec(`export RELEASE_TITLE="${mapDescription}"`, (err, stdout, stderr) => {
-  if (err) {
-    //some err occurred
-    console.error(err)
-  } else {
-    // the *entire* stdout and stderr (buffered)
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
-  }
-});
-//console.log(process.env.RELEASE_TITLE);
+mapDescription = mapDescription.replace(/(\r\n|\n|\r)/gm, "");
+fs.writeFileSync(`${cwd}/build/set-release-title.sh`, `export RELEASE_TITLE="${mapDescription}"`);
+console.log(mapDescription);
