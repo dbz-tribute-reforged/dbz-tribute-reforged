@@ -5,6 +5,7 @@ export const DodgeComponents = [
     repeatInterval: 2, 
     startTick: 0,
     endTick: -1,
+    groundOnly: true,
     knockbackData: {
       speed: 100, 
       angle: 270, 
@@ -15,14 +16,15 @@ export const DodgeComponents = [
   },
   // to here, and replace with unique name
   {
-    name: "dodge homing beam 120angle",
+    name: "dodge homing beam twin dragon shot",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    groundOnly: false,
     knockbackData: {
-      speed: 15, 
-      angle: 120, 
-      aoe: 800,
+      speed: 10, 
+      angle: 150, 
+      aoe: 1000,
     },
     maxEnemies: 1,
     addRandomAngle: false,
@@ -33,6 +35,7 @@ export const DodgeComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
+    groundOnly: true,
     knockbackData: {
       speed: 25, 
       angle: 30, 

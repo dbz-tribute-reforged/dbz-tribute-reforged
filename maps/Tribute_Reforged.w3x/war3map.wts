@@ -10,14 +10,14 @@ Player 1
 }
 
 STRING 2
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Units: H042 (Changling), Awakentip (Tooltip - Awaken)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cffffff00S|r] Choose Cooler
 }
 
 STRING 3
 {
-TR 0.17c
+TR 0.18a
 }
 
 STRING 4
@@ -97,27 +97,33 @@ Q
 }
 
 STRING 19
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Units: H042 (Changling), Ubertip (Tooltip - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+A fast and versatile teamfight hero. Can transform into Metal Cooler if he dies in his Fourth Form Transformation.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 20
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Units: H042 (Changling), Tip (Tooltip - Basic)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cffffff00S|r] Choose Cooler
 }
 
 STRING 21
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Units: H043 (Changling (Final Form)), EditorSuffix (Name - Editor Suffix)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+(Final Form)
 }
 
 STRING 22
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+You have received +0.05x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 23
@@ -133,25 +139,25 @@ W
 }
 
 STRING 25
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00D|r] Final Form Transformation
 }
 
 STRING 26
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Researchtip (Tooltip - Learn)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Learn Final Form Transformation
 }
 
 STRING 27
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 2|r]
 }
 
 STRING 28
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 3|r]
 }
@@ -169,7 +175,7 @@ W
 }
 
 STRING 31
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 4|r]
 }
@@ -181,7 +187,7 @@ Dummy
 }
 
 STRING 33
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 5|r]
 }
@@ -599,7 +605,7 @@ Kamikaze Ghost
 }
 
 STRING 95
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 6|r]
 }
@@ -3607,13 +3613,13 @@ Dummy Fire Ring
 }
 
 STRING 586
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 1|r]
 }
 
 STRING 587
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 7|r]
 }
@@ -3643,13 +3649,13 @@ R
 }
 
 STRING 592
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 9|r]
 }
 
 STRING 593
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 8|r]
 }
@@ -3715,7 +3721,7 @@ Ki Transmitter
 }
 
 STRING 604
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Planet Crusher - [|cffffcc00Level 10|r]
 }
@@ -3794,19 +3800,19 @@ Cooler
 }
 
 STRING 616
-// Units: H042 (Changling), Awakentip (Tooltip - Awaken)
+// Units: H042 (Changling), Revivetip (Tooltip - Revive)
 {
 Rebuild Metal Koola
 }
 
 STRING 617
-// Units: H042 (Changling), Ubertip (Tooltip - Extended)
+// Units: H043 (Changling (Final Form)), Ubertip (Tooltip - Extended)
 {
 Koola fused with the Geti Star to become Metal Koola.
 }
 
 STRING 618
-// Units: H042 (Changling), Revivetip (Tooltip - Revive)
+// Units: H043 (Changling (Final Form)), Awakentip (Tooltip - Awaken)
 {
 Rebuild Metal Koola
 }
@@ -3824,19 +3830,19 @@ Cooler
 }
 
 STRING 621
-// Units: H043 (Changling (Final Form)), Awakentip (Tooltip - Awaken)
+// Units: H043 (Changling (Final Form)), Revivetip (Tooltip - Revive)
 {
 Rebuild Metal Koola
 }
 
 STRING 622
-// Units: H043 (Changling (Final Form)), Ubertip (Tooltip - Extended)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-Koola fused with the Geti Star to become Metal Koola.
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.
 }
 
 STRING 623
-// Units: H043 (Changling (Final Form)), Revivetip (Tooltip - Revive)
+// Units: H049 (Half Cyborg / Half Changling), Awakentip (Tooltip - Awaken)
 {
 Rebuild Metal Koola
 }
@@ -3908,7 +3914,7 @@ Metal Cooler*
 }
 
 STRING 635
-// Units: H049 (Half Cyborg / Half Changling), Awakentip (Tooltip - Awaken)
+// Units: H049 (Half Cyborg / Half Changling), Revivetip (Tooltip - Revive)
 {
 Rebuild Metal Koola
 }
@@ -3922,9 +3928,8 @@ Quickly constructs 10 Metal Cooler Copies. Because they are put together so quic
 }
 
 STRING 637
-// Units: H049 (Half Cyborg / Half Changling), Revivetip (Tooltip - Revive)
 {
-Rebuild Metal Koola
+You have received +0.1x multiplier from gathering combat data.
 }
 
 STRING 638
@@ -4031,15 +4036,15 @@ Popo's Magic Carpet
 }
 
 STRING 654
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Researchubertip (Tooltip - Learn - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.
 }
 
 STRING 655
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), EditorSuffix (Editor Suffix)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+(cooler current version)
 }
 
 STRING 656
@@ -5250,7 +5255,7 @@ STRING 842
 }
 
 STRING 843
-// Units: H05V (Namekian), Hotkey (Hotkey)
+// Units: H042 (Changling), Hotkey (Hotkey)
 {
 S
 }
@@ -5777,9 +5782,9 @@ Saibaman
 }
 
 STRING 928
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 2|r]
 }
 
 STRING 929
@@ -5965,9 +5970,9 @@ m
 }
 
 STRING 958
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A06D (Transform), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 3|r]
 }
 
 STRING 959
@@ -6286,9 +6291,9 @@ Flower Dummy
 }
 
 STRING 1010
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 4|r]
 }
 
 STRING 1011
@@ -6606,7 +6611,7 @@ STRING 1058
 }
 
 STRING 1059
-// Units: E010 (Desert Bandit), Hotkey (Hotkey)
+// Units: H05V (Namekian), Hotkey (Hotkey)
 {
 S
 }
@@ -7551,7 +7556,7 @@ STRING 1200
 }
 
 STRING 1201
-// Units: E01O (Desert Bandit), Hotkey (Hotkey)
+// Units: E010 (Desert Bandit), Hotkey (Hotkey)
 {
 S
 }
@@ -7655,9 +7660,9 @@ STRING 1215
 }
 
 STRING 1216
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 5|r]
 }
 
 STRING 1217
@@ -13237,31 +13242,31 @@ Saga Item
 }
 
 STRING 2136
-// Abilities: A063 (Self Repair), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-Using advanced technology, you are able to instantly repair damage done to your body.|n|cff00FFFFCooldown: 75s|r
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|r
 }
 
 STRING 2137
-// Abilities: A063 (Self Repair), Tip (Tooltip - Normal)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00R|r] Self Repair
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|r
 }
 
 STRING 2138
-// Abilities: A063 (Self Repair), Name (Name)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-Self Repair
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|r
 }
 
 STRING 2139
-// Abilities: A063 (Self Repair), Researchtip (Tooltip - Learn)
+// Abilities: A04G (Recharge), Researchtip (Tooltip - Learn)
 {
 Learn |cffffcc00R|recharge
 }
 
 STRING 2140
-// Abilities: A063 (Self Repair), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A04G (Recharge), Researchubertip (Tooltip - Learn - Extended)
 {
 Bulma blasts you with another ray of energy healing you. |n[|cffffcc00History|r] - |cff0066CCBulma uses this on Bebi to recharge him back to full power.|r
 }
@@ -13837,33 +13842,33 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 2236
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|r
 }
 
 STRING 2237
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A063 (Geti Star Repair), EditorSuffix (Editor Suffix)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+(cooler)
 }
 
 STRING 2238
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Units: E01O (Desert Bandit), Hotkey (Hotkey)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+S
 }
 
 STRING 2239
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+D
 }
 
 STRING 2240
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+F
 }
 
 STRING 2241
@@ -13879,7 +13884,7 @@ STRING 2242
 }
 
 STRING 2243
-// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13903,7 +13908,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 2247
-// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
+// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14035,7 +14040,7 @@ STRING 2268
 }
 
 STRING 2269
-// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14059,7 +14064,7 @@ Piccolo fires alot of energy blasts hitting any nearby creatures.
 }
 
 STRING 2273
-// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14245,7 +14250,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14599,7 +14604,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 2363
-// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14713,7 +14718,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14737,7 +14742,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15105,7 +15110,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15117,7 +15122,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15555,7 +15560,7 @@ A combat style taught by Master Roshi. |n|cffffcc00Evasion|r - <A027,DataD1,%>% 
 }
 
 STRING 2522
-// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -15759,7 +15764,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -16323,7 +16328,7 @@ Buu Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2650
-// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16653,7 +16658,7 @@ STRING 2704
 }
 
 STRING 2705
-// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16677,7 +16682,7 @@ Yakon is one of Babidi's majin minions. He is from a distant corner of the unive
 }
 
 STRING 2709
-// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
+// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16701,7 +16706,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16725,7 +16730,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16983,7 +16988,7 @@ STRING 2759
 }
 
 STRING 2760
-// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -17871,7 +17876,7 @@ STRING 2907
 }
 
 STRING 2908
-// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A07D (Create Android), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -17895,7 +17900,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 2912
-// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A07D (Create Android), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -18399,7 +18404,7 @@ Combat of Strength - [|cffffcc00Level 15|r]
 }
 
 STRING 2996
-// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -18555,19 +18560,19 @@ M
 }
 
 STRING 3022
-// Abilities: A06D (Transform), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A2 (Fuse Parts), Researchubertip (Tooltip - Learn - Extended)
 {
 Cooler transforms into his final, most powerful form.
 }
 
 STRING 3023
-// Abilities: A06D (Transform), Tip (Tooltip - Normal)
+// Abilities: A0BT (Transform), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Transform
 }
 
 STRING 3024
-// Abilities: A07D (Create Android), Researchhotkey (Hotkey - Learn)
+// Abilities: A03E (Summon Dabura), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -18579,19 +18584,19 @@ Transform
 }
 
 STRING 3026
-// Abilities: A06D (Transform), Researchtip (Tooltip - Learn)
+// Abilities: A0A2 (Fuse Parts), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Transform
 }
 
 STRING 3027
-// Abilities: A06D (Transform), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0B5 (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
 {
 Cooler transforms into his final, most powerful form.
 }
 
 STRING 3028
-// Abilities: A07D (Create Android), Hotkey (Hotkey - Normal)
+// Abilities: A03E (Summon Dabura), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -18681,7 +18686,7 @@ STRING 3042
 }
 
 STRING 3043
-// Abilities: A03E (Summon Dabura), Researchhotkey (Hotkey - Learn)
+// Abilities: A02G (Gohan Anger), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -18705,7 +18710,7 @@ Turns the target creep into an android, increasing its combat capabilities and p
 }
 
 STRING 3047
-// Abilities: A03E (Summon Dabura), Hotkey (Hotkey - Normal)
+// Abilities: A03H (Geti Star Influence), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -18969,7 +18974,7 @@ STRING 3090
 }
 
 STRING 3091
-// Abilities: A02G (Gohan Anger), Researchhotkey (Hotkey - Learn)
+// Abilities: A01I (Renzoku Energy Dan (Scatter Shot)), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -18993,7 +18998,7 @@ Dabura is a Minion of Babidi. |n[|cffffcc00History|r] - |cff0066CCAlso known as 
 }
 
 STRING 3095
-// Abilities: A03H (Geti Star Influence), Researchhotkey (Hotkey - Learn)
+// Abilities: A01I (Renzoku Energy Dan (Scatter Shot)), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19629,7 +19634,7 @@ Ki Mastery
 }
 
 STRING 3201
-// Abilities: A01I (Renzoku Energy Dan (Scatter Shot)), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -19791,15 +19796,15 @@ Recharge
 }
 
 STRING 3228
-// Abilities: A04G (Recharge), Researchtip (Tooltip - Learn)
+// Abilities: A0L1 (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-Learn |cffffcc00R|recharge
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
 }
 
 STRING 3229
-// Abilities: A04G (Recharge), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0L1 (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-Bulma blasts you with another ray of energy healing you. |n[|cffffcc00History|r] - |cff0066CCBulma uses this on Bebi to recharge him back to full power.|r
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
 }
 
 STRING 3230
@@ -19822,7 +19827,7 @@ STRING 3232
 }
 
 STRING 3233
-// Abilities: A05G (Geti Star Repair), Name (Name)
+// Abilities: A063 (Geti Star Repair), Name (Name)
 {
 Geti Star Repair
 }
@@ -20134,7 +20139,7 @@ Geti Star Influence - [|cffffcc00Level 4|r]
 }
 
 STRING 3285
-// Abilities: A01I (Renzoku Energy Dan (Scatter Shot)), Hotkey (Hotkey - Normal)
+// Abilities: A04J (Saiya-jin memories), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -20332,7 +20337,7 @@ STRING 3317
 }
 
 STRING 3318
-// Abilities: A05I (Tsufuru Elite Guard Training), Hotkey (Hotkey - Normal)
+// Abilities: A01L (Buu Beam (Area)), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -20356,7 +20361,7 @@ A machine gun energy attack. It is fairly powerful, especially if the defender i
 }
 
 STRING 3322
-// Abilities: A04J (Saiya-jin memories), Researchhotkey (Hotkey - Learn)
+// Abilities: A01L (Buu Beam (Area)), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -20512,7 +20517,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3348
-// Abilities: A01L (Buu Beam (Area)), Researchhotkey (Hotkey - Learn)
+// Abilities: A06N (Deafening Wave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -20866,7 +20871,7 @@ STRING 3406
 }
 
 STRING 3407
-// Abilities: A01L (Buu Beam (Area)), Hotkey (Hotkey - Normal)
+// Abilities: A06N (Deafening Wave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -22228,25 +22233,25 @@ Cam Angle Down
 }
 
 STRING 3634
-// Abilities: A06N (Silence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06N (Deafening Wave), Ubertip (Tooltip - Normal - Extended)
 {
 Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 3635
-// Abilities: A06N (Silence), Tip (Tooltip - Normal)
+// Abilities: A0L1 (Transform), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Deafening Wave
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
 }
 
 STRING 3636
-// Abilities: A06N (Silence), Researchtip (Tooltip - Learn)
+// Abilities: A0L1 (Transform), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Learn Deafening Wave
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 1|r]
 }
 
 STRING 3637
-// Abilities: A06N (Silence), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A06N (Deafening Wave), Researchubertip (Tooltip - Learn - Extended)
 {
 Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
@@ -26740,7 +26745,7 @@ STRING 4384
 }
 
 STRING 4385
-// Abilities: A02Y (Geti Star Repair), Name (Name)
+// Abilities: A05G (Geti Star Repair), Name (Name)
 {
 Geti Star Repair
 }
@@ -30941,13 +30946,13 @@ Fuse Parts
 }
 
 STRING 5083
-// Abilities: A0A2 (Fuse Parts), Researchtip (Tooltip - Learn)
+// Abilities: A0B5 (Kyodaika), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Transform
 }
 
 STRING 5084
-// Abilities: A0A2 (Fuse Parts), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0BT (Transform), Researchubertip (Tooltip - Learn - Extended)
 {
 Cooler transforms into his final, most powerful form.
 }
@@ -31529,15 +31534,14 @@ Kyodaika
 }
 
 STRING 5181
-// Abilities: A0B5 (Kyodaika), Researchtip (Tooltip - Learn)
+// Abilities: A0BT (Transform), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Transform
 }
 
 STRING 5182
-// Abilities: A0B5 (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
 {
-Cooler transforms into his final, most powerful form.
+You have received +0.02x multiplier from gathering combat data.
 }
 
 STRING 5183
@@ -32858,9 +32862,8 @@ Janemba transforms into his ultimate form.|n|cff00FF00Consumes all souls. Requir
 }
 
 STRING 5402
-// Abilities: A0BT (Transform), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Transform
+You have received +0.01x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 5403
@@ -32876,15 +32879,15 @@ Transform
 }
 
 STRING 5405
-// Abilities: A0BT (Transform), Researchtip (Tooltip - Learn)
+// Units: H004 (Oozaru), EditorSuffix (Name - Editor Suffix)
 {
-[|cff00ff00R|r] Learn Transform
+(vegeta)
 }
 
 STRING 5406
-// Abilities: A0BT (Transform), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
 {
-Cooler transforms into his final, most powerful form.
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 5407
@@ -33701,6 +33704,12 @@ STRING 5540
 E
 }
 
+STRING 5541
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
 STRING 5542
 // Abilities: A0C3 (BeerusBall), Researchtip (Tooltip - Learn)
 {
@@ -33723,6 +33732,12 @@ STRING 5545
 // Abilities: A0C3 (BeerusBall), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destruction Sphere
+}
+
+STRING 5546
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 1|r]
 }
 
 STRING 5547
@@ -34097,6 +34112,48 @@ STRING 5608
 A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
+STRING 5609
+// Abilities: A063 (Geti Star Repair), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level %d|r]
+}
+
+STRING 5610
+// Abilities: A063 (Geti Star Repair), Researchubertip (Tooltip - Learn - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 5611
+// Abilities: A07S (MC Head), EditorSuffix (Editor Suffix)
+{
+(cooler)
+}
+
+STRING 5612
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 2|r]
+}
+
+STRING 5613
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 3|r]
+}
+
+STRING 5614
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 4|r]
+}
+
+STRING 5615
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 5|r]
+}
+
 STRING 5616
 // Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
@@ -34109,10 +34166,28 @@ STRING 5617
 BeerusBall
 }
 
+STRING 5618
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 6|r]
+}
+
 STRING 5619
 // Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 5620
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 7|r]
+}
+
+STRING 5621
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 8|r]
 }
 
 STRING 5622
@@ -44449,21 +44524,21 @@ STRING 7339
 }
 
 STRING 7340
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L1 (Transform), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 2|r]
 }
 
 STRING 7341
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L1 (Transform), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 3|r]
 }
 
 STRING 7342
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L1 (Transform), Name (Name)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Transform
 }
 
 STRING 7343
@@ -44527,9 +44602,9 @@ STRING 7352
 }
 
 STRING 7353
-// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0L1 (Transform), Researchtip (Tooltip - Learn)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00F|r] Learn Final Form Transformation - [|cffffcc00Level %d|r]
 }
 
 STRING 7354
@@ -46704,10 +46779,106 @@ STRING 7715
 (actual)
 }
 
+STRING 7716
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 9|r]
+}
+
+STRING 7717
+// Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 10|r]
+}
+
+STRING 7718
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7719
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7720
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7721
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7722
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7723
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7724
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7725
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7726
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 7727
+// Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level 1|r]
+}
+
+STRING 7728
+// Abilities: A06N (Deafening Wave), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level %d|r]
+}
+
 STRING 7729
 // Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 7730
+// Abilities: A06N (Deafening Wave), EditorSuffix (Editor Suffix)
+{
+(Cooler Frieza)
+}
+
+STRING 7731
+// Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level 2|r]
+}
+
+STRING 7732
+// Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level 3|r]
 }
 
 STRING 7733
@@ -55986,6 +56157,12 @@ STRING 9267
 [|cff00FF00R|r] Moonlight 
 }
 
+STRING 9268
+// Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level 4|r]
+}
+
 STRING 9269
 // Abilities: A0KR (Ultra Instinct), Name (Name)
 {
@@ -56002,6 +56179,12 @@ STRING 9271
 // Abilities: A0KR (Ultra Instinct), Researchubertip (Tooltip - Learn - Extended)
 {
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
+}
+
+STRING 9272
+// Abilities: A06N (Deafening Wave), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 9273
@@ -56160,6 +56343,12 @@ STRING 9298
 [|cff00FF00R|r] Moonlight 
 }
 
+STRING 9299
+// Abilities: A06N (Deafening Wave), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
 STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
@@ -56176,6 +56365,12 @@ STRING 9302
 // Abilities: A0KT (Super Saiyan Rage), Researchubertip (Tooltip - Learn - Extended)
 {
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
+}
+
+STRING 9303
+// Abilities: A06N (Deafening Wave), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 9304
@@ -59118,16 +59313,112 @@ STRING 9793
 Sabertooth Rider
 }
 
+STRING 9794
+// Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Learn Deafening Wave - [|cffffcc00Level 5|r]
+}
+
+STRING 9795
+// Abilities: A06N (Deafening Wave), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler releases an incredibly loud wave of energy that causes the enemy to become disoriented and unable to focus. |n|cff00ff00Stops all attacks and abilities used by the enemy for a short duration.|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9796
+// Abilities: A06N (Deafening Wave), Name (Name)
+{
+Deafening Wave
+}
+
+STRING 9797
+// Abilities: A02Y (Geti Star Repair), Name (Name)
+{
+Geti Star Repair
+}
+
+STRING 9798
+// Abilities: A0H8 (Masenko), EditorSuffix (Editor Suffix)
+{
+(gohan)
+}
+
+STRING 9799
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9800
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9801
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 9802
 // Units: U01D (Saiyan), Propernames (Proper Names)
 {
 Raditz
 }
 
+STRING 9803
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9804
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9805
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9806
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 9807
 // Units: U01D (Saiyan), Name (Name)
 {
 Saiyan
+}
+
+STRING 9808
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 2|r]
+}
+
+STRING 9809
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 3|r]
+}
+
+STRING 9810
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 4|r]
+}
+
+STRING 9811
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 5|r]
 }
 
 STRING 9812
@@ -59185,6 +59476,36 @@ STRING 9819
 (smaller)
 }
 
+STRING 9820
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 6|r]
+}
+
+STRING 9821
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 1|r]
+}
+
+STRING 9822
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 7|r]
+}
+
+STRING 9823
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 9824
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
 STRING 9825
 // Units: n001 (Hero Selector), EditorSuffix (Name - Editor Suffix)
 {
@@ -59195,6 +59516,18 @@ STRING 9826
 // Units: n001 (Hero Selector), Name (Name)
 {
 Hero Selector
+}
+
+STRING 9827
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 9|r]
+}
+
+STRING 9828
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 8|r]
 }
 
 STRING 9829
@@ -59245,6 +59578,30 @@ STRING 9836
 (Tavern)
 }
 
+STRING 9837
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 10|r]
+}
+
+STRING 9838
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9839
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 9840
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 9841
 // Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
@@ -59282,19 +59639,19 @@ STRING 9846
 }
 
 STRING 9847
-// Units: H01A (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9848
 // Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H03Y (Human Fighter), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9849
+// Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59455,10 +59812,118 @@ STRING 9875
 (Tavern)
 }
 
+STRING 9876
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
 STRING 9877
 // Units: H016 (Vegeta's First Child), EditorSuffix (Name - Editor Suffix)
 {
 (Actual)
+}
+
+STRING 9878
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9879
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9880
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9881
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9882
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9883
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9884
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9885
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9886
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9887
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9888
+// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 9889
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9890
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9891
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9892
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9893
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9894
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
 }
 
 STRING 9895
@@ -59471,6 +59936,30 @@ STRING 9896
 // Doodads: YSc2 (Arrows), Name (Name)
 {
 Arrows
+}
+
+STRING 9897
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9898
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 2|r]
+}
+
+STRING 9899
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 3|r]
+}
+
+STRING 9900
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 4|r]
 }
 
 STRING 9901
@@ -59515,6 +60004,36 @@ STRING 9907
 (uses upgrades)
 }
 
+STRING 9908
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 5|r]
+}
+
+STRING 9909
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 6|r]
+}
+
+STRING 9910
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 1|r]
+}
+
+STRING 9911
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 7|r]
+}
+
+STRING 9912
+// Abilities: A0KX (P. Reliable Friend), Hotkey (Hotkey - Normal)
+{
+E
+}
+
 STRING 9913
 // Units: U01L (Pyre Keeper of Hell), Name (Name)
 {
@@ -59533,6 +60052,18 @@ STRING 9915
 Pan
 }
 
+STRING 9916
+// Abilities: A0KY (Nova Chariot), Name (Name)
+{
+Nova Chariot
+}
+
+STRING 9917
+// Abilities: A0KY (Nova Chariot), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level %d|r]
+}
+
 STRING 9918
 // Units: Giru ("Giru"), Name (Name)
 {
@@ -59546,7 +60077,7 @@ Pan's best friend
 }
 
 STRING 9920
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59594,7 +60125,7 @@ P. Maiden Blast
 }
 
 STRING 9928
-// Abilities: A0KX (P. Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -59615,6 +60146,144 @@ STRING 9931
 // Abilities: A0KX (P. Reliable Friend), Name (Name)
 {
 P. Reliable Friend
+}
+
+STRING 9932
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 9933
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 9|r]
+}
+
+STRING 9934
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 8|r]
+}
+
+STRING 9935
+// Abilities: A0KY (Nova Chariot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level 10|r]
+}
+
+STRING 9936
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9937
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9938
+// Abilities: A0KY (Nova Chariot), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9939
+// Abilities: A0KY (Nova Chariot), Researchubertip (Tooltip - Learn - Extended)
+{
+Cooler surrounds himself with a purple barrier and flies at the enemy, ramming them and inflicting a great deal of damage.  |n|cff00ff00(Damage: Agi * lvl * 3.75)|n(Damage Blocked: Agi * lvl @ 50%)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080Cooler uses this move to fly through Goku's Kaio-ken Kamehameha unfazed (much to Goku's shock), and then punches him in the face.|r
+}
+
+STRING 9940
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 9941
+// Abilities: A0KZ (Cooler Fourth Form Head), Name (Name)
+{
+Cooler Fourth Form Head
+}
+
+STRING 9942
+// Abilities: A0L0 (Book Cooler Heads), Name (Name)
+{
+Book Cooler Heads
+}
+
+STRING 9943
+// Abilities: A0L1 (Transform), Researchubertip (Tooltip - Learn - Extended)
+{
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
+}
+
+STRING 9944
+// Abilities: A0L1 (Transform), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 4|r]
+}
+
+STRING 9945
+// Abilities: A0L1 (Transform), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Final Form Transformation - [|cffffcc00Level 5|r]
+}
+
+STRING 9946
+// Abilities: A0L1 (Transform), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
+}
+
+STRING 9947
+// Abilities: A0L1 (Transform), Ubertip (Tooltip - Normal - Extended)
+{
+Cooler transforms into his final, most powerful form. This form allows the user to ascend beyond their true forms. It is a fourth Transforming Ability, which increases the user's combat capabilities instead of lessening them. The transformation causes the user's offensive and defensive power to increase.|n|cff00FF00(Stat Multiplier: +0.3 x lvl)|n(Duration: 120s)|r |n|cff00FFFF(Cooldown: 30 seconds)|r
+}
+
+STRING 9948
+// Abilities: A0L1 (Transform), EditorSuffix (Editor Suffix)
+{
+(Cooler metamorphosis version)
+}
+
+STRING 9949
+// Buffs/Effects: B01K (), Bufftip (Tooltip)
+{
+Final Form
+}
+
+STRING 9950
+// Buffs/Effects: B01K (), Buffubertip (Tooltip - Extended)
+{
+Cooler has transformed into his final form!
+}
+
+STRING 9951
+// Abilities: A00H (Scan for Powers), EditorSuffix (Editor Suffix)
+{
+(Cooler)
+}
+
+STRING 9952
+// Units: H01A (Half Cyborg / Half Changling), EditorSuffix (Name - Editor Suffix)
+{
+(Actual)
+}
+
+STRING 9953
+// Abilities: A0L2 (Supernova Golden), EditorSuffix (Editor Suffix)
+{
+(Cooler)
+}
+
+STRING 9954
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 9955
@@ -59660,6 +60329,60 @@ STRING 9962
 STRING 9963
 {
 |cffe60000M|r|cffe20101o|r|cffde0302v|r|cffda0503e|r|cffd60605 |r|cffd20806h|r|cffce0a07e|r|cffca0b09r|r|cffc60d0ae|r|cffc20f0b |r|cffbe110dt|r|cffba120eo|r|cffb6140f |r|cffb31610R|r|cffaf1812e|r|cffab1913s|r|cffa71b14p|r|cffa31d16a|r|cff9f1f17w|r|cff9b2018n|r
+}
+
+STRING 9964
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9965
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9966
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9967
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9968
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9969
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 9970
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 2|r]
+}
+
+STRING 9971
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 3|r]
+}
+
+STRING 9972
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
 }
 
 STRING 9973
@@ -59733,45 +60456,45 @@ Game Start:
 }
 
 STRING 9987
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 5|r]
 }
 
 STRING 9988
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 6|r]
 }
 
 STRING 9989
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 1|r]
 }
 
 STRING 9990
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 7|r]
 }
 
 STRING 9991
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+W
 }
 
 STRING 9992
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Name (Name)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+Supernova Golden
 }
 
 STRING 9993
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchtip (Tooltip - Learn)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Learn Golden Supernova - [|cffffcc00Level %d|r]
 }
 
 STRING 9994
@@ -59787,26 +60510,356 @@ STRING 9995
 }
 
 STRING 9996
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+W
 }
 
 STRING 9997
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 9|r]
 }
 
 STRING 9998
-// Abilities: A0BZ (Planet Crusher), Tip (Tooltip - Normal)
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Planet Crusher - [|cffffcc00Level %d|r]
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 8|r]
 }
 
 STRING 9999
-// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (actual)
+}
+
+STRING 10000
+// Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 10|r]
+}
+
+STRING 10001
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10002
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10003
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10004
+// Abilities: A0L2 (Supernova Golden), Researchubertip (Tooltip - Learn - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10005
+// Buffs/Effects: B01K (), EditorSuffix (Editor Suffix)
+{
+(Cooler)
+}
+
+STRING 10006
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10007
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10008
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10009
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10010
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10011
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10012
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 2|r]
+}
+
+STRING 10013
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 3|r]
+}
+
+STRING 10014
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 4|r]
+}
+
+STRING 10015
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 5|r]
+}
+
+STRING 10016
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 6|r]
+}
+
+STRING 10017
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 1|r]
+}
+
+STRING 10018
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 7|r]
+}
+
+STRING 10019
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 10020
+// Abilities: A0L3 (Energy Blast Volley), Name (Name)
+{
+Energy Blast Volley
+}
+
+STRING 10021
+// Abilities: A0L3 (Energy Blast Volley), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Energy Blast Volley - [|cffffcc00Level %d|r]
+}
+
+STRING 10022
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 10023
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 9|r]
+}
+
+STRING 10024
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 8|r]
+}
+
+STRING 10025
+// Abilities: A0L3 (Energy Blast Volley), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Energy Blast Volley - [|cffffcc00Level 10|r]
+}
+
+STRING 10026
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10027
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10028
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10029
+// Abilities: A0L3 (Energy Blast Volley), Researchubertip (Tooltip - Learn - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10030
+// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 10031
+// Units: H05L (Changling (Golden Final Form)), Name (Name)
+{
+Changling (Golden Final Form)
+}
+
+STRING 10032
+// Units: H05L (Changling (Golden Final Form)), Propernames (Proper Names)
+{
+Cooler
+}
+
+STRING 10033
+// Units: H05L (Changling (Golden Final Form)), Awakentip (Tooltip - Awaken)
+{
+Rebuild Metal Koola
+}
+
+STRING 10034
+// Units: H05L (Changling (Golden Final Form)), Ubertip (Tooltip - Extended)
+{
+Koola fused with the Geti Star to become Metal Koola.
+}
+
+STRING 10035
+// Units: H05L (Changling (Golden Final Form)), Revivetip (Tooltip - Revive)
+{
+Rebuild Metal Koola
+}
+
+STRING 10036
+// Units: H05L (Changling (Golden Final Form)), EditorSuffix (Name - Editor Suffix)
+{
+(Golden Final Form)
+}
+
+STRING 10037
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10038
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10039
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10040
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10041
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10042
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10043
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 2|r]
+}
+
+STRING 10044
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 3|r]
+}
+
+STRING 10045
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 1|r]
+}
+
+STRING 10046
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 4|r]
+}
+
+STRING 10047
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 5|r]
+}
+
+STRING 10048
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 10049
+// Abilities: A0L4 (Final Flash 2), Name (Name)
+{
+Final Flash 2
+}
+
+STRING 10050
+// Abilities: A0L4 (Final Flash 2), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Final Flash - [|cffffcc00Level %d|r]
+}
+
+STRING 10051
+// Abilities: A0L4 (Final Flash 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose! |n[|cffffcc00History|r] - |cff0066CCHe uses this to finish his opponents, most memorable is when he uses this to finish off Jeice of the Ginyu Force.|r
+}
+
+STRING 10052
+// Abilities: A0L4 (Final Flash 2), EditorSuffix (Editor Suffix)
+{
+VEG
+}
+
+STRING 10053
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 10054
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 

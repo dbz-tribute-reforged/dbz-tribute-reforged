@@ -28,8 +28,13 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   }
 
   calculateMaxBlock(input: CustomAbilityInput): number {
-    return this.multiplier * input.level * 
-      GetHeroStatBJ(this.attribute, input.caster.unit, true);
+    return (
+      input.level * (
+        10 +
+        this.multiplier * 
+        GetHeroStatBJ(this.attribute, input.caster.unit, true)
+      )
+    );
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {

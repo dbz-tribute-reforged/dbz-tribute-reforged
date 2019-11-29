@@ -8,8 +8,9 @@ import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
+  public isCasting: Map<CustomAbility, boolean>;
 
-  public isCasting: boolean;
+  public isCastTimeWaiting: boolean;
 
   constructor(
     public readonly unit: unit,
@@ -20,30 +21,48 @@ export class CustomHero {
         
       ]
     );
-    this.isCasting = false;
+    this.isCasting = new Map();
+
+    this.isCastTimeWaiting = false;
 
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
     // relevant heroes
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Guard");
-
     
     /*
-    this.addAbilityFromAll("Galick Gun");
-    this.addAbilityFromAll("Big Bang Attack");
-    this.addAbilityFromAll("Final Flash");
+    this.addAbilityFromAll("Max Power");
+    this.addAbilityFromAll("Ultra Instinct");
+
+    this.addAbilityFromAll("Kamehameha");
     this.addAbilityFromAll("Masenko");
     this.addAbilityFromAll("Twin Dragon Shot");
+    this.addAbilityFromAll("Death Beam Barrage");
+    this.addAbilityFromAll("Energy Blast Volley");
+
+    this.addAbilityFromAll("Death Beam Frieza");
+    this.addAbilityFromAll("Supernova Cooler");
+    this.addAbilityFromAll("Nova Chariot");
+    this.addAbilityFromAll("Deafening Wave");
+    
+    
+    this.addAbilityFromAll("Geti Star Repair");
+
+    this.addAbilityFromAll("Supernova Golden");
+
+    this.addAbilityFromAll("Galick Gun");
+    this.addAbilityFromAll("Final Flash");
+    this.addAbilityFromAll("Big Bang Kamehameha");
+    
     this.addAbilityFromAll("Kamehameha");
     this.addAbilityFromAll("Spirit Bomb");
     this.addAbilityFromAll("Dragon Fist");
-    this.addAbilityFromAll("Energy Punch");
-    this.addAbilityFromAll("Power Level Rising");
+
+    this.addAbilityFromAll("Final Flash");
+
     this.addAbilityFromAll("Planet Crusher");
     this.addAbilityFromAll("Gigantic Roar");
-    this.addAbilityFromAll("Gigantic Omegastorm");
-    this.addAbilityFromAll("Big Bang Kamehameha");
     */
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
@@ -75,9 +94,12 @@ export class CustomHero {
   public useAbility(name: string, input: CustomAbilityInput) {
     let customAbility = this.abilities.getCustomAbilityByName(name);
     if (customAbility && customAbility.canCastAbility(input)) {
-      if (!this.isCasting || customAbility.canMultiCast) {
-          this.isCasting = true;
-          CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
+      if (!this.isCastTimeWaiting || customAbility.canMultiCast) {
+          if (!this.isCasting.get(customAbility)) {
+            this.isCastTimeWaiting = true;
+            this.isCasting.set(customAbility, true);
+            CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
+          }
       }
     }
   }

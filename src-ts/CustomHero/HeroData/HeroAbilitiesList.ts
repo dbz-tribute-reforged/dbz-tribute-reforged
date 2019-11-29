@@ -5,7 +5,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
 
     // vegeta
-    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash"]],
+    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash", "Final Flash 2", "Energy Blast Volley"]],
     
     // gohan
     [FourCC("H00K"), ["Kamehameha", "Twin Dragon Shot", "Masenko"]],
@@ -43,8 +43,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00F"), ["Kamehameha", "Special Beam Cannon", "Solar Flare"]],
     [FourCC("H00G"), ["Kamehameha", "Special Beam Cannon", "Masenko"]],
 
+    // fourth form cooler
+    [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
+    // final form cooler
+    [FourCC("H043"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
+    // golden final form
+    [FourCC("H05L"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
     // metal cooler
-    [FourCC("H01A"), ["Death Beam", "Supernova", "Geti Star Repair", "Scan"]],
+    [FourCC("H01A"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Geti Star Repair", "Supernova Golden"]],
 
 
   ]

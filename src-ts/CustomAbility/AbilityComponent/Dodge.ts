@@ -16,6 +16,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public groundOnly: boolean = true,
     public knockbackData: KnockbackData = new KnockbackData(
       20, 0, 200
     ),
@@ -62,8 +63,11 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     if (currentEnemies > 0) {
       dodgeVector.x = dodgeVector.x / currentEnemies;
       dodgeVector.y = dodgeVector.y / currentEnemies;
-
-      PathingCheck.moveGroundUnitToCoord(source, dodgeVector);
+      if (this.groundOnly) {
+        PathingCheck.moveGroundUnitToCoord(source, dodgeVector);
+      } else {
+        PathingCheck.moveFlyingUnitToCoord(source, dodgeVector);
+      }
     }
   }
   
@@ -71,7 +75,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
   clone(): AbilityComponent {
     return new Dodge(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.knockbackData, this.maxEnemies, this.addRandomAngle
+      this.groundOnly, this.knockbackData, 
+      this.maxEnemies, this.addRandomAngle
     );
   }
   
@@ -81,6 +86,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      groundOnly: boolean;
       knockbackData: {
         speed: number; 
         angle: number; 
@@ -94,6 +100,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.groundOnly = input.groundOnly;
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
     this.maxEnemies = input.maxEnemies;
     this.addRandomAngle = input.addRandomAngle;
