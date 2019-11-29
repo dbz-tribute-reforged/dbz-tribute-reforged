@@ -60719,3 +60719,147 @@ STRING 10030
 (actual)
 }
 
+STRING 10031
+// Units: H05L (Changling (Golden Final Form)), Name (Name)
+{
+Changling (Golden Final Form)
+}
+
+STRING 10032
+// Units: H05L (Changling (Golden Final Form)), Propernames (Proper Names)
+{
+Cooler
+}
+
+STRING 10033
+// Units: H05L (Changling (Golden Final Form)), Awakentip (Tooltip - Awaken)
+{
+Rebuild Metal Koola
+}
+
+STRING 10034
+// Units: H05L (Changling (Golden Final Form)), Ubertip (Tooltip - Extended)
+{
+Koola fused with the Geti Star to become Metal Koola.
+}
+
+STRING 10035
+// Units: H05L (Changling (Golden Final Form)), Revivetip (Tooltip - Revive)
+{
+Rebuild Metal Koola
+}
+
+STRING 10036
+// Units: H05L (Changling (Golden Final Form)), EditorSuffix (Name - Editor Suffix)
+{
+(Golden Final Form)
+}
+
+STRING 10037
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10038
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10039
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10040
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10041
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10042
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10043
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 2|r]
+}
+
+STRING 10044
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 3|r]
+}
+
+STRING 10045
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 1|r]
+}
+
+STRING 10046
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 4|r]
+}
+
+STRING 10047
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 5|r]
+}
+
+STRING 10048
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 10049
+// Abilities: A0L4 (Final Flash 2), Name (Name)
+{
+Final Flash 2
+}
+
+STRING 10050
+// Abilities: A0L4 (Final Flash 2), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Final Flash - [|cffffcc00Level %d|r]
+}
+
+STRING 10051
+// Abilities: A0L4 (Final Flash 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose! |n[|cffffcc00History|r] - |cff0066CCHe uses this to finish his opponents, most memorable is when he uses this to finish off Jeice of the Ginyu Force.|r
+}
+
+STRING 10052
+// Abilities: A0L4 (Final Flash 2), EditorSuffix (Editor Suffix)
+{
+VEG
+}
+
+STRING 10053
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 10054
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+

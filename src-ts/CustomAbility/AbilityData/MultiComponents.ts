@@ -18,6 +18,23 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi final flash 2", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -10,
+    angleMax: 10,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    components: [
+      { name: "beam final flash" },
+      { name: "beam final flash" },
+      { name: "beam final flash" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi energy blast volley", 
     repeatInterval: 1, 
     startTick: 0,

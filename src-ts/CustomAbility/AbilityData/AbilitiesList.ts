@@ -246,6 +246,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Final Flash 2",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFinalFlash2.blp",
+      disabled: "BTNFinalFlash2.blp",
+    },
+    tooltip: {
+      title: "Final Flash 2",
+      body: 
+        "Final Flash 2"
+    },
+    components: [
+      { name: "multi final flash 2" },
+      { name: "knockback 1tick 25speed 0angle 400aoe" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Energy Blast Volley",
     currentCd: 0,
     maxCd: 5,

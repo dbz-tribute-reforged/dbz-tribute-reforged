@@ -5244,11 +5244,15 @@ function Trig_Oozaru_Vegeta_Actions()
         TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+                udg_TransformationID = FourCC('H004')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
     else
         udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
         TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+                udg_TransformationID = FourCC('E003')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
     end
 end
 
@@ -5336,6 +5340,26 @@ function Trig_Transformations_Vegeta_Func017Func001C()
     return false
 end
 
+function Trig_Transformations_Vegeta_Func017Func009Func007C()
+    if (udg_TransformationString == "ssbe") then
+        return true
+    end
+    if (udg_TransformationString == "ssb") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Vegeta_Func017Func009C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not Trig_Transformations_Vegeta_Func017Func009Func007C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Vegeta_Func017C()
     if (not Trig_Transformations_Vegeta_Func017Func001C()) then
         return false
@@ -5403,6 +5427,14 @@ function Trig_Transformations_Vegeta_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+        if (Trig_Transformations_Vegeta_Func017Func009C()) then
+            UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 7)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
+        else
+            SetPlayerAbilityAvailableBJ(true, FourCC("A01B"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L4"), udg_TransformationPlayer)
+        end
     else
     end
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -6037,6 +6069,7 @@ end
 
 function Trig_Cooler_Transform_Into_Final_Form_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), GetTriggerPlayer())
     udg_StatMultUnit = GetTriggerUnit()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
@@ -6067,7 +6100,7 @@ end
 function Trig_Metal_Cooler_Add_Stat_Mult_Actions()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     if (Trig_Metal_Cooler_Add_Stat_Mult_Func002C()) then
-        udg_StatMultReal = RMaxBJ(2.50, (udg_TempReal + udg_StatMultInt))
+        udg_StatMultReal = RMinBJ(2.50, (udg_TempReal + udg_StatMultInt))
         TriggerExecute(gg_trg_Set_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
     else
@@ -6198,6 +6231,13 @@ function InitTrig_Metal_Cooler_Stat_Mult_On_Death()
     TriggerAddAction(gg_trg_Metal_Cooler_Stat_Mult_On_Death, Trig_Metal_Cooler_Stat_Mult_On_Death_Actions)
 end
 
+function Trig_Transformations_Cooler_Base_Func009Func003C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Cooler_Base_Func009C()
     if (not (udg_TransformationString == "r")) then
         return false
@@ -6240,6 +6280,13 @@ function Trig_Transformations_Cooler_Base_Func013C()
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func014Func004C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
         return false
     end
     return true
@@ -6294,6 +6341,11 @@ function Trig_Transformations_Cooler_Base_Actions()
     if (Trig_Transformations_Cooler_Base_Func009C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0KZ")
+        if (Trig_Transformations_Cooler_Base_Func009Func003C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
+        else
+        end
     else
     end
     if (Trig_Transformations_Cooler_Base_Func010C()) then
@@ -6324,6 +6376,11 @@ function Trig_Transformations_Cooler_Base_Actions()
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "AuraPink2.mdx"
+        if (Trig_Transformations_Cooler_Base_Func014Func004C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
+        else
+        end
     else
     end
     if (Trig_Transformations_Cooler_Base_Func015C()) then
@@ -6333,7 +6390,6 @@ function Trig_Transformations_Cooler_Base_Actions()
         udg_TransformationSFXString2 = "AuraPink2.mdx"
         UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
-        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
     else
     end
@@ -6350,6 +6406,13 @@ end
 function InitTrig_Transformations_Cooler_Base()
     gg_trg_Transformations_Cooler_Base = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Cooler_Base, Trig_Transformations_Cooler_Base_Actions)
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func009Func003C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Transformations_Cooler_Final_Form_Func009C()
@@ -6412,6 +6475,13 @@ function Trig_Transformations_Cooler_Final_Form_Func014C()
     return true
 end
 
+function Trig_Transformations_Cooler_Final_Form_Func015Func005C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Cooler_Final_Form_Func015C()
     if (not (udg_TransformationString == "fp")) then
         return false
@@ -6460,6 +6530,13 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cooler_Final_Form_Func009C()) then
         udg_StatMultReal = 1.00
+        if (Trig_Transformations_Cooler_Final_Form_Func009Func003C()) then
+                        udg_TransformationID = FourCC('H043')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
+        else
+        end
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func010C()) then
@@ -6469,6 +6546,7 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
         udg_StatMultReal = 0.00
     else
@@ -6496,6 +6574,13 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     if (Trig_Transformations_Cooler_Final_Form_Func015C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraPink2.mdx"
+        if (Trig_Transformations_Cooler_Final_Form_Func015Func005C()) then
+                        udg_TransformationID = FourCC('H043')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
+        else
+        end
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func016C()) then
@@ -6504,8 +6589,9 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         udg_TransformationSFXString2 = "AuraPink2.mdx"
         UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
-        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
+                udg_TransformationID = FourCC('H05L')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func018C()) then
@@ -6587,7 +6673,6 @@ function Trig_Transformations_Metal_Cooler_Actions()
         udg_TransformationSFXString2 = "AuraPink2.mdx"
         UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
-        UnitRemoveAbilityBJ(FourCC("A0C1"), udg_StatMultUnit)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
     else
     end
