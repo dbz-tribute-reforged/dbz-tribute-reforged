@@ -23,6 +23,8 @@ import { DamageBlockComponents } from "./AbilityData/DamageBlockComponents";
 import { DamageBlock } from "./AbilityComponent/DamageBlock";
 import { AOEStunComponents } from "./AbilityData/AOEStunComponents";
 import { AOEStun } from "./AbilityComponent/AOEStun";
+import { MultiComponents } from "./AbilityData/MultiComponents";
+import { MultiComponent } from "./AbilityComponent/MultiComponent";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -76,13 +78,19 @@ export class CustomAbilityManager {
     }
 
 
-    // load beam components after all other components
+    // load beam components after all other singular components
     for (const beam of BeamComponents) {
       const beamComponent = new BeamComponent().deserialize(beam);
       this.beamComponentAddComponent(beamComponent, beam.components);
       this.setComponent(beamComponent);
     }
 
+    // load multi components after all other components
+    for (const multi of MultiComponents) {
+      const multiComponent = new MultiComponent().deserialize(multi);
+      this.multiComponentAddComponent(multiComponent, multi.components);
+      this.setComponent(multiComponent);
+    }
     // load abilities after all other components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
@@ -114,6 +122,15 @@ export class CustomAbilityManager {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
         beam.addComponent(retrievedComponent.clone());
+      }
+    }
+  }
+
+  multiComponentAddComponent(multi: MultiComponent, components: {name: string}[] ) {
+    for (const component of components) {
+      const retrievedComponent = this.getComponent(component.name);
+      if (retrievedComponent) {
+        multi.addComponent(retrievedComponent.clone());
       }
     }
   }

@@ -12,4 +12,15 @@ export class CustomAbilityInput {
   ) {
 
   }
+
+  clone(): CustomAbilityInput {
+    return new CustomAbilityInput(
+      this.caster,
+      this.casterPlayer,
+      this.level,
+      new Vector2D(this.targetPoint.x, this.targetPoint.y),
+      new Vector2D(this.mouseData.x, this.mouseData.y),
+      this.targetUnit
+    );
+  }
 }

@@ -26,8 +26,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      this.damageData.multiplier * input.level *
-      GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
+      input.level * (
+        10 + 
+        this.damageData.multiplier *
+        GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
+      )
     );
   }
 
@@ -44,7 +47,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
       UnitDamageTarget(
-        source, 
+        input.caster.unit, 
         target, 
         this.calculateDamage(input),
         true,

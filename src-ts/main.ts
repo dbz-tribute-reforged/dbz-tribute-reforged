@@ -5,8 +5,8 @@ import { CustomPlayerTest } from 'CustomPlayer/CustomPlayerTest';
 import { PathingCheck } from 'Common/PathingCheck';
 
 function tsMain() {
-  const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
-  unit.name = "TypeScript!";
+  // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
+  // unit.name = "TypeScript!";
 
 
   PathingCheck.Init();

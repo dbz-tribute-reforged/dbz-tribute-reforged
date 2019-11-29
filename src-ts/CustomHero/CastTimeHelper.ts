@@ -63,11 +63,13 @@ export module CastTimeHelper {
 
   export function cleanupCastTime(
     hero: CustomHero, 
+    ability: CustomAbility,
     castTimeTimer: timer, 
     readyTrigger: trigger, 
     stopCastingTrigger: trigger
   ) {
-    hero.isCasting = false;
+    hero.isCastTimeWaiting = false;
+    hero.isCasting.set(ability, false);
     DestroyTimer(castTimeTimer);
     DestroyTrigger(readyTrigger);
     DestroyTrigger(stopCastingTrigger);
@@ -95,7 +97,7 @@ export module CastTimeHelper {
         // then if ready
         // actually activate the ability
         ability.activate(input);
-        cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
+        cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
       }
     });
   }
@@ -112,7 +114,7 @@ export module CastTimeHelper {
     addEventStopCasting(stopCastingTrigger, input);
     TriggerAddAction(stopCastingTrigger, ()=> {
       DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
-      cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
+      cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
     })
     
     if (ability.waitsForNextClick) {
@@ -125,7 +127,7 @@ export module CastTimeHelper {
     } else {
       DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " instantly.");
       ability.activate(input);
-      cleanupCastTime(hero, castTimeTimer, readyTrigger, stopCastingTrigger);
+      cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
     }
 
   }

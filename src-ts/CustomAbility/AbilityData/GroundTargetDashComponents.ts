@@ -84,7 +84,7 @@ export const GroundTargetDashComponents = [
     name: "ground dash gigantic roar pushback",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 10,
+    endTick: 12,
     distance: -25,
   },
 ];

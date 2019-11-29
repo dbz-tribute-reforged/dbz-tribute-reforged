@@ -178,6 +178,21 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // energy blast volley
+  {
+    name: "damage energy blast volley dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 325,
+    damageData: {
+      multiplier: 0.04,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // twin dragon shot
   {
     name: "damage twin dragon shot dps",
@@ -320,6 +335,65 @@ export const AOEDamageComponents = [
     damageData: {
       multiplier: 2.0,
       attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // death beam (half a kame)
+  {
+    name: "damage death beam frieza dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 325,
+    damageData: {
+      multiplier: 0.1,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // nova chariot (match with dfist but agi-version)
+  {
+    name: "damage nova chariot dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 300,
+    damageData: {
+      multiplier: 0.2,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // used for spirit bomb
+  {
+    name: "damage supernova golden dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.05,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage supernova golden explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    aoe: 600,
+    damageData: {
+      multiplier: 5,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
