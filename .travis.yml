@@ -12,7 +12,7 @@ script: npm run build:w3x
 
 before_deploy:
   # set release name
-  - export RELEASE_TITLE="1.0.0.$(git log --format=%h -1)"
+  - node build/set-release-title.js
   # Set up git user name and tag this commit
   - git config --local user.name "ttay24"
   - git config --local user.email "$GITHUB_TAG_EMAIL"
