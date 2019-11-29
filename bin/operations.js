@@ -2,7 +2,6 @@ const fs = require("fs");
 const War3TSTLHelper = require("war3tstlhelper");
 const exec = require("child_process").execFile;
 const cwd = process.cwd();
-const lineReader = require('line-reader');
 
 // Parse configuration
 let config = {};
