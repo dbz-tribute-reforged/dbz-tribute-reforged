@@ -56020,7 +56020,7 @@ placeholder
 }
 
 STRING 9263
-// Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
 placeholder
 }
@@ -56200,12 +56200,6 @@ TEST
 }
 
 STRING 9293
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
-{
-placeholder
-}
-
-STRING 9294
 // Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
 placeholder
@@ -61336,5 +61330,11 @@ STRING 10152
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 10153
+// Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+{
+Automatically dodges incoming enemies (including beams) and provides a Int x 100 shield that absorbs 100% of all incoming non-lethal damage.
 }
 

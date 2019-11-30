@@ -208,7 +208,7 @@ export const BeamComponents = [
     endTick: -1,
     beamHpMult: 0.02,
     beamHpAttribute: bj_HEROSTAT_INT,
-    speed: 20,
+    speed: 25,
     aoe: 300,
     clashingDelayTicks: 2,
     maxDelayTicks: 7,

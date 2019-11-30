@@ -427,7 +427,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage super dragon flight dps" },
-      { name: "knockback super dragon flight punch" },
+      { name: "knockback super dragon flight" },
       { name: "ground dash super dragon flight" },
       { name: "spell amp super dragon flight" },
       { name: "sfx super dragon flight" },

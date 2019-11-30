@@ -103,8 +103,11 @@ export class CustomHero {
   public useAbility(name: string, input: CustomAbilityInput) {
     let customAbility = this.abilities.getCustomAbilityByName(name);
     if (customAbility && customAbility.canCastAbility(input)) {
+      BJDebugMsg(customAbility.name + " exists .");
       if (!this.isCastTimeWaiting || customAbility.canMultiCast) {
+          BJDebugMsg(customAbility.name + " is not castTimeWaiting.");
           if (!this.isCasting.get(customAbility)) {
+            BJDebugMsg(customAbility.name + " is not castTime.get(" + customAbility.name);
             this.isCastTimeWaiting = true;
             this.isCasting.set(customAbility, true);
             CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);

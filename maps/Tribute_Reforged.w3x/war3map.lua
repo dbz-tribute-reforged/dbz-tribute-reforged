@@ -2089,7 +2089,7 @@ end
 
 function InitTrig_Disable_abilities_and_heads()
     gg_trg_Disable_abilities_and_heads = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Disable_abilities_and_heads, 0.00)
+    TriggerRegisterTimerEventSingle(gg_trg_Disable_abilities_and_heads, 0.01)
     TriggerAddAction(gg_trg_Disable_abilities_and_heads, Trig_Disable_abilities_and_heads_Actions)
 end
 
@@ -5565,35 +5565,14 @@ function Trig_Transformations_Gohan_Func016Func001C()
     return false
 end
 
-function Trig_Transformations_Gohan_Func016Func005C()
-    if (not (GetHeroLevel(udg_StatMultUnit) < 115)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Gohan_Func016Func007Func001C()
-    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Gohan_Func016Func007C()
-    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Gohan_Func016Func008Func001C()
+function Trig_Transformations_Gohan_Func016Func005Func001C()
     if (not (udg_TransformationString == "saiyaman")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func016Func008Func002Func001C()
+function Trig_Transformations_Gohan_Func016Func005Func002Func001C()
     if (udg_TransformationString == "ult") then
         return true
     end
@@ -5603,15 +5582,29 @@ function Trig_Transformations_Gohan_Func016Func008Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Gohan_Func016Func008Func002C()
-    if (not Trig_Transformations_Gohan_Func016Func008Func002Func001C()) then
+function Trig_Transformations_Gohan_Func016Func005Func002C()
+    if (not Trig_Transformations_Gohan_Func016Func005Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func016Func005C()
+    if (not (GetHeroLevel(udg_StatMultUnit) < 115)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func016Func008Func001C()
+    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Gohan_Func016Func008C()
-    if (not (GetHeroLevel(udg_StatMultUnit) < 115)) then
+    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
         return false
     end
     return true
@@ -5680,33 +5673,31 @@ function Trig_Transformations_Gohan_Actions()
         if (Trig_Transformations_Gohan_Func016Func005C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-        else
-        end
-                udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Transformations_Gohan_Func016Func007C()) then
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
-            SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
-            SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
-        else
-            if (Trig_Transformations_Gohan_Func016Func007Func001C()) then
-                SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
-                SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
-                SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
-            else
-            end
-        end
-        if (Trig_Transformations_Gohan_Func016Func008C()) then
                         udg_TransformationID = FourCC('H00K')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
-            if (Trig_Transformations_Gohan_Func016Func008Func001C()) then
+            if (Trig_Transformations_Gohan_Func016Func005Func001C()) then
                                 udg_TransformationID = FourCC('H08L')
                 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             else
             end
-            if (Trig_Transformations_Gohan_Func016Func008Func002C()) then
+            if (Trig_Transformations_Gohan_Func016Func005Func002C()) then
                                 udg_TransformationID = FourCC('H086')
                 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            else
+            end
+        end
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        DisplayTextToForce(GetPlayersAll(), ("11 of statmult: " .. I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable))))
+        if (Trig_Transformations_Gohan_Func016Func008C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
+        else
+            if (Trig_Transformations_Gohan_Func016Func008Func001C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
             else
             end
         end
