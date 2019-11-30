@@ -76,6 +76,35 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // god kame
+  {
+    name: "damage god kame dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 0.03,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage god kame explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    aoe: 500,
+    damageData: {
+      multiplier: 3,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // used for spirit bomb
   {
     name: "damage spirit bomb dps",
@@ -232,6 +261,21 @@ export const AOEDamageComponents = [
     damageData: {
       multiplier: 0.04,
       attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // super dragon flight
+  {
+    name: "damage super dragon flight dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 30,
+    aoe: 300,
+    damageData: {
+      multiplier: 0.1,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,

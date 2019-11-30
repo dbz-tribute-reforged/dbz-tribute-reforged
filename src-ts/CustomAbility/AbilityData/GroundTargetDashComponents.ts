@@ -72,6 +72,13 @@ export const GroundTargetDashComponents = [
     distance: 50,
   },
   // ----------------------------
+  {
+    name: "ground dash super dragon flight",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 30,
+    distance: 20,
+  },
   // energy punch
   {
     name: "ground dash energy punch",

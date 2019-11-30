@@ -4,6 +4,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A00R'), "Kamehameha"],
     [FourCC('A0JP'), "Spirit Bomb"],
     [FourCC('A00U'), "Dragon Fist"],
+    [FourCC('A0L9'), "God Kamehameha"],
     [FourCC('A0KR'), "Ultra Instinct"],
 
     // vegeta
@@ -15,8 +16,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A035'), "Moonlight"],
 
     // gohan
-    [FourCC('A0IS'), "Twin Dragon Shot"],
     [FourCC('A0H8'), "Masenko"],
+    [FourCC('A0IS'), "Twin Dragon Shot"],
+    [FourCC('A0L5'), "Super Dragon Flight"],
+    [FourCC('A0L6'), "Unlock Potential"],
+    [FourCC('A0L7'), "Justice Pose"],
+    [FourCC('A0L8'), "Potential Unleashed"],
 
     // kid trunks
     [FourCC('A02L'), "Finish Buster"],

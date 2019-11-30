@@ -1,14 +1,18 @@
 export const HeroAbilitiesList: Map<number, string[]> = new Map(
   [
     // goku and xeno
-    [FourCC("H000"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
-    [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "Ultra Instinct"]],
+    [FourCC("H000"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "God Kamehameha", "Ultra Instinct"]],
+    [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "God Kamehameha", "Ultra Instinct"]],
 
     // vegeta
     [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash", "Final Flash 2", "Energy Blast Volley"]],
     
     // gohan
-    [FourCC("H00K"), ["Kamehameha", "Twin Dragon Shot", "Masenko"]],
+    [FourCC("H00K"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
+    // adult gohan
+    [FourCC("H086"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
+    // saiyaman
+    [FourCC("H08L"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
     
     // goten
     [FourCC("H008"), ["Kamehameha"]],

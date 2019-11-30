@@ -29,7 +29,8 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
 
   calculateMaxBlock(input: CustomAbilityInput): number {
     return (
-      input.level * (
+      input.level * input.caster.spellPower * 
+      (
         10 +
         this.multiplier * 
         GetHeroStatBJ(this.attribute, input.caster.unit, true)

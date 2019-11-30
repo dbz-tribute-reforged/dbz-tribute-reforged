@@ -30,6 +30,35 @@ export const BeamComponents = [
   },
   // to here, and replace with unique name
   { 
+    name: "beam god kamehameha",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    beamHpMult: 0.03,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 35,
+    aoe: 300,
+    clashingDelayTicks: 1,
+    maxDelayTicks: 6,
+    durationIncPerDelay: 20,
+    heightVariation: {
+      start: 100,
+      finish: 100,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: true,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage god kame dps" },
+      { name: "damage god kame explosion" },
+      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "sfx beam god kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  { 
     name: "beam spirit bomb",
     repeatInterval: 1,
     startTick: 0,
