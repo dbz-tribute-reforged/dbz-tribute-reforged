@@ -812,6 +812,65 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam special beam cannon", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxList: [
+      {
+        model: "BeamCannonHead.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 2.5,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 175,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 0.75,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 175,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "BeamCannonHead.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 175,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "overhead",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx energy punch", 
     repeatInterval: 1,
     startTick: 0,

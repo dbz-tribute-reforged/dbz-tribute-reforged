@@ -61,7 +61,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 5,
     costType: "MP",
-    costAmount: 25,
+    costAmount: 200,
     duration: 150,
     updateRate: 0.03,
     castTime: 0.25,
@@ -76,7 +76,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "Boosts your ability damage by 25%." + 
-        "|nCost:25 MP|nCD: ??"
+        "|nCost:200 MP|nCD: ??"
     },
     components: [
       { name: "spell amp max power" },
@@ -110,7 +110,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "God Kamehameha", // Goku's Kame
+    name: "God Kamehameha", // Goku's Kame 2
     currentCd: 0,
     maxCd: 5,
     costType: "MP",
@@ -513,6 +513,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Special Beam Cannon",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSpecialBeamCannon.blp",
+      disabled: "BTNSpecialBeamCannon.blp",
+    },
+    tooltip: {
+      title: "Special Beam Cannon",
+      body: 
+        "Special Beam Cannon"
+    },
+    components: [
+      { name: "beam special beam cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Energy Punch",
     currentCd: 0,
     maxCd: 5,
@@ -652,6 +678,32 @@ export const AbilitiesList = [
     components: [
       { name: "beam gigantic omegastorm" },
       { name: "block broly" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Absorb",
+    currentCd: 0,
+    maxCd: 3,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNLifeDrain.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNLifeDrain.blp",
+    },
+    tooltip: {
+      title: "Absorb",
+      body: 
+        "Absorb"
+    },
+    components: [
+      { name: "block absorb" },
     ],
   },
   // -------------------------------------------
