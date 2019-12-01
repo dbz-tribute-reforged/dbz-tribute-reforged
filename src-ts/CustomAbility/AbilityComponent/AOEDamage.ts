@@ -4,6 +4,8 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
+import { TextTagHelper } from "Common/TextTagHelper";
+import { Colorizer } from "Common/Colorizer";
 
 export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
@@ -26,7 +28,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      input.level * (
+      input.level * input.caster.spellPower * 
+      (
         10 + 
         this.damageData.multiplier *
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
@@ -44,18 +47,25 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       }
     );
 
+    const damage = this.calculateDamage(input);
+
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
       UnitDamageTarget(
         input.caster.unit, 
         target, 
-        this.calculateDamage(input),
+        damage,
         true,
         false,
         this.damageData.attackType,
         this.damageData.damageType,
         this.damageData.weaponType,
       )
+
+      TextTagHelper.showTempText(
+        Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+        GetUnitX(target), GetUnitY(target), 1.0, 0.8
+      );
     })
 
     DestroyGroup(affectedGroup);

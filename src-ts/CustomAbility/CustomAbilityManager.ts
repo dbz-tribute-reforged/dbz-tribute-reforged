@@ -25,6 +25,8 @@ import { AOEStunComponents } from "./AbilityData/AOEStunComponents";
 import { AOEStun } from "./AbilityComponent/AOEStun";
 import { MultiComponents } from "./AbilityData/MultiComponents";
 import { MultiComponent } from "./AbilityComponent/MultiComponent";
+import { SpellAmpComponents } from "./AbilityData/SpellAmpComponent";
+import { SpellAmp } from "./AbilityComponent/SpellAmp";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -71,6 +73,10 @@ export class CustomAbilityManager {
 
     for (const component of GroundVortexComponents) {
       this.setComponent(new GroundVortex().deserialize(component));
+    }
+
+    for (const component of SpellAmpComponents) {
+      this.setComponent(new SpellAmp().deserialize(component));
     }
 
     for (const component of SwordSlashComponents) {

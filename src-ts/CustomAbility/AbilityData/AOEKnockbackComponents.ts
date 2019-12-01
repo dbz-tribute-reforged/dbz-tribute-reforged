@@ -25,6 +25,18 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
   },
+  // super dragon flight
+  {
+    name: "knockback super dragon flight",
+    repeatInterval: 1, 
+    startTick: 10,
+    endTick: -1,
+    knockbackData: {
+      speed: 20, 
+      angle: 0, 
+      aoe: 200,
+    },
+  },
   // broly energy punch
   {
     name: "knockback energy punch",

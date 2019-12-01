@@ -195,11 +195,12 @@ export function CustomPlayerTest() {
 
     const spellName = abilityCodesToNames.get(abilityId);
 
-    if (spellName) {
+    if (spellName) { 
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+      customPlayers[playerId].selectedUnit = caster;
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
-      if (customHero && IsUnitSelected(customHero.unit, player)) {
+      if (customHero) {
         customHero.useAbility(
           spellName,
           new CustomAbilityInput(
@@ -230,42 +231,42 @@ export function CustomPlayerTest() {
   addKeyEvent(abil1, OSKEY_X, 0, true);
   addAbilityAction(abil1, "Guard");
 
-  /*
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
-  addAbilityAction(abil2, "Ultra Instinct");
+  addAbilityAction(abil2, "Max Power");
+
+  /*
 
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, "Kamehameha");
+  addKeyEvent(abil3, OSKEY_V, 0, true);
+  addAbilityAction(abil3, "Ultra Instinct");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, "Masenko");
+  addKeyEvent(abil4, OSKEY_Q, 0, true);
+  addAbilityAction(abil4, "Kamehameha");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, "Twin Dragon Shot");
+  addKeyEvent(abil5, OSKEY_W, 0, true);
+  addAbilityAction(abil5, "Unlock Potential");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, "Death Beam Barrage");
+  addKeyEvent(abil6, OSKEY_E, 0, true);
+  addAbilityAction(abil6, "The Great Saiyaman has arrived!");
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, "Energy Blast Volley");
-
+  addKeyEvent(abil7, OSKEY_R, 0, true);
+  addAbilityAction(abil7, "Potential Unleashed");
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, "Geti Star Repair");
+  addKeyEvent(abil8, OSKEY_D, 0, true);
+  addAbilityAction(abil8, "Super Dragon Flight");
 
 
   const abil9 = CreateTrigger();

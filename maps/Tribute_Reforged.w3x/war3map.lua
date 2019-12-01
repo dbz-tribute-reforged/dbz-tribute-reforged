@@ -197,7 +197,7 @@ gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Map_Setup = nil
-gg_trg_Disable_heads = nil
+gg_trg_Disable_abilities_and_heads = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Kill_Creep = nil
@@ -546,52 +546,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 545)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 630)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1411,6 +1411,11 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H04T"), 71.5, 22205.2, 270.854, FourCC("H04T"))
     u = BlzCreateUnitWithSkin(p, FourCC("E00T"), 195.5, 22586.5, 268.738, FourCC("E00T"))
     SetUnitColor(u, ConvertPlayerColor(1))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08L"), -252.9, 22874.9, 266.518, FourCC("H08L"))
+    SetUnitState(u, UNIT_STATE_MANA, 560)
+    u = BlzCreateUnitWithSkin(p, FourCC("U019"), -539.9, 21445.3, 276.780, FourCC("U019"))
+    SetUnitState(u, UNIT_STATE_MANA, 126)
+    SetUnitColor(u, ConvertPlayerColor(9))
 end
 
 function CreatePlayerBuildings()
@@ -2033,7 +2038,7 @@ function InitTrig_Map_Setup()
     TriggerAddAction(gg_trg_Map_Setup, Trig_Map_Setup_Actions)
 end
 
-function Trig_Disable_heads_Actions()
+function Trig_Disable_abilities_and_heads_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -2072,6 +2077,8 @@ function Trig_Disable_heads_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TempPlayer)
         SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
@@ -2080,10 +2087,10 @@ function Trig_Disable_heads_Actions()
     end
 end
 
-function InitTrig_Disable_heads()
-    gg_trg_Disable_heads = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Disable_heads, 0.00)
-    TriggerAddAction(gg_trg_Disable_heads, Trig_Disable_heads_Actions)
+function InitTrig_Disable_abilities_and_heads()
+    gg_trg_Disable_abilities_and_heads = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Disable_abilities_and_heads, 0.01)
+    TriggerAddAction(gg_trg_Disable_abilities_and_heads, Trig_Disable_abilities_and_heads_Actions)
 end
 
 function Trig_Setup_Spawns_Actions()
@@ -4796,6 +4803,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssbe"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "saiyaman"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ult"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "uss"
@@ -5056,6 +5065,33 @@ function Trig_Transformations_Goku_Func020Func001C()
     return false
 end
 
+function Trig_Transformations_Goku_Func020Func010Func002Func008C()
+    if (udg_TransformationString == "ssg") then
+        return true
+    end
+    if (udg_TransformationString == "ssb") then
+        return true
+    end
+    if (udg_TransformationString == "ssbkao") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Goku_Func020Func010Func002C()
+    if (not Trig_Transformations_Goku_Func020Func010Func002Func008C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func020Func010C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Goku_Func020C()
     if (not Trig_Transformations_Goku_Func020Func001C()) then
         return false
@@ -5120,6 +5156,7 @@ function Trig_Transformations_Goku_Actions()
         udg_TransformationAbility = FourCC("A0DP")
         udg_TransformationSFXString = "AuraBlue.mdx"
         udg_TransformationSFXString2 = "AuraKaox10.mdx"
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
     else
     end
     if (Trig_Transformations_Goku_Func020C()) then
@@ -5131,6 +5168,19 @@ function Trig_Transformations_Goku_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+        if (Trig_Transformations_Goku_Func020Func010C()) then
+            if (Trig_Transformations_Goku_Func020Func010Func002C()) then
+                SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
+                UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
+                SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_StatMultUnit, 9)
+                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L9'))
+            else
+                SetPlayerAbilityAvailableBJ(true, FourCC("A00R"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0L9"), udg_TransformationPlayer)
+            end
+        else
+        end
     else
     end
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -5336,7 +5386,7 @@ function Trig_Transformations_Vegeta_Func017Func001C()
     return false
 end
 
-function Trig_Transformations_Vegeta_Func017Func009Func001Func007C()
+function Trig_Transformations_Vegeta_Func017Func009Func001Func008C()
     if (udg_TransformationString == "ssbe") then
         return true
     end
@@ -5347,7 +5397,7 @@ function Trig_Transformations_Vegeta_Func017Func009Func001Func007C()
 end
 
 function Trig_Transformations_Vegeta_Func017Func009Func001C()
-    if (not Trig_Transformations_Vegeta_Func017Func009Func001Func007C()) then
+    if (not Trig_Transformations_Vegeta_Func017Func009Func001Func008C()) then
         return false
     end
     return true
@@ -5433,6 +5483,7 @@ function Trig_Transformations_Vegeta_Actions()
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L4"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
                 SetUnitAbilityLevelSwapped(FourCC("A0L4"), udg_StatMultUnit, 7)
+                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L4'))
             else
                 SetPlayerAbilityAvailableBJ(true, FourCC("A01B"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0L4"), udg_TransformationPlayer)
@@ -5477,6 +5528,36 @@ function Trig_Transformations_Gohan_Func011C()
 end
 
 function Trig_Transformations_Gohan_Func012C()
+    if (not (udg_TransformationString == "saiyaman")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 115)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func013C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func014C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 135)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func015C()
     if (not (udg_TransformationString == "ult")) then
         return false
     end
@@ -5486,7 +5567,7 @@ function Trig_Transformations_Gohan_Func012C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func014Func001C()
+function Trig_Transformations_Gohan_Func017Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -5496,8 +5577,53 @@ function Trig_Transformations_Gohan_Func014Func001C()
     return false
 end
 
-function Trig_Transformations_Gohan_Func014C()
-    if (not Trig_Transformations_Gohan_Func014Func001C()) then
+function Trig_Transformations_Gohan_Func017Func005Func001C()
+    if (not (udg_TransformationString == "saiyaman")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func017Func005Func002Func001C()
+    if (udg_TransformationString == "ult") then
+        return true
+    end
+    if (udg_TransformationString == "r") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Gohan_Func017Func005Func002C()
+    if (not Trig_Transformations_Gohan_Func017Func005Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func017Func005C()
+    if (not (GetHeroLevel(udg_StatMultUnit) < 115)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func017Func008Func001C()
+    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func017Func008C()
+    if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func017C()
+    if (not Trig_Transformations_Gohan_Func017Func001C()) then
         return false
     end
     return true
@@ -5531,17 +5657,68 @@ function Trig_Transformations_Gohan_Actions()
     else
     end
     if (Trig_Transformations_Gohan_Func012C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationAbility = FourCC("A0AJ")
-        udg_TransformationSFXString = "AuraWhite.mdx"
+        udg_StatMultReal = 2.10
+        udg_TransformationAbility = FourCC("AUan")
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        SaveIntegerBJ(IMaxBJ(1, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
+    else
+    end
+    if (Trig_Transformations_Gohan_Func013C()) then
+        udg_StatMultReal = 2.15
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
     if (Trig_Transformations_Gohan_Func014C()) then
+        udg_StatMultReal = 2.20
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Gohan_Func015C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0AJ")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        SaveIntegerBJ(IMaxBJ(2, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
+    else
+    end
+    if (Trig_Transformations_Gohan_Func017C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
-        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+        if (Trig_Transformations_Gohan_Func017Func005C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+                        udg_TransformationID = FourCC('H00K')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+            if (Trig_Transformations_Gohan_Func017Func005Func001C()) then
+                                udg_TransformationID = FourCC('H08L')
+                BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            else
+            end
+            if (Trig_Transformations_Gohan_Func017Func005Func002C()) then
+                                udg_TransformationID = FourCC('H086')
+                BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            else
+            end
+        end
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        DisplayTextToForce(GetPlayersAll(), ("11 of statmult: " .. I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable))))
+        if (Trig_Transformations_Gohan_Func017Func008C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
+        else
+            if (Trig_Transformations_Gohan_Func017Func008Func001C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
+            else
+            end
+        end
     else
     end
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -6395,6 +6572,7 @@ function Trig_Transformations_Cooler_Base_Actions()
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L2"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
                 SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L2'))
             else
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0C1"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0L2"), udg_TransformationPlayer)
@@ -6592,6 +6770,7 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L2"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
                 SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L2'))
                                 udg_TransformationID = FourCC('H05L')
                 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             else
@@ -6685,6 +6864,7 @@ function Trig_Transformations_Metal_Cooler_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
         UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0L2"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L2'))
     else
     end
     if (Trig_Transformations_Metal_Cooler_Func012C()) then
@@ -7184,7 +7364,7 @@ function InitCustomTriggers()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
     InitTrig_Map_Setup()
-    InitTrig_Disable_heads()
+    InitTrig_Disable_abilities_and_heads()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New()

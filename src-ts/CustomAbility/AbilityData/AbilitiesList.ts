@@ -57,6 +57,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Max Power",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 25,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNNagaUnBurrow.blp",
+    },
+    tooltip: {
+      title: "(C) Max Power",
+      body: 
+        "Boosts your ability damage by 25%." + 
+        "|nCost:25 MP|nCD: ??"
+    },
+    components: [
+      { name: "spell amp max power" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Kamehameha", // Goku's Kame
     currentCd: 0,
     maxCd: 5,
@@ -79,6 +106,32 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam kamehameha" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "God Kamehameha", // Goku's Kame
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKameGod.blp",
+      disabled: "BTNKameGod.blp",
+    },
+    tooltip: {
+      title: "God Kame",
+      body: 
+        "God Kame"
+    },
+    components: [
+      { name: "beam god kamehameha" },
       { name: "sfx blue wind aura" },
     ],
   },
@@ -145,7 +198,7 @@ export const AbilitiesList = [
     maxCd: 25,
     costType: "HP",
     costAmount: 0,
-    duration: 180,
+    duration: 660,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: false,
@@ -347,8 +400,115 @@ export const AbilitiesList = [
         "Masenko"
     },
     components: [
-      // TODO: need to add stun for masenko
       { name: "beam masenko" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Super Dragon Flight",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuperDragonFlight.blp",
+      disabled: "BTNSuperDragonFlight.blp",
+    },
+    tooltip: {
+      title: "Super Dragon Flight",
+      body: 
+        "Super Dragon Flight"
+    },
+    components: [
+      { name: "damage super dragon flight dps" },
+      { name: "knockback super dragon flight" },
+      { name: "ground dash super dragon flight" },
+      { name: "spell amp super dragon flight" },
+      { name: "sfx super dragon flight" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Unlock Potential",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNUnlockPotential.blp",
+      disabled: "BTNUnlockPotential.blp",
+    },
+    tooltip: {
+      title: "Unlock Potential",
+      body: 
+        "Unlock Potential"
+    },
+    components: [
+      { name: "spell amp unlock potential" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "The Great Saiyaman has arrived!",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJusticePose.blp",
+      disabled: "BTNJusticePose.blp",
+    },
+    tooltip: {
+      title: "Justice Pose",
+      body: 
+        "Justice Pose"
+    },
+    components: [
+      { name: "spell amp justice pose" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Potential Unleashed",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPotentialUnleashed.blp",
+      disabled: "BTNPotentialUnleashed.blp",
+    },
+    tooltip: {
+      title: "Potential Unleashed",
+      body: 
+        "Potential Unleashed"
+    },
+    components: [
+      { name: "spell amp potential unleashed" },
     ],
   },
   // -------------------------------------------

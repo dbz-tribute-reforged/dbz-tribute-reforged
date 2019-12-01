@@ -11,6 +11,7 @@ export class CustomHero {
   public isCasting: Map<CustomAbility, boolean>;
 
   public isCastTimeWaiting: boolean;
+  public spellPower: number;
 
   constructor(
     public readonly unit: unit,
@@ -24,17 +25,25 @@ export class CustomHero {
     this.isCasting = new Map();
 
     this.isCastTimeWaiting = false;
+    this.spellPower = 1.0;
 
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
     // relevant heroes
     this.addAbilityFromAll("Zanzo Dash");
     this.addAbilityFromAll("Guard");
-    
-    /*
     this.addAbilityFromAll("Max Power");
+
+    /*
     this.addAbilityFromAll("Ultra Instinct");
 
+    this.addAbilityFromAll("Kamehameha");
+    this.addAbilityFromAll("Unlock Potential");
+    this.addAbilityFromAll("The Great Saiyaman has arrived!");
+    this.addAbilityFromAll("Potential Unleashed");
+    
+    this.addAbilityFromAll("Super Dragon Flight");
+    
     this.addAbilityFromAll("Kamehameha");
     this.addAbilityFromAll("Masenko");
     this.addAbilityFromAll("Twin Dragon Shot");
@@ -119,5 +128,13 @@ export class CustomHero {
   public addAbility(name: string, ability: CustomAbility): this {
     this.abilities.add(name, ability);
     return this;
+  }
+
+  public addSpellPower(modifier: number) {
+    this.spellPower += modifier;
+  }
+  
+  public removeSpellPower(modifier: number) {
+    this.spellPower -= modifier;
   }
 }

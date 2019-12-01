@@ -1,7 +1,7 @@
 import { CustomAbility } from "CustomAbility/CustomAbility";
 
 export class CustomHeroAbilityManager {
-  protected abilities: Map<string, CustomAbility>;
+  public abilities: Map<string, CustomAbility>;
 
   constructor(
     abilities?: CustomAbility[]
