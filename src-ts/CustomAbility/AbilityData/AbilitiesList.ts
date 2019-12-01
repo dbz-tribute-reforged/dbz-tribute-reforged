@@ -684,7 +684,7 @@ export const AbilitiesList = [
   {
     name: "Absorb",
     currentCd: 0,
-    maxCd: 3,
+    maxCd: 2,
     costType: "MP",
     costAmount: 0,
     duration: 25,
@@ -694,8 +694,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNLifeDrain.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNLifeDrain.blp",
+      enabled: "Replaceabletextures\\CommandButtons\\BTNCellAbsorb.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNCellAbsorb.blp",
     },
     tooltip: {
       title: "Absorb",

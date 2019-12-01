@@ -16351,6 +16351,11 @@ STRING 2653
 Buu's fighting style is not a very good one. He leaves himself open for alot of attacks but since he can regenerate he doesn't care.
 }
 
+STRING 2654
+{
+You need to absorb android 18!
+}
+
 STRING 2655
 // Abilities: A029 (Absorb), Tip (Tooltip - Normal)
 {
@@ -16373,6 +16378,11 @@ STRING 2658
 // Abilities: A029 (Absorb), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Absorb
+}
+
+STRING 2659
+{
+You need to absorb android 17!
 }
 
 STRING 2660
@@ -47043,11 +47053,6 @@ STRING 7763
 (Cell SECOND)
 }
 
-STRING 7764
-{
-You need to absorb the other android!
-}
-
 STRING 7765
 // Abilities: A01S (Reincarnation), EditorSuffix (Editor Suffix)
 {
@@ -47067,7 +47072,7 @@ Masenko
 }
 
 STRING 7768
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47541,7 +47546,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47565,7 +47570,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -51052,7 +51057,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -52468,7 +52473,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54646,7 +54651,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -55282,7 +55287,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61091,7 +61096,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61109,7 +61114,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61121,7 +61126,7 @@ Unlocks the Gohan's hidden potential, boosting ability damage by 10% for the nex
 }
 
 STRING 10112
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61139,7 +61144,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61151,7 +61156,7 @@ Strikes a daring pose for justice. Boosts ability damage by 15% for the next 10 
 }
 
 STRING 10117
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61169,7 +61174,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
