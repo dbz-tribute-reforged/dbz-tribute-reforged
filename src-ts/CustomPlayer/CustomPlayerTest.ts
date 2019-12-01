@@ -195,11 +195,12 @@ export function CustomPlayerTest() {
 
     const spellName = abilityCodesToNames.get(abilityId);
 
-    if (spellName) {
+    if (spellName) { 
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+      customPlayers[playerId].selectedUnit = caster;
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
-      if (customHero && IsUnitSelected(customHero.unit, player)) {
+      if (customHero) {
         customHero.useAbility(
           spellName,
           new CustomAbilityInput(

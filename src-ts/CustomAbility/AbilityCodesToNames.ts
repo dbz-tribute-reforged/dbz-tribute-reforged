@@ -20,7 +20,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0IS'), "Twin Dragon Shot"],
     [FourCC('A0L5'), "Super Dragon Flight"],
     [FourCC('A0L6'), "Unlock Potential"],
-    [FourCC('A0L7'), "Justice Pose"],
+    [FourCC('A0L7'), "The Great Saiyaman has arrived!"],
     [FourCC('A0L8'), "Potential Unleashed"],
 
     // kid trunks
