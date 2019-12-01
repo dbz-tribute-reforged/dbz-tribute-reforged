@@ -349,6 +349,7 @@ gg_trg_Cell_Absorb = nil
 gg_trg_Transformations_Cell_Perfect = nil
 gg_trg_Transformations_Cell_First = nil
 gg_trg_Cell_Sense_Droids = nil
+gg_trg_Cell_Juniors = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1439,7 +1440,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("U019"), -539.9, 21445.3, 276.780, FourCC("U019"))
     SetUnitState(u, UNIT_STATE_MANA, 126)
     SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00E"), 208.4, 21980.5, -78.886, FourCC("H00E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H00E"), 208.4, 21980.5, 265.458, FourCC("H00E"))
     SetUnitState(u, UNIT_STATE_MANA, 0)
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H00G"), -139.4, 21970.9, 263.872, FourCC("H00G"))
@@ -1822,6 +1823,61 @@ function InitTrig_Lookout_Exit()
     TriggerRegisterEnterRectSimple(gg_trg_Lookout_Exit, gg_rct_LookoutExit)
     TriggerAddCondition(gg_trg_Lookout_Exit, Condition(Trig_Lookout_Exit_Conditions))
     TriggerAddAction(gg_trg_Lookout_Exit, Trig_Lookout_Exit_Actions)
+end
+
+function Trig_Cell_Juniors_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A01Z"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Cell_Juniors_Func005A()
+    ModifyHeroStat(bj_HEROSTAT_STR, GetEnumUnit(), bj_MODIFYMETHOD_SET, udg_TempInt)
+    ModifyHeroStat(bj_HEROSTAT_AGI, GetEnumUnit(), bj_MODIFYMETHOD_SET, udg_TempInt2)
+    ModifyHeroStat(bj_HEROSTAT_INT, GetEnumUnit(), bj_MODIFYMETHOD_SET, udg_TempInt3)
+end
+
+function Trig_Cell_Juniors_Actions()
+    udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetSpellAbilityUnit(), true) // 4)
+    udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetSpellAbilityUnit(), true) // 4)
+    udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), true) // 4)
+    udg_TempUnitGroup = GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC("H01J"))
+    ForGroupBJ(udg_TempUnitGroup, Trig_Cell_Juniors_Func005A)
+        DestroyGroup(udg_TempUnitGroup)
+end
+
+function InitTrig_Cell_Juniors()
+    gg_trg_Cell_Juniors = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Cell_Juniors, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Cell_Juniors, Condition(Trig_Cell_Juniors_Conditions))
+    TriggerAddAction(gg_trg_Cell_Juniors, Trig_Cell_Juniors_Actions)
+end
+
+function Trig_Cell_Sense_Droids_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0BO"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Cell_Sense_Droids_Actions()
+    udg_TempPlayer = GetTriggerPlayer()
+    udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+    udg_TempLoc = GetUnitLoc(udg_TransformationCell17)
+    PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_SIMPLE, 100.00, 100.00, 0.00)
+        RemoveLocation(udg_TempLoc)
+    udg_TempLoc = GetUnitLoc(udg_TransformationCell18)
+    PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_SIMPLE, 100.00, 100.00, 0.00)
+        RemoveLocation(udg_TempLoc)
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Cell_Sense_Droids()
+    gg_trg_Cell_Sense_Droids = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Cell_Sense_Droids, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Cell_Sense_Droids, Condition(Trig_Cell_Sense_Droids_Conditions))
+    TriggerAddAction(gg_trg_Cell_Sense_Droids, Trig_Cell_Sense_Droids_Actions)
 end
 
 function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
@@ -6340,7 +6396,7 @@ function Trig_Cell_Absorb_Conditions()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func001C()
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002Func001C()
     if (not (LoadIntegerBJ(12, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
@@ -6350,7 +6406,7 @@ function Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func001C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func002C()
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002Func002C()
     if (not (LoadIntegerBJ(12, udg_ID, udg_StatMultHashtable) == 2)) then
         return false
     end
@@ -6360,41 +6416,55 @@ function Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func002C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004Func002Func016C()
-    if (Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func001C()) then
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002C()
+    if (Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002Func001C()) then
         return true
     end
-    if (Trig_Cell_Absorb_Func001Func003Func004Func002Func016Func002C()) then
+    if (Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002Func002C()) then
         return true
     end
     return false
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004Func002C()
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
         return false
     end
-    if (not Trig_Cell_Absorb_Func001Func003Func004Func002Func016C()) then
+    if (not Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001Func002C()) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004Func009C()
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func003C()
+    if (not Trig_Cell_Absorb_Func001Func006Func001Func005Func003Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Cell_Absorb_Func001Func006Func001Func005Func012C()
     if (not (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("n01M"))) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func004C()
+function Trig_Cell_Absorb_Func001Func006Func001Func005C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00E"))) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func003Func005C()
+function Trig_Cell_Absorb_Func001Func006Func001C()
+    if (not (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) >= 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Cell_Absorb_Func001Func006Func002C()
     if (GetUnitTypeId(GetSpellTargetUnit()) == FourCC("n01M")) then
         return true
     end
@@ -6404,8 +6474,8 @@ function Trig_Cell_Absorb_Func001Func003Func005C()
     return false
 end
 
-function Trig_Cell_Absorb_Func001Func003C()
-    if (not Trig_Cell_Absorb_Func001Func003Func005C()) then
+function Trig_Cell_Absorb_Func001Func006C()
+    if (not Trig_Cell_Absorb_Func001Func006Func002C()) then
         return false
     end
     return true
@@ -6421,50 +6491,65 @@ end
 function Trig_Cell_Absorb_Actions()
     if (Trig_Cell_Absorb_Func001C()) then
         udg_StatMultUnit = GetSpellAbilityUnit()
-        if (Trig_Cell_Absorb_Func001Func003C()) then
-            if (Trig_Cell_Absorb_Func001Func003Func004C()) then
-                GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
-                                udg_TransformationID = FourCC('H00F')
-                udg_TransformationStatMult = 1.75
-                TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
-                                udg_ID = GetHandleId(udg_TempUnit)
-                if (Trig_Cell_Absorb_Func001Func003Func004Func009C()) then
-                    SaveIntegerBJ(1, 12, udg_ID, udg_StatMultHashtable)
-                else
-                    SaveIntegerBJ(2, 12, udg_ID, udg_StatMultHashtable)
-                end
-                udg_TempLoc = GetUnitLoc(udg_TempUnit)
-                AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
-                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
-                DestroyEffectBJ(GetLastCreatedEffectBJ())
-                                RemoveLocation(udg_TempLoc)
-            else
-                                udg_ID = GetHandleId(udg_StatMultUnit)
-                if (Trig_Cell_Absorb_Func001Func003Func004Func002C()) then
+        if (Trig_Cell_Absorb_Func001Func006C()) then
+            if (Trig_Cell_Absorb_Func001Func006Func001C()) then
+                if (Trig_Cell_Absorb_Func001Func006Func001Func005C()) then
+                    SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+                    UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                     GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
-                                        udg_TransformationID = FourCC('H00G')
-                    udg_TransformationStatMult = 2.00
+                                        udg_TransformationID = FourCC('H00F')
+                    udg_TransformationStatMult = 1.75
                     TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+                                        udg_ID = GetHandleId(udg_TempUnit)
+                    if (Trig_Cell_Absorb_Func001Func006Func001Func005Func012C()) then
+                        SaveIntegerBJ(1, 12, udg_ID, udg_StatMultHashtable)
+                    else
+                        SaveIntegerBJ(2, 12, udg_ID, udg_StatMultHashtable)
+                    end
                     udg_TempLoc = GetUnitLoc(udg_TempUnit)
                     AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
-                    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 4.00)
+                    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                                         RemoveLocation(udg_TempLoc)
                 else
-                    udg_TempPlayer = GetTriggerPlayer()
-                    udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
-                    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7764")
-                                        DestroyForce(udg_TempPlayerGroup)
+                                        udg_ID = GetHandleId(udg_StatMultUnit)
+                    if (Trig_Cell_Absorb_Func001Func006Func001Func005Func003C()) then
+                        SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+                        UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+                        GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
+                                                udg_TransformationID = FourCC('H00G')
+                        udg_TransformationStatMult = 2.00
+                        TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+                        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+                        AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
+                        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 4.00)
+                        DestroyEffectBJ(GetLastCreatedEffectBJ())
+                                                RemoveLocation(udg_TempLoc)
+                    else
+                        udg_TempPlayer = GetTriggerPlayer()
+                        udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+                        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7764")
+                                                DestroyForce(udg_TempPlayerGroup)
+                    end
                 end
+            else
+                udg_TempPlayer = GetTriggerPlayer()
+                udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
+                DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_8478")
+                                DestroyForce(udg_TempPlayerGroup)
             end
         else
-            udg_StatMultReal = (1.00 + I2R(GetUnitFoodMade(GetSpellTargetUnit())))
+            udg_StatMultReal = (0.00 + I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit())))
             TriggerExecute(gg_trg_Add_To_Base_Stats)
             TriggerExecute(gg_trg_Update_Current_Stats)
+            SetUnitLifePercentBJ(GetSpellAbilityUnit(), (GetUnitLifePercent(GetSpellAbilityUnit()) + 3.00))
+            SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+            UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         end
-        SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
-        UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     else
+        udg_TempInt = (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) + 1)
+        SetUnitLifePercentBJ(GetSpellAbilityUnit(), (GetUnitLifePercent(GetSpellAbilityUnit()) + I2R(udg_TempInt)))
+        UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * (0.01 * I2R(udg_TempInt))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     end
 end
 
@@ -6475,30 +6560,11 @@ function InitTrig_Cell_Absorb()
     TriggerAddAction(gg_trg_Cell_Absorb, Trig_Cell_Absorb_Actions)
 end
 
-function Trig_Cell_Sense_Droids_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0BO"))) then
+function Trig_Transformations_Cell_Larval_Func009Func001C()
+    if (not (udg_TransformationCellDroidsReady == false)) then
         return false
     end
     return true
-end
-
-function Trig_Cell_Sense_Droids_Actions()
-    udg_TempPlayer = GetTriggerPlayer()
-    udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
-    udg_TempLoc = GetUnitLoc(udg_TransformationCell17)
-    PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_SIMPLE, 100.00, 100.00, 0.00)
-        RemoveLocation(udg_TempLoc)
-    udg_TempLoc = GetUnitLoc(udg_TransformationCell18)
-    PingMinimapLocForForceEx(udg_TempPlayerGroup, udg_TempLoc, 2.00, bj_MINIMAPPINGSTYLE_SIMPLE, 100.00, 100.00, 0.00)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
-end
-
-function InitTrig_Cell_Sense_Droids()
-    gg_trg_Cell_Sense_Droids = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Cell_Sense_Droids, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Cell_Sense_Droids, Condition(Trig_Cell_Sense_Droids_Conditions))
-    TriggerAddAction(gg_trg_Cell_Sense_Droids, Trig_Cell_Sense_Droids_Actions)
 end
 
 function Trig_Transformations_Cell_Larval_Func009C()
@@ -6538,6 +6604,14 @@ function Trig_Transformations_Cell_Larval_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_Larval_Func009C()) then
+        if (Trig_Transformations_Cell_Larval_Func009Func001C()) then
+            udg_TempInt = GetRandomInt(0, 9)
+                        udg_TransformationCell17 = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('n01M'), udg_TransformationCellDroidsX[udg_TempInt], udg_TransformationCellDroidsY[udg_TempInt], 270)
+            udg_TempInt = ModuloInteger((udg_TempInt + 1), 10)
+                        udg_TransformationCell18 = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('n008'), udg_TransformationCellDroidsX[udg_TempInt], udg_TransformationCellDroidsY[udg_TempInt], 270)
+            udg_TransformationCellDroidsReady = true
+        else
+        end
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('H00E')
         udg_TransformationStatMult = 1.25
@@ -6556,13 +6630,6 @@ end
 function InitTrig_Transformations_Cell_Larval()
     gg_trg_Transformations_Cell_Larval = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Cell_Larval, Trig_Transformations_Cell_Larval_Actions)
-end
-
-function Trig_Transformations_Cell_First_Func009Func002C()
-    if (not (udg_TransformationCellDroidsReady == false)) then
-        return false
-    end
-    return true
 end
 
 function Trig_Transformations_Cell_First_Func009C()
@@ -6603,13 +6670,6 @@ function Trig_Transformations_Cell_First_Actions()
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_First_Func009C()) then
         udg_StatMultReal = 1.50
-        if (Trig_Transformations_Cell_First_Func009Func002C()) then
-            udg_TempInt = GetRandomInt(0, 9)
-                        udg_TransformationCell17 = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('n01M'), udg_TransformationCellDroidsX[udg_TempInt], udg_TransformationCellDroidsY[udg_TempInt], 270)
-            udg_TempInt = ModuloInteger((udg_TempInt + 1), 10)
-                        udg_TransformationCell18 = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('n008'), udg_TransformationCellDroidsX[udg_TempInt], udg_TransformationCellDroidsY[udg_TempInt], 270)
-        else
-        end
     else
     end
     if (Trig_Transformations_Cell_First_Func011C()) then
@@ -7820,6 +7880,8 @@ function InitCustomTriggers()
     InitTrig_Pan_E_Effect()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
+    InitTrig_Cell_Juniors()
+    InitTrig_Cell_Sense_Droids()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
     InitTrig_Cam_Dist()
@@ -7936,7 +7998,6 @@ function InitCustomTriggers()
     InitTrig_Transformations_Broly()
     InitTrig_Set_Transformation_Stat_Mult()
     InitTrig_Cell_Absorb()
-    InitTrig_Cell_Sense_Droids()
     InitTrig_Transformations_Cell_Larval()
     InitTrig_Transformations_Cell_First()
     InitTrig_Transformations_Cell_Perfect()

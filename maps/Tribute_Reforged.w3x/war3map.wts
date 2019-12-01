@@ -16351,12 +16351,6 @@ STRING 2653
 Buu's fighting style is not a very good one. He leaves himself open for alot of attacks but since he can regenerate he doesn't care.
 }
 
-STRING 2654
-// Abilities: A029 (Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
-}
-
 STRING 2655
 // Abilities: A029 (Absorb), Tip (Tooltip - Normal)
 {
@@ -16381,22 +16375,10 @@ STRING 2658
 [|cff00ff00E|r] Learn Absorb
 }
 
-STRING 2659
-// Abilities: A029 (Absorb), Researchubertip (Tooltip - Learn - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
-}
-
 STRING 2660
 // Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 2661
-// Abilities: A029 (Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
 STRING 2662
@@ -51363,6 +51345,11 @@ STRING 8477
 W
 }
 
+STRING 8478
+{
+You need level 2 Absorb to absorb the androids!
+}
+
 STRING 8479
 // Abilities: A0IS (Twin Dragon Shot), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -51421,6 +51408,24 @@ STRING 8494
 // Abilities: A0IS (Twin Dragon Shot), Ubertip (Tooltip - Normal - Extended)
 {
 The user fires two spheres of energy towards the target area, damaging the first units they come in contact with..|n|cff00FF00Dmg: int*lvl*1.5+1000|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 8495
+// Units: H00E (Cell "First Form"), EditorSuffix (Name - Editor Suffix)
+{
+(first form)
+}
+
+STRING 8496
+// Units: H00F (Cell "Second Form"), EditorSuffix (Name - Editor Suffix)
+{
+(second form)
+}
+
+STRING 8497
+// Units: H00G (Cell "Perfect Form"), EditorSuffix (Name - Editor Suffix)
+{
+(perfect form)
 }
 
 STRING 8498
@@ -54033,12 +54038,6 @@ STRING 8926
 Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|r|n|cff00FFFFCooldown: 16s|r
 }
 
-STRING 8927
-// Abilities: A0JU (Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
-}
-
 STRING 8928
 // Abilities: A0JU (Absorb), Tip (Tooltip - Normal)
 {
@@ -54063,22 +54062,10 @@ STRING 8931
 [|cff00ff00E|r] Learn Absorb
 }
 
-STRING 8932
-// Abilities: A0JU (Absorb), Researchubertip (Tooltip - Learn - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
-}
-
 STRING 8933
 // Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 8934
-// Abilities: A0JU (Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-Cell can use his tail to absorb weak creeps and Androids 17/18.|n|cffFFFF00Level 1:|r Can absorb creeps for power and healing.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
 STRING 8935
@@ -56238,6 +56225,12 @@ STRING 9293
 // Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
 placeholder
+}
+
+STRING 9294
+// Abilities: A029 (Absorb), Ubertip (Tooltip - Normal - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
 STRING 9295
@@ -60400,6 +60393,12 @@ STRING 9990
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 7|r]
 }
 
+STRING 9991
+// Abilities: A029 (Absorb), Researchubertip (Tooltip - Learn - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
+}
+
 STRING 9992
 // Abilities: A0L2 (Supernova Golden), Name (Name)
 {
@@ -60422,6 +60421,12 @@ STRING 9995
 // Abilities: A0BZ (Planet Crusher), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Planet Crusher - [|cffffcc00Level %d|r]
+}
+
+STRING 9996
+// Abilities: A029 (Absorb), Ubertip (Tooltip - Normal - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
 STRING 9997
@@ -61365,5 +61370,23 @@ STRING 10153
 // Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
 {
 Automatically dodges incoming enemies (including beams) and provides a Int x 100 shield that absorbs 100% of all incoming non-lethal damage.
+}
+
+STRING 10154
+// Abilities: A0JU (Absorb), Ubertip (Tooltip - Normal - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
+}
+
+STRING 10155
+// Abilities: A0JU (Absorb), Researchubertip (Tooltip - Learn - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
+}
+
+STRING 10156
+// Abilities: A0JU (Absorb), Ubertip (Tooltip - Normal - Extended)
+{
+Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
