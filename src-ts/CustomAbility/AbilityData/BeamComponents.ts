@@ -260,6 +260,34 @@ export const BeamComponents = [
   },
   // -------------------------------------------
   { 
+    name: "beam special beam cannon",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    beamHpMult: 0.04,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 30,
+    aoe: 300,
+    clashingDelayTicks: 0,
+    maxDelayTicks: 0,
+    durationIncPerDelay: 0,
+    heightVariation: {
+      start: 50,
+      finish: 50,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: false,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage final flash dps" },
+      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "sfx beam special beam cannon" },
+    ],
+  },
+  // -------------------------------------------
+  { 
     name: "beam planet crusher",
     repeatInterval: 1,
     startTick: 0,

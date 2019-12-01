@@ -34,9 +34,17 @@ export class CustomHero {
     this.addAbilityFromAll("Guard");
     this.addAbilityFromAll("Max Power");
 
+    
     /*
     this.addAbilityFromAll("Ultra Instinct");
 
+    this.addAbilityFromAll("Kamehameha");
+    this.addAbilityFromAll("Masenko");
+    this.addAbilityFromAll("Special Beam Cannon");
+    this.addAbilityFromAll("Perfect Kamehameha");
+
+    this.addAbilityFromAll("Absorb");
+    
     this.addAbilityFromAll("Kamehameha");
     this.addAbilityFromAll("Unlock Potential");
     this.addAbilityFromAll("The Great Saiyaman has arrived!");
@@ -44,8 +52,6 @@ export class CustomHero {
     
     this.addAbilityFromAll("Super Dragon Flight");
     
-    this.addAbilityFromAll("Kamehameha");
-    this.addAbilityFromAll("Masenko");
     this.addAbilityFromAll("Twin Dragon Shot");
     this.addAbilityFromAll("Death Beam Barrage");
     this.addAbilityFromAll("Energy Blast Volley");
