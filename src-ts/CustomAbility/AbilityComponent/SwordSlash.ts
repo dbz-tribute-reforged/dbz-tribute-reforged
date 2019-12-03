@@ -110,10 +110,9 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       );
       
       const damageThisTick = 
-        input.level * input.caster.spellPower * 
+        input.level * input.caster.spellPower * this.damageData.multiplier * 
         (
-          CustomAbility.BASE_DAMAGE + 
-          this.damageData.multiplier * 
+          CustomAbility.BASE_DAMAGE +  
           GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true
         )
       );

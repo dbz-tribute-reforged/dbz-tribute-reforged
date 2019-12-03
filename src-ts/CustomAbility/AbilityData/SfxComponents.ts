@@ -967,7 +967,7 @@ export const SfxComponents = [
         model: "NuclearExplosion.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 1.5,
+        scale: 1.71,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,

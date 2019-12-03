@@ -12191,10 +12191,58 @@ STRING 1960
 (androids 13 14 15 )
 }
 
+STRING 1961
+// Abilities: A0LC (S.S. Deadly Hammer), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn S.S. Deadly Hammer - [|cffffcc00Level %d|r]
+}
+
+STRING 1962
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 1963
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 1964
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 1965
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 1966
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
 STRING 1967
 // Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 1968
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 1969
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
 }
 
 STRING 1970
@@ -26592,6 +26640,66 @@ STRING 4367
 G
 }
 
+STRING 4368
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 4369
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 3|r]
+}
+
+STRING 4370
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 4371
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 5|r]
+}
+
+STRING 4372
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 4373
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 4374
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 7|r]
+}
+
+STRING 4375
+// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 4376
+// Abilities: A0LD (S.S. Deadly Bomber), Name (Name)
+{
+S.S. Deadly Bomber
+}
+
+STRING 4377
+// Abilities: A0LD (S.S. Deadly Bomber), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn S.S. Deadly Bomb - [|cffffcc00Level %d|r]
+}
+
 STRING 4378
 // Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
@@ -26602,6 +26710,18 @@ STRING 4379
 // Abilities: A01Y (Nuclear Bomb), Name (Name)
 {
 Nuclear Bomb
+}
+
+STRING 4380
+// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 4381
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Dragon Flight - [|cffffcc00Level 9|r]
 }
 
 STRING 4382
@@ -54626,10 +54746,34 @@ STRING 9034
 R
 }
 
+STRING 9035
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] S.S. Deadly Bomb - [|cffffcc00Level 8|r]
+}
+
+STRING 9036
+// Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Dragon Flight - [|cffffcc00Level 10|r]
+}
+
 STRING 9037
 // Abilities: A0K2 (Overcharge), Name (Name)
 {
 Overcharge
+}
+
+STRING 9038
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 21 seconds)|r
+}
+
+STRING 9039
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 9040
@@ -54684,6 +54828,18 @@ STRING 9048
 // Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 9049
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
+}
+
+STRING 9050
+// Abilities: A0LD (S.S. Deadly Bomber), Researchubertip (Tooltip - Learn - Extended)
+{
+A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 19 seconds)|r
 }
 
 STRING 9051
@@ -55158,6 +55314,12 @@ STRING 9129
 // Abilities: A0KA (Power Impact), EditorSuffix (Editor Suffix)
 {
 2
+}
+
+STRING 9130
+// Abilities: A0LD (S.S. Deadly Bomber), EditorSuffix (Editor Suffix)
+{
+(super 13 new version)
 }
 
 STRING 9131
@@ -59935,6 +60097,12 @@ STRING 9923
 P. Call Giru
 }
 
+STRING 9924
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 9925
 // Abilities: A0KW (P. Maiden Blast), Tip (Tooltip - Normal)
 {
@@ -60842,6 +61010,18 @@ STRING 10079
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
+STRING 10080
+// Abilities: A0K2 (Overcharge), Researchubertip (Tooltip - Learn - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10081
+// Abilities: A0K2 (Overcharge), Untip (Tooltip - Turn Off)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 10087
 // Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
@@ -61401,28 +61581,10 @@ STRING 10182
 [|cffFFFF00F|r] Overcharge - [|cffffcc00Level 1|r]
 }
 
-STRING 10183
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
-{
-Increases ability damage by 3.3% per second up to a maximum of 20%. Lasts 7 seconds.|n|cff00FFFFCooldown: 22s|r
-}
-
 STRING 10184
 // Abilities: A0K2 (Overcharge), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00F|r] Learn Overcharge - [|cffffcc00Level %d|r]
-}
-
-STRING 10185
-// Abilities: A0K2 (Overcharge), Researchubertip (Tooltip - Learn - Extended)
-{
-Increases ability damage by 3.3% per second up to a maximum of 20%. Lasts 7 seconds.|n|cff00FFFFCooldown: 22s|r
-}
-
-STRING 10186
-// Abilities: A0K2 (Overcharge), Untip (Tooltip - Turn Off)
-{
-Increases ability damage by 3.3% per second up to a maximum of 20%. Lasts 7 seconds.|n|cff00FFFFCooldown: 22s|r
 }
 
 STRING 10187
@@ -61747,12 +61909,6 @@ STRING 10240
 // Abilities: A0LC (S.S. Deadly Hammer), Name (Name)
 {
 S.S. Deadly Hammer
-}
-
-STRING 10241
-// Abilities: A0LC (S.S. Deadly Hammer), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00Q|r] S.S. Deadly Hammer - [|cffffcc00Level %d|r]
 }
 
 STRING 10242

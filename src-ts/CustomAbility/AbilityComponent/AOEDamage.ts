@@ -35,10 +35,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      input.level * input.caster.spellPower * 
+      input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
-        this.damageData.multiplier *
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
       )
     );

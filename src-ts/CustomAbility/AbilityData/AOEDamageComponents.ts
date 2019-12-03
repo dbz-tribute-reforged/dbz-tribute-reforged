@@ -378,7 +378,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
-    aoe: 700,
+    aoe: 900,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.75,
       attribute: bj_HEROSTAT_INT,
@@ -393,9 +393,25 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
-    aoe: 700,
+    aoe: 900,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // 13 energy beam beam
+  {
+    name: "damage overcharge dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 210,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.25,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

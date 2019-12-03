@@ -52,6 +52,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A00N'), "Energy Beam"],
     // change later distortion field -> android barrier
     [FourCC('A0LC'), "S.S. Deadly Hammer"],
+    // new
+    [FourCC('A0LD'), "S.S. Deadly Bomber"],
+    // old
     [FourCC('A041'), "S.S. Deadly Bomber"],
     [FourCC('A01Y'), "Nuke"],
     [FourCC('A0LB'), "Android Barrier"],
