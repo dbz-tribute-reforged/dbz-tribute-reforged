@@ -411,7 +411,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 210,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.25,
+      multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

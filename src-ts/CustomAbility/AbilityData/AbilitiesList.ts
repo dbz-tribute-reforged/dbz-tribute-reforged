@@ -698,6 +698,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp overcharge" },
+      { name: "damage overcharge dps" },
     ],
   },
   // -------------------------------------------
