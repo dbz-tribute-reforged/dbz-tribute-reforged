@@ -48,6 +48,20 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0JQ'), "Babidi's Magic"],
     [FourCC('A01A'), "Summon Yakon"],
 
+    // androids 13 14 15
+    [FourCC('A00N'), "Energy Beam"],
+    // change later distortion field -> android barrier
+    [FourCC('A0LC'), "S.S. Deadly Hammer"],
+    // new
+    [FourCC('A0LD'), "S.S. Deadly Bomber"],
+    // old
+    [FourCC('A041'), "S.S. Deadly Bomber"],
+    [FourCC('A01Y'), "Nuke"],
+    [FourCC('A0LB'), "Android Barrier"],
+    [FourCC('A0K2'), "Overcharge"],
+
+
+
     // broly
     [FourCC('A0G8'), "Energy Punch"],
     [FourCC('A00J'), "Power Level Rising"],
@@ -58,6 +72,7 @@ export const abilityCodesToNames = new Map<number, string>(
     // cell 
     [FourCC('A029'), "Absorb"],
     [FourCC('A0JU'), "Absorb"],
+    [FourCC('A0LA'), "Absorb"],
     // special beam cannon CELL
     [FourCC('A0C9'), "Special Beam Cannon"],
     // masenko CELL

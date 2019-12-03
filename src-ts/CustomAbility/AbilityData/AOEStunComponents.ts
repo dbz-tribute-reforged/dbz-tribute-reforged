@@ -6,7 +6,7 @@ export const AOEStunComponents = [
     startTick: 0,
     endTick: -1,
     duration: 1,
-    aoe: 500,
+    aoe: 400,
     keepStunning: false, 
   },
   // to here, and replace with unique name

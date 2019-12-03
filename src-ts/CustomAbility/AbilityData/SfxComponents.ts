@@ -1,3 +1,5 @@
+import { SfxComponent } from "CustomAbility/AbilityComponent/SfxComponent";
+
 export const SfxComponents = [
   // copy from here
   { 
@@ -5,6 +7,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -46,10 +49,39 @@ export const SfxComponents = [
   },
   // to here, and replace with unique name
   { 
+    name: "sfx max power", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "DustWave.mdl",
+        repeatInterval: 33,
+        group: 0,
+        scale: 0.75,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx beam kamehameha", 
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
@@ -109,6 +141,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
@@ -216,6 +249,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -323,6 +357,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -462,6 +497,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "CalamityParticle3.mdl",
@@ -504,6 +540,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\Purge\\PurgeBuffTarget.mdl",
@@ -563,6 +600,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl",
@@ -654,6 +692,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
 
     ],
@@ -682,6 +721,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Des.mdl",
@@ -757,6 +797,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -816,6 +857,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "BeamCannonHead.mdl",
@@ -871,10 +913,203 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam energy beam", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\Cripple\\CrippleTarget.mdl",
+        repeatInterval: 3,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 205,
+          y: 255,
+          z: 205,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        repeatInterval: 12,
+        group: 0,
+        scale: 1.2,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "origin",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx nuke", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxList: [
+      {
+        model: "NuclearExplosion.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.71,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx ss deadly hammer", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 25,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "WindCircleFaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 0.5,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "DustWindFasterExact.mdl",
+        repeatInterval: 5,
+        group: 0,
+        scale: 0.4,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam ss deadly bomber", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        repeatInterval: 8,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 205,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        repeatInterval: 4,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 155,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "SSDB.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 1.0,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 205,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 1.0,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx energy punch", 
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -950,6 +1185,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "AuraDarkGreen.mdl",
@@ -993,6 +1229,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1117,6 +1354,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Banish\\BanishTarget.mdl",
@@ -1151,8 +1389,8 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\NightElf\\Immolation\\ImmolationDamage.mdl",
-        repeatInterval: 1,
+        model: "Abilities\\Spells\\NightElf\\Immolation\\ImmolationTarget.mdl",
+        repeatInterval: 3,
         group: 0,
         scale: 4,
         startHeight: 0,
@@ -1208,6 +1446,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl",
@@ -1300,6 +1539,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "DeathBeamHead.mdl",
@@ -1343,6 +1583,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1450,6 +1691,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Items\\OrbCorruption\\OrbCorruptionMissile.mdl",
@@ -1493,6 +1735,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1536,6 +1779,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1643,6 +1887,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1702,6 +1947,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl",
@@ -1761,6 +2007,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\OrbOfDeath\\AnnihilationMissile.mdl",
@@ -1820,6 +2067,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl",
@@ -1911,6 +2159,7 @@ export const SfxComponents = [
     repeatInterval: 0,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1970,6 +2219,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     sfxList: [
       {
         model: "BlackBlink.mdl",

@@ -36,6 +36,15 @@ export class CustomHero {
 
     
     /*
+    this.addAbilityFromAll("Energy Beam");
+
+    this.addAbilityFromAll("Nuke");
+    this.addAbilityFromAll("S.S. Deadly Hammer");
+    this.addAbilityFromAll("S.S. Deadly Bomber");
+    this.addAbilityFromAll("Android Barrier");
+    this.addAbilityFromAll("Overcharge");
+
+
     this.addAbilityFromAll("Ultra Instinct");
 
     this.addAbilityFromAll("Kamehameha");

@@ -1,3 +1,5 @@
+import { AOEDamage } from "CustomAbility/AbilityComponent/AOEDamage";
+
 /*
 
 // Hero stats
@@ -40,6 +42,14 @@ constant weapontype         WEAPON_TYPE_CLAW_HEAVY_SLICE    = ConvertWeaponType(
 constant weapontype         WEAPON_TYPE_AXE_MEDIUM_CHOP     = ConvertWeaponType(22)
 constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(23)
 */
+export module BASE {
+  export const KAME_DPS = 0.006;
+  export const KAME_EXPLOSION = 0.04;
+  export const SPIRIT_BOMB_DPS = 0.003;
+  export const SPIRIT_BOMB_EXPLOSION = 0.4;
+  export const DFIST_DPS = 0.012;
+  export const DFIST_EXPLOSION = 0.3;
+}
 
 export const AOEDamageComponents = [
   // used for kame
@@ -52,9 +62,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: 0.02,
+      multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -67,9 +78,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 2,
+      multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -82,9 +94,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.03,
+      multiplier: BASE.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -96,9 +109,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 3,
+      multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -111,9 +125,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.03,
+      multiplier: BASE.SPIRIT_BOMB_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -125,9 +140,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 600,
     damageData: {
-      multiplier: 3,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -140,9 +156,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 300,
     damageData: {
-      multiplier: 0.15,
+      multiplier: BASE.DFIST_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -154,24 +171,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 5,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-  },
-  // big bang attack
-  {
-    name: "damage big bang attack explosion",
-    repeatInterval: 1,
-    startTick: -1,
-    endTick: -1,
-    aoe: 500,
-    damageData: {
-      multiplier: 4,
+      multiplier: BASE.DFIST_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -184,9 +187,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.KAME_DPS * 4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -198,9 +202,26 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 3.5,
+      multiplier: BASE.KAME_DPS * 4 * 3,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // big bang attack
+  {
+    name: "damage big bang attack explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.9,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -213,38 +234,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    aoe: 325,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 300,
     damageData: {
-      multiplier: 0.04,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-  },
-  // twin dragon shot
-  {
-    name: "damage twin dragon shot dps",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: -1,
-    aoe: 400,
-    damageData: {
-      multiplier: 0.01,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-  },
-  {
-    name: "damage twin dragon shot explosion",
-    repeatInterval: 1,
-    startTick: -1,
-    endTick: -1,
-    aoe: 500,
-    damageData: {
-      multiplier: 1.5,
+      multiplier: BASE.KAME_DPS * 0.09,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -257,9 +250,41 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.8,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // twin dragon shot
+  {
+    name: "damage twin dragon shot dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage twin dragon shot explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.04,
+      multiplier: BASE.KAME_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -272,10 +297,122 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 30,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 300,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.DFIST_DPS * 0.8,
       attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // special beam cannon
+  {
+    name: "damage special beam cannon dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 1.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // 13 energy beam beam
+  {
+    name: "damage energy beam dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // ss deadly hammer
+  {
+    name: "damage ss deadly hammer dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 25,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.DFIST_DPS * 0.25,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // ss deadly bomber
+  {
+    name: "damage ss deadly bomber dps",
+    repeatInterval: 16,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5 * 16,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // 13 nuke 
+  {
+    name: "damage target nuke dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    aoe: 900,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.75,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage target nuke explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    aoe: 900,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // 13 energy beam beam
+  {
+    name: "damage overcharge dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 210,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
@@ -287,9 +424,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 20,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.DFIST_DPS * 0.75,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -302,9 +440,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 2,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.75,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -317,9 +456,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.03,
+      multiplier: BASE.SPIRIT_BOMB_DPS,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -331,9 +471,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 600,
     damageData: {
-      multiplier: 3,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -346,9 +487,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -361,9 +503,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.KAME_DPS * 1.2,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -375,24 +518,26 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 2.0,
+      multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
   },
-  // death beam (half a kame)
+  // death beam
   {
     name: "damage death beam frieza dps",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 325,
     damageData: {
-      multiplier: 0.1,
+      multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -405,24 +550,26 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 300,
     damageData: {
-      multiplier: 0.2,
+      multiplier: BASE.DFIST_DPS * 1.4,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
   },
-  // used for spirit bomb
+  // supernova golden, upped spirit bomb dmg
   {
     name: "damage supernova golden dps",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: 0.05,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -434,9 +581,10 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 600,
     damageData: {
-      multiplier: 5,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

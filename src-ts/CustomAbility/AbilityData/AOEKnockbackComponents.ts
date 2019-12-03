@@ -37,6 +37,18 @@ export const AOEKnockbackComponents = [
       aoe: 200,
     },
   },
+  // ss deadly hammer reverse knockback
+  {
+    name: "knockback ss deadly hammer",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    knockbackData: {
+      speed: 15, 
+      angle: 180, 
+      aoe: 400,
+    },
+  },
   // broly energy punch
   {
     name: "knockback energy punch",

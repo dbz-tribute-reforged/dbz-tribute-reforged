@@ -79,6 +79,13 @@ export const GroundTargetDashComponents = [
     endTick: 30,
     distance: 20,
   },
+  {
+    name: "ground dash ss deadly hammer",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    distance: 25,
+  },
   // energy punch
   {
     name: "ground dash energy punch",

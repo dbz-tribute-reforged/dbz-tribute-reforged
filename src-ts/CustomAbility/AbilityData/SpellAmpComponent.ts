@@ -6,8 +6,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.25,
-    mode: SpellAmp.INSTANT_MODE,
+    bonus: 0.1,
+    rate: 0.1,
   },
   // --------------------------------------------
   { 
@@ -16,7 +16,7 @@ export const SpellAmpComponents = [
     startTick: 0,
     endTick: -1,
     bonus: 0.05,
-    mode: SpellAmp.INSTANT_MODE,
+    rate: 0.05,
   },
   // --------------------------------------------
   { 
@@ -24,8 +24,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.10,
-    mode: SpellAmp.INSTANT_MODE,
+    bonus: 0.05,
+    rate: 0.05,
   },
   // --------------------------------------------
   { 
@@ -33,8 +33,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.15,
-    mode: SpellAmp.INSTANT_MODE,
+    bonus: 0.1,
+    rate: 0.1,
   },
   // --------------------------------------------
   { 
@@ -42,7 +42,16 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.20,
-    mode: SpellAmp.INSTANT_MODE,
+    bonus: 0.15,
+    rate: 0.15,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp overcharge", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.2,
+    rate: 0.001,
   },
 ];

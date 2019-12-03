@@ -7,7 +7,7 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
   static readonly INCREASE_MODE = 1;
   static readonly DECREASE_MODE = 2;
 
-  protected isActive: boolean;
+  protected currentBonus: number;
 
   constructor(
     public name: string = "SpellAmp",
@@ -15,19 +15,23 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
     public startTick: number = 0,
     public endTick: number = -1,
     public bonus: number = 0.1,
-    public mode: number = SpellAmp.INSTANT_MODE,
+    public rate: number = 0.1,
   ) {
-    this.isActive = false;
+    this.currentBonus = 0;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.isActive) {
-      this.isActive = true;
-      input.caster.addSpellPower(this.bonus);
+    if (this.currentBonus < this.bonus) {
+      let addedSpellPower = this.rate;
+      if (this.currentBonus + addedSpellPower > this.bonus) {
+        addedSpellPower = this.bonus - this.currentBonus;
+      }
+      this.currentBonus += addedSpellPower;
+      input.caster.addSpellPower(addedSpellPower);
     }
 
-    if (ability.isFinishedUsing(this) && this.isActive) {
-      this.isActive = false;
+    if (ability.isFinishedUsing(this)) {
+      this.currentBonus = 0;
       input.caster.removeSpellPower(this.bonus);
     }
   }
@@ -36,7 +40,7 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
   clone(): AbilityComponent {
     return new SpellAmp(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.bonus, this.mode,
+      this.bonus, this.rate,
     );
   }
   
@@ -47,7 +51,7 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
       startTick: number;
       endTick: number;
       bonus: number;
-      mode: number;
+      rate: number;
     }
   ) {
     this.name = input.name;
@@ -55,7 +59,7 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.bonus = input.bonus;
-    this.mode = input.mode;
+    this.rate = input.rate;
     return this;
   }
 }

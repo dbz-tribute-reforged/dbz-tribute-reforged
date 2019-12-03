@@ -141,7 +141,12 @@ export class BeamComponent implements AbilityComponent, Serializable<BeamCompone
       PauseUnit(this.beamUnit, true);
     } else {
       // possible selection bug again?
-      SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);
+      // SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);
+      if (input.targetUnit) {
+        IssueTargetOrder(this.beamUnit, "follow", input.targetUnit);
+      } else {
+        IssuePointOrder(this.beamUnit, "move", input.targetPoint.x, input.targetPoint.y);
+      }
     }
   }
   

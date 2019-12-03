@@ -8,12 +8,18 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 
 export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
+  static readonly SOURCE_UNIT = 0;
+  static readonly SOURCE_TARGET_POINT = 1;
+
+  protected damageCoords: Vector2D;
+  protected damageStarted: boolean;
 
   constructor(
     public name: string = "AOEDamage",
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public damageSource: number = AOEDamage.SOURCE_UNIT,
     public aoe: number = 250,
     public damageData: DamageData = new DamageData(
       0.02,
@@ -23,24 +29,34 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       WEAPON_TYPE_WHOKNOWS
     ), 
   ) {
-
+    this.damageCoords = new Vector2D(0, 0);
+    this.damageStarted = false;
   }
 
   protected calculateDamage(input: CustomAbilityInput): number {
     return (
-      input.level * input.caster.spellPower * 
+      input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
-        10 + 
-        this.damageData.multiplier *
+        CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
       )
     );
   }
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    if (!this.damageStarted) {
+      this.damageStarted = true;
+      if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT) {
+        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      }
+    }
+
+    if (this.damageSource == AOEDamage.SOURCE_UNIT) {
+      this.damageCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+    }
+
     const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoord, 
+      this.damageCoords, 
       this.aoe,
       () => {
         return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
@@ -69,13 +85,15 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     })
 
     DestroyGroup(affectedGroup);
-
+    if (ability.isFinishedUsing(this)) {
+      this.damageStarted = false;
+    }
   }
 
   clone(): AbilityComponent {
     return new AOEDamage(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.aoe, this.damageData,
+      this.damageSource, this.aoe, this.damageData,
     );
   }
 
@@ -85,6 +103,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      damageSource: number;
       aoe: number; 
       damageData: {
         multiplier: number; 
@@ -99,6 +118,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.damageSource = input.damageSource;
     this.aoe = input.aoe;
     this.damageData = new DamageData().deserialize(input.damageData);
     return this;
