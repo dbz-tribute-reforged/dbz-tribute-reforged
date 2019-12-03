@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.18c
+TR 0.18d
 }
 
 STRING 4
@@ -12183,6 +12183,12 @@ STRING 1959
 // Abilities: A041 (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
 {
 A large red energy ball charged with both hands that has immense destructive power. |n|cff00ff00(Damage: (Int * lvl * 2) +100) per 0.5s).|r|n|cff00ffff(Cooldown: 19 seconds)|r
+}
+
+STRING 1960
+// Abilities: A00N (Energy Beam), EditorSuffix (Editor Suffix)
+{
+(androids 13 14 15 )
 }
 
 STRING 1967
@@ -53972,7 +53978,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8927
-// Abilities: A00N (Energy Beam), EditorSuffix (Editor Suffix)
+// Abilities: A02O (Distortion Field), EditorSuffix (Editor Suffix)
 {
 (androids)
 }
@@ -60967,12 +60973,6 @@ STRING 10110
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
-}
-
-STRING 10111
-// Abilities: A02O (Distortion Field), EditorSuffix (Editor Suffix)
-{
-(androids)
 }
 
 STRING 10112

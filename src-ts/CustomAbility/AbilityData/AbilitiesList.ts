@@ -688,8 +688,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNStasisTrap.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNStasisTrap.blp",
+      enabled: "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
+      disabled: "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
     },
     tooltip: {
       title: "Overcharge",
