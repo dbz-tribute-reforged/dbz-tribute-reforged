@@ -48,7 +48,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 50% of incoming damage until more than 10 * STR damage is blocked." + 
+        "Basic Guard ability that blocks 50% of incoming damage until more than 5 * STR damage is blocked." + 
         "|nCost:25 MP|nCD: 9"
     },
     components: [
@@ -59,10 +59,10 @@ export const AbilitiesList = [
   {
     name: "Max Power",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 40,
     costType: "MP",
     costAmount: 200,
-    duration: 150,
+    duration: 330,
     updateRate: 0.03,
     castTime: 0.25,
     canMultiCast: false,
@@ -75,11 +75,12 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Max Power",
       body: 
-        "Boosts your ability damage by 25%." + 
-        "|nCost:200 MP|nCD: ??"
+        "Boosts your ability damage by 10% for 10seconds." + 
+        "|nCost:200 MP|nCD: 40"
     },
     components: [
       { name: "spell amp max power" },
+      { name: "sfx max power" },
     ],
   },
   // -------------------------------------------
@@ -198,7 +199,7 @@ export const AbilitiesList = [
     maxCd: 25,
     costType: "HP",
     costAmount: 0,
-    duration: 660,
+    duration: 495,
     updateRate: 0.03,
     castTime: 0.03,
     canMultiCast: false,
@@ -211,7 +212,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "Ultra Instinct",
       body: 
-        "Ultra Instinct (dodging randomly + blocking 20*INT). 25hp, cd7"
+        "Ultra Instinct (dodging randomly + blocking 20*INT)."
     },
     components: [
       { name: "dodge ultra instinct" },
@@ -243,32 +244,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam galick gun" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Big Bang Attack",
-    currentCd: 0,
-    maxCd: 5,
-    costType: "MP",
-    costAmount: 0,
-    duration: 30,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: false,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNBigBangAttack.blp",
-      disabled: "BTNBigBangAttack.blp",
-    },
-    tooltip: {
-      title: "Big Bang Attack",
-      body: 
-        "Big Bang Attack stuff"
-    },
-    components: [
-      { name: "beam big bang attack" },
     ],
   },
   // -------------------------------------------
@@ -322,6 +297,32 @@ export const AbilitiesList = [
     components: [
       { name: "multi final flash 2" },
       { name: "knockback 1tick 25speed 0angle 400aoe" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Big Bang Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBigBangAttack.blp",
+      disabled: "BTNBigBangAttack.blp",
+    },
+    tooltip: {
+      title: "Big Bang Attack",
+      body: 
+        "Big Bang Attack stuff"
+    },
+    components: [
+      { name: "beam big bang attack" },
     ],
   },
   // -------------------------------------------
@@ -384,7 +385,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 40,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -518,7 +519,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -535,6 +536,168 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam special beam cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Energy Beam", // androids 13 14 15 beam
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Beam.blp",
+      disabled: "BTN13Beam.blp",
+    },
+    tooltip: {
+      title: "Energy Beam 13",
+      body: 
+        "Energy Beam 13"
+    },
+    components: [
+      { name: "beam energy beam" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "S.S. Deadly Hammer",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 124,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Hammer.blp",
+      disabled: "BTN13Hammer.blp",
+    },
+    tooltip: {
+      title: "S.S. Deadly Hammer",
+      body: 
+        "S.S. Deadly Hammer"
+    },
+    components: [
+      { name: "ground dash ss deadly hammer" },
+      { name: "damage ss deadly hammer dps" },
+      { name: "multi ss deadly hammer" },
+      { name: "knockback ss deadly hammer" },
+      { name: "sfx ss deadly hammer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "S.S. Deadly Bomber",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 208,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13SSDB.blp",
+      disabled: "BTN13SSDB.blp",
+    },
+    tooltip: {
+      title: "S.S. Deadly Bomber",
+      body: 
+        "S.S. Deadly Bomber"
+    },
+    components: [
+      { name: "beam ss deadly bomber" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Nuke",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Nuke.blp",
+      disabled: "BTN13Nuke.blp",
+    },
+    tooltip: {
+      title: "Nuke",
+      body: 
+        "Nuke"
+    },
+    components: [
+      { name: "damage target nuke dps" },
+      { name: "damage target nuke explosion" },
+      { name: "sfx nuke" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Android Barrier",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Barrier.blp",
+      disabled: "BTN13Barrier.blp",
+    },
+    tooltip: {
+      title: "Android Barrier",
+      body: 
+        "Android Barrier"
+    },
+    components: [
+      { name: "block android barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Overcharge",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 231,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNStasisTrap.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNStasisTrap.blp",
+    },
+    tooltip: {
+      title: "Overcharge",
+      body: 
+        "Overcharge"
+    },
+    components: [
+      { name: "spell amp overcharge" },
     ],
   },
   // -------------------------------------------
@@ -560,9 +723,9 @@ export const AbilitiesList = [
         "Energy Puncho"
     },
     components: [
+      { name: "ground dash energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
-      { name: "ground dash energy punch" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
       { name: "block broly" },

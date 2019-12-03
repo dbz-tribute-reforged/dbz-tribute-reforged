@@ -154,6 +154,7 @@ udg_TransformationCellDroidsReady = false
 udg_TransformationCellDroidsX = __jarray(0.0)
 udg_TransformationCellDroidsY = __jarray(0.0)
 udg_CellJrAutoPatrolAngle = 0.0
+udg_TransformationResultUnit = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -350,6 +351,10 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
+gg_trg_Transformations_Androids_13_14_15 = nil
+gg_trg_Transformations_Exit_Point = nil
+gg_trg_Transformations_Androids_13 = nil
+gg_trg_Transformations_Androids_Super_13 = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -571,52 +576,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 485)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1382,9 +1387,9 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H00R"), 190.0, 22716.4, 278.215, FourCC("H00R"))
     u = BlzCreateUnitWithSkin(p, FourCC("H01V"), 191.1, 22300.1, 277.078, FourCC("H01V"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01S"), 155.0, 22364.2, 272.943, FourCC("H01S"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H01S"), 147.2, 22385.0, 272.943, FourCC("H01S"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 228.8, 22377.8, 275.421, FourCC("H01T"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 247.9, 22404.2, 275.421, FourCC("H01T"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("O001"), -458.4, 22342.7, 272.925, FourCC("O001"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -1450,6 +1455,11 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("n01M"), 64.6, 21708.0, 254.880, FourCC("n01M"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n008"), -7.0, 21696.3, 269.130, FourCC("n008"))
+    SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("H01U"), 488.0, 22147.7, 256.497, FourCC("H01U"))
+    SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("H01W"), 348.0, 22162.3, 258.290, FourCC("H01W"))
+    SetUnitState(u, UNIT_STATE_MANA, 400)
     SetUnitColor(u, ConvertPlayerColor(12))
 end
 
@@ -1835,6 +1845,7 @@ function Trig_Cell_Juniors_Actions()
     ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt)
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt2)
     ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt3)
+    SuspendHeroXPBJ(false, GetSummonedUnit())
 end
 
 function InitTrig_Cell_Juniors()
@@ -4222,6 +4233,26 @@ function InitTrig_Hero_Pick_Disable_Pick_Modes()
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01S")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01T")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()
+    if (not Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     udg_TempUnit = GetEnumUnit()
     udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
@@ -4237,6 +4268,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
         RemoveLocation(udg_TempLoc)
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
+    if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
+        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 50.00)
+    else
+    end
 end
 
 function Trig_Hero_Pick_Setup_Selected_Heroes_Actions()
@@ -5095,6 +5130,13 @@ function Trig_Transformations_Entry_Point_Func003Func008C()
     return true
 end
 
+function Trig_Transformations_Entry_Point_Func003Func009C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00G"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Entry_Point_Func003A()
     udg_StatMultUnit = GetEnumUnit()
     if (Trig_Transformations_Entry_Point_Func003Func002C()) then
@@ -5149,17 +5191,48 @@ function Trig_Transformations_Entry_Point_Func003A()
         TriggerExecute(gg_trg_Transformations_Cell_Perfect)
     else
     end
+    if (Trig_Transformations_Entry_Point_Func003Func009C()) then
+        TriggerExecute(gg_trg_Transformations_Cell_Perfect)
+    else
+    end
 end
 
 function Trig_Transformations_Entry_Point_Actions()
     udg_TransformationPlayer = GetTriggerPlayer()
     udg_TransformationString = GetEventPlayerChatString()
     ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Entry_Point_Func003A)
+    TriggerExecute(gg_trg_Transformations_Exit_Point)
 end
 
 function InitTrig_Transformations_Entry_Point()
     gg_trg_Transformations_Entry_Point = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Entry_Point, Trig_Transformations_Entry_Point_Actions)
+end
+
+function Trig_Transformations_Exit_Point_Func001A()
+    udg_TempInt2 = 1
+    while (true) do
+        if (udg_TempInt2 > 6) then break end
+        UnitRemoveItemFromSlotSwapped(udg_TempInt2, GetEnumUnit())
+        UnitAddItemSwapped(GetLastRemovedItem(), udg_TransformationResultUnit)
+        udg_TempInt2 = udg_TempInt2 + 1
+    end
+    udg_StatMultUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Remove_Unit_From_StatMult)
+    udg_HeroRespawnUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Remove_Unit_From_HeroRespawn)
+    RemoveUnit(GetEnumUnit())
+end
+
+function Trig_Transformations_Exit_Point_Actions()
+    ForGroupBJ(udg_TransformationUnitGroup, Trig_Transformations_Exit_Point_Func001A)
+    GroupClear(udg_TransformationUnitGroup)
+    udg_TempUnit = udg_TransformationResultUnit
+end
+
+function InitTrig_Transformations_Exit_Point()
+    gg_trg_Transformations_Exit_Point = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Exit_Point, Trig_Transformations_Exit_Point_Actions)
 end
 
 function Trig_Transformations_Goku_Func009C()
@@ -6223,6 +6296,190 @@ function InitTrig_Transformations_Future_Trunks()
     TriggerAddAction(gg_trg_Transformations_Future_Trunks, Trig_Transformations_Future_Trunks_Actions)
 end
 
+function Trig_Transformations_Androids_13_Func009Func002A()
+    udg_TempInt = (udg_TempInt + GetHeroLevel(GetEnumUnit()))
+end
+
+function Trig_Transformations_Androids_13_Func009Func003Func001Func001Func002C()
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01S")) then
+        return true
+    end
+    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01T")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Androids_13_Func009Func003Func001Func001C()
+    if (not Trig_Transformations_Androids_13_Func009Func003Func001Func001Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_Func009Func003Func001A()
+    if (Trig_Transformations_Androids_13_Func009Func003Func001Func001C()) then
+        GroupAddUnitSimple(GetEnumUnit(), udg_TransformationUnitGroup)
+    else
+    end
+end
+
+function Trig_Transformations_Androids_13_Func009Func003C()
+    if (not (udg_TempInt >= 105)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_Func009C()
+    if (not (udg_TransformationString == "super")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Androids_13_Func009C()) then
+        udg_TempInt = 0
+        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func009Func002A)
+        if (Trig_Transformations_Androids_13_Func009Func003C()) then
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func009Func003Func001A)
+                        udg_TransformationID = FourCC('H01U')
+            udg_TransformationStatMult = 2.00
+            TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 100.00)
+            udg_StatMultReal = 0.00
+        else
+        end
+    else
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Androids_13()
+    gg_trg_Transformations_Androids_13 = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Androids_13, Trig_Transformations_Androids_13_Actions)
+end
+
+function Trig_Transformations_Androids_13_14_15_Func009C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_14_15_Func010C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 45)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_14_15_Func011C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_14_15_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Androids_13_14_15_Func009C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Androids_13_14_15_Func010C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationSFXString = "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl"
+    else
+    end
+    if (Trig_Transformations_Androids_13_14_15_Func011C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationSFXString = "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl"
+    else
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Androids_13_14_15()
+    gg_trg_Transformations_Androids_13_14_15 = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Androids_13_14_15, Trig_Transformations_Androids_13_14_15_Actions)
+end
+
+function Trig_Transformations_Androids_Super_13_Func009C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_Super_13_Func010C()
+    if (not (udg_TransformationString == "ultra")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_Super_13_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Androids_Super_13_Func009C()) then
+        udg_StatMultReal = 2.00
+    else
+    end
+    if (Trig_Transformations_Androids_Super_13_Func010C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Androids_Super_13()
+    gg_trg_Transformations_Androids_Super_13 = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Androids_Super_13, Trig_Transformations_Androids_Super_13_Actions)
+end
+
 function Trig_Transformations_Broly_Func009C()
     if (not (udg_TransformationString == "r")) then
         return false
@@ -6408,6 +6665,9 @@ function Trig_Cell_Absorb_Func002C()
     if (GetSpellAbilityId() == FourCC("A0JU")) then
         return true
     end
+    if (GetSpellAbilityId() == FourCC("A0LA")) then
+        return true
+    end
     return false
 end
 
@@ -6418,7 +6678,7 @@ function Trig_Cell_Absorb_Conditions()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func001C()
+function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func001C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
@@ -6428,7 +6688,7 @@ function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func001C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func002C()
+function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func002C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 2)) then
         return false
     end
@@ -6438,25 +6698,25 @@ function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func002C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001C()
-    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func001C()) then
+function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001C()
+    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func001C()) then
         return true
     end
-    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001Func002C()) then
+    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func002C()) then
         return true
     end
     return false
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func004C()
+function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func004C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func003C()
-    if (not Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func001C()) then
+function Trig_Cell_Absorb_Func001Func006Func001Func001Func002C()
+    if (not Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001C()) then
         return false
     end
     return true
@@ -6521,15 +6781,14 @@ function Trig_Cell_Absorb_Actions()
             if (Trig_Cell_Absorb_Func001Func006Func001C()) then
                 if (Trig_Cell_Absorb_Func001Func006Func001Func001C()) then
                                         udg_ID = GetHandleId(udg_StatMultUnit)
-                    DisplayTextToForce(GetPlayersAll(), ("13 of id: " .. I2S(LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable))))
-                    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func003C()) then
+                    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002C()) then
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
                         UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                                                 udg_TransformationID = FourCC('H00G')
                         udg_TransformationStatMult = 2.00
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
-                        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+                        udg_TempLoc = GetUnitLoc(udg_TransformationResultUnit)
                         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
                         BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 4.00)
                         DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -6537,7 +6796,7 @@ function Trig_Cell_Absorb_Actions()
                     else
                         udg_TempPlayer = GetTriggerPlayer()
                         udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
-                        if (Trig_Cell_Absorb_Func001Func006Func001Func001Func003Func004C()) then
+                        if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func004C()) then
                             DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2654")
                         else
                             DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2659")
@@ -6554,14 +6813,13 @@ function Trig_Cell_Absorb_Actions()
                                                 udg_TransformationID = FourCC('H00F')
                         udg_TransformationStatMult = 1.75
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
-                        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+                        udg_TempLoc = GetUnitLoc(udg_TransformationResultUnit)
                         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
                         BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                         DestroyEffectBJ(GetLastCreatedEffectBJ())
                                                 RemoveLocation(udg_TempLoc)
                                                 udg_ID = GetHandleId(udg_TempUnit)
                         SaveIntegerBJ(1, 13, udg_ID, udg_StatMultHashtable)
-                        DisplayTextToForce(GetPlayersAll(), ("13 of id: " .. I2S(LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable))))
                     else
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
                         UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
@@ -6569,14 +6827,13 @@ function Trig_Cell_Absorb_Actions()
                                                 udg_TransformationID = FourCC('H00F')
                         udg_TransformationStatMult = 1.75
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
-                        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+                        udg_TempLoc = GetUnitLoc(udg_TransformationResultUnit)
                         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl")
                         BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                         DestroyEffectBJ(GetLastCreatedEffectBJ())
                                                 RemoveLocation(udg_TempLoc)
                                                 udg_ID = GetHandleId(udg_TempUnit)
                         SaveIntegerBJ(2, 13, udg_ID, udg_StatMultHashtable)
-                        DisplayTextToForce(GetPlayersAll(), ("13 of id: " .. I2S(LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable))))
                     end
                 else
                 end
@@ -7504,21 +7761,6 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Func007A()
         udg_TempLoc = Location(GetUnitX(udg_StatMultUnit), GetUnitY(udg_StatMultUnit))
 end
 
-function Trig_Replace_Transformation_Group_with_New_Hero_Func024A()
-    udg_TempInt2 = 1
-    while (true) do
-        if (udg_TempInt2 > 6) then break end
-        UnitRemoveItemFromSlotSwapped(udg_TempInt2, GetEnumUnit())
-        UnitAddItemSwapped(GetLastRemovedItem(), udg_TempUnit)
-        udg_TempInt2 = udg_TempInt2 + 1
-    end
-    udg_StatMultUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Remove_Unit_From_StatMult)
-    udg_HeroRespawnUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Remove_Unit_From_HeroRespawn)
-    RemoveUnit(GetEnumUnit())
-end
-
 function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
     udg_TempInt = 0
     udg_TempReal = 0.00
@@ -7527,28 +7769,26 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
     udg_TempReal4 = 0.00
     udg_TempLoc = GetRectCenter(GetPlayableMapRect())
     ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func007A)
-        udg_TempUnit = CreateUnit(udg_TransformationPlayer, udg_TransformationID, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc), 90)
+        udg_TransformationResultUnit = CreateUnit(udg_TransformationPlayer, udg_TransformationID, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc), 90)
         RemoveLocation(udg_TempLoc)
     udg_PlayerLevel[GetConvertedPlayerId(udg_TransformationPlayer)] = (udg_TempInt - 1)
-        SetHeroLevel(udg_TempUnit, udg_TempInt, false)
-    ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
-    ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
-    ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
-    ModifyHeroSkillPoints(udg_TempUnit, bj_MODIFYMETHOD_SET, (udg_TempInt // 3))
-    udg_StatMultUnit = udg_TempUnit
+        SetHeroLevel(udg_TransformationResultUnit, udg_TempInt, false)
+    ModifyHeroStat(bj_HEROSTAT_STR, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
+    ModifyHeroStat(bj_HEROSTAT_AGI, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
+    ModifyHeroStat(bj_HEROSTAT_INT, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
+    ModifyHeroSkillPoints(udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, (udg_TempInt // 3))
+    udg_StatMultUnit = udg_TransformationResultUnit
     TriggerExecute(gg_trg_Add_Unit_To_StatMult)
     udg_StatMultReal = udg_TransformationStatMult
     TriggerExecute(gg_trg_Set_Stat_Multiplier)
     TriggerExecute(gg_trg_Update_Current_Stats)
-    udg_HeroRespawnUnit = udg_TempUnit
+    udg_HeroRespawnUnit = udg_TransformationResultUnit
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
-    SetUnitLifePercentBJ(udg_TempUnit, (udg_TempReal4 / I2R(CountUnitsInGroup(udg_TransformationUnitGroup))))
-    ForGroupBJ(udg_TransformationUnitGroup, Trig_Replace_Transformation_Group_with_New_Hero_Func024A)
-    GroupClear(udg_TransformationUnitGroup)
-    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    SetUnitLifePercentBJ(udg_TransformationResultUnit, (udg_TempReal4 / I2R(CountUnitsInGroup(udg_TransformationUnitGroup))))
+    udg_TempLoc = GetUnitLoc(udg_TransformationResultUnit)
     PanCameraToTimedLocForPlayer(udg_TransformationPlayer, udg_TempLoc, 0)
         RemoveLocation(udg_TempLoc)
-    SelectUnitAddForPlayer(udg_TempUnit, udg_TransformationPlayer)
+    SelectUnitAddForPlayer(udg_TransformationResultUnit, udg_TransformationPlayer)
 end
 
 function InitTrig_Replace_Transformation_Group_with_New_Hero()
@@ -8036,6 +8276,7 @@ function InitCustomTriggers()
     InitTrig_Test_LVL_command_Copy()
     InitTrig_Transformations_Init_Commands()
     InitTrig_Transformations_Entry_Point()
+    InitTrig_Transformations_Exit_Point()
     InitTrig_Transformations_Goku()
     InitTrig_Goku_Meme_Transformations()
     InitTrig_Oozaru_Vegeta()
@@ -8044,6 +8285,9 @@ function InitCustomTriggers()
     InitTrig_Transformations_Goten()
     InitTrig_Transformations_Kid_Trunks()
     InitTrig_Transformations_Future_Trunks()
+    InitTrig_Transformations_Androids_13()
+    InitTrig_Transformations_Androids_13_14_15()
+    InitTrig_Transformations_Androids_Super_13()
     InitTrig_Transformations_Broly()
     InitTrig_Set_Transformation_Stat_Mult()
     InitTrig_Cell_Absorb()

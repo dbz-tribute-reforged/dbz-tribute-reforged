@@ -235,38 +235,38 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, "Max Power");
+
   
   /*
-
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil3, OSKEY_V, 0, true);
-  addAbilityAction(abil3, "Ultra Instinct");
+  addKeyEvent(abil3, OSKEY_Q, 0, true);
+  addAbilityAction(abil3, "Energy Beam");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil4, OSKEY_Q, 0, true);
-  addAbilityAction(abil4, "Kamehameha");
+  addKeyEvent(abil4, OSKEY_W, 0, true);
+  addAbilityAction(abil4, "Nuke");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil5, OSKEY_W, 0, true);
-  addAbilityAction(abil5, "Masenko");
+  addKeyEvent(abil5, OSKEY_E, 0, true);
+  addAbilityAction(abil5, "S.S. Deadly Hammer");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil6, OSKEY_E, 0, true);
-  addAbilityAction(abil6, "Special Beam Cannon");
+  addKeyEvent(abil6, OSKEY_R, 0, true);
+  addAbilityAction(abil6, "S.S. Deadly Bomber");
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil7, OSKEY_R, 0, true);
-  addAbilityAction(abil7, "Perfect Kamehameha");
+  addKeyEvent(abil7, OSKEY_D, 0, true);
+  addAbilityAction(abil7, "Android Barrier");
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
-  addKeyEvent(abil8, OSKEY_D, 0, true);
-  addAbilityAction(abil8, "Absorb");
+  addKeyEvent(abil8, OSKEY_F, 0, true);
+  addAbilityAction(abil8, "Overcharge");
 
 
 
@@ -330,11 +330,49 @@ export function CustomPlayerTest() {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
         ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);
-        BJDebugMsg("revoive spam");
+        BJDebugMsg("revoive spoim");
         SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
         SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));
         DestroyTimer(t);
       })
     }
   })
+
+  const cdTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
+  }
+  TriggerAddAction(cdTrig, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    for (const customHero of customPlayers[playerId].allHeroes) {
+      if (customHero) {
+        for (const [name, abil] of customHero.abilities.abilities) {
+          if (abil) {
+            abil.currentCd = 0;
+          }
+        }
+      }
+    }
+  });
+
+  const allyTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(allyTrig, Player(i), "-ally", false);
+  }
+  TriggerAddAction(allyTrig, () => {
+    const player = GetTriggerPlayer();
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
+  });
+
+  const unallyTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(unallyTrig, Player(i), "-unally", false);
+  }
+  TriggerAddAction(unallyTrig, () => {
+    const player = GetTriggerPlayer();
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9));
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_UNALLIED);
+  });
 }

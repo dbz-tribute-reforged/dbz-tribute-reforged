@@ -1,7 +1,7 @@
 [Misc]
 AgiAttackSpeedBonus=0.01
 AgiDefenseBase=0.0
-AgiDefenseBonus=0.07
+AgiDefenseBonus=0.0
 AgiMoveBonus=0.2
 BoneDecayTime=20.0
 ChanceToMiss=0.0
@@ -24,7 +24,7 @@ HeroAwakenManaFactor=1.0
 HeroExpRange=3000.0
 HeroFactorXP=100
 HeroReviveManaFactor=1.0
-IntManaBonus=7.0
+IntManaBonus=10.0
 IntRegenBonus=0.02
 MaxGuardDistance=100000.0
 MaxHeroLevel=1000
@@ -32,7 +32,7 @@ MaxLevelHeroesDrainExp=0
 MaxUnitLevel=100
 MaxUnitSpeed=522.0
 MinUnitSpeed=1.0
-StrAttackBonus=1.5
+StrAttackBonus=0.12
 StrHitPointBonus=20.0
 StrRegenBonus=0.04
 SummonedKillFactor=1.0

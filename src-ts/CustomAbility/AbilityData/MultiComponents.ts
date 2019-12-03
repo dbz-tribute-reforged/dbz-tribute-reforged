@@ -23,14 +23,11 @@ export const MultiComponents = [
     startTick: 0,
     endTick: -1,
     angleDifference: 5,
-    angleMin: -10,
-    angleMax: 10,
+    angleMin: -2.5,
+    angleMax: 2.5,
     delayBetweenComponents: 1,
     firingMode: MultiComponent.SPREAD_FIRING,
     components: [
-      { name: "beam final flash" },
-      { name: "beam final flash" },
-      { name: "beam final flash" },
       { name: "beam final flash" },
       { name: "beam final flash" },
     ],
@@ -66,6 +63,21 @@ export const MultiComponents = [
       { name: "beam energy blast volley" },
       { name: "beam energy blast volley" },
       { name: "beam energy blast volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi ss deadly hammer", 
+    repeatInterval: 1, 
+    startTick: 25,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.LINEAR_FIRING,
+    components: [
+      { name: "beam ss deadly bomber" },
     ],
   },
   // -------------------------------------------

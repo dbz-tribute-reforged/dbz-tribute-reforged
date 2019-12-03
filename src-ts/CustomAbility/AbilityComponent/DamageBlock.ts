@@ -31,7 +31,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     return (
       input.level * input.caster.spellPower * 
       (
-        10 +
+        CustomAbility.BASE_DAMAGE * CustomAbility.BASE_AVG_TICKS,
         this.multiplier * 
         GetHeroStatBJ(this.attribute, input.caster.unit, true)
       )
@@ -97,6 +97,10 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
           );
         }
 
+        const maxHp = GetUnitState(source, UNIT_STATE_MAX_LIFE);
+        if (currentHp + amountBlocked > maxHp) {
+          amountBlocked = maxHp - currentHp;
+        }
         this.remainingBlock -= amountBlocked;
         currentHp += amountBlocked;
         SetUnitState(source, UNIT_STATE_LIFE, currentHp);

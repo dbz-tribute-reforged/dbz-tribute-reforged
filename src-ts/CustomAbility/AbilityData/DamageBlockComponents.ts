@@ -10,7 +10,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 10,
+    multiplier: 5,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -58,7 +58,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 100,
+    multiplier: 20,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -102,10 +102,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 15,
+    blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 1,
+    multiplier: 0.2,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
@@ -152,7 +152,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 3,
+    multiplier: 0.25,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
@@ -199,7 +199,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 1,
+    multiplier: 0.75,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
@@ -246,7 +246,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 200,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 10,
+    multiplier: 0.9,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
@@ -268,6 +268,53 @@ export const DamageBlockComponents = [
     attachedSfxList: [
       {
         model: "Abilities\\Spells\\Orc\\ReinforcedTrollBurrow\\ReinforcedTrollBurrowTarget.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block android barrier",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 100,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 0.5,
+    sfxList: [
+      {
+        model: "IceNova.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\ManaFlare\\ManaFlareBase.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
