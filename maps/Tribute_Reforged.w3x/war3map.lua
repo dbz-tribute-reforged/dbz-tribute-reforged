@@ -355,6 +355,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
+gg_trg_FT_SS_Rage = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -576,52 +577,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 423)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -6204,6 +6205,45 @@ function InitTrig_Transformations_Kid_Trunks()
     TriggerAddAction(gg_trg_Transformations_Kid_Trunks, Trig_Transformations_Kid_Trunks_Actions)
 end
 
+function Trig_FT_SS_Rage_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0KT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_FT_SS_Rage_Func004C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H009"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_FT_SS_Rage_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_FT_SS_Rage_Func004C()) then
+        SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
+        udg_StatMultStr = 3.00
+        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+    else
+        udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
+        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+    end
+end
+
+function InitTrig_FT_SS_Rage()
+    gg_trg_FT_SS_Rage = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_FT_SS_Rage, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_FT_SS_Rage, Condition(Trig_FT_SS_Rage_Conditions))
+    TriggerAddAction(gg_trg_FT_SS_Rage, Trig_FT_SS_Rage_Actions)
+end
+
 function Trig_Transformations_Future_Trunks_Func009C()
     if (not (udg_TransformationString == "r")) then
         return false
@@ -6252,7 +6292,7 @@ function Trig_Transformations_Future_Trunks_Func013C()
 end
 
 function Trig_Transformations_Future_Trunks_Func014C()
-    if (not (udg_TransformationString == "ssr")) then
+    if (not (udg_TransformationString == "ss2")) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
@@ -6261,7 +6301,17 @@ function Trig_Transformations_Future_Trunks_Func014C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func016Func001C()
+function Trig_Transformations_Future_Trunks_Func015C()
+    if (not (udg_TransformationString == "ssr")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func017Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -6271,8 +6321,8 @@ function Trig_Transformations_Future_Trunks_Func016Func001C()
     return false
 end
 
-function Trig_Transformations_Future_Trunks_Func016C()
-    if (not Trig_Transformations_Future_Trunks_Func016Func001C()) then
+function Trig_Transformations_Future_Trunks_Func017C()
+    if (not Trig_Transformations_Future_Trunks_Func017Func001C()) then
         return false
     end
     return true
@@ -6323,13 +6373,22 @@ function Trig_Transformations_Future_Trunks_Actions()
     if (Trig_Transformations_Future_Trunks_Func014C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func015C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("A0AV")
+        udg_TransformationAbility2 = FourCC("A0KT")
         udg_TransformationSFXString = "AuraYellow.mdx"
         udg_TransformationSFXString2 = "AuraLightBlue.mdx"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func016C()) then
+    if (Trig_Transformations_Future_Trunks_Func017C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AU"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0KT"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -8345,6 +8404,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Gohan()
     InitTrig_Transformations_Goten()
     InitTrig_Transformations_Kid_Trunks()
+    InitTrig_FT_SS_Rage()
     InitTrig_Transformations_Future_Trunks()
     InitTrig_Transformations_Androids_13()
     InitTrig_Transformations_Androids_13_14_15()

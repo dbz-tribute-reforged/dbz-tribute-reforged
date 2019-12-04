@@ -98,6 +98,53 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
+    name: "block super saiyan rage",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 25,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 4,
+    sfxList: [
+      {
+        model: "IceNova.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 2.0,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 105,
+          y: 155,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "AuraYellow.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
     name: "block broly",
     repeatInterval: 1,
     startTick: 0,

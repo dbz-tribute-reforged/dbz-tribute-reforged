@@ -34,6 +34,15 @@ export class CustomHero {
     this.addAbilityFromAll("Guard");
     this.addAbilityFromAll("Max Power");
 
+    this.addAbilityFromAll("Finish Buster");
+
+    this.addAbilityFromAll("Burning Attack");
+    this.addAbilityFromAll("Big Bang Attack");
+    this.addAbilityFromAll("Shining Sword Attack");
+    this.addAbilityFromAll("Blazing Rush");
+    this.addAbilityFromAll("Heat Dome Attack");
+    this.addAbilityFromAll("SS Rage");
+
     
     /*
     this.addAbilityFromAll("Energy Beam");

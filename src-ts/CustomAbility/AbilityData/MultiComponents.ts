@@ -67,6 +67,21 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi shining sword attack", 
+    repeatInterval: 1, 
+    startTick: 36,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.LINEAR_FIRING,
+    components: [
+      { name: "beam finish buster" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi ss deadly hammer", 
     repeatInterval: 1, 
     startTick: 25,

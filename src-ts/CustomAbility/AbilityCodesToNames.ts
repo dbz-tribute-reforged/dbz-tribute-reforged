@@ -32,7 +32,10 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // future trunks
     [FourCC('A03I'), "Burning Attack"],
-    [FourCC('A064'), "High Power Rush"],
+    // [FourCC('A064'), "High Power Rush"],
+    [FourCC('A0LE'), "Blazing Rush"],
+    [FourCC('A0LF'), "Shining Sword Attack"],
+    [FourCC('A0KT'), "Super Saiyan Rage"],
 
     // piccolo
     [FourCC('A0C8'), "Slappy Hand"],

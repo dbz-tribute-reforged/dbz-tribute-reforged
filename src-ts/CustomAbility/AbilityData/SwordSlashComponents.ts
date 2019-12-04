@@ -1,3 +1,5 @@
+import { BASE } from "./AOEDamageComponents";
+
 /*
 
 // Hero stats
@@ -44,12 +46,12 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 export const SwordSlashComponents = [
   // copy from here
   { 
-    name: "sword slash orange",
+    name: "slash shining sword attack",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: -1,
+    endTick: 36,
     damageData: {
-      multiplier: 1.0,
+      multiplier: BASE.KAME_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6, 
       damageType: 0, 

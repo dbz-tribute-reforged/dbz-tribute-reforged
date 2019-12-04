@@ -307,6 +307,69 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // heat dome attack initial explosion
+  {
+    name: "damage heat dome attack explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // burning attack 
+  {
+    name: "damage target burning attack dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage target burning attack explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // blazing rush
+  {
+    name: "damage blazing rush explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 250,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.5,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // special beam cannon
   {
     name: "damage special beam cannon dps",

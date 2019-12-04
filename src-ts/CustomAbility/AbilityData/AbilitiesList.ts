@@ -514,6 +514,178 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Finish Buster",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFinishBuster.blp",
+      disabled: "BTNFinishBuster.blp",
+    },
+    tooltip: {
+      title: "Finish Buster",
+      body: 
+        "Finish Buster"
+    },
+    components: [
+      { name: "beam finish buster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Heat Dome Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFinishBuster.blp",
+      disabled: "BTNFinishBuster.blp",
+    },
+    tooltip: {
+      title: "Heat Dome Attack",
+      body: 
+        "Heat Dome Attack"
+    },
+    components: [
+      { name: "beam finish buster" },
+      { name: "damage heat dome attack explosion" },
+      { name: "knockback heat dome attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Burning Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBurningAttack.blp",
+      disabled: "BTNBurningAttack.blp",
+    },
+    tooltip: {
+      title: "Burning Attack",
+      body: 
+        "Burning Attack"
+    },
+    components: [
+      { name: "damage target burning attack dps" },
+      { name: "damage target burning attack explosion" },
+      { name: "sfx burning attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Shining Sword Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 86,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "attack",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNArcaniteMelee.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArcaniteMelee.blp"
+    },
+    tooltip: {
+      title: "Shining Sword Attack",
+      body: 
+        "Performs multiple sword slashes as you move your cursor around." + 
+        "|nDeals ? * AGI per slash in 225 AOE per damage tick" + 
+        "(minimum 0.09s)" + 
+        "|nCost: ? MP |nCD: ?",
+    },
+    components: [
+      { name: "slash shining sword attack" },
+      { name: "multi shining sword attack" },
+      // { name: "multi shining sword attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Blazing Rush",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 26,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBlazingRush.blp",
+      disabled: "BTNBlazingRush.blp",
+    },
+    tooltip: {
+      title: "Blazing Rush",
+      body: 
+        "Blazing Rush"
+    },
+    components: [
+      { name: "ground dash 15dist" },
+      { name: "damage blazing rush explosion" },
+      { name: "stun blazing rush" },
+      { name: "sfx blazing rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Super Saiyan Rage",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFTRageIcon.blp",
+      disabled: "BTNFTRageIcon.blp",
+    },
+    tooltip: {
+      title: "Super Saiyan Rage",
+      body: 
+        "Super Saiyan Rage"
+    },
+    components: [
+      { name: "ground dast 5dist" },
+      { name: "stun super saiyan rage" },
+      { name: "spell amp super saiyan rage" },
+      { name: "block super saiyan rage" },
+      { name: "sfx super saiyan rage" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Special Beam Cannon",
     currentCd: 0,
     maxCd: 5,
@@ -1059,35 +1231,6 @@ export const AbilitiesList = [
     components: [
       { name: "ground vortex blue hurricane" },
       { name: "sfx blue hurricane" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Shining Sword Attack",
-    currentCd: 0,
-    maxCd: 4,
-    costType: "MP",
-    costAmount: 25,
-    duration: 67,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: false,
-    waitsForNextClick: false,
-    animation: "attack",
-    icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNArcaniteMelee.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArcaniteMelee.blp"
-    },
-    tooltip: {
-      title: "Shining Sword Attack",
-      body: 
-        "Performs multiple sword slashes as you move your cursor around." + 
-        "|nDeals 1 * AGI per slash in 225 AOE per damage tick" + 
-        "(minimum 0.09s)" + 
-        "|nCost: 25 MP |nCD: 4",
-    },
-    components: [
-      { name: "sword slash orange" },
     ],
   },
   // -------------------------------------------

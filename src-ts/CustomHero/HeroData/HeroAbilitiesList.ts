@@ -22,7 +22,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00A"), ["Kamehameha", "Galactic Donuts", "Super Ghost Kamikaze Attack"]],
 
     // future trunks
-    [FourCC("H009"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Slash"]],
+    [FourCC("H009"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Attack", "Blazing Rush", "Heat Dome Attack", "Super Saiyan Rage"]],
+    // ss rage
+    [FourCC("H08I"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Attack", "Blazing Rush", "Heat Dome Attack", "Super Saiyan Rage"]],
 
     // piccolo
     [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Multi Form", "Hellzone Grenade"]],

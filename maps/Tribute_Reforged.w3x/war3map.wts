@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.18d
+TR 0.18e
 }
 
 STRING 4
@@ -56124,12 +56124,6 @@ STRING 9262
 placeholder
 }
 
-STRING 9263
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
-{
-placeholder
-}
-
 STRING 9264
 // Abilities: A0KR (Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
 {
@@ -61022,6 +61016,36 @@ STRING 10081
 Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
+STRING 10082
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Increases Future Trunk's movement speed cap by 165 (can exceed max ms).|nMinistuns enemy units in 200 AOE every second.|nIncreases ability damage by +15% over 9s.|nReduces incoming damage by 20% up to Str x 4.
+}
+
+STRING 10083
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10084
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10085
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10086
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
 STRING 10087
 // Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
@@ -61044,6 +61068,24 @@ STRING 10090
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan unleashes the true extent of his ultimate form boosting ability damage by 15% for the next 10 seconds.
+}
+
+STRING 10091
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10092
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10093
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 10094
@@ -61153,6 +61195,12 @@ STRING 10110
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
+}
+
+STRING 10111
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 2|r]
 }
 
 STRING 10112
@@ -61581,10 +61629,28 @@ STRING 10182
 [|cffFFFF00F|r] Overcharge - [|cffffcc00Level 1|r]
 }
 
+STRING 10183
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 3|r]
+}
+
 STRING 10184
 // Abilities: A0K2 (Overcharge), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00F|r] Learn Overcharge - [|cffffcc00Level %d|r]
+}
+
+STRING 10185
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 4|r]
+}
+
+STRING 10186
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 5|r]
 }
 
 STRING 10187
@@ -61911,6 +61977,12 @@ STRING 10240
 S.S. Deadly Hammer
 }
 
+STRING 10241
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 6|r]
+}
+
 STRING 10242
 // Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
 {
@@ -61957,5 +62029,245 @@ STRING 10249
 // Abilities: A0LC (S.S. Deadly Hammer), EditorSuffix (Editor Suffix)
 {
 (super 13)
+}
+
+STRING 10250
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 1|r]
+}
+
+STRING 10251
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 7|r]
+}
+
+STRING 10252
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 10253
+// Abilities: A0LE (Blazing Rush), Name (Name)
+{
+Blazing Rush
+}
+
+STRING 10254
+// Abilities: A0LE (Blazing Rush), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Blazing Rush - [|cffffcc00Level %d|r]
+}
+
+STRING 10255
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 10256
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 9|r]
+}
+
+STRING 10257
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 8|r]
+}
+
+STRING 10258
+// Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 10|r]
+}
+
+STRING 10259
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10260
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10261
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10262
+// Abilities: A0LE (Blazing Rush), Researchubertip (Tooltip - Learn - Extended)
+{
+Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+}
+
+STRING 10263
+// Abilities: A0LE (Blazing Rush), EditorSuffix (Editor Suffix)
+{
+(FT)
+}
+
+STRING 10264
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10265
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10266
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10267
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10268
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10269
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10270
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10271
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 10272
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 10273
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 10274
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 10275
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 10276
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 10277
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 10278
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 10279
+// Abilities: A0LF (Shining Sword Attack), Name (Name)
+{
+Shining Sword Attack
+}
+
+STRING 10280
+// Abilities: A0LF (Shining Sword Attack), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Shining Sword Attack - [|cffffcc00Level %d|r]
+}
+
+STRING 10281
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 10282
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 10283
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 10284
+// Abilities: A0LF (Shining Sword Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Shining Sword Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 10285
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10286
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10287
+// Abilities: A0LF (Shining Sword Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10288
+// Abilities: A0LF (Shining Sword Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Future Trunks flies up and comes down to vertically slash the opponent with his sword. Next, he slashes the opponent multiple times, chopping them up into bits. Finally, Future Trunks draws his hand back and brings it forward to fire a yellow energy wave at what's left of the opponent, inflicting a high amount of damage. |n|cff00ff00(Damage: ? * Agi * lvl / 0.9s + ? * Int * lvl after 2s)|r|n|cff00ffff(Cooldown: 22 seconds)|r
+}
+
+STRING 10289
+// Abilities: A0LF (Shining Sword Attack), EditorSuffix (Editor Suffix)
+{
+(FT)
 }
 
