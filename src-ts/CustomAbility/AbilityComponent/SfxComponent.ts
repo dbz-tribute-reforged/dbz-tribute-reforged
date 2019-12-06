@@ -8,6 +8,7 @@ import { AbilitySfxHelper } from "CustomAbility/AbilitySfxHelper";
 export class SfxComponent implements AbilityComponent, Serializable<SfxComponent>  {
   static readonly SOURCE_UNIT = 0;
   static readonly SOURCE_TARGET_POINT = 1;
+  static readonly SOURCE_TARGET_UNIT = 2;
 
   protected sfxCoords: Vector2D;
   protected sfxStarted: boolean;
@@ -35,6 +36,12 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
 
     if (this.sfxSource == SfxComponent.SOURCE_UNIT) {
       this.sfxCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+    } else if (this.sfxSource == SfxComponent.SOURCE_TARGET_UNIT) {
+      if (input.targetUnit) {
+        this.sfxCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+      } else {
+        this.sfxCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      }
     }
     
     AbilitySfxHelper.displaySfxListAtCoord(

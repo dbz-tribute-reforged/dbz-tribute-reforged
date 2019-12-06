@@ -27,6 +27,14 @@ import { MultiComponents } from "./AbilityData/MultiComponents";
 import { MultiComponent } from "./AbilityComponent/MultiComponent";
 import { SpellAmpComponents } from "./AbilityData/SpellAmpComponent";
 import { SpellAmp } from "./AbilityComponent/SpellAmp";
+import { HideUnitComponents } from "./AbilityData/HideUnitComponents";
+import { HideUnit } from "./AbilityComponent/HideUnit";
+import { ChannellingComponents } from "./AbilityData/ChannellingComponents";
+import { Channelling } from "./AbilityComponent/Channelling";
+import { TimedLifeComponents } from "./AbilityData/TimedLifeComponents";
+import { TimedLife } from "./AbilityComponent/TimedLife";
+import { SummonComponents } from "./AbilityData/SummonComponents";
+import { Summon } from "./AbilityComponent/Summon";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -55,6 +63,10 @@ export class CustomAbilityManager {
       this.setComponent(new AOEStun().deserialize(component));
     }
 
+    for (const component of ChannellingComponents) {
+      this.setComponent(new Channelling().deserialize(component));
+    }
+
     for (const component of DamageBlockComponents) {
       this.setComponent(new DamageBlock().deserialize(component));
     }
@@ -75,12 +87,24 @@ export class CustomAbilityManager {
       this.setComponent(new GroundVortex().deserialize(component));
     }
 
+    for (const component of HideUnitComponents) {
+      this.setComponent(new HideUnit().deserialize(component));
+    }
+
     for (const component of SpellAmpComponents) {
       this.setComponent(new SpellAmp().deserialize(component));
     }
 
+    for (const component of SummonComponents) {
+      this.setComponent(new Summon().deserialize(component));
+    }
+
     for (const component of SwordSlashComponents) {
       this.setComponent(new SwordSlash().deserialize(component));
+    }
+
+    for (const component of TimedLifeComponents) {
+      this.setComponent(new TimedLife().deserialize(component));
     }
 
 
@@ -136,7 +160,9 @@ export class CustomAbilityManager {
     for (const component of components) {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
-        multi.addComponent(retrievedComponent.clone());
+        for (let i = 0; i < multi.multiplyComponents; ++i) {
+          multi.addComponent(retrievedComponent.clone());
+        }
       }
     }
   }

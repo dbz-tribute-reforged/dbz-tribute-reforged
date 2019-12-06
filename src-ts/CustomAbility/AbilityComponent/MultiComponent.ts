@@ -30,6 +30,7 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
     public angleMax: number = 30,
     public delayBetweenComponents: number = 1,
     public firingMode: number = MultiComponent.SPREAD_FIRING,
+    public multiplyComponents: number = 1,
     public components: AbilityComponent[] = [],
   ) {
     this.angleCurrent = 0;
@@ -62,7 +63,7 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
         this.angleCurrent = nextAngle;
       }
     } else if (this.firingMode == MultiComponent.WRAPAROUND_FIRING) {
-      this.angleCurrent = this.angleMin + ((this.angleCurrent + this.angleDifference) % this.angleRange);
+      this.angleCurrent = (this.angleCurrent + this.angleDifference) % this.angleRange;
     } else if (this.firingMode == MultiComponent.RANDOM_FIRING) {
       this.angleCurrent = this.angleMin + Math.random() * this.angleRange;
     }
@@ -78,6 +79,9 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
       this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, input.targetPoint);
       this.originalDistance = CoordMath.distance(sourceCoords, input.targetPoint);
       this.originalTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      if (this.angleRange >= 360) {
+        this.originalTarget = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      }
       this.currentDelay = this.delayBetweenComponents;
     }
 
@@ -121,6 +125,7 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.angleDifference, this.angleMin, this.angleMax, this.delayBetweenComponents,
       this.firingMode,
+      this.multiplyComponents,
       AbilityComponentHelper.clone(this.components)
     );
   }
@@ -136,6 +141,7 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
       angleMax: number;
       delayBetweenComponents: number;
       firingMode: number;
+      multiplyComponents: number;
       components: {
         name: string,
       }[];
@@ -150,6 +156,7 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
     this.angleMax = input.angleMax;
     this.delayBetweenComponents = input.delayBetweenComponents;
     this.firingMode = input.firingMode;
+    this.multiplyComponents = input.multiplyComponents;
     return this;
   }
 

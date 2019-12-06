@@ -16,7 +16,7 @@ export const DodgeComponents = [
   },
   // to here, and replace with unique name
   {
-    name: "dodge homing beam twin dragon shot",
+    name: "dodge homing beam",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,

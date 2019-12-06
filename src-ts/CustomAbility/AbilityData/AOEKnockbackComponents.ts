@@ -37,6 +37,18 @@ export const AOEKnockbackComponents = [
       aoe: 200,
     },
   },
+  // super dragon flight
+  {
+    name: "knockback heat dome attack",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 9,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 450,
+    },
+  },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",
