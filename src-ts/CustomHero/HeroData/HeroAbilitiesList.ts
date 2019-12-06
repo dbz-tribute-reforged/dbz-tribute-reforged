@@ -30,16 +30,6 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Multi Form", "Hellzone Grenade"]],
 
 
-    // babidi
-    [FourCC("O001"), ["Summon Dabura", "Haretsu No Maho", "Babidi Wizadry", "Babidi Magic", "Summon Yakon"]],
-
-    // fat buu / super buu / kid buu
-    [FourCC("O005"), ["Flesh Attack", "Energy Disbursement", "Buu Beam", "Angry Explosion"]],
-    [FourCC("O006"), ["Vanishing Ball", "Mankind Destruction Attack", "Buu Beam"]],
-    [FourCC("O00C"), ["Vanishing Ball", "Mankind Destruction Attack", "Buu Beam", "Angry Explosion"]],
-
-
-
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],
     [FourCC("H01S"), ["Energy Beam", "Nuke", "Android Barrier", "Overcharge"]],
@@ -49,7 +39,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // ultra 13
     [FourCC("H01W"), ["S.S. Deadly Hammer", "S.S. Deadly Bomber", "Nuke", "Android Barrier", "Overcharge"]],
 
-    
+    // babidi
+    [FourCC("O001"), ["Summon Pui Pui", "Summon Yakon", "Summon Dabura", "Haretsu no Majutsu", "Babidi Barrier", "Babidi Magic"]],
+
+    // fat buu / super buu / kid buu
+    [FourCC("O005"), ["Buu Beam", "Flesh Attack", "Innocence Breath", "Angry Explosion"]],
+    [FourCC("O006"), ["Buu Beam", "Flesh Attack", "Mankind Destruction Attack", "Vanishing Ball"]],
+    [FourCC("O00C"), ["Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",]],
 
     // broly
     [FourCC("H00M"), ["Energy Punch", "Power Level Rising", "Planet Crusher", "Gigantic Roar", "Gigantic Omegastorm"]],
@@ -58,7 +54,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("N00Q"), ["Kamehameha"]],
     [FourCC("H00E"), ["Kamehameha", "Solar Flare", "Absorb"]],
     [FourCC("H00F"), ["Kamehameha", "Special Beam Cannon", "Solar Flare", "Absorb"]],
-    [FourCC("H00G"), ["Kamehameha", "Masenko", "Special Beam Cannon", "Perfect Kamehameha"]],
+    [FourCC("H00G"), ["Kamehameha", "Masenko", "Special Beam Cannon", "Perfect Kamehameha", "Spawn Cell Juniors"]],
 
     // fourth form cooler
     [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],

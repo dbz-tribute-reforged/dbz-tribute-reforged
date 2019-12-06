@@ -45,11 +45,20 @@ export const abilityCodesToNames = new Map<number, string>(
 
 
     // babidi
-    [FourCC('A03E'), "Summon Dabura"],
-    [FourCC('A02F'), "Haretsu No Maho"],
-    [FourCC('A007'), "Babidi Wizadry"],
+    [FourCC('A02F'), "Haretsu no Majutsu"],
+    [FourCC('A0LG'), "Babidi Barrier"],
     [FourCC('A0JQ'), "Babidi's Magic"],
+    [FourCC('A018'), "Summon Pui Pui"],
     [FourCC('A01A'), "Summon Yakon"],
+    [FourCC('A03E'), "Summon Dabura"],
+
+    // buus
+    [FourCC('A0EI'), "Buu Beam"],
+    [FourCC('A01C'), "Flesh Attack"],
+    [FourCC('A0LH'), "Innocence Breath"],
+    [FourCC('A0ER'), "Angry Explosion"],
+    [FourCC('A0C0'), "Vanishing Ball"],
+    [FourCC('A01D'), "Mankind Destruction Attack"],
 
     // androids 13 14 15
     [FourCC('A00N'), "Energy Beam"],
@@ -80,6 +89,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0C9'), "Special Beam Cannon"],
     // masenko CELL
     [FourCC('A0GD'), "Masenko"],
+    [FourCC('A01Z'), "Spawn Cell Juniors"],
 
     // cooler
     [FourCC('A06C'), "Death Beam Frieza"],

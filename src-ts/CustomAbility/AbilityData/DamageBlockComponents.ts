@@ -105,7 +105,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 25,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 4,
+    multiplier: 3,
     sfxList: [
       {
         model: "IceNova.mdl",
@@ -372,6 +372,53 @@ export const DamageBlockComponents = [
           x: 255,
           y: 255,
           z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block babidi barrier",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 100,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 1.0,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 105,
+          y: 255,
+          z: 155,
         },
         persistent: true,
         attachmentPoint: "origin",

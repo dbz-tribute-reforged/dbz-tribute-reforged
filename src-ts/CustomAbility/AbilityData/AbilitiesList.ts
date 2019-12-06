@@ -18,7 +18,7 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
     },
     tooltip: {
-      title: "Zanzo Dash",
+      title: "(Z) Zanzo Dash",
       body: 
         "Dashes towards your next right click." + 
         "|nCost: 75 MP |nCD: 19",
@@ -101,9 +101,9 @@ export const AbilitiesList = [
       disabled: "BTNKame2.blp",
     },
     tooltip: {
-      title: "kame",
+      title: "Kamehameha",
       body: 
-        "kame stuff"
+        "Kamehameha"
     },
     components: [
       { name: "beam kamehameha" },
@@ -358,7 +358,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 60,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -526,8 +526,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFinishBuster.blp",
-      disabled: "BTNFinishBuster.blp",
+      enabled: "BTNFTFinishBuster.blp",
+      disabled: "BTNFTFinishBuster.blp",
     },
     tooltip: {
       title: "Finish Buster",
@@ -552,8 +552,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFinishBuster.blp",
-      disabled: "BTNFinishBuster.blp",
+      enabled: "BTNFTFinishBuster.blp",
+      disabled: "BTNFTFinishBuster.blp",
     },
     tooltip: {
       title: "Heat Dome Attack",
@@ -601,15 +601,15 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 86,
+    duration: 90,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
     waitsForNextClick: false,
     animation: "attack",
     icon: {
-      enabled: "ReplaceableTextures\\CommandButtons\\BTNArcaniteMelee.blp",
-      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArcaniteMelee.blp"
+      enabled: "BTNFTShiningSwordAttack.blp",
+      disabled: "BTNFTShiningSwordAttack.blp"
     },
     tooltip: {
       title: "Shining Sword Attack",
@@ -639,8 +639,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNBlazingRush.blp",
-      disabled: "BTNBlazingRush.blp",
+      enabled: "BTNFTBlazingRush.blp",
+      disabled: "BTNFTBlazingRush.blp",
     },
     tooltip: {
       title: "Blazing Rush",
@@ -677,7 +677,7 @@ export const AbilitiesList = [
         "Super Saiyan Rage"
     },
     components: [
-      { name: "ground dast 5dist" },
+      { name: "ground dash 5dist" },
       { name: "stun super saiyan rage" },
       { name: "spell amp super saiyan rage" },
       { name: "block super saiyan rage" },
@@ -871,6 +871,274 @@ export const AbilitiesList = [
     components: [
       { name: "spell amp overcharge" },
       { name: "damage overcharge dps" },
+      { name: "sfx overcharge" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Haretsu no Majutsu",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBabidiQ.blp",
+      disabled: "BTNBabidiQ.blp",
+    },
+    tooltip: {
+      title: "Haretsu no Majutsu",
+      body: 
+        "Haretsu no Majutsu"
+    },
+    components: [
+      { name: "damage target haretsu explosion" },
+      { name: "sfx haretsu" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Babidi Barrier",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBabidiW.blp",
+      disabled: "BTNBabidiW.blp",
+    },
+    tooltip: {
+      title: "Babidi Barrier",
+      body: 
+        "Babidi Barrier"
+    },
+    components: [
+      { name: "block babidi barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Summon Pui Pui",
+    currentCd: 0,
+    maxCd: 0,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPuiPui.blp",
+      disabled: "BTNPuiPui.blp",
+    },
+    tooltip: {
+      title: "Summon Pui Pui",
+      body: 
+        "Summon Pui Pui"
+    },
+    components: [
+      { name: "summon summon pui pui" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Summon Yakon",
+    currentCd: 0,
+    maxCd: 0,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYakon.blp",
+      disabled: "BTNYakon.blp",
+    },
+    tooltip: {
+      title: "Summon Yakon",
+      body: 
+        "Summon Yakon"
+    },
+    components: [
+      { name: "summon summon yakon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Summon Dabura",
+    currentCd: 0,
+    maxCd: 0,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDabura.blp",
+      disabled: "BTNDabura.blp",
+    },
+    tooltip: {
+      title: "Summon Dabura",
+      body: 
+        "Summon Dabura"
+    },
+    components: [
+      { name: "summon summon dabura" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Flesh Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuFleshAttack.blp",
+      disabled: "BTNBuuFleshAttack.blp",
+    },
+    tooltip: {
+      title: "Flesh Attack",
+      body: 
+        "Flesh Attack"
+    },
+    components: [
+      { name: "damage target flesh attack explosion" },
+      { name: "sfx flesh attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Innocence Breath",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuInnocenceBreath.blp",
+      disabled: "BTNBuuInnocenceBreath.blp",
+    },
+    tooltip: {
+      title:  "Innocence Breath",
+      body: 
+        "Innocence Breath",
+    },
+    components: [
+      { name: "multi innocence breath" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Angry Explosion",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 300,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuAngryExplosion.blp",
+      disabled: "BTNBuuAngryExplosion.blp",
+    },
+    tooltip: {
+      title:  "Angry Explosion",
+      body: 
+        "Angry Explosion",
+    },
+    components: [
+      { name: "damage angry explosion dps" },
+      { name: "damage angry explosion explosion" },
+      { name: "hide unit angry explosion" },
+      { name: "sfx angry explosion delay" },
+      { name: "sfx angry explosion explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Vanishing Ball",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuVanishingBall.blp",
+      disabled: "BTNBuuVanishingBall.blp",
+    },
+    tooltip: {
+      title: "Vanishing Ball",
+      body: 
+        "Vanishing Ball"
+    },
+    components: [
+      { name: "beam vanishing ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Mankind Destruction Attack",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuMankind.blp",
+      disabled: "BTNBuuMankind.blp",
+    },
+    tooltip: {
+      title: "Mankind Destruction Attack",
+      body: 
+        "Mankind Destruction Attack"
+    },
+    components: [
+      { name: "multi mankind destruction attack" },
+      { name: "channel caster default" },
     ],
   },
   // -------------------------------------------
@@ -1014,6 +1282,32 @@ export const AbilitiesList = [
     components: [
       { name: "beam gigantic omegastorm" },
       { name: "block broly" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Spawn Cell Juniors",
+    currentCd: 0,
+    maxCd: 0,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellJunior.blp",
+      disabled: "BTNCellJunior.blp",
+    },
+    tooltip: {
+      title: "Spawn Cell Juniors",
+      body: 
+        "Spawn Cell Juniors"
+    },
+    components: [
+      { name: "summon spawn cell juniors" },
     ],
   },
   // -------------------------------------------
