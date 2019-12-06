@@ -364,6 +364,7 @@ gg_trg_Transformations_Babidi = nil
 gg_trg_Transformations_Fat_Buu = nil
 gg_trg_Super_Buu_Absorb = nil
 gg_trg_Super_Buu_to_Kid_Buu = nil
+gg_trg_Babidi_Haretsu_Instagib = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1925,6 +1926,28 @@ function InitTrig_Babidi_Summons()
     TriggerAddAction(gg_trg_Babidi_Summons, Trig_Babidi_Summons_Actions)
 end
 
+function Trig_Babidi_Haretsu_Instagib_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A02F"))) then
+        return false
+    end
+    if (not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Babidi_Haretsu_Instagib_Actions()
+    SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+    UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+end
+
+function InitTrig_Babidi_Haretsu_Instagib()
+    gg_trg_Babidi_Haretsu_Instagib = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Babidi_Haretsu_Instagib, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Babidi_Haretsu_Instagib, Condition(Trig_Babidi_Haretsu_Instagib_Conditions))
+    TriggerAddAction(gg_trg_Babidi_Haretsu_Instagib, Trig_Babidi_Haretsu_Instagib_Actions)
+end
+
 function Trig_Buu_Candy_Beam_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0EI"))) then
         return false
@@ -1932,19 +1955,19 @@ function Trig_Buu_Candy_Beam_Conditions()
     return true
 end
 
-function Trig_Buu_Candy_Beam_Func008Func002002003001()
+function Trig_Buu_Candy_Beam_Func009Func002002003001()
     return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func008Func002002003002()
+function Trig_Buu_Candy_Beam_Func009Func002002003002()
     return (IsUnitAliveBJ(GetFilterUnit()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func008Func002002003()
-    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func008Func002002003001(), Trig_Buu_Candy_Beam_Func008Func002002003002())
+function Trig_Buu_Candy_Beam_Func009Func002002003()
+    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func009Func002002003001(), Trig_Buu_Candy_Beam_Func009Func002002003002())
 end
 
-function Trig_Buu_Candy_Beam_Func008Func003A()
+function Trig_Buu_Candy_Beam_Func009Func003A()
     IssueTargetOrderBJ(udg_TempUnit, "hex", GetEnumUnit())
 end
 
@@ -1952,6 +1975,7 @@ function Trig_Buu_Candy_Beam_Actions()
     udg_TempLoc = GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(1, FourCC("h054"), GetTriggerPlayer(), udg_TempLoc, bj_UNIT_FACING)
     udg_TempUnit = GetLastCreatedUnit()
+    UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit)
     UnitAddAbilityBJ(FourCC("A0LI"), udg_TempUnit)
     SetUnitAbilityLevelSwapped(FourCC("A0LI"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()))
     udg_TempLoc2 = GetSpellTargetLoc()
@@ -1960,8 +1984,8 @@ function Trig_Buu_Candy_Beam_Actions()
     while (true) do
         if (udg_TempInt > 10) then break end
         udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, (udg_TempReal * I2R(udg_TempInt)), udg_TempReal)
-        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(120.00, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func008Func002002003))
-        ForGroupBJ(udg_TempGroup, Trig_Buu_Candy_Beam_Func008Func003A)
+        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(120.00, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func009Func002002003))
+        ForGroupBJ(udg_TempGroup, Trig_Buu_Candy_Beam_Func009Func003A)
                 RemoveLocation(udg_TempLoc3)
                 DestroyGroup(udg_TempGroup)
         udg_TempInt = udg_TempInt + 1
@@ -5221,6 +5245,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "paparapapa"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "release"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "fp"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "metal"
@@ -7031,7 +7057,7 @@ function Trig_Transformations_Babidi_Func010C()
     if (not (udg_TransformationString == "release")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 45)) then
         return false
     end
     return true
@@ -8765,6 +8791,7 @@ function InitCustomTriggers()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
     InitTrig_Babidi_Summons()
+    InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()
     InitTrig_Buu_Candy_Eat_Passive()
     InitTrig_Cell_Juniors()

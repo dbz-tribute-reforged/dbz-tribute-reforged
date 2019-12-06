@@ -4,7 +4,7 @@ export const SummonComponents = [
   {
     name: "summon spawn cell juniors",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 0,
     endTick: -1,
     target: FourCC('H01J'),
     multiplier: 0.25,
@@ -13,7 +13,7 @@ export const SummonComponents = [
   {
     name: "summon summon pui pui",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 0,
     endTick: -1,
     target: FourCC('O004'),
     multiplier: 0.5,
@@ -22,7 +22,7 @@ export const SummonComponents = [
   {
     name: "summon summon yakon",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 0,
     endTick: -1,
     target: FourCC('O009'),
     multiplier: 0.75,
@@ -31,7 +31,7 @@ export const SummonComponents = [
   {
     name: "summon summon dabura",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 0,
     endTick: -1,
     target: FourCC('O000'),
     multiplier: 1,

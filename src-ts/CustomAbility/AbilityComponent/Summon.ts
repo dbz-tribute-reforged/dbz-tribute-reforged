@@ -28,7 +28,7 @@ export class Summon implements AbilityComponent, Serializable<Summon> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const stats = this.multiplier * GetHeroStatBJ(this.attribute, input.caster.unit, true);
+    const stats: number = 1.0 * I2R(GetHeroStatBJ(this.attribute, input.caster.unit, true)) * this.multiplier;
     if (this.target == Summon.TARGET_SOURCE_UNIT) {
       this.setupSummonUnit(source, stats);
     } else if (this.target == Summon.TARGET_LAST_SUMMONED_UNIT) {

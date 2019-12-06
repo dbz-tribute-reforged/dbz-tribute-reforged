@@ -4,7 +4,7 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 
 export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
 
-  protected currentTime: number;
+  protected appliedTimedLife: boolean;
 
   constructor(
     public name: string = "TimedLife",
@@ -13,16 +13,16 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
     public endTick: number = -1,
     public duration: number = 10,
   ) {
-    this.currentTime = 0;
+    this.appliedTimedLife = false;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (this.currentTime == 0) {
-      UnitApplyTimedLife(source, FourCC("BTLF"), this.duration);
+    if (!this.appliedTimedLife) {
+      this.appliedTimedLife = true;
+      UnitApplyTimedLife(source, FourCC("BTLF"), this.duration * ability.updateRate);
     }
-    ++this.currentTime;
-    if (this.currentTime > this.duration) {
-      this.currentTime = 0;
+    if (ability.isFinishedUsing(this)) {
+      this.appliedTimedLife = false;
     }
   }
   

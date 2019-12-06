@@ -34,6 +34,7 @@ export class CustomHero {
     this.addAbilityFromAll("Guard");
     this.addAbilityFromAll("Max Power");
 
+    /*
     this.addAbilityFromAll("Haretsu no Majutsu");
     this.addAbilityFromAll("Flesh Attack");
     this.addAbilityFromAll("Innocence Breath");
@@ -41,7 +42,6 @@ export class CustomHero {
     this.addAbilityFromAll("Vanishing Ball");
     this.addAbilityFromAll("Mankind Destruction Attack");
 
-    /*
     this.addAbilityFromAll("Finish Buster");
 
     this.addAbilityFromAll("Burning Attack");

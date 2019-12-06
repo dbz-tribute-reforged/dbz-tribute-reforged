@@ -208,6 +208,11 @@ export function CustomPlayerTest() {
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
       customPlayers[playerId].selectedUnit = caster;
+      /*
+      if (GetOrderTargetUnit()) {
+        customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+      }
+      */
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero) {
         // temp fix for double ss rage trigger
@@ -248,6 +253,7 @@ export function CustomPlayerTest() {
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, "Max Power");
 
+  /*
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_Q, 0, true);
@@ -278,7 +284,6 @@ export function CustomPlayerTest() {
   addKeyEvent(abil8, OSKEY_F, 0, true);
   addAbilityAction(abil8, "Mankind Destruction Attack");
 
-  /*
 
   const abil9 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
