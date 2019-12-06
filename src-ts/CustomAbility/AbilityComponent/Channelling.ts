@@ -2,6 +2,7 @@ import { AbilityComponent } from "./AbilityComponent";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Trigger } from "w3ts";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class Channelling implements AbilityComponent, Serializable<Channelling> {
 
@@ -18,17 +19,32 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     this.isChannelling = false;
     this.cancelChannelTrigger = CreateTrigger();
   }
+
+  forceTerminateAbility(ability: CustomAbility) {
+    ability.currentTick = ability.duration - this.ticksFromEnd;
+  }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.isChannelling) {
+      this.isChannelling = true;
       DestroyTrigger(this.cancelChannelTrigger);
       this.cancelChannelTrigger = CreateTrigger();
 
       TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_FINISH);
+      TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_ORDER);
+      TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_POINT_ORDER);
+      TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_ISSUED_TARGET_ORDER);
+      TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_DEATH);
+      // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_CHANNEL);
+      // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_ENDCAST);
 
       TriggerAddAction(this.cancelChannelTrigger, () => {
-        ability.currentTick = ability.duration - this.ticksFromEnd;
+        this.forceTerminateAbility(ability);
       })
+    }
+
+    if (UnitHelper.isUnitStunned(input.caster.unit)) {
+      this.forceTerminateAbility(ability);
     }
 
     if (ability.isFinishedUsing(this)) {

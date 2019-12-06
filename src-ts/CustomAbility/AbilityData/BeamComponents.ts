@@ -423,6 +423,7 @@ export const BeamComponents = [
     beamUnitType: "hpea",
     components: [
       { name: "damage innocence breath dps" },
+      { name: "timed life beam innocence breath" },
       { name: "sfx innocence breath" },
     ],
   },

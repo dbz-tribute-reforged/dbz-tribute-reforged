@@ -931,10 +931,10 @@ export const AbilitiesList = [
   {
     name: "Summon Pui Pui",
     currentCd: 0,
-    maxCd: 0,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: false,
@@ -950,17 +950,17 @@ export const AbilitiesList = [
         "Summon Pui Pui"
     },
     components: [
-      { name: "summon summon pui pui" },
+      // { name: "summon summon pui pui" },
     ],
   },
   // -------------------------------------------
   {
     name: "Summon Yakon",
     currentCd: 0,
-    maxCd: 0,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: false,
@@ -976,17 +976,17 @@ export const AbilitiesList = [
         "Summon Yakon"
     },
     components: [
-      { name: "summon summon yakon" },
+      // { name: "summon summon yakon" },
     ],
   },
   // -------------------------------------------
   {
     name: "Summon Dabura",
     currentCd: 0,
-    maxCd: 0,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: false,
@@ -1002,7 +1002,7 @@ export const AbilitiesList = [
         "Summon Dabura"
     },
     components: [
-      { name: "summon summon dabura" },
+      // { name: "summon summon dabura" },
     ],
   },
   // -------------------------------------------
@@ -1039,7 +1039,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 132,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -1288,10 +1288,10 @@ export const AbilitiesList = [
   {
     name: "Spawn Cell Juniors",
     currentCd: 0,
-    maxCd: 0,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: false,
@@ -1307,7 +1307,7 @@ export const AbilitiesList = [
         "Spawn Cell Juniors"
     },
     components: [
-      { name: "summon spawn cell juniors" },
+      // { name: "summon spawn cell juniors" },
     ],
   },
   // -------------------------------------------

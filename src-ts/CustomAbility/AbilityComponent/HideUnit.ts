@@ -23,6 +23,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       if (this.preventMovement) {
         PauseUnit(source, true);
       }
+      SetUnitInvulnerable(source, true);
     }
 
     if (ability.isFinishedUsing(this)) {
@@ -31,6 +32,7 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       if (this.preventMovement) {
         PauseUnit(source, false);
       }
+      SetUnitInvulnerable(source, false);
     }
   }
   

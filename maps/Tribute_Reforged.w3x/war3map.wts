@@ -17567,6 +17567,96 @@ STRING 2856
 Gain 5 damage
 }
 
+STRING 2857
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 2858
+// Abilities: A0LK (Buu Candy Slow 80%), Name (Name)
+{
+Buu Candy Slow 80%
+}
+
+STRING 2859
+// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+{
+Slow
+}
+
+STRING 2860
+// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+{
+Slow
+}
+
+STRING 2861
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 2862
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 2864
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004/0.005/0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 2865
+// Abilities: A0LJ (Buu Candy Eat), EditorSuffix (Editor Suffix)
+{
+(buu old)
+}
+
+STRING 2866
+// Abilities: A0LJ (Buu Candy Eat), Ubertip (Tooltip - Normal - Extended)
+{
+Buu's basic attacks against candy deals bonus damage and also heals him. Instantly kills candied creeps for bonus stats. Increased effect for higher levels of Candy Beam.|n|cff00ff00(Damage: 0.5/1/1.5% Enemy Max HP)|r|n|cff00ff00(Heal: 0.3/0.6/0.9% Self Max HP)|r|n|cff00ff00(Bonus Stats: 10/15/20%)|r|n|cff00ff00(Fat Buu Stat Multiplier: +0.004/0.005/0.006x)|r
+}
+
+STRING 2867
+// Abilities: A0LL (Candy Gobbler), Name (Name)
+{
+Candy Gobbler
+}
+
+STRING 2868
+// Abilities: A0LL (Candy Gobbler), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Candy Gobbler
+}
+
+STRING 2869
+// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
+{
+Instantly consumes all nearby candy. |n|cff00ff00AOE: 500/600/700|r|n|cff00FFFFCooldown: 45 seconds|r
+}
+
+STRING 2870
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 2871
+// Abilities: A0LL (Candy Gobbler), EditorSuffix (Editor Suffix)
+{
+(Buu)
+}
+
+STRING 2872
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
 STRING 2877
 // Abilities: A00B (Spirit Sword), Hotkey (Hotkey - Normal)
 {
@@ -18817,7 +18907,7 @@ You move at such a fast rate, you become almost invisible.
 
 STRING 3089
 {
-Stomach saga not implemented yet.
+Stomach saga skipped (not implemented yet).
 }
 
 STRING 3090
@@ -38430,7 +38520,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0EI (Buu Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38688,7 +38778,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0EI (Buu Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39618,49 +39708,49 @@ R
 }
 
 STRING 6564
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6565
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6566
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6567
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6570
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 4|r]
 }
 
 STRING 6572
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 6|r]
 }
 
 STRING 6573
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 5|r]
 }
 
 STRING 6574
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 7|r]
 }
@@ -46405,7 +46495,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A0EI (Buu Candy Beam), EditorSuffix (Editor Suffix)
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -52154,7 +52244,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8666
-// Abilities: A0JQ (Babidi's Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52286,7 +52376,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8688
-// Abilities: A0JQ (Babidi's Magic), Hotkey (Hotkey - Normal)
+// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -52418,7 +52508,7 @@ Zamasu spins his energy blade in a circle, dealing damage to all units in range.
 }
 
 STRING 8710
-// Abilities: A0K8 (Mighty Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52816,7 +52906,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8775
-// Abilities: A0K8 (Mighty Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KW (P. Maiden Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -52841,7 +52931,7 @@ Temporal Do-Over
 }
 
 STRING 8779
-// Abilities: A0KB (Follow-Up), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53245,7 +53335,7 @@ BEB/VEG/GOT/DEF
 }
 
 STRING 8846
-// Abilities: A0KW (P. Maiden Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53269,7 +53359,7 @@ Spirit Bomb
 }
 
 STRING 8850
-// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53382,18 +53472,6 @@ STRING 8868
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for 2 seconds.|r|n|cff00ffff(Cooldown: 16 seconds)|r
 }
 
-STRING 8869
-// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Babidi's Magic
-}
-
-STRING 8870
-// Abilities: A0JQ (Babidi's Magic), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00W|r] Learn Babidi's Magic
-}
-
 STRING 8871
 // Abilities: A0JQ (Babidi's Magic), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -53401,27 +53479,15 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 8872
-// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 8873
-// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 8874
-// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Babidi's Magic
-}
-
-STRING 8875
-// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Babidi's Magic
 }
 
 STRING 8876
@@ -54692,7 +54758,7 @@ R
 }
 
 STRING 9087
-// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -54776,7 +54842,7 @@ STRING 9100
 }
 
 STRING 9101
-// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -59827,7 +59893,7 @@ Cooler surrounds himself with a purple barrier and flies at the enemy, ramming t
 }
 
 STRING 9940
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60158,7 +60224,7 @@ STRING 9998
 }
 
 STRING 9999
-// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60344,7 +60410,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 10030
-// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60807,7 +60873,7 @@ E
 }
 
 STRING 10106
-// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -62079,7 +62145,7 @@ STRING 10319
 }
 
 STRING 10320
-// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -62094,12 +62160,6 @@ STRING 10322
 // Abilities: A0LG (Babidi Barrier), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
-}
-
-STRING 10323
-// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
-{
-W
 }
 
 STRING 10324
@@ -62432,58 +62492,28 @@ STRING 10390
 The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
-STRING 10391
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy.|n|cff00FFFFCooldown: 18 seconds|r
-}
-
-STRING 10392
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy.|n|cff00FFFFCooldown: 18 seconds|r
-}
-
-STRING 10393
-// Abilities: A0EI (Buu Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy.|n|cff00FFFFCooldown: 18 seconds|r
-}
-
 STRING 10394
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Candy Beam - [|cffffcc00Level 1|r]
 }
 
 STRING 10395
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Candy Beam - [|cffffcc00Level 2|r]
 }
 
 STRING 10396
-// Abilities: A0EI (Buu Candy Beam), Tip (Tooltip - Normal)
+// Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Candy Beam - [|cffffcc00Level 3|r]
 }
 
-STRING 10397
-// Abilities: A0EI (Buu Candy Beam), Name (Name)
-{
-Buu Candy Beam
-}
-
 STRING 10398
-// Abilities: A0EI (Buu Candy Beam), Researchtip (Tooltip - Learn)
+// Abilities: A0EI (Candy Beam), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Candy Beam - [|cffffcc00Level %d|r]
-}
-
-STRING 10399
-// Abilities: A0EI (Buu Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy.|n|cff00FFFFCooldown: 18 seconds|r
 }
 
 STRING 10400
@@ -62583,12 +62613,6 @@ Buu gets so angry he makes himself explode damaging nearby units. |n|cff00ff00(D
 }
 
 STRING 10416
-// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
-{
-(actual)
-}
-
-STRING 10417
 // Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
 {
 (actual)
@@ -62678,38 +62702,32 @@ STRING 10431
 (buu)
 }
 
-STRING 10432
-// Abilities: A0LI (Buu Candy Hex), Name (Name)
-{
-Buu Candy Hex
-}
-
 STRING 10433
-// Abilities: A0LI (Buu Candy Hex), EditorSuffix (Editor Suffix)
+// Abilities: A0LI (Buu Candy Beam Hex), EditorSuffix (Editor Suffix)
 {
 (Buu)
 }
 
 STRING 10434
-// Abilities: A0LI (Buu Candy Hex), Tip (Tooltip - Normal)
+// Abilities: A0LI (Buu Candy Beam Hex), Tip (Tooltip - Normal)
 {
 Hex
 }
 
 STRING 10435
-// Abilities: A0LI (Buu Candy Hex), Tip (Tooltip - Normal)
+// Abilities: A0LI (Buu Candy Beam Hex), Tip (Tooltip - Normal)
 {
 Hex
 }
 
 STRING 10436
-// Abilities: A0LI (Buu Candy Hex), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LI (Buu Candy Beam Hex), Ubertip (Tooltip - Normal - Extended)
 {
 Transforms an enemy unit into a random critter for <AChx,Dur1> seconds.
 }
 
 STRING 10437
-// Abilities: A0LI (Buu Candy Hex), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LI (Buu Candy Beam Hex), Ubertip (Tooltip - Normal - Extended)
 {
 Transforms an enemy unit into a random critter for <AChx,Dur1> seconds.
 }
@@ -62720,22 +62738,10 @@ STRING 10438
 Buu Candy Eat
 }
 
-STRING 10439
-// Abilities: A0LJ (Buu Candy Eat), EditorSuffix (Editor Suffix)
-{
-(buu)
-}
-
 STRING 10440
 // Abilities: A0LJ (Buu Candy Eat), Tip (Tooltip - Normal)
 {
 Candy Eater
-}
-
-STRING 10441
-// Abilities: A0LJ (Buu Candy Eat), Ubertip (Tooltip - Normal - Extended)
-{
-Buu's basic attacks against candy deals bonus damage and also heals him. Instantly kills candied creeps for bonus stats. Increased effect for higher levels of Candy Beam.|n|cff00ff00(Damage: 0.5/1/1.5% Enemy Max HP)|r|n|cff00ff00(Heal: 0.5/1/1.5% Self Max HP)|r|n|cff00ff00(Bonus Stats: 5/10/15%)|r
 }
 
 STRING 10442
@@ -62779,12 +62785,6 @@ STRING 10447
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
-}
-
-STRING 10448
-// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
-{
-W
 }
 
 STRING 10449
@@ -62905,5 +62905,47 @@ STRING 10468
 // Abilities: A01D (Mankind Destruction Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Buu creates hundreds of thousands of energy beams to destroy all the earthlings. |n|cff00ff00(Damage: (Int * 3) +100) per hit.|r|n|cff00ffff(Cooldown: 40 seconds)|r
+}
+
+STRING 10469
+// Abilities: A0EI (Candy Beam), Name (Name)
+{
+Candy Beam
+}
+
+STRING 10470
+// Abilities: A0EI (Candy Beam), EditorSuffix (Editor Suffix)
+{
+(Buu actual)
+}
+
+STRING 10471
+// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Babidi's Magic - [|cffffcc00Level 1|r]
+}
+
+STRING 10472
+// Abilities: A0JQ (Babidi's Magic), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Babidi's Magic - [|cffffcc00Level %d|r]
+}
+
+STRING 10473
+// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Babidi's Magic - [|cffffcc00Level 2|r]
+}
+
+STRING 10474
+// Abilities: A0JQ (Babidi's Magic), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Babidi's Magic - [|cffffcc00Level 3|r]
+}
+
+STRING 10475
+// Abilities: A0LI (Buu Candy Beam Hex), Name (Name)
+{
+Buu Candy Beam Hex
 }
 

@@ -195,12 +195,14 @@ export function CustomPlayerTest() {
     const playerId = GetPlayerId(player);
     const abilityId = GetSpellAbilityId();
 
-    // show ability name on activation
-    TextTagHelper.showTempText(
-      Colorizer.getPlayerColorText(GetPlayerId(player)) + GetAbilityName(abilityId) + "|r", 
-      GetUnitX(GetTriggerUnit()), 
-      GetUnitY(GetTriggerUnit()),
-    );
+    if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
+      // show ability name on activation
+      TextTagHelper.showTempText(
+        Colorizer.getPlayerColorText(GetPlayerId(player)) + GetAbilityName(abilityId) + "|r", 
+        GetUnitX(GetTriggerUnit()), 
+        GetUnitY(GetTriggerUnit()),
+      );
+    }
 
     const spellName = abilityCodesToNames.get(abilityId);
 

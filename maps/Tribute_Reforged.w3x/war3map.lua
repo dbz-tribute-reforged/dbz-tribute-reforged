@@ -156,6 +156,7 @@ udg_TransformationCellDroidsY = __jarray(0.0)
 udg_CellJrAutoPatrolAngle = 0.0
 udg_TransformationResultUnit = nil
 udg_SuperBuuToKidBuuUnitGroup = nil
+udg_TempUnit2 = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -197,6 +198,9 @@ gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
 gg_trg_Babidi_Summons = nil
+gg_trg_Babidi_Haretsu_Instagib = nil
+gg_trg_Buu_Candy_Beam = nil
+gg_trg_Buu_Candy_Auto_Attack = nil
 gg_trg_Cell_Juniors = nil
 gg_trg_Cell_Sense_Droids = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
@@ -313,6 +317,7 @@ gg_trg_Test_LVL_command_Copy = nil
 gg_trg_Transformations_Init_Commands = nil
 gg_trg_Transformations_Entry_Point = nil
 gg_trg_Transformations_Exit_Point = nil
+gg_trg_Set_Transformation_Stat_Mult = nil
 gg_trg_Transformations_Goku = nil
 gg_trg_Goku_Meme_Transformations = nil
 gg_trg_Oozaru_Vegeta = nil
@@ -326,7 +331,10 @@ gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
 gg_trg_Transformations_Broly = nil
-gg_trg_Set_Transformation_Stat_Mult = nil
+gg_trg_Transformations_Babidi = nil
+gg_trg_Super_Buu_to_Kid_Buu = nil
+gg_trg_Super_Buu_Absorb = nil
+gg_trg_Transformations_Fat_Buu = nil
 gg_trg_Cell_Absorb = nil
 gg_trg_Transformations_Cell_Larval = nil
 gg_trg_Transformations_Cell_First = nil
@@ -358,13 +366,8 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Buu_Candy_Beam = nil
-gg_trg_Buu_Candy_Eat_Passive = nil
-gg_trg_Transformations_Babidi = nil
-gg_trg_Transformations_Fat_Buu = nil
-gg_trg_Super_Buu_Absorb = nil
-gg_trg_Super_Buu_to_Kid_Buu = nil
-gg_trg_Babidi_Haretsu_Instagib = nil
+gg_trg_Buu_Candy_Gobbler = nil
+gg_trg_Buu_Candy_Eating = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1065,7 +1068,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -2519.6, 4750.0, 187.356, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("H000"), 227.7, 21420.6, 95.869, FourCC("H000"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H000"), 254.2, 21412.3, 95.869, FourCC("H000"))
     SetHeroLevel(u, 10, false)
     SetUnitState(u, UNIT_STATE_MANA, 560)
     SelectHeroSkill(u, FourCC("A0KO"))
@@ -1476,14 +1479,10 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("n00U"), 737.0, 21476.7, 251.792, FourCC("n00U"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00W"), 482.4, 21486.6, 181.610, FourCC("n00W"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00X"), 707.3, 21649.8, 32.070, FourCC("n00X"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O005"), 516.6, 21764.1, 168.606, FourCC("O005"))
-    SetUnitState(u, UNIT_STATE_MANA, 0)
+    u = BlzCreateUnitWithSkin(p, FourCC("O005"), 541.9, 21834.0, 168.606, FourCC("O005"))
     u = BlzCreateUnitWithSkin(p, FourCC("O006"), 698.5, 21907.4, 258.173, FourCC("O006"))
-    SetUnitState(u, UNIT_STATE_MANA, 0)
-    u = BlzCreateUnitWithSkin(p, FourCC("O00C"), 866.4, 21774.2, 210.142, FourCC("O00C"))
-    SetUnitState(u, UNIT_STATE_MANA, 0)
+    u = BlzCreateUnitWithSkin(p, FourCC("O00C"), 979.2, 21834.8, 210.142, FourCC("O00C"))
     u = BlzCreateUnitWithSkin(p, FourCC("H00H"), 865.2, 21931.8, 249.939, FourCC("H00H"))
-    SetUnitState(u, UNIT_STATE_MANA, 0)
     SetUnitColor(u, ConvertPlayerColor(12))
 end
 
@@ -1911,7 +1910,7 @@ function Trig_Babidi_Summons_Actions()
     end
     udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
-    udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
+    udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
     ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
     ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
@@ -1920,7 +1919,6 @@ end
 
 function InitTrig_Babidi_Summons()
     gg_trg_Babidi_Summons = CreateTrigger()
-    DisableTrigger(gg_trg_Babidi_Summons)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Babidi_Summons, EVENT_PLAYER_UNIT_SUMMON)
     TriggerAddCondition(gg_trg_Babidi_Summons, Condition(Trig_Babidi_Summons_Conditions))
     TriggerAddAction(gg_trg_Babidi_Summons, Trig_Babidi_Summons_Actions)
@@ -1955,20 +1953,29 @@ function Trig_Buu_Candy_Beam_Conditions()
     return true
 end
 
-function Trig_Buu_Candy_Beam_Func009Func002002003001()
+function Trig_Buu_Candy_Beam_Func014Func002002003001()
     return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func009Func002002003002()
+function Trig_Buu_Candy_Beam_Func014Func002002003002001()
     return (IsUnitAliveBJ(GetFilterUnit()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func009Func002002003()
-    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func009Func002002003001(), Trig_Buu_Candy_Beam_Func009Func002002003002())
+function Trig_Buu_Candy_Beam_Func014Func002002003002002()
+    return (UnitHasBuffBJ(GetFilterUnit(), FourCC("B01O")) == false)
 end
 
-function Trig_Buu_Candy_Beam_Func009Func003A()
+function Trig_Buu_Candy_Beam_Func014Func002002003002()
+    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func014Func002002003002001(), Trig_Buu_Candy_Beam_Func014Func002002003002002())
+end
+
+function Trig_Buu_Candy_Beam_Func014Func002002003()
+    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func014Func002002003001(), Trig_Buu_Candy_Beam_Func014Func002002003002())
+end
+
+function Trig_Buu_Candy_Beam_Func014Func003A()
     IssueTargetOrderBJ(udg_TempUnit, "hex", GetEnumUnit())
+    IssueTargetOrderBJ(udg_TempUnit, "slow", GetEnumUnit())
 end
 
 function Trig_Buu_Candy_Beam_Actions()
@@ -1978,16 +1985,21 @@ function Trig_Buu_Candy_Beam_Actions()
     UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit)
     UnitAddAbilityBJ(FourCC("A0LI"), udg_TempUnit)
     SetUnitAbilityLevelSwapped(FourCC("A0LI"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC("A0LK"), udg_TempUnit)
+    SetUnitAbilityLevelSwapped(FourCC("A0LK"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()))
     udg_TempLoc2 = GetSpellTargetLoc()
+    AddLightningLoc("MBUR", udg_TempLoc, udg_TempLoc2)
+    DestroyLightningBJ(GetLastCreatedLightningBJ())
+    udg_TempReal2 = (90.00 + (30.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetSpellAbilityUnit()))))
     udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > 10) then break end
-        udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, (udg_TempReal * I2R(udg_TempInt)), udg_TempReal)
-        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(120.00, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func009Func002002003))
-        ForGroupBJ(udg_TempGroup, Trig_Buu_Candy_Beam_Func009Func003A)
+        udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, (udg_TempReal2 * I2R(udg_TempInt)), udg_TempReal)
+        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal2, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func014Func002002003))
+        ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Beam_Func014Func003A)
                 RemoveLocation(udg_TempLoc3)
-                DestroyGroup(udg_TempGroup)
+                DestroyGroup(udg_TempUnitGroup)
         udg_TempInt = udg_TempInt + 1
     end
         RemoveLocation(udg_TempLoc)
@@ -2001,8 +2013,8 @@ function InitTrig_Buu_Candy_Beam()
     TriggerAddAction(gg_trg_Buu_Candy_Beam, Trig_Buu_Candy_Beam_Actions)
 end
 
-function Trig_Buu_Candy_Eat_Passive_Conditions()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0LJ"), GetAttacker()) > 0)) then
+function Trig_Buu_Candy_Auto_Attack_Conditions()
+    if (not (UnitHasBuffBJ(GetAttackedUnitBJ(), FourCC("B01O")) == true)) then
         return false
     end
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetAttacker()) > 0)) then
@@ -2011,49 +2023,116 @@ function Trig_Buu_Candy_Eat_Passive_Conditions()
     return true
 end
 
-function Trig_Buu_Candy_Eat_Passive_Func003Func007C()
+function Trig_Buu_Candy_Auto_Attack_Actions()
+    udg_TempUnit = GetAttackedUnitBJ()
+    udg_TempUnit2 = GetAttacker()
+    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TempUnit2)
+    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIsm\\AIsmTarget.mdl")
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+        RemoveLocation(udg_TempLoc)
+    TriggerExecute(gg_trg_Buu_Candy_Eating)
+end
+
+function InitTrig_Buu_Candy_Auto_Attack()
+    gg_trg_Buu_Candy_Auto_Attack = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Buu_Candy_Auto_Attack, EVENT_PLAYER_UNIT_ATTACKED)
+    TriggerAddCondition(gg_trg_Buu_Candy_Auto_Attack, Condition(Trig_Buu_Candy_Auto_Attack_Conditions))
+    TriggerAddAction(gg_trg_Buu_Candy_Auto_Attack, Trig_Buu_Candy_Auto_Attack_Actions)
+end
+
+function Trig_Buu_Candy_Gobbler_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0LL"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Buu_Candy_Gobbler_Func008002003001()
+    return (IsUnitAliveBJ(GetFilterUnit()) == true)
+end
+
+function Trig_Buu_Candy_Gobbler_Func008002003002001()
+    return (UnitHasBuffBJ(GetFilterUnit(), FourCC("B01O")) == true)
+end
+
+function Trig_Buu_Candy_Gobbler_Func008002003002002()
+    return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
+end
+
+function Trig_Buu_Candy_Gobbler_Func008002003002()
+    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func008002003002001(), Trig_Buu_Candy_Gobbler_Func008002003002002())
+end
+
+function Trig_Buu_Candy_Gobbler_Func008002003()
+    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func008002003001(), Trig_Buu_Candy_Gobbler_Func008002003002())
+end
+
+function Trig_Buu_Candy_Gobbler_Func009A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Buu_Candy_Eating)
+end
+
+function Trig_Buu_Candy_Gobbler_Actions()
+    udg_TempUnit2 = GetTriggerUnit()
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactCaster.mdl")
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit())
+    udg_TempReal = (400.00 + (100.00 * I2R(udg_TempInt)))
+    udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal, udg_TempLoc, Condition(Trig_Buu_Candy_Gobbler_Func008002003))
+    ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Gobbler_Func009A)
+        DestroyGroup(udg_TempUnitGroup)
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_Buu_Candy_Gobbler()
+    gg_trg_Buu_Candy_Gobbler = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Buu_Candy_Gobbler, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Buu_Candy_Gobbler, Condition(Trig_Buu_Candy_Gobbler_Conditions))
+    TriggerAddAction(gg_trg_Buu_Candy_Gobbler, Trig_Buu_Candy_Gobbler_Actions)
+end
+
+function Trig_Buu_Candy_Eating_Func002Func006C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O005"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Buu_Candy_Eating_Func002C()
     if (not (IsUnitType(udg_TempUnit, UNIT_TYPE_HERO) == false)) then
         return false
     end
     return true
 end
 
-function Trig_Buu_Candy_Eat_Passive_Func003C()
-    if (not (udg_TempBool == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Buu_Candy_Eat_Passive_Actions()
-    udg_TempUnit = GetAttackedUnitBJ()
-        udg_TempBool = GetUnitAbilityLevel(udg_TempUnit, FourCC('B01O')) > 0
-    if (Trig_Buu_Candy_Eat_Passive_Func003C()) then
-        udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetAttacker())
-        SetUnitLifePercentBJ(GetAttacker(), (GetUnitLifePercent(GetAttacker()) + (0.50 * I2R(udg_TempInt))))
-        AddSpecialEffectTargetUnitBJ("origin", GetAttacker(), "Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl")
-        DestroyEffectBJ(GetLastCreatedEffectBJ())
-        AddSpecialEffectTargetUnitBJ("origin", udg_TempUnit, "Abilities\\Spells\\Items\\AIsm\\AIsmTarget.mdl")
-        DestroyEffectBJ(GetLastCreatedEffectBJ())
-        if (Trig_Buu_Candy_Eat_Passive_Func003Func007C()) then
-            udg_StatMultUnit = GetAttacker()
-            udg_StatMultReal = ((0.05 * I2R(udg_TempInt)) * I2R(GetUnitFoodMade(udg_TempUnit)))
-            TriggerExecute(gg_trg_Add_To_Base_Stats)
-            TriggerExecute(gg_trg_Update_Current_Stats)
-            SetUnitLifeBJ(udg_TempUnit, 1.00)
-            UnitDamageTargetBJ(GetAttacker(), GetAttackedUnitBJ(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+function Trig_Buu_Candy_Eating_Actions()
+    SetUnitLifePercentBJ(udg_TempUnit2, (GetUnitLifePercent(udg_TempUnit2) + (0.30 * I2R(udg_TempInt))))
+    if (Trig_Buu_Candy_Eating_Func002C()) then
+        udg_StatMultUnit = udg_TempUnit2
+        udg_StatMultReal = ((0.05 + (0.05 * I2R(udg_TempInt))) * I2R(GetUnitFoodMade(udg_TempUnit)))
+        TriggerExecute(gg_trg_Add_To_Base_Stats)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        if (Trig_Buu_Candy_Eating_Func002Func006C()) then
+            TriggerExecute(gg_trg_Get_Stat_Multiplier)
+            udg_TempReal = (((0.04 * 0.10) + (I2R(udg_TempInt) * (0.01 * 0.10))) + udg_StatMultInt)
+            udg_StatMultReal = RMinBJ(2.50, udg_TempReal)
+            TriggerExecute(gg_trg_Set_Stat_Multiplier)
         else
-            UnitDamageTargetBJ(GetAttacker(), udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit) * ((0.01 * 0.50) * I2R(udg_TempInt))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         end
+        SetUnitLifeBJ(udg_TempUnit, 1.00)
+        UnitDamageTargetBJ(udg_TempUnit2, udg_TempUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     else
+        UnitDamageTargetBJ(udg_TempUnit2, udg_TempUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit) * ((0.01 * 0.50) * I2R(udg_TempInt))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     end
 end
 
-function InitTrig_Buu_Candy_Eat_Passive()
-    gg_trg_Buu_Candy_Eat_Passive = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Buu_Candy_Eat_Passive, EVENT_PLAYER_UNIT_ATTACKED)
-    TriggerAddCondition(gg_trg_Buu_Candy_Eat_Passive, Condition(Trig_Buu_Candy_Eat_Passive_Conditions))
-    TriggerAddAction(gg_trg_Buu_Candy_Eat_Passive, Trig_Buu_Candy_Eat_Passive_Actions)
+function InitTrig_Buu_Candy_Eating()
+    gg_trg_Buu_Candy_Eating = CreateTrigger()
+    TriggerAddAction(gg_trg_Buu_Candy_Eating, Trig_Buu_Candy_Eating_Actions)
 end
 
 function Trig_Cell_Juniors_Conditions()
@@ -2075,7 +2154,6 @@ end
 
 function InitTrig_Cell_Juniors()
     gg_trg_Cell_Juniors = CreateTrigger()
-    DisableTrigger(gg_trg_Cell_Juniors)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cell_Juniors, EVENT_PLAYER_UNIT_SUMMON)
     TriggerAddCondition(gg_trg_Cell_Juniors, Condition(Trig_Cell_Juniors_Conditions))
     TriggerAddAction(gg_trg_Cell_Juniors, Trig_Cell_Juniors_Actions)
@@ -4503,10 +4581,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
-        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 150.00)
+        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 420.00)
     else
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()) then
-            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 110.00)
+            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 420.00)
         else
         end
     end
@@ -7053,6 +7131,20 @@ function Trig_Transformations_Babidi_Func009C()
     return true
 end
 
+function Trig_Transformations_Babidi_Func010Func003Func001C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Babidi_Func010Func003C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Babidi_Func010C()
     if (not (udg_TransformationString == "release")) then
         return false
@@ -7099,8 +7191,18 @@ function Trig_Transformations_Babidi_Actions()
     if (Trig_Transformations_Babidi_Func010C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('O005')
-        udg_TransformationStatMult = 1.75
+        if (Trig_Transformations_Babidi_Func010Func003C()) then
+            if (Trig_Transformations_Babidi_Func010Func003Func001C()) then
+                udg_TransformationStatMult = 2.00
+            else
+                udg_TransformationStatMult = 1.85
+            end
+        else
+            udg_TransformationStatMult = 1.75
+        end
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+        SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
+        SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 2)
         udg_StatMultReal = 0.00
     else
     end
@@ -7120,28 +7222,35 @@ function InitTrig_Transformations_Babidi()
     TriggerAddAction(gg_trg_Transformations_Babidi, Trig_Transformations_Babidi_Actions)
 end
 
-function Trig_Super_Buu_to_Kid_Buu_Func001C()
-    if (not (CountUnitsInGroup(udg_SuperBuuToKidBuuUnitGroup) == 0)) then
+function Trig_Super_Buu_to_Kid_Buu_Func001Func004C()
+    if (not (ModuloInteger(udg_TempInt, 30) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_to_Kid_Buu_Func002Func004C()
+function Trig_Super_Buu_to_Kid_Buu_Func001Func006C()
     if (not (udg_TempInt > 120)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_to_Kid_Buu_Func002A()
+function Trig_Super_Buu_to_Kid_Buu_Func001A()
     udg_TempUnit = GetEnumUnit()
-        udg_ID = GetHandleID(udg_TempUnit)
+        udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable)
-    if (Trig_Super_Buu_to_Kid_Buu_Func002Func004C()) then
+    if (Trig_Super_Buu_to_Kid_Buu_Func001Func004C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
+        DisplayTextToForce(udg_TempPlayerGroup, ("Time till Kid Buu:" .. I2S((120 - udg_TempInt))))
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    SaveIntegerBJ((udg_TempInt + 1), 15, udg_ID, udg_StatMultHashtable)
+    if (Trig_Super_Buu_to_Kid_Buu_Func001Func006C()) then
         DisplayTextToForce(GetPlayersAll(), "TRIGSTR_3089")
-        GroupRemoveUnitSimple(udg_TempUnit, udg_SuperBuuToKidBuuUnitGroup)
         udg_StatMultUnit = udg_TempUnit
+        GroupRemoveUnitSimple(udg_TempUnit, udg_SuperBuuToKidBuuUnitGroup)
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('O00C')
@@ -7149,16 +7258,11 @@ function Trig_Super_Buu_to_Kid_Buu_Func002A()
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
         TriggerExecute(gg_trg_Transformations_Exit_Point)
     else
-        SaveIntegerBJ((udg_TempInt + 1), 15, udg_ID, udg_StatMultHashtable)
     end
 end
 
 function Trig_Super_Buu_to_Kid_Buu_Actions()
-    if (Trig_Super_Buu_to_Kid_Buu_Func001C()) then
-        DisableTrigger(GetTriggeringTrigger())
-    else
-    end
-    ForGroupBJ(udg_SuperBuuToKidBuuUnitGroup, Trig_Super_Buu_to_Kid_Buu_Func002A)
+    ForGroupBJ(udg_SuperBuuToKidBuuUnitGroup, Trig_Super_Buu_to_Kid_Buu_Func001A)
 end
 
 function InitTrig_Super_Buu_to_Kid_Buu()
@@ -7179,6 +7283,13 @@ function Trig_Super_Buu_Absorb_Conditions()
         return false
     end
     if (not (GetUnitTypeId(GetSpellAbilityUnit()) == FourCC("O006"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Super_Buu_Absorb_Func001Func007C()
+    if (not (LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) > 0)) then
         return false
     end
     return true
@@ -7205,12 +7316,15 @@ function Trig_Super_Buu_Absorb_Actions()
     if (Trig_Super_Buu_Absorb_Func001C()) then
         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
         UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+        GroupAddUnitSimple(GetSpellAbilityUnit(), udg_SuperBuuToKidBuuUnitGroup)
         udg_StatMultUnit = GetSpellAbilityUnit()
                 udg_ID = GetHandleId(udg_TransformationResultUnit)
         SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
-        SaveIntegerBJ(1, 15, udg_ID, udg_StatMultHashtable)
-        GroupAddUnitSimple(udg_StatMultUnit, udg_SuperBuuToKidBuuUnitGroup)
-        udg_StatMultReal = (2.10 + (0.10 + I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
+        if (Trig_Super_Buu_Absorb_Func001Func007C()) then
+        else
+            SaveIntegerBJ(0, 15, udg_ID, udg_StatMultHashtable)
+        end
+        udg_StatMultReal = (2.20 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
         TriggerExecute(gg_trg_Set_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         EnableTrigger(gg_trg_Super_Buu_to_Kid_Buu)
@@ -7226,30 +7340,10 @@ function InitTrig_Super_Buu_Absorb()
 end
 
 function Trig_Transformations_Fat_Buu_Func009C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Fat_Buu_Func010C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Fat_Buu_Func011C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
@@ -7265,20 +7359,14 @@ function Trig_Transformations_Fat_Buu_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Fat_Buu_Func009C()) then
-        udg_StatMultReal = 2.00
-    else
-    end
-    if (Trig_Transformations_Fat_Buu_Func010C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('O006')
-        udg_TransformationStatMult = 2.00
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_TransformationStatMult = RMaxBJ(2.00, (udg_StatMultInt - 0.30))
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+        SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
+        SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 2)
         udg_StatMultReal = 0.00
-    else
-    end
-    if (Trig_Transformations_Fat_Buu_Func011C()) then
-        udg_StatMultReal = 2.50
-        udg_TransformationSFXString = "AuraPink.mdx"
     else
     end
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -8793,7 +8881,9 @@ function InitCustomTriggers()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()
-    InitTrig_Buu_Candy_Eat_Passive()
+    InitTrig_Buu_Candy_Auto_Attack()
+    InitTrig_Buu_Candy_Gobbler()
+    InitTrig_Buu_Candy_Eating()
     InitTrig_Cell_Juniors()
     InitTrig_Cell_Sense_Droids()
     InitTrig_Metal_Cooler_Scan_For_Powers()

@@ -28,14 +28,14 @@ export class Summon implements AbilityComponent, Serializable<Summon> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const stats: number = 1.0 * I2R(GetHeroStatBJ(this.attribute, input.caster.unit, true)) * this.multiplier;
+    const stats: number = 2.0 * I2R(GetHeroStatBJ(this.attribute, input.caster.unit, true)) * 0.5 * this.multiplier;
     if (this.target == Summon.TARGET_SOURCE_UNIT) {
       this.setupSummonUnit(source, stats);
     } else if (this.target == Summon.TARGET_LAST_SUMMONED_UNIT) {
       this.setupSummonUnit(GetSummonedUnit(), stats);
     } else {
       let summonGroup = CreateGroup();
-      GroupEnumUnitsOfPlayer(summonGroup, input.casterPlayer, Filter(() => {
+      GroupEnumUnitsOfPlayer(summonGroup, input.casterPlayer, Condition(() => {
         return GetUnitTypeId(GetFilterUnit()) == this.target;
       }));
       ForGroup(summonGroup, () => {

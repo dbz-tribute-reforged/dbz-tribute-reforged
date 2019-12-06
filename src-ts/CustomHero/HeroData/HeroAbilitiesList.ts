@@ -44,8 +44,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     // fat buu / super buu / kid buu
     [FourCC("O005"), ["Buu Beam", "Flesh Attack", "Innocence Breath", "Angry Explosion"]],
-    [FourCC("O006"), ["Buu Beam", "Flesh Attack", "Mankind Destruction Attack", "Vanishing Ball"]],
-    [FourCC("O00C"), ["Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",]],
+    [FourCC("O006"), ["Buu Beam", "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball"]],
+    [FourCC("O00C"), ["God Kamehameha", "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",]],
 
     // broly
     [FourCC("H00M"), ["Energy Punch", "Power Level Rising", "Planet Crusher", "Gigantic Roar", "Gigantic Omegastorm"]],
