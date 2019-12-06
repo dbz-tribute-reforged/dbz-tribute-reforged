@@ -10,6 +10,7 @@ import { Colorizer } from "Common/Colorizer";
 export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SOURCE_UNIT = 0;
   static readonly SOURCE_TARGET_POINT = 1;
+  static readonly SOURCE_TARGET_UNIT = 2;
 
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
@@ -53,6 +54,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
     if (this.damageSource == AOEDamage.SOURCE_UNIT) {
       this.damageCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+    } else if (this.damageSource == AOEDamage.SOURCE_TARGET_UNIT) {
+      if (input.targetUnit) {
+        this.damageCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+      } else {
+        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      }
     }
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(

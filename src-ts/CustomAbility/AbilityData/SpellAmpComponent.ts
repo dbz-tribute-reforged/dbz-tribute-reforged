@@ -47,11 +47,20 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp super saiyan rage", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.10,
+    rate: 0.0005,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp overcharge", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.2,
+    bonus: 0.15,
     rate: 0.001,
   },
 ];

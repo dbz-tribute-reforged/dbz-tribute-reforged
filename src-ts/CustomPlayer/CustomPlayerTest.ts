@@ -5,6 +5,8 @@ import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
+import { TextTagHelper } from "Common/TextTagHelper";
+import { Colorizer } from "Common/Colorizer";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -193,25 +195,42 @@ export function CustomPlayerTest() {
     const playerId = GetPlayerId(player);
     const abilityId = GetSpellAbilityId();
 
+    if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
+      // show ability name on activation
+      TextTagHelper.showTempText(
+        Colorizer.getPlayerColorText(GetPlayerId(player)) + GetAbilityName(abilityId) + "|r", 
+        GetUnitX(GetTriggerUnit()), 
+        GetUnitY(GetTriggerUnit()),
+      );
+    }
+
     const spellName = abilityCodesToNames.get(abilityId);
 
     if (spellName) { 
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
       customPlayers[playerId].selectedUnit = caster;
+      /*
+      if (GetOrderTargetUnit()) {
+        customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+      }
+      */
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero) {
-        customHero.useAbility(
-          spellName,
-          new CustomAbilityInput(
-            customHero,
-            player,
-            abilityLevel,
-            customPlayers[playerId].orderPoint,
-            customPlayers[playerId].mouseData,
-            customPlayers[playerId].targetUnit,
-          ),
-        );
+        // temp fix for double ss rage trigger
+        if (spellName != "Super Saiyan Rage" || GetUnitTypeId(customHero.unit) != FourCC("H08I")) {
+          customHero.useAbility(
+            spellName,
+            new CustomAbilityInput(
+              customHero,
+              player,
+              abilityLevel,
+              customPlayers[playerId].orderPoint,
+              customPlayers[playerId].mouseData,
+              customPlayers[playerId].targetUnit,
+            ),
+          );
+        }
       }
     }
 
@@ -236,44 +255,42 @@ export function CustomPlayerTest() {
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, "Max Power");
 
-  
   /*
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, "Energy Beam");
+  addAbilityAction(abil3, "Haretsu no Majutsu");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, "Nuke");
+  addAbilityAction(abil4, "Flesh Attack");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, "S.S. Deadly Hammer");
+  addAbilityAction(abil5, "Innocence Breath");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, "S.S. Deadly Bomber");
+  addAbilityAction(abil6, "Angry Explosion");
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, "Android Barrier");
+  addAbilityAction(abil7, "Vanishing Ball");
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, "Overcharge");
-
+  addAbilityAction(abil8, "Mankind Destruction Attack");
 
 
   const abil9 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil9, BlzGetFrameByName("abilityButton9", 9), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil9, OSKEY_V, 0, true);
-  addAbilityAction(abil9, "Ultra Instinct");
+  addAbilityAction(abil9, "SS Rage");
   */
 
 
@@ -326,7 +343,7 @@ export function CustomPlayerTest() {
   TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
   TriggerAddAction(revoiveSpam, () => {
     const dead = GetTriggerUnit();
-    if (IsUnitType(dead, UNIT_TYPE_HERO)) {
+    if (IsUnitType(dead, UNIT_TYPE_HERO) && !IsUnitType(dead, UNIT_TYPE_SUMMONED)) {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
         ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);

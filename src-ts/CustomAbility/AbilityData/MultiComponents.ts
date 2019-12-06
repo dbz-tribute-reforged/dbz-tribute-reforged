@@ -11,8 +11,8 @@ export const MultiComponents = [
     angleMax: 15,
     delayBetweenComponents: 16,
     firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 2,
     components: [
-      { name: "beam twin dragon shot" },
       { name: "beam twin dragon shot" },
     ],
   },
@@ -27,8 +27,8 @@ export const MultiComponents = [
     angleMax: 2.5,
     delayBetweenComponents: 1,
     firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 2,
     components: [
-      { name: "beam final flash" },
       { name: "beam final flash" },
     ],
   },
@@ -43,26 +43,25 @@ export const MultiComponents = [
     angleMax: 20,
     delayBetweenComponents: 2,
     firingMode: MultiComponent.RANDOM_FIRING,
+    multiplyComponents: 16,
     components: [
       { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
-      { name: "beam energy blast volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi shining sword attack", 
+    repeatInterval: 1, 
+    startTick: 40,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.LINEAR_FIRING,
+    multiplyComponents: 1,
+    components: [
+      { name: "beam finish buster" },
     ],
   },
   // -------------------------------------------
@@ -76,8 +75,41 @@ export const MultiComponents = [
     angleMax: 1,
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
+    multiplyComponents: 1,
     components: [
       { name: "beam ss deadly bomber" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi innocence breath", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -60,
+    angleMax: 60,
+    delayBetweenComponents: 2,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 12,
+    components: [
+      { name: "beam innocence breath" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi mankind destruction attack", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -180,
+    angleMax: 180,
+    delayBetweenComponents: 5,
+    firingMode: MultiComponent.RANDOM_FIRING,
+    multiplyComponents: 100,
+    components: [
+      { name: "beam mankind destruction attack" },
     ],
   },
   // -------------------------------------------
@@ -91,11 +123,8 @@ export const MultiComponents = [
     angleMax: -7,
     delayBetweenComponents: 4,
     firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 5,
     components: [
-      { name: "beam death beam frieza" },
-      { name: "beam death beam frieza" },
-      { name: "beam death beam frieza" },
-      { name: "beam death beam frieza" },
       { name: "beam death beam frieza" },
     ],
   },
