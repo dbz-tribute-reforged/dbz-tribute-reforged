@@ -35,7 +35,7 @@ export class TestSaga extends BaseSaga implements Saga {
     super.complete();
   }
 
-  update(): void {
+  update(t: number): void {
   }
 }
 
@@ -58,6 +58,6 @@ export class TestSagaTwo extends BaseSaga implements Saga {
     super.complete();
   }
 
-  update(): void {
+  update(t: number): void {
   }
 }

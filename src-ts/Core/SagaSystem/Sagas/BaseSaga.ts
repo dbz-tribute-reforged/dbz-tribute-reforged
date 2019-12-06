@@ -33,5 +33,5 @@ export interface Saga {
 
   start: () => void;
   complete: () => void;
-  update: () => void;
+  update: (t: number) => void;
 }

@@ -19,7 +19,7 @@ export abstract class Entity {
                     xpcall(() => {
                         entity._internalTimer += 0.01;
                         if (entity._internalTimer >= entity._timerDelay) {
-                            entity.step();
+                            entity.step(entity._timerDelay);
                             entity._internalTimer = 0;
                         }
                     }, () => Logger.LogCritical));
@@ -29,7 +29,7 @@ export abstract class Entity {
         Entity.entities.push(this);
     }
 
-    abstract step(): void;
+    abstract step(t: number): void;
 
     public remove() {
         let index = Entity.entities.indexOf(this);

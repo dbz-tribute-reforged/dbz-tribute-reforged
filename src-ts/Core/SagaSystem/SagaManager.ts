@@ -38,11 +38,19 @@ export class SagaManager extends Entity {
     }
   }
 
-  public step(): void {
+  public step(t: number): void {
     // iterate over all sagas and check the conditions to see if it should be progressed
+    this.progressSagas(t);
+
+    // TODO: progress side sagas (?)
+  }
+
+  private progressSagas(t: number): void {
+    // iterate over each main saga and do some work
     for (let saga of this.sagas) {
       switch (saga.state) {
 
+        // if this saga hasn't started yet, run some logic to check if we should start it
         case SagaState.NotStarted: {
           // if we are already at max concurrent sagas, then skip this
           if (this.inProgressSagas >= this.maxNumberConcurrentSagas)
@@ -57,16 +65,19 @@ export class SagaManager extends Entity {
           break;
         }
 
+        // if saga is in progress, check if it needs to be completed; otherwise, run its update function
         case SagaState.InProgress: {
           if (saga.canComplete()) {
             saga.complete();
           }
           else {
-            saga.update();
+            saga.update(t);
           }
           break;
         }
 
+        // if saga is completed, do nothing; we could expand this to check if a saga is
+        // repeatable or something like that
         case SagaState.Completed: {
           // do nothing
           break;
