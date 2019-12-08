@@ -38,10 +38,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0KT'), "Super Saiyan Rage"],
 
     // piccolo
-    [FourCC('A0C8'), "Slappy Hand"],
     [FourCC('A06F'), "Special Beam Cannon"],
+    [FourCC('A0C8'), "Slappy Hand"],
+    [FourCC('A0LM'), "Hellzone Grenade"],
     [FourCC('A088'), "Multi Form"],
-    [FourCC('A03G'), "Hellzone Grenade"],
+    [FourCC('A04Y'), "Kyodaika"],
+    // clones version
+    [FourCC('A0ES'), "Special Beam Cannon"],
 
 
     // babidi

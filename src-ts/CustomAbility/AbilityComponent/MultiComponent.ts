@@ -54,18 +54,25 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
   }
 
   adjustAngleCurrent() {
-    if (this.firingMode == MultiComponent.SPREAD_FIRING) {
+    if (this.firingMode == MultiComponent.RANDOM_FIRING) {
+      this.angleCurrent = this.angleMin + Math.random() * this.angleRange;
+
+    } else {
       const nextAngle = this.angleCurrent + this.angleDifference * this.angleDirection;
-      if (nextAngle > this.angleMax || nextAngle < this.angleMin) {
-        this.angleDirection *= -1;
-        this.angleCurrent += this.angleDifference * this.angleDirection;
+      if (nextAngle > this.angleMax || nextAngle < this.angleMin) {  
+        if (this.firingMode == MultiComponent.WRAPAROUND_FIRING) {
+          if (this.angleDirection > 0) {
+            this.angleCurrent = this.angleMin;
+          } else {
+            this.angleCurrent = this.angleMax;
+          }
+        } else {
+          this.angleDirection *= -1;
+          this.angleCurrent += this.angleDifference * this.angleDirection;
+        }
       } else {
         this.angleCurrent = nextAngle;
       }
-    } else if (this.firingMode == MultiComponent.WRAPAROUND_FIRING) {
-      this.angleCurrent = (this.angleCurrent + this.angleDifference) % this.angleRange;
-    } else if (this.firingMode == MultiComponent.RANDOM_FIRING) {
-      this.angleCurrent = this.angleMin + Math.random() * this.angleRange;
     }
   }
   
@@ -74,8 +81,17 @@ export class MultiComponent implements AbilityComponent, Serializable<MultiCompo
 
     if (ability.currentTick == this.startTick) {
       this.angleCurrent = this.angleMin;
-      this.angleDirection = 1;
-      this.angleRange = this.angleMax - this.angleMin;
+      if (this.angleMax > this.angleMin) {
+        this.angleRange = this.angleMax - this.angleMin;
+        this.angleDirection = 1;
+      } else {
+        this.angleRange = this.angleMin - this.angleMax;
+        
+        const tmp = this.angleMax;
+        this.angleMax = this.angleMin;
+        this.angleMin = tmp;
+        this.angleDirection = -1;
+      }
       this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, input.targetPoint);
       this.originalDistance = CoordMath.distance(sourceCoords, input.targetPoint);
       this.originalTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);

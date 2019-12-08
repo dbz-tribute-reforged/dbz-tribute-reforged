@@ -35,6 +35,9 @@ export class CustomHero {
     this.addAbilityFromAll("Max Power");
 
     /*
+    this.addAbilityFromAll("Hellzone Grenade");
+    this.addAbilityFromAll("Slappy Hand");
+
     this.addAbilityFromAll("Haretsu no Majutsu");
     this.addAbilityFromAll("Flesh Attack");
     this.addAbilityFromAll("Innocence Breath");

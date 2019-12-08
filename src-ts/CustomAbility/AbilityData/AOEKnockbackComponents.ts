@@ -49,6 +49,18 @@ export const AOEKnockbackComponents = [
       aoe: 450,
     },
   },
+  // hellzone grenade
+  {
+    name: "knockback hellzone grenade",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 1, 
+      angle: 0, 
+      aoe: 250,
+    },
+  },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",
@@ -58,6 +70,18 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 15, 
       angle: 180, 
+      aoe: 400,
+    },
+  },
+  // android barrier knockback
+  {
+    name: "knockback android barrier",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 66,
+    knockbackData: {
+      speed: 45, 
+      angle: 0, 
       aoe: 400,
     },
   },
@@ -130,6 +154,18 @@ export const AOEKnockbackComponents = [
       speed: 5, 
       angle: 0, 
       aoe: 250,
+    },
+  },
+  // babidi barrier knockback
+  {
+    name: "knockback babidi barrier",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 15, 
+      angle: 0, 
+      aoe: 500,
     },
   },
   // cooler deafening wave

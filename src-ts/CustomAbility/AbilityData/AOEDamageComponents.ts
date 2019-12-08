@@ -386,6 +386,37 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // hellzone grenade
+  {
+    name: "damage hellzone grenade dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 300,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.035,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage hellzone grenade explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 0.2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // 13 energy beam beam
   {
     name: "damage energy beam dps",

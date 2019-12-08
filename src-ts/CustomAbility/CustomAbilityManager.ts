@@ -1,6 +1,5 @@
 import { CustomAbility, CostType } from "./CustomAbility";
 import { AbilityComponent } from "./AbilityComponent/AbilityComponent";
-import { GroundTargetDash } from "./AbilityComponent/GroundTargetDash";
 import { BeamComponent } from "./AbilityComponent/BeamComponent";
 import { SfxComponent } from "./AbilityComponent/SfxComponent";
 import { GroundVortex } from "./AbilityComponent/GroundVortex";
@@ -8,9 +7,6 @@ import { AOEDamage } from "./AbilityComponent/AOEDamage";
 import { AOEDamageComponents } from "./AbilityData/AOEDamageComponents";
 import { AOEKnockbackComponents } from "./AbilityData/AOEKnockbackComponents";
 import { AOEKnockback } from "./AbilityComponent/AOEKnockback";
-import { FlyingForwardDashComponents } from "./AbilityData/FlyingForwardDashComponents";
-import { FlyingForwardDash } from "./AbilityComponent/FlyingForwardDash";
-import { GroundTargetDashComponents } from "./AbilityData/GroundTargetDashComponents";
 import { GroundVortexComponents } from "./AbilityData/GroundVortexComponents";
 import { SwordSlashComponents } from "./AbilityData/SwordSlashComponents";
 import { SwordSlash } from "./AbilityComponent/SwordSlash";
@@ -35,6 +31,10 @@ import { TimedLifeComponents } from "./AbilityData/TimedLifeComponents";
 import { TimedLife } from "./AbilityComponent/TimedLife";
 import { SummonComponents } from "./AbilityData/SummonComponents";
 import { Summon } from "./AbilityComponent/Summon";
+import { DashComponents } from "./AbilityData/DashComponents";
+import { Dash } from "./AbilityComponent/Dash";
+import { HookComponents } from "./AbilityData/HookComponents";
+import { Hook } from "./AbilityComponent/Hook";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -71,16 +71,12 @@ export class CustomAbilityManager {
       this.setComponent(new DamageBlock().deserialize(component));
     }
 
+    for (const component of DashComponents) {
+      this.setComponent(new Dash().deserialize(component));
+    }
+
     for (const component of DodgeComponents) {
       this.setComponent(new Dodge().deserialize(component));
-    }
-
-    for (const component of FlyingForwardDashComponents) {
-      this.setComponent(new FlyingForwardDash().deserialize(component));
-    }
-
-    for (const component of GroundTargetDashComponents) {
-      this.setComponent(new GroundTargetDash().deserialize(component));
     }
 
     for (const component of GroundVortexComponents) {
@@ -89,6 +85,10 @@ export class CustomAbilityManager {
 
     for (const component of HideUnitComponents) {
       this.setComponent(new HideUnit().deserialize(component));
+    }
+
+    for (const component of HookComponents) {
+      this.setComponent(new Hook().deserialize(component));
     }
 
     for (const component of SpellAmpComponents) {

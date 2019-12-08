@@ -6,7 +6,6 @@ import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
-import { GroundTargetDash } from "./GroundTargetDash";
 
 export class GroundVortex implements AbilityComponent, Serializable<GroundVortex> {
 

@@ -2499,7 +2499,7 @@ export const SfxComponents = [
         attachmentPoint: "origin",
       },
       {
-        model: "Objects\Spawnmodels\Naga\NagaDeath\NagaDeath.mdl",
+        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
         repeatInterval: 50,
         group: 0,
         scale: 1.0,

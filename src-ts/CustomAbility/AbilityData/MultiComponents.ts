@@ -54,7 +54,7 @@ export const MultiComponents = [
     repeatInterval: 1, 
     startTick: 40,
     endTick: -1,
-    angleDifference: 1,
+    angleDifference: 0,
     angleMin: 0,
     angleMax: 1,
     delayBetweenComponents: 1,
@@ -62,6 +62,22 @@ export const MultiComponents = [
     multiplyComponents: 1,
     components: [
       { name: "beam finish buster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi hellzone grenade", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: 40,
+    angleMax: -40,
+    delayBetweenComponents: 5,
+    firingMode: MultiComponent.RANDOM_FIRING,
+    multiplyComponents: 12,
+    components: [
+      { name: "beam hellzone grenade" },
     ],
   },
   // -------------------------------------------
