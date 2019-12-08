@@ -24,7 +24,7 @@ export const AbilitiesList = [
         "|nCost: 75 MP |nCD: 19",
     },
     components: [
-      { name: "ground dash 40dist" },
+      { name: "dash ground point 40dist" },
       { name: "sfx zanzo dash" },
     ],
   },
@@ -185,7 +185,7 @@ export const AbilitiesList = [
         "Dragon Fisto"
     },
     components: [
-      { name: "ground dash 25dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage dragon fist dps" },
       { name: "damage dragon fist explosion" },
       { name: "knockback 1tick 25speed 180angle 250aoe" },
@@ -429,7 +429,7 @@ export const AbilitiesList = [
     components: [
       { name: "damage super dragon flight dps" },
       { name: "knockback super dragon flight" },
-      { name: "ground dash super dragon flight" },
+      { name: "dash ground point super dragon flight" },
       { name: "spell amp super dragon flight" },
       { name: "sfx super dragon flight" },
     ],
@@ -648,7 +648,7 @@ export const AbilitiesList = [
         "Blazing Rush"
     },
     components: [
-      { name: "ground dash 15dist" },
+      { name: "dash ground point 15dist" },
       { name: "damage blazing rush explosion" },
       { name: "stun blazing rush" },
       { name: "sfx blazing rush" },
@@ -677,7 +677,7 @@ export const AbilitiesList = [
         "Super Saiyan Rage"
     },
     components: [
-      { name: "ground dash 5dist" },
+      { name: "dash ground point 5dist" },
       { name: "stun super saiyan rage" },
       { name: "spell amp super saiyan rage" },
       { name: "block super saiyan rage" },
@@ -708,6 +708,84 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam special beam cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Slappy Hand",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloSlappyHand.blp",
+      disabled: "BTNPiccoloSlappyHand.blp",
+    },
+    tooltip: {
+      title: "Slappy Hand",
+      body: 
+        "Slappy Hand"
+    },
+    components: [
+      { name: "hook slappy hand" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Hellzone Grenade",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloHellzoneGrenade.blp",
+      disabled: "BTNPiccoloHellzoneGrenade.blp",
+    },
+    tooltip: {
+      title: "Hellzone Grenade",
+      body: 
+        "Hellzone Grenade"
+    },
+    components: [
+      { name: "multi hellzone grenade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Kyodaika",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloKyodaika.blp",
+      disabled: "BTNPiccoloKyodaika.blp",
+    },
+    tooltip: {
+      title: "Kyodaika",
+      body: 
+        "Kyodaika"
+    },
+    components: [
+      { name: "dash ground point 5dist" },
     ],
   },
   // -------------------------------------------
@@ -759,7 +837,7 @@ export const AbilitiesList = [
         "S.S. Deadly Hammer"
     },
     components: [
-      { name: "ground dash ss deadly hammer" },
+      { name: "dash ground point ss deadly hammer" },
       { name: "damage ss deadly hammer dps" },
       { name: "multi ss deadly hammer" },
       { name: "knockback ss deadly hammer" },
@@ -844,6 +922,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block android barrier" },
+      { name: "knockback android barrier" },
     ],
   },
   // -------------------------------------------
@@ -925,6 +1004,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block babidi barrier" },
+      { name: "knockback babidi barrier" },
     ],
   },
   // -------------------------------------------
@@ -1164,7 +1244,7 @@ export const AbilitiesList = [
         "Energy Puncho"
     },
     components: [
-      { name: "ground dash energy punch" },
+      { name: "dash ground point energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
       { name: "stun energy punch" },
@@ -1253,7 +1333,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam gigantic roar" },
-      { name: "ground dash gigantic roar pushback" },
+      { name: "dash ground point gigantic roar pushback" },
       { name: "block broly" },
     ],
   },
@@ -1412,7 +1492,7 @@ export const AbilitiesList = [
         "Nova Chariot"
     },
     components: [
-      { name: "ground dash 25dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage nova chariot dps" },
       { name: "block nova chariot" },
       { name: "sfx nova chariot" },
@@ -1633,7 +1713,7 @@ export const AbilitiesList = [
         "Dragon Fisto. 25mp, cd4"
     },
     components: [
-      { name: "ground dash 25dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage 1tick 1int 250aoe" },
       { name: "damage final 10int 500aoe" },
       { name: "knockback 1tick 25speed 180angle 200aoe" },

@@ -259,12 +259,13 @@ export function CustomPlayerTest() {
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, "Haretsu no Majutsu");
+  addAbilityAction(abil3, "Hellzone Grenade");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, "Flesh Attack");
+  addAbilityAction(abil4, "Slappy Hand");
+
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
@@ -338,6 +339,51 @@ export function CustomPlayerTest() {
   });
 
 
+  // reveal map
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+  }
+
+  // player leaves game
+  const leaveTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerEvent(leaveTrig, Player(i), EVENT_PLAYER_LEAVE);
+  }
+  TriggerAddAction(leaveTrig, () => {
+    const leavePlayer = GetTriggerPlayer();
+    DisplayTimedTextToForce(
+      GetPlayersAll(), 
+      15,
+      Colorizer.getPlayerColorText(GetPlayerId(leavePlayer)) + GetPlayerName(leavePlayer) + 
+      "|r has left the game."
+    );
+  })
+
+  // player kills another player
+  const killTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(killTrig, Player(i), EVENT_PLAYER_UNIT_DEATH);
+  }
+  TriggerAddCondition(killTrig, Condition( () => {
+    return (
+      IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) && 
+     !IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED)
+    );
+  }));
+  TriggerAddAction(killTrig, () => {
+    const deadPlayer = GetOwningPlayer(GetDyingUnit());
+    const killPlayer = GetOwningPlayer(GetKillingUnit());
+    DisplayTimedTextToForce(
+      GetPlayersAll(), 
+      15,
+      Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
+      "|r has pwned " + 
+      Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
+      "|r"
+    );
+  })
+
+
   // revive heroes for free
   const revoiveSpam = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
@@ -355,6 +401,7 @@ export function CustomPlayerTest() {
     }
   })
 
+  // reset cd of custom ability
   const cdTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
@@ -373,6 +420,7 @@ export function CustomPlayerTest() {
     }
   });
 
+  // ally/unally as necessary
   const allyTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(allyTrig, Player(i), "-ally", false);

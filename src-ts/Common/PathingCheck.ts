@@ -56,7 +56,9 @@ export module PathingCheck {
   }
 
   export function moveFlyingUnitToCoord(unit: unit, target: Vector2D) {
-    if (!IsTerrainPathable(target.x, target.y, PATHING_TYPE_FLYABILITY)) {
+    if (
+      !IsTerrainPathable(target.x, target.y, PATHING_TYPE_FLYABILITY)
+    ) {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
     }

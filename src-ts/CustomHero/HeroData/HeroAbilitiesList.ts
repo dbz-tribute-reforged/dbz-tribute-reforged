@@ -27,7 +27,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08I"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Attack", "Blazing Rush", "Heat Dome Attack", "Super Saiyan Rage"]],
 
     // piccolo
-    [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Multi Form", "Hellzone Grenade"]],
+    [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
+    [FourCC("H04X"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
 
 
     // androids 13 14 15

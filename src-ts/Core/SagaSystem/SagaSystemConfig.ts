@@ -7,9 +7,9 @@ export interface SagaSystemConfig {
   sagas: BaseSagaType[];
 
   sagaDependencies: { 
-      [sagaKey: string]: [
-        BaseSagaType,
-        SagaState
-      ][]
-    }
+    [sagaKey: string]: [
+      BaseSagaType,
+      SagaState
+    ][]
+  }
 };
