@@ -31,8 +31,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H04X"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
 
     // bardock
-    [FourCC("H08M"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit"]],
-    [FourCC("H08N"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit"]],
+    [FourCC("H08M"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
+    [FourCC("H08N"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
 
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],

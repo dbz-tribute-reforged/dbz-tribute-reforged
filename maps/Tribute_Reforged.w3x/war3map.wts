@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.18h
+TR 0.18i
 }
 
 STRING 4
@@ -16356,6 +16356,19 @@ STRING 2654
 You need to absorb android 18!
 }
 
+STRING 2655
+// Units: H08M (Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+Secret hero. A strong PvP fighters due to his extremely high mobility, burst damage, and innate dodge ability. However, his abilities are only suited for close-range combat and have higher than average cooldowns that heavily punish missing. 
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 2656
 // Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
 {
@@ -26769,19 +26782,6 @@ STRING 4392
 // Abilities: A04Y (Kyodaika), Name (Name)
 {
 Kyodaika
-}
-
-STRING 4393
-// Units: H08M (Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A secret hero that can only be randomed. One of the strongest PvP fighters due to his high offense and mobility. However, his weakness lies in his longer than average cooldowns compounded with his hard to land abilities.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 4394
@@ -39883,7 +39883,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6576
-// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H000 (Saiyan Defender of the earth), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59475,7 +59475,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H000 (Saiyan Defender of the earth), EditorSuffix (Name - Editor Suffix)
+// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59487,7 +59487,7 @@ Evil
 }
 
 STRING 9832
-// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
+// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59499,7 +59499,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
+// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59511,7 +59511,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59541,85 +59541,85 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 9841
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: O005 (Fat Buu), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H03Y (Human Fighter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59631,13 +59631,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
+// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
+// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59649,103 +59649,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: E010 (Desert Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62837,7 +62837,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62945,19 +62945,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63132,7 +63132,7 @@ STRING 10446
 }
 
 STRING 10447
-// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
+// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
