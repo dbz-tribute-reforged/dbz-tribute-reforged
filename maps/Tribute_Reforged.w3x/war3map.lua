@@ -197,6 +197,8 @@ gg_trg_Pan_E_cast = nil
 gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
+gg_trg_Oozaru_Vegeta_Old = nil
+gg_trg_Piccolo_Multi_Form = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -223,6 +225,7 @@ gg_trg_Kill_Creep_New = nil
 gg_trg_Player_Hero_Killed = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
+gg_trg_Remove_Dead_Summons = nil
 gg_trg_Team_System_Init = nil
 gg_trg_Update_Alliances_for_PlayerGroups = nil
 gg_trg_Switch_players = nil
@@ -266,6 +269,7 @@ gg_trg_Hero_Pick_Mode_Captains_Mode_UNFINISHED = nil
 gg_trg_Hero_Pick_Mode_RandM_Announcer_Audio = nil
 gg_trg_Hero_Pick_Set_HeroPickUnitType_availability = nil
 gg_trg_Hero_Pick_Init_Available_Heroes = nil
+gg_trg_Hero_Pick_Disable_Unmade_Heroes = nil
 gg_trg_Hero_Pick_Disable_Spellcasting = nil
 gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup = nil
 gg_trg_Hero_Pick_Pick_A_Hero = nil
@@ -322,13 +326,17 @@ gg_trg_Transformations_Exit_Point = nil
 gg_trg_Set_Transformation_Stat_Mult = nil
 gg_trg_Transformations_Goku = nil
 gg_trg_Goku_Meme_Transformations = nil
-gg_trg_Oozaru_Vegeta = nil
 gg_trg_Transformations_Vegeta = nil
 gg_trg_Transformations_Gohan = nil
 gg_trg_Transformations_Goten = nil
 gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_FT_SS_Rage = nil
 gg_trg_Transformations_Future_Trunks = nil
+gg_trg_Piccolo_Kyo = nil
+gg_trg_Piccolo_Kyo_Revert = nil
+gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
+gg_trg_Transformations_Piccolo = nil
+gg_trg_Transformations_Bardock = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -368,11 +376,9 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Piccolo_Multi_Form = nil
-gg_trg_Transformations_Piccolo = nil
-gg_trg_Piccolo_Kyo = nil
-gg_trg_Piccolo_Kyo_Revert = nil
-gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
+gg_trg_Hero_Pick_Secret_Heroes = nil
+gg_trg_Hero_Pick_Secret_Bardock = nil
+gg_trg_Oozaru_Vegeta_New = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1489,6 +1495,10 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("O00C"), 979.2, 21834.8, 210.142, FourCC("O00C"))
     u = BlzCreateUnitWithSkin(p, FourCC("H00H"), 865.2, 21931.8, 249.939, FourCC("H00H"))
     SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08M"), 290.6, 22588.6, 271.939, FourCC("H08M"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("H08N"), 370.3, 22595.7, 261.560, FourCC("H08N"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -1859,6 +1869,64 @@ function InitTrig_Lookout_Exit()
     TriggerAddAction(gg_trg_Lookout_Exit, Trig_Lookout_Exit_Actions)
 end
 
+function Trig_Oozaru_Vegeta_New_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A035"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Oozaru_Vegeta_New_Func004Func001C()
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003")) then
+        return true
+    end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08M")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Oozaru_Vegeta_New_Func004C()
+    if (not Trig_Oozaru_Vegeta_New_Func004Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Oozaru_Vegeta_New_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Oozaru_Vegeta_New_Func004C()) then
+        AddSpecialEffectTargetUnitBJ("overhead", GetTriggerUnit(), "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl")
+        DestroyEffectBJ(GetLastCreatedEffectBJ())
+        SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
+        udg_StatMultStr = 3.00
+        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        UnitAddAbilityBJ(FourCC("A0LS"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0LS"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A035"), udg_StatMultUnit))
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0LS'))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A035"), GetTriggerPlayer())
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0LS"), GetTriggerPlayer())
+    else
+        udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
+        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A035"), GetTriggerPlayer())
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0LS"), GetTriggerPlayer())
+    end
+end
+
+function InitTrig_Oozaru_Vegeta_New()
+    gg_trg_Oozaru_Vegeta_New = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Oozaru_Vegeta_New, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Oozaru_Vegeta_New, Condition(Trig_Oozaru_Vegeta_New_Conditions))
+    TriggerAddAction(gg_trg_Oozaru_Vegeta_New, Trig_Oozaru_Vegeta_New_Actions)
+end
+
 function Trig_Piccolo_Multi_Form_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A088"))) then
         return false
@@ -2087,6 +2155,9 @@ end
 
 function Trig_Buu_Candy_Gobbler_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0LL"))) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()) > 0)) then
         return false
     end
     return true
@@ -2915,6 +2986,24 @@ function InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     TriggerAddAction(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc, Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions)
 end
 
+function Trig_Remove_Dead_Summons_Conditions()
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Remove_Dead_Summons_Actions()
+    RemoveUnit(GetTriggerUnit())
+end
+
+function InitTrig_Remove_Dead_Summons()
+    gg_trg_Remove_Dead_Summons = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Remove_Dead_Summons, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Remove_Dead_Summons, Condition(Trig_Remove_Dead_Summons_Conditions))
+    TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
+end
+
 function Trig_Team_System_Init_Actions()
     udg_TempInt = 1
     while (true) do
@@ -3221,87 +3310,6 @@ function InitTrig_Hero_Enters_Lower_Hell_Respawn()
     TriggerRegisterEnterRectSimple(gg_trg_Hero_Enters_Lower_Hell_Respawn, gg_rct_LowerHellsLeave)
     TriggerAddCondition(gg_trg_Hero_Enters_Lower_Hell_Respawn, Condition(Trig_Hero_Enters_Lower_Hell_Respawn_Conditions))
     TriggerAddAction(gg_trg_Hero_Enters_Lower_Hell_Respawn, Trig_Hero_Enters_Lower_Hell_Respawn_Actions)
-end
-
-function Trig_Add_Unit_to_Lower_Hell_Saga_Queue_Actions()
-    udg_LowerHellSagaUnit[udg_LowerHellSagaMaxIndex] = udg_TempUnit
-    udg_LowerHellSagaStats[udg_LowerHellSagaMaxIndex] = (udg_SagaCompletedStatReward * 0.50)
-    TriggerExecute(gg_trg_Revive_and_Move_Unit_to_HeroInit)
-    udg_LowerHellSagaMaxIndex = (udg_LowerHellSagaMaxIndex + 1)
-end
-
-function InitTrig_Add_Unit_to_Lower_Hell_Saga_Queue()
-    gg_trg_Add_Unit_to_Lower_Hell_Saga_Queue = CreateTrigger()
-    TriggerAddAction(gg_trg_Add_Unit_to_Lower_Hell_Saga_Queue, Trig_Add_Unit_to_Lower_Hell_Saga_Queue_Actions)
-end
-
-function Trig_Lower_Hell_Saga_Unit_Dies_Conditions()
-    if (not (GetTriggerUnit() == udg_LowerHellSagaUnit[udg_LowerHellSagaCurrentIndex])) then
-        return false
-    end
-    return true
-end
-
-function Trig_Lower_Hell_Saga_Unit_Dies_Actions()
-    udg_TempUnit = GetTriggerUnit()
-    udg_SagaCompletedLoc = GetUnitLoc(udg_TempUnit)
-    udg_SagaCompletedStatReward = udg_LowerHellSagaStats[udg_LowerHellSagaCurrentIndex]
-    udg_SagaCompletedPlayer = GetOwningPlayer(GetKillingUnitBJ())
-    ConditionalTriggerExecute(gg_trg_Saga_Stat_Reward)
-    DisplayTextToForce(GetPlayersAll(), ("The lower hells have been purged of " .. (GetHeroProperName(udg_TempUnit) .. ((" by " .. udg_PlayerColorString[GetConvertedPlayerId(udg_SagaCompletedPlayer)]) .. (GetPlayerName(udg_SagaCompletedPlayer) .. "|r")))))
-    TriggerSleepAction(5.00)
-    udg_TempUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Revive_and_Move_Unit_to_HeroInit)
-    udg_LowerHellSagaCurrentIndex = ModuloInteger((udg_LowerHellSagaCurrentIndex + 1), udg_LowerHellSagaMaxIndex)
-    StartTimerBJ(udg_LowerHellSagaTimer, false, 25.00)
-end
-
-function InitTrig_Lower_Hell_Saga_Unit_Dies()
-    gg_trg_Lower_Hell_Saga_Unit_Dies = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Lower_Hell_Saga_Unit_Dies, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Lower_Hell_Saga_Unit_Dies, Condition(Trig_Lower_Hell_Saga_Unit_Dies_Conditions))
-    TriggerAddAction(gg_trg_Lower_Hell_Saga_Unit_Dies, Trig_Lower_Hell_Saga_Unit_Dies_Actions)
-end
-
-function Trig_Revive_and_Move_Unit_to_HeroInit_Func001C()
-    if (not (IsUnitDeadBJ(udg_TempUnit) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Revive_and_Move_Unit_to_HeroInit_Actions()
-    if (Trig_Revive_and_Move_Unit_to_HeroInit_Func001C()) then
-        DisplayTextToForce(GetPlayersAll(), ("Lower hell reviving: " .. GetHeroProperName(udg_TempUnit)))
-        udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        ReviveHeroLoc(udg_TempUnit, udg_TempLoc, false)
-                RemoveLocation(udg_TempLoc)
-    else
-    end
-    udg_TempLoc = GetRectCenter(gg_rct_HeroInit)
-        SetUnitPosition(udg_TempUnit, GetLocationX(udg_TempLoc), GetLocationY(udg_TempLoc))
-        RemoveLocation(udg_TempLoc)
-    PauseUnitBJ(true, udg_TempUnit)
-end
-
-function InitTrig_Revive_and_Move_Unit_to_HeroInit()
-    gg_trg_Revive_and_Move_Unit_to_HeroInit = CreateTrigger()
-    TriggerAddAction(gg_trg_Revive_and_Move_Unit_to_HeroInit, Trig_Revive_and_Move_Unit_to_HeroInit_Actions)
-end
-
-function Trig_Lower_Hell_Saga_Timer_Expire_Actions()
-    udg_TempUnit = udg_LowerHellSagaUnit[udg_LowerHellSagaCurrentIndex]
-    ReviveHeroLoc(udg_TempUnit, udg_LowerHellSagaLoc, false)
-        SetUnitPosition(udg_TempUnit, GetLocationX(udg_LowerHellSagaLoc), GetLocationY(udg_LowerHellSagaLoc))
-    PauseUnitBJ(false, udg_TempUnit)
-    SetUnitLifePercentBJ(udg_TempUnit, 100)
-    DisplayTextToForce(GetPlayersAll(), (GetHeroProperName(udg_TempUnit) .. " has returned in the Lower Hells!"))
-end
-
-function InitTrig_Lower_Hell_Saga_Timer_Expire()
-    gg_trg_Lower_Hell_Saga_Timer_Expire = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_Lower_Hell_Saga_Timer_Expire, udg_LowerHellSagaTimer)
-    TriggerAddAction(gg_trg_Lower_Hell_Saga_Timer_Expire, Trig_Lower_Hell_Saga_Timer_Expire_Actions)
 end
 
 function Trig_Hero_Respawn_Init_Actions()
@@ -3785,6 +3793,38 @@ function InitTrig_Hero_Pick_Repick_Randomly()
     TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
 end
 
+function Trig_Hero_Pick_Secret_Heroes_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Hero_Pick_Secret_Heroes()
+    gg_trg_Hero_Pick_Secret_Heroes = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Secret_Heroes, 0.60)
+    TriggerAddAction(gg_trg_Hero_Pick_Secret_Heroes, Trig_Hero_Pick_Secret_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Secret_Bardock_Actions()
+    udg_TempPlayer = GetTriggerPlayer()
+    udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
+    TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
+        udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
+    CreateNUnitsAtLoc(1, FourCC("H08M"), udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
+    udg_TempUnit = GetLastCreatedUnit()
+        RemoveLocation(udg_TempLoc)
+    TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
+end
+
+function InitTrig_Hero_Pick_Secret_Bardock()
+    gg_trg_Hero_Pick_Secret_Bardock = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Secret_Bardock, Trig_Hero_Pick_Secret_Bardock_Actions)
+end
+
 function Trig_Hero_Pick_Mode_Default_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9978")
     udg_HeroPickMode = "default"
@@ -4095,11 +4135,11 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00K")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H008")
-    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H009")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00R")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08M")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
@@ -4114,7 +4154,7 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H042")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H04Z")
+    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("O005")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_NumAvailableHeroes = 0
     udg_TempInt = 0
@@ -4138,6 +4178,44 @@ function InitTrig_Hero_Pick_Init_Available_Heroes()
     gg_trg_Hero_Pick_Init_Available_Heroes = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Init_Available_Heroes, 0.03)
     TriggerAddAction(gg_trg_Hero_Pick_Init_Available_Heroes, Trig_Hero_Pick_Init_Available_Heroes_Actions)
+end
+
+function Trig_Hero_Pick_Disable_Unmade_Heroes_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        SetPlayerUnitAvailableBJ(FourCC("H008"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H04D"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H03Y"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H04P"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H055"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H06M"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H04I"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H04T"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H04Z"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H05C"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H061"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E014"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E012"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E010"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E00T"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E00K"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E00H"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E001"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H071"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E019"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E01D"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E01I"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("E01P"), false, udg_TempPlayer)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Hero_Pick_Disable_Unmade_Heroes()
+    gg_trg_Hero_Pick_Disable_Unmade_Heroes = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Disable_Unmade_Heroes, 0.06)
+    TriggerAddAction(gg_trg_Hero_Pick_Disable_Unmade_Heroes, Trig_Hero_Pick_Disable_Unmade_Heroes_Actions)
 end
 
 function Trig_Hero_Pick_Disable_Spellcasting_Conditions()
@@ -4681,6 +4759,9 @@ end
 function Trig_Hero_Pick_Completion_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
+    DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
+    DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
+    DisableTrigger(gg_trg_Hero_Pick_Secret_Bardock)
     EnableTrigger(gg_trg_Zanzo_Cooldown)
     EnableTrigger(gg_trg_Zanzo_Move)
     EnableTrigger(gg_trg_Zanzo_Toggle)
@@ -4961,7 +5042,6 @@ function Trig_Saiyan_Saga_Completion_Actions()
     TriggerExecute(gg_trg_Saga_Stat_Reward)
         RemoveLocation(udg_SagaCompletedLoc)
     DisableTrigger(GetTriggeringTrigger())
-    TriggerExecute(gg_trg_Add_Unit_to_Lower_Hell_Saga_Queue)
     TriggerSleepAction(5.00)
     TriggerExecute(gg_trg_Saiyan_Saga_Creep_Upgrade)
     SaveIntegerBJ(1, 0, udg_TurlesSagaIndex, udg_SagaHashtable)
@@ -5055,7 +5135,6 @@ function Trig_Turles_Saga_Completion_Actions()
     TriggerExecute(gg_trg_Saga_Stat_Reward)
         RemoveLocation(udg_SagaCompletedLoc)
     DisableTrigger(GetTriggeringTrigger())
-    TriggerExecute(gg_trg_Add_Unit_to_Lower_Hell_Saga_Queue)
 end
 
 function InitTrig_Turles_Saga_Completion()
@@ -5598,6 +5677,13 @@ function Trig_Transformations_Entry_Point_Func003Func015C()
     return true
 end
 
+function Trig_Transformations_Entry_Point_Func003Func016C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08M"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Entry_Point_Func003A()
     udg_StatMultUnit = GetEnumUnit()
     if (Trig_Transformations_Entry_Point_Func003Func002C()) then
@@ -5679,6 +5765,10 @@ function Trig_Transformations_Entry_Point_Func003A()
     end
     if (Trig_Transformations_Entry_Point_Func003Func015C()) then
         TriggerExecute(gg_trg_Transformations_Piccolo)
+    else
+    end
+    if (Trig_Transformations_Entry_Point_Func003Func016C()) then
+        TriggerExecute(gg_trg_Transformations_Bardock)
     else
     end
 end
@@ -6052,47 +6142,6 @@ function InitTrig_Goku_Meme_Transformations()
     gg_trg_Goku_Meme_Transformations = CreateTrigger()
     DisableTrigger(gg_trg_Goku_Meme_Transformations)
     TriggerAddAction(gg_trg_Goku_Meme_Transformations, Trig_Goku_Meme_Transformations_Actions)
-end
-
-function Trig_Oozaru_Vegeta_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A035"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Oozaru_Vegeta_Func004C()
-    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Oozaru_Vegeta_Actions()
-    udg_StatMultUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Oozaru_Vegeta_Func004C()) then
-        AddSpecialEffectTargetUnitBJ("overhead", GetTriggerUnit(), "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl")
-        DestroyEffectBJ(GetLastCreatedEffectBJ())
-        SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
-        udg_StatMultStr = 3.00
-        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-    else
-        udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
-        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
-    end
-end
-
-function InitTrig_Oozaru_Vegeta()
-    gg_trg_Oozaru_Vegeta = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Oozaru_Vegeta, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Oozaru_Vegeta, Condition(Trig_Oozaru_Vegeta_Conditions))
-    TriggerAddAction(gg_trg_Oozaru_Vegeta, Trig_Oozaru_Vegeta_Actions)
 end
 
 function Trig_Transformations_Vegeta_Func009C()
@@ -6977,21 +7026,21 @@ end
 
 function Trig_Piccolo_Kyo_Get_Str_Mult_Actions()
     if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001C()) then
-        udg_TempReal = 0.10
+        udg_TempReal = 0.20
     else
         if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001C()) then
-            udg_TempReal = 0.20
+            udg_TempReal = 0.30
         else
             if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001C()) then
-                udg_TempReal = 0.30
+                udg_TempReal = 0.40
             else
                 if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001C()) then
-                    udg_TempReal = 0.40
+                    udg_TempReal = 0.50
                 else
                     if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001Func001C()) then
-                        udg_TempReal = 0.50
-                    else
                         udg_TempReal = 0.60
+                    else
+                        udg_TempReal = 0.70
                     end
                 end
             end
@@ -7088,6 +7137,203 @@ end
 function InitTrig_Transformations_Piccolo()
     gg_trg_Transformations_Piccolo = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Piccolo, Trig_Transformations_Piccolo_Actions)
+end
+
+function Trig_Transformations_Bardock_Func009C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func010C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func011C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func012C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func013C()
+    if (not (udg_TransformationString == "ss3")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 130)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func014C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func015C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 210)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func017Func001Func003Func002C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func017Func001Func003C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func017Func001Func004C()
+    if (udg_TransformationString == "ss") then
+        return true
+    end
+    if (udg_TransformationString == "ss2") then
+        return true
+    end
+    if (udg_TransformationString == "ss3") then
+        return true
+    end
+    if (udg_TransformationString == "ssg") then
+        return true
+    end
+    if (udg_TransformationString == "ssb") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Bardock_Func017Func001C()
+    if (not Trig_Transformations_Bardock_Func017Func001Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func017Func005C()
+    if (udg_TransformationString == "r") then
+        return true
+    end
+    if (udg_TransformationString == "fp") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Bardock_Func017C()
+    if (not Trig_Transformations_Bardock_Func017Func005C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Bardock_Func009C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Bardock_Func010C()) then
+        udg_StatMultReal = 1.30
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func011C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func012C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func013C()) then
+        udg_StatMultReal = 2.25
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func014C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func015C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationSFXString = "AuraBlue.mdx"
+    else
+    end
+    if (Trig_Transformations_Bardock_Func017C()) then
+                udg_TransformationID = FourCC('H08M')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100, 100, 0)
+    else
+        if (Trig_Transformations_Bardock_Func017Func001C()) then
+                        udg_TransformationID = FourCC('H08N')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            if (Trig_Transformations_Bardock_Func017Func001Func003C()) then
+                SetUnitVertexColorBJ(udg_StatMultUnit, 100, 30.00, 30.00, 0)
+            else
+                if (Trig_Transformations_Bardock_Func017Func001Func003Func002C()) then
+                    SetUnitVertexColorBJ(udg_StatMultUnit, 25.00, 30.00, 100, 0)
+                else
+                    SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
+                end
+            end
+        else
+        end
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Bardock()
+    gg_trg_Transformations_Bardock = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Bardock, Trig_Transformations_Bardock_Actions)
 end
 
 function Trig_Transformations_Androids_13_Func009Func002A()
@@ -9181,6 +9427,7 @@ function InitCustomTriggers()
     InitTrig_Pan_E_Effect()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
+    InitTrig_Oozaru_Vegeta_New()
     InitTrig_Piccolo_Multi_Form()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
@@ -9202,6 +9449,7 @@ function InitCustomTriggers()
     InitTrig_Player_Hero_Killed()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
+    InitTrig_Remove_Dead_Summons()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
     InitTrig_Switch_players()
@@ -9215,10 +9463,6 @@ function InitCustomTriggers()
     InitTrig_Lower_Hells_Init()
     InitTrig_Move_Hero_To_Lower_Hell()
     InitTrig_Hero_Enters_Lower_Hell_Respawn()
-    InitTrig_Add_Unit_to_Lower_Hell_Saga_Queue()
-    InitTrig_Lower_Hell_Saga_Unit_Dies()
-    InitTrig_Revive_and_Move_Unit_to_HeroInit()
-    InitTrig_Lower_Hell_Saga_Timer_Expire()
     InitTrig_Hero_Respawn_Init()
     InitTrig_Add_Unit_to_HeroRespawn()
     InitTrig_Remove_Unit_From_HeroRespawn()
@@ -9237,6 +9481,8 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_End_Bans_Command()
     InitTrig_Hero_Pick_Show_Pickable_Heroes()
     InitTrig_Hero_Pick_Repick_Randomly()
+    InitTrig_Hero_Pick_Secret_Heroes()
+    InitTrig_Hero_Pick_Secret_Bardock()
     InitTrig_Hero_Pick_Mode_Default()
     InitTrig_Hero_Pick_Mode_All_Pick()
     InitTrig_Hero_Pick_Mode_All_Random()
@@ -9245,6 +9491,7 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Mode_RandM_Announcer_Audio()
     InitTrig_Hero_Pick_Set_HeroPickUnitType_availability()
     InitTrig_Hero_Pick_Init_Available_Heroes()
+    InitTrig_Hero_Pick_Disable_Unmade_Heroes()
     InitTrig_Hero_Pick_Disable_Spellcasting()
     InitTrig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup()
     InitTrig_Hero_Pick_Pick_A_Hero()
@@ -9298,7 +9545,6 @@ function InitCustomTriggers()
     InitTrig_Set_Transformation_Stat_Mult()
     InitTrig_Transformations_Goku()
     InitTrig_Goku_Meme_Transformations()
-    InitTrig_Oozaru_Vegeta()
     InitTrig_Transformations_Vegeta()
     InitTrig_Transformations_Gohan()
     InitTrig_Transformations_Goten()
@@ -9309,6 +9555,7 @@ function InitCustomTriggers()
     InitTrig_Piccolo_Kyo_Revert()
     InitTrig_Piccolo_Kyo_Get_Str_Mult()
     InitTrig_Transformations_Piccolo()
+    InitTrig_Transformations_Bardock()
     InitTrig_Transformations_Androids_13()
     InitTrig_Transformations_Androids_13_14_15()
     InitTrig_Transformations_Androids_Super_13()

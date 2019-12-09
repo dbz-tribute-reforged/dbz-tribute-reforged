@@ -5,7 +5,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "God Kamehameha", "Ultra Instinct"]],
 
     // vegeta
-    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash", "Final Flash 2", "Energy Blast Volley"]],
+    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash", "Final Flash 2", "Moonlight", "Angry Shout", "Energy Blast Volley"]],
     
     // gohan
     [FourCC("H00K"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
@@ -30,6 +30,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
     [FourCC("H04X"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
 
+    // bardock
+    [FourCC("H08M"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
+    [FourCC("H08N"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
 
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],

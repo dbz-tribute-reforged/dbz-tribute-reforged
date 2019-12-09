@@ -254,38 +254,44 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, "Max Power");
-
+  
   /*
+
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, "Hellzone Grenade");
+  addAbilityAction(abil3, "Future Sight");
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, "Slappy Hand");
-
+  addAbilityAction(abil4, "Tyrant Lancer");
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, "Innocence Breath");
+  addAbilityAction(abil5, "Riot Javelin");
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, "Angry Explosion");
+  addAbilityAction(abil6, "Rebellion Spear");
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, "Vanishing Ball");
+  addAbilityAction(abil7, "Angry Shout");
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, "Mankind Destruction Attack");
+  addAbilityAction(abil8, "Saiyan Spirit");
+
+
+
+
+
+
 
 
   const abil9 = CreateTrigger();

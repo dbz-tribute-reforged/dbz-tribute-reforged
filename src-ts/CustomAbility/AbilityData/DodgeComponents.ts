@@ -16,6 +16,20 @@ export const DodgeComponents = [
   },
   // to here, and replace with unique name
   {
+    name: "dodge future sight",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    groundOnly: true,
+    knockbackData: {
+      speed: 25, 
+      angle: 120, 
+      aoe: 600,
+    },
+    maxEnemies: 3,
+    addRandomAngle: true,
+  },
+  {
     name: "dodge homing beam",
     repeatInterval: 1, 
     startTick: 0,
