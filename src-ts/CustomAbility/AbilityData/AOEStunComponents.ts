@@ -29,6 +29,15 @@ export const AOEStunComponents = [
     keepStunning: true, 
   },
   {
+    name: "stun saiyan spirit",
+    repeatInterval: 1,
+    startTick: 3,
+    endTick: 22,
+    duration: 1,
+    aoe: 250,
+    keepStunning: false, 
+  },
+  {
     name: "stun energy punch",
     repeatInterval: 1,
     startTick: 17,

@@ -35,6 +35,13 @@ export class CustomHero {
     this.addAbilityFromAll("Max Power");
 
     /*
+    this.addAbilityFromAll("Future Sight");
+    this.addAbilityFromAll("Tyrant Lancer");
+    this.addAbilityFromAll("Riot Javelin");
+    this.addAbilityFromAll("Rebellion Spear");
+    this.addAbilityFromAll("Angry Shout");
+    this.addAbilityFromAll("Saiyan Spirit");
+
     this.addAbilityFromAll("Hellzone Grenade");
     this.addAbilityFromAll("Slappy Hand");
 

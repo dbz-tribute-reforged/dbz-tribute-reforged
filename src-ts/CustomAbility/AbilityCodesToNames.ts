@@ -46,6 +46,14 @@ export const abilityCodesToNames = new Map<number, string>(
     // clones version
     [FourCC('A0ES'), "Special Beam Cannon"],
 
+    // bardock
+    [FourCC('A0LN'), "Future Sight"],
+    [FourCC('A0LO'), "Tyrant Lancer"],
+    [FourCC('A0LP'), "Riot Javelin"],
+    [FourCC('A0LQ'), "Rebellion Spear"],
+    [FourCC('A0LR'), "Saiyan Spirit"],
+    [FourCC('A0LS'), "Angry Shout"],
+
 
     // babidi
     [FourCC('A02F'), "Haretsu no Majutsu"],

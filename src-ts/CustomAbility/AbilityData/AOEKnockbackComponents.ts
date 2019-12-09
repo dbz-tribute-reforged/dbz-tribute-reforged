@@ -78,11 +78,11 @@ export const AOEKnockbackComponents = [
     name: "knockback android barrier",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 66,
+    endTick: 99,
     knockbackData: {
       speed: 45, 
       angle: 0, 
-      aoe: 400,
+      aoe: 500,
     },
   },
   // broly energy punch
@@ -156,6 +156,18 @@ export const AOEKnockbackComponents = [
       aoe: 250,
     },
   },
+  // angry shout large aoe knockback
+  {
+    name: "knockback 1tick 20speed 0angle 900aoe",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 20, 
+      angle: 0, 
+      aoe: 900,
+    },
+  },
   // babidi barrier knockback
   {
     name: "knockback babidi barrier",
@@ -165,7 +177,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 15, 
       angle: 0, 
-      aoe: 500,
+      aoe: 600,
     },
   },
   // cooler deafening wave

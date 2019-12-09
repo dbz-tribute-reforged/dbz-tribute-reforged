@@ -519,7 +519,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,
@@ -786,6 +786,181 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point 5dist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Future Sight",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockFutureSight.blp",
+      disabled: "BTNBardockFutureSight.blp",
+    },
+    tooltip: {
+      title: "Future Sight",
+      body: 
+        "Future Sight"
+    },
+    components: [
+      { name: "dodge future sight" },
+      { name: "block future sight" },
+      { name: "sfx future sight" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Tyrant Lancer",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 75,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockTyrantLancer.blp",
+      disabled: "BTNBardockTyrantLancer.blp",
+    },
+    tooltip: {
+      title: "Tyrant Lancer",
+      body: 
+        "Tyrant Lancer"
+    },
+    components: [
+      { name: "dash ground point tyrant lancer" },
+      { name: "damage tyrant lancer dps" },
+      { name: "knockback 1tick 5speed 0angle 250aoe" },
+      { name: "multi tyrant lancer" },
+      { name: "sfx tyrant lancer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Saiyan Spirit",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockSaiyanSpirit.blp",
+      disabled: "BTNBardockSaiyanSpirit.blp",
+    },
+    tooltip: {
+      title: "Saiyan Spirit",
+      body: 
+        "Saiyan Spirit"
+    },
+    components: [
+      { name: "dash ground point saiyan spirit" },
+      { name: "dash ground point saiyan spirit pushback" },
+      { name: "damage saiyan spirit dps" },
+      { name: "knockback 1tick 5speed 0angle 250aoe" },
+      { name: "stun saiyan spirit" },
+      { name: "multi saiyan spirit" },
+      { name: "sfx saiyan spirit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Riot Javelin",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockRiotJavelin.blp",
+      disabled: "BTNBardockRiotJavelin.blp",
+    },
+    tooltip: {
+      title: "Riot Javelin",
+      body: 
+        "Riot Javelin"
+    },
+    components: [
+      { name: "beam riot javelin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Rebellion Spear",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockRebellionSpear.blp",
+      disabled: "BTNBardockRebellionSpear.blp",
+    },
+    tooltip: {
+      title: "Rebellion Spear",
+      body: 
+        "Rebellion Spear"
+    },
+    components: [
+      { name: "dash ground unit rebellion spear" },
+      { name: "damage rebellion spear dps" },
+      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "sfx rebellion spear" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Angry Shout",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOozaru.blp",
+      disabled: "BTNOozaru.blp",
+    },
+    tooltip: {
+      title: "Angry Shout",
+      body: 
+        "Angry Shout"
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "block angry shout" },
+      { name: "damage angry shout dps" },
+      { name: "knockback 1tick 20speed 0angle 900aoe" },
+      { name: "sfx angry shout" },
     ],
   },
   // -------------------------------------------
@@ -1217,8 +1392,8 @@ export const AbilitiesList = [
         "Mankind Destruction Attack"
     },
     components: [
-      { name: "multi mankind destruction attack" },
       { name: "channel caster default" },
+      { name: "multi mankind destruction attack" },
     ],
   },
   // -------------------------------------------

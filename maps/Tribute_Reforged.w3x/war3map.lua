@@ -197,6 +197,7 @@ gg_trg_Pan_E_cast = nil
 gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
+gg_trg_Piccolo_Multi_Form = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -329,6 +330,10 @@ gg_trg_Transformations_Goten = nil
 gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_FT_SS_Rage = nil
 gg_trg_Transformations_Future_Trunks = nil
+gg_trg_Piccolo_Kyo = nil
+gg_trg_Piccolo_Kyo_Revert = nil
+gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
+gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -368,11 +373,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Piccolo_Multi_Form = nil
-gg_trg_Transformations_Piccolo = nil
-gg_trg_Piccolo_Kyo = nil
-gg_trg_Piccolo_Kyo_Revert = nil
-gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
+gg_trg_Remove_Dead_Summons = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1489,6 +1490,10 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("O00C"), 979.2, 21834.8, 210.142, FourCC("O00C"))
     u = BlzCreateUnitWithSkin(p, FourCC("H00H"), 865.2, 21931.8, 249.939, FourCC("H00H"))
     SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08M"), 290.6, 22588.6, -88.062, FourCC("H08M"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("H08N"), 370.3, 22595.7, 261.560, FourCC("H08N"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -2087,6 +2092,9 @@ end
 
 function Trig_Buu_Candy_Gobbler_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0LL"))) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()) > 0)) then
         return false
     end
     return true
@@ -2913,6 +2921,24 @@ end
 function InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = CreateTrigger()
     TriggerAddAction(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc, Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions)
+end
+
+function Trig_Remove_Dead_Summons_Conditions()
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Remove_Dead_Summons_Actions()
+    RemoveUnit(GetTriggerUnit())
+end
+
+function InitTrig_Remove_Dead_Summons()
+    gg_trg_Remove_Dead_Summons = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Remove_Dead_Summons, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Remove_Dead_Summons, Condition(Trig_Remove_Dead_Summons_Conditions))
+    TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
 end
 
 function Trig_Team_System_Init_Actions()
@@ -4095,11 +4121,11 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00K")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
-    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H008")
-    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H009")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H00R")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08M")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
@@ -4114,7 +4140,7 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H042")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H04Z")
+    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("O005")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_NumAvailableHeroes = 0
     udg_TempInt = 0
@@ -4681,6 +4707,8 @@ end
 function Trig_Hero_Pick_Completion_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
+    DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
+    DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
     EnableTrigger(gg_trg_Zanzo_Cooldown)
     EnableTrigger(gg_trg_Zanzo_Move)
     EnableTrigger(gg_trg_Zanzo_Toggle)
@@ -6062,7 +6090,7 @@ function Trig_Oozaru_Vegeta_Conditions()
 end
 
 function Trig_Oozaru_Vegeta_Func004C()
-    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003"))) then
+    if (not (GetUnitTypeId(GetTriggerUnit()) ~= FourCC("H004"))) then
         return false
     end
     return true
@@ -6080,11 +6108,16 @@ function Trig_Oozaru_Vegeta_Actions()
         TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        UnitAddAbilityBJ(FourCC("A0LS"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0LS"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A035"), GetTriggerPlayer())
     else
         udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
         TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
+        UnitRemoveAbilityBJ(FourCC("A0LS"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A035"), GetTriggerPlayer())
     end
 end
 
@@ -9202,6 +9235,7 @@ function InitCustomTriggers()
     InitTrig_Player_Hero_Killed()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
+    InitTrig_Remove_Dead_Summons()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
     InitTrig_Switch_players()

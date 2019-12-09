@@ -45,7 +45,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
         const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
         let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
         if (this.addRandomAngle) {
-          dodgeAngle += Math.random() * this.knockbackData.angle - 90;
+          dodgeAngle += Math.random() * this.knockbackData.angle - this.knockbackData.angle / 2;
         } else {
           dodgeAngle += this.knockbackData.angle;
         }
