@@ -111,6 +111,15 @@ export const DashComponents = [
     distance: 25,
   },
   {
+    name: "dash ground unit rebellion spear",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: true,
+    distance: 15,
+  },
+  {
     name: "dash ground point saiyan spirit",
     repeatInterval: 1, 
     startTick: 0,
@@ -194,14 +203,5 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: true,
     distance: 35,
-  },
-  {
-    name: "dash ground unit rebellion spear",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_UNIT_TARGET,
-    isFlying: true,
-    distance: 15,
   },
 ]

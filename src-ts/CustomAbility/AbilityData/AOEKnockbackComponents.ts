@@ -165,7 +165,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 20, 
       angle: 0, 
-      aoe: 900,
+      aoe: 800,
     },
   },
   // babidi barrier knockback

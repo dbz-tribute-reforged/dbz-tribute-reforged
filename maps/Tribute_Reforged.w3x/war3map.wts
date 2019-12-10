@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.18i
+TR 0.19
 }
 
 STRING 4
@@ -16379,6 +16379,11 @@ STRING 2657
 // Abilities: A029 (Absorb), Name (Name)
 {
 Absorb
+}
+
+STRING 2658
+{
+Defeat!
 }
 
 STRING 2659

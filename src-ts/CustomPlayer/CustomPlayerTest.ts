@@ -399,7 +399,7 @@ export function CustomPlayerTest() {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
         ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);
-        BJDebugMsg("revoive spoim");
+        // BJDebugMsg("revoive spoim");
         SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
         SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));
         DestroyTimer(t);

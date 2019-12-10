@@ -157,6 +157,9 @@ udg_CellJrAutoPatrolAngle = 0.0
 udg_TransformationResultUnit = nil
 udg_SuperBuuToKidBuuUnitGroup = nil
 udg_TempUnit2 = nil
+udg_TeamAboutToLose = __jarray(false)
+udg_CreepOwner = {}
+udg_CreepPlayerGroup = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -198,6 +201,7 @@ gg_trg_Pan_E_Effect = nil
 gg_trg_Lookout_Enter = nil
 gg_trg_Lookout_Exit = nil
 gg_trg_Oozaru_Vegeta_Old = nil
+gg_trg_Oozaru_Vegeta_New = nil
 gg_trg_Piccolo_Multi_Form = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
@@ -261,6 +265,8 @@ gg_trg_Hero_Pick_Rush_Repick = nil
 gg_trg_Hero_Pick_End_Bans_Command = nil
 gg_trg_Hero_Pick_Show_Pickable_Heroes = nil
 gg_trg_Hero_Pick_Repick_Randomly = nil
+gg_trg_Hero_Pick_Secret_Heroes = nil
+gg_trg_Hero_Pick_Secret_Bardock = nil
 gg_trg_Hero_Pick_Mode_Default = nil
 gg_trg_Hero_Pick_Mode_All_Pick = nil
 gg_trg_Hero_Pick_Mode_All_Random = nil
@@ -376,9 +382,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Hero_Pick_Secret_Heroes = nil
-gg_trg_Hero_Pick_Secret_Bardock = nil
-gg_trg_Oozaru_Vegeta_New = nil
+gg_trg_Force_Win_Loss = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -597,6 +601,13 @@ function InitGlobals()
     end
     udg_CellJrAutoPatrolAngle = 0.0
     udg_SuperBuuToKidBuuUnitGroup = CreateGroup()
+    i = 0
+    while (true) do
+        if ((i > 30)) then break end
+        udg_TeamAboutToLose[i] = false
+        i = i + 1
+    end
+    udg_CreepPlayerGroup = CreateForce()
 end
 
 function InitSounds()
@@ -1185,30 +1196,30 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16724.4, 6334.5, 355.314, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17401.7, 6478.4, 349.651, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17306.6, 5853.9, 27.157, FourCC("n019"))
-    gg_unit_U01D_0410 = BlzCreateUnitWithSkin(p, FourCC("U01D"), -554.8, 21303.6, 275.440, FourCC("U01D"))
-    SetHeroLevel(gg_unit_U01D_0410, 20, false)
-    SetHeroStr(gg_unit_U01D_0410, 250, true)
-    SetHeroAgi(gg_unit_U01D_0410, 16, true)
-    SetHeroInt(gg_unit_U01D_0410, 200, true)
-    SetUnitState(gg_unit_U01D_0410, UNIT_STATE_MANA, 1400)
-    SetUnitColor(gg_unit_U01D_0410, ConvertPlayerColor(9))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A00R"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A00R"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A00R"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A00R"))
-    IssueImmediateOrder(gg_unit_U01D_0410, "")
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A0KO"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A0KO"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A0KO"))
-    SelectHeroSkill(gg_unit_U01D_0410, FourCC("A0KO"))
-    IssueImmediateOrder(gg_unit_U01D_0410, "")
-    gg_unit_H01H_0411 = BlzCreateUnitWithSkin(p, FourCC("H01H"), -414.0, 21303.4, 272.190, FourCC("H01H"))
-    SetHeroLevel(gg_unit_H01H_0411, 25, false)
-    SetHeroStr(gg_unit_H01H_0411, 500, true)
-    SetHeroAgi(gg_unit_H01H_0411, 100, true)
-    SetHeroInt(gg_unit_H01H_0411, 250, true)
-    SetUnitState(gg_unit_H01H_0411, UNIT_STATE_MANA, 1750)
-    SetUnitColor(gg_unit_H01H_0411, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("U01D"), -554.8, 21303.6, 275.440, FourCC("U01D"))
+    SetHeroLevel(u, 20, false)
+    SetHeroStr(u, 250, true)
+    SetHeroAgi(u, 16, true)
+    SetHeroInt(u, 200, true)
+    SetUnitState(u, UNIT_STATE_MANA, 1400)
+    SetUnitColor(u, ConvertPlayerColor(9))
+    SelectHeroSkill(u, FourCC("A00R"))
+    SelectHeroSkill(u, FourCC("A00R"))
+    SelectHeroSkill(u, FourCC("A00R"))
+    SelectHeroSkill(u, FourCC("A00R"))
+    IssueImmediateOrder(u, "")
+    SelectHeroSkill(u, FourCC("A0KO"))
+    SelectHeroSkill(u, FourCC("A0KO"))
+    SelectHeroSkill(u, FourCC("A0KO"))
+    SelectHeroSkill(u, FourCC("A0KO"))
+    IssueImmediateOrder(u, "")
+    u = BlzCreateUnitWithSkin(p, FourCC("H01H"), -414.0, 21303.4, 272.190, FourCC("H01H"))
+    SetHeroLevel(u, 25, false)
+    SetHeroStr(u, 500, true)
+    SetHeroAgi(u, 100, true)
+    SetHeroInt(u, 250, true)
+    SetUnitState(u, UNIT_STATE_MANA, 1750)
+    SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), -966.7, 18101.2, 317.670, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 740.6, 18310.2, 248.846, FourCC("n014"))
@@ -2506,10 +2517,14 @@ function InitTrig_Cam_Angle()
     TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
 end
 
-function Trig_Map_Setup_Func004A()
+function Trig_Map_Setup_Func007A()
     udg_CreepUnit[udg_CreepMaxNum] = GetEnumUnit()
     udg_CreepType[udg_CreepMaxNum] = GetUnitTypeId(GetEnumUnit())
     udg_CreepIsUpgrading[udg_CreepMaxNum] = false
+    udg_TempInt = (ModuloInteger((udg_TempInt + 1), (CountPlayersInForceBJ(udg_CreepPlayerGroup) - 1)) + (udg_MaxNumPlayers + 1))
+    udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+    udg_CreepOwner[udg_CreepMaxNum] = udg_TempPlayer
+    SetUnitOwner(udg_CreepUnit[udg_CreepMaxNum], udg_TempPlayer, true)
         udg_CreepX[udg_CreepMaxNum] = GetUnitX(GetEnumUnit())
         udg_CreepY[udg_CreepMaxNum] = GetUnitY(GetEnumUnit())
     SetUnitUserData(GetEnumUnit(), udg_CreepMaxNum)
@@ -2518,9 +2533,25 @@ end
 
 function Trig_Map_Setup_Actions()
     TriggerExecute(gg_trg_Map_Setup_Hashtables)
+    SetCreepCampFilterState(false)
+    udg_TempInt = (udg_MaxNumPlayers + 1)
+    while (true) do
+        if (udg_TempInt > 24) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        ForceAddPlayerSimple(udg_TempPlayer, udg_CreepPlayerGroup)
+                FogModifierStart(CreateFogModifierRect(udg_TempPlayer, FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+        udg_TempInt2 = (udg_MaxNumPlayers + 1)
+        while (true) do
+            if (udg_TempInt2 > 24) then break end
+            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_ALLIED_VISION)
+            udg_TempInt2 = udg_TempInt2 + 1
+        end
+        udg_TempInt = udg_TempInt + 1
+    end
     udg_TempGroup = GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(PLAYER_NEUTRAL_AGGRESSIVE))
     udg_CreepMaxNum = 0
-    ForGroupBJ(udg_TempGroup, Trig_Map_Setup_Func004A)
+    udg_TempInt = 0
+    ForGroupBJ(udg_TempGroup, Trig_Map_Setup_Func007A)
         DestroyGroup(udg_TempGroup)
     udg_TempInt = 0
     while (true) do
@@ -2863,7 +2894,7 @@ function Trig_Kill_Creep_New_Actions()
                 udg_CreepIsUpgrading[i] = false
     end
         udg_TempLoc = Location(udg_CreepX[i], udg_CreepY[i])
-        CreateNUnitsAtLoc( 1, udg_CreepType[i], Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempLoc, GetRandomDirectionDeg() )
+        CreateNUnitsAtLoc( 1, udg_CreepType[i], udg_CreepOwner[i], udg_TempLoc, GetRandomDirectionDeg() )
         SetUnitUserData( GetLastCreatedUnit(), i )
         udg_CreepUnit[i] = GetLastCreatedUnit()
         RemoveLocation(udg_TempLoc)
@@ -3004,19 +3035,135 @@ function InitTrig_Remove_Dead_Summons()
     TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
 end
 
+function Trig_Force_Win_Loss_Func001Func003Func003Func003C()
+    if (not (LoadIntegerBJ(3, udg_ID, udg_HeroRespawnHashtable) == 1)) then
+        return false
+    end
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Func001Func003Func003A()
+    udg_HeroRespawnUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_HeroRespawnUnit)
+    if (Trig_Force_Win_Loss_Func001Func003Func003Func003C()) then
+        udg_TempBool = false
+    else
+    end
+end
+
+function Trig_Force_Win_Loss_Func001Func003A()
+    udg_TempPlayer = GetEnumPlayer()
+    udg_TempInt2 = GetConvertedPlayerId(udg_TempPlayer)
+    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt2], Trig_Force_Win_Loss_Func001Func003Func003A)
+end
+
+function Trig_Force_Win_Loss_Func001Func004Func001C()
+    if (not (udg_TeamAboutToLose[udg_TempInt] == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Func001Func004Func002Func001C()
+    if (not (udg_TeamAboutToLose[udg_TempInt] == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Func001Func004Func002Func002A()
+    udg_TempPlayer = GetEnumPlayer()
+    DisplayTextToForce(GetPlayersAll(), (GetPlayerName(udg_TempPlayer) .. " has lost."))
+    CustomDefeatBJ(udg_TempPlayer, "TRIGSTR_2658")
+end
+
+function Trig_Force_Win_Loss_Func001Func004Func002Func003A()
+    udg_TempPlayer = GetEnumPlayer()
+    DisplayTextToForce(GetPlayersAll(), (GetPlayerName(udg_TempPlayer) .. " has won."))
+    CustomVictoryBJ(udg_TempPlayer, true, true)
+end
+
+function Trig_Force_Win_Loss_Func001Func004Func002C()
+    if (not (udg_TeamAboutToLose[udg_TempInt] == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Func001Func004C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Actions()
+    udg_TempInt = 0
+    while (true) do
+        if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
+        udg_TempBool = true
+        ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func001Func003A)
+        if (Trig_Force_Win_Loss_Func001Func004C()) then
+            if (Trig_Force_Win_Loss_Func001Func004Func002C()) then
+                ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func001Func004Func002Func002A)
+                ForForce(udg_TeamsPlayerGroup[ModuloInteger((udg_TempInt + 1), 2)], Trig_Force_Win_Loss_Func001Func004Func002Func003A)
+            else
+                if (Trig_Force_Win_Loss_Func001Func004Func002Func001C()) then
+                    DisplayTextToForce(GetPlayersAll(), ("Team " .. (I2S((udg_TempInt + 1)) .. " will lose in 15s if someone doesn't revive!")))
+                    udg_TeamAboutToLose[udg_TempInt] = true
+                else
+                end
+            end
+        else
+            if (Trig_Force_Win_Loss_Func001Func004Func001C()) then
+                DisplayTextToForce(GetPlayersAll(), ("Team " .. (I2S((udg_TempInt + 1)) .. "  are safe and will not be eliminated in 15s.")))
+                udg_TeamAboutToLose[udg_TempInt] = false
+            else
+            end
+        end
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Force_Win_Loss()
+    gg_trg_Force_Win_Loss = CreateTrigger()
+    DisableTrigger(gg_trg_Force_Win_Loss)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Force_Win_Loss, 15.00)
+    TriggerAddAction(gg_trg_Force_Win_Loss, Trig_Force_Win_Loss_Actions)
+end
+
 function Trig_Team_System_Init_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > (udg_MaxNumPlayers // 2)) then break end
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[0])
+        udg_TempInt2 = (udg_MaxNumPlayers + 1)
+        while (true) do
+            if (udg_TempInt2 > 24) then break end
+            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
+            SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
+            udg_TempInt2 = udg_TempInt2 + 1
+        end
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempInt = ((udg_MaxNumPlayers // 2) + 1)
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[1])
+        udg_TempInt2 = (udg_MaxNumPlayers + 1)
+        while (true) do
+            if (udg_TempInt2 > 24) then break end
+            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
+            SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
+            udg_TempInt2 = udg_TempInt2 + 1
+        end
         udg_TempInt = udg_TempInt + 1
     end
+    udg_TeamAboutToLose[0] = false
+    udg_TeamAboutToLose[1] = false
     TriggerExecute(gg_trg_Update_Alliances_for_PlayerGroups)
 end
 
@@ -3105,107 +3252,12 @@ function InitTrig_Prevent_Team_Killing()
     TriggerAddAction(gg_trg_Prevent_Team_Killing, Trig_Prevent_Team_Killing_Actions)
 end
 
-function Trig_revive_command_Func002Func002C()
-    if (not (IsUnitInGroup(udg_HeroRespawnUnit, udg_HeroRespawnUnitGroup) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_revive_command_Func002A()
-    udg_HeroRespawnUnit = GetEnumUnit()
-    if (Trig_revive_command_Func002Func002C()) then
-                udg_ID = GetHandleId(udg_HeroRespawnUnit)
-        SaveRealBJ(0.00, 0, udg_ID, udg_HeroRespawnHashtable)
-    else
-    end
-end
-
-function Trig_revive_command_Actions()
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_revive_command_Func002A)
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_revive_command()
-    gg_trg_revive_command = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_revive_command, Player(0), "-revive", true)
-    TriggerAddAction(gg_trg_revive_command, Trig_revive_command_Actions)
-end
-
-function Trig_force_revive_unit_where_thye_are_Func001A()
-    udg_HeroRespawnUnit = GetEnumUnit()
-    udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
-    ReviveHeroLoc(udg_HeroRespawnUnit, udg_TempLoc, false)
-        RemoveLocation(udg_TempLoc)
-end
-
-function Trig_force_revive_unit_where_thye_are_Actions()
-    ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[GetConvertedPlayerId(GetTriggerPlayer())], Trig_force_revive_unit_where_thye_are_Func001A)
-end
-
-function InitTrig_force_revive_unit_where_thye_are()
-    gg_trg_force_revive_unit_where_thye_are = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_force_revive_unit_where_thye_are, Player(0), "-forcerevive", true)
-    TriggerAddAction(gg_trg_force_revive_unit_where_thye_are, Trig_force_revive_unit_where_thye_are_Actions)
-end
-
-function Trig_move_to_heaven_Func001A()
-    udg_HeroRespawnUnit = GetEnumUnit()
-        SetUnitX(udg_HeroRespawnUnit, GetLocationX(udg_HeavenLoc))
-        SetUnitY(udg_HeroRespawnUnit, GetLocationY(udg_HeavenLoc))
-end
-
-function Trig_move_to_heaven_Actions()
-    ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[GetConvertedPlayerId(GetTriggerPlayer())], Trig_move_to_heaven_Func001A)
-end
-
-function InitTrig_move_to_heaven()
-    gg_trg_move_to_heaven = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_move_to_heaven, Player(0), "-move", true)
-    TriggerAddAction(gg_trg_move_to_heaven, Trig_move_to_heaven_Actions)
-end
-
-function Trig_Make_player_units_go_rez_Conditions()
-    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 5) == "-prez")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Make_player_units_go_rez_Func003Func001C()
-    if (not (udg_TempInt <= (udg_MaxNumPlayers // 2))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Make_player_units_go_rez_Func003A()
-    if (Trig_Make_player_units_go_rez_Func003Func001C()) then
-        IssuePointOrderLocBJ(GetEnumUnit(), "move", GetRectCenter(gg_rct_HeavenLeave))
-    else
-        IssuePointOrderLocBJ(GetEnumUnit(), "move", GetRectCenter(gg_rct_HellLeave))
-    end
-end
-
-function Trig_Make_player_units_go_rez_Actions()
-    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
-    ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[udg_TempInt], Trig_Make_player_units_go_rez_Func003A)
-end
-
-function InitTrig_Make_player_units_go_rez()
-    gg_trg_Make_player_units_go_rez = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Make_player_units_go_rez, Player(0), "-prez", false)
-    TriggerAddCondition(gg_trg_Make_player_units_go_rez, Condition(Trig_Make_player_units_go_rez_Conditions))
-    TriggerAddAction(gg_trg_Make_player_units_go_rez, Trig_Make_player_units_go_rez_Actions)
-end
-
 function Trig_Suicide_units_Func001A()
     KillUnit(GetEnumUnit())
 end
 
 function Trig_Suicide_units_Actions()
-    ForGroupBJ(udg_PlayerPickedHeroesUnitGroup[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Suicide_units_Func001A)
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Suicide_units_Func001A)
 end
 
 function InitTrig_Suicide_units()
@@ -3421,6 +3473,7 @@ function Trig_Move_and_Revive_Hero_To_Dead_Zone_Actions()
         end
         udg_TempInt = udg_TempInt + 1
     end
+    SaveIntegerBJ(1, 3, udg_ID, udg_HeroRespawnHashtable)
     udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
     PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0)
         RemoveLocation(udg_TempLoc)
@@ -3600,6 +3653,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
                 SetUnitPosition(udg_HeroRespawnUnit, udg_PlayerSpawnX[udg_TempInt], udg_PlayerSpawnY[udg_TempInt])
         udg_TempReal = (15.00 + I2R(GetHeroLevel(udg_HeroRespawnUnit)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
+        SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
         udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
                 udg_TempLoc = Location(udg_PlayerSpawnX[udg_TempInt], udg_PlayerSpawnY[udg_TempInt])
         PanCameraToTimedLocForPlayer(udg_TempPlayer, udg_TempLoc, 0)
@@ -3664,16 +3718,6 @@ function InitTrig_Respawn_Creep_Heroes_in_Deadzones()
     TriggerAddAction(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Trig_Respawn_Creep_Heroes_in_Deadzones_Actions)
 end
 
-function Trig_Hero_Pick_Stall_Actions()
-    PauseTimerBJ(true, udg_HeroPickTimer)
-end
-
-function InitTrig_Hero_Pick_Stall()
-    gg_trg_Hero_Pick_Stall = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Stall, Player(0), "stall", true)
-    TriggerAddAction(gg_trg_Hero_Pick_Stall, Trig_Hero_Pick_Stall_Actions)
-end
-
 function Trig_Hero_Pick_Unstall_Actions()
     PauseTimerBJ(false, udg_HeroPickTimer)
 end
@@ -3685,7 +3729,7 @@ function InitTrig_Hero_Pick_Unstall()
 end
 
 function Trig_Hero_Pick_Rush_Actions()
-    StartTimerBJ(udg_HeroPickTimer, false, 1.00)
+    StartTimerBJ(udg_HeroPickTimer, false, 10.00)
 end
 
 function InitTrig_Hero_Pick_Rush()
@@ -3695,7 +3739,7 @@ function InitTrig_Hero_Pick_Rush()
 end
 
 function Trig_Hero_Pick_Rush_Repick_Actions()
-    StartTimerBJ(udg_HeroRepickTimer, false, 1.00)
+    StartTimerBJ(udg_HeroRepickTimer, false, 5.00)
 end
 
 function InitTrig_Hero_Pick_Rush_Repick()
@@ -3793,12 +3837,24 @@ function InitTrig_Hero_Pick_Repick_Randomly()
     TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
 end
 
+function Trig_Hero_Pick_Secret_Heroes_Func002Func004C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Secret_Heroes_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
+        udg_HeroPickUnitType = FourCC("H08M")
+                udg_HeroAvailabilityKey = udg_HeroPickUnitType
+        if (Trig_Hero_Pick_Secret_Heroes_Func002Func004C()) then
+            TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
+        else
+        end
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -4762,10 +4818,7 @@ function Trig_Hero_Pick_Completion_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
     DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
     DisableTrigger(gg_trg_Hero_Pick_Secret_Bardock)
-    EnableTrigger(gg_trg_Zanzo_Cooldown)
-    EnableTrigger(gg_trg_Zanzo_Move)
-    EnableTrigger(gg_trg_Zanzo_Toggle)
-    EnableTrigger(gg_trg_Saga_Countdown)
+    EnableTrigger(gg_trg_Force_Win_Loss)
 end
 
 function InitTrig_Hero_Pick_Completion()
@@ -4882,33 +4935,6 @@ function InitTrig_Saiyan_Saga_Creep_Upgrade()
     TriggerAddAction(gg_trg_Saiyan_Saga_Creep_Upgrade, Trig_Saiyan_Saga_Creep_Upgrade_Actions)
 end
 
-function Trig_Saga_Countdown_Func001Func001C()
-    if (not (LoadIntegerBJ(0, udg_TempInt, udg_SagaHashtable) == 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saga_Countdown_Actions()
-    udg_TempInt = 0
-    while (true) do
-        if (udg_TempInt > (udg_SagaMaxNum - 1)) then break end
-        if (Trig_Saga_Countdown_Func001Func001C()) then
-            SaveRealBJ((LoadRealBJ(1, udg_TempInt, udg_SagaHashtable) - 1), 1, udg_TempInt, udg_SagaHashtable)
-            TriggerExecute(LoadTriggerHandleBJ(2, udg_TempInt, udg_SagaHashtable))
-        else
-        end
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Saga_Countdown()
-    gg_trg_Saga_Countdown = CreateTrigger()
-    DisableTrigger(gg_trg_Saga_Countdown)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Countdown, 1.00)
-    TriggerAddAction(gg_trg_Saga_Countdown, Trig_Saga_Countdown_Actions)
-end
-
 function Trig_Saga_Completion_Message_Actions()
     DisplayTextToForce(GetPlayersAll(), ("The universe has been saved from " .. (udg_SagaCompletedName .. ((" by " .. udg_PlayerColorString[GetConvertedPlayerId(udg_SagaCompletedPlayer)]) .. (GetPlayerName(udg_SagaCompletedPlayer) .. "|r")))))
 end
@@ -4954,214 +4980,6 @@ function InitTrig_Saga_Stat_Reward()
     TriggerAddAction(gg_trg_Saga_Stat_Reward, Trig_Saga_Stat_Reward_Actions)
 end
 
-function Trig_Saiyan_Saga_Init_Actions()
-    udg_SaiyanSagaIndex = udg_SagaMaxNum
-    udg_TempInt = udg_SagaMaxNum
-    SaveIntegerBJ(1, 0, udg_TempInt, udg_SagaHashtable)
-    SaveRealBJ(170.00, 1, udg_TempInt, udg_SagaHashtable)
-    SaveTriggerHandleBJ(gg_trg_Saiyan_Saga_Activate, 2, udg_TempInt, udg_SagaHashtable)
-    SaveRealBJ(20.00, 3, udg_TempInt, udg_SagaHashtable)
-    PauseUnitBJ(true, gg_unit_U01D_0410)
-    udg_SagaMaxNum = (udg_SagaMaxNum + 1)
-    DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Saiyan_Saga_Init()
-    gg_trg_Saiyan_Saga_Init = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Saiyan_Saga_Init, 10.00)
-    TriggerAddAction(gg_trg_Saiyan_Saga_Init, Trig_Saiyan_Saga_Init_Actions)
-end
-
-function Trig_Saiyan_Saga_Activate_Func002002002001001()
-    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
-end
-
-function Trig_Saiyan_Saga_Activate_Func002002002001002()
-    return (IsPlayerInForce(GetOwningPlayer(GetFilterUnit()), udg_ActivePlayerGroup) == true)
-end
-
-function Trig_Saiyan_Saga_Activate_Func002002002001()
-    return GetBooleanAnd(Trig_Saiyan_Saga_Activate_Func002002002001001(), Trig_Saiyan_Saga_Activate_Func002002002001002())
-end
-
-function Trig_Saiyan_Saga_Activate_Func002002002002()
-    return (GetHeroLevel(GetFilterUnit()) >= 20)
-end
-
-function Trig_Saiyan_Saga_Activate_Func002002002()
-    return GetBooleanAnd(Trig_Saiyan_Saga_Activate_Func002002002001(), Trig_Saiyan_Saga_Activate_Func002002002002())
-end
-
-function Trig_Saiyan_Saga_Activate_Func003Func009C()
-    if (udg_TempReal <= 0.00) then
-        return true
-    end
-    if (CountUnitsInGroup(udg_TempGroup) > 0) then
-        return true
-    end
-    return false
-end
-
-function Trig_Saiyan_Saga_Activate_Func003C()
-    if (not Trig_Saiyan_Saga_Activate_Func003Func009C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saiyan_Saga_Activate_Actions()
-    udg_TempReal = LoadRealBJ(1, udg_SaiyanSagaIndex, udg_SagaHashtable)
-    udg_TempGroup = GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Saiyan_Saga_Activate_Func002002002))
-    if (Trig_Saiyan_Saga_Activate_Func003C()) then
-        SaveIntegerBJ(2, 0, udg_SaiyanSagaIndex, udg_SagaHashtable)
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9975")
-        udg_TempUnit = gg_unit_U01D_0410
-                SetUnitX(udg_TempUnit, 8765)
-                SetUnitY(udg_TempUnit, 1400)
-        PauseUnitBJ(false, udg_TempUnit)
-        EnableTrigger(gg_trg_Saiyan_Saga_Completion)
-        EnableTrigger(gg_trg_Saiyan_Saga_VI)
-    else
-    end
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_Saiyan_Saga_Activate()
-    gg_trg_Saiyan_Saga_Activate = CreateTrigger()
-    TriggerAddAction(gg_trg_Saiyan_Saga_Activate, Trig_Saiyan_Saga_Activate_Actions)
-end
-
-function Trig_Saiyan_Saga_Completion_Actions()
-    udg_SagaCompletedStatReward = LoadRealBJ(3, udg_SaiyanSagaIndex, udg_SagaHashtable)
-    SaveIntegerBJ(3, 0, udg_SaiyanSagaIndex, udg_SagaHashtable)
-    udg_TempUnit = GetDyingUnit()
-    udg_SagaCompletedName = GetHeroProperName(udg_TempUnit)
-    udg_SagaCompletedPlayer = GetOwningPlayer(GetKillingUnitBJ())
-    TriggerExecute(gg_trg_Saga_Completion_Message)
-    udg_SagaCompletedLoc = GetUnitLoc(udg_TempUnit)
-    TriggerExecute(gg_trg_Saga_Stat_Reward)
-        RemoveLocation(udg_SagaCompletedLoc)
-    DisableTrigger(GetTriggeringTrigger())
-    TriggerSleepAction(5.00)
-    TriggerExecute(gg_trg_Saiyan_Saga_Creep_Upgrade)
-    SaveIntegerBJ(1, 0, udg_TurlesSagaIndex, udg_SagaHashtable)
-end
-
-function InitTrig_Saiyan_Saga_Completion()
-    gg_trg_Saiyan_Saga_Completion = CreateTrigger()
-    DisableTrigger(gg_trg_Saiyan_Saga_Completion)
-    TriggerRegisterUnitEvent(gg_trg_Saiyan_Saga_Completion, gg_unit_U01D_0410, EVENT_UNIT_DEATH)
-    TriggerAddAction(gg_trg_Saiyan_Saga_Completion, Trig_Saiyan_Saga_Completion_Actions)
-end
-
-function Trig_Saiyan_Saga_VI_Conditions()
-    if (not (IsUnitPausedBJ(gg_unit_U01D_0410) == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saiyan_Saga_VI_Actions()
-end
-
-function InitTrig_Saiyan_Saga_VI()
-    gg_trg_Saiyan_Saga_VI = CreateTrigger()
-    DisableTrigger(gg_trg_Saiyan_Saga_VI)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Saiyan_Saga_VI, 15.00)
-    TriggerAddCondition(gg_trg_Saiyan_Saga_VI, Condition(Trig_Saiyan_Saga_VI_Conditions))
-    TriggerAddAction(gg_trg_Saiyan_Saga_VI, Trig_Saiyan_Saga_VI_Actions)
-end
-
-function Trig_Turles_Saga_Init_Actions()
-    udg_TurlesSagaIndex = udg_SagaMaxNum
-    udg_TempInt = udg_SagaMaxNum
-    SaveIntegerBJ(0, 0, udg_TempInt, udg_SagaHashtable)
-    SaveRealBJ(15.00, 1, udg_TempInt, udg_SagaHashtable)
-    SaveTriggerHandleBJ(gg_trg_Turles_Saga_Activate, 2, udg_TempInt, udg_SagaHashtable)
-    SaveRealBJ(40.00, 3, udg_TempInt, udg_SagaHashtable)
-    PauseUnitBJ(true, gg_unit_H01H_0411)
-    udg_SagaMaxNum = (udg_SagaMaxNum + 1)
-    DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Turles_Saga_Init()
-    gg_trg_Turles_Saga_Init = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Turles_Saga_Init, 11.00)
-    TriggerAddAction(gg_trg_Turles_Saga_Init, Trig_Turles_Saga_Init_Actions)
-end
-
-function Trig_Turles_Saga_Activate_Func002Func009C()
-    if (udg_TempReal <= 0.00) then
-        return true
-    end
-    return false
-end
-
-function Trig_Turles_Saga_Activate_Func002C()
-    if (not Trig_Turles_Saga_Activate_Func002Func009C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Turles_Saga_Activate_Actions()
-    udg_TempReal = LoadRealBJ(1, udg_TurlesSagaIndex, udg_SagaHashtable)
-    if (Trig_Turles_Saga_Activate_Func002C()) then
-        SaveIntegerBJ(2, 0, udg_TurlesSagaIndex, udg_SagaHashtable)
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9976")
-        udg_TempUnit = gg_unit_H01H_0411
-                SetUnitX(udg_TempUnit, 12667)
-                SetUnitY(udg_TempUnit, 6970)
-        PauseUnitBJ(false, udg_TempUnit)
-        EnableTrigger(gg_trg_Turles_Saga_Completion)
-        EnableTrigger(gg_trg_Turles_Saga_VI)
-    else
-    end
-end
-
-function InitTrig_Turles_Saga_Activate()
-    gg_trg_Turles_Saga_Activate = CreateTrigger()
-    TriggerAddAction(gg_trg_Turles_Saga_Activate, Trig_Turles_Saga_Activate_Actions)
-end
-
-function Trig_Turles_Saga_Completion_Actions()
-    udg_SagaCompletedStatReward = LoadRealBJ(3, udg_TurlesSagaIndex, udg_SagaHashtable)
-    SaveIntegerBJ(3, 0, udg_TurlesSagaIndex, udg_SagaHashtable)
-    udg_TempUnit = GetDyingUnit()
-    udg_SagaCompletedName = GetHeroProperName(udg_TempUnit)
-    udg_SagaCompletedPlayer = GetOwningPlayer(GetKillingUnitBJ())
-    TriggerExecute(gg_trg_Saga_Completion_Message)
-    udg_SagaCompletedLoc = GetUnitLoc(udg_TempUnit)
-    TriggerExecute(gg_trg_Saga_Stat_Reward)
-        RemoveLocation(udg_SagaCompletedLoc)
-    DisableTrigger(GetTriggeringTrigger())
-end
-
-function InitTrig_Turles_Saga_Completion()
-    gg_trg_Turles_Saga_Completion = CreateTrigger()
-    DisableTrigger(gg_trg_Turles_Saga_Completion)
-    TriggerRegisterUnitEvent(gg_trg_Turles_Saga_Completion, gg_unit_H01H_0411, EVENT_UNIT_DEATH)
-    TriggerAddAction(gg_trg_Turles_Saga_Completion, Trig_Turles_Saga_Completion_Actions)
-end
-
-function Trig_Turles_Saga_VI_Conditions()
-    if (not (IsUnitPausedBJ(gg_unit_H01H_0411) == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Turles_Saga_VI_Actions()
-end
-
-function InitTrig_Turles_Saga_VI()
-    gg_trg_Turles_Saga_VI = CreateTrigger()
-    DisableTrigger(gg_trg_Turles_Saga_VI)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Turles_Saga_VI, 15.00)
-    TriggerAddCondition(gg_trg_Turles_Saga_VI, Condition(Trig_Turles_Saga_VI_Conditions))
-    TriggerAddAction(gg_trg_Turles_Saga_VI, Trig_Turles_Saga_VI_Actions)
-end
-
 function Trig_Test_StatMult_Init_Func001002002()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
 end
@@ -5184,25 +5002,6 @@ function InitTrig_Test_StatMult_Init()
     TriggerAddAction(gg_trg_Test_StatMult_Init, Trig_Test_StatMult_Init_Actions)
 end
 
-function Trig_Test_Stats_Add_Command_Func002A()
-    udg_StatMultUnit = GetEnumUnit()
-    udg_StatMultReal = S2R(SubStringBJ(GetEventPlayerChatString(), 8, 20))
-    TriggerExecute(gg_trg_Add_To_Base_Stats)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-end
-
-function Trig_Test_Stats_Add_Command_Actions()
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_Stats_Add_Command_Func002A)
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_Test_Stats_Add_Command()
-    gg_trg_Test_Stats_Add_Command = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Add_Command, Player(0), "-stats", false)
-    TriggerAddAction(gg_trg_Test_Stats_Add_Command, Trig_Test_Stats_Add_Command_Actions)
-end
-
 function Trig_Test_Stats_Get_Stats_Command_Func002A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
@@ -5220,6 +5019,15 @@ end
 function InitTrig_Test_Stats_Get_Stats_Command()
     gg_trg_Test_Stats_Get_Stats_Command = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(0), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(1), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(2), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(3), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(4), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(5), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(6), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(7), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(8), "-getstats", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(9), "-getstats", false)
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
@@ -5374,67 +5182,6 @@ end
 function InitTrig_Clear_Stat_Mult_SFX()
     gg_trg_Clear_Stat_Mult_SFX = CreateTrigger()
     TriggerAddAction(gg_trg_Clear_Stat_Mult_SFX, Trig_Clear_Stat_Mult_SFX_Actions)
-end
-
-function Trig_show_me_the_ss_Actions()
-    SetPlayerAbilityAvailableBJ(true, FourCC("A0AB"), GetTriggerPlayer())
-end
-
-function InitTrig_show_me_the_ss()
-    gg_trg_show_me_the_ss = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_show_me_the_ss, Player(0), "showss", true)
-    TriggerAddAction(gg_trg_show_me_the_ss, Trig_show_me_the_ss_Actions)
-end
-
-function Trig_show_me_the_ss_Copy_Actions()
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), GetTriggerPlayer())
-end
-
-function InitTrig_show_me_the_ss_Copy()
-    gg_trg_show_me_the_ss_Copy = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_show_me_the_ss_Copy, Player(0), "stopss", true)
-    TriggerAddAction(gg_trg_show_me_the_ss_Copy, Trig_show_me_the_ss_Copy_Actions)
-end
-
-function Trig_Test_LVL_command_Func004A()
-    udg_TempUnit = GetEnumUnit()
-        j = GetHeroLevel(udg_TempUnit)
-        while (j < udg_TempInt3) do
-        j=j+1
-        SetHeroLevel(udg_TempUnit, j, false)
-        end
-end
-
-function Trig_Test_LVL_command_Actions()
-    udg_TempInt3 = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8))
-        local j
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Func004A)
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_Test_LVL_command()
-    gg_trg_Test_LVL_command = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_LVL_command, Player(0), "-lvl", false)
-    TriggerAddAction(gg_trg_Test_LVL_command, Trig_Test_LVL_command_Actions)
-end
-
-function Trig_Test_LVL_command_Copy_Func003A()
-    udg_TempUnit = GetEnumUnit()
-    SetHeroLevelBJ(GetEnumUnit(), udg_TempInt3, false)
-end
-
-function Trig_Test_LVL_command_Copy_Actions()
-    udg_TempInt3 = S2I(SubStringBJ(GetEventPlayerChatString(), 7, 9))
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Test_LVL_command_Copy_Func003A)
-        DestroyGroup(udg_TempGroup)
-end
-
-function InitTrig_Test_LVL_command_Copy()
-    gg_trg_Test_LVL_command_Copy = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_LVL_command_Copy, Player(0), "-vllv", false)
-    TriggerAddAction(gg_trg_Test_LVL_command_Copy, Trig_Test_LVL_command_Copy_Actions)
 end
 
 function Trig_Transformations_Init_Commands_Actions()
@@ -9137,217 +8884,6 @@ function InitTrig_Zanzo_Test_Less_Charges()
     TriggerAddAction(gg_trg_Zanzo_Test_Less_Charges, Trig_Zanzo_Test_Less_Charges_Actions)
 end
 
-function Trig_Zanzo_Toggle_Func003Func002Func005Func002C()
-    if (not (udg_TempBool == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Toggle_Func003Func002Func005C()
-    if (not (udg_TempInt > 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Toggle_Func003Func002C()
-    if (not (IsUnitType(udg_TempUnit, UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    if (not (GetOwningPlayer(udg_TempUnit) == GetTriggerPlayer())) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Toggle_Func003A()
-    udg_TempUnit = GetEnumUnit()
-    if (Trig_Zanzo_Toggle_Func003Func002C()) then
-                udg_ID = GetHandleId(udg_TempUnit)
-        udg_TempBool = LoadBooleanBJ(0, udg_ID, udg_ZanzoHashtable)
-        udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_ZanzoHashtable)
-        udg_TempReal = LoadRealBJ(2, udg_ID, udg_ZanzoHashtable)
-        if (Trig_Zanzo_Toggle_Func003Func002Func005C()) then
-            if (Trig_Zanzo_Toggle_Func003Func002Func005Func002C()) then
-                SaveBooleanBJ(false, 0, udg_ID, udg_ZanzoHashtable)
-                udg_TempString = "|cffff00ffZanzoken Inactive|r"
-            else
-                SaveBooleanBJ(true, 0, udg_ID, udg_ZanzoHashtable)
-                udg_TempString = "|cffff00ffZanzoken Active|r"
-            end
-        else
-            udg_TempString = ("|cffff00ff" .. (I2S(R2I(udg_TempReal)) .. "s|r"))
-        end
-        udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-                RemoveLocation(udg_TempLoc)
-        GroupAddUnitSimple(udg_TempUnit, udg_ZanzoUnitGroup)
-    else
-    end
-end
-
-function Trig_Zanzo_Toggle_Actions()
-    udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
-    udg_TempGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempGroup, Trig_Zanzo_Toggle_Func003A)
-        DestroyGroup(udg_TempGroup)
-        DestroyForce(udg_TempPlayerGroup)
-end
-
-function InitTrig_Zanzo_Toggle()
-    gg_trg_Zanzo_Toggle = CreateTrigger()
-    DisableTrigger(gg_trg_Zanzo_Toggle)
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(0))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(1))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(2))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(3))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(4))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(5))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(6))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(7))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(8))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(9))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(10))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(11))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(12))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(13))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(14))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(15))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(16))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(17))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(18))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(19))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(20))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(21))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(22))
-    TriggerRegisterPlayerEventEndCinematic(gg_trg_Zanzo_Toggle, Player(23))
-    TriggerAddAction(gg_trg_Zanzo_Toggle, Trig_Zanzo_Toggle_Actions)
-end
-
-function Trig_Zanzo_Cooldown_Func001Func005Func001C()
-    if (not (udg_TempReal <= 0.00)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Cooldown_Func001Func005C()
-    if (not (udg_TempInt < udg_ZanzoMaxCharges)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Cooldown_Func001A()
-    udg_TempUnit = GetEnumUnit()
-        udg_ID = GetHandleId(udg_TempUnit)
-    udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_ZanzoHashtable)
-    udg_TempReal = LoadRealBJ(2, udg_ID, udg_ZanzoHashtable)
-    if (Trig_Zanzo_Cooldown_Func001Func005C()) then
-        if (Trig_Zanzo_Cooldown_Func001Func005Func001C()) then
-            SaveIntegerBJ((udg_TempInt + 1), 1, udg_ID, udg_ZanzoHashtable)
-            SaveRealBJ(udg_ZanzoMaxCooldown, 2, udg_ID, udg_ZanzoHashtable)
-            udg_TempString = ("|cffff00ffZanzoken Ready (" .. (I2S(LoadIntegerBJ(1, udg_ID, udg_ZanzoHashtable)) .. ")|r"))
-            udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetEnumUnit()))
-            udg_TempLoc = GetUnitLoc(udg_TempUnit)
-            TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-                        RemoveLocation(udg_TempLoc)
-                        DestroyForce(udg_TempPlayerGroup)
-        else
-            SaveRealBJ((udg_TempReal - 0.05), 2, udg_ID, udg_ZanzoHashtable)
-        end
-    else
-    end
-end
-
-function Trig_Zanzo_Cooldown_Actions()
-    ForGroupBJ(udg_ZanzoUnitGroup, Trig_Zanzo_Cooldown_Func001A)
-end
-
-function InitTrig_Zanzo_Cooldown()
-    gg_trg_Zanzo_Cooldown = CreateTrigger()
-    DisableTrigger(gg_trg_Zanzo_Cooldown)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Zanzo_Cooldown, 0.05)
-    TriggerAddAction(gg_trg_Zanzo_Cooldown, Trig_Zanzo_Cooldown_Actions)
-end
-
-function Trig_Zanzo_Move_Conditions()
-    if (not (IsUnitInGroup(GetTriggerUnit(), udg_ZanzoUnitGroup) == true)) then
-        return false
-    end
-    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("smart"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Move_Func003Func003C()
-    if (not (DistanceBetweenPoints(udg_TempLoc, udg_TempLoc2) >= udg_ZanzoMaxDistance)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Move_Func003Func007C()
-    if (not (udg_CP_PointIsWalkable == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Move_Func003C()
-    if (not (LoadBooleanBJ(0, udg_ID, udg_ZanzoHashtable) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Zanzo_Move_Actions()
-    udg_TempUnit = GetTriggerUnit()
-        udg_ID = GetHandleId(udg_TempUnit)
-    if (Trig_Zanzo_Move_Func003C()) then
-        udg_TempLoc = GetUnitLoc(GetTriggerUnit())
-        udg_TempLoc2 = GetOrderPointLoc()
-        if (Trig_Zanzo_Move_Func003Func003C()) then
-            udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, udg_ZanzoMaxDistance, AngleBetweenPoints(udg_TempLoc, udg_TempLoc2))
-        else
-            udg_TempLoc3 = udg_TempLoc2
-        end
-        udg_TempBool = true
-        udg_CP_Point = udg_TempLoc3
-        TriggerExecute(gg_trg_Check_Walkability)
-        if (Trig_Zanzo_Move_Func003Func007C()) then
-            AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl")
-            BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-            BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), 0.00)
-            DestroyEffectBJ(GetLastCreatedEffectBJ())
-                        SetUnitX(udg_TempUnit, GetLocationX(udg_TempLoc3))
-                        SetUnitY(udg_TempUnit, GetLocationY(udg_TempLoc3))
-            SaveBooleanBJ(false, 0, udg_ID, udg_ZanzoHashtable)
-            udg_TempInt = LoadIntegerBJ(1, udg_ID, udg_ZanzoHashtable)
-            SaveIntegerBJ((udg_TempInt - 1), 1, udg_ID, udg_ZanzoHashtable)
-        else
-            udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
-            DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_9977")
-                        DestroyForce(udg_TempPlayerGroup)
-        end
-                RemoveLocation(udg_CP_Point)
-                RemoveLocation(udg_TempLoc)
-                RemoveLocation(udg_TempLoc2)
-                RemoveLocation(udg_TempLoc3)
-    else
-    end
-end
-
-function InitTrig_Zanzo_Move()
-    gg_trg_Zanzo_Move = CreateTrigger()
-    DisableTrigger(gg_trg_Zanzo_Move)
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Zanzo_Move, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-    TriggerAddCondition(gg_trg_Zanzo_Move, Condition(Trig_Zanzo_Move_Conditions))
-    TriggerAddAction(gg_trg_Zanzo_Move, Trig_Zanzo_Move_Actions)
-end
-
 function Trig_Bean_Tick_Func001Func001Func001C()
     if (not (UnitHasBuffBJ(GetEnumUnit(), FourCC("BIrg")) == false)) then
         return false
@@ -9450,15 +8986,12 @@ function InitCustomTriggers()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()
+    InitTrig_Force_Win_Loss()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
     InitTrig_Switch_players()
     InitTrig_Enable_TK_Copy()
     InitTrig_Prevent_Team_Killing()
-    InitTrig_revive_command()
-    InitTrig_force_revive_unit_where_thye_are()
-    InitTrig_move_to_heaven()
-    InitTrig_Make_player_units_go_rez()
     InitTrig_Suicide_units()
     InitTrig_Lower_Hells_Init()
     InitTrig_Move_Hero_To_Lower_Hell()
@@ -9474,7 +9007,6 @@ function InitCustomTriggers()
     InitTrig_Hero_Enters_Deadzone_Respawn_Region()
     InitTrig_Hero_Respawn_To_Earth()
     InitTrig_Respawn_Creep_Heroes_in_Deadzones()
-    InitTrig_Hero_Pick_Stall()
     InitTrig_Hero_Pick_Unstall()
     InitTrig_Hero_Pick_Rush()
     InitTrig_Hero_Pick_Rush_Repick()
@@ -9512,19 +9044,9 @@ function InitCustomTriggers()
     InitTrig_Set_Creep_Spawn_Delay()
     InitTrig_Upgrade_Creeps()
     InitTrig_Saiyan_Saga_Creep_Upgrade()
-    InitTrig_Saga_Countdown()
     InitTrig_Saga_Completion_Message()
     InitTrig_Saga_Stat_Reward()
-    InitTrig_Saiyan_Saga_Init()
-    InitTrig_Saiyan_Saga_Activate()
-    InitTrig_Saiyan_Saga_Completion()
-    InitTrig_Saiyan_Saga_VI()
-    InitTrig_Turles_Saga_Init()
-    InitTrig_Turles_Saga_Activate()
-    InitTrig_Turles_Saga_Completion()
-    InitTrig_Turles_Saga_VI()
     InitTrig_Test_StatMult_Init()
-    InitTrig_Test_Stats_Add_Command()
     InitTrig_Test_Stats_Get_Stats_Command()
     InitTrig_Add_Unit_To_StatMult()
     InitTrig_Remove_Unit_From_StatMult()
@@ -9535,10 +9057,6 @@ function InitCustomTriggers()
     InitTrig_Set_Varied_Stat_Multiplier()
     InitTrig_Update_Current_Stats()
     InitTrig_Clear_Stat_Mult_SFX()
-    InitTrig_show_me_the_ss()
-    InitTrig_show_me_the_ss_Copy()
-    InitTrig_Test_LVL_command()
-    InitTrig_Test_LVL_command_Copy()
     InitTrig_Transformations_Init_Commands()
     InitTrig_Transformations_Entry_Point()
     InitTrig_Transformations_Exit_Point()
@@ -9583,9 +9101,6 @@ function InitCustomTriggers()
     InitTrig_Zanzo_Test_Slower_Zanzo_CD()
     InitTrig_Zanzo_Test_More_Charges()
     InitTrig_Zanzo_Test_Less_Charges()
-    InitTrig_Zanzo_Toggle()
-    InitTrig_Zanzo_Cooldown()
-    InitTrig_Zanzo_Move()
     InitTrig_Bean_Tick()
     InitTrig_Use_Bean()
 end
