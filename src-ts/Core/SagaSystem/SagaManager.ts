@@ -65,13 +65,11 @@ export class SagaManager extends Entity {
           break;
         }
 
-        // if saga is in progress, check if it needs to be completed; otherwise, run its update function
+        // if saga is in progress, run its update function then check if it can be completed
         case SagaState.InProgress: {
+          saga.update(t);
           if (saga.canComplete()) {
             saga.complete();
-          }
-          else {
-            saga.update(t);
           }
           break;
         }

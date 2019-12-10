@@ -230,6 +230,7 @@ gg_trg_Player_Hero_Killed = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
+gg_trg_Force_Win_Loss = nil
 gg_trg_Team_System_Init = nil
 gg_trg_Update_Alliances_for_PlayerGroups = nil
 gg_trg_Switch_players = nil
@@ -298,6 +299,7 @@ gg_trg_Upgrade_Creeps = nil
 gg_trg_Saiyan_Saga_Creep_Upgrade = nil
 gg_trg_Saga_Countdown = nil
 gg_trg_Saga_Completion_Message = nil
+gg_trg_Saga_Hint_Show = nil
 gg_trg_Saga_Stat_Reward = nil
 gg_trg_SS_Raditz_Test = nil
 gg_trg_SS_Turles_Test = nil
@@ -351,6 +353,8 @@ gg_trg_Transformations_Babidi = nil
 gg_trg_Super_Buu_to_Kid_Buu = nil
 gg_trg_Super_Buu_Absorb = nil
 gg_trg_Transformations_Fat_Buu = nil
+gg_trg_Transformations_Super_Buu = nil
+gg_trg_Transformations_Kid_Buu = nil
 gg_trg_Cell_Absorb = nil
 gg_trg_Transformations_Cell_Larval = nil
 gg_trg_Transformations_Cell_First = nil
@@ -382,10 +386,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Force_Win_Loss = nil
-gg_trg_Transformations_Super_Buu = nil
-gg_trg_Transformations_Kid_Buu = nil
-gg_trg_Saga_Hint_Show = nil
+gg_trg_Disable_Heads_for_TempPlayer = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -938,7 +939,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15360.1, -573.4, 118.986, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14299.4, -1214.6, 149.210, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 17952.8, -7472.2, 60.173, FourCC("n02E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, -69.766, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, 290.234, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17263.8, -1854.8, 258.890, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 17026.6, -2987.0, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15964.2, -3397.3, 64.569, FourCC("n01D"))
@@ -1362,7 +1363,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15704.1, 3398.1, 226.677, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15867.2, 3490.1, 11.943, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, -33.155, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, 326.845, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16591.2, -946.4, 133.048, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 19416.5, 1787.3, 247.194, FourCC("n02E"))
 end
@@ -1558,7 +1559,7 @@ function CreateRegions()
     gg_rct_HeroInit = Rect(-640.0, 21088.0, 1152.0, 22912.0)
     gg_rct_HeavenLeave = Rect(-6720.0, 21952.0, -6432.0, 22272.0)
     gg_rct_HellLeave = Rect(-1760.0, 21920.0, -1472.0, 22240.0)
-    gg_rct_LookoutEntrance = Rect(5152.0, 3776.0, 5344.0, 3936.0)
+    gg_rct_LookoutEntrance = Rect(5152.0, 3744.0, 5344.0, 3936.0)
     gg_rct_LookoutExit2 = Rect(5216.0, 3296.0, 5376.0, 3456.0)
     gg_rct_LookoutExit = Rect(5792.0, 21216.0, 5984.0, 21472.0)
     gg_rct_LookoutEntrance2 = Rect(5792.0, 21696.0, 5952.0, 21824.0)
@@ -1843,10 +1844,13 @@ function InitTrig_Pan_E_Effect()
 end
 
 function Trig_Lookout_Enter_Conditions()
-    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
-    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
+        return false
+    end
+    if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
     end
     return true
@@ -1867,10 +1871,13 @@ function InitTrig_Lookout_Enter()
 end
 
 function Trig_Lookout_Exit_Conditions()
-    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
-    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
+        return false
+    end
+    if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
     end
     return true
@@ -2602,44 +2609,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JS"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JT"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0KT"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AI"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AM"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AD"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AN"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AT"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AW"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0B0"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0L0"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AE"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AP"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AQ"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TempPlayer)
+        TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
         SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
@@ -2649,12 +2619,66 @@ function Trig_Setup_Per_Player_Properties_Actions()
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10146", "TRIGSTR_10148", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
+    udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+    udg_TempInt = (udg_MaxNumPlayers + 1)
+    while (true) do
+        if (udg_TempInt > 24) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+        udg_TempInt = udg_TempInt + 1
+    end
 end
 
 function InitTrig_Setup_Per_Player_Properties()
     gg_trg_Setup_Per_Player_Properties = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.01)
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.50)
     TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
+end
+
+function Trig_Disable_Heads_for_TempPlayer_Actions()
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0JS"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0JT"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A06D"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0KT"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AI"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AM"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AN"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AT"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AW"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0B0"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0L0"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0DR"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AS"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AE"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AP"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AQ"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
+end
+
+function InitTrig_Disable_Heads_for_TempPlayer()
+    gg_trg_Disable_Heads_for_TempPlayer = CreateTrigger()
+    TriggerAddAction(gg_trg_Disable_Heads_for_TempPlayer, Trig_Disable_Heads_for_TempPlayer_Actions)
 end
 
 function Trig_Setup_Spawns_Actions()
@@ -2929,6 +2953,9 @@ function Trig_Player_Hero_Killed_Conditions()
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
+    if (not (IsUnitEnemy(GetDyingUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true)) then
+        return false
+    end
     if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
         return false
     end
@@ -2949,6 +2976,7 @@ function Trig_Player_Hero_Killed_Actions()
     if (Trig_Player_Hero_Killed_Func001C()) then
         udg_StatMultUnit = GetKillingUnitBJ()
         udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetTriggerUnit())))
+        udg_StatMultReal = (udg_StatMultReal * 0.25)
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Update_Current_Stats)
         udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
@@ -4217,8 +4245,6 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("O001")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
-    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H00D")
-    udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H00M")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("N00Q")
@@ -4262,6 +4288,7 @@ function Trig_Hero_Pick_Disable_Unmade_Heroes_Actions()
         SetPlayerUnitAvailableBJ(FourCC("H04P"), false, udg_TempPlayer)
         SetPlayerUnitAvailableBJ(FourCC("H055"), false, udg_TempPlayer)
         SetPlayerUnitAvailableBJ(FourCC("H06M"), false, udg_TempPlayer)
+        SetPlayerUnitAvailableBJ(FourCC("H00D"), false, udg_TempPlayer)
         SetPlayerUnitAvailableBJ(FourCC("H04I"), false, udg_TempPlayer)
         SetPlayerUnitAvailableBJ(FourCC("H04T"), false, udg_TempPlayer)
         SetPlayerUnitAvailableBJ(FourCC("H04Z"), false, udg_TempPlayer)
@@ -4885,7 +4912,28 @@ function InitTrig_Upgrade_Creeps()
     TriggerAddAction(gg_trg_Upgrade_Creeps, Trig_Upgrade_Creeps_Actions)
 end
 
+function Trig_Saiyan_Saga_Creep_Upgrade_Func003C()
+    if (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_CreepPlayerGroup) == true) then
+        return true
+    end
+    if (IsPlayerAlly(GetOwningPlayer(GetDyingUnit()), Player(PLAYER_NEUTRAL_AGGRESSIVE)) == true) then
+        return true
+    end
+    return false
+end
+
+function Trig_Saiyan_Saga_Creep_Upgrade_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003"))) then
+        return false
+    end
+    if (not Trig_Saiyan_Saga_Creep_Upgrade_Func003C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Saiyan_Saga_Creep_Upgrade_Actions()
+    DisableTrigger(GetTriggeringTrigger())
     udg_CreepUpgTypeFrom = FourCC("n01E")
     udg_CreepUpgTypeTo = FourCC("n039")
         udg_TempInt = udg_CreepUpgTypeFrom
@@ -4926,6 +4974,8 @@ end
 
 function InitTrig_Saiyan_Saga_Creep_Upgrade()
     gg_trg_Saiyan_Saga_Creep_Upgrade = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Saiyan_Saga_Creep_Upgrade, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Saiyan_Saga_Creep_Upgrade, Condition(Trig_Saiyan_Saga_Creep_Upgrade_Conditions))
     TriggerAddAction(gg_trg_Saiyan_Saga_Creep_Upgrade, Trig_Saiyan_Saga_Creep_Upgrade_Actions)
 end
 
@@ -8359,6 +8409,7 @@ function Trig_Cooler_Transform_Into_Final_Form_Actions()
     TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
     SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), GetTriggerPlayer())
+    TriggerExecute(gg_trg_Transformations_Exit_Point)
 end
 
 function InitTrig_Cooler_Transform_Into_Final_Form()
@@ -9286,6 +9337,7 @@ function InitCustomTriggers()
     InitTrig_Cam_Angle()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
+    InitTrig_Disable_Heads_for_TempPlayer()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New()

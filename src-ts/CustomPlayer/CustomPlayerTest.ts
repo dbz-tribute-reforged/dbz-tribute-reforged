@@ -391,7 +391,7 @@ export function CustomPlayerTest() {
         GetPlayersAll(), 
         15,
         Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
-        "|r has pwned " + 
+        "|r has killed " + 
         Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
         "|r"
       );
@@ -400,7 +400,7 @@ export function CustomPlayerTest() {
         GetPlayersAll(), 
         15,
         Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
-        "|r has pwned " + 
+        "|r has killed " + 
         Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
         "|r"
       );
@@ -428,24 +428,94 @@ export function CustomPlayerTest() {
   })
   */
 
-  // reset cd of custom ability
-  const cdTrig = CreateTrigger();
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
+  // force stats
+  let numActivePlayers = 0;
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    let player = Player(i);
+    if (
+      IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING) &&
+      GetPlayerController(player) == MAP_CONTROL_USER && 
+      GetPlayerController(player) != MAP_CONTROL_COMPUTER
+    ) {
+      ++numActivePlayers;
+    }
   }
-  TriggerAddAction(cdTrig, () => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
-    for (const customHero of customPlayers[playerId].allHeroes) {
-      if (customHero) {
-        for (const [name, abil] of customHero.abilities.abilities) {
-          if (abil) {
-            abil.currentCd = 0;
+
+  BJDebugMsg("Num players detected: " + numActivePlayers);
+
+  if (numActivePlayers == 1) {
+
+    const megaLvl = CreateTrigger();
+    TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
+    TriggerAddAction(megaLvl, () => {
+      const group = GetUnitsOfPlayerMatching(
+        GetTriggerPlayer(), 
+        Condition(() => {
+          return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO);
+        })
+      )
+
+      ForGroup(group, () => {
+        SetHeroLevel(GetEnumUnit(), 900, false);
+      });
+
+      DestroyGroup(group);
+    });
+
+    const statsTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-stats", false);
+    }
+    TriggerAddAction(statsTrig, () => {
+      const value = S2I(SubString(GetEventPlayerChatString(), 7, 12));
+      const group = GetUnitsSelectedAll(GetTriggerPlayer());
+      ForGroup(group, () => {
+        const target = GetEnumUnit();
+        if (IsUnitType(target, UNIT_TYPE_HERO)) {
+          SetHeroStr(target, value, true);
+          SetHeroAgi(target, value, true);
+          SetHeroInt(target, value, true);
+        }
+      });
+      DestroyGroup(group);
+    });
+  
+    const lvlTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-lvl", false);
+    }
+    TriggerAddAction(statsTrig, () => {
+      const value = S2I(SubString(GetEventPlayerChatString(), 5, 7));
+      const group = GetUnitsSelectedAll(GetTriggerPlayer());
+      ForGroup(group, () => {
+        const target = GetEnumUnit();
+        if (IsUnitType(target, UNIT_TYPE_HERO)) {
+          SetHeroLevel(target, value, false);
+        }
+      });
+      DestroyGroup(group);
+    });
+  
+    // reset cd of custom ability
+    const cdTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
+    }
+    TriggerAddAction(cdTrig, () => {
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      for (const customHero of customPlayers[playerId].allHeroes) {
+        if (customHero) {
+          for (const [name, abil] of customHero.abilities.abilities) {
+            if (abil) {
+              abil.currentCd = 0;
+            }
           }
         }
       }
-    }
-  });
+    });
+
+  }
 
   // ally/unally as necessary
   const allyTrig = CreateTrigger();
@@ -455,7 +525,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
   });
 
   const unallyTrig = CreateTrigger();
