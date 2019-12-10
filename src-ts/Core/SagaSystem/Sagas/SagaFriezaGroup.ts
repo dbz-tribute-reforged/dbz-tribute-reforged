@@ -46,8 +46,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
         }
         SagaHelper.pingMinimap(this.bosses);
         
-        this.bosses.delete("Zarbon");
-        RemoveUnit(zarbon);
+        KillUnit(zarbon);
       }
     }
   }
@@ -170,6 +169,27 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    // if frieza dead, replace with strong frieza
+    for (let i = 1; i < 5; ++i) {
+      const frieza = this.bosses.get("Frieza " + i);
+      if (frieza) {
+        if (
+          IsUnitDeadBJ(frieza) || 
+          GetUnitState(frieza, UNIT_STATE_LIFE) < GetUnitState(frieza, UNIT_STATE_MAX_LIFE) * 0.6
+        ) {
+          DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza: This isn't even my final form!");
+      
+          this.addHeroListToSaga(["Frieza " + (i+1)], true);
+          const nextFrieza = this.bosses.get("Frieza " + (i+1));
+          if (nextFrieza) {
+            SetUnitPosition(nextFrieza, GetUnitX(frieza), GetUnitY(frieza));
+          }
+          SagaHelper.pingMinimap(this.bosses);
+          
+          KillUnit(frieza);
+        }
+      }
+    }
   }
 
   canStart(): boolean {

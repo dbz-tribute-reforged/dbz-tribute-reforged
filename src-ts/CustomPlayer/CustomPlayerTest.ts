@@ -429,6 +429,7 @@ export function CustomPlayerTest() {
   */
 
   // force stats
+  /*
   const statsTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-stats", true);
@@ -454,8 +455,10 @@ export function CustomPlayerTest() {
       SetHeroLevel(target, value, false);
     }
   });
+  */
 
   // reset cd of custom ability
+  /*
   const cdTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
@@ -473,6 +476,7 @@ export function CustomPlayerTest() {
       }
     }
   });
+  */
 
   // ally/unally as necessary
   const allyTrig = CreateTrigger();
@@ -482,7 +486,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
   });
 
   const unallyTrig = CreateTrigger();
