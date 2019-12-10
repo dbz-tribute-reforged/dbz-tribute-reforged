@@ -383,6 +383,8 @@ gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
 gg_trg_Force_Win_Loss = nil
+gg_trg_Transformations_Super_Buu = nil
+gg_trg_Transformations_Kid_Buu = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2563,6 +2565,9 @@ function Trig_Map_Setup_Actions()
         udg_PlayerColorString[udg_TempInt] = "|cffffffff"
         udg_TempInt = udg_TempInt + 1
     end
+    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_8935", "TRIGSTR_9301", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    FlashQuestDialogButtonBJ()
     udg_PlayerColorString[1] = "|cffff0000"
     udg_PlayerColorString[2] = "|cff0000ff"
     udg_PlayerColorString[3] = "|cff00ffff"
@@ -2633,6 +2638,9 @@ function Trig_Setup_Per_Player_Properties_Actions()
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
         udg_TempInt = udg_TempInt + 1
     end
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10146", "TRIGSTR_10148", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    FlashQuestDialogButtonBJ()
 end
 
 function InitTrig_Setup_Per_Player_Properties()
@@ -5164,6 +5172,8 @@ end
 
 function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = 0
+    udg_TransformationCommands[udg_TempInt] = "hs"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "r"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "kao"
@@ -5396,13 +5406,27 @@ function Trig_Transformations_Entry_Point_Func003Func014C()
 end
 
 function Trig_Transformations_Entry_Point_Func003Func015C()
-    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H00R"))) then
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O006"))) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Entry_Point_Func003Func016C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O00C"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func017C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H00R"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func018C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08M"))) then
         return false
     end
@@ -5489,10 +5513,18 @@ function Trig_Transformations_Entry_Point_Func003A()
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func015C()) then
-        TriggerExecute(gg_trg_Transformations_Piccolo)
+        TriggerExecute(gg_trg_Transformations_Super_Buu)
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func016C()) then
+        TriggerExecute(gg_trg_Transformations_Kid_Buu)
+    else
+    end
+    if (Trig_Transformations_Entry_Point_Func003Func017C()) then
+        TriggerExecute(gg_trg_Transformations_Piccolo)
+    else
+    end
+    if (Trig_Transformations_Entry_Point_Func003Func018C()) then
         TriggerExecute(gg_trg_Transformations_Bardock)
     else
     end
@@ -5580,13 +5612,20 @@ function InitTrig_Set_Transformation_Stat_Mult()
 end
 
 function Trig_Transformations_Goku_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Goku_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Goku_Func011C()
     if (not (udg_TransformationString == "kao")) then
         return false
     end
@@ -5596,7 +5635,7 @@ function Trig_Transformations_Goku_Func010C()
     return true
 end
 
-function Trig_Transformations_Goku_Func011C()
+function Trig_Transformations_Goku_Func012C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -5606,7 +5645,7 @@ function Trig_Transformations_Goku_Func011C()
     return true
 end
 
-function Trig_Transformations_Goku_Func012C()
+function Trig_Transformations_Goku_Func013C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -5616,7 +5655,7 @@ function Trig_Transformations_Goku_Func012C()
     return true
 end
 
-function Trig_Transformations_Goku_Func013C()
+function Trig_Transformations_Goku_Func014C()
     if (not (udg_TransformationString == "ss3")) then
         return false
     end
@@ -5626,7 +5665,7 @@ function Trig_Transformations_Goku_Func013C()
     return true
 end
 
-function Trig_Transformations_Goku_Func014C()
+function Trig_Transformations_Goku_Func015C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
@@ -5636,7 +5675,7 @@ function Trig_Transformations_Goku_Func014C()
     return true
 end
 
-function Trig_Transformations_Goku_Func015C()
+function Trig_Transformations_Goku_Func016C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
@@ -5646,7 +5685,7 @@ function Trig_Transformations_Goku_Func015C()
     return true
 end
 
-function Trig_Transformations_Goku_Func016C()
+function Trig_Transformations_Goku_Func017C()
     if (not (udg_TransformationString == "ssbkao")) then
         return false
     end
@@ -5656,7 +5695,7 @@ function Trig_Transformations_Goku_Func016C()
     return true
 end
 
-function Trig_Transformations_Goku_Func020Func001C()
+function Trig_Transformations_Goku_Func021Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -5666,7 +5705,7 @@ function Trig_Transformations_Goku_Func020Func001C()
     return false
 end
 
-function Trig_Transformations_Goku_Func020Func010Func002Func008C()
+function Trig_Transformations_Goku_Func021Func010Func002Func008C()
     if (udg_TransformationString == "ssg") then
         return true
     end
@@ -5679,22 +5718,22 @@ function Trig_Transformations_Goku_Func020Func010Func002Func008C()
     return false
 end
 
-function Trig_Transformations_Goku_Func020Func010Func002C()
-    if (not Trig_Transformations_Goku_Func020Func010Func002Func008C()) then
+function Trig_Transformations_Goku_Func021Func010Func002C()
+    if (not Trig_Transformations_Goku_Func021Func010Func002Func008C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Goku_Func020Func010C()
+function Trig_Transformations_Goku_Func021Func010C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Goku_Func020C()
-    if (not Trig_Transformations_Goku_Func020Func001C()) then
+function Trig_Transformations_Goku_Func021C()
+    if (not Trig_Transformations_Goku_Func021Func001C()) then
         return false
     end
     return true
@@ -5710,49 +5749,55 @@ function Trig_Transformations_Goku_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Goku_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5689")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Goku_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0A9")
     else
     end
-    if (Trig_Transformations_Goku_Func010C()) then
+    if (Trig_Transformations_Goku_Func011C()) then
         udg_StatMultReal = 1.25
         udg_TransformationAbility = FourCC("A0A9")
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Goku_Func011C()) then
+    if (Trig_Transformations_Goku_Func012C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("A0AB")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Goku_Func012C()) then
+    if (Trig_Transformations_Goku_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0AA")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Goku_Func013C()) then
+    if (Trig_Transformations_Goku_Func014C()) then
         udg_StatMultReal = 2.25
         udg_TransformationAbility = FourCC("A0AC")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Goku_Func014C()) then
+    if (Trig_Transformations_Goku_Func015C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0DQ")
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Goku_Func015C()) then
+    if (Trig_Transformations_Goku_Func016C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0DP")
         udg_TransformationSFXString = "AuraBlue.mdx"
     else
     end
-    if (Trig_Transformations_Goku_Func016C()) then
+    if (Trig_Transformations_Goku_Func017C()) then
         udg_StatMultReal = 2.70
         udg_TransformationAbility = FourCC("A0DP")
         udg_TransformationSFXString = "AuraBlue.mdx"
@@ -5760,7 +5805,7 @@ function Trig_Transformations_Goku_Actions()
         SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
     else
     end
-    if (Trig_Transformations_Goku_Func020C()) then
+    if (Trig_Transformations_Goku_Func021C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TransformationPlayer)
@@ -5769,8 +5814,8 @@ function Trig_Transformations_Goku_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-        if (Trig_Transformations_Goku_Func020Func010C()) then
-            if (Trig_Transformations_Goku_Func020Func010Func002C()) then
+        if (Trig_Transformations_Goku_Func021Func010C()) then
+            if (Trig_Transformations_Goku_Func021Func010Func002C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A00R"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L9"), udg_StatMultUnit)
@@ -5870,13 +5915,20 @@ function InitTrig_Goku_Meme_Transformations()
 end
 
 function Trig_Transformations_Vegeta_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Vegeta_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Vegeta_Func011C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -5886,7 +5938,7 @@ function Trig_Transformations_Vegeta_Func010C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func011C()
+function Trig_Transformations_Vegeta_Func012C()
     if (not (udg_TransformationString == "uss")) then
         return false
     end
@@ -5896,7 +5948,7 @@ function Trig_Transformations_Vegeta_Func011C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func012C()
+function Trig_Transformations_Vegeta_Func013C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -5906,7 +5958,7 @@ function Trig_Transformations_Vegeta_Func012C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func013C()
+function Trig_Transformations_Vegeta_Func014C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
@@ -5916,7 +5968,7 @@ function Trig_Transformations_Vegeta_Func013C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func014C()
+function Trig_Transformations_Vegeta_Func015C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
@@ -5926,7 +5978,7 @@ function Trig_Transformations_Vegeta_Func014C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func015C()
+function Trig_Transformations_Vegeta_Func016C()
     if (not (udg_TransformationString == "ssbe")) then
         return false
     end
@@ -5936,7 +5988,7 @@ function Trig_Transformations_Vegeta_Func015C()
     return true
 end
 
-function Trig_Transformations_Vegeta_Func017Func001C()
+function Trig_Transformations_Vegeta_Func018Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -5946,7 +5998,7 @@ function Trig_Transformations_Vegeta_Func017Func001C()
     return false
 end
 
-function Trig_Transformations_Vegeta_Func017Func009Func001Func008C()
+function Trig_Transformations_Vegeta_Func018Func009Func001Func008C()
     if (udg_TransformationString == "ssbe") then
         return true
     end
@@ -5956,22 +6008,22 @@ function Trig_Transformations_Vegeta_Func017Func009Func001Func008C()
     return false
 end
 
-function Trig_Transformations_Vegeta_Func017Func009Func001C()
-    if (not Trig_Transformations_Vegeta_Func017Func009Func001Func008C()) then
+function Trig_Transformations_Vegeta_Func018Func009Func001C()
+    if (not Trig_Transformations_Vegeta_Func018Func009Func001Func008C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func017Func009C()
+function Trig_Transformations_Vegeta_Func018Func009C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Vegeta_Func017C()
-    if (not Trig_Transformations_Vegeta_Func017Func001C()) then
+function Trig_Transformations_Vegeta_Func018C()
+    if (not Trig_Transformations_Vegeta_Func018Func001C()) then
         return false
     end
     return true
@@ -5987,49 +6039,55 @@ function Trig_Transformations_Vegeta_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Vegeta_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5690")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Vegeta_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0AG")
     else
     end
-    if (Trig_Transformations_Vegeta_Func010C()) then
+    if (Trig_Transformations_Vegeta_Func011C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("A0AH")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Vegeta_Func011C()) then
+    if (Trig_Transformations_Vegeta_Func012C()) then
         udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("A0AH")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Vegeta_Func012C()) then
+    if (Trig_Transformations_Vegeta_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0AH")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Vegeta_Func013C()) then
+    if (Trig_Transformations_Vegeta_Func014C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0JD")
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Vegeta_Func014C()) then
+    if (Trig_Transformations_Vegeta_Func015C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0DR")
         udg_TransformationSFXString = "AuraBlue.mdx"
     else
     end
-    if (Trig_Transformations_Vegeta_Func015C()) then
+    if (Trig_Transformations_Vegeta_Func016C()) then
         udg_StatMultReal = 2.70
         udg_TransformationAbility = FourCC("A0JR")
         udg_TransformationSFXString = "AuraBlue.mdx"
         udg_TransformationSFXString2 = "AuraRoyalBlue2.mdx"
     else
     end
-    if (Trig_Transformations_Vegeta_Func017C()) then
+    if (Trig_Transformations_Vegeta_Func018C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AG"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AH"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0JD"), udg_TransformationPlayer)
@@ -6037,8 +6095,8 @@ function Trig_Transformations_Vegeta_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0JR"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-        if (Trig_Transformations_Vegeta_Func017Func009C()) then
-            if (Trig_Transformations_Vegeta_Func017Func009Func001C()) then
+        if (Trig_Transformations_Vegeta_Func018Func009C()) then
+            if (Trig_Transformations_Vegeta_Func018Func009Func001C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A01B"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L4"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L4"), udg_StatMultUnit)
@@ -6061,13 +6119,20 @@ function InitTrig_Transformations_Vegeta()
 end
 
 function Trig_Transformations_Gohan_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Gohan_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Gohan_Func011C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -6077,7 +6142,7 @@ function Trig_Transformations_Gohan_Func010C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func011C()
+function Trig_Transformations_Gohan_Func012C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -6087,7 +6152,7 @@ function Trig_Transformations_Gohan_Func011C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func012C()
+function Trig_Transformations_Gohan_Func013C()
     if (not (udg_TransformationString == "saiyaman")) then
         return false
     end
@@ -6097,7 +6162,7 @@ function Trig_Transformations_Gohan_Func012C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func013C()
+function Trig_Transformations_Gohan_Func014C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -6107,7 +6172,7 @@ function Trig_Transformations_Gohan_Func013C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func014C()
+function Trig_Transformations_Gohan_Func015C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -6117,7 +6182,7 @@ function Trig_Transformations_Gohan_Func014C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func015C()
+function Trig_Transformations_Gohan_Func016C()
     if (not (udg_TransformationString == "ult")) then
         return false
     end
@@ -6127,7 +6192,7 @@ function Trig_Transformations_Gohan_Func015C()
     return true
 end
 
-function Trig_Transformations_Gohan_Func017Func001C()
+function Trig_Transformations_Gohan_Func018Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -6137,14 +6202,14 @@ function Trig_Transformations_Gohan_Func017Func001C()
     return false
 end
 
-function Trig_Transformations_Gohan_Func017Func005Func001C()
+function Trig_Transformations_Gohan_Func018Func005Func001C()
     if (not (udg_TransformationString == "saiyaman")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func017Func005Func002Func001C()
+function Trig_Transformations_Gohan_Func018Func005Func002Func001C()
     if (udg_TransformationString == "ult") then
         return true
     end
@@ -6154,36 +6219,36 @@ function Trig_Transformations_Gohan_Func017Func005Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Gohan_Func017Func005Func002C()
-    if (not Trig_Transformations_Gohan_Func017Func005Func002Func001C()) then
+function Trig_Transformations_Gohan_Func018Func005Func002C()
+    if (not Trig_Transformations_Gohan_Func018Func005Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func017Func005C()
+function Trig_Transformations_Gohan_Func018Func005C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 115)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func017Func008Func001C()
+function Trig_Transformations_Gohan_Func018Func008Func001C()
     if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func017Func008C()
+function Trig_Transformations_Gohan_Func018Func008C()
     if (not (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) == 2)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Gohan_Func017C()
-    if (not Trig_Transformations_Gohan_Func017Func001C()) then
+function Trig_Transformations_Gohan_Func018C()
+    if (not Trig_Transformations_Gohan_Func018Func001C()) then
         return false
     end
     return true
@@ -6199,44 +6264,50 @@ function Trig_Transformations_Gohan_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Gohan_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5691")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Gohan_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0AJ")
     else
     end
-    if (Trig_Transformations_Gohan_Func010C()) then
+    if (Trig_Transformations_Gohan_Func011C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("A0AK")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Gohan_Func011C()) then
+    if (Trig_Transformations_Gohan_Func012C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0AL")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Gohan_Func012C()) then
+    if (Trig_Transformations_Gohan_Func013C()) then
         udg_StatMultReal = 2.10
         udg_TransformationAbility = FourCC("AUan")
                 udg_ID = GetHandleId(udg_StatMultUnit)
         SaveIntegerBJ(IMaxBJ(1, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
     else
     end
-    if (Trig_Transformations_Gohan_Func013C()) then
+    if (Trig_Transformations_Gohan_Func014C()) then
         udg_StatMultReal = 2.15
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Gohan_Func014C()) then
+    if (Trig_Transformations_Gohan_Func015C()) then
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Gohan_Func015C()) then
+    if (Trig_Transformations_Gohan_Func016C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0AJ")
         udg_TransformationSFXString = "AuraWhite.mdx"
@@ -6244,22 +6315,22 @@ function Trig_Transformations_Gohan_Actions()
         SaveIntegerBJ(IMaxBJ(2, LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)), 11, udg_ID, udg_StatMultHashtable)
     else
     end
-    if (Trig_Transformations_Gohan_Func017C()) then
+    if (Trig_Transformations_Gohan_Func018C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AJ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AK"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AL"), udg_TransformationPlayer)
-        if (Trig_Transformations_Gohan_Func017Func005C()) then
+        if (Trig_Transformations_Gohan_Func018Func005C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H00K')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
-            if (Trig_Transformations_Gohan_Func017Func005Func001C()) then
+            if (Trig_Transformations_Gohan_Func018Func005Func001C()) then
                                 udg_TransformationID = FourCC('H08L')
                 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             else
             end
-            if (Trig_Transformations_Gohan_Func017Func005Func002C()) then
+            if (Trig_Transformations_Gohan_Func018Func005Func002C()) then
                                 udg_TransformationID = FourCC('H086')
                 BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             else
@@ -6267,12 +6338,12 @@ function Trig_Transformations_Gohan_Actions()
         end
                 udg_ID = GetHandleId(udg_StatMultUnit)
         DisplayTextToForce(GetPlayersAll(), ("11 of statmult: " .. I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable))))
-        if (Trig_Transformations_Gohan_Func017Func008C()) then
+        if (Trig_Transformations_Gohan_Func018Func008C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0L7"), udg_TransformationPlayer)
         else
-            if (Trig_Transformations_Gohan_Func017Func008Func001C()) then
+            if (Trig_Transformations_Gohan_Func018Func008Func001C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L7"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0L8"), udg_TransformationPlayer)
@@ -6503,13 +6574,20 @@ function InitTrig_FT_SS_Rage()
 end
 
 function Trig_Transformations_Future_Trunks_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Future_Trunks_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Future_Trunks_Func011C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -6519,7 +6597,7 @@ function Trig_Transformations_Future_Trunks_Func010C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func011C()
+function Trig_Transformations_Future_Trunks_Func012C()
     if (not (udg_TransformationString == "uss")) then
         return false
     end
@@ -6529,7 +6607,7 @@ function Trig_Transformations_Future_Trunks_Func011C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func012C()
+function Trig_Transformations_Future_Trunks_Func013C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -6539,7 +6617,7 @@ function Trig_Transformations_Future_Trunks_Func012C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func013C()
+function Trig_Transformations_Future_Trunks_Func014C()
     if (not (udg_TransformationString == "uss2")) then
         return false
     end
@@ -6549,7 +6627,7 @@ function Trig_Transformations_Future_Trunks_Func013C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func014C()
+function Trig_Transformations_Future_Trunks_Func015C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -6559,7 +6637,7 @@ function Trig_Transformations_Future_Trunks_Func014C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func015C()
+function Trig_Transformations_Future_Trunks_Func016C()
     if (not (udg_TransformationString == "ssr")) then
         return false
     end
@@ -6569,7 +6647,7 @@ function Trig_Transformations_Future_Trunks_Func015C()
     return true
 end
 
-function Trig_Transformations_Future_Trunks_Func017Func001C()
+function Trig_Transformations_Future_Trunks_Func018Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -6579,8 +6657,8 @@ function Trig_Transformations_Future_Trunks_Func017Func001C()
     return false
 end
 
-function Trig_Transformations_Future_Trunks_Func017C()
-    if (not Trig_Transformations_Future_Trunks_Func017Func001C()) then
+function Trig_Transformations_Future_Trunks_Func018C()
+    if (not Trig_Transformations_Future_Trunks_Func018Func001C()) then
         return false
     end
     return true
@@ -6596,30 +6674,36 @@ function Trig_Transformations_Future_Trunks_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Future_Trunks_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5695")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Future_Trunks_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0AU")
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func010C()) then
+    if (Trig_Transformations_Future_Trunks_Func011C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("A0AV")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func011C()) then
+    if (Trig_Transformations_Future_Trunks_Func012C()) then
         udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("A0AV")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func012C()) then
+    if (Trig_Transformations_Future_Trunks_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0AV")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func013C()) then
+    if (Trig_Transformations_Future_Trunks_Func014C()) then
         udg_StatMultReal = 2.00
         udg_StatMultStr = 3.00
         udg_StatMultAgi = 2.00
@@ -6628,14 +6712,14 @@ function Trig_Transformations_Future_Trunks_Actions()
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func014C()) then
+    if (Trig_Transformations_Future_Trunks_Func015C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0AV")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func015C()) then
+    if (Trig_Transformations_Future_Trunks_Func016C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0AV")
         udg_TransformationAbility2 = FourCC("A0KT")
@@ -6643,7 +6727,7 @@ function Trig_Transformations_Future_Trunks_Actions()
         udg_TransformationSFXString2 = "AuraLightBlue.mdx"
     else
     end
-    if (Trig_Transformations_Future_Trunks_Func017C()) then
+    if (Trig_Transformations_Future_Trunks_Func018C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AU"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AV"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KT"), udg_TransformationPlayer)
@@ -6779,13 +6863,20 @@ function InitTrig_Piccolo_Kyo_Get_Str_Mult()
 end
 
 function Trig_Transformations_Piccolo_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Piccolo_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Piccolo_Func011C()
     if (not (udg_TransformationString == "nail")) then
         return false
     end
@@ -6795,7 +6886,7 @@ function Trig_Transformations_Piccolo_Func010C()
     return true
 end
 
-function Trig_Transformations_Piccolo_Func011C()
+function Trig_Transformations_Piccolo_Func012C()
     if (not (udg_TransformationString == "kami")) then
         return false
     end
@@ -6805,7 +6896,7 @@ function Trig_Transformations_Piccolo_Func011C()
     return true
 end
 
-function Trig_Transformations_Piccolo_Func012C()
+function Trig_Transformations_Piccolo_Func013C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
@@ -6815,7 +6906,7 @@ function Trig_Transformations_Piccolo_Func012C()
     return true
 end
 
-function Trig_Transformations_Piccolo_Func013C()
+function Trig_Transformations_Piccolo_Func014C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
@@ -6835,23 +6926,29 @@ function Trig_Transformations_Piccolo_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Piccolo_Func009C()) then
-        udg_StatMultReal = 1.00
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_5696")
+                DestroyForce(udg_TempPlayerGroup)
     else
     end
     if (Trig_Transformations_Piccolo_Func010C()) then
-        udg_StatMultReal = 1.50
+        udg_StatMultReal = 1.00
     else
     end
     if (Trig_Transformations_Piccolo_Func011C()) then
-        udg_StatMultReal = 1.75
+        udg_StatMultReal = 1.50
     else
     end
     if (Trig_Transformations_Piccolo_Func012C()) then
+        udg_StatMultReal = 1.75
+    else
+    end
+    if (Trig_Transformations_Piccolo_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Piccolo_Func013C()) then
+    if (Trig_Transformations_Piccolo_Func014C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
@@ -6865,13 +6962,20 @@ function InitTrig_Transformations_Piccolo()
 end
 
 function Trig_Transformations_Bardock_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Bardock_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Bardock_Func011C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -6881,7 +6985,7 @@ function Trig_Transformations_Bardock_Func010C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func011C()
+function Trig_Transformations_Bardock_Func012C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -6891,7 +6995,7 @@ function Trig_Transformations_Bardock_Func011C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func012C()
+function Trig_Transformations_Bardock_Func013C()
     if (not (udg_TransformationString == "ss2")) then
         return false
     end
@@ -6901,7 +7005,7 @@ function Trig_Transformations_Bardock_Func012C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func013C()
+function Trig_Transformations_Bardock_Func014C()
     if (not (udg_TransformationString == "ss3")) then
         return false
     end
@@ -6911,7 +7015,7 @@ function Trig_Transformations_Bardock_Func013C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func014C()
+function Trig_Transformations_Bardock_Func015C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
@@ -6921,7 +7025,7 @@ function Trig_Transformations_Bardock_Func014C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func015C()
+function Trig_Transformations_Bardock_Func016C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
@@ -6931,21 +7035,21 @@ function Trig_Transformations_Bardock_Func015C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func017Func001Func003Func002C()
+function Trig_Transformations_Bardock_Func018Func001Func003Func002C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Bardock_Func017Func001Func003C()
+function Trig_Transformations_Bardock_Func018Func001Func003C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Bardock_Func017Func001Func004C()
+function Trig_Transformations_Bardock_Func018Func001Func004C()
     if (udg_TransformationString == "ss") then
         return true
     end
@@ -6964,14 +7068,14 @@ function Trig_Transformations_Bardock_Func017Func001Func004C()
     return false
 end
 
-function Trig_Transformations_Bardock_Func017Func001C()
-    if (not Trig_Transformations_Bardock_Func017Func001Func004C()) then
+function Trig_Transformations_Bardock_Func018Func001C()
+    if (not Trig_Transformations_Bardock_Func018Func001Func004C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Bardock_Func017Func005C()
+function Trig_Transformations_Bardock_Func018Func005C()
     if (udg_TransformationString == "r") then
         return true
     end
@@ -6981,8 +7085,8 @@ function Trig_Transformations_Bardock_Func017Func005C()
     return false
 end
 
-function Trig_Transformations_Bardock_Func017C()
-    if (not Trig_Transformations_Bardock_Func017Func005C()) then
+function Trig_Transformations_Bardock_Func018C()
+    if (not Trig_Transformations_Bardock_Func018Func005C()) then
         return false
     end
     return true
@@ -6998,53 +7102,59 @@ function Trig_Transformations_Bardock_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Bardock_Func009C()) then
-        udg_StatMultReal = 1.00
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10150")
+                DestroyForce(udg_TempPlayerGroup)
     else
     end
     if (Trig_Transformations_Bardock_Func010C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Bardock_Func011C()) then
         udg_StatMultReal = 1.30
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Bardock_Func011C()) then
+    if (Trig_Transformations_Bardock_Func012C()) then
         udg_StatMultReal = 1.50
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Bardock_Func012C()) then
+    if (Trig_Transformations_Bardock_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Bardock_Func013C()) then
+    if (Trig_Transformations_Bardock_Func014C()) then
         udg_StatMultReal = 2.25
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Bardock_Func014C()) then
+    if (Trig_Transformations_Bardock_Func015C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Bardock_Func015C()) then
+    if (Trig_Transformations_Bardock_Func016C()) then
         udg_StatMultReal = 2.60
         udg_TransformationSFXString = "AuraBlue.mdx"
     else
     end
-    if (Trig_Transformations_Bardock_Func017C()) then
+    if (Trig_Transformations_Bardock_Func018C()) then
                 udg_TransformationID = FourCC('H08M')
         BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100, 100, 0)
     else
-        if (Trig_Transformations_Bardock_Func017Func001C()) then
+        if (Trig_Transformations_Bardock_Func018Func001C()) then
                         udg_TransformationID = FourCC('H08N')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            if (Trig_Transformations_Bardock_Func017Func001Func003C()) then
+            if (Trig_Transformations_Bardock_Func018Func001Func003C()) then
                 SetUnitVertexColorBJ(udg_StatMultUnit, 100, 30.00, 30.00, 0)
             else
-                if (Trig_Transformations_Bardock_Func017Func001Func003Func002C()) then
+                if (Trig_Transformations_Bardock_Func018Func001Func003Func002C()) then
                     SetUnitVertexColorBJ(udg_StatMultUnit, 25.00, 30.00, 100, 0)
                 else
                     SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
@@ -7061,11 +7171,18 @@ function InitTrig_Transformations_Bardock()
     TriggerAddAction(gg_trg_Transformations_Bardock, Trig_Transformations_Bardock_Actions)
 end
 
-function Trig_Transformations_Androids_13_Func009Func002A()
+function Trig_Transformations_Androids_13_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_13_Func010Func002A()
     udg_TempInt = (udg_TempInt + GetHeroLevel(GetEnumUnit()))
 end
 
-function Trig_Transformations_Androids_13_Func009Func003Func001Func001Func002C()
+function Trig_Transformations_Androids_13_Func010Func003Func001Func001Func002C()
     if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V")) then
         return true
     end
@@ -7078,28 +7195,28 @@ function Trig_Transformations_Androids_13_Func009Func003Func001Func001Func002C()
     return false
 end
 
-function Trig_Transformations_Androids_13_Func009Func003Func001Func001C()
-    if (not Trig_Transformations_Androids_13_Func009Func003Func001Func001Func002C()) then
+function Trig_Transformations_Androids_13_Func010Func003Func001Func001C()
+    if (not Trig_Transformations_Androids_13_Func010Func003Func001Func001Func002C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Androids_13_Func009Func003Func001A()
-    if (Trig_Transformations_Androids_13_Func009Func003Func001Func001C()) then
+function Trig_Transformations_Androids_13_Func010Func003Func001A()
+    if (Trig_Transformations_Androids_13_Func010Func003Func001Func001C()) then
         GroupAddUnitSimple(GetEnumUnit(), udg_TransformationUnitGroup)
     else
     end
 end
 
-function Trig_Transformations_Androids_13_Func009Func003C()
+function Trig_Transformations_Androids_13_Func010Func003C()
     if (not (udg_TempInt >= 105)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Androids_13_Func009C()
+function Trig_Transformations_Androids_13_Func010C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
@@ -7119,10 +7236,16 @@ function Trig_Transformations_Androids_13_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Androids_13_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10158")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Androids_13_Func010C()) then
         udg_TempInt = 0
-        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func009Func002A)
-        if (Trig_Transformations_Androids_13_Func009Func003C()) then
-            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func009Func003Func001A)
+        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func010Func002A)
+        if (Trig_Transformations_Androids_13_Func010Func003C()) then
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Androids_13_Func010Func003Func001A)
                         udg_TransformationID = FourCC('H01U')
             udg_TransformationStatMult = 2.00
             TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
@@ -7203,13 +7326,20 @@ function InitTrig_Transformations_Androids_13_14_15()
 end
 
 function Trig_Transformations_Androids_Super_13_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Androids_Super_13_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Androids_Super_13_Func011C()
     if (not (udg_TransformationString == "ultra")) then
         return false
     end
@@ -7219,7 +7349,7 @@ function Trig_Transformations_Androids_Super_13_Func010C()
     return true
 end
 
-function Trig_Transformations_Androids_Super_13_Func011C()
+function Trig_Transformations_Androids_Super_13_Func012C()
     if (not (udg_TransformationString == "ultra")) then
         return false
     end
@@ -7239,15 +7369,21 @@ function Trig_Transformations_Androids_Super_13_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Androids_Super_13_Func009C()) then
-        udg_StatMultReal = 2.00
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10601")
+                DestroyForce(udg_TempPlayerGroup)
     else
     end
     if (Trig_Transformations_Androids_Super_13_Func010C()) then
+        udg_StatMultReal = 2.00
+    else
+    end
+    if (Trig_Transformations_Androids_Super_13_Func011C()) then
         udg_StatMultReal = 2.25
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Androids_Super_13_Func011C()) then
+    if (Trig_Transformations_Androids_Super_13_Func012C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
@@ -7261,13 +7397,20 @@ function InitTrig_Transformations_Androids_Super_13()
 end
 
 function Trig_Transformations_Broly_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Broly_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Broly_Func011C()
     if (not (udg_TransformationString == "ws")) then
         return false
     end
@@ -7277,7 +7420,7 @@ function Trig_Transformations_Broly_Func010C()
     return true
 end
 
-function Trig_Transformations_Broly_Func011C()
+function Trig_Transformations_Broly_Func012C()
     if (not (udg_TransformationString == "ss")) then
         return false
     end
@@ -7287,7 +7430,7 @@ function Trig_Transformations_Broly_Func011C()
     return true
 end
 
-function Trig_Transformations_Broly_Func012C()
+function Trig_Transformations_Broly_Func013C()
     if (not (udg_TransformationString == "uss")) then
         return false
     end
@@ -7297,7 +7440,7 @@ function Trig_Transformations_Broly_Func012C()
     return true
 end
 
-function Trig_Transformations_Broly_Func013C()
+function Trig_Transformations_Broly_Func014C()
     if (not (udg_TransformationString == "lss")) then
         return false
     end
@@ -7307,7 +7450,7 @@ function Trig_Transformations_Broly_Func013C()
     return true
 end
 
-function Trig_Transformations_Broly_Func014C()
+function Trig_Transformations_Broly_Func015C()
     if (not (udg_TransformationString == "luss")) then
         return false
     end
@@ -7317,7 +7460,7 @@ function Trig_Transformations_Broly_Func014C()
     return true
 end
 
-function Trig_Transformations_Broly_Func016Func001C()
+function Trig_Transformations_Broly_Func017Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -7327,8 +7470,8 @@ function Trig_Transformations_Broly_Func016Func001C()
     return false
 end
 
-function Trig_Transformations_Broly_Func016C()
-    if (not Trig_Transformations_Broly_Func016Func001C()) then
+function Trig_Transformations_Broly_Func017C()
+    if (not Trig_Transformations_Broly_Func017Func001C()) then
         return false
     end
     return true
@@ -7344,42 +7487,48 @@ function Trig_Transformations_Broly_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Broly_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10161")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Broly_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0AX")
     else
     end
-    if (Trig_Transformations_Broly_Func010C()) then
+    if (Trig_Transformations_Broly_Func011C()) then
         udg_StatMultReal = 1.20
         udg_TransformationAbility = FourCC("A0AX")
         udg_TransformationSFXString = "AuraDarkGreen.mdx"
     else
     end
-    if (Trig_Transformations_Broly_Func011C()) then
+    if (Trig_Transformations_Broly_Func012C()) then
         udg_StatMultReal = 1.65
         udg_TransformationAbility = FourCC("A0AY")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Broly_Func012C()) then
+    if (Trig_Transformations_Broly_Func013C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0AY")
         udg_TransformationSFXString = "AuraSS.mdx"
     else
     end
-    if (Trig_Transformations_Broly_Func013C()) then
+    if (Trig_Transformations_Broly_Func014C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0AZ")
         udg_TransformationSFXString = "AuraDarkGreen.mdx"
     else
     end
-    if (Trig_Transformations_Broly_Func014C()) then
+    if (Trig_Transformations_Broly_Func015C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0AZ")
         udg_TransformationSFXString = "AuraYellow.mdx"
         udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
     else
     end
-    if (Trig_Transformations_Broly_Func016C()) then
+    if (Trig_Transformations_Broly_Func017C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AX"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TransformationPlayer)
@@ -7396,6 +7545,13 @@ function InitTrig_Transformations_Broly()
 end
 
 function Trig_Transformations_Babidi_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Babidi_Func010C()
     if (not (udg_TransformationString == "paparapapa")) then
         return false
     end
@@ -7405,21 +7561,21 @@ function Trig_Transformations_Babidi_Func009C()
     return true
 end
 
-function Trig_Transformations_Babidi_Func010Func003Func001C()
+function Trig_Transformations_Babidi_Func011Func003Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Babidi_Func010Func003C()
+function Trig_Transformations_Babidi_Func011Func003C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Babidi_Func010C()
+function Trig_Transformations_Babidi_Func011C()
     if (not (udg_TransformationString == "release")) then
         return false
     end
@@ -7429,7 +7585,7 @@ function Trig_Transformations_Babidi_Func010C()
     return true
 end
 
-function Trig_Transformations_Babidi_Func011C()
+function Trig_Transformations_Babidi_Func012C()
     if (not (udg_TransformationString == "paparapapa")) then
         return false
     end
@@ -7439,7 +7595,7 @@ function Trig_Transformations_Babidi_Func011C()
     return true
 end
 
-function Trig_Transformations_Babidi_Func012C()
+function Trig_Transformations_Babidi_Func013C()
     if (not (udg_TransformationString == "paparapapa")) then
         return false
     end
@@ -7459,14 +7615,20 @@ function Trig_Transformations_Babidi_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Babidi_Func009C()) then
-        udg_StatMultReal = 1.50
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10165")
+                DestroyForce(udg_TempPlayerGroup)
     else
     end
     if (Trig_Transformations_Babidi_Func010C()) then
+        udg_StatMultReal = 1.50
+    else
+    end
+    if (Trig_Transformations_Babidi_Func011C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('O005')
-        if (Trig_Transformations_Babidi_Func010Func003C()) then
-            if (Trig_Transformations_Babidi_Func010Func003Func001C()) then
+        if (Trig_Transformations_Babidi_Func011Func003C()) then
+            if (Trig_Transformations_Babidi_Func011Func003Func001C()) then
                 udg_TransformationStatMult = 2.00
             else
                 udg_TransformationStatMult = 1.85
@@ -7480,11 +7642,11 @@ function Trig_Transformations_Babidi_Actions()
         udg_StatMultReal = 0.00
     else
     end
-    if (Trig_Transformations_Babidi_Func011C()) then
+    if (Trig_Transformations_Babidi_Func012C()) then
         udg_StatMultReal = 2.00
     else
     end
-    if (Trig_Transformations_Babidi_Func012C()) then
+    if (Trig_Transformations_Babidi_Func013C()) then
         udg_StatMultReal = 2.50
     else
     end
@@ -7614,6 +7776,13 @@ function InitTrig_Super_Buu_Absorb()
 end
 
 function Trig_Transformations_Fat_Buu_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Fat_Buu_Func010C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
@@ -7633,6 +7802,12 @@ function Trig_Transformations_Fat_Buu_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Fat_Buu_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10602")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Fat_Buu_Func010C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('O006')
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
@@ -7649,6 +7824,64 @@ end
 function InitTrig_Transformations_Fat_Buu()
     gg_trg_Transformations_Fat_Buu = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Fat_Buu, Trig_Transformations_Fat_Buu_Actions)
+end
+
+function Trig_Transformations_Super_Buu_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Buu_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Super_Buu_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10603")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
+function InitTrig_Transformations_Super_Buu()
+    gg_trg_Transformations_Super_Buu = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Super_Buu, Trig_Transformations_Super_Buu_Actions)
+end
+
+function Trig_Transformations_Kid_Buu_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Kid_Buu_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Kid_Buu_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10604")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
+function InitTrig_Transformations_Kid_Buu()
+    gg_trg_Transformations_Kid_Buu = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Kid_Buu, Trig_Transformations_Kid_Buu_Actions)
 end
 
 function Trig_Cell_Absorb_Func002C()
@@ -7844,14 +8077,21 @@ function InitTrig_Cell_Absorb()
     TriggerAddAction(gg_trg_Cell_Absorb, Trig_Cell_Absorb_Actions)
 end
 
-function Trig_Transformations_Cell_Larval_Func009Func001C()
+function Trig_Transformations_Cell_Larval_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cell_Larval_Func010Func001C()
     if (not (udg_TransformationCellDroidsReady == false)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cell_Larval_Func009C()
+function Trig_Transformations_Cell_Larval_Func010C()
     if (not (udg_TransformationString == "first")) then
         return false
     end
@@ -7861,7 +8101,7 @@ function Trig_Transformations_Cell_Larval_Func009C()
     return true
 end
 
-function Trig_Transformations_Cell_Larval_Func011Func001C()
+function Trig_Transformations_Cell_Larval_Func012Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -7871,8 +8111,8 @@ function Trig_Transformations_Cell_Larval_Func011Func001C()
     return false
 end
 
-function Trig_Transformations_Cell_Larval_Func011C()
-    if (not Trig_Transformations_Cell_Larval_Func011Func001C()) then
+function Trig_Transformations_Cell_Larval_Func012C()
+    if (not Trig_Transformations_Cell_Larval_Func012Func001C()) then
         return false
     end
     return true
@@ -7888,7 +8128,13 @@ function Trig_Transformations_Cell_Larval_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_Larval_Func009C()) then
-        if (Trig_Transformations_Cell_Larval_Func009Func001C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10605")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Cell_Larval_Func010C()) then
+        if (Trig_Transformations_Cell_Larval_Func010Func001C()) then
             udg_TempInt = GetRandomInt(0, 9)
                         udg_TransformationCell17 = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('n01M'), udg_TransformationCellDroidsX[udg_TempInt], udg_TransformationCellDroidsY[udg_TempInt], 270)
             udg_TempInt = ModuloInteger((udg_TempInt + 1), 10)
@@ -7903,7 +8149,7 @@ function Trig_Transformations_Cell_Larval_Actions()
         udg_StatMultReal = 0.00
     else
     end
-    if (Trig_Transformations_Cell_Larval_Func011C()) then
+    if (Trig_Transformations_Cell_Larval_Func012C()) then
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -7917,6 +8163,13 @@ function InitTrig_Transformations_Cell_Larval()
 end
 
 function Trig_Transformations_Cell_First_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cell_First_Func010C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -7926,7 +8179,7 @@ function Trig_Transformations_Cell_First_Func009C()
     return true
 end
 
-function Trig_Transformations_Cell_First_Func011Func001C()
+function Trig_Transformations_Cell_First_Func012Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -7936,8 +8189,8 @@ function Trig_Transformations_Cell_First_Func011Func001C()
     return false
 end
 
-function Trig_Transformations_Cell_First_Func011C()
-    if (not Trig_Transformations_Cell_First_Func011Func001C()) then
+function Trig_Transformations_Cell_First_Func012C()
+    if (not Trig_Transformations_Cell_First_Func012Func001C()) then
         return false
     end
     return true
@@ -7953,10 +8206,16 @@ function Trig_Transformations_Cell_First_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_First_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10606")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Cell_First_Func010C()) then
         udg_StatMultReal = 1.50
     else
     end
-    if (Trig_Transformations_Cell_First_Func011C()) then
+    if (Trig_Transformations_Cell_First_Func012C()) then
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -7970,6 +8229,13 @@ function InitTrig_Transformations_Cell_First()
 end
 
 function Trig_Transformations_Cell_Perfect_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cell_Perfect_Func010C()
     if (not (udg_TransformationString == "super")) then
         return false
     end
@@ -7979,7 +8245,7 @@ function Trig_Transformations_Cell_Perfect_Func009C()
     return true
 end
 
-function Trig_Transformations_Cell_Perfect_Func011Func001C()
+function Trig_Transformations_Cell_Perfect_Func012Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -7989,8 +8255,8 @@ function Trig_Transformations_Cell_Perfect_Func011Func001C()
     return false
 end
 
-function Trig_Transformations_Cell_Perfect_Func011C()
-    if (not Trig_Transformations_Cell_Perfect_Func011Func001C()) then
+function Trig_Transformations_Cell_Perfect_Func012C()
+    if (not Trig_Transformations_Cell_Perfect_Func012Func001C()) then
         return false
     end
     return true
@@ -8006,12 +8272,18 @@ function Trig_Transformations_Cell_Perfect_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_Perfect_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10607")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Cell_Perfect_Func010C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
-    if (Trig_Transformations_Cell_Perfect_Func011C()) then
+    if (Trig_Transformations_Cell_Perfect_Func012C()) then
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -8129,7 +8401,7 @@ end
 function Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001A()
     if (Trig_Metal_Cooler_Stat_Mult_On_Kill_Func008Func001Func001C()) then
         udg_StatMultUnit = GetEnumUnit()
-        udg_TempReal = 0.05
+        udg_TempReal = 0.03
         TriggerExecute(gg_trg_Metal_Cooler_Add_Stat_Mult)
         udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_022")
@@ -8220,17 +8492,14 @@ function InitTrig_Metal_Cooler_Stat_Mult_On_Death()
 end
 
 function Trig_Transformations_Cooler_Base_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Cooler_Base_Func010C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+    if (not (udg_TransformationString == "r")) then
         return false
     end
     return true
@@ -8240,7 +8509,7 @@ function Trig_Transformations_Cooler_Base_Func011C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
         return false
     end
     return true
@@ -8250,7 +8519,7 @@ function Trig_Transformations_Cooler_Base_Func012C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
         return false
     end
     return true
@@ -8260,7 +8529,7 @@ function Trig_Transformations_Cooler_Base_Func013C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
         return false
     end
     return true
@@ -8270,13 +8539,23 @@ function Trig_Transformations_Cooler_Base_Func014C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 140)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Cooler_Base_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 140)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Base_Func016C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
@@ -8286,7 +8565,7 @@ function Trig_Transformations_Cooler_Base_Func015C()
     return true
 end
 
-function Trig_Transformations_Cooler_Base_Func017Func003C()
+function Trig_Transformations_Cooler_Base_Func018Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -8296,22 +8575,22 @@ function Trig_Transformations_Cooler_Base_Func017Func003C()
     return false
 end
 
-function Trig_Transformations_Cooler_Base_Func017Func006Func001C()
+function Trig_Transformations_Cooler_Base_Func018Func006Func001C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Base_Func017Func006C()
+function Trig_Transformations_Cooler_Base_Func018Func006C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Base_Func017C()
-    if (not Trig_Transformations_Cooler_Base_Func017Func003C()) then
+function Trig_Transformations_Cooler_Base_Func018C()
+    if (not Trig_Transformations_Cooler_Base_Func018Func003C()) then
         return false
     end
     return true
@@ -8327,54 +8606,60 @@ function Trig_Transformations_Cooler_Base_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cooler_Base_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10608")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Cooler_Base_Func010C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("A0KZ")
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func010C()) then
+    if (Trig_Transformations_Cooler_Base_Func011C()) then
         udg_StatMultReal = 1.25
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "White.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func011C()) then
+    if (Trig_Transformations_Cooler_Base_Func012C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "White.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func012C()) then
+    if (Trig_Transformations_Cooler_Base_Func013C()) then
         udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "White.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func013C()) then
+    if (Trig_Transformations_Cooler_Base_Func014C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func014C()) then
+    if (Trig_Transformations_Cooler_Base_Func015C()) then
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func015C()) then
+    if (Trig_Transformations_Cooler_Base_Func016C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0KZ")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Base_Func017C()) then
+    if (Trig_Transformations_Cooler_Base_Func018C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-        if (Trig_Transformations_Cooler_Base_Func017Func006C()) then
-            if (Trig_Transformations_Cooler_Base_Func017Func006Func001C()) then
+        if (Trig_Transformations_Cooler_Base_Func018Func006C()) then
+            if (Trig_Transformations_Cooler_Base_Func018Func006Func001C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L2"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
@@ -8397,13 +8682,20 @@ function InitTrig_Transformations_Cooler_Base()
 end
 
 function Trig_Transformations_Cooler_Final_Form_Func009C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "hs")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Cooler_Final_Form_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cooler_Final_Form_Func011C()
     if (not (udg_TransformationString == "metal")) then
         return false
     end
@@ -8416,7 +8708,7 @@ function Trig_Transformations_Cooler_Final_Form_Func010C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func011C()
+function Trig_Transformations_Cooler_Final_Form_Func012C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -8426,7 +8718,7 @@ function Trig_Transformations_Cooler_Final_Form_Func011C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func012C()
+function Trig_Transformations_Cooler_Final_Form_Func013C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -8436,7 +8728,7 @@ function Trig_Transformations_Cooler_Final_Form_Func012C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func013C()
+function Trig_Transformations_Cooler_Final_Form_Func014C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -8446,7 +8738,7 @@ function Trig_Transformations_Cooler_Final_Form_Func013C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func014C()
+function Trig_Transformations_Cooler_Final_Form_Func015C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -8456,7 +8748,7 @@ function Trig_Transformations_Cooler_Final_Form_Func014C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func015C()
+function Trig_Transformations_Cooler_Final_Form_Func016C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
@@ -8466,7 +8758,7 @@ function Trig_Transformations_Cooler_Final_Form_Func015C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func016C()
+function Trig_Transformations_Cooler_Final_Form_Func017C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
@@ -8476,28 +8768,28 @@ function Trig_Transformations_Cooler_Final_Form_Func016C()
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func018Func001Func001C()
+function Trig_Transformations_Cooler_Final_Form_Func019Func001Func001C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func018Func001C()
+function Trig_Transformations_Cooler_Final_Form_Func019Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func018C()
+function Trig_Transformations_Cooler_Final_Form_Func019C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func019Func003C()
+function Trig_Transformations_Cooler_Final_Form_Func020Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -8507,8 +8799,8 @@ function Trig_Transformations_Cooler_Final_Form_Func019Func003C()
     return false
 end
 
-function Trig_Transformations_Cooler_Final_Form_Func019C()
-    if (not Trig_Transformations_Cooler_Final_Form_Func019Func003C()) then
+function Trig_Transformations_Cooler_Final_Form_Func020C()
+    if (not Trig_Transformations_Cooler_Final_Form_Func020Func003C()) then
         return false
     end
     return true
@@ -8524,10 +8816,16 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cooler_Final_Form_Func009C()) then
-        udg_StatMultReal = 1.00
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10609")
+                DestroyForce(udg_TempPlayerGroup)
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func010C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Cooler_Final_Form_Func011C()) then
         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
                 udg_TransformationID = FourCC('H01A')
         udg_TransformationStatMult = 2.00
@@ -8539,40 +8837,40 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         udg_StatMultReal = 0.00
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func011C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func012C()) then
         udg_StatMultReal = 1.30
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func012C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func013C()) then
         udg_StatMultReal = 1.60
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func013C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func014C()) then
         udg_StatMultReal = 1.90
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func014C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func015C()) then
         udg_StatMultReal = 2.20
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func015C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func016C()) then
         udg_StatMultReal = 2.50
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func016C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func017C()) then
         udg_StatMultReal = 2.60
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func018C()) then
-        if (Trig_Transformations_Cooler_Final_Form_Func018Func001C()) then
-            if (Trig_Transformations_Cooler_Final_Form_Func018Func001Func001C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func019C()) then
+        if (Trig_Transformations_Cooler_Final_Form_Func019Func001C()) then
+            if (Trig_Transformations_Cooler_Final_Form_Func019Func001Func001C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0C1"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0L2"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0L2"), udg_StatMultUnit)
@@ -8590,7 +8888,7 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
         end
     else
     end
-    if (Trig_Transformations_Cooler_Final_Form_Func019C()) then
+    if (Trig_Transformations_Cooler_Final_Form_Func020C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
@@ -8606,6 +8904,13 @@ function InitTrig_Transformations_Cooler_Final_Form()
 end
 
 function Trig_Transformations_Metal_Cooler_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Metal_Cooler_Func010C()
     if (not (udg_TransformationString == "upg")) then
         return false
     end
@@ -8615,7 +8920,7 @@ function Trig_Transformations_Metal_Cooler_Func009C()
     return true
 end
 
-function Trig_Transformations_Metal_Cooler_Func010C()
+function Trig_Transformations_Metal_Cooler_Func011C()
     if (not (udg_TransformationString == "golden")) then
         return false
     end
@@ -8625,7 +8930,7 @@ function Trig_Transformations_Metal_Cooler_Func010C()
     return true
 end
 
-function Trig_Transformations_Metal_Cooler_Func012Func003C()
+function Trig_Transformations_Metal_Cooler_Func013Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -8635,8 +8940,8 @@ function Trig_Transformations_Metal_Cooler_Func012Func003C()
     return false
 end
 
-function Trig_Transformations_Metal_Cooler_Func012C()
-    if (not Trig_Transformations_Metal_Cooler_Func012Func003C()) then
+function Trig_Transformations_Metal_Cooler_Func013C()
+    if (not Trig_Transformations_Metal_Cooler_Func013Func003C()) then
         return false
     end
     return true
@@ -8652,6 +8957,12 @@ function Trig_Transformations_Metal_Cooler_Actions()
     udg_StatMultAgi = 0.00
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Metal_Cooler_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10610")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Metal_Cooler_Func010C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_TempReal = (udg_StatMultInt - 2.00)
         udg_StatMultReal = (udg_TempReal * 200.00)
@@ -8661,7 +8972,7 @@ function Trig_Transformations_Metal_Cooler_Actions()
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Metal_Cooler_Func010C()) then
+    if (Trig_Transformations_Metal_Cooler_Func011C()) then
         udg_StatMultReal = 2.70
         udg_TransformationAbility = FourCC("A07S")
         udg_TransformationAbility2 = FourCC("A0L2")
@@ -8674,7 +8985,7 @@ function Trig_Transformations_Metal_Cooler_Actions()
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0L2'))
     else
     end
-    if (Trig_Transformations_Metal_Cooler_Func012C()) then
+    if (Trig_Transformations_Metal_Cooler_Func013C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0KZ"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
@@ -9058,6 +9369,8 @@ function InitCustomTriggers()
     InitTrig_Super_Buu_to_Kid_Buu()
     InitTrig_Super_Buu_Absorb()
     InitTrig_Transformations_Fat_Buu()
+    InitTrig_Transformations_Super_Buu()
+    InitTrig_Transformations_Kid_Buu()
     InitTrig_Cell_Absorb()
     InitTrig_Transformations_Cell_Larval()
     InitTrig_Transformations_Cell_First()
