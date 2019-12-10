@@ -346,9 +346,12 @@ export function CustomPlayerTest() {
 
 
   // reveal map
+  /*
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
   }
+  */
+  // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
 
   // player leaves game
   const leaveTrig = CreateTrigger();

@@ -220,7 +220,7 @@ gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Map_Setup = nil
-gg_trg_Disable_abilities_and_heads = nil
+gg_trg_Setup_Per_Player_Properties = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Kill_Creep = nil
@@ -2539,7 +2539,9 @@ function Trig_Map_Setup_Actions()
         if (udg_TempInt > 24) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
         ForceAddPlayerSimple(udg_TempPlayer, udg_CreepPlayerGroup)
-                FogModifierStart(CreateFogModifierRect(udg_TempPlayer, FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+                SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION)
+                SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
         udg_TempInt2 = (udg_MaxNumPlayers + 1)
         while (true) do
             if (udg_TempInt2 > 24) then break end
@@ -2582,7 +2584,7 @@ function InitTrig_Map_Setup()
     TriggerAddAction(gg_trg_Map_Setup, Trig_Map_Setup_Actions)
 end
 
-function Trig_Disable_abilities_and_heads_Actions()
+function Trig_Setup_Per_Player_Properties_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
@@ -2633,10 +2635,10 @@ function Trig_Disable_abilities_and_heads_Actions()
     end
 end
 
-function InitTrig_Disable_abilities_and_heads()
-    gg_trg_Disable_abilities_and_heads = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Disable_abilities_and_heads, 0.01)
-    TriggerAddAction(gg_trg_Disable_abilities_and_heads, Trig_Disable_abilities_and_heads_Actions)
+function InitTrig_Setup_Per_Player_Properties()
+    gg_trg_Setup_Per_Player_Properties = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.01)
+    TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
 end
 
 function Trig_Setup_Spawns_Actions()
@@ -3036,7 +3038,7 @@ function InitTrig_Remove_Dead_Summons()
 end
 
 function Trig_Force_Win_Loss_Func001Func003Func003Func003C()
-    if (not (LoadIntegerBJ(3, udg_ID, udg_HeroRespawnHashtable) == 1)) then
+    if (not (LoadIntegerBJ(3, udg_ID, udg_HeroRespawnHashtable) == 0)) then
         return false
     end
     if (not (udg_TempBool == true)) then
@@ -3135,31 +3137,28 @@ function InitTrig_Force_Win_Loss()
     TriggerAddAction(gg_trg_Force_Win_Loss, Trig_Force_Win_Loss_Actions)
 end
 
+function Trig_Team_System_Init_Func003Func001A()
+end
+
 function Trig_Team_System_Init_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > (udg_MaxNumPlayers // 2)) then break end
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[0])
-        udg_TempInt2 = (udg_MaxNumPlayers + 1)
-        while (true) do
-            if (udg_TempInt2 > 24) then break end
-            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
-            SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
-            udg_TempInt2 = udg_TempInt2 + 1
-        end
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempInt = ((udg_MaxNumPlayers // 2) + 1)
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[1])
-        udg_TempInt2 = (udg_MaxNumPlayers + 1)
-        while (true) do
-            if (udg_TempInt2 > 24) then break end
-            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
-            SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
-            udg_TempInt2 = udg_TempInt2 + 1
-        end
+        udg_TempInt = udg_TempInt + 1
+    end
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForForce(udg_CreepPlayerGroup, Trig_Team_System_Init_Func003Func001A)
+        SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
+        SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
         udg_TempInt = udg_TempInt + 1
     end
     udg_TeamAboutToLose[0] = false
@@ -4824,27 +4823,6 @@ end
 function InitTrig_Hero_Pick_Completion()
     gg_trg_Hero_Pick_Completion = CreateTrigger()
     TriggerAddAction(gg_trg_Hero_Pick_Completion, Trig_Hero_Pick_Completion_Actions)
-end
-
-function Trig_Test_force_upg_saiyan_saga_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
-    TriggerExecute(gg_trg_Saiyan_Saga_Creep_Upgrade)
-end
-
-function InitTrig_Test_force_upg_saiyan_saga()
-    gg_trg_Test_force_upg_saiyan_saga = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Test_force_upg_saiyan_saga, Player(0), "up c", true)
-    TriggerAddAction(gg_trg_Test_force_upg_saiyan_saga, Trig_Test_force_upg_saiyan_saga_Actions)
-end
-
-function Trig_Set_Creep_Spawn_Delay_Actions()
-    udg_CreepRespawnReviveDelay = S2R(SubStringBJ(GetEventPlayerChatString(), 8, 12))
-end
-
-function InitTrig_Set_Creep_Spawn_Delay()
-    gg_trg_Set_Creep_Spawn_Delay = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Set_Creep_Spawn_Delay, Player(0), "-delay", false)
-    TriggerAddAction(gg_trg_Set_Creep_Spawn_Delay, Trig_Set_Creep_Spawn_Delay_Actions)
 end
 
 function Trig_Upgrade_Creeps_Func001Func003Func006C()
@@ -8978,7 +8956,7 @@ function InitCustomTriggers()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
     InitTrig_Map_Setup()
-    InitTrig_Disable_abilities_and_heads()
+    InitTrig_Setup_Per_Player_Properties()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New()
@@ -9040,8 +9018,6 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
-    InitTrig_Test_force_upg_saiyan_saga()
-    InitTrig_Set_Creep_Spawn_Delay()
     InitTrig_Upgrade_Creeps()
     InitTrig_Saiyan_Saga_Creep_Upgrade()
     InitTrig_Saga_Completion_Message()
