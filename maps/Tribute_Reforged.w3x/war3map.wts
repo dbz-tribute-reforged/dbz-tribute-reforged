@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.18i
+TR 0.19
 }
 
 STRING 4
@@ -32,7 +32,7 @@ Nondescript
 
 STRING 6
 {
-phone
+phone @ discord.gg/vayXJSZ
 }
 
 STRING 7
@@ -123,7 +123,7 @@ STRING 21
 
 STRING 22
 {
-You have received +0.05x multiplier from another Metal Cooler gathering combat data.
+You have received +0.03x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 23
@@ -16379,6 +16379,11 @@ STRING 2657
 // Abilities: A029 (Absorb), Name (Name)
 {
 Absorb
+}
+
+STRING 2658
+{
+Defeat!
 }
 
 STRING 2659
@@ -34580,6 +34585,43 @@ STRING 5688
 Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
 }
 
+STRING 5689
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x kao
+[lvl 30]  1.50x ss
+[lvl 85]  2.00x ss2
+[lvl 125] 2.25x ss3
+[lvl 150] 2.50x ssg
+[lvl 200] 2.60x ssb
+[lvl 225] 2.70x ssbkao
+}
+
+STRING 5690
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x ss
+[lvl 50]  1.50x uss
+[lvl 85]  2.00x ss2
+[lvl 150] 2.50x ssg
+[lvl 200] 2.60x ssb
+[lvl 225] 2.70x ssbe
+}
+
+STRING 5691
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x ss
+[lvl 75]  2.00x ss2
+[lvl 115] 2.10x saiyaman
+[lvl 120] 2.15x ss
+[lvl 135] 2.20x ss2
+[lvl 150] 2.50x ult
+}
+
 STRING 5692
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
@@ -34596,6 +34638,30 @@ STRING 5694
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
 Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
+}
+
+STRING 5695
+{
+Type "r" to revert.
+Transformations:
+[lvl 25]  1.50x  ss
+[lvl 50]  1.75x  uss
+[lvl 85]  2.00x  ss2
+[lvl 100] 3/2/2x uss2
+[lvl 150] 2.50x  ss2
+[lvl 225] 2.60x  ssr
+}
+
+STRING 5696
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x nail
+[lvl 60]  1.75x kami
+[lvl 90]  2.00x super
+[lvl 150] 2.50x super
+
+Kyodaika: +0.2-0.7x str 
 }
 
 STRING 5697
@@ -54098,6 +54164,11 @@ STRING 8934
 Unlocks the Gohan's hidden potential, boosting ability damage by 5% for the next 10 seconds.
 }
 
+STRING 8935
+{
+Discord
+}
+
 STRING 8936
 // Abilities: A0L7 (Gohan Boost Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
@@ -56297,6 +56368,11 @@ STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
 Super Saiyan Rage
+}
+
+STRING 9301
+{
+DBZ Tribute community @ discord.gg/vayXJSZ
 }
 
 STRING 9302
@@ -61354,16 +61430,40 @@ STRING 10145
 This unit has unlocked their potential for +10% ability damage.
 }
 
+STRING 10146
+{
+Transformations
+}
+
 STRING 10147
 // Buffs/Effects: B01M (), Buffubertip (Tooltip - Extended)
 {
 This unit has performed a justice pose giving them +15% ability damage.
 }
 
+STRING 10148
+{
+Type "hs" (without the quotation marks ") to get a list of transformations your character has.
+
+e.g. "ss" at lvl 30
+}
+
 STRING 10149
 // Buffs/Effects: B01N (), Buffubertip (Tooltip - Extended)
 {
 This unit has unleashed their potential giving them +20% ability damage.
+}
+
+STRING 10150
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.30x fp
+[lvl 35]  1.50x ss
+[lvl 90]  2.00x ss2
+[lvl 130] 2.25x ss3
+[lvl 165] 2.50x ssg
+[lvl 210] 2.60x ssb
 }
 
 STRING 10151
@@ -61408,6 +61508,17 @@ STRING 10157
 Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
 }
 
+STRING 10158
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.50x fp
+[lvl 45]  2.00x fp
+[lvl 70]  2.50x fp
+
+For Super 13 type "super" when all androids lvl greater than 35
+}
+
 STRING 10159
 // Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
@@ -61418,6 +61529,18 @@ STRING 10160
 // Abilities: A0LA (Absorb), Name (Name)
 {
 Absorb
+}
+
+STRING 10161
+{
+Type "r" to revert.
+
+Transformations:
+[lvl 15]  1.20x ws
+[lvl 35]  1.65x ss
+[lvl 75]  2.00x uss
+[lvl 150] 2.50x lss
+[lvl 200] 2.60x luss
 }
 
 STRING 10162
@@ -61436,6 +61559,18 @@ STRING 10164
 // Abilities: A0LA (Absorb), Ubertip (Tooltip - Normal - Extended)
 {
 Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deals 2/3% of enemy hero's max HP.|nHeals 2/3% of Cell's max HP.|r |n|cffFFFF00Level 1:|r Can absorb creeps +1 bonus stats.|n|cffFFFF00Level 2:|r Can absorb Androids 17 and 18.
+}
+
+STRING 10165
+{
+Transformations:
+[lvl 30]  1.50x paparapapa
+[lvl 90]  2.00x paparapapa
+[lvl 150] 2.50x paparapapa
+
+For Majin Buu type "release" at lvl 45.
+Majin Buu from Babidi gains lvl2 candy beam.
+Type "hs" as Majin Buu to see Buu's transformations.
 }
 
 STRING 10166
@@ -64053,5 +64188,158 @@ STRING 10600
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 10601
+{
+Type "r" to revert.
+Transformations:
+[lvl 105] 2.00x r
+[lvl 150] 2.25x ultra
+[lvl 200] 2.50x ultra
+}
+
+STRING 10602
+{
+Transformations:
+Fat Buu:
+Only gains stat multiplier by eating candy (see candy beam ability).
+For Super Buu type "super" at lvl 90.
+
+Super Buu:
+Gains stat multiplier by eating candy.
+Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
+Turns into Kid buu 120s after your first absorb.
+}
+
+STRING 10603
+{
+Transformations:
+Super Buu:
+Gains stat multiplier by eating candy.
+Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
+Turns into Kid buu 120s after your first absorb.
+}
+
+STRING 10604
+{
+Kid buu retains the stat mult gained from Super Buu's absorbs.
+}
+
+STRING 10605
+{
+Transformations:
+[lvl 15]  1.25x first
+[lvl 30]  1.50x fp
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x super
+
+To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10606
+{
+Type "r" to revert.
+
+Transformations:
+[lvl 15]  1.25x first
+[lvl 30]  1.50x fp
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x super
+
+To reach higher form cells you must use [D] Sense Androids and [E] Absorb abilities
+For 2nd form Cell absorb 17/18
+For Perfect Cell absorb the other android too
+
+Note: Androids respawn at 10s intervals.
+
+}
+
+STRING 10607
+{
+Type "r" to revert.
+
+Transformations:
+[lvl 15]  1.25x first
+[lvl 30]  1.50x fp
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x super
+
+To reach higher form cells you must use [D] Sense Androids and [E] Absorb abilities
+For 2nd form Cell absorb 17/18
+For Perfect Cell absorb the other android too
+
+Note: Androids respawn at 10s intervals.
+
+}
+
+STRING 10608
+{
+Transformations:
+[lvl 20]  1.25x fp
+[lvl 50]  1.50x fp
+[lvl 80]  1.75x fp
+[lvl 110] 2.00x fp
+[lvl 140] 2.20x fp
+[lvl 160] 2.60x golden
+
+To [D] Transform into Final Form Cooler, you must kill at least (1) enemy hero.
+}
+
+STRING 10609
+{
+Transformations:
+[lvl 20]  1.30x fp
+[lvl 50]  1.60x fp
+[lvl 80]  1.90x fp
+[lvl 110] 2.20x fp
+[lvl 140] 2.50x fp
+[lvl 200] 2.60x golden
+
+To become Metal Cooler type "metal" as Final Form Cooler while dead.
+}
+
+STRING 10610
+{
+Transformations:
+[lvl 250]  2.70x golden
+
+Metal Cooler gains stat multiplier from kills/deaths up to a max of 2.50x. Works with allied Metal Coolers at a reduced rate.
+[kill] +0.10x / +0.03x
+[death] +0.02x / +0.01x
+
+Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 2 bonus stats per 0.01x traded in. Stops at lvl 250.
+}
+
+STRING 10611
+{
+Download the latest official versions only at: discord.gg/vayXJSZ
+}
+
+STRING 10612
+{
+Transformations:
+[lvl 15]  1.25x first
+[lvl 30]  1.50x fp
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x super
+
+To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10613
+{
+Transformations:
+[lvl 15]  1.25x first
+[lvl 30]  1.50x fp
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x super
+
+To reach Cell's higher forms you must absorb 17/18.
 }
 

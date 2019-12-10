@@ -28,7 +28,7 @@ export class TestSaga extends BaseSaga implements Saga {
     super.start();
 
     // create unit
-    this.badGuy = CreateUnitAtLoc(Players.NEUTRAL_HOSTILE, FourCC('Hblm'), Location(0, 0), 0);
+    this.badGuy = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('Hblm'), 0, 0, 0);
   }
 
   complete(): void {

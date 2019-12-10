@@ -23,7 +23,7 @@ export function stringToCostType(costType: string): CostType {
 }
 
 export class CustomAbility implements Serializable<CustomAbility> {
-  static readonly BASE_DAMAGE = 1000;
+  static readonly BASE_DAMAGE = 1500;
   static readonly BASE_AVG_TICKS = 2;
 
   public currentTick: number;

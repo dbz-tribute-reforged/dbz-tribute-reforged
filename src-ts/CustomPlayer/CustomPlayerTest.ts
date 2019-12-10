@@ -346,9 +346,12 @@ export function CustomPlayerTest() {
 
 
   // reveal map
+  /*
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
   }
+  */
+  // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
 
   // player leaves game
   const leaveTrig = CreateTrigger();
@@ -379,17 +382,34 @@ export function CustomPlayerTest() {
   TriggerAddAction(killTrig, () => {
     const deadPlayer = GetOwningPlayer(GetDyingUnit());
     const killPlayer = GetOwningPlayer(GetKillingUnit());
-    DisplayTimedTextToForce(
-      GetPlayersAll(), 
-      15,
-      Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
-      "|r has pwned " + 
-      Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-      "|r"
-    );
+
+    if (
+      killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) && 
+      IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
+    ) {
+      DisplayTimedTextToForce(
+        GetPlayersAll(), 
+        15,
+        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
+        "|r has pwned " + 
+        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
+        "|r"
+      );
+    } else {
+      DisplayTimedTextToForce(
+        GetPlayersAll(), 
+        15,
+        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
+        "|r has pwned " + 
+        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
+        "|r"
+      );
+
+    }
   })
 
 
+  /*
   // revive heroes for free
   const revoiveSpam = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
@@ -399,13 +419,14 @@ export function CustomPlayerTest() {
       TimerStart(CreateTimer(), 5.0, false, () => {
         const t = GetExpiredTimer();
         ReviveHero(dead, 64 + Math.random()*256, 64 + Math.random()*256, true);
-        BJDebugMsg("revoive spoim");
+        // BJDebugMsg("revoive spoim");
         SetUnitState(dead, UNIT_STATE_MANA, BlzGetUnitMaxMana(dead));
         SetUnitState(dead, UNIT_STATE_LIFE, BlzGetUnitMaxHP(dead));
         DestroyTimer(t);
       })
     }
   })
+  */
 
   // reset cd of custom ability
   const cdTrig = CreateTrigger();

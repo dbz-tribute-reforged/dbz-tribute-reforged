@@ -457,7 +457,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 300,
     damageData: {
-      multiplier: BASE.DFIST_DPS,
+      multiplier: BASE.DFIST_DPS * 0.3,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -472,7 +472,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 320,
     damageData: {
-      multiplier: BASE.KAME_DPS * 3,
+      multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -487,7 +487,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 3,
+      multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -503,7 +503,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 310,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 1.3,
+      multiplier: BASE.DFIST_DPS * 0.7,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -518,7 +518,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 330,
     damageData: {
-      multiplier: BASE.KAME_DPS * 4,
+      multiplier: BASE.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -533,7 +533,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 4,
+      multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -549,7 +549,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 320,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 2.5,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -564,7 +564,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -580,7 +580,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 320,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.8,
+      multiplier: BASE.DFIST_DPS * 0.6,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -596,7 +596,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 900,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 2,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 3,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
