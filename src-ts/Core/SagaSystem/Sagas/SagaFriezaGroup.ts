@@ -31,11 +31,21 @@ export class NamekSaga extends BaseSaga implements Saga {
     super.start();
 
     // create unit
-    const boss1 = CreateUnitAtLoc(Players.NEUTRAL_HOSTILE, FourCC('U015'), Location(0, 0), 0);
+    const maxFriezaHenchmen = 10;
+    for (let i = 0; i < maxFriezaHenchmen; ++i) {
+      let offsetX = Math.random() * 1000;
+      let offsetY = Math.random() * 1000;
+      const saibaman = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n028'), 8765 + offsetX, 1400 + offsetY, 0);
+      // SagaHelper.setAllStats(saibaman, 50, 50, 50);
+      // this.bosses.set("Saibaman" + i, saibaman);
+    }
+
+    // create unit
+    const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U015'), 8765, 1400, 0);
     SagaHelper.setAllStats(boss1, 1000, 250, 400);
     this.bosses.set("Dodoria", boss1);
 
-    const boss2 = CreateUnitAtLoc(Players.NEUTRAL_HOSTILE, FourCC('U01B'), Location(0, 0), 0);
+    const boss2 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01B'), 8765, 1400, 0);
     SagaHelper.setAllStats(boss2, 1200, 300, 700);
     this.bosses.set("Zarbon", boss2);
 

@@ -55,7 +55,7 @@ function moveButton3Around() {
 }
 
 export function CustomUiTest() {
-	BJDebugMsg("Testing ui ... ");
+	BJDebugMsg("Setting uo Custom UI ... ");
 
 	let loaded = LoadToc("CustomUI\\templates.toc");
 	
@@ -75,7 +75,7 @@ export function CustomUiTest() {
 		3, 4, 5 are for textaligntype horz
 	*/
 	
-	BJDebugMsg("making main menu");
+	// BJDebugMsg("making main menu");
 	mainMenu = new ButtonMenu(
 		"mainMenu", 
 		"mainMenuTitle",
@@ -86,7 +86,7 @@ export function CustomUiTest() {
 		Colorizer.Color.White + "Tribute Reforged Menu"
 	).setRenderVisible(false);
 
-	BJDebugMsg("Setting up Main Menu Button");
+	// BJDebugMsg("Setting up Main Menu Button");
 	const mainMenuToggleButton = new BasicButton(
 		"mainMenuToggleButton",
 		grandpa,
@@ -105,7 +105,7 @@ export function CustomUiTest() {
 		}
 	});
 
-	BJDebugMsg("Setting up submenus");
+	// BJDebugMsg("Setting up submenus");
 	for (let i = 0; i < 9; ++i) {
 		const subMenuButton = new BasicButton(
 			"subMenuButton" + i, 
@@ -170,7 +170,7 @@ export function CustomUiTest() {
 	}
 	mainMenu.autoAlignButtonPositions();
 
-	BJDebugMsg("Setting up sliders");
+	// BJDebugMsg("Setting up sliders");
 	const camDistanceSlider = new BasicTitledSlider(
 		"camDistanceSlider",
 		"camDistanceSliderTitle",
@@ -253,7 +253,7 @@ export function CustomUiTest() {
 	});
 
 	// status bars
-	BJDebugMsg("Setting up status bars");
+	// BJDebugMsg("Setting up status bars");
 	let hpBar = new HPBar(
 		grandpa,
 		0, 
@@ -327,6 +327,7 @@ export function CustomUiTest() {
 
 	abilityHotBar.autoAlignButtonPositions();
 
+	BJDebugMsg("Custom UI Setup Complete.");
 
 	const hideTrig = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
