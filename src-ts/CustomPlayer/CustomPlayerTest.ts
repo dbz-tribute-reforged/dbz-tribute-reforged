@@ -393,6 +393,7 @@ export function CustomPlayerTest() {
   })
 
 
+  /*
   // revive heroes for free
   const revoiveSpam = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(revoiveSpam, EVENT_PLAYER_UNIT_DEATH);
@@ -409,6 +410,7 @@ export function CustomPlayerTest() {
       })
     }
   })
+  */
 
   // reset cd of custom ability
   const cdTrig = CreateTrigger();

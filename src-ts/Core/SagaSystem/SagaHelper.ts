@@ -33,7 +33,7 @@ export module SagaHelper {
       () => {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, 15, 
-          saga.name + " completed by " + " + 0 bonus stats"
+          saga.name + " completed by ..." + " + 0 bonus stats"
         );
         DestroyTrigger(GetTriggeringTrigger());
       },

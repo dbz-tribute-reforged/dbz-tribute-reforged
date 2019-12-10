@@ -105,10 +105,10 @@ export class VegetaSaga extends BaseSaga implements Saga {
   }
 
   start(): void {
+    super.start();
     this.sagaDelay = 30;
     TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
       this.spawnSagaUnits();
-      super.start();
       // doesnt work yet but placeholder
       SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 80);
       DestroyTimer(GetExpiredTimer());
