@@ -14,13 +14,31 @@ export module SagaHelper {
   }
 
   export function addHeroToAdvancedSaga(saga: AdvancedSaga, name: string, mustKill: boolean) {
-    const henchmen = sagaUnitsConfig.get(name);
-    if (henchmen) {
-      const henchmenUnit = CreateUnit(Players.NEUTRAL_HOSTILE, henchmen.unitId, 5500, 22400, 0);
-      SetHeroLevel(henchmenUnit, henchmen.lvl, false);
-      SagaHelper.setAllStats(henchmenUnit, henchmen.str, henchmen.agi, henchmen.int);
+    const sagaUnitConfig = sagaUnitsConfig.get(name);
+    if (sagaUnitConfig) {
+      let x = sagaUnitConfig.spawnPos.x;
+      let y = sagaUnitConfig.spawnPos.y;
+      if (
+        sagaUnitConfig.spawnPos.x > GetRectMaxX(GetPlayableMapRect()) || 
+        sagaUnitConfig.spawnPos.x < GetRectMinX(GetPlayableMapRect()) || 
+        sagaUnitConfig.spawnPos.y > GetRectMaxY(GetPlayableMapRect()) || 
+        sagaUnitConfig.spawnPos.y < GetRectMinY(GetPlayableMapRect()) 
+      ) {
+        x = 0;
+        y = 0;
+      }
+      const sagaUnit = CreateUnit(
+        Players.NEUTRAL_HOSTILE, 
+        sagaUnitConfig.unitId, 
+        x, 
+        y, 
+        0
+      );
+      SetHeroLevel(sagaUnit, sagaUnitConfig.lvl, false);
+      // TODO: change to relative str/agi/int
+      SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
       if (mustKill) {
-        saga.bosses.set(name, henchmenUnit);
+        saga.bosses.set(name, sagaUnit);
       }
     }
   }

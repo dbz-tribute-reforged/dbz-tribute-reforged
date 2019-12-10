@@ -35,5 +35,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Frieza 4", new SagaUnit(FourCC("U014"), 28, 1200, 400, 1200, new Vector2D(8765, 1400))],
     ["Frieza 5", new SagaUnit(FourCC("U018"), 29, 1500, 400, 1500, new Vector2D(8765, 1400))],
 
+    // garlic jr saga
+    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 25, 750, 350, 750, new Vector2D(6000, 22500))],
+
   ],
 );

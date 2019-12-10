@@ -1843,7 +1843,7 @@ function InitTrig_Pan_E_Effect()
 end
 
 function Trig_Lookout_Enter_Conditions()
-    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
         return false
     end
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
@@ -1867,7 +1867,7 @@ function InitTrig_Lookout_Enter()
 end
 
 function Trig_Lookout_Exit_Conditions()
-    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_CreepPlayerGroup) == false)) then
         return false
     end
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
@@ -2653,7 +2653,7 @@ end
 
 function InitTrig_Setup_Per_Player_Properties()
     gg_trg_Setup_Per_Player_Properties = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.01)
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.50)
     TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
 end
 
