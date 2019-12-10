@@ -53,18 +53,18 @@ export class NamekSaga extends BaseSaga implements Saga {
   }
 
   start(): void {
-    super.start();
-
-  }
-
-  complete(): void {
     this.sagaDelay = 60;
     TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
       this.spawnSagaUnits();
       super.start();
       // doesnt work yet but placeholder
       SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 100);
+      DestroyTimer(GetExpiredTimer());
     });
+  }
+
+  complete(): void {
+    super.complete();
   }
 
   update(t: number): void {

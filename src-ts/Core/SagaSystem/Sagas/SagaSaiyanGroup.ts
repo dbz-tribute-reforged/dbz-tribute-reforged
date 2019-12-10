@@ -34,19 +34,16 @@ export class RaditzSaga extends BaseSaga implements Saga {
 
   spawnSagaUnits(): void {
     const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01D'), 8765, 1400, 0);
-    SagaHelper.setAllStats(boss1, 100, 50, 100);
+    SagaHelper.setAllStats(boss1, 100, 50, 75);
     this.bosses.set("Raditz", boss1);
   }
 
   start(): void {
 
-    this.sagaDelay = 60;
-    TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
-      this.spawnSagaUnits();
-      super.start();
-      // doesnt work yet but placeholder
-      SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 20);
-    });
+    this.spawnSagaUnits();
+    super.start();
+    // doesnt work yet but placeholder
+    SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 20);
 
   }
 
@@ -114,6 +111,7 @@ export class VegetaSaga extends BaseSaga implements Saga {
       super.start();
       // doesnt work yet but placeholder
       SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 80);
+      DestroyTimer(GetExpiredTimer());
     });
   }
 
