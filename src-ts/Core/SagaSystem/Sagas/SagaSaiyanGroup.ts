@@ -9,12 +9,16 @@ export class RaditzSaga extends BaseSaga implements Saga {
   // custom stuff
   bosses: Map<string, unit>;
   sagaRewardTrigger: trigger;
+  sagaDelayTimer: timer;
+  sagaDelay: number;
 
   constructor() {
     super();
 
     this.bosses = new Map();
     this.sagaRewardTrigger = CreateTrigger();
+    this.sagaDelayTimer = CreateTimer();
+    this.sagaDelay = 0;
   }
 
   canStart(): boolean {
@@ -28,16 +32,21 @@ export class RaditzSaga extends BaseSaga implements Saga {
     return false;
   }
 
-  start(): void {
-    super.start();
-
+  spawnSagaUnits(): void {
     const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01D'), 8765, 1400, 0);
     SagaHelper.setAllStats(boss1, 100, 50, 100);
     this.bosses.set("Raditz", boss1);
+  }
 
-    // doesnt work yet but placeholder
-    SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 20);
+  start(): void {
 
+    this.sagaDelay = 60;
+    TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
+      this.spawnSagaUnits();
+      super.start();
+      // doesnt work yet but placeholder
+      SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 20);
+    });
 
   }
 
@@ -55,12 +64,16 @@ export class VegetaSaga extends BaseSaga implements Saga {
   // custom stuff
   bosses: Map<string, unit>;
   sagaRewardTrigger: trigger;
+  sagaDelayTimer: timer;
+  sagaDelay: number;
 
   constructor() {
     super();
 
     this.bosses = new Map();
     this.sagaRewardTrigger = CreateTrigger();
+    this.sagaDelayTimer = CreateTimer();
+    this.sagaDelay = 0;
   }
 
   canStart(): boolean {
@@ -73,9 +86,8 @@ export class VegetaSaga extends BaseSaga implements Saga {
     }
     return false;
   }
-
-  start(): void {
-    super.start();
+  
+  spawnSagaUnits(): void {
 
     // create unit
     const maxSaibamen = 6;
@@ -93,10 +105,16 @@ export class VegetaSaga extends BaseSaga implements Saga {
     SagaHelper.setAllStats(boss2, 400, 250, 600);
     this.bosses.set("Vegeta", boss2);
 
-    // doesnt work yet but placeholder
-    SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 80);
+  }
 
-
+  start(): void {
+    this.sagaDelay = 30;
+    TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
+      this.spawnSagaUnits();
+      super.start();
+      // doesnt work yet but placeholder
+      SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 80);
+    });
   }
 
   complete(): void {

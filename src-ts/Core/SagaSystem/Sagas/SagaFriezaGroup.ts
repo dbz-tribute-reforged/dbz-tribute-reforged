@@ -8,12 +8,16 @@ export class NamekSaga extends BaseSaga implements Saga {
   // custom stuff
   bosses: Map<string, unit>;
   sagaRewardTrigger: trigger;
+  sagaDelayTimer: timer;
+  sagaDelay: number;
 
   constructor() {
     super();
 
     this.bosses = new Map();
     this.sagaRewardTrigger = CreateTrigger();
+    this.sagaDelayTimer = CreateTimer();
+    this.sagaDelay = 0;
   }
 
   canStart(): boolean {
@@ -27,9 +31,7 @@ export class NamekSaga extends BaseSaga implements Saga {
     return false;
   }
 
-  start(): void {
-    super.start();
-
+  spawnSagaUnits(): void {
     // create unit
     const maxFriezaHenchmen = 10;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
@@ -48,13 +50,21 @@ export class NamekSaga extends BaseSaga implements Saga {
     const boss2 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01B'), 8765, 1400, 0);
     SagaHelper.setAllStats(boss2, 1200, 300, 700);
     this.bosses.set("Zarbon", boss2);
+  }
 
-    // doesnt work yet but placeholder
-    SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 100);
+  start(): void {
+    super.start();
+
   }
 
   complete(): void {
-    super.complete();
+    this.sagaDelay = 60;
+    TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
+      this.spawnSagaUnits();
+      super.start();
+      // doesnt work yet but placeholder
+      SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 100);
+    });
   }
 
   update(t: number): void {
