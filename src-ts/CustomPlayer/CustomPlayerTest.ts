@@ -428,6 +428,19 @@ export function CustomPlayerTest() {
   })
   */
 
+  // force stats
+  const statsTrig = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(statsTrig, Player(0), "-stats", false);
+  TriggerAddAction(statsTrig, () => {
+    const target = customPlayers[0].selectedUnit;
+    if (IsUnitType(target, UNIT_TYPE_HERO)) {
+      const value = S2I(SubString(GetEventPlayerChatString(), 7, 11));
+      SetHeroStr(target, value, true);
+      SetHeroAgi(target, value, true);
+      SetHeroInt(target, value, true);
+    }
+  });
+
   // reset cd of custom ability
   const cdTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {

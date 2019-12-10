@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-TR 0.19
+Tribute Reforged 0.19a
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-Nondescript
+discord.gg/vayXJSZ
 }
 
 STRING 6
@@ -16403,6 +16403,12 @@ STRING 2661
 [|cff00ff00Q|r] Death Beam - [|cffffcc00Level 1|r]
 }
 
+STRING 2662
+// Units: U011 (Changling), EditorSuffix (Name - Editor Suffix)
+{
+(form 1)
+}
+
 STRING 2663
 // Abilities: A039 (Tournament Trophy), Name (Name)
 {
@@ -26787,6 +26793,12 @@ STRING 4392
 // Abilities: A04Y (Kyodaika), Name (Name)
 {
 Kyodaika
+}
+
+STRING 4393
+// Units: U012 (Changling Form 2), EditorSuffix (Name - Editor Suffix)
+{
+(form 2)
 }
 
 STRING 4394
@@ -54134,6 +54146,12 @@ STRING 8927
 (androids)
 }
 
+STRING 8928
+// Units: U00J (Changling), EditorSuffix (Name - Editor Suffix)
+{
+(form mecha)
+}
+
 STRING 8929
 // Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
@@ -54144,6 +54162,12 @@ STRING 8930
 // Abilities: A0JU (Absorb), Name (Name)
 {
 Absorb
+}
+
+STRING 8931
+// Units: U013 (Changling Form 3), EditorSuffix (Name - Editor Suffix)
+{
+(form 3)
 }
 
 STRING 8932
@@ -64341,5 +64365,23 @@ Transformations:
 [lvl 130] 2.50x super
 
 To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10614
+// Units: U014 (Changling Final Form), EditorSuffix (Name - Editor Suffix)
+{
+(form final)
+}
+
+STRING 10615
+// Units: U018 (Changling), EditorSuffix (Name - Editor Suffix)
+{
+(form 100)
+}
+
+STRING 10616
+// Units: U01G (Golden Frieza), EditorSuffix (Name - Editor Suffix)
+{
+(form golden)
 }
 

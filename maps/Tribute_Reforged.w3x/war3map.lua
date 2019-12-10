@@ -230,6 +230,7 @@ gg_trg_Player_Hero_Killed = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
+gg_trg_Force_Win_Loss = nil
 gg_trg_Team_System_Init = nil
 gg_trg_Update_Alliances_for_PlayerGroups = nil
 gg_trg_Switch_players = nil
@@ -298,6 +299,7 @@ gg_trg_Upgrade_Creeps = nil
 gg_trg_Saiyan_Saga_Creep_Upgrade = nil
 gg_trg_Saga_Countdown = nil
 gg_trg_Saga_Completion_Message = nil
+gg_trg_Saga_Hint_Show = nil
 gg_trg_Saga_Stat_Reward = nil
 gg_trg_SS_Raditz_Test = nil
 gg_trg_SS_Turles_Test = nil
@@ -351,6 +353,8 @@ gg_trg_Transformations_Babidi = nil
 gg_trg_Super_Buu_to_Kid_Buu = nil
 gg_trg_Super_Buu_Absorb = nil
 gg_trg_Transformations_Fat_Buu = nil
+gg_trg_Transformations_Super_Buu = nil
+gg_trg_Transformations_Kid_Buu = nil
 gg_trg_Cell_Absorb = nil
 gg_trg_Transformations_Cell_Larval = nil
 gg_trg_Transformations_Cell_First = nil
@@ -382,10 +386,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Force_Win_Loss = nil
-gg_trg_Transformations_Super_Buu = nil
-gg_trg_Transformations_Kid_Buu = nil
-gg_trg_Saga_Hint_Show = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -938,7 +938,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15360.1, -573.4, 118.986, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14299.4, -1214.6, 149.210, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 17952.8, -7472.2, 60.173, FourCC("n02E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, -69.766, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, 290.234, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17263.8, -1854.8, 258.890, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 17026.6, -2987.0, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15964.2, -3397.3, 64.569, FourCC("n01D"))
@@ -1362,7 +1362,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15704.1, 3398.1, 226.677, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15867.2, 3490.1, 11.943, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, -33.155, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, 326.845, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16591.2, -946.4, 133.048, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 19416.5, 1787.3, 247.194, FourCC("n02E"))
 end
@@ -4885,7 +4885,28 @@ function InitTrig_Upgrade_Creeps()
     TriggerAddAction(gg_trg_Upgrade_Creeps, Trig_Upgrade_Creeps_Actions)
 end
 
+function Trig_Saiyan_Saga_Creep_Upgrade_Func003C()
+    if (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_CreepPlayerGroup) == true) then
+        return true
+    end
+    if (IsPlayerAlly(GetOwningPlayer(GetDyingUnit()), Player(PLAYER_NEUTRAL_AGGRESSIVE)) == true) then
+        return true
+    end
+    return false
+end
+
+function Trig_Saiyan_Saga_Creep_Upgrade_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003"))) then
+        return false
+    end
+    if (not Trig_Saiyan_Saga_Creep_Upgrade_Func003C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Saiyan_Saga_Creep_Upgrade_Actions()
+    DisableTrigger(GetTriggeringTrigger())
     udg_CreepUpgTypeFrom = FourCC("n01E")
     udg_CreepUpgTypeTo = FourCC("n039")
         udg_TempInt = udg_CreepUpgTypeFrom
@@ -4926,6 +4947,8 @@ end
 
 function InitTrig_Saiyan_Saga_Creep_Upgrade()
     gg_trg_Saiyan_Saga_Creep_Upgrade = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Saiyan_Saga_Creep_Upgrade, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Saiyan_Saga_Creep_Upgrade, Condition(Trig_Saiyan_Saga_Creep_Upgrade_Conditions))
     TriggerAddAction(gg_trg_Saiyan_Saga_Creep_Upgrade, Trig_Saiyan_Saga_Creep_Upgrade_Actions)
 end
 
