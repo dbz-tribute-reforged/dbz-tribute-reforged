@@ -31,31 +31,6 @@ export module SagaHelper {
     SetHeroInt(hero, int, true);
   }
 
-  export function addActionRewardStats(saga: Saga, sagaRewardTrigger: trigger, stats: number) {
-
-    TriggerRegisterPlayerUnitEvent(
-      sagaRewardTrigger,
-      Players.NEUTRAL_HOSTILE,
-      EVENT_PLAYER_UNIT_DEATH,
-      Condition(() => {
-        return saga.canComplete();
-      }),
-    );
-
-    TriggerAddAction(
-      sagaRewardTrigger,
-      () => {
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 15, 
-          saga.name + " completed by ..." + 
-          GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " " + 
-          "(" + stats + ") bonus stats (not implemented)"
-        );
-        DestroyTrigger(GetTriggeringTrigger());
-      },
-    )
-  }
-
   export function pingMinimap(bosses: Map<string, unit>) {
     for (const [name, boss] of bosses) {
       PingMinimapForForceEx(

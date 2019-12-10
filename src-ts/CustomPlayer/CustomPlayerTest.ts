@@ -430,14 +430,28 @@ export function CustomPlayerTest() {
 
   // force stats
   const statsTrig = CreateTrigger();
-  TriggerRegisterPlayerChatEvent(statsTrig, Player(0), "-stats", false);
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-stats", true);
+  }
   TriggerAddAction(statsTrig, () => {
-    const target = customPlayers[0].selectedUnit;
+    const target = customPlayers[GetPlayerId(GetTriggerPlayer())].selectedUnit;
     if (IsUnitType(target, UNIT_TYPE_HERO)) {
       const value = S2I(SubString(GetEventPlayerChatString(), 7, 11));
       SetHeroStr(target, value, true);
       SetHeroAgi(target, value, true);
       SetHeroInt(target, value, true);
+    }
+  });
+
+  const lvlTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-lvl", true);
+  }
+  TriggerAddAction(statsTrig, () => {
+    const target = customPlayers[GetPlayerId(GetTriggerPlayer())].selectedUnit;
+    if (IsUnitType(target, UNIT_TYPE_HERO)) {
+      const value = S2I(SubString(GetEventPlayerChatString(), 4, 6));
+      SetHeroLevel(target, value, false);
     }
   });
 

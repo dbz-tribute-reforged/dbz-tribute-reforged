@@ -8,7 +8,8 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    super.sagaDelay = 30;
+    this.sagaDelay = 30;
+    this.stats = 50;
   }
 
   spawnSagaUnits(): void {
@@ -25,7 +26,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Dodoria", "Zarbon"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 50);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -64,7 +65,17 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {
@@ -77,7 +88,8 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    super.sagaDelay = 20;
+    this.sagaDelay = 20;
+    this.stats = 100;
   }
 
   spawnSagaUnits(): void {
@@ -94,7 +106,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 100);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -113,7 +125,17 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {
@@ -126,7 +148,8 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    super.sagaDelay = 20;
+    this.sagaDelay = 20;
+    this.stats = 100;
   }
 
   spawnSagaUnits(): void {
@@ -143,7 +166,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Frieza 1"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 200);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -162,7 +185,17 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {

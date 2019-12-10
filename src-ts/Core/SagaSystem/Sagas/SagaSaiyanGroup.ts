@@ -10,6 +10,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.sagaDelay = 30;
+    this.stats = 15;
   }
 
   spawnSagaUnits(): void {
@@ -18,7 +19,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Raditz"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 15);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -37,7 +38,17 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {
@@ -53,6 +64,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.sagaDelay = 15;
+    this.stats = 30;
   }
 
   spawnSagaUnits(): void {
@@ -66,7 +78,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Nappa", "Raditz"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 30);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -85,7 +97,17 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {

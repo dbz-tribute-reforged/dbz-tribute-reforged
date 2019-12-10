@@ -1,6 +1,7 @@
-import { BaseSaga, SagaState } from "./BaseSaga";
+import { BaseSaga, SagaState, Saga } from "./BaseSaga";
 import { Logger } from "Libs/TreeLib/Logger";
 import { SagaHelper } from "../SagaHelper";
+import { Players } from "Libs/TreeLib/Structs/Players";
 
 export class AdvancedSaga {
   public name: string = '';
@@ -12,6 +13,8 @@ export class AdvancedSaga {
   public sagaDelayTimer: timer;
   public sagaDelay: number;
 
+  public stats: number;
+
   constructor() {
     this.state = SagaState.NotStarted;
     this.name = '';
@@ -19,6 +22,7 @@ export class AdvancedSaga {
     this.sagaRewardTrigger = CreateTrigger();
     this.sagaDelayTimer = CreateTimer();
     this.sagaDelay = 0;
+    this.stats = 0;
   }
 
   start(): void {
@@ -31,19 +35,33 @@ export class AdvancedSaga {
     this.state = SagaState.Completed;
   }
 
-  startTimerDelay(callback: () => void): void {
-    if (this.sagaDelay <= 0) {
-      callback();
-    } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
-        callback();
-      });
+  addHeroListToSaga(names: string[], mustKill: boolean) {
+    for (const name of names) {
+      SagaHelper.addHeroToAdvancedSaga(this, name, mustKill);
     }
   }
 
-  addHeroListToSaga(names: string[], mustKill: boolean) {
-    for (const name in names) {
-      SagaHelper.addHeroToAdvancedSaga(this, name, mustKill);
-    }
+  addActionRewardStats(saga: Saga) {
+    TriggerRegisterPlayerUnitEvent(
+      this.sagaRewardTrigger,
+      Players.NEUTRAL_HOSTILE,
+      EVENT_PLAYER_UNIT_DEATH,
+      Condition(() => {
+        return saga.canComplete();
+      }),
+    );
+
+    TriggerAddAction(
+      this.sagaRewardTrigger,
+      () => {
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 15, 
+          this.name + " completed by ..." + 
+          GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " " + 
+          "(" + this.stats + ") bonus stats (not implemented)"
+        );
+        DestroyTrigger(GetTriggeringTrigger());
+      },
+    )
   }
 }

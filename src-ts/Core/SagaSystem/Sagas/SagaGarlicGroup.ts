@@ -9,6 +9,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.sagaDelay = 15;
+    this.stats = 10;
   }
 
   spawnSagaUnits(): void {
@@ -17,7 +18,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Garlic Jr", "Sansho", "Nicky", "Ginger"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 10);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -36,7 +37,17 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {
@@ -50,6 +61,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.sagaDelay = 30;
+    this.stats = 50;
   }
 
   spawnSagaUnits(): void {
@@ -58,7 +70,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Garlic Jr 2", "Spice", "Vinegar", "Mustard", "Salt"], true);
     
     SagaHelper.pingMinimap(this.bosses);
-    SagaHelper.addActionRewardStats(this, this.sagaRewardTrigger, 10);
+    this.addActionRewardStats(this);
   }
 
   update(t: number): void {
@@ -77,7 +89,17 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    this.startTimerDelay(this.spawnSagaUnits);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+      });
+    }
   }
 
   complete(): void {
