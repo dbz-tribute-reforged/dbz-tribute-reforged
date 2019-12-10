@@ -1843,7 +1843,7 @@ function InitTrig_Pan_E_Effect()
 end
 
 function Trig_Lookout_Enter_Conditions()
-    if (not (GetConvertedPlayerId(GetTriggerPlayer()) <= 10)) then
+    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
         return false
     end
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
@@ -1867,7 +1867,7 @@ function InitTrig_Lookout_Enter()
 end
 
 function Trig_Lookout_Exit_Conditions()
-    if (not (GetConvertedPlayerId(GetTriggerPlayer()) <= 10)) then
+    if (not (IsPlayerInForce(GetTriggerPlayer(), udg_ActivePlayerGroup) == true)) then
         return false
     end
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then

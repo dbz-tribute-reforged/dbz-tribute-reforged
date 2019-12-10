@@ -44,21 +44,24 @@ export class NamekSaga extends BaseSaga implements Saga {
 
     // create unit
     const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U015'), 8765, 1400, 0);
-    SagaHelper.setAllStats(boss1, 1000, 250, 400);
+    SetHeroLevel(boss1, 15, false);
+    SagaHelper.setAllStats(boss1, 300, 250, 150);
     this.bosses.set("Dodoria", boss1);
 
     const boss2 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01B'), 8765, 1400, 0);
-    SagaHelper.setAllStats(boss2, 1200, 300, 700);
+    SetHeroLevel(boss1, 20, false);
+    SagaHelper.setAllStats(boss2, 500, 350, 400);
     this.bosses.set("Zarbon", boss2);
   }
 
   start(): void {
     super.start();
-    this.sagaDelay = 60;
+    this.sagaDelay = 30;
     TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
       this.spawnSagaUnits();
       // doesnt work yet but placeholder
       SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 100);
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Zarbon and Dodoria have arrived looking for the Dragon Balls.");
       DestroyTimer(GetExpiredTimer());
     });
   }

@@ -382,14 +382,30 @@ export function CustomPlayerTest() {
   TriggerAddAction(killTrig, () => {
     const deadPlayer = GetOwningPlayer(GetDyingUnit());
     const killPlayer = GetOwningPlayer(GetKillingUnit());
-    DisplayTimedTextToForce(
-      GetPlayersAll(), 
-      15,
-      Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
-      "|r has pwned " + 
-      Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-      "|r"
-    );
+
+    if (
+      killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) && 
+      IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
+    ) {
+      DisplayTimedTextToForce(
+        GetPlayersAll(), 
+        15,
+        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
+        "|r has pwned " + 
+        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
+        "|r"
+      );
+    } else {
+      DisplayTimedTextToForce(
+        GetPlayersAll(), 
+        15,
+        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
+        "|r has pwned " + 
+        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
+        "|r"
+      );
+
+    }
   })
 
 

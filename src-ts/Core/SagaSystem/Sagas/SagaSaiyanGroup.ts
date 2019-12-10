@@ -34,7 +34,8 @@ export class RaditzSaga extends BaseSaga implements Saga {
 
   spawnSagaUnits(): void {
     const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U01D'), 8765, 1400, 0);
-    SagaHelper.setAllStats(boss1, 100, 50, 75);
+    SetHeroLevel(boss1, 5, false);
+    SagaHelper.setAllStats(boss1, 50, 50, 75);
     this.bosses.set("Raditz", boss1);
   }
 
@@ -95,22 +96,25 @@ export class VegetaSaga extends BaseSaga implements Saga {
     }
 
     const boss1 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('U019'), -3300, -5500, 0);
-    SagaHelper.setAllStats(boss1, 200, 100, 150);
+    SetHeroLevel(boss1, 10, false);
+    SagaHelper.setAllStats(boss1, 100, 100, 150);
     this.bosses.set("Nappa", boss1);
 
     const boss2 = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('E003'), -3300, -5500, 0);
-    SagaHelper.setAllStats(boss2, 400, 250, 600);
+    SetHeroLevel(boss2, 20, false);
+    SagaHelper.setAllStats(boss2, 250, 250, 400);
     this.bosses.set("Vegeta", boss2);
 
   }
 
   start(): void {
     super.start();
-    this.sagaDelay = 30;
+    this.sagaDelay = 10;
     TimerStart(this.sagaDelayTimer, this.sagaDelay, false, () => {
       this.spawnSagaUnits();
       // doesnt work yet but placeholder
       SagaHelper.addStatRewardOnCompletAction(this, this.sagaRewardTrigger, 80);
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have arrived in West City.");
       DestroyTimer(GetExpiredTimer());
     });
   }
