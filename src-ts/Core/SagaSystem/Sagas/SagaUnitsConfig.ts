@@ -4,10 +4,10 @@ import { Vector2D } from "Common/Vector2D";
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
     // dead zone movie
+    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 5, 30, 25, 20, new Vector2D(6000, 22500))],
     ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(5860, 21638))],
     ["Nicky", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(5500, 22000))],
     ["Sansho", new SagaUnit(FourCC("N00C"), 1, 10, 5, 5, new Vector2D(6292, 22000))],
-    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 5, 30, 25, 20, new Vector2D(6000, 22500))],
 
     // raditz saga
     ["Raditz", new SagaUnit(FourCC("U01D"), 5, 60, 50, 75, new Vector2D(17333, -7358))],
@@ -37,6 +37,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // garlic jr saga
     ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 25, 750, 350, 750, new Vector2D(6000, 22500))],
+    ["Salt", new SagaUnit(FourCC("U00E"), 23, 500, 300, 600, new Vector2D(6292, 22000))],
+    ["Vinegar", new SagaUnit(FourCC("U00F"), 23, 500, 300, 600, new Vector2D(5861, 21285))],
+    ["Mustard", new SagaUnit(FourCC("U00G"), 23, 600, 300, 500, new Vector2D(5860, 21638))],
+    ["Spice", new SagaUnit(FourCC("U00H"), 23, 600, 300, 500, new Vector2D(5500, 22000))],
 
   ],
 );

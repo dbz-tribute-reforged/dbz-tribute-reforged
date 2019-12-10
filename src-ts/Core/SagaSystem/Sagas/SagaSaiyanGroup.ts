@@ -47,6 +47,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
     } else {
       TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
         this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
       });
     }
   }
@@ -106,6 +107,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     } else {
       TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
         this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
       });
     }
   }

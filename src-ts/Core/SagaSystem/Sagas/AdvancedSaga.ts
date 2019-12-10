@@ -41,26 +41,48 @@ export class AdvancedSaga {
     }
   }
 
-  addActionRewardStats(saga: Saga) {
-    TriggerRegisterPlayerUnitEvent(
+  addEventRewardStats(boss: unit) {
+    TriggerRegisterUnitEvent(
       this.sagaRewardTrigger,
-      Players.NEUTRAL_HOSTILE,
-      EVENT_PLAYER_UNIT_DEATH,
-      Condition(() => {
-        return saga.canComplete();
-      }),
-    );
+      boss, 
+      EVENT_UNIT_DEATH,
+    )
+  }
+
+  addActionRewardStats(saga: Saga) {
+    // TriggerRegisterPlayerUnitEvent(
+    //   this.sagaRewardTrigger,
+    //   Players.NEUTRAL_HOSTILE,
+    //   EVENT_PLAYER_UNIT_DEATH,
+    //   Condition(() => {
+    //     return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && saga.canComplete();
+    //   }),
+    // );
+    for (const [name, sagaUnit] of this.bosses) {
+      this.addEventRewardStats(sagaUnit);
+    }
 
     TriggerAddAction(
       this.sagaRewardTrigger,
       () => {
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 15, 
-          this.name + " completed by ..." + 
-          GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " " + 
-          "(" + this.stats + ") bonus stats (not implemented)"
-        );
-        DestroyTrigger(GetTriggeringTrigger());
+        const deadUnit = GetDyingUnit();
+        if (IsUnitType(deadUnit, UNIT_TYPE_HERO)) {
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS, 15, 
+            GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " just killed " + 
+            GetHeroProperName(deadUnit)
+          );
+        }
+
+        if (saga.canComplete()) {
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS, 15, 
+            this.name + " completed by ..." + 
+            GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " " + 
+            "(" + this.stats + ") bonus stats (not implemented)"
+          );
+          DestroyTrigger(GetTriggeringTrigger());
+        }
       },
     )
   }
