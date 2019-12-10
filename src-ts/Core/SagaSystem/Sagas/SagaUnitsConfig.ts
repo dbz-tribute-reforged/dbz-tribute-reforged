@@ -13,20 +13,20 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Raditz", new SagaUnit(FourCC("U01D"), 5, 60, 50, 75, new Vector2D(17333, -7358))],
 
     // saiyan saga
-    ["Nappa", new SagaUnit(FourCC("U019"), 7, 150, 100, 100, new Vector2D(-3300, -5500))],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 300, 200, 400, new Vector2D(-3300, -5500))],
+    ["Nappa", new SagaUnit(FourCC("U019"), 7, 100, 100, 100, new Vector2D(-3300, -5500))],
+    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 400, new Vector2D(-3300, -5500))],
 
     // namek saga
-    ["Dodoria", new SagaUnit(FourCC("U015"), 15, 350, 150, 200, new Vector2D(8765, 1400))],
-    ["Zarbon", new SagaUnit(FourCC("U016"), 17, 400, 300, 250, new Vector2D(8765, 1400))],
-    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 18, 600, 300, 250, new Vector2D(8765, 1400))],
+    ["Dodoria", new SagaUnit(FourCC("U015"), 15, 250, 150, 200, new Vector2D(8765, 1400))],
+    ["Zarbon", new SagaUnit(FourCC("U016"), 17, 300, 300, 250, new Vector2D(8765, 1400))],
+    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 18, 500, 300, 250, new Vector2D(8765, 1400))],
 
     // ginyu force
     ["Guldo", new SagaUnit(FourCC("U00Y"), 20, 200, 200, 600, new Vector2D(8765, 1400))],
     ["Recoome", new SagaUnit(FourCC("U005"), 22, 600, 200, 300, new Vector2D(8765, 1400))],
     ["Burter", new SagaUnit(FourCC("U00Z"), 23, 200, 600, 350, new Vector2D(8765, 1400))],
     ["Jeice", new SagaUnit(FourCC("U010"), 23, 600, 250, 600, new Vector2D(8765, 1400))],
-    ["Ginyu", new SagaUnit(FourCC("U015"), 25, 700, 250, 650, new Vector2D(8765, 1400))],
+    ["Ginyu", new SagaUnit(FourCC("U000"), 25, 700, 250, 650, new Vector2D(8765, 1400))],
 
     // frieza
     ["Frieza 1", new SagaUnit(FourCC("U011"), 25, 800, 200, 800, new Vector2D(8765, 1400))],

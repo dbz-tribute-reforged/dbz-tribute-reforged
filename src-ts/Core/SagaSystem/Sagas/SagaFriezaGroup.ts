@@ -69,8 +69,8 @@ export class NamekSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (super.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(super.bosses);
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
     }
     return false;
   }
@@ -130,8 +130,8 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (super.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(super.bosses);
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
     }
     return false;
   }
@@ -179,7 +179,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
 
-    for (let i = 2; i < 5; ++i) {
+    for (let i = 2; i <= 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
       if (frieza) {
         SetUnitInvulnerable(frieza, true);
@@ -194,7 +194,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     // if frieza dead, replace with strong frieza
-    for (let i = 1; i < 4; ++i) {
+    for (let i = 1; i < 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
       const nextFrieza = this.bosses.get("Frieza " + (i+1));
       if (frieza && nextFrieza) {
@@ -224,8 +224,8 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (super.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(super.bosses);
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
     }
     return false;
   }

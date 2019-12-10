@@ -443,7 +443,7 @@ export function CustomPlayerTest() {
 
   BJDebugMsg("Num players detected: " + numActivePlayers);
 
-  if (numActivePlayers >= 0) {
+  if (numActivePlayers == 1) {
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
@@ -456,7 +456,7 @@ export function CustomPlayerTest() {
       )
 
       ForGroup(group, () => {
-        SetHeroLevel(GetEnumUnit(), 999, false);
+        SetHeroLevel(GetEnumUnit(), 900, false);
       });
 
       DestroyGroup(group);
