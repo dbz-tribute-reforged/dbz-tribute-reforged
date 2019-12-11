@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19a
+Tribute Reforged 0.19b
 }
 
 STRING 4
@@ -60421,11 +60421,6 @@ STRING 9972
 // Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
-}
-
-STRING 9973
-{
-Upgrading Creeps...
 }
 
 STRING 9974

@@ -834,7 +834,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.75,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,

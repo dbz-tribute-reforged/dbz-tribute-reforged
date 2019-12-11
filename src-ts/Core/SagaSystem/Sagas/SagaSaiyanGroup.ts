@@ -3,6 +3,8 @@ import { Players } from "Libs/TreeLib/Structs/Players";
 import { SagaHelper } from "../SagaHelper";
 import { Trigger } from "w3ts";
 import { AdvancedSaga } from "./AdvancedSaga";
+import { CreepManager } from "Core/CreepSystem/CreepManager";
+import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Raditz';
@@ -137,6 +139,6 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    // gg_trg_Saiyan_Saga_Creep_Upgrade();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.SAIYAN_SAGA);
   }
 }

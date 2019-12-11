@@ -1,9 +1,5 @@
 udg_TempInt = 0
-udg_PlayerBaseStats = __jarray(0.0)
 udg_TempGroup = nil
-udg_CreepX = __jarray(0.0)
-udg_CreepY = __jarray(0.0)
-udg_CreepType = __jarray(0)
 udg_TempLoc = nil
 udg_KameDMG = __jarray(0.0)
 udg_TempLoc2 = nil
@@ -12,7 +8,6 @@ udg_KameLoc = {}
 udg_KameTicks = __jarray(0)
 udg_KameDMGGroup = {}
 udg_KameCaster = {}
-udg_PlayerLevel = __jarray(0)
 udg_mycamdist_Copy = __jarray(0.0)
 udg_mycamang_Copy = __jarray(0.0)
 udg_TempBool = false
@@ -57,20 +52,11 @@ udg_TransformationSFXString = ""
 udg_TransformationSFXString2 = ""
 udg_TransformationAbility = 0
 udg_TransformationAbility2 = 0
-udg_CreepMaxNum = 0
-udg_CreepUpgMaxNum = 0
 udg_StatMultStr = 0.0
 udg_StatMultAgi = 0.0
 udg_StatMultInt = 0.0
 udg_TempInt2 = 0
-udg_CreepUnit = {}
-udg_CreepRespawnReviveDelay = 0.0
-udg_CreepUpgHashtable = nil
-udg_CreepUpgTypeFrom = 0
-udg_CreepUpgTypeTo = 0
 udg_TempInt3 = 0
-udg_CreepRespawnDeathDelay = 0.0
-udg_CreepIsUpgrading = __jarray(false)
 udg_PlayerPickedHeroesUnitGroup = {}
 udg_MaxNumPlayers = 0
 udg_AvailableHeroTypesArray = __jarray(0)
@@ -158,8 +144,8 @@ udg_TransformationResultUnit = nil
 udg_SuperBuuToKidBuuUnitGroup = nil
 udg_TempUnit2 = nil
 udg_TeamAboutToLose = __jarray(false)
-udg_CreepOwner = {}
 udg_CreepPlayerGroup = nil
+udg_PlayerLevel = __jarray(0)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -221,6 +207,7 @@ gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
+gg_trg_Disable_Heads_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Kill_Creep = nil
@@ -293,10 +280,6 @@ gg_trg_Hero_Pick_Repick_Complete = nil
 gg_trg_Hero_Pick_Disable_Pick_Modes = nil
 gg_trg_Hero_Pick_Setup_Selected_Heroes = nil
 gg_trg_Hero_Pick_Completion = nil
-gg_trg_Test_force_upg_saiyan_saga = nil
-gg_trg_Set_Creep_Spawn_Delay = nil
-gg_trg_Upgrade_Creeps = nil
-gg_trg_Saiyan_Saga_Creep_Upgrade = nil
 gg_trg_Saga_Countdown = nil
 gg_trg_Saga_Completion_Message = nil
 gg_trg_Saga_Hint_Show = nil
@@ -386,29 +369,11 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Disable_Heads_for_TempPlayer = nil
+gg_trg_Kill_Creep_New_New_Stats_Only = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
-    i = 0
-    while (true) do
-        if ((i > 10)) then break end
-        udg_PlayerBaseStats[i] = 30.00
-        i = i + 1
-    end
     udg_TempGroup = CreateGroup()
-    i = 0
-    while (true) do
-        if ((i > 999)) then break end
-        udg_CreepX[i] = 0.0
-        i = i + 1
-    end
-    i = 0
-    while (true) do
-        if ((i > 999)) then break end
-        udg_CreepY[i] = 0.0
-        i = i + 1
-    end
     i = 0
     while (true) do
         if ((i > 10)) then break end
@@ -431,12 +396,6 @@ function InitGlobals()
     while (true) do
         if ((i > 10)) then break end
         udg_KameDMGGroup[i] = CreateGroup()
-        i = i + 1
-    end
-    i = 0
-    while (true) do
-        if ((i > 10)) then break end
-        udg_PlayerLevel[i] = 1
         i = i + 1
     end
     i = 0
@@ -486,21 +445,11 @@ function InitGlobals()
     udg_TransformationString = ""
     udg_TransformationSFXString = ""
     udg_TransformationSFXString2 = ""
-    udg_CreepMaxNum = 0
-    udg_CreepUpgMaxNum = 0
     udg_StatMultStr = 0.0
     udg_StatMultAgi = 0.0
     udg_StatMultInt = 0.0
     udg_TempInt2 = 0
-    udg_CreepRespawnReviveDelay = 55.00
     udg_TempInt3 = 0
-    udg_CreepRespawnDeathDelay = 5.00
-    i = 0
-    while (true) do
-        if ((i > 999)) then break end
-        udg_CreepIsUpgrading[i] = false
-        i = i + 1
-    end
     i = 0
     while (true) do
         if ((i > 30)) then break end
@@ -612,56 +561,52 @@ function InitGlobals()
         i = i + 1
     end
     udg_CreepPlayerGroup = CreateForce()
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_PlayerLevel[i] = 1
+        i = i + 1
+    end
 end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -2534,44 +2479,8 @@ function InitTrig_Cam_Angle()
     TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
 end
 
-function Trig_Map_Setup_Func007A()
-    udg_CreepUnit[udg_CreepMaxNum] = GetEnumUnit()
-    udg_CreepType[udg_CreepMaxNum] = GetUnitTypeId(GetEnumUnit())
-    udg_CreepIsUpgrading[udg_CreepMaxNum] = false
-    udg_TempInt = (ModuloInteger((udg_TempInt + 1), (CountPlayersInForceBJ(udg_CreepPlayerGroup) - 1)) + (udg_MaxNumPlayers + 1))
-    udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-    udg_CreepOwner[udg_CreepMaxNum] = udg_TempPlayer
-    SetUnitOwner(udg_CreepUnit[udg_CreepMaxNum], udg_TempPlayer, true)
-        udg_CreepX[udg_CreepMaxNum] = GetUnitX(GetEnumUnit())
-        udg_CreepY[udg_CreepMaxNum] = GetUnitY(GetEnumUnit())
-    SetUnitUserData(GetEnumUnit(), udg_CreepMaxNum)
-    udg_CreepMaxNum = (udg_CreepMaxNum + 1)
-end
-
 function Trig_Map_Setup_Actions()
     TriggerExecute(gg_trg_Map_Setup_Hashtables)
-    SetCreepCampFilterState(false)
-    udg_TempInt = (udg_MaxNumPlayers + 1)
-    while (true) do
-        if (udg_TempInt > 24) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        ForceAddPlayerSimple(udg_TempPlayer, udg_CreepPlayerGroup)
-        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-                SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION)
-                SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
-        udg_TempInt2 = (udg_MaxNumPlayers + 1)
-        while (true) do
-            if (udg_TempInt2 > 24) then break end
-            SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_ALLIED_VISION)
-            udg_TempInt2 = udg_TempInt2 + 1
-        end
-        udg_TempInt = udg_TempInt + 1
-    end
-    udg_TempGroup = GetUnitsInRectOfPlayer(GetPlayableMapRect(), Player(PLAYER_NEUTRAL_AGGRESSIVE))
-    udg_CreepMaxNum = 0
-    udg_TempInt = 0
-    ForGroupBJ(udg_TempGroup, Trig_Map_Setup_Func007A)
-        DestroyGroup(udg_TempGroup)
     udg_TempInt = 0
     while (true) do
         if (udg_TempInt > 29) then break end
@@ -2780,8 +2689,6 @@ function Trig_Map_Setup_Hashtables_Actions()
     InitHashtableBJ()
     udg_SagaHashtable = GetLastCreatedHashtableBJ()
     InitHashtableBJ()
-    udg_CreepUpgHashtable = GetLastCreatedHashtableBJ()
-    InitHashtableBJ()
     udg_HeroRespawnHashtable = GetLastCreatedHashtableBJ()
 end
 
@@ -2790,7 +2697,7 @@ function InitTrig_Map_Setup_Hashtables()
     TriggerAddAction(gg_trg_Map_Setup_Hashtables, Trig_Map_Setup_Hashtables_Actions)
 end
 
-function Trig_Kill_Creep_New_Conditions()
+function Trig_Kill_Creep_New_New_Stats_Only_Conditions()
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == false)) then
         return false
     end
@@ -2803,13 +2710,29 @@ function Trig_Kill_Creep_New_Conditions()
     return true
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func002A()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func002A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func006Func002C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func003Func002C()
+    if (not (udg_StatMultUnit ~= GetKillingUnitBJ())) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func003A()
+    udg_StatMultUnit = GetEnumUnit()
+    if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func003Func002C()) then
+        TriggerExecute(gg_trg_Add_To_Base_Stats)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+    else
+    end
+end
+
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func005C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
         return true
     end
@@ -2822,14 +2745,14 @@ function Trig_Kill_Creep_New_Func003Func001Func006Func002C()
     return false
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func006C()
-    if (not Trig_Kill_Creep_New_Func003Func001Func006Func002C()) then
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006C()
+    if (not Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func005C()) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func007Func002C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func007Func002C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H008")) then
         return true
     end
@@ -2839,114 +2762,92 @@ function Trig_Kill_Creep_New_Func003Func001Func007Func002C()
     return false
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func007C()
-    if (not Trig_Kill_Creep_New_Func003Func001Func007Func002C()) then
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func007C()
+    if (not Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func007Func002C()) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func008Func001Func002A()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001Func002A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func008Func001Func003C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001Func003C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H04X")) then
         return true
     end
     return false
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func008Func001C()
-    if (not Trig_Kill_Creep_New_Func003Func001Func008Func001Func003C()) then
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001C()
+    if (not Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func003Func001Func008C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func003Func001C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001Func001C()
     if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_SUMMONED) == false)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func003C()
+function Trig_Kill_Creep_New_New_Stats_Only_Func001C()
     if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_Func006C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kill_Creep_New_Actions()
-        local i = 0
-        local u = nil
-    if (Trig_Kill_Creep_New_Func003C()) then
-        if (Trig_Kill_Creep_New_Func003Func001C()) then
+function Trig_Kill_Creep_New_New_Stats_Only_Actions()
+    if (Trig_Kill_Creep_New_New_Stats_Only_Func001C()) then
+        if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001C()) then
             udg_StatMultUnit = GetKillingUnitBJ()
             udg_StatMultReal = (0.00 + I2R(GetUnitFoodMade(GetTriggerUnit())))
-            if (Trig_Kill_Creep_New_Func003Func001Func006C()) then
-                udg_StatMultReal = (0.50 * I2R(GetUnitFoodMade(GetTriggerUnit())))
+            if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006C()) then
+                udg_StatMultReal = ((0.50 * 0.33) * I2R(GetUnitFoodMade(GetTriggerUnit())))
+                ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func006Func003A)
+                udg_StatMultUnit = GetKillingUnitBJ()
             else
             end
-            if (Trig_Kill_Creep_New_Func003Func001Func007C()) then
+            if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func007C()) then
                 udg_StatMultReal = (0.66 * I2R(GetUnitFoodMade(GetTriggerUnit())))
             else
             end
-            if (Trig_Kill_Creep_New_Func003Func001Func008C()) then
+            if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008C()) then
                 TriggerExecute(gg_trg_Add_To_Base_Stats)
                 TriggerExecute(gg_trg_Update_Current_Stats)
             else
-                if (Trig_Kill_Creep_New_Func003Func001Func008Func001C()) then
+                if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001C()) then
                     udg_StatMultReal = (0.50 * I2R(GetUnitFoodMade(GetTriggerUnit())))
-                    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_New_Func003Func001Func008Func001Func002A)
+                    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func008Func001Func002A)
                 else
                 end
             end
         else
             udg_StatMultReal = (0.25 * I2R(GetUnitFoodMade(GetTriggerUnit())))
-            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_New_Func003Func001Func002A)
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func002A)
         end
     else
     end
-        i = GetUnitUserData(GetTriggerUnit())
-        udg_TempBool = udg_CreepIsUpgrading[i]
-    if (Trig_Kill_Creep_New_Func006C()) then
-        TriggerSleepAction(udg_CreepRespawnDeathDelay)
-        RemoveUnit(GetTriggerUnit())
-        TriggerSleepAction(udg_CreepRespawnReviveDelay)
-    else
-        RemoveUnit(GetTriggerUnit())
-                udg_CreepIsUpgrading[i] = false
-    end
-        udg_TempLoc = Location(udg_CreepX[i], udg_CreepY[i])
-        CreateNUnitsAtLoc( 1, udg_CreepType[i], udg_CreepOwner[i], udg_TempLoc, GetRandomDirectionDeg() )
-        SetUnitUserData( GetLastCreatedUnit(), i )
-        udg_CreepUnit[i] = GetLastCreatedUnit()
-        RemoveLocation(udg_TempLoc)
 end
 
-function InitTrig_Kill_Creep_New()
-    gg_trg_Kill_Creep_New = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Creep_New, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Kill_Creep_New, Condition(Trig_Kill_Creep_New_Conditions))
-    TriggerAddAction(gg_trg_Kill_Creep_New, Trig_Kill_Creep_New_Actions)
+function InitTrig_Kill_Creep_New_New_Stats_Only()
+    gg_trg_Kill_Creep_New_New_Stats_Only = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Creep_New_New_Stats_Only, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Kill_Creep_New_New_Stats_Only, Condition(Trig_Kill_Creep_New_New_Stats_Only_Conditions))
+    TriggerAddAction(gg_trg_Kill_Creep_New_New_Stats_Only, Trig_Kill_Creep_New_New_Stats_Only_Actions)
 end
 
 function Trig_Player_Hero_Killed_Conditions()
@@ -4866,117 +4767,6 @@ end
 function InitTrig_Hero_Pick_Completion()
     gg_trg_Hero_Pick_Completion = CreateTrigger()
     TriggerAddAction(gg_trg_Hero_Pick_Completion, Trig_Hero_Pick_Completion_Actions)
-end
-
-function Trig_Upgrade_Creeps_Func001Func003Func006C()
-    if (not (udg_CreepX[udg_TempInt] == GetLocationX(udg_TempLoc))) then
-        return false
-    end
-    if (not (udg_CreepY[udg_TempInt] == GetLocationY(udg_TempLoc))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Upgrade_Creeps_Func001Func003C()
-    if (not (udg_TempInt3 ~= 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Upgrade_Creeps_Actions()
-    udg_TempInt = 0
-    while (true) do
-        if (udg_TempInt > (udg_CreepMaxNum - 1)) then break end
-                udg_TempInt2 = udg_CreepType[udg_TempInt]
-        udg_TempInt3 = LoadIntegerBJ(0, udg_TempInt2, udg_CreepUpgHashtable)
-        if (Trig_Upgrade_Creeps_Func001Func003C()) then
-                        udg_CreepUpgTypeTo = udg_TempInt3
-            udg_CreepType[udg_TempInt] = udg_CreepUpgTypeTo
-            udg_CreepIsUpgrading[udg_TempInt] = true
-            udg_TempLoc = GetUnitLoc(udg_CreepUnit[udg_TempInt])
-            if (Trig_Upgrade_Creeps_Func001Func003Func006C()) then
-                UnitApplyTimedLifeBJ(GetRandomReal(2.00, 12.00), FourCC("BTLF"), udg_CreepUnit[udg_TempInt])
-            else
-            end
-                        RemoveLocation(udg_TempLoc)
-        else
-        end
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Upgrade_Creeps()
-    gg_trg_Upgrade_Creeps = CreateTrigger()
-    TriggerAddAction(gg_trg_Upgrade_Creeps, Trig_Upgrade_Creeps_Actions)
-end
-
-function Trig_Saiyan_Saga_Creep_Upgrade_Func003C()
-    if (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_CreepPlayerGroup) == true) then
-        return true
-    end
-    if (IsPlayerAlly(GetOwningPlayer(GetDyingUnit()), Player(PLAYER_NEUTRAL_AGGRESSIVE)) == true) then
-        return true
-    end
-    return false
-end
-
-function Trig_Saiyan_Saga_Creep_Upgrade_Conditions()
-    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E003"))) then
-        return false
-    end
-    if (not Trig_Saiyan_Saga_Creep_Upgrade_Func003C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saiyan_Saga_Creep_Upgrade_Actions()
-    DisableTrigger(GetTriggeringTrigger())
-    udg_CreepUpgTypeFrom = FourCC("n01E")
-    udg_CreepUpgTypeTo = FourCC("n039")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n01D")
-    udg_CreepUpgTypeTo = FourCC("n037")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n015")
-    udg_CreepUpgTypeTo = FourCC("n037")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n019")
-    udg_CreepUpgTypeTo = FourCC("n038")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n01A")
-    udg_CreepUpgTypeTo = FourCC("n03C")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n02F")
-    udg_CreepUpgTypeTo = FourCC("n03A")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    udg_CreepUpgTypeFrom = FourCC("n02E")
-    udg_CreepUpgTypeTo = FourCC("n03A")
-        udg_TempInt = udg_CreepUpgTypeFrom
-        udg_TempInt2 = udg_CreepUpgTypeTo
-    SaveIntegerBJ(udg_TempInt2, 0, udg_TempInt, udg_CreepUpgHashtable)
-    TriggerExecute(gg_trg_Upgrade_Creeps)
-end
-
-function InitTrig_Saiyan_Saga_Creep_Upgrade()
-    gg_trg_Saiyan_Saga_Creep_Upgrade = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Saiyan_Saga_Creep_Upgrade, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Saiyan_Saga_Creep_Upgrade, Condition(Trig_Saiyan_Saga_Creep_Upgrade_Conditions))
-    TriggerAddAction(gg_trg_Saiyan_Saga_Creep_Upgrade, Trig_Saiyan_Saga_Creep_Upgrade_Actions)
 end
 
 function Trig_Saga_Completion_Message_Actions()
@@ -9340,7 +9130,7 @@ function InitCustomTriggers()
     InitTrig_Disable_Heads_for_TempPlayer()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
-    InitTrig_Kill_Creep_New()
+    InitTrig_Kill_Creep_New_New_Stats_Only()
     InitTrig_Player_Hero_Killed()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
@@ -9399,8 +9189,6 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
-    InitTrig_Upgrade_Creeps()
-    InitTrig_Saiyan_Saga_Creep_Upgrade()
     InitTrig_Saga_Completion_Message()
     InitTrig_Saga_Hint_Show()
     InitTrig_Saga_Stat_Reward()

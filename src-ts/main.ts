@@ -5,8 +5,10 @@ import { CustomPlayerTest } from 'CustomPlayer/CustomPlayerTest';
 import { PathingCheck } from 'Common/PathingCheck';
 import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
+import { CreepManager } from 'Core/CreepSystem/CreepManager';
 
 let sagaManager: SagaManager;
+let creepManager: CreepManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -19,6 +21,8 @@ function tsMain() {
   // initialize some systems
   PathingCheck.Init();
   sagaManager = SagaManager.getInstance();
+
+  creepManager = CreepManager.getInstance();
   
   CustomUiTest();
   CustomPlayerTest();
