@@ -29,11 +29,11 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     if (this.android20 && !this.isRunningAway) {
       const android20Hp = GetUnitState(this.android20, UNIT_STATE_LIFE);
       if (
-        android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.25 &&
+        android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.5 &&
         android20Hp > 0
       ) {
         IssuePointOrder(this.android20, "move", 14000, 7500);
-        SetUnitMoveSpeed(this.android20, 460);
+        SetUnitMoveSpeed(this.android20, 500);
         this.isRunningAway = true;
       }
     }
