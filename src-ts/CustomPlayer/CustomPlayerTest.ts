@@ -518,13 +518,11 @@ export function CustomPlayerTest() {
 
     const tpTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerUnitEvent(
-        tpTrig, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
-        Condition(()=> {
-          return GetIssuedOrderId() == OrderId("patrol");
-        })
-      );
+      TriggerRegisterPlayerUnitEventSimple(tpTrig, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
     };
+    TriggerAddCondition(tpTrig, Condition(()=>{
+      return GetIssuedOrderId() == String2OrderIdBJ("patrol");
+    }));
     TriggerAddAction(tpTrig, () => {
       const unit = GetTriggerUnit();
       SetUnitX(unit, GetOrderPointX());

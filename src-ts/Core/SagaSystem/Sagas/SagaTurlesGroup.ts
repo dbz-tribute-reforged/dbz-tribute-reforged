@@ -10,9 +10,9 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 45;
     this.stats = 25;
-    this.availableFruits = 2;
+    this.availableFruits = 3;
   }
 
   spawnSagaUnits(): void {

@@ -4,6 +4,7 @@ import { Vector2D } from "Common/Vector2D";
 import { DefaultCreepUpgradeConfig, CreepUpgradeConfig } from "./CreepUpgradeConfig";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { RandomCreepTypeHelper } from "./CreepUpgradeTypes";
+import { Logger } from "Libs/TreeLib/Logger";
 
 // Possible Optimisations: 
 // use custom value of a unit for O(1)
@@ -99,7 +100,14 @@ export class CreepManager {
     );
     
     // in with the new, out with the old
-    this.customCreeps.set(newCreepUnit, customCreep.shallowCopy());
+    this.customCreeps.set(newCreepUnit, new CustomCreep(
+      newCreepUnit,
+      customCreep.unitTypeId,
+      customCreep.owner,
+      new Vector2D(customCreep.position.x, customCreep.position.y),
+      customCreep.facing,
+      false,
+    ));
     this.customCreeps.delete(oldCreep);
     RemoveUnit(oldCreep);
   }
@@ -120,15 +128,15 @@ export class CreepManager {
         const creepUnit = GetTriggerUnit();
         const customCreep = this.customCreeps.get(creepUnit);
         if (customCreep) {
+          let wait = Constants.creepRespawnReviveDelay;
           if (customCreep.isUpgrading) {
             customCreep.isUpgrading = false;
-            this.doCreepRespawn(creepUnit, customCreep);
-          } else {
-            TimerStart(CreateTimer(), Constants.creepRespawnReviveDelay, false, () => {
-              this.doCreepRespawn(creepUnit, customCreep);
-              DestroyTimer(GetExpiredTimer());
-            });
+            wait = Math.random() + 0.1;
           }
+          TimerStart(CreateTimer(), wait, false, () => {
+            this.doCreepRespawn(creepUnit, customCreep);
+            DestroyTimer(GetExpiredTimer());
+          });
         }
       }
     );
@@ -153,13 +161,20 @@ export class CreepManager {
   upgradeCreeps(configName: string) {
     const config = this.creepUpgradeConfigs.upgradeGroups[configName];
     if (config) {
-      BJDebugMsg("Performing upgrade: " + configName);
+      Logger.LogDebug("Performing upgrade: " + configName);
       for (const [unit, customCreep] of this.customCreeps) {
-        const newType = config.map.get(GetUnitTypeId(unit));
+        const newType = config.map.get(customCreep.unitTypeId);
         if (newType) {
           customCreep.unitTypeId = RandomCreepTypeHelper.getType(newType);
           // if not chaining, force replace
-          if (GetUnitY(unit) != customCreep.position.y) {
+          const unitY = GetUnitY(unit);
+          const unitX = GetUnitX(unit);
+          if (
+            unitY >= customCreep.position.y - Constants.creepChainErrorMargin &&
+            unitY <= customCreep.position.y + Constants.creepChainErrorMargin &&
+            unitX >= customCreep.position.x - Constants.creepChainErrorMargin &&
+            unitX <= customCreep.position.x + Constants.creepChainErrorMargin
+          ) {
             customCreep.isUpgrading = true;
             UnitApplyTimedLife(
               unit, 

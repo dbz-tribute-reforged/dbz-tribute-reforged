@@ -3,18 +3,18 @@ import { Vector2D } from "Common/Vector2D";
 
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
-    // dead zone movie
+    // dead zone
     ["Garlic Jr", new SagaUnit(FourCC("U00D"), 5, 30, 25, 20, new Vector2D(6000, 22500))],
     ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(5860, 21638))],
     ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(5500, 22000))],
     ["Sansho", new SagaUnit(FourCC("N00C"), 1, 10, 5, 5, new Vector2D(6300, 22000))],
 
-    // raditz saga
+    // raditz
     ["Raditz", new SagaUnit(FourCC("U01D"), 5, 60, 50, 75, new Vector2D(17333, -7358))],
 
     // saiyan saga
-    ["Nappa", new SagaUnit(FourCC("U019"), 7, 100, 100, 100, new Vector2D(-3300, -5500))],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 400, new Vector2D(-3300, -5500))],
+    ["Nappa", new SagaUnit(FourCC("U019"), 8, 150, 100, 100, new Vector2D(-3300, -5500))],
+    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 250, 200, 400, new Vector2D(-3300, -5500))],
     
     // wheelo
     ["Kishime", new SagaUnit(FourCC("O00P"), 6, 100, 100, 100, new Vector2D(800, 18000))],
@@ -45,15 +45,42 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Frieza 1", new SagaUnit(FourCC("U011"), 25, 800, 200, 800, new Vector2D(8800, 1400))],
     ["Frieza 2", new SagaUnit(FourCC("U012"), 26, 1000, 300, 800, new Vector2D(8800, 1400))],
     ["Frieza 3", new SagaUnit(FourCC("U013"), 27, 1100, 350, 850, new Vector2D(8800, 1400))],
-    ["Frieza 4", new SagaUnit(FourCC("U014"), 28, 1200, 400, 1200, new Vector2D(8800, 1400))],
-    ["Frieza 5", new SagaUnit(FourCC("U018"), 29, 1500, 400, 1500, new Vector2D(8800, 1400))],
+    ["Frieza 4", new SagaUnit(FourCC("U014"), 28, 1200, 400, 1300, new Vector2D(8800, 1400))],
+    ["Frieza 5", new SagaUnit(FourCC("U018"), 29, 1500, 400, 1600, new Vector2D(8800, 1400))],
 
-    // garlic jr saga
+    // garlic jr
     ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 25, 750, 350, 750, new Vector2D(6000, 22500))],
     ["Salt", new SagaUnit(FourCC("U00E"), 23, 500, 300, 600, new Vector2D(6292, 22000))],
     ["Vinegar", new SagaUnit(FourCC("U00F"), 23, 500, 300, 600, new Vector2D(5861, 21285))],
     ["Mustard", new SagaUnit(FourCC("U00G"), 23, 600, 300, 500, new Vector2D(5860, 21638))],
     ["Spice", new SagaUnit(FourCC("U00H"), 23, 600, 300, 500, new Vector2D(5500, 22000))],
+
+    // cooler's revenge
+    ["Cooler", new SagaUnit(FourCC("H042"), 28, 1500, 400, 1600, new Vector2D(4500, 9300))],
+
+    // return of cooler
+    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 35, 2000, 400, 2000, new Vector2D(-6000, 17200))],
+    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 35, 2000, 400, 2000, new Vector2D(-6000, 17200))],
+    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 35, 2000, 400, 2000, new Vector2D(-6000, 17200))],
+
+    // trunks saga
+    ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 32, 2100, 350, 1900, new Vector2D(18000, 2000))],
+    ["King Cold", new SagaUnit(FourCC("U00K"), 32, 1600, 350, 1800, new Vector2D(18000, 2000))],
+
+    // androids 19/20 saga
+    ["Android 19", new SagaUnit(FourCC("O00A"), 33, 2500, 350, 2500, new Vector2D(-5000, -5000))],
+    ["Android 20", new SagaUnit(FourCC("H04T"), 33, 2500, 350, 2500, new Vector2D(-5000, -5000))],
+
+    // androids 16/17/18 saga
+    ["Android 16", new SagaUnit(FourCC("H08O"), 37, 4000, 350, 4000, new Vector2D(14000, 7500))],
+    ["Android 17", new SagaUnit(FourCC("H05C"), 35, 3500, 350, 3500, new Vector2D(14000, 7500))],
+    ["Android 18", new SagaUnit(FourCC("H05D"), 35, 3000, 350, 3000, new Vector2D(14000, 7500))],
+
+    // super android 13
+    ["Android 13", new SagaUnit(FourCC("H01V"), 36, 3500, 350, 3500, new Vector2D(-5000, -5000))],
+    ["Android 14", new SagaUnit(FourCC("H01S"), 35, 2500, 350, 2000, new Vector2D(-5000, -5000))],
+    ["Android 15", new SagaUnit(FourCC("H01T"), 35, 2000, 350, 2500, new Vector2D(-5000, -5000))],
+    ["Super Android 13", new SagaUnit(FourCC("H01U"), 38, 4500, 400, 4500, new Vector2D(-5000, -5000))],
 
   ],
 );

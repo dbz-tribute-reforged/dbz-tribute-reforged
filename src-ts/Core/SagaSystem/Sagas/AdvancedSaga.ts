@@ -26,12 +26,12 @@ export class AdvancedSaga {
   }
 
   start(): void {
-    Logger.LogDebug(this.name + " Saga Started");
+    Logger.LogDebug(this.name + " Started");
     this.state = SagaState.InProgress;
   }
 
   complete(): void {
-    Logger.LogDebug(this.name + " Saga Completed");
+    Logger.LogDebug(this.name + " Completed");
     this.state = SagaState.Completed;
   }
 

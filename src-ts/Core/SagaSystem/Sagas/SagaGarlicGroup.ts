@@ -57,7 +57,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
 }
 
 export class GarlicJrSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Garlic Jr';
+  name: string = '[DBZ] Garlic Jr Saga';
 
   constructor() {
     super();

@@ -77,7 +77,6 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SLUG);
   }
 
 }

@@ -3,10 +3,10 @@ import { Players } from "Libs/TreeLib/Structs/Players";
 import { SagaHelper } from "../SagaHelper";
 import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
-import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Namek';
+  name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';
 
   constructor() {
     super();
@@ -18,11 +18,11 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Zarbon and Dodoria have arrived looking for the Dragon Balls.");
 
     // create unit
-    const maxFriezaHenchmen = 8;
+    const maxFriezaHenchmen = 3;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 1500;
       let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n028'), 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaOrlen, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
@@ -99,11 +99,11 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 }
 
 export class GinyuSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Ginyu Force';
+  name: string = '[DBZ] Ginyu Force Saga';
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 15;
     this.stats = 100;
   }
 
@@ -115,7 +115,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 1500;
       let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n02r'), 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
@@ -160,7 +160,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 }
 
 export class FriezaSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Frieza';
+  name: string = '[DBZ] Frieza Saga';
 
   constructor() {
     super();
@@ -172,11 +172,11 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza has arrived looking for the Dragon Balls.");
 
     // create unit
-    const maxFriezaHenchmen = 10;
+    const maxFriezaHenchmen = 8;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 2000;
       let offsetY = Math.random() * 2000;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n02r'), 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
@@ -204,7 +204,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
           BlzIsUnitInvulnerable(nextFrieza) &&
           (
             IsUnitDeadBJ(frieza) || 
-            GetUnitState(frieza, UNIT_STATE_LIFE) < GetUnitState(frieza, UNIT_STATE_MAX_LIFE) * 0.6
+            GetUnitState(frieza, UNIT_STATE_LIFE) < GetUnitState(frieza, UNIT_STATE_MAX_LIFE) * 0.4
           )
         ) {
           DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza: This isn't even my final form!");
@@ -236,7 +236,6 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_FRIEZA);
     this.spawnWhenDelayFinished();
   }
 
@@ -253,6 +252,67 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_FRIEZA);
+  }
+}
+
+export class TrunksSaga extends AdvancedSaga implements Saga {
+  name: string = '[DBZ] Trunks Saga';
+
+  constructor() {
+    super();
+    this.sagaDelay = 30;
+    this.stats = 100;
+  }
+
+  spawnSagaUnits(): void {
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "King Cold and Mecha Frieza have come seeking revenge!");
+
+    // create unit
+    const maxFriezaHenchmen = 5;
+    for (let i = 0; i < maxFriezaHenchmen; ++i) {
+      let offsetX = Math.random() * 2000;
+      let offsetY = Math.random() * 2000;
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaPineapple, 18000 + offsetX, 2000 + offsetY, Math.random() * 360);
+    }
+
+    this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
+    
+    SagaHelper.pingMinimap(this.bosses);
+    this.addActionRewardStats(this);
+  }
+
+  update(t: number): void {
+  }
+
+  canStart(): boolean {
+    return true;
+  }
+
+  canComplete(): boolean {
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
+    }
+    return false;
+  }
+
+  start(): void {
+    super.start();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_TRUNKS);
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  }
+
+  complete(): void {
+    super.complete();
   }
 }

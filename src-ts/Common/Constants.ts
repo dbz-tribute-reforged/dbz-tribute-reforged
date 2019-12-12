@@ -5,4 +5,5 @@ export module Constants {
   export const creepUpgradeDeathDelay = 10;
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
+  export const creepChainErrorMargin: number = 4;
 }

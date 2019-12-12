@@ -3,9 +3,8 @@ import { RandomCreepType } from "./CreepUpgradeTypes";
 export module SagaUpgradeNames {
   export const POST_SAIYANS = "PostSaiyans";
   export const PRE_SLUG = "PreSlug";
-  export const POST_SLUG = "PostSlug";
-  export const PRE_FRIEZA = "PreFrieza";
-  export const POST_FRIEZA = "PostFrieza";
+  export const PRE_TRUNKS = "PreTrunks";
+  export const POST_TRUNKS = "PostTrunks";
 }
 
 export module Creep {
@@ -53,13 +52,13 @@ export module Creep {
 
   export const FriezaScout = FourCC("n028"); // lvl 4
   export const FriezaHenchmen = FourCC("n02R"); // lvl 16
-  export const FriezaOrlen = FourCC("n00Y"); // lvl 12 orange
+  export const FriezaOrlen = FourCC("n00Y"); // lvl 13 orange
   export const FriezaNabana = FourCC("n00Z"); // lvl 13 green
   export const FriezaRobery = FourCC("n010"); // lvl 13 brown (pink)
-  export const FriezaAppule = FourCC("n011"); // lvl 16 purple
-  export const FriezaPineapple = FourCC("n012"); // lvl 21 yellow
-  export const FriezaStrawberry = FourCC("n017") // lvl 26 red
-  export const FriezaGreyberry = FourCC("n018") // lvl 30 grey
+  export const FriezaAppule = FourCC("n011"); // lvl 17 purple
+  export const FriezaPineapple = FourCC("n012"); // lvl 22 yellow
+  export const FriezaStrawberry = FourCC("n017") // lvl 30 red
+  export const FriezaGreyberry = FourCC("n018") // lvl 32 grey
 
 
   // maybe use these for when hell opens up?
@@ -130,6 +129,9 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           [Creep.Saibaman, [
             new RandomCreepType(Creep.SlugGuard, 1.0)
           ]],
+          [Creep.Bull, [
+            new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
+          ]],
           [Creep.Sabertooth, [
             new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
           ]],
@@ -146,8 +148,8 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DemonUnknown, 1.0)
           ]],
           [Creep.TurtleBaby, [
-            new RandomCreepType(Creep.TurtleAdult, 0.8),
-            new RandomCreepType(Creep.TreacherousLobster, 0.2),
+            new RandomCreepType(Creep.TurtleAdult, 0.6),
+            new RandomCreepType(Creep.TreacherousLobster, 0.4),
           ]],
           [Creep.DinosaurTeen, [
             new RandomCreepType(Creep.DinosaurSmall, 0.5),
@@ -156,47 +158,21 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
         ]
       )
     },
-    PostSlug: {
-      map: new Map<number, RandomCreepType[]>(
-        [
-          [Creep.TreacherousLobster, [
-            new RandomCreepType(Creep.TurtleAdult, 1.0),
-          ]],
-          [Creep.SlugGuard, [
-            new RandomCreepType(Creep.ForestMonster, 1.0),
-          ]],
-          [Creep.SlugDefenseDroid, [
-            new RandomCreepType(Creep.Witch, 1.0),
-          ]],
-          [Creep.DemonSpooky, [
-            new RandomCreepType(Creep.BirdHater, 1.0),
-          ]],
-          [Creep.DemonUnknown, [
-            new RandomCreepType(Creep.DemonImmortal, 1.0),
-          ]],
-          [Creep.CrabGiant, [
-            new RandomCreepType(Creep.CrabMother, 1.0),
-          ]],
-          [Creep.Pterodactyl, [
-            new RandomCreepType(Creep.DinosaurLarge, 1.0),
-          ]],
-          [Creep.DinosaurSmall, [
-            new RandomCreepType(Creep.DinosaurLarge, 0.8),
-            new RandomCreepType(Creep.Pterodactyl, 0.2),
-          ]],
-        ]
-      )
-    },
-    PreFrieza: {
+    // can skip slug creeps and go straight to this
+    PreTrunks: {
       map: new Map<number, RandomCreepType[]>(
         [
           [Creep.Saibaman, [
-            new RandomCreepType(Creep.FriezaOrlen, 0.4),
+            new RandomCreepType(Creep.FriezaOrlen, 0.5),
             new RandomCreepType(Creep.FriezaNabana, 0.3),
-            new RandomCreepType(Creep.FriezaRobery, 0.3),
+            new RandomCreepType(Creep.FriezaRobery, 0.2),
+          ]],
+          [Creep.Bull, [
+            new RandomCreepType(Creep.FriezaAppule, 0.9),
+            new RandomCreepType(Creep.FriezaRobery, 0.1),
           ]],
           [Creep.Sabertooth, [
-            new RandomCreepType(Creep.FriezaAppule, 0.4),
+            new RandomCreepType(Creep.FriezaAppule, 1.0),
           ]],
           [Creep.BearThief, [
             new RandomCreepType(Creep.FriezaPineapple, 1.0)
@@ -210,23 +186,54 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           [Creep.RRPunisherDroid, [
             new RandomCreepType(Creep.FriezaGreyberry, 1.0)
           ]],
+          // seafood
           [Creep.TurtleBaby, [
-            new RandomCreepType(Creep.TurtleAdult, 0.8),
-            new RandomCreepType(Creep.TreacherousLobster, 0.2),
+            new RandomCreepType(Creep.TurtleAdult, 0.9),
+            new RandomCreepType(Creep.TreacherousLobster, 0.1),
           ]],
+          [Creep.TreacherousLobster, [
+            new RandomCreepType(Creep.TurtleAdult, 1.0),
+          ]],
+          [Creep.CrabGiant, [
+            new RandomCreepType(Creep.CrabMother, 1.0),
+          ]],
+          // dinos
           [Creep.DinosaurTeen, [
-            new RandomCreepType(Creep.DinosaurSmall, 0.5),
-            new RandomCreepType(Creep.Pterodactyl, 0.5)
+            new RandomCreepType(Creep.Pterodactyl, 0.8),
+            new RandomCreepType(Creep.DinosaurSmall, 0.2),
+          ]],
+          [Creep.DinosaurSmall, [
+            new RandomCreepType(Creep.Pterodactyl, 0.6),
+            new RandomCreepType(Creep.DinosaurLarge, 0.4),
+          ]],
+          [Creep.Pterodactyl, [
+            new RandomCreepType(Creep.DinosaurLarge, 1.0),
+          ]],
+          // slug conversion if necessary
+          [Creep.SlugGuard, [
+            new RandomCreepType(Creep.FriezaOrlen, 0.5),
+            new RandomCreepType(Creep.FriezaNabana, 0.3),
+            new RandomCreepType(Creep.FriezaRobery, 0.2),
+          ]],
+          [Creep.SlugDefenseDroid, [
+            new RandomCreepType(Creep.FriezaAppule, 0.9),
+            new RandomCreepType(Creep.FriezaRobery, 0.1),
+          ]],
+          [Creep.NocturnalCreature, [
+            new RandomCreepType(Creep.FriezaPineapple, 1.0)
+          ]],
+          [Creep.DemonSpooky, [
+            new RandomCreepType(Creep.FriezaStrawberry, 1.0)
+          ]],
+          [Creep.DemonUnknown, [
+            new RandomCreepType(Creep.FriezaGreyberry, 1.0)
           ]],
         ]
       )
     },
-    PostFrieza: {
+    PostTrunks: {
       map: new Map<number, RandomCreepType[]>(
         [
-          [Creep.TreacherousLobster, [
-            new RandomCreepType(Creep.TurtleAdult, 1.0),
-          ]],
           [Creep.FriezaOrlen, [
             new RandomCreepType(Creep.ForestMonster, 1.0),
           ]],
@@ -245,15 +252,14 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           [Creep.FriezaGreyberry, [
             new RandomCreepType(Creep.DemonImmortal, 1.0),
           ]],
-          [Creep.CrabGiant, [
-            new RandomCreepType(Creep.CrabMother, 1.0),
+          [Creep.DinosaurSmall, [
+            new RandomCreepType(Creep.DinosaurLarge, 1.0),
           ]],
           [Creep.Pterodactyl, [
             new RandomCreepType(Creep.DinosaurLarge, 1.0),
           ]],
-          [Creep.DinosaurSmall, [
-            new RandomCreepType(Creep.DinosaurLarge, 0.8),
-            new RandomCreepType(Creep.Pterodactyl, 0.2),
+          [Creep.TreacherousLobster, [
+            new RandomCreepType(Creep.TurtleAdult, 1.0),
           ]],
         ]
       )

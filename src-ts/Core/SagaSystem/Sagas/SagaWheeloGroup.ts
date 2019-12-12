@@ -10,7 +10,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 10;
+    this.sagaDelay = 15;
     this.stats = 25;
   }
 

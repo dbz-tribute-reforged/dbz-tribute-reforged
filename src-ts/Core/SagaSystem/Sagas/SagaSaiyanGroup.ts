@@ -7,7 +7,7 @@ import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Raditz';
+  name: string = '[DBZ] Saiyan Saga I: Raditz';
 
   constructor() {
     super();
@@ -62,7 +62,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
 
 export class VegetaSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Nappa and Vegeta';
+  name: string = '[DBZ] Saiyan Saga II: Nappa and Vegeta';
 
   protected isNappaOoz: boolean;
   protected isVegetaOoz: boolean;
