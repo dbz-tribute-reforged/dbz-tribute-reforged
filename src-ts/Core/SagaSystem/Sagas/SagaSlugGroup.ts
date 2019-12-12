@@ -30,7 +30,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
     if (this.slug && !this.isSlugKyo) {
       const slugHp = GetUnitState(this.slug, UNIT_STATE_LIFE);
       if (
-        slugHp < GetUnitState(this.slug, UNIT_STATE_MAX_LIFE) * 0.5 &&
+        slugHp < GetUnitState(this.slug, UNIT_STATE_MAX_LIFE) * 0.6 &&
         slugHp > 0
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(

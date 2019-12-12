@@ -506,6 +506,7 @@ export function CustomPlayerTest() {
       const playerId = GetPlayerId(player);
       for (const customHero of customPlayers[playerId].allHeroes) {
         if (customHero) {
+          UnitResetCooldown(customHero.unit);
           for (const [name, abil] of customHero.abilities.abilities) {
             if (abil) {
               abil.currentCd = 0;
@@ -513,6 +514,21 @@ export function CustomPlayerTest() {
           }
         }
       }
+    });
+
+    const tpTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerUnitEvent(
+        tpTrig, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER, 
+        Condition(()=> {
+          return GetIssuedOrderId() == OrderId("patrol");
+        })
+      );
+    };
+    TriggerAddAction(tpTrig, () => {
+      const unit = GetTriggerUnit();
+      SetUnitX(unit, GetOrderPointX());
+      SetUnitY(unit, GetOrderPointY());
     });
 
   }

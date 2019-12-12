@@ -2,6 +2,8 @@ import { Saga } from "./BaseSaga";
 import { Players } from "Libs/TreeLib/Structs/Players";
 import { SagaHelper } from "../SagaHelper";
 import { AdvancedSaga } from "./AdvancedSaga";
+import { CreepManager } from "Core/CreepSystem/CreepManager";
+import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek';
@@ -16,7 +18,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Zarbon and Dodoria have arrived looking for the Dragon Balls.");
 
     // create unit
-    const maxFriezaHenchmen = 10;
+    const maxFriezaHenchmen = 8;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 1500;
       let offsetY = Math.random() * 1500;
@@ -162,7 +164,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 30;
     this.stats = 100;
   }
 
@@ -172,8 +174,8 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     // create unit
     const maxFriezaHenchmen = 10;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 1500;
-      let offsetY = Math.random() * 1500;
+      let offsetX = Math.random() * 2000;
+      let offsetY = Math.random() * 2000;
       const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n02r'), 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
     }
 
@@ -234,6 +236,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_FRIEZA);
     this.spawnWhenDelayFinished();
   }
 
@@ -250,5 +253,6 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_FRIEZA);
   }
 }

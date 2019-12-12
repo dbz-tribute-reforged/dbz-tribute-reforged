@@ -60423,6 +60423,11 @@ STRING 9972
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
 }
 
+STRING 9973
+{
+Freemode Enabled, forced win/loss conditions are disabled.
+}
+
 STRING 9974
 {
 Raditz: And this ... is to go ... even further ... beyond
@@ -64378,5 +64383,101 @@ STRING 10616
 // Units: U01G (Golden Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (form golden)
+}
+
+STRING 10617
+// Units: n00Y (Orlen), Name (Name)
+{
+Orlen
+}
+
+STRING 10618
+// Units: n00Y (Orlen), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10619
+// Units: n00Z (Nabana), Name (Name)
+{
+Nabana
+}
+
+STRING 10620
+// Units: n00Z (Nabana), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10621
+// Units: n010 (Robery), Name (Name)
+{
+Robery
+}
+
+STRING 10622
+// Units: n010 (Robery), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10623
+// Units: n011 (Appule), Name (Name)
+{
+Appule
+}
+
+STRING 10624
+// Units: n011 (Appule), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10625
+// Units: n012 (Pineapple), Name (Name)
+{
+Pineapple
+}
+
+STRING 10626
+// Units: n012 (Pineapple), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10627
+// Units: n017 (Strawberry), Name (Name)
+{
+Strawberry
+}
+
+STRING 10628
+// Units: n017 (Strawberry), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10629
+// Units: n018 (Greyberry), Name (Name)
+{
+Greyberry
+}
+
+STRING 10630
+// Units: n018 (Greyberry), Ubertip (Tooltip - Extended)
+{
+i made my mistakes
+}
+
+STRING 10631
+// Units: n018 (Greyberry), Tip (Tooltip - Basic)
+{
+how could this happen to me
+}
+
+STRING 10632
+// Units: n018 (Greyberry), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
 }
 

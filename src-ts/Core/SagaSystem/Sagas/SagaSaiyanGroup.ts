@@ -97,9 +97,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
         vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5 && 
         vegetaHp > 0
       ) {
-        BlzSetUnitSkin(vegeta, FourCC("H004"));
-        SetHeroStr(vegeta, GetHeroStr(vegeta, true) * 2, true);
-        SetHeroAgi(vegeta, GetHeroAgi(vegeta, true) * 1.5, true);
+        this.fakeOoz(vegeta);
         this.isVegetaOoz = true;
       }
     }
@@ -110,12 +108,21 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
         nappaHp < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25 && 
         nappaHp > 0
       ) {
-        BlzSetUnitSkin(nappa, FourCC("H004"));
-        SetHeroStr(nappa, GetHeroStr(nappa, true) * 2, true);
-        SetHeroAgi(nappa, GetHeroAgi(nappa, true) * 1.5, true);
+        this.fakeOoz(nappa);
         this.isNappaOoz = true;
       }
     }
+  }
+
+  fakeOoz(unit: unit) {
+    DestroyEffect(AddSpecialEffectTargetUnitBJ(
+      "origin", 
+      unit, 
+      "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
+    );
+    BlzSetUnitSkin(unit, FourCC("H004"));
+    SetHeroStr(unit, GetHeroStr(unit, true) * 2, true);
+    SetHeroAgi(unit, GetHeroAgi(unit, true) * 1.5, true);
   }
 
   canStart(): boolean {

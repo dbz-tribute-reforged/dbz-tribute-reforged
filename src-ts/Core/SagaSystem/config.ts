@@ -36,17 +36,17 @@ export const sagaSystemConfig: SagaSystemConfig = {
     TurlesSaga: [
       [ VegetaSaga, SagaState.Completed ]
     ],
+    LordSlugSaga: [
+      [ TurlesSaga, SagaState.Completed ]
+    ],
     NamekSaga: [
       [ VegetaSaga, SagaState.Completed ]
     ],
     GinyuSaga: [
       [ NamekSaga, SagaState.Completed ]
     ],
-    LordSlugSaga: [
-      [ TurlesSaga, SagaState.Completed ]
-    ],
     FriezaSaga: [
-      [ LordSlugSaga, SagaState.Completed ]
+      [ GinyuSaga, SagaState.Completed ]
     ],
     GarlicJrSaga: [
       [ FriezaSaga, SagaState.Completed ],
