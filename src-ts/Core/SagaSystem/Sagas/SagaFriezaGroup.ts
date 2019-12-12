@@ -35,7 +35,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
       ShowUnitHide(zarbon2);
     }
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -59,7 +59,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
         PauseUnit(zarbon2, false);
         ShowUnitShow(zarbon2);
 
-        SagaHelper.pingMinimap(this.bosses);
+        this.ping()
 
         KillUnit(zarbon);
       }
@@ -120,7 +120,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -190,7 +190,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       }
     }
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -217,7 +217,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
           KillUnit(frieza);
           
-          SagaHelper.pingMinimap(this.bosses);
+          this.ping()
         }
       }
     }
@@ -260,7 +260,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
     this.stats = 100;
   }
 
@@ -277,7 +277,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 

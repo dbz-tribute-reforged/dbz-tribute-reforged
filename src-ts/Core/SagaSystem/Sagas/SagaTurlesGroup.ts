@@ -12,7 +12,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     super();
     this.sagaDelay = 45;
     this.stats = 25;
-    this.availableFruits = 3;
+    this.availableFruits = 2;
   }
 
   spawnSagaUnits(): void {
@@ -21,7 +21,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Turles"], true);
     this.turles = this.bosses.get("Turles");
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 

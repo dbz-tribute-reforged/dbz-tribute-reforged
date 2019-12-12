@@ -17,7 +17,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Garlic Jr", "Sansho", "Nicky", "Ginger"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -70,7 +70,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
     
     this.addHeroListToSaga(["Garlic Jr 2", "Spice", "Vinegar", "Mustard", "Salt"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 

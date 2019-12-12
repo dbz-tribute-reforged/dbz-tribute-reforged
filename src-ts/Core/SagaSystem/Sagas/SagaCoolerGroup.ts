@@ -12,7 +12,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 30;
     this.stats = 100;
     this.isFinalForm = false;
   }
@@ -23,7 +23,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Cooler"], true);
     this.cooler = this.bosses.get("Cooler");
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -109,14 +109,14 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
       this.metalCoolers.push(mc1, mc2, mc3);
     }
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
     for (const mc of this.metalCoolers) {
       if (IsUnitAliveBJ(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.01);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
       } else if (this.revives > 0) {
         --this.revives;
         DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Metal Cooler: But how could this be? The Big Gete Star allowed me to cheat death!");    

@@ -21,7 +21,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Android 19", "Android 20"], true);
     this.android20 = this.bosses.get("Android 20");
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping();
     this.addActionRewardStats(this);
   }
 
@@ -29,7 +29,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     if (this.android20 && !this.isRunningAway) {
       const android20Hp = GetUnitState(this.android20, UNIT_STATE_LIFE);
       if (
-        android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.2 &&
+        android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.25 &&
         android20Hp > 0
       ) {
         IssuePointOrder(this.android20, "move", 14000, 7500);
@@ -86,7 +86,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping();
     this.addActionRewardStats(this);
   }
 
@@ -156,15 +156,18 @@ export class Super13Saga extends AdvancedSaga implements Saga {
       ShowUnitHide(this.super13);
     }
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping();
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
     if (this.android13 && this.android14 && this.android15 && this.super13) {
       if (
-        GetUnitLifePercent(this.android13) < 25 ||
-        (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15)) 
+        IsUnitHidden(this.super13) && 
+        (
+          GetUnitLifePercent(this.android13) < 25 ||
+          (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15)) 
+        )
       ) {
         DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Super Android 13 has arrived!");
 
@@ -177,7 +180,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
         PauseUnit(this.super13, false);
         ShowUnitShow(this.super13);
 
-        SagaHelper.pingMinimap(this.bosses);
+        this.ping();
 
         KillUnit(this.android13);
       }

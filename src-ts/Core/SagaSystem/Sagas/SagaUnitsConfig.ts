@@ -24,7 +24,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Wheelo", new SagaUnit(FourCC("U006"), 17, 390, 200, 500, new Vector2D(-300, 18000))],
 
     // turles
-    ["Turles", new SagaUnit(FourCC("H01H"), 22, 400, 200, 400, new Vector2D(12600, 6950))],
+    ["Turles", new SagaUnit(FourCC("H01H"), 22, 400, 250, 400, new Vector2D(12600, 6950))],
 
     // slug
     ["Lord Slug", new SagaUnit(FourCC("O00L"), 27, 700, 400, 600, new Vector2D(4500, 9300))],

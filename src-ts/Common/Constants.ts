@@ -6,4 +6,5 @@ export module Constants {
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
+  export const sagaPingInterval: number = 45;
 }

@@ -22,7 +22,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Lord Slug"], true);
     this.slug = this.bosses.get("Lord Slug");
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 

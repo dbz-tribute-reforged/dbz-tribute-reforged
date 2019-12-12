@@ -86,4 +86,8 @@ export class AdvancedSaga {
       },
     )
   }
+
+  ping() {
+    SagaHelper.pingMinimap(this.bosses);
+  }
 }

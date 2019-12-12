@@ -20,7 +20,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Raditz"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -85,7 +85,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 

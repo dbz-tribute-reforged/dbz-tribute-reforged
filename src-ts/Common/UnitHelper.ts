@@ -53,6 +53,8 @@ export module UnitHelper {
       IsUnitEnemy(unit, caster) == true
       &&
       !BlzIsUnitInvulnerable(unit)
+      &&
+      !IsUnitDeadBJ(unit)
     );
   }
 }

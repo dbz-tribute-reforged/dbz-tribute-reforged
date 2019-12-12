@@ -27,7 +27,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
       ShowUnitHide(this.wheelo);
     }
 
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -43,7 +43,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
         PauseUnit(this.wheelo, false);
         ShowUnitShow(this.wheelo);
 
-        SagaHelper.pingMinimap(this.bosses);
+        this.ping()
       }
     }
   }
