@@ -3,6 +3,7 @@ import { CustomCreep } from "./CustomCreep";
 import { Vector2D } from "Common/Vector2D";
 import { DefaultCreepUpgradeConfig, CreepUpgradeConfig } from "./CreepUpgradeConfig";
 import { Hooks } from "Libs/TreeLib/Hooks";
+import { RandomCreepTypeHelper } from "./CreepUpgradeTypes";
 
 // Possible Optimisations: 
 // use custom value of a unit for O(1)
@@ -156,7 +157,7 @@ export class CreepManager {
       for (const [unit, customCreep] of this.customCreeps) {
         const newType = config.map.get(GetUnitTypeId(unit));
         if (newType) {
-          customCreep.unitTypeId = newType;
+          customCreep.unitTypeId = RandomCreepTypeHelper.getType(newType);
           // if not chaining, force replace
           if (GetUnitY(unit) != customCreep.position.x) {
             customCreep.isUpgrading = true;

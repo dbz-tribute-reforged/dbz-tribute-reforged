@@ -1,37 +1,177 @@
+import { RandomCreepType } from "./CreepUpgradeTypes";
+
+export module SagaUpgradeNames {
+  export const POST_SAIYAN = "PostSaiyan";
+  export const PRE_SLUG = "PreSlug";
+  export const POST_SLUG = "PostSlug";
+}
+
+export module Creep {
+  export const ForestSpider = FourCC("n020");
+  export const NamekianFrog = FourCC("n02P");
+
+  export const Bandit = FourCC("n01D"); 
+  export const Rogue = FourCC("n01E");
+  export const BanditLord = FourCC("n03G");
+
+  export const RRDefenseDroid = FourCC("n015");
+  export const RRBattleDroid = FourCC("n019");
+  export const RREnforcerDroid = FourCC("n01A");
+  export const RRPunisherDroid = FourCC("n031"); // lvl 14
+
+  export const DinosaurBaby = FourCC("n02F"); // lvl 2
+  export const DinosaurTeen = FourCC("n02E"); // lvl 4
+  export const DinosaurSmall = FourCC("n03A"); // lvl 5
+  export const DinosaurLarge = FourCC("n00D"); // lvl 24
+  export const Pterodactyl = FourCC("n03B"); // lvl 9
+
+  export const Saibaman = FourCC("n037");
+  export const MountainBeast = FourCC("n014"); // lvl 5
+  export const Sabertooth = FourCC("n038");
+  export const Bull = FourCC("n039");
+  export const BearThief = FourCC("n03C"); // lvl 11
+
+  export const TurtleBaby = FourCC("n01U"); // lvl 4
+  export const TurtleAdult = FourCC("n02H"); // lvl 18
+  export const TreacherousLobster = FourCC("n00A"); // lvl 9
+  export const CrabGiant = FourCC("n02Q"); // lvl 12
+  export const CrabMother = FourCC("n02S"); // lvl 30
+
+  export const SlugGuard = FourCC("z004"); // lvl 12
+  export const SlugDefenseDroid = FourCC("n021"); // lvl 16
+
+  export const ForestMonster = FourCC("n02G"); // lvl 13
+  export const Witch = FourCC("n00N"); // lvl 18
+  export const BirdHater = FourCC("n03M"); // lvl 32
+
+  export const NocturnalCreature = FourCC("n023"); // lvl 21
+  export const DemonSpooky = FourCC("n03L"); // lvl 26
+  export const DemonUnknown = FourCC("n00O"); // lvl 30
+  export const DemonImmortal = FourCC("n034"); // lvl 35
+
+  export const FriezaScout = FourCC("n028"); // lvl 4
+  export const FriezaHenchmen = FourCC("n02R"); // lvl 16
+
+
+  // maybe use these for when hell opens up?
+  export const YenmaHelper = FourCC("n01X"); // lvl 2
+  export const LostSoul = FourCC("n02C"); // lvl 3
+  export const YenmaGuard = FourCC("n02J"); // lvl 12
+  export const YenmaElite = FourCC("n02K"); // lvl 17
+  export const SoulLord = FourCC("n02D"); // lvl 17
+  export const SoulKing = FourCC("n02I"); // lvl 21
+  export const PrimalDemon = FourCC("n032"); // lvl 21, 10 stats
+  export const PrimalDemonKing = FourCC("n032"); // lvl 25, 15 stats
+
+}
+
+
 export interface CreepUpgradeConfig {
   upgradeGroups: {
     [upgradeKey: string]: {
       // key: unit type upgraded from
       // value: unit type upgraded to
-      map: Map<number, number>
+      map: Map<number, RandomCreepType[]>
     }
   }
 }
 
-export module SagaUpgradeNames {
-  export const SAIYAN_SAGA = "SaiyanUpgrade";
-}
-
-export const DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
+export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
   upgradeGroups: {
-    SaiyanUpgrade: {
-      map: new Map<number, number>(
+    PostSaiyan: {
+      map: new Map<number, RandomCreepType[]>(
         [
-          [FourCC("n01E"), FourCC("n039")],
-          [FourCC("n01D"), FourCC("n037")],
-          [FourCC("n015"), FourCC("n037")],
-          [FourCC("n019"), FourCC("n038")],
-          [FourCC("n01A"), FourCC("n03C")],
-          [FourCC("n02F"), FourCC("n03A")],
-          [FourCC("n02E"), FourCC("n03A")],
+          // [
+          //   Creep.Bandit, // from unit type (key)
+          //   [
+          //     // to unit type(s) (value)
+          //     new RandomCreepType(Creep.Saibaman, 1.0),
+          //   ]
+          // ],
+          [Creep.Bandit, [
+            new RandomCreepType(Creep.Saibaman, 1.0)
+          ]],
+          [Creep.RRDefenseDroid, [
+            new RandomCreepType(Creep.Saibaman, 1.0)
+          ]],
+          [Creep.RRBattleDroid, [
+            new RandomCreepType(Creep.Sabertooth, 1.0)
+          ]],
+          [Creep.Rogue, [
+            new RandomCreepType(Creep.Bull, 1.0)
+          ]],
+          [Creep.RREnforcerDroid, [
+            new RandomCreepType(Creep.BearThief, 1.0)
+          ]],
+          [Creep.DinosaurBaby, [
+            new RandomCreepType(Creep.DinosaurSmall, 0.5),
+            new RandomCreepType(Creep.DinosaurTeen, 0.45),
+            new RandomCreepType(Creep.Pterodactyl, 0.05)
+          ]],
+          [Creep.DinosaurTeen, [
+            new RandomCreepType(Creep.DinosaurSmall, 0.9),
+            new RandomCreepType(Creep.Pterodactyl, 0.1)
+          ]],
         ]
       )
     },
-    TurlesUpgrade: {
-      map: new Map<number, number>(
+    PreSlug: {
+      map: new Map<number, RandomCreepType[]>(
         [
-          [FourCC("n01E"), FourCC("n039")],
-          [FourCC("n01D"), FourCC("n037")],
+          [Creep.Saibaman, [
+            new RandomCreepType(Creep.SlugGuard, 1.0)
+          ]],
+          [Creep.Sabertooth, [
+            new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
+          ]],
+          [Creep.TurtleBaby, [
+            new RandomCreepType(Creep.TreacherousLobster, 0.2),
+            new RandomCreepType(Creep.TurtleAdult, 0.8),
+          ]],
+          [Creep.BearThief, [
+            new RandomCreepType(Creep.NocturnalCreature, 1.0)
+          ]],
+          [Creep.MountainBeast, [
+            new RandomCreepType(Creep.NocturnalCreature, 1.0)
+          ]],
+          [Creep.BanditLord, [
+            new RandomCreepType(Creep.DemonSpooky, 1.0)
+          ]],
+          [Creep.RRPunisherDroid, [
+            new RandomCreepType(Creep.DemonUnknown, 1.0)
+          ]],
+          [Creep.DinosaurTeen, [
+            new RandomCreepType(Creep.DinosaurSmall, 0.5),
+            new RandomCreepType(Creep.Pterodactyl, 0.5)
+          ]],
+        ]
+      )
+    },
+    PostSlug: {
+      map: new Map<number, RandomCreepType[]>(
+        [
+          [Creep.TreacherousLobster, [
+            new RandomCreepType(Creep.TurtleAdult, 1.0),
+          ]],
+          [Creep.SlugGuard, [
+            new RandomCreepType(Creep.ForestMonster, 1.0),
+          ]],
+          [Creep.SlugDefenseDroid, [
+            new RandomCreepType(Creep.Witch, 1.0),
+          ]],
+          [Creep.DemonSpooky, [
+            new RandomCreepType(Creep.BirdHater, 1.0),
+          ]],
+          [Creep.CrabGiant, [
+            new RandomCreepType(Creep.CrabMother, 1.0),
+          ]],
+          [Creep.Pterodactyl, [
+            new RandomCreepType(Creep.DinosaurLarge, 1.0),
+          ]],
+          [Creep.DinosaurSmall, [
+            new RandomCreepType(Creep.Pterodactyl, 0.2),
+            new RandomCreepType(Creep.DinosaurLarge, 0.8),
+          ]],
         ]
       )
     },

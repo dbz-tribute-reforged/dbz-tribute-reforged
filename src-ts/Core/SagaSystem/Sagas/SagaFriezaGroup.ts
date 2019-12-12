@@ -214,6 +214,8 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
           ShowUnitShow(nextFrieza);
 
           KillUnit(frieza);
+          
+          SagaHelper.pingMinimap(this.bosses);
         }
       }
     }

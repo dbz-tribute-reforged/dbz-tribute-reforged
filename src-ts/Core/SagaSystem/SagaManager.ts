@@ -9,7 +9,7 @@ export class SagaManager extends Entity {
   private static instance: SagaManager;
 
   // constants
-  protected maxNumberConcurrentSagas: number = 2;
+  protected maxNumberConcurrentSagas: number = 5;
 
   config: SagaSystemConfig;
   sagas: Saga[] = [];

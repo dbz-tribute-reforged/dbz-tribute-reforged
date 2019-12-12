@@ -92,7 +92,11 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   update(t: number): void {
     const vegeta = this.bosses.get("Vegeta");
     if (vegeta && !this.isVegetaOoz) {
-      if (GetUnitState(vegeta, UNIT_STATE_LIFE) < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5) {
+      const vegetaHp = GetUnitState(vegeta, UNIT_STATE_LIFE);
+      if (
+        vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5 && 
+        vegetaHp > 0
+      ) {
         BlzSetUnitSkin(vegeta, FourCC("H004"));
         SetHeroStr(vegeta, GetHeroStr(vegeta, true) * 2, true);
         SetHeroAgi(vegeta, GetHeroAgi(vegeta, true) * 1.5, true);
@@ -101,7 +105,11 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     }
     const nappa = this.bosses.get("Nappa");
     if (nappa && !this.isNappaOoz) {
-      if (GetUnitState(nappa, UNIT_STATE_LIFE) < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25) {
+      const nappaHp = GetUnitState(nappa, UNIT_STATE_LIFE);
+      if (
+        nappaHp < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25 && 
+        nappaHp > 0
+      ) {
         BlzSetUnitSkin(nappa, FourCC("H004"));
         SetHeroStr(nappa, GetHeroStr(nappa, true) * 2, true);
         SetHeroAgi(nappa, GetHeroAgi(nappa, true) * 1.5, true);
@@ -139,6 +147,6 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.SAIYAN_SAGA);
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYAN);
   }
 }

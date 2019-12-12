@@ -213,6 +213,7 @@ gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
+gg_trg_Kill_Creep_New_New_Stats_Only = nil
 gg_trg_Player_Hero_Killed = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
@@ -369,7 +370,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_N00C_0556 = nil
-gg_trg_Kill_Creep_New_New_Stats_Only = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1169,22 +1169,22 @@ function CreateNeutralHostile()
     SetHeroInt(u, 250, true)
     SetUnitState(u, UNIT_STATE_MANA, 1750)
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n014"), -966.7, 18101.2, 317.670, FourCC("n014"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), -1395.7, 18096.1, -13.364, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 740.6, 18310.2, 248.846, FourCC("n014"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 1563.9, 18547.5, -71.325, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 3128.4, 18219.7, 248.846, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6716.0, -3686.3, 91.134, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 2931.3, 15743.4, 248.846, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -299.7, 16514.6, 44.573, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -664.7, 16365.4, 44.573, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -398.9, 16320.5, 221.964, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 393.0, 16375.8, 44.573, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 293.9, 16181.7, 221.964, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 296.3, 16227.7, 44.573, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 443.3, 16044.3, 221.964, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 7434.2, 2556.6, 315.482, FourCC("n01A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n038"), 1411.4, 17184.4, 27.468, FourCC("n038"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n038"), -36.1, 17449.8, 94.692, FourCC("n038"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n038"), 1396.0, 17269.7, 27.468, FourCC("n038"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n038"), 2289.2, 18582.7, -87.296, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 9284.3, 18730.9, 244.014, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 10419.6, 18826.3, 298.636, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 10719.8, 18821.7, 198.738, FourCC("n038"))
@@ -2698,9 +2698,6 @@ function InitTrig_Map_Setup_Hashtables()
 end
 
 function Trig_Kill_Creep_New_New_Stats_Only_Conditions()
-    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == false)) then
-        return false
-    end
     if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == false)) then
         return false
     end
