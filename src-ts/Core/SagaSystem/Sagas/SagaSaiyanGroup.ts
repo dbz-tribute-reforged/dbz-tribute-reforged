@@ -3,9 +3,11 @@ import { Players } from "Libs/TreeLib/Structs/Players";
 import { SagaHelper } from "../SagaHelper";
 import { Trigger } from "w3ts";
 import { AdvancedSaga } from "./AdvancedSaga";
+import { CreepManager } from "Core/CreepSystem/CreepManager";
+import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Raditz';
+  name: string = '[DBZ] Saiyan Saga I: Raditz';
 
   constructor() {
     super();
@@ -18,7 +20,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Raditz"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
@@ -60,7 +62,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
 
 export class VegetaSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Nappa and Vegeta';
+  name: string = '[DBZ] Saiyan Saga II: Nappa and Vegeta';
 
   protected isNappaOoz: boolean;
   protected isVegetaOoz: boolean;
@@ -83,29 +85,44 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
     
-    SagaHelper.pingMinimap(this.bosses);
+    this.ping()
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
     const vegeta = this.bosses.get("Vegeta");
     if (vegeta && !this.isVegetaOoz) {
-      if (GetUnitState(vegeta, UNIT_STATE_LIFE) < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5) {
-        BlzSetUnitSkin(vegeta, FourCC("H004"));
-        SetHeroStr(vegeta, GetHeroStr(vegeta, true) * 2, true);
-        SetHeroAgi(vegeta, GetHeroAgi(vegeta, true) * 1.5, true);
+      const vegetaHp = GetUnitState(vegeta, UNIT_STATE_LIFE);
+      if (
+        vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5 && 
+        vegetaHp > 0
+      ) {
+        this.fakeOoz(vegeta);
         this.isVegetaOoz = true;
       }
     }
     const nappa = this.bosses.get("Nappa");
     if (nappa && !this.isNappaOoz) {
-      if (GetUnitState(nappa, UNIT_STATE_LIFE) < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25) {
-        BlzSetUnitSkin(nappa, FourCC("H004"));
-        SetHeroStr(nappa, GetHeroStr(nappa, true) * 2, true);
-        SetHeroAgi(nappa, GetHeroAgi(nappa, true) * 1.5, true);
+      const nappaHp = GetUnitState(nappa, UNIT_STATE_LIFE);
+      if (
+        nappaHp < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25 && 
+        nappaHp > 0
+      ) {
+        this.fakeOoz(nappa);
         this.isNappaOoz = true;
       }
     }
+  }
+
+  fakeOoz(unit: unit) {
+    DestroyEffect(AddSpecialEffectTargetUnitBJ(
+      "origin", 
+      unit, 
+      "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
+    );
+    BlzSetUnitSkin(unit, FourCC("H004"));
+    SetHeroStr(unit, GetHeroStr(unit, true) * 2, true);
+    SetHeroAgi(unit, GetHeroAgi(unit, true) * 1.5, true);
   }
 
   canStart(): boolean {
@@ -137,6 +154,6 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    // gg_trg_Saiyan_Saga_Creep_Upgrade();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
   }
 }

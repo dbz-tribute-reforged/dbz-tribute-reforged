@@ -51,13 +51,15 @@ export module SagaHelper {
 
   export function pingMinimap(bosses: Map<string, unit>) {
     for (const [name, boss] of bosses) {
-      PingMinimapForForceEx(
-        bj_FORCE_ALL_PLAYERS, 
-        GetUnitX(boss), 
-        GetUnitY(boss), 
-        5, bj_MINIMAPPINGSTYLE_FLASHY, 
-        100, 75, 0
-      );
+      if (IsUnitAliveBJ(boss) && !IsUnitHidden(boss)) {
+        PingMinimapForForceEx(
+          bj_FORCE_ALL_PLAYERS, 
+          GetUnitX(boss), 
+          GetUnitY(boss), 
+          5, bj_MINIMAPPINGSTYLE_FLASHY, 
+          100, 75, 0
+        );
+      }
     }
   }
 }

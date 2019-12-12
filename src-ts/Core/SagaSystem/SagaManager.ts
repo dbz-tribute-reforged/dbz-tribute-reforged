@@ -3,21 +3,25 @@ import { Saga, BaseSaga, SagaState } from "./Sagas/BaseSaga";
 import { Entity } from "Libs/TreeLib/Entity";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { sagaSystemConfig } from "./config";
+import { Constants } from "Common/Constants";
 
 export class SagaManager extends Entity {
 
   private static instance: SagaManager;
 
   // constants
-  protected maxNumberConcurrentSagas: number = 2;
+  protected maxNumberConcurrentSagas: number = 6;
 
   config: SagaSystemConfig;
   sagas: Saga[] = [];
+
+  protected sagaPingTimer: timer;
 
   constructor(sagaSystemConfig: SagaSystemConfig) {
     super();
 
     this.config = sagaSystemConfig;
+    this.sagaPingTimer = CreateTimer();
 
     this.initialize();
   }
@@ -36,6 +40,13 @@ export class SagaManager extends Entity {
       let sagaType = this.config.sagas[i];
       this.sagas.push(new sagaType() as Saga);
     }
+    TimerStart(this.sagaPingTimer, Constants.sagaPingInterval, true, () => {
+      for (const saga of this.sagas) {
+        if (saga.state == SagaState.InProgress) {
+          saga.ping();
+        }
+      }
+    });
   }
 
   public step(t: number): void {

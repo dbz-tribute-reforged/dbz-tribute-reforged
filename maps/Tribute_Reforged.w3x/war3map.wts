@@ -1,5 +1,5 @@
 ﻿STRING 0
-// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19a
+Tribute Reforged 0.19c
 }
 
 STRING 4
@@ -6120,7 +6120,7 @@ STRING 982
 }
 
 STRING 983
-// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -24390,7 +24390,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 3992
-// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
+// Units: H08O (Android of Birds), Hotkey (Hotkey)
 {
 X
 }
@@ -32461,7 +32461,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5335
-// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
+// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -33840,13 +33840,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5563
-// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
 
 STRING 5564
-// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -37079,7 +37079,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6096
-// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
+// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -37633,7 +37633,7 @@ Beerus fires many ki blasts in all directions. |n|cff00FF00Channeled for 30s|r|n
 }
 
 STRING 6188
-// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -41127,7 +41127,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6767
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -46815,7 +46815,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60235,7 +60235,7 @@ Cooler surrounds himself with a purple barrier and flies at the enemy, ramming t
 }
 
 STRING 9940
-// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60425,7 +60425,7 @@ STRING 9972
 
 STRING 9973
 {
-Upgrading Creeps...
+Freemode Enabled, forced win/loss conditions are disabled.
 }
 
 STRING 9974
@@ -60566,7 +60566,7 @@ STRING 9998
 }
 
 STRING 9999
-// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60752,7 +60752,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 10030
-// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -61215,7 +61215,7 @@ E
 }
 
 STRING 10106
-// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
+// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -63098,7 +63098,7 @@ Buu gets so angry he makes himself explode damaging nearby units. |n|cff00ff00(D
 }
 
 STRING 10416
-// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
+// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -64383,5 +64383,156 @@ STRING 10616
 // Units: U01G (Golden Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (form golden)
+}
+
+STRING 10617
+// Units: n00Y (Orlen), Name (Name)
+{
+Orlen
+}
+
+STRING 10618
+// Units: n00Y (Orlen), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10619
+// Units: n00Z (Nabana), Name (Name)
+{
+Nabana
+}
+
+STRING 10620
+// Units: n00Z (Nabana), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10621
+// Units: n010 (Robery), Name (Name)
+{
+Robery
+}
+
+STRING 10622
+// Units: n010 (Robery), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10623
+// Units: n011 (Appule), Name (Name)
+{
+Appule
+}
+
+STRING 10624
+// Units: n011 (Appule), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10625
+// Units: n012 (Pineapple), Name (Name)
+{
+Pineapple
+}
+
+STRING 10626
+// Units: n012 (Pineapple), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10627
+// Units: n017 (Strawberry), Name (Name)
+{
+Strawberry
+}
+
+STRING 10628
+// Units: n017 (Strawberry), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10629
+// Units: n018 (Greyberry), Name (Name)
+{
+Greyberry
+}
+
+STRING 10630
+// Units: n018 (Greyberry), Ubertip (Tooltip - Extended)
+{
+i made my mistakes
+}
+
+STRING 10631
+// Units: n018 (Greyberry), Tip (Tooltip - Basic)
+{
+how could this happen to me
+}
+
+STRING 10632
+// Units: n018 (Greyberry), EditorSuffix (Name - Editor Suffix)
+{
+(Appule Ranger)
+}
+
+STRING 10633
+// Units: H08O (Android of Birds), Name (Name)
+{
+Android of Birds
+}
+
+STRING 10634
+// Units: H08O (Android of Birds), Propernames (Proper Names)
+{
+Android 16
+}
+
+STRING 10635
+// Units: H08O (Android of Birds), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00X|r] Choose Android 16
+}
+
+STRING 10636
+// Units: H08O (Android of Birds), Ubertip (Tooltip - Extended)
+{
+Not a bird hater. Likes birds very much.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 10637
+// Units: H08O (Android of Birds), Tip (Tooltip - Basic)
+{
+[|cffffff00X|r] Choose Android 16
+}
+
+STRING 10638
+// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 10639
+// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 10640
+// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 

@@ -22,6 +22,10 @@ export class BaseSaga {
     Logger.LogDebug('Completing saga "' + this.name + '"');
     this.state = SagaState.Completed;
   }
+
+  ping(): void {
+    
+  }
 }
 
 export interface Saga {
@@ -35,4 +39,5 @@ export interface Saga {
   start: () => void;
   complete: () => void;
   update: (t: number) => void;
+  ping: () => void;
 }
