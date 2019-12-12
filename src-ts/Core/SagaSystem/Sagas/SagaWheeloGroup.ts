@@ -10,19 +10,18 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 10;
     this.stats = 25;
   }
 
   spawnSagaUnits(): void {
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Kochin has begun reviving Dr Wheelo!");
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Kochin has revived Dr Wheelo!");
 
     this.addHeroListToSaga(["Wheelo", "Kishime", "Misokatsun", "Ebifurya", "Dr. Kochin"], true);
     
-    this.kochin = this.bosses.get("Kochin");
-
+    this.kochin = this.bosses.get("Dr. Kochin");
     this.wheelo = this.bosses.get("Wheelo");
-    if (this.wheelo) {
+    if (this.kochin && this.wheelo) {
       SetUnitInvulnerable(this.wheelo, true);
       PauseUnit(this.wheelo, true);
       ShowUnitHide(this.wheelo);
@@ -38,8 +37,8 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
         IsUnitDeadBJ(this.kochin) && 
         IsUnitHidden(this.wheelo)
       ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr Wheelo: Bring me the world's strongest!");
-        
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");
+
         SetUnitInvulnerable(this.wheelo, false);
         PauseUnit(this.wheelo, false);
         ShowUnitShow(this.wheelo);

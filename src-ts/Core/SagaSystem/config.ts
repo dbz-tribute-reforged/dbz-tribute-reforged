@@ -15,12 +15,12 @@ export const sagaSystemConfig: SagaSystemConfig = {
     DeadZoneSaga,
     RaditzSaga,
     VegetaSaga,
-    NamekSaga,
-    GinyuSaga,
-    FriezaSaga,
     WheeloSaga,
     TurlesSaga,
+    NamekSaga,
+    GinyuSaga,
     LordSlugSaga,
+    FriezaSaga,
     GarlicJrSaga,
   ],
 
@@ -30,23 +30,23 @@ export const sagaSystemConfig: SagaSystemConfig = {
     VegetaSaga: [
       [ RaditzSaga, SagaState.Completed ]
     ],
+    WheeloSaga: [
+      [ VegetaSaga, SagaState.Completed ]
+    ],
+    TurlesSaga: [
+      [ VegetaSaga, SagaState.Completed ]
+    ],
     NamekSaga: [
       [ VegetaSaga, SagaState.Completed ]
     ],
     GinyuSaga: [
       [ NamekSaga, SagaState.Completed ]
     ],
-    FriezaSaga: [
-      [ GinyuSaga, SagaState.Completed ]
-    ],
-    WheeloSaga: [
-      [ VegetaSaga, SagaState.Completed ]
-    ],
-    TurlesSaga: [
-      [ GinyuSaga, SagaState.InProgress ]
-    ],
     LordSlugSaga: [
       [ TurlesSaga, SagaState.Completed ]
+    ],
+    FriezaSaga: [
+      [ LordSlugSaga, SagaState.Completed ]
     ],
     GarlicJrSaga: [
       [ FriezaSaga, SagaState.Completed ],

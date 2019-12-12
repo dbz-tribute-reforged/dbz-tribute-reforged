@@ -7,6 +7,7 @@ import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 export class LordSlugSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Lord Slug';
 
+  protected slug: unit | undefined;
   protected isSlugKyo: boolean;
 
   constructor() {
@@ -20,28 +21,27 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Lord Slug has arrived!");
 
     this.addHeroListToSaga(["Lord Slug"], true);
-    
+    this.slug = this.bosses.get("Lord Slug");
     SagaHelper.pingMinimap(this.bosses);
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
-    const slug = this.bosses.get("Lord Slug");
-    if (slug && !this.isSlugKyo) {
-      const slugHp = GetUnitState(slug, UNIT_STATE_LIFE);
+    if (this.slug && !this.isSlugKyo) {
+      const slugHp = GetUnitState(this.slug, UNIT_STATE_LIFE);
       if (
-        slugHp < GetUnitState(slug, UNIT_STATE_MAX_LIFE) * 0.5 &&
+        slugHp < GetUnitState(this.slug, UNIT_STATE_MAX_LIFE) * 0.5 &&
         slugHp > 0
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(
           "origin", 
-          slug, 
+          this.slug, 
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
         );
-        SetUnitScale(slug, 2.5, 2.5, 2.5);
-        SetHeroLevel(slug, GetHeroLevel(slug) + 1, true);
-        SetHeroStr(slug, GetHeroStr(slug, true) * 2, true);
-        SetHeroAgi(slug, GetHeroAgi(slug, true) * 1.5, true);
+        SetUnitScale(this.slug, 2.5, 2.5, 2.5);
+        SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
+        SetHeroStr(this.slug, GetHeroStr(this.slug, true) * 2, true);
+        SetHeroAgi(this.slug, GetHeroAgi(this.slug, true) * 1.5, true);
         this.isSlugKyo = true;
       }
     }

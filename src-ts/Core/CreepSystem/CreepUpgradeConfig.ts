@@ -1,7 +1,7 @@
 import { RandomCreepType } from "./CreepUpgradeTypes";
 
 export module SagaUpgradeNames {
-  export const POST_SAIYAN = "PostSaiyan";
+  export const POST_SAIYANS = "PostSaiyans";
   export const PRE_SLUG = "PreSlug";
   export const POST_SLUG = "PostSlug";
 }
@@ -51,6 +51,13 @@ export module Creep {
 
   export const FriezaScout = FourCC("n028"); // lvl 4
   export const FriezaHenchmen = FourCC("n02R"); // lvl 16
+  export const FriezaAppule = FourCC("n02R"); // purple
+  export const FriezaOrlen = FourCC("n02R"); // orange
+  export const FriezaNabana = FourCC("n02R"); // green
+  export const FriezaRobery = FourCC("n02R"); // brown
+  export const FriezaPineapple = FourCC("n02R"); // yellow
+  export const FriezaStrawberry = FourCC("n02R") // red
+  export const FriezaGreyberry = FourCC("n02R") // grey
 
 
   // maybe use these for when hell opens up?
@@ -78,7 +85,7 @@ export interface CreepUpgradeConfig {
 
 export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
   upgradeGroups: {
-    PostSaiyan: {
+    PostSaiyans: {
       map: new Map<number, RandomCreepType[]>(
         [
           // [
@@ -125,8 +132,8 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
           ]],
           [Creep.TurtleBaby, [
-            new RandomCreepType(Creep.TreacherousLobster, 0.2),
             new RandomCreepType(Creep.TurtleAdult, 0.8),
+            new RandomCreepType(Creep.TreacherousLobster, 0.2),
           ]],
           [Creep.BearThief, [
             new RandomCreepType(Creep.NocturnalCreature, 1.0)
@@ -169,8 +176,8 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DinosaurLarge, 1.0),
           ]],
           [Creep.DinosaurSmall, [
-            new RandomCreepType(Creep.Pterodactyl, 0.2),
             new RandomCreepType(Creep.DinosaurLarge, 0.8),
+            new RandomCreepType(Creep.Pterodactyl, 0.2),
           ]],
         ]
       )

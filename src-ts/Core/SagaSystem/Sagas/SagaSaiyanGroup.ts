@@ -147,6 +147,6 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYAN);
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
   }
 }

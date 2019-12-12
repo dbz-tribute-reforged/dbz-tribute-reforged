@@ -13,7 +13,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has taken over the lookout! (Korin's, kami not implemented)");
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has taken over the lookout!");
 
     this.addHeroListToSaga(["Garlic Jr", "Sansho", "Nicky", "Ginger"], true);
     
@@ -66,7 +66,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has returned from the Dead Zone! (Korin's, kami not implemented)");
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has returned from the Dead Zone!");
     
     this.addHeroListToSaga(["Garlic Jr 2", "Spice", "Vinegar", "Mustard", "Salt"], true);
     

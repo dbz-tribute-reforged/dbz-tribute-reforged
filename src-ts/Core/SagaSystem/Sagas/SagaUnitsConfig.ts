@@ -17,11 +17,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 400, new Vector2D(-3300, -5500))],
 
     
-    ["Kishime", new SagaUnit(FourCC("U006"), 6, 100, 100, 100, new Vector2D(800, 18000))],
-    ["Misokatsun", new SagaUnit(FourCC("O00O"), 5, 60, 100, 60, new Vector2D(800, 18200))],
-    ["Ebifurya", new SagaUnit(FourCC("O00O"), 7, 150, 100, 100, new Vector2D(-600, 17500))],
+    ["Kishime", new SagaUnit(FourCC("O00P"), 6, 100, 100, 100, new Vector2D(800, 18000))],
+    ["Misokatsun", new SagaUnit(FourCC("O00O"), 5, 60, 100, 60, new Vector2D(400, 18200))],
+    ["Ebifurya", new SagaUnit(FourCC("O00N"), 7, 150, 100, 100, new Vector2D(-600, 17500))],
     ["Dr. Kochin", new SagaUnit(FourCC("O00Q"), 1, 2, 1, 1, new Vector2D(-600, 17500))],
-    ["Wheelo", new SagaUnit(FourCC("O00P"), 17, 390, 200, 500, new Vector2D(-300, 18000))],
+    ["Wheelo", new SagaUnit(FourCC("U006"), 17, 390, 200, 500, new Vector2D(-300, 18000))],
 
     ["Turles", new SagaUnit(FourCC("H01H"), 22, 400, 200, 400, new Vector2D(12600, 6950))],
 

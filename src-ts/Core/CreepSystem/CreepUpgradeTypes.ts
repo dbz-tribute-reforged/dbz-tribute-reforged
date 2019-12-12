@@ -12,7 +12,7 @@ export module RandomCreepTypeHelper {
     const rand = Math.random();
     let max = randomCreepTypes[0].probability;
     for (let i = 0; i < randomCreepTypes.length - 1; ++i) {
-      if (max > rand) {
+      if (max >= rand) {
         return randomCreepTypes[i].creepType;
       }
       max += randomCreepTypes[i+1].probability;

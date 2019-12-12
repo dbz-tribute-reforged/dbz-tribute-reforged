@@ -159,7 +159,7 @@ export class CreepManager {
         if (newType) {
           customCreep.unitTypeId = RandomCreepTypeHelper.getType(newType);
           // if not chaining, force replace
-          if (GetUnitY(unit) != customCreep.position.x) {
+          if (GetUnitY(unit) != customCreep.position.y) {
             customCreep.isUpgrading = true;
             UnitApplyTimedLife(
               unit, 
