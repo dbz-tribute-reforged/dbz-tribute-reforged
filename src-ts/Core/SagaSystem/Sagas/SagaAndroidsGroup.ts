@@ -172,6 +172,8 @@ export class Super13Saga extends AdvancedSaga implements Saga {
     if (this.android13 && this.android14 && this.android15 && this.super13) {
       if (
         IsUnitHidden(this.super13) && 
+        IsUnitAliveBJ(this.super13) &&
+        BlzIsUnitInvulnerable(this.super13) &&
         (
           GetUnitLifePercent(this.android13) < 25 ||
           (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15)) 
