@@ -49,15 +49,15 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       "The final battle for the fate of the universe will begin in " + 
       this.toStartDelay + " seconds!"
     );
+    const dummyCaster = CreateUnit(
+      Player(PLAYER_NEUTRAL_PASSIVE), 
+      Constants.dummyCasterId,
+      0, 0, 0,
+    );
+    UnitAddAbility(dummyCaster, Constants.finalBattleSpell);
+    IssueImmediateOrderById(dummyCaster, Constants.finalBattleOrder);
 
     TimerStart(this.toStartTimer, this.toStartDelay, false, () => {
-      const dummyCaster = CreateUnit(
-        Player(PLAYER_NEUTRAL_PASSIVE), 
-        Constants.dummyCasterId,
-        0, 0, 0,
-      );
-      UnitAddAbility(dummyCaster, Constants.finalBattleSpell);
-      IssueImmediateOrderById(dummyCaster, Constants.finalBattleOrder);
 
       this.prepareTeam(Constants.defaultTeam1, this.unitsTeam1, Constants.tournamentWaitRoom1);
       this.prepareTeam(Constants.defaultTeam2, this.unitsTeam2, Constants.tournamentWaitRoom2);
