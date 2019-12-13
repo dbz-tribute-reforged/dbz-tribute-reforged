@@ -6,9 +6,11 @@ import { PathingCheck } from 'Common/PathingCheck';
 import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
+import { TournamentManager, TournamentNames } from 'Core/TournamentSystem/TournamentManager';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
+let tournamentManager: TournamentManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -23,6 +25,14 @@ function tsMain() {
   sagaManager = SagaManager.getInstance();
 
   creepManager = CreepManager.getInstance();
+
+  tournamentManager = TournamentManager.getInstance();
+
+  TimerStart(CreateTimer(), 60, false, () => {
+    Logger.LogDebug("Final Battle starting now!");
+    tournamentManager.startTournament(TournamentNames.FinalBattle);
+    DestroyTimer(GetExpiredTimer());
+  });
   
   CustomUiTest();
   CustomPlayerTest();

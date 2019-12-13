@@ -12,12 +12,10 @@ export class TournamentManager {
 
   protected tournaments: Map<string, Tournament>;
   protected currentTournament: Tournament | undefined;
-  protected finalBattleTimer: timer;
 
   constructor (
   ) {
     this.tournaments = new Map();
-    this.finalBattleTimer = CreateTimer();
     this.initialize();
   }
 
@@ -32,13 +30,6 @@ export class TournamentManager {
   public initialize(): this {
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
-
-    const testTrig = CreateTrigger();
-    TriggerRegisterTimerEvent(testTrig, 45, false);
-    TriggerAddAction(testTrig, () => {
-      Logger.LogDebug("Attempting to start tournament " + TournamentNames.FinalBattle);
-      TournamentManager.getInstance().startTournament(TournamentNames.FinalBattle);
-    })
 
     return this;
   }
