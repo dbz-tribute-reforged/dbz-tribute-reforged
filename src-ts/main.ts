@@ -27,12 +27,6 @@ function tsMain() {
   creepManager = CreepManager.getInstance();
 
   tournamentManager = TournamentManager.getInstance();
-
-  TimerStart(CreateTimer(), 60, false, () => {
-    Logger.LogDebug("Final Battle starting now!");
-    tournamentManager.startTournament(TournamentNames.FinalBattle);
-    DestroyTimer(GetExpiredTimer());
-  });
   
   CustomUiTest();
   CustomPlayerTest();
