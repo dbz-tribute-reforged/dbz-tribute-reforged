@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19c
+Tribute Reforged 0.19d
 }
 
 STRING 4
@@ -64534,5 +64534,28 @@ STRING 10640
 // Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
 {
 (actual)
+}
+
+STRING 10642
+// Abilities: A0LT (Final Battle Activator), Ubertip (Tooltip - Normal - Extended)
+{
+Triggers final battle
+}
+
+STRING 10643
+{
+=== Final Battle ===
+}
+
+STRING 10644
+// Abilities: A0LT (Final Battle Activator), Name (Name)
+{
+Final Battle Activator
+}
+
+STRING 10645
+// Abilities: A0LT (Final Battle Activator), Tip (Tooltip - Normal)
+{
+Final Battle
 }
 

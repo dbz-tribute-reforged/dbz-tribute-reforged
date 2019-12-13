@@ -38,6 +38,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       const newTargetCoord = CoordMath.polarProjectCoords(targetCoord, knockbackAngle, this.knockbackData.speed);
       PathingCheck.moveGroundUnitToCoord(target, newTargetCoord);
     });
+    DestroyGroup(affectedGroup);
   }
 
   clone(): AbilityComponent {

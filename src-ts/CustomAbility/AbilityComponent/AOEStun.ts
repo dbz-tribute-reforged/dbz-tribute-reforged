@@ -3,6 +3,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
+import { Constants } from "Common/Constants";
 
 export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   static readonly MICRO = 0.03;
@@ -33,7 +34,7 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
       // this.stunDummy = CreateUnit(input.casterPlayer, FourCC('Hmkg'), sourceCoord.x, sourceCoord.y, 0);
       // UnitAddAbility(this.stunDummy, FourCC('AHtb'));
 
-      this.stunDummy = CreateUnit(input.casterPlayer, FourCC('h054'), sourceCoord.x, sourceCoord.y, 0);
+      this.stunDummy = CreateUnit(input.casterPlayer, Constants.dummyCasterId, sourceCoord.x, sourceCoord.y, 0);
 
       if (this.duration == AOEStun.MICRO) {
         UnitAddAbility(this.stunDummy, FourCC('A08K'));
@@ -62,6 +63,8 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
         IssueTargetOrder(this.stunDummy, "thunderbolt", target);
       }
     });
+
+    DestroyGroup(affectedGroup);
 
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick
