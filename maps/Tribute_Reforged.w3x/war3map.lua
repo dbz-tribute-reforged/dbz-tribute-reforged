@@ -216,7 +216,7 @@ gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
 gg_trg_Kill_Creep_New_New_Stats_Only = nil
-gg_trg_Player_Hero_Killed = nil
+gg_trg_Kill_Hero_Stats_And_Revive = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
@@ -575,52 +575,42 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1268,7 +1258,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 1560.7, 3.7, 88.684, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 2381.0, 300.8, 161.998, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 2980.8, -1196.5, -10.867, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 2980.8, -1196.5, 349.133, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("U01L"), -1710.1, 21310.3, 140.040, FourCC("U01L"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 8329.4, -7555.3, 131.461, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("U01J"), -3404.0, 23001.8, 303.490, FourCC("U01J"))
@@ -3004,14 +2994,11 @@ function InitTrig_Kill_Creep_New_New_Stats_Only()
     TriggerAddAction(gg_trg_Kill_Creep_New_New_Stats_Only, Trig_Kill_Creep_New_New_Stats_Only_Actions)
 end
 
-function Trig_Player_Hero_Killed_Conditions()
+function Trig_Kill_Hero_Stats_And_Revive_Conditions()
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
     if (not (IsUnitEnemy(GetDyingUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true)) then
-        return false
-    end
-    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
         return false
     end
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) == false)) then
@@ -3020,38 +3007,79 @@ function Trig_Player_Hero_Killed_Conditions()
     return true
 end
 
-function Trig_Player_Hero_Killed_Func001C()
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003001()
+    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003002()
+    return (IsUnitAlly(GetFilterUnit(), udg_TempPlayer) == true)
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003()
+    return GetBooleanAnd(Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003001(), Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003002())
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func004A()
+    udg_StatMultUnit = GetEnumUnit()
+    udg_StatMultReal = I2R(GetHeroLevel(GetDyingUnit()))
+    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " saga stats|r"))
+    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+        RemoveLocation(udg_TempLoc)
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func008C()
     if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Player_Hero_Killed_Actions()
-    if (Trig_Player_Hero_Killed_Func001C()) then
-        udg_StatMultUnit = GetKillingUnitBJ()
-        udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetTriggerUnit())))
-        udg_StatMultReal = (udg_StatMultReal * 0.25)
-        TriggerExecute(gg_trg_Add_To_Base_Stats)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
-        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
-        udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-        TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-                RemoveLocation(udg_TempLoc)
-                DestroyForce(udg_TempPlayerGroup)
-    else
+function Trig_Kill_Hero_Stats_And_Revive_Func001C()
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
     end
-    TriggerSleepAction(udg_HeroRespawnDelay)
-    udg_HeroRespawnUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+    return true
 end
 
-function InitTrig_Player_Hero_Killed()
-    gg_trg_Player_Hero_Killed = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Player_Hero_Killed, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Player_Hero_Killed, Condition(Trig_Player_Hero_Killed_Conditions))
-    TriggerAddAction(gg_trg_Player_Hero_Killed, Trig_Player_Hero_Killed_Actions)
+function Trig_Kill_Hero_Stats_And_Revive_Actions()
+    if (Trig_Kill_Hero_Stats_And_Revive_Func001C()) then
+        if (Trig_Kill_Hero_Stats_And_Revive_Func001Func008C()) then
+            udg_StatMultUnit = GetKillingUnitBJ()
+            udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetTriggerUnit())))
+            udg_StatMultReal = (udg_StatMultReal * 0.25)
+            TriggerExecute(gg_trg_Add_To_Base_Stats)
+            TriggerExecute(gg_trg_Update_Current_Stats)
+            udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
+            udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+            udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+            TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+                        RemoveLocation(udg_TempLoc)
+                        DestroyForce(udg_TempPlayerGroup)
+        else
+        end
+        TriggerSleepAction(udg_HeroRespawnDelay)
+        udg_HeroRespawnUnit = GetTriggerUnit()
+        TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+    else
+        udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
+        udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
+        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc, Condition(Trig_Kill_Hero_Stats_And_Revive_Func001Func003002003))
+        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_Stats_And_Revive_Func001Func004A)
+                DestroyGroup(udg_TempGroup)
+                RemoveLocation(udg_TempLoc2)
+    end
+end
+
+function InitTrig_Kill_Hero_Stats_And_Revive()
+    gg_trg_Kill_Hero_Stats_And_Revive = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Stats_And_Revive, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Kill_Hero_Stats_And_Revive, Condition(Trig_Kill_Hero_Stats_And_Revive_Conditions))
+    TriggerAddAction(gg_trg_Kill_Hero_Stats_And_Revive, Trig_Kill_Hero_Stats_And_Revive_Actions)
 end
 
 function Trig_Player_Level_up_New_Conditions()
@@ -3109,7 +3137,7 @@ function Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions()
     ShowTextTagForceBJ(true, udg_TempFloatingText, udg_TempPlayerGroup)
     SetTextTagVelocityBJ(udg_TempFloatingText, 64, 90)
     SetTextTagPermanentBJ(udg_TempFloatingText, false)
-    SetTextTagLifespanBJ(udg_TempFloatingText, 2.50)
+    SetTextTagLifespanBJ(udg_TempFloatingText, 3.50)
     SetTextTagFadepointBJ(udg_TempFloatingText, 1.00)
 end
 
@@ -9319,7 +9347,7 @@ function InitCustomTriggers()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New_New_Stats_Only()
-    InitTrig_Player_Hero_Killed()
+    InitTrig_Kill_Hero_Stats_And_Revive()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()

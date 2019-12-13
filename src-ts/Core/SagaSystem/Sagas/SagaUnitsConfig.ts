@@ -64,8 +64,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 35, 2000, 400, 2000, new Vector2D(-6000, 17200))],
 
     // trunks saga
-    ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 32, 2100, 350, 1900, new Vector2D(18000, 2000))],
-    ["King Cold", new SagaUnit(FourCC("U00K"), 32, 1600, 350, 1800, new Vector2D(18000, 2000))],
+    ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 32, 2100, 420, 1900, new Vector2D(18000, 2000))],
+    ["King Cold", new SagaUnit(FourCC("U00K"), 32, 2100, 420, 1900, new Vector2D(18000, 2000))],
 
     // androids 19/20 saga
     ["Android 19", new SagaUnit(FourCC("O00A"), 33, 2500, 350, 2500, new Vector2D(-5000, -5000))],

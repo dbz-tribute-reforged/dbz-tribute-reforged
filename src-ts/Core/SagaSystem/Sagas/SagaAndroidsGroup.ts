@@ -86,6 +86,10 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 99999);
+    }
+
     this.ping();
     this.addActionRewardStats(this);
   }
@@ -154,6 +158,10 @@ export class Super13Saga extends AdvancedSaga implements Saga {
       SetUnitInvulnerable(this.super13, true);
       PauseUnit(this.super13, true);
       ShowUnitHide(this.super13);
+    }
+    
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 99999);
     }
 
     this.ping();
