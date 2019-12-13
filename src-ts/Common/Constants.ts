@@ -18,7 +18,10 @@ export module Constants {
   export const tournamentWaitRoom2: Vector2D = new Vector2D(23300, 18500);
   export const defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];
   export const defaultTeam2: player[] = [Player(5), Player(6), Player(7), Player(8), Player(9)];
-  export const finalBattleTime: number = 60;
+  // maybe put all the final battle data into a config file
+  export const finalBattleName: string = "Final Battle";
+  export const finalBattleTime: number = 60 * 30;
+  export const finalBattleDelay: number = 60 * 2;
   export const finalBattleSpell: number = FourCC("A0LT");
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
   export const senzuBean: number = FourCC("I000");

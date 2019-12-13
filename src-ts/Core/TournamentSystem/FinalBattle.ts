@@ -1,26 +1,28 @@
-import { TournamentNames } from "./TournamentManager";
 import { AdvancedTournament } from "./AdvancedTournament";
-import { TournamentState } from "./Tournament";
+import { TournamentState, Tournament } from "./Tournament";
 import { Constants } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { WinLossHelper } from "Common/WinLossHelper";
+import { Logger } from "Libs/TreeLib/Logger";
 
-export class FinalBattle extends AdvancedTournament {
+export class FinalBattle extends AdvancedTournament implements Tournament {
   protected lobbyWait: number;
   protected unitsTeam1: unit[];
   protected unitsTeam2: unit[];
   protected winTrigger: trigger;
+  protected winTeam: number;
 
   constructor(
-    public name: string = TournamentNames.FinalBattle,
+    public name: string = Constants.finalBattleName,
     public state: TournamentState = TournamentState.NotStarted,
   ) {
     super(name, state);
-    this.toStartDelay = Constants.finalBattleTime;
+    this.toStartDelay = Constants.finalBattleDelay;
     this.lobbyWait = 15;
     this.unitsTeam1 = [];
     this.unitsTeam2 = [];
     this.winTrigger = CreateTrigger();
+    this.winTeam = 0;
   }
 
   start(): void {
@@ -30,16 +32,25 @@ export class FinalBattle extends AdvancedTournament {
 
   complete(): void {
     super.complete();
+    WinLossHelper.forceTeamWin((this.winTeam) % 2 + 1);
+    for (const unit of this.unitsTeam1) {
+      SetUnitX(unit, 0);
+      SetUnitY(unit, 0);
+    }
+    for (const unit of this.unitsTeam2) {
+      SetUnitX(unit, 0);
+      SetUnitY(unit, 0);
+    }
   }
 
   prepareTournament(): void {
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "The final battle for the fate of the universe will begin in " + 
+      this.toStartDelay + " seconds!"
+    );
+
     TimerStart(this.toStartTimer, this.toStartDelay, false, () => {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "Prepare yourselves, the final battle for the fate of the universe will begin in " + 
-        this.lobbyWait + " seconds!"
-      );
-      
       const dummyCaster = CreateUnit(
         Player(PLAYER_NEUTRAL_PASSIVE), 
         Constants.dummyCasterId,
@@ -87,7 +98,18 @@ export class FinalBattle extends AdvancedTournament {
   }
 
   lobbyWaitForTournament(): void {
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, this.lobbyWait, 
+      "You have " + this.lobbyWait + 
+      " seconds to make your last preparations for the Final Battle. " + 
+      "After this, there's no turning back."
+    );
+
     TimerStart(this.toStartTimer, this.lobbyWait, false, () => {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, this.lobbyWait, 
+        "The Final Battle has begun!"
+      );
       this.moveTeamsToSpawn(this.unitsTeam1, Constants.tournamentSpawn1);
       this.moveTeamsToSpawn(this.unitsTeam2, Constants.tournamentSpawn2);
 
@@ -110,26 +132,27 @@ export class FinalBattle extends AdvancedTournament {
     TriggerAddAction(this.winTrigger, () => {
       const dyingUnit = GetTriggerUnit();
       const player = GetOwningPlayer(dyingUnit);
-      let team = 0;
+      let teamNumber = 0;
       let dyingUnitTeam: unit[] = [];
       if (GetConvertedPlayerId(player) < Constants.maxActivePlayers / 2) {
         dyingUnitTeam = this.unitsTeam1;
-        team = Constants.team1Value;
+        teamNumber = Constants.team1Value;
       } else {
         dyingUnitTeam = this.unitsTeam2;
-        team = Constants.team2Value;
+        teamNumber = Constants.team2Value;
       }
       this.removeUnitFromTeam(dyingUnit, dyingUnitTeam);
 
+      Logger.LogDebug("Team " + teamNumber + " remaining: " + dyingUnitTeam.length);
       if (dyingUnitTeam.length == 0) {
-        WinLossHelper.forceTeamWin((team) % 2 + 1);
+        this.winTeam = teamNumber;
         this.complete();
       }
     });
   }
 
   removeUnitFromTeam(unit: unit, unitsTeam: unit[]) {
-    const index = this.unitsTeam1.indexOf(unit);
-    this.unitsTeam1.splice(index, 1);
+    const index = unitsTeam.indexOf(unit);
+    unitsTeam.splice(index, 1);
   }
 }

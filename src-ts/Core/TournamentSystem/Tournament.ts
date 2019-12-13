@@ -18,7 +18,7 @@ export interface Tournament {
 
 export class BaseTournament implements Tournament {
   constructor(
-    public name: string = "",
+    public name: string,
     public state: TournamentState = TournamentState.NotStarted,
   ) {
 

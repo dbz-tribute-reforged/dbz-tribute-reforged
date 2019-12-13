@@ -1,4 +1,3 @@
-import { MapPlayer, Unit } from 'w3ts';
 import { LibraryLoader } from 'war3-library-loader';
 import { CustomUiTest } from './CustomUI/CustomUITest';
 import { CustomPlayerTest } from 'CustomPlayer/CustomPlayerTest';
@@ -6,7 +5,8 @@ import { PathingCheck } from 'Common/PathingCheck';
 import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
-import { TournamentManager, TournamentNames } from 'Core/TournamentSystem/TournamentManager';
+import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
+import { Constants } from 'Common/Constants';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;

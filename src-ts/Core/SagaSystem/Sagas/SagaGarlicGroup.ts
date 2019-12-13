@@ -1,7 +1,6 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
-import { TournamentManager, TournamentNames } from "Core/TournamentSystem/TournamentManager";
 
 export class DeadZoneSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Dead Zone';
@@ -106,7 +105,5 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-
-    TournamentManager.getInstance().startTournament(TournamentNames.FinalBattle);
   }
 }
