@@ -87,6 +87,8 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       }
     });
 
+    DestroyGroup(hookedGroup);
+
     if (this.hookedUnit) {
       this.hookPause = IsUnitPaused(this.hookedUnit);
       if (!this.hookPause) {

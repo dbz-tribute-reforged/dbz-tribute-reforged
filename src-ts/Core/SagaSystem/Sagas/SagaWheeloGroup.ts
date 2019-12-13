@@ -35,6 +35,8 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
     if (this.kochin && this.wheelo) {
       if (
         IsUnitDeadBJ(this.kochin) && 
+        IsUnitAliveBJ(this.wheelo) &&
+        BlzIsUnitInvulnerable(this.wheelo) &&
         IsUnitHidden(this.wheelo)
       ) {
         DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");

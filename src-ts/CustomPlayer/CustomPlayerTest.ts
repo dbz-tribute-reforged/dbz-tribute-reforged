@@ -7,6 +7,8 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { abilityCodesToNames } from "CustomAbility/AbilityCodesToNames";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
+import { WinLossHelper } from "Common/WinLossHelper";
+import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -22,17 +24,20 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
     // const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
     for (const customHero of customPlayers[playerId].allHeroes) {
       if (customHero && IsUnitSelected(customHero.unit, player)) {
-        customHero.useAbility(
-          name,
-          new CustomAbilityInput(
-            customHero,
-            player,
-            1,
-            customPlayers[playerId].orderPoint,
-            customPlayers[playerId].mouseData,
-            customPlayers[playerId].targetUnit,
-          ),
+        const abilityInput = new CustomAbilityInput(
+          customHero,
+          player,
+          1,
+          customPlayers[playerId].orderPoint,
+          customPlayers[playerId].mouseData,
+          customPlayers[playerId].targetUnit,
         );
+
+        if (customHero.canCastAbility(name, abilityInput)) {
+          // show custom ability name on activation, if castable
+          TextTagHelper.showPlayerColorTextOnUnit(name, playerId, customHero.unit);
+        }
+        customHero.useAbility(name, abilityInput);
       }
     }
   });
@@ -197,11 +202,7 @@ export function CustomPlayerTest() {
 
     if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
       // show ability name on activation
-      TextTagHelper.showTempText(
-        Colorizer.getPlayerColorText(GetPlayerId(player)) + GetAbilityName(abilityId) + "|r", 
-        GetUnitX(GetTriggerUnit()), 
-        GetUnitY(GetTriggerUnit()),
-      );
+      TextTagHelper.showPlayerColorTextOnUnit(GetAbilityName(abilityId), playerId, GetTriggerUnit());
     }
 
     const spellName = abilityCodesToNames.get(abilityId);
@@ -343,15 +344,6 @@ export function CustomPlayerTest() {
       }
     }
   });
-
-
-  // reveal map
-  /*
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
-  }
-  */
-  // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
 
   // player leaves game
   const leaveTrig = CreateTrigger();
@@ -529,6 +521,14 @@ export function CustomPlayerTest() {
       SetUnitY(unit, GetOrderPointY());
     });
 
+    // reveal map
+    /*
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+    }
+    */
+    // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
+
   }
 
   // ally/unally as necessary
@@ -539,7 +539,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
   });
 
   const unallyTrig = CreateTrigger();
@@ -551,4 +551,34 @@ export function CustomPlayerTest() {
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9));
     SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_UNALLIED);
   });
+
+  // rename trig
+  const nameTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
+  }
+  TriggerAddAction(nameTrig, () => {
+    const player = GetTriggerPlayer();
+    const newName = SubString(GetEventPlayerChatString(), 6, 20);
+    SetPlayerName(player, newName);
+  });
+
+  // freemode
+  const freeModeTrig = CreateTrigger();
+  // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
+  // }
+  TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-freemode", true);
+  TriggerAddAction(nameTrig, () => {
+    WinLossHelper.freeMode = true;
+  });
+
+  // force final battle
+  const forceFinalBattleTrig = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
+  TriggerAddAction(nameTrig, () => {
+    TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+  });
+
+
 }

@@ -1,4 +1,3 @@
-import { MapPlayer, Unit } from 'w3ts';
 import { LibraryLoader } from 'war3-library-loader';
 import { CustomUiTest } from './CustomUI/CustomUITest';
 import { CustomPlayerTest } from 'CustomPlayer/CustomPlayerTest';
@@ -6,9 +5,12 @@ import { PathingCheck } from 'Common/PathingCheck';
 import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
+import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
+import { Constants } from 'Common/Constants';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
+let tournamentManager: TournamentManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -23,6 +25,8 @@ function tsMain() {
   sagaManager = SagaManager.getInstance();
 
   creepManager = CreepManager.getInstance();
+
+  tournamentManager = TournamentManager.getInstance();
   
   CustomUiTest();
   CustomPlayerTest();

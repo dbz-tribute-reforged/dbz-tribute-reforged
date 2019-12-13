@@ -78,7 +78,6 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_TRUNKS);
   }
 
 }
@@ -107,6 +106,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
     if (mc1 && mc2 && mc3) {
       this.metalCoolers.push(mc1, mc2, mc3);
+      SetUnitAcquireRange(mc1, 99999);
+      SetUnitAcquireRange(mc2, 99999);
+      SetUnitAcquireRange(mc3, 99999);
     }
 
     this.ping()

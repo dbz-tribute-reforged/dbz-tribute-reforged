@@ -260,7 +260,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 45;
+    this.sagaDelay = 60;
     this.stats = 100;
   }
 
@@ -268,7 +268,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "King Cold and Mecha Frieza have come seeking revenge!");
 
     // create unit
-    const maxFriezaHenchmen = 5;
+    const maxFriezaHenchmen = 8;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 2000;
       let offsetY = Math.random() * 2000;
@@ -297,6 +297,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "The Frieza Force have invaded Earth!");
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_TRUNKS);
     this.spawnWhenDelayFinished();
   }
@@ -314,5 +315,6 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_TRUNKS);
   }
 }

@@ -29,7 +29,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     if (this.turles && this.availableFruits > 0) {
       const turlesHp = GetUnitState(this.turles, UNIT_STATE_LIFE);
       if (
-        turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.15 &&
+        turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.2 &&
         turlesHp > 0
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(

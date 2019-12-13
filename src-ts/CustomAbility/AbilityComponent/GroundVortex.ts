@@ -93,6 +93,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
       PathingCheck.moveGroundUnitToCoord(target, targetNewCoord);
       this.dealDamageToUnit(ability, input, target, closenessRatio);
     });
+
+    DestroyGroup(affectedGroup);
   }
 
   clone(): AbilityComponent {

@@ -1,3 +1,4 @@
+import { Colorizer } from "./Colorizer";
 
 export module TextTagHelper {
   export function showTempText(
@@ -15,5 +16,13 @@ export module TextTagHelper {
     SetTextTagPermanentBJ(tag, false);
     SetTextTagLifespanBJ(tag, duration);
     SetTextTagFadepointBJ(tag, fading);
+  }
+
+  export function showPlayerColorTextOnUnit(colorText: string, playerId: number, unit: unit) {
+    TextTagHelper.showTempText(
+      Colorizer.getPlayerColorText(playerId) + colorText + "|r", 
+      GetUnitX(unit), 
+      GetUnitY(unit),
+    );
   }
 }

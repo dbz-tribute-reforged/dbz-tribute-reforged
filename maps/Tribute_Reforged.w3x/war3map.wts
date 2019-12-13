@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19c
+Tribute Reforged 0.19d
 }
 
 STRING 4
@@ -21960,7 +21960,7 @@ Causes fusion via two Potara earrings given to Goten and Kid Trunks by the Supre
 }
 
 STRING 3588
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 50% extra damage.|r
 }
@@ -22694,12 +22694,6 @@ STRING 3709
 // Abilities: A05P (Cam Distance Down), Name (Name)
 {
 Cam Distance Down
-}
-
-STRING 3710
-// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
-{
-This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 50% extra damage.|r
 }
 
 STRING 3711
@@ -64534,5 +64528,34 @@ STRING 10640
 // Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
 {
 (actual)
+}
+
+STRING 10641
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+{
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 150% extra damage.|r
+}
+
+STRING 10642
+// Abilities: A0LT (Final Battle Activator), Ubertip (Tooltip - Normal - Extended)
+{
+Triggers final battle
+}
+
+STRING 10643
+{
+=== Final Battle ===
+}
+
+STRING 10644
+// Abilities: A0LT (Final Battle Activator), Name (Name)
+{
+Final Battle Activator
+}
+
+STRING 10645
+// Abilities: A0LT (Final Battle Activator), Tip (Tooltip - Normal)
+{
+Final Battle
 }
 

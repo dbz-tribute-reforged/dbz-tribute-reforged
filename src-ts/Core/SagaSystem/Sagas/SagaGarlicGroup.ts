@@ -1,7 +1,6 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
-import { Players } from "Libs/TreeLib/Structs/Players";
 
 export class DeadZoneSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Dead Zone';

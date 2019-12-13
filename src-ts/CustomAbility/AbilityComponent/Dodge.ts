@@ -60,6 +60,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       }
     });
 
+    DestroyGroup(affectedGroup);
+
     if (currentEnemies > 0) {
       dodgeVector.x = dodgeVector.x / currentEnemies;
       dodgeVector.y = dodgeVector.y / currentEnemies;
