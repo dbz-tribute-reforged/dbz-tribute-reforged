@@ -569,14 +569,14 @@ export function CustomPlayerTest() {
   //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
   // }
   TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-freemode", true);
-  TriggerAddAction(nameTrig, () => {
+  TriggerAddAction(freeModeTrig, () => {
     WinLossHelper.freeMode = true;
   });
 
   // force final battle
   const forceFinalBattleTrig = CreateTrigger();
   TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
-  TriggerAddAction(nameTrig, () => {
+  TriggerAddAction(forceFinalBattleTrig, () => {
     TournamentManager.getInstance().startTournament(Constants.finalBattleName);
   });
 
