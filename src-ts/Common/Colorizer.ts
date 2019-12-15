@@ -72,4 +72,11 @@ export module Colorizer {
     const index = Math.floor(Math.random() * Object.keys(Color).length);
     return getPlayerColorText(index);
   }
+
+  export function getColoredPlayerName(player: player): string {
+    return (
+      Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
+      GetPlayerName(player) + "|r"
+    );
+  }
 }

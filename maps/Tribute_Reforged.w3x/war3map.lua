@@ -374,6 +374,7 @@ gg_unit_H000_0014 = nil
 gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
+gg_rct_Final_Battle_Detector_Region = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1627,6 +1628,7 @@ function CreateRegions()
     gg_rct_HeavenToLowerHell = Rect(-5024.0, 21984.0, -4736.0, 22304.0)
     gg_rct_LowerHellsSagaSpawn = Rect(23456.0, 23104.0, 23744.0, 23424.0)
     gg_rct_TournamentArena = Rect(16800.0, 17824.0, 22624.0, 23648.0)
+    gg_rct_Final_Battle_Detector_Region = Rect(-800.0, 22912.0, -640.0, 23040.0)
 end
 
 function CreateCameras()
@@ -2292,6 +2294,27 @@ function InitTrig_Buu_Candy_Gobbler()
     TriggerAddAction(gg_trg_Buu_Candy_Gobbler, Trig_Buu_Candy_Gobbler_Actions)
 end
 
+function Trig_Buu_Candy_Eating_Func002Func006Func004Func001Func001C()
+    if (not (GetHeroLevel(udg_StatMultUnit) < 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Buu_Candy_Eating_Func002Func006Func004Func001C()
+    if (not (GetHeroLevel(udg_StatMultUnit) < 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Buu_Candy_Eating_Func002Func006Func004C()
+    if (not (GetHeroLevel(udg_StatMultUnit) < 45)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Buu_Candy_Eating_Func002Func006C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O005"))) then
         return false
@@ -2315,8 +2338,21 @@ function Trig_Buu_Candy_Eating_Actions()
         TriggerExecute(gg_trg_Update_Current_Stats)
         if (Trig_Buu_Candy_Eating_Func002Func006C()) then
             TriggerExecute(gg_trg_Get_Stat_Multiplier)
-            udg_TempReal = (((0.04 * 0.10) + (I2R(udg_TempInt) * (0.01 * 0.10))) + udg_StatMultInt)
-            udg_StatMultReal = RMinBJ(2.50, udg_TempReal)
+            udg_TempReal = (((0.01 * 0.10) + (I2R(udg_TempInt) * (0.01 * 0.10))) + udg_StatMultInt)
+            if (Trig_Buu_Candy_Eating_Func002Func006Func004C()) then
+                udg_TempReal2 = 1.75
+            else
+                if (Trig_Buu_Candy_Eating_Func002Func006Func004Func001C()) then
+                    udg_TempReal2 = 2.25
+                else
+                    if (Trig_Buu_Candy_Eating_Func002Func006Func004Func001Func001C()) then
+                        udg_TempReal2 = 2.50
+                    else
+                        udg_TempReal2 = 2.60
+                    end
+                end
+            end
+            udg_StatMultReal = RMinBJ(udg_TempReal2, udg_TempReal)
             TriggerExecute(gg_trg_Set_Stat_Multiplier)
         else
         end
@@ -3037,6 +3073,13 @@ function Trig_Kill_Hero_Stats_And_Revive_Func001Func010C()
     return true
 end
 
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func011C()
+    if (not (RectContainsUnit(gg_rct_TournamentArena, GetDyingUnit()) == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Kill_Hero_Stats_And_Revive_Func001C()
     if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
         return false
@@ -3060,9 +3103,12 @@ function Trig_Kill_Hero_Stats_And_Revive_Actions()
                         DestroyForce(udg_TempPlayerGroup)
         else
         end
-        TriggerSleepAction(udg_HeroRespawnDelay)
-        udg_HeroRespawnUnit = GetTriggerUnit()
-        TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+        if (Trig_Kill_Hero_Stats_And_Revive_Func001Func011C()) then
+        else
+            TriggerSleepAction(udg_HeroRespawnDelay)
+            udg_HeroRespawnUnit = GetTriggerUnit()
+            TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+        end
     else
         udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
         udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
@@ -3265,7 +3311,7 @@ function InitTrig_Force_Win_Loss()
 end
 
 function Trig_Final_Battle_Detector_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0LT"))) then
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h054"))) then
         return false
     end
     return true
@@ -3276,13 +3322,12 @@ function Trig_Final_Battle_Detector_Actions()
     DisableTrigger(gg_trg_Hero_Leaves_Heaven)
     DisableTrigger(gg_trg_Hero_Leaves_Hell)
     DisableTrigger(gg_trg_Force_Win_Loss)
-    EnableTrigger(gg_trg_Final_Battle_Tagger)
     EnableTrigger(gg_trg_Unit_Leaves_Final_Battle_TournamentArea)
 end
 
 function InitTrig_Final_Battle_Detector()
     gg_trg_Final_Battle_Detector = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Final_Battle_Detector, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerRegisterEnterRectSimple(gg_trg_Final_Battle_Detector, gg_rct_Final_Battle_Detector_Region)
     TriggerAddCondition(gg_trg_Final_Battle_Detector, Condition(Trig_Final_Battle_Detector_Conditions))
     TriggerAddAction(gg_trg_Final_Battle_Detector, Trig_Final_Battle_Detector_Actions)
 end
@@ -3639,6 +3684,7 @@ end
 
 function InitTrig_Hero_Leaves_Heaven()
     gg_trg_Hero_Leaves_Heaven = CreateTrigger()
+    DisableTrigger(gg_trg_Hero_Leaves_Heaven)
     TriggerRegisterLeaveRectSimple(gg_trg_Hero_Leaves_Heaven, gg_rct_HeavenZone)
     TriggerAddCondition(gg_trg_Hero_Leaves_Heaven, Condition(Trig_Hero_Leaves_Heaven_Conditions))
     TriggerAddAction(gg_trg_Hero_Leaves_Heaven, Trig_Hero_Leaves_Heaven_Actions)
@@ -3659,6 +3705,7 @@ end
 
 function InitTrig_Hero_Leaves_Hell()
     gg_trg_Hero_Leaves_Hell = CreateTrigger()
+    DisableTrigger(gg_trg_Hero_Leaves_Hell)
     TriggerRegisterLeaveRectSimple(gg_trg_Hero_Leaves_Hell, gg_rct_HellZone)
     TriggerAddCondition(gg_trg_Hero_Leaves_Hell, Condition(Trig_Hero_Leaves_Hell_Conditions))
     TriggerAddAction(gg_trg_Hero_Leaves_Hell, Trig_Hero_Leaves_Hell_Actions)

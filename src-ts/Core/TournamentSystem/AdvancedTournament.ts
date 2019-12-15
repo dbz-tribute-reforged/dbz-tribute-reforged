@@ -19,6 +19,7 @@ export class AdvancedTournament extends BaseTournament implements Tournament {
 
   complete(): void {
     super.complete();
+    TimerDialogDisplay(this.toStartTimerDialog, false);
   }
 
 }

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19e
+Tribute Reforged 0.19f
 }
 
 STRING 4
@@ -17573,12 +17573,6 @@ STRING 2856
 Gain 5 damage
 }
 
-STRING 2857
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
 STRING 2858
 // Abilities: A0LK (Buu Candy Slow 80%), Name (Name)
 {
@@ -17597,28 +17591,10 @@ STRING 2860
 Slow
 }
 
-STRING 2861
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 2862
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
 STRING 2863
 // Units: H04X (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (int clone)
-}
-
-STRING 2864
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004/0.005/0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 2865
@@ -22694,6 +22670,12 @@ STRING 3709
 // Abilities: A05P (Cam Distance Down), Name (Name)
 {
 Cam Distance Down
+}
+
+STRING 3710
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 5%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 3711
@@ -64557,5 +64539,23 @@ STRING 10645
 // Abilities: A0LT (Final Battle Activator), Tip (Tooltip - Normal)
 {
 Final Battle
+}
+
+STRING 10646
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.003x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 10647
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 10648
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 5/10/15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002/0.003/0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 

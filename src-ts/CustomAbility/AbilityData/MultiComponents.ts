@@ -155,7 +155,7 @@ export const MultiComponents = [
     angleMax: 180,
     delayBetweenComponents: 5,
     firingMode: MultiComponent.RANDOM_FIRING,
-    multiplyComponents: 100,
+    multiplyComponents: 66,
     components: [
       { name: "beam mankind destruction attack" },
     ],

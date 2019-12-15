@@ -528,7 +528,13 @@ export function CustomPlayerTest() {
     }
     */
     // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
-
+  
+    // force budokai
+    const forceBudokaiTrig = CreateTrigger();
+    TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
+    TriggerAddAction(forceBudokaiTrig, () => {
+      TournamentManager.getInstance().startTournament(Constants.budokaiName);
+    });
   }
 
   // ally/unally as necessary
@@ -579,6 +585,5 @@ export function CustomPlayerTest() {
   TriggerAddAction(forceFinalBattleTrig, () => {
     TournamentManager.getInstance().startTournament(Constants.finalBattleName);
   });
-
 
 }

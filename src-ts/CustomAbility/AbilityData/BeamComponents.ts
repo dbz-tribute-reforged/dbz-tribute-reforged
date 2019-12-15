@@ -524,7 +524,7 @@ export const BeamComponents = [
     speed: 20,
     aoe: 250,
     clashingDelayTicks: 2,
-    maxDelayTicks: 20,
+    maxDelayTicks: 14,
     durationIncPerDelay: 4,
     heightVariation: {
       start: 50,
@@ -576,7 +576,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 0.15,
+    beamHpMult: BASE.KAME_DPS * 0.12,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 30,
     aoe: 250,
