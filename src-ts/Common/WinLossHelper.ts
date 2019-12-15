@@ -23,10 +23,7 @@ export module WinLossHelper {
 
       let winningPlayerNames: string = "";         
       for (const player of winningPlayers) {
-        winningPlayerNames += (
-          Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
-          GetPlayerName(player) + "|r "
-        );
+        winningPlayerNames += Colorizer.getColoredPlayerName(player) + " ";
       }
 
       if (!freeMode) {

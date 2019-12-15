@@ -4,21 +4,21 @@ import { Constants } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { WinLossHelper } from "Common/WinLossHelper";
 import { Logger } from "Libs/TreeLib/Logger";
+import { TournamentData } from "./TournamentData";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
-  protected lobbyWait: number;
   protected unitsTeam1: unit[];
   protected unitsTeam2: unit[];
   protected winTrigger: trigger;
   protected winTeam: number;
 
   constructor(
-    public name: string = Constants.finalBattleName,
+    public name: string = TournamentData.finalBattleName,
     public state: TournamentState = TournamentState.NotStarted,
+    public toStartDelay: number = TournamentData.finalBattleDelay,
   ) {
-    super(name, state);
-    this.toStartDelay = Constants.finalBattleDelay;
-    this.lobbyWait = 15;
+    super(name, state, toStartDelay);
     this.unitsTeam1 = [];
     this.unitsTeam2 = [];
     this.winTrigger = CreateTrigger();
@@ -43,35 +43,46 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     }
   }
 
+  // what to do before the tournament actually starts
+  // e.g. show timers
   prepareTournament(): void {
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      "The final battle for the fate of the universe will begin in " + 
+      "The Final Battle for the fate of the universe will begin in " + 
       this.toStartDelay + " seconds!"
     );
+    
+    // tell gui respawn system final battle is happening
     const dummyCaster = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE), 
       Constants.dummyCasterId,
-      0, 0, 0,
+      TournamentData.finalBattleDetector.x, 
+      TournamentData.finalBattleDetector.y,
+      0,
     );
-    UnitAddAbility(dummyCaster, Constants.finalBattleSpell);
-    IssueImmediateOrderById(dummyCaster, Constants.finalBattleOrder);
+    // UnitAddAbility(dummyCaster, TournamentData.finalBattleSpell);
+    // IssueImmediateOrderById(dummyCaster, TournamentData.finalBattleOrder);
 
     TimerStart(this.toStartTimer, this.toStartDelay, false, () => {
-
-      this.prepareTeam(Constants.defaultTeam1, this.unitsTeam1, Constants.tournamentWaitRoom1);
-      this.prepareTeam(Constants.defaultTeam2, this.unitsTeam2, Constants.tournamentWaitRoom2);
-
-      CreateItem(Constants.senzuBean, Constants.tournamentWaitRoom1.x, Constants.tournamentWaitRoom1.y);
-      CreateItem(Constants.senzuBean, Constants.tournamentWaitRoom2.x, Constants.tournamentWaitRoom2.y);
-      
-      for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-        FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
-      }
-      
-      this.state = TournamentState.InProgress;
-      this.lobbyWaitForTournament();
+      this.setupTournament();
     });
+  }
+
+  // setup the tournament by
+  // moving units into it as needed
+  setupTournament() {
+    this.prepareTeam(Constants.defaultTeam1, this.unitsTeam1, TournamentData.tournamentWaitRoom1);
+    this.prepareTeam(Constants.defaultTeam2, this.unitsTeam2, TournamentData.tournamentWaitRoom2);
+
+    CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom1.x, TournamentData.tournamentWaitRoom1.y - 500);
+    CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom2.x, TournamentData.tournamentWaitRoom2.y + 500);
+    
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+    }
+    
+    this.state = TournamentState.InProgress;
+    this.lobbyWaitForTournament();
   }
 
   prepareTeam(players: player[], unitsTeam: unit[], waitRoom: Vector2D): void {
@@ -79,7 +90,10 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     for (const player of players) {
       const playerUnits = CreateGroup();
       GroupEnumUnitsOfPlayer(playerUnits, player, Filter(() => {
-        return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO);
+        return (
+          UnitHelper.isUnitTournamentViable(GetFilterUnit()) &&
+          IsUnitAliveBJ(GetFilterUnit())
+        );
       }));
 
       ForGroup(playerUnits, () => {
@@ -99,19 +113,19 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
 
   lobbyWaitForTournament(): void {
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, this.lobbyWait, 
-      "You have " + this.lobbyWait + 
+      bj_FORCE_ALL_PLAYERS, TournamentData.finalBattleLobbyWait, 
+      "You have " + TournamentData.finalBattleLobbyWait + 
       " seconds to make your last preparations for the Final Battle. " + 
       "After this, there's no turning back."
     );
 
-    TimerStart(this.toStartTimer, this.lobbyWait, false, () => {
+    TimerStart(this.toStartTimer, TournamentData.finalBattleLobbyWait, false, () => {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, this.lobbyWait, 
+        bj_FORCE_ALL_PLAYERS, TournamentData.finalBattleLobbyWait, 
         "The Final Battle has begun!"
       );
-      this.moveTeamsToSpawn(this.unitsTeam1, Constants.tournamentSpawn1);
-      this.moveTeamsToSpawn(this.unitsTeam2, Constants.tournamentSpawn2);
+      this.moveTeamsToSpawn(this.unitsTeam1, TournamentData.tournamentSpawn1);
+      this.moveTeamsToSpawn(this.unitsTeam2, TournamentData.tournamentSpawn2);
 
       this.setupWinTriggerActions();
     })
@@ -134,7 +148,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       const player = GetOwningPlayer(dyingUnit);
       let teamNumber = 0;
       let dyingUnitTeam: unit[] = [];
-      if (GetConvertedPlayerId(player) < Constants.maxActivePlayers / 2) {
+      if (GetPlayerId(player) < Constants.maxActivePlayers / 2) {
         dyingUnitTeam = this.unitsTeam1;
         teamNumber = Constants.team1Value;
       } else {

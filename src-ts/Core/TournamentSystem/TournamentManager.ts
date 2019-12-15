@@ -2,18 +2,26 @@ import { Hooks } from "Libs/TreeLib/Hooks";
 import { Tournament, TournamentState } from "./Tournament";
 import { FinalBattle } from "./FinalBattle";
 import { Logger } from "Libs/TreeLib/Logger";
+import { TournamentData } from "./TournamentData";
 import { Constants } from "Common/Constants";
+import { Budokai } from "./Budokai";
+import { UnitHelper } from "Common/UnitHelper";
+
 
 export class TournamentManager {
+  
   private static instance: TournamentManager;
 
   protected tournaments: Map<string, Tournament>;
   protected currentTournament: Tournament | null;
 
+  protected tournamentReviveTrig: trigger;
+
   constructor (
   ) {
     this.tournaments = new Map();
     this.currentTournament = null;
+    this.tournamentReviveTrig = CreateTrigger();
     this.initialize();
   }
 
@@ -26,35 +34,106 @@ export class TournamentManager {
   }
 
   public initialize(): this {
+    this.setupReviveTrigger();
+
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
+    // this.setupTimedStartFinalBattle();
+    this.startPreTournamentTimer(
+      TournamentData.finalBattleName,
+      TournamentData.finalBattleTime,
+      TournamentData.finalBattleInterval,
+      true,
+    );
 
-    // move all of this somewhere else probably ...
-    // NOTE: wait till 70s have elapsed
-    // then create a visible timer for 30mins 
-    // that shows how long before final battle will start()
-    // if another tournament is going wait another 15misn to start() fb
-    // final battle then delays for another 120s
-    const finalBattleTrig = CreateTrigger();
-    TriggerRegisterTimerEvent(finalBattleTrig, 70, false);
-    TriggerAddAction(finalBattleTrig, () => {
-      const finalBattleTimer = CreateTimer();
-      TimerStart(finalBattleTimer, Constants.finalBattleTime, true, () => {
-        TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+    const budokai = new Budokai();
+    this.tournaments.set(budokai.name, budokai);
+    this.startPreTournamentTimer(
+      TournamentData.budokaiName,
+      TournamentData.budokaiStartTime1,
+      3,
+      false,
+    );
+    this.startPreTournamentTimer(
+      TournamentData.budokaiName,
+      TournamentData.budokaiStartTime2,
+      3,
+      false,
+    );
+    this.startPreTournamentTimer(
+      TournamentData.budokaiName,
+      TournamentData.budokaiStartTime3,
+      3,
+      false,
+    );
+
+
+    return this;
+  }
+
+  protected setupReviveTrigger() {
+    // tournament revive trigger
+    // if you die in tournament, revive & move to lobby
+    TriggerRegisterAnyUnitEventBJ(this.tournamentReviveTrig, EVENT_PLAYER_UNIT_DEATH);
+    TriggerAddAction(this.tournamentReviveTrig, () => {
+      const deadHero = GetDyingUnit();
+      const x = GetUnitX(deadHero);
+      const y = GetUnitY(deadHero);
+      if ( 
+        x > TournamentData.tournamentBottomLeft.x &&
+        y > TournamentData.tournamentBottomLeft.y && 
+        x < TournamentData.tournamentTopRight.x &&
+        y < TournamentData.tournamentTopRight.y && 
+        UnitHelper.isUnitTournamentViable(deadHero)
+      ) {
+        Logger.LogDebug("Reviving Dead Tournament Hero");
+        TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
+          ReviveHero(
+            deadHero, 
+            TournamentData.tournamentWaitRoom1.x,
+            TournamentData.tournamentWaitRoom1.y,
+            false
+          );
+
+          SetUnitInvulnerable(deadHero, true);
+          PauseUnit(deadHero, true);
+
+          DestroyTimer(GetExpiredTimer());
+        });
+      }
+    });
+  }
+  
+  // timer to show how long before a given tournament starts()
+  protected startPreTournamentTimer(
+    tournamentName: string, 
+    initialDelay: number, 
+    timerDuration: number,
+    timerRepeat: boolean,
+  ) {
+    const tournamentStartTrig = CreateTrigger();
+    const tournamentIntervalTimer = CreateTimer();
+    const tournamentTimerDialog = CreateTimerDialog(tournamentIntervalTimer);
+
+    TriggerRegisterTimerEvent(tournamentStartTrig, initialDelay, false);
+
+    TriggerAddAction(tournamentStartTrig, () => {
+      TimerStart(tournamentIntervalTimer, timerDuration, timerRepeat, () => {
+        TournamentManager.getInstance().startTournament(tournamentName);
         const currentTournament = TournamentManager.getInstance().currentTournament;
-        if (currentTournament && currentTournament.name == Constants.finalBattleName) {
-          DestroyTimerDialog(finalBattleTimerDialog);
-          DestroyTimer(finalBattleTimer);
+
+        if (currentTournament && currentTournament.name == tournamentName) {
+          DestroyTimer(tournamentIntervalTimer);
+          DestroyTimerDialog(tournamentTimerDialog);
+          DestroyTrigger(tournamentStartTrig);
         } else {
           Logger.LogDebug("Another tournament is active...");
         }
       })
-      const finalBattleTimerDialog = CreateTimerDialog(finalBattleTimer);
-      TimerDialogSetTitle(finalBattleTimerDialog, Constants.finalBattleName);
-      TimerDialogDisplay(finalBattleTimerDialog, true);
-    });
 
-    return this;
+      TimerDialogSetTitle(tournamentTimerDialog, tournamentName);
+      TimerDialogDisplay(tournamentTimerDialog, true);
+    });
   }
   
   public startTournament(name: string) {

@@ -355,8 +355,8 @@ export function CustomPlayerTest() {
     DisplayTimedTextToForce(
       GetPlayersAll(), 
       15,
-      Colorizer.getPlayerColorText(GetPlayerId(leavePlayer)) + GetPlayerName(leavePlayer) + 
-      "|r has left the game."
+      Colorizer.getColoredPlayerName(leavePlayer) + 
+      " has left the game."
     );
   })
 
@@ -384,17 +384,15 @@ export function CustomPlayerTest() {
         15,
         Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
         "|r has killed " + 
-        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-        "|r"
+        Colorizer.getColoredPlayerName(deadPlayer)
       );
     } else {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         15,
-        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
-        "|r has killed " + 
-        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-        "|r"
+        Colorizer.getColoredPlayerName(killPlayer) + 
+        " has killed " + 
+        Colorizer.getColoredPlayerName(deadPlayer)
       );
 
     }
@@ -528,7 +526,13 @@ export function CustomPlayerTest() {
     }
     */
     // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
-
+  
+    // force budokai
+    const forceBudokaiTrig = CreateTrigger();
+    TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
+    TriggerAddAction(forceBudokaiTrig, () => {
+      TournamentManager.getInstance().startTournament(Constants.budokaiName);
+    });
   }
 
   // ally/unally as necessary
@@ -539,7 +543,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
   });
 
   const unallyTrig = CreateTrigger();
@@ -579,6 +583,5 @@ export function CustomPlayerTest() {
   TriggerAddAction(forceFinalBattleTrig, () => {
     TournamentManager.getInstance().startTournament(Constants.finalBattleName);
   });
-
 
 }
