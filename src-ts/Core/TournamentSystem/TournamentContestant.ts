@@ -1,4 +1,5 @@
 import { Vector2D } from "Common/Vector2D";
+import { TournamentData } from "./TournamentData";
 
 
 export class UnitContestant {
@@ -17,14 +18,41 @@ export class TournamentContestant {
     public isInArena: boolean = false,
     public units: Map<unit, UnitContestant> = new Map(),
     public unitsAlive: number = 0,
+    public tournamentFogModifier: fogmodifier = CreateFogModifierRect(
+      Player(id), 
+      FOG_OF_WAR_VISIBLE, 
+      TournamentData.tournamentRect, 
+      true, 
+      false
+    ),
   ) {
 
+  }
+
+  completeTournament() {
+    this.units.clear();
+    this.stopVision();
+  }
+
+  startMatch() {
+    this.setupUnitsOfPlayer(this.id);
+    this.resetUnitsAlive();
+    this.isInArena = true;
+  }
+
+  startVision() {
+    FogModifierStart(this.tournamentFogModifier);
+  }
+
+  stopVision() {
+    FogModifierStop(this.tournamentFogModifier);
+    DestroyFogModifier(this.tournamentFogModifier);
   }
 
   setupUnitsOfPlayer(playerId: number) {
     this.units.clear();
     const playerUnits = CreateGroup();
-    // TODO: don't lead dead units join
+    // TODO: don't let dead units join
     GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), Filter(() => {
       return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && IsUnitAliveBJ(GetFilterUnit());
     }));
@@ -57,5 +85,6 @@ export class TournamentContestant {
       SetUnitX(unitContestant.unit, unitContestant.oldPosition.x);
       SetUnitY(unitContestant.unit, unitContestant.oldPosition.y);
     }
+    this.isInArena = false;
   }
 }

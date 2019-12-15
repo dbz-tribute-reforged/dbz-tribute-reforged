@@ -5,6 +5,7 @@ import { Logger } from "Libs/TreeLib/Logger";
 import { TournamentData } from "./TournamentData";
 import { Constants } from "Common/Constants";
 import { Budokai } from "./Budokai";
+import { UnitHelper } from "Common/UnitHelper";
 
 
 export class TournamentManager {
@@ -37,15 +38,32 @@ export class TournamentManager {
 
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
-    this.setupTimedStartFinalBattle();
-    
+    // this.setupTimedStartFinalBattle();
+    this.startPreTournamentTimer(
+      TournamentData.finalBattleName,
+      TournamentData.finalBattleTime,
+      TournamentData.finalBattleInterval,
+      false,
+    );
+
     const budokai = new Budokai();
     this.tournaments.set(budokai.name, budokai);
-    // timer to show how long before the tournament starts()
     this.startPreTournamentTimer(
       TournamentData.budokaiName,
-      70,
-      5,
+      TournamentData.budokaiStartTime1,
+      3,
+      false,
+    );
+    this.startPreTournamentTimer(
+      TournamentData.budokaiName,
+      TournamentData.budokaiStartTime2,
+      3,
+      false,
+    );
+    this.startPreTournamentTimer(
+      TournamentData.budokaiName,
+      TournamentData.budokaiStartTime3,
+      3,
       false,
     );
 
@@ -57,68 +75,36 @@ export class TournamentManager {
     // tournament revive trigger
     // if you die in tournament, revive & move to lobby
     TriggerRegisterAnyUnitEventBJ(this.tournamentReviveTrig, EVENT_PLAYER_UNIT_DEATH);
-    
-    TriggerAddCondition(this.tournamentReviveTrig, Condition(()=> {
-      const testUnit = GetFilterUnit();
-      return (
-        GetUnitX(testUnit) > TournamentData.tournmanetBottomLeft.x && 
-        GetUnitY(testUnit) > TournamentData.tournmanetBottomLeft.y &&
-        GetUnitX(testUnit) < TournamentData.tournmanetTopRight.x &&
-        GetUnitY(testUnit) < TournamentData.tournmanetTopRight.y &&
-        IsUnitType(testUnit, UNIT_TYPE_HERO) &&
-        !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
-      );
-    }));
-
     TriggerAddAction(this.tournamentReviveTrig, () => {
-      TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
-        const deadHero = GetTriggerUnit();
-        ReviveHero(
-          deadHero, 
-          TournamentData.tournamentWaitRoom1.x, 
-          TournamentData.tournamentWaitRoom1.y, 
-          false
-        );
-        SetUnitInvulnerable(deadHero, true);
-        PauseUnit(deadHero, true);
+      const deadHero = GetDyingUnit();
+      const x = GetUnitX(deadHero);
+      const y = GetUnitY(deadHero);
+      if ( 
+        x > TournamentData.tournamentBottomLeft.x &&
+        y > TournamentData.tournamentBottomLeft.y && 
+        x < TournamentData.tournamentTopRight.x &&
+        y < TournamentData.tournamentTopRight.y && 
+        UnitHelper.isUnitTournamentViable(deadHero)
+      ) {
+        Logger.LogDebug("Reviving Dead Tournament Hero");
+        TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
+          ReviveHero(
+            deadHero, 
+            TournamentData.tournamentWaitRoom1.x,
+            TournamentData.tournamentWaitRoom1.y,
+            false
+          );
 
-        DestroyTimer(GetExpiredTimer());
-      });
-    });
-  }
+          SetUnitInvulnerable(deadHero, true);
+          PauseUnit(deadHero, true);
 
-  protected setupTimedStartFinalBattle() {
-    // move all of this somewhere else probably ...
-    // and clean it up...
-    // NOTE: wait till 25mins have elapsed
-    // then create a visible timer for 5mins 
-    // that shows how long before final battle will start()
-    // if another tournament is going wait another 5 mins to start() fb
-    // final battle then delays for another 120s after claiming use of the tournament ring
-    const finalBattleTrig = CreateTrigger();
-    TriggerRegisterTimerEvent(finalBattleTrig, 25*60, false);
-
-    TriggerAddAction(finalBattleTrig, () => {
-      const finalBattleTimer = CreateTimer();
-      TimerStart(finalBattleTimer, TournamentData.finalBattleInterval, true, () => {
-        TournamentManager.getInstance().startTournament(TournamentData.finalBattleName);
-        const currentTournament = TournamentManager.getInstance().currentTournament;
-
-        if (currentTournament && currentTournament.name == TournamentData.finalBattleName) {
-          DestroyTimerDialog(finalBattleTimerDialog);
-          DestroyTimer(finalBattleTimer);
-          DestroyTrigger(finalBattleTrig);
-        } else {
-          Logger.LogDebug("Another tournament is active...");
-        }
-      })
-
-      const finalBattleTimerDialog = CreateTimerDialog(finalBattleTimer);
-      TimerDialogSetTitle(finalBattleTimerDialog, TournamentData.finalBattleName);
-      TimerDialogDisplay(finalBattleTimerDialog, true);
+          DestroyTimer(GetExpiredTimer());
+        });
+      }
     });
   }
   
+  // timer to show how long before a given tournament starts()
   protected startPreTournamentTimer(
     tournamentName: string, 
     initialDelay: number, 

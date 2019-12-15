@@ -5,6 +5,7 @@ import { Vector2D } from "Common/Vector2D";
 import { WinLossHelper } from "Common/WinLossHelper";
 import { Logger } from "Libs/TreeLib/Logger";
 import { TournamentData } from "./TournamentData";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -89,7 +90,10 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     for (const player of players) {
       const playerUnits = CreateGroup();
       GroupEnumUnitsOfPlayer(playerUnits, player, Filter(() => {
-        return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO);
+        return (
+          UnitHelper.isUnitTournamentViable(GetFilterUnit()) &&
+          IsUnitAliveBJ(GetFilterUnit())
+        );
       }));
 
       ForGroup(playerUnits, () => {
@@ -144,7 +148,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       const player = GetOwningPlayer(dyingUnit);
       let teamNumber = 0;
       let dyingUnitTeam: unit[] = [];
-      if (GetConvertedPlayerId(player) < Constants.maxActivePlayers / 2) {
+      if (GetPlayerId(player) < Constants.maxActivePlayers / 2) {
         dyingUnitTeam = this.unitsTeam1;
         teamNumber = Constants.team1Value;
       } else {

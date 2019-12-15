@@ -75,7 +75,7 @@ export module Colorizer {
 
   export function getColoredPlayerName(player: player): string {
     return (
-      Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
+      Colorizer.getPlayerColorText(GetPlayerId(player)) + 
       GetPlayerName(player) + "|r"
     );
   }

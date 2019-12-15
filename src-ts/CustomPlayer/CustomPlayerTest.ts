@@ -355,8 +355,8 @@ export function CustomPlayerTest() {
     DisplayTimedTextToForce(
       GetPlayersAll(), 
       15,
-      Colorizer.getPlayerColorText(GetPlayerId(leavePlayer)) + GetPlayerName(leavePlayer) + 
-      "|r has left the game."
+      Colorizer.getColoredPlayerName(leavePlayer) + 
+      " has left the game."
     );
   })
 
@@ -384,17 +384,15 @@ export function CustomPlayerTest() {
         15,
         Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
         "|r has killed " + 
-        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-        "|r"
+        Colorizer.getColoredPlayerName(deadPlayer)
       );
     } else {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         15,
-        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetPlayerName(killPlayer) + 
-        "|r has killed " + 
-        Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetPlayerName(deadPlayer) +
-        "|r"
+        Colorizer.getColoredPlayerName(killPlayer) + 
+        " has killed " + 
+        Colorizer.getColoredPlayerName(deadPlayer)
       );
 
     }
@@ -545,7 +543,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED);
+    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
   });
 
   const unallyTrig = CreateTrigger();

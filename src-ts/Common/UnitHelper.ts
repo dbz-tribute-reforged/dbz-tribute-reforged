@@ -57,4 +57,11 @@ export module UnitHelper {
       !IsUnitDeadBJ(unit)
     );
   }
+
+  export function isUnitTournamentViable(unit: unit): boolean {
+    return (
+      IsUnitType(unit, UNIT_TYPE_HERO) &&
+      !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+    );
+  }
 }

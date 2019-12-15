@@ -7,12 +7,13 @@ import { ArrayHelper } from "Common/ArrayHelper";
 import { Vector2D } from "Common/Vector2D";
 import { TournamentData } from "./TournamentData";
 import { Logger } from "Libs/TreeLib/Logger";
+import { AllianceHelper } from "Common/AllianceHelper";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
   protected contestants: Map<number, TournamentContestant>;
   protected currentBracket: TournamentContestant[];
-  protected currentIndex: number;
+  protected bracketIndex: number;
   protected isMatchOver: boolean;
   protected runTournamentTimer: timer;
 
@@ -26,7 +27,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     this.registerTrigger = CreateTrigger();
     this.contestants = new Map();
     this.currentBracket = [];
-    this.currentIndex = 0;
+    this.bracketIndex = 0;
     this.isMatchOver = false;
     this.runTournamentTimer = CreateTimer();
     this.initialize();
@@ -39,6 +40,11 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
   complete(): void {
     super.complete();
+
+    for (const contestant of this.contestants.values()) {
+      contestant.completeTournament();
+    }
+
     this.contestants.clear();
     this.currentBracket.splice(0, this.currentBracket.length);
     ++this.tournamentCounter;
@@ -106,7 +112,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
   prepareTournament() {
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      this.getTournamentName + " will be held in " + 
+      this.getTournamentName() + " will be held in " + 
       this.toStartDelay + " seconds! " + 
       "Type " + TournamentData.budokaiEnterCommand + " to register."
     );
@@ -130,33 +136,50 @@ export class Budokai extends AdvancedTournament implements Tournament {
     if (numContestants < 2) {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15, 
-        this.getTournamentName + 
+        this.getTournamentName() + 
         " has been cancelled due to lack of attendance."
       );
       this.complete();
     } else {
+      Logger.LogDebug("> 2 contestants detected");
+      TimerDialogDisplay(this.toStartTimerDialog, false);
+
+      this.isMatchOver = true;
+
+      for (const contestant of this.contestants.values()) {
+        contestant.startVision();
+      }
       // seed all registered players into randomised brackets
       // then run the tournament until there is a winner
-      this.currentBracket = Array.from(this.contestants.values());
       this.setupCurrentBracket(TournamentData.seedingRandom);
-      Logger.LogDebug("Bracket setup? " + this.currentBracket.length);
-      for (const e of this.currentBracket) {
-        Logger.LogDebug("e: " + e.id);
-      }
       this.showBracket();
       this.runTournament();
     }
   }
 
   setupCurrentBracket(seeding: number) {
-    this.currentIndex = 0;
-    const allContestants = this.currentBracket;
-
-    for (const contestant of allContestants) {
-      if (contestant.isCompeting) {
-        // if competing then this contestant is staying on for next bracket
-        this.currentBracket.push(contestant);
+    this.bracketIndex = 0;
+    if (this.currentBracket.length > 0) {
+      for (let i = 0; i < this.currentBracket.length; ++i) {
+        if (!this.currentBracket[i].isCompeting) {
+          this.currentBracket.splice(i, 1);
+          --i;
+        }
       }
+      if (this.currentBracket.length % 2 != 0) {
+        // someone received a bye last round
+        // move them to the front
+        const lastContestant = this.currentBracket.pop();
+        if (lastContestant) {
+          this.currentBracket.unshift(lastContestant);
+        }
+      }
+    } else {
+      for (const contestant of this.contestants.values()) {
+        if (contestant.isCompeting) {
+          this.currentBracket.push(contestant);
+        }
+      }  
     }
 
     switch (seeding) {
@@ -171,6 +194,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
   }
 
   showBracket() {
+    // adapt for any bracket?
     // 0 v 1, 2 v 3, 4 v 5, etc, odd player gets a bye till next round
     let i: number;
     for (i = 0; i < this.currentBracket.length - 1; i += 2) {
@@ -179,7 +203,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15,
         Colorizer.getColoredPlayerName(Player(contestant1.id)) +  
-        " vs" + 
+        " vs " + 
         Colorizer.getColoredPlayerName(Player(contestant2.id))
       );
     }
@@ -194,29 +218,29 @@ export class Budokai extends AdvancedTournament implements Tournament {
   }
 
   runTournament() {
-    this.isMatchOver = true;
-
     // timer check, if next match then go, else do nothing
-    TimerStart(this.runTournamentTimer, 1, true, () => {
+    TimerStart(this.runTournamentTimer, 0.03, true, () => {
       if (this.isMatchOver) {
+        Logger.LogDebug("match is over");
         // move everyone in arena back to their old position
         // unpause and un-invul them as well
         for (const contestant of this.contestants.values()) {
-          if (contestant.isCompeting && contestant.isInArena) {
+          if (contestant.isInArena) {
             contestant.returnAllUnits();
-            contestant.isInArena = false;
           }
         }
 
         // run matches if there are any available
-        if (this.currentIndex < this.currentBracket.length - 1) {
+        if (this.bracketIndex < this.currentBracket.length - 1) {
+          Logger.LogDebug("running match");
           this.runMatch();
         } else if (this.currentBracket.length == 1) {
           // if only 1 person left in tournament
           // i.e. the winner of the tournament
           const winner = this.currentBracket[0];
-          winner.returnAllUnits();
-          winner.isInArena = false;
+          if (winner.isInArena) {
+            winner.returnAllUnits();
+          }
           
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15,
@@ -226,41 +250,44 @@ export class Budokai extends AdvancedTournament implements Tournament {
           );
           // complete and finish up
           this.complete();
+        } else if (this.currentBracket.length == 0) {
+          Logger.LogDebug("no more possible matches, tournament complete");
+          this.complete();
         } else {
           // no matches possible in this bracket
-          if (this.currentIndex < this.currentBracket.length) {
-            // if > 1 contestants but < max bracket length
-            // there are an odd num of contesants
-            // give the currentIndex player a bye
-            const byePlayer = Player(this.currentBracket[this.currentIndex].id);
+          // if (this.bracketIndex < this.currentBracket.length) {
+          //   // if > 1 contestants but < max bracket length
+          //   // there are an odd num of contesants
+          //   // give the bracketIndex player a bye
+          //   const byePlayer = Player(this.currentBracket[this.bracketIndex].id);
 
-            DisplayTimedTextToForce(
-              bj_FORCE_ALL_PLAYERS, 15,
-              Colorizer.getColoredPlayerName(byePlayer) +  
-              " has received a bye."
-            );
-          }
+          //   DisplayTimedTextToForce(
+          //     bj_FORCE_ALL_PLAYERS, 15,
+          //     Colorizer.getColoredPlayerName(byePlayer) +  
+          //     " has received a bye."
+          //   );
+          // }
           // create new bracket with winners of previous bracket
           Logger.LogDebug("Moving on to next bracket.");
           this.setupCurrentBracket(TournamentData.seedingNone);
+          this.showBracket();
         }
       }
     })
   }
 
+  // TODO: refactor and clean up this stuff
   runMatch() {
     this.isMatchOver = false;
-    const activeContestants: Map<number, TournamentContestant> = new Map();
     const matchHandlerTrigger = CreateTrigger();
+    const activeContestants: Map<number, TournamentContestant> = new Map();
 
     for (let j = 0; j < TournamentData.budokaiMaxContestantsPerMatch; ++j) {
-      const contestant = this.currentBracket[this.currentIndex];
-      ++this.currentIndex;
+      const contestant = this.currentBracket[this.bracketIndex];
+      ++this.bracketIndex;
       // adds units of player to the contestant
       // records old position of each unit
-      contestant.setupUnitsOfPlayer(contestant.id);
-      contestant.resetUnitsAlive();
-      contestant.isInArena = true;
+      contestant.startMatch();
 
       // TODO: if any unit of contestant is in heaven/hell
       // they are disqualiifed
@@ -270,6 +297,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
       if (j % 2 != 0) {
         spawnPos = TournamentData.tournamentSpawn2;
       }
+      Logger.LogDebug("Contestant: " + contestant.id + " units: " + contestant.units.size);
       for (const unit of contestant.getUnits()) {
         DestroyEffect(
           AddSpecialEffect(
@@ -285,6 +313,56 @@ export class Budokai extends AdvancedTournament implements Tournament {
       activeContestants.set(contestant.id, contestant);
     }
 
+    let wasAllied: boolean;
+    let isDoneLoop: boolean = false;
+    // modify alliance settings
+    for (const source of activeContestants.values()) {
+      for (const target of activeContestants.values()) {
+        if (source.id != target.id) {
+          const sourcePlayer = Player(source.id);
+          const targetPlayer = Player(target.id);
+          wasAllied = GetPlayerAlliance(
+            sourcePlayer, 
+            targetPlayer, 
+            ConvertAllianceType(bj_ALLIANCE_ALLIED_VISION)
+          );
+          
+          AllianceHelper.setAllianceTwoWay(sourcePlayer, targetPlayer, bj_ALLIANCE_UNALLIED);
+          
+          isDoneLoop = true;
+          break;
+        }
+      }
+      if (isDoneLoop) {
+        break;
+      }
+    }
+
+    // have a timer to enforce max duration of fights (so they dont go on forever stalling)
+    const matchLimitTimer = CreateTimer();
+    const matchLimitTimerDialog = CreateTimerDialog(matchLimitTimer);
+    TimerDialogSetTitle(matchLimitTimerDialog, TournamentData.budokaiMatchTimeLimitName);
+    TimerDialogDisplay(matchLimitTimerDialog, true);
+
+    TimerStart(matchLimitTimer, TournamentData.budokaiMatchTimeLimit, false, () => {
+      // everyone loses
+      let losers: TournamentContestant[] = [];
+      for (const contestant of activeContestants.values()) {
+        losers.push(contestant);
+      }
+
+      this.endMatch(
+        losers,
+        [],
+        wasAllied,
+        matchLimitTimer,
+        matchLimitTimerDialog,
+        matchHandlerTrigger,
+      );
+      activeContestants.clear();
+    });
+
+    // handle the match for dying units of said player
     TriggerAddAction(matchHandlerTrigger, () => {
       const dyingUnit = GetTriggerUnit();
       const player = GetOwningPlayer(dyingUnit);
@@ -294,39 +372,91 @@ export class Budokai extends AdvancedTournament implements Tournament {
       if (contestant) {
         --contestant.unitsAlive;
         if (contestant.unitsAlive == 0) {
-          contestant.isCompeting = false;
 
-          for (const winner of activeContestants.values()) {
-            if (winner.isCompeting) {
-              DisplayTimedTextToForce(
-                bj_FORCE_ALL_PLAYERS, 10,
-                Colorizer.getColoredPlayerName(Player(winner.id)) +  
-                " has won their match."
+          let winner: TournamentContestant = contestant;
+          for (const possibleWinner of activeContestants.values()) {
+            if (possibleWinner.id != contestant.id) {
+              winner = possibleWinner;
+            }
+          }
+          
+          this.endMatch(
+            [contestant], 
+            [winner], 
+            wasAllied, 
+            matchLimitTimer,
+            matchLimitTimerDialog,
+            matchHandlerTrigger
+          );
+          activeContestants.clear();
+        }
+      }
+    });
+  }
+
+  endMatch(
+    losers: TournamentContestant[], 
+    winners: TournamentContestant[],
+    wasAllied: boolean,
+    matchLimitTimer: timer,
+    matchLimitTimerDialog: timerdialog,
+    matchHandlerTrigger: trigger,
+  ) {
+    DisableTrigger(matchHandlerTrigger);
+
+    for (const winner of winners) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 10,
+        Colorizer.getColoredPlayerName(Player(winner.id)) +  
+        " has won their match."
+      );
+    }
+    for (const loser of losers) {
+      loser.isCompeting = false;
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 10,
+        Colorizer.getColoredPlayerName(Player(loser.id)) +  
+        " has lost their match."
+      );
+    }
+
+    // reset alliance
+    if (wasAllied) {
+      if (losers.length > 1) {
+        AllianceHelper.setAllianceTwoWay(
+          Player(losers[0].id),
+          Player(losers[1].id), 
+          bj_ALLIANCE_ALLIED_VISION,
+        )
+      } else {
+        for (const winner of winners) {
+          for (const loser of losers) {
+            if (wasAllied && winner.id != loser.id) {
+              AllianceHelper.setAllianceTwoWay(
+                Player(winner.id), 
+                Player(loser.id), 
+                bj_ALLIANCE_ALLIED_VISION,
               );
             }
           }
-          DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 10,
-            Colorizer.getColoredPlayerName(Player(contestant.id)) +  
-            " has lost their match."
-          );
-
-          const matchEndTimer = CreateTimer();
-          const matchEndTimerDialog = CreateTimerDialog(matchEndTimer);
-          TimerDialogSetTitle(matchEndTimerDialog, "Next Match");
-          TimerDialogDisplay(matchEndTimerDialog, true);
-
-          TimerStart(matchEndTimer, TournamentData.budokaiMatchDelay, false, () => {
-            this.isMatchOver = true;
-
-            activeContestants.clear();
-
-            DestroyTimerDialog(matchEndTimerDialog);
-            DestroyTimer(matchEndTimer);
-            DestroyTrigger(matchHandlerTrigger);
-          });
         }
       }
-    })
+    }
+
+    DestroyTimerDialog(matchLimitTimerDialog);
+    DestroyTimer(matchLimitTimer);
+
+    const matchEndTimer = CreateTimer();
+    const matchEndTimerDialog = CreateTimerDialog(matchEndTimer);
+    TimerDialogSetTitle(matchEndTimerDialog, "Next Match");
+    TimerDialogDisplay(matchEndTimerDialog, true);
+
+    TimerStart(matchEndTimer, TournamentData.budokaiMatchDelay, false, () => {
+      this.isMatchOver = true;
+
+      DestroyTimerDialog(matchEndTimerDialog);
+      DestroyTimer(matchEndTimer);
+      DestroyTrigger(matchHandlerTrigger);
+    });
   }
 }
