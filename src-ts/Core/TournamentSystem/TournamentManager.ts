@@ -45,8 +45,8 @@ export class TournamentManager {
     this.startPreTournamentTimer(
       TournamentData.budokaiName,
       70,
-      2*60,
-      true,
+      5,
+      false,
     );
 
 
@@ -145,7 +145,7 @@ export class TournamentManager {
         }
       })
 
-      TimerDialogSetTitle(tournamentTimerDialog, TournamentData.finalBattleName);
+      TimerDialogSetTitle(tournamentTimerDialog, tournamentName);
       TimerDialogDisplay(tournamentTimerDialog, true);
     });
   }

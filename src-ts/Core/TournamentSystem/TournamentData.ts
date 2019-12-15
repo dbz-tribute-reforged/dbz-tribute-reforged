@@ -17,7 +17,7 @@ export module TournamentData {
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
   export const budokaiName: string = "Tournament";
   export const budokaiEnterCommand: string = "-enter";
-  export const budokaiDelay: number = 60 * 2;
+  export const budokaiDelay: number = 30;
   export const budokaiCounter: number = 23;
   export const budokaiMatchDelay: number = 10;
   export const budokaiMaxContestantsPerMatch: number = 2;

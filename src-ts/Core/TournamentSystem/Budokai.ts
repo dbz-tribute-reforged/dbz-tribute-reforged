@@ -124,12 +124,14 @@ export class Budokai extends AdvancedTournament implements Tournament {
   setupTournament() {
     DisableTrigger(this.registerTrigger);
 
+    Logger.LogDebug("Num Contestants: " + this.contestants.size);
+
     const numContestants = this.contestants.size;
     if (numContestants < 2) {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15, 
-        "Mr. Satan has won " + 
-        this.getTournamentName
+        this.getTournamentName + 
+        " has been cancelled due to lack of attendance."
       );
       this.complete();
     } else {
@@ -137,6 +139,10 @@ export class Budokai extends AdvancedTournament implements Tournament {
       // then run the tournament until there is a winner
       this.currentBracket = Array.from(this.contestants.values());
       this.setupCurrentBracket(TournamentData.seedingRandom);
+      Logger.LogDebug("Bracket setup? " + this.currentBracket.length);
+      for (const e of this.currentBracket) {
+        Logger.LogDebug("e: " + e.id);
+      }
       this.showBracket();
       this.runTournament();
     }
