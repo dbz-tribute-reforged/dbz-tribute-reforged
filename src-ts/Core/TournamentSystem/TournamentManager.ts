@@ -43,7 +43,7 @@ export class TournamentManager {
       TournamentData.finalBattleName,
       TournamentData.finalBattleTime,
       TournamentData.finalBattleInterval,
-      false,
+      true,
     );
 
     const budokai = new Budokai();

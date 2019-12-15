@@ -410,6 +410,12 @@ export class Budokai extends AdvancedTournament implements Tournament {
         Colorizer.getColoredPlayerName(Player(winner.id)) +  
         " has won their match."
       );
+      for (const unit of winner.units.keys()) {
+        if (IsUnitAliveBJ(unit)) {
+          SetUnitLifePercentBJ(unit, 100);
+          SetUnitManaPercentBJ(unit, 100);
+        }
+      }
     }
     for (const loser of losers) {
       loser.isCompeting = false;

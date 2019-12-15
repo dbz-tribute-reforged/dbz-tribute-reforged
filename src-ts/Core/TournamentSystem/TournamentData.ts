@@ -17,7 +17,7 @@ export module TournamentData {
   export const finalBattleDetector: Vector2D = new Vector2D(-729, 22950);
   export const finalBattleName: string = "Final Battle";
   export const finalBattleTime: number = 28 * 60;
-  export const finalBattleInterval: number = 2 * 60;
+  export const finalBattleInterval: number = 60;
   export const finalBattleDelay: number = 60;
   export const finalBattleLobbyWait: number = 15;
   export const finalBattleSpell: number = FourCC("A0LT");
