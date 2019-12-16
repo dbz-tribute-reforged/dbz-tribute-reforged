@@ -195,6 +195,7 @@ gg_trg_Lookout_Exit = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
 gg_trg_Piccolo_Multi_Form = nil
+gg_trg_Pan_Summon_Giru = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -211,6 +212,7 @@ gg_trg_KameLoop = nil
 gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
+gg_trg_Auto_Zoom = nil
 gg_trg_Freemode = nil
 gg_trg_Lights_toggle = nil
 gg_trg_Map_Setup = nil
@@ -343,6 +345,7 @@ gg_trg_Piccolo_Kyo_Revert = nil
 gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
 gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
+gg_trg_Transformations_Pan = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -384,8 +387,6 @@ gg_unit_H000_0014 = nil
 gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
-gg_trg_Pan_Summon_Giru = nil
-gg_trg_Transformations_Pan = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1692,7 +1693,7 @@ function CreateCameras()
     gg_cam_Camera_001 = CreateCameraSetup()
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 90.0, 0.0)
-    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 304.0, 0.0)
+    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 3200.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
@@ -2117,7 +2118,7 @@ end
 function Trig_Pan_Summon_Giru_Actions()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
     SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
-    udg_TempReal4 = (0.50 + (0.25 * I2R(udg_TempInt)))
+    udg_TempReal4 = (0.40 + (0.20 * I2R(udg_TempInt)))
     udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
@@ -2709,6 +2710,25 @@ function InitTrig_Cam_Angle()
     TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
 end
 
+function Trig_Auto_Zoom_Actions()
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10149")
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 2.00)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 2.00)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.00, 2.00)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Auto_Zoom()
+    gg_trg_Auto_Zoom = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Auto_Zoom, 3.00)
+    TriggerAddAction(gg_trg_Auto_Zoom, Trig_Auto_Zoom_Actions)
+end
+
 function Trig_Freemode_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
     udg_TeamAboutToLose[0] = false
@@ -2815,6 +2835,8 @@ function Trig_Setup_Quests_Actions()
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
@@ -3961,6 +3983,7 @@ end
 
 function InitTrig_Respawn_Creep_Heroes_in_Deadzones()
     gg_trg_Respawn_Creep_Heroes_in_Deadzones = CreateTrigger()
+    DisableTrigger(gg_trg_Respawn_Creep_Heroes_in_Deadzones)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Respawn_Creep_Heroes_in_Deadzones, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddCondition(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Condition(Trig_Respawn_Creep_Heroes_in_Deadzones_Conditions))
     TriggerAddAction(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Trig_Respawn_Creep_Heroes_in_Deadzones_Actions)
@@ -9798,6 +9821,7 @@ function InitCustomTriggers()
     InitTrig_SolarFlare()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
+    InitTrig_Auto_Zoom()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Map_Setup()

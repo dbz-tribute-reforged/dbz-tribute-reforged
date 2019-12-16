@@ -109,6 +109,13 @@ export class CreepManager {
       customCreep.position.y, 
       customCreep.facing,
     );
+
+    if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
+      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep), false);
+      SetHeroStr(newCreepUnit, GetHeroStr(oldCreep, false), false);
+      SetHeroAgi(newCreepUnit, GetHeroAgi(oldCreep, false), false);
+      SetHeroInt(newCreepUnit, GetHeroInt(oldCreep, false), false);
+    }
     
     // in with the new, out with the old
     this.customCreeps.set(newCreepUnit, new CustomCreep(
