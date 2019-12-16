@@ -51,7 +51,10 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
       sourceCoord, 
       this.aoe,
       () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
+        return (
+          UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) &&
+          IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+        );
       }
     );
 

@@ -12,6 +12,17 @@ export const AOEKnockbackComponents = [
       aoe: 300,
     },
   },
+  {
+    name: "knockback spirit bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 12, 
+      angle: 180, 
+      aoe: 300,
+    },
+  },
   // to here, and replace with unique name
   // kame light knockback
   {
@@ -22,6 +33,17 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 10, 
       angle: 0, 
+      aoe: 250,
+    },
+  },
+  {
+    name: "knockback kame",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 8, 
+      angle: 180, 
       aoe: 250,
     },
   },
@@ -37,7 +59,7 @@ export const AOEKnockbackComponents = [
       aoe: 200,
     },
   },
-  // super dragon flight
+  // heat dome attack
   {
     name: "knockback heat dome attack",
     repeatInterval: 1, 
@@ -99,7 +121,7 @@ export const AOEKnockbackComponents = [
   },
   // broly power level rising
   {
-    name: "knockback 1tick 25speed 0angle 400aoe",
+    name: "knockback power level rising",
     repeatInterval: 1, 
     startTick: 1,
     endTick: -1,
@@ -107,18 +129,6 @@ export const AOEKnockbackComponents = [
       speed: 15, 
       angle: 0, 
       aoe: 400,
-    },
-  },
-  // broly gigantic omegastorm
-  {
-    name: "knockback 1tick 25speed 0angle 300aoe",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    knockbackData: {
-      speed: 25, 
-      angle: 0, 
-      aoe: 300,
     },
   },
   // big bang attack reverse knockback

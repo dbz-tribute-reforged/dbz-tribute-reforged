@@ -147,6 +147,7 @@ udg_TeamAboutToLose = __jarray(false)
 udg_CreepPlayerGroup = nil
 udg_PlayerLevel = __jarray(0)
 udg_IsLeadingToFinalBattle = false
+udg_IsAOEFlyingVision = false
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -166,6 +167,8 @@ gg_rct_HeavenToLowerHell = nil
 gg_rct_LowerHellsSagaSpawn = nil
 gg_rct_TournamentArena = nil
 gg_rct_Final_Battle_Detector_Region = nil
+gg_rct_Creep_Vision = nil
+gg_rct_Lookout_Vision = nil
 gg_cam_Camera_001 = nil
 gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = nil
 gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = nil
@@ -209,6 +212,7 @@ gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Freemode = nil
+gg_trg_Lights_toggle = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
 gg_trg_Disable_Heads_for_TempPlayer = nil
@@ -303,6 +307,8 @@ gg_trg_Turles_Saga_Init = nil
 gg_trg_Turles_Saga_Activate = nil
 gg_trg_Turles_Saga_Completion = nil
 gg_trg_Turles_Saga_VI = nil
+gg_trg_Update_AOE_Flying_Vision = nil
+gg_trg_Set_AOE_Flying_Vision_for_TempUnit = nil
 gg_trg_Test_StatMult_Init = nil
 gg_trg_Test_Stats_Add_Command = nil
 gg_trg_Test_Stats_Get_Stats_Command = nil
@@ -574,46 +580,57 @@ function InitGlobals()
         i = i + 1
     end
     udg_IsLeadingToFinalBattle = false
+    udg_IsAOEFlyingVision = true
 end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -916,7 +933,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02Q"), -1661.9, 4078.2, 68.194, FourCC("n02Q"))
     u = BlzCreateUnitWithSkin(p, FourCC("n031"), 11395.5, -7579.8, 127.526, FourCC("n031"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11023.6, -7605.9, 95.524, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 10790.8, -7592.3, 95.524, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 11696.7, -7428.9, 115.295, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 21921.1, 2908.5, 194.200, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
@@ -1263,12 +1280,36 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 2381.0, 300.8, 161.998, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 2980.8, -1196.5, 349.133, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("U01L"), -1710.1, 21310.3, 140.040, FourCC("U01L"))
+    SetHeroLevel(u, 10, false)
+    SetHeroStr(u, 300, true)
+    SetHeroAgi(u, 300, true)
+    SetHeroInt(u, 1, true)
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 8329.4, -7555.3, 131.461, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("U01J"), -3404.0, 23001.8, 303.490, FourCC("U01J"))
+    SetHeroLevel(u, 2, false)
+    SetHeroStr(u, 30, true)
+    SetHeroAgi(u, 30, true)
+    SetHeroInt(u, 30, true)
     u = BlzCreateUnitWithSkin(p, FourCC("U01K"), -3380.3, 21333.1, 40.460, FourCC("U01K"))
+    SetHeroLevel(u, 5, false)
+    SetHeroStr(u, 100, true)
+    SetHeroAgi(u, 100, true)
+    SetHeroInt(u, 100, true)
     u = BlzCreateUnitWithSkin(p, FourCC("U01N"), -4824.9, 21299.0, 130.910, FourCC("U01N"))
+    SetHeroLevel(u, 10, false)
+    SetHeroStr(u, 300, true)
+    SetHeroAgi(u, 300, true)
+    SetHeroInt(u, 300, true)
     u = BlzCreateUnitWithSkin(p, FourCC("U01O"), -6486.7, 23001.8, 306.910, FourCC("U01O"))
+    SetHeroLevel(u, 3, false)
+    SetHeroStr(u, 30, true)
+    SetHeroAgi(u, 30, true)
+    SetHeroInt(u, 30, true)
     u = BlzCreateUnitWithSkin(p, FourCC("U01M"), -6482.0, 21282.2, 42.170, FourCC("U01M"))
+    SetHeroLevel(u, 5, false)
+    SetHeroStr(u, 100, true)
+    SetHeroAgi(u, 100, true)
+    SetHeroInt(u, 100, true)
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15704.1, 3398.1, 226.677, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15867.2, 3490.1, 11.943, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, 326.845, FourCC("n02F"))
@@ -1394,7 +1435,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H00D"), -324.8, 22332.0, 267.753, FourCC("H00D"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00M"), -188.3, 22353.5, 268.450, FourCC("H00M"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H00M"), -192.7, 22345.5, 268.450, FourCC("H00M"))
     SetUnitColor(u, ConvertPlayerColor(9))
     u = BlzCreateUnitWithSkin(p, FourCC("N00Q"), -70.3, 22334.7, 272.706, FourCC("N00Q"))
     u = BlzCreateUnitWithSkin(p, FourCC("H01A"), 57.8, 22346.0, 271.318, FourCC("H01A"))
@@ -1406,7 +1447,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H043"), -54.2, 22400.4, 268.590, FourCC("H043"))
     SetUnitState(u, UNIT_STATE_MANA, 510)
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00K"), 426.1, 21507.0, 262.654, FourCC("U00K"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00K"), 448.9, 21522.8, 262.654, FourCC("U00K"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("h077"), -6608.9, 22128.9, 0.000, FourCC("h077"))
     SetUnitColor(u, ConvertPlayerColor(11))
@@ -1503,18 +1544,18 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(9))
     u = BlzCreateUnitWithSkin(p, FourCC("U014"), 314.5, 21426.1, 270.892, FourCC("U014"))
     SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U01G"), 355.2, 21673.6, 266.758, FourCC("U01G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U01G"), 312.7, 21647.6, 266.758, FourCC("U01G"))
     SetUnitColor(u, ConvertPlayerColor(9))
     u = BlzCreateUnitWithSkin(p, FourCC("U018"), 346.4, 21505.5, 269.018, FourCC("U018"))
     SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00J"), 392.5, 21426.3, 267.568, FourCC("U00J"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00J"), 437.3, 21418.9, 267.568, FourCC("U00J"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00D"), -537.7, 21182.3, 357.936, FourCC("U00D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00D"), -514.0, 21159.7, 357.936, FourCC("U00D"))
     u = BlzCreateUnitWithSkin(p, FourCC("U00I"), -602.6, 21184.9, 332.888, FourCC("U00I"))
     SetUnitColor(u, ConvertPlayerColor(10))
     u = BlzCreateUnitWithSkin(p, FourCC("U00H"), -433.9, 21305.9, 349.427, FourCC("U00H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O002"), -574.6, 21277.0, 354.243, FourCC("O002"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O003"), -473.1, 21193.3, 353.250, FourCC("O003"))
+    u = BlzCreateUnitWithSkin(p, FourCC("O002"), -623.1, 21294.7, 354.243, FourCC("O002"))
+    u = BlzCreateUnitWithSkin(p, FourCC("O003"), -460.5, 21211.4, 353.250, FourCC("O003"))
     u = BlzCreateUnitWithSkin(p, FourCC("N00C"), -495.7, 21326.4, 8.592, FourCC("N00C"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("O00P"), -107.8, 21744.4, 268.206, FourCC("O00P"))
@@ -1526,39 +1567,39 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(11))
     u = BlzCreateUnitWithSkin(p, FourCC("O00Q"), -204.3, 21913.7, 251.946, FourCC("O00Q"))
     SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00E"), -413.3, 21162.6, 302.595, FourCC("U00E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00G"), -139.7, 21166.2, 325.755, FourCC("U00G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00E"), -349.3, 21173.0, -8.992, FourCC("U00E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00G"), -188.9, 21159.8, 325.755, FourCC("U00G"))
     u = BlzCreateUnitWithSkin(p, FourCC("U00F"), -90.0, 21217.4, 266.315, FourCC("U00F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 1126.2, 21178.4, 263.911, FourCC("n02P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 1107.5, 21488.6, 263.930, FourCC("n03A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00D"), 1092.9, 21418.9, 189.674, FourCC("n00D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n037"), 1020.8, 21180.0, 297.046, FourCC("n037"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03C"), 1101.0, 21369.0, 356.935, FourCC("n03C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n039"), 940.9, 21175.2, 285.423, FourCC("n039"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02H"), 851.7, 21377.9, 275.068, FourCC("n02H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 1135.2, 21157.8, 263.911, FourCC("n02P"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 763.1, 21316.6, 263.930, FourCC("n03A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00D"), 687.6, 21706.3, 189.674, FourCC("n00D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n037"), 1039.7, 21152.4, 297.046, FourCC("n037"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03C"), 652.1, 21387.0, 356.935, FourCC("n03C"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n039"), 995.8, 21186.2, 285.423, FourCC("n039"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02H"), 1096.3, 21566.2, 275.068, FourCC("n02H"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00A"), 861.2, 21164.4, 318.541, FourCC("n00A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02S"), 989.0, 21561.2, 162.482, FourCC("n02S"))
-    u = BlzCreateUnitWithSkin(p, FourCC("z004"), 767.2, 21155.5, 309.700, FourCC("z004"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00A"), 927.1, 21145.8, 318.541, FourCC("n00A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02S"), 1080.8, 21312.3, 162.482, FourCC("n02S"))
+    u = BlzCreateUnitWithSkin(p, FourCC("z004"), 793.5, 21150.0, 309.700, FourCC("z004"))
     SetUnitColor(u, ConvertPlayerColor(10))
-    u = BlzCreateUnitWithSkin(p, FourCC("n021"), 685.6, 21150.2, 298.013, FourCC("n021"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n021"), 646.4, 21153.3, 298.013, FourCC("n021"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00N"), 562.6, 21215.6, 261.899, FourCC("n00N"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02G"), 512.6, 21178.8, 302.357, FourCC("n02G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00N"), 549.3, 21136.9, 261.899, FourCC("n00N"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02G"), 432.9, 21150.2, 302.357, FourCC("n02G"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03M"), 521.1, 21243.8, 283.897, FourCC("n03M"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n023"), 754.2, 21333.9, 306.817, FourCC("n023"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03M"), 578.1, 21266.7, 283.897, FourCC("n03M"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n023"), 1101.3, 21789.7, 306.817, FourCC("n023"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n032"), 695.3, 21305.9, 282.793, FourCC("n032"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n032"), 916.6, 21424.3, 282.793, FourCC("n032"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n033"), 716.7, 21494.9, 297.845, FourCC("n033"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n033"), 780.0, 21473.8, 297.845, FourCC("n033"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03L"), 452.7, 21144.9, 299.892, FourCC("n03L"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00O"), 1084.5, 21825.3, 243.217, FourCC("n00O"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03L"), 648.7, 21619.4, 299.892, FourCC("n03L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00O"), 1119.1, 21943.1, 243.217, FourCC("n00O"))
     u = BlzCreateUnitWithSkin(p, FourCC("n034"), 1071.0, 21877.0, 298.328, FourCC("n034"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00Y"), 290.4, 21178.8, 268.734, FourCC("n00Y"))
     SetUnitColor(u, ConvertPlayerColor(5))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00Z"), 212.7, 21168.0, 278.834, FourCC("n00Z"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00Z"), 240.3, 21145.8, 278.834, FourCC("n00Z"))
     SetUnitColor(u, ConvertPlayerColor(6))
     u = BlzCreateUnitWithSkin(p, FourCC("n010"), 144.2, 21146.7, 291.050, FourCC("n010"))
     SetUnitColor(u, ConvertPlayerColor(11))
@@ -1566,9 +1607,9 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(3))
     u = BlzCreateUnitWithSkin(p, FourCC("n012"), 95.4, 21150.2, 293.556, FourCC("n012"))
     SetUnitColor(u, ConvertPlayerColor(4))
-    u = BlzCreateUnitWithSkin(p, FourCC("n018"), 241.1, 21309.6, 277.228, FourCC("n018"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n018"), 164.3, 21377.1, 277.228, FourCC("n018"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n017"), 80.7, 21263.9, 300.420, FourCC("n017"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n017"), 20.3, 21221.6, 300.420, FourCC("n017"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("O000"), -587.4, 22382.9, 288.681, FourCC("O000"))
     SetUnitColor(u, ConvertPlayerColor(1))
@@ -1631,6 +1672,10 @@ function CreateRegions()
     gg_rct_LowerHellsSagaSpawn = Rect(23456.0, 23104.0, 23744.0, 23424.0)
     gg_rct_TournamentArena = Rect(16800.0, 17824.0, 22624.0, 23648.0)
     gg_rct_Final_Battle_Detector_Region = Rect(-800.0, 22912.0, -640.0, 23040.0)
+    gg_rct_Creep_Vision = Rect(-8160.0, -8192.0, 22304.0, 20448.0)
+    gg_rct_Lookout_Vision = Rect(4672.0, 20768.0, 7136.0, 23584.0)
+    we = AddWeatherEffect(gg_rct_Lookout_Vision, FourCC("LRaa"))
+    EnableWeatherEffect(we, true)
 end
 
 function CreateCameras()
@@ -2640,6 +2685,27 @@ function InitTrig_Freemode()
     TriggerAddAction(gg_trg_Freemode, Trig_Freemode_Actions)
 end
 
+function Trig_Lights_toggle_Func001C()
+    if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Lights_toggle_Actions()
+    if (Trig_Lights_toggle_Func001C()) then
+        udg_IsAOEFlyingVision = false
+    else
+        udg_IsAOEFlyingVision = true
+    end
+end
+
+function InitTrig_Lights_toggle()
+    gg_trg_Lights_toggle = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, Player(0), "-lights", true)
+    TriggerAddAction(gg_trg_Lights_toggle, Trig_Lights_toggle_Actions)
+end
+
 function Trig_Map_Setup_Actions()
     TriggerExecute(gg_trg_Map_Setup_Hashtables)
     udg_TempInt = 0
@@ -2684,6 +2750,8 @@ function Trig_Setup_Per_Player_Properties_Actions()
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_TournamentArena)
         udg_TempInt = udg_TempInt + 1
     end
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10146", "TRIGSTR_10148", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
@@ -2691,10 +2759,14 @@ function Trig_Setup_Per_Player_Properties_Actions()
     FlashQuestDialogButtonBJ()
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+    CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
+    CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
     udg_TempInt = (udg_MaxNumPlayers + 1)
     while (true) do
         if (udg_TempInt > 24) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
         TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
         udg_TempInt = udg_TempInt + 1
     end
@@ -5007,6 +5079,62 @@ function InitTrig_Saga_Stat_Reward()
     TriggerAddAction(gg_trg_Saga_Stat_Reward, Trig_Saga_Stat_Reward_Actions)
 end
 
+function Trig_Update_AOE_Flying_Vision_Func001Func002A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Set_AOE_Flying_Vision_for_TempUnit)
+end
+
+function Trig_Update_AOE_Flying_Vision_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_AOE_Flying_Vision_Func001Func002A)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Update_AOE_Flying_Vision()
+    gg_trg_Update_AOE_Flying_Vision = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Update_AOE_Flying_Vision, 0.50)
+    TriggerAddAction(gg_trg_Update_AOE_Flying_Vision, Trig_Update_AOE_Flying_Vision_Actions)
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()
+    if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()
+    if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
+        udg_ID = GetHandleId(udg_TempUnit)
+    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()) then
+        DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
+    else
+    end
+    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
+        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+        udg_TempReal = RMinBJ(6666.00, RMaxBJ(1200.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.66)))
+        CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
+        SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+end
+
+function InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
+    gg_trg_Set_AOE_Flying_Vision_for_TempUnit = CreateTrigger()
+    TriggerAddAction(gg_trg_Set_AOE_Flying_Vision_for_TempUnit, Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions)
+end
+
 function Trig_Test_StatMult_Init_Func001002002()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
 end
@@ -5106,6 +5234,13 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
+function Trig_Add_Unit_To_StatMult_Func001Func010C()
+    if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Add_Unit_To_StatMult_Func001C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == false)) then
         return false
@@ -5123,6 +5258,15 @@ function Trig_Add_Unit_To_StatMult_Actions()
         SaveRealBJ(1.00, 4, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(1.00, 5, udg_ID, udg_StatMultHashtable)
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
+        udg_TempUnit = udg_StatMultUnit
+        if (Trig_Add_Unit_To_StatMult_Func001Func010C()) then
+            udg_TempLoc = GetUnitLoc(udg_TempUnit)
+            udg_TempReal = RMinBJ(4000.00, RMaxBJ(1000.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
+            CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
+            SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
+                        RemoveLocation(udg_TempLoc)
+        else
+        end
     else
     end
 end
@@ -5130,6 +5274,13 @@ end
 function InitTrig_Add_Unit_To_StatMult()
     gg_trg_Add_Unit_To_StatMult = CreateTrigger()
     TriggerAddAction(gg_trg_Add_Unit_To_StatMult, Trig_Add_Unit_To_StatMult_Actions)
+end
+
+function Trig_Remove_Unit_From_StatMult_Func001Func002C()
+    if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Remove_Unit_From_StatMult_Func001C()
@@ -5142,6 +5293,10 @@ end
 function Trig_Remove_Unit_From_StatMult_Actions()
     if (Trig_Remove_Unit_From_StatMult_Func001C()) then
                 udg_ID = GetHandleId(udg_StatMultUnit)
+        if (Trig_Remove_Unit_From_StatMult_Func001Func002C()) then
+            DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
+        else
+        end
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
         GroupRemoveUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
         FlushChildHashtableBJ(udg_ID, udg_StatMultHashtable)
@@ -6427,7 +6582,6 @@ function Trig_Transformations_Gohan_Actions()
             end
         end
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        DisplayTextToForce(GetPlayersAll(), ("11 of statmult: " .. I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable))))
         if (Trig_Transformations_Gohan_Func018Func008C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0L6"), udg_TransformationPlayer)
@@ -8116,6 +8270,7 @@ function Trig_Cell_Absorb_Actions()
                                                 udg_TransformationID = FourCC('H00G')
                         udg_TransformationStatMult = 2.00
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+                        TriggerExecute(gg_trg_Transformations_Exit_Point)
                     else
                         udg_TempPlayer = GetTriggerPlayer()
                         udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
@@ -8138,6 +8293,7 @@ function Trig_Cell_Absorb_Actions()
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
                                                 udg_ID = GetHandleId(udg_TransformationResultUnit)
                         SaveIntegerBJ(1, 13, udg_ID, udg_StatMultHashtable)
+                        TriggerExecute(gg_trg_Transformations_Exit_Point)
                     else
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
                         UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
@@ -8147,6 +8303,7 @@ function Trig_Cell_Absorb_Actions()
                         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
                                                 udg_ID = GetHandleId(udg_TransformationResultUnit)
                         SaveIntegerBJ(2, 13, udg_ID, udg_StatMultHashtable)
+                        TriggerExecute(gg_trg_Transformations_Exit_Point)
                     end
                 else
                 end
@@ -9376,6 +9533,7 @@ function InitCustomTriggers()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
     InitTrig_Freemode()
+    InitTrig_Lights_toggle()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
     InitTrig_Disable_Heads_for_TempPlayer()
@@ -9442,6 +9600,8 @@ function InitCustomTriggers()
     InitTrig_Saga_Completion_Message()
     InitTrig_Saga_Hint_Show()
     InitTrig_Saga_Stat_Reward()
+    InitTrig_Update_AOE_Flying_Vision()
+    InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
     InitTrig_Test_StatMult_Init()
     InitTrig_Test_Stats_Add_Command()
     InitTrig_Test_Stats_Get_Stats_Command()
