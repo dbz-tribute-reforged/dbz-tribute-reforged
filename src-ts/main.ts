@@ -7,6 +7,7 @@ import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { Constants } from 'Common/Constants';
+import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
@@ -19,6 +20,7 @@ function tsMain() {
   // setup logger
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
+  HostDetectSystem.onInit();
 
   // initialize some systems
   PathingCheck.Init();
