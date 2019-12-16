@@ -1,5 +1,5 @@
 export module Constants {
-  export const maxSubAbilities = 10;
+  export const maxSubAbilities = 3;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
   export const dummyCasterId = FourCC('h054');
