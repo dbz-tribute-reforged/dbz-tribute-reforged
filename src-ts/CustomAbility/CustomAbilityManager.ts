@@ -114,28 +114,28 @@ export class CustomAbilityManager {
     // load beam components after all other singular components
     for (const beam of BeamComponents) {
       const beamComponent = new BeamComponent().deserialize(beam);
-      this.addableComponentAddComponent(beamComponent, beam.components);
+      this.addableComponentAddComponent(beamComponent, beam.components, 1);
       this.setComponent(beamComponent);
     }
 
     // load aoe applyable components after multi components
     for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
       const aoeApplyComponent = new AOEApplyComponent().deserialize(aoeApplyComponentConfig);
-      this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components);
+      this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
       this.setComponent(aoeApplyComponent);
     } 
 
     // load multi components after all other components
     for (const multi of MultiComponents) {
       const multiComponent = new MultiComponent().deserialize(multi);
-      this.addableComponentAddComponent(multiComponent, multi.components);
+      this.addableComponentAddComponent(multiComponent, multi.components, multiComponent.multiplyComponents);
       this.setComponent(multiComponent);
     }
 
     // load abilities after all other components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
-      this.addableComponentAddComponent(ability, abilityData.components);
+      this.addableComponentAddComponent(ability, abilityData.components, 1);
       this.setAbility(ability);
     }
   }
@@ -158,11 +158,17 @@ export class CustomAbilityManager {
     return this.components.get(name);
   }
 
-  addableComponentAddComponent(addTarget: AddableComponent, components: { name: string }[]) {
+  addableComponentAddComponent(
+    addTarget: AddableComponent, 
+    components: { name: string }[], 
+    numRepeatComponents: number,
+  ) {
     for (const component of components) {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
-        addTarget.addComponent(retrievedComponent.clone());
+        for (let i = 0; i < numRepeatComponents; ++i) {
+          addTarget.addComponent(retrievedComponent.clone());
+        }
       }
     }
   }

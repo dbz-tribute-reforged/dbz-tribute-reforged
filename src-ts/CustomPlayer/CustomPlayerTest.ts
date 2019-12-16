@@ -373,29 +373,34 @@ export function CustomPlayerTest() {
   }));
   TriggerAddAction(killTrig, () => {
     const deadPlayer = GetOwningPlayer(GetDyingUnit());
+    const deadPlayerId = GetPlayerId(deadPlayer);
     const killPlayer = GetOwningPlayer(GetKillingUnit());
+    const killPlayerId = GetPlayerId(killPlayer);
 
+    let killerName = Colorizer.getColoredPlayerName(killPlayer);
+    let deadName = Colorizer.getColoredPlayerName(deadPlayer);
     if (
-      killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) && 
+      (killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || killPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
     ) {
-      DisplayTimedTextToForce(
-        GetPlayersAll(), 
-        15,
-        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
-        "|r has killed " + 
-        Colorizer.getColoredPlayerName(deadPlayer)
-      );
-    } else {
-      DisplayTimedTextToForce(
-        GetPlayersAll(), 
-        15,
-        Colorizer.getColoredPlayerName(killPlayer) + 
-        " has killed " + 
-        Colorizer.getColoredPlayerName(deadPlayer)
-      );
-
+      killerName = Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit());
     }
+
+    if (
+      (deadPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || deadPlayerId >= Constants.maxActivePlayers) && 
+      IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
+    ) {
+      deadName = Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetHeroProperName(GetDyingUnit());
+    }
+
+    DisplayTimedTextToForce(
+      GetPlayersAll(), 
+      15,
+      killerName + 
+      " has killed " + 
+      deadName
+    );
+
   })
 
 
