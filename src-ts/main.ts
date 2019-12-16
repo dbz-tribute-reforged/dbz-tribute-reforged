@@ -21,6 +21,9 @@ function tsMain() {
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
   HostDetectSystem.onInit();
+  TimerStart(CreateTimer(), 1.0, false, () => {
+    DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
+  })
 
   // if delayed wont hide creep cramps properly
   creepManager = CreepManager.getInstance();
