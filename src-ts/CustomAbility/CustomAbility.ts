@@ -6,6 +6,7 @@ import { AbilitySfxHelper } from "./AbilitySfxHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
+import { AddableComponent } from "./AbilityComponent/AddableComponent";
 
 export enum CostType {
   HP = "Life",
@@ -22,7 +23,7 @@ export function stringToCostType(costType: string): CostType {
   return CostType.STAMINA;
 }
 
-export class CustomAbility implements Serializable<CustomAbility> {
+export class CustomAbility implements Serializable<CustomAbility>, AddableComponent {
   static readonly BASE_DAMAGE = 1500;
   static readonly BASE_AVG_TICKS = 2;
 

@@ -40,6 +40,16 @@ export class CreepManager {
     return this.instance;
   }
 
+  initialize(): this {
+    SetCreepCampFilterState(false);
+
+    this.setupCreepPlayers();
+    this.setupCustomCreeps().setupCustomCreepRespawn();
+
+    return this;
+  }
+
+
   setupCreepPlayers(): this {
     // reminder to change constants if adding more players in
     // init creep players who will have creeps distributed to
@@ -142,15 +152,6 @@ export class CreepManager {
       }
     );
 
-
-    return this;
-  }
-
-  initialize(): this {
-    SetCreepCampFilterState(false);
-
-    this.setupCreepPlayers();
-    this.setupCustomCreeps().setupCustomCreepRespawn();
 
     return this;
   }

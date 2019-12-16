@@ -4,8 +4,13 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
+import { AddableComponent } from "./AddableComponent";
 
-export class MultiComponent implements AbilityComponent, Serializable<MultiComponent> {
+export class MultiComponent implements 
+  AbilityComponent,
+  Serializable<MultiComponent>,
+  AddableComponent
+{
   static readonly LINEAR_FIRING = 0;
   static readonly SPREAD_FIRING = 1;
   static readonly WRAPAROUND_FIRING = 2;

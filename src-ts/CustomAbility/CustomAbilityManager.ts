@@ -35,6 +35,9 @@ import { DashComponents } from "./AbilityData/DashComponents";
 import { Dash } from "./AbilityComponent/Dash";
 import { HookComponents } from "./AbilityData/HookComponents";
 import { Hook } from "./AbilityComponent/Hook";
+import { AOEApplyComponentComponents } from "./AbilityData/AOEApplyComponentComponents";
+import { AOEApplyComponent } from "./AbilityComponent/AOEApplyComponent";
+import { AddableComponent } from "./AbilityComponent/AddableComponent";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -111,20 +114,28 @@ export class CustomAbilityManager {
     // load beam components after all other singular components
     for (const beam of BeamComponents) {
       const beamComponent = new BeamComponent().deserialize(beam);
-      this.beamComponentAddComponent(beamComponent, beam.components);
+      this.addableComponentAddComponent(beamComponent, beam.components);
       this.setComponent(beamComponent);
     }
+
+    // load aoe applyable components after multi components
+    for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
+      const aoeApplyComponent = new AOEApplyComponent().deserialize(aoeApplyComponentConfig);
+      this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components);
+      this.setComponent(aoeApplyComponent);
+    } 
 
     // load multi components after all other components
     for (const multi of MultiComponents) {
       const multiComponent = new MultiComponent().deserialize(multi);
-      this.multiComponentAddComponent(multiComponent, multi.components);
+      this.addableComponentAddComponent(multiComponent, multi.components);
       this.setComponent(multiComponent);
     }
+
     // load abilities after all other components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
-      this.abilityAddComponent(ability, abilityData.components);
+      this.addableComponentAddComponent(ability, abilityData.components);
       this.setAbility(ability);
     }
   }
@@ -147,31 +158,11 @@ export class CustomAbilityManager {
     return this.components.get(name);
   }
 
-  beamComponentAddComponent(beam: BeamComponent, components: {name: string}[] ) {
+  addableComponentAddComponent(addTarget: AddableComponent, components: { name: string }[]) {
     for (const component of components) {
       const retrievedComponent = this.getComponent(component.name);
       if (retrievedComponent) {
-        beam.addComponent(retrievedComponent.clone());
-      }
-    }
-  }
-
-  multiComponentAddComponent(multi: MultiComponent, components: {name: string}[] ) {
-    for (const component of components) {
-      const retrievedComponent = this.getComponent(component.name);
-      if (retrievedComponent) {
-        for (let i = 0; i < multi.multiplyComponents; ++i) {
-          multi.addComponent(retrievedComponent.clone());
-        }
-      }
-    }
-  }
-
-  abilityAddComponent(ability: CustomAbility, components: {name: string}[] ) {
-    for (const component of components) {
-      const retrievedComponent = this.getComponent(component.name);
-      if (retrievedComponent) {
-        ability.addComponent(retrievedComponent.clone());
+        addTarget.addComponent(retrievedComponent.clone());
       }
     }
   }

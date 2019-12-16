@@ -215,6 +215,7 @@ gg_trg_Freemode = nil
 gg_trg_Lights_toggle = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
+gg_trg_Setup_Quests = nil
 gg_trg_Disable_Heads_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
@@ -355,6 +356,7 @@ gg_trg_Transformations_Kid_Buu = nil
 gg_trg_Cell_Absorb = nil
 gg_trg_Transformations_Cell_Larval = nil
 gg_trg_Transformations_Cell_First = nil
+gg_trg_Transformations_Cell_Second = nil
 gg_trg_Transformations_Cell_Perfect = nil
 gg_trg_Cooler_Give_Transform = nil
 gg_trg_Cooler_Transform_Into_Final_Form = nil
@@ -382,8 +384,8 @@ gg_unit_H000_0014 = nil
 gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
-gg_trg_Setup_Quests = nil
-gg_trg_Transformations_Cell_Second = nil
+gg_trg_Pan_Summon_Giru = nil
+gg_trg_Transformations_Pan = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -587,42 +589,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1443,6 +1455,12 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("h077"), -6608.9, 22128.9, 0.000, FourCC("h077"))
     SetUnitColor(u, ConvertPlayerColor(11))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08P"), 449.0, 22601.7, 261.250, FourCC("H08P"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("H08Q"), 651.4, 22587.8, 234.510, FourCC("H08Q"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("H08R"), 534.5, 22603.4, 261.380, FourCC("H08R"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H042"), -121.8, 22383.7, 256.690, FourCC("H042"))
     SetUnitState(u, UNIT_STATE_MANA, 510)
     SetUnitColor(u, ConvertPlayerColor(8))
@@ -2087,6 +2105,33 @@ function InitTrig_Piccolo_Multi_Form()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Piccolo_Multi_Form, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Piccolo_Multi_Form, Condition(Trig_Piccolo_Multi_Form_Conditions))
     TriggerAddAction(gg_trg_Piccolo_Multi_Form, Trig_Piccolo_Multi_Form_Actions)
+end
+
+function Trig_Pan_Summon_Giru_Conditions()
+    if (not (GetUnitTypeId(GetSummonedUnit()) == FourCC("H08Q"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Pan_Summon_Giru_Actions()
+    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
+    SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
+    udg_TempReal4 = (0.50 + (0.25 * I2R(udg_TempInt)))
+    udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
+    udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
+    udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
+    ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
+    ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
+    ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
+    SuspendHeroXPBJ(false, GetSummonedUnit())
+end
+
+function InitTrig_Pan_Summon_Giru()
+    gg_trg_Pan_Summon_Giru = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_Summon_Giru, EVENT_PLAYER_UNIT_SUMMON)
+    TriggerAddCondition(gg_trg_Pan_Summon_Giru, Condition(Trig_Pan_Summon_Giru_Conditions))
+    TriggerAddAction(gg_trg_Pan_Summon_Giru, Trig_Pan_Summon_Giru_Actions)
 end
 
 function Trig_Babidi_Summons_Func002C()
@@ -4400,6 +4445,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08M")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08P")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -5454,9 +5501,7 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "kami"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "red"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "blue"
+    udg_TransformationCommands[udg_TempInt] = "honey"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ws"
     udg_TempInt = (udg_TempInt + 1)
@@ -5681,6 +5726,13 @@ function Trig_Transformations_Entry_Point_Func003Func018C()
     return true
 end
 
+function Trig_Transformations_Entry_Point_Func003Func019C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08P"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Entry_Point_Func003A()
     udg_StatMultUnit = GetEnumUnit()
     if (Trig_Transformations_Entry_Point_Func003Func002C()) then
@@ -5774,6 +5826,10 @@ function Trig_Transformations_Entry_Point_Func003A()
     end
     if (Trig_Transformations_Entry_Point_Func003Func018C()) then
         TriggerExecute(gg_trg_Transformations_Bardock)
+    else
+    end
+    if (Trig_Transformations_Entry_Point_Func003Func019C()) then
+        TriggerExecute(gg_trg_Transformations_Pan)
     else
     end
 end
@@ -7417,6 +7473,182 @@ end
 function InitTrig_Transformations_Bardock()
     gg_trg_Transformations_Bardock = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Bardock, Trig_Transformations_Bardock_Actions)
+end
+
+function Trig_Transformations_Pan_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func011C()
+    if (not (udg_TransformationString == "honey")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func012C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func013C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func014C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func016Func001Func003Func002C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func016Func001Func003C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func016Func001Func004C()
+    if (udg_TransformationString == "ss") then
+        return true
+    end
+    if (udg_TransformationString == "ss2") then
+        return true
+    end
+    if (udg_TransformationString == "ssg") then
+        return true
+    end
+    if (udg_TransformationString == "ssb") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Pan_Func016Func001C()
+    if (not Trig_Transformations_Pan_Func016Func001Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func016Func005C()
+    if (udg_TransformationString == "r") then
+        return true
+    end
+    if (udg_TransformationString == "honey") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Pan_Func016C()
+    if (not Trig_Transformations_Pan_Func016Func005C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Pan_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10724")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Pan_Func010C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Pan_Func011C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Pan_Func012C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Pan_Func013C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Pan_Func014C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Pan_Func016C()) then
+                udg_TransformationID = FourCC('H08P')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100, 100, 0)
+    else
+        if (Trig_Transformations_Pan_Func016Func001C()) then
+                        udg_TransformationID = FourCC('H08R')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            if (Trig_Transformations_Pan_Func016Func001Func003C()) then
+                SetUnitVertexColorBJ(udg_StatMultUnit, 100, 30.00, 30.00, 0)
+            else
+                if (Trig_Transformations_Pan_Func016Func001Func003Func002C()) then
+                    SetUnitVertexColorBJ(udg_StatMultUnit, 25.00, 30.00, 100, 0)
+                else
+                    SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
+                end
+            end
+        else
+        end
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Pan()
+    gg_trg_Transformations_Pan = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Pan, Trig_Transformations_Pan_Actions)
 end
 
 function Trig_Transformations_Androids_13_Func009C()
@@ -9553,6 +9785,7 @@ function InitCustomTriggers()
     InitTrig_Lookout_Exit()
     InitTrig_Oozaru_Vegeta_New()
     InitTrig_Piccolo_Multi_Form()
+    InitTrig_Pan_Summon_Giru()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()
@@ -9665,6 +9898,7 @@ function InitCustomTriggers()
     InitTrig_Piccolo_Kyo_Get_Str_Mult()
     InitTrig_Transformations_Piccolo()
     InitTrig_Transformations_Bardock()
+    InitTrig_Transformations_Pan()
     InitTrig_Transformations_Androids_13()
     InitTrig_Transformations_Androids_13_14_15()
     InitTrig_Transformations_Androids_Super_13()

@@ -33,6 +33,12 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // bardock
     [FourCC("H08M"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
     [FourCC("H08N"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
+    
+    // pan
+    [FourCC("H08P"), ["Pan Kamehameha", "Maiden Blast", "Reliable Friend", "Summon Giru", "Honey Bee Costume"]],
+    [FourCC("H08R"), ["Pan Kamehameha", "Maiden Blast", "Reliable Friend", "Summon Giru", "Honey Bee Costume"]],
+    // giru
+    [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", "Reliable Friend", "Dragon Radar"]],
 
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],

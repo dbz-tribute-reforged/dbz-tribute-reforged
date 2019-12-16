@@ -374,7 +374,6 @@ export const AbilitiesList = [
         "Twin dragon shot"
     },
     components: [
-      // TODO: probs make a multi-beam component for this ability
       { name: "multi twin dragon shot" },
     ],
   },
@@ -961,6 +960,143 @@ export const AbilitiesList = [
       { name: "damage angry shout dps" },
       { name: "knockback 1tick 20speed 0angle 900aoe" },
       { name: "sfx angry shout" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Pan Kamehameha",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: "Kamehameha",
+      body: 
+        "Kamehameha"
+    },
+    components: [
+      { name: "beam kamehameha" },
+      { name: "aoe apply pan immolation" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Maiden Blast",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPanMaidenBlast.blp",
+      disabled: "BTNPanMaidenBlast.blp",
+    },
+    tooltip: {
+      title: "Maiden Blast",
+      body: 
+        "Maiden Blast"
+    },
+    components: [
+      { name: "beam maiden blast" },
+      { name: "aoe apply pan immolation" },
+      { name: "damage pan immolation dps" },
+      { name: "sfx pan immolation" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Reliable Friend",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPanReliableFriend.blp",
+      disabled: "BTNPanReliableFriend.blp",
+    },
+    tooltip: {
+      title: "Reliable Friend",
+      body: 
+        "Reliable Friend"
+    },
+    components: [
+      { name: "beam reliable friend" },
+      { name: "multi reliable friend" },
+      { name: "aoe apply pan immolation" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Honey Bee Costume",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPanHoneyBee.blp",
+      disabled: "BTNPanHoneyBee.blp",
+    },
+    tooltip: {
+      title: "Honey Bee Costume",
+      body: 
+        "Honey Bee Custome"
+    },
+    components: [
+      { name: "spell amp honey bee costume" },
+      { name: "aoe apply pan immolation" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Summon Giru",
+    currentCd: 0,
+    maxCd: 5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: false,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGiru.blp",
+      disabled: "BTNGiru.blp",
+    },
+    tooltip: {
+      title: "Summon Giru",
+      body: 
+        "Summon Giru"
+    },
+    components: [
+      { name: "aoe apply pan immolation" },
     ],
   },
   // -------------------------------------------

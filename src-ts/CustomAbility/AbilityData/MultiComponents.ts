@@ -114,6 +114,22 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi reliable friend", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 0,
+    angleMin: 0,
+    angleMax: 1,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.LINEAR_FIRING,
+    multiplyComponents: 1,
+    components: [
+      { name: "aoe apply reliable friend" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi ss deadly hammer", 
     repeatInterval: 1, 
     startTick: 25,

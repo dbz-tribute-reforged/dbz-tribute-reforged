@@ -38,6 +38,15 @@ export const AOEStunComponents = [
     keepStunning: false, 
   },
   {
+    name: "stun reliable friend",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    duration: 1,
+    aoe: 400,
+    keepStunning: false, 
+  },
+  {
     name: "stun energy punch",
     repeatInterval: 1,
     startTick: 17,

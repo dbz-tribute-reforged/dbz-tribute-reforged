@@ -6,7 +6,6 @@ import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
-import { Constants } from 'Common/Constants';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 
 let sagaManager: SagaManager;
@@ -23,18 +22,20 @@ function tsMain() {
   HostDetectSystem.onInit();
   TimerStart(CreateTimer(), 5.0, false, () => {
     DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
+    DestroyTimer(GetExpiredTimer());
   })
 
-  // if delayed wont hide creep cramps properly
-  creepManager = CreepManager.getInstance();
+  SetCreepCampFilterState(false);
 
   // delay init
-  TimerStart(CreateTimer(), 1, false, () => {
+  TimerStart(CreateTimer(), 3, false, () => {
     // initialize some systems
     PathingCheck.Init();
+    creepManager = CreepManager.getInstance();
+  
     sagaManager = SagaManager.getInstance();
     
-    // CustomUiTest();
+    CustomUiTest();
     CustomPlayerTest();
     DestroyTimer(GetExpiredTimer());
   });
