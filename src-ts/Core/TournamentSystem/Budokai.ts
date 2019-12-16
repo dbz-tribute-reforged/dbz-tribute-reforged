@@ -242,6 +242,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
             winner.returnAllUnits();
           }
           
+          for (const unit of winner.units.keys()) {
+            if (IsUnitAliveBJ(unit)) {
+              SetUnitLifePercentBJ(unit, 100);
+              SetUnitManaPercentBJ(unit, 100);
+            }
+          }
+          
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15,
             Colorizer.getColoredPlayerName(Player(winner.id)) +  
@@ -410,12 +417,6 @@ export class Budokai extends AdvancedTournament implements Tournament {
         Colorizer.getColoredPlayerName(Player(winner.id)) +  
         " has won their match."
       );
-      for (const unit of winner.units.keys()) {
-        if (IsUnitAliveBJ(unit)) {
-          SetUnitLifePercentBJ(unit, 100);
-          SetUnitManaPercentBJ(unit, 100);
-        }
-      }
     }
     for (const loser of losers) {
       loser.isCompeting = false;

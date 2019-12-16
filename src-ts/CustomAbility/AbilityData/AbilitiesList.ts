@@ -296,7 +296,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi final flash 2" },
-      { name: "knockback 1tick 25speed 0angle 400aoe" },
+      { name: "knockback power level rising" },
     ],
   },
   // -------------------------------------------
@@ -929,7 +929,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground unit rebellion spear" },
       { name: "damage rebellion spear dps" },
-      { name: "knockback 1tick 10speed 0angle 250aoe" },
+      { name: "knockback kame" },
       { name: "sfx rebellion spear" },
     ],
   },
@@ -1452,7 +1452,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage power level rising explosion" },
-      { name: "knockback 1tick 25speed 0angle 400aoe" },
+      { name: "knockback power level rising" },
       { name: "block broly" },
       { name: "sfx power level rising" },
     ],

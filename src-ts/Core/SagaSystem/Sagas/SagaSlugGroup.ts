@@ -38,7 +38,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
           this.slug, 
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
         );
-        SetUnitScale(this.slug, 2.5, 2.5, 2.5);
+        SetUnitScale(this.slug, 3.0, 3.0, 3.0);
         SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
         SetHeroStr(this.slug, GetHeroStr(this.slug, true) * 2, true);
         SetHeroAgi(this.slug, GetHeroAgi(this.slug, true) * 1.5, true);

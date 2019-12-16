@@ -20,16 +20,23 @@ function tsMain() {
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
 
-  // initialize some systems
-  PathingCheck.Init();
-  sagaManager = SagaManager.getInstance();
-
+  // if delayed wont hide creep cramps properly
   creepManager = CreepManager.getInstance();
 
-  tournamentManager = TournamentManager.getInstance();
-  
-  CustomUiTest();
-  CustomPlayerTest();
+  // delay init
+  TimerStart(CreateTimer(), 1, false, () => {
+    // initialize some systems
+    PathingCheck.Init();
+    sagaManager = SagaManager.getInstance();
+    
+    CustomUiTest();
+    CustomPlayerTest();
+    DestroyTimer(GetExpiredTimer());
+  });
+
+  TimerStart(CreateTimer(), 15, false, () => {
+    tournamentManager = TournamentManager.getInstance();
+  });
 }
 
 // Configure libraries
