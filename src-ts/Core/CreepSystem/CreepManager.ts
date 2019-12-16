@@ -46,7 +46,8 @@ export class CreepManager {
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
       let player = Player(i);
       this.creepPlayers.push(player);
-      CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
+      // gui does it for us
+      // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
       SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
       SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
       for (let j = 0; j < Constants.maxPlayers; ++j) {
