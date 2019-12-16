@@ -7,8 +7,13 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
+import { AddableComponent } from "./AddableComponent";
 
-export class BeamComponent implements AbilityComponent, Serializable<BeamComponent> {
+export class BeamComponent implements 
+  AbilityComponent, 
+  Serializable<BeamComponent>,
+  AddableComponent
+{
 
   public beamUnit: unit;
   public delayTicks: number;

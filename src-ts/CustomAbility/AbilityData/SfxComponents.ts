@@ -501,18 +501,18 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "CalamityParticle3.mdl",
-        repeatInterval: 1,
+        repeatInterval: 2,
         group: 0,
-        scale: 2.5,
-        startHeight: 50,
-        endHeight: 50,
+        scale: 3,
+        startHeight: 75,
+        endHeight: 75,
         extraDirectionalYaw: 0,
         color: {
           x: 255,
           y: 255,
           z: 255,
         },
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
       {
@@ -1588,6 +1588,123 @@ export const SfxComponents = [
           z: 225,
         },
         persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx pan immolation", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 33,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\NightElf\\Immolation\\ImmolationTarget.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+      {
+        model: "Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.5,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 235,
+          y: 205,
+          z: 205,
+        },
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam maiden blast", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "CalamityParticle3.mdl",
+        repeatInterval: 2,
+        group: 0,
+        scale: 2,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "NewDirtEXNofire.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  
+  // --------------------------------------------
+  { 
+    name: "sfx reliable friend", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "AuraKaox10.mdl",
+        repeatInterval: 3,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        persistent: true,
         attachmentPoint: "",
       },
     ],

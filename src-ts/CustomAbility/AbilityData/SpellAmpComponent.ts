@@ -56,6 +56,15 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp honey bee costume", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.10,
+    rate: 0.001,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp overcharge", 
     repeatInterval: 1, 
     startTick: 0,

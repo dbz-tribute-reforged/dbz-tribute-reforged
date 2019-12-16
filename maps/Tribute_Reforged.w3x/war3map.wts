@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19h
+Tribute Reforged 0.20
 }
 
 STRING 4
@@ -11880,7 +11880,7 @@ STRING 1908
 }
 
 STRING 1909
-// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
+// Units: H08P (Spoiled Brat), Hotkey (Hotkey)
 {
 E
 }
@@ -11904,7 +11904,7 @@ A desperate and shameless attack. Tao throws a grenade, dealing damage based on 
 }
 
 STRING 1913
-// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
+// Units: H08Q (T2006 Machine Mutant), Hotkey (Hotkey)
 {
 E
 }
@@ -12822,13 +12822,13 @@ Decharge to stop draining mana.
 }
 
 STRING 2066
-// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
+// Units: H08R (Spoiled Brat), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 2067
-// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
+// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
 {
 E
 }
@@ -12852,7 +12852,7 @@ STRING 2070
 }
 
 STRING 2071
-// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -13758,7 +13758,7 @@ STRING 2221
 }
 
 STRING 2222
-// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -13782,7 +13782,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 2226
-// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -13998,7 +13998,7 @@ Mas|cffffcc00e|rnko - [|cffffcc00Level 7|r]
 }
 
 STRING 2262
-// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -14022,7 +14022,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2266
-// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -14958,7 +14958,7 @@ STRING 2421
 }
 
 STRING 2422
-// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -14984,7 +14984,7 @@ A sphere thrown from Broly's hand causing wide area damage.
 }
 
 STRING 2426
-// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15338,7 +15338,7 @@ STRING 2484
 }
 
 STRING 2485
-// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15362,7 +15362,7 @@ Babidi uses his magic to heal himself.
 }
 
 STRING 2489
-// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15884,7 +15884,7 @@ STRING 2575
 }
 
 STRING 2576
-// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
+// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15908,7 +15908,7 @@ Caster Shoots evil energy from its mouth at its enemy.
 }
 
 STRING 2580
-// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
+// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16370,7 +16370,7 @@ Secret hero. A strong PvP fighters due to his extremely high mobility, burst dam
 }
 
 STRING 2656
-// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16392,7 +16392,7 @@ You need to absorb android 17!
 }
 
 STRING 2660
-// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17538,7 +17538,7 @@ STRING 2850
 }
 
 STRING 2851
-// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -17562,7 +17562,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 2855
-// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17571,6 +17571,12 @@ STRING 2856
 // Abilities: A00C (Gain 5 damage), Name (Name)
 {
 Gain 5 damage
+}
+
+STRING 2857
+// Units: H08P (Spoiled Brat), Name (Name)
+{
+Spoiled Brat
 }
 
 STRING 2858
@@ -17589,6 +17595,12 @@ STRING 2860
 // Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
 {
 Slow
+}
+
+STRING 2861
+// Units: Pann ("Pan"), Propernames (Proper Names)
+{
+Pan
 }
 
 STRING 2862
@@ -19265,7 +19277,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19289,7 +19301,7 @@ Buu fires energy blasts everywhere.
 }
 
 STRING 3145
-// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19799,7 +19811,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 3230
-// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
+// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20172,7 +20184,7 @@ Tsufuru Mcffffcc00e|rdic Training
 }
 
 STRING 3292
-// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20196,7 +20208,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3296
-// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20238,7 +20250,7 @@ STRING 3302
 }
 
 STRING 3303
-// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20262,7 +20274,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 3307
-// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20484,7 +20496,7 @@ Tsufuru Elite Guacffffcc00r|rd Training
 }
 
 STRING 3344
-// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20904,7 +20916,7 @@ Tsufuru Sciencffffcc00t|rist Training
 }
 
 STRING 3414
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -22625,7 +22637,7 @@ STRING 3699
 }
 
 STRING 3700
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -22649,7 +22661,7 @@ Used to turn people into candy. |n[|cffffcc00History|r] - |cff0066CCThis is Buu'
 }
 
 STRING 3704
-// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24444,7 +24456,7 @@ Gigantic Omegastorm
 }
 
 STRING 4003
-// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24468,7 +24480,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 4007
-// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -25584,7 +25596,7 @@ STRING 4192
 }
 
 STRING 4193
-// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
+// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -25608,7 +25620,7 @@ Dende heals nearby heroes for 0.33% of their total HP per second and heals himse
 }
 
 STRING 4197
-// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -25980,7 +25992,7 @@ Finger Blit|cffffcc00z|r Barrage
 }
 
 STRING 4259
-// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26004,7 +26016,7 @@ Dende, as Earth's Guardian, has the ability to revive a dead player.|n|cff66ccee
 }
 
 STRING 4263
-// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26754,7 +26766,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 4388
-// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27144,7 +27156,7 @@ STRING 4452
 }
 
 STRING 4453
-// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27168,7 +27180,7 @@ Nearby enemies are blinded and cannot attack.|n|cff00FF00Duration: 10 seconds)|r
 }
 
 STRING 4457
-// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
+// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27552,7 +27564,7 @@ STRING 4520
 }
 
 STRING 4521
-// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27576,7 +27588,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 4525
-// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28448,7 +28460,7 @@ STRING 4668
 }
 
 STRING 4669
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28473,7 +28485,7 @@ Turles forms a ring of energy between his palms and throws it at the target loca
 }
 
 STRING 4673
-// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30065,7 +30077,7 @@ STRING 4937
 }
 
 STRING 4938
-// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30089,7 +30101,7 @@ Android 18 stuns the target with a quick knee to the torso.|n|cff00FF00Duration:
 }
 
 STRING 4942
-// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30294,7 +30306,7 @@ STRING 4975
 }
 
 STRING 4976
-// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30319,7 +30331,7 @@ Android 17 uses his inhuman agility and strength to throw his opponent around li
 }
 
 STRING 4980
-// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31393,7 +31405,7 @@ STRING 5158
 }
 
 STRING 5159
-// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31417,7 +31429,7 @@ Bebi detonates the targeted minion, causing damage in an area.. |n|cff00ff00(Dam
 }
 
 STRING 5163
-// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31590,7 +31602,7 @@ STRING 5191
 }
 
 STRING 5192
-// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
+// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31614,7 +31626,7 @@ Tien blinds his opponents with a Solar Flare and creates images of himself.
 }
 
 STRING 5196
-// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
+// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32184,7 +32196,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5291
-// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
+// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -33690,7 +33702,7 @@ STRING 5539
 }
 
 STRING 5540
-// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -33708,7 +33720,7 @@ STRING 5542
 }
 
 STRING 5543
-// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34146,7 +34158,7 @@ STRING 5615
 }
 
 STRING 5616
-// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34164,7 +34176,7 @@ STRING 5618
 }
 
 STRING 5619
-// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34388,13 +34400,13 @@ STRING 5655
 }
 
 STRING 5656
-// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5657
-// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34556,13 +34568,13 @@ Slappy Hand
 }
 
 STRING 5684
-// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5685
-// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34857,7 +34869,7 @@ Moves your revive point to the upper-left area of the map.|n|cffFF0000Warning: n
 }
 
 STRING 5729
-// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34905,7 +34917,7 @@ Moves your revive point to the wooded area in the south of the map.
 }
 
 STRING 5737
-// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35297,7 +35309,7 @@ STRING 5800
 }
 
 STRING 5801
-// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35321,7 +35333,7 @@ Gotenks creates ghost clones of himself that will travel to the target location 
 }
 
 STRING 5805
-// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35687,13 +35699,13 @@ Beerus Generic Hakai 2.0
 }
 
 STRING 5866
-// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5867
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36017,7 +36029,7 @@ STRING 5920
 }
 
 STRING 5921
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36131,7 +36143,7 @@ STRING 5939
 }
 
 STRING 5940
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36245,7 +36257,7 @@ STRING 5958
 }
 
 STRING 5959
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36269,7 +36281,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5963
-// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36359,7 +36371,7 @@ STRING 5977
 }
 
 STRING 5978
-// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36473,7 +36485,7 @@ STRING 5996
 }
 
 STRING 5997
-// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36587,7 +36599,7 @@ STRING 6015
 }
 
 STRING 6016
-// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36701,7 +36713,7 @@ STRING 6034
 }
 
 STRING 6035
-// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36815,7 +36827,7 @@ STRING 6053
 }
 
 STRING 6054
-// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36929,7 +36941,7 @@ STRING 6072
 }
 
 STRING 6073
-// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37043,7 +37055,7 @@ STRING 6091
 }
 
 STRING 6092
-// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37555,7 +37567,7 @@ STRING 6176
 }
 
 STRING 6177
-// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37573,7 +37585,7 @@ STRING 6179
 }
 
 STRING 6180
-// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38491,7 +38503,7 @@ Removes 90 armor from nearby enemies.
 }
 
 STRING 6333
-// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38905,7 +38917,7 @@ STRING 6401
 }
 
 STRING 6402
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39019,7 +39031,7 @@ STRING 6420
 }
 
 STRING 6421
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39133,7 +39145,7 @@ STRING 6439
 }
 
 STRING 6440
-// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39157,7 +39169,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6444
-// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39247,7 +39259,7 @@ STRING 6458
 }
 
 STRING 6459
-// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -39361,7 +39373,7 @@ STRING 6477
 }
 
 STRING 6478
-// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39475,7 +39487,7 @@ STRING 6496
 }
 
 STRING 6497
-// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
+// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39625,7 +39637,7 @@ STRING 6521
 }
 
 STRING 6522
-// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41439,7 +41451,7 @@ Removes 150 armor from nearby enemies.
 }
 
 STRING 6821
-// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41637,7 +41649,7 @@ STRING 6853
 }
 
 STRING 6854
-// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41661,7 +41673,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 6858
-// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42093,7 +42105,7 @@ W
 }
 
 STRING 6930
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42129,7 +42141,7 @@ Madara traps the target unit in a time loop, causing it to be moved to its origi
 }
 
 STRING 6936
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42633,7 +42645,7 @@ W
 }
 
 STRING 7020
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42669,7 +42681,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7026
-// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43203,13 +43215,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43293,7 +43305,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43317,7 +43329,7 @@ Big Bang Attack
 }
 
 STRING 7134
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43665,7 +43677,7 @@ Kamehameha
 }
 
 STRING 7192
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43773,7 +43785,7 @@ Fires a beam in that deals damage in a line and stuns heroes that are struck. |n
 }
 
 STRING 7210
-// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44247,7 +44259,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44271,7 +44283,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7293
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44817,7 +44829,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44841,7 +44853,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7388
-// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47133,13 +47145,13 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7770
-// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47421,7 +47433,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47439,7 +47451,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47895,7 +47907,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47913,7 +47925,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48543,7 +48555,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48567,7 +48579,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49324,7 +49336,7 @@ Tapion jumps above a target affected by “Hero’s Song”. Upon arrival, Tapio
 }
 
 STRING 8132
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49360,7 +49372,7 @@ Tapion plays his flute.|n|CffFFFF00Applies  |rlvl*200|cffFFFF00 armor to Tapion 
 }
 
 STRING 8138
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50014,7 +50026,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50128,7 +50140,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50290,7 +50302,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50926,7 +50938,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 8399
-// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50950,7 +50962,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51525,13 +51537,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51609,7 +51621,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51633,7 +51645,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52986,7 +52998,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53010,7 +53022,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54141,7 +54153,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54165,7 +54177,7 @@ Automatically dodges incoming enemies (including beams) and provides a Int x 100
 }
 
 STRING 8933
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54174,6 +54186,12 @@ STRING 8934
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
 {
 Unlocks the Gohan's hidden potential, boosting ability damage by 5% for the next 10 seconds.
+}
+
+STRING 8935
+// Units: H08P (Spoiled Brat), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00E|r] Choose Pan
 }
 
 STRING 8936
@@ -54297,7 +54315,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8956
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54616,7 +54634,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54916,7 +54934,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54940,7 +54958,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54952,7 +54970,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55024,7 +55042,7 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 }
 
 STRING 9077
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56377,6 +56395,19 @@ STRING 9300
 Super Saiyan Rage
 }
 
+STRING 9301
+// Units: H08P (Spoiled Brat), Ubertip (Tooltip - Extended)
+{
+A hero.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 9302
 // Abilities: A0KT (Super Saiyan Rage), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -56420,13 +56451,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -58244,13 +58275,13 @@ Q
 }
 
 STRING 9613
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9614
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60045,7 +60076,7 @@ STRING 9911
 }
 
 STRING 9912
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60063,7 +60094,7 @@ STRING 9914
 }
 
 STRING 9915
-// Units: Pann ("Pan"), Propernames (Proper Names)
+// Units: H08P (Spoiled Brat), Propernames (Proper Names)
 {
 Pan
 }
@@ -60141,7 +60172,7 @@ P. Maiden Blast
 }
 
 STRING 9928
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60165,7 +60196,7 @@ P. Reliable Friend
 }
 
 STRING 9932
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61187,7 +61218,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0KX (P. Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61426,22 +61457,16 @@ STRING 10144
 Gohan
 }
 
-STRING 10145
-// Buffs/Effects: B01L (), Buffubertip (Tooltip - Extended)
+STRING 10146
+// Units: H08P (Spoiled Brat), Tip (Tooltip - Basic)
 {
-This unit has unlocked their potential for +10% ability damage.
+[|cffffff00E|r] Choose Pan
 }
 
-STRING 10147
-// Buffs/Effects: B01M (), Buffubertip (Tooltip - Extended)
+STRING 10148
+// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
-This unit has performed a justice pose giving them +15% ability damage.
-}
-
-STRING 10149
-// Buffs/Effects: B01N (), Buffubertip (Tooltip - Extended)
-{
-This unit has unleashed their potential giving them +20% ability damage.
+(Tavern)
 }
 
 STRING 10150
@@ -61452,7 +61477,7 @@ Transformations:
 [lvl 35]  1.50x ss
 [lvl 90]  2.00x ss2
 [lvl 130] 2.25x ss3
-[lvl 165] 2.50x ssg
+[lvl 160] 2.50x ssg
 [lvl 210] 2.60x ssb
 }
 
@@ -61510,7 +61535,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61540,7 +61565,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61768,13 +61793,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KX (P. Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62698,7 +62723,7 @@ STRING 10354
 }
 
 STRING 10355
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62716,7 +62741,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63257,7 +63282,7 @@ STRING 10446
 }
 
 STRING 10447
-// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64309,6 +64334,18 @@ STRING 10611
 Download the latest official versions only at: discord.gg/vayXJSZ
 }
 
+STRING 10612
+// Units: H08Q (T2006 Machine Mutant), Name (Name)
+{
+T2006 Machine Mutant
+}
+
+STRING 10613
+// Units: H08Q (T2006 Machine Mutant), Propernames (Proper Names)
+{
+Giru
+}
+
 STRING 10614
 // Units: U014 (Changling Final Form), EditorSuffix (Name - Editor Suffix)
 {
@@ -64461,7 +64498,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
+// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64526,6 +64563,18 @@ STRING 10648
 Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 5/10/15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002/0.003/0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
+STRING 10649
+// Units: H08Q (T2006 Machine Mutant), EditorSuffix (Name - Editor Suffix)
+{
+(Pan Robot)
+}
+
+STRING 10650
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+{
+E
+}
+
 STRING 10651
 {
 Discord
@@ -64544,6 +64593,18 @@ AOE Flying vision disabled.
 STRING 10654
 {
 AOE Flying vision enabled.
+}
+
+STRING 10655
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 10656
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
 }
 
 STRING 10657
@@ -64594,5 +64655,867 @@ All Pick: -ap
 All Random: -ar
 Single Draft: -sd
 Captain's Mode: -cm
+}
+
+STRING 10662
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10663
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10664
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10665
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10666
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10667
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10668
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 2|r]
+}
+
+STRING 10669
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 3|r]
+}
+
+STRING 10670
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 4|r]
+}
+
+STRING 10671
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 5|r]
+}
+
+STRING 10672
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 6|r]
+}
+
+STRING 10673
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 1|r]
+}
+
+STRING 10674
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 7|r]
+}
+
+STRING 10675
+// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 10676
+// Abilities: A0LU (Maiden Blast), Name (Name)
+{
+Maiden Blast
+}
+
+STRING 10677
+// Abilities: A0LU (Maiden Blast), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Maiden Blast - [|cffffcc00Level %d|r]
+}
+
+STRING 10678
+// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 10679
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 9|r]
+}
+
+STRING 10680
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 8|r]
+}
+
+STRING 10681
+// Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 10682
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10683
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10684
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10685
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10686
+// Abilities: A0LU (Maiden Blast), EditorSuffix (Editor Suffix)
+{
+(pan)
+}
+
+STRING 10687
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10688
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10689
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10690
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10691
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10692
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10693
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10694
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 2|r]
+}
+
+STRING 10695
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 3|r]
+}
+
+STRING 10696
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 4|r]
+}
+
+STRING 10697
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 5|r]
+}
+
+STRING 10698
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 6|r]
+}
+
+STRING 10699
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 1|r]
+}
+
+STRING 10700
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 7|r]
+}
+
+STRING 10701
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 10702
+// Abilities: A0LV (Reliable Friend), Name (Name)
+{
+Reliable Friend
+}
+
+STRING 10703
+// Abilities: A0LV (Reliable Friend), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Reliable Friend - [|cffffcc00Level %d|r]
+}
+
+STRING 10704
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 10705
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 9|r]
+}
+
+STRING 10706
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 8|r]
+}
+
+STRING 10707
+// Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 10|r]
+}
+
+STRING 10708
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10709
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10710
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10711
+// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
+}
+
+STRING 10712
+// Abilities: A0LV (Reliable Friend), EditorSuffix (Editor Suffix)
+{
+(pan)
+}
+
+STRING 10716
+// Abilities: A0LW (Summon Giru), Name (Name)
+{
+Summon Giru
+}
+
+STRING 10719
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 10720
+// Buffs/Effects: B01P (), Bufftip (Tooltip)
+{
+Giru
+}
+
+STRING 10721
+// Buffs/Effects: B01P (), Buffubertip (Tooltip - Extended)
+{
+Pan's best friend.
+}
+
+STRING 10722
+// Buffs/Effects: B01Q (), Bufftip (Tooltip)
+{
+Dabura
+}
+
+STRING 10723
+// Buffs/Effects: B01Q (), Buffubertip (Tooltip - Extended)
+{
+A Minion of Babidi and King of the Demon Realm
+}
+
+STRING 10724
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x honey
+[lvl 30]  1.50x ss
+[lvl 90]  2.00x ss2
+[lvl 160] 2.50x ssg
+}
+
+STRING 10725
+// Units: H08R (Spoiled Brat), Name (Name)
+{
+Spoiled Brat
+}
+
+STRING 10726
+// Units: H08R (Spoiled Brat), Propernames (Proper Names)
+{
+Pan
+}
+
+STRING 10727
+// Units: H08R (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+{
+SS
+}
+
+STRING 10728
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 10729
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10730
+// Abilities: A0LW (Summon Giru), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Summon Giru - [|cffffcc00Level 1|r]
+}
+
+STRING 10731
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 10732
+// Abilities: A0LW (Summon Giru), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Summon Giru - [|cffffcc00Level %d|r]
+}
+
+STRING 10733
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10734
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 10735
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10736
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10737
+// Abilities: A0LW (Summon Giru), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Summon Giru - [|cffffcc00Level 2|r]
+}
+
+STRING 10738
+// Abilities: A0LW (Summon Giru), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Summon Giru - [|cffffcc00Level 3|r]
+}
+
+STRING 10739
+// Abilities: A0LW (Summon Giru), EditorSuffix (Editor Suffix)
+{
+(pan)
+}
+
+STRING 10740
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10741
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10742
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10743
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10744
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10745
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10746
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10747
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10748
+// Abilities: A0LX (Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10749
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 10750
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 10751
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 10752
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 10753
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 10754
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 10755
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 10756
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 10757
+// Abilities: A0LX (Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 10758
+// Abilities: A0LX (Kamehameha), Name (Name)
+{
+Kamehameha
+}
+
+STRING 10759
+// Abilities: A0LX (Kamehameha), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 10760
+// Abilities: A0LX (Kamehameha), Researchubertip (Tooltip - Learn - Extended)
+{
+At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 10761
+// Abilities: A0LX (Kamehameha), EditorSuffix (Editor Suffix)
+{
+(actual pan)
+}
+
+STRING 10762
+// Abilities: A0LY (Pan Costume Honey Bee), Name (Name)
+{
+Pan Costume Honey Bee
+}
+
+STRING 10763
+// Abilities: A0LY (Pan Costume Honey Bee), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Honey Bee Costume
+}
+
+STRING 10764
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 10765
+// Abilities: A0LY (Pan Costume Honey Bee), Ubertip (Tooltip - Normal - Extended)
+{
+Pan puts on her honey bee costume increasing ability damage over the next 10 seconds. Increases ability damage by +0.1% per second up to a max of +10%.
+}
+
+STRING 10766
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 10% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD1,%>% |n|cffffcc00Critical|r - <A0LZ,DataA1>% |n|cffffcc00Damage|r - <A0LZ,DataB1,.> times
+}
+
+STRING 10767
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 20% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD2,%>% |n|cffffcc00Critical|r - <A0LZ,DataA2>% |n|cffffcc00Damage|r - <A0LZ,DataB2,.> times
+}
+
+STRING 10768
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 30% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD3,%>% |n|cffffcc00Critical|r - <A0LZ,DataA3>% |n|cffffcc00Damage|r - <A0LZ,DataB3,.> times
+}
+
+STRING 10769
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 40% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD4,%>% |n|cffffcc00Critical|r - <A0LZ,DataA4>% |n|cffffcc00Damage|r - <A0LZ,DataB4,.> times
+}
+
+STRING 10770
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 50% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD5,%>% |n|cffffcc00Critical|r - <A0LZ,DataA5>% |n|cffffcc00Damage|r - <A0LZ,DataB5,.> times
+}
+
+STRING 10771
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 60% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD6,%>% |n|cffffcc00Critical|r - <A0LZ,DataA6>% |n|cffffcc00Damage|r - <A0LZ,DataB6,.> times
+}
+
+STRING 10772
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 70% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD7,%>% |n|cffffcc00Critical|r - <A0LZ,DataA7>% |n|cffffcc00Damage|r - <A0LZ,DataB7,.> times
+}
+
+STRING 10773
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 80% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD8,%>% |n|cffffcc00Critical|r - <A0LZ,DataA8>% |n|cffffcc00Damage|r - <A0LZ,DataB8,.> times
+}
+
+STRING 10774
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 90% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD9,%>% |n|cffffcc00Critical|r - <A0LZ,DataA9>% |n|cffffcc00Damage|r - <A0LZ,DataB9,.> times
+}
+
+STRING 10775
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 100% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD10,%>% |n|cffffcc00Critical|r - <A0LZ,DataA10>% |n|cffffcc00Damage|r - <A0LZ,DataB10,.> times
+}
+
+STRING 10776
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 110% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD11,%>% |n|cffffcc00Critical|r - <A0LZ,DataA11>% |n|cffffcc00Damage|r - <A0LZ,DataB11,.> times
+}
+
+STRING 10777
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 120% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD12,%>% |n|cffffcc00Critical|r - <A0LZ,DataA12>% |n|cffffcc00Damage|r - <A0LZ,DataB12,.> times
+}
+
+STRING 10778
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 130% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD13,%>% |n|cffffcc00Critical|r - <A0LZ,DataA13>% |n|cffffcc00Damage|r - <A0LZ,DataB13,.> times
+}
+
+STRING 10779
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 140% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD14,%>% |n|cffffcc00Critical|r - <A0LZ,DataA14>% |n|cffffcc00Damage|r - <A0LZ,DataB14,.> times
+}
+
+STRING 10780
+// Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
+{
+Giru is strengthened by the power of friendship. Every time Pan casts a spell Giru will deal AOE damage @ 150% Dfist dps. Additionally, Giru can land a friendship strike for bonus critical damage while also having a chance of evading incoming attacks. |n|cffffcc00Evasion|r - <A0LZ,DataD15,%>% |n|cffffcc00Critical|r - <A0LZ,DataA15>% |n|cffffcc00Damage|r - <A0LZ,DataB15,.> times
+}
+
+STRING 10781
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 3|r]
+}
+
+STRING 10782
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 1|r]
+}
+
+STRING 10783
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 2|r]
+}
+
+STRING 10784
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 4|r]
+}
+
+STRING 10785
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 5|r]
+}
+
+STRING 10786
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 6|r]
+}
+
+STRING 10787
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 7|r]
+}
+
+STRING 10788
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 8|r]
+}
+
+STRING 10789
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 9|r]
+}
+
+STRING 10790
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 10|r]
+}
+
+STRING 10791
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 11|r]
+}
+
+STRING 10792
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 12|r]
+}
+
+STRING 10793
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 13|r]
+}
+
+STRING 10794
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 14|r]
+}
+
+STRING 10795
+// Abilities: A0LZ (Best Friends Forever), Tip (Tooltip - Normal)
+{
+Best Friends Forever - [|cffffcc00Level 15|r]
+}
+
+STRING 10796
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 10797
+// Abilities: A0LZ (Best Friends Forever), Name (Name)
+{
+Best Friends Forever
+}
+
+STRING 10798
+// Abilities: A0LZ (Best Friends Forever), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Master Roshi's Teachings - [|cffffcc00Level %d|r]
+}
+
+STRING 10799
+// Abilities: A0LZ (Best Friends Forever), Researchubertip (Tooltip - Learn - Extended)
+{
+A combat style taught to Goku by Master Roshi. When Goku and Krillin were young they trained under Master Roshi for almost a year to prepare for their first Tenkaichi Budoukai.
+}
+
+STRING 10800
+// Abilities: A0LZ (Best Friends Forever), EditorSuffix (Editor Suffix)
+{
+(Giru Passive)
+}
+
+STRING 10801
+// Buffs/Effects: B01L (), Buffubertip (Tooltip - Extended)
+{
+This unit has unlocked their potential for +5% ability damage.
+}
+
+STRING 10802
+// Buffs/Effects: B01M (), Buffubertip (Tooltip - Extended)
+{
+This unit has performed a justice pose giving them +10% ability damage.
+}
+
+STRING 10803
+// Buffs/Effects: B01N (), Buffubertip (Tooltip - Extended)
+{
+This unit has unleashed their potential giving them +15% ability damage.
+}
+
+STRING 10804
+// Buffs/Effects: B01R (), Buffubertip (Tooltip - Extended)
+{
+This unit is wearing a honey bee costume giving them up to +10% ability damage.
+}
+
+STRING 10805
+// Buffs/Effects: B01R (), Bufftip (Tooltip)
+{
+Honey Bee Costume
+}
+
+STRING 10806
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 10807
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 10808
+// Abilities: A0LY (Pan Costume Honey Bee), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00D|r] Learn Honey Bee Costume
+}
+
+STRING 10809
+// Abilities: A0LY (Pan Costume Honey Bee), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan puts on her honey bee costume increasing ability damage over the next 10 seconds. Increases ability damage by +0.1% per second up to a max of +10%.
 }
 

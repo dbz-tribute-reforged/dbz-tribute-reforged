@@ -54,6 +54,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LR'), "Saiyan Spirit"],
     [FourCC('A0LS'), "Angry Shout"],
 
+    // pan & giru
+    [FourCC('A0LX'), "Pan Kamehameha"],
+    [FourCC('A0LU'), "Maiden Blast"],
+    [FourCC('A0LV'), "Reliable Friend"],
+    [FourCC('A0LY'), "Honey Bee Costume"],
+    [FourCC('A0LW'), "Summon Giru"],
+
 
     // babidi
     [FourCC('A02F'), "Haretsu no Majutsu"],

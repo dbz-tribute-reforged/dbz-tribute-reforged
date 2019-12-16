@@ -138,6 +138,15 @@ export const DashComponents = [
     distance: -40,
   },
   {
+    name: "dash ground point reliable friend",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    distance: 30,
+  },
+  {
     name: "dash ground point ss deadly hammer",
     repeatInterval: 1, 
     startTick: 0,

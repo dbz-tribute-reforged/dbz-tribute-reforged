@@ -447,6 +447,7 @@ export function CustomPlayerTest() {
 
       ForGroup(group, () => {
         SetHeroLevel(GetEnumUnit(), 900, false);
+        ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_ADD, 500);
       });
 
       DestroyGroup(group);
