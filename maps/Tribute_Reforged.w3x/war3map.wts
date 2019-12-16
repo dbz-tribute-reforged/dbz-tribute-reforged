@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.19g
+Tribute Reforged 0.19h
 }
 
 STRING 4
@@ -17591,10 +17591,22 @@ STRING 2860
 Slow
 }
 
+STRING 2862
+{
+Transformations
+}
+
 STRING 2863
 // Units: H04X (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (int clone)
+}
+
+STRING 2864
+{
+Type "hs" (without the quotation marks ") to get a list of transformations your character has.
+
+e.g. "ss" at lvl 30
 }
 
 STRING 2865
@@ -54164,11 +54176,6 @@ STRING 8934
 Unlocks the Gohan's hidden potential, boosting ability damage by 5% for the next 10 seconds.
 }
 
-STRING 8935
-{
-Discord
-}
-
 STRING 8936
 // Abilities: A0L7 (Gohan Boost Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
@@ -56368,11 +56375,6 @@ STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
 Super Saiyan Rage
-}
-
-STRING 9301
-{
-DBZ Tribute community @ discord.gg/vayXJSZ
 }
 
 STRING 9302
@@ -61430,22 +61432,10 @@ STRING 10145
 This unit has unlocked their potential for +10% ability damage.
 }
 
-STRING 10146
-{
-Transformations
-}
-
 STRING 10147
 // Buffs/Effects: B01M (), Buffubertip (Tooltip - Extended)
 {
 This unit has performed a justice pose giving them +15% ability damage.
-}
-
-STRING 10148
-{
-Type "hs" (without the quotation marks ") to get a list of transformations your character has.
-
-e.g. "ss" at lvl 30
 }
 
 STRING 10149
@@ -64229,11 +64219,11 @@ Kid buu retains the stat mult gained from Super Buu's absorbs.
 STRING 10605
 {
 Transformations:
-[lvl 15]  1.25x first
-[lvl 30]  1.50x fp
+[lvl 15]  1.25x "first"
+[lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 60+] 2.00x (absorb 17/18)
-[lvl 130] 2.50x super
+[lvl 130] 2.50x "super"
 
 To reach Cell's higher forms you must absorb 17/18.
 }
@@ -64317,30 +64307,6 @@ Can type "upg" to convert half your stat multiplier above 2.00x into bonus base 
 STRING 10611
 {
 Download the latest official versions only at: discord.gg/vayXJSZ
-}
-
-STRING 10612
-{
-Transformations:
-[lvl 15]  1.25x first
-[lvl 30]  1.50x fp
-[lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
-[lvl 130] 2.50x super
-
-To reach Cell's higher forms you must absorb 17/18.
-}
-
-STRING 10613
-{
-Transformations:
-[lvl 15]  1.25x first
-[lvl 30]  1.50x fp
-[lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
-[lvl 130] 2.50x super
-
-To reach Cell's higher forms you must absorb 17/18.
 }
 
 STRING 10614
@@ -64558,5 +64524,75 @@ STRING 10648
 // Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
 {
 Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 5/10/15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002/0.003/0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 10651
+{
+Discord
+}
+
+STRING 10652
+{
+DBZ Tribute community @ discord.gg/vayXJSZ
+}
+
+STRING 10653
+{
+AOE Flying vision disabled.
+}
+
+STRING 10654
+{
+AOE Flying vision enabled.
+}
+
+STRING 10657
+{
+Transformations:
+[lvl 15]  1.25x "first"
+[lvl 30]  1.50x "fp"
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x "super"
+
+To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10658
+{
+Transformations:
+[lvl 15]  1.25x "first"
+[lvl 30]  1.50x "fp"
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x "super"
+
+To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10659
+{
+Transformations:
+[lvl 15]  1.25x "first"
+[lvl 30]  1.50x "fp"
+[lvl 30+] 1.75x (absorb 17/18)
+[lvl 60+] 2.00x (absorb 17/18)
+[lvl 130] 2.50x "super"
+
+To reach Cell's higher forms you must absorb 17/18.
+}
+
+STRING 10660
+{
+Game Modes
+}
+
+STRING 10661
+{
+Good v Evil: -default
+All Pick: -ap
+All Random: -ar
+Single Draft: -sd
+Captain's Mode: -cm
 }
 
