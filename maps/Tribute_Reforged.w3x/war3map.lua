@@ -382,6 +382,8 @@ gg_unit_H000_0014 = nil
 gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
+gg_trg_Setup_Quests = nil
+gg_trg_Transformations_Cell_Second = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -585,52 +587,42 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -1567,7 +1559,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(11))
     u = BlzCreateUnitWithSkin(p, FourCC("O00Q"), -204.3, 21913.7, 251.946, FourCC("O00Q"))
     SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00E"), -349.3, 21173.0, -8.992, FourCC("U00E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("U00E"), -349.3, 21173.0, 351.008, FourCC("U00E"))
     u = BlzCreateUnitWithSkin(p, FourCC("U00G"), -188.9, 21159.8, 325.755, FourCC("U00G"))
     u = BlzCreateUnitWithSkin(p, FourCC("U00F"), -90.0, 21217.4, 266.315, FourCC("U00F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 1135.2, 21157.8, 263.911, FourCC("n02P"))
@@ -2695,8 +2687,10 @@ end
 function Trig_Lights_toggle_Actions()
     if (Trig_Lights_toggle_Func001C()) then
         udg_IsAOEFlyingVision = false
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10653")
     else
         udg_IsAOEFlyingVision = true
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10654")
     end
 end
 
@@ -2716,9 +2710,6 @@ function Trig_Map_Setup_Actions()
         udg_PlayerColorString[udg_TempInt] = "|cffffffff"
         udg_TempInt = udg_TempInt + 1
     end
-    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_8935", "TRIGSTR_9301", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
-    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-    FlashQuestDialogButtonBJ()
     udg_PlayerColorString[1] = "|cffff0000"
     udg_PlayerColorString[2] = "|cff0000ff"
     udg_PlayerColorString[3] = "|cff00ffff"
@@ -2754,9 +2745,6 @@ function Trig_Setup_Per_Player_Properties_Actions()
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_TournamentArena)
         udg_TempInt = udg_TempInt + 1
     end
-    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10146", "TRIGSTR_10148", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
-    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-    FlashQuestDialogButtonBJ()
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
@@ -2776,6 +2764,22 @@ function InitTrig_Setup_Per_Player_Properties()
     gg_trg_Setup_Per_Player_Properties = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.50)
     TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
+end
+
+function Trig_Setup_Quests_Actions()
+    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    FlashQuestDialogButtonBJ()
+end
+
+function InitTrig_Setup_Quests()
+    gg_trg_Setup_Quests = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Quests, 5)
+    TriggerAddAction(gg_trg_Setup_Quests, Trig_Setup_Quests_Actions)
 end
 
 function Trig_Disable_Heads_for_TempPlayer_Actions()
@@ -2910,7 +2914,7 @@ end
 
 function InitTrig_Setup_Spawns()
     gg_trg_Setup_Spawns = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Setup_Spawns, 0.02)
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Spawns, 0.05)
     TriggerAddAction(gg_trg_Setup_Spawns, Trig_Setup_Spawns_Actions)
 end
 
@@ -4429,7 +4433,7 @@ end
 
 function InitTrig_Hero_Pick_Init_Available_Heroes()
     gg_trg_Hero_Pick_Init_Available_Heroes = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Init_Available_Heroes, 0.03)
+    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Init_Available_Heroes, 0.30)
     TriggerAddAction(gg_trg_Hero_Pick_Init_Available_Heroes, Trig_Hero_Pick_Init_Available_Heroes_Actions)
 end
 
@@ -5591,7 +5595,7 @@ function Trig_Transformations_Entry_Point_Func003Func007C()
 end
 
 function Trig_Transformations_Entry_Point_Func003Func008C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00G"))) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
         return false
     end
     return true
@@ -5728,7 +5732,7 @@ function Trig_Transformations_Entry_Point_Func003A()
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func008C()) then
-        TriggerExecute(gg_trg_Transformations_Cell_Perfect)
+        TriggerExecute(gg_trg_Transformations_Cell_Second)
     else
     end
     if (Trig_Transformations_Entry_Point_Func003Func009C()) then
@@ -8466,7 +8470,7 @@ function Trig_Transformations_Cell_First_Actions()
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_First_Func009C()) then
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
-        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10612")
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10657")
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
@@ -8485,6 +8489,35 @@ end
 function InitTrig_Transformations_Cell_First()
     gg_trg_Transformations_Cell_First = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Cell_First, Trig_Transformations_Cell_First_Actions)
+end
+
+function Trig_Transformations_Cell_Second_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Cell_Second_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Cell_Second_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10658")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
+function InitTrig_Transformations_Cell_Second()
+    gg_trg_Transformations_Cell_Second = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Cell_Second, Trig_Transformations_Cell_Second_Actions)
 end
 
 function Trig_Transformations_Cell_Perfect_Func009C()
@@ -8532,7 +8565,7 @@ function Trig_Transformations_Cell_Perfect_Actions()
     udg_StatMultInt = 0.00
     if (Trig_Transformations_Cell_Perfect_Func009C()) then
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
-        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10613")
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10659")
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
@@ -9536,6 +9569,7 @@ function InitCustomTriggers()
     InitTrig_Lights_toggle()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
+    InitTrig_Setup_Quests()
     InitTrig_Disable_Heads_for_TempPlayer()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
@@ -9644,6 +9678,7 @@ function InitCustomTriggers()
     InitTrig_Cell_Absorb()
     InitTrig_Transformations_Cell_Larval()
     InitTrig_Transformations_Cell_First()
+    InitTrig_Transformations_Cell_Second()
     InitTrig_Transformations_Cell_Perfect()
     InitTrig_Cooler_Give_Transform()
     InitTrig_Cooler_Transform_Into_Final_Form()
