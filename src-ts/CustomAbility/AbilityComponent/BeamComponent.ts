@@ -39,6 +39,7 @@ export class BeamComponent implements
     public isTracking : boolean = false,
     public isFixedAngle : boolean = true,
     public canClashWithHero : boolean = true,
+    public useLastCastPoint : boolean = true,
     public beamUnitType: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
   ) {
@@ -104,7 +105,11 @@ export class BeamComponent implements
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
-    this.angle = CoordMath.angleBetweenCoords(sourceCoord, input.targetPoint);
+    let beamTargetPoint = input.castPoint;
+    if (!this.useLastCastPoint) {
+      beamTargetPoint = input.targetPoint;
+    }
+    this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
 
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
@@ -150,7 +155,7 @@ export class BeamComponent implements
       if (input.targetUnit) {
         IssueTargetOrder(this.beamUnit, "attack", input.targetUnit);
       } else {
-        IssuePointOrder(this.beamUnit, "move", input.targetPoint.x, input.targetPoint.y);
+        IssuePointOrder(this.beamUnit, "move", beamTargetPoint.x, beamTargetPoint.y);
       }
     }
   }
@@ -181,7 +186,8 @@ export class BeamComponent implements
       this.beamHpMult, this.beamHpAttribute, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
-      this.isFixedAngle, this.canClashWithHero, this.beamUnitType, 
+      this.isFixedAngle, this.canClashWithHero, this.useLastCastPoint, 
+      this.beamUnitType, 
       AbilityComponentHelper.clone(this.components),
     );
   }
@@ -207,6 +213,7 @@ export class BeamComponent implements
       isTracking: boolean;
       isFixedAngle: boolean;
       canClashWithHero: boolean;
+      useLastCastPoint: boolean;
       beamUnitType: string;
       components: {
         name: string,
@@ -228,6 +235,7 @@ export class BeamComponent implements
     this.isTracking = input.isTracking;
     this.isFixedAngle = input.isFixedAngle;
     this.canClashWithHero = input.canClashWithHero;
+    this.useLastCastPoint = input.useLastCastPoint;
     this.beamUnitType = FourCC(input.beamUnitType);
     return this;
   }

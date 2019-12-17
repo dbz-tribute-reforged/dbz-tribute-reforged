@@ -6,4 +6,8 @@ export class Vector2D {
     this.y += v.y;
     return this;
   }
+
+  public clone(): Vector2D {
+    return new Vector2D(this.x, this.y);
+  }
 }

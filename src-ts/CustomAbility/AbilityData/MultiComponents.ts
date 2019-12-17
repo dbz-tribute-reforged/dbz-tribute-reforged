@@ -12,6 +12,7 @@ export const MultiComponents = [
     delayBetweenComponents: 16,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 2,
+    useLastCastPoint: true,
     components: [
       { name: "beam twin dragon shot" },
     ],
@@ -28,6 +29,7 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 2,
+    useLastCastPoint: true,
     components: [
       { name: "beam final flash" },
     ],
@@ -44,6 +46,7 @@ export const MultiComponents = [
     delayBetweenComponents: 2,
     firingMode: MultiComponent.RANDOM_FIRING,
     multiplyComponents: 16,
+    useLastCastPoint: true,
     components: [
       { name: "beam energy blast volley" },
     ],
@@ -60,6 +63,7 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
     multiplyComponents: 1,
+    useLastCastPoint: true,
     components: [
       { name: "beam finish buster" },
     ],
@@ -76,6 +80,7 @@ export const MultiComponents = [
     delayBetweenComponents: 5,
     firingMode: MultiComponent.RANDOM_FIRING,
     multiplyComponents: 12,
+    useLastCastPoint: true,
     components: [
       { name: "beam hellzone grenade" },
     ],
@@ -92,6 +97,7 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
     multiplyComponents: 1,
+    useLastCastPoint: false,
     components: [
       { name: "beam tyrant lancer" },
     ],
@@ -108,24 +114,9 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
     multiplyComponents: 1,
+    useLastCastPoint: false,
     components: [
       { name: "beam saiyan spirit" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "multi reliable friend", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    angleDifference: 0,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    components: [
-      { name: "aoe apply reliable friend" },
     ],
   },
   // -------------------------------------------
@@ -140,6 +131,7 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
     multiplyComponents: 1,
+    useLastCastPoint: false,
     components: [
       { name: "beam ss deadly bomber" },
     ],
@@ -156,6 +148,7 @@ export const MultiComponents = [
     delayBetweenComponents: 2,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 12,
+    useLastCastPoint: true,
     components: [
       { name: "beam innocence breath" },
     ],
@@ -172,6 +165,7 @@ export const MultiComponents = [
     delayBetweenComponents: 5,
     firingMode: MultiComponent.RANDOM_FIRING,
     multiplyComponents: 66,
+    useLastCastPoint: true,
     components: [
       { name: "beam mankind destruction attack" },
     ],
@@ -188,6 +182,7 @@ export const MultiComponents = [
     delayBetweenComponents: 4,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 5,
+    useLastCastPoint: true,
     components: [
       { name: "beam death beam frieza" },
     ],
