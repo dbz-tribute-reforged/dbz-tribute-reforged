@@ -12,12 +12,13 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 100;
     this.isFinalForm = false;
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Cooler has come to Earth seeking revenge!");
 
     this.addHeroListToSaga(["Cooler"], true);
@@ -97,6 +98,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Cooler has fused with the Big Gete Star to become Metal Cooler!");
 
     this.addHeroListToSaga(["Metal Cooler 1", "Metal Cooler 2", "Metal Cooler 3"], true);

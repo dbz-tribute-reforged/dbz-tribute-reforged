@@ -36,6 +36,19 @@ export class TournamentManager {
   public initialize(): this {
     this.setupReviveTrigger();
 
+    /*
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      FogModifierStart(
+        CreateFogModifierRect(
+          Player(i), 
+          FOG_OF_WAR_VISIBLE, 
+          TournamentData.tournamentRect, 
+          true, false
+        )
+      );
+    }
+    */
+
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
     // this.setupTimedStartFinalBattle();
@@ -86,7 +99,7 @@ export class TournamentManager {
         y < TournamentData.tournamentTopRight.y && 
         UnitHelper.isUnitTournamentViable(deadHero)
       ) {
-        Logger.LogDebug("Reviving Dead Tournament Hero");
+        // Logger.LogDebug("Reviving Dead Tournament Hero");
         TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
           ReviveHero(
             deadHero, 
@@ -127,7 +140,7 @@ export class TournamentManager {
           DestroyTimerDialog(tournamentTimerDialog);
           DestroyTrigger(tournamentStartTrig);
         } else {
-          Logger.LogDebug("Another tournament is active...");
+          // Logger.LogDebug("Another tournament is active...");
         }
       })
 

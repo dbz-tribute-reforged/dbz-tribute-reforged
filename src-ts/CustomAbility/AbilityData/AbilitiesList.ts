@@ -1042,7 +1042,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam reliable friend" },
-      { name: "multi reliable friend" },
+      { name: "aoe apply reliable friend" },
       { name: "aoe apply pan immolation" },
     ],
   },

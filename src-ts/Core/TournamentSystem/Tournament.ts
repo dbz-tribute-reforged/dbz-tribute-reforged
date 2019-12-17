@@ -25,12 +25,12 @@ export class BaseTournament implements Tournament {
   }
 
   start(): void {
-    Logger.LogDebug('Starting tournament "' + this.name + '"');
+    // Logger.LogDebug('Starting tournament "' + this.name + '"');
     this.state = TournamentState.Waiting;
   }
 
   complete(): void {
-    Logger.LogDebug('Completing tournament "' + this.name + '"');
+    // Logger.LogDebug('Completing tournament "' + this.name + '"');
     this.state = TournamentState.Completed;
   }
 

@@ -43,7 +43,7 @@ export const AOEStunComponents = [
     startTick: 0,
     endTick: -1,
     duration: 1,
-    aoe: 400,
+    aoe: 500,
     keepStunning: false, 
   },
   {

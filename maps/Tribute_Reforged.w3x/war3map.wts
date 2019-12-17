@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.20a
+Tribute Reforged 0.20b
 }
 
 STRING 4
@@ -17579,20 +17579,14 @@ STRING 2857
 Spoiled Brat
 }
 
-STRING 2858
-// Abilities: A0LK (Buu Candy Slow 80%), Name (Name)
-{
-Buu Candy Slow 80%
-}
-
 STRING 2859
-// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
 {
 Slow
 }
 
 STRING 2860
-// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
 {
 Slow
 }
@@ -64240,7 +64234,8 @@ Only gains stat multiplier by eating candy (see candy beam ability).
 For Super Buu type "super" at lvl 90.
 
 Super Buu:
-Gains stat multiplier by eating candy.
+Carries over stat mult from fat buu.
+Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
@@ -64249,14 +64244,15 @@ STRING 10603
 {
 Transformations:
 Super Buu:
-Gains stat multiplier by eating candy.
+Carries over stat mult from fat buu.
+Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
 
 STRING 10604
 {
-Kid buu retains the stat mult gained from Super Buu's absorbs.
+Kid buu retains the stat mult gained from Fat Buu's candy and Super Buu's absorbs. (minimum 2.4x)
 }
 
 STRING 10605
@@ -64595,12 +64591,14 @@ E
 
 STRING 10651
 {
-Discord
+DBZ Tribute
 }
 
 STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
+
+This map is under active development - 17.12.19
 }
 
 STRING 10653
@@ -64617,6 +64615,12 @@ STRING 10655
 // Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 10656
+// Abilities: A0LK (Buu Candy Slow 10%), Name (Name)
+{
+Buu Candy Slow 10%
 }
 
 STRING 10657
@@ -64667,6 +64671,24 @@ All Pick: -ap
 All Random: -ar
 Single Draft: -sd
 Captain's Mode: -cm
+}
+
+STRING 10662
+// Buffs/Effects: B01S (), Bufftip (Tooltip)
+{
+Buu Candy
+}
+
+STRING 10663
+// Buffs/Effects: B01S (), EditorSuffix (Editor Suffix)
+{
+(recent)
+}
+
+STRING 10664
+// Buffs/Effects: B01S (), Buffubertip (Tooltip - Extended)
+{
+This unit has recently been turned into candy and is immune to further candy beams. Movement speed is reduced while immune.
 }
 
 STRING 10668

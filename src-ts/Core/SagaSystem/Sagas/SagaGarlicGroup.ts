@@ -12,6 +12,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has taken over the lookout!");
 
     this.addHeroListToSaga(["Garlic Jr", "Sansho", "Nicky", "Ginger"], true);
@@ -60,11 +61,12 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 20;
     this.stats = 50;
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has returned from the Dead Zone!");
     
     this.addHeroListToSaga(["Garlic Jr 2", "Spice", "Vinegar", "Mustard", "Salt"], true);

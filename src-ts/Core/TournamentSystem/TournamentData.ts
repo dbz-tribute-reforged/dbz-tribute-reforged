@@ -16,7 +16,7 @@ export module TournamentData {
   );
   export const finalBattleDetector: Vector2D = new Vector2D(-729, 22950);
   export const finalBattleName: string = "Final Battle";
-  export const finalBattleTime: number = 28 * 60;
+  export const finalBattleTime: number = 30 * 60;
   export const finalBattleInterval: number = 60;
   export const finalBattleDelay: number = 60;
   export const finalBattleLobbyWait: number = 15;
@@ -25,9 +25,9 @@ export module TournamentData {
   export const budokaiName: string = "Tournament";
   export const budokaiEnterCommand: string = "-enter";
   export const budokaiStartTime1: number = 2 * 60;
-  export const budokaiStartTime2: number = 12 * 60;
-  export const budokaiStartTime3: number = 22 * 60;
-  export const budokaiDelay: number = 30;
+  export const budokaiStartTime2: number = 13 * 60;
+  export const budokaiStartTime3: number = 23 * 60;
+  export const budokaiDelay: number = 45;
   export const budokaiCounter: number = 23;
   export const budokaiMatchDelay: number = 10;
   export const budokaiMatchTimeLimit: number = 2 * 60;

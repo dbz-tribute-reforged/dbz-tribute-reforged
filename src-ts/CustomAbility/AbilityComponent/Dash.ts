@@ -18,6 +18,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     public endTick: number = -1,
     public targetDirection: number = Dash.DIRECTION_TARGET_POINT,
     public isFlying: boolean = false,
+    public useLastCastPoint: boolean = false,
     public distance: number = 25,
   ) {
 
@@ -26,9 +27,13 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     const currentCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
     let direction: number = 0;
+    let dashTargetPoint = input.targetPoint;
+    if (this.useLastCastPoint) {
+      dashTargetPoint = input.castPoint;
+    }
     
     if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
-      direction = CoordMath.angleBetweenCoords(currentCoord, input.targetPoint);
+      direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
 
     } else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
       direction = GetUnitFacing(source);
@@ -39,7 +44,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         direction = CoordMath.angleBetweenCoords(currentCoord, targetUnitCoord);
       } else {
         // if no unit just fallback to target point
-        direction = CoordMath.angleBetweenCoords(currentCoord, input.targetPoint);
+        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
       }
     }
 
@@ -55,7 +60,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   clone(): AbilityComponent {
     return new Dash(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.targetDirection, this.isFlying, this.distance,
+      this.targetDirection, this.isFlying, this.useLastCastPoint, 
+      this.distance,
     );
   }
   
@@ -67,6 +73,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       endTick: number;
       targetDirection: number;
       isFlying: boolean;
+      useLastCastPoint: boolean;
       distance: number;
     }
   ) {
@@ -76,6 +83,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.endTick = input.endTick;
     this.targetDirection = input.targetDirection;
     this.isFlying = input.isFlying;
+    this.useLastCastPoint = input.useLastCastPoint;
     this.distance = input.distance;
     return this;
   }
