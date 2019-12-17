@@ -36,6 +36,7 @@ export class TournamentManager {
   public initialize(): this {
     this.setupReviveTrigger();
 
+    /*
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       FogModifierStart(
         CreateFogModifierRect(
@@ -46,6 +47,7 @@ export class TournamentManager {
         )
       );
     }
+    */
 
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
