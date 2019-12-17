@@ -2,6 +2,7 @@ import { Players } from "Libs/TreeLib/Structs/Players";
 import { Saga } from "./Sagas/BaseSaga";
 import { AdvancedSaga } from "./Sagas/AdvancedSaga";
 import { sagaUnitsConfig } from "./Sagas/SagaUnitsConfig";
+import { Constants } from "Common/Constants";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: Map<string, unit>): boolean {
@@ -39,6 +40,9 @@ export module SagaHelper {
       SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
       if (mustKill) {
         saga.bosses.set(name, sagaUnit);
+      }
+      if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
+        UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
       }
     }
   }

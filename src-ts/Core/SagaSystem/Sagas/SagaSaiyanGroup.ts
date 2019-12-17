@@ -16,6 +16,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Raditz has arrived looking for Goku.");
 
     this.addHeroListToSaga(["Raditz"], true);
@@ -76,6 +77,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have arrived in West City.");
 
     const maxSaibamen = 5;

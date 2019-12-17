@@ -130,8 +130,11 @@ export class Budokai extends AdvancedTournament implements Tournament {
   setupTournament() {
     DisableTrigger(this.registerTrigger);
 
-    Logger.LogDebug("Num Contestants: " + this.contestants.size);
-
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "Contestants: " + this.contestants.size
+    );
+    
     const numContestants = this.contestants.size;
     if (numContestants < 2) {
       DisplayTimedTextToForce(
@@ -141,7 +144,6 @@ export class Budokai extends AdvancedTournament implements Tournament {
       );
       this.complete();
     } else {
-      Logger.LogDebug("> 2 contestants detected");
       TimerDialogDisplay(this.toStartTimerDialog, false);
 
       this.isMatchOver = true;
@@ -221,18 +223,43 @@ export class Budokai extends AdvancedTournament implements Tournament {
     // timer check, if next match then go, else do nothing
     TimerStart(this.runTournamentTimer, 0.03, true, () => {
       if (this.isMatchOver) {
-        Logger.LogDebug("match is over");
         // move everyone in arena back to their old position
         // unpause and un-invul them as well
         for (const contestant of this.contestants.values()) {
           if (contestant.isInArena) {
             contestant.returnAllUnits();
           }
+          // check if contestant has any other units in arena
+          // if so chuck em to the pos of first unit contestant
+          for (const unitContestant of contestant.units.values()) {
+            const extraUnitsGroup = CreateGroup();
+            GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), Condition(() => {
+              const filterUnit = GetFilterUnit();
+              const y = GetUnitY(filterUnit)
+              const x = GetUnitX(filterUnit);
+              return (
+                x > TournamentData.tournamentBottomLeft.x &&
+                y > TournamentData.tournamentBottomLeft.y && 
+                x < TournamentData.tournamentTopRight.x &&
+                y < TournamentData.tournamentTopRight.y
+              );
+            }));
+
+            ForGroup(extraUnitsGroup, () => {
+              const unit = GetEnumUnit();
+              SetUnitX(unit, unitContestant.oldPosition.x);
+              SetUnitY(unit, unitContestant.oldPosition.y);
+              PauseUnit(unit, false);
+              SetUnitInvulnerable(unit, false);
+            });
+
+            DestroyGroup(extraUnitsGroup);
+            break;
+          }
         }
 
         // run matches if there are any available
         if (this.bracketIndex < this.currentBracket.length - 1) {
-          Logger.LogDebug("running match");
           this.runMatch();
         } else if (this.currentBracket.length == 1) {
           // if only 1 person left in tournament
@@ -258,7 +285,6 @@ export class Budokai extends AdvancedTournament implements Tournament {
           // complete and finish up
           this.complete();
         } else if (this.currentBracket.length == 0) {
-          Logger.LogDebug("no more possible matches, tournament complete");
           this.complete();
         } else {
           // no matches possible in this bracket
@@ -275,7 +301,14 @@ export class Budokai extends AdvancedTournament implements Tournament {
           //   );
           // }
           // create new bracket with winners of previous bracket
-          Logger.LogDebug("Moving on to next bracket.");
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS, 10,
+            this.getColoredName()
+          );
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS, 10,
+            "Moving on to the next round of matches."
+          );
           this.setupCurrentBracket(TournamentData.seedingNone);
           this.showBracket();
         }
@@ -304,7 +337,8 @@ export class Budokai extends AdvancedTournament implements Tournament {
       if (j % 2 != 0) {
         spawnPos = TournamentData.tournamentSpawn2;
       }
-      Logger.LogDebug("Contestant: " + contestant.id + " units: " + contestant.units.size);
+      PanCameraToTimedForPlayer(Player(contestant.id), spawnPos.x, spawnPos.y, 0);
+      // Logger.LogDebug("Contestant: " + contestant.id + " units: " + contestant.units.size);
       for (const unit of contestant.getUnits()) {
         DestroyEffect(
           AddSpecialEffect(

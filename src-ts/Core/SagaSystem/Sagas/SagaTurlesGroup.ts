@@ -16,6 +16,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Turles and the Crusher Corps have arrived on Earth!");
 
     this.addHeroListToSaga(["Turles"], true);

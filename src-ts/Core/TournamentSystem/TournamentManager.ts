@@ -86,7 +86,7 @@ export class TournamentManager {
         y < TournamentData.tournamentTopRight.y && 
         UnitHelper.isUnitTournamentViable(deadHero)
       ) {
-        Logger.LogDebug("Reviving Dead Tournament Hero");
+        // Logger.LogDebug("Reviving Dead Tournament Hero");
         TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
           ReviveHero(
             deadHero, 
@@ -127,7 +127,7 @@ export class TournamentManager {
           DestroyTimerDialog(tournamentTimerDialog);
           DestroyTrigger(tournamentStartTrig);
         } else {
-          Logger.LogDebug("Another tournament is active...");
+          // Logger.LogDebug("Another tournament is active...");
         }
       })
 

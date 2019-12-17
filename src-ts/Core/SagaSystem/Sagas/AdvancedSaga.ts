@@ -15,6 +15,9 @@ export class AdvancedSaga {
 
   public stats: number;
 
+  public spawnSound: sound;
+  public completeSound: sound;
+
   constructor() {
     this.state = SagaState.NotStarted;
     this.name = '';
@@ -23,16 +26,28 @@ export class AdvancedSaga {
     this.sagaDelayTimer = CreateTimer();
     this.sagaDelay = 0;
     this.stats = 0;
+    this.spawnSound = gg_snd_QuestNew;
+    this.completeSound = gg_snd_QuestCompleted;
   }
 
   start(): void {
-    Logger.LogDebug(this.name + " Started");
+    // Logger.LogDebug(this.name + " Started");
     this.state = SagaState.InProgress;
   }
 
   complete(): void {
-    Logger.LogDebug(this.name + " Completed");
+    // Logger.LogDebug(this.name + " Completed");
     this.state = SagaState.Completed;
+    PlaySoundBJ(this.completeSound);
+  }
+
+  getColoredName(): string {
+    return "|cffffcc00" + this.name + "|r";
+  }
+
+  spawnSagaUnits(): void {
+    PlaySoundBJ(this.spawnSound);
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, this.getColoredName());
   }
 
   addHeroListToSaga(names: string[], mustKill: boolean) {
@@ -65,21 +80,12 @@ export class AdvancedSaga {
     TriggerAddAction(
       this.sagaRewardTrigger,
       () => {
-        const deadUnit = GetDyingUnit();
-        if (IsUnitType(deadUnit, UNIT_TYPE_HERO)) {
-          DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 15, 
-            GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " just killed " + 
-            GetHeroProperName(deadUnit)
-          );
-        }
-
         if (saga.canComplete()) {
+          DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, this.getColoredName());
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15, 
-            this.name + " completed by ..." + 
-            GetPlayerName(GetOwningPlayer(GetKillingUnit())) + " " + 
-            "(" + this.stats + ") bonus stats (not implemented)"
+            "Completed by " + 
+            GetPlayerName(GetOwningPlayer(GetKillingUnit()))
           );
           DestroyTrigger(GetTriggeringTrigger());
         }

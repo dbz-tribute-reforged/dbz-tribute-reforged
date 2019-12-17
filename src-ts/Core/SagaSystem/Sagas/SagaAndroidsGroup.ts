@@ -16,6 +16,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 19 and Android 20 have begun terrorizing West City!");
 
     this.addHeroListToSaga(["Android 19", "Android 20"], true);
@@ -82,6 +83,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 16, 17, and 18 have been released from Dr. Gero's lab!");
 
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
@@ -145,6 +147,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 13, 14, and 15 have begun terrorizing West City!");
 
     this.addHeroListToSaga(["Android 13", "Android 14", "Android 15", "Super Android 13"], true);
