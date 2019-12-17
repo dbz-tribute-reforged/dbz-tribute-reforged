@@ -380,6 +380,7 @@ export function CustomPlayerTest() {
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(killTrig, Player(i), EVENT_PLAYER_UNIT_DEATH);
   }
+  TriggerRegisterPlayerUnitEventSimple(killTrig, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH);
   TriggerAddCondition(killTrig, Condition( () => {
     return (
       IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) && 
@@ -398,14 +399,14 @@ export function CustomPlayerTest() {
       (killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || killPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
     ) {
-      killerName = Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit());
+      killerName = Colorizer.getPlayerColorText(killPlayerId) + GetHeroProperName(GetKillingUnit());
     }
 
     if (
       (deadPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || deadPlayerId >= Constants.maxActivePlayers) && 
-      IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
+      IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO)
     ) {
-      deadName = Colorizer.getPlayerColorText(GetPlayerId(deadPlayer)) + GetHeroProperName(GetDyingUnit());
+      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit());
     }
 
     DisplayTimedTextToForce(

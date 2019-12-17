@@ -36,6 +36,17 @@ export class TournamentManager {
   public initialize(): this {
     this.setupReviveTrigger();
 
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      FogModifierStart(
+        CreateFogModifierRect(
+          Player(i), 
+          FOG_OF_WAR_VISIBLE, 
+          TournamentData.tournamentRect, 
+          true, false
+        )
+      );
+    }
+
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
     // this.setupTimedStartFinalBattle();

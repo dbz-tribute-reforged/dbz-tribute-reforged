@@ -10,7 +10,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 50;
   }
 
@@ -104,7 +104,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 20;
     this.stats = 100;
   }
 
@@ -166,7 +166,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 100;
   }
 

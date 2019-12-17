@@ -14,7 +14,7 @@ export module Colorizer {
     DarkGreen = "|cFF0F6145",
     Brown = "|cFF4D2903",
     White = "|cFFFFFFFF",
-    Default = "|r",
+    Default = "|cFFFFCC00",
   }
 
   // seems buggy?

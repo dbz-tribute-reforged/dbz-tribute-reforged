@@ -12,7 +12,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 100;
     this.isFinalForm = false;
   }

@@ -282,6 +282,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
             " is the winner of " + 
             this.getTournamentName()
           );
+          PlaySoundBJ(this.completeSound);
           // complete and finish up
           this.complete();
         } else if (this.currentBracket.length == 0) {

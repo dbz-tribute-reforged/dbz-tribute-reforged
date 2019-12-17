@@ -2873,14 +2873,6 @@ function Trig_Setup_Per_Player_Properties_Actions()
         FogModifierStart(GetLastCreatedFogModifier())
         udg_TempInt = udg_TempInt + 1
     end
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_TournamentArena)
-        FogModifierStart(GetLastCreatedFogModifier())
-        udg_TempInt = udg_TempInt + 1
-    end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)

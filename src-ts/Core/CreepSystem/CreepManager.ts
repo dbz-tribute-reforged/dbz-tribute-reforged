@@ -170,7 +170,7 @@ export class CreepManager {
   upgradeCreeps(configName: string) {
     const config = this.creepUpgradeConfigs.upgradeGroups[configName];
     if (config) {
-      Logger.LogDebug("Performing upgrade: " + configName);
+      // Logger.LogDebug("Performing upgrade: " + configName);
       for (const [unit, customCreep] of this.customCreeps) {
         const newType = config.map.get(customCreep.unitTypeId);
         if (newType) {

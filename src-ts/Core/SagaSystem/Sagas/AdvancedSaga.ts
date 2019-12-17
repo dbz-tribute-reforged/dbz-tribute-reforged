@@ -2,6 +2,7 @@ import { BaseSaga, SagaState, Saga } from "./BaseSaga";
 import { Logger } from "Libs/TreeLib/Logger";
 import { SagaHelper } from "../SagaHelper";
 import { Players } from "Libs/TreeLib/Structs/Players";
+import { Colorizer } from "Common/Colorizer";
 
 export class AdvancedSaga {
   public name: string = '';
@@ -85,7 +86,7 @@ export class AdvancedSaga {
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15, 
             "Completed by " + 
-            GetPlayerName(GetOwningPlayer(GetKillingUnit()))
+            Colorizer.getColoredPlayerName(GetOwningPlayer(GetKillingUnit()))
           );
           DestroyTrigger(GetTriggeringTrigger());
         }
