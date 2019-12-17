@@ -399,14 +399,14 @@ export function CustomPlayerTest() {
       (killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || killPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
     ) {
-      killerName = Colorizer.getPlayerColorText(killPlayerId) + GetHeroProperName(GetKillingUnit());
+      killerName = Colorizer.getPlayerColorText(killPlayerId) + GetHeroProperName(GetKillingUnit()) + "|r";
     }
 
     if (
       (deadPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || deadPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO)
     ) {
-      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit());
+      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
     }
 
     DisplayTimedTextToForce(
