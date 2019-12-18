@@ -5,6 +5,7 @@ import { DefaultCreepUpgradeConfig, CreepUpgradeConfig } from "./CreepUpgradeCon
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { RandomCreepTypeHelper } from "./CreepUpgradeTypes";
 import { Logger } from "Libs/TreeLib/Logger";
+import { CoordMath } from "Common/CoordMath";
 
 // Possible Optimisations: 
 // use custom value of a unit for O(1)
@@ -79,6 +80,14 @@ export class CreepManager {
     }
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+    CreateFogModifierRadius(
+      Player(PLAYER_NEUTRAL_AGGRESSIVE),
+      FOG_OF_WAR_FOGGED,
+      (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
+      (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
+      CoordMath.distance(Constants.heavenHellBottomLeft, Constants.heavenHellTopRight) / 2,
+      true, false
+    );
 
     return this;
   }
