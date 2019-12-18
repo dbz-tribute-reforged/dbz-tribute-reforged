@@ -1764,259 +1764,6 @@ function CreateCameras()
     CameraSetupSetDestPosition(gg_cam_Camera_001, 2852.0, 21947.2, 0.0)
 end
 
-function Trig_Pan_R_Cast_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0KV"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_R_Cast_Actions()
-    RemoveUnit(udg_Giru)
-    udg_LocA = GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(1, FourCC("Giru"), GetTriggerPlayer(), udg_LocA, 90.00)
-    UnitApplyTimedLifeBJ(50.00, FourCC("BTLF"), GetLastCreatedUnit())
-        RemoveLocation(udg_LocA)
-    udg_Giru = GetLastCreatedUnit()
-end
-
-function InitTrig_Pan_R_Cast()
-    gg_trg_Pan_R_Cast = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_R_Cast, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Pan_R_Cast, Condition(Trig_Pan_R_Cast_Conditions))
-    TriggerAddAction(gg_trg_Pan_R_Cast, Trig_Pan_R_Cast_Actions)
-end
-
-function Trig_Pan_W_cast_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0KW"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_W_cast_Actions()
-    SetUnitTimeScalePercent(GetTriggerUnit(), 400.00)
-    StartTimerBJ(udg_WhisAnimReset, false, 0.25)
-    StartTimerBJ(udg_Wdmgtime, true, 1.00)
-    udg_PanWdmg = I2R((GetHeroStatBJ(bj_HEROSTAT_INT, udg_Pan, false) * (GetUnitAbilityLevelSwapped(FourCC("A0KW"), udg_Pan) * 1)))
-    udg_PanWdmg = (udg_PanWdmg + 20.00)
-end
-
-function InitTrig_Pan_W_cast()
-    gg_trg_Pan_W_cast = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_W_cast, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Pan_W_cast, Condition(Trig_Pan_W_cast_Conditions))
-    TriggerAddAction(gg_trg_Pan_W_cast, Trig_Pan_W_cast_Actions)
-end
-
-function Trig_Pan_W_Effect_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0KW"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_W_Effect_Actions()
-    udg_LocPoint1 = GetUnitLoc(GetTriggerUnit())
-    udg_LocPoint2 = GetSpellTargetLoc()
-    udg_TempReal = AngleBetweenPoints(udg_LocPoint1, udg_LocPoint2)
-    CreateNUnitsAtLoc(1, FourCC("e00O"), GetTriggerPlayer(), udg_LocPoint1, udg_TempReal)
-    UnitApplyTimedLifeBJ(3.00, FourCC("BTLF"), GetLastCreatedUnit())
-        RemoveLocation(udg_LocPoint1)
-        RemoveLocation(udg_LocPoint2)
-end
-
-function InitTrig_Pan_W_Effect()
-    gg_trg_Pan_W_Effect = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_W_Effect, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pan_W_Effect, Condition(Trig_Pan_W_Effect_Conditions))
-    TriggerAddAction(gg_trg_Pan_W_Effect, Trig_Pan_W_Effect_Actions)
-end
-
-function Trig_Pan_W_Aura_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0KW"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_W_Aura_Actions()
-    DestroyEffectBJ(udg_PanSFX)
-    AddSpecialEffectTargetUnitBJ("origin", GetTriggerUnit(), "JirenShield.mdx")
-    udg_PanSFX = GetLastCreatedEffectBJ()
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 57.00)
-    AddSpecialEffectTargetUnitBJ("origin", udg_Giru, "JirenShield.mdx")
-    udg_GiruSFX = GetLastCreatedEffectBJ()
-    StartTimerBJ(udg_PanWTimer, false, 8.00)
-end
-
-function InitTrig_Pan_W_Aura()
-    gg_trg_Pan_W_Aura = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_W_Aura, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pan_W_Aura, Condition(Trig_Pan_W_Aura_Conditions))
-    TriggerAddAction(gg_trg_Pan_W_Aura, Trig_Pan_W_Aura_Actions)
-end
-
-function Trig_W_dmg_Func004Func001C()
-    if (not (IsUnitEnemy(GetEnumUnit(), udg_PanImmo) == true)) then
-        return false
-    end
-    if (not (IsUnitAliveBJ(GetEnumUnit()) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_W_dmg_Func004A()
-    if (Trig_W_dmg_Func004Func001C()) then
-        UnitDamageTargetBJ(udg_Pan, GetEnumUnit(), udg_PanWdmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    else
-        return 
-    end
-end
-
-function Trig_W_dmg_Actions()
-    udg_LocA = GetUnitLoc(udg_Pan)
-    udg_PanImmo = GetOwningPlayer(udg_Pan)
-    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(400.00, udg_LocA)
-    ForGroupBJ(udg_TempUnitGroup, Trig_W_dmg_Func004A)
-        DestroyGroup(udg_TempUnitGroup)
-        RemoveLocation(udg_LocA)
-end
-
-function InitTrig_W_dmg()
-    gg_trg_W_dmg = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_W_dmg, udg_Wdmgtime)
-    TriggerAddAction(gg_trg_W_dmg, Trig_W_dmg_Actions)
-end
-
-function Trig_W_dmg_Giru_Func004Func001C()
-    if (not (IsUnitEnemy(GetEnumUnit(), udg_PanImmo) == true)) then
-        return false
-    end
-    if (not (IsUnitAliveBJ(GetEnumUnit()) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_W_dmg_Giru_Func004A()
-    if (Trig_W_dmg_Giru_Func004Func001C()) then
-        UnitDamageTargetBJ(udg_Pan, GetEnumUnit(), udg_PanWdmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    else
-        return 
-    end
-end
-
-function Trig_W_dmg_Giru_Actions()
-    udg_LocA = GetUnitLoc(udg_Giru)
-    udg_PanImmo = GetOwningPlayer(udg_Giru)
-    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(400.00, udg_LocA)
-    ForGroupBJ(udg_TempUnitGroup, Trig_W_dmg_Giru_Func004A)
-        DestroyGroup(udg_TempUnitGroup)
-        RemoveLocation(udg_LocA)
-end
-
-function InitTrig_W_dmg_Giru()
-    gg_trg_W_dmg_Giru = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_W_dmg_Giru, udg_Wdmgtime)
-    TriggerAddAction(gg_trg_W_dmg_Giru, Trig_W_dmg_Giru_Actions)
-end
-
-function Trig_Aura_expires_Actions()
-    DestroyEffectBJ(udg_PanSFX)
-    DestroyEffectBJ(udg_GiruSFX)
-    PauseTimerBJ(true, udg_Wdmgtime)
-end
-
-function InitTrig_Aura_expires()
-    gg_trg_Aura_expires = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_Aura_expires, udg_PanWTimer)
-    TriggerAddAction(gg_trg_Aura_expires, Trig_Aura_expires_Actions)
-end
-
-function Trig_Pan_E_cast_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0KX"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_E_cast_Actions()
-    udg_ETargetpoint = GetSpellTargetLoc()
-    PauseUnitBJ(true, udg_Giru)
-    SetUnitPathing(udg_Giru, false)
-    StartTimerBJ(udg_Etimer, true, 0.05)
-    udg_GiruEdmg = I2R((GetHeroStatBJ(bj_HEROSTAT_INT, udg_Pan, false) * (GetUnitAbilityLevelSwapped(FourCC("A01F"), udg_Pan) * 1)))
-    udg_GiruEdmg = (udg_GiruEdmg + 20.00)
-    udg_GiruEdmg = (udg_GiruEdmg / 10.00)
-    EnableTrigger(gg_trg_Pan_E_Effect)
-end
-
-function InitTrig_Pan_E_cast()
-    gg_trg_Pan_E_cast = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_E_cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pan_E_cast, Condition(Trig_Pan_E_cast_Conditions))
-    TriggerAddAction(gg_trg_Pan_E_cast, Trig_Pan_E_cast_Actions)
-end
-
-function Trig_Pan_E_Effect_Func004Func008Func001C()
-    if (not (IsUnitEnemy(GetEnumUnit(), udg_PanImmo) == true)) then
-        return false
-    end
-    if (not (IsUnitAliveBJ(GetEnumUnit()) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_E_Effect_Func004Func008A()
-    if (Trig_Pan_E_Effect_Func004Func008Func001C()) then
-        UnitDamageTargetBJ(udg_Giru, GetEnumUnit(), udg_GiruEdmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    else
-        DoNothing()
-    end
-end
-
-function Trig_Pan_E_Effect_Func004C()
-    if (not (DistanceBetweenPoints(udg_GiruEpoint, udg_ETargetpoint) >= 40.00)) then
-        return false
-    end
-    if (not (IsUnitAliveBJ(udg_Giru) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_E_Effect_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9955")
-    udg_PanImmo = GetOwningPlayer(udg_Pan)
-    udg_GiruEpoint = GetUnitLoc(udg_Giru)
-    if (Trig_Pan_E_Effect_Func004C()) then
-        udg_TempUnitGroup = GetUnitsInRangeOfLocAll(350.00, udg_GiruEpoint)
-        ForGroupBJ(udg_TempUnitGroup, Trig_Pan_E_Effect_Func004Func008A)
-                DestroyGroup(udg_TempUnitGroup)
-        udg_Angle = AngleBetweenPoints(udg_GiruEpoint, udg_ETargetpoint)
-        udg_MoveToPoint = PolarProjectionBJ(udg_GiruEpoint, 50.00, udg_Angle)
-        SetUnitPositionLoc(udg_Giru, udg_MoveToPoint)
-                RemoveLocation(udg_GiruEpoint)
-                RemoveLocation(udg_MoveToPoint)
-    else
-        PauseUnitBJ(false, udg_Giru)
-        SetUnitPathing(udg_Giru, true)
-                RemoveLocation(udg_GiruEpoint)
-                RemoveLocation(udg_MoveToPoint)
-                RemoveLocation(udg_ETargetpoint)
-        DisableTrigger(GetTriggeringTrigger())
-    end
-end
-
-function InitTrig_Pan_E_Effect()
-    gg_trg_Pan_E_Effect = CreateTrigger()
-    TriggerRegisterTimerEventPeriodic(gg_trg_Pan_E_Effect, 0.03)
-    TriggerAddAction(gg_trg_Pan_E_Effect, Trig_Pan_E_Effect_Actions)
-end
-
 function Trig_Lookout_Enter_Conditions()
     if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
         return false
@@ -2165,33 +1912,6 @@ function InitTrig_Piccolo_Multi_Form()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Piccolo_Multi_Form, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Piccolo_Multi_Form, Condition(Trig_Piccolo_Multi_Form_Conditions))
     TriggerAddAction(gg_trg_Piccolo_Multi_Form, Trig_Piccolo_Multi_Form_Actions)
-end
-
-function Trig_Pan_Summon_Giru_Conditions()
-    if (not (GetUnitTypeId(GetSummonedUnit()) == FourCC("H08Q"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Pan_Summon_Giru_Actions()
-    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
-    SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
-    udg_TempReal4 = (0.40 + (0.20 * I2R(udg_TempInt)))
-    udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
-    udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
-    udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
-    ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
-    ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
-    ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
-    SuspendHeroXPBJ(false, GetSummonedUnit())
-end
-
-function InitTrig_Pan_Summon_Giru()
-    gg_trg_Pan_Summon_Giru = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_Summon_Giru, EVENT_PLAYER_UNIT_SUMMON)
-    TriggerAddCondition(gg_trg_Pan_Summon_Giru, Condition(Trig_Pan_Summon_Giru_Conditions))
-    TriggerAddAction(gg_trg_Pan_Summon_Giru, Trig_Pan_Summon_Giru_Actions)
 end
 
 function Trig_Babidi_Summons_Func002C()
@@ -2897,13 +2617,13 @@ function InitTrig_Setup_Per_Player_Properties()
 end
 
 function Trig_Setup_Quests_Actions()
-    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
+    CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "BTNBardock.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp")
-    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\PassiveButtons\\PASBTNMagicalSentry.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
 end
@@ -5097,33 +4817,6 @@ function InitTrig_Hero_Pick_Disable_Pick_Modes()
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
-function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()
-    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O001"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func002C()
-    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V")) then
-        return true
-    end
-    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01S")) then
-        return true
-    end
-    if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01T")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()
-    if (not Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func002C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     udg_TempUnit = GetEnumUnit()
     udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
@@ -5139,14 +4832,6 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
         RemoveLocation(udg_TempLoc)
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
-    if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
-        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 105.00)
-    else
-        if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()) then
-            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 105.00)
-        else
-        end
-    end
 end
 
 function Trig_Hero_Pick_Setup_Selected_Heroes_Actions()
@@ -5182,12 +4867,13 @@ function InitTrig_Saga_Completion_Message()
 end
 
 function Trig_Saga_Hint_Show_Actions()
+    PlaySoundBJ(gg_snd_Hint)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10611")
 end
 
 function InitTrig_Saga_Hint_Show()
     gg_trg_Saga_Hint_Show = CreateTrigger()
-    TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Hint_Show, 300.00)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Saga_Hint_Show, 480.00)
     TriggerAddAction(gg_trg_Saga_Hint_Show, Trig_Saga_Hint_Show_Actions)
 end
 
@@ -9876,20 +9562,10 @@ function InitTrig_Use_Bean()
 end
 
 function InitCustomTriggers()
-    InitTrig_Pan_R_Cast()
-    InitTrig_Pan_W_cast()
-    InitTrig_Pan_W_Effect()
-    InitTrig_Pan_W_Aura()
-    InitTrig_W_dmg()
-    InitTrig_W_dmg_Giru()
-    InitTrig_Aura_expires()
-    InitTrig_Pan_E_cast()
-    InitTrig_Pan_E_Effect()
     InitTrig_Lookout_Enter()
     InitTrig_Lookout_Exit()
     InitTrig_Oozaru_Vegeta_New()
     InitTrig_Piccolo_Multi_Form()
-    InitTrig_Pan_Summon_Giru()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()

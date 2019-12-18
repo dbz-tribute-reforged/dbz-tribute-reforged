@@ -17579,6 +17579,12 @@ STRING 2857
 Spoiled Brat
 }
 
+STRING 2858
+// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 2859
 // Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
 {
@@ -59716,13 +59722,13 @@ STRING 9852
 }
 
 STRING 9853
-// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9854
-// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
+// Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59734,13 +59740,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
+// Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
+// Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59752,103 +59758,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
+// Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9860
-// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
+// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9861
-// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
+// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9862
-// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9863
-// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
+// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9864
-// Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
+// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9865
-// Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
+// Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9866
-// Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
+// Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9867
-// Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9868
-// Units: E010 (Desert Bandit), EditorSuffix (Name - Editor Suffix)
+// Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9869
-// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
+// Units: E010 (Desert Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9870
-// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
+// Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9871
-// Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
+// Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9872
-// Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
+// Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9873
-// Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
+// Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9874
-// Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
+// Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9875
-// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
+// Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61471,7 +61477,7 @@ Alternatively, TR Menu (top left) - Button 1 contains camera zoom, angle and rot
 }
 
 STRING 10148
-// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63294,7 +63300,7 @@ STRING 10446
 }
 
 STRING 10447
-// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
+// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64512,7 +64518,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64598,7 +64604,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 17.12.19
+This map is under active development - 18.12.19
 }
 
 STRING 10653

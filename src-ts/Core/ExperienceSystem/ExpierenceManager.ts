@@ -2,6 +2,7 @@ import { Hooks } from "Libs/TreeLib/Hooks";
 import { Constants } from "Common/Constants";
 import { ExperienceConstants } from "./ExperienceConstants";
 import { Vector2D } from "Common/Vector2D";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class ExperienceManager {
   static instance: ExperienceManager;
@@ -84,16 +85,18 @@ export class ExperienceManager {
         const rewardedGroup = CreateGroup();
         const dyingPos = new Vector2D(GetUnitX(dyingUnit), GetUnitY(dyingUnit));
         
+        BJDebugMsg("hey");
 
         let rewardXP: number = 0;
         if (IsUnitType(dyingUnit, UNIT_TYPE_HERO)) {
-          rewardXP = this.heroXP[GetHeroLevel(killingUnit)];
+          rewardXP = this.heroXP[GetHeroLevel(dyingUnit)];
         } else {
           rewardXP = this.creepXP[GetUnitLevel(dyingUnit)];
         }
+        BJDebugMsg("reward xp: " + rewardXP);
 
         const dyingPlayerId = GetPlayerId(dyingPlayer);
-        const killingPlayerId = GetPlayerId(killingPlayer);
+        // const killingPlayerId = GetPlayerId(killingPlayer);
         
         if (dyingPlayerId >= Constants.maxActivePlayers) {
           // share exp with enemies too
@@ -111,6 +114,7 @@ export class ExperienceManager {
             killingPlayer,
           );
         }
+        BJDebugMsg("group size " + CountUnitsInGroup(rewardedGroup));
 
         // count num different players nearby
         let numUniquePlayers = 0;
@@ -120,26 +124,48 @@ export class ExperienceManager {
         }
         ForGroup(rewardedGroup, () => {
           const playerId = GetPlayerId(GetOwningPlayer(GetEnumUnit()));
-          if (playerId > 0 && playerId < Constants.maxActivePlayers && !seenPlayer[playerId]) {
+          if (playerId >= 0 && playerId < Constants.maxActivePlayers && !seenPlayer[playerId]) {
             ++numUniquePlayers;
             seenPlayer[playerId] = true;
           }
         });
 
+        BJDebugMsg("num unique players: " + numUniquePlayers);
+
         // % that gets distributed,
         // minimum each hero gets 10%
+        // per adam:
+        // 1 : 100%
+        // 2 : 90% * 2
+        // 3 : 80% * 3 and so on
         const rewardMult = Math.max(
-          0.9, 
-          ExperienceConstants.nearbyPlayerXPMult * numUniquePlayers,
+          ExperienceConstants.nearbyPlayerXPMult, 
+          1 - (ExperienceConstants.nearbyPlayerXPMult * (numUniquePlayers - 1)),
         );
-
-        rewardXP *= (1 - rewardMult);
         
+        BJDebugMsg("reward mult: " + rewardMult);
+
+        rewardXP = rewardXP * rewardMult * ExperienceConstants.globalXPRateModifier;
+        
+        BJDebugMsg("rewardXP: " + rewardXP);
+
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
-
           
           AddHeroXP(rewardedUnit, rewardXP, true);
+          BJDebugMsg("reward unit: " + GetHeroProperName(rewardedUnit));
+
+          TextTagHelper.showPlayerColorTextToForce(
+            "+" + rewardXP + " xp", 
+            GetUnitX(rewardedUnit),
+            GetUnitY(rewardedUnit),
+            0, 0, 64, 
+            GetPlayersAll(),
+            8, 
+            105, 155, 205, 205,
+            24, 90, 
+            3, 4
+          )
         });
 
         DestroyGroup(rewardedGroup);
