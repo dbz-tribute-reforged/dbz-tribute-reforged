@@ -24,15 +24,16 @@ import { Icon } from 'Common/Icon';
 import { AbilityButtonHotbar } from './AbilityButtonHotbar';
 import { FrameHelper } from 'Common/FrameHelper';
 import { Constants } from 'Common/Constants';
+import { Logger } from 'Libs/TreeLib/Logger';
 
 
 // need to add promise + error catching
 function LoadToc(path: string): boolean {
 	const loaded = BlzLoadTOCFile(path);
 	if(loaded) {
-		BJDebugMsg("Loaded: " + path);
+		Logger.LogDebug("Loaded: " + path);
 	} else {
-		BJDebugMsg("Failed to load: " + path);
+		Logger.LogDebug("Failed to load: " + path);
 	}
 	return loaded;
 }
@@ -55,7 +56,7 @@ function moveButton3Around() {
 }
 
 export function CustomUiTest() {
-	BJDebugMsg("Setting uo Custom UI ... ");
+	Logger.LogDebug("Setting up Custom UI ... ");
 
 	let loaded = LoadToc("CustomUI\\templates.toc");
 	
@@ -327,7 +328,7 @@ export function CustomUiTest() {
 
 	abilityHotBar.autoAlignButtonPositions();
 
-	BJDebugMsg("Custom UI Setup Complete.");
+	Logger.LogDebug("Custom UI Setup Complete.");
 
 	const hideTrig = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {

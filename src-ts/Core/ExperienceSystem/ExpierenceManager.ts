@@ -68,6 +68,20 @@ export class ExperienceManager {
     }
   }
 
+  getHeroKillXP(level: number): number {
+    if (level > 0 && level < Constants.maxHeroLevel) {
+      return this.heroXP[level];
+    }
+    return 0;
+  }
+
+  getCreepKillXP(level: number): number {
+    if (level > 0 && level < Constants.maxCreepLvl) {
+      return this.creepXP[level];
+    }
+    return 0;
+  }
+
   setupRewardXPTrigger(rewardTrigger: trigger) {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       TriggerRegisterPlayerUnitEvent(rewardTrigger, Player(i), EVENT_PLAYER_UNIT_DEATH, null);
@@ -84,8 +98,6 @@ export class ExperienceManager {
       if (IsPlayerEnemy(dyingPlayer, killingPlayer)) {
         const rewardedGroup = CreateGroup();
         const dyingPos = new Vector2D(GetUnitX(dyingUnit), GetUnitY(dyingUnit));
-        
-        BJDebugMsg("hey");
 
         let rewardXP: number = 0;
         if (IsUnitType(dyingUnit, UNIT_TYPE_HERO)) {
@@ -93,7 +105,6 @@ export class ExperienceManager {
         } else {
           rewardXP = this.creepXP[GetUnitLevel(dyingUnit)];
         }
-        BJDebugMsg("reward xp: " + rewardXP);
 
         const dyingPlayerId = GetPlayerId(dyingPlayer);
         // const killingPlayerId = GetPlayerId(killingPlayer);
@@ -114,7 +125,6 @@ export class ExperienceManager {
             killingPlayer,
           );
         }
-        BJDebugMsg("group size " + CountUnitsInGroup(rewardedGroup));
 
         // count num different players nearby
         let numUniquePlayers = 0;
@@ -130,8 +140,6 @@ export class ExperienceManager {
           }
         });
 
-        BJDebugMsg("num unique players: " + numUniquePlayers);
-
         // % that gets distributed,
         // minimum each hero gets 10%
         // per adam:
@@ -140,21 +148,25 @@ export class ExperienceManager {
         // 3 : 80% * 3 and so on
         const rewardMult = Math.max(
           ExperienceConstants.nearbyPlayerXPMult, 
-          1 - (ExperienceConstants.nearbyPlayerXPMult * (numUniquePlayers - 1)),
+          Math.min(
+            1 - ExperienceConstants.nearbyPlayerXPMult * (numUniquePlayers - 1),
+            1,
+          ),
         );
-        
-        BJDebugMsg("reward mult: " + rewardMult);
 
-        rewardXP = rewardXP * rewardMult * ExperienceConstants.globalXPRateModifier;
-        
-        BJDebugMsg("rewardXP: " + rewardXP);
+        rewardXP = Math.floor(
+          rewardXP * rewardMult * ExperienceConstants.globalXPRateModifier
+        );
 
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
           
           AddHeroXP(rewardedUnit, rewardXP, true);
-          BJDebugMsg("reward unit: " + GetHeroProperName(rewardedUnit));
 
+          // exp floating text is provided for us
+          // although it might be possible to disable
+          // and manually do it
+          /*
           TextTagHelper.showPlayerColorTextToForce(
             "+" + rewardXP + " xp", 
             GetUnitX(rewardedUnit),
@@ -166,6 +178,7 @@ export class ExperienceManager {
             24, 90, 
             3, 4
           )
+          */
         });
 
         DestroyGroup(rewardedGroup);
