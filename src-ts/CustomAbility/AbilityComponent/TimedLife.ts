@@ -25,6 +25,9 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
       this.currentTime = 0;
       KillUnit(source);
     }
+    if (ability.isFinishedUsing(this)) {
+      this.currentTime = 0;
+    }
   }
   
 

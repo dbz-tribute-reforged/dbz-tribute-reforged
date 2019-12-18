@@ -610,9 +610,9 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 33,
     damageSource: AOEDamage.SOURCE_UNIT,
-    aoe: 500,
+    aoe: 600,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.2,
+      multiplier: BASE.DFIST_DPS * 0.08,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

@@ -125,7 +125,7 @@ export module CastTimeHelper {
         startCastTimeTimer(castTimeTimer, hero, ability, input, readyTrigger, stopCastingTrigger);
       });
     } else {
-      DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " instantly.");
+      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " instantly.");
       ability.activate(input);
       cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
     }

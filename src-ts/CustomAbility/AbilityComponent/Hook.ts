@@ -39,6 +39,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     public speed: number = 120,
     public aoe: number = 120,
     public onlyHookHeroes: boolean = false,
+    public useLastCastPoint: boolean = true,
     public sfxList: SfxData[] = [],
   ) {
     this.startedHook = false;
@@ -123,7 +124,11 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.startedHook) {
       this.startedHook = true;
-      this.hookTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      if (this.useLastCastPoint) {
+        this.hookTarget = new Vector2D(input.castPoint.x, input.castPoint.y);
+      } else {
+        this.hookTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      }
       this.hookSource = new Vector2D(GetUnitX(source), GetUnitY(source));
       this.hookCoords = this.hookSource;
       this.hookAngle = CoordMath.angleBetweenCoords(this.hookSource, this.hookTarget);
@@ -201,7 +206,8 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     return new Hook(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.damageData, this.maxRange, this.speed, this.aoe, 
-      this.onlyHookHeroes, this.sfxList,
+      this.onlyHookHeroes, this.useLastCastPoint,
+      this.sfxList,
     );
   }
   
@@ -222,6 +228,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       speed: number,
       aoe: number,
       onlyHookHeroes: boolean,
+      useLastCastPoint: boolean,
       sfxList: {
         model: string;
         repeatInterval: number;
@@ -249,6 +256,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.speed = input.speed;
     this.aoe = input.aoe;
     this.onlyHookHeroes = input.onlyHookHeroes;
+    this.useLastCastPoint = input.useLastCastPoint;
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));
     }

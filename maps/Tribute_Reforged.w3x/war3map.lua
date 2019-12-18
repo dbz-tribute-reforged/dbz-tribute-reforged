@@ -180,6 +180,14 @@ gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = nil
 gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = nil
 gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = nil
 gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = nil
+gg_snd_QuestNew = nil
+gg_snd_NewTournament = nil
+gg_snd_Rescue = nil
+gg_snd_Hint = nil
+gg_snd_GoodJob = nil
+gg_snd_QuestCompleted = nil
+gg_snd_SecretFound = nil
+gg_snd_QuestFailed = nil
 gg_trg_Untitled_Trigger_002 = nil
 gg_trg_Pan_R_Cast = nil
 gg_trg_Pan_W_cast = nil
@@ -195,6 +203,7 @@ gg_trg_Lookout_Exit = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
 gg_trg_Piccolo_Multi_Form = nil
+gg_trg_Pan_Summon_Giru = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -211,6 +220,7 @@ gg_trg_KameLoop = nil
 gg_trg_Dragon_Fist = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
+gg_trg_Auto_Zoom = nil
 gg_trg_Freemode = nil
 gg_trg_Lights_toggle = nil
 gg_trg_Map_Setup = nil
@@ -219,6 +229,7 @@ gg_trg_Setup_Quests = nil
 gg_trg_Disable_Heads_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
+gg_trg_soundtrig = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
@@ -343,6 +354,7 @@ gg_trg_Piccolo_Kyo_Revert = nil
 gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
 gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
+gg_trg_Transformations_Pan = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -384,8 +396,9 @@ gg_unit_H000_0014 = nil
 gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
-gg_trg_Pan_Summon_Giru = nil
-gg_trg_Transformations_Pan = nil
+gg_unit_H08K_0422 = nil
+gg_unit_H04Z_0455 = nil
+gg_snd_ClanInvitation = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -638,6 +651,42 @@ function InitSounds()
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
+    gg_snd_QuestNew = CreateSound("Sound/Interface/QuestNew.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_QuestNew, "QuestNew")
+    SetSoundDuration(gg_snd_QuestNew, 3750)
+    SetSoundVolume(gg_snd_QuestNew, 80)
+    gg_snd_NewTournament = CreateSound("Sound/Interface/NewTournament.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_NewTournament, "NewTournament")
+    SetSoundDuration(gg_snd_NewTournament, 7987)
+    SetSoundVolume(gg_snd_NewTournament, 127)
+    gg_snd_Rescue = CreateSound("Sound/Interface/Rescue.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_Rescue, "Rescue")
+    SetSoundDuration(gg_snd_Rescue, 3796)
+    SetSoundVolume(gg_snd_Rescue, 80)
+    gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
+    SetSoundDuration(gg_snd_Hint, 2845)
+    SetSoundVolume(gg_snd_Hint, 80)
+    gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
+    SetSoundDuration(gg_snd_GoodJob, 2954)
+    SetSoundVolume(gg_snd_GoodJob, 127)
+    gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
+    SetSoundDuration(gg_snd_QuestCompleted, 5154)
+    SetSoundVolume(gg_snd_QuestCompleted, 80)
+    gg_snd_SecretFound = CreateSound("Sound/Interface/SecretFound.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_SecretFound, "SecretFound")
+    SetSoundDuration(gg_snd_SecretFound, 2525)
+    SetSoundVolume(gg_snd_SecretFound, 80)
+    gg_snd_QuestFailed = CreateSound("Sound/Interface/QuestFailed.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_QuestFailed, "QuestFailed")
+    SetSoundDuration(gg_snd_QuestFailed, 4690)
+    SetSoundVolume(gg_snd_QuestFailed, 80)
+    gg_snd_ClanInvitation = CreateSound("Sound/Interface/ClanInvitation.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_ClanInvitation, "ClanInvitation")
+    SetSoundDuration(gg_snd_ClanInvitation, 4295)
+    SetSoundVolume(gg_snd_ClanInvitation, 127)
 end
 
 function CreateBuildingsForPlayer0()
@@ -1276,9 +1325,9 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10776.3, 3503.8, 358.308, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n003"), -5690.2, 22895.7, 271.093, FourCC("n003"))
     u = BlzCreateUnitWithSkin(p, FourCC("n004"), -5456.6, 22888.2, 259.749, FourCC("n004"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -2795.4, 22973.9, 278.162, FourCC("n01X"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -1727.4, 21843.1, 166.253, FourCC("n01X"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -2309.1, 22962.7, 247.127, FourCC("n01X"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -1739.4, 22443.3, 247.127, FourCC("n01X"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 1560.7, 3.7, 88.684, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 2381.0, 300.8, 161.998, FourCC("n01E"))
@@ -1299,6 +1348,12 @@ function CreateNeutralHostile()
     SetHeroStr(u, 100, true)
     SetHeroAgi(u, 100, true)
     SetHeroInt(u, 100, true)
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -6477.8, 22478.3, 353.578, FourCC("n01X"))
+    SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -6484.6, 21807.2, 355.595, FourCC("n01X"))
+    SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02C"), -4770.8, 22932.6, 213.943, FourCC("n02C"))
+    SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("U01N"), -4824.9, 21299.0, 130.910, FourCC("U01N"))
     SetHeroLevel(u, 10, false)
     SetHeroStr(u, 300, true)
@@ -1314,6 +1369,8 @@ function CreateNeutralHostile()
     SetHeroStr(u, 100, true)
     SetHeroAgi(u, 100, true)
     SetHeroInt(u, 100, true)
+    u = BlzCreateUnitWithSkin(p, FourCC("n02C"), -1719.0, 22971.6, 213.943, FourCC("n02C"))
+    SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15704.1, 3398.1, 226.677, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15867.2, 3490.1, 11.943, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, 326.845, FourCC("n02F"))
@@ -1335,6 +1392,10 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 12931.0, 17094.7, 123.354, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12169.9, 17824.4, 184.068, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -2592.4, 22961.4, 6.551, FourCC("n01X"))
+    SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -2276.0, 23013.6, 254.934, FourCC("n01X"))
+    SetUnitColor(u, ConvertPlayerColor(12))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -1692,7 +1753,7 @@ function CreateCameras()
     gg_cam_Camera_001 = CreateCameraSetup()
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 90.0, 0.0)
-    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 304.0, 0.0)
+    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 3200.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
@@ -2117,7 +2178,7 @@ end
 function Trig_Pan_Summon_Giru_Actions()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
     SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
-    udg_TempReal4 = (0.50 + (0.25 * I2R(udg_TempInt)))
+    udg_TempReal4 = (0.40 + (0.20 * I2R(udg_TempInt)))
     udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
@@ -2233,27 +2294,27 @@ function Trig_Buu_Candy_Beam_Conditions()
     return true
 end
 
-function Trig_Buu_Candy_Beam_Func014Func002002003001()
+function Trig_Buu_Candy_Beam_Func012Func002002003001()
     return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func014Func002002003002001()
+function Trig_Buu_Candy_Beam_Func012Func002002003002001()
     return (IsUnitAliveBJ(GetFilterUnit()) == true)
 end
 
-function Trig_Buu_Candy_Beam_Func014Func002002003002002()
-    return (UnitHasBuffBJ(GetFilterUnit(), FourCC("B01O")) == false)
+function Trig_Buu_Candy_Beam_Func012Func002002003002002()
+    return (UnitHasBuffBJ(GetFilterUnit(), FourCC("B01S")) == false)
 end
 
-function Trig_Buu_Candy_Beam_Func014Func002002003002()
-    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func014Func002002003002001(), Trig_Buu_Candy_Beam_Func014Func002002003002002())
+function Trig_Buu_Candy_Beam_Func012Func002002003002()
+    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func012Func002002003002001(), Trig_Buu_Candy_Beam_Func012Func002002003002002())
 end
 
-function Trig_Buu_Candy_Beam_Func014Func002002003()
-    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func014Func002002003001(), Trig_Buu_Candy_Beam_Func014Func002002003002())
+function Trig_Buu_Candy_Beam_Func012Func002002003()
+    return GetBooleanAnd(Trig_Buu_Candy_Beam_Func012Func002002003001(), Trig_Buu_Candy_Beam_Func012Func002002003002())
 end
 
-function Trig_Buu_Candy_Beam_Func014Func003A()
+function Trig_Buu_Candy_Beam_Func012Func003A()
     IssueTargetOrderBJ(udg_TempUnit, "hex", GetEnumUnit())
     IssueTargetOrderBJ(udg_TempUnit, "slow", GetEnumUnit())
 end
@@ -2268,22 +2329,25 @@ function Trig_Buu_Candy_Beam_Actions()
     UnitAddAbilityBJ(FourCC("A0LK"), udg_TempUnit)
     SetUnitAbilityLevelSwapped(FourCC("A0LK"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit()))
     udg_TempLoc2 = GetSpellTargetLoc()
-    AddLightningLoc("MBUR", udg_TempLoc, udg_TempLoc2)
-    DestroyLightningBJ(GetLastCreatedLightningBJ())
-    udg_TempReal2 = (90.00 + (30.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetSpellAbilityUnit()))))
+    udg_TempReal2 = (120.00 + (20.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetSpellAbilityUnit()))))
     udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > 10) then break end
         udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, (udg_TempReal2 * I2R(udg_TempInt)), udg_TempReal)
-        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal2, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func014Func002002003))
-        ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Beam_Func014Func003A)
+        udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal2, udg_TempLoc3, Condition(Trig_Buu_Candy_Beam_Func012Func002002003))
+        ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Beam_Func012Func003A)
                 RemoveLocation(udg_TempLoc3)
                 DestroyGroup(udg_TempUnitGroup)
         udg_TempInt = udg_TempInt + 1
     end
+    udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, (udg_TempReal2 * 10.00), udg_TempReal)
+        buuLightning = AddLightningLoc("LBUU", udg_TempLoc, udg_TempLoc3)
         RemoveLocation(udg_TempLoc)
         RemoveLocation(udg_TempLoc2)
+        RemoveLocation(udg_TempLoc3)
+    TriggerSleepAction(1.00)
+        DestroyLightning(buuLightning)
 end
 
 function InitTrig_Buu_Candy_Beam()
@@ -2709,6 +2773,25 @@ function InitTrig_Cam_Angle()
     TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
 end
 
+function Trig_Auto_Zoom_Actions()
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10149")
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 2.00)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 2.00)
+        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.00, 2.00)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Auto_Zoom()
+    gg_trg_Auto_Zoom = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Auto_Zoom, 3.00)
+    TriggerAddAction(gg_trg_Auto_Zoom, Trig_Auto_Zoom_Actions)
+end
+
 function Trig_Freemode_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
     udg_TeamAboutToLose[0] = false
@@ -2787,19 +2870,23 @@ function Trig_Setup_Per_Player_Properties_Actions()
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
-        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_TournamentArena)
+        FogModifierStart(GetLastCreatedFogModifier())
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
+    FogModifierStart(GetLastCreatedFogModifier())
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
+    FogModifierStart(GetLastCreatedFogModifier())
     udg_TempInt = (udg_MaxNumPlayers + 1)
     while (true) do
         if (udg_TempInt > 24) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
+        FogModifierStart(GetLastCreatedFogModifier())
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
+        FogModifierStart(GetLastCreatedFogModifier())
         TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
         udg_TempInt = udg_TempInt + 1
     end
@@ -2815,6 +2902,8 @@ function Trig_Setup_Quests_Actions()
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10651", "TRIGSTR_10652", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_10660", "TRIGSTR_10661", "ReplaceableTextures\\CommandButtons\\BTNCOP.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
@@ -3166,8 +3255,16 @@ function Trig_Kill_Hero_Stats_And_Revive_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001()
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001001()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001002()
+    return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
+end
+
+function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001()
+    return GetBooleanAnd(Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001001(), Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001002())
 end
 
 function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003002()
@@ -3961,6 +4058,7 @@ end
 
 function InitTrig_Respawn_Creep_Heroes_in_Deadzones()
     gg_trg_Respawn_Creep_Heroes_in_Deadzones = CreateTrigger()
+    DisableTrigger(gg_trg_Respawn_Creep_Heroes_in_Deadzones)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Respawn_Creep_Heroes_in_Deadzones, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddCondition(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Condition(Trig_Respawn_Creep_Heroes_in_Deadzones_Conditions))
     TriggerAddAction(gg_trg_Respawn_Creep_Heroes_in_Deadzones, Trig_Respawn_Creep_Heroes_in_Deadzones_Actions)
@@ -4085,24 +4183,12 @@ function InitTrig_Hero_Pick_Repick_Randomly()
     TriggerAddAction(gg_trg_Hero_Pick_Repick_Randomly, Trig_Hero_Pick_Repick_Randomly_Actions)
 end
 
-function Trig_Hero_Pick_Secret_Heroes_Func002Func004C()
-    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Hero_Pick_Secret_Heroes_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        udg_HeroPickUnitType = FourCC("H08M")
-                udg_HeroAvailabilityKey = udg_HeroPickUnitType
-        if (Trig_Hero_Pick_Secret_Heroes_Func002Func004C()) then
-            TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
-        else
-        end
+        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -4113,15 +4199,28 @@ function InitTrig_Hero_Pick_Secret_Heroes()
     TriggerAddAction(gg_trg_Hero_Pick_Secret_Heroes, Trig_Hero_Pick_Secret_Heroes_Actions)
 end
 
+function Trig_Hero_Pick_Secret_Bardock_Func005C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Secret_Bardock_Actions()
     udg_TempPlayer = GetTriggerPlayer()
     udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
-    TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
-        udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
-    CreateNUnitsAtLoc(1, FourCC("H08M"), udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
-    udg_TempUnit = GetLastCreatedUnit()
-        RemoveLocation(udg_TempLoc)
-    TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
+    udg_HeroPickUnitType = FourCC("H08M")
+        udg_HeroAvailabilityKey = udg_HeroPickUnitType
+    if (Trig_Hero_Pick_Secret_Bardock_Func005C()) then
+        PlaySoundBJ(gg_snd_SecretFound)
+        TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
+                udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
+        CreateNUnitsAtLoc(1, FourCC("H08M"), udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
+        udg_TempUnit = GetLastCreatedUnit()
+                RemoveLocation(udg_TempLoc)
+        TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
+    else
+    end
 end
 
 function InitTrig_Hero_Pick_Secret_Bardock()
@@ -4475,7 +4574,7 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
         udg_NumAvailableHeroes = (udg_NumAvailableHeroes + 1)
         udg_TempInt = udg_TempInt + 1
     end
-    TriggerExecute(gg_trg_Hero_Pick_Mode_Default)
+    TriggerExecute(gg_trg_Hero_Pick_Mode_All_Pick)
 end
 
 function InitTrig_Hero_Pick_Init_Available_Heroes()
@@ -8217,7 +8316,7 @@ function Trig_Super_Buu_Absorb_Func001Func008C()
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func013C()
+function Trig_Super_Buu_Absorb_Func001Func020C()
     if (GetUnitLifePercent(GetSpellTargetUnit()) <= 15.00) then
         return true
     end
@@ -8231,7 +8330,7 @@ function Trig_Super_Buu_Absorb_Func001C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
-    if (not Trig_Super_Buu_Absorb_Func001Func013C()) then
+    if (not Trig_Super_Buu_Absorb_Func001Func020C()) then
         return false
     end
     return true
@@ -8253,6 +8352,13 @@ function Trig_Super_Buu_Absorb_Actions()
         TriggerExecute(gg_trg_Set_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         EnableTrigger(gg_trg_Super_Buu_to_Kid_Buu)
+        udg_TempLoc = GetUnitLoc(GetSpellAbilityUnit())
+        udg_TempLoc2 = GetUnitLoc(GetSpellTargetUnit())
+                buuLightning = AddLightningLoc("LBUU", udg_TempLoc, udg_TempLoc2)
+                RemoveLocation(udg_TempLoc)
+                RemoveLocation(udg_TempLoc2)
+        TriggerSleepAction(1.00)
+                DestroyLightning(buuLightning)
     else
     end
 end
@@ -9798,6 +9904,7 @@ function InitCustomTriggers()
     InitTrig_SolarFlare()
     InitTrig_Cam_Dist()
     InitTrig_Cam_Angle()
+    InitTrig_Auto_Zoom()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Map_Setup()

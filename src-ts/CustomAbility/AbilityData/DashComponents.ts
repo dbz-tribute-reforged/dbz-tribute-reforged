@@ -8,6 +8,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 5,
   },
   {
@@ -17,6 +18,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 10,
   },
   {
@@ -26,6 +28,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 15,
   },
   {
@@ -35,6 +38,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 20,
   },
   {
@@ -44,6 +48,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 25,
   },
   {
@@ -53,6 +58,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 30,
   },
   {
@@ -62,6 +68,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 35,
   },
   {
@@ -71,6 +78,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 40,
   },
   {
@@ -80,6 +88,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 45,
   },
   {
@@ -89,6 +98,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 50,
   },
   // ----------------------------
@@ -99,6 +109,7 @@ export const DashComponents = [
     endTick: 30,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 20,
   },
   {
@@ -108,6 +119,7 @@ export const DashComponents = [
     endTick: 25,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 25,
   },
   {
@@ -117,6 +129,7 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: true,
+    useLastCastPoint: false,
     distance: 15,
   },
   {
@@ -126,6 +139,7 @@ export const DashComponents = [
     endTick: 20,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 35,
   },
   {
@@ -135,6 +149,7 @@ export const DashComponents = [
     endTick: 27,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: -40,
   },
   {
@@ -144,6 +159,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: true,
     distance: 30,
   },
   {
@@ -153,6 +169,7 @@ export const DashComponents = [
     endTick: 25,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 25,
   },
   // energy punch
@@ -163,6 +180,7 @@ export const DashComponents = [
     endTick: 20,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: 25,
   },
   {
@@ -172,6 +190,7 @@ export const DashComponents = [
     endTick: 12,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
+    useLastCastPoint: false,
     distance: -25,
   },
   // flying dash forwards facing
@@ -182,6 +201,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: true,
+    useLastCastPoint: false,
     distance: 5,
   },
   // big bang kamehameha bang 
@@ -192,6 +212,7 @@ export const DashComponents = [
     endTick: 20,    
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: true,
+    useLastCastPoint: false,
     distance: 25,
   },
   // hellzone grenade delayed dash to target unit
@@ -202,6 +223,7 @@ export const DashComponents = [
     endTick: 66,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: true,
+    useLastCastPoint: false,
     distance: 25,
   },
   {
@@ -211,6 +233,7 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: true,
+    useLastCastPoint: false,
     distance: 35,
   },
 ]

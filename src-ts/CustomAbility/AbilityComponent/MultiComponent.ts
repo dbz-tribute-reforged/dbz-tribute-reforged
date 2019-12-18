@@ -36,6 +36,7 @@ export class MultiComponent implements
     public delayBetweenComponents: number = 1,
     public firingMode: number = MultiComponent.SPREAD_FIRING,
     public multiplyComponents: number = 1,
+    public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
     this.angleCurrent = 0;
@@ -109,12 +110,22 @@ export class MultiComponent implements
     // add components to active components when ready
     this.activateComponentsWhenReady();
 
-    const tmp = input.targetPoint;
-    input.targetPoint = CoordMath.polarProjectCoords(
-      sourceCoords, 
-      this.angleCurrent + this.originalAngle,
-      this.originalDistance
-    )
+    let tmp: Vector2D;
+    if (this.useLastCastPoint) {
+      tmp = input.castPoint;
+      input.castPoint = CoordMath.polarProjectCoords(
+        sourceCoords, 
+        this.angleCurrent + this.originalAngle,
+        this.originalDistance
+      );
+    } else {
+      tmp = input.targetPoint
+      input.targetPoint = CoordMath.polarProjectCoords(
+        sourceCoords, 
+        this.angleCurrent + this.originalAngle,
+        this.originalDistance
+      );
+    }
 
     // keep showing active components
     for (const component of this.activeComponents) {
@@ -123,7 +134,11 @@ export class MultiComponent implements
       }
     }
 
-    input.targetPoint = tmp;
+    if (this.useLastCastPoint) {
+      input.castPoint = tmp;
+    } else {
+      input.targetPoint = tmp;
+    }
 
     // if fired a beam, then adjust angle to next point
     if (this.currentDelay == 0) {
@@ -147,6 +162,7 @@ export class MultiComponent implements
       this.angleDifference, this.angleMin, this.angleMax, this.delayBetweenComponents,
       this.firingMode,
       this.multiplyComponents,
+      this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
     );
   }
@@ -163,6 +179,7 @@ export class MultiComponent implements
       delayBetweenComponents: number;
       firingMode: number;
       multiplyComponents: number;
+      useLastCastPoint: boolean;
       components: {
         name: string,
       }[];
@@ -178,6 +195,7 @@ export class MultiComponent implements
     this.delayBetweenComponents = input.delayBetweenComponents;
     this.firingMode = input.firingMode;
     this.multiplyComponents = input.multiplyComponents;
+    this.useLastCastPoint = input.useLastCastPoint;
     return this;
   }
 

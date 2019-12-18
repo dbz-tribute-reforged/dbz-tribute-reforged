@@ -17,6 +17,7 @@ export const HookComponents = [
     speed: 50,
     aoe: 180,
     onlyHookHeroes: false,
+    useLastCastPoint: true,
     sfxList: [
       {
         model: "SlappyArm.mdl",

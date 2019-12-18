@@ -7,6 +7,7 @@ export module Constants {
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
+  export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 45;
   export const senzuBean: number = FourCC("I000");
   export const reviveDelay: number = 5;

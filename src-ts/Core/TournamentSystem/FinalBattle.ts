@@ -107,6 +107,8 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
         SetUnitInvulnerable(unit, true);
       })
 
+      PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0);
+
       DestroyGroup(playerUnits);
     }
   }

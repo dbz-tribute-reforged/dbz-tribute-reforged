@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.20
+Tribute Reforged 0.20b
 }
 
 STRING 4
@@ -17579,20 +17579,14 @@ STRING 2857
 Spoiled Brat
 }
 
-STRING 2858
-// Abilities: A0LK (Buu Candy Slow 80%), Name (Name)
-{
-Buu Candy Slow 80%
-}
-
 STRING 2859
-// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
 {
 Slow
 }
 
 STRING 2860
-// Abilities: A0LK (Buu Candy Slow 80%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
 {
 Slow
 }
@@ -17618,7 +17612,7 @@ STRING 2864
 {
 Type "hs" (without the quotation marks ") to get a list of transformations your character has.
 
-e.g. "ss" at lvl 30
+Most transformations require you to type a comamnd e.g. "fp", "ss", "metal", "first", "super".
 }
 
 STRING 2865
@@ -61457,16 +61451,34 @@ STRING 10144
 Gohan
 }
 
+STRING 10145
+{
+Camera
+}
+
 STRING 10146
 // Units: H08P (Spoiled Brat), Tip (Tooltip - Basic)
 {
 [|cffffff00E|r] Choose Pan
 }
 
+STRING 10147
+{
+-cam <zoom distance>
+-ang <angle>
+
+Alternatively, TR Menu (top left) - Button 1 contains camera zoom, angle and rotation sliders.
+}
+
 STRING 10148
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 10149
+{
+Auto-adjusting camera. Use -cam or -ang to manually set camera.
 }
 
 STRING 10150
@@ -64222,7 +64234,8 @@ Only gains stat multiplier by eating candy (see candy beam ability).
 For Super Buu type "super" at lvl 90.
 
 Super Buu:
-Gains stat multiplier by eating candy.
+Carries over stat mult from fat buu.
+Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
@@ -64231,14 +64244,15 @@ STRING 10603
 {
 Transformations:
 Super Buu:
-Gains stat multiplier by eating candy.
+Carries over stat mult from fat buu.
+Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
 
 STRING 10604
 {
-Kid buu retains the stat mult gained from Super Buu's absorbs.
+Kid buu retains the stat mult gained from Fat Buu's candy and Super Buu's absorbs. (minimum 2.4x)
 }
 
 STRING 10605
@@ -64577,12 +64591,14 @@ E
 
 STRING 10651
 {
-Discord
+DBZ Tribute
 }
 
 STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
+
+This map is under active development - 17.12.19
 }
 
 STRING 10653
@@ -64602,9 +64618,9 @@ E
 }
 
 STRING 10656
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LK (Buu Candy Slow 10%), Name (Name)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+Buu Candy Slow 10%
 }
 
 STRING 10657
@@ -64658,39 +64674,21 @@ Captain's Mode: -cm
 }
 
 STRING 10662
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B01S (), Bufftip (Tooltip)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+Buu Candy
 }
 
 STRING 10663
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B01S (), EditorSuffix (Editor Suffix)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+(recent)
 }
 
 STRING 10664
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B01S (), Buffubertip (Tooltip - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10665
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10666
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10667
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
+This unit has recently been turned into candy and is immune to further candy beams. Movement speed is reduced while immune.
 }
 
 STRING 10668
@@ -64775,30 +64773,6 @@ STRING 10681
 // Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 10|r]
-}
-
-STRING 10682
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10683
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10684
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10685
-// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
 }
 
 STRING 10686
@@ -64963,10 +64937,40 @@ STRING 10712
 (pan)
 }
 
+STRING 10713
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10714
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10715
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
 STRING 10716
 // Abilities: A0LW (Summon Giru), Name (Name)
 {
 Summon Giru
+}
+
+STRING 10717
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10718
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 10719
@@ -65033,12 +65037,6 @@ STRING 10728
 E
 }
 
-STRING 10729
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
 STRING 10730
 // Abilities: A0LW (Summon Giru), Tip (Tooltip - Normal)
 {
@@ -65057,28 +65055,10 @@ STRING 10732
 [|cff00FF00R|r] Learn Summon Giru - [|cffffcc00Level %d|r]
 }
 
-STRING 10733
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
 STRING 10734
 // Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 10735
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 10736
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.75/1/1.25x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 10737
@@ -65517,5 +65497,65 @@ STRING 10809
 // Abilities: A0LY (Pan Costume Honey Bee), Researchubertip (Tooltip - Learn - Extended)
 {
 Pan puts on her honey bee costume increasing ability damage over the next 10 seconds. Increases ability damage by +0.1% per second up to a max of +10%.
+}
+
+STRING 10810
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10811
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10812
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10813
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10814
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10815
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 10816
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10817
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10818
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 10819
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 

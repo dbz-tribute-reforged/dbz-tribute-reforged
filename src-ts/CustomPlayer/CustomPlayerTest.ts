@@ -30,6 +30,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           1,
           customPlayers[playerId].orderPoint,
           customPlayers[playerId].mouseData,
+          customPlayers[playerId].lastCastPoint.clone(),
           customPlayers[playerId].targetUnit,
         );
 
@@ -181,7 +182,7 @@ export function CustomPlayerTest() {
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
-  TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
+  TriggerAddCondition(updatePlayerTargetPoint, Condition(() => {
     return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
   }));
   TriggerAddAction(updatePlayerTargetPoint, () => {
@@ -189,6 +190,19 @@ export function CustomPlayerTest() {
     customPlayers[playerId].targetUnit = GetOrderTargetUnit();
     customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
     customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
+  });
+
+  const updatePlayerLastCastPoint = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(updatePlayerLastCastPoint, Player(i), EVENT_PLAYER_UNIT_SPELL_CAST);
+  }
+  TriggerAddCondition(updatePlayerLastCastPoint, Condition(() => {
+    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+  }));
+  TriggerAddAction(updatePlayerLastCastPoint, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    customPlayers[playerId].lastCastPoint.x = GetSpellTargetX();
+    customPlayers[playerId].lastCastPoint.y = GetSpellTargetY();
   });
 
   const linkNormalAbilityToCustomAbility = CreateTrigger();
@@ -228,6 +242,7 @@ export function CustomPlayerTest() {
               abilityLevel,
               customPlayers[playerId].orderPoint,
               customPlayers[playerId].mouseData,
+              customPlayers[playerId].lastCastPoint.clone(),
               customPlayers[playerId].targetUnit,
             ),
           );
@@ -365,6 +380,7 @@ export function CustomPlayerTest() {
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(killTrig, Player(i), EVENT_PLAYER_UNIT_DEATH);
   }
+  TriggerRegisterPlayerUnitEventSimple(killTrig, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH);
   TriggerAddCondition(killTrig, Condition( () => {
     return (
       IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) && 
@@ -373,29 +389,34 @@ export function CustomPlayerTest() {
   }));
   TriggerAddAction(killTrig, () => {
     const deadPlayer = GetOwningPlayer(GetDyingUnit());
+    const deadPlayerId = GetPlayerId(deadPlayer);
     const killPlayer = GetOwningPlayer(GetKillingUnit());
+    const killPlayerId = GetPlayerId(killPlayer);
 
+    let killerName = Colorizer.getColoredPlayerName(killPlayer);
+    let deadName = Colorizer.getColoredPlayerName(deadPlayer);
     if (
-      killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) && 
+      (killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || killPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
     ) {
-      DisplayTimedTextToForce(
-        GetPlayersAll(), 
-        15,
-        Colorizer.getPlayerColorText(GetPlayerId(killPlayer)) + GetHeroProperName(GetKillingUnit()) + 
-        "|r has killed " + 
-        Colorizer.getColoredPlayerName(deadPlayer)
-      );
-    } else {
-      DisplayTimedTextToForce(
-        GetPlayersAll(), 
-        15,
-        Colorizer.getColoredPlayerName(killPlayer) + 
-        " has killed " + 
-        Colorizer.getColoredPlayerName(deadPlayer)
-      );
-
+      killerName = Colorizer.getPlayerColorText(killPlayerId) + GetHeroProperName(GetKillingUnit()) + "|r";
     }
+
+    if (
+      (deadPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || deadPlayerId >= Constants.maxActivePlayers) && 
+      IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO)
+    ) {
+      deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
+    }
+
+    DisplayTimedTextToForce(
+      GetPlayersAll(), 
+      15,
+      killerName + 
+      " has killed " + 
+      deadName
+    );
+
   })
 
 
