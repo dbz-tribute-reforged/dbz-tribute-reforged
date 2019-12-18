@@ -66,4 +66,14 @@ export module SagaHelper {
       }
     }
   }
+
+  export function pingDeathMinimap(dyingUnit: unit) {
+    PingMinimapForForceEx(
+      bj_FORCE_ALL_PLAYERS, 
+      GetUnitX(dyingUnit), 
+      GetUnitY(dyingUnit), 
+      5, bj_MINIMAPPINGSTYLE_ATTACK, 
+      100, 0, 0
+    );
+  }
 }

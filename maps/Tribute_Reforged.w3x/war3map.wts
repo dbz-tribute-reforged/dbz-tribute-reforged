@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.20c
+Tribute Reforged 0.20d
 }
 
 STRING 4
@@ -33773,6 +33773,42 @@ STRING 5551
 [|cff00FF00W|r] Learn Slappy Hand  [|cffffcc00Level %d|r]
 }
 
+STRING 5552
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5553
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5554
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5555
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5556
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5557
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
 STRING 5558
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
@@ -33857,6 +33893,36 @@ STRING 5571
 D
 }
 
+STRING 5572
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5573
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5574
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5575
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
+STRING 5576
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+}
+
 STRING 5577
 // Abilities: A0C1 (Supernova), Ubertip (Tooltip - Normal - Extended)
 {
@@ -33893,6 +33959,48 @@ STRING 5582
 A ball of negative energy about the size of a spirit bomb that deals area damage. |n|cff00ff00(Damage: (Int * lvl * 3)|r|n|cff00ffff(Cooldown: 17 seconds)|r
 }
 
+STRING 5583
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5584
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5585
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5586
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5587
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5588
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5589
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
 STRING 5590
 // Abilities: A0CO (Lightning Shower New Janemba spell), Researchhotkey (Hotkey - Learn)
 {
@@ -33915,6 +34023,24 @@ STRING 5593
 // Abilities: A0CO (Lightning Shower New Janemba spell), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 5594
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5595
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 5596
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5597
@@ -53534,6 +53660,18 @@ STRING 8846
 W
 }
 
+STRING 8847
+// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
+{
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
+}
+
+STRING 8848
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
 STRING 8849
 // Abilities: A0JP (Spirit Bomb), Name (Name)
 {
@@ -53544,6 +53682,24 @@ STRING 8850
 // Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 8851
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 8852
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 8853
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8863
@@ -64589,48 +64745,6 @@ STRING 10686
 (pan)
 }
 
-STRING 10687
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10688
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10689
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10690
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10691
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10692
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10693
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
 STRING 10694
 // Abilities: A0LV (Reliable Friend), Tip (Tooltip - Normal)
 {
@@ -64715,70 +64829,16 @@ STRING 10707
 [|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 10|r]
 }
 
-STRING 10708
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10709
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10710
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10711
-// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
 STRING 10712
 // Abilities: A0LV (Reliable Friend), EditorSuffix (Editor Suffix)
 {
 (pan)
 }
 
-STRING 10713
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10714
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10715
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
 STRING 10716
 // Abilities: A0LW (Summon Giru), Name (Name)
 {
 Summon Giru
-}
-
-STRING 10717
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10718
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 10719
@@ -65329,66 +65389,6 @@ STRING 10809
 // Abilities: A0LY (Pan Costume Honey Bee), Researchubertip (Tooltip - Learn - Extended)
 {
 Pan puts on her honey bee costume increasing ability damage over the next 10 seconds. Increases ability damage by +0.1% per second up to a max of +10%.
-}
-
-STRING 10810
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10811
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10812
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10813
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10814
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10815
-// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10816
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 10817
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 10818
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 10819
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 10820

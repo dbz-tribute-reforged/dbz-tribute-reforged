@@ -46,7 +46,7 @@ export module BASE {
   export const KAME_DPS = 0.006;
   export const KAME_EXPLOSION = 0.04;
   export const SPIRIT_BOMB_DPS = 0.002;
-  export const SPIRIT_BOMB_EXPLOSION = 0.35;
+  export const SPIRIT_BOMB_EXPLOSION = 0.33;
   export const DFIST_DPS = 0.012;
   export const DFIST_EXPLOSION = 0.3;
 }
