@@ -96,7 +96,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     if (vegeta && !this.isVegetaOoz) {
       const vegetaHp = GetUnitState(vegeta, UNIT_STATE_LIFE);
       if (
-        vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.5 && 
+        vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.4 && 
         vegetaHp > 0
       ) {
         this.fakeOoz(vegeta);
@@ -123,8 +123,8 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
       "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
     );
     BlzSetUnitSkin(unit, FourCC("H004"));
-    SetHeroStr(unit, GetHeroStr(unit, true) * 2, true);
-    SetHeroAgi(unit, GetHeroAgi(unit, true) * 1.5, true);
+    SetHeroStr(unit, Math.floor(GetHeroStr(unit, true) * 2), true);
+    SetHeroAgi(unit, Math.floor(GetHeroAgi(unit, true) * 1.5), true);
   }
 
   canStart(): boolean {

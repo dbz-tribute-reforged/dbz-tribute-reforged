@@ -81,6 +81,7 @@ export class AdvancedSaga {
     TriggerAddAction(
       this.sagaRewardTrigger,
       () => {
+        SagaHelper.pingDeathMinimap(GetDyingUnit());
         if (saga.canComplete()) {
           DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, this.getColoredName());
           DisplayTimedTextToForce(

@@ -41,8 +41,8 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
         );
         SetUnitScale(this.slug, 3.0, 3.0, 3.0);
         SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
-        SetHeroStr(this.slug, GetHeroStr(this.slug, true) * 2, true);
-        SetHeroAgi(this.slug, GetHeroAgi(this.slug, true) * 1.5, true);
+        SetHeroStr(this.slug, Math.floor(GetHeroStr(this.slug, true) * 2), true);
+        SetHeroAgi(this.slug, Math.floor(GetHeroAgi(this.slug, true) * 1.5), true);
         this.isSlugKyo = true;
       }
     }

@@ -30,7 +30,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     if (this.turles && this.availableFruits > 0) {
       const turlesHp = GetUnitState(this.turles, UNIT_STATE_LIFE);
       if (
-        turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.2 &&
+        turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.15 &&
         turlesHp > 0
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(
@@ -39,8 +39,8 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
           "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl")
         );
         SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
-        SetHeroStr(this.turles, GetHeroStr(this.turles, true) + 100, true);
-        SetHeroAgi(this.turles, GetHeroAgi(this.turles, true) + 25, true);
+        SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 50), true);
+        SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.05 + 25), true);
         SetUnitState(this.turles, UNIT_STATE_LIFE, turlesHp + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.5);
         --this.availableFruits;
       }

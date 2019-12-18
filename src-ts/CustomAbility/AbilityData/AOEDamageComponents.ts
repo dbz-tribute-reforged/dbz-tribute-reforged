@@ -46,7 +46,7 @@ export module BASE {
   export const KAME_DPS = 0.006;
   export const KAME_EXPLOSION = 0.04;
   export const SPIRIT_BOMB_DPS = 0.002;
-  export const SPIRIT_BOMB_EXPLOSION = 0.35;
+  export const SPIRIT_BOMB_EXPLOSION = 0.33;
   export const DFIST_DPS = 0.012;
   export const DFIST_EXPLOSION = 0.3;
 }
@@ -190,7 +190,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.2,
+      multiplier: BASE.KAME_DPS * 1.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

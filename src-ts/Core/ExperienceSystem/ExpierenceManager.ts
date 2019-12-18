@@ -161,7 +161,9 @@ export class ExperienceManager {
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
           
-          AddHeroXP(rewardedUnit, rewardXP, true);
+          if (IsUnitEnemy(rewardedUnit, dyingPlayer)) {
+            AddHeroXP(rewardedUnit, rewardXP, true);
+          }
 
           // exp floating text is provided for us
           // although it might be possible to disable
