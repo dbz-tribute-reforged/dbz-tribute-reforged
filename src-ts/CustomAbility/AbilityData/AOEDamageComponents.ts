@@ -45,8 +45,8 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 export module BASE {
   export const KAME_DPS = 0.006;
   export const KAME_EXPLOSION = 0.04;
-  export const SPIRIT_BOMB_DPS = 0.003;
-  export const SPIRIT_BOMB_EXPLOSION = 0.4;
+  export const SPIRIT_BOMB_DPS = 0.002;
+  export const SPIRIT_BOMB_EXPLOSION = 0.35;
   export const DFIST_DPS = 0.012;
   export const DFIST_EXPLOSION = 0.3;
 }
@@ -175,6 +175,37 @@ export const AOEDamageComponents = [
     aoe: 500,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // galick gun
+  {
+    name: "damage galick gun dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 1.2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage galick gun explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 1.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

@@ -18,7 +18,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 12, 
+      speed: 10, 
       angle: 180, 
       aoe: 300,
     },
@@ -42,7 +42,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 8, 
+      speed: 7, 
       angle: 180, 
       aoe: 250,
     },
@@ -176,6 +176,18 @@ export const AOEKnockbackComponents = [
       speed: 20, 
       angle: 0, 
       aoe: 800,
+    },
+  },
+  // reliable friend
+  {
+    name: "knockback reliable friend",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
+      angle: 0, 
+      aoe: 400,
     },
   },
   // babidi barrier knockback

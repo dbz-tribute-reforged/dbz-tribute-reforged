@@ -23,6 +23,7 @@ export const AOEApplyComponentComponents = [
     affectsAllies: false,
     components: [
       { name: "dash ground point reliable friend" },
+      { name: "knockback reliable friend" },
       { name: "stun reliable friend" },
       { name: "sfx reliable friend" },
     ],
