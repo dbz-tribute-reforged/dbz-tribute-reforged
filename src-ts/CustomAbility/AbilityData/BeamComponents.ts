@@ -115,8 +115,8 @@ export const BeamComponents = [
     useLastCastPoint: true,
     beamUnitType: "hpea",
     components: [
-      { name: "damage kame dps" },
-      { name: "damage kame explosion" },
+      { name: "damage galick gun dps" },
+      { name: "damage galick gun explosion" },
       { name: "knockback kame" },
       { name: "sfx beam galick gun" },
     ],
