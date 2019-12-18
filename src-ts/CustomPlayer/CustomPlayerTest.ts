@@ -496,7 +496,7 @@ export function CustomPlayerTest() {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-lvl", false);
     }
-    TriggerAddAction(statsTrig, () => {
+    TriggerAddAction(lvlTrig, () => {
       const value = S2I(SubString(GetEventPlayerChatString(), 5, 7));
       const group = GetUnitsSelectedAll(GetTriggerPlayer());
       ForGroup(group, () => {
@@ -506,6 +506,16 @@ export function CustomPlayerTest() {
         }
       });
       DestroyGroup(group);
+    });
+
+    const xpRate = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(xpRate, Player(i), "-xpr", false);
+    }
+    TriggerAddAction(xpRate, () => {
+      const value = S2R(SubString(GetEventPlayerChatString(), 5, 9));
+      SetPlayerHandicapXP(GetTriggerPlayer(), value * 0.01);
+      BJDebugMsg("XP Rate: " + GetPlayerHandicapXPBJ(GetTriggerPlayer()));
     });
   
     // reset cd of custom ability

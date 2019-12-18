@@ -188,6 +188,7 @@ gg_snd_GoodJob = nil
 gg_snd_QuestCompleted = nil
 gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
+gg_snd_ClanInvitation = nil
 gg_trg_Untitled_Trigger_002 = nil
 gg_trg_Pan_R_Cast = nil
 gg_trg_Pan_W_cast = nil
@@ -397,8 +398,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_unit_H04Z_0455 = nil
-gg_snd_ClanInvitation = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2865,7 +2864,6 @@ function Trig_Setup_Per_Player_Properties_Actions()
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
         TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
-        SetPlayerHandicapXPBJ(udg_TempPlayer, 400.00)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
@@ -5142,10 +5140,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
-        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 420.00)
+        SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 105.00)
     else
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()) then
-            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 420.00)
+            SetPlayerHandicapXPBJ(GetOwningPlayer(GetEnumUnit()), 105.00)
         else
         end
     end
