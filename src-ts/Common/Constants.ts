@@ -1,3 +1,5 @@
+import { Vector2D } from "./Vector2D";
+
 export module Constants {
   export const maxSubAbilities = 3;
   export const maxActivePlayers = 10;
@@ -7,6 +9,14 @@ export module Constants {
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
+  export const heavenHellCreepPlayerId: number = maxPlayers - 1;
+  export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
+  export const heavenHellBottomLeft: Vector2D = new Vector2D(
+    -7000, 20000
+  );
+  export const heavenHellTopRight: Vector2D = new Vector2D(
+    -1000, 24000
+  );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 45;
   export const senzuBean: number = FourCC("I000");

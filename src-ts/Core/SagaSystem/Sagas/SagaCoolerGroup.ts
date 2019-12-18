@@ -43,8 +43,8 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
         BlzSetUnitSkin(this.cooler, FourCC("H043"));
         SetUnitScale(this.cooler, 2.0, 2.0, 2.0);
         SetHeroLevel(this.cooler, GetHeroLevel(this.cooler) + 5, true);
-        SetHeroStr(this.cooler, GetHeroStr(this.cooler, true) * 1.5, true);
-        SetHeroAgi(this.cooler, GetHeroAgi(this.cooler, true) * 1.5, true);
+        SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.5), true);
+        SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.5), true);
         this.isFinalForm = true;
       }
     }
@@ -125,8 +125,8 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
         --this.revives;
         DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Metal Cooler: But how could this be? The Big Gete Star allowed me to cheat death!");    
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, GetHeroStr(mc, true) + 200, true);
-        SetHeroInt(mc, GetHeroStr(mc, true) + 200, true);
+        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
+        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
       }
     }
   }

@@ -189,7 +189,6 @@ gg_snd_QuestCompleted = nil
 gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
-gg_trg_Pan_Summon_Giru = nil
 gg_trg_Untitled_Trigger_002 = nil
 gg_trg_Pan_R_Cast = nil
 gg_trg_Pan_W_cast = nil
@@ -205,6 +204,7 @@ gg_trg_Lookout_Exit = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
 gg_trg_Piccolo_Multi_Form = nil
+gg_trg_Pan_Summon_Giru = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -1912,6 +1912,33 @@ function InitTrig_Piccolo_Multi_Form()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Piccolo_Multi_Form, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Piccolo_Multi_Form, Condition(Trig_Piccolo_Multi_Form_Conditions))
     TriggerAddAction(gg_trg_Piccolo_Multi_Form, Trig_Piccolo_Multi_Form_Actions)
+end
+
+function Trig_Pan_Summon_Giru_Conditions()
+    if (not (GetUnitTypeId(GetSummonedUnit()) == FourCC("H08Q"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Pan_Summon_Giru_Actions()
+    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
+    SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
+    udg_TempReal4 = (0.40 + (0.20 * I2R(udg_TempInt)))
+    udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
+    udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
+    udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
+    ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
+    ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
+    ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
+    SuspendHeroXPBJ(false, GetSummonedUnit())
+end
+
+function InitTrig_Pan_Summon_Giru()
+    gg_trg_Pan_Summon_Giru = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Pan_Summon_Giru, EVENT_PLAYER_UNIT_SUMMON)
+    TriggerAddCondition(gg_trg_Pan_Summon_Giru, Condition(Trig_Pan_Summon_Giru_Conditions))
+    TriggerAddAction(gg_trg_Pan_Summon_Giru, Trig_Pan_Summon_Giru_Actions)
 end
 
 function Trig_Babidi_Summons_Func002C()
@@ -9566,6 +9593,7 @@ function InitCustomTriggers()
     InitTrig_Lookout_Exit()
     InitTrig_Oozaru_Vegeta_New()
     InitTrig_Piccolo_Multi_Form()
+    InitTrig_Pan_Summon_Giru()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()
