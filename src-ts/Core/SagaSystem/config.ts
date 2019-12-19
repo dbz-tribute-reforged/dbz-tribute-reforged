@@ -139,10 +139,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ CellGamesSaga, SagaState.Completed ],
     ],
     FutureAndroidsSaga: [
-      [ SemiperfectCellSaga, SagaState.Completed ],
+      [ PerfectCellSaga, SagaState.Completed ],
     ],
     FutureCellSaga: [
-      [ SemiperfectCellSaga, SagaState.Completed ],
+      [ PerfectCellSaga, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga1: [
       [ PerfectCellSaga, SagaState.Completed ],
