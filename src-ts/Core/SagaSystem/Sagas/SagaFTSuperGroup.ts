@@ -2,8 +2,8 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 
-export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
-  name: string = '[DBGT] Shadow Dragon Saga I';
+export class FTSuperSaga1 extends AdvancedSaga implements Saga {
+  name: string = '[DB Super] Future Trunks Saga I: Goku Black\'s Incursion';
 
   constructor() {
     super();
@@ -12,12 +12,9 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Overuse of the Dragon Balls has brought immensely powerful Shadow Dragons!"
-    );
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, " - Under Construction - ");
 
-    this.addHeroListToSaga(["Haze Shenron", "Rage Shenron", "Oceanus Shenron", "Naturon Shenron", "Nuova Shenron", "Eis Shenron"], true);
+    this.addHeroListToSaga(["Goku Black 1"], true);
 
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 99999);
@@ -62,12 +59,9 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
   }
 }
 
-export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
-  name: string = '[DBGT] Shadow Dragon Saga II';
+export class FTSuperSaga2 extends AdvancedSaga implements Saga {
+  name: string = '[DB Super] Future Trunks Saga II: The Zero Mortal Plan';
 
-  protected syn: unit | undefined;
-  protected omega: unit | undefined;
-  
   constructor() {
     super();
     this.sagaDelay = 15;
@@ -75,20 +69,12 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Syn Shenron is looking for the other 6 Dragon Balls!"
-    );
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, " - Under Construction - ");
 
-    this.addHeroListToSaga(["Syn Shenron", "Omeega Shenron"], true);
-    
-    this.syn = this.bosses.get("Syn Shenron");
-    this.omega = this.bosses.get("Omega Shenron");
-
-    SagaHelper.sagaHideUnit(this.omega);
+    this.addHeroListToSaga(["Goku Black 2", "Zamasu"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, 3000);
     }
 
     this.ping();
@@ -96,17 +82,6 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (
-      this.syn && this.omega &&
-      SagaHelper.checkUnitHp(this.syn, 0.5, false, false, true) &&
-      SagaHelper.isUnitSagaHidden(this.omega)
-    ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Omega Shenron|r: By absorbing the other Dragon Balls I have become Omega Shenron!"
-      );
-      SagaHelper.genericTransformAndPing(this.omega, this.syn, this);
-    }
   }
 
   canStart(): boolean {
@@ -138,5 +113,6 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Unfinished -> goto Fused Zamasu Saga");
   }
 }

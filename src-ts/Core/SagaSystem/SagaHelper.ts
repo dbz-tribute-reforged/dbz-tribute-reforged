@@ -81,11 +81,9 @@ export module SagaHelper {
   export function checkUnitHp(
     unit: unit, 
     threshold: number,
-    checkIfAlive: boolean,
-    checkIfDead: boolean,
-    checkIfStunned: boolean,
-    checkAlternateUnitHidden: boolean,
-    alternateUnit: unit
+    mustBeAlive: boolean,
+    mustBeDead: boolean,
+    mustNotBeStunned: boolean,
   ) {
     const currentHp = GetUnitState(unit, UNIT_STATE_LIFE);
     const maxHp = GetUnitState(unit, UNIT_STATE_MAX_LIFE);
@@ -93,20 +91,63 @@ export module SagaHelper {
     return (
       currentHp < maxHp * threshold && 
       (
-        (checkIfAlive && !isDead) ||
-        (checkIfDead && isDead)
+        (mustBeAlive && !isDead) ||
+        (mustBeDead && isDead)
       ) &&
       (
-        !checkIfStunned || !UnitHelper.isUnitStunned(unit)
-      ) &&
-      (
-        !checkAlternateUnitHidden || 
-        (
-          BlzIsUnitInvulnerable(alternateUnit) &&
-          IsUnitPaused(alternateUnit) && 
-          IsUnitHidden(alternateUnit)
-        ) 
+        !mustNotBeStunned || !UnitHelper.isUnitStunned(unit)
       )
     );
+  }
+
+  export function sagaHideUnit(
+    unit: unit | undefined
+  ) {
+    if (unit) {
+      SetUnitInvulnerable(unit, true);
+      PauseUnit(unit, true);
+      ShowUnitHide(unit);
+    }
+  }
+
+  export function sagaShowUnitAtUnit(
+    hiddenUnit: unit,
+    targetUnit: unit,
+  ) {
+    SetUnitX(hiddenUnit, GetUnitX(targetUnit));
+    SetUnitY(hiddenUnit, GetUnitY(targetUnit));
+    sagaShowUnit(hiddenUnit);
+  }
+
+  export function sagaShowUnit(
+    unit: unit | undefined
+  ) {
+    if (unit) {
+      SetUnitInvulnerable(unit, false);
+      PauseUnit(unit, false);
+      ShowUnitShow(unit);
+    }
+  }
+
+  export function genericTransformAndPing(
+    newUnit: unit,
+    oldUnit: unit,
+    sagaToPing: Saga,
+  ) {
+    sagaShowUnitAtUnit(newUnit, oldUnit);
+    if (!IsUnitType(oldUnit, UNIT_TYPE_DEAD)) {
+      KillUnit(oldUnit);
+    }
+    sagaToPing.ping();
+  }
+  
+  export function isUnitSagaHidden(
+    unit: unit
+  ) {
+    return (
+      BlzIsUnitInvulnerable(unit) &&
+      IsUnitPaused(unit) && 
+      IsUnitHidden(unit)
+    )
   }
 }

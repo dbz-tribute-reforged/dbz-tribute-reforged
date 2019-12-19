@@ -27,17 +27,14 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.android20 && !this.isRunningAway) {
-      const android20Hp = GetUnitState(this.android20, UNIT_STATE_LIFE);
-      if (
-        android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.5 &&
-        android20Hp > 0
-      ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
-        IssuePointOrder(this.android20, "move", 14000, 7500);
-        SetUnitMoveSpeed(this.android20, 522);
-        this.isRunningAway = true;
-      }
+    if (
+      this.android20 && !this.isRunningAway && 
+      SagaHelper.checkUnitHp(this.android20, 0.5, true, false, true)
+    ) {
+      this.isRunningAway = true;
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
+      IssuePointOrder(this.android20, "move", 14000, 7500);
+      SetUnitMoveSpeed(this.android20, 522);
     }
   }
 
@@ -158,11 +155,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
     this.android15 = this.bosses.get("Android 15");
     this.super13 = this.bosses.get("Super Android 13");
 
-    if (this.super13) {
-      SetUnitInvulnerable(this.super13, true);
-      PauseUnit(this.super13, true);
-      ShowUnitHide(this.super13);
-    }
+    SagaHelper.sagaHideUnit(this.super13);
     
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 99999);
@@ -173,31 +166,18 @@ export class Super13Saga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.android13 && this.android14 && this.android15 && this.super13) {
-      if (
-        IsUnitHidden(this.super13) && 
-        IsUnitAliveBJ(this.super13) &&
-        BlzIsUnitInvulnerable(this.super13) &&
-        (
-          GetUnitLifePercent(this.android13) < 25 ||
-          (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15)) 
-        )
-      ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Super Android 13 has arrived!");
-
-        KillUnit(this.android14);
-        KillUnit(this.android15);
-                
-        SetUnitX(this.super13, GetUnitX(this.android13));
-        SetUnitY(this.super13, GetUnitY(this.android13));
-        SetUnitInvulnerable(this.super13, false);
-        PauseUnit(this.super13, false);
-        ShowUnitShow(this.super13);
-
-        this.ping();
-
-        KillUnit(this.android13);
-      }
+    if (
+      this.android13 && this.android14 && this.android15 && this.super13 && 
+      SagaHelper.isUnitSagaHidden(this.super13) &&
+      (
+        SagaHelper.checkUnitHp(this.android13, 0.25, false, false, true) ||
+        (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15))
+      )
+    ) {
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Super Android 13 has arrived!");
+      KillUnit(this.android14);
+      KillUnit(this.android15);
+      SagaHelper.genericTransformAndPing(this.super13, this.android13, this);
     }
   }
 

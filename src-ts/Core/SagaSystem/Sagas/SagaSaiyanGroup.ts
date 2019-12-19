@@ -66,6 +66,9 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 export class VegetaSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Saiyan Saga II: Nappa and Vegeta';
 
+  
+  protected vegeta: unit | undefined;
+  protected nappa: unit | undefined;
   protected isNappaOoz: boolean;
   protected isVegetaOoz: boolean;
 
@@ -88,47 +91,43 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     }
 
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
+
+    this.vegeta = this.bosses.get("Vegeta");
+    this.nappa = this.bosses.get("Nappa");
     
     this.ping()
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
-    const vegeta = this.bosses.get("Vegeta");
-    if (vegeta && !this.isVegetaOoz) {
-      const vegetaHp = GetUnitState(vegeta, UNIT_STATE_LIFE);
-      if (
-        vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.4 && 
-        vegetaHp > 0 && 
-        !UnitHelper.isUnitStunned(vegeta)
-      ) {
-        this.fakeOoz(vegeta);
-        this.isVegetaOoz = true;
-      }
+    if (
+      this.vegeta && !this.isVegetaOoz &&
+      SagaHelper.checkUnitHp(this.vegeta, 0.4, true, false, true)
+    ) {
+      this.isVegetaOoz = true;
+      this.fakeOoz(this.vegeta);
     }
-    const nappa = this.bosses.get("Nappa");
-    if (nappa && !this.isNappaOoz) {
-      const nappaHp = GetUnitState(nappa, UNIT_STATE_LIFE);
-      if (
-        nappaHp < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25 && 
-        nappaHp > 0 && 
-        !UnitHelper.isUnitStunned(nappa)
-      ) {
-        this.fakeOoz(nappa);
-        this.isNappaOoz = true;
-      }
+    
+    if (
+      this.nappa && !this.isNappaOoz &&
+      SagaHelper.checkUnitHp(this.nappa, 0.2, true, false, true)
+    ) {
+      this.isNappaOoz = true;
+      this.fakeOoz(this.nappa);
     }
   }
 
   fakeOoz(unit: unit) {
-    DestroyEffect(AddSpecialEffectTargetUnitBJ(
-      "origin", 
-      unit, 
-      "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
-    );
     BlzSetUnitSkin(unit, FourCC("H004"));
     SetHeroStr(unit, Math.floor(GetHeroStr(unit, true) * 2), true);
     SetHeroAgi(unit, Math.floor(GetHeroAgi(unit, true) * 1.5), true);
+    DestroyEffect(
+      AddSpecialEffectTarget(
+        "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        unit, 
+        "origin", 
+      )
+    );
   }
 
   canStart(): boolean {

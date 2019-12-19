@@ -29,24 +29,22 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.slug && !this.isSlugKyo) {
-      const slugHp = GetUnitState(this.slug, UNIT_STATE_LIFE);
-      if (
-        slugHp < GetUnitState(this.slug, UNIT_STATE_MAX_LIFE) * 0.6 &&
-        slugHp > 0 && 
-        !UnitHelper.isUnitStunned(this.slug)
-      ) {
-        DestroyEffect(AddSpecialEffectTargetUnitBJ(
-          "origin", 
+    if (
+      this.slug && !this.isSlugKyo &&
+      SagaHelper.checkUnitHp(this.slug, 0.6, true, false, true)
+    ) {
+      this.isSlugKyo = true;
+      SetUnitScale(this.slug, 3.0, 3.0, 3.0);
+      SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
+      SetHeroStr(this.slug, Math.floor(GetHeroStr(this.slug, true) * 2), true);
+      SetHeroAgi(this.slug, Math.floor(GetHeroAgi(this.slug, true) * 1.5), true);
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
           this.slug, 
-          "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl")
-        );
-        SetUnitScale(this.slug, 3.0, 3.0, 3.0);
-        SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
-        SetHeroStr(this.slug, Math.floor(GetHeroStr(this.slug, true) * 2), true);
-        SetHeroAgi(this.slug, Math.floor(GetHeroAgi(this.slug, true) * 1.5), true);
-        this.isSlugKyo = true;
-      }
+          "origin", 
+        )
+      );
     }
   }
 

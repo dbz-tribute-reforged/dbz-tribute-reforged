@@ -28,24 +28,26 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.turles && this.availableFruits > 0) {
-      const turlesHp = GetUnitState(this.turles, UNIT_STATE_LIFE);
-      if (
-        turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.15 &&
-        turlesHp > 0 && 
-        !UnitHelper.isUnitStunned(this.turles)
-      ) {
-        DestroyEffect(AddSpecialEffectTargetUnitBJ(
-          "origin", 
+    if (
+      this.turles && this.availableFruits > 0 && 
+      SagaHelper.checkUnitHp(this.turles, 0.15, true, false, true)
+    ) {
+      --this.availableFruits;
+      SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
+      SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 50), true);
+      SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.05 + 25), true);
+      SetUnitState(
+        this.turles, 
+        UNIT_STATE_LIFE, 
+        GetUnitState(this.turles, UNIT_STATE_LIFE) + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.5
+      );
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl",
           this.turles, 
-          "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl")
-        );
-        SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
-        SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 50), true);
-        SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.05 + 25), true);
-        SetUnitState(this.turles, UNIT_STATE_LIFE, turlesHp + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.5);
-        --this.availableFruits;
-      }
+          "origin", 
+        )
+      );
     }
   }
 

@@ -97,7 +97,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Imperfect Cell", new SagaUnit(FourCC("H00E"), 39, 3300, 400, 3300, new Vector2D(16500, 16000))],
 
     // broly - lss
-    ["Broly DBZ 1", new SagaUnit(FourCC("H00M"), 46, 5500, 400, 4500, new Vector2D(7500, -2550))],
+    ["Broly DBZ 1", new SagaUnit(FourCC("H00M"), 33, 2500, 400, 2500, new Vector2D(7500, -2550))],
 
     // bojack unbound
     ["Bojack", new SagaUnit(FourCC("U00L"), 49, 6000, 400, 5500, new Vector2D(-4500, 2500))],
@@ -107,7 +107,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Zangya", new SagaUnit(FourCC("U00P"), 38, 4000, 400, 3500, new Vector2D(-4600, 3000))],
 
     // broly - second coming
-    ["Broly DBZ 2", new SagaUnit(FourCC("H00M"), 50, 6000, 400, 6000, new Vector2D(5000, 18000))],
+    ["Broly DBZ 2", new SagaUnit(FourCC("H00M"), 35, 3200, 400, 3200, new Vector2D(5000, 18000))],
 
     // other world tournament
     // caterpy, olibu, pikkon, arqua
@@ -150,7 +150,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 90, 14000, 400, 14000, new Vector2D(-6700, -6700))],
 
     // gt + super split
-    // uub tournament
+    // uub tournament ?
     // start gt stuff
 
     // bebi saga

@@ -10,7 +10,7 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 15;
   }
 
   spawnSagaUnits(): void {
@@ -25,11 +25,7 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
     this.hirudegarn = this.bosses.get("Hirudegarn");
     this.matureHirudegarn = this.bosses.get("Mature Hirudegarn");
 
-    if (this.matureHirudegarn) {
-      SetUnitInvulnerable(this.matureHirudegarn, true);
-      PauseUnit(this.matureHirudegarn, true);
-      ShowUnitHide(this.matureHirudegarn);
-    }
+    SagaHelper.sagaHideUnit(this.matureHirudegarn);
 
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 99999);
@@ -40,31 +36,16 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.hirudegarn && this.matureHirudegarn) {
-      const hirudegarnHp = GetUnitState(this.hirudegarn, UNIT_STATE_LIFE);
-      if (
-        (
-          IsUnitDeadBJ(this.hirudegarn) || 
-          hirudegarnHp < GetUnitState(this.hirudegarn, UNIT_STATE_MAX_LIFE) * 0.5
-        ) && 
-        BlzIsUnitInvulnerable(this.matureHirudegarn) &&
-        IsUnitPaused(this.matureHirudegarn) && 
-        IsUnitHidden(this.matureHirudegarn)
-      ) {
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 15, 
-          "|cffffcc00Hoi|r: Hahahaha, how foolish of you - <gets crushed by Hirudegarn>"
-        );
-
-        SetUnitX(this.matureHirudegarn, GetUnitX(this.hirudegarn));
-        SetUnitY(this.matureHirudegarn, GetUnitY(this.hirudegarn));
-
-        SetUnitInvulnerable(this.matureHirudegarn, false);
-        PauseUnit(this.matureHirudegarn, false);
-        ShowUnitShow(this.matureHirudegarn);
-
-        this.ping();
-      }
+    if (
+      this.hirudegarn && this.matureHirudegarn && 
+      SagaHelper.checkUnitHp(this.hirudegarn, 0.5, false, false, true) &&
+      SagaHelper.isUnitSagaHidden(this.matureHirudegarn)
+    ) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Hoi|r: Hahahaha, how foolish of you - <gets crushed by Mature Hirudegarn>"
+      );
+      SagaHelper.genericTransformAndPing(this.matureHirudegarn, this.hirudegarn, this);
     }
   }
 

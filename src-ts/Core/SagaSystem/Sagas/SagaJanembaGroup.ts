@@ -17,7 +17,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      "The soul cleansing machine in hell has broken down, with stray souls manifesting into the evil demon Janemba"
+      "The soul cleansing machine in hell has malfunctioned. The stray souls have manifested into the evil demon Janemba"
     );
 
     this.addHeroListToSaga(["Janemba", "Super Janemba"], true);
@@ -25,11 +25,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     this.janemba = this.bosses.get("Janemba");
     this.superJanemba = this.bosses.get("Super Janemba");
 
-    if (this.superJanemba) {
-      SetUnitInvulnerable(this.superJanemba, true);
-      PauseUnit(this.superJanemba, true);
-      ShowUnitHide(this.superJanemba);
-    }
+    SagaHelper.sagaHideUnit(this.superJanemba);
 
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 99999);
@@ -40,32 +36,23 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (this.janemba && this.superJanemba) {
-      if (
-        IsUnitDeadBJ(this.janemba) && 
-        BlzIsUnitInvulnerable(this.superJanemba) &&
-        IsUnitPaused(this.superJanemba) && 
-        IsUnitHidden(this.superJanemba)
-      ) {
-        DestroyEffect(AddSpecialEffectTargetUnitBJ(
+    if (
+      this.janemba && this.superJanemba &&
+      SagaHelper.checkUnitHp(this.janemba, 0.1, false, true, false) && 
+      SagaHelper.isUnitSagaHidden(this.superJanemba)
+    ) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Janemba|r: JANEMBA! JANEMBA! JANEMBA!"
+      );
+      SagaHelper.genericTransformAndPing(this.superJanemba, this.janemba, this);
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "AuraBunkai.mdl",
+          this.superJanemba, 
           "origin", 
-          this.janemba, 
-          "AuraBunkai.mdl")
-        );
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 15, 
-          "|cffffcc00Janemba|r: JANEMBA! JANEMBA! JANEMBA!"
-        );
-
-        SetUnitX(this.superJanemba, GetUnitX(this.janemba));
-        SetUnitY(this.superJanemba, GetUnitY(this.janemba));
-
-        SetUnitInvulnerable(this.superJanemba, false);
-        PauseUnit(this.superJanemba, false);
-        ShowUnitShow(this.superJanemba);
-
-        this.ping();
-      }
+        )
+      );
     }
   }
 

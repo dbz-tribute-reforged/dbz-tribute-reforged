@@ -2,30 +2,19 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 
-export class BebiSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBGT] Bebi Saga';
+export class Universe6Saga extends AdvancedSaga implements Saga {
+  name: string = '[DB Super] Universe 6 Saga';
 
-  protected bebi: unit | undefined;
-  protected bebiGooz: unit | undefined;
-  
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 60;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Bebi has taken over the body of Vegeta and begun terrorizing the Earth!"
-    );
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, " - Under Construction - ");
 
-    this.addHeroListToSaga(["Super Bebi", "Bebi Golden Oozaru"], true);
-    
-    this.bebi = this.bosses.get("Super Bebi");
-    this.bebiGooz = this.bosses.get("Bebi Golden Oozaru");
-
-    SagaHelper.sagaHideUnit(this.bebiGooz);
+    this.addHeroListToSaga(["Hit Universe 6"], true);
 
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 99999);
@@ -36,17 +25,6 @@ export class BebiSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    if (
-      this.bebi && this.bebiGooz && 
-      SagaHelper.checkUnitHp(this.bebi, 0.5, false, false, false) && 
-      SagaHelper.isUnitSagaHidden(this.bebiGooz)
-    ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Bebi|r: Bulma, beam me up!"
-      );
-      SagaHelper.genericTransformAndPing(this.bebiGooz, this.bebi, this);
-    }
   }
 
   canStart(): boolean {

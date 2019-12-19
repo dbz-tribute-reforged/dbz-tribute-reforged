@@ -131,7 +131,7 @@ export class PerfectCellSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      "Semiperfect Cell somehow survived and absorbed Android 18 becoming Perfect Cell!"
+      "Semiperfect Cell somehow survived and absorbed Android 18 to become Perfect Cell!"
     );
 
     this.addHeroListToSaga(["Perfect Cell 1"], true);

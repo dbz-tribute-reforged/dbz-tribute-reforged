@@ -30,11 +30,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
     
     const zarbon2 = this.bosses.get("Zarbon 2");
-    if (zarbon2) {
-      SetUnitInvulnerable(zarbon2, true);
-      PauseUnit(zarbon2, true);
-      ShowUnitHide(zarbon2);
-    }
+    SagaHelper.sagaHideUnit(zarbon2);
     
     this.ping()
     this.addActionRewardStats(this);
@@ -44,27 +40,16 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     // if zarbon dead, replace with stornger zarbon
     const zarbon = this.bosses.get("Zarbon");
     const zarbon2 = this.bosses.get("Zarbon 2");
-    if (zarbon && zarbon2) {
-      if (
-        BlzIsUnitInvulnerable(zarbon2) &&
-        (
-          IsUnitDeadBJ(zarbon) || 
-          GetUnitState(zarbon, UNIT_STATE_LIFE) < GetUnitState(zarbon, UNIT_STATE_MAX_LIFE) * 0.5
-        )
+    if (
+      zarbon && zarbon2 &&
+      SagaHelper.checkUnitHp(zarbon, 0.5, false, false, true) &&
+      SagaHelper.isUnitSagaHidden(zarbon2)
       ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Zarbon: Pitiful humans!");
-
-        SetUnitX(zarbon2, GetUnitX(zarbon));
-        SetUnitY(zarbon2, GetUnitY(zarbon));
-        
-        SetUnitInvulnerable(zarbon2, false);
-        PauseUnit(zarbon2, false);
-        ShowUnitShow(zarbon2);
-
-        this.ping()
-
-        KillUnit(zarbon);
-      }
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Zarbon|r: Pitiful humans!"
+      );
+      SagaHelper.genericTransformAndPing(zarbon2, zarbon, this);
     }
   }
 
@@ -187,11 +172,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
     for (let i = 2; i <= 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
-      if (frieza) {
-        SetUnitInvulnerable(frieza, true);
-        PauseUnit(frieza, true);
-        ShowUnitHide(frieza);
-      }
+      SagaHelper.sagaHideUnit(frieza);
     }
     
     this.ping()
@@ -203,26 +184,14 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     for (let i = 1; i < 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
       const nextFrieza = this.bosses.get("Frieza " + (i+1));
-      if (frieza && nextFrieza) {
-        if (
-          BlzIsUnitInvulnerable(nextFrieza) &&
-          (
-            IsUnitDeadBJ(frieza) || 
-            GetUnitState(frieza, UNIT_STATE_LIFE) < GetUnitState(frieza, UNIT_STATE_MAX_LIFE) * 0.4
-          )
-        ) {
-          DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza: This isn't even my final form!");
-
-          SetUnitX(nextFrieza, GetUnitX(frieza));
-          SetUnitY(nextFrieza, GetUnitY(frieza));
-          SetUnitInvulnerable(nextFrieza, false);
-          PauseUnit(nextFrieza, false);
-          ShowUnitShow(nextFrieza);
-
-          KillUnit(frieza);
-          
-          this.ping()
-        }
+      if (
+        frieza && 
+        nextFrieza &&
+        SagaHelper.checkUnitHp(frieza, 0.4, false, false, true) &&
+        SagaHelper.isUnitSagaHidden(nextFrieza)
+      ) {
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza: This isn't even my final form!");
+        SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
       }
     }
   }
@@ -327,7 +296,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 // tagoma / frieza force saga
 
 export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
-  name: string = '[Super] Resurrection \'F\'';
+  name: string = '[DB Super] Resurrection \'F\'';
 
   protected frieza1: unit | undefined;
   protected friezaFinal: unit | undefined;
@@ -342,36 +311,48 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      "Frieza has undergone intense training before returning to Earth for his revenge"
+      "Frieza has undergone intense training after being resurrected. He has now returned to Earth seeking his revenge"
     );
 
     this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 1800);
+      SetUnitAcquireRange(boss, 3000);
     }
 
     this.frieza1 = this.bosses.get("Resurrection Frieza 1");
     this.friezaFinal = this.bosses.get("Resurrection Frieza Final");
     this.friezaGolden = this.bosses.get("Resurrection Frieza Golden");
 
-    if (this.friezaFinal) {
-      SetUnitInvulnerable(this.friezaFinal, true);
-      PauseUnit(this.friezaFinal, true);
-      ShowUnitHide(this.friezaFinal);
-    }
-    
-    if (this.friezaGolden) {
-      SetUnitInvulnerable(this.friezaGolden, true);
-      PauseUnit(this.friezaGolden, true);
-      ShowUnitHide(this.friezaGolden);
-    }
+    SagaHelper.sagaHideUnit(this.friezaFinal);
+    SagaHelper.sagaHideUnit(this.friezaGolden);
 
     this.ping();
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
+    if (
+      this.frieza1 && this.friezaFinal && 
+      SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, true) &&
+      SagaHelper.isUnitSagaHidden(this.friezaFinal)
+    ) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Frieza|r: Enough playing around. Time to get serious."
+      );
+      SagaHelper.genericTransformAndPing(this.friezaFinal, this.frieza1, this);
+    } else if (
+      this.friezaFinal && this.friezaGolden &&
+      SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, true) &&
+      SagaHelper.isUnitSagaHidden(this.friezaGolden)
+    ) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Frieza|r: For the sake of you chimp brains let's keep the names simple as well, we'll call this Golden Frieza."
+      );
+      SagaHelper.genericTransformAndPing(this.friezaGolden, this.friezaFinal, this);
+    }
   }
 
   canStart(): boolean {

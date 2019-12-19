@@ -3,11 +3,11 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 
 export class BeerusSaga extends AdvancedSaga implements Saga {
-  name: string = '[Super] God of Destruction Beerus Saga';
+  name: string = '[DB Super] God of Destruction Beerus Saga';
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 15;
   }
 
   spawnSagaUnits(): void {
@@ -63,11 +63,11 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
 }
 
 export class WhisTrainingSaga extends AdvancedSaga implements Saga {
-  name: string = '[Super] Training with Whis';
+  name: string = '[DB Super] Training with Whis';
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 15;
   }
 
   spawnSagaUnits(): void {

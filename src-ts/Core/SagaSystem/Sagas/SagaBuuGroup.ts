@@ -7,12 +7,15 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 120;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Babidi's minions have come to collect enough energy to release Majin Buu!");
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "Babidi's minions have come to collect enough energy to release Majin Buu!"
+    );
 
     this.addHeroListToSaga(["Pui Pui", "Yakon", "Dabura"], true);
 
@@ -64,7 +67,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 15;
   }
 
   spawnSagaUnits(): void {
@@ -125,7 +128,7 @@ export class SuperBuuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 15;
   }
 
   spawnSagaUnits(): void {
@@ -187,7 +190,10 @@ export class KidBuuSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Majin Buu has returned to his original form and has begun terrorizing Earth!");
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15,
+      "Majin Buu has returned to his original form and has begun terrorizing Earth!"
+    );
 
     this.addHeroListToSaga(["Kid Buu"], true);
 
