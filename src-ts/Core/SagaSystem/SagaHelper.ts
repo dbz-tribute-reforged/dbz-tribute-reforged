@@ -89,7 +89,9 @@ export module SagaHelper {
     const maxHp = GetUnitState(unit, UNIT_STATE_MAX_LIFE);
     const isDead = IsUnitType(unit, UNIT_TYPE_DEAD);
     return (
-      currentHp < maxHp * threshold && 
+      (
+        currentHp < maxHp * threshold || isDead
+      ) && 
       (
         (mustBeAlive && !isDead) ||
         (mustBeDead && isDead)

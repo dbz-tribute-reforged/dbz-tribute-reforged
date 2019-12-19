@@ -8,6 +8,9 @@ import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';
 
+  protected zarbon: unit | undefined;
+  protected zarbon2: unit | undefined;
+
   constructor() {
     super();
     this.sagaDelay = 30;
@@ -28,9 +31,9 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
 
-    
-    const zarbon2 = this.bosses.get("Zarbon 2");
-    SagaHelper.sagaHideUnit(zarbon2);
+    this.zarbon = this.bosses.get("Zarbon");
+    this.zarbon2 = this.bosses.get("Zarbon 2");
+    SagaHelper.sagaHideUnit(this.zarbon2);
     
     this.ping()
     this.addActionRewardStats(this);
@@ -38,18 +41,16 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     // if zarbon dead, replace with stornger zarbon
-    const zarbon = this.bosses.get("Zarbon");
-    const zarbon2 = this.bosses.get("Zarbon 2");
     if (
-      zarbon && zarbon2 &&
-      SagaHelper.checkUnitHp(zarbon, 0.5, false, false, true) &&
-      SagaHelper.isUnitSagaHidden(zarbon2)
+      this.zarbon && this.zarbon2 &&
+      SagaHelper.checkUnitHp(this.zarbon, 0.5, false, false, true) &&
+      SagaHelper.isUnitSagaHidden(this.zarbon2)
       ) {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15, 
         "|cffffcc00Zarbon|r: Pitiful humans!"
       );
-      SagaHelper.genericTransformAndPing(zarbon2, zarbon, this);
+      SagaHelper.genericTransformAndPing(this.zarbon2, this.zarbon, this);
     }
   }
 
