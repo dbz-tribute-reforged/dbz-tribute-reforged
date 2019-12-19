@@ -3,6 +3,7 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Cooler\'s Revenge';
@@ -23,6 +24,10 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Cooler"], true);
     this.cooler = this.bosses.get("Cooler");
+    
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 99999);
+    }
 
     this.ping()
     this.addActionRewardStats(this);
@@ -33,7 +38,8 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
       const coolerHp = GetUnitState(this.cooler, UNIT_STATE_LIFE);
       if (
         coolerHp < GetUnitState(this.cooler, UNIT_STATE_MAX_LIFE) * 0.5 &&
-        coolerHp > 0
+        coolerHp > 0 && 
+        !UnitHelper.isUnitStunned(this.cooler)
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(
           "origin", 

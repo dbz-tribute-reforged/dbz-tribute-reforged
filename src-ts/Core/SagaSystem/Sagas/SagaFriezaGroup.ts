@@ -10,7 +10,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 40;
+    this.sagaDelay = 30;
     this.stats = 50;
   }
 
@@ -56,6 +56,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
         SetUnitX(zarbon2, GetUnitX(zarbon));
         SetUnitY(zarbon2, GetUnitY(zarbon));
+        
         SetUnitInvulnerable(zarbon2, false);
         PauseUnit(zarbon2, false);
         ShowUnitShow(zarbon2);
@@ -104,7 +105,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 15;
     this.stats = 100;
   }
 
@@ -166,7 +167,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 40;
+    this.sagaDelay = 30;
     this.stats = 100;
   }
 
@@ -263,7 +264,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.sagaDelay = 45;
     this.stats = 100;
   }
 
@@ -320,5 +321,87 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
   complete(): void {
     super.complete();
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_TRUNKS);
+  }
+}
+
+// tagoma / frieza force saga
+
+export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
+  name: string = '[Super] Resurrection \'F\'';
+
+  protected frieza1: unit | undefined;
+  protected friezaFinal: unit | undefined;
+  protected friezaGolden: unit | undefined;
+
+  constructor() {
+    super();
+    this.sagaDelay = 30;
+  }
+
+  spawnSagaUnits(): void {
+    super.spawnSagaUnits();
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "Frieza has undergone intense training before returning to Earth for his revenge"
+    );
+
+    this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 1800);
+    }
+
+    this.frieza1 = this.bosses.get("Resurrection Frieza 1");
+    this.friezaFinal = this.bosses.get("Resurrection Frieza Final");
+    this.friezaGolden = this.bosses.get("Resurrection Frieza Golden");
+
+    if (this.friezaFinal) {
+      SetUnitInvulnerable(this.friezaFinal, true);
+      PauseUnit(this.friezaFinal, true);
+      ShowUnitHide(this.friezaFinal);
+    }
+    
+    if (this.friezaGolden) {
+      SetUnitInvulnerable(this.friezaGolden, true);
+      PauseUnit(this.friezaGolden, true);
+      ShowUnitHide(this.friezaGolden);
+    }
+
+    this.ping();
+    this.addActionRewardStats(this);
+  }
+
+  update(t: number): void {
+  }
+
+  canStart(): boolean {
+    return true;
+  }
+
+  canComplete(): boolean {
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
+    }
+    return false;
+  }
+
+  start(): void {
+    super.start();
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  }
+
+  complete(): void {
+    super.complete();
   }
 }

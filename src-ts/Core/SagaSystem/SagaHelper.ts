@@ -3,6 +3,7 @@ import { Saga } from "./Sagas/BaseSaga";
 import { AdvancedSaga } from "./Sagas/AdvancedSaga";
 import { sagaUnitsConfig } from "./Sagas/SagaUnitsConfig";
 import { Constants } from "Common/Constants";
+import { UnitHelper } from "Common/UnitHelper";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: Map<string, unit>): boolean {
@@ -72,8 +73,40 @@ export module SagaHelper {
       bj_FORCE_ALL_PLAYERS, 
       GetUnitX(dyingUnit), 
       GetUnitY(dyingUnit), 
-      5, bj_MINIMAPPINGSTYLE_ATTACK, 
+      4, bj_MINIMAPPINGSTYLE_ATTACK, 
       100, 0, 0
+    );
+  }
+
+  export function checkUnitHp(
+    unit: unit, 
+    threshold: number,
+    checkIfAlive: boolean,
+    checkIfDead: boolean,
+    checkIfStunned: boolean,
+    checkAlternateUnitHidden: boolean,
+    alternateUnit: unit
+  ) {
+    const currentHp = GetUnitState(unit, UNIT_STATE_LIFE);
+    const maxHp = GetUnitState(unit, UNIT_STATE_MAX_LIFE);
+    const isDead = IsUnitType(unit, UNIT_TYPE_DEAD);
+    return (
+      currentHp < maxHp * threshold && 
+      (
+        (checkIfAlive && !isDead) ||
+        (checkIfDead && isDead)
+      ) &&
+      (
+        !checkIfStunned || !UnitHelper.isUnitStunned(unit)
+      ) &&
+      (
+        !checkAlternateUnitHidden || 
+        (
+          BlzIsUnitInvulnerable(alternateUnit) &&
+          IsUnitPaused(alternateUnit) && 
+          IsUnitHidden(alternateUnit)
+        ) 
+      )
     );
   }
 }

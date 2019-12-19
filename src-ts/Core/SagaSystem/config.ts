@@ -6,8 +6,9 @@ import { DeadZoneSaga, GarlicJrSaga } from "./Sagas/SagaGarlicGroup";
 import { TurlesSaga } from "./Sagas/SagaTurlesGroup";
 import { LordSlugSaga } from "./Sagas/SagaSlugGroup";
 import { WheeloSaga } from "./Sagas/SagaWheeloGroup";
-import { AndroidsSaga1, AndroidsSaga2, Super13Saga } from "./Sagas/SagaAndroidsGroup";
+import { AndroidsSaga1, AndroidsSaga2, Super13Saga, FutureAndroidsSaga } from "./Sagas/SagaAndroidsGroup";
 import { CoolerReturnSaga, CoolerRevengeSaga } from "./Sagas/SagaCoolerGroup";
+import { ImperfectCellSaga, SemiperfectCellSaga, PerfectCellSaga, CellGamesSaga, SuperPerfectCellSaga, FutureCellSaga } from "./Sagas/SagaCellGroup";
 
 // the actual saga configuration
 export const sagaSystemConfig: SagaSystemConfig = {
@@ -30,6 +31,13 @@ export const sagaSystemConfig: SagaSystemConfig = {
     AndroidsSaga1,
     AndroidsSaga2,
     Super13Saga,
+    ImperfectCellSaga,
+    SemiperfectCellSaga,
+    PerfectCellSaga,
+    CellGamesSaga,
+    SuperPerfectCellSaga,
+    FutureAndroidsSaga,
+    FutureCellSaga,
   ],
 
   sagaDependencies: {
@@ -81,6 +89,27 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     Super13Saga: [
       [ AndroidsSaga1, SagaState.Completed ],
+    ],
+    ImperfectCellSaga: [
+      [ AndroidsSaga1, SagaState.Completed ],
+    ],
+    SemiperfectCellSaga: [
+      [ ImperfectCellSaga, SagaState.Completed ],
+    ],
+    PerfectCellSaga: [
+      [ SemiperfectCellSaga, SagaState.Completed ],
+    ],
+    CellGamesSaga: [
+      [ PerfectCellSaga, SagaState.Completed ],
+    ],
+    SuperPerfectCellSaga: [
+      [ CellGamesSaga, SagaState.Completed ],
+    ],
+    FutureAndroidsSaga: [
+      [ SemiperfectCellSaga, SagaState.Completed ],
+    ],
+    FutureCellSaga: [
+      [ SemiperfectCellSaga, SagaState.Completed ],
     ],
     // TestSagaTwo: [ 
     //   [ TestSaga, SagaState.Completed ]

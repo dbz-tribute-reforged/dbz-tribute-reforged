@@ -5,6 +5,7 @@ import { Trigger } from "w3ts";
 import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Saiyan Saga I: Raditz';
@@ -70,7 +71,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 30;
     this.stats = 30;
     this.isNappaOoz = false;
     this.isVegetaOoz = false;
@@ -78,6 +79,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have arrived in West City.");
 
     const maxSaibamen = 5;
@@ -97,7 +99,8 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
       const vegetaHp = GetUnitState(vegeta, UNIT_STATE_LIFE);
       if (
         vegetaHp < GetUnitState(vegeta, UNIT_STATE_MAX_LIFE) * 0.4 && 
-        vegetaHp > 0
+        vegetaHp > 0 && 
+        !UnitHelper.isUnitStunned(vegeta)
       ) {
         this.fakeOoz(vegeta);
         this.isVegetaOoz = true;
@@ -108,7 +111,8 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
       const nappaHp = GetUnitState(nappa, UNIT_STATE_LIFE);
       if (
         nappaHp < GetUnitState(nappa, UNIT_STATE_MAX_LIFE) * 0.25 && 
-        nappaHp > 0
+        nappaHp > 0 && 
+        !UnitHelper.isUnitStunned(nappa)
       ) {
         this.fakeOoz(nappa);
         this.isNappaOoz = true;
@@ -156,6 +160,5 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
   }
 }

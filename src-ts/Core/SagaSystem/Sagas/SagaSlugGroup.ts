@@ -3,6 +3,7 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class LordSlugSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Lord Slug';
@@ -32,7 +33,8 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
       const slugHp = GetUnitState(this.slug, UNIT_STATE_LIFE);
       if (
         slugHp < GetUnitState(this.slug, UNIT_STATE_MAX_LIFE) * 0.6 &&
-        slugHp > 0
+        slugHp > 0 && 
+        !UnitHelper.isUnitStunned(this.slug)
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(
           "origin", 

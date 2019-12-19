@@ -2,22 +2,28 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 
-export class DeadZoneSaga extends AdvancedSaga implements Saga {
-  name: string = '[Movie] Dead Zone';
+export class BeerusSaga extends AdvancedSaga implements Saga {
+  name: string = '[Super] God of Destruction Beerus Saga';
 
   constructor() {
     super();
     this.sagaDelay = 30;
-    this.stats = 10;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has taken over the lookout!");
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "|cffffcc00Beerus|r: I'm looking for a Super Saiyan God..."
+    );
 
-    this.addHeroListToSaga(["Garlic Jr", "Sansho", "Nicky", "Ginger"], true);
-    
-    this.ping()
+    this.addHeroListToSaga(["Beerus"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 99999);
+    }
+
+    this.ping();
     this.addActionRewardStats(this);
   }
 
@@ -56,22 +62,28 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
   }
 }
 
-export class GarlicJrSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Garlic Jr Saga';
+export class WhisTrainingSaga extends AdvancedSaga implements Saga {
+  name: string = '[Super] Training with Whis';
 
   constructor() {
     super();
-    this.sagaDelay = 15;
-    this.stats = 50;
+    this.sagaDelay = 30;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Garlic Jr has returned from the Dead Zone!");
-    
-    this.addHeroListToSaga(["Garlic Jr 2", "Spice", "Vinegar", "Mustard", "Salt"], true);
-    
-    this.ping()
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "Whis is offering training classes in exchange for delicious food."
+    );
+
+    this.addHeroListToSaga(["Whis"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 1800);
+    }
+
+    this.ping();
     this.addActionRewardStats(this);
   }
 

@@ -33,8 +33,9 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
         android20Hp < GetUnitState(this.android20, UNIT_STATE_MAX_LIFE) * 0.5 &&
         android20Hp > 0
       ) {
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
         IssuePointOrder(this.android20, "move", 14000, 7500);
-        SetUnitMoveSpeed(this.android20, 500);
+        SetUnitMoveSpeed(this.android20, 522);
         this.isRunningAway = true;
       }
     }
@@ -78,7 +79,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 15;
     this.stats = 100;
   }
 
@@ -198,6 +199,63 @@ export class Super13Saga extends AdvancedSaga implements Saga {
         KillUnit(this.android13);
       }
     }
+  }
+
+  canStart(): boolean {
+    return true;
+  }
+
+  canComplete(): boolean {
+    if (this.bosses.size > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
+    }
+    return false;
+  }
+
+  start(): void {
+    super.start();
+    this.spawnWhenDelayFinished();
+  }
+
+  spawnWhenDelayFinished(): void {
+    if (this.sagaDelay <= 0) {
+      this.spawnSagaUnits();
+    } else {
+      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+        this.spawnSagaUnits();
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  }
+
+  complete(): void {
+    super.complete();
+  }
+}
+
+export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
+  name: string = '[DBZ] Future Androids Saga';
+
+  constructor() {
+    super();
+    this.sagaDelay = 75;
+  }
+
+  spawnSagaUnits(): void {
+    super.spawnSagaUnits();
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Future Androids 17 and 18 have begun terrorizing the future.");
+
+    this.addHeroListToSaga(["Future Android 17", "Future Android 18"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 1800);
+    }
+
+    this.ping();
+    this.addActionRewardStats(this);
+  }
+
+  update(t: number): void {
   }
 
   canStart(): boolean {

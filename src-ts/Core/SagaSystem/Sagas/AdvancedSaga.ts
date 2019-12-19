@@ -14,6 +14,8 @@ export class AdvancedSaga {
   public sagaDelayTimer: timer;
   public sagaDelay: number;
 
+  // deprecated, 
+  // stats are given based on lvl of dying saga boss
   public stats: number;
 
   public spawnSound: sound;

@@ -110,11 +110,13 @@ export class ExperienceManager {
         // const killingPlayerId = GetPlayerId(killingPlayer);
         
         if (dyingPlayerId >= Constants.maxActivePlayers) {
-          // share exp with enemies too
+          // share exp with anyone else who is also 
+          // treats dying player as an enemy
           this.getNearbyXPHeroes(
             rewardedGroup, 
             dyingPos, 
             ExperienceConstants.expRange,
+            dyingPlayer,
           );
         } else {
           // share exp with allies only
@@ -161,9 +163,7 @@ export class ExperienceManager {
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
           
-          if (IsUnitEnemy(rewardedUnit, dyingPlayer)) {
-            AddHeroXP(rewardedUnit, rewardXP, true);
-          }
+          AddHeroXP(rewardedUnit, rewardXP, true);
 
           // exp floating text is provided for us
           // although it might be possible to disable
@@ -195,6 +195,7 @@ export class ExperienceManager {
     heroGroup: group, 
     position: Vector2D, 
     aoe: number,
+    enemiedPlayer: player,
   ) {
     GroupEnumUnitsInRange(
       heroGroup, 
@@ -205,6 +206,8 @@ export class ExperienceManager {
         const testUnit = GetFilterUnit();
         return (
           IsUnitType(testUnit, UNIT_TYPE_HERO) &&
+          IsUnitEnemy(testUnit, enemiedPlayer) &&
+          !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
           !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
           !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
         )
@@ -228,6 +231,7 @@ export class ExperienceManager {
         return (
           IsUnitType(testUnit, UNIT_TYPE_HERO) &&
           IsUnitAlly(testUnit, allyPlayer) &&
+          !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
           !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
           !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
         )

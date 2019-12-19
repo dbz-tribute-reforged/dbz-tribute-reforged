@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class TurlesSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] The Tree of Might';
@@ -10,7 +11,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.sagaDelay = 45;
     this.stats = 25;
     this.availableFruits = 2;
   }
@@ -31,7 +32,8 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
       const turlesHp = GetUnitState(this.turles, UNIT_STATE_LIFE);
       if (
         turlesHp < GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.15 &&
-        turlesHp > 0
+        turlesHp > 0 && 
+        !UnitHelper.isUnitStunned(this.turles)
       ) {
         DestroyEffect(AddSpecialEffectTargetUnitBJ(
           "origin", 
