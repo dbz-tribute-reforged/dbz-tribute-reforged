@@ -71,20 +71,22 @@ export class CreepManager {
         ) {
           allianceState = bj_ALLIANCE_ALLIED;
         }
-        SetPlayerAllianceStateBJ(player, ConvertedPlayer(j), allianceState);
-        SetPlayerAllianceStateBJ(ConvertedPlayer(j), player, allianceState);
+        SetPlayerAllianceStateBJ(player, Player(j), allianceState);
+        SetPlayerAllianceStateBJ(Player(j), player, allianceState);
       }
     }
 
+    // special setup just for creep player
     for (let j = 0; j < Constants.maxActivePlayers; ++j) {
-      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, ConvertedPlayer(j), bj_ALLIANCE_UNALLIED);
-      SetPlayerAllianceStateBJ(ConvertedPlayer(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(j), bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(Player(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
     }
-
     for (let j = Constants.maxActivePlayers; j < Constants.maxPlayers; ++j) {
-      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, ConvertedPlayer(j), bj_ALLIANCE_ALLIED);
-      SetPlayerAllianceStateBJ(ConvertedPlayer(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(j), bj_ALLIANCE_ALLIED);
+      SetPlayerAllianceStateBJ(Player(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
     }
+    SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED);
+    SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
 
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
@@ -150,10 +152,10 @@ export class CreepManager {
     );
 
     if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
-      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
-      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 100), false);
-      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 100), false);
-      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 100), false);
+      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 2, false);
+      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 50), false);
+      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 50), false);
+      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 50), false);
     }
     
     // in with the new, out with the old
