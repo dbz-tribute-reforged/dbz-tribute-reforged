@@ -54,34 +54,38 @@ export class CreepManager {
   setupCreepPlayers(): this {
     // reminder to change constants if adding more players in
     // init creep players who will have creeps distributed to
-    for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
+    for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers - 1; ++i) {
       let player = Player(i);
       this.creepPlayers.push(player);
       // gui does it for us
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
-      if (GetPlayerId(player) == Constants.heavenHellCreepPlayerId) {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED);
-      } else {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
-      }
+      SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
+      SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
       for (let j = 0; j < Constants.maxPlayers; ++j) {
         let allianceState = bj_ALLIANCE_ALLIED_VISION;
 
-
-        if (j <= Constants.maxActivePlayers) {
+        if (j < Constants.maxActivePlayers) {
           allianceState = bj_ALLIANCE_UNALLIED;
         } else if (
-          j == Constants.heavenHellCreepPlayerId || 
-          i == Constants.heavenHellCreepPlayerId
+          j == Constants.heavenHellCreepPlayerId
         ) {
           allianceState = bj_ALLIANCE_ALLIED;
         }
-        SetPlayerAllianceStateBJ(player, ConvertedPlayer(j), allianceState)
-        SetPlayerAllianceStateBJ(ConvertedPlayer(j), player, allianceState)
+        SetPlayerAllianceStateBJ(player, ConvertedPlayer(j), allianceState);
+        SetPlayerAllianceStateBJ(ConvertedPlayer(j), player, allianceState);
       }
     }
+
+    for (let j = 0; j < Constants.maxActivePlayers; ++j) {
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, ConvertedPlayer(j), bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(ConvertedPlayer(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+    }
+
+    for (let j = Constants.maxActivePlayers; j < Constants.maxPlayers; ++j) {
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, ConvertedPlayer(j), bj_ALLIANCE_ALLIED);
+      SetPlayerAllianceStateBJ(ConvertedPlayer(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
+    }
+
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
 
