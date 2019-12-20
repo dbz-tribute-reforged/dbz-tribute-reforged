@@ -236,6 +236,7 @@ gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
 gg_trg_Kill_Creep_New_New_Stats_Only = nil
 gg_trg_Kill_Hero_Stats = nil
+gg_trg_Kill_Hero_Revive = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
@@ -398,7 +399,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Kill_Hero_Revive = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2616,14 +2616,6 @@ function Trig_Setup_Per_Player_Properties_Actions()
         FogModifierStart(GetLastCreatedFogModifier())
         udg_TempInt = udg_TempInt + 1
     end
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_TournamentArena)
-        FogModifierStart(GetLastCreatedFogModifier())
-        udg_TempInt = udg_TempInt + 1
-    end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
@@ -2657,6 +2649,8 @@ function Trig_Setup_Quests_Actions()
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\PassiveButtons\\PASBTNMagicalSentry.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
 end
@@ -3108,7 +3102,7 @@ function Trig_Kill_Hero_Revive_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
-    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == false)) then
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
         return false
     end
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then

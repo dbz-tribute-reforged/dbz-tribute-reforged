@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.21
+DBZ Tribute Reforged 0.21a
 }
 
 STRING 4
@@ -53712,6 +53712,18 @@ STRING 8855
 // Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
 (actual)
+}
+
+STRING 8856
+{
+Heaven/Hell
+}
+
+STRING 8857
+{
+Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
+
+Note: if you want to complain about no snakeway or tickets (non-canon btw), you should probably focus on why you're spending so much time dead instead of playing the game. Hrm?
 }
 
 STRING 8863
