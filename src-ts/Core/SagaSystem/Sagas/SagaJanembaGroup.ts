@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class JanembaSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Fusion Reborn';
@@ -28,7 +29,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.superJanemba);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

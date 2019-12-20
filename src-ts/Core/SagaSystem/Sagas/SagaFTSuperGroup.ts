@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class FTSuperSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DB Super] Future Trunks Saga I: Goku Black\'s Incursion';
@@ -17,7 +18,7 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Goku Black 1"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

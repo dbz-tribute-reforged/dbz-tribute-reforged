@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class Super17Saga extends AdvancedSaga implements Saga {
   name: string = '[DBGT] Super 17 Saga';
@@ -17,7 +18,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Super 17"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

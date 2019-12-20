@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class Universe6Saga extends AdvancedSaga implements Saga {
   name: string = '[DB Super] Universe 6 Saga';
@@ -17,7 +18,7 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Hit Universe 6"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
