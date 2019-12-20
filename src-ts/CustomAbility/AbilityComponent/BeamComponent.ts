@@ -20,6 +20,13 @@ export class BeamComponent implements
   public angle: number;
   public previousHp: number;
   protected hasBeamUnit: boolean;
+  // time to explode = 
+  // distance from start position to cast point
+  // divided by speed
+  protected explodeTick: number;
+  protected explodeMinDistance: number;
+  protected explodePosition: Vector2D;
+  protected forcedExplode: boolean;
 
   constructor(
     public name: string = "BeamComponent",
@@ -36,10 +43,11 @@ export class BeamComponent implements
     public heightVariation: HeightVariation = new HeightVariation(
       250, 0, HeightVariation.LINEAR_VARIATION
     ),
-    public isTracking : boolean = false,
-    public isFixedAngle : boolean = true,
-    public canClashWithHero : boolean = true,
-    public useLastCastPoint : boolean = true,
+    public isTracking: boolean = false,
+    public isFixedAngle: boolean = true,
+    public canClashWithHero: boolean = true,
+    public useLastCastPoint: boolean = true,
+    public explodeAtCastPoint: boolean = false,
     public beamUnitType: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
   ) {
@@ -48,6 +56,10 @@ export class BeamComponent implements
     this.angle = 0;
     this.previousHp = 0;
     this.hasBeamUnit = false;
+    this.explodeTick = 0;
+    this.explodeMinDistance = 0;
+    this.explodePosition = new Vector2D(0, 0);
+    this.forcedExplode = false;
   }
 
   protected getNearbyEnemies(input: CustomAbilityInput) {
@@ -87,7 +99,24 @@ export class BeamComponent implements
       }
       const targetCoord = CoordMath.polarProjectCoords(currentCoord, this.angle, this.speed);
 
-     PathingCheck.moveFlyingUnitToCoord(this.beamUnit, targetCoord);
+      PathingCheck.moveFlyingUnitToCoord(this.beamUnit, targetCoord);
+
+      // if wanting to explode prematurely then
+      // check if at maximal explode tick AND close enough to target
+      if (
+        this.explodeAtCastPoint && 
+        !this.forcedExplode &&
+        ability.currentTick > this.explodeTick &&
+        CoordMath.distance(currentCoord, this.explodePosition) < this.explodeMinDistance
+      ) {
+        this.forcedExplode = true;
+        if (this.endTick == -1) {
+          ability.currentTick = ability.duration - 1;
+        } else {
+          ability.currentTick = this.endTick - 1;
+        }
+      }
+
     } else {
       --this.delayTicks;
       // when delaying movement, if duration inc per delay > 0
@@ -121,13 +150,31 @@ export class BeamComponent implements
 
     UnitHelper.giveUnitFlying(this.beamUnit);
     SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
+    
+    let endHeightTick = this.endTick;
+    if (this.endTick == -1) {
+      endHeightTick = ability.duration;
+    }
+
+    if (this.explodeAtCastPoint) {
+      this.explodePosition.x = input.castPoint.x;
+      this.explodePosition.y = input.castPoint.y;
+
+      this.explodeMinDistance = this.aoe * 0.5;
+
+      this.explodeTick = ability.currentTick + Math.floor(
+        CoordMath.distance(sourceCoord, input.castPoint) / Math.floor(this.speed)
+      )
+      endHeightTick = this.explodeTick;
+    }
+
     SetUnitFlyHeight(
       this.beamUnit, 
       this.heightVariation.finish, 
       Math.abs(
         (this.heightVariation.finish - this.heightVariation.start) 
         / 
-        (ability.duration * ability.updateRate)
+        ((endHeightTick - ability.currentTick) * ability.updateRate)
       ),
     );
     // hp MUST be a multiple of 50??? or something
@@ -176,6 +223,7 @@ export class BeamComponent implements
     }
     if (ability.isFinishedUsing(this)) {
       this.hasBeamUnit = false;
+      this.forcedExplode = false;
       RemoveUnit(this.beamUnit);
     }
   }
@@ -186,7 +234,8 @@ export class BeamComponent implements
       this.beamHpMult, this.beamHpAttribute, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
-      this.isFixedAngle, this.canClashWithHero, this.useLastCastPoint, 
+      this.isFixedAngle, this.canClashWithHero, 
+      this.useLastCastPoint, this.explodeAtCastPoint,
       this.beamUnitType, 
       AbilityComponentHelper.clone(this.components),
     );
@@ -214,6 +263,7 @@ export class BeamComponent implements
       isFixedAngle: boolean;
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
+      explodeAtCastPoint: boolean;
       beamUnitType: string;
       components: {
         name: string,
@@ -236,6 +286,7 @@ export class BeamComponent implements
     this.isFixedAngle = input.isFixedAngle;
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
+    this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.beamUnitType = FourCC(input.beamUnitType);
     return this;
   }

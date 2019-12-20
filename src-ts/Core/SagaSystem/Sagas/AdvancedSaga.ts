@@ -14,6 +14,8 @@ export class AdvancedSaga {
   public sagaDelayTimer: timer;
   public sagaDelay: number;
 
+  // deprecated, 
+  // stats are given based on lvl of dying saga boss
   public stats: number;
 
   public spawnSound: sound;
@@ -40,6 +42,10 @@ export class AdvancedSaga {
     // Logger.LogDebug(this.name + " Completed");
     this.state = SagaState.Completed;
     PlaySoundBJ(this.completeSound);
+  }
+
+  update(t: number): void {
+    
   }
 
   getColoredName(): string {

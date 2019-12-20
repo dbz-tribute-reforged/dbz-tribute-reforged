@@ -54,39 +54,45 @@ export class CreepManager {
   setupCreepPlayers(): this {
     // reminder to change constants if adding more players in
     // init creep players who will have creeps distributed to
-    for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
+    for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers - 1; ++i) {
       let player = Player(i);
       this.creepPlayers.push(player);
       // gui does it for us
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
-      if (player != Constants.heavenHellCreepPlayer) {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
-      } else {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED);
-      }
-      for (let j = 0; j < Constants.maxPlayers; ++j) {
+      SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
+      SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
+      for (let j = 0; j < Constants.maxPlayers - 1; ++j) {
         let allianceState = bj_ALLIANCE_ALLIED_VISION;
-        if ( j == Constants.heavenHellCreepPlayerId) {
-          allianceState = bj_ALLIANCE_ALLIED;
-        }
-        if (j <= Constants.maxActivePlayers) {
+        if (j < Constants.maxActivePlayers) {
           allianceState = bj_ALLIANCE_UNALLIED;
         }
-        SetPlayerAllianceStateBJ(player, ConvertedPlayer(j), allianceState)
-        SetPlayerAllianceStateBJ(ConvertedPlayer(j), player, allianceState)
+        SetPlayerAllianceStateBJ(player, Player(j), allianceState);
+        SetPlayerAllianceStateBJ(Player(j), player, allianceState);
       }
     }
+
+    // special setup just for creep player
+    for (let j = 0; j < Constants.maxActivePlayers; ++j) {
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(j), bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(Player(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+    }
+    for (let j = Constants.maxActivePlayers; j < Constants.maxPlayers; ++j) {
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(j), bj_ALLIANCE_ALLIED);
+      SetPlayerAllianceStateBJ(Player(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
+    }
+
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
-    CreateFogModifierRadius(
-      Player(PLAYER_NEUTRAL_AGGRESSIVE),
-      FOG_OF_WAR_FOGGED,
-      (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
-      (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
-      CoordMath.distance(Constants.heavenHellBottomLeft, Constants.heavenHellTopRight) / 2,
-      true, false
+
+    FogModifierStart(
+      CreateFogModifierRadius(
+        Player(PLAYER_NEUTRAL_AGGRESSIVE),
+        FOG_OF_WAR_FOGGED,
+        (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
+        (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
+        CoordMath.distance(Constants.heavenHellBottomLeft, Constants.heavenHellTopRight) / 2,
+        true, false
+      )
     );
 
     return this;
@@ -99,7 +105,7 @@ export class CreepManager {
     ForGroup(allCreeps, () => {
       const creepUnit = GetEnumUnit();
       let creepPlayer = Player(creepPlayerIndex + Constants.maxActivePlayers);
-      creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length);
+      creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length - 1);
 
       const x = GetUnitX(creepUnit);
       const y = GetUnitY(creepUnit);
@@ -139,10 +145,10 @@ export class CreepManager {
     );
 
     if (IsUnitType(oldCreep, UNIT_TYPE_HERO)) {
-      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
-      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 100), false);
-      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 100), false);
-      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 100), false);
+      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 2, false);
+      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 50), false);
+      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 50), false);
+      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 50), false);
     }
     
     // in with the new, out with the old

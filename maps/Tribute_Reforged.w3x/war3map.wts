@@ -1,5 +1,5 @@
 ﻿STRING 0
-// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
+// Units: U00L (Space Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (actual)
 }
@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.20d
+DBZ Tribute Reforged 0.21d
 }
 
 STRING 4
@@ -6120,7 +6120,7 @@ STRING 982
 }
 
 STRING 983
-// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -33840,13 +33840,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5563
-// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
 
 STRING 5564
-// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -41127,7 +41127,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6767
-// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -46815,7 +46815,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -53700,6 +53700,40 @@ STRING 8853
 // Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
 {
 Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 8854
+// Units: U01A (Space Pirate), EditorSuffix (Name - Editor Suffix)
+{
+(super 17 saga)
+}
+
+STRING 8855
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 8856
+{
+Heaven/Hell
+}
+
+STRING 8857
+{
+Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
+
+Note: if you want to complain about no snakeway or tickets (non-canon btw), you should probably focus on why you're spending so much time dead instead of playing the game. Hrm?
+}
+
+STRING 8858
+{
+Available game modes:
+-default (good v evil)
+-ap (all pick)
+-ar (all random)
+-sd (single draft)
+-cm (captain's mode)
 }
 
 STRING 8863
@@ -64520,7 +64554,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 18.12.19
+This map is under active development - 21.12.19
 }
 
 STRING 10653
