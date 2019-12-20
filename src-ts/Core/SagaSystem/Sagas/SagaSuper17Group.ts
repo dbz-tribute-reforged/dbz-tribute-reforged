@@ -2,42 +2,30 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 
-export class WheeloSaga extends AdvancedSaga implements Saga {
-  name: string = '[Movie] The World\'s Strongest';
-
-  protected wheelo: unit | undefined;
-  protected kochin: unit | undefined;
+export class Super17Saga extends AdvancedSaga implements Saga {
+  name: string = '[DBGT] Super 17 Saga';
 
   constructor() {
     super();
     this.sagaDelay = 15;
-    this.stats = 25;
   }
 
   spawnSagaUnits(): void {
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Kochin has revived Dr Wheelo!");
+    super.spawnSagaUnits();
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Gero and Dr. Myuu have combined forces to create Super Android 17");
 
-    this.addHeroListToSaga(["Wheelo", "Kishime", "Misokatsun", "Ebifurya", "Dr. Kochin"], true);
-    
-    this.kochin = this.bosses.get("Dr. Kochin");
-    this.wheelo = this.bosses.get("Wheelo");
+    this.addHeroListToSaga(["Super 17"], true);
 
-    SagaHelper.sagaHideUnit(this.wheelo);
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 99999);
+    }
 
-    this.ping()
+    this.ping();
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
     super.update(t);
-    if (
-      this.kochin && this.wheelo && 
-      IsUnitDeadBJ(this.kochin) && 
-      SagaHelper.isUnitSagaHidden(this.wheelo)
-    ) {
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");
-      SagaHelper.genericTransformAndPing(this.wheelo, this.kochin, this);
-    }
   }
 
   canStart(): boolean {
@@ -70,5 +58,4 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
   complete(): void {
     super.complete();
   }
-
 }

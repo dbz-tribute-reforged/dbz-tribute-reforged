@@ -409,13 +409,15 @@ export function CustomPlayerTest() {
       deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
     }
 
-    DisplayTimedTextToForce(
-      GetPlayersAll(), 
-      15,
-      killerName + 
-      " has killed " + 
-      deadName
-    );
+    if (killerName && deadName) {
+      DisplayTimedTextToForce(
+        GetPlayersAll(), 
+        15,
+        killerName + 
+        " has killed " + 
+        deadName
+      );
+    }
 
   })
 
