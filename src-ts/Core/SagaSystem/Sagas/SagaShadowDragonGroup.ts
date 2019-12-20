@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DBGT] Shadow Dragon Saga I';
@@ -20,7 +21,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Haze Shenron", "Rage Shenron", "Oceanus Shenron", "Naturon Shenron", "Nuova Shenron", "Eis Shenron"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
@@ -89,7 +90,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.omega);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

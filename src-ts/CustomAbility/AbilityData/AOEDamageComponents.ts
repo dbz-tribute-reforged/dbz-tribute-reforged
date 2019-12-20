@@ -43,11 +43,11 @@ constant weapontype         WEAPON_TYPE_AXE_MEDIUM_CHOP     = ConvertWeaponType(
 constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(23)
 */
 export module BASE {
-  export const KAME_DPS = 0.012;
-  export const KAME_EXPLOSION = 0.06;
-  export const SPIRIT_BOMB_DPS = 0.003;
-  export const SPIRIT_BOMB_EXPLOSION = 0.30;
-  export const DFIST_DPS = 0.015;
+  export const KAME_DPS = 0.009;
+  export const KAME_EXPLOSION = 0.05;
+  export const SPIRIT_BOMB_DPS = 0.002;
+  export const SPIRIT_BOMB_EXPLOSION = 0.32;
+  export const DFIST_DPS = 0.014;
   export const DFIST_EXPLOSION = 0.31;
 }
 
@@ -423,7 +423,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
-    aoe: 250,
+    aoe: 400,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.35,
       attribute: bj_HEROSTAT_STR,
@@ -895,7 +895,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 300,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.5,
+      multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1021,7 +1021,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 325,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.75,
+      multiplier: BASE.KAME_DPS * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

@@ -6,6 +6,7 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 import { UnitHelper } from "Common/UnitHelper";
+import { Constants } from "Common/Constants";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Saiyan Saga I: Raditz';
@@ -21,6 +22,10 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Raditz has arrived looking for Goku.");
 
     this.addHeroListToSaga(["Raditz"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
     
     this.ping()
     this.addActionRewardStats(this);

@@ -61,15 +61,10 @@ export class CreepManager {
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
       SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
       SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
-      for (let j = 0; j < Constants.maxPlayers; ++j) {
+      for (let j = 0; j < Constants.maxPlayers - 1; ++j) {
         let allianceState = bj_ALLIANCE_ALLIED_VISION;
-
         if (j < Constants.maxActivePlayers) {
           allianceState = bj_ALLIANCE_UNALLIED;
-        } else if (
-          j == Constants.heavenHellCreepPlayerId
-        ) {
-          allianceState = bj_ALLIANCE_ALLIED;
         }
         SetPlayerAllianceStateBJ(player, Player(j), allianceState);
         SetPlayerAllianceStateBJ(Player(j), player, allianceState);
@@ -85,8 +80,6 @@ export class CreepManager {
       SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(j), bj_ALLIANCE_ALLIED);
       SetPlayerAllianceStateBJ(Player(j), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
     }
-    SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED);
-    SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Constants.heavenHellCreepPlayer, bj_ALLIANCE_ALLIED);
 
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
@@ -112,7 +105,7 @@ export class CreepManager {
     ForGroup(allCreeps, () => {
       const creepUnit = GetEnumUnit();
       let creepPlayer = Player(creepPlayerIndex + Constants.maxActivePlayers);
-      creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length);
+      creepPlayerIndex = (creepPlayerIndex+1) % (this.creepPlayers.length - 1);
 
       const x = GetUnitX(creepUnit);
       const y = GetUnitY(creepUnit);
