@@ -404,6 +404,49 @@ export class Budokai extends AdvancedTournament implements Tournament {
       activeContestants.clear();
     });
 
+    // force check if lose
+    TimerStart(CreateTimer(), 15, true, () => {
+      if (IsTriggerEnabled(matchHandlerTrigger)) {
+        // if somehow no contestants, end
+        if (activeContestants.size == 0) {
+          this.endMatch(
+            [], 
+            [],
+            false, 
+            matchLimitTimer,
+            matchLimitTimerDialog,
+            matchHandlerTrigger,
+          );
+          activeContestants.clear();
+          DestroyTimer(GetExpiredTimer());
+        }
+        
+        // if all units for contestant are dead, end
+        for (const [playerId, contestant] of activeContestants) {
+          let allUnitsDead = true;
+          for (const [unit, unitContestant] of contestant.units) {
+            if (!IsUnitType(unit, UNIT_TYPE_DEAD)) {
+              allUnitsDead = false;
+            }
+          }
+          if (allUnitsDead) {
+            contestant.unitsAlive = 0;
+            this.checkIfContestantUnitsAreDead(
+              contestant,
+              activeContestants,
+              wasAllied,
+              matchLimitTimer,
+              matchLimitTimerDialog,
+              matchHandlerTrigger,
+            );
+            DestroyTimer(GetExpiredTimer());
+          }
+        }
+      } else {
+        DestroyTimer(GetExpiredTimer());
+      }
+    });
+
     // handle the match for dying units of said player
     TriggerAddAction(matchHandlerTrigger, () => {
       const dyingUnit = GetTriggerUnit();
@@ -413,27 +456,45 @@ export class Budokai extends AdvancedTournament implements Tournament {
       const contestant = activeContestants.get(playerId);
       if (contestant) {
         --contestant.unitsAlive;
-        if (contestant.unitsAlive == 0) {
-
-          let winner: TournamentContestant = contestant;
-          for (const possibleWinner of activeContestants.values()) {
-            if (possibleWinner.id != contestant.id) {
-              winner = possibleWinner;
-            }
-          }
-          
-          this.endMatch(
-            [contestant], 
-            [winner], 
-            wasAllied, 
-            matchLimitTimer,
-            matchLimitTimerDialog,
-            matchHandlerTrigger
-          );
-          activeContestants.clear();
-        }
+        this.checkIfContestantUnitsAreDead(
+          contestant,
+          activeContestants,
+          wasAllied,
+          matchLimitTimer,
+          matchLimitTimerDialog,
+          matchHandlerTrigger,
+        );
       }
     });
+  }
+
+  checkIfContestantUnitsAreDead(
+    contestant: TournamentContestant, 
+    activeContestants: Map<number, TournamentContestant>,
+    wasAllied: boolean,
+    matchLimitTimer: timer,
+    matchLimitTimerDialog: timerdialog,
+    matchHandlerTrigger: trigger,
+  ) {
+    if (contestant.unitsAlive == 0) {
+
+      let winner: TournamentContestant = contestant;
+      for (const possibleWinner of activeContestants.values()) {
+        if (possibleWinner.id != contestant.id) {
+          winner = possibleWinner;
+        }
+      }
+      
+      this.endMatch(
+        [contestant], 
+        [winner], 
+        wasAllied, 
+        matchLimitTimer,
+        matchLimitTimerDialog,
+        matchHandlerTrigger
+      );
+      activeContestants.clear();
+    }
   }
 
   endMatch(

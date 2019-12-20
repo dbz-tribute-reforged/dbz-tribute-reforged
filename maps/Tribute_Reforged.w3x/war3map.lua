@@ -281,6 +281,7 @@ gg_trg_Hero_Pick_Show_Pickable_Heroes = nil
 gg_trg_Hero_Pick_Repick_Randomly = nil
 gg_trg_Hero_Pick_Secret_Heroes = nil
 gg_trg_Hero_Pick_Secret_Bardock = nil
+gg_trg_Hero_Pick_Modes_Show = nil
 gg_trg_Hero_Pick_Mode_Default = nil
 gg_trg_Hero_Pick_Mode_All_Pick = nil
 gg_trg_Hero_Pick_Mode_All_Random = nil
@@ -1634,7 +1635,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 1135.2, 21157.8, 263.911, FourCC("n02P"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 763.1, 21316.6, 263.930, FourCC("n03A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00D"), 687.6, 21706.3, 189.674, FourCC("n00D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n037"), 1039.7, 21152.4, 297.046, FourCC("n037"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n037"), 433.3, 21310.9, 287.730, FourCC("n037"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03C"), 652.1, 21387.0, 356.935, FourCC("n03C"))
     u = BlzCreateUnitWithSkin(p, FourCC("n039"), 995.8, 21186.2, 285.423, FourCC("n039"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02H"), 1096.3, 21566.2, 275.068, FourCC("n02H"))
@@ -1689,6 +1690,8 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("U00B"), 744.8, 21640.8, 141.411, FourCC("U00B"))
     SetUnitState(u, UNIT_STATE_MANA, 180)
     u = BlzCreateUnitWithSkin(p, FourCC("U00C"), 675.6, 21768.1, 146.361, FourCC("U00C"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01Z"), 496.0, 21305.0, 267.860, FourCC("n01Z"))
+    SetUnitColor(u, ConvertPlayerColor(6))
 end
 
 function CreatePlayerBuildings()
@@ -4014,6 +4017,16 @@ function InitTrig_Hero_Pick_Secret_Bardock()
     TriggerAddAction(gg_trg_Hero_Pick_Secret_Bardock, Trig_Hero_Pick_Secret_Bardock_Actions)
 end
 
+function Trig_Hero_Pick_Modes_Show_Actions()
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_8858")
+end
+
+function InitTrig_Hero_Pick_Modes_Show()
+    gg_trg_Hero_Pick_Modes_Show = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Modes_Show, 7.00)
+    TriggerAddAction(gg_trg_Hero_Pick_Modes_Show, Trig_Hero_Pick_Modes_Show_Actions)
+end
+
 function Trig_Hero_Pick_Mode_Default_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9978")
     udg_HeroPickMode = "default"
@@ -4790,25 +4803,28 @@ function InitTrig_Hero_Pick_Timer_Start()
     TriggerAddAction(gg_trg_Hero_Pick_Timer_Start, Trig_Hero_Pick_Timer_Start_Actions)
 end
 
-function Trig_Hero_Pick_Timer_Complete_Func004Func002A()
+function Trig_Hero_Pick_Timer_Complete_Func004Func003A()
     SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_PASSIVE), true)
 end
 
-function Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()
-    if (GetPlayerController(ConvertedPlayer(udg_TempInt)) ~= MAP_CONTROL_USER) then
+function Trig_Hero_Pick_Timer_Complete_Func004Func005Func003C()
+    if (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER) then
         return true
     end
-    if (GetPlayerController(ConvertedPlayer(udg_TempInt)) ~= MAP_CONTROL_COMPUTER) then
+    if (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_COMPUTER) then
         return true
     end
     return false
 end
 
-function Trig_Hero_Pick_Timer_Complete_Func004Func004C()
-    if (not Trig_Hero_Pick_Timer_Complete_Func004Func004Func003C()) then
+function Trig_Hero_Pick_Timer_Complete_Func004Func005C()
+    if (not Trig_Hero_Pick_Timer_Complete_Func004Func005Func003C()) then
         return false
     end
     if (not (CountUnitsInGroup(udg_PlayerPickedHeroesUnitGroup[udg_TempInt]) == 0)) then
+        return false
+    end
+    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
         return false
     end
     return true
@@ -4821,10 +4837,11 @@ function Trig_Hero_Pick_Timer_Complete_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempGroup = GetUnitsOfPlayerAndTypeId(ConvertedPlayer(udg_TempInt), FourCC("n001"))
-        ForGroupBJ(udg_TempGroup, Trig_Hero_Pick_Timer_Complete_Func004Func002A)
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        udg_TempGroup = GetUnitsOfPlayerAndTypeId(udg_TempPlayer, FourCC("n001"))
+        ForGroupBJ(udg_TempGroup, Trig_Hero_Pick_Timer_Complete_Func004Func003A)
                 DestroyGroup(udg_TempGroup)
-        if (Trig_Hero_Pick_Timer_Complete_Func004Func004C()) then
+        if (Trig_Hero_Pick_Timer_Complete_Func004Func005C()) then
             TriggerExecute(gg_trg_Hero_Pick_Give_Random_Hero_to_Player)
         else
         end
@@ -5273,9 +5290,13 @@ end
 
 function Trig_Update_Current_Stats_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempReal = GetUnitLifePercent(udg_StatMultUnit)
+    udg_TempReal2 = GetUnitManaPercent(udg_StatMultUnit)
     ModifyHeroStat(bj_HEROSTAT_STR, udg_StatMultUnit, bj_MODIFYMETHOD_SET, R2I((LoadRealBJ(0, udg_ID, udg_StatMultHashtable) * LoadRealBJ(3, udg_ID, udg_StatMultHashtable))))
     ModifyHeroStat(bj_HEROSTAT_AGI, udg_StatMultUnit, bj_MODIFYMETHOD_SET, R2I((LoadRealBJ(1, udg_ID, udg_StatMultHashtable) * LoadRealBJ(4, udg_ID, udg_StatMultHashtable))))
     ModifyHeroStat(bj_HEROSTAT_INT, udg_StatMultUnit, bj_MODIFYMETHOD_SET, R2I((LoadRealBJ(2, udg_ID, udg_StatMultHashtable) * LoadRealBJ(5, udg_ID, udg_StatMultHashtable))))
+    SetUnitLifePercentBJ(udg_StatMultUnit, udg_TempReal)
+    SetUnitManaPercentBJ(udg_StatMultUnit, udg_TempReal2)
 end
 
 function InitTrig_Update_Current_Stats()
@@ -9690,6 +9711,7 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Repick_Randomly()
     InitTrig_Hero_Pick_Secret_Heroes()
     InitTrig_Hero_Pick_Secret_Bardock()
+    InitTrig_Hero_Pick_Modes_Show()
     InitTrig_Hero_Pick_Mode_Default()
     InitTrig_Hero_Pick_Mode_All_Pick()
     InitTrig_Hero_Pick_Mode_All_Random()

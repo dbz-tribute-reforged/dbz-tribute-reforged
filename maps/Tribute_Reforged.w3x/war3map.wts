@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.21a
+DBZ Tribute Reforged 0.21b
 }
 
 STRING 4
@@ -53724,6 +53724,16 @@ STRING 8857
 Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
 
 Note: if you want to complain about no snakeway or tickets (non-canon btw), you should probably focus on why you're spending so much time dead instead of playing the game. Hrm?
+}
+
+STRING 8858
+{
+Available game modes:
+-default (good v evil)
+-ap (all pick)
+-ar (all random)
+-sd (single draft)
+-cm (captain's mode)
 }
 
 STRING 8863
