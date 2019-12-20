@@ -43,12 +43,12 @@ constant weapontype         WEAPON_TYPE_AXE_MEDIUM_CHOP     = ConvertWeaponType(
 constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(23)
 */
 export module BASE {
-  export const KAME_DPS = 0.008;
-  export const KAME_EXPLOSION = 0.05;
-  export const SPIRIT_BOMB_DPS = 0.002;
-  export const SPIRIT_BOMB_EXPLOSION = 0.32;
-  export const DFIST_DPS = 0.012;
-  export const DFIST_EXPLOSION = 0.3;
+  export const KAME_DPS = 0.012;
+  export const KAME_EXPLOSION = 0.06;
+  export const SPIRIT_BOMB_DPS = 0.003;
+  export const SPIRIT_BOMB_EXPLOSION = 0.30;
+  export const DFIST_DPS = 0.015;
+  export const DFIST_EXPLOSION = 0.31;
 }
 
 export const AOEDamageComponents = [
@@ -221,7 +221,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_DPS * 5,
+      multiplier: BASE.KAME_DPS * 3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -236,7 +236,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_DPS * 5 * 3,
+      multiplier: BASE.KAME_DPS * 3 * 3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -284,7 +284,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.8,
+      multiplier: BASE.KAME_DPS * 0.85,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -300,7 +300,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.45,
+      multiplier: BASE.KAME_DPS * 0.40,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -315,7 +315,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.45,
+      multiplier: BASE.KAME_EXPLOSION * 0.30,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -409,7 +409,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 2,
+      multiplier: BASE.KAME_EXPLOSION * 2.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -441,7 +441,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.5,
+      multiplier: BASE.KAME_DPS * 1.30,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -814,25 +814,9 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_UNIT,
-    aoe: 50,
+    aoe: 25,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 1.5,
-      attribute: bj_HEROSTAT_INT,
-      attackType: 6,
-      damageType: 0,
-      weaponType: 0,
-    },
-  },
-  // babidi
-  {
-    name: "damage target haretsu explosion",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_UNIT,
-    aoe: 50,
-    damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 1.5,
+      multiplier: BASE.DFIST_EXPLOSION * 1.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -941,9 +925,9 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
-    aoe: 500,
+    aoe: 600,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.65,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -1037,7 +1021,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 325,
     damageData: {
-      multiplier: BASE.KAME_DPS,
+      multiplier: BASE.KAME_DPS * 0.75,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

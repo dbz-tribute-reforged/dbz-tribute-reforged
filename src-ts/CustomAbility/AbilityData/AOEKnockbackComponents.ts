@@ -199,7 +199,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 15, 
       angle: 0, 
-      aoe: 600,
+      aoe: 650,
     },
   },
   // cooler deafening wave

@@ -75,7 +75,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
     this.stats = 30;
     this.isNappaOoz = false;
     this.isVegetaOoz = false;
