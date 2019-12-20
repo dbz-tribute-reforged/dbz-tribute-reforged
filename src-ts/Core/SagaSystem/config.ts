@@ -171,7 +171,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BuuSaga, SagaState.Completed ],
     ],
     KidBuuSaga: [
-      [ BuuSaga, SagaState.Completed ],
+      [ SuperBuuSaga, SagaState.Completed ],
     ],
     JanembaSaga: [
       [ BuuSaga, SagaState.Completed ],

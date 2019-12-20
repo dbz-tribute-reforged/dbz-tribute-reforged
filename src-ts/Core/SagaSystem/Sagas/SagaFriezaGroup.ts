@@ -340,7 +340,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.frieza1 && this.friezaFinal && 
-      SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, true) &&
+      SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.friezaFinal)
     ) {
       DisplayTimedTextToForce(
@@ -350,12 +350,12 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
       SagaHelper.genericTransformAndPing(this.friezaFinal, this.frieza1, this);
     } else if (
       this.friezaFinal && this.friezaGolden &&
-      SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, true) &&
+      SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.friezaGolden)
     ) {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Frieza|r: For the sake of you chimp brains let's keep the names simple as well, we'll call this Golden Frieza."
+        "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
       );
       SagaHelper.genericTransformAndPing(this.friezaGolden, this.friezaFinal, this);
     }

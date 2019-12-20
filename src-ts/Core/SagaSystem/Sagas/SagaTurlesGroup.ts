@@ -35,12 +35,12 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     ) {
       --this.availableFruits;
       SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
-      SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 50), true);
+      SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 40), true);
       SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.05 + 25), true);
       SetUnitState(
         this.turles, 
         UNIT_STATE_LIFE, 
-        GetUnitState(this.turles, UNIT_STATE_LIFE) + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.5
+        GetUnitState(this.turles, UNIT_STATE_LIFE) + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.4
       );
       DestroyEffect(
         AddSpecialEffectTarget(

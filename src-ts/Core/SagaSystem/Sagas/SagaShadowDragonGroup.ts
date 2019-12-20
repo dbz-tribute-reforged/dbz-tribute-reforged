@@ -14,7 +14,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
-      "Overuse of the Dragon Balls has brought immensely powerful Shadow Dragons!"
+      "Overuse of the Dragon Balls has brought forth immensely powerful Shadow Dragons!"
     );
 
     this.addHeroListToSaga(["Haze Shenron", "Rage Shenron", "Oceanus Shenron", "Naturon Shenron", "Nuova Shenron", "Eis Shenron"], true);
@@ -100,7 +100,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.syn && this.omega &&
-      SagaHelper.checkUnitHp(this.syn, 0.5, false, false, true) &&
+      SagaHelper.checkUnitHp(this.syn, 0.8, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.omega)
     ) {
       DisplayTimedTextToForce(

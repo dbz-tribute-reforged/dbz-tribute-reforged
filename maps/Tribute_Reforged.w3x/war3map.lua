@@ -235,7 +235,7 @@ gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
 gg_trg_Kill_Creep_New_New_Stats_Only = nil
-gg_trg_Kill_Hero_Stats_And_Revive = nil
+gg_trg_Kill_Hero_Stats = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
@@ -398,6 +398,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Kill_Hero_Revive = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -3010,7 +3011,7 @@ function InitTrig_Kill_Creep_New_New_Stats_Only()
     TriggerAddAction(gg_trg_Kill_Creep_New_New_Stats_Only, Trig_Kill_Creep_New_New_Stats_Only_Actions)
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Conditions()
+function Trig_Kill_Hero_Stats_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
@@ -3023,27 +3024,27 @@ function Trig_Kill_Hero_Stats_And_Revive_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001001()
+function Trig_Kill_Hero_Stats_Func001Func004002003001001()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001002()
+function Trig_Kill_Hero_Stats_Func001Func004002003001002()
     return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001()
-    return GetBooleanAnd(Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001001(), Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001002())
+function Trig_Kill_Hero_Stats_Func001Func004002003001()
+    return GetBooleanAnd(Trig_Kill_Hero_Stats_Func001Func004002003001001(), Trig_Kill_Hero_Stats_Func001Func004002003001002())
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003002()
+function Trig_Kill_Hero_Stats_Func001Func004002003002()
     return (IsUnitAlly(GetFilterUnit(), udg_TempPlayer) == true)
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003()
-    return GetBooleanAnd(Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003001(), Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003002())
+function Trig_Kill_Hero_Stats_Func001Func004002003()
+    return GetBooleanAnd(Trig_Kill_Hero_Stats_Func001Func004002003001(), Trig_Kill_Hero_Stats_Func001Func004002003002())
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func005A()
+function Trig_Kill_Hero_Stats_Func001Func005A()
     udg_StatMultUnit = GetEnumUnit()
     udg_StatMultReal = I2R(GetHeroLevel(GetDyingUnit()))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
@@ -3054,30 +3055,23 @@ function Trig_Kill_Hero_Stats_And_Revive_Func001Func005A()
         RemoveLocation(udg_TempLoc)
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func010C()
+function Trig_Kill_Hero_Stats_Func001Func010C()
     if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Func001Func011C()
-    if (not (RectContainsUnit(gg_rct_TournamentArena, GetDyingUnit()) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kill_Hero_Stats_And_Revive_Func001C()
+function Trig_Kill_Hero_Stats_Func001C()
     if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_Stats_And_Revive_Actions()
-    if (Trig_Kill_Hero_Stats_And_Revive_Func001C()) then
-        if (Trig_Kill_Hero_Stats_And_Revive_Func001Func010C()) then
+function Trig_Kill_Hero_Stats_Actions()
+    if (Trig_Kill_Hero_Stats_Func001C()) then
+        if (Trig_Kill_Hero_Stats_Func001Func010C()) then
             udg_StatMultUnit = GetKillingUnitBJ()
             udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetTriggerUnit())))
             udg_StatMultReal = (udg_StatMultReal * 0.25)
@@ -3091,29 +3085,59 @@ function Trig_Kill_Hero_Stats_And_Revive_Actions()
                         DestroyForce(udg_TempPlayerGroup)
         else
         end
-        if (Trig_Kill_Hero_Stats_And_Revive_Func001Func011C()) then
-        else
-            TriggerSleepAction(udg_HeroRespawnDelay)
-            udg_HeroRespawnUnit = GetTriggerUnit()
-            TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
-        end
     else
         udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
         udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
         udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
-        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc2, Condition(Trig_Kill_Hero_Stats_And_Revive_Func001Func004002003))
-        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_Stats_And_Revive_Func001Func005A)
+        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc2, Condition(Trig_Kill_Hero_Stats_Func001Func004002003))
+        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_Stats_Func001Func005A)
                 DestroyForce(udg_TempPlayerGroup)
                 DestroyGroup(udg_TempGroup)
                 RemoveLocation(udg_TempLoc2)
     end
 end
 
-function InitTrig_Kill_Hero_Stats_And_Revive()
-    gg_trg_Kill_Hero_Stats_And_Revive = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Stats_And_Revive, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Kill_Hero_Stats_And_Revive, Condition(Trig_Kill_Hero_Stats_And_Revive_Conditions))
-    TriggerAddAction(gg_trg_Kill_Hero_Stats_And_Revive, Trig_Kill_Hero_Stats_And_Revive_Actions)
+function InitTrig_Kill_Hero_Stats()
+    gg_trg_Kill_Hero_Stats = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Stats, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Kill_Hero_Stats, Condition(Trig_Kill_Hero_Stats_Conditions))
+    TriggerAddAction(gg_trg_Kill_Hero_Stats, Trig_Kill_Hero_Stats_Actions)
+end
+
+function Trig_Kill_Hero_Revive_Conditions()
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == false)) then
+        return false
+    end
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Revive_Func005C()
+    if (not (RectContainsUnit(gg_rct_TournamentArena, GetDyingUnit()) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Revive_Actions()
+    if (Trig_Kill_Hero_Revive_Func005C()) then
+    else
+        TriggerSleepAction(udg_HeroRespawnDelay)
+        udg_HeroRespawnUnit = GetTriggerUnit()
+        TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+    end
+end
+
+function InitTrig_Kill_Hero_Revive()
+    gg_trg_Kill_Hero_Revive = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Revive, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Kill_Hero_Revive, Condition(Trig_Kill_Hero_Revive_Conditions))
+    TriggerAddAction(gg_trg_Kill_Hero_Revive, Trig_Kill_Hero_Revive_Actions)
 end
 
 function Trig_Player_Level_up_New_Conditions()
@@ -9639,7 +9663,8 @@ function InitCustomTriggers()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New_New_Stats_Only()
-    InitTrig_Kill_Hero_Stats_And_Revive()
+    InitTrig_Kill_Hero_Stats()
+    InitTrig_Kill_Hero_Revive()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()

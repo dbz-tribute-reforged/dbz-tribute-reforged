@@ -37,7 +37,6 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     super.update(t);
-    super.update(t);
     if (
       this.hirudegarn && this.matureHirudegarn && 
       SagaHelper.checkUnitHp(this.hirudegarn, 0.5, false, false, true) &&
