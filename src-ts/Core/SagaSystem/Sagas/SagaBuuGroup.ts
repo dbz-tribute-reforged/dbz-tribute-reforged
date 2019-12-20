@@ -28,6 +28,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -85,6 +86,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -146,6 +148,7 @@ export class SuperBuuSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -206,6 +209,7 @@ export class KidBuuSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {

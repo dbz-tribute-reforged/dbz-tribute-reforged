@@ -28,6 +28,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -96,6 +97,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.syn && this.omega &&
       SagaHelper.checkUnitHp(this.syn, 0.5, false, false, true) &&

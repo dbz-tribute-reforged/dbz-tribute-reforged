@@ -31,6 +31,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.cooler && !this.isFinalForm && 
       SagaHelper.checkUnitHp(this.cooler, 0.5, true, false, true)
@@ -119,6 +120,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     for (const mc of this.metalCoolers) {
       if (IsUnitAliveBJ(mc)) {
         SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);

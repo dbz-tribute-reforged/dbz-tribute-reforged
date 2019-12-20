@@ -40,6 +40,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     // if zarbon dead, replace with stornger zarbon
     if (
       this.zarbon && this.zarbon2 &&
@@ -114,6 +115,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -181,6 +183,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     // if frieza dead, replace with strong frieza
     for (let i = 1; i < 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
@@ -257,6 +260,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -333,6 +337,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.frieza1 && this.friezaFinal && 
       SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, true) &&

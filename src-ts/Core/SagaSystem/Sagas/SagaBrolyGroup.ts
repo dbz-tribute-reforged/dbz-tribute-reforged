@@ -33,6 +33,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.broly &&
       !this.isLSS && 
@@ -126,6 +127,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.broly &&
       !this.isLSS && 
@@ -211,6 +213,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {

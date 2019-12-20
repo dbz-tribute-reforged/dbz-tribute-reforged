@@ -36,6 +36,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.janemba && this.superJanemba &&
       SagaHelper.checkUnitHp(this.janemba, 0.1, false, true, false) && 

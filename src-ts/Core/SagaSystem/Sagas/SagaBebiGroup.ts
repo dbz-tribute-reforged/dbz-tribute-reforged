@@ -36,6 +36,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.bebi && this.bebiGooz && 
       SagaHelper.checkUnitHp(this.bebi, 0.5, false, false, false) && 

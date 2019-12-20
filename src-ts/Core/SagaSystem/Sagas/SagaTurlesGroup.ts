@@ -28,6 +28,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.turles && this.availableFruits > 0 && 
       SagaHelper.checkUnitHp(this.turles, 0.15, true, false, true)

@@ -25,6 +25,7 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -82,6 +83,7 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {

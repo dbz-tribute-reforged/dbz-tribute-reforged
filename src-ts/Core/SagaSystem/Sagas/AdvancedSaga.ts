@@ -44,6 +44,10 @@ export class AdvancedSaga {
     PlaySoundBJ(this.completeSound);
   }
 
+  update(t: number): void {
+    
+  }
+
   getColoredName(): string {
     return "|cffffcc00" + this.name + "|r";
   }

@@ -25,6 +25,7 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {

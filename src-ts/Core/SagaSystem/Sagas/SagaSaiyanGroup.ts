@@ -27,6 +27,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -100,6 +101,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.vegeta && !this.isVegetaOoz &&
       SagaHelper.checkUnitHp(this.vegeta, 0.4, true, false, true)

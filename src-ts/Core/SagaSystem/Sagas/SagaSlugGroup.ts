@@ -29,6 +29,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.slug && !this.isSlugKyo &&
       SagaHelper.checkUnitHp(this.slug, 0.6, true, false, true)

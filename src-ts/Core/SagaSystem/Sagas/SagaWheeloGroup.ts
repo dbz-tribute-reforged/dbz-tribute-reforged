@@ -29,6 +29,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.kochin && this.wheelo && 
       IsUnitDeadBJ(this.kochin) && 

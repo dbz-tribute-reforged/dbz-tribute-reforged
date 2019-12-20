@@ -90,11 +90,11 @@ export module SagaHelper {
     const isDead = IsUnitType(unit, UNIT_TYPE_DEAD);
     return (
       (
-        currentHp < maxHp * threshold || isDead
+        currentHp < maxHp * threshold
       ) && 
       (
-        (mustBeAlive && !isDead) ||
-        (mustBeDead && isDead)
+        (!mustBeAlive || !isDead) &&
+        (!mustBeDead || isDead)
       ) &&
       (
         !mustNotBeStunned || !UnitHelper.isUnitStunned(unit)

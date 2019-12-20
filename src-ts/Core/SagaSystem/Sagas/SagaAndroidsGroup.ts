@@ -27,6 +27,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.android20 && !this.isRunningAway && 
       SagaHelper.checkUnitHp(this.android20, 0.5, true, false, true)
@@ -95,6 +96,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -166,6 +168,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
     if (
       this.android13 && this.android14 && this.android15 && this.super13 && 
       SagaHelper.isUnitSagaHidden(this.super13) &&
@@ -236,6 +239,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
