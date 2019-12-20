@@ -3,6 +3,7 @@ import { Saga } from "./Sagas/BaseSaga";
 import { AdvancedSaga } from "./Sagas/AdvancedSaga";
 import { sagaUnitsConfig } from "./Sagas/SagaUnitsConfig";
 import { Constants } from "Common/Constants";
+import { UnitHelper } from "Common/UnitHelper";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: Map<string, unit>): boolean {
@@ -65,5 +66,90 @@ export module SagaHelper {
         );
       }
     }
+  }
+
+  export function pingDeathMinimap(dyingUnit: unit) {
+    PingMinimapForForceEx(
+      bj_FORCE_ALL_PLAYERS, 
+      GetUnitX(dyingUnit), 
+      GetUnitY(dyingUnit), 
+      4, bj_MINIMAPPINGSTYLE_ATTACK, 
+      100, 0, 0
+    );
+  }
+
+  export function checkUnitHp(
+    unit: unit, 
+    threshold: number,
+    mustBeAlive: boolean,
+    mustBeDead: boolean,
+    mustNotBeStunned: boolean,
+  ) {
+    const currentHp = GetUnitState(unit, UNIT_STATE_LIFE);
+    const maxHp = GetUnitState(unit, UNIT_STATE_MAX_LIFE);
+    const isDead = IsUnitType(unit, UNIT_TYPE_DEAD);
+    return (
+      (
+        currentHp < maxHp * threshold
+      ) && 
+      (
+        (!mustBeAlive || !isDead) &&
+        (!mustBeDead || isDead)
+      ) &&
+      (
+        !mustNotBeStunned || !UnitHelper.isUnitStunned(unit)
+      )
+    );
+  }
+
+  export function sagaHideUnit(
+    unit: unit | undefined
+  ) {
+    if (unit) {
+      SetUnitInvulnerable(unit, true);
+      PauseUnit(unit, true);
+      ShowUnitHide(unit);
+    }
+  }
+
+  export function sagaShowUnitAtUnit(
+    hiddenUnit: unit,
+    targetUnit: unit,
+  ) {
+    SetUnitX(hiddenUnit, GetUnitX(targetUnit));
+    SetUnitY(hiddenUnit, GetUnitY(targetUnit));
+    sagaShowUnit(hiddenUnit);
+  }
+
+  export function sagaShowUnit(
+    unit: unit | undefined
+  ) {
+    if (unit) {
+      SetUnitInvulnerable(unit, false);
+      PauseUnit(unit, false);
+      ShowUnitShow(unit);
+    }
+  }
+
+  export function genericTransformAndPing(
+    newUnit: unit,
+    oldUnit: unit,
+    sagaToPing: Saga,
+  ) {
+    sagaShowUnitAtUnit(newUnit, oldUnit);
+    if (!IsUnitType(oldUnit, UNIT_TYPE_DEAD)) {
+      KillUnit(oldUnit);
+    }
+    sagaToPing.ping();
+  }
+  
+  export function isUnitSagaHidden(
+    unit: unit
+  ) {
+    return (
+      BlzIsUnitInvulnerable(unit) &&
+      IsUnitPaused(unit) && 
+      IsUnitHidden(unit)
+    )
   }
 }

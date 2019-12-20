@@ -22,6 +22,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {
@@ -61,7 +62,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 15;
     this.stats = 50;
   }
 
@@ -76,6 +77,7 @@ export class GarlicJrSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
+    super.update(t);
   }
 
   canStart(): boolean {

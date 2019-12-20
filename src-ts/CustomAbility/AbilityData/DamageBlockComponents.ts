@@ -479,7 +479,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 1.5,
+    multiplier: 1,
     sfxList: [
       {
         model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",

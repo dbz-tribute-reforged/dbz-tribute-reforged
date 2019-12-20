@@ -30,7 +30,7 @@ export module TournamentData {
   export const budokaiDelay: number = 45;
   export const budokaiCounter: number = 23;
   export const budokaiMatchDelay: number = 10;
-  export const budokaiMatchTimeLimit: number = 2 * 60;
+  export const budokaiMatchTimeLimit: number = 3 * 60;
   export const budokaiMatchTimeLimitName: string = "Remaining Time";
   export const budokaiMaxContestantsPerMatch: number = 2;
   export const budokaiTpSfx: string = "BlackBlink.mdl";

@@ -7,10 +7,12 @@ import { Logger } from 'Libs/TreeLib/Logger';
 import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
+import { ExperienceManager } from 'Core/ExperienceSystem/ExpierenceManager';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
 let tournamentManager: TournamentManager;
+let experienceManager: ExperienceManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -42,6 +44,8 @@ function tsMain() {
 
   TimerStart(CreateTimer(), 15, false, () => {
     tournamentManager = TournamentManager.getInstance();
+
+    experienceManager = ExperienceManager.getInstance();
   });
 }
 

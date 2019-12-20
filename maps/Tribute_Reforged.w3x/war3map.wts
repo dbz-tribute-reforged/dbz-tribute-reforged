@@ -1,5 +1,5 @@
 ﻿STRING 0
-// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
+// Units: U00L (Space Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (actual)
 }
@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-Tribute Reforged 0.20b
+DBZ Tribute Reforged 0.21d
 }
 
 STRING 4
@@ -6120,7 +6120,7 @@ STRING 982
 }
 
 STRING 983
-// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -17577,6 +17577,12 @@ STRING 2857
 // Units: H08P (Spoiled Brat), Name (Name)
 {
 Spoiled Brat
+}
+
+STRING 2858
+// Units: H000 (Saiyan Defender of the earth), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 2859
@@ -33768,39 +33774,39 @@ STRING 5551
 }
 
 STRING 5552
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5553
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5554
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5555
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5556
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5557
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5558
@@ -33834,13 +33840,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5563
-// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
 
 STRING 5564
-// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -33888,33 +33894,33 @@ D
 }
 
 STRING 5572
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5573
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5574
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5575
-// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
 {
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5576
-// Abilities: A0C1 (Supernova), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00W|r] Supernova
+Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
 STRING 5577
@@ -33954,45 +33960,45 @@ A ball of negative energy about the size of a spirit bomb that deals area damage
 }
 
 STRING 5583
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5584
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5585
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5586
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5587
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5588
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5589
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5590
@@ -34020,21 +34026,21 @@ W
 }
 
 STRING 5594
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5595
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5596
-// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Supernova
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 5597
@@ -39955,7 +39961,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6576
-// Units: H000 (Saiyan Defender of the earth), EditorSuffix (Name - Editor Suffix)
+// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -41121,7 +41127,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6767
-// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -46809,7 +46815,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -53655,15 +53661,15 @@ W
 }
 
 STRING 8847
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb
+Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 8848
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
 {
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8849
@@ -53679,105 +53685,61 @@ W
 }
 
 STRING 8851
-// Abilities: A0JP (Spirit Bomb), Researchtip (Tooltip - Learn)
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cffFFFF00W|r] Learn Spirit Bomb
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8852
-// Abilities: A0JP (Spirit Bomb), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
 {
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 30s|r
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8853
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00W|r] Spirit Bomb
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8854
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Units: U01A (Space Pirate), EditorSuffix (Name - Editor Suffix)
 {
-[|cffFFFF00W|r] Spirit Bomb
+(super 17 saga)
 }
 
 STRING 8855
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
-[|cffFFFF00W|r] Spirit Bomb
+(actual)
 }
 
 STRING 8856
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
-[|cffFFFF00W|r] Spirit Bomb
+Heaven/Hell
 }
 
 STRING 8857
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
-[|cffFFFF00W|r] Spirit Bomb
+Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
+
+Note: if you want to complain about no snakeway or tickets (non-canon btw), you should probably focus on why you're spending so much time dead instead of playing the game. Hrm?
 }
 
 STRING 8858
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8859
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8860
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8861
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8862
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
+Available game modes:
+-default (good v evil)
+-ap (all pick)
+-ar (all random)
+-sd (single draft)
+-cm (captain's mode)
 }
 
 STRING 8863
 // Abilities: A0JP (Spirit Bomb), EditorSuffix (Editor Suffix)
 {
 2.5.0j
-}
-
-STRING 8864
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Spirit Bomb
-}
-
-STRING 8865
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
-}
-
-STRING 8866
-// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Spirit Bomb
-}
-
-STRING 8867
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*3+100|r|n|cff00FFFFCooldown: 24s|r
 }
 
 STRING 8868
@@ -59578,7 +59540,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
+// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59590,7 +59552,7 @@ Evil
 }
 
 STRING 9832
-// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
+// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59602,7 +59564,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59614,7 +59576,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
+// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59644,73 +59606,73 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 9841
-// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: O005 (Fat Buu), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H03Y (Human Fighter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9852
+// Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -62944,12 +62906,6 @@ STRING 10389
 [|cff00ff00F|r] Vanishing Ball - [|cffffcc00Level 10|r]
 }
 
-STRING 10390
-// Abilities: A0C0 (Vanishing Ball), Researchubertip (Tooltip - Learn - Extended)
-{
-The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
 STRING 10391
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Tip (Tooltip - Normal)
 {
@@ -64598,7 +64554,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 17.12.19
+This map is under active development - 21.12.19
 }
 
 STRING 10653
@@ -64691,6 +64647,24 @@ STRING 10664
 This unit has recently been turned into candy and is immune to further candy beams. Movement speed is reduced while immune.
 }
 
+STRING 10665
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10666
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10667
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 10668
 // Abilities: A0LU (Maiden Blast), Tip (Tooltip - Normal)
 {
@@ -64775,52 +64749,34 @@ STRING 10681
 [|cff00ff00W|r] Maiden Blast - [|cffffcc00Level 10|r]
 }
 
+STRING 10682
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10683
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10684
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10685
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 10686
 // Abilities: A0LU (Maiden Blast), EditorSuffix (Editor Suffix)
 {
 (pan)
-}
-
-STRING 10687
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10688
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10689
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10690
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10691
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10692
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10693
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
 }
 
 STRING 10694
@@ -64907,70 +64863,16 @@ STRING 10707
 [|cff00ff00E|r] Reliable Friend - [|cffffcc00Level 10|r]
 }
 
-STRING 10708
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10709
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10710
-// Abilities: A0LV (Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 10711
-// Abilities: A0LV (Reliable Friend), Researchubertip (Tooltip - Learn - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
 STRING 10712
 // Abilities: A0LV (Reliable Friend), EditorSuffix (Editor Suffix)
 {
 (pan)
 }
 
-STRING 10713
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10714
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10715
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
 STRING 10716
 // Abilities: A0LW (Summon Giru), Name (Name)
 {
 Summon Giru
-}
-
-STRING 10717
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
-}
-
-STRING 10718
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 10719
@@ -65037,6 +64939,12 @@ STRING 10728
 E
 }
 
+STRING 10729
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 10730
 // Abilities: A0LW (Summon Giru), Tip (Tooltip - Normal)
 {
@@ -65055,10 +64963,28 @@ STRING 10732
 [|cff00FF00R|r] Learn Summon Giru - [|cffffcc00Level %d|r]
 }
 
+STRING 10733
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
 STRING 10734
 // Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 10735
+// Abilities: A0C0 (Vanishing Ball), Ubertip (Tooltip - Normal - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
+}
+
+STRING 10736
+// Abilities: A0C0 (Vanishing Ball), Researchubertip (Tooltip - Learn - Extended)
+{
+The powerful energy attack Kid Buu uses to blow up the Earth dealing massive damage. |n|cff00ff00(Damage: (Int * lvl * ?) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 10737
@@ -65499,63 +65425,213 @@ STRING 10809
 Pan puts on her honey bee costume increasing ability damage over the next 10 seconds. Increases ability damage by +0.1% per second up to a max of +10%.
 }
 
-STRING 10810
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 10820
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 2|r]
 }
 
-STRING 10811
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 10821
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 3|r]
 }
 
-STRING 10812
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 10822
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 4|r]
 }
 
-STRING 10813
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 10823
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 5|r]
 }
 
-STRING 10814
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+STRING 10824
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 6|r]
 }
 
-STRING 10815
-// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+STRING 10825
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 20s|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 1|r]
 }
 
-STRING 10816
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+STRING 10826
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 7|r]
 }
 
-STRING 10817
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+STRING 10827
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 9|r]
 }
 
-STRING 10818
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+STRING 10828
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 8|r]
 }
 
-STRING 10819
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+STRING 10829
+// Abilities: A0C1 (Supernova), Tip (Tooltip - Normal)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+[|cff00ff00W|r] Supernova - [|cffffcc00Level 10|r]
+}
+
+STRING 10830
+// Abilities: A0C1 (Supernova), Ubertip (Tooltip - Normal - Extended)
+{
+A ball of negative energy about the size of a spirit bomb that deals area damage. |n|cff00ff00(Damage: (Int * lvl * 3)|r|n|cff00ffff(Cooldown: 17 seconds)|r
+}
+
+STRING 10831
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 10832
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10833
+// Abilities: A0JP (Spirit Bomb), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn Spirit Bomb - [|cffffcc00Level %d|r]
+}
+
+STRING 10834
+// Abilities: A0JP (Spirit Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10835
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 10836
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 3|r]
+}
+
+STRING 10837
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 10838
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 5|r]
+}
+
+STRING 10839
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 10840
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10841
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10842
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10843
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10844
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10845
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
+}
+
+STRING 10846
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10847
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
+}
+
+STRING 10848
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10849
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10850
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10851
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
+}
+
+STRING 10852
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 9|r]
+}
+
+STRING 10853
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 10|r]
+}
+
+STRING 10854
+// Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
 }
 

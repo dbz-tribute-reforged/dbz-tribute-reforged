@@ -23,6 +23,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage kame dps" },
@@ -53,6 +54,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage god kame dps" },
@@ -83,6 +85,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage spirit bomb dps" },
@@ -113,10 +116,11 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
-      { name: "damage kame dps" },
-      { name: "damage kame explosion" },
+      { name: "damage galick gun dps" },
+      { name: "damage galick gun explosion" },
       { name: "knockback kame" },
       { name: "sfx beam galick gun" },
     ],
@@ -143,6 +147,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage final flash dps" },
@@ -172,6 +177,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage spirit bomb dps" },
@@ -202,6 +208,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage energy blast volley dps" },
@@ -231,6 +238,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage masenko dps" },
@@ -261,6 +269,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage twin dragon shot dps" },
@@ -290,6 +299,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage kame dps" },
@@ -320,6 +330,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage god kame dps" },
@@ -350,6 +361,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage special beam cannon dps" },
@@ -379,6 +391,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage hellzone grenade dps" },
@@ -409,6 +422,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage beam tyrant lancer dps" },
@@ -438,6 +452,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage beam saiyan spirit dps" },
@@ -467,6 +482,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage beam riot javelin dps" },
@@ -497,6 +513,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage beam maiden blast dps" },
@@ -527,6 +544,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage beam reliable friend dps" },
@@ -557,6 +575,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage energy beam dps" },
@@ -585,6 +604,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage ss deadly bomber dps" },
@@ -613,6 +633,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage innocence breath dps" },
@@ -628,7 +649,7 @@ export const BeamComponents = [
     endTick: -1,
     beamHpMult: BASE.KAME_DPS * 2.5,
     beamHpAttribute: bj_HEROSTAT_INT,
-    speed: 25,
+    speed: 30,
     aoe: 300,
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
@@ -642,6 +663,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage spirit bomb dps" },
@@ -672,6 +694,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage mankind destruction attack dps" },
@@ -701,6 +724,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage planet crusher dps" },
@@ -731,6 +755,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage gigantic roar dps" },
@@ -760,6 +785,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage gigantic omegastorm dps" },
@@ -790,6 +816,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage death beam frieza dps" },
@@ -818,6 +845,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage spirit bomb dps" },
@@ -848,6 +876,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "knockback 1tick 25speed 0angle 500aoe" },
@@ -862,7 +891,7 @@ export const BeamComponents = [
     endTick: -1,
     beamHpMult: BASE.KAME_DPS * 4,
     beamHpAttribute: bj_HEROSTAT_INT,
-    speed: 25,
+    speed: 27,
     aoe: 300,
     clashingDelayTicks: 2,
     maxDelayTicks: 10,
@@ -876,6 +905,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: true,
     useLastCastPoint: true,
+    explodeAtCastPoint: true,
     beamUnitType: "hpea",
     components: [
       { name: "damage supernova golden dps" },
@@ -906,6 +936,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage kame dps" },
@@ -936,6 +967,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "damage kame dps" },
@@ -965,6 +997,7 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
+    explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
       { name: "beam big bang kamehameha kame" },

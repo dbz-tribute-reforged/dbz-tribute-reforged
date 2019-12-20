@@ -1,5 +1,5 @@
 # DBZ Tribute Reforged
-[![Build Status](https://travis-ci.com/ttay24/dbz-tribute-reforged.svg?branch=develop)](https://travis-ci.com/ttay24/dbz-tribute-reforged)
+[![Build Status](https://travis-ci.com/dbz-tribute-reforged/dbz-tribute-reforged.svg?branch=develop)](https://travis-ci.com/dbz-tribute-reforged/dbz-tribute-reforged)
 
  A TypeScript repository for the Warcraft III map DBZ Tribute Reforged.
 

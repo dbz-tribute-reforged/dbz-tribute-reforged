@@ -5,7 +5,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 19,
     costType: "MP",
-    costAmount: 75,
+    costAmount: 25,
     duration: 25,
     updateRate: 0.03,
     castTime: 0.03,
@@ -21,7 +21,7 @@ export const AbilitiesList = [
       title: "(Z) Zanzo Dash",
       body: 
         "Dashes towards your next right click." + 
-        "|nCost: 75 MP |nCD: 19",
+        "|nCost: 25 MP |nCD: 19",
     },
     components: [
       { name: "dash ground point 40dist" },
@@ -61,7 +61,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 40,
     costType: "MP",
-    costAmount: 200,
+    costAmount: 100,
     duration: 330,
     updateRate: 0.03,
     castTime: 0.25,
@@ -76,7 +76,7 @@ export const AbilitiesList = [
       title: "(C) Max Power",
       body: 
         "Boosts your ability damage by 10% for 10seconds." + 
-        "|nCost:200 MP|nCD: 40"
+        "|nCost:100 MP|nCD: 40"
     },
     components: [
       { name: "spell amp max power" },
@@ -143,7 +143,7 @@ export const AbilitiesList = [
     maxCd: 5,
     costType: "MP",
     costAmount: 0,
-    duration: 99,
+    duration: 160,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: false,

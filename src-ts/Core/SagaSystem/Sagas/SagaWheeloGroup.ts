@@ -10,7 +10,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.sagaDelay = 15;
     this.stats = 25;
   }
 
@@ -21,32 +21,22 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
     
     this.kochin = this.bosses.get("Dr. Kochin");
     this.wheelo = this.bosses.get("Wheelo");
-    if (this.kochin && this.wheelo) {
-      SetUnitInvulnerable(this.wheelo, true);
-      PauseUnit(this.wheelo, true);
-      ShowUnitHide(this.wheelo);
-    }
+
+    SagaHelper.sagaHideUnit(this.wheelo);
 
     this.ping()
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
-    if (this.kochin && this.wheelo) {
-      if (
-        IsUnitDeadBJ(this.kochin) && 
-        IsUnitAliveBJ(this.wheelo) &&
-        BlzIsUnitInvulnerable(this.wheelo) &&
-        IsUnitHidden(this.wheelo)
-      ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");
-
-        SetUnitInvulnerable(this.wheelo, false);
-        PauseUnit(this.wheelo, false);
-        ShowUnitShow(this.wheelo);
-
-        this.ping()
-      }
+    super.update(t);
+    if (
+      this.kochin && this.wheelo && 
+      IsUnitDeadBJ(this.kochin) && 
+      SagaHelper.isUnitSagaHidden(this.wheelo)
+    ) {
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");
+      SagaHelper.genericTransformAndPing(this.wheelo, this.kochin, this);
     }
   }
 
