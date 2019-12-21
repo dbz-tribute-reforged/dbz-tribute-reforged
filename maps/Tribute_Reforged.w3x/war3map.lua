@@ -603,42 +603,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -2443,144 +2453,6 @@ function InitTrig_SolarFlare()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SolarFlare, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_SolarFlare, Condition(Trig_SolarFlare_Conditions))
     TriggerAddAction(gg_trg_SolarFlare, Trig_SolarFlare_Actions)
-end
-
-function Trig_Cam_Dist_Func001Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 9)) > 3000)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Dist_Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 9)) < 1400)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Dist_Actions()
-    if (Trig_Cam_Dist_Func001C()) then
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, 70.00, 1.00)
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-        udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 1400.00
-    else
-        if (Trig_Cam_Dist_Func001Func001C()) then
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 1.00)
-            udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 4000.00
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-        else
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, (((S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9)) - 1400.00) / 45.00) + 70.00), 1.00)
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-            udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
-        end
-    end
-end
-
-function InitTrig_Cam_Dist()
-    gg_trg_Cam_Dist = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(0), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(1), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(2), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(3), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(4), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(5), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(6), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(7), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(8), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(9), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(10), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(11), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(12), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(13), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(14), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(15), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(16), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(17), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(18), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(19), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(20), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(21), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(22), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(23), "-cam", false)
-    TriggerAddAction(gg_trg_Cam_Dist, Trig_Cam_Dist_Actions)
-end
-
-function Trig_Cam_Angle_Func001Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 7)) > 89)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Angle_Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 7)) < 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Angle_Actions()
-    if (Trig_Cam_Angle_Func001C()) then
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, 0.00, 1.00)
-        udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 0.00
-    else
-        if (Trig_Cam_Angle_Func001Func001C()) then
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, 270.00, 1.00)
-            udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 90.00
-        else
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, (360.00 - S2R(SubStringBJ(GetEventPlayerChatString(), 6, 7))), 1.00)
-            udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 7))
-        end
-    end
-end
-
-function InitTrig_Cam_Angle()
-    gg_trg_Cam_Angle = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(0), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(1), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(2), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(3), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(4), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(5), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(6), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(7), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(8), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(9), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(10), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(11), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(12), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(13), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(14), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(15), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(16), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(17), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(18), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(19), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(20), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(21), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(22), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(23), "-ang", false)
-    TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
-end
-
-function Trig_Auto_Zoom_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10149")
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 2.00)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 2.00)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.00, 2.00)
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Auto_Zoom()
-    gg_trg_Auto_Zoom = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Auto_Zoom, 3.00)
-    TriggerAddAction(gg_trg_Auto_Zoom, Trig_Auto_Zoom_Actions)
 end
 
 function Trig_Freemode_Actions()
@@ -9710,9 +9582,6 @@ function InitCustomTriggers()
     InitTrig_Cell_Sense_Droids()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
-    InitTrig_Cam_Dist()
-    InitTrig_Cam_Angle()
-    InitTrig_Auto_Zoom()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Map_Setup()
