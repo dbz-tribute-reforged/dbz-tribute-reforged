@@ -19,6 +19,7 @@ export module Constants {
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 45;
+  export const sagaAggroInterval: number = 1000;
   export const sagaMaxAcquisitionRange: number = 99999;
   export const senzuBean: number = FourCC("I000");
   export const reviveDelay: number = 5;
