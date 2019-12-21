@@ -63,7 +63,7 @@ export const MultiComponents = [
     delayBetweenComponents: 1,
     firingMode: MultiComponent.LINEAR_FIRING,
     multiplyComponents: 1,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     components: [
       { name: "beam finish buster" },
     ],

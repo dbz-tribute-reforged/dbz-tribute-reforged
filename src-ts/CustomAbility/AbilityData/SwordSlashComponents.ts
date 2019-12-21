@@ -51,16 +51,17 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 40,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.4,
+      multiplier: BASE.KAME_EXPLOSION * 0.2,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6, 
       damageType: 0, 
       weaponType: 0, 
     },
-    maxDistance: 450,
-    minDistance: 75,
+    maxDistance: 400,
+    // -1 means triggers all the time
+    minDistance: -1,
     aoe: 225,
-    delayBetweenDamageTicks: 3,
+    delayBetweenDamageTicks: 4,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
