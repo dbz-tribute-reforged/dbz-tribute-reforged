@@ -341,6 +341,37 @@ export const BeamComponents = [
   },
   // -------------------------------------------
   { 
+    name: "beam shining sword attack",
+    repeatInterval: 1,
+    startTick: 40,
+    endTick: -1,
+    beamHpMult: BASE.KAME_DPS * 0.9,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 30,
+    aoe: 300,
+    clashingDelayTicks: 2,
+    maxDelayTicks: 7,
+    durationIncPerDelay: 6,
+    heightVariation: {
+      start: 50,
+      finish: 50,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: false,
+    useLastCastPoint: false,
+    explodeAtCastPoint: false,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage kame dps" },
+      { name: "damage kame explosion" },
+      { name: "knockback kame" },
+      { name: "sfx beam finish buster" },
+    ],
+  },
+  // -------------------------------------------
+  { 
     name: "beam special beam cannon",
     repeatInterval: 1,
     startTick: 0,
@@ -404,7 +435,7 @@ export const BeamComponents = [
   { 
     name: "beam tyrant lancer",
     repeatInterval: 1,
-    startTick: 0,
+    startTick: 25,
     endTick: -1,
     beamHpMult: BASE.KAME_DPS,
     beamHpAttribute: bj_HEROSTAT_INT,
@@ -421,7 +452,7 @@ export const BeamComponents = [
     isTracking: false,
     isFixedAngle: false,
     canClashWithHero: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
@@ -434,7 +465,7 @@ export const BeamComponents = [
   { 
     name: "beam saiyan spirit",
     repeatInterval: 1,
-    startTick: 0,
+    startTick: 27,
     endTick: -1,
     beamHpMult: BASE.KAME_DPS * 2,
     beamHpAttribute: bj_HEROSTAT_INT,
@@ -451,7 +482,7 @@ export const BeamComponents = [
     isTracking: false,
     isFixedAngle: false,
     canClashWithHero: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [

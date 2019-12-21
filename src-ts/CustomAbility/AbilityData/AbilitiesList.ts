@@ -620,8 +620,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "slash shining sword attack" },
-      { name: "multi shining sword attack" },
-      // { name: "multi shining sword attack" },
+      { name: "beam shining sword attack" },
     ],
   },
   // -------------------------------------------
@@ -841,7 +840,7 @@ export const AbilitiesList = [
       { name: "dash ground point tyrant lancer" },
       { name: "damage tyrant lancer dps" },
       { name: "knockback 1tick 5speed 0angle 250aoe" },
-      { name: "multi tyrant lancer" },
+      { name: "beam tyrant lancer" },
       { name: "sfx tyrant lancer" },
     ],
   },
@@ -873,7 +872,7 @@ export const AbilitiesList = [
       { name: "damage saiyan spirit dps" },
       { name: "knockback 1tick 5speed 0angle 250aoe" },
       { name: "stun saiyan spirit" },
-      { name: "multi saiyan spirit" },
+      { name: "beam saiyan spirit" },
       { name: "sfx saiyan spirit" },
     ],
   },
