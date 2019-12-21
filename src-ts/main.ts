@@ -52,7 +52,6 @@ function tsMain() {
 // Configure libraries
 //setIsDestructableTreeConfig({ HARVESTER_UNIT_ID: FourCC("opeo") });
 
-
 // Handle initialization 
 function libLoaderLog(libName: string, success: boolean, message: string) {
   print(`Initializing "${libName}": ${success ? 'Success' : 'Failure'}, "${message}"`);
