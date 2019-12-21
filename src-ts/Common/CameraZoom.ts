@@ -2,12 +2,13 @@ import { Logger } from "Libs/TreeLib/Logger";
 
 export module CameraZoom {
 
-    const ZOOM_DEFAULT = 4000.0;
+    const ZOOM_DEFAULT = 3000.0;
     const ANGLE_DEFAULT = 290.0;
-    const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //??will use if dist/farz dont work on reforged
+    const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
+    const PERIOD = 0.03125;
 
     const ZOOM_MIN = 1650.0;
-    const ZOOM_MAX = 5000.0;
+    const ZOOM_MAX = 4000.0;
 
     const ANGLE_MIN = 90.0;
     const ANGLE_MAX = 360.0;
@@ -21,43 +22,32 @@ export module CameraZoom {
 
         }
 
-        /**
-         * performZoom
-         */
         public performZoom() {
             if (GetLocalPlayer() == this.p) {
                 SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
                 SetCameraField(CAMERA_FIELD_FARZ, 1.5 * this.zoom, 0.0);
                 SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
+                SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
+                SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);
             }
         }
     }
 
-    let arr: PlayerCam[];
+    let arr: PlayerCam[] = [];
 
     export function onInit() {
-        //DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "CamZoomInit");
+
         let zoomTrig = CreateTrigger();
         let angleTrig = CreateTrigger();
         for (let i = 0; i < bj_MAX_PLAYERS; i++) {
-            TriggerRegisterPlayerChatEvent(zoomTrig, Player(i), "-cam ", false);
-            TriggerRegisterPlayerChatEvent(angleTrig, Player(i), "-ang ", false);
-            arr.push(new PlayerCam(Player(i), 4000.0, 290.0));
+            if (GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) {
+                arr.push(new PlayerCam(Player(i), ZOOM_DEFAULT, ANGLE_DEFAULT));
+                TriggerRegisterPlayerChatEvent(zoomTrig, Player(i), "-cam ", false);
+                TriggerRegisterPlayerChatEvent(angleTrig, Player(i), "-ang ", false);
+            }
         }
-        TimerStart(CreateTimer(), 0.5, true, () => {
-            BJDebugMsg("a");
-            arr.forEach(element => {
-                if(GetLocalPlayer() == element.p) {
-                    if(GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
-                        element.performZoom();
-                    }
-                }
-            });
-        });
 
         TriggerAddCondition(zoomTrig, Condition(() => {
-            BJDebugMsg("a");
-            print("B");
             let cam = arr[GetPlayerId(GetTriggerPlayer())];
             let newZoom = S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
 
@@ -82,8 +72,19 @@ export module CameraZoom {
 
             return false;
         }));
-        
-        
 
+        TimerStart(CreateTimer(), PERIOD, true, () => {
+            arr.forEach(element => {
+                if (GetLocalPlayer() == element.p) {
+                    // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
+                    // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
+                    // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
+                    // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
+                    if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
+                        element.performZoom();
+                    }
+                }
+            });
+        });
     }
 }

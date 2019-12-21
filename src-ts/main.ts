@@ -47,9 +47,6 @@ function tsMain() {
 
     experienceManager = ExperienceManager.getInstance();
   });
-
-  CameraZoom.onInit();
-
 }
 
 // Configure libraries
@@ -62,6 +59,7 @@ function libLoaderLog(libName: string, success: boolean, message: string) {
 }
 
 LibraryLoader.logFunction = libLoaderLog;
-//ceres.addHook("main::before", () => HostDetectSystem.onInit());
+ceres.addHook("main::before", () => HostDetectSystem.onInit());
 ceres.addHook("main::after", () => LibraryLoader.runInitializers());
 ceres.addHook("main::after", () => tsMain());
+ceres.addHook("main::after", () => CameraZoom.onInit());
