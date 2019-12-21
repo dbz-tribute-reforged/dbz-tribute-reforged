@@ -67,6 +67,8 @@ export class CreepManager {
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
       }
       for (let j = 0; j < Constants.maxPlayers; ++j) {
+        if (i == j) continue;
+
         let allianceState = bj_ALLIANCE_ALLIED_VISION;
         if (j < Constants.maxActivePlayers) {
           allianceState = bj_ALLIANCE_UNALLIED;
@@ -80,6 +82,14 @@ export class CreepManager {
         SetPlayerAllianceStateBJ(Player(j), player, allianceState);
       }
     }
+
+    for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
+      if (i == Constants.heavenHellCreepPlayerId) continue;
+      let player = Player(i);
+      SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
+      SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
+    }
+
     
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
