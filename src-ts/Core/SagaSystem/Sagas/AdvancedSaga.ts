@@ -24,7 +24,7 @@ export class AdvancedSaga {
   public spawnSound: sound;
   public completeSound: sound;
 
-  public customAggroClosest: boolean;
+  public useCustomAggroClosest: boolean;
   public aggroCounter: number;
 
   constructor() {
@@ -37,7 +37,7 @@ export class AdvancedSaga {
     this.stats = 0;
     this.spawnSound = gg_snd_QuestNew;
     this.completeSound = gg_snd_QuestCompleted;
-    this.customAggroClosest = true;
+    this.useCustomAggroClosest = true;
     this.aggroCounter = 0;
   }
 
@@ -54,7 +54,7 @@ export class AdvancedSaga {
   }
 
   update(t: number): void {
-    if (this.customAggroClosest) {
+    if (this.useCustomAggroClosest) {
       ++this.aggroCounter;
       if (this.aggroCounter > Constants.sagaAggroInterval) {
         this.aggroCounter = 0;
@@ -131,12 +131,12 @@ export class AdvancedSaga {
         const enemyGroup = CreateGroup();
         const bossPlayer = GetOwningPlayer(boss);
         const acquireRange = GetUnitAcquireRange(boss);
-        let closestPoint = new Vector2D(GetUnitX(boss), GetUnitY(boss));
+        const bossPos = new Vector2D(GetUnitX(boss), GetUnitY(boss));
 
         GroupEnumUnitsInRange(
           enemyGroup,
-          closestPoint.x,
-          closestPoint.y,
+          bossPos.x,
+          bossPos.y,
           acquireRange,
           Condition(() => {
             const testUnit = GetFilterUnit();
@@ -162,15 +162,13 @@ export class AdvancedSaga {
         ForGroup(enemyGroup, () => {
           const enemyUnit = GetEnumUnit();
           const enemyPos = new Vector2D(GetUnitX(enemyUnit), GetUnitY(enemyUnit));
-          const enemyDistance = CoordMath.distance(enemyPos, closestPoint);
+          const enemyDistance = CoordMath.distance(enemyPos, bossPos);
           if (enemyDistance < closestDistance) {
             closestUnit = enemyUnit;
             closestDistance = enemyDistance;
-            closestPoint.x = enemyPos.x;
-            closestPoint.y = enemyPos.y;
           }
         });
-
+        
         if (IsUnitEnemy(closestUnit, bossPlayer)) {
           for (const [orderBossName, orderBoss] of this.bosses) {
             IssueTargetOrder(orderBoss, "attack", closestUnit);
