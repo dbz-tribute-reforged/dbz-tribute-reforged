@@ -18,9 +18,9 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 10, 
+      speed: 9, 
       angle: 180, 
-      aoe: 300,
+      aoe: 350,
     },
   },
   // to here, and replace with unique name
@@ -42,7 +42,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 7, 
+      speed: 6, 
       angle: 180, 
       aoe: 250,
     },
