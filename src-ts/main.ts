@@ -8,6 +8,7 @@ import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 import { ExperienceManager } from 'Core/ExperienceSystem/ExpierenceManager';
+import { CameraZoom } from 'Common/CameraZoom';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
@@ -21,7 +22,6 @@ function tsMain() {
   // setup logger
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
-  HostDetectSystem.onInit();
   TimerStart(CreateTimer(), 5.0, false, () => {
     DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());
@@ -47,6 +47,9 @@ function tsMain() {
 
     experienceManager = ExperienceManager.getInstance();
   });
+
+  CameraZoom.onInit();
+
 }
 
 // Configure libraries
@@ -59,5 +62,6 @@ function libLoaderLog(libName: string, success: boolean, message: string) {
 }
 
 LibraryLoader.logFunction = libLoaderLog;
+//ceres.addHook("main::before", () => HostDetectSystem.onInit());
 ceres.addHook("main::after", () => LibraryLoader.runInitializers());
 ceres.addHook("main::after", () => tsMain());
