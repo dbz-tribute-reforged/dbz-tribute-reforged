@@ -381,6 +381,7 @@ gg_trg_Metal_Cooler_Stat_Mult_On_Death = nil
 gg_trg_Transformations_Cooler_Base = nil
 gg_trg_Transformations_Cooler_Final_Form = nil
 gg_trg_Transformations_Metal_Cooler = nil
+gg_trg_Transformations_Farmer_with_Shotgun = nil
 gg_trg_Transformations_Apply_SFX = nil
 gg_trg_Replace_Transformation_Group_with_New_Hero = nil
 gg_trg_Check_Walkability = nil
@@ -1418,6 +1419,7 @@ function CreateNeutralPassiveBuildings()
     u = BlzCreateUnitWithSkin(p, FourCC("n01N"), -6016.0, -6208.0, 270.000, FourCC("n01N"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n00R"), 14144.0, 7040.0, 270.000, FourCC("n00R"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03N"), 20928.0, 5184.0, 270.000, FourCC("n03N"))
 end
 
 function CreateNeutralPassive()
@@ -1429,8 +1431,8 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H000"), -479.1, 22700.1, 279.087, FourCC("H000"))
     SetUnitState(u, UNIT_STATE_MANA, 560)
     u = BlzCreateUnitWithSkin(p, FourCC("H05C"), 354.9, 22361.7, 271.245, FourCC("H05C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H05D"), 290.0, 22305.4, 279.656, FourCC("H05D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H06M"), 309.7, 22708.5, 270.500, FourCC("H06M"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H05D"), 290.0, 22305.4, 249.276, FourCC("H05D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H06M"), 283.3, 22789.1, 270.500, FourCC("H06M"))
     u = BlzCreateUnitWithSkin(p, FourCC("H04D"), 439.2, 22724.0, 274.500, FourCC("H04D"))
     u = BlzCreateUnitWithSkin(p, FourCC("E01T"), 609.7, 22761.2, 271.773, FourCC("E01T"))
     SetUnitColor(u, ConvertPlayerColor(1))
@@ -1439,7 +1441,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H086"), -167.3, 22747.1, 246.892, FourCC("H086"))
     u = BlzCreateUnitWithSkin(p, FourCC("H03G"), -433.0, 22758.9, 304.939, FourCC("H03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("H04P"), 740.7, 22747.0, 268.114, FourCC("H04P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 825.7, 22724.3, 265.090, FourCC("E00K"))
+    u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 845.1, 22781.8, 265.090, FourCC("E00K"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("H000"), -610.6, 22906.0, 95.869, FourCC("H000"))
     SetHeroLevel(u, 10, false)
@@ -1507,11 +1509,11 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("h077"), -6608.9, 22128.9, 0.000, FourCC("h077"))
     SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08P"), 449.0, 22601.7, 261.250, FourCC("H08P"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08P"), 454.8, 22604.1, 261.250, FourCC("H08P"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H08Q"), 651.4, 22587.8, 234.510, FourCC("H08Q"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08R"), 534.5, 22603.4, 261.380, FourCC("H08R"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08R"), 499.9, 22597.0, 261.380, FourCC("H08R"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H042"), -121.8, 22383.7, 256.690, FourCC("H042"))
     SetUnitState(u, UNIT_STATE_MANA, 510)
@@ -1520,7 +1522,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("E01D"), 841.6, 22342.2, 273.260, FourCC("E01D"))
     SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H03Y"), 973.5, 22727.6, 356.330, FourCC("H03Y"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H03Y"), 979.3, 22735.2, 356.330, FourCC("H03Y"))
     u = BlzCreateUnitWithSkin(p, FourCC("E00H"), 959.9, 22313.0, 266.635, FourCC("E00H"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("E001"), -454.4, 22589.9, 277.375, FourCC("E001"))
@@ -1575,7 +1577,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H08M"), 290.6, 22588.6, 271.939, FourCC("H08M"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08N"), 370.3, 22595.7, 261.560, FourCC("H08N"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08N"), 368.4, 22586.4, 261.560, FourCC("H08N"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("h07V"), -6117.3, 14747.6, 320.330, FourCC("h07V"))
     u = BlzCreateUnitWithSkin(p, FourCC("H004"), -565.8, 21568.2, 297.550, FourCC("H004"))
@@ -1736,6 +1738,8 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 180)
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 18072.4, -6398.2, 330.002, FourCC("H08S"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -2445,144 +2449,6 @@ function InitTrig_SolarFlare()
     TriggerAddAction(gg_trg_SolarFlare, Trig_SolarFlare_Actions)
 end
 
-function Trig_Cam_Dist_Func001Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 9)) > 3000)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Dist_Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 9)) < 1400)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Dist_Actions()
-    if (Trig_Cam_Dist_Func001C()) then
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, 70.00, 1.00)
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-        udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 1400.00
-    else
-        if (Trig_Cam_Dist_Func001Func001C()) then
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 1.00)
-            udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 4000.00
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-        else
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_FIELD_OF_VIEW, (((S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9)) - 1400.00) / 45.00) + 70.00), 1.00)
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 1.00)
-            udg_mycamdist_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
-        end
-    end
-end
-
-function InitTrig_Cam_Dist()
-    gg_trg_Cam_Dist = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(0), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(1), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(2), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(3), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(4), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(5), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(6), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(7), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(8), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(9), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(10), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(11), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(12), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(13), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(14), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(15), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(16), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(17), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(18), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(19), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(20), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(21), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(22), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Dist, Player(23), "-cam", false)
-    TriggerAddAction(gg_trg_Cam_Dist, Trig_Cam_Dist_Actions)
-end
-
-function Trig_Cam_Angle_Func001Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 7)) > 89)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Angle_Func001C()
-    if (not (S2I(SubStringBJ(GetEventPlayerChatString(), 6, 7)) < 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Cam_Angle_Actions()
-    if (Trig_Cam_Angle_Func001C()) then
-        SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, 0.00, 1.00)
-        udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 0.00
-    else
-        if (Trig_Cam_Angle_Func001Func001C()) then
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, 270.00, 1.00)
-            udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = 90.00
-        else
-            SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_ANGLE_OF_ATTACK, (360.00 - S2R(SubStringBJ(GetEventPlayerChatString(), 6, 7))), 1.00)
-            udg_mycamang_Copy[GetConvertedPlayerId(GetTriggerPlayer())] = S2R(SubStringBJ(GetEventPlayerChatString(), 6, 7))
-        end
-    end
-end
-
-function InitTrig_Cam_Angle()
-    gg_trg_Cam_Angle = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(0), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(1), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(2), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(3), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(4), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(5), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(6), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(7), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(8), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(9), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(10), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(11), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(12), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(13), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(14), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(15), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(16), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(17), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(18), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(19), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(20), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(21), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(22), "-ang", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Cam_Angle, Player(23), "-ang", false)
-    TriggerAddAction(gg_trg_Cam_Angle, Trig_Cam_Angle_Actions)
-end
-
-function Trig_Auto_Zoom_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10149")
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_FIELD_OF_VIEW, (((4000.00 - 1400.00) / 45.00) + 70.00), 2.00)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_TARGET_DISTANCE, 2000.00, 2.00)
-        SetCameraFieldForPlayer(udg_TempPlayer, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.00, 2.00)
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Auto_Zoom()
-    gg_trg_Auto_Zoom = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Auto_Zoom, 3.00)
-    TriggerAddAction(gg_trg_Auto_Zoom, Trig_Auto_Zoom_Actions)
-end
-
 function Trig_Freemode_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
     udg_TeamAboutToLose[0] = false
@@ -2746,6 +2612,7 @@ function Trig_Disable_Heads_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0M1"), udg_TempPlayer)
 end
 
 function InitTrig_Disable_Heads_for_TempPlayer()
@@ -5457,6 +5324,55 @@ function InitTrig_Transformations_Init_Commands()
     TriggerAddAction(gg_trg_Transformations_Init_Commands, Trig_Transformations_Init_Commands_Actions)
 end
 
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00G"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00E"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("N00Q"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01A"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H043"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H042"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
         return false
@@ -5517,62 +5433,13 @@ function Trig_Transformations_Entry_Point_Func003Func002C()
 end
 
 function Trig_Transformations_Entry_Point_Func003Func003C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H042"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func004C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H043"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func005C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01A"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func006C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("N00Q"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func007C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00E"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func008C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func009C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00G"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Entry_Point_Func003Func010C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func011Func001C()
+function Trig_Transformations_Entry_Point_Func003Func004Func001C()
     if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01S")) then
         return true
     end
@@ -5582,64 +5449,71 @@ function Trig_Transformations_Entry_Point_Func003Func011Func001C()
     return false
 end
 
-function Trig_Transformations_Entry_Point_Func003Func011C()
-    if (not Trig_Transformations_Entry_Point_Func003Func011Func001C()) then
+function Trig_Transformations_Entry_Point_Func003Func004C()
+    if (not Trig_Transformations_Entry_Point_Func003Func004Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func012C()
+function Trig_Transformations_Entry_Point_Func003Func005C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01U"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func013C()
+function Trig_Transformations_Entry_Point_Func003Func006C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O001"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func014C()
+function Trig_Transformations_Entry_Point_Func003Func007C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O005"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func015C()
+function Trig_Transformations_Entry_Point_Func003Func008C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O006"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func016C()
+function Trig_Transformations_Entry_Point_Func003Func009C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O00C"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func017C()
+function Trig_Transformations_Entry_Point_Func003Func010C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H00R"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func018C()
+function Trig_Transformations_Entry_Point_Func003Func011C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08M"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func019C()
+function Trig_Transformations_Entry_Point_Func003Func012C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08P"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Entry_Point_Func003Func013C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08S"))) then
         return false
     end
     return true
@@ -5668,6 +5542,34 @@ function Trig_Transformations_Entry_Point_Func003A()
                             if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()) then
                                 TriggerExecute(gg_trg_Transformations_Broly)
                             else
+                                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001C()) then
+                                    TriggerExecute(gg_trg_Transformations_Cooler_Base)
+                                else
+                                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                        TriggerExecute(gg_trg_Transformations_Cooler_Final_Form)
+                                    else
+                                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                            TriggerExecute(gg_trg_Transformations_Metal_Cooler)
+                                        else
+                                            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                TriggerExecute(gg_trg_Transformations_Cell_Larval)
+                                            else
+                                                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                    TriggerExecute(gg_trg_Transformations_Cell_First)
+                                                else
+                                                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                        TriggerExecute(gg_trg_Transformations_Cell_Second)
+                                                    else
+                                                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                            TriggerExecute(gg_trg_Transformations_Cell_Perfect)
+                                                        else
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
                             end
                         end
                     end
@@ -5676,72 +5578,48 @@ function Trig_Transformations_Entry_Point_Func003A()
         end
     end
     if (Trig_Transformations_Entry_Point_Func003Func003C()) then
-        TriggerExecute(gg_trg_Transformations_Cooler_Base)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func004C()) then
-        TriggerExecute(gg_trg_Transformations_Cooler_Final_Form)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func005C()) then
-        TriggerExecute(gg_trg_Transformations_Metal_Cooler)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func006C()) then
-        TriggerExecute(gg_trg_Transformations_Cell_Larval)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func007C()) then
-        TriggerExecute(gg_trg_Transformations_Cell_First)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func008C()) then
-        TriggerExecute(gg_trg_Transformations_Cell_Second)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func009C()) then
-        TriggerExecute(gg_trg_Transformations_Cell_Perfect)
-    else
-    end
-    if (Trig_Transformations_Entry_Point_Func003Func010C()) then
         TriggerExecute(gg_trg_Transformations_Androids_13_14_15)
         TriggerExecute(gg_trg_Transformations_Androids_13)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func011C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func004C()) then
         TriggerExecute(gg_trg_Transformations_Androids_13_14_15)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func012C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func005C()) then
         TriggerExecute(gg_trg_Transformations_Androids_Super_13)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func013C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func006C()) then
         TriggerExecute(gg_trg_Transformations_Babidi)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func014C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func007C()) then
         TriggerExecute(gg_trg_Transformations_Fat_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func015C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func008C()) then
         TriggerExecute(gg_trg_Transformations_Super_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func016C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func009C()) then
         TriggerExecute(gg_trg_Transformations_Kid_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func017C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func010C()) then
         TriggerExecute(gg_trg_Transformations_Piccolo)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func018C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func011C()) then
         TriggerExecute(gg_trg_Transformations_Bardock)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func019C()) then
+    if (Trig_Transformations_Entry_Point_Func003Func012C()) then
         TriggerExecute(gg_trg_Transformations_Pan)
+    else
+    end
+    if (Trig_Transformations_Entry_Point_Func003Func013C()) then
+        TriggerExecute(gg_trg_Transformations_Farmer_with_Shotgun)
     else
     end
 end
@@ -9454,6 +9332,190 @@ function InitTrig_Transformations_Metal_Cooler()
     TriggerAddAction(gg_trg_Transformations_Metal_Cooler, Trig_Transformations_Metal_Cooler_Actions)
 end
 
+function Trig_Transformations_Farmer_with_Shotgun_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func011C()
+    if (not (udg_TransformationString == "kao")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func012C()
+    if (not (udg_TransformationString == "ss")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func013C()
+    if (not (udg_TransformationString == "ss2")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func014C()
+    if (not (udg_TransformationString == "ss3")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func015C()
+    if (not (udg_TransformationString == "ssg")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func016C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func017C()
+    if (not (udg_TransformationString == "ssbkao")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func019Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Func019C()
+    if (not Trig_Transformations_Farmer_with_Shotgun_Func019Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Farmer_with_Shotgun_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Farmer_with_Shotgun_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_10390")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func010C()) then
+        udg_StatMultReal = 1.00
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func011C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func012C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("A0AB")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func013C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("A0AA")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func014C()) then
+        udg_StatMultReal = 2.25
+        udg_TransformationAbility = FourCC("A0AC")
+        udg_TransformationSFXString = "AuraSS.mdx"
+        udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func015C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("A0DQ")
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func016C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("A0DP")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func017C()) then
+        udg_StatMultReal = 2.70
+        udg_TransformationAbility = FourCC("A0DP")
+        udg_TransformationSFXString = "AuraBlue.mdx"
+        udg_TransformationSFXString2 = "AuraKaox10.mdx"
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Farmer_with_Shotgun_Func019C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0A9"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AB"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AA"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0AC"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DP"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0DQ"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Farmer_with_Shotgun()
+    gg_trg_Transformations_Farmer_with_Shotgun = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Farmer_with_Shotgun, Trig_Transformations_Farmer_with_Shotgun_Actions)
+end
+
 function Trig_Transformations_Apply_SFX_Func002C()
     if (not (udg_TransformationSFXString ~= "")) then
         return false
@@ -9710,9 +9772,6 @@ function InitCustomTriggers()
     InitTrig_Cell_Sense_Droids()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
-    InitTrig_Cam_Dist()
-    InitTrig_Cam_Angle()
-    InitTrig_Auto_Zoom()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Map_Setup()
@@ -9839,6 +9898,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Cooler_Base()
     InitTrig_Transformations_Cooler_Final_Form()
     InitTrig_Transformations_Metal_Cooler()
+    InitTrig_Transformations_Farmer_with_Shotgun()
     InitTrig_Transformations_Apply_SFX()
     InitTrig_Replace_Transformation_Group_with_New_Hero()
     InitTrig_Check_Walkability()
