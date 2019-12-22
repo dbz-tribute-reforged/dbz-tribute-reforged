@@ -75,7 +75,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // metal cooler
     [FourCC("H01A"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Geti Star Repair", "Supernova Golden"]],
 
-
+    // farmer with shotgun
     [FourCC("H08S"), ["Death Beam Frieza", "Final Flash", "Twin Dragon Shot", "Gigantic Roar", "Energy Blast Volley"]],
 
   ]
