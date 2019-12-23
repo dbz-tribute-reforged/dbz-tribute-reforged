@@ -3,23 +3,43 @@ import { DragonBallsConstants } from "./DragonBallsConstants";
 import { Vector2D } from "Common/Vector2D";
 import { PathingCheck } from "Common/PathingCheck";
 import { ItemStackingManager } from "Core/ItemStackingSystem/ItemStackingManager";
+import { Constants } from "Common/Constants";
+import { Colorizer } from "Common/Colorizer";
 
 export class DragonBallsManager {
   static instance: DragonBallsManager;
 
+  protected dragonBallsItems: item[];
   protected dragonBallsActivationTrigger: trigger;
+  protected wishTrigger: trigger;
   protected shenron: unit;
+  protected dummyShenron: unit;
+  protected summonedAtDayTime: boolean;
+  protected shenronFogModifiers: fogmodifier[];
+  protected radarTrigger: trigger;
 
   constructor (
   ) {
+    this.dragonBallsItems = [];
     this.dragonBallsActivationTrigger = CreateTrigger();
+    this.wishTrigger = CreateTrigger();
     this.shenron = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE),
       DragonBallsConstants.shenronUnit,
-      0,
-      22000,
+      DragonBallsConstants.shenronWaitingRoom.x,
+      DragonBallsConstants.shenronWaitingRoom.y,
       270
     );
+    this.dummyShenron = CreateUnit(
+      Player(PLAYER_NEUTRAL_PASSIVE),
+      DragonBallsConstants.shenronUnit,
+      DragonBallsConstants.shenronWaitingRoom.x,
+      DragonBallsConstants.shenronWaitingRoom.y,
+      270
+    );
+    this.summonedAtDayTime = false;
+    this.shenronFogModifiers = [];
+    this.radarTrigger = CreateTrigger();
     this.initialize();
   }
 
@@ -32,7 +52,23 @@ export class DragonBallsManager {
   }
 
   initialize(): this {
+    this.setupShenron();
+    this.setupWishes();
+    this.setupDragonBallsActivation();
 
+    this.distributeDragonBalls();
+    ItemStackingManager.getInstance().addStackableItemType(
+      DragonBallsConstants.dragonBallItem,
+    );
+    this.setupRadar();
+    
+    SetUnitInvulnerable(this.shenron, true);
+    UnitAddAbility(this.dummyShenron, Constants.locustAbility);
+
+    return this;
+  }
+
+  setupDragonBallsActivation() {
     TriggerRegisterAnyUnitEventBJ(
       this.dragonBallsActivationTrigger, 
       EVENT_PLAYER_UNIT_USE_ITEM
@@ -44,9 +80,14 @@ export class DragonBallsManager {
         const item = GetManipulatedItem();
         const itemId = GetItemTypeId(item);
         if (itemId == DragonBallsConstants.dragonBallItem) {
+          const player = GetTriggerPlayer();
           SetItemCharges(item, GetItemCharges(item) + 1);
           if (GetItemCharges(item) >= DragonBallsConstants.numDragonBalls) {
-            BJDebugMsg("You have collected all 7 dragon balls");
+            DisplayTimedTextToForce(
+              bj_FORCE_ALL_PLAYERS,
+              15,
+              Colorizer.getColoredPlayerName(player) + " has collected all 7 Dragon Balls."
+            );
             RemoveItem(item);
 
             const unit = GetTriggerUnit();
@@ -54,27 +95,192 @@ export class DragonBallsManager {
             const unitY = GetUnitY(unit);
             this.summonShenron(unitX, unitY);
           } else {
-            BJDebugMsg("You need to collect all 7 dragon balls before making a wish");
+            // need to collect all 7
+          }
+        }
+        return false;
+      })
+    );
+  }
+  
+  radarPingDragonball(db: item, player: player, x: number, y: number): number {
+    let numPing = GetItemCharges(db);
+    const repeatPingForce = CreateForce();
+    ForceAddPlayer(repeatPingForce, player);
+    TimerStart(CreateTimer(), 0.2, true, () => {
+      if (numPing == 0) {
+        DestroyForce(repeatPingForce);
+        DestroyTimer(GetExpiredTimer());
+      } else {
+        --numPing;
+        PingMinimapForForceEx(
+          repeatPingForce,
+          x, y,
+          3,
+          bj_MINIMAPPINGSTYLE_SIMPLE,
+          35, 100, 35
+        );
+      }
+    });
+    return numPing;
+  }
+
+  setupRadar(): this {
+    TriggerRegisterAnyUnitEventBJ(
+      this.radarTrigger,
+      EVENT_PLAYER_UNIT_USE_ITEM
+    );
+
+    TriggerAddCondition(
+      this.radarTrigger,
+      Condition(() => {
+        const item = GetManipulatedItem();
+        if (GetItemTypeId(item) == DragonBallsConstants.radarItem) {
+          const player = GetTriggerPlayer();
+
+          // const pingForce = CreateForce();
+          // ForceAddPlayer(pingForce, player);
+          // for (const db of this.dragonBallsItems) {
+          //   if (db) {
+          //     this.radarPingDragonball(pingForce, GetItemX(db), GetItemY(db));
+          //   }
+          // }
+          // DestroyForce(pingForce);
+          let numDragonBalls = 0;
+
+          EnumItemsInRect(
+            GetPlayableMapRect(),
+            null,
+            () => {
+              if (GetItemTypeId(GetEnumItem()) == DragonBallsConstants.dragonBallItem) {
+                const testItem = GetEnumItem();
+                numDragonBalls += this.radarPingDragonball(
+                  testItem, 
+                  player,
+                  GetItemX(testItem),
+                  GetItemY(testItem)
+                )
+              }
+            }
+          );
+          
+          // get all heroes
+          // check if they hold dball?
+          const carryingDb = CreateGroup();
+          GroupEnumUnitsInRect(
+            carryingDb,
+            GetPlayableMapRect(),
+            Condition(() => {
+              if (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)) {
+                const index = GetInventoryIndexOfItemTypeBJ(GetFilterUnit(), DragonBallsConstants.dragonBallItem)
+                if (index > 0) {
+                  const testUnit = GetFilterUnit();
+                  numDragonBalls += this.radarPingDragonball(
+                    UnitItemInSlotBJ(testUnit, index), 
+                    player, 
+                    GetUnitX(testUnit),
+                    GetUnitY(testUnit)
+                  );
+                }
+              }
+              return false;
+            })
+          );
+          DestroyGroup(carryingDb);
+
+          if (numDragonBalls == 0) {
+            const printForce = CreateForce();
+            ForceAddPlayer(printForce, player);
+            DisplayTimedTextToForce(
+              printForce,
+              15,
+              "The Dragon Balls have not been restored yet."
+            );
+            DestroyForce(printForce);
           }
         }
         return false;
       })
     );
 
-    this.distributeDragonBalls();
-    ItemStackingManager.getInstance().addStackableItemType(
-      DragonBallsConstants.dragonBallItem,
+
+
+    return this;
+  }
+
+  setupShenron(): this {
+    UnitRemoveAbility(this.shenron, FourCC("Amov"));
+    UnitRemoveAbility(this.shenron, FourCC("Aatk"));
+    SetUnitInvulnerable(this.shenron, true);
+    return this;
+  }
+
+  setupWishes(): this {
+    TriggerRegisterUnitEvent(
+      this.wishTrigger,
+      this.shenron,
+      EVENT_UNIT_SELL_ITEM
     );
-    
+
+    TriggerAddCondition(
+      this.wishTrigger,
+      Condition(() => {
+        const wishItem = GetSoldItem();
+        const wishingUnit = GetBuyingUnit();
+
+        if (GetItemTypeId(wishItem) == DragonBallsConstants.wishImmortalityItem) {
+          const addedReincarnation = UnitAddAbility(
+            wishingUnit, 
+            DragonBallsConstants.wishImmortalityAbility
+          )
+          
+          if (addedReincarnation) {
+            UnitMakeAbilityPermanent(wishingUnit, true, DragonBallsConstants.wishImmortalityAbility);
+
+            // remove reinc when detected
+            const reincTimer = CreateTimer();
+            TimerStart(reincTimer, 0.5, true, () => {
+              if (IsUnitType(wishingUnit, UNIT_TYPE_DEAD)) {
+                const removeReincTimer = CreateTimer();
+                TimerStart(removeReincTimer, DragonBallsConstants.immortalDelay, false, () => {
+                  UnitRemoveAbility(wishingUnit, DragonBallsConstants.wishImmortalityAbility);
+                  UnitMakeAbilityPermanent(wishingUnit, false, DragonBallsConstants.wishImmortalityAbility);
+                  DestroyTimer(removeReincTimer);
+                });
+                DestroyTimer(reincTimer);
+              }
+            })
+          }
+        }
+        // power wish done by gui
+        
+        this.grantWish();
+        TimerStart(CreateTimer(), 7, false, () => {
+          this.unsummonShenron(this.summonedAtDayTime);
+          DestroyTimer(GetExpiredTimer());
+        });
+
+        return false;
+      })
+    );
 
     return this;
   }
   
   distributeDragonBalls(): this {
+    for (const db of this.dragonBallsItems) {
+      if (db) {
+        RemoveItem(db);
+      }
+    }
+    this.dragonBallsItems.splice(0, this.dragonBallsItems.length);
+
+    // const startingAngle = Math.random() * 360;
+    const index = Math.floor(Math.random() * (DragonBallsConstants.dbSpawns.length - 1));
+    let nextIndex = index;
     for (let i = 0; i < DragonBallsConstants.numDragonBalls; ++i) {
-      const x = Math.random() * 1000;
-      const y = Math.random() * 1000;
-      const dbPos = new Vector2D(x, y);
+      nextIndex = (nextIndex + 1 + Math.floor(Math.random() * 2)) % DragonBallsConstants.dbSpawns.length;
+      const dbPos = DragonBallsConstants.dbSpawns[nextIndex];
 
       let numChecks = 0;
       while (
@@ -82,50 +288,92 @@ export class DragonBallsManager {
         numChecks < 100
       ) {
         if (Math.random() < 0.5) {
-          dbPos.x += 128;
+          dbPos.x += 128 - 256 * Math.random();
         } else {
-          dbPos.y += 128;
+          dbPos.y += 128 - 256 * Math.random();
         }
         ++numChecks;
+      }
+      if (numChecks >= 100) {
+        dbPos.x = 0;
+        dbPos.y = 0;
       }
 
       const db = CreateItem(DragonBallsConstants.dragonBallItem, dbPos.x, dbPos.y);
       SetItemInvulnerable(db, true);
+      this.dragonBallsItems.push(db);
     }
+    
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS,
+      15,
+      "The Dragon Balls have been restored."
+    );
+
     return this;
   }
 
   summonShenron(x: number, y: number): this {
-    SetUnitX(this.shenron, x);
-    SetUnitY(this.shenron, y);
+    PlaySoundBJ(gg_snd_ShenronSummon);
+
+    this.summonedAtDayTime = GetTimeOfDay() < 18;
+    if (this.summonedAtDayTime) {
+      SetTimeOfDay(24);
+    }
+    const sfxTimer = CreateTimer();
+    TimerStart(sfxTimer, 1, true, () => {
+      this.playShenronSFX();
+    })
+
+    SetUnitX(this.dummyShenron, x);
+    SetUnitY(this.dummyShenron, y);
+    SetUnitAnimation(
+      this.dummyShenron,
+      "birth"
+    );
     SetUnitAnimation(
       this.shenron,
       "birth"
     );
+
+    PingMinimapForForceEx(
+      bj_FORCE_ALL_PLAYERS,
+      x, y,
+      4, 
+      bj_MINIMAPPINGSTYLE_FLASHY,
+      10, 100, 10,
+    )
     
-    const summonAtDayTime = GetTimeOfDay() < 18;
-    if (summonAtDayTime) {
-      SetTimeOfDay(24);
-    }
-    this.playShenronSFX();
-    
-    TimerStart(CreateTimer(), 5, false, () => {
-      BJDebugMsg("You have summoned the eternal dragon, Shenron. What is your wish?");
+    TimerStart(CreateTimer(), 9, false, () => {
+      SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
+      SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
+      
+      SetUnitX(this.shenron, x);
+      SetUnitY(this.shenron, y);
+
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS,
+        15,
+        "|cff00ffccShenron|r: Speak your wish and I shall grant it."
+      );
       // enable wish stuff
+
+      for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+        const shenronVision = CreateFogModifierRadius(
+          Player(i),
+          FOG_OF_WAR_VISIBLE, 
+          x, y,
+          DragonBallsConstants.shenronVisionRadius,
+          true, false
+        );
+        FogModifierStart(shenronVision);
+        this.shenronFogModifiers.push(shenronVision);
+      }
+
       DestroyTimer(GetExpiredTimer());
+      DestroyTimer(sfxTimer);
     })
 
-    // replace these with funcs to accept input etc
-    // enable wish trig
-    TimerStart(CreateTimer(), 15, false, () => {
-      this.grantWish();
-      DestroyTimer(GetExpiredTimer());
-    });
-
-    TimerStart(CreateTimer(), 18, false, () => {
-      this.unsummonShenron(summonAtDayTime);
-      DestroyTimer(GetExpiredTimer());
-    });
     return this;
   }
 
@@ -153,23 +401,55 @@ export class DragonBallsManager {
         "origin", 
       )
     );
+
+    DestroyEffect(
+      AddSpecialEffectTarget(
+        "DivineRing.mdl",
+        shenron, 
+        "origin", 
+      )
+    );
     return this;
   }
 
   grantWish(): this {
     this.playShenronSFX();
     SetUnitAnimation(this.shenron, "death");
-    BJDebugMsg("So be it. Your wish has been granted.");
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS,
+      15,
+      "|cff00ffccShenron|r: So be it. Your wish has been granted."
+    );
     return this;
   }
 
   unsummonShenron(resetToDay: boolean): this {
-    SetUnitX(this.shenron, 0);
-    SetUnitY(this.shenron, 22000);
+    SetUnitX(this.shenron, DragonBallsConstants.shenronWaitingRoom.x);
+    SetUnitY(this.shenron, DragonBallsConstants.shenronWaitingRoom.y);
     if (resetToDay) {
       SetTimeOfDay(12);
     }
-    this.distributeDragonBalls();
+
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      const shenronVision = this.shenronFogModifiers.pop();
+      if (shenronVision) {
+        FogModifierStop(shenronVision);
+        DestroyFogModifier(shenronVision);
+      } else {
+        break;
+      }
+    }
+
+    const restoreDragonBallTimer = CreateTimer();
+    TimerStart(
+      restoreDragonBallTimer, 
+      DragonBallsConstants.restoreDragonBallsTime,
+      false, () => {
+        this.distributeDragonBalls();
+        DestroyTimer(restoreDragonBallTimer);
+      }
+    );
+
     return this;
   }
 }

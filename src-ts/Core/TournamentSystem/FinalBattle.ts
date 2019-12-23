@@ -145,6 +145,12 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
   }
 
   setupWinTriggerActions() {
+    TriggerAddCondition(
+      this.winTrigger,
+      Condition(() => {
+        return !UnitHelper.isImmortal(GetTriggerUnit())
+      })
+    )
     TriggerAddAction(this.winTrigger, () => {
       const dyingUnit = GetTriggerUnit();
       const player = GetOwningPlayer(dyingUnit);

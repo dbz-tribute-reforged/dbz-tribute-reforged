@@ -57,7 +57,7 @@ export class ItemStackingManager {
       const pickupItemId = GetItemTypeId(pickupItem);
       const heldItemIndex = GetInventoryIndexOfItemTypeBJ(pickupUnit, pickupItemId);
       const heldItem = UnitItemInSlotBJ(pickupUnit, heldItemIndex);
-      BJDebugMsg("held index: " + heldItemIndex + " pickup item: " + GetItemName(pickupItem) + " charges: " + GetItemCharges(heldItem));
+      // BJDebugMsg("held index: " + heldItemIndex + " pickup item: " + GetItemName(pickupItem) + " charges: " + GetItemCharges(heldItem));
       if (
         // manipulating item type is already carried
         heldItemIndex > 0 &&
