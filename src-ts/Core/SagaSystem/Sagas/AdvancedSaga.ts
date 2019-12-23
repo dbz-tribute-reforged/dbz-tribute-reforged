@@ -144,6 +144,7 @@ export class AdvancedSaga {
             const y = GetUnitY(testUnit);
             return (
               IsUnitEnemy(testUnit, bossPlayer) &&
+              IsUnitType(testUnit, UNIT_TYPE_HERO) && 
               !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
               !BlzIsUnitInvulnerable(testUnit) && 
               !IsUnitHidden(testUnit) && 

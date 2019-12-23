@@ -9,11 +9,15 @@ import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 import { ExperienceManager } from 'Core/ExperienceSystem/ExpierenceManager';
 import { CameraZoom } from 'Common/CameraZoom';
+import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
+import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
+let itemStackingManager: ItemStackingManager;
 let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
+let dragonBallsManager: DragonBallsManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -36,6 +40,8 @@ function tsMain() {
     creepManager = CreepManager.getInstance();
   
     sagaManager = SagaManager.getInstance();
+
+    itemStackingManager = ItemStackingManager.getInstance();
     
     CustomUiTest();
     CustomPlayerTest();
@@ -46,6 +52,15 @@ function tsMain() {
     tournamentManager = TournamentManager.getInstance();
 
     experienceManager = ExperienceManager.getInstance();
+
+    DestroyTimer(GetExpiredTimer());
+  });
+
+  TimerStart(CreateTimer(), 30, false, () => {
+    dragonBallsManager = DragonBallsManager.getInstance();
+
+
+    DestroyTimer(GetExpiredTimer());
   });
 }
 

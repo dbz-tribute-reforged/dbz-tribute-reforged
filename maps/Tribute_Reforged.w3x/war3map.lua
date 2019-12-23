@@ -691,6 +691,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_ClanInvitation, 127)
 end
 
+function CreateAllItems()
+    local itemID
+    BlzCreateItemWithSkin(FourCC("I01V"), -69.6, 22028.5, FourCC("I01V"))
+end
+
 function CreateBuildingsForPlayer0()
     local p = Player(0)
     local u
@@ -1750,6 +1755,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
     u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 18072.4, -6398.2, 330.002, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("z001"), 181.3, 22027.7, 279.480, FourCC("z001"))
 end
 
 function CreatePlayerBuildings()
@@ -10205,6 +10211,7 @@ function main()
     InitSounds()
     CreateRegions()
     CreateCameras()
+    CreateAllItems()
     CreateAllUnits()
     InitBlizzard()
     InitGlobals()
