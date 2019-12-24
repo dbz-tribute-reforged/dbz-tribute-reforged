@@ -321,6 +321,7 @@ export class DragonBallsManager {
     this.summonedAtDayTime = GetTimeOfDay() < 18;
     if (this.summonedAtDayTime) {
       SetTimeOfDay(24);
+      SuspendTimeOfDay(true);
     }
 
     SetUnitX(this.dummyShenron, x);
@@ -429,6 +430,7 @@ export class DragonBallsManager {
     SetUnitY(this.shenron, DragonBallsConstants.shenronWaitingRoom.y);
     if (resetToDay) {
       SetTimeOfDay(12);
+      SuspendTimeOfDay(true);
     }
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
