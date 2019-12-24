@@ -361,6 +361,7 @@ export class DragonBallsManager {
         "|cffffcc00Shenron|r: Speak your wish and I shall grant it."
       );
       // enable wish stuff
+      EnableTrigger(this.wishTrigger);
 
       for (let i = 0; i < Constants.maxActivePlayers; ++i) {
         const shenronVision = CreateFogModifierRadius(
@@ -415,19 +416,27 @@ export class DragonBallsManager {
   }
 
   grantWish(): this {
-    this.playShenronSFX(this.shenron);
-    SetUnitAnimation(this.shenron, "death");
+    SetUnitX(this.dummyShenron, GetUnitX(this.shenron));
+    SetUnitY(this.dummyShenron, GetUnitY(this.shenron));
+
+    SetUnitX(this.shenron, DragonBallsConstants.shenronWaitingRoom.x);
+    SetUnitY(this.shenron, DragonBallsConstants.shenronWaitingRoom.y);
+
+    this.playShenronSFX(this.dummyShenron);
+    SetUnitAnimation(this.dummyShenron, "death");
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS,
       15,
       "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
+    DisableTrigger(this.wishTrigger);
+
     return this;
   }
 
   unsummonShenron(resetToDay: boolean): this {
-    SetUnitX(this.shenron, DragonBallsConstants.shenronWaitingRoom.x);
-    SetUnitY(this.shenron, DragonBallsConstants.shenronWaitingRoom.y);
+    SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
+    SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
     if (resetToDay) {
       SetTimeOfDay(12);
       SuspendTimeOfDay(true);

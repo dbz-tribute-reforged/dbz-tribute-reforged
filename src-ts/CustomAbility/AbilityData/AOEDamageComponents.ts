@@ -753,7 +753,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.5 * 16,
+      multiplier: BASE.KAME_DPS * 0.4 * 16,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -769,7 +769,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
     aoe: 900,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.66,
+      multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -784,7 +784,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
     aoe: 900,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION,
+      multiplier: BASE.KAME_EXPLOSION * 1.2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

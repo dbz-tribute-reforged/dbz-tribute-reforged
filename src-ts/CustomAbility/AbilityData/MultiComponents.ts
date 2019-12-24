@@ -70,23 +70,6 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
-    name: "multi ss deadly hammer", 
-    repeatInterval: 1, 
-    startTick: 25,
-    endTick: -1,
-    angleDifference: 1,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    useLastCastPoint: false,
-    components: [
-      { name: "beam ss deadly bomber" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: "multi innocence breath", 
     repeatInterval: 1, 
     startTick: 0,

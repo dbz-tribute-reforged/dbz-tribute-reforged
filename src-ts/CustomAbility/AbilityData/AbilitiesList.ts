@@ -1149,7 +1149,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground point ss deadly hammer" },
       { name: "damage ss deadly hammer dps" },
-      { name: "multi ss deadly hammer" },
+      { name: "beam ss deadly hammer" },
       { name: "knockback ss deadly hammer" },
       { name: "sfx ss deadly hammer" },
     ],
