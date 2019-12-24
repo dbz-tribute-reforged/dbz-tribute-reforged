@@ -190,6 +190,7 @@ gg_snd_QuestCompleted = nil
 gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
+gg_snd_ShenronSummon = nil
 gg_trg_Untitled_Trigger_002 = nil
 gg_trg_Pan_R_Cast = nil
 gg_trg_Pan_W_cast = nil
@@ -243,6 +244,7 @@ gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
 gg_trg_Force_Win_Loss = nil
 gg_trg_Shenron_Wish_for_Power = nil
+gg_trg_Shenron_Wish_Granted_Sound = nil
 gg_trg_Final_Battle_Detector = nil
 gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
@@ -403,8 +405,9 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_snd_ShenronSummon = nil
-gg_trg_Shenron_Wish_Granted_Sound = nil
+gg_trg_SantaHat_On = nil
+gg_trg_SantaHat_Init = nil
+gg_trg_SantaHat_Off = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1440,7 +1443,6 @@ function CreateNeutralPassiveBuildings()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n00R"), 14144.0, 7040.0, 270.000, FourCC("n00R"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03N"), 20928.0, 5184.0, 270.000, FourCC("n03N"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03O"), -20.3, 22048.6, 270.000, FourCC("n03O"))
 end
 
 function CreateNeutralPassive()
@@ -1761,6 +1763,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
     u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 18072.4, -6398.2, 330.002, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("z001"), 89.3, 22035.7, 273.200, FourCC("z001"))
 end
 
 function CreatePlayerBuildings()
@@ -2518,6 +2521,75 @@ function InitTrig_Lights_toggle()
     gg_trg_Lights_toggle = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, Player(0), "-lights", true)
     TriggerAddAction(gg_trg_Lights_toggle, Trig_Lights_toggle_Actions)
+end
+
+function Trig_SantaHat_On_Func001Func003C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_SantaHat_On_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_SantaHat_On_Func001Func003C()) then
+        DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+    else
+    end
+    AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
+    SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
+end
+
+function Trig_SantaHat_On_Actions()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_SantaHat_On_Func001A)
+end
+
+function InitTrig_SantaHat_On()
+    gg_trg_SantaHat_On = CreateTrigger()
+    TriggerAddAction(gg_trg_SantaHat_On, Trig_SantaHat_On_Actions)
+end
+
+function Trig_SantaHat_Off_Func001Func003C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_SantaHat_Off_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_SantaHat_Off_Func001Func003C()) then
+        DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+    else
+    end
+end
+
+function Trig_SantaHat_Off_Actions()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_SantaHat_Off_Func001A)
+end
+
+function InitTrig_SantaHat_Off()
+    gg_trg_SantaHat_Off = CreateTrigger()
+    TriggerAddAction(gg_trg_SantaHat_Off, Trig_SantaHat_Off_Actions)
+end
+
+function Trig_SantaHat_Init_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerRegisterPlayerChatEvent(gg_trg_SantaHat_On, udg_TempPlayer, "-haton", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_SantaHat_Off, udg_TempPlayer, "-hatoff", true)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_SantaHat_Init()
+    gg_trg_SantaHat_Init = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_SantaHat_Init, 4.00)
+    TriggerAddAction(gg_trg_SantaHat_Init, Trig_SantaHat_Init_Actions)
 end
 
 function Trig_Map_Setup_Actions()
@@ -5152,7 +5224,7 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func010C()
+function Trig_Add_Unit_To_StatMult_Func001Func012C()
     if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
@@ -5176,8 +5248,10 @@ function Trig_Add_Unit_To_StatMult_Actions()
         SaveRealBJ(1.00, 4, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(1.00, 5, udg_ID, udg_StatMultHashtable)
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
+        AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
+        SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
         udg_TempUnit = udg_StatMultUnit
-        if (Trig_Add_Unit_To_StatMult_Func001Func010C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
             udg_TempLoc = GetUnitLoc(udg_TempUnit)
             udg_TempReal = RMinBJ(4000.00, RMaxBJ(1000.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
             CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -5195,6 +5269,13 @@ function InitTrig_Add_Unit_To_StatMult()
 end
 
 function Trig_Remove_Unit_From_StatMult_Func001Func002C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Remove_Unit_From_StatMult_Func001Func003C()
     if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
         return false
     end
@@ -5212,6 +5293,10 @@ function Trig_Remove_Unit_From_StatMult_Actions()
     if (Trig_Remove_Unit_From_StatMult_Func001C()) then
                 udg_ID = GetHandleId(udg_StatMultUnit)
         if (Trig_Remove_Unit_From_StatMult_Func001Func002C()) then
+            DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+        else
+        end
+        if (Trig_Remove_Unit_From_StatMult_Func001Func003C()) then
             DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
         else
         end
@@ -9862,6 +9947,9 @@ function InitCustomTriggers()
     InitTrig_SolarFlare()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
+    InitTrig_SantaHat_On()
+    InitTrig_SantaHat_Off()
+    InitTrig_SantaHat_Init()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
     InitTrig_Setup_Quests()

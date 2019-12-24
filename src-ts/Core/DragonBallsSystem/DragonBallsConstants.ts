@@ -13,7 +13,7 @@ export module DragonBallsConstants {
   export const restoreDragonBallsTime: number = 60;
   export const wishImmortalityItem: number = FourCC("I042");
   export const wishImmortalityAbility: number = FourCC("A0M9");
-  export const immortalDelay: number = 4.2;
+  export const immortalDelay: number = 4.1;
   export const startingDBPos: Vector2D = new Vector2D(5000, 3500);
   export const dbSpawns: Vector2D[] = [
     new Vector2D(14000, 17000),

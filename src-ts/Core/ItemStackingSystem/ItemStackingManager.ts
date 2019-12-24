@@ -8,14 +8,16 @@ export class ItemStackingManager {
   static instance: ItemStackingManager;
 
   protected stackableItemTypes: Map<number, () => void>;
-  protected itemPickupTrigger: trigger;
+  protected itemTargetPickupTrigger: trigger;
   protected numDelayedPickupTimer: number;
+  protected itemAcquireTrigger: trigger;
 
   constructor (
   ) {
     this.stackableItemTypes = new Map();
-    this.itemPickupTrigger = CreateTrigger();
+    this.itemTargetPickupTrigger = CreateTrigger();
     this.numDelayedPickupTimer = 0;
+    this.itemAcquireTrigger = CreateTrigger();
     this.initialize();
   }
 
@@ -28,21 +30,57 @@ export class ItemStackingManager {
   }
 
   initialize() {
-    // if pick up dragon ball then
-    // do nothing if no dragon balls
-    // add a charge if have any dballs
+
+    // if unit targets picking up an item
+    // but inventory is full
     TriggerRegisterAnyUnitEventBJ(
-      this.itemPickupTrigger,
+      this.itemTargetPickupTrigger,
       EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER
     );
     // conditions faster than actions hrm?
     TriggerAddCondition(
-      this.itemPickupTrigger,
+      this.itemTargetPickupTrigger,
       Condition(() => {
         // note: no auto stack unless in range
         const pickupUnit = GetTriggerUnit();
         const pickupItem = GetOrderTargetItem();
-        this.stackItemForUnit(pickupUnit, pickupItem);
+        this.pickupStackedItemForUnit(pickupUnit, pickupItem);
+        return false;
+      })
+    )
+
+    // unit acquires item normally
+    TriggerRegisterAnyUnitEventBJ(
+      this.itemAcquireTrigger,
+      EVENT_PLAYER_UNIT_PICKUP_ITEM,
+    );
+    TriggerAddCondition(
+      this.itemAcquireTrigger, 
+      Condition(() => {
+        const pickupItem = GetManipulatedItem();
+        const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
+        if (callback) {
+          const pickupUnit = GetManipulatingUnit();
+          let heldItem = UnitItemInSlotBJ(pickupUnit, 1);
+          for (let i = 2; i <= 6; ++i) {
+            if (
+              GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
+              heldItem != pickupItem
+            ) {
+              break;
+            } else {
+              heldItem = UnitItemInSlotBJ(pickupUnit, i);
+            }
+          }
+          if (
+            GetItemTypeId(heldItem) == GetItemTypeId(pickupItem) &&
+            heldItem != pickupItem &&
+            GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
+          ) {
+            this.stackItem(heldItem, pickupItem, callback);
+          }
+        }
+        
         return false;
       })
     )
@@ -50,7 +88,7 @@ export class ItemStackingManager {
 
   // stacks charges from pickupitem to helditem
   // then removes pickupitem
-  stackItemForUnit(pickupUnit: unit, pickupItem: item) {
+  pickupStackedItemForUnit(pickupUnit: unit, pickupItem: item) {
     // check if item is pickup stackable
     const callback = this.stackableItemTypes.get(GetItemTypeId(pickupItem));
     if (callback != undefined) {
@@ -63,7 +101,7 @@ export class ItemStackingManager {
         heldItemIndex > 0 &&
         // item being manipulated comes from external source
         pickupItem != GetItemOfTypeFromUnitBJ(pickupUnit, GetItemTypeId(pickupItem)) &&
-        GetItemCharges(heldItem) > 0
+        GetItemCharges(heldItem) > 0 && GetItemCharges(pickupItem) > 0
       ) {
         if (this.unitNearItem(pickupUnit, pickupItem)) {
           this.stackItem(heldItem, pickupItem, callback);

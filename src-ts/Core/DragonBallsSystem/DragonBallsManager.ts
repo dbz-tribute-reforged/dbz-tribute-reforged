@@ -245,6 +245,8 @@ export class DragonBallsManager {
                 TimerStart(removeReincTimer, DragonBallsConstants.immortalDelay, false, () => {
                   UnitRemoveAbility(wishingUnit, DragonBallsConstants.wishImmortalityAbility);
                   UnitMakeAbilityPermanent(wishingUnit, false, DragonBallsConstants.wishImmortalityAbility);
+                  SetUnitManaPercentBJ(wishingUnit, 100);
+                  // SetUnitLifePercentBJ(wishingUnit, 100);
                   DestroyTimer(removeReincTimer);
                 });
                 DestroyTimer(reincTimer);
@@ -320,10 +322,6 @@ export class DragonBallsManager {
     if (this.summonedAtDayTime) {
       SetTimeOfDay(24);
     }
-    const sfxTimer = CreateTimer();
-    TimerStart(sfxTimer, 1, true, () => {
-      this.playShenronSFX();
-    })
 
     SetUnitX(this.dummyShenron, x);
     SetUnitY(this.dummyShenron, y);
@@ -335,6 +333,11 @@ export class DragonBallsManager {
       this.shenron,
       "birth"
     );
+
+    const sfxTimer = CreateTimer();
+    TimerStart(sfxTimer, 1, true, () => {
+      this.playShenronSFX(this.dummyShenron);
+    })
 
     PingMinimapForForceEx(
       bj_FORCE_ALL_PLAYERS,
@@ -354,7 +357,7 @@ export class DragonBallsManager {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         15,
-        "|cff00ffccShenron|r: Speak your wish and I shall grant it."
+        "|cffffcc00Shenron|r: Speak your wish and I shall grant it."
       );
       // enable wish stuff
 
@@ -378,47 +381,45 @@ export class DragonBallsManager {
   }
 
   playShenronSFX(shenron: unit = this.shenron): this {
+    const x = GetUnitX(shenron);
+    const y = GetUnitY(shenron);
     DestroyEffect(
-      AddSpecialEffectTarget(
+      AddSpecialEffect(
         "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
-        shenron, 
-        "origin", 
+        x, y,
       )
     );
     
     DestroyEffect(
-      AddSpecialEffectTarget(
+      AddSpecialEffect(
         "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
-        shenron, 
-        "origin", 
+        x, y,
       )
     );
     
     DestroyEffect(
-      AddSpecialEffectTarget(
+      AddSpecialEffect(
         "PhotonFlash2.mdl",
-        shenron, 
-        "origin", 
+        x, y,
       )
     );
 
     DestroyEffect(
-      AddSpecialEffectTarget(
+      AddSpecialEffect(
         "DivineRing.mdl",
-        shenron, 
-        "origin", 
+        x, y,
       )
     );
     return this;
   }
 
   grantWish(): this {
-    this.playShenronSFX();
+    this.playShenronSFX(this.shenron);
     SetUnitAnimation(this.shenron, "death");
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS,
       15,
-      "|cff00ffccShenron|r: So be it. Your wish has been granted."
+      "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
     return this;
   }
