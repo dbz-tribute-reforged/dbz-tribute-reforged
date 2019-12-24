@@ -335,7 +335,7 @@ export class DragonBallsManager {
     );
 
     const sfxTimer = CreateTimer();
-    TimerStart(sfxTimer, 1, true, () => {
+    TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
       this.playShenronSFX(this.dummyShenron);
     })
 
@@ -347,7 +347,7 @@ export class DragonBallsManager {
       10, 100, 10,
     )
     
-    TimerStart(CreateTimer(), 9, false, () => {
+    TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay, false, () => {
       SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
       SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
       
@@ -383,12 +383,12 @@ export class DragonBallsManager {
   playShenronSFX(shenron: unit = this.shenron): this {
     const x = GetUnitX(shenron);
     const y = GetUnitY(shenron);
-    DestroyEffect(
-      AddSpecialEffect(
-        "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
-        x, y,
-      )
-    );
+    // DestroyEffect(
+    //   AddSpecialEffect(
+    //     "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+    //     x, y,
+    //   )
+    // );
     
     DestroyEffect(
       AddSpecialEffect(

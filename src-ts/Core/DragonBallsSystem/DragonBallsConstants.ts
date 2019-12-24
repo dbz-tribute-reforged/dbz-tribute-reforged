@@ -10,6 +10,8 @@ export module DragonBallsConstants {
   export const shenronUnit: number = FourCC("z001");
   export const shenronWaitingRoom: Vector2D = new Vector2D(0, 22000);
   export const shenronVisionRadius: number = 600;
+  export const shenronSfxInterval: number = 2;
+  export const shenronDelay: number = 7.7;
   export const restoreDragonBallsTime: number = 60;
   export const wishImmortalityItem: number = FourCC("I042");
   export const wishImmortalityAbility: number = FourCC("A0M9");
