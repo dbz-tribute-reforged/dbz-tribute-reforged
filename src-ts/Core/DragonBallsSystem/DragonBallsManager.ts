@@ -361,6 +361,7 @@ export class DragonBallsManager {
         "|cffffcc00Shenron|r: Speak your wish and I shall grant it."
       );
       // enable wish stuff
+      EnableTrigger(this.wishTrigger);
 
       for (let i = 0; i < Constants.maxActivePlayers; ++i) {
         const shenronVision = CreateFogModifierRadius(
@@ -428,6 +429,8 @@ export class DragonBallsManager {
       15,
       "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
+    DisableTrigger(this.wishTrigger);
+
     return this;
   }
 

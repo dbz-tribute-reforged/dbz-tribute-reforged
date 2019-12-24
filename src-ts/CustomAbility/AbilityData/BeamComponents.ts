@@ -615,6 +615,35 @@ export const BeamComponents = [
   },
   // -------------------------------------------
   { 
+    name: "beam ss deadly hammer",
+    repeatInterval: 1,
+    startTick: 25,
+    endTick: -1,
+    beamHpMult: BASE.KAME_DPS * 5,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 6,
+    aoe: 300,
+    clashingDelayTicks: 4,
+    maxDelayTicks: 15,
+    durationIncPerDelay: 30,
+    heightVariation: {
+      start: 50,
+      finish: 50,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: false,
+    useLastCastPoint: true,
+    explodeAtCastPoint: false,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage ss deadly bomber dps" },
+      { name: "sfx beam ss deadly bomber" },
+    ],
+  },
+  // -------------------------------------------
+  { 
     name: "beam ss deadly bomber",
     repeatInterval: 1,
     startTick: 0,
