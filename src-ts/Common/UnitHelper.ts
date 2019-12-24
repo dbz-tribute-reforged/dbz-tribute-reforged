@@ -1,4 +1,5 @@
 import { Vector2D } from "./Vector2D";
+import { Constants } from "./Constants";
 
 export module UnitHelper {
   export function isUnitStunned(unit: unit): boolean {
@@ -62,6 +63,12 @@ export module UnitHelper {
     return (
       IsUnitType(unit, UNIT_TYPE_HERO) &&
       !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+    );
+  }
+
+  export function isImmortal(unit: unit): boolean {
+    return (
+      UnitHasBuffBJ(unit, Constants.buffImmortal)
     );
   }
 }

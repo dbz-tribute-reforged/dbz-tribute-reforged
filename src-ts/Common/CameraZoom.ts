@@ -2,7 +2,7 @@ import { Logger } from "Libs/TreeLib/Logger";
 
 export module CameraZoom {
 
-    const ZOOM_DEFAULT = 3000.0;
+    const ZOOM_DEFAULT = 2600.0;
     const ANGLE_DEFAULT = 290.0;
     const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
     const PERIOD = 0.03125;

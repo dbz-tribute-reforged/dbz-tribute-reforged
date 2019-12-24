@@ -148,6 +148,7 @@ udg_CreepPlayerGroup = nil
 udg_PlayerLevel = __jarray(0)
 udg_IsLeadingToFinalBattle = false
 udg_IsAOEFlyingVision = false
+udg_IsFreeMode = false
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -189,6 +190,7 @@ gg_snd_QuestCompleted = nil
 gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
+gg_snd_ShenronSummon = nil
 gg_trg_Untitled_Trigger_002 = nil
 gg_trg_Pan_R_Cast = nil
 gg_trg_Pan_W_cast = nil
@@ -227,7 +229,7 @@ gg_trg_Lights_toggle = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
 gg_trg_Setup_Quests = nil
-gg_trg_Disable_Heads_for_TempPlayer = nil
+gg_trg_Disable_Abilities_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_soundtrig = nil
@@ -241,6 +243,8 @@ gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
 gg_trg_Force_Win_Loss = nil
+gg_trg_Shenron_Wish_for_Power = nil
+gg_trg_Shenron_Wish_Granted_Sound = nil
 gg_trg_Final_Battle_Detector = nil
 gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
@@ -401,6 +405,9 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_SantaHat_On = nil
+gg_trg_SantaHat_Init = nil
+gg_trg_SantaHat_Off = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -600,6 +607,7 @@ function InitGlobals()
     end
     udg_IsLeadingToFinalBattle = false
     udg_IsAOEFlyingVision = true
+    udg_IsFreeMode = false
 end
 
 function InitSounds()
@@ -689,6 +697,11 @@ function InitSounds()
     SetSoundParamsFromLabel(gg_snd_ClanInvitation, "ClanInvitation")
     SetSoundDuration(gg_snd_ClanInvitation, 4295)
     SetSoundVolume(gg_snd_ClanInvitation, 127)
+    gg_snd_ShenronSummon = CreateSound("Audio/Effects/ShenronSummon.mp3", false, false, false, 1, 1, "DefaultEAXON")
+    SetSoundDuration(gg_snd_ShenronSummon, 9012)
+    SetSoundChannel(gg_snd_ShenronSummon, 0)
+    SetSoundVolume(gg_snd_ShenronSummon, 127)
+    SetSoundPitch(gg_snd_ShenronSummon, 1.0)
 end
 
 function CreateBuildingsForPlayer0()
@@ -1750,6 +1763,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
     u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 18072.4, -6398.2, 330.002, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("z001"), 89.3, 22035.7, 273.200, FourCC("z001"))
 end
 
 function CreatePlayerBuildings()
@@ -2459,11 +2473,25 @@ function InitTrig_SolarFlare()
     TriggerAddAction(gg_trg_SolarFlare, Trig_SolarFlare_Actions)
 end
 
+function Trig_Freemode_Func003C()
+    if (not (udg_IsFreeMode == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Freemode_Actions()
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
     udg_TeamAboutToLose[0] = false
     udg_TeamAboutToLose[1] = false
-    DisableTrigger(gg_trg_Force_Win_Loss)
+    if (Trig_Freemode_Func003C()) then
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10998")
+        udg_IsFreeMode = false
+        EnableTrigger(gg_trg_Force_Win_Loss)
+    else
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
+        udg_IsFreeMode = true
+        DisableTrigger(gg_trg_Force_Win_Loss)
+    end
 end
 
 function InitTrig_Freemode()
@@ -2493,6 +2521,75 @@ function InitTrig_Lights_toggle()
     gg_trg_Lights_toggle = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, Player(0), "-lights", true)
     TriggerAddAction(gg_trg_Lights_toggle, Trig_Lights_toggle_Actions)
+end
+
+function Trig_SantaHat_On_Func001Func003C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_SantaHat_On_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_SantaHat_On_Func001Func003C()) then
+        DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+    else
+    end
+    AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
+    SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
+end
+
+function Trig_SantaHat_On_Actions()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_SantaHat_On_Func001A)
+end
+
+function InitTrig_SantaHat_On()
+    gg_trg_SantaHat_On = CreateTrigger()
+    TriggerAddAction(gg_trg_SantaHat_On, Trig_SantaHat_On_Actions)
+end
+
+function Trig_SantaHat_Off_Func001Func003C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_SantaHat_Off_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_SantaHat_Off_Func001Func003C()) then
+        DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+    else
+    end
+end
+
+function Trig_SantaHat_Off_Actions()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_SantaHat_Off_Func001A)
+end
+
+function InitTrig_SantaHat_Off()
+    gg_trg_SantaHat_Off = CreateTrigger()
+    TriggerAddAction(gg_trg_SantaHat_Off, Trig_SantaHat_Off_Actions)
+end
+
+function Trig_SantaHat_Init_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerRegisterPlayerChatEvent(gg_trg_SantaHat_On, udg_TempPlayer, "-haton", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_SantaHat_Off, udg_TempPlayer, "-hatoff", true)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_SantaHat_Init()
+    gg_trg_SantaHat_Init = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_SantaHat_Init, 4.00)
+    TriggerAddAction(gg_trg_SantaHat_Init, Trig_SantaHat_Init_Actions)
 end
 
 function Trig_Map_Setup_Actions()
@@ -2531,7 +2628,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+        TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
@@ -2540,7 +2637,9 @@ function Trig_Setup_Per_Player_Properties_Actions()
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
-    TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+    TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
+    udg_TempPlayer = Player(PLAYER_NEUTRAL_PASSIVE)
+    TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
     FogModifierStart(GetLastCreatedFogModifier())
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
@@ -2553,7 +2652,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
         FogModifierStart(GetLastCreatedFogModifier())
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
         FogModifierStart(GetLastCreatedFogModifier())
-        TriggerExecute(gg_trg_Disable_Heads_for_TempPlayer)
+        TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -2584,7 +2683,7 @@ function InitTrig_Setup_Quests()
     TriggerAddAction(gg_trg_Setup_Quests, Trig_Setup_Quests_Actions)
 end
 
-function Trig_Disable_Heads_for_TempPlayer_Actions()
+function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
@@ -2623,11 +2722,12 @@ function Trig_Disable_Heads_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0AZ"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A07S"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0M1"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0M9"), udg_TempPlayer)
 end
 
-function InitTrig_Disable_Heads_for_TempPlayer()
-    gg_trg_Disable_Heads_for_TempPlayer = CreateTrigger()
-    TriggerAddAction(gg_trg_Disable_Heads_for_TempPlayer, Trig_Disable_Heads_for_TempPlayer_Actions)
+function InitTrig_Disable_Abilities_for_TempPlayer()
+    gg_trg_Disable_Abilities_for_TempPlayer = CreateTrigger()
+    TriggerAddAction(gg_trg_Disable_Abilities_for_TempPlayer, Trig_Disable_Abilities_for_TempPlayer_Actions)
 end
 
 function Trig_Setup_Spawns_Actions()
@@ -3032,10 +3132,13 @@ function Trig_Kill_Hero_Revive_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
         return false
     end
+    if (not (UnitHasBuffBJ(GetDyingUnit(), FourCC("B01U")) == false)) then
+        return false
+    end
     return true
 end
 
-function Trig_Kill_Hero_Revive_Func005C()
+function Trig_Kill_Hero_Revive_Func006C()
     if (not (RectContainsUnit(gg_rct_TournamentArena, GetDyingUnit()) == true)) then
         return false
     end
@@ -3043,7 +3146,7 @@ function Trig_Kill_Hero_Revive_Func005C()
 end
 
 function Trig_Kill_Hero_Revive_Actions()
-    if (Trig_Kill_Hero_Revive_Func005C()) then
+    if (Trig_Kill_Hero_Revive_Func006C()) then
     else
         TriggerSleepAction(udg_HeroRespawnDelay)
         udg_HeroRespawnUnit = GetTriggerUnit()
@@ -3140,7 +3243,14 @@ function InitTrig_Remove_Dead_Summons()
     TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
 end
 
-function Trig_Force_Win_Loss_Func001Func003Func003Func003C()
+function Trig_Force_Win_Loss_Conditions()
+    if (not (udg_IsFreeMode == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Force_Win_Loss_Func002Func003Func003Func003C()
     if (not (LoadIntegerBJ(3, udg_ID, udg_HeroRespawnHashtable) == 0)) then
         return false
     end
@@ -3150,55 +3260,55 @@ function Trig_Force_Win_Loss_Func001Func003Func003Func003C()
     return true
 end
 
-function Trig_Force_Win_Loss_Func001Func003Func003A()
+function Trig_Force_Win_Loss_Func002Func003Func003A()
     udg_HeroRespawnUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_HeroRespawnUnit)
-    if (Trig_Force_Win_Loss_Func001Func003Func003Func003C()) then
+    if (Trig_Force_Win_Loss_Func002Func003Func003Func003C()) then
         udg_TempBool = false
     else
     end
 end
 
-function Trig_Force_Win_Loss_Func001Func003A()
+function Trig_Force_Win_Loss_Func002Func003A()
     udg_TempPlayer = GetEnumPlayer()
     udg_TempInt2 = GetConvertedPlayerId(udg_TempPlayer)
-    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt2], Trig_Force_Win_Loss_Func001Func003Func003A)
+    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt2], Trig_Force_Win_Loss_Func002Func003Func003A)
 end
 
-function Trig_Force_Win_Loss_Func001Func004Func001C()
+function Trig_Force_Win_Loss_Func002Func004Func001C()
     if (not (udg_TeamAboutToLose[udg_TempInt] == true)) then
         return false
     end
     return true
 end
 
-function Trig_Force_Win_Loss_Func001Func004Func002Func001C()
+function Trig_Force_Win_Loss_Func002Func004Func002Func001C()
     if (not (udg_TeamAboutToLose[udg_TempInt] == false)) then
         return false
     end
     return true
 end
 
-function Trig_Force_Win_Loss_Func001Func004Func002Func002A()
+function Trig_Force_Win_Loss_Func002Func004Func002Func002A()
     udg_TempPlayer = GetEnumPlayer()
     DisplayTextToForce(GetPlayersAll(), (GetPlayerName(udg_TempPlayer) .. " has lost."))
     CustomDefeatBJ(udg_TempPlayer, "TRIGSTR_2658")
 end
 
-function Trig_Force_Win_Loss_Func001Func004Func002Func003A()
+function Trig_Force_Win_Loss_Func002Func004Func002Func003A()
     udg_TempPlayer = GetEnumPlayer()
     DisplayTextToForce(GetPlayersAll(), (GetPlayerName(udg_TempPlayer) .. " has won."))
     CustomVictoryBJ(udg_TempPlayer, true, true)
 end
 
-function Trig_Force_Win_Loss_Func001Func004Func002C()
+function Trig_Force_Win_Loss_Func002Func004Func002C()
     if (not (udg_TeamAboutToLose[udg_TempInt] == true)) then
         return false
     end
     return true
 end
 
-function Trig_Force_Win_Loss_Func001Func004C()
+function Trig_Force_Win_Loss_Func002Func004C()
     if (not (udg_TempBool == true)) then
         return false
     end
@@ -3210,20 +3320,20 @@ function Trig_Force_Win_Loss_Actions()
     while (true) do
         if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
         udg_TempBool = true
-        ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func001Func003A)
-        if (Trig_Force_Win_Loss_Func001Func004C()) then
-            if (Trig_Force_Win_Loss_Func001Func004Func002C()) then
-                ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func001Func004Func002Func002A)
-                ForForce(udg_TeamsPlayerGroup[ModuloInteger((udg_TempInt + 1), 2)], Trig_Force_Win_Loss_Func001Func004Func002Func003A)
+        ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func002Func003A)
+        if (Trig_Force_Win_Loss_Func002Func004C()) then
+            if (Trig_Force_Win_Loss_Func002Func004Func002C()) then
+                ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Win_Loss_Func002Func004Func002Func002A)
+                ForForce(udg_TeamsPlayerGroup[ModuloInteger((udg_TempInt + 1), 2)], Trig_Force_Win_Loss_Func002Func004Func002Func003A)
             else
-                if (Trig_Force_Win_Loss_Func001Func004Func002Func001C()) then
+                if (Trig_Force_Win_Loss_Func002Func004Func002Func001C()) then
                     DisplayTextToForce(GetPlayersAll(), ("Team " .. (I2S((udg_TempInt + 1)) .. " will lose in 15s if someone doesn't revive!")))
                     udg_TeamAboutToLose[udg_TempInt] = true
                 else
                 end
             end
         else
-            if (Trig_Force_Win_Loss_Func001Func004Func001C()) then
+            if (Trig_Force_Win_Loss_Func002Func004Func001C()) then
                 DisplayTextToForce(GetPlayersAll(), ("Team " .. (I2S((udg_TempInt + 1)) .. "  are safe and will not be eliminated in 15s.")))
                 udg_TeamAboutToLose[udg_TempInt] = false
             else
@@ -3237,7 +3347,47 @@ function InitTrig_Force_Win_Loss()
     gg_trg_Force_Win_Loss = CreateTrigger()
     DisableTrigger(gg_trg_Force_Win_Loss)
     TriggerRegisterTimerEventPeriodic(gg_trg_Force_Win_Loss, 15.00)
+    TriggerAddCondition(gg_trg_Force_Win_Loss, Condition(Trig_Force_Win_Loss_Conditions))
     TriggerAddAction(gg_trg_Force_Win_Loss, Trig_Force_Win_Loss_Actions)
+end
+
+function Trig_Shenron_Wish_for_Power_Conditions()
+    if (not (GetItemTypeId(GetSoldItem()) == FourCC("I043"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Shenron_Wish_for_Power_Actions()
+    udg_StatMultUnit = GetBuyingUnit()
+    udg_StatMultReal = 150.00
+    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+end
+
+function InitTrig_Shenron_Wish_for_Power()
+    gg_trg_Shenron_Wish_for_Power = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Shenron_Wish_for_Power, EVENT_PLAYER_UNIT_SELL_ITEM)
+    TriggerAddCondition(gg_trg_Shenron_Wish_for_Power, Condition(Trig_Shenron_Wish_for_Power_Conditions))
+    TriggerAddAction(gg_trg_Shenron_Wish_for_Power, Trig_Shenron_Wish_for_Power_Actions)
+end
+
+function Trig_Shenron_Wish_Granted_Sound_Conditions()
+    if (not (GetUnitTypeId(GetSellingUnit()) == FourCC("n01P"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Shenron_Wish_Granted_Sound_Actions()
+    PlaySoundBJ(gg_snd_ClanInvitation)
+end
+
+function InitTrig_Shenron_Wish_Granted_Sound()
+    gg_trg_Shenron_Wish_Granted_Sound = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Shenron_Wish_Granted_Sound, EVENT_PLAYER_UNIT_SELL_ITEM)
+    TriggerAddCondition(gg_trg_Shenron_Wish_Granted_Sound, Condition(Trig_Shenron_Wish_Granted_Sound_Conditions))
+    TriggerAddAction(gg_trg_Shenron_Wish_Granted_Sound, Trig_Shenron_Wish_Granted_Sound_Actions)
 end
 
 function Trig_Final_Battle_Detector_Conditions()
@@ -5074,7 +5224,7 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func010C()
+function Trig_Add_Unit_To_StatMult_Func001Func012C()
     if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
@@ -5098,8 +5248,10 @@ function Trig_Add_Unit_To_StatMult_Actions()
         SaveRealBJ(1.00, 4, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(1.00, 5, udg_ID, udg_StatMultHashtable)
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
+        AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
+        SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
         udg_TempUnit = udg_StatMultUnit
-        if (Trig_Add_Unit_To_StatMult_Func001Func010C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
             udg_TempLoc = GetUnitLoc(udg_TempUnit)
             udg_TempReal = RMinBJ(4000.00, RMaxBJ(1000.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
             CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -5117,6 +5269,13 @@ function InitTrig_Add_Unit_To_StatMult()
 end
 
 function Trig_Remove_Unit_From_StatMult_Func001Func002C()
+    if (not (HaveSavedValue(8, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Remove_Unit_From_StatMult_Func001Func003C()
     if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
         return false
     end
@@ -5134,6 +5293,10 @@ function Trig_Remove_Unit_From_StatMult_Actions()
     if (Trig_Remove_Unit_From_StatMult_Func001C()) then
                 udg_ID = GetHandleId(udg_StatMultUnit)
         if (Trig_Remove_Unit_From_StatMult_Func001Func002C()) then
+            DestroyEffectBJ(LoadEffectHandleBJ(8, udg_ID, udg_StatMultHashtable))
+        else
+        end
+        if (Trig_Remove_Unit_From_StatMult_Func001Func003C()) then
             DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
         else
         end
@@ -9784,10 +9947,13 @@ function InitCustomTriggers()
     InitTrig_SolarFlare()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
+    InitTrig_SantaHat_On()
+    InitTrig_SantaHat_Off()
+    InitTrig_SantaHat_Init()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
     InitTrig_Setup_Quests()
-    InitTrig_Disable_Heads_for_TempPlayer()
+    InitTrig_Disable_Abilities_for_TempPlayer()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Kill_Creep_New_New_Stats_Only()
@@ -9797,6 +9963,8 @@ function InitCustomTriggers()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()
     InitTrig_Force_Win_Loss()
+    InitTrig_Shenron_Wish_for_Power()
+    InitTrig_Shenron_Wish_Granted_Sound()
     InitTrig_Final_Battle_Detector()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()

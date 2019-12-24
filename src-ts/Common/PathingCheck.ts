@@ -45,20 +45,26 @@ export module PathingCheck {
     return distance < maxRange;
   }
 
-  export function moveGroundUnitToCoord(unit: unit, target: Vector2D) {
-    if (
+  export function isGroundWalkable(target: Vector2D): boolean {
+    return (
       PathingCheck.IsWalkable(target) && 
       !IsTerrainPathable(target.x, target.y, PATHING_TYPE_WALKABILITY)
-    ) {
+    )
+  }
+
+  export function isFlyingWalkable(target: Vector2D): boolean {
+    return !IsTerrainPathable(target.x, target.y, PATHING_TYPE_FLYABILITY);
+  }
+
+  export function moveGroundUnitToCoord(unit: unit, target: Vector2D) {
+    if (isGroundWalkable(target)) {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
     }
   }
 
   export function moveFlyingUnitToCoord(unit: unit, target: Vector2D) {
-    if (
-      !IsTerrainPathable(target.x, target.y, PATHING_TYPE_FLYABILITY)
-    ) {
+    if (isFlyingWalkable(target)) {
       SetUnitX(unit, target.x);
       SetUnitY(unit, target.y);
     }

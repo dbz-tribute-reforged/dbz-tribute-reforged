@@ -458,6 +458,8 @@ export function CustomPlayerTest() {
 
   if (numActivePlayers == 1) {
 
+    BJDebugMsg("Recomended to type -freemode to prevent insta loss");
+
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
     TriggerAddAction(megaLvl, () => {
@@ -499,7 +501,7 @@ export function CustomPlayerTest() {
       TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-lvl", false);
     }
     TriggerAddAction(lvlTrig, () => {
-      const value = S2I(SubString(GetEventPlayerChatString(), 5, 7));
+      const value = S2I(SubString(GetEventPlayerChatString(), 5, 8));
       const group = GetUnitsSelectedAll(GetTriggerPlayer());
       ForGroup(group, () => {
         const target = GetEnumUnit();
@@ -566,6 +568,35 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
     TriggerAddAction(forceBudokaiTrig, () => {
       TournamentManager.getInstance().startTournament(Constants.budokaiName);
+    });
+
+    // force set unit skin
+    const setUnitSkin = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(setUnitSkin, Player(i), "-skin", false);
+    };
+    TriggerAddAction(setUnitSkin, () => {
+      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
+      const group = GetUnitsSelectedAll(GetTriggerPlayer());
+      ForGroup(group, () => {
+        const target = GetEnumUnit();
+        BlzSetUnitSkin(target, value);
+      });
+      DestroyGroup(group);
+    });
+
+    const makeItem = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(makeItem, Player(i), "-item", false);
+    };
+    TriggerAddAction(makeItem, () => {
+      const value = FourCC(SubString(GetEventPlayerChatString(), 6, 9));
+      const group = GetUnitsSelectedAll(GetTriggerPlayer());
+      ForGroup(group, () => {
+        const target = GetEnumUnit();
+        CreateItem(value, GetUnitX(target), GetUnitY(target));
+      });
+      DestroyGroup(group);
     });
   }
 

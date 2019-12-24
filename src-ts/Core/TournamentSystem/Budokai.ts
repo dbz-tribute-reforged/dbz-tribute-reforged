@@ -8,6 +8,7 @@ import { Vector2D } from "Common/Vector2D";
 import { TournamentData } from "./TournamentData";
 import { Logger } from "Libs/TreeLib/Logger";
 import { AllianceHelper } from "Common/AllianceHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
@@ -354,6 +355,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
       activeContestants.set(contestant.id, contestant);
     }
+
+    TriggerAddCondition(
+      matchHandlerTrigger, 
+      Condition(() => {
+        return !UnitHelper.isImmortal(GetTriggerUnit())
+      }
+    ));
 
     let wasAllied: boolean;
     let isDoneLoop: boolean = false;
