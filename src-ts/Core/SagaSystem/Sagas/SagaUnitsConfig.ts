@@ -131,23 +131,23 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // buu saga
     // babidi
     ["Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(16500, 12000))],
-    ["Fat Buu", new SagaUnit(FourCC("O005"), 70, 10000, 400, 10000, new Vector2D(16500, 12000))],
+    ["Fat Buu", new SagaUnit(FourCC("O005"), 70, 12000, 400, 12000, new Vector2D(16500, 12000))],
 
     // fusion reborn
-    ["Janemba", new SagaUnit(FourCC("H061"), 65, 9000, 400, 9000, new Vector2D(8500, 4000))],
-    ["Super Janemba", new SagaUnit(FourCC("U007"), 85, 13000, 400, 13000, new Vector2D(8500, 4000))],
+    ["Janemba", new SagaUnit(FourCC("H061"), 65, 11000, 400, 11000, new Vector2D(8500, 4000))],
+    ["Super Janemba", new SagaUnit(FourCC("U007"), 85, 15000, 400, 15000, new Vector2D(8500, 4000))],
 
     // super buu saga
-    ["Super Buu", new SagaUnit(FourCC("O006"), 75, 11000, 400, 11000, new Vector2D(5000, 3300))],
+    ["Super Buu", new SagaUnit(FourCC("O006"), 75, 13000, 400, 13000, new Vector2D(5000, 3300))],
 
     // kid buu saga
-    ["Kid Buu", new SagaUnit(FourCC("O00C"), 90, 14000, 400, 14000, new Vector2D(5000, 9300))],
+    ["Kid Buu", new SagaUnit(FourCC("O00C"), 85, 15000, 400, 15000, new Vector2D(5000, 9300))],
 
     // wrath of the dragon
     ["Hirudegarn Lower", new SagaUnit(FourCC("U009"), 40, 4000, 400, 4000, new Vector2D(-6700, -6700))],
     ["Hirudegarn Upper", new SagaUnit(FourCC("U00A"), 40, 4000, 400, 4000, new Vector2D(17333, -7358))],
-    ["Hirudegarn", new SagaUnit(FourCC("U00B"), 75, 11000, 400, 11000, new Vector2D(-6700, -6700))],
-    ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 90, 14000, 400, 14000, new Vector2D(-6700, -6700))],
+    ["Hirudegarn", new SagaUnit(FourCC("U00B"), 70, 12000, 400, 12000, new Vector2D(-6700, -6700))],
+    ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 85, 15000, 400, 15000, new Vector2D(-6700, -6700))],
 
     // gt + super split
     // uub tournament ?
@@ -155,12 +155,12 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // bebi saga
     // general rilldo
-    ["Super Bebi", new SagaUnit(FourCC("U004"), 90, 14000, 400, 14000, new Vector2D(-6000, -5500))],
-    ["Bebi Golden Oozaru", new SagaUnit(FourCC("H01L"), 100, 16000, 400, 16000, new Vector2D(-6000, -5500))],
+    ["Super Bebi", new SagaUnit(FourCC("U004"), 90, 16000, 400, 16000, new Vector2D(-6000, -5500))],
+    ["Bebi Golden Oozaru", new SagaUnit(FourCC("H01L"), 100, 19000, 400, 19000, new Vector2D(-6000, -5500))],
 
     // super 17 saga
     // hell fighter 17
-    ["Super 17", new SagaUnit(FourCC("H05B"), 105, 17000, 400, 17000, new Vector2D(7000, 5500))],
+    ["Super 17", new SagaUnit(FourCC("H05B"), 90, 17000, 400, 17000, new Vector2D(7000, 5500))],
     // pui pui, yakon, 19, saibamen, appule, rilldo
     // cooler, king cold,
     // raditz, nappa, 
@@ -171,31 +171,31 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // shadow dragon saga
     ["Haze Shenron", new SagaUnit(FourCC("U00S"), 50, 3500, 400, 3500, new Vector2D(4400, 9500))],
-    ["Rage Shenron", new SagaUnit(FourCC("U00V"), 85, 13000, 400, 13000, new Vector2D(-2000, -6000))],
-    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 85, 13000, 400, 13000, new Vector2D(-5000, 3500))],
-    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 85, 13000, 400, 13000, new Vector2D(-3500, -5500))],
+    ["Rage Shenron", new SagaUnit(FourCC("U00V"), 85, 15000, 400, 15000, new Vector2D(-2000, -6000))],
+    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 85, 15000, 400, 15000, new Vector2D(-5000, 3500))],
+    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 85, 15000, 400, 15000, new Vector2D(-3500, -5500))],
 
-    ["Nuova Shenron", new SagaUnit(FourCC("U00U"), 95, 15000, 400, 15000, new Vector2D(18500, -6700))],
-    ["Eis Shenron", new SagaUnit(FourCC("U00T"), 95, 15000, 400, 15000, new Vector2D(18000, -6700))],
+    ["Nuova Shenron", new SagaUnit(FourCC("U00U"), 95, 17000, 400, 17000, new Vector2D(18500, -6700))],
+    ["Eis Shenron", new SagaUnit(FourCC("U00T"), 95, 17000, 400, 17000, new Vector2D(18000, -6700))],
 
-    ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 110, 18000, 400, 18000, new Vector2D(3000, 7000))],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 120, 20000, 400, 20000, new Vector2D(3000, 7000))],
+    ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 110, 21000, 400, 21000, new Vector2D(3000, 7000))],
+    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 120, 23000, 400, 23000, new Vector2D(3000, 7000))],
     // gt end?
 
     // battle of gods movie/super
     // beerus
-    ["Beerus", new SagaUnit(FourCC("U01F"), 95, 15000, 400, 15000, new Vector2D(5000, 3300))],
+    ["Beerus", new SagaUnit(FourCC("U01F"), 95, 18000, 400, 18000, new Vector2D(5000, 3300))],
     // possibly spawn in pilaf
 
     // possible whis training saga?
     // whis E01I
-    ["Whis", new SagaUnit(FourCC("E01I"), 100, 16000, 400, 16000, new Vector2D(5000, 3300))],
+    ["Whis", new SagaUnit(FourCC("E01I"), 100, 22000, 400, 22000, new Vector2D(5000, 3300))],
 
     // resurrection f
     // ginyu again? / tagoma
-    ["Resurrection Frieza 1", new SagaUnit(FourCC("U011"), 60, 5000, 400, 10000, new Vector2D(-3000, 10000))],
-    ["Resurrection Frieza Final", new SagaUnit(FourCC("U014"), 80, 12000, 400, 12000, new Vector2D(-3000, 10000))],
-    ["Resurrection Frieza Golden", new SagaUnit(FourCC("U01G"), 100, 16000, 400, 16000, new Vector2D(-3000, 10000))],
+    ["Resurrection Frieza 1", new SagaUnit(FourCC("U011"), 55, 7000, 400, 10000, new Vector2D(-3000, 10000))],
+    ["Resurrection Frieza Final", new SagaUnit(FourCC("U014"), 90, 16000, 400, 16000, new Vector2D(-3000, 10000))],
+    ["Resurrection Frieza Golden", new SagaUnit(FourCC("U01G"), 105, 20000, 400, 20000, new Vector2D(-3000, 10000))],
     // sorbet
 
     // universe 6
@@ -205,18 +205,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // cabba
     // hit
     // monaka?
-    ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 110, 18000, 400, 18000, new Vector2D(16000, -6000))],
+    ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 110, 21000, 400, 21000, new Vector2D(16000, -6000))],
 
     // copy-vegeta saga
     // purple vege
-    ["Copy-Vegeta", new SagaUnit(FourCC("E003"), 90, 14000, 400, 14000, new Vector2D(16000, 30000))],
+    ["Copy-Vegeta", new SagaUnit(FourCC("E003"), 90, 17000, 400, 17000, new Vector2D(16000, 30000))],
 
     // future trunks saga super
     // goku black
-    ["Goku Black 1", new SagaUnit(FourCC("E019"), 38, 5000, 400, 4500, new Vector2D(-6700, -6700))],
-    // zamasu
-    ["Goku Black 2", new SagaUnit(FourCC("E019"), 38, 5000, 400, 4500, new Vector2D(18000, 15000))],
-    ["Zamasu", new SagaUnit(FourCC("E012"), 38, 5000, 400, 4500, new Vector2D(18000, 15000))],
+    ["Goku Black 1", new SagaUnit(FourCC("E019"), 85, 15000, 400, 15000, new Vector2D(-6700, -6700))],
+    // gb + zamasu
+    ["Goku Black 2", new SagaUnit(FourCC("E019"), 110, 21000, 400, 21000, new Vector2D(18000, 15000))],
+    ["Zamasu", new SagaUnit(FourCC("E012"), 90, 14000, 400, 17000, new Vector2D(18000, 15000))],
     
     // fused zamasu saga
     // fused

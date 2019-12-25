@@ -31,7 +31,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.android20 && !this.isRunningAway && 
-      SagaHelper.checkUnitHp(this.android20, 0.5, true, false, true)
+      SagaHelper.checkUnitHp(this.android20, 0.6, true, false, true)
     ) {
       this.isRunningAway = true;
       DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    

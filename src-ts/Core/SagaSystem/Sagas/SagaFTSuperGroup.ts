@@ -95,17 +95,19 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.gokuBlack && !this.isRose && 
-      SagaHelper.checkUnitHp(this.gokuBlack, 0.8, false, false, true)
+      SagaHelper.checkUnitHp(this.gokuBlack, 0.6, false, false, true)
     ) {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Goku Black|r: And this. Is to go. Even. Further. Beyond."
+        "|cffffcc00Goku Black|r: I call this Super Saiyan Rose."
       );
       this.isRose = true;
       SetUnitScale(this.gokuBlack, 2.0, 2.0, 2.0);
-      SetHeroLevel(this.gokuBlack, GetHeroLevel(this.gokuBlack) + 6, true);
-      SetHeroStr(this.gokuBlack, Math.floor(GetHeroStr(this.gokuBlack, true) + 1000), true);
+      SetUnitLifePercentBJ(this.gokuBlack, 100);
+      SetHeroLevel(this.gokuBlack, GetHeroLevel(this.gokuBlack) + 10, true);
+      SetHeroStr(this.gokuBlack, Math.floor(GetHeroStr(this.gokuBlack, true) + 2500), true);
       SetHeroAgi(this.gokuBlack, Math.floor(GetHeroAgi(this.gokuBlack, true) + 200), true);
+      SetHeroInt(this.gokuBlack, Math.floor(GetHeroInt(this.gokuBlack, true) + 2500), true);
       this.auraRose = AddSpecialEffectTarget(
         "AuraPink.mdl",
         this.gokuBlack,
