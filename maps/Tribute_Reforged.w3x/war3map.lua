@@ -329,6 +329,8 @@ gg_trg_Turles_Saga_Init = nil
 gg_trg_Turles_Saga_Activate = nil
 gg_trg_Turles_Saga_Completion = nil
 gg_trg_Turles_Saga_VI = nil
+gg_trg_Update_MS = nil
+gg_trg_Set_HP_scaled_MS_for_TempUnit = nil
 gg_trg_Update_AOE_Flying_Vision = nil
 gg_trg_Set_AOE_Flying_Vision_for_TempUnit = nil
 gg_trg_Test_StatMult_Init = nil
@@ -612,52 +614,42 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -698,7 +690,7 @@ function InitSounds()
     SetSoundDuration(gg_snd_ClanInvitation, 4295)
     SetSoundVolume(gg_snd_ClanInvitation, 127)
     gg_snd_ShenronSummon = CreateSound("Audio/Effects/ShenronSummon.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    SetSoundDuration(gg_snd_ShenronSummon, 9012)
+    SetSoundDuration(gg_snd_ShenronSummon, 4295)
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
@@ -2632,18 +2624,20 @@ function Trig_Setup_Per_Player_Properties_Actions()
         ForceAddPlayerSimple(udg_TempPlayer, udg_ActivePlayerGroup)
         SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED)
         SetPlayerAllianceStateBJ(udg_TempPlayer, Player(PLAYER_NEUTRAL_PASSIVE), bj_ALLIANCE_ALLIED)
+        SetPlayerAllianceStateBJ(udg_TempPlayer, Player(23), bj_ALLIANCE_UNALLIED)
+        SetPlayerAllianceStateBJ(Player(23), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
         FogModifierStart(GetLastCreatedFogModifier())
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
-    udg_TempPlayer = Player(PLAYER_NEUTRAL_PASSIVE)
-    TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Creep_Vision)
     FogModifierStart(GetLastCreatedFogModifier())
     CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
     FogModifierStart(GetLastCreatedFogModifier())
+    udg_TempPlayer = Player(PLAYER_NEUTRAL_PASSIVE)
+    TriggerExecute(gg_trg_Disable_Abilities_for_TempPlayer)
     udg_TempInt = (udg_MaxNumPlayers + 1)
     while (true) do
         if (udg_TempInt > 24) then break end
@@ -3439,9 +3433,6 @@ function InitTrig_Final_Battle_Tagger()
     TriggerAddAction(gg_trg_Final_Battle_Tagger, Trig_Final_Battle_Tagger_Actions)
 end
 
-function Trig_Team_System_Init_Func003Func001A()
-end
-
 function Trig_Team_System_Init_Actions()
     udg_TempInt = 1
     while (true) do
@@ -3453,14 +3444,6 @@ function Trig_Team_System_Init_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[1])
-        udg_TempInt = udg_TempInt + 1
-    end
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        ForForce(udg_CreepPlayerGroup, Trig_Team_System_Init_Func003Func001A)
-        SetPlayerAllianceStateBJ(udg_TempPlayer, ConvertedPlayer(udg_TempInt2), bj_ALLIANCE_UNALLIED)
-        SetPlayerAllianceStateBJ(ConvertedPlayer(udg_TempInt2), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
         udg_TempInt = udg_TempInt + 1
     end
     udg_TeamAboutToLose[0] = false
@@ -5013,15 +4996,6 @@ function InitTrig_Hero_Pick_Completion()
     TriggerAddAction(gg_trg_Hero_Pick_Completion, Trig_Hero_Pick_Completion_Actions)
 end
 
-function Trig_Saga_Completion_Message_Actions()
-    DisplayTextToForce(GetPlayersAll(), ("The universe has been saved from " .. (udg_SagaCompletedName .. ((" by " .. udg_PlayerColorString[GetConvertedPlayerId(udg_SagaCompletedPlayer)]) .. (GetPlayerName(udg_SagaCompletedPlayer) .. "|r")))))
-end
-
-function InitTrig_Saga_Completion_Message()
-    gg_trg_Saga_Completion_Message = CreateTrigger()
-    TriggerAddAction(gg_trg_Saga_Completion_Message, Trig_Saga_Completion_Message_Actions)
-end
-
 function Trig_Saga_Hint_Show_Actions()
     PlaySoundBJ(gg_snd_Hint)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10611")
@@ -5033,40 +5007,45 @@ function InitTrig_Saga_Hint_Show()
     TriggerAddAction(gg_trg_Saga_Hint_Show, Trig_Saga_Hint_Show_Actions)
 end
 
-function Trig_Saga_Stat_Reward_Func001002003001()
-    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
+function Trig_Update_MS_Func002Func002A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit)
 end
 
-function Trig_Saga_Stat_Reward_Func001002003002()
-    return (IsUnitAlly(GetFilterUnit(), udg_SagaCompletedPlayer) == true)
+function Trig_Update_MS_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_MS_Func002Func002A)
+        udg_TempInt = udg_TempInt + 1
+    end
 end
 
-function Trig_Saga_Stat_Reward_Func001002003()
-    return GetBooleanAnd(Trig_Saga_Stat_Reward_Func001002003001(), Trig_Saga_Stat_Reward_Func001002003002())
+function InitTrig_Update_MS()
+    gg_trg_Update_MS = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Update_MS, 0.50)
+    TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
 end
 
-function Trig_Saga_Stat_Reward_Func002A()
-    udg_StatMultUnit = GetEnumUnit()
-    udg_StatMultReal = udg_SagaCompletedStatReward
-    TriggerExecute(gg_trg_Add_To_Base_Stats)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " saga stats|r"))
-    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
-    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-        DestroyForce(udg_TempPlayerGroup)
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func002C()
+    if (not (udg_TempReal ~= GetUnitDefaultMoveSpeed(udg_TempUnit))) then
+        return false
+    end
+    return true
 end
 
-function Trig_Saga_Stat_Reward_Actions()
-    udg_TempGroup = GetUnitsInRangeOfLocMatching(1600.00, udg_SagaCompletedLoc, Condition(Trig_Saga_Stat_Reward_Func001002003))
-    ForGroupBJ(udg_TempGroup, Trig_Saga_Stat_Reward_Func002A)
-        DestroyGroup(udg_TempGroup)
+function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
+    udg_TempReal = (RMaxBJ(150.00, RMinBJ(522.00, (GetUnitDefaultMoveSpeed(udg_TempUnit) * RMaxBJ(1.00, (0.20 + (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit))))))) + 0.00)
+    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func002C()) then
+        SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
+    else
+    end
 end
 
-function InitTrig_Saga_Stat_Reward()
-    gg_trg_Saga_Stat_Reward = CreateTrigger()
-    TriggerAddAction(gg_trg_Saga_Stat_Reward, Trig_Saga_Stat_Reward_Actions)
+function InitTrig_Set_HP_scaled_MS_for_TempUnit()
+    gg_trg_Set_HP_scaled_MS_for_TempUnit = CreateTrigger()
+    TriggerAddAction(gg_trg_Set_HP_scaled_MS_for_TempUnit, Trig_Set_HP_scaled_MS_for_TempUnit_Actions)
 end
 
 function Trig_Update_AOE_Flying_Vision_Func001Func002A()
@@ -10018,9 +9997,9 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
-    InitTrig_Saga_Completion_Message()
     InitTrig_Saga_Hint_Show()
-    InitTrig_Saga_Stat_Reward()
+    InitTrig_Update_MS()
+    InitTrig_Set_HP_scaled_MS_for_TempUnit()
     InitTrig_Update_AOE_Flying_Vision()
     InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
     InitTrig_Test_StatMult_Init()

@@ -90,6 +90,11 @@ export class CreepManager {
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
     }
 
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(i), bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(Player(i), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+    }
+
     
     // distribute creeps into neutral aggressive as well
     this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));

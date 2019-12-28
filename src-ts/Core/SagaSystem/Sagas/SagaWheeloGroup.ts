@@ -15,6 +15,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
   }
 
   spawnSagaUnits(): void {
+    super.spawnSagaUnits();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Kochin has revived Dr Wheelo!");
 
     this.addHeroListToSaga(["Wheelo", "Kishime", "Misokatsun", "Ebifurya", "Dr. Kochin"], true);
@@ -35,7 +36,10 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
       IsUnitDeadBJ(this.kochin) && 
       SagaHelper.isUnitSagaHidden(this.wheelo)
     ) {
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Wheelo: Bring me the world's strongest!");
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 15, 
+        "|cffffcc00Dr. Wheelo|r: Bring me the strongest man in the world, |cffff4400Master Roshi|r!"
+      );
       SagaHelper.genericTransformAndPing(this.wheelo, this.kochin, this);
     }
   }

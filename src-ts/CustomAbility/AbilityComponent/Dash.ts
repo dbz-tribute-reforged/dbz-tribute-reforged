@@ -9,6 +9,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
   static readonly DIRECTION_SOURCE_FORWARD = 1;
   static readonly DIRECTION_UNIT_TARGET = 2;
+  static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
 
 
   constructor(
@@ -44,6 +45,13 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         direction = CoordMath.angleBetweenCoords(currentCoord, targetUnitCoord);
       } else {
         // if no unit just fallback to target point
+        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+      }
+    } else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
+      if (input.castUnit){
+        const targetUnitCoord = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
+        direction = CoordMath.angleBetweenCoords(currentCoord, targetUnitCoord);
+      } else {
         direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
       }
     }
