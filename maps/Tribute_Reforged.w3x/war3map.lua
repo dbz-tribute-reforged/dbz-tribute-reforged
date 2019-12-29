@@ -5074,7 +5074,7 @@ function InitTrig_Update_MS()
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
-    udg_TempReal = (RMaxBJ(150.00, RMinBJ(522.00, ((300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)))) * RMinBJ(1.00, (0.20 + (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit))))))) + 0.00)
+    udg_TempReal = (RMaxBJ(200.00, RMinBJ(522.00, (RMinBJ(522.00, (300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.40 + (0.60 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
     SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
 end
 
