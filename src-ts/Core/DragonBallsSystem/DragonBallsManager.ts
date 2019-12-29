@@ -212,6 +212,7 @@ export class DragonBallsManager {
     UnitRemoveAbility(this.shenron, FourCC("Amov"));
     UnitRemoveAbility(this.shenron, FourCC("Aatk"));
     SetUnitInvulnerable(this.shenron, true);
+    ShowUnitHide(this.shenron);
     return this;
   }
 
@@ -330,10 +331,6 @@ export class DragonBallsManager {
       this.dummyShenron,
       "birth"
     );
-    SetUnitAnimation(
-      this.shenron,
-      "birth"
-    );
 
     const sfxTimer = CreateTimer();
     TimerStart(sfxTimer, DragonBallsConstants.shenronSfxInterval, true, () => {
@@ -363,6 +360,10 @@ export class DragonBallsManager {
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
       ShowUnitShow(this.shenron);
+      SetUnitAnimation(
+        this.shenron,
+        "stand"
+      );
 
       for (let i = 0; i < Constants.maxActivePlayers; ++i) {
         const shenronVision = CreateFogModifierRadius(

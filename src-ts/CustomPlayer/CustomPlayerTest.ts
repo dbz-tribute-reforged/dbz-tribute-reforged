@@ -412,7 +412,7 @@ export function CustomPlayerTest() {
       deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
     }
 
-    if (killerName && deadName && killerName.length > 0 && deadName.length > 0) {
+    if (killerName && deadName && killerName.length > 1 && deadName.length > 1) {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         15,
@@ -632,7 +632,9 @@ export function CustomPlayerTest() {
   TriggerAddAction(nameTrig, () => {
     const player = GetTriggerPlayer();
     const newName = SubString(GetEventPlayerChatString(), 6, 20);
-    SetPlayerName(player, newName);
+    if (newName.length > 1) {
+      SetPlayerName(player, newName);
+    }
   });
 
   // freemode
