@@ -77,7 +77,10 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Goku Black and Zamasu team up to execute the Zero Mortal Plan.");
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 15, 
+      "Goku Black and Zamasu team up to execute the Zero Mortal Plan."
+    );
 
     this.addHeroListToSaga(["Goku Black 2", "Zamasu"], true);
 

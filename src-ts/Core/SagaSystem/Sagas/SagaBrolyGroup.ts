@@ -26,7 +26,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 1");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 2500);
     }
 
     this.ping();
@@ -196,7 +196,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 30;
   }
 
   spawnSagaUnits(): void {

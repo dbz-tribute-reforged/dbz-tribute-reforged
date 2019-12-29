@@ -245,6 +245,7 @@ gg_trg_Kill_Hero_Revive = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
+gg_trg_Auto_Free_Mode_SP = nil
 gg_trg_Force_Win_Loss = nil
 gg_trg_Shenron_Wish_for_Power = nil
 gg_trg_Shenron_Wish_Granted_Sound = nil
@@ -3237,6 +3238,51 @@ function InitTrig_Remove_Dead_Summons()
     TriggerAddAction(gg_trg_Remove_Dead_Summons, Trig_Remove_Dead_Summons_Actions)
 end
 
+function Trig_Auto_Free_Mode_SP_Func002Func002C()
+    if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+        return false
+    end
+    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Free_Mode_SP_Func003C()
+    if (not (udg_TempInt2 <= 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Free_Mode_SP_Actions()
+    udg_TempInt2 = 0
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > 24) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        if (Trig_Auto_Free_Mode_SP_Func002Func002C()) then
+            udg_TempInt2 = (udg_TempInt2 + 1)
+        else
+        end
+        udg_TempInt = udg_TempInt + 1
+    end
+    if (Trig_Auto_Free_Mode_SP_Func003C()) then
+        udg_TeamAboutToLose[0] = false
+        udg_TeamAboutToLose[1] = false
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10997")
+        udg_IsFreeMode = true
+        DisableTrigger(gg_trg_Force_Win_Loss)
+    else
+    end
+end
+
+function InitTrig_Auto_Free_Mode_SP()
+    gg_trg_Auto_Free_Mode_SP = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Auto_Free_Mode_SP, 16.66)
+    TriggerAddAction(gg_trg_Auto_Free_Mode_SP, Trig_Auto_Free_Mode_SP_Actions)
+end
+
 function Trig_Force_Win_Loss_Conditions()
     if (not (udg_IsFreeMode == false)) then
         return false
@@ -5007,7 +5053,7 @@ function InitTrig_Saga_Hint_Show()
     TriggerAddAction(gg_trg_Saga_Hint_Show, Trig_Saga_Hint_Show_Actions)
 end
 
-function Trig_Update_MS_Func002Func002A()
+function Trig_Update_MS_Func002Func001A()
     udg_TempUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit)
 end
@@ -5016,8 +5062,7 @@ function Trig_Update_MS_Actions()
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_MS_Func002Func002A)
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_MS_Func002Func001A)
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -5028,19 +5073,9 @@ function InitTrig_Update_MS()
     TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func002C()
-    if (not (udg_TempReal ~= GetUnitDefaultMoveSpeed(udg_TempUnit))) then
-        return false
-    end
-    return true
-end
-
 function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
-    udg_TempReal = (RMaxBJ(150.00, RMinBJ(522.00, (GetUnitDefaultMoveSpeed(udg_TempUnit) * RMaxBJ(1.00, (0.20 + (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit))))))) + 0.00)
-    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func002C()) then
-        SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
-    else
-    end
+    udg_TempReal = (RMaxBJ(150.00, RMinBJ(522.00, ((300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)))) * RMinBJ(1.00, (0.20 + (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit))))))) + 0.00)
+    SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
 end
 
 function InitTrig_Set_HP_scaled_MS_for_TempUnit()
@@ -9941,6 +9976,7 @@ function InitCustomTriggers()
     InitTrig_Player_Level_up_New()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()
+    InitTrig_Auto_Free_Mode_SP()
     InitTrig_Force_Win_Loss()
     InitTrig_Shenron_Wish_for_Power()
     InitTrig_Shenron_Wish_Granted_Sound()

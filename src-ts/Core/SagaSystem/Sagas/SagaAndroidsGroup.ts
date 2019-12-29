@@ -12,7 +12,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 6 * Constants.sagaMinDelayTime;
+    this.sagaDelay = 30;
     this.stats = 100;
     this.isRunningAway = false;
   }
@@ -147,7 +147,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 40;
+    this.sagaDelay = 45;
     this.stats = 100;
   }
 
@@ -226,7 +226,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 75;
+    this.sagaDelay = 80;
   }
 
   spawnSagaUnits(): void {

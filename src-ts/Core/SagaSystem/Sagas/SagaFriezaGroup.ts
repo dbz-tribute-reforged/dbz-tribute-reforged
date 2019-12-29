@@ -14,7 +14,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 50;
   }
 

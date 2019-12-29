@@ -3,7 +3,6 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
-import { UnitHelper } from "Common/UnitHelper";
 import { Constants } from "Common/Constants";
 
 export class LordSlugSaga extends AdvancedSaga implements Saga {
@@ -14,7 +13,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
     this.stats = 40;
     this.isSlugKyo = false;
   }

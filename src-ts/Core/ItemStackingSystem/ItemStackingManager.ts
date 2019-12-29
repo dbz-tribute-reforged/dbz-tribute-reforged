@@ -1,7 +1,6 @@
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
-import { Constants } from "Common/Constants";
 import { ItemStackingConstants } from "./ItemStackingConstants";
 
 export class ItemStackingManager {

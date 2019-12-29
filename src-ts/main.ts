@@ -11,6 +11,7 @@ import { ExperienceManager } from 'Core/ExperienceSystem/ExpierenceManager';
 import { CameraZoom } from 'Common/CameraZoom';
 import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
 import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
+import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
@@ -18,6 +19,7 @@ let itemStackingManager: ItemStackingManager;
 let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
 let dragonBallsManager: DragonBallsManager;
+let itemCleanupManager: ItemCleanupManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -38,9 +40,7 @@ function tsMain() {
     // initialize some systems
     PathingCheck.Init();
     creepManager = CreepManager.getInstance();
-  
     sagaManager = SagaManager.getInstance();
-
     itemStackingManager = ItemStackingManager.getInstance();
     
     CustomUiTest();
@@ -50,16 +50,13 @@ function tsMain() {
 
   TimerStart(CreateTimer(), 15, false, () => {
     tournamentManager = TournamentManager.getInstance();
-
     experienceManager = ExperienceManager.getInstance();
-
     DestroyTimer(GetExpiredTimer());
   });
 
   TimerStart(CreateTimer(), 30, false, () => {
     dragonBallsManager = DragonBallsManager.getInstance();
-
-
+    itemCleanupManager = ItemCleanupManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
 }

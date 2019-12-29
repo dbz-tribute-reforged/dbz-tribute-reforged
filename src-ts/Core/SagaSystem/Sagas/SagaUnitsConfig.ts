@@ -138,7 +138,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Super Janemba", new SagaUnit(FourCC("U007"), 85, 15000, 400, 15000, new Vector2D(8500, 4000))],
 
     // super buu saga
-    ["Super Buu", new SagaUnit(FourCC("O006"), 75, 13000, 400, 13000, new Vector2D(5000, 3300))],
+    ["Super Buu", new SagaUnit(FourCC("O006"), 75, 13000, 400, 13000, new Vector2D(-3000, 10000))],
 
     // kid buu saga
     ["Kid Buu", new SagaUnit(FourCC("O00C"), 85, 15000, 400, 15000, new Vector2D(5000, 9300))],
@@ -160,7 +160,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // super 17 saga
     // hell fighter 17
-    ["Super 17", new SagaUnit(FourCC("H05B"), 90, 17000, 400, 17000, new Vector2D(7000, 5500))],
+    ["Super 17", new SagaUnit(FourCC("H05B"), 90, 17000, 400, 17000, new Vector2D(0, -7000))],
     // pui pui, yakon, 19, saibamen, appule, rilldo
     // cooler, king cold,
     // raditz, nappa, 

@@ -66722,6 +66722,11 @@ STRING 10996
 Q
 }
 
+STRING 10997
+{
+Single player detected. Automatic Freemode Enabled, forced win/loss conditions are disabled.
+}
+
 STRING 10998
 {
 Freemode Disabled, forced win/loss conditions are enabled.
