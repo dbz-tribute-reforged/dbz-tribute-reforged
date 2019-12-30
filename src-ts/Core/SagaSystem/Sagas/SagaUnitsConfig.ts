@@ -10,11 +10,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Sansho", new SagaUnit(FourCC("N00C"), 1, 10, 5, 5, new Vector2D(6300, 22000))],
 
     // raditz
-    ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
+    // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
+    ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(8800, -1400))],
 
     // saiyan saga
-    ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(-3300, -5500))],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(-3300, -5500))],
+    // ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(-3300, -5500))],
+    // ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(-3300, -5500))],
+    ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(8800, 1400))],
+    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(8800, 1400))],
     
     // wheelo
     ["Kishime", new SagaUnit(FourCC("O00P"), 6, 75, 75, 75, new Vector2D(800, 18000))],

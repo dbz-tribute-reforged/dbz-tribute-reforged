@@ -466,7 +466,7 @@ export const DamageBlockComponents = [
           z: 255,
         },
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },
