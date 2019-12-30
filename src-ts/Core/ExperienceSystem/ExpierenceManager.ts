@@ -88,9 +88,9 @@ export class ExperienceManager {
 
   setupUnitXPModifiers() {
     // androids 13/14/15
-    this.unitXPModifier.set(FourCC("H01V"), 0.66);
-    this.unitXPModifier.set(FourCC("H01S"), 0.66);
-    this.unitXPModifier.set(FourCC("H01T"), 0.66);
+    // this.unitXPModifier.set(FourCC("H01V"), 0.5);
+    // this.unitXPModifier.set(FourCC("H01S"), 0.5);
+    // this.unitXPModifier.set(FourCC("H01T"), 0.5);
   }
 
   setupRewardXPTrigger(rewardTrigger: trigger) {
@@ -175,21 +175,35 @@ export class ExperienceManager {
 
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
-          
-          const xpModifier = this.unitXPModifier.get(GetUnitTypeId(rewardedUnit));
-          if (xpModifier != undefined) {
-            AddHeroXP(
-              rewardedUnit, 
-              Math.floor(rewardXP * xpModifier), 
-              true
-            );
-          } else {
-            AddHeroXP(
-              rewardedUnit, 
-              rewardXP, 
-              true
-            );
+
+          let xpModifier = 1;
+          const nearbyPlayerUnits = numPlayerUnits[GetPlayerId(GetOwningPlayer(rewardedUnit))];
+          if (nearbyPlayerUnits >= 3) {            
+            xpModifier = 0.5;
+          } else if (nearbyPlayerUnits == 2) {
+            xpModifier = 0.75;
           }
+
+          AddHeroXP(
+            rewardedUnit, 
+            Math.floor(rewardXP * xpModifier), 
+            true
+          );
+          
+          // const xpModifier = this.unitXPModifier.get(GetUnitTypeId(rewardedUnit));
+          // if (xpModifier != undefined) {
+          //   AddHeroXP(
+          //     rewardedUnit, 
+          //     Math.floor(rewardXP * xpModifier), 
+          //     true
+          //   );
+          // } else {
+          //   AddHeroXP(
+          //     rewardedUnit, 
+          //     rewardXP, 
+          //     true
+          //   );
+          // }
           // exp floating text is provided for us
           // although it might be possible to disable
           // and manually do it

@@ -245,6 +245,7 @@ gg_trg_Setup_Quests = nil
 gg_trg_Disable_Abilities_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
+gg_trg_Hero_Pick_Floating_Text_Help = nil
 gg_trg_soundtrig = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
@@ -429,7 +430,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Hero_Pick_Floating_Text_Help = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2881,7 +2881,7 @@ function Trig_Hero_Pick_Floating_Text_Help_Actions()
     CreateTextTagLocBJ("TRIGSTR_11040", udg_TempLoc, 0, 16.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
-        udg_TempLoc = Location(2200, 21000)
+        udg_TempLoc = Location(2200, 21100)
     CreateTextTagLocBJ("TRIGSTR_11043", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
@@ -5612,7 +5612,7 @@ function InitTrig_Update_MS()
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
-    udg_TempReal = (RMaxBJ(200.00, RMinBJ(522.00, (RMinBJ(522.00, (300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.40 + (0.60 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
+    udg_TempReal = (RMaxBJ(250.00, RMinBJ(522.00, (RMinBJ(522.00, (300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.60 + (0.40 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
     SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
 end
 
@@ -8377,7 +8377,7 @@ function Trig_Transformations_Androids_Super_13_Func011C()
     if (not (udg_TransformationString == "ultra")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 110)) then
         return false
     end
     return true
@@ -8387,7 +8387,7 @@ function Trig_Transformations_Androids_Super_13_Func012C()
     if (not (udg_TransformationString == "ultra")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 170)) then
         return false
     end
     return true
@@ -10321,7 +10321,7 @@ end
 
 function Trig_Replace_Transformation_Group_with_New_Hero_Func007A()
         RemoveLocation(udg_TempLoc)
-    udg_TempInt = (udg_TempInt + GetHeroLevel(GetEnumUnit()))
+    udg_TempInt = (udg_TempInt + GetHeroXP(GetEnumUnit()))
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
     udg_TempReal = (udg_TempReal + udg_StatMultStr)
@@ -10345,7 +10345,7 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
     udg_PlayerLevel[GetConvertedPlayerId(udg_TransformationPlayer)] = (udg_TempInt - 1)
-        SetHeroLevel(udg_TransformationResultUnit, udg_TempInt, false)
+        AddHeroXP(udg_TransformationResultUnit, udg_TempInt, false)
     ModifyHeroStat(bj_HEROSTAT_STR, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
     ModifyHeroStat(bj_HEROSTAT_AGI, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
     ModifyHeroStat(bj_HEROSTAT_INT, udg_TransformationResultUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
