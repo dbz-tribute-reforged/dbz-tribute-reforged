@@ -258,6 +258,8 @@ gg_trg_Auto_Free_Mode_SP = nil
 gg_trg_Force_Win_Loss = nil
 gg_trg_Scoreboard_Init = nil
 gg_trg_Scoreboard_Setup_Team = nil
+gg_trg_Scoreboard_Get_TempUnit_Icon = nil
+gg_trg_Scoreboard_Death = nil
 gg_trg_Scoreboard_Update = nil
 gg_trg_Scoreboard_Timer_Increment = nil
 gg_trg_Shenron_Wish_for_Power = nil
@@ -425,7 +427,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Scoreboard_Get_TempUnit_Icon = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -3113,13 +3114,6 @@ function Trig_Kill_Hero_Stats_Func001Func010C()
     return true
 end
 
-function Trig_Kill_Hero_Stats_Func001Func011C()
-    if (not (IsPlayerInForce(GetOwningPlayer(GetKillingUnitBJ()), udg_ActivePlayerGroup) == true)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Kill_Hero_Stats_Func001C()
     if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
         return false
@@ -3141,15 +3135,6 @@ function Trig_Kill_Hero_Stats_Actions()
             TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
                         RemoveLocation(udg_TempLoc)
                         DestroyForce(udg_TempPlayerGroup)
-        else
-        end
-        if (Trig_Kill_Hero_Stats_Func001Func011C()) then
-            udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit()))
-            udg_TempInt2 = GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))
-            udg_PlayerDeaths[udg_TempInt] = (udg_PlayerDeaths[udg_TempInt] + 1)
-            udg_PlayerKills[udg_TempInt2] = (udg_PlayerKills[udg_TempInt2] + 1)
-            MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_ScoreboardPlayerRowIndex[udg_TempInt], I2S(udg_PlayerDeaths[udg_TempInt]))
-            MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_ScoreboardPlayerRowIndex[udg_TempInt2], I2S(udg_PlayerKills[udg_TempInt2]))
         else
         end
     else
@@ -3532,6 +3517,7 @@ function Trig_Scoreboard_Init_Actions()
     MultiboardMinimizeBJ(false, udg_Scoreboard)
     EnableTrigger(gg_trg_Scoreboard_Update)
     EnableTrigger(gg_trg_Scoreboard_Timer_Increment)
+    EnableTrigger(gg_trg_Scoreboard_Death)
 end
 
 function InitTrig_Scoreboard_Init()
@@ -3555,7 +3541,7 @@ function Trig_Scoreboard_Setup_Team_Func001A()
     udg_TempPlayer = GetEnumPlayer()
     udg_TempInt3 = GetConvertedPlayerId(udg_TempPlayer)
     udg_ScoreboardPlayerRowIndex[udg_TempInt3] = udg_TempInt2
-    MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, I2S(udg_TempInt3))
+    MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, (udg_PlayerColorString[udg_TempInt3] .. (I2S(udg_TempInt3) .. "|r")))
     udg_TempString = "IconNotFound"
     ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scoreboard_Setup_Team_Func001Func006A)
     if (Trig_Scoreboard_Setup_Team_Func001Func007C()) then
@@ -3737,6 +3723,49 @@ end
 function InitTrig_Scoreboard_Get_TempUnit_Icon()
     gg_trg_Scoreboard_Get_TempUnit_Icon = CreateTrigger()
     TriggerAddAction(gg_trg_Scoreboard_Get_TempUnit_Icon, Trig_Scoreboard_Get_TempUnit_Icon_Actions)
+end
+
+function Trig_Scoreboard_Death_Conditions()
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
+    if (not (IsUnitInGroup(GetDyingUnit(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit()))]) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Death_Func009C()
+    if (not (IsPlayerInForce(GetOwningPlayer(GetKillingUnitBJ()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Death_Actions()
+    udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit()))
+    udg_PlayerDeaths[udg_TempInt] = (udg_PlayerDeaths[udg_TempInt] + 1)
+    MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_ScoreboardPlayerRowIndex[udg_TempInt], I2S(udg_PlayerDeaths[udg_TempInt]))
+    if (Trig_Scoreboard_Death_Func009C()) then
+        udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))
+        udg_PlayerKills[udg_TempInt] = (udg_PlayerKills[udg_TempInt] + 1)
+        MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_ScoreboardPlayerRowIndex[udg_TempInt], I2S(udg_PlayerKills[udg_TempInt]))
+    else
+    end
+end
+
+function InitTrig_Scoreboard_Death()
+    gg_trg_Scoreboard_Death = CreateTrigger()
+    DisableTrigger(gg_trg_Scoreboard_Death)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Scoreboard_Death, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Scoreboard_Death, Condition(Trig_Scoreboard_Death_Conditions))
+    TriggerAddAction(gg_trg_Scoreboard_Death, Trig_Scoreboard_Death_Actions)
 end
 
 function Trig_Scoreboard_Update_Func001Func007Func004C()
@@ -4855,8 +4884,12 @@ function InitTrig_Hero_Pick_Set_HeroPickUnitType_availability()
 end
 
 function Trig_Hero_Pick_Init_Available_Heroes_Actions()
-        udg_TempLoc = Location(2000, 22000)
-    CreateTextTagLocBJ("TRIGSTR_10999", udg_TempLoc, 0, 20.00, 100, 100, 100, 0)
+        udg_TempLoc = Location(2000, 21600)
+    CreateTextTagLocBJ("TRIGSTR_10999", udg_TempLoc, 0, 15.00, 100, 100, 100, 15.00)
+    udg_TempFloatingText = GetLastCreatedTextTag()
+    SetTextTagPermanentBJ(udg_TempFloatingText, true)
+        udg_TempLoc = Location(2000, 21200)
+    CreateTextTagLocBJ("TRIGSTR_11033", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
         RemoveLocation(udg_TempLoc)
@@ -6298,8 +6331,7 @@ function Trig_Transformations_Exit_Point_Func001A()
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > 6) then break end
-        UnitRemoveItemFromSlotSwapped(udg_TempInt2, GetEnumUnit())
-        UnitAddItemSwapped(GetLastRemovedItem(), udg_TransformationResultUnit)
+        UnitAddItemSwapped(UnitItemInSlotBJ(udg_TempUnit, udg_TempInt2), udg_TransformationResultUnit)
         udg_TempInt2 = udg_TempInt2 + 1
     end
     udg_StatMultUnit = GetEnumUnit()
@@ -10455,6 +10487,7 @@ function InitCustomTriggers()
     InitTrig_Scoreboard_Init()
     InitTrig_Scoreboard_Setup_Team()
     InitTrig_Scoreboard_Get_TempUnit_Icon()
+    InitTrig_Scoreboard_Death()
     InitTrig_Scoreboard_Update()
     InitTrig_Scoreboard_Timer_Increment()
     InitTrig_Shenron_Wish_for_Power()
