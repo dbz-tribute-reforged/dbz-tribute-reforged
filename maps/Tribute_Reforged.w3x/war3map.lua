@@ -154,7 +154,9 @@ udg_ScoreboardPlayerRowIndex = __jarray(0)
 udg_StatsPerLvl = 0.0
 udg_PlayerKills = __jarray(0)
 udg_PlayerDeaths = __jarray(0)
-udg_ScoreboardTimer = nil
+udg_ScoreboardTimeSeconds = 0
+udg_ScoreboardTimeMinutes = 0
+udg_ScoreboardTimeHours = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -249,12 +251,15 @@ gg_trg_Kill_Creep_New_New_Stats_Only = nil
 gg_trg_Kill_Hero_Stats = nil
 gg_trg_Kill_Hero_Revive = nil
 gg_trg_Player_Level_up_New = nil
+gg_trg_Hero_Level_up_New_New = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
 gg_trg_Auto_Free_Mode_SP = nil
 gg_trg_Force_Win_Loss = nil
 gg_trg_Scoreboard_Init = nil
 gg_trg_Scoreboard_Setup_Team = nil
+gg_trg_Scoreboard_Update = nil
+gg_trg_Scoreboard_Timer_Increment = nil
 gg_trg_Shenron_Wish_for_Power = nil
 gg_trg_Shenron_Wish_Granted_Sound = nil
 gg_trg_Final_Battle_Detector = nil
@@ -352,6 +357,7 @@ gg_trg_Get_Base_Stats = nil
 gg_trg_Set_Stat_Multiplier = nil
 gg_trg_Get_Stat_Multiplier = nil
 gg_trg_Set_Varied_Stat_Multiplier = nil
+gg_trg_Get_Highest_Stat_Real = nil
 gg_trg_Update_Current_Stats = nil
 gg_trg_Clear_Stat_Mult_SFX = nil
 gg_trg_show_me_the_ss = nil
@@ -419,11 +425,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Hero_Level_up_New_New = nil
-gg_trg_Scoreboard_Update = nil
-gg_trg_Get_Highest_Stat_Real = nil
-gg_trg_Scoreboard_Timer_Init = nil
-gg_trg_Scoreboard_Timer_Increment = nil
+gg_trg_Scoreboard_Get_TempUnit_Icon = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -643,7 +645,9 @@ function InitGlobals()
         udg_PlayerDeaths[i] = 0
         i = i + 1
     end
-    udg_ScoreboardTimer = CreateTimer()
+    udg_ScoreboardTimeSeconds = 0
+    udg_ScoreboardTimeMinutes = 0
+    udg_ScoreboardTimeHours = 0
 end
 
 function InitSounds()
@@ -3468,7 +3472,7 @@ function InitTrig_Force_Win_Loss()
     TriggerAddAction(gg_trg_Force_Win_Loss, Trig_Force_Win_Loss_Actions)
 end
 
-function Trig_Scoreboard_Init_Func002Func002C()
+function Trig_Scoreboard_Init_Func005Func002C()
     if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
         return false
     end
@@ -3476,12 +3480,15 @@ function Trig_Scoreboard_Init_Func002Func002C()
 end
 
 function Trig_Scoreboard_Init_Actions()
+    udg_ScoreboardTimeSeconds = 0
+    udg_ScoreboardTimeMinutes = 0
+    udg_ScoreboardTimeHours = 0
     udg_TempInt2 = 0
     udg_TempInt = 1
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        if (Trig_Scoreboard_Init_Func002Func002C()) then
+        if (Trig_Scoreboard_Init_Func005Func002C()) then
             udg_TempInt2 = (udg_TempInt2 + 1)
             udg_PlayerKills[udg_TempInt] = 0
             udg_PlayerDeaths[udg_TempInt] = 0
@@ -3498,16 +3505,15 @@ function Trig_Scoreboard_Init_Actions()
     MultiboardSetItemStyleBJ(udg_Scoreboard, 4, 0, true, false)
     MultiboardSetItemStyleBJ(udg_Scoreboard, 5, 0, true, false)
     MultiboardSetItemStyleBJ(udg_Scoreboard, 6, 0, true, false)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 1, 0, 1.00)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 2, 0, 1.00)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 3, 0, 4.00)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 4, 0, 1.00)
+    MultiboardSetItemWidthBJ(udg_Scoreboard, 1, 0, 2.00)
+    MultiboardSetItemWidthBJ(udg_Scoreboard, 2, 0, 2.00)
+    MultiboardSetItemWidthBJ(udg_Scoreboard, 3, 0, 5.00)
+    MultiboardSetItemWidthBJ(udg_Scoreboard, 4, 0, 2.00)
     MultiboardSetItemWidthBJ(udg_Scoreboard, 5, 0, 1.00)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 6, 0, 1.00)
-    MultiboardSetItemWidthBJ(udg_Scoreboard, 6, 0, 1.00)
+    MultiboardSetItemWidthBJ(udg_Scoreboard, 6, 0, 2.00)
+    MultiboardSetItemIconBJ(udg_Scoreboard, 2, 0, "Replaceabletextures\\\\CommandButtons\\\\BTNSelectHeroOn.blp")
     udg_TempInt2 = 1
     MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, "TRIGSTR_11032")
-    MultiboardSetItemValueBJ(udg_Scoreboard, 2, udg_TempInt2, "TRIGSTR_11033")
     MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11034")
     MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, "TRIGSTR_11035")
     MultiboardSetItemValueBJ(udg_Scoreboard, 5, 0, "TRIGSTR_11036")
@@ -3516,10 +3522,8 @@ function Trig_Scoreboard_Init_Actions()
     udg_TempInt = 0
     TriggerExecute(gg_trg_Scoreboard_Setup_Team)
     MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, "TRIGSTR_11039")
-    MultiboardSetItemValueBJ(udg_Scoreboard, 2, udg_TempInt2, "TRIGSTR_11040")
     MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11041")
     MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, "TRIGSTR_11042")
-    MultiboardSetItemValueBJ(udg_Scoreboard, 5, 0, "TRIGSTR_11043")
     MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_TempInt2, "TRIGSTR_11044")
     udg_TempInt2 = (udg_TempInt2 + 1)
     udg_TempInt = 1
@@ -3527,7 +3531,7 @@ function Trig_Scoreboard_Init_Actions()
     MultiboardDisplayBJ(true, udg_Scoreboard)
     MultiboardMinimizeBJ(false, udg_Scoreboard)
     EnableTrigger(gg_trg_Scoreboard_Update)
-    TriggerExecute(gg_trg_Scoreboard_Timer_Init)
+    EnableTrigger(gg_trg_Scoreboard_Timer_Increment)
 end
 
 function InitTrig_Scoreboard_Init()
@@ -3535,12 +3539,29 @@ function InitTrig_Scoreboard_Init()
     TriggerAddAction(gg_trg_Scoreboard_Init, Trig_Scoreboard_Init_Actions)
 end
 
+function Trig_Scoreboard_Setup_Team_Func001Func006A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Scoreboard_Get_TempUnit_Icon)
+end
+
+function Trig_Scoreboard_Setup_Team_Func001Func007C()
+    if (not (udg_TempString ~= "IconNotFound")) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Setup_Team_Func001A()
     udg_TempPlayer = GetEnumPlayer()
     udg_TempInt3 = GetConvertedPlayerId(udg_TempPlayer)
     udg_ScoreboardPlayerRowIndex[udg_TempInt3] = udg_TempInt2
     MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, I2S(udg_TempInt3))
-    MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, "UI\\Feedback\\Resources\\ResourceGold.blp")
+    udg_TempString = "IconNotFound"
+    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scoreboard_Setup_Team_Func001Func006A)
+    if (Trig_Scoreboard_Setup_Team_Func001Func007C()) then
+        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, udg_TempString)
+    else
+    end
     MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11046")
     MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, I2S(udg_PlayerKills[udg_TempInt3]))
     MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_TempInt2, I2S(udg_PlayerDeaths[udg_TempInt3]))
@@ -3554,6 +3575,168 @@ end
 function InitTrig_Scoreboard_Setup_Team()
     gg_trg_Scoreboard_Setup_Team = CreateTrigger()
     TriggerAddAction(gg_trg_Scoreboard_Setup_Team, Trig_Scoreboard_Setup_Team_Actions)
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H042"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("N00Q"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("O005"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("O001"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H01V"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08S"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08P"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00R"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H009"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00K"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E003"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H000"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Get_TempUnit_Icon_Actions()
+    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001C()) then
+        udg_TempString = "BTNGoku.blp"
+    else
+        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001C()) then
+            udg_TempString = "BTNVegeta.blp"
+        else
+            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001C()) then
+                udg_TempString = "BTNGohan.blp"
+            else
+                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001C()) then
+                    udg_TempString = "BTNFutureTrunks.blp"
+                else
+                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001C()) then
+                        udg_TempString = "BTNPiccolo.blp"
+                    else
+                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001C()) then
+                            udg_TempString = "BTNBardock.blp"
+                        else
+                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001C()) then
+                                udg_TempString = "BTNPan.blp"
+                            else
+                                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                    udg_TempString = "BTNFarmer.blp"
+                                else
+                                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()) then
+                                        udg_TempString = "BTNSuper13.blp"
+                                    else
+                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()) then
+                                            udg_TempString = "BTNBabidi.blp"
+                                        else
+                                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()) then
+                                                udg_TempString = "BTNFatBuu.blp"
+                                            else
+                                                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()) then
+                                                    udg_TempString = "BTNBroly.blp"
+                                                else
+                                                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()) then
+                                                        udg_TempString = "BTNCellPerfect.blp"
+                                                    else
+                                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()) then
+                                                            udg_TempString = "BTNCoolerBaseForm.blp"
+                                                        else
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function InitTrig_Scoreboard_Get_TempUnit_Icon()
+    gg_trg_Scoreboard_Get_TempUnit_Icon = CreateTrigger()
+    TriggerAddAction(gg_trg_Scoreboard_Get_TempUnit_Icon, Trig_Scoreboard_Get_TempUnit_Icon_Actions)
 end
 
 function Trig_Scoreboard_Update_Func001Func007Func004C()
@@ -3597,21 +3780,33 @@ function InitTrig_Scoreboard_Update()
     TriggerAddAction(gg_trg_Scoreboard_Update, Trig_Scoreboard_Update_Actions)
 end
 
-function Trig_Scoreboard_Timer_Init_Actions()
-    StartTimerBJ(udg_ScoreboardTimer, false, 0.00)
-    PauseTimerBJ(true, udg_ScoreboardTimer)
-    EnableTrigger(gg_trg_Scoreboard_Timer_Increment)
+function Trig_Scoreboard_Timer_Increment_Func002Func003C()
+    if (not (udg_ScoreboardTimeMinutes >= 60)) then
+        return false
+    end
+    return true
 end
 
-function InitTrig_Scoreboard_Timer_Init()
-    gg_trg_Scoreboard_Timer_Init = CreateTrigger()
-    TriggerAddAction(gg_trg_Scoreboard_Timer_Init, Trig_Scoreboard_Timer_Init_Actions)
+function Trig_Scoreboard_Timer_Increment_Func002C()
+    if (not (udg_ScoreboardTimeSeconds >= 60)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Scoreboard_Timer_Increment_Actions()
-    StartTimerBJ(udg_ScoreboardTimer, false, (TimerGetRemaining(udg_ScoreboardTimer) + 1))
-    PauseTimerBJ(true, udg_ScoreboardTimer)
-    MultiboardSetTitleText(udg_Scoreboard, R2S(TimerGetRemaining(udg_ScoreboardTimer)))
+    udg_ScoreboardTimeSeconds = (udg_ScoreboardTimeSeconds + 1)
+    if (Trig_Scoreboard_Timer_Increment_Func002C()) then
+        udg_ScoreboardTimeSeconds = 0
+        udg_ScoreboardTimeMinutes = (udg_ScoreboardTimeMinutes + 1)
+        if (Trig_Scoreboard_Timer_Increment_Func002Func003C()) then
+            udg_ScoreboardTimeMinutes = 0
+            udg_ScoreboardTimeHours = (udg_ScoreboardTimeHours + 1)
+        else
+        end
+    else
+    end
+    MultiboardSetTitleText(udg_Scoreboard, (I2S(udg_ScoreboardTimeHours) .. (":" .. (I2S(udg_ScoreboardTimeMinutes) .. (":" .. I2S(udg_ScoreboardTimeSeconds))))))
 end
 
 function InitTrig_Scoreboard_Timer_Increment()
@@ -4679,6 +4874,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08M")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08P")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08S")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
@@ -8377,6 +8574,7 @@ function Trig_Transformations_Babidi_Actions()
         SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
         SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 2)
         udg_StatMultReal = 0.00
+        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(udg_TransformationPlayer)], "BTNFatBuu.blp")
     else
     end
     if (Trig_Transformations_Babidi_Func012C()) then
@@ -8429,6 +8627,7 @@ function Trig_Super_Buu_to_Kid_Buu_Func001A()
                 udg_TransformationID = FourCC('O00C')
         udg_TransformationStatMult = RMaxBJ(udg_StatMultInt, 2.40)
         udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(udg_TransformationPlayer)], "BTNKidBuu.blp")
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
         TriggerExecute(gg_trg_Transformations_Exit_Point)
     else
@@ -8567,6 +8766,7 @@ function Trig_Transformations_Fat_Buu_Actions()
         SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
         SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 2)
         udg_StatMultReal = 0.00
+        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(udg_TransformationPlayer)], "BTNSuperBuu.blp")
     else
     end
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -10254,8 +10454,8 @@ function InitCustomTriggers()
     InitTrig_Force_Win_Loss()
     InitTrig_Scoreboard_Init()
     InitTrig_Scoreboard_Setup_Team()
+    InitTrig_Scoreboard_Get_TempUnit_Icon()
     InitTrig_Scoreboard_Update()
-    InitTrig_Scoreboard_Timer_Init()
     InitTrig_Scoreboard_Timer_Increment()
     InitTrig_Shenron_Wish_for_Power()
     InitTrig_Shenron_Wish_Granted_Sound()
