@@ -10,12 +10,14 @@ export class ExperienceManager {
   protected creepXP: number[];
   protected heroXP: number[];
 
+  protected unitXPModifier: Map<number, number>;
   protected rewardXPTrigger: trigger;
 
   constructor (
   ) {
     this.creepXP = [];
     this.heroXP = [];
+    this.unitXPModifier = new Map();
     this.rewardXPTrigger = CreateTrigger();
     this.initialize();
   }
@@ -46,6 +48,8 @@ export class ExperienceManager {
       ExperienceConstants.creepConstant,
       Constants.maxCreepLvl,
     )
+
+    this.setupUnitXPModifiers();
 
     this.setupRewardXPTrigger(this.rewardXPTrigger);
 
@@ -80,6 +84,13 @@ export class ExperienceManager {
       return this.creepXP[level];
     }
     return 0;
+  }
+
+  setupUnitXPModifiers() {
+    // androids 13/14/15
+    this.unitXPModifier.set(FourCC("H01V"), 0.5);
+    this.unitXPModifier.set(FourCC("H01S"), 0.5);
+    this.unitXPModifier.set(FourCC("H01T"), 0.5);
   }
 
   setupRewardXPTrigger(rewardTrigger: trigger) {
@@ -164,13 +175,20 @@ export class ExperienceManager {
 
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
-          const playerId = GetPlayerId(GetOwningPlayer(rewardedUnit));
           
-          if (numPlayerUnits[playerId] > 0) {
+          const xpModifier = this.unitXPModifier.get(GetUnitTypeId(rewardedUnit));
+          if (xpModifier != undefined) {
             AddHeroXP(
               rewardedUnit, 
-              Math.max(1, Math.floor(rewardXP / numPlayerUnits[playerId])), 
-              true);
+              rewardXP * xpModifier, 
+              true
+            );
+          } else {
+            AddHeroXP(
+              rewardedUnit, 
+              rewardXP, 
+              true
+            );
           }
           // exp floating text is provided for us
           // although it might be possible to disable
