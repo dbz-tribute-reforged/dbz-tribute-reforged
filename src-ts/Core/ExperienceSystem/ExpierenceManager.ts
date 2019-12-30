@@ -130,15 +130,17 @@ export class ExperienceManager {
 
         // count num different players nearby
         let numUniquePlayers = 0;
-        let seenPlayer: boolean[] = [];
+        let numPlayerUnits: number[] = [];
         for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-          seenPlayer[i] = false;
+          numPlayerUnits[i] = 0;
         }
         ForGroup(rewardedGroup, () => {
           const playerId = GetPlayerId(GetOwningPlayer(GetEnumUnit()));
-          if (playerId >= 0 && playerId < Constants.maxActivePlayers && !seenPlayer[playerId]) {
-            ++numUniquePlayers;
-            seenPlayer[playerId] = true;
+          if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+            if (numPlayerUnits[playerId] == 0) {
+              ++numUniquePlayers;
+            }
+            ++numPlayerUnits[playerId];
           }
         });
 
@@ -162,9 +164,14 @@ export class ExperienceManager {
 
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
+          const playerId = GetPlayerId(GetOwningPlayer(rewardedUnit));
           
-          AddHeroXP(rewardedUnit, rewardXP, true);
-
+          if (numPlayerUnits[playerId] > 0) {
+            AddHeroXP(
+              rewardedUnit, 
+              Math.max(1, Math.floor(rewardXP / numPlayerUnits[playerId])), 
+              true);
+          }
           // exp floating text is provided for us
           // although it might be possible to disable
           // and manually do it
