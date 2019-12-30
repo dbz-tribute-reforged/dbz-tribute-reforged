@@ -157,6 +157,8 @@ udg_PlayerDeaths = __jarray(0)
 udg_ScoreboardTimeSeconds = 0
 udg_ScoreboardTimeMinutes = 0
 udg_ScoreboardTimeHours = 0
+udg_TempString2 = ""
+udg_TempString3 = ""
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -649,6 +651,8 @@ function InitGlobals()
     udg_ScoreboardTimeSeconds = 0
     udg_ScoreboardTimeMinutes = 0
     udg_ScoreboardTimeHours = 0
+    udg_TempString2 = ""
+    udg_TempString3 = ""
 end
 
 function InitSounds()
@@ -3525,13 +3529,20 @@ function InitTrig_Scoreboard_Init()
     TriggerAddAction(gg_trg_Scoreboard_Init, Trig_Scoreboard_Init_Actions)
 end
 
-function Trig_Scoreboard_Setup_Team_Func001Func006A()
+function Trig_Scoreboard_Setup_Team_Func001Func002Func005A()
     udg_TempUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Scoreboard_Get_TempUnit_Icon)
 end
 
-function Trig_Scoreboard_Setup_Team_Func001Func007C()
+function Trig_Scoreboard_Setup_Team_Func001Func002Func006C()
     if (not (udg_TempString ~= "IconNotFound")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Setup_Team_Func001Func002C()
+    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
         return false
     end
     return true
@@ -3539,19 +3550,22 @@ end
 
 function Trig_Scoreboard_Setup_Team_Func001A()
     udg_TempPlayer = GetEnumPlayer()
-    udg_TempInt3 = GetConvertedPlayerId(udg_TempPlayer)
-    udg_ScoreboardPlayerRowIndex[udg_TempInt3] = udg_TempInt2
-    MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, (udg_PlayerColorString[udg_TempInt3] .. (I2S(udg_TempInt3) .. "|r")))
-    udg_TempString = "IconNotFound"
-    ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scoreboard_Setup_Team_Func001Func006A)
-    if (Trig_Scoreboard_Setup_Team_Func001Func007C()) then
-        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, udg_TempString)
+    if (Trig_Scoreboard_Setup_Team_Func001Func002C()) then
+        udg_TempInt3 = GetConvertedPlayerId(udg_TempPlayer)
+        udg_ScoreboardPlayerRowIndex[udg_TempInt3] = udg_TempInt2
+        MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, (udg_PlayerColorString[udg_TempInt3] .. (I2S(udg_TempInt3) .. "|r")))
+        udg_TempString = "IconNotFound"
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scoreboard_Setup_Team_Func001Func002Func005A)
+        if (Trig_Scoreboard_Setup_Team_Func001Func002Func006C()) then
+            MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, udg_TempString)
+        else
+        end
+        MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11038")
+        MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, I2S(udg_PlayerKills[udg_TempInt3]))
+        MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_TempInt2, I2S(udg_PlayerDeaths[udg_TempInt3]))
+        udg_TempInt2 = (udg_TempInt2 + 1)
     else
     end
-    MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11046")
-    MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, I2S(udg_PlayerKills[udg_TempInt3]))
-    MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_TempInt2, I2S(udg_PlayerDeaths[udg_TempInt3]))
-    udg_TempInt2 = (udg_TempInt2 + 1)
 end
 
 function Trig_Scoreboard_Setup_Team_Actions()
@@ -3823,6 +3837,27 @@ function Trig_Scoreboard_Timer_Increment_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Timer_Increment_Func006C()
+    if (not (udg_ScoreboardTimeHours < 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Timer_Increment_Func007C()
+    if (not (udg_ScoreboardTimeMinutes < 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Scoreboard_Timer_Increment_Func008C()
+    if (not (udg_ScoreboardTimeSeconds < 10)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Timer_Increment_Actions()
     udg_ScoreboardTimeSeconds = (udg_ScoreboardTimeSeconds + 1)
     if (Trig_Scoreboard_Timer_Increment_Func002C()) then
@@ -3835,7 +3870,22 @@ function Trig_Scoreboard_Timer_Increment_Actions()
         end
     else
     end
-    MultiboardSetTitleText(udg_Scoreboard, (I2S(udg_ScoreboardTimeHours) .. (":" .. (I2S(udg_ScoreboardTimeMinutes) .. (":" .. I2S(udg_ScoreboardTimeSeconds))))))
+    udg_TempString = I2S(udg_ScoreboardTimeHours)
+    udg_TempString2 = I2S(udg_ScoreboardTimeMinutes)
+    udg_TempString3 = I2S(udg_ScoreboardTimeSeconds)
+    if (Trig_Scoreboard_Timer_Increment_Func006C()) then
+        udg_TempString = ("0" .. udg_TempString)
+    else
+    end
+    if (Trig_Scoreboard_Timer_Increment_Func007C()) then
+        udg_TempString2 = ("0" .. udg_TempString2)
+    else
+    end
+    if (Trig_Scoreboard_Timer_Increment_Func008C()) then
+        udg_TempString3 = ("0" .. udg_TempString3)
+    else
+    end
+    MultiboardSetTitleText(udg_Scoreboard, (udg_TempString .. (":" .. (udg_TempString2 .. (":" .. udg_TempString3)))))
 end
 
 function InitTrig_Scoreboard_Timer_Increment()
