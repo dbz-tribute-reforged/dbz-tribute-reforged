@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.22a
+DBZ Tribute Reforged 0.23
 }
 
 STRING 4
@@ -61555,7 +61555,7 @@ Type "r" to revert.
 Transformations:
 [lvl 15]  1.50x fp
 [lvl 45]  2.00x fp
-[lvl 70]  2.50x fp
+[lvl 75]  2.25x fp
 
 For Super 13 type "super" when all androids lvl greater than 35
 }
@@ -64242,9 +64242,9 @@ STRING 10601
 {
 Type "r" to revert.
 Transformations:
-[lvl 105] 2.00x r
-[lvl 150] 2.25x ultra
-[lvl 200] 2.50x ultra
+[ base ] 2.00x r
+[lvl 110] 2.25x ultra
+[lvl 170] 2.50x ultra
 }
 
 STRING 10602
@@ -64255,7 +64255,7 @@ Only gains stat multiplier by eating candy (see candy beam ability).
 For Super Buu type "super" at lvl 90.
 
 Super Buu:
-Carries over stat mult from fat buu.
+Carries over some of the stat mult from fat buu.
 Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
@@ -64265,7 +64265,7 @@ STRING 10603
 {
 Transformations:
 Super Buu:
-Carries over stat mult from fat buu.
+Carries over some of the stat mult from fat buu.
 Only gains additional stat multiplier by absorbing players.
 Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
@@ -64349,7 +64349,7 @@ Transformations:
 [lvl 140] 2.50x fp
 [lvl 200] 2.60x golden
 
-To become Metal Cooler type "metal" as Final Form Cooler while dead.
+To become Metal Cooler type "metal" as Final Form Cooler while dead. Note: MC is not necessarily stronger than Final Form Cooler.
 }
 
 STRING 10610
@@ -66722,6 +66722,11 @@ STRING 10996
 Q
 }
 
+STRING 10997
+{
+Single player detected. Automatic Freemode Enabled, forced win/loss conditions are disabled.
+}
+
 STRING 10998
 {
 Freemode Disabled, forced win/loss conditions are enabled.
@@ -66859,6 +66864,24 @@ STRING 11021
 (Wish)
 }
 
+STRING 11022
+// Abilities: A0MC (Book Goku Black Heads), Name (Name)
+{
+Book Goku Black Heads
+}
+
+STRING 11023
+// Abilities: A0MD (GokuBlackRevert), Name (Name)
+{
+GokuBlackRevert
+}
+
+STRING 11024
+// Buffs/Effects: B01V (), Buffubertip (Tooltip - Extended)
+{
+It's Goku Black!
+}
+
 STRING 11025
 // Units: z001 (Shenron), EditorSuffix (Name - Editor Suffix)
 {
@@ -66887,5 +66910,76 @@ STRING 11029
 // Abilities: A0M8 (Wish Immortality), Tip (Tooltip - Normal)
 {
 Wish Immortality
+}
+
+STRING 11030
+// Buffs/Effects: B01V (), Bufftip (Tooltip)
+{
+Goku Black
+}
+
+STRING 11031
+{
+00:00:00
+}
+
+STRING 11032
+{
+T1
+}
+
+STRING 11034
+{
+Multi
+}
+
+STRING 11035
+{
+K
+}
+
+STRING 11036
+{
+/
+}
+
+STRING 11037
+{
+D
+}
+
+STRING 11038
+{
+1.000x
+}
+
+STRING 11039
+{
+T2
+}
+
+STRING 11040
+{
+|cff00ff00Pick a hero from one of the "!" taverns.|r
+}
+
+STRING 11041
+{
+Multi
+}
+
+STRING 11042
+{
+K
+}
+
+STRING 11043
+{
+|cffffcc00Type "hs" to see transformations. Most will require typing a command e.g. "ss"|r
+}
+
+STRING 11044
+{
+D
 }
 

@@ -6,6 +6,7 @@ import { Constants } from "Common/Constants";
 export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Androids Saga I: 19/20';
 
+  protected android19: unit | undefined;
   protected android20: unit | undefined;
   protected isRunningAway: boolean;
 
@@ -21,6 +22,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 19 and Android 20 have begun terrorizing West City!");
 
     this.addHeroListToSaga(["Android 19", "Android 20"], true);
+    this.android19 = this.bosses.get("Android 19");
     this.android20 = this.bosses.get("Android 20");
 
     this.ping();
@@ -30,10 +32,12 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   update(t: number): void {
     super.update(t);
     if (
-      this.android20 && !this.isRunningAway && 
-      SagaHelper.checkUnitHp(this.android20, 0.5, true, false, true)
+      this.android19 && this.android20 && !this.isRunningAway && 
+      IsUnitDeadBJ(this.android19) && 
+      SagaHelper.checkUnitHp(this.android20, 0.8, true, false, true)
     ) {
       this.isRunningAway = true;
+      this.useCustomAggroClosest = false;
       DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
       IssuePointOrder(this.android20, "move", 14000, 7500);
       SetUnitMoveSpeed(this.android20, 522);
@@ -143,7 +147,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 40;
+    this.sagaDelay = 45;
     this.stats = 100;
   }
 
@@ -222,7 +226,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 75;
+    this.sagaDelay = 80;
   }
 
   spawnSagaUnits(): void {

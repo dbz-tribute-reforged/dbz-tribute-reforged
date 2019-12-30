@@ -453,7 +453,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaFlare\\ManaFlareBase.mdl",
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -466,7 +466,7 @@ export const DamageBlockComponents = [
           z: 255,
         },
         persistent: true,
-        attachmentPoint: "origin",
+        attachmentPoint: "chest",
       },
     ],
   },

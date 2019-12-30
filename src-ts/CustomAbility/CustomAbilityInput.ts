@@ -10,6 +10,7 @@ export class CustomAbilityInput {
     public mouseData: Vector2D, 
     public castPoint: Vector2D,
     public targetUnit?: unit,
+    public castUnit?: unit,
   ) {
 
   }

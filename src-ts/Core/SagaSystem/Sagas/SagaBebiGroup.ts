@@ -11,7 +11,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.sagaDelay = 75;
   }
 
   spawnSagaUnits(): void {
@@ -29,7 +29,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.bebiGooz);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 1800);
     }
 
     this.ping();

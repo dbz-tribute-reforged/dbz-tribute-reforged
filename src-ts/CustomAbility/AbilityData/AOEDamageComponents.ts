@@ -221,7 +221,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_DPS * 3,
+      multiplier: BASE.KAME_DPS * 2.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -236,7 +236,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_DPS * 3 * 3,
+      multiplier: BASE.KAME_DPS * 2.5 * 3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -721,7 +721,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.5,
+      multiplier: BASE.KAME_DPS * 0.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -813,7 +813,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_UNIT,
+    damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
     aoe: 25,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 1.4,
@@ -829,7 +829,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_UNIT,
+    damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
     aoe: 50,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.7,

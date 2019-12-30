@@ -39,5 +39,5 @@ export module Constants {
   export const budokaiName: string = "Tournament";
   export const locustAbility: number = FourCC("Aloc")
   export const shopSellItemAbility: number = FourCC("Asit");
-  export const buffImmortal: number = FourCC("B01U")
+  export const buffImmortal: number = FourCC("B01U");
 }

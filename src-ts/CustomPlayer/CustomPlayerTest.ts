@@ -32,6 +32,7 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           customPlayers[playerId].mouseData,
           customPlayers[playerId].lastCastPoint.clone(),
           customPlayers[playerId].targetUnit,
+          customPlayers[playerId].lastCastUnit,
         );
 
         if (customHero.canCastAbility(name, abilityInput)) {
@@ -213,6 +214,7 @@ export function CustomPlayerTest() {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
     const abilityId = GetSpellAbilityId();
+    customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
 
     if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
       // show ability name on activation
@@ -244,6 +246,7 @@ export function CustomPlayerTest() {
               customPlayers[playerId].mouseData,
               customPlayers[playerId].lastCastPoint.clone(),
               customPlayers[playerId].targetUnit,
+              GetSpellTargetUnit(),
             ),
           );
         }
@@ -409,7 +412,7 @@ export function CustomPlayerTest() {
       deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
     }
 
-    if (killerName && deadName) {
+    if (killerName && deadName && killerName.length > 1 && deadName.length > 1) {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         15,
@@ -629,7 +632,9 @@ export function CustomPlayerTest() {
   TriggerAddAction(nameTrig, () => {
     const player = GetTriggerPlayer();
     const newName = SubString(GetEventPlayerChatString(), 6, 20);
-    SetPlayerName(player, newName);
+    if (newName.length > 1) {
+      SetPlayerName(player, newName);
+    }
   });
 
   // freemode
