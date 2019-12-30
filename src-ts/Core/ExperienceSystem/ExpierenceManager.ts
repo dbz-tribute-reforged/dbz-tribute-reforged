@@ -88,9 +88,9 @@ export class ExperienceManager {
 
   setupUnitXPModifiers() {
     // androids 13/14/15
-    this.unitXPModifier.set(FourCC("H01V"), 0.5);
-    this.unitXPModifier.set(FourCC("H01S"), 0.5);
-    this.unitXPModifier.set(FourCC("H01T"), 0.5);
+    this.unitXPModifier.set(FourCC("H01V"), 0.66);
+    this.unitXPModifier.set(FourCC("H01S"), 0.66);
+    this.unitXPModifier.set(FourCC("H01T"), 0.66);
   }
 
   setupRewardXPTrigger(rewardTrigger: trigger) {
@@ -180,7 +180,7 @@ export class ExperienceManager {
           if (xpModifier != undefined) {
             AddHeroXP(
               rewardedUnit, 
-              rewardXP * xpModifier, 
+              Math.floor(rewardXP * xpModifier), 
               true
             );
           } else {
