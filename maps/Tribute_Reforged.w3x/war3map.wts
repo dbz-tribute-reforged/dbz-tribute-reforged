@@ -61555,7 +61555,7 @@ Type "r" to revert.
 Transformations:
 [lvl 15]  1.50x fp
 [lvl 45]  2.00x fp
-[lvl 70]  2.50x fp
+[lvl 75]  2.25x fp
 
 For Super 13 type "super" when all androids lvl greater than 35
 }
@@ -66921,5 +66921,75 @@ STRING 11030
 // Buffs/Effects: B01V (), Bufftip (Tooltip)
 {
 Goku Black
+}
+
+STRING 11031
+{
+00:00:00
+}
+
+STRING 11032
+{
+T1
+}
+
+STRING 11033
+{
+?
+}
+
+STRING 11034
+{
+Multi
+}
+
+STRING 11035
+{
+K
+}
+
+STRING 11036
+{
+/
+}
+
+STRING 11037
+{
+D
+}
+
+STRING 11039
+{
+T2
+}
+
+STRING 11040
+{
+?
+}
+
+STRING 11041
+{
+Multi
+}
+
+STRING 11042
+{
+K
+}
+
+STRING 11043
+{
+/
+}
+
+STRING 11044
+{
+D
+}
+
+STRING 11046
+{
+1.000x
 }
 
