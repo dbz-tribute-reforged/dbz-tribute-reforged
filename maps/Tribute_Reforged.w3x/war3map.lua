@@ -429,6 +429,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Hero_Pick_Floating_Text_Help = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2875,6 +2876,24 @@ function InitTrig_Map_Setup_Hashtables()
     TriggerAddAction(gg_trg_Map_Setup_Hashtables, Trig_Map_Setup_Hashtables_Actions)
 end
 
+function Trig_Hero_Pick_Floating_Text_Help_Actions()
+        udg_TempLoc = Location(2200, 23000)
+    CreateTextTagLocBJ("TRIGSTR_11040", udg_TempLoc, 0, 16.00, 100, 100, 100, 15.00)
+    udg_TempFloatingText = GetLastCreatedTextTag()
+    SetTextTagPermanentBJ(udg_TempFloatingText, true)
+        udg_TempLoc = Location(2200, 21000)
+    CreateTextTagLocBJ("TRIGSTR_11043", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
+    udg_TempFloatingText = GetLastCreatedTextTag()
+    SetTextTagPermanentBJ(udg_TempFloatingText, true)
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_Hero_Pick_Floating_Text_Help()
+    gg_trg_Hero_Pick_Floating_Text_Help = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Floating_Text_Help, 0.10)
+    TriggerAddAction(gg_trg_Hero_Pick_Floating_Text_Help, Trig_Hero_Pick_Floating_Text_Help_Actions)
+end
+
 function Trig_Kill_Creep_New_New_Stats_Only_Conditions()
     if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == false)) then
         return false
@@ -3519,9 +3538,9 @@ function Trig_Scoreboard_Init_Actions()
     TriggerExecute(gg_trg_Scoreboard_Setup_Team)
     MultiboardDisplayBJ(true, udg_Scoreboard)
     MultiboardMinimizeBJ(false, udg_Scoreboard)
+    EnableTrigger(gg_trg_Scoreboard_Death)
     EnableTrigger(gg_trg_Scoreboard_Update)
     EnableTrigger(gg_trg_Scoreboard_Timer_Increment)
-    EnableTrigger(gg_trg_Scoreboard_Death)
 end
 
 function InitTrig_Scoreboard_Init()
@@ -3782,21 +3801,29 @@ function InitTrig_Scoreboard_Death()
     TriggerAddAction(gg_trg_Scoreboard_Death, Trig_Scoreboard_Death_Actions)
 end
 
-function Trig_Scoreboard_Update_Func001Func007Func004C()
+function Trig_Scoreboard_Update_Func001Func002Func007Func004C()
     if (not (udg_StatMultReal > udg_TempReal)) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Update_Func001Func007A()
+function Trig_Scoreboard_Update_Func001Func002Func007A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-    if (Trig_Scoreboard_Update_Func001Func007Func004C()) then
+    if (Trig_Scoreboard_Update_Func001Func002Func007Func004C()) then
         udg_TempUnit = udg_StatMultUnit
+        udg_TempReal = udg_StatMultReal
     else
     end
+end
+
+function Trig_Scoreboard_Update_Func001Func002C()
+    if (not (CountUnitsInGroup(udg_StatMultPlayerUnits[udg_TempInt]) > 0)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Scoreboard_Update_Actions()
@@ -3804,14 +3831,17 @@ function Trig_Scoreboard_Update_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        udg_TempUnit = GroupPickRandomUnit(udg_StatMultPlayerUnits[udg_TempInt])
-        udg_StatMultUnit = udg_TempUnit
-        TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        TriggerExecute(gg_trg_Get_Highest_Stat_Real)
-        udg_TempReal = udg_StatMultReal
-        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scoreboard_Update_Func001Func007A)
-        udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_TempInt]
-        MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, (R2S(udg_TempReal) .. "x"))
+        if (Trig_Scoreboard_Update_Func001Func002C()) then
+            udg_TempUnit = GroupPickRandomUnit(udg_StatMultPlayerUnits[udg_TempInt])
+            udg_StatMultUnit = udg_TempUnit
+            TriggerExecute(gg_trg_Get_Stat_Multiplier)
+            TriggerExecute(gg_trg_Get_Highest_Stat_Real)
+            udg_TempReal = udg_StatMultReal
+            ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scoreboard_Update_Func001Func002Func007A)
+            udg_TempInt2 = udg_ScoreboardPlayerRowIndex[udg_TempInt]
+            MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, (R2S(udg_TempReal) .. "x"))
+        else
+        end
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -4934,15 +4964,6 @@ function InitTrig_Hero_Pick_Set_HeroPickUnitType_availability()
 end
 
 function Trig_Hero_Pick_Init_Available_Heroes_Actions()
-        udg_TempLoc = Location(2000, 21600)
-    CreateTextTagLocBJ("TRIGSTR_10999", udg_TempLoc, 0, 15.00, 100, 100, 100, 15.00)
-    udg_TempFloatingText = GetLastCreatedTextTag()
-    SetTextTagPermanentBJ(udg_TempFloatingText, true)
-        udg_TempLoc = Location(2000, 21200)
-    CreateTextTagLocBJ("TRIGSTR_11033", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
-    udg_TempFloatingText = GetLastCreatedTextTag()
-    SetTextTagPermanentBJ(udg_TempFloatingText, true)
-        RemoveLocation(udg_TempLoc)
     udg_NumGoodHeroes = 0
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H000")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
@@ -10526,6 +10547,7 @@ function InitCustomTriggers()
     InitTrig_Disable_Abilities_for_TempPlayer()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
+    InitTrig_Hero_Pick_Floating_Text_Help()
     InitTrig_Kill_Creep_New_New_Stats_Only()
     InitTrig_Kill_Hero_Stats()
     InitTrig_Kill_Hero_Revive()

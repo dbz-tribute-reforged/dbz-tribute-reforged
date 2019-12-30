@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.22b
+DBZ Tribute Reforged 0.23
 }
 
 STRING 4
@@ -66732,11 +66732,6 @@ STRING 10998
 Freemode Disabled, forced win/loss conditions are enabled.
 }
 
-STRING 10999
-{
-|cff00ff00Pick a hero from one of the "!" taverns.|r
-}
-
 STRING 11000
 // Items: I042 (|cffffcc00Wish for Immortality|r), Name (Name)
 {
@@ -66933,11 +66928,6 @@ STRING 11032
 T1
 }
 
-STRING 11033
-{
-|cffffcc00Type "hs" to see transformations. Most will require typing a command e.g. "ss"|r
-}
-
 STRING 11034
 {
 Multi
@@ -66968,6 +66958,11 @@ STRING 11039
 T2
 }
 
+STRING 11040
+{
+|cff00ff00Pick a hero from one of the "!" taverns.|r
+}
+
 STRING 11041
 {
 Multi
@@ -66976,6 +66971,11 @@ Multi
 STRING 11042
 {
 K
+}
+
+STRING 11043
+{
+|cffffcc00Type "hs" to see transformations. Most will require typing a command e.g. "ss"|r
 }
 
 STRING 11044
