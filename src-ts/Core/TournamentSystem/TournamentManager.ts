@@ -111,6 +111,9 @@ export class TournamentManager {
             false
           );
 
+          SetUnitLifePercentBJ(deadHero, 100);
+          SetUnitManaPercentBJ(deadHero, 100);
+
           SetUnitInvulnerable(deadHero, true);
           PauseUnit(deadHero, true);
 

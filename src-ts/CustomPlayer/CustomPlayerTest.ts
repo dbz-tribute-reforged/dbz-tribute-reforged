@@ -412,7 +412,13 @@ export function CustomPlayerTest() {
       deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
     }
 
-    if (killerName && deadName && killerName.length > 1 && deadName.length > 1) {
+    if (
+      killerName && deadName && 
+      (
+        killPlayerId == PLAYER_NEUTRAL_AGGRESSIVE || 
+        (killPlayerId > 0 && killPlayerId < Constants.maxPlayers)
+      )
+    ) {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
         15,
@@ -461,7 +467,7 @@ export function CustomPlayerTest() {
 
   if (numActivePlayers == 1) {
 
-    BJDebugMsg("Recomended to type -freemode to prevent insta loss");
+    BJDebugMsg("Special Single Player Commands -lvl -mega -cd");
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);

@@ -1,4 +1,8 @@
 import { Colorizer } from "./Colorizer";
+import { Vector2D } from "./Vector2D";
+import { UnitHelper } from "./UnitHelper";
+import { Constants } from "./Constants";
+import { ForceHelper } from "./ForceHelper";
 
 export module TextTagHelper {
   export function showTempText(
@@ -20,11 +24,25 @@ export module TextTagHelper {
   }
 
   export function showPlayerColorTextOnUnit(colorText: string, playerId: number, unit: unit) {
+    const showForce = CreateForce();
+
+    ForceHelper.addNearbyEnemyAlliedPlayers(
+      showForce,
+      GetUnitX(unit), GetUnitY(unit),
+      Constants.floatingTextVisionRange,
+      playerId
+    )
+    ForceHelper.addAllies(showForce, playerId);
+
     TextTagHelper.showTempText(
       Colorizer.getPlayerColorText(playerId) + colorText + "|r", 
       GetUnitX(unit), 
       GetUnitY(unit),
+      5,
+      4,
+      showForce
     );
+    DestroyForce(showForce);
   }
 
   export function showPlayerColorTextToForce(

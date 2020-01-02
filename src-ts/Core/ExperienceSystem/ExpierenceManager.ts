@@ -121,7 +121,7 @@ export class ExperienceManager {
         // const killingPlayerId = GetPlayerId(killingPlayer);
         
         if (dyingPlayerId >= Constants.maxActivePlayers) {
-          // share exp with anyone else who is also 
+          // share exp with anyone else who is also nearby
           // treats dying player as an enemy
           this.getNearbyXPHeroes(
             rewardedGroup, 
@@ -178,10 +178,12 @@ export class ExperienceManager {
 
           let xpModifier = 1;
           const nearbyPlayerUnits = numPlayerUnits[GetPlayerId(GetOwningPlayer(rewardedUnit))];
-          if (nearbyPlayerUnits >= 3) {            
+          if (nearbyPlayerUnits == 3) {            
             xpModifier = 0.5;
           } else if (nearbyPlayerUnits == 2) {
             xpModifier = 0.75;
+          } else if (nearbyPlayerUnits > 3) {
+            xpModifier = Math.max(0.1, 1.5 / nearbyPlayerUnits);
           }
 
           AddHeroXP(

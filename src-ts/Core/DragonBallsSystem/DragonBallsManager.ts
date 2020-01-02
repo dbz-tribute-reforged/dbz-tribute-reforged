@@ -32,7 +32,7 @@ export class DragonBallsManager {
     );
     this.dummyShenron = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE),
-      DragonBallsConstants.shenronUnit,
+      DragonBallsConstants.shenronUnitDummy,
       DragonBallsConstants.shenronWaitingRoom.x,
       DragonBallsConstants.shenronWaitingRoom.y,
       270
@@ -64,6 +64,18 @@ export class DragonBallsManager {
     
     SetUnitInvulnerable(this.shenron, true);
     UnitAddAbility(this.dummyShenron, Constants.locustAbility);
+
+    DisableTrigger(this.wishTrigger);
+    const selectShenron = CreateTrigger();
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      TriggerRegisterPlayerChatEvent(selectShenron, Player(i), "-shenron", true);
+    };
+    TriggerAddCondition(selectShenron, Condition(() => {
+      if (IsTriggerEnabled(this.wishTrigger)) {
+        SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
+      }
+      return false;
+    }));
 
     return this;
   }
@@ -212,7 +224,7 @@ export class DragonBallsManager {
     UnitRemoveAbility(this.shenron, FourCC("Amov"));
     UnitRemoveAbility(this.shenron, FourCC("Aatk"));
     SetUnitInvulnerable(this.shenron, true);
-    ShowUnitHide(this.shenron);
+    // ShowUnitHide(this.shenron);
     return this;
   }
 
@@ -355,11 +367,16 @@ export class DragonBallsManager {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         15,
-        "|cffffcc00Shenron|r: Speak your wish and I shall grant it."
+        "|cffffcc00Shenron|r: Speak your wish and I shall grant it.|r" 
+      );
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS,
+        15,
+        "|cffc2c5cc(KNOWN BUG: unselectable shenron. Temp Fix: Type -shenron to select shenron)|r"
       );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
-      ShowUnitShow(this.shenron);
+      // ShowUnitShow(this.shenron);
       SetUnitAnimation(
         this.shenron,
         "stand"
@@ -432,7 +449,7 @@ export class DragonBallsManager {
       "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
     DisableTrigger(this.wishTrigger);
-    ShowUnitHide(this.shenron);
+    // ShowUnitHide(this.shenron);
 
     return this;
   }
