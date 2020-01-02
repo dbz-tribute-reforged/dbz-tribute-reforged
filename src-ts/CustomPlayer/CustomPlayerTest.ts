@@ -467,7 +467,7 @@ export function CustomPlayerTest() {
 
   if (numActivePlayers == 1) {
 
-    BJDebugMsg("Recomended to type -freemode to prevent insta loss");
+    BJDebugMsg("Special Single Player Commands -lvl -mega -cd");
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);

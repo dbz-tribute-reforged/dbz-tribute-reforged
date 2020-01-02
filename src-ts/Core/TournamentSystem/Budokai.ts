@@ -279,9 +279,8 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 IsUnitType(unit, UNIT_TYPE_HERO) && 
                 !IsUnitType(unit, UNIT_TYPE_SUMMONED)
               ) {
-                const trophy = CreateItem(TournamentData.trophyItem, 0, 22000);
+                const trophy = CreateItem(TournamentData.trophyItem, GetUnitX(unit), GetUnitY(unit));
                 UnitAddItem(unit, trophy);
-                UnitUseItem(unit, trophy);
                 // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
                 // TextTagHelper.showPlayerColorTextOnUnit(
                 //   "+" + (numTournaments * 50) + " tournament stats",

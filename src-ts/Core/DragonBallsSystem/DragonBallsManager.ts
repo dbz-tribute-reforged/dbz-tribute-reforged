@@ -32,7 +32,7 @@ export class DragonBallsManager {
     );
     this.dummyShenron = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE),
-      DragonBallsConstants.shenronUnit,
+      DragonBallsConstants.shenronUnitDummy,
       DragonBallsConstants.shenronWaitingRoom.x,
       DragonBallsConstants.shenronWaitingRoom.y,
       270
@@ -212,7 +212,7 @@ export class DragonBallsManager {
     UnitRemoveAbility(this.shenron, FourCC("Amov"));
     UnitRemoveAbility(this.shenron, FourCC("Aatk"));
     SetUnitInvulnerable(this.shenron, true);
-    ShowUnitHide(this.shenron);
+    // ShowUnitHide(this.shenron);
     return this;
   }
 
@@ -359,7 +359,7 @@ export class DragonBallsManager {
       );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
-      ShowUnitShow(this.shenron);
+      // ShowUnitShow(this.shenron);
       SetUnitAnimation(
         this.shenron,
         "stand"
@@ -432,7 +432,7 @@ export class DragonBallsManager {
       "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
     DisableTrigger(this.wishTrigger);
-    ShowUnitHide(this.shenron);
+    // ShowUnitHide(this.shenron);
 
     return this;
   }
