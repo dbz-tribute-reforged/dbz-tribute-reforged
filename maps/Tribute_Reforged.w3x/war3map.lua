@@ -163,6 +163,7 @@ udg_CandyBeamLvl = 0
 udg_IsCatchupStatsActivated = false
 udg_CatchupThreshold = 0.0
 udg_CatchupIncrement = 0.0
+udg_LvlUpInt = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -264,6 +265,8 @@ gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
 gg_trg_Auto_Free_Mode_SP = nil
 gg_trg_Force_Win_Loss = nil
+gg_trg_Catchup_Toggle = nil
+gg_trg_Catchup_Timer = nil
 gg_trg_Scoreboard_Init = nil
 gg_trg_Scoreboard_Setup_Team = nil
 gg_trg_Scoreboard_Get_TempUnit_Icon = nil
@@ -273,6 +276,9 @@ gg_trg_Scoreboard_Timer_Increment = nil
 gg_trg_Shenron_Wish_for_Power = nil
 gg_trg_Shenron_Wish_Granted_Sound = nil
 gg_trg_Tournament_Trophy = nil
+gg_trg_Tournament_Trophy_Use_Abil = nil
+gg_trg_Tournament_Trophy_Acquire_Item = nil
+gg_trg_Tournament_Trophy_Give_Stats = nil
 gg_trg_Final_Battle_Detector = nil
 gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
@@ -436,9 +442,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Catchup_Toggle = nil
-gg_trg_Catchup_Timer = nil
-gg_trg_Tournament_Trophy_Copy = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -667,6 +670,7 @@ function InitGlobals()
     udg_IsCatchupStatsActivated = false
     udg_CatchupThreshold = 0.0
     udg_CatchupIncrement = 0.0
+    udg_LvlUpInt = 0
 end
 
 function InitSounds()
@@ -3286,23 +3290,23 @@ function Trig_Hero_Level_up_New_New_Conditions()
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func003Func003Func002C()
+function Trig_Hero_Level_up_New_New_Func005Func001Func003Func002C()
     if (not (udg_StatMultUnit ~= GetTriggerUnit())) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func003Func003A()
+function Trig_Hero_Level_up_New_New_Func005Func001Func003A()
     udg_StatMultUnit = GetEnumUnit()
-    if (Trig_Hero_Level_up_New_New_Func003Func003Func002C()) then
+    if (Trig_Hero_Level_up_New_New_Func005Func001Func003Func002C()) then
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Update_Current_Stats)
     else
     end
 end
 
-function Trig_Hero_Level_up_New_New_Func003Func005C()
+function Trig_Hero_Level_up_New_New_Func005Func001Func005C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
         return true
     end
@@ -3315,15 +3319,22 @@ function Trig_Hero_Level_up_New_New_Func003Func005C()
     return false
 end
 
-function Trig_Hero_Level_up_New_New_Func003C()
-    if (not Trig_Hero_Level_up_New_New_Func003Func005C()) then
+function Trig_Hero_Level_up_New_New_Func005Func001C()
+    if (not Trig_Hero_Level_up_New_New_Func005Func001Func005C()) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func006C()
-    if (not (ModuloInteger(GetHeroLevel(GetTriggerUnit()), 3) == 0)) then
+function Trig_Hero_Level_up_New_New_Func005Func004Func001C()
+    if (not (ModuloInteger(udg_LvlUpInt, 3) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Level_up_New_New_Func005C()
+    if (not (udg_LvlUpInt > 0)) then
         return false
     end
     return true
@@ -3331,18 +3342,29 @@ end
 
 function Trig_Hero_Level_up_New_New_Actions()
     udg_StatMultUnit = GetTriggerUnit()
-    udg_StatMultReal = udg_StatsPerLvl
-    if (Trig_Hero_Level_up_New_New_Func003C()) then
-        udg_StatMultReal = ((udg_StatMultReal * 0.33) * 1.00)
-        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Hero_Level_up_New_New_Func003Func003A)
-        udg_StatMultUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_LvlUpInt = (GetHeroLevel(udg_StatMultUnit) - LoadIntegerBJ(17, udg_ID, udg_StatMultHashtable))
+    udg_StatMultReal = (udg_StatsPerLvl * I2R(udg_LvlUpInt))
+    if (Trig_Hero_Level_up_New_New_Func005C()) then
+        if (Trig_Hero_Level_up_New_New_Func005Func001C()) then
+            udg_StatMultReal = ((udg_StatMultReal * 0.33) * 1.00)
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Hero_Level_up_New_New_Func005Func001Func003A)
+            udg_StatMultUnit = GetTriggerUnit()
+        else
+        end
+        TriggerExecute(gg_trg_Add_To_Base_Stats)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+        udg_LvlUpInt = (LoadIntegerBJ(17, udg_ID, udg_StatMultHashtable) + 1)
+        while (true) do
+            if (udg_LvlUpInt > GetHeroLevel(udg_StatMultUnit)) then break end
+            if (Trig_Hero_Level_up_New_New_Func005Func004Func001C()) then
+            else
+                ModifyHeroSkillPoints(GetTriggerUnit(), bj_MODIFYMETHOD_SUB, 1)
+            end
+            udg_LvlUpInt = udg_LvlUpInt + 1
+        end
+        SaveIntegerBJ(GetHeroLevel(udg_StatMultUnit), 17, udg_ID, udg_StatMultHashtable)
     else
-    end
-    TriggerExecute(gg_trg_Add_To_Base_Stats)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    if (Trig_Hero_Level_up_New_New_Func006C()) then
-    else
-        ModifyHeroSkillPoints(GetTriggerUnit(), bj_MODIFYMETHOD_SUB, 1)
     end
 end
 
@@ -3568,7 +3590,7 @@ function Trig_Catchup_Toggle_Actions()
     end
     if (Trig_Catchup_Toggle_Func002C()) then
         udg_IsCatchupStatsActivated = true
-        DisplayTextToForce(GetPlayersAll(), ("|cff00ffffCatchup Stats Activated! |r|cffffcc00Threshold:" .. (R2S((udg_CatchupThreshold * 100.00)) .. ("%|r " .. ("|cffff00ffIncrement:" .. (R2S((udg_CatchupIncrement * 100.00)) .. "%|r"))))))
+        DisplayTextToForce(GetPlayersAll(), ("|cff00ffffCatchup Stats Activated! |r|cffffcc00Threshold: " .. (R2S((udg_CatchupThreshold * 100.00)) .. ("%|r " .. ("|cffff00ffIncrement: " .. (R2S((udg_CatchupIncrement * 100.00)) .. "%|r"))))))
         EnableTrigger(gg_trg_Catchup_Timer)
     else
         udg_IsCatchupStatsActivated = false
@@ -3601,7 +3623,7 @@ function Trig_Catchup_Timer_Func001Func004Func001A()
     end
 end
 
-function Trig_Catchup_Timer_Func001Func008Func002Func007C()
+function Trig_Catchup_Timer_Func001Func008Func002Func006C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
@@ -3614,13 +3636,13 @@ function Trig_Catchup_Timer_Func001Func008Func002A()
     udg_StatMultReal = (((udg_TempReal + udg_TempReal2) + udg_TempReal3) - ((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt))
     udg_StatMultReal = (udg_StatMultReal / 3.00)
     udg_StatMultReal = (udg_StatMultReal * udg_CatchupIncrement)
-    DisplayTextToForce(GetPlayersAll(), ((GetHeroProperName(udg_StatMultUnit) .. ": ") .. R2S(udg_StatMultReal)))
-    if (Trig_Catchup_Timer_Func001Func008Func002Func007C()) then
+    if (Trig_Catchup_Timer_Func001Func008Func002Func006C()) then
         udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
                 RemoveLocation(udg_TempLoc)
-        DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (GetPlayerName(udg_TempPlayer) .. ("|r|cffffcc00receives " .. ("|r|cffffcc00+" .. (R2S(udg_StatMultReal) .. " catchup stats|r"))))))
+        udg_TempString = (udg_PlayerColorString[udg_TempInt] .. (GetPlayerName(udg_TempPlayer) .. ("|r|cffffcc00 receives +" .. (R2S(udg_StatMultReal) .. " catchup stats|r"))))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, udg_TempString)
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Update_Current_Stats)
     else
@@ -3662,7 +3684,7 @@ end
 function InitTrig_Catchup_Timer()
     gg_trg_Catchup_Timer = CreateTrigger()
     DisableTrigger(gg_trg_Catchup_Timer)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Catchup_Timer, 15.00)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Catchup_Timer, 20.00)
     TriggerAddAction(gg_trg_Catchup_Timer, Trig_Catchup_Timer_Actions)
 end
 
@@ -4150,31 +4172,59 @@ function InitTrig_Shenron_Wish_Granted_Sound()
     TriggerAddAction(gg_trg_Shenron_Wish_Granted_Sound, Trig_Shenron_Wish_Granted_Sound_Actions)
 end
 
-function Trig_Tournament_Trophy_Copy_Conditions()
+function Trig_Tournament_Trophy_Use_Abil_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A039"))) then
         return false
     end
     return true
 end
 
-function Trig_Tournament_Trophy_Copy_Actions()
+function Trig_Tournament_Trophy_Use_Abil_Actions()
     udg_StatMultUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Tournament_Trophy_Give_Stats)
+end
+
+function InitTrig_Tournament_Trophy_Use_Abil()
+    gg_trg_Tournament_Trophy_Use_Abil = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Tournament_Trophy_Use_Abil, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Tournament_Trophy_Use_Abil, Condition(Trig_Tournament_Trophy_Use_Abil_Conditions))
+    TriggerAddAction(gg_trg_Tournament_Trophy_Use_Abil, Trig_Tournament_Trophy_Use_Abil_Actions)
+end
+
+function Trig_Tournament_Trophy_Acquire_Item_Conditions()
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I01H"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Tournament_Trophy_Acquire_Item_Actions()
+    UnitUseItem(udg_StatMultUnit, GetManipulatedItem())
+end
+
+function InitTrig_Tournament_Trophy_Acquire_Item()
+    gg_trg_Tournament_Trophy_Acquire_Item = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Tournament_Trophy_Acquire_Item, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerAddCondition(gg_trg_Tournament_Trophy_Acquire_Item, Condition(Trig_Tournament_Trophy_Acquire_Item_Conditions))
+    TriggerAddAction(gg_trg_Tournament_Trophy_Acquire_Item, Trig_Tournament_Trophy_Acquire_Item_Actions)
+end
+
+function Trig_Tournament_Trophy_Give_Stats_Actions()
     udg_StatMultReal = (25.00 + (5.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
     udg_TempString = ("|cffffcc00+" .. (R2S(udg_StatMultReal) .. " tournament stats|r"))
     udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    DisplayTextToForce(udg_TempPlayerGroup, udg_TempString)
     udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
 end
 
-function InitTrig_Tournament_Trophy_Copy()
-    gg_trg_Tournament_Trophy_Copy = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Tournament_Trophy_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Tournament_Trophy_Copy, Condition(Trig_Tournament_Trophy_Copy_Conditions))
-    TriggerAddAction(gg_trg_Tournament_Trophy_Copy, Trig_Tournament_Trophy_Copy_Actions)
+function InitTrig_Tournament_Trophy_Give_Stats()
+    gg_trg_Tournament_Trophy_Give_Stats = CreateTrigger()
+    TriggerAddAction(gg_trg_Tournament_Trophy_Give_Stats, Trig_Tournament_Trophy_Give_Stats_Actions)
 end
 
 function Trig_Final_Battle_Detector_Conditions()
@@ -5989,7 +6039,7 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func012C()
+function Trig_Add_Unit_To_StatMult_Func001Func013C()
     if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
@@ -6012,11 +6062,12 @@ function Trig_Add_Unit_To_StatMult_Actions()
         SaveRealBJ(1.00, 3, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(1.00, 4, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(1.00, 5, udg_ID, udg_StatMultHashtable)
+        SaveIntegerBJ(GetHeroLevel(udg_StatMultUnit), 17, udg_ID, udg_StatMultHashtable)
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
         AddSpecialEffectTargetUnitBJ("overhead", udg_StatMultUnit, "SantaHat.mdx")
         SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
         udg_TempUnit = udg_StatMultUnit
-        if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func013C()) then
             udg_TempLoc = GetUnitLoc(udg_TempUnit)
             udg_TempReal = RMinBJ(4000.00, RMaxBJ(1000.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
             CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -10793,7 +10844,9 @@ function InitCustomTriggers()
     InitTrig_Scoreboard_Timer_Increment()
     InitTrig_Shenron_Wish_for_Power()
     InitTrig_Shenron_Wish_Granted_Sound()
-    InitTrig_Tournament_Trophy_Copy()
+    InitTrig_Tournament_Trophy_Use_Abil()
+    InitTrig_Tournament_Trophy_Acquire_Item()
+    InitTrig_Tournament_Trophy_Give_Stats()
     InitTrig_Final_Battle_Detector()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()

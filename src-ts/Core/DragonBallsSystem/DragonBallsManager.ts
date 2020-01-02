@@ -65,6 +65,18 @@ export class DragonBallsManager {
     SetUnitInvulnerable(this.shenron, true);
     UnitAddAbility(this.dummyShenron, Constants.locustAbility);
 
+    DisableTrigger(this.wishTrigger);
+    const selectShenron = CreateTrigger();
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      TriggerRegisterPlayerChatEvent(selectShenron, Player(i), "-shenron", true);
+    };
+    TriggerAddCondition(selectShenron, Condition(() => {
+      if (IsTriggerEnabled(this.wishTrigger)) {
+        SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
+      }
+      return false;
+    }));
+
     return this;
   }
 
@@ -355,7 +367,12 @@ export class DragonBallsManager {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         15,
-        "|cffffcc00Shenron|r: Speak your wish and I shall grant it."
+        "|cffffcc00Shenron|r: Speak your wish and I shall grant it.|r" 
+      );
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS,
+        15,
+        "|cffc2c5cc(KNOWN BUG: unselectable shenron. Temp Fix: Type -shenron to select shenron)|r"
       );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
