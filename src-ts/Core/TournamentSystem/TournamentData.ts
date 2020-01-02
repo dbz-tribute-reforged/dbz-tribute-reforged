@@ -36,4 +36,5 @@ export module TournamentData {
   export const budokaiTpSfx: string = "BlackBlink.mdl";
   export const seedingNone: number = 0;
   export const seedingRandom: number = 1;
+  export const trophyItem: number = FourCC("I01H");
 }

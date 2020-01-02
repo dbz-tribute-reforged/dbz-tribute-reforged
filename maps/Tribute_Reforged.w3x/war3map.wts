@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.23
+DBZ Tribute Reforged 0.23a
 }
 
 STRING 4
@@ -9733,14 +9733,8 @@ STRING 1551
 Q
 }
 
-STRING 1552
-// Items: I01H (|cffffcc00Tournament Trophy|r), Name (Name)
-{
-|cffffcc00Tournament Trophy|r
-}
-
 STRING 1553
-// Items: I01H (|cffffcc00Tournament Trophy|r), EditorSuffix (Name - Editor Suffix)
+// Items: I01H (|cffffcc00Budokai Tournament Trophy|r), EditorSuffix (Name - Editor Suffix)
 {
 Afterlife
 }
@@ -17645,12 +17639,6 @@ STRING 2868
 [|cff00ff00D|r] Candy Gobbler
 }
 
-STRING 2869
-// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
-{
-Instantly consumes all nearby candy. |n|cff00ff00AOE: 500/600/700|r|n|cff00FFFFCooldown: 45 seconds|r
-}
-
 STRING 2870
 // Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
 {
@@ -22694,12 +22682,6 @@ STRING 3709
 // Abilities: A05P (Cam Distance Down), Name (Name)
 {
 Cam Distance Down
-}
-
-STRING 3710
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 5%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 3711
@@ -64580,24 +64562,6 @@ STRING 10645
 Final Battle
 }
 
-STRING 10646
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.003x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 10647
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 10648
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 5/10/15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002/0.003/0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
 STRING 10649
 // Units: H08Q (T2006 Machine Mutant), EditorSuffix (Name - Editor Suffix)
 {
@@ -64619,7 +64583,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 24.12.19
+This map is under active development - 1.1.20
 }
 
 STRING 10653
@@ -66732,6 +66696,12 @@ STRING 10998
 Freemode Disabled, forced win/loss conditions are enabled.
 }
 
+STRING 10999
+// Items: I01H (|cffffcc00Budokai Tournament Trophy|r), Name (Name)
+{
+|cffffcc00Budokai Tournament Trophy|r
+}
+
 STRING 11000
 // Items: I042 (|cffffcc00Wish for Immortality|r), Name (Name)
 {
@@ -66928,6 +66898,12 @@ STRING 11032
 T1
 }
 
+STRING 11033
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 5%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.001x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
 STRING 11034
 {
 Multi
@@ -66981,5 +66957,29 @@ STRING 11043
 STRING 11044
 {
 D
+}
+
+STRING 11045
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.002x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 11046
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.003x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 11047
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 5/10/15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.001/0.002/0.003x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 11048
+// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
+{
+Instantly consumes all nearby candy. |n|cff00ff00AOE: 700/800/900|r|n|cff00FFFFCooldown: 40 seconds|r
 }
 

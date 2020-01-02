@@ -40,4 +40,5 @@ export module Constants {
   export const locustAbility: number = FourCC("Aloc")
   export const shopSellItemAbility: number = FourCC("Asit");
   export const buffImmortal: number = FourCC("B01U");
+  export const floatingTextVisionRange: number = 4000;
 }

@@ -9,6 +9,7 @@ import { TournamentData } from "./TournamentData";
 import { Logger } from "Libs/TreeLib/Logger";
 import { AllianceHelper } from "Common/AllianceHelper";
 import { UnitHelper } from "Common/UnitHelper";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
@@ -210,7 +211,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
         Colorizer.getColoredPlayerName(Player(contestant2.id))
       );
     }
-    if (i < this.currentBracket.length) {
+    if (this.currentBracket.length > 1 && i < this.currentBracket.length) {
       
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, 15,
@@ -274,6 +275,21 @@ export class Budokai extends AdvancedTournament implements Tournament {
             if (IsUnitAliveBJ(unit)) {
               SetUnitLifePercentBJ(unit, 100);
               SetUnitManaPercentBJ(unit, 100);
+              if (
+                IsUnitType(unit, UNIT_TYPE_HERO) && 
+                !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+              ) {
+                const trophy = CreateItem(TournamentData.trophyItem, 0, 22000);
+                UnitAddItem(unit, trophy);
+                UnitUseItem(unit, trophy);
+                // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
+                // TextTagHelper.showPlayerColorTextOnUnit(
+                //   "+" + (numTournaments * 50) + " tournament stats",
+                //   winner.id,
+                //   unit
+                // );
+
+              }
             }
           }
           

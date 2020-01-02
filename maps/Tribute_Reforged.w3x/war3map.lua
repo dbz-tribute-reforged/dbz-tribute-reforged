@@ -246,6 +246,7 @@ gg_trg_Disable_Abilities_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
 gg_trg_Map_Setup_Hashtables = nil
 gg_trg_Hero_Pick_Floating_Text_Help = nil
+gg_trg_Force_Remove_T2_Buggy_Vision = nil
 gg_trg_soundtrig = nil
 gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
@@ -430,6 +431,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Tournament_Trophy = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -900,7 +902,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 17072.6, 10061.4, 214.987, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 17072.1, 10358.1, 104.956, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 17005.1, 10496.6, 136.894, FourCC("n020"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16744.1, 10537.9, 130.027, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16732.7, 10406.4, 130.027, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16708.7, 10560.1, 13.733, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16697.6, 10608.7, 25.489, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6440.1, -5049.3, 117.964, FourCC("n02F"))
@@ -1016,7 +1018,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17263.8, -1854.8, 258.890, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 17026.6, -2987.0, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15964.2, -3397.3, 64.569, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15389.9, -2892.5, 72.627, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15684.5, -2536.5, 72.627, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16727.4, -3890.5, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 19207.9, -3336.4, 201.825, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 20117.1, -3028.6, 256.721, FourCC("n01E"))
@@ -1047,7 +1049,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 6071.3, 18351.4, 159.351, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 7803.7, 18641.7, 329.435, FourCC("n014"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 7872.5, 19034.9, 265.536, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 11803.1, 18655.8, 249.054, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
@@ -1341,7 +1343,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19778.7, 14828.6, 350.792, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19696.3, 14667.2, 321.921, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 1581.1, 16047.7, 35.498, FourCC("n038"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19514.1, 4610.4, 62.514, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19734.7, 4758.0, 62.514, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19988.7, 4227.0, 157.736, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19158.8, 3678.1, 20.193, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18279.3, 2978.6, 77.786, FourCC("n01D"))
@@ -1424,7 +1426,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15704.1, 3398.1, 226.677, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15867.2, 3490.1, 11.943, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15005.6, -2099.9, 326.845, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15086.2, -1927.3, 326.845, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16591.2, -946.4, 133.048, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 19499.7, 2135.9, 247.194, FourCC("n02E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 6019.6, -338.2, 198.786, FourCC("n020"))
@@ -1447,6 +1449,13 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01X"), -2276.0, 23013.6, 254.934, FourCC("n01X"))
     SetUnitColor(u, ConvertPlayerColor(12))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16563.6, 12358.1, 130.027, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13671.1, 11736.9, 280.918, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14058.6, 11803.9, 130.027, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13940.7, 11468.9, 180.813, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14011.3, 12114.7, 280.918, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16771.4, 10025.5, 280.918, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16552.2, 10203.9, 280.918, FourCC("n020"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -1797,7 +1806,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 180)
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 18072.4, -6398.2, 330.002, FourCC("H08S"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 10163.5, 1925.7, 214.252, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("z001"), 89.3, 22035.7, 273.200, FourCC("z001"))
 end
@@ -2283,7 +2292,7 @@ function Trig_Buu_Candy_Gobbler_Actions()
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit())
-    udg_TempReal = (400.00 + (100.00 * I2R(udg_TempInt)))
+    udg_TempReal = (600.00 + (100.00 * I2R(udg_TempInt)))
     udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal, udg_TempLoc, Condition(Trig_Buu_Candy_Gobbler_Func008002003))
     ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Gobbler_Func009A)
         DestroyGroup(udg_TempUnitGroup)
@@ -2341,7 +2350,7 @@ function Trig_Buu_Candy_Eating_Actions()
         TriggerExecute(gg_trg_Update_Current_Stats)
         if (Trig_Buu_Candy_Eating_Func002Func006C()) then
             TriggerExecute(gg_trg_Get_Stat_Multiplier)
-            udg_TempReal = (((0.01 * 0.10) + (I2R(udg_TempInt) * (0.01 * 0.10))) + udg_StatMultInt)
+            udg_TempReal = ((0.00 + (I2R(udg_TempInt) * (0.01 * 0.10))) + udg_StatMultInt)
             if (Trig_Buu_Candy_Eating_Func002Func006Func004C()) then
                 udg_TempReal2 = 1.75
             else
@@ -2886,12 +2895,41 @@ function Trig_Hero_Pick_Floating_Text_Help_Actions()
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
         RemoveLocation(udg_TempLoc)
+    DisableTrigger(GetTriggeringTrigger())
 end
 
 function InitTrig_Hero_Pick_Floating_Text_Help()
     gg_trg_Hero_Pick_Floating_Text_Help = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Hero_Pick_Floating_Text_Help, 0.10)
     TriggerAddAction(gg_trg_Hero_Pick_Floating_Text_Help, Trig_Hero_Pick_Floating_Text_Help_Actions)
+end
+
+function Trig_Force_Remove_T2_Buggy_Vision_Func003Func001A()
+    udg_TempPlayer = GetEnumPlayer()
+    SetPlayerAllianceBJ(udg_TempPlayer, ALLIANCE_SHARED_VISION, false, Player(PLAYER_NEUTRAL_PASSIVE))
+    SetPlayerAllianceBJ(Player(PLAYER_NEUTRAL_PASSIVE), ALLIANCE_SHARED_VISION, false, udg_TempPlayer)
+    SetPlayerAllianceStateBJ(udg_TempPlayer, Player(23), bj_ALLIANCE_UNALLIED)
+    SetPlayerAllianceStateBJ(Player(23), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
+    SetPlayerAllianceBJ(udg_TempPlayer, ALLIANCE_SHARED_VISION, false, Player(23))
+    SetPlayerAllianceBJ(Player(23), ALLIANCE_SHARED_VISION, false, udg_TempPlayer)
+end
+
+function Trig_Force_Remove_T2_Buggy_Vision_Actions()
+    SetForceAllianceStateBJ(udg_TeamsPlayerGroup[0], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
+    SetForceAllianceStateBJ(udg_TeamsPlayerGroup[1], udg_CreepPlayerGroup, bj_ALLIANCE_UNALLIED)
+    udg_TempInt = 0
+    while (true) do
+        if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
+        ForForce(udg_TeamsPlayerGroup[udg_TempInt], Trig_Force_Remove_T2_Buggy_Vision_Func003Func001A)
+        udg_TempInt = udg_TempInt + 1
+    end
+    DisableTrigger(GetTriggeringTrigger())
+end
+
+function InitTrig_Force_Remove_T2_Buggy_Vision()
+    gg_trg_Force_Remove_T2_Buggy_Vision = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Force_Remove_T2_Buggy_Vision, 33.00)
+    TriggerAddAction(gg_trg_Force_Remove_T2_Buggy_Vision, Trig_Force_Remove_T2_Buggy_Vision_Actions)
 end
 
 function Trig_Kill_Creep_New_New_Stats_Only_Conditions()
@@ -3300,7 +3338,7 @@ function Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions()
     ShowTextTagForceBJ(true, udg_TempFloatingText, udg_TempPlayerGroup)
     SetTextTagVelocityBJ(udg_TempFloatingText, 64, 90)
     SetTextTagPermanentBJ(udg_TempFloatingText, false)
-    SetTextTagLifespanBJ(udg_TempFloatingText, 3.50)
+    SetTextTagLifespanBJ(udg_TempFloatingText, 4.00)
     SetTextTagFadepointBJ(udg_TempFloatingText, 1.00)
 end
 
@@ -3964,6 +4002,33 @@ function InitTrig_Shenron_Wish_Granted_Sound()
     TriggerAddAction(gg_trg_Shenron_Wish_Granted_Sound, Trig_Shenron_Wish_Granted_Sound_Actions)
 end
 
+function Trig_Tournament_Trophy_Conditions()
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I01H"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Tournament_Trophy_Actions()
+    udg_StatMultUnit = GetManipulatingUnit()
+    udg_StatMultReal = (25.00 + (5.00 * I2R(udg_ScoreboardTimeMinutes)))
+    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_TempString = ("|cffffcc00+" .. (R2S(udg_StatMultReal) .. " tournament stats|r"))
+    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+        RemoveLocation(udg_TempLoc)
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Tournament_Trophy()
+    gg_trg_Tournament_Trophy = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Tournament_Trophy, EVENT_PLAYER_UNIT_USE_ITEM)
+    TriggerAddCondition(gg_trg_Tournament_Trophy, Condition(Trig_Tournament_Trophy_Conditions))
+    TriggerAddAction(gg_trg_Tournament_Trophy, Trig_Tournament_Trophy_Actions)
+end
+
 function Trig_Final_Battle_Detector_Conditions()
     if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("h054"))) then
         return false
@@ -4045,12 +4110,12 @@ function Trig_Update_Alliances_for_PlayerGroups_Func001Func001Func001C()
 end
 
 function Trig_Update_Alliances_for_PlayerGroups_Actions()
-    udg_TempInt = 1
+    udg_TempInt = 0
     while (true) do
-        if (udg_TempInt > udg_MaxNumTeams) then break end
-        udg_TempInt2 = 1
+        if (udg_TempInt > (udg_MaxNumTeams - 1)) then break end
+        udg_TempInt2 = 0
         while (true) do
-            if (udg_TempInt2 > udg_MaxNumTeams) then break end
+            if (udg_TempInt2 > (udg_MaxNumTeams - 1)) then break end
             if (Trig_Update_Alliances_for_PlayerGroups_Func001Func001Func001C()) then
                 SetForceAllianceStateBJ(udg_TeamsPlayerGroup[udg_TempInt], udg_TeamsPlayerGroup[udg_TempInt2], bj_ALLIANCE_UNALLIED)
             else
@@ -8958,7 +9023,14 @@ function Trig_Cell_Absorb_Conditions()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func001C()
+function Trig_Cell_Absorb_Func001Func006Func001C()
+    if (not (IsPlayerInForce(GetOwningPlayer(GetSpellTargetUnit()), udg_ActivePlayerGroup) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001Func001C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
@@ -8968,7 +9040,7 @@ function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func001C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func002C()
+function Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001Func002C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 2)) then
         return false
     end
@@ -8978,59 +9050,59 @@ function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func002C()
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001C()
-    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func001C()) then
+function Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001C()
+    if (Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001Func001C()) then
         return true
     end
-    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001Func002C()) then
+    if (Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001Func002C()) then
         return true
     end
     return false
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func004C()
+function Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func004C()
     if (not (LoadIntegerBJ(13, udg_ID, udg_StatMultHashtable) == 1)) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001Func002C()
-    if (not Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func001C()) then
+function Trig_Cell_Absorb_Func001Func006Func002Func001Func002C()
+    if (not Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func001C()
+function Trig_Cell_Absorb_Func001Func006Func002Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func006Func003C()
+function Trig_Cell_Absorb_Func001Func006Func002Func006Func003C()
     if (not (GetSpellTargetUnit() == udg_TransformationCell17)) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001Func006C()
+function Trig_Cell_Absorb_Func001Func006Func002Func006C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00E"))) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func001C()
+function Trig_Cell_Absorb_Func001Func006Func002C()
     if (not (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) >= 2)) then
         return false
     end
     return true
 end
 
-function Trig_Cell_Absorb_Func001Func006Func002C()
+function Trig_Cell_Absorb_Func001Func006Func003C()
     if (GetSpellTargetUnit() == udg_TransformationCell17) then
         return true
     end
@@ -9041,7 +9113,7 @@ function Trig_Cell_Absorb_Func001Func006Func002C()
 end
 
 function Trig_Cell_Absorb_Func001Func006C()
-    if (not Trig_Cell_Absorb_Func001Func006Func002C()) then
+    if (not Trig_Cell_Absorb_Func001Func006Func003C()) then
         return false
     end
     return true
@@ -9058,10 +9130,10 @@ function Trig_Cell_Absorb_Actions()
     if (Trig_Cell_Absorb_Func001C()) then
         udg_StatMultUnit = GetSpellAbilityUnit()
         if (Trig_Cell_Absorb_Func001Func006C()) then
-            if (Trig_Cell_Absorb_Func001Func006Func001C()) then
-                if (Trig_Cell_Absorb_Func001Func006Func001Func001C()) then
+            if (Trig_Cell_Absorb_Func001Func006Func002C()) then
+                if (Trig_Cell_Absorb_Func001Func006Func002Func001C()) then
                                         udg_ID = GetHandleId(udg_StatMultUnit)
-                    if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002C()) then
+                    if (Trig_Cell_Absorb_Func001Func006Func002Func001Func002C()) then
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
                         UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
@@ -9073,7 +9145,7 @@ function Trig_Cell_Absorb_Actions()
                     else
                         udg_TempPlayer = GetTriggerPlayer()
                         udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
-                        if (Trig_Cell_Absorb_Func001Func006Func001Func001Func002Func004C()) then
+                        if (Trig_Cell_Absorb_Func001Func006Func002Func001Func002Func004C()) then
                             DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2654")
                         else
                             DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2659")
@@ -9082,8 +9154,8 @@ function Trig_Cell_Absorb_Actions()
                     end
                 else
                 end
-                if (Trig_Cell_Absorb_Func001Func006Func001Func006C()) then
-                    if (Trig_Cell_Absorb_Func001Func006Func001Func006Func003C()) then
+                if (Trig_Cell_Absorb_Func001Func006Func002Func006C()) then
+                    if (Trig_Cell_Absorb_Func001Func006Func002Func006Func003C()) then
                         SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
                         UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
                         GroupAddUnitSimple(udg_StatMultUnit, udg_TransformationUnitGroup)
@@ -9115,13 +9187,19 @@ function Trig_Cell_Absorb_Actions()
                                 DestroyForce(udg_TempPlayerGroup)
             end
         else
-            udg_StatMultReal = (0.00 + I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit())))
-            TriggerExecute(gg_trg_Add_To_Base_Stats)
-            TriggerExecute(gg_trg_Update_Current_Stats)
-            udg_TempInt = (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) + 1)
-            SetUnitLifePercentBJ(GetSpellAbilityUnit(), (GetUnitLifePercent(GetSpellAbilityUnit()) + I2R(udg_TempInt)))
-            SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
-            UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+            if (Trig_Cell_Absorb_Func001Func006Func001C()) then
+                udg_StatMultReal = (0.00 + I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit())))
+                TriggerExecute(gg_trg_Add_To_Base_Stats)
+                TriggerExecute(gg_trg_Update_Current_Stats)
+                udg_TempInt = (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) + 1)
+                SetUnitLifePercentBJ(GetSpellAbilityUnit(), (GetUnitLifePercent(GetSpellAbilityUnit()) + I2R(udg_TempInt)))
+                SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+                UnitDamageTargetBJ(udg_StatMultUnit, GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+            else
+                udg_TempInt = (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) + 1)
+                SetUnitLifePercentBJ(GetSpellAbilityUnit(), (GetUnitLifePercent(GetSpellAbilityUnit()) + I2R(udg_TempInt)))
+                UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * (0.01 * I2R(udg_TempInt))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+            end
         end
     else
         udg_TempInt = (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetSpellAbilityUnit()) + 1)
@@ -10548,6 +10626,7 @@ function InitCustomTriggers()
     InitTrig_Setup_Spawns()
     InitTrig_Map_Setup_Hashtables()
     InitTrig_Hero_Pick_Floating_Text_Help()
+    InitTrig_Force_Remove_T2_Buggy_Vision()
     InitTrig_Kill_Creep_New_New_Stats_Only()
     InitTrig_Kill_Hero_Stats()
     InitTrig_Kill_Hero_Revive()
@@ -10564,6 +10643,7 @@ function InitCustomTriggers()
     InitTrig_Scoreboard_Timer_Increment()
     InitTrig_Shenron_Wish_for_Power()
     InitTrig_Shenron_Wish_Granted_Sound()
+    InitTrig_Tournament_Trophy()
     InitTrig_Final_Battle_Detector()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()
