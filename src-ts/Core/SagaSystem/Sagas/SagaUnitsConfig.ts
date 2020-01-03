@@ -11,7 +11,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
-    ["Raditz", new SagaUnit(FourCC("U01D"), 6, 75, 50, 75, new Vector2D(8800, -1400))],
+    ["Raditz", new SagaUnit(FourCC("U01D"), 6, 75, 50, 75, new Vector2D(8000, 5000))],
 
     // saiyan saga
     // ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(-3300, -5500))],

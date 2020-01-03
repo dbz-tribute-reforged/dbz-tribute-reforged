@@ -3623,30 +3623,59 @@ function Trig_Catchup_Timer_Func001Func004Func001A()
     end
 end
 
-function Trig_Catchup_Timer_Func001Func008Func002Func006C()
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func006C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01S"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01T"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func007C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
     return true
 end
 
-function Trig_Catchup_Timer_Func001Func008Func002A()
+function Trig_Catchup_Timer_Func001Func008Func002Func001A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
     udg_StatMultReal = (((udg_TempReal + udg_TempReal2) + udg_TempReal3) - ((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt))
-    udg_StatMultReal = (udg_StatMultReal / 3.00)
+    udg_StatMultReal = (udg_StatMultReal * 0.33)
     udg_StatMultReal = (udg_StatMultReal * udg_CatchupIncrement)
-    if (Trig_Catchup_Timer_Func001Func008Func002Func006C()) then
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func006C()) then
+        udg_StatMultReal = (udg_StatMultReal * 0.33)
+    else
+    end
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func007C()) then
         udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
                 RemoveLocation(udg_TempLoc)
-        udg_TempString = (udg_PlayerColorString[udg_TempInt] .. (GetPlayerName(udg_TempPlayer) .. ("|r|cffffcc00 receives +" .. (R2S(udg_StatMultReal) .. " catchup stats|r"))))
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, udg_TempString)
+        udg_TempString = (udg_PlayerColorString[udg_TempInt] .. (GetHeroProperName(udg_StatMultUnit) .. ("|r|cffffcc00 receives +" .. (R2S(udg_StatMultReal) .. " catchup stats|r"))))
+        udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
+        DisplayTimedTextToForce(udg_TempPlayerGroup, 4.00, udg_TempString)
+                DestroyForce(udg_TempPlayerGroup)
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Update_Current_Stats)
     else
     end
+end
+
+function Trig_Catchup_Timer_Func001Func008Func002C()
+    if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+        return false
+    end
+    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Catchup_Timer_Func001C()
@@ -3674,7 +3703,10 @@ function Trig_Catchup_Timer_Actions()
         while (true) do
             if (udg_TempInt > udg_MaxNumPlayers) then break end
             udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-            ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Catchup_Timer_Func001Func008Func002A)
+            if (Trig_Catchup_Timer_Func001Func008Func002C()) then
+                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Catchup_Timer_Func001Func008Func002Func001A)
+            else
+            end
             udg_TempInt = udg_TempInt + 1
         end
     else
@@ -3684,7 +3716,7 @@ end
 function InitTrig_Catchup_Timer()
     gg_trg_Catchup_Timer = CreateTrigger()
     DisableTrigger(gg_trg_Catchup_Timer)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Catchup_Timer, 20.00)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Catchup_Timer, 30.00)
     TriggerAddAction(gg_trg_Catchup_Timer, Trig_Catchup_Timer_Actions)
 end
 
@@ -4057,7 +4089,7 @@ end
 function InitTrig_Scoreboard_Update()
     gg_trg_Scoreboard_Update = CreateTrigger()
     DisableTrigger(gg_trg_Scoreboard_Update)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Scoreboard_Update, 5.00)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Scoreboard_Update, 5.50)
     TriggerAddAction(gg_trg_Scoreboard_Update, Trig_Scoreboard_Update_Actions)
 end
 
@@ -6666,7 +6698,7 @@ function Trig_Transformations_Exit_Point_Func001A()
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > 6) then break end
-        UnitAddItemSwapped(UnitItemInSlotBJ(udg_TempUnit, udg_TempInt2), udg_TransformationResultUnit)
+        UnitAddItemSwapped(UnitItemInSlotBJ(GetEnumUnit(), udg_TempInt2), udg_TransformationResultUnit)
         udg_TempInt2 = udg_TempInt2 + 1
     end
     udg_StatMultUnit = GetEnumUnit()
