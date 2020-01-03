@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.23b
+DBZ Tribute Reforged 0.23c
 }
 
 STRING 4
@@ -22694,6 +22694,11 @@ STRING 3709
 // Abilities: A05P (Cam Distance Down), Name (Name)
 {
 Cam Distance Down
+}
+
+STRING 3710
+{
+Credits
 }
 
 STRING 3711
@@ -64572,6 +64577,18 @@ STRING 10645
 // Abilities: A0LT (Final Battle Activator), Tip (Tooltip - Normal)
 {
 Final Battle
+}
+
+STRING 10646
+{
+phone
+Xephyrix
+randomkilla
+ttay24
+Frozenhelfire
+micohelt
+dbsw
+anyone else i'm missing?
 }
 
 STRING 10649
