@@ -224,7 +224,7 @@ export class DragonBallsManager {
     UnitRemoveAbility(this.shenron, FourCC("Amov"));
     UnitRemoveAbility(this.shenron, FourCC("Aatk"));
     SetUnitInvulnerable(this.shenron, true);
-    // ShowUnitHide(this.shenron);
+    ShowUnitHide(this.shenron);
     return this;
   }
 
@@ -376,7 +376,7 @@ export class DragonBallsManager {
       );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
-      // ShowUnitShow(this.shenron);
+      ShowUnitShow(this.shenron);
       SetUnitAnimation(
         this.shenron,
         "stand"
@@ -449,7 +449,7 @@ export class DragonBallsManager {
       "|cffffcc00Shenron|r: So be it. Your wish has been granted."
     );
     DisableTrigger(this.wishTrigger);
-    // ShowUnitHide(this.shenron);
+    ShowUnitHide(this.shenron);
 
     return this;
   }

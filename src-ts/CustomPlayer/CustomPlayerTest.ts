@@ -414,14 +414,17 @@ export function CustomPlayerTest() {
 
     if (
       killerName && deadName && 
+      GetPlayerName(killPlayer).length > 1 &&
+      GetPlayerName(deadPlayer).length > 1 &&
       (
         killPlayerId == PLAYER_NEUTRAL_AGGRESSIVE || 
-        (killPlayerId > 0 && killPlayerId < Constants.maxPlayers)
-      )
+        (killPlayerId >= 0 && killPlayerId < Constants.maxPlayers)
+      ) &&
+      deadPlayerId != Constants.heavenHellCreepPlayerId
     ) {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
-        15,
+        8,
         killerName + 
         " has killed " + 
         deadName

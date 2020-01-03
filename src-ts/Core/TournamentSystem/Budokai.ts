@@ -107,13 +107,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
     return (
       "The " + 
       this.tournamentCounter + SuffixNumber(this.tournamentCounter) + " " +
-      "Strongest Under the Heavens Martial Arts Tournament"
+      "Budokai Tenkaichi"
     );
   }
 
   prepareTournament() {
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
+      bj_FORCE_ALL_PLAYERS, 20, 
       this.getTournamentName() + " will be held in " + 
       this.toStartDelay + " seconds! " + 
       "Type " + TournamentData.budokaiEnterCommand + " to register."
@@ -132,15 +132,17 @@ export class Budokai extends AdvancedTournament implements Tournament {
   setupTournament() {
     DisableTrigger(this.registerTrigger);
 
+    /*
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
       "Contestants: " + this.contestants.size
     );
+    */
     
     const numContestants = this.contestants.size;
     if (numContestants < 2) {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
+        bj_FORCE_ALL_PLAYERS, 10, 
         this.getTournamentName() + 
         " has been cancelled due to lack of attendance."
       );
@@ -214,7 +216,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     if (this.currentBracket.length > 1 && i < this.currentBracket.length) {
       
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(this.currentBracket[i].id)) +  
         " receives a bye."
       );
@@ -533,7 +535,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
     for (const winner of winners) {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(winner.id)) +  
         " has won their match."
       );
@@ -541,7 +543,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     for (const loser of losers) {
       loser.isCompeting = false;
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(loser.id)) +  
         " has lost their match."
       );
