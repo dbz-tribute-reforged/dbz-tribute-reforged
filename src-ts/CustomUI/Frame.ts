@@ -18,7 +18,7 @@ export abstract class Frame {
     public size: Vector2D, 
     public position: FramePosition
   ) {
-    this.frameHandle = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI,0);
+    this.frameHandle = BlzGetFrameByName(name, 0);
   }
   
   public setup(): this {

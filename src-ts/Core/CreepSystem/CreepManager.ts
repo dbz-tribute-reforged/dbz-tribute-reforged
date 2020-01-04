@@ -166,7 +166,9 @@ export class CreepManager {
     );
 
     if (IsUnitType(newCreepUnit, UNIT_TYPE_HERO)) {
-      SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 2, false);
+      if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
+        SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
+      }
       SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 50), false);
       SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 50), false);
       SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 50), false);
@@ -202,6 +204,12 @@ export class CreepManager {
         const customCreep = this.customCreeps.get(creepUnit);
         if (customCreep) {
           let wait = Constants.creepRespawnReviveDelay;
+          if (
+            IsUnitType(creepUnit, UNIT_TYPE_HERO) && 
+            GetPlayerId(customCreep.owner) == Constants.heavenHellCreepPlayerId
+          ) {
+            wait = Constants.creepHeavenHellHeroRespawnDelay;
+          }
           if (customCreep.isUpgrading) {
             customCreep.isUpgrading = false;
             wait = Math.random() + 0.1;
