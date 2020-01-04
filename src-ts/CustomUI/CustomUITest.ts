@@ -25,6 +25,8 @@ import { AbilityButtonHotbar } from './AbilityButtonHotbar';
 import { FrameHelper } from 'Common/FrameHelper';
 import { Constants } from 'Common/Constants';
 import { Logger } from 'Libs/TreeLib/Logger';
+import { BasicTitledBackdrop } from './BasicTitledBackdrop';
+import { BasicTextFrame } from './BasicTextFrame';
 
 
 // need to add promise + error catching
@@ -258,7 +260,7 @@ export function CustomUiTest() {
 	let hpBar = new HPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.3, 0.02),
+		new Vector2D(0.24, 0.02),
 		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
 		new StatusBarData(0, 0, 100)
 	);
@@ -266,7 +268,7 @@ export function CustomUiTest() {
 	let mpBar = new MPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.3, 0.02),
+		new Vector2D(0.24, 0.02),
 		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
 		new StatusBarData(0, 0, 100)
 	);
@@ -275,7 +277,7 @@ export function CustomUiTest() {
 		grandpa, 
 		0,
 		new Vector2D(0.06, 0.015),
-		new FramePosition(FRAMEPOINT_RIGHT, hpBar.frameHandle, FRAMEPOINT_LEFT, -0.002, 0),
+		new FramePosition(FRAMEPOINT_RIGHT, hpBar.frameHandle, FRAMEPOINT_LEFT, -0.0015, 0),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -330,6 +332,58 @@ export function CustomUiTest() {
 
 	Logger.LogDebug("Custom UI Setup Complete.");
 
+	// custom ui 2.0
+
+	// const heroStatsUI = new BasicTitledBackdrop(
+	// 	"heroStatsBackdrop", 
+	// 	"heroStatsBackdropTitle", 
+	// 	grandpa, 
+	// 	0, 
+	// 	new Vector2D(0.1, 0.08), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, levelBar.frameHandle, FRAMEPOINT_TOP, 0.04, 0.02), 
+	// 	Colorizer.Color.White + "Stats"
+	// ).setRenderVisible(false);
+
+	// const heroStatsUI = new Backdrop(
+	// 	"heroStatsBackdrop",
+	// 	"BACKDROP",
+	// 	grandpa,
+	// 	"EscMenuBackdrop",
+	// 	0,
+	// 	new Vector2D(0.15, 0.1), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.04, 0.02), 
+	// ).setRenderVisible(false);
+
+	const heroStatStrengthText = new BasicTextFrame(
+		"heroStatStrengthText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.01, 0.015), 
+		"|cffff2020STR:|n0|r",
+	).setRenderVisible(false);
+	
+	const heroStatAgilityText = new BasicTextFrame(
+		"heroStatAgilityText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.03, 0.015), 
+		"|cff20ff20AGI:|n0|r",
+	).setRenderVisible(false);
+	
+	const heroStatIntelligenceText = new BasicTextFrame(
+		"heroStatIntelligenceText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.07, 0.015), 
+		"|cff20ffffINT:|n0|r",
+	).setRenderVisible(false);
+
 	// hides the standard ui
 	// shows LHS hero bar buttons
 	// minimap + minimap buttons
@@ -350,6 +404,7 @@ export function CustomUiTest() {
 		const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
 		
 		const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
+		const minimapParent = BlzFrameGetParent(minimap);
 		const minimapButtons: framehandle[] = [];
 		for (let i = 0; i < 5; ++i) {
 			minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
@@ -390,6 +445,7 @@ export function CustomUiTest() {
 			
 			BlzFrameSetVisible(heroBarButtons, true);
 
+			BlzFrameSetVisible(minimapParent, true);
 			BlzFrameSetVisible(minimap, true);
 			for (let i = 0; i < 4 && i < minimapButtons.length; ++i) {
 				BlzFrameSetVisible(minimapButtons[i], true);
@@ -399,11 +455,16 @@ export function CustomUiTest() {
 			BlzFrameSetVisible(gameMsg, true);
 
 			BlzFrameSetVisible(commandCardParent, true);
-
+			BlzFrameSetVisible(inventoryParent, true);
 			for (let i = 0; i < 6; ++i) {
-				BlzFrameSetParent(inventoryButtons[i], commandCardParent);
+				BlzFrameSetParent(inventoryButtons[i], hpBar.frameHandle);
 				BlzFrameSetVisible(inventoryButtons[i], true);
 			}
+
+			// heroStatsUI.setRenderVisible(true);
+			heroStatStrengthText.setRenderVisible(true);
+			heroStatAgilityText.setRenderVisible(true);
+			heroStatIntelligenceText.setRenderVisible(true);
 		}
 	});
 

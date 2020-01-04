@@ -38,7 +38,7 @@ export const AbilitiesList = [
     duration: 40,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -65,7 +65,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -93,7 +93,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -119,7 +119,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -146,7 +146,7 @@ export const AbilitiesList = [
     duration: 160,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -172,7 +172,7 @@ export const AbilitiesList = [
     duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -202,7 +202,7 @@ export const AbilitiesList = [
     duration: 495,
     updateRate: 0.03,
     castTime: 0.03,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -230,7 +230,7 @@ export const AbilitiesList = [
     duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -256,7 +256,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -282,7 +282,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -309,7 +309,7 @@ export const AbilitiesList = [
     duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -335,7 +335,7 @@ export const AbilitiesList = [
     duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -361,7 +361,7 @@ export const AbilitiesList = [
     duration: 60,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -387,7 +387,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -413,7 +413,7 @@ export const AbilitiesList = [
     duration: 45,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -443,7 +443,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -469,7 +469,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -495,7 +495,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -521,7 +521,7 @@ export const AbilitiesList = [
     duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -547,7 +547,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -575,7 +575,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -603,7 +603,7 @@ export const AbilitiesList = [
     duration: 90,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "attack",
     icon: {
@@ -633,7 +633,7 @@ export const AbilitiesList = [
     duration: 26,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -662,7 +662,7 @@ export const AbilitiesList = [
     duration: 495,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -692,7 +692,7 @@ export const AbilitiesList = [
     duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -718,7 +718,7 @@ export const AbilitiesList = [
     duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -744,7 +744,7 @@ export const AbilitiesList = [
     duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -770,7 +770,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -796,7 +796,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -824,7 +824,7 @@ export const AbilitiesList = [
     duration: 75,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -854,7 +854,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -886,7 +886,7 @@ export const AbilitiesList = [
     duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -912,7 +912,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -941,7 +941,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -971,7 +971,7 @@ export const AbilitiesList = [
     duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -998,7 +998,7 @@ export const AbilitiesList = [
     duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1027,7 +1027,7 @@ export const AbilitiesList = [
     duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1055,7 +1055,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1082,7 +1082,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1108,7 +1108,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1134,7 +1134,7 @@ export const AbilitiesList = [
     duration: 124,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1164,7 +1164,7 @@ export const AbilitiesList = [
     duration: 208,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1190,7 +1190,7 @@ export const AbilitiesList = [
     duration: 150,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1218,7 +1218,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1245,7 +1245,7 @@ export const AbilitiesList = [
     duration: 231,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1273,7 +1273,7 @@ export const AbilitiesList = [
     duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1300,7 +1300,7 @@ export const AbilitiesList = [
     duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1327,7 +1327,7 @@ export const AbilitiesList = [
     duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1353,7 +1353,7 @@ export const AbilitiesList = [
     duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1379,7 +1379,7 @@ export const AbilitiesList = [
     duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1405,7 +1405,7 @@ export const AbilitiesList = [
     duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1432,7 +1432,7 @@ export const AbilitiesList = [
     duration: 132,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1458,7 +1458,7 @@ export const AbilitiesList = [
     duration: 300,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1488,7 +1488,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1514,7 +1514,7 @@ export const AbilitiesList = [
     duration: 330,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1541,7 +1541,7 @@ export const AbilitiesList = [
     duration: 45,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1573,7 +1573,7 @@ export const AbilitiesList = [
     duration: 2,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1602,7 +1602,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1629,7 +1629,7 @@ export const AbilitiesList = [
     duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1657,7 +1657,7 @@ export const AbilitiesList = [
     duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1684,7 +1684,7 @@ export const AbilitiesList = [
     duration: 3,
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1710,7 +1710,7 @@ export const AbilitiesList = [
     duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1737,7 +1737,7 @@ export const AbilitiesList = [
     // higher update rate than normal!!
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1763,7 +1763,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1789,7 +1789,7 @@ export const AbilitiesList = [
     duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1818,7 +1818,7 @@ export const AbilitiesList = [
     duration: 45,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1844,7 +1844,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1870,7 +1870,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1896,7 +1896,7 @@ export const AbilitiesList = [
     duration: 250,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1927,7 +1927,7 @@ export const AbilitiesList = [
     duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: true,
     animation: "spell",
     icon: {
@@ -1953,7 +1953,7 @@ export const AbilitiesList = [
     duration: 66,
     updateRate: 0.02,
     castTime: 0.0,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -1979,7 +1979,7 @@ export const AbilitiesList = [
     duration: 150,
     updateRate: 0.03,
     castTime: 0.03,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
@@ -2010,7 +2010,7 @@ export const AbilitiesList = [
     duration: 25,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: true,
     animation: "spell",
     icon: {
@@ -2040,7 +2040,7 @@ export const AbilitiesList = [
     duration: 67,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: true,
     animation: "spell",
     icon: {
@@ -2067,7 +2067,7 @@ export const AbilitiesList = [
     duration: 120,
     updateRate: 0.03,
     castTime: 0.25,
-    canMultiCast: false,
+    canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {

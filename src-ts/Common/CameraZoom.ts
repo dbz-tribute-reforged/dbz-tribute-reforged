@@ -7,10 +7,10 @@ export module CameraZoom {
     const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
     const PERIOD = 0.03125;
 
-    const ZOOM_MIN = 1650.0;
+    const ZOOM_MIN = 1400.0;
     const ZOOM_MAX = 4000.0;
 
-    const ANGLE_MIN = 90.0;
+    const ANGLE_MIN = 270.0;
     const ANGLE_MAX = 360.0;
 
     class PlayerCam {
@@ -49,7 +49,7 @@ export module CameraZoom {
 
         TriggerAddCondition(zoomTrig, Condition(() => {
             let cam = arr[GetPlayerId(GetTriggerPlayer())];
-            let newZoom = S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
+            let newZoom = 360 - S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
 
             if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
             else if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;
@@ -62,7 +62,7 @@ export module CameraZoom {
 
         TriggerAddCondition(angleTrig, Condition(() => {
             let cam = arr[GetPlayerId(GetTriggerPlayer())];
-            let newAngle = S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
+            let newAngle = ANGLE_MAX - S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
 
             if (newAngle > ANGLE_MAX) newAngle = ANGLE_MAX;
             else if (newAngle < ANGLE_MIN) newAngle = ANGLE_MIN;

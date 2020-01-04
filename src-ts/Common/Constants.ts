@@ -9,8 +9,10 @@ export module Constants {
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
+  export const creepHeavenHellHeroRespawnDelay: number = 15;
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
+  export const heavenHellMaxHeroLevel: number = 20;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -7000, 20000
   );

@@ -320,7 +320,7 @@ export function CustomPlayerTest() {
   */
 
 
-  // update hp/mp bars for current custom player
+  // UI info for selected unit
 	TimerStart(CreateTimer(), 0.03, true, () => {
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
       let playerId = i;
@@ -336,6 +336,29 @@ export function CustomPlayerTest() {
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
           updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level);
+        }
+        // update stats
+        let strength = "|cffff2020STR:|n";
+        let agility = "|cff20ff20AGI:|n";
+        let intelligence = "|cff20ffffINT:|n";
+
+        if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+          strength += I2S(GetHeroStr(unit, true));
+          agility += I2S(GetHeroAgi(unit, true));
+          intelligence += I2S(GetHeroInt(unit, true));
+        } else {
+          strength += "0";
+          agility += "0";
+          intelligence += "0";
+        }
+        strength += "|r"
+        agility += "|r"
+        intelligence += "|r"
+
+        if (GetPlayerId(GetLocalPlayer()) == playerId) {
+          BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
+          BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
+          BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
         }
       }
 

@@ -164,6 +164,9 @@ udg_IsCatchupStatsActivated = false
 udg_CatchupThreshold = 0.0
 udg_CatchupIncrement = 0.0
 udg_LvlUpInt = 0
+udg_MaxTransformationStrings = 0
+udg_AutoTransformPlayer = __jarray(false)
+udg_AutoTransformInt = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -261,6 +264,9 @@ gg_trg_Kill_Hero_Stats = nil
 gg_trg_Kill_Hero_Revive = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_Hero_Level_up_New_New = nil
+gg_trg_Auto_Transform = nil
+gg_trg_Auto_Transform_Toggle = nil
+gg_trg_Auto_Transform_Init = nil
 gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc = nil
 gg_trg_Remove_Dead_Summons = nil
 gg_trg_Auto_Free_Mode_SP = nil
@@ -383,6 +389,7 @@ gg_trg_Test_LVL_command = nil
 gg_trg_Test_LVL_command_Copy = nil
 gg_trg_Transformations_Init_Commands = nil
 gg_trg_Transformations_Entry_Point = nil
+gg_trg_Transformations_Parse_String = nil
 gg_trg_Transformations_Exit_Point = nil
 gg_trg_Set_Transformation_Stat_Mult = nil
 gg_trg_Transformations_Goku = nil
@@ -671,6 +678,14 @@ function InitGlobals()
     udg_CatchupThreshold = 0.0
     udg_CatchupIncrement = 0.0
     udg_LvlUpInt = 0
+    udg_MaxTransformationStrings = 0
+    i = 0
+    while (true) do
+        if ((i > 30)) then break end
+        udg_AutoTransformPlayer[i] = false
+        i = i + 1
+    end
+    udg_AutoTransformInt = 0
 end
 
 function InitSounds()
@@ -2919,7 +2934,7 @@ function Trig_Hero_Pick_Floating_Text_Help_Actions()
     CreateTextTagLocBJ("TRIGSTR_11040", udg_TempLoc, 0, 16.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
-        udg_TempLoc = Location(2200, 20500)
+        udg_TempLoc = Location(2200, 21200)
     CreateTextTagLocBJ("TRIGSTR_11043", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
     SetTextTagPermanentBJ(udg_TempFloatingText, true)
@@ -3375,6 +3390,108 @@ function InitTrig_Hero_Level_up_New_New()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Level_up_New_New, EVENT_PLAYER_HERO_LEVEL)
     TriggerAddCondition(gg_trg_Hero_Level_up_New_New, Condition(Trig_Hero_Level_up_New_New_Conditions))
     TriggerAddAction(gg_trg_Hero_Level_up_New_New, Trig_Hero_Level_up_New_New_Actions)
+end
+
+function Trig_Auto_Transform_Func001Func002Func005Func002Func002C()
+    if (not (udg_TransformationString ~= "hs")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "release")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "metal")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "super")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Transform_Func001Func002Func005A()
+    udg_StatMultUnit = GetEnumUnit()
+    udg_LvlUpInt = 0
+    while (true) do
+        if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
+        udg_TransformationString = udg_TransformationCommands[udg_LvlUpInt]
+        if (Trig_Auto_Transform_Func001Func002Func005Func002Func002C()) then
+            TriggerExecute(gg_trg_Transformations_Parse_String)
+            TriggerExecute(gg_trg_Transformations_Exit_Point)
+        else
+        end
+        udg_LvlUpInt = udg_LvlUpInt + 1
+    end
+end
+
+function Trig_Auto_Transform_Func001Func002C()
+    if (not (udg_AutoTransformPlayer[udg_AutoTransformInt] == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Transform_Actions()
+    udg_AutoTransformInt = 1
+    while (true) do
+        if (udg_AutoTransformInt > udg_MaxNumPlayers) then break end
+        udg_TransformationPlayer = ConvertedPlayer(udg_AutoTransformInt)
+        if (Trig_Auto_Transform_Func001Func002C()) then
+            ForGroupBJ(udg_StatMultPlayerUnits[udg_AutoTransformInt], Trig_Auto_Transform_Func001Func002Func005A)
+        else
+        end
+        udg_AutoTransformInt = udg_AutoTransformInt + 1
+    end
+end
+
+function InitTrig_Auto_Transform()
+    gg_trg_Auto_Transform = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Auto_Transform, 60.00)
+    TriggerAddAction(gg_trg_Auto_Transform, Trig_Auto_Transform_Actions)
+end
+
+function Trig_Auto_Transform_Toggle_Func002C()
+    if (not (udg_AutoTransformPlayer[udg_AutoTransformInt] == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Transform_Toggle_Actions()
+    udg_AutoTransformInt = GetConvertedPlayerId(GetTriggerPlayer())
+    if (Trig_Auto_Transform_Toggle_Func002C()) then
+        udg_AutoTransformPlayer[udg_AutoTransformInt] = false
+        udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11010")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+        udg_AutoTransformPlayer[udg_AutoTransformInt] = true
+        udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11025")
+                DestroyForce(udg_TempPlayerGroup)
+    end
+end
+
+function InitTrig_Auto_Transform_Toggle()
+    gg_trg_Auto_Transform_Toggle = CreateTrigger()
+    TriggerAddAction(gg_trg_Auto_Transform_Toggle, Trig_Auto_Transform_Toggle_Actions)
+end
+
+function Trig_Auto_Transform_Init_Actions()
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11026")
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        udg_AutoTransformPlayer[udg_TempInt] = true
+        TriggerRegisterPlayerChatEvent(gg_trg_Auto_Transform_Toggle, udg_TempPlayer, "-autotransform", true)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Auto_Transform_Init()
+    gg_trg_Auto_Transform_Init = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Auto_Transform_Init, 60.00)
+    TriggerAddAction(gg_trg_Auto_Transform_Init, Trig_Auto_Transform_Init_Actions)
 end
 
 function Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions()
@@ -6310,11 +6427,37 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "r"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "first"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "fp"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "kao"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "honey"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ws"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "paparapapa"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ss"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "nail"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "uss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "kami"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ss2"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "uss2"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "super perfect"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "saiyaman"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ult"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ultra"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ss3"
     udg_TempInt = (udg_TempInt + 1)
@@ -6322,50 +6465,27 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssg"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "lss"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "luss"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssb"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "golden"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssbkao"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssbe"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "saiyaman"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "ult"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "uss"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "uss2"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "nail"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "kami"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "honey"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "ws"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "lss"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "luss"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "ultra"
-    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "super"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "paparapapa"
-    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "release"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "fp"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "first"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "metal"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "upg"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "golden"
-    udg_TempInt = (udg_TempInt + 1)
+    udg_MaxTransformationStrings = udg_TempInt
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > udg_MaxNumPlayers) then break end
@@ -6384,98 +6504,110 @@ function InitTrig_Transformations_Init_Commands()
     TriggerAddAction(gg_trg_Transformations_Init_Commands, Trig_Transformations_Init_Commands_Actions)
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Entry_Point_Actions()
+    udg_TransformationPlayer = GetTriggerPlayer()
+    udg_TransformationString = GetEventPlayerChatString()
+    TriggerExecute(gg_trg_Transformations_Parse_String)
+    TriggerExecute(gg_trg_Transformations_Exit_Point)
+end
+
+function InitTrig_Transformations_Entry_Point()
+    gg_trg_Transformations_Entry_Point = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Entry_Point, Trig_Transformations_Entry_Point_Actions)
+end
+
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00G"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00F"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00E"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("N00Q"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01A"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H043"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H042"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H009"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00K"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func001C()
+function Trig_Transformations_Parse_String_Func001Func002Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E003"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002Func003C()
+function Trig_Transformations_Parse_String_Func001Func002Func003C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H000")) then
         return true
     end
@@ -6485,21 +6617,21 @@ function Trig_Transformations_Entry_Point_Func003Func002Func003C()
     return false
 end
 
-function Trig_Transformations_Entry_Point_Func003Func002C()
-    if (not Trig_Transformations_Entry_Point_Func003Func002Func003C()) then
+function Trig_Transformations_Parse_String_Func001Func002C()
+    if (not Trig_Transformations_Parse_String_Func001Func002Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func003C()
+function Trig_Transformations_Parse_String_Func001Func003C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01V"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func004Func001C()
+function Trig_Transformations_Parse_String_Func001Func004Func001C()
     if (GetUnitTypeId(GetEnumUnit()) == FourCC("H01S")) then
         return true
     end
@@ -6509,118 +6641,118 @@ function Trig_Transformations_Entry_Point_Func003Func004Func001C()
     return false
 end
 
-function Trig_Transformations_Entry_Point_Func003Func004C()
-    if (not Trig_Transformations_Entry_Point_Func003Func004Func001C()) then
+function Trig_Transformations_Parse_String_Func001Func004C()
+    if (not Trig_Transformations_Parse_String_Func001Func004Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func005C()
+function Trig_Transformations_Parse_String_Func001Func005C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H01U"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func006C()
+function Trig_Transformations_Parse_String_Func001Func006C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O001"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func007C()
+function Trig_Transformations_Parse_String_Func001Func007C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O005"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func008C()
+function Trig_Transformations_Parse_String_Func001Func008C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O006"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func009C()
+function Trig_Transformations_Parse_String_Func001Func009C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("O00C"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func010C()
+function Trig_Transformations_Parse_String_Func001Func010C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H00R"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func011C()
+function Trig_Transformations_Parse_String_Func001Func011C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08M"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func012C()
+function Trig_Transformations_Parse_String_Func001Func012C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08P"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003Func013C()
+function Trig_Transformations_Parse_String_Func001Func013C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08S"))) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Entry_Point_Func003A()
+function Trig_Transformations_Parse_String_Func001A()
     udg_StatMultUnit = GetEnumUnit()
-    if (Trig_Transformations_Entry_Point_Func003Func002C()) then
+    if (Trig_Transformations_Parse_String_Func001Func002C()) then
         TriggerExecute(gg_trg_Transformations_Goku)
     else
-        if (Trig_Transformations_Entry_Point_Func003Func002Func001C()) then
+        if (Trig_Transformations_Parse_String_Func001Func002Func001C()) then
             TriggerExecute(gg_trg_Transformations_Vegeta)
         else
-            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001C()) then
+            if (Trig_Transformations_Parse_String_Func001Func002Func001Func001C()) then
                 TriggerExecute(gg_trg_Transformations_Gohan)
             else
-                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001C()) then
+                if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001C()) then
                     TriggerExecute(gg_trg_Transformations_Goten)
                 else
-                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001C()) then
+                    if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001C()) then
                         TriggerExecute(gg_trg_Transformations_Kid_Trunks)
                     else
-                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001C()) then
+                        if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001C()) then
                             TriggerExecute(gg_trg_Transformations_Future_Trunks)
                         else
-                            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001C()) then
+                            if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001C()) then
                                 TriggerExecute(gg_trg_Transformations_Broly)
                             else
-                                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001C()) then
+                                if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001C()) then
                                     TriggerExecute(gg_trg_Transformations_Cooler_Base)
                                 else
-                                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                    if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                         TriggerExecute(gg_trg_Transformations_Cooler_Final_Form)
                                     else
-                                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                        if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                             TriggerExecute(gg_trg_Transformations_Metal_Cooler)
                                         else
-                                            if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                            if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                 TriggerExecute(gg_trg_Transformations_Cell_Larval)
                                             else
-                                                if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                     TriggerExecute(gg_trg_Transformations_Cell_First)
                                                 else
-                                                    if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                    if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                         TriggerExecute(gg_trg_Transformations_Cell_Second)
                                                     else
-                                                        if (Trig_Transformations_Entry_Point_Func003Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                        if (Trig_Transformations_Parse_String_Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                             TriggerExecute(gg_trg_Transformations_Cell_Perfect)
                                                         else
                                                         end
@@ -6637,63 +6769,60 @@ function Trig_Transformations_Entry_Point_Func003A()
             end
         end
     end
-    if (Trig_Transformations_Entry_Point_Func003Func003C()) then
+    if (Trig_Transformations_Parse_String_Func001Func003C()) then
         TriggerExecute(gg_trg_Transformations_Androids_13_14_15)
         TriggerExecute(gg_trg_Transformations_Androids_13)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func004C()) then
+    if (Trig_Transformations_Parse_String_Func001Func004C()) then
         TriggerExecute(gg_trg_Transformations_Androids_13_14_15)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func005C()) then
+    if (Trig_Transformations_Parse_String_Func001Func005C()) then
         TriggerExecute(gg_trg_Transformations_Androids_Super_13)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func006C()) then
+    if (Trig_Transformations_Parse_String_Func001Func006C()) then
         TriggerExecute(gg_trg_Transformations_Babidi)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func007C()) then
+    if (Trig_Transformations_Parse_String_Func001Func007C()) then
         TriggerExecute(gg_trg_Transformations_Fat_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func008C()) then
+    if (Trig_Transformations_Parse_String_Func001Func008C()) then
         TriggerExecute(gg_trg_Transformations_Super_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func009C()) then
+    if (Trig_Transformations_Parse_String_Func001Func009C()) then
         TriggerExecute(gg_trg_Transformations_Kid_Buu)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func010C()) then
+    if (Trig_Transformations_Parse_String_Func001Func010C()) then
         TriggerExecute(gg_trg_Transformations_Piccolo)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func011C()) then
+    if (Trig_Transformations_Parse_String_Func001Func011C()) then
         TriggerExecute(gg_trg_Transformations_Bardock)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func012C()) then
+    if (Trig_Transformations_Parse_String_Func001Func012C()) then
         TriggerExecute(gg_trg_Transformations_Pan)
     else
     end
-    if (Trig_Transformations_Entry_Point_Func003Func013C()) then
+    if (Trig_Transformations_Parse_String_Func001Func013C()) then
         TriggerExecute(gg_trg_Transformations_Farmer_with_Shotgun)
     else
     end
 end
 
-function Trig_Transformations_Entry_Point_Actions()
-    udg_TransformationPlayer = GetTriggerPlayer()
-    udg_TransformationString = GetEventPlayerChatString()
-    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Transformations_Entry_Point_Func003A)
-    TriggerExecute(gg_trg_Transformations_Exit_Point)
+function Trig_Transformations_Parse_String_Actions()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(udg_TransformationPlayer)], Trig_Transformations_Parse_String_Func001A)
 end
 
-function InitTrig_Transformations_Entry_Point()
-    gg_trg_Transformations_Entry_Point = CreateTrigger()
-    TriggerAddAction(gg_trg_Transformations_Entry_Point, Trig_Transformations_Entry_Point_Actions)
+function InitTrig_Transformations_Parse_String()
+    gg_trg_Transformations_Parse_String = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Parse_String, Trig_Transformations_Parse_String_Actions)
 end
 
 function Trig_Transformations_Exit_Point_Func001A()
@@ -8188,21 +8317,21 @@ function Trig_Transformations_Bardock_Func016C()
     return true
 end
 
-function Trig_Transformations_Bardock_Func018Func001Func003Func002C()
+function Trig_Transformations_Bardock_Func018Func001Func004Func002C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Bardock_Func018Func001Func003C()
+function Trig_Transformations_Bardock_Func018Func001Func004C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Bardock_Func018Func001Func004C()
+function Trig_Transformations_Bardock_Func018Func001Func005C()
     if (udg_TransformationString == "ss") then
         return true
     end
@@ -8222,7 +8351,10 @@ function Trig_Transformations_Bardock_Func018Func001Func004C()
 end
 
 function Trig_Transformations_Bardock_Func018Func001C()
-    if (not Trig_Transformations_Bardock_Func018Func001Func004C()) then
+    if (not (udg_TransformationSFXString ~= "")) then
+        return false
+    end
+    if (not Trig_Transformations_Bardock_Func018Func001Func005C()) then
         return false
     end
     return true
@@ -8304,10 +8436,10 @@ function Trig_Transformations_Bardock_Actions()
         if (Trig_Transformations_Bardock_Func018Func001C()) then
                         udg_TransformationID = FourCC('H08N')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            if (Trig_Transformations_Bardock_Func018Func001Func003C()) then
+            if (Trig_Transformations_Bardock_Func018Func001Func004C()) then
                 SetUnitVertexColorBJ(udg_StatMultUnit, 100, 30.00, 30.00, 0)
             else
-                if (Trig_Transformations_Bardock_Func018Func001Func003Func002C()) then
+                if (Trig_Transformations_Bardock_Func018Func001Func004Func002C()) then
                     SetUnitVertexColorBJ(udg_StatMultUnit, 25.00, 30.00, 100, 0)
                 else
                     SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
@@ -8378,21 +8510,21 @@ function Trig_Transformations_Pan_Func014C()
     return true
 end
 
-function Trig_Transformations_Pan_Func016Func001Func003Func002C()
+function Trig_Transformations_Pan_Func016Func001Func004Func002C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Pan_Func016Func001Func003C()
+function Trig_Transformations_Pan_Func016Func001Func004C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Pan_Func016Func001Func004C()
+function Trig_Transformations_Pan_Func016Func001Func005C()
     if (udg_TransformationString == "ss") then
         return true
     end
@@ -8409,7 +8541,10 @@ function Trig_Transformations_Pan_Func016Func001Func004C()
 end
 
 function Trig_Transformations_Pan_Func016Func001C()
-    if (not Trig_Transformations_Pan_Func016Func001Func004C()) then
+    if (not (udg_TransformationSFXString ~= "")) then
+        return false
+    end
+    if (not Trig_Transformations_Pan_Func016Func001Func005C()) then
         return false
     end
     return true
@@ -8480,10 +8615,10 @@ function Trig_Transformations_Pan_Actions()
         if (Trig_Transformations_Pan_Func016Func001C()) then
                         udg_TransformationID = FourCC('H08R')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            if (Trig_Transformations_Pan_Func016Func001Func003C()) then
+            if (Trig_Transformations_Pan_Func016Func001Func004C()) then
                 SetUnitVertexColorBJ(udg_StatMultUnit, 100, 30.00, 30.00, 0)
             else
-                if (Trig_Transformations_Pan_Func016Func001Func003Func002C()) then
+                if (Trig_Transformations_Pan_Func016Func001Func004Func002C()) then
                     SetUnitVertexColorBJ(udg_StatMultUnit, 25.00, 30.00, 100, 0)
                 else
                     SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100.00, 100.00, 0)
@@ -9636,7 +9771,7 @@ function Trig_Transformations_Cell_Perfect_Func009C()
 end
 
 function Trig_Transformations_Cell_Perfect_Func010C()
-    if (not (udg_TransformationString == "super")) then
+    if (not (udg_TransformationString == "super pefect")) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 130)) then
@@ -10102,6 +10237,19 @@ function Trig_Transformations_Cooler_Final_Form_Func010C()
     return true
 end
 
+function Trig_Transformations_Cooler_Final_Form_Func011Func012C()
+    if (IsUnitDeadBJ(udg_StatMultUnit) == true) then
+        return true
+    end
+    if (RectContainsUnit(gg_rct_HeavenZone, udg_StatMultUnit) == true) then
+        return true
+    end
+    if (RectContainsUnit(gg_rct_HellZone, udg_StatMultUnit) == true) then
+        return true
+    end
+    return false
+end
+
 function Trig_Transformations_Cooler_Final_Form_Func011C()
     if (not (udg_TransformationString == "metal")) then
         return false
@@ -10109,7 +10257,7 @@ function Trig_Transformations_Cooler_Final_Form_Func011C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
         return false
     end
-    if (not (IsUnitDeadBJ(udg_StatMultUnit) == true)) then
+    if (not Trig_Transformations_Cooler_Final_Form_Func011Func012C()) then
         return false
     end
     return true
@@ -10864,6 +11012,9 @@ function InitCustomTriggers()
     InitTrig_Kill_Hero_Stats()
     InitTrig_Kill_Hero_Revive()
     InitTrig_Hero_Level_up_New_New()
+    InitTrig_Auto_Transform()
+    InitTrig_Auto_Transform_Toggle()
+    InitTrig_Auto_Transform_Init()
     InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
     InitTrig_Remove_Dead_Summons()
     InitTrig_Auto_Free_Mode_SP()
@@ -10954,6 +11105,7 @@ function InitCustomTriggers()
     InitTrig_Clear_Stat_Mult_SFX()
     InitTrig_Transformations_Init_Commands()
     InitTrig_Transformations_Entry_Point()
+    InitTrig_Transformations_Parse_String()
     InitTrig_Transformations_Exit_Point()
     InitTrig_Set_Transformation_Stat_Mult()
     InitTrig_Transformations_Goku()
