@@ -427,6 +427,8 @@ export function CustomPlayerTest() {
 
 		const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
     const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
+
+    const abilityButtonHotbar = BlzGetFrameByName("abilityButtonHotBar", 0);
     
     const hpBar = BlzGetFrameByName("MyHPBar", 0);
     const mpBar = BlzGetFrameByName("MyMPBar", 0);
@@ -483,7 +485,16 @@ export function CustomPlayerTest() {
 			BlzFrameSetVisible(rm, false);
 
 			BlzFrameSetVisible(upperBar, true);
-			BlzFrameSetVisible(resourceBar, true);
+      BlzFrameSetVisible(resourceBar, true);
+      
+      BlzFrameClearAllPoints(abilityButtonHotbar);
+      BlzFrameSetPoint(
+        abilityButtonHotbar, 
+        FRAMEPOINT_BOTTOMRIGHT, 
+        hpBar, 
+        FRAMEPOINT_TOPRIGHT, 
+        -0.008, 0.001
+      );
 
       BlzFrameClearAllPoints(hpBar);
       BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
@@ -502,7 +513,7 @@ export function CustomPlayerTest() {
 
       BlzFrameSetVisible(heroPortrait, true);
       BlzFrameClearAllPoints(heroPortrait);
-      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.05, 0.003);
+      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.13, 0.003);
       BlzFrameSetSize(heroPortrait, 0.08, 0.08);
 
       BlzFrameSetVisible(unitPanelParent, true);
