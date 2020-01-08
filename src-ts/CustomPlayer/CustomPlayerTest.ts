@@ -9,6 +9,8 @@ import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
+import { FrameHelper } from "Common/FrameHelper";
+import { ExperienceManager } from "Core/ExperienceSystem/ExpierenceManager";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -79,10 +81,11 @@ export function updateSelectedUnitBars(
   currentMp: string,
   maxMp: string,
   level: string,
+  percentXp: number,
 ) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, Math.floor(GetUnitLevel(unit)*0.2)));
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), percentXp);
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
@@ -332,11 +335,16 @@ export function CustomPlayerTest() {
         const maxHp = I2S(BlzGetUnitMaxHP(unit));
         const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
         const maxMp = I2S(BlzGetUnitMaxMana(unit));
+        let percentXp = 0;
+        if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+          const currentLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit));
+          const nextLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
+          const currentXp = GetHeroXP(unit) - currentLevelXp;
+          const maxXp = nextLevelXp - currentLevelXp;
+          percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp))
+        }
         const level = I2S(GetUnitLevel(unit));
 
-        if (GetPlayerId(GetLocalPlayer()) == playerId) {
-          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level);
-        }
         // update stats
         let strength = "|cffff2020STR:|n";
         let agility = "|cff20ff20AGI:|n";
@@ -351,14 +359,24 @@ export function CustomPlayerTest() {
           agility += "0";
           intelligence += "0";
         }
-        strength += "|r"
-        agility += "|r"
-        intelligence += "|r"
+        strength += "|r";
+        agility += "|r";
+        intelligence += "|r";
+
+        const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
+        const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
+        const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
+          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level, percentXp);
           BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
           BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
           BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
+          if (customPlayers[playerId].usingCustomUI) {
+            BlzFrameSetVisible(unitPanel, false);
+            BlzFrameSetVisible(inventoryCover, false);
+            BlzFrameSetVisible(inventoryCoverTexture, false);
+          }
         }
       }
 
@@ -386,6 +404,183 @@ export function CustomPlayerTest() {
     }
   });
 
+
+
+  // ==== custom ui 2.0 ====
+	// hides the standard ui
+	// shows LHS hero bar buttons
+	// minimap + minimap buttons
+	// chat msgs, game msgs
+	// hides first 5 command buttons
+	// sets parent of inventory to parent of bottom right command buttons
+	const hideTrig = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "iseedeadui", true);
+	}
+	TriggerAddAction(hideTrig, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    customPlayers[playerId].usingCustomUI = true;
+
+		const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
+		const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
+		const rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
+
+		const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
+    const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
+
+    const abilityButtonHotbar = BlzGetFrameByName("abilityButtonHotBar", 0);
+    
+    const hpBar = BlzGetFrameByName("MyHPBar", 0);
+    const mpBar = BlzGetFrameByName("MyMPBar", 0);
+
+		const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
+		
+		const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
+		const minimapParent = BlzFrameGetParent(minimap);
+		const minimapButtons: framehandle[] = [];
+		for (let i = 0; i < 5; ++i) {
+			minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
+		}
+
+		const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
+		const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
+
+    const heroPortrait = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0);
+		const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
+    const unitPanelParent = BlzFrameGetParent(unitPanel);
+    
+    const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
+    const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
+
+		const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
+		// const inventoryFrames: framehandle[] = [];
+		// inventoryFrames.push(BlzGetFrameByName("SimpleInventoryCover",0));
+		// inventoryFrames.push(BlzGetFrameByName("SimpleInventoryBar",0));
+		// inventoryFrames.push(BlzGetFrameByName("InventoryCoverTexture",0));
+		// inventoryFrames.push(BlzGetFrameByName("InventoryText",0));
+
+		const inventoryButtons: framehandle[] = [];
+		for (let i = 0; i < 6; ++i) {
+			const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
+			inventoryButtons.push(frame);
+			// inventoryFrames.push(frame);
+		}
+
+		const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
+		const commandCardButtons: framehandle[] = [];
+		for (let i = 0; i < 12; ++i) {
+			commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
+    }
+    
+    const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
+    const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
+    const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
+
+		if (GetLocalPlayer() == GetTriggerPlayer()) {
+			BlzHideOriginFrames(true);
+			BlzFrameSetAllPoints(worldFrame, grandpa);
+			// let frame = BlzGetFrameByName("ConsoleUI", 0);
+			// BlzFrameSetAllPoints(frame, grandpa);
+			// BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
+			BlzFrameSetVisible(rm, false);
+
+			BlzFrameSetVisible(upperBar, true);
+      BlzFrameSetVisible(resourceBar, true);
+      
+      BlzFrameClearAllPoints(abilityButtonHotbar);
+      BlzFrameSetPoint(
+        abilityButtonHotbar, 
+        FRAMEPOINT_BOTTOMRIGHT, 
+        hpBar, 
+        FRAMEPOINT_TOPRIGHT, 
+        -0.008, 0.001
+      );
+
+      BlzFrameClearAllPoints(hpBar);
+      BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
+      BlzFrameClearAllPoints(mpBar);
+      BlzFrameSetPoint(mpBar, FRAMEPOINT_TOP, hpBar, FRAMEPOINT_BOTTOM, 0, 0.00);
+			
+			BlzFrameSetVisible(heroBarButtons, true);
+
+			BlzFrameSetVisible(minimapParent, true);
+			BlzFrameSetVisible(minimap, true);
+			// buttons still not showing up
+			FrameHelper.setFramesVisibility(minimapButtons, true);
+
+			BlzFrameSetVisible(chatMsg, true);
+			BlzFrameSetVisible(gameMsg, true);
+
+      BlzFrameSetVisible(heroPortrait, true);
+      BlzFrameClearAllPoints(heroPortrait);
+      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.13, 0.003);
+      BlzFrameSetSize(heroPortrait, 0.08, 0.08);
+
+      BlzFrameSetVisible(unitPanelParent, true);
+      BlzFrameSetVisible(unitPanel, false);
+
+      BlzFrameSetVisible(inventoryCover, false);
+      BlzFrameSetVisible(inventoryCoverTexture, false);
+      
+			BlzFrameSetParent(inventoryParent, commandCardParent);
+
+			BlzFrameSetVisible(commandCardParent, true);
+			BlzFrameSetVisible(inventoryParent, true);
+			FrameHelper.setFramesVisibility(inventoryButtons, true);
+			// FrameHelper.setFramesVisibility(inventoryFrames, true);
+
+			// heroStatsUI.setRenderVisible(true);
+			BlzFrameSetVisible(customStrengthLabel, true);
+			BlzFrameSetVisible(customAgilityLabel, true);
+			BlzFrameSetVisible(customIntelligenceLabel, true);
+		}
+	});
+
+	const resetUnitPanelTrigger = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(resetUnitPanelTrigger, Player(i), "hideunitpanel", true);
+	}
+	TriggerAddAction(resetUnitPanelTrigger, () => {
+		const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
+		const unitPanelParent = BlzFrameGetParent(unitPanel);
+		
+		const toBeHidden: framehandle[] = [
+			// BlzGetFrameByName("SimpleInfoPanelIconDamage", 0),
+			// BlzGetFrameByName("SimpleInfoPanelIconDamage", 1),
+			// BlzGetFrameByName("SimpleInfoPanelIconArmor", 2),
+			// BlzGetFrameByName("SimpleInfoPanelIconRank", 3),
+			// BlzGetFrameByName("SimpleInfoPanelIconFood", 4),
+			// BlzGetFrameByName("SimpleInfoPanelIconGold", 5),
+			// BlzGetFrameByName("InfoPanelIconHeroIcon", 6),
+			// BlzGetFrameByName("SimpleInfoPanelIconAlly", 7),
+
+			// BlzGetFrameByName("InfoPanelIconHeroStrengthLabel", 6),
+			// BlzGetFrameByName("InfoPanelIconHeroStrengthValue", 6),
+			// BlzGetFrameByName("InfoPanelIconHeroAgilityLabel", 6),
+			// BlzGetFrameByName("InfoPanelIconHeroAgilityValue", 6),
+			// BlzGetFrameByName("InfoPanelIconHeroIntellectLabel", 6),
+			// BlzGetFrameByName("InfoPanelIconHeroIntellectValue", 6),
+			// BlzGetFrameByName("SimpleInfoPanelIconHeroText", 6),
+			// BlzGetFrameByName("SimpleInfoPanelIconHero", 6),
+			BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0),
+			BlzGetFrameByName("SimpleInventoryCover", 0),
+			BlzGetFrameByName("SimpleInventoryCoverTexture", 0),
+		]
+
+		for (let i = 0; i < toBeHidden.length; ++i) {
+			BJDebugMsg(i + ": " + toBeHidden[i]);
+		}
+
+		const player = GetTriggerPlayer();
+		if (GetLocalPlayer() == player) {
+			FrameHelper.setFramesVisibility(toBeHidden, false);
+		}
+
+  });
+  
+
+
+  // ==== other player related triggers ====
   // player leaves game
   const leaveTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -476,6 +671,8 @@ export function CustomPlayerTest() {
   })
   */
 
+
+  // special player commands + single player commands
   // force stats
   let numActivePlayers = 0;
   for (let i = 0; i < Constants.maxActivePlayers; ++i) {
@@ -686,4 +883,67 @@ export function CustomPlayerTest() {
     TournamentManager.getInstance().startTournament(Constants.finalBattleName);
   });
 
+
+  
+  // allow player to modify ui as they see fit
+	// prints id of frame given by name
+	const customUIPlayerSelectFrame = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(customUIPlayerSelectFrame, Player(i), "uipr", false);
+	}
+	TriggerAddAction(customUIPlayerSelectFrame, () => {
+		FrameHelper.getFrameFromString(GetEventPlayerChatString(), 5, true);
+	});
+
+	// toggle ui on/off
+	const customUIPlayerToggleFrame = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uion", false);
+		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uiof", false);
+	}
+	TriggerAddAction(customUIPlayerToggleFrame, () => {
+    const player = GetTriggerPlayer();
+    const input = GetEventPlayerChatString();
+		const frame = FrameHelper.getFrameFromString(input, 5, true);
+		if (GetLocalPlayer() == player && frame) {
+      if (input[3] == 'n') {
+        BlzFrameSetEnable(frame, true);
+      } else {
+        BlzFrameSetEnable(frame, false);
+      }
+		}
+	});
+
+	// uimv x.xxx y.yyy cc name
+	const customUIPlayerMoveFrame = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(customUIPlayerMoveFrame, Player(i), "uimv", false);
+	}
+	TriggerAddAction(customUIPlayerMoveFrame, () => {
+		const player = GetTriggerPlayer();
+		const input = GetEventPlayerChatString();
+		const x = S2R(input.substring(5, 10));
+		const y = S2R(input.substring(11, 16));
+		const frame = FrameHelper.getFrameFromString(input, 17, true);
+		if (GetLocalPlayer() == player && frame) {
+      BlzFrameClearAllPoints(frame);
+			BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, x, y);
+		}
+  });
+
+	// uirs x.xxx y.yyy cc name
+	const customUIPlayerResizeFrame = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(customUIPlayerResizeFrame, Player(i), "uirs", false);
+	}
+	TriggerAddAction(customUIPlayerResizeFrame, () => {
+		const player = GetTriggerPlayer();
+		const input = GetEventPlayerChatString();
+		const x = S2R(input.substring(5, 10));
+		const y = S2R(input.substring(11, 16));
+		const frame = FrameHelper.getFrameFromString(input, 17, true);
+		if (GetLocalPlayer() == player && frame) {
+      BlzFrameSetSize(frame, x, y);
+		}
+  });
 }

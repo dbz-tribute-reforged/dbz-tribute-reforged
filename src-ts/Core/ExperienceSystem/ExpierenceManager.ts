@@ -7,6 +7,7 @@ import { TextTagHelper } from "Common/TextTagHelper";
 export class ExperienceManager {
   static instance: ExperienceManager;
 
+  protected levelReqXP: number[];
   protected creepXP: number[];
   protected heroXP: number[];
 
@@ -15,6 +16,7 @@ export class ExperienceManager {
 
   constructor (
   ) {
+    this.levelReqXP = [];
     this.creepXP = [];
     this.heroXP = [];
     this.unitXPModifier = new Map();
@@ -31,6 +33,16 @@ export class ExperienceManager {
   }
 
   initialize(): this {
+    this.levelReqXP.push(ExperienceConstants.reqBase);
+    this.setupXPTables(
+      this.levelReqXP, 
+      ExperienceConstants.reqBase,
+      ExperienceConstants.reqPrevMult,
+      ExperienceConstants.reqLevelMult,
+      ExperienceConstants.reqConstant,
+      Constants.maxHeroLevel,
+    )
+
     this.setupXPTables(
       this.heroXP, 
       ExperienceConstants.heroBase,
@@ -66,21 +78,28 @@ export class ExperienceManager {
   ) {
     table.push(base);
     table.push(base);
-    for (let i = 2; i <= maxLevel; ++i) {
+    for (let i = table.length; i <= maxLevel; ++i) {
       const value = table[i-1] * prevMult + i * levelMult + constant;
       table.push(value);
     }
   }
 
+  getHeroReqLevelXP(level: number) : number {
+    if (level > 0 && level < this.levelReqXP.length) {
+      return this.levelReqXP[level];
+    }
+    return 0;
+  }
+
   getHeroKillXP(level: number): number {
-    if (level > 0 && level < Constants.maxHeroLevel) {
+    if (level > 0 && level < this.heroXP.length) {
       return this.heroXP[level];
     }
     return 0;
   }
 
   getCreepKillXP(level: number): number {
-    if (level > 0 && level < Constants.maxCreepLvl) {
+    if (level > 0 && level < this.creepXP.length) {
       return this.creepXP[level];
     }
     return 0;

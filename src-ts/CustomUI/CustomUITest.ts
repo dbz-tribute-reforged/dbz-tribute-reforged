@@ -293,8 +293,8 @@ export function CustomUiTest() {
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(0.4, 0.04),
-		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0.005),
+		new Vector2D(0.04 * (Constants.maxSubAbilities) + 0.003, 0.04),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.06, 0.005),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {
@@ -330,7 +330,6 @@ export function CustomUiTest() {
 
 	abilityHotBar.autoAlignButtonPositions();
 
-	Logger.LogDebug("Custom UI Setup Complete.");
 
 	// custom ui 2.0
 
@@ -360,7 +359,7 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.01, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.10, 0.003), 
 		"|cffff2020STR:|n0|r",
 	).setRenderVisible(false);
 	
@@ -370,7 +369,7 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.03, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.06, 0.003), 
 		"|cff20ff20AGI:|n0|r",
 	).setRenderVisible(false);
 	
@@ -380,92 +379,9 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.07, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
 		"|cff20ffffINT:|n0|r",
 	).setRenderVisible(false);
 
-	// hides the standard ui
-	// shows LHS hero bar buttons
-	// minimap + minimap buttons
-	// chat msgs, game msgs
-	// hides first 5 command buttons
-	// sets parent of inventory to parent of bottom right command buttons
-	const hideTrig = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "iseedeadui", true);
-	}
-	TriggerAddAction(hideTrig, () => {
-		const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
-		const rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
-
-		const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
-		const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
-
-		const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
-		
-		const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
-		const minimapParent = BlzFrameGetParent(minimap);
-		const minimapButtons: framehandle[] = [];
-		for (let i = 0; i < 5; ++i) {
-			minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
-		}
-
-		const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
-		const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
-		
-		const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
-		const inventoryButtons: framehandle[] = [];
-		for (let i = 0; i < 6; ++i) {
-			inventoryButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
-		}
-
-		const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
-		const commandCardButtons: framehandle[] = [];
-		for (let i = 0; i < 12; ++i) {
-			commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
-		}
-
-		if (GetLocalPlayer() == GetTriggerPlayer()) {
-			BlzHideOriginFrames(true);
-			BlzFrameSetAllPoints(worldFrame, grandpa);
-			// let frame = BlzGetFrameByName("ConsoleUI", 0);
-			// BlzFrameSetAllPoints(frame, grandpa);
-			// BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
-			BlzFrameSetVisible(rm, false);
-
-			BlzFrameSetVisible(upperBar, true);
-			BlzFrameSetVisible(resourceBar, true);
-
-			hpBar.resetRenderPosition().setRenderPosition(
-				new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02)
-			);
-			mpBar.resetRenderPosition().setRenderPosition(
-				new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.00)
-			);
-			
-			BlzFrameSetVisible(heroBarButtons, true);
-
-			BlzFrameSetVisible(minimapParent, true);
-			BlzFrameSetVisible(minimap, true);
-			for (let i = 0; i < 4 && i < minimapButtons.length; ++i) {
-				BlzFrameSetVisible(minimapButtons[i], true);
-			}
-
-			BlzFrameSetVisible(chatMsg, true);
-			BlzFrameSetVisible(gameMsg, true);
-
-			BlzFrameSetVisible(commandCardParent, true);
-			BlzFrameSetVisible(inventoryParent, true);
-			for (let i = 0; i < 6; ++i) {
-				BlzFrameSetParent(inventoryButtons[i], hpBar.frameHandle);
-				BlzFrameSetVisible(inventoryButtons[i], true);
-			}
-
-			// heroStatsUI.setRenderVisible(true);
-			heroStatStrengthText.setRenderVisible(true);
-			heroStatAgilityText.setRenderVisible(true);
-			heroStatIntelligenceText.setRenderVisible(true);
-		}
-	});
-
+	Logger.LogDebug("Custom UI Setup Complete.");
 }

@@ -31,7 +31,6 @@ export module DragonBallsConstants {
     new Vector2D(13775, 9720),
     new Vector2D(11890, -2650),
     new Vector2D(8500, -5870),
-    new Vector2D(8500, -5870),
     new Vector2D(16000, 2500),
     new Vector2D(-13000, 17730),
     new Vector2D(2500, -7250),
