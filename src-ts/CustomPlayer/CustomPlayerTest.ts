@@ -81,12 +81,11 @@ export function updateSelectedUnitBars(
   currentMp: string,
   maxMp: string,
   level: string,
-  currentXp: number,
-  maxXp: number,
+  percentXp: number,
 ) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, 100 * currentXp / Math.max(1, maxXp)));
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), percentXp);
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
@@ -336,11 +335,13 @@ export function CustomPlayerTest() {
         const maxHp = I2S(BlzGetUnitMaxHP(unit));
         const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
         const maxMp = I2S(BlzGetUnitMaxMana(unit));
-        let currentXp = 0;
-        let maxXp = 1;
+        let percentXp = 0;
         if (IsUnitType(unit, UNIT_TYPE_HERO)) {
-          currentXp = GetHeroXP(unit);
-          maxXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
+          const currentLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit));
+          const nextLevelXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
+          const currentXp = GetHeroXP(unit) - currentLevelXp;
+          const maxXp = nextLevelXp - currentLevelXp;
+          percentXp = Math.min(100, 100 * currentXp / Math.max(1, maxXp))
         }
         const level = I2S(GetUnitLevel(unit));
 
@@ -367,7 +368,7 @@ export function CustomPlayerTest() {
         const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
-          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level, currentXp, maxXp);
+          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level, percentXp);
           BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
           BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
           BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
@@ -442,6 +443,7 @@ export function CustomPlayerTest() {
 		const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
 		const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
 
+    const heroPortrait = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0);
 		const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
     const unitPanelParent = BlzFrameGetParent(unitPanel);
     
@@ -497,6 +499,11 @@ export function CustomPlayerTest() {
 
 			BlzFrameSetVisible(chatMsg, true);
 			BlzFrameSetVisible(gameMsg, true);
+
+      BlzFrameSetVisible(heroPortrait, true);
+      BlzFrameClearAllPoints(heroPortrait);
+      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.05, 0.003);
+      BlzFrameSetSize(heroPortrait, 0.08, 0.08);
 
       BlzFrameSetVisible(unitPanelParent, true);
       BlzFrameSetVisible(unitPanel, false);
@@ -910,6 +917,22 @@ export function CustomPlayerTest() {
 		if (GetLocalPlayer() == player && frame) {
       BlzFrameClearAllPoints(frame);
 			BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, x, y);
+		}
+  });
+
+	// uirs x.xxx y.yyy cc name
+	const customUIPlayerResizeFrame = CreateTrigger();
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(customUIPlayerResizeFrame, Player(i), "uirs", false);
+	}
+	TriggerAddAction(customUIPlayerResizeFrame, () => {
+		const player = GetTriggerPlayer();
+		const input = GetEventPlayerChatString();
+		const x = S2R(input.substring(5, 10));
+		const y = S2R(input.substring(11, 16));
+		const frame = FrameHelper.getFrameFromString(input, 17, true);
+		if (GetLocalPlayer() == player && frame) {
+      BlzFrameSetSize(frame, x, y);
 		}
   });
 }

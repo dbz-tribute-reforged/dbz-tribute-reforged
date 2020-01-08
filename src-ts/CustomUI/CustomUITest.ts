@@ -293,8 +293,8 @@ export function CustomUiTest() {
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(0.04 * Constants.maxSubAbilities, 0.04),
-		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0.005),
+		new Vector2D(0.04 * (Constants.maxSubAbilities + 1), 0.04),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.06, 0.005),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {
@@ -359,7 +359,7 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.01, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.01, 0.003), 
 		"|cffff2020STR:|n0|r",
 	).setRenderVisible(false);
 	
@@ -369,7 +369,7 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.03, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.05, 0.003), 
 		"|cff20ff20AGI:|n0|r",
 	).setRenderVisible(false);
 	
@@ -379,7 +379,7 @@ export function CustomUiTest() {
 		"EscMenuLabelTextTemplate",
 		0,
 		new Vector2D(0.04, 0.02), 
-		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.07, 0.015), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.09, 0.003), 
 		"|cff20ffffINT:|n0|r",
 	).setRenderVisible(false);
 
