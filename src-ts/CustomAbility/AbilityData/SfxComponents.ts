@@ -512,7 +512,7 @@ export const SfxComponents = [
           y: 255,
           z: 255,
         },
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
       {
@@ -1659,7 +1659,7 @@ export const SfxComponents = [
           y: 255,
           z: 225,
         },
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
       {

@@ -5,6 +5,7 @@ export module ExperienceConstants {
   export const reqBase = 50;
   export const reqPrevMult = 1.0;
   export const reqLevelMult = 25;
+  export const reqConstant = 0;
 
   // creep xp table
   // legacy: 25, 1.0, 5, 5

@@ -293,7 +293,7 @@ export function CustomUiTest() {
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(0.4, 0.04),
+		new Vector2D(0.04 * Constants.maxSubAbilities, 0.04),
 		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0.005),
 	)
 	

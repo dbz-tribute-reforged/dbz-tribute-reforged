@@ -10,6 +10,7 @@ import { Colorizer } from "Common/Colorizer";
 import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
+import { ExperienceManager } from "Core/ExperienceSystem/ExpierenceManager";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -80,10 +81,12 @@ export function updateSelectedUnitBars(
   currentMp: string,
   maxMp: string,
   level: string,
+  currentXp: number,
+  maxXp: number,
 ) {
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), GetUnitLifePercent(unit));
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), GetUnitManaPercent(unit));
-  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, Math.floor(GetUnitLevel(unit)*0.2)));
+  BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), Math.min(100, 100 * currentXp / Math.max(1, maxXp)));
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), currentHp + " / " + maxHp);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), currentMp + " / " + maxMp);
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
@@ -333,6 +336,12 @@ export function CustomPlayerTest() {
         const maxHp = I2S(BlzGetUnitMaxHP(unit));
         const currentMp = I2S(Math.max(0, R2I(GetUnitState(unit, UNIT_STATE_MANA))));
         const maxMp = I2S(BlzGetUnitMaxMana(unit));
+        let currentXp = 0;
+        let maxXp = 1;
+        if (IsUnitType(unit, UNIT_TYPE_HERO)) {
+          currentXp = GetHeroXP(unit);
+          maxXp = ExperienceManager.getInstance().getHeroReqLevelXP(GetHeroLevel(unit) + 1);
+        }
         const level = I2S(GetUnitLevel(unit));
 
         // update stats
@@ -358,7 +367,7 @@ export function CustomPlayerTest() {
         const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
         if (GetPlayerId(GetLocalPlayer()) == playerId) {
-          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level);
+          updateSelectedUnitBars(unit, currentHp, maxHp, currentMp, maxMp, level, currentXp, maxXp);
           BlzFrameSetText(BlzGetFrameByName("heroStatStrengthText", 0), strength);
           BlzFrameSetText(BlzGetFrameByName("heroStatAgilityText", 0), agility);
           BlzFrameSetText(BlzGetFrameByName("heroStatIntelligenceText", 0), intelligence);
@@ -419,7 +428,7 @@ export function CustomPlayerTest() {
     const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
     
     const hpBar = BlzGetFrameByName("MyHPBar", 0);
-    const mpBar = BlzGetFrameByName("MyMBBar", 0);
+    const mpBar = BlzGetFrameByName("MyMPBar", 0);
 
 		const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
 		
@@ -434,7 +443,10 @@ export function CustomPlayerTest() {
 		const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
 
 		const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
-		const unitPanelParent = BlzFrameGetParent(unitPanel);
+    const unitPanelParent = BlzFrameGetParent(unitPanel);
+    
+    const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
+    const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
 		const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
 		// const inventoryFrames: framehandle[] = [];
@@ -472,9 +484,9 @@ export function CustomPlayerTest() {
 			BlzFrameSetVisible(resourceBar, true);
 
       BlzFrameClearAllPoints(hpBar);
-      BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
+      BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
       BlzFrameClearAllPoints(mpBar);
-      BlzFrameSetPoint(mpBar, FRAMEPOINT_BOTTOMRIGHT, grandpa, FRAMEPOINT_BOTTOM, 0, 0.00);
+      BlzFrameSetPoint(mpBar, FRAMEPOINT_TOP, hpBar, FRAMEPOINT_BOTTOM, 0, 0.00);
 			
 			BlzFrameSetVisible(heroBarButtons, true);
 
@@ -486,10 +498,13 @@ export function CustomPlayerTest() {
 			BlzFrameSetVisible(chatMsg, true);
 			BlzFrameSetVisible(gameMsg, true);
 
-			BlzFrameSetVisible(unitPanelParent, true);
+      BlzFrameSetVisible(unitPanelParent, true);
+      BlzFrameSetVisible(unitPanel, false);
+
+      BlzFrameSetVisible(inventoryCover, false);
+      BlzFrameSetVisible(inventoryCoverTexture, false);
+      
 			BlzFrameSetParent(inventoryParent, commandCardParent);
-			// FrameHelper.setFramesVisibility(unitPanelDamage, false);
-			// FrameHelper.setFramesVisibility(unitPanelArmor, false);
 
 			BlzFrameSetVisible(commandCardParent, true);
 			BlzFrameSetVisible(inventoryParent, true);
@@ -853,8 +868,6 @@ export function CustomPlayerTest() {
 
   
   // allow player to modify ui as they see fit
-	BJDebugMsg("[test] player configurable ui start");
-	
 	// prints id of frame given by name
 	const customUIPlayerSelectFrame = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -867,13 +880,19 @@ export function CustomPlayerTest() {
 	// toggle ui on/off
 	const customUIPlayerToggleFrame = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uien", false);
+		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uion", false);
+		TriggerRegisterPlayerChatEvent(customUIPlayerToggleFrame, Player(i), "uiof", false);
 	}
 	TriggerAddAction(customUIPlayerToggleFrame, () => {
-		const player = GetTriggerPlayer();
-		const frame = FrameHelper.getFrameFromString(GetEventPlayerChatString(), 5, true);
-		if (GetLocalPlayer() == player) {
-			BlzFrameSetEnable(frame, !BlzFrameGetEnable(frame));
+    const player = GetTriggerPlayer();
+    const input = GetEventPlayerChatString();
+		const frame = FrameHelper.getFrameFromString(input, 5, true);
+		if (GetLocalPlayer() == player && frame) {
+      if (input[3] == 'n') {
+        BlzFrameSetEnable(frame, true);
+      } else {
+        BlzFrameSetEnable(frame, false);
+      }
 		}
 	});
 
@@ -888,10 +907,9 @@ export function CustomPlayerTest() {
 		const x = S2R(input.substring(5, 10));
 		const y = S2R(input.substring(11, 16));
 		const frame = FrameHelper.getFrameFromString(input, 17, true);
-		if (GetLocalPlayer() == player) {
+		if (GetLocalPlayer() == player && frame) {
+      BlzFrameClearAllPoints(frame);
 			BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, x, y);
 		}
   });
-
-	BJDebugMsg("[test] player configurable ui end");
 }

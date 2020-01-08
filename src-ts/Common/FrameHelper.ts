@@ -17,7 +17,7 @@ export module FrameHelper {
   ): framehandle 
   {
     BJDebugMsg("Input: " + input.substring(start));
-    
+
     const context = S2I(input.substring(start, start+2));
     const name = input.substring(start+3);
     const frame = BlzGetFrameByName(name, context);
@@ -26,7 +26,8 @@ export module FrameHelper {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         5,
-        "BlzGetFrameByName(" + name + ", " + context + ") = " + frame
+        "BlzGetFrameByName(" + name + ", " + context + ") = " + 
+         BlzFrameGetName(frame) + "(" + frame + ")"
       );
     }
 
