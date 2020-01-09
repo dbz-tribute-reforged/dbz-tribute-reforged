@@ -233,6 +233,7 @@ gg_trg_Buu_Candy_Gobbler = nil
 gg_trg_Buu_Candy_Eating = nil
 gg_trg_Cell_Juniors = nil
 gg_trg_Cell_Sense_Droids = nil
+gg_trg_Raditz_Double_Sundae_End = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Solar_Flare_Test = nil
 gg_trg_SolarFlare = nil
@@ -429,8 +430,10 @@ gg_trg_Metal_Cooler_Stat_Mult_On_Death = nil
 gg_trg_Transformations_Cooler_Base = nil
 gg_trg_Transformations_Cooler_Final_Form = nil
 gg_trg_Transformations_Metal_Cooler = nil
+gg_trg_Transformations_Raditz = nil
 gg_trg_Transformations_Farmer_with_Shotgun = nil
 gg_trg_Transformations_Apply_SFX = nil
+gg_trg_Transformations_Generic_SSG_SSB = nil
 gg_trg_Replace_Transformation_Group_with_New_Hero = nil
 gg_trg_Check_Walkability = nil
 gg_trg_Zanzo_Test = nil
@@ -449,9 +452,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Raditz_Double_Sundae_End = nil
-gg_trg_Transformations_Raditz = nil
-gg_trg_Transformations_Generic_SSG_SSB = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -3355,23 +3355,23 @@ function Trig_Hero_Level_up_New_New_Conditions()
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func005Func001Func003Func002C()
+function Trig_Hero_Level_up_New_New_Func004Func002Func003Func002C()
     if (not (udg_StatMultUnit ~= GetTriggerUnit())) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func005Func001Func003A()
+function Trig_Hero_Level_up_New_New_Func004Func002Func003A()
     udg_StatMultUnit = GetEnumUnit()
-    if (Trig_Hero_Level_up_New_New_Func005Func001Func003Func002C()) then
+    if (Trig_Hero_Level_up_New_New_Func004Func002Func003Func002C()) then
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Update_Current_Stats)
     else
     end
 end
 
-function Trig_Hero_Level_up_New_New_Func005Func001Func005C()
+function Trig_Hero_Level_up_New_New_Func004Func002Func005C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
         return true
     end
@@ -3384,22 +3384,25 @@ function Trig_Hero_Level_up_New_New_Func005Func001Func005C()
     return false
 end
 
-function Trig_Hero_Level_up_New_New_Func005Func001C()
-    if (not Trig_Hero_Level_up_New_New_Func005Func001Func005C()) then
+function Trig_Hero_Level_up_New_New_Func004Func002C()
+    if (not Trig_Hero_Level_up_New_New_Func004Func002Func005C()) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func005Func004Func001C()
+function Trig_Hero_Level_up_New_New_Func004Func005Func001C()
     if (not (ModuloInteger(udg_LvlUpInt, 3) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Level_up_New_New_Func005C()
+function Trig_Hero_Level_up_New_New_Func004C()
     if (not (udg_LvlUpInt > 0)) then
+        return false
+    end
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))]) == true)) then
         return false
     end
     return true
@@ -3409,11 +3412,11 @@ function Trig_Hero_Level_up_New_New_Actions()
     udg_StatMultUnit = GetTriggerUnit()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_LvlUpInt = (GetHeroLevel(udg_StatMultUnit) - LoadIntegerBJ(17, udg_ID, udg_StatMultHashtable))
-    udg_StatMultReal = (udg_StatsPerLvl * I2R(udg_LvlUpInt))
-    if (Trig_Hero_Level_up_New_New_Func005C()) then
-        if (Trig_Hero_Level_up_New_New_Func005Func001C()) then
+    if (Trig_Hero_Level_up_New_New_Func004C()) then
+        udg_StatMultReal = (udg_StatsPerLvl * I2R(udg_LvlUpInt))
+        if (Trig_Hero_Level_up_New_New_Func004Func002C()) then
             udg_StatMultReal = ((udg_StatMultReal * 0.33) * 1.00)
-            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Hero_Level_up_New_New_Func005Func001Func003A)
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], Trig_Hero_Level_up_New_New_Func004Func002Func003A)
             udg_StatMultUnit = GetTriggerUnit()
         else
         end
@@ -3422,7 +3425,7 @@ function Trig_Hero_Level_up_New_New_Actions()
         udg_LvlUpInt = (LoadIntegerBJ(17, udg_ID, udg_StatMultHashtable) + 1)
         while (true) do
             if (udg_LvlUpInt > GetHeroLevel(udg_StatMultUnit)) then break end
-            if (Trig_Hero_Level_up_New_New_Func005Func004Func001C()) then
+            if (Trig_Hero_Level_up_New_New_Func004Func005Func001C()) then
             else
                 ModifyHeroSkillPoints(GetTriggerUnit(), bj_MODIFYMETHOD_SUB, 1)
             end
@@ -3466,7 +3469,7 @@ function Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002C()
     return true
 end
 
-function Trig_Auto_Transform_Func001Func002Func005Func003C()
+function Trig_Auto_Transform_Func001Func002Func005Func003Func001C()
     if (not (udg_TempBool == true)) then
         return false
     end
@@ -3476,10 +3479,10 @@ end
 function Trig_Auto_Transform_Func001Func002Func005A()
     udg_StatMultUnit = GetEnumUnit()
     udg_TempBool = true
-    if (Trig_Auto_Transform_Func001Func002Func005Func003C()) then
-        udg_LvlUpInt = 0
-        while (true) do
-            if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
+    udg_LvlUpInt = 0
+    while (true) do
+        if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
+        if (Trig_Auto_Transform_Func001Func002Func005Func003Func001C()) then
             udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
             if (Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002C()) then
                 TriggerExecute(gg_trg_Transformations_Parse_String)
@@ -3490,9 +3493,9 @@ function Trig_Auto_Transform_Func001Func002Func005A()
                 TriggerExecute(gg_trg_Transformations_Exit_Point)
             else
             end
-            udg_LvlUpInt = udg_LvlUpInt + 1
+        else
         end
-    else
+        udg_LvlUpInt = udg_LvlUpInt + 1
     end
 end
 

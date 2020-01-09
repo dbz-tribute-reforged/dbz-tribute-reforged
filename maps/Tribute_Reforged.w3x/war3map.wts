@@ -67002,6 +67002,12 @@ STRING 11045
 [|cffffff00A|r] Choose Raditz
 }
 
+STRING 11046
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
+}
+
 STRING 11047
 // Units: H08U (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
 {
@@ -67059,6 +67065,48 @@ STRING 11056
 // Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
 {
 A
+}
+
+STRING 11057
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool2> seconds|r
+}
+
+STRING 11058
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool3> seconds|r
+}
+
+STRING 11059
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool4> seconds|r
+}
+
+STRING 11060
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool5> seconds|r
+}
+
+STRING 11061
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool6> seconds|r
+}
+
+STRING 11062
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool7> seconds|r
+}
+
+STRING 11063
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool8> seconds|r
 }
 
 STRING 11064
@@ -67131,6 +67179,24 @@ STRING 11075
 // Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 10|r]
+}
+
+STRING 11076
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool9> seconds|r
+}
+
+STRING 11077
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool10> seconds|r
+}
+
+STRING 11078
+// Abilities: A0MG (Behind You), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
 }
 
 STRING 11080
@@ -67295,48 +67361,6 @@ STRING 11106
 (raditz)
 }
 
-STRING 11107
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11108
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11109
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11110
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11111
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11112
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11113
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
 STRING 11114
 // Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
 {
@@ -67419,30 +67443,6 @@ STRING 11127
 // Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
-}
-
-STRING 11128
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11129
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11130
-// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11131
-// Abilities: A0MG (Behind You), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: 15 seconds|r
 }
 
 STRING 11132
