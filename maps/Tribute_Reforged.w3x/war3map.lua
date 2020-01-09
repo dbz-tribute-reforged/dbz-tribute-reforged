@@ -693,52 +693,42 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
-    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -779,7 +769,7 @@ function InitSounds()
     SetSoundDuration(gg_snd_ClanInvitation, 4295)
     SetSoundVolume(gg_snd_ClanInvitation, 127)
     gg_snd_ShenronSummon = CreateSound("Audio/Effects/ShenronSummon.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    SetSoundDuration(gg_snd_ShenronSummon, 9012)
+    SetSoundDuration(gg_snd_ShenronSummon, 4295)
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
@@ -1995,6 +1985,9 @@ function Trig_Oozaru_Vegeta_New_Func004Func001C()
     if (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08M")) then
         return true
     end
+    if (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08U")) then
+        return true
+    end
     return false
 end
 
@@ -2029,6 +2022,7 @@ function Trig_Oozaru_Vegeta_New_Actions()
         SetPlayerAbilityAvailableBJ(true, FourCC("A0LS"), GetTriggerPlayer())
     else
         udg_StatMultStr = LoadRealBJ(10, udg_ID, udg_StatMultHashtable)
+        SaveRealBJ(0.00, 10, udg_ID, udg_StatMultHashtable)
         TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         TriggerExecute(gg_trg_Clear_Stat_Mult_SFX)
@@ -3443,14 +3437,14 @@ function InitTrig_Hero_Level_up_New_New()
     TriggerAddAction(gg_trg_Hero_Level_up_New_New, Trig_Hero_Level_up_New_New_Actions)
 end
 
-function Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002Func007C()
+function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func007C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
     return true
 end
 
-function Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002C()
+function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002C()
     if (not (udg_TransformationString ~= "hs")) then
         return false
     end
@@ -3469,8 +3463,15 @@ function Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002C()
     return true
 end
 
-function Trig_Auto_Transform_Func001Func002Func005Func003Func001C()
+function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001C()
     if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Auto_Transform_Func001Func002Func005Func003C()
+    if (not (LoadRealBJ(10, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
@@ -3478,24 +3479,28 @@ end
 
 function Trig_Auto_Transform_Func001Func002Func005A()
     udg_StatMultUnit = GetEnumUnit()
-    udg_TempBool = true
-    udg_LvlUpInt = 0
-    while (true) do
-        if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
-        if (Trig_Auto_Transform_Func001Func002Func005Func003Func001C()) then
-            udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
-            if (Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002C()) then
-                TriggerExecute(gg_trg_Transformations_Parse_String)
-                if (Trig_Auto_Transform_Func001Func002Func005Func003Func001Func002Func007C()) then
-                    udg_TempBool = false
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Auto_Transform_Func001Func002Func005Func003C()) then
+    else
+        udg_TempBool = true
+        udg_LvlUpInt = 0
+        while (true) do
+            if (udg_LvlUpInt > (udg_MaxTransformationStrings - 1)) then break end
+            if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001C()) then
+                udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
+                if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002C()) then
+                    TriggerExecute(gg_trg_Transformations_Parse_String)
+                    if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func007C()) then
+                        udg_TempBool = false
+                    else
+                    end
+                    TriggerExecute(gg_trg_Transformations_Exit_Point)
                 else
                 end
-                TriggerExecute(gg_trg_Transformations_Exit_Point)
             else
             end
-        else
+            udg_LvlUpInt = udg_LvlUpInt + 1
         end
-        udg_LvlUpInt = udg_LvlUpInt + 1
     end
 end
 
@@ -4031,6 +4036,13 @@ function InitTrig_Scoreboard_Setup_Team()
     TriggerAddAction(gg_trg_Scoreboard_Setup_Team, Trig_Scoreboard_Setup_Team_Actions)
 end
 
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08U"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H042"))) then
         return false
@@ -4172,6 +4184,10 @@ function Trig_Scoreboard_Get_TempUnit_Icon_Actions()
                                                         if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()) then
                                                             udg_TempString = "BTNCoolerBaseForm.blp"
                                                         else
+                                                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()) then
+                                                                udg_TempString = "BTNRaditz.blp"
+                                                            else
+                                                            end
                                                         end
                                                     end
                                                 end

@@ -67199,6 +67199,12 @@ STRING 11078
 Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
 }
 
+STRING 11079
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: 4/3.5/3 seconds|r|n|cff00ffffCooldown: 12/9/6 seconds|r
+}
+
 STRING 11080
 // Abilities: A0ME (Double Sunday), EditorSuffix (Editor Suffix)
 {
@@ -67618,12 +67624,6 @@ STRING 11167
 // Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
 {
 Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur1> seconds|r|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
-STRING 11168
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: 4/3.5/3 seconds|r|n|cff00ffffCooldown: 15/12/9 seconds|r
 }
 
 STRING 11169
