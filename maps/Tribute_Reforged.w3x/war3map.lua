@@ -449,7 +449,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Raditz_Double_Sundae = nil
+gg_trg_Raditz_Double_Sundae_End = nil
 gg_trg_Transformations_Raditz = nil
 gg_trg_Transformations_Generic_SSG_SSB = nil
 function InitGlobals()
@@ -2477,14 +2477,14 @@ function InitTrig_Cell_Sense_Droids()
     TriggerAddAction(gg_trg_Cell_Sense_Droids, Trig_Cell_Sense_Droids_Actions)
 end
 
-function Trig_Raditz_Double_Sundae_Conditions()
+function Trig_Raditz_Double_Sundae_End_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0MH"))) then
         return false
     end
     return true
 end
 
-function Trig_Raditz_Double_Sundae_Actions()
+function Trig_Raditz_Double_Sundae_End_Actions()
     udg_TempUnit = GetTriggerUnit()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TempUnit)
     udg_TempInt2 = GetUnitAbilityLevelSwapped(FourCC("A0MF"), udg_TempUnit)
@@ -2498,11 +2498,11 @@ function Trig_Raditz_Double_Sundae_Actions()
         UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0MF'))
 end
 
-function InitTrig_Raditz_Double_Sundae()
-    gg_trg_Raditz_Double_Sundae = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Raditz_Double_Sundae, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Raditz_Double_Sundae, Condition(Trig_Raditz_Double_Sundae_Conditions))
-    TriggerAddAction(gg_trg_Raditz_Double_Sundae, Trig_Raditz_Double_Sundae_Actions)
+function InitTrig_Raditz_Double_Sundae_End()
+    gg_trg_Raditz_Double_Sundae_End = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Raditz_Double_Sundae_End, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    TriggerAddCondition(gg_trg_Raditz_Double_Sundae_End, Condition(Trig_Raditz_Double_Sundae_End_Conditions))
+    TriggerAddAction(gg_trg_Raditz_Double_Sundae_End, Trig_Raditz_Double_Sundae_End_Actions)
 end
 
 function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
@@ -2966,12 +2966,17 @@ function Trig_Hero_Pick_Floating_Text_Help_Actions()
         udg_TempLoc = Location(2200, 23000)
     CreateTextTagLocBJ("TRIGSTR_11040", udg_TempLoc, 0, 16.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
-    SetTextTagPermanentBJ(udg_TempFloatingText, true)
-        udg_TempLoc = Location(2200, 21200)
+        RemoveLocation(udg_TempLoc)
+    SetTextTagPermanentBJ(udg_TempFloatingText, false)
+    SetTextTagLifespanBJ(udg_TempFloatingText, 60.00)
+    SetTextTagFadepointBJ(udg_TempFloatingText, 3.00)
+        udg_TempLoc = Location(1200, 22550)
     CreateTextTagLocBJ("TRIGSTR_11043", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
-    SetTextTagPermanentBJ(udg_TempFloatingText, true)
         RemoveLocation(udg_TempLoc)
+    SetTextTagPermanentBJ(udg_TempFloatingText, false)
+    SetTextTagLifespanBJ(udg_TempFloatingText, 65.00)
+    SetTextTagFadepointBJ(udg_TempFloatingText, 3.00)
     DisableTrigger(GetTriggeringTrigger())
 end
 
@@ -6012,6 +6017,13 @@ function InitTrig_Hero_Pick_Disable_Pick_Modes()
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08U"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     udg_TempUnit = GetEnumUnit()
     udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
@@ -6027,6 +6039,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
         RemoveLocation(udg_TempLoc)
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_to_HeroRespawn)
+    if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
+        ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_ADD, 1)
+    else
+    end
 end
 
 function Trig_Hero_Pick_Setup_Selected_Heroes_Actions()
@@ -11238,7 +11254,7 @@ function InitCustomTriggers()
     InitTrig_Buu_Candy_Eating()
     InitTrig_Cell_Juniors()
     InitTrig_Cell_Sense_Droids()
-    InitTrig_Raditz_Double_Sundae()
+    InitTrig_Raditz_Double_Sundae_End()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
     InitTrig_Freemode()

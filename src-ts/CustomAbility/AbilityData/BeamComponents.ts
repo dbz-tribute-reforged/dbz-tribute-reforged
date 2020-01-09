@@ -1002,7 +1002,7 @@ export const BeamComponents = [
       { name: "damage double sunday dps" },
       { name: "damage double sunday explosion" },
       { name: "knockback kame" },
-      { name: "sfx beam dobule sunday" },
+      { name: "sfx beam double sunday" },
     ],
   },
   // -------------------------------------------

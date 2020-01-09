@@ -67002,19 +67002,6 @@ STRING 11045
 [|cffffff00A|r] Choose Raditz
 }
 
-STRING 11046
-// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A beam spamming hero. Has unique ability that refreshes his abilities.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11047
 // Units: H08U (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
 {
@@ -67636,5 +67623,18 @@ Transformations:
 [lvl 130] 2.25x "ss3"
 [lvl 170] 2.50x "ssg"
 [lvl 230] 2.60x "ssb"
+}
+
+STRING 11165
+// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A strong early game hero that relies heavily on his teammates to protect him while he beam spams. Has a unique ability that refreshes other abilities. Starts with 1 bonus skill point.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
