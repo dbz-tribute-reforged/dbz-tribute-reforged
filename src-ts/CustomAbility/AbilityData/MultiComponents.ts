@@ -119,4 +119,21 @@ export const MultiComponents = [
       { name: "beam death beam frieza" },
     ],
   },
+  // -------------------------------------------
+  {
+    name: "multi double sunday", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 8,
+    angleMin: -4,
+    angleMax: 4,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 2,
+    useLastCastPoint: true,
+    components: [
+      { name: "beam double sunday" },
+    ],
+  },
 ];

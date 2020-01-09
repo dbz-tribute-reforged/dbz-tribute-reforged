@@ -236,4 +236,15 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: 35,
   },
+  // behind you
+  {
+    name: "dash ground point behind you",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 20,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: -25,
+  },
 ]

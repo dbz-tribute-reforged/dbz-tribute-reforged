@@ -87,7 +87,7 @@ export const AbilitiesList = [
   {
     name: "Kamehameha", // Goku's Kame
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -113,7 +113,7 @@ export const AbilitiesList = [
   {
     name: "God Kamehameha", // Goku's Kame 2
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -140,7 +140,7 @@ export const AbilitiesList = [
   {
     name: "Spirit Bomb",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 160,
@@ -166,7 +166,7 @@ export const AbilitiesList = [
   {
     name: "Dragon Fist",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 25,
@@ -224,7 +224,7 @@ export const AbilitiesList = [
   {
     name: "Galick Gun",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 40,
@@ -250,7 +250,7 @@ export const AbilitiesList = [
   {
     name: "Final Flash",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -276,7 +276,7 @@ export const AbilitiesList = [
   {
     name: "Final Flash 2",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -303,7 +303,7 @@ export const AbilitiesList = [
   {
     name: "Big Bang Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 30,
@@ -329,7 +329,7 @@ export const AbilitiesList = [
   {
     name: "Energy Blast Volley",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 66,
@@ -355,7 +355,7 @@ export const AbilitiesList = [
   {
     name: "Twin Dragon Shot",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 60,
@@ -381,7 +381,7 @@ export const AbilitiesList = [
   {
     name: "Masenko",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -407,7 +407,7 @@ export const AbilitiesList = [
   {
     name: "Super Dragon Flight",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 45,
@@ -437,7 +437,7 @@ export const AbilitiesList = [
   {
     name: "Unlock Potential",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -463,7 +463,7 @@ export const AbilitiesList = [
   {
     name: "The Great Saiyaman has arrived!",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -489,7 +489,7 @@ export const AbilitiesList = [
   {
     name: "Potential Unleashed",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -515,7 +515,7 @@ export const AbilitiesList = [
   {
     name: "Finish Buster",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 40,
@@ -541,7 +541,7 @@ export const AbilitiesList = [
   {
     name: "Heat Dome Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -569,7 +569,7 @@ export const AbilitiesList = [
   {
     name: "Burning Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -597,7 +597,7 @@ export const AbilitiesList = [
   {
     name: "Shining Sword Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 90,
@@ -627,7 +627,7 @@ export const AbilitiesList = [
   {
     name: "Blazing Rush",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 26,
@@ -656,7 +656,7 @@ export const AbilitiesList = [
   {
     name: "Super Saiyan Rage",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 495,
@@ -686,7 +686,7 @@ export const AbilitiesList = [
   {
     name: "Special Beam Cannon",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 40,
@@ -712,7 +712,7 @@ export const AbilitiesList = [
   {
     name: "Slappy Hand",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 100,
@@ -738,7 +738,7 @@ export const AbilitiesList = [
   {
     name: "Hellzone Grenade",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 165,
@@ -764,7 +764,7 @@ export const AbilitiesList = [
   {
     name: "Kyodaika",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -790,7 +790,7 @@ export const AbilitiesList = [
   {
     name: "Future Sight",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -818,7 +818,7 @@ export const AbilitiesList = [
   {
     name: "Tyrant Lancer",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 75,
@@ -848,7 +848,7 @@ export const AbilitiesList = [
   {
     name: "Saiyan Spirit",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -880,7 +880,7 @@ export const AbilitiesList = [
   {
     name: "Riot Javelin",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 33,
@@ -906,7 +906,7 @@ export const AbilitiesList = [
   {
     name: "Rebellion Spear",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -935,7 +935,7 @@ export const AbilitiesList = [
   {
     name: "Angry Shout",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -965,7 +965,7 @@ export const AbilitiesList = [
   {
     name: "Pan Kamehameha",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 50,
@@ -992,7 +992,7 @@ export const AbilitiesList = [
   {
     name: "Maiden Blast",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 66,
@@ -1021,7 +1021,7 @@ export const AbilitiesList = [
   {
     name: "Reliable Friend",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 66,
@@ -1049,7 +1049,7 @@ export const AbilitiesList = [
   {
     name: "Honey Bee Costume",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -1076,7 +1076,7 @@ export const AbilitiesList = [
   {
     name: "Summon Giru",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1102,7 +1102,7 @@ export const AbilitiesList = [
   {
     name: "Energy Beam", // androids 13 14 15 beam
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1128,7 +1128,7 @@ export const AbilitiesList = [
   {
     name: "S.S. Deadly Hammer",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 124,
@@ -1158,7 +1158,7 @@ export const AbilitiesList = [
   {
     name: "S.S. Deadly Bomber",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 208,
@@ -1184,7 +1184,7 @@ export const AbilitiesList = [
   {
     name: "Nuke",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 150,
@@ -1212,7 +1212,7 @@ export const AbilitiesList = [
   {
     name: "Android Barrier",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -1239,7 +1239,7 @@ export const AbilitiesList = [
   {
     name: "Overcharge",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 231,
@@ -1267,7 +1267,7 @@ export const AbilitiesList = [
   {
     name: "Haretsu no Majutsu",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 1,
@@ -1294,7 +1294,7 @@ export const AbilitiesList = [
   {
     name: "Babidi Barrier",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 165,
@@ -1399,7 +1399,7 @@ export const AbilitiesList = [
   {
     name: "Flesh Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 1,
@@ -1426,7 +1426,7 @@ export const AbilitiesList = [
   {
     name: "Innocence Breath",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 132,
@@ -1452,7 +1452,7 @@ export const AbilitiesList = [
   {
     name: "Angry Explosion",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 300,
@@ -1482,7 +1482,7 @@ export const AbilitiesList = [
   {
     name: "Vanishing Ball",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1508,7 +1508,7 @@ export const AbilitiesList = [
   {
     name: "Mankind Destruction Attack",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 330,
@@ -1535,7 +1535,7 @@ export const AbilitiesList = [
   {
     name: "Energy Punch",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 45,
@@ -1567,7 +1567,7 @@ export const AbilitiesList = [
   {
     name: "Power Level Rising",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 2,
@@ -1596,7 +1596,7 @@ export const AbilitiesList = [
   {
     name: "Planet Crusher",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1623,7 +1623,7 @@ export const AbilitiesList = [
   {
     name: "Gigantic Roar",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 40,
@@ -1651,7 +1651,7 @@ export const AbilitiesList = [
   {
     name: "Gigantic Omegastorm",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 30,
@@ -1704,7 +1704,7 @@ export const AbilitiesList = [
   {
     name: "Absorb",
     currentCd: 0,
-    maxCd: 2,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 25,
@@ -1757,7 +1757,7 @@ export const AbilitiesList = [
   {
     name: "Supernova Cooler",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1783,7 +1783,7 @@ export const AbilitiesList = [
   {
     name: "Nova Chariot",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 25,
@@ -1812,7 +1812,7 @@ export const AbilitiesList = [
   {
     name: "Deafening Wave",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 45,
@@ -1838,7 +1838,7 @@ export const AbilitiesList = [
   {
     name: "Geti Star Repair",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1864,7 +1864,7 @@ export const AbilitiesList = [
   {
     name: "Supernova Golden",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1884,6 +1884,89 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam supernova golden" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Double Sunday",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRaditzDoubleSunday.blp",
+      disabled: "BTNRaditzDoubleSunday.blp",
+    },
+    tooltip: {
+      title: "Double Sunday",
+      body: 
+        "Double Sunday"
+    },
+    components: [
+      { name: "multi double sunday" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Saturday Crash",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRaditzSaturdayCrash.blp",
+      disabled: "BTNRaditzSaturdayCrash.blp",
+    },
+    tooltip: {
+      title: "Saturday Crash",
+      body: 
+        "Saturday Crash"
+    },
+    components: [
+      { name: "beam saturday crash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Behind You",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRaditzBehindYou.blp",
+      disabled: "BTNRaditzBehindYou.blp",
+    },
+    tooltip: {
+      title: "Behind You",
+      body: 
+        "Behind You"
+    },
+    components: [
+      { name: "dash ground point behind you pushback" },
+      { name: "damage behind you dps" },
+      { name: "knockback behind you" },
+      { name: "stun behind you" },
+      // TODO: add in sfx
+      // { name: "sfx behind you" },
     ],
   },
   // -------------------------------------------
@@ -1921,7 +2004,7 @@ export const AbilitiesList = [
   {
     name: "Big Bang Kamehameha",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
     duration: 99,
@@ -1973,7 +2056,7 @@ export const AbilitiesList = [
   {
     name: "Test Ability",
     currentCd: 0,
-    maxCd: 5,
+    maxCd: 1,
     costType: "HP",
     costAmount: 25,
     duration: 150,

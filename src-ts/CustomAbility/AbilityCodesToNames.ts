@@ -117,6 +117,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A063'), "Geti Star Repair"],
     [FourCC('A0L2'), "Supernova Golden"],
 
+    // raditz
+    [FourCC('A0ME'), "Double Sunday"],
+    [FourCC('A0MF'), "Saturday Crash"],
+    [FourCC('A0MG'), "Behind You"],
+    [FourCC('A0MH'), "Double Sundae"],
 
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s

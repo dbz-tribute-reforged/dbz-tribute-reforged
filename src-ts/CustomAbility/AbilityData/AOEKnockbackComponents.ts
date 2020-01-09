@@ -214,4 +214,16 @@ export const AOEKnockbackComponents = [
       aoe: 500,
     },
   },
+  // raditz behind you
+  {
+    name: "knockback behind you",
+    repeatInterval: 1, 
+    startTick: 19,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 600,
+    },
+  },
 ];
