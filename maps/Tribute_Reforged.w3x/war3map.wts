@@ -67589,35 +67589,11 @@ STRING 11159
 Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
 }
 
-STRING 11160
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11161
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 20/15/10 seconds|r
-}
-
-STRING 11162
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 15 seconds|r
-}
-
-STRING 11163
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 10 seconds|r
-}
-
 STRING 11164
 {
 Type "r" to revert.
 Transformations:
-[lvl 5]   1.15x "fp"
+[lvl 2]   1.15x "fp"
 [lvl 35]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
 [lvl 130] 2.25x "ss3"
@@ -67625,16 +67601,40 @@ Transformations:
 [lvl 230] 2.60x "ssb"
 }
 
-STRING 11165
+STRING 11166
 // Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
 {
-A strong early game hero that relies heavily on his teammates to protect him while he beam spams. Has a unique ability that refreshes other abilities. Starts with 1 bonus skill point.
+A strong early game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
 
 |cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 11167
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur1> seconds|r|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 11168
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: 4/3.5/3 seconds|r|n|cff00ffffCooldown: 15/12/9 seconds|r
+}
+
+STRING 11169
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur2> seconds|r|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
+STRING 11170
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur3> seconds|r|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 

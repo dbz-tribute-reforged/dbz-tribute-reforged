@@ -238,7 +238,7 @@ export const DashComponents = [
   },
   // behind you
   {
-    name: "dash ground point behind you",
+    name: "dash ground point behind you pushback",
     repeatInterval: 1, 
     startTick: 0,
     endTick: 20,    

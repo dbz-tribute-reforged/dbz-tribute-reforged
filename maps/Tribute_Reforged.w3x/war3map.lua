@@ -2010,6 +2010,11 @@ function Trig_Oozaru_Vegeta_New_Actions()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_ID = GetHandleId(udg_StatMultUnit)
     if (Trig_Oozaru_Vegeta_New_Func004C()) then
+        udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+        AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
+        DestroyEffectBJ(GetLastCreatedEffectBJ())
+                RemoveLocation(udg_TempLoc)
         AddSpecialEffectTargetUnitBJ("overhead", GetTriggerUnit(), "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
         SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
@@ -2496,6 +2501,11 @@ function Trig_Raditz_Double_Sundae_End_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A0MF"), udg_TempUnit, udg_TempInt2)
         UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0ME'))
         UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0MF'))
+    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactCaster.mdl")
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.50)
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+        RemoveLocation(udg_TempLoc)
 end
 
 function InitTrig_Raditz_Double_Sundae_End()
@@ -2969,14 +2979,14 @@ function Trig_Hero_Pick_Floating_Text_Help_Actions()
         RemoveLocation(udg_TempLoc)
     SetTextTagPermanentBJ(udg_TempFloatingText, false)
     SetTextTagLifespanBJ(udg_TempFloatingText, 60.00)
-    SetTextTagFadepointBJ(udg_TempFloatingText, 3.00)
+    SetTextTagFadepointBJ(udg_TempFloatingText, 45.00)
         udg_TempLoc = Location(1200, 22550)
     CreateTextTagLocBJ("TRIGSTR_11043", udg_TempLoc, 0, 12.00, 100, 100, 100, 15.00)
     udg_TempFloatingText = GetLastCreatedTextTag()
         RemoveLocation(udg_TempLoc)
     SetTextTagPermanentBJ(udg_TempFloatingText, false)
     SetTextTagLifespanBJ(udg_TempFloatingText, 65.00)
-    SetTextTagFadepointBJ(udg_TempFloatingText, 3.00)
+    SetTextTagFadepointBJ(udg_TempFloatingText, 50.00)
     DisableTrigger(GetTriggeringTrigger())
 end
 
@@ -10616,7 +10626,7 @@ function Trig_Transformations_Raditz_Func011C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 5)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 2)) then
         return false
     end
     return true
