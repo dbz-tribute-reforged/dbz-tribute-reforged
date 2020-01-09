@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.23e
+DBZ Tribute Reforged 0.24
 }
 
 STRING 4
@@ -36622,7 +36622,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6020
-// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
+// Units: H08U (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
 {
 A
 }
@@ -39396,7 +39396,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6482
-// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -50565,7 +50565,7 @@ W
 }
 
 STRING 8337
-// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -58309,13 +58309,13 @@ Q
 }
 
 STRING 9617
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9618
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64591,6 +64591,12 @@ dbsw
 anyone else i'm missing?
 }
 
+STRING 10647
+// Units: H08U (Mid-Class Saiyan Warrior), Name (Name)
+{
+Mid-Class Saiyan Warrior
+}
+
 STRING 10648
 {
 |cffff2020Activating Auto Transformation. Type -autotransform to toggle on/off.|r
@@ -65019,7 +65025,7 @@ STRING 10713
 }
 
 STRING 10714
-// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -66929,6 +66935,12 @@ STRING 11032
 T1
 }
 
+STRING 11033
+// Units: H08U (Mid-Class Saiyan Warrior), Propernames (Proper Names)
+{
+Raditz
+}
+
 STRING 11034
 {
 Multi
@@ -66984,10 +66996,34 @@ STRING 11044
 D
 }
 
+STRING 11045
+// Units: H08U (Mid-Class Saiyan Warrior), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00A|r] Choose Raditz
+}
+
+STRING 11046
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
+}
+
+STRING 11047
+// Units: H08U (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
+{
+[|cffffff00A|r] Choose Raditz
+}
+
 STRING 11048
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
 Instantly consumes all nearby candy. |n|cff00ff00AOE: 700/800/900|r|n|cff00FFFFCooldown: 40 seconds|r
+}
+
+STRING 11049
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 11050
@@ -67023,5 +67059,582 @@ STRING 11055
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 11056
+// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 11057
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool2> seconds|r
+}
+
+STRING 11058
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool3> seconds|r
+}
+
+STRING 11059
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool4> seconds|r
+}
+
+STRING 11060
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool5> seconds|r
+}
+
+STRING 11061
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool6> seconds|r
+}
+
+STRING 11062
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool7> seconds|r
+}
+
+STRING 11063
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool8> seconds|r
+}
+
+STRING 11064
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 2|r]
+}
+
+STRING 11065
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 3|r]
+}
+
+STRING 11066
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 4|r]
+}
+
+STRING 11067
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 5|r]
+}
+
+STRING 11068
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 6|r]
+}
+
+STRING 11069
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 1|r]
+}
+
+STRING 11070
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 7|r]
+}
+
+STRING 11071
+// Abilities: A0ME (Double Sunday), Name (Name)
+{
+Double Sunday
+}
+
+STRING 11072
+// Abilities: A0ME (Double Sunday), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Double Sunday - [|cffffcc00Level %d|r]
+}
+
+STRING 11073
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 9|r]
+}
+
+STRING 11074
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 8|r]
+}
+
+STRING 11075
+// Abilities: A0ME (Double Sunday), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Double Sunday - [|cffffcc00Level 10|r]
+}
+
+STRING 11076
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool9> seconds|r
+}
+
+STRING 11077
+// Abilities: A0MG (Behind You), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool10> seconds|r
+}
+
+STRING 11078
+// Abilities: A0MG (Behind You), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
+}
+
+STRING 11079
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: 4/3.5/3 seconds|r|n|cff00ffffCooldown: 12/9/6 seconds|r
+}
+
+STRING 11080
+// Abilities: A0ME (Double Sunday), EditorSuffix (Editor Suffix)
+{
+(raditz)
+}
+
+STRING 11081
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11082
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11083
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11084
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11085
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11086
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11087
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11088
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 2|r]
+}
+
+STRING 11089
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 3|r]
+}
+
+STRING 11090
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 4|r]
+}
+
+STRING 11091
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 5|r]
+}
+
+STRING 11092
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 6|r]
+}
+
+STRING 11093
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 1|r]
+}
+
+STRING 11094
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 7|r]
+}
+
+STRING 11095
+// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 11096
+// Abilities: A0MF (Saturday Crash), Name (Name)
+{
+Saturday Crash
+}
+
+STRING 11097
+// Abilities: A0MF (Saturday Crash), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Saturday Crash - [|cffffcc00Level %d|r]
+}
+
+STRING 11098
+// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11099
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 9|r]
+}
+
+STRING 11100
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 8|r]
+}
+
+STRING 11101
+// Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 10|r]
+}
+
+STRING 11102
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11103
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11104
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11105
+// Abilities: A0MF (Saturday Crash), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
+}
+
+STRING 11106
+// Abilities: A0MF (Saturday Crash), EditorSuffix (Editor Suffix)
+{
+(raditz)
+}
+
+STRING 11114
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 2|r]
+}
+
+STRING 11115
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 3|r]
+}
+
+STRING 11116
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 4|r]
+}
+
+STRING 11117
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 5|r]
+}
+
+STRING 11118
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 6|r]
+}
+
+STRING 11119
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 1|r]
+}
+
+STRING 11120
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 7|r]
+}
+
+STRING 11121
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 11122
+// Abilities: A0MG (Behind You), Name (Name)
+{
+Behind You
+}
+
+STRING 11123
+// Abilities: A0MG (Behind You), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Behind You - [|cffffcc00Level %d|r]
+}
+
+STRING 11124
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 11125
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 9|r]
+}
+
+STRING 11126
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 8|r]
+}
+
+STRING 11127
+// Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
+}
+
+STRING 11132
+// Abilities: A0MG (Behind You), EditorSuffix (Editor Suffix)
+{
+(raditz)
+}
+
+STRING 11133
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 11134
+// Abilities: A0MH (Double Sundae), Name (Name)
+{
+Double Sundae
+}
+
+STRING 11135
+// Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Double Sundae - [|cffffcc00Level 1|r]
+}
+
+STRING 11137
+// Abilities: A0MH (Double Sundae), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Double Sundae - [|cffffcc00Level %d|r]
+}
+
+STRING 11139
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 11140
+// Abilities: A0MH (Double Sundae), EditorSuffix (Editor Suffix)
+{
+(raditz)
+}
+
+STRING 11141
+// Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Double Sundae - [|cffffcc00Level 2|r]
+}
+
+STRING 11142
+// Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Double Sundae - [|cffffcc00Level 3|r]
+}
+
+STRING 11145
+// Buffs/Effects: B01W (), Buffubertip (Tooltip - Extended)
+{
+This unit is eating a double sundae
+}
+
+STRING 11146
+// Buffs/Effects: B01W (), Bufftip (Tooltip)
+{
+Double Sundae
+}
+
+STRING 11147
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11148
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11149
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11150
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11151
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11152
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11153
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11154
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11155
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11156
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11157
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11158
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11159
+// Abilities: A0ME (Double Sunday), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
+}
+
+STRING 11164
+{
+Type "r" to revert.
+Transformations:
+[lvl 2]   1.15x "fp"
+[lvl 35]  1.50x "ss"
+[lvl 90]  2.00x "ss2"
+[lvl 130] 2.25x "ss3"
+[lvl 170] 2.50x "ssg"
+[lvl 230] 2.60x "ssb"
+}
+
+STRING 11166
+// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A strong early game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11167
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur1> seconds|r|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 11169
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur2> seconds|r|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
+STRING 11170
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur3> seconds|r|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
