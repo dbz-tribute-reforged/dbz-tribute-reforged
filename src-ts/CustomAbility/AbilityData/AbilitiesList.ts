@@ -1945,7 +1945,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 45,
+    duration: 35,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1965,8 +1965,7 @@ export const AbilitiesList = [
       { name: "damage behind you dps" },
       { name: "knockback behind you" },
       { name: "stun behind you" },
-      // TODO: add in sfx
-      // { name: "sfx behind you" },
+      { name: "sfx behind you" },
     ],
   },
   // -------------------------------------------

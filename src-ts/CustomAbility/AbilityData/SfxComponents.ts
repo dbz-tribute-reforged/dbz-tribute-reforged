@@ -3045,6 +3045,33 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx behind you", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx blue hurricane", 
     repeatInterval: 1,
     startTick: 0,
