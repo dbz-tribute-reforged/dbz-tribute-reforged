@@ -5,6 +5,7 @@ export module ExperienceConstants {
   export const reqBase = 50;
   export const reqPrevMult = 1.0;
   export const reqLevelMult = 25;
+  export const reqConstant = 0;
 
   // creep xp table
   // legacy: 25, 1.0, 5, 5
@@ -20,7 +21,7 @@ export module ExperienceConstants {
   export const heroLevelMult = 0.0;
   export const heroConstant = 100;
 
-  export const globalXPRateModifier = 1.05;
+  export const globalXPRateModifier = 1.0;
   export const nearbyPlayerXPMult = 0.1;
   // legacy range: 3000
   export const expRange = 2500;

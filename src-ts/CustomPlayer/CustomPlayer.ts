@@ -9,6 +9,8 @@ export class CustomPlayer {
   public orderPoint: Vector2D;
   public lastCastPoint: Vector2D;
   public targetUnit: unit;
+  public lastCastUnit: unit;
+  public usingCustomUI: boolean;
 
   constructor(
     public id: number, 
@@ -21,6 +23,8 @@ export class CustomPlayer {
     this.orderPoint = new Vector2D(0, 0);
     this.lastCastPoint = new Vector2D(0, 0);
     this.targetUnit = GetEnumUnit();
+    this.lastCastUnit = GetEnumUnit();
+    this.usingCustomUI = false;
   }
 
   public addHero(hero: unit): this {

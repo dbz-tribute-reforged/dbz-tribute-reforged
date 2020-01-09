@@ -40,15 +40,15 @@ export module CastTimeHelper {
     );
 
     // if a stunned unit is damaged
-    TriggerRegisterPlayerUnitEvent(
-      trigger, 
-      input.casterPlayer, 
-      EVENT_PLAYER_UNIT_DAMAGED, 
-      Condition(() => {
-        return GetFilterUnit() == input.caster.unit && 
-          UnitHelper.isUnitStunned(input.caster.unit);
-      })
-    );
+    // TriggerRegisterPlayerUnitEvent(
+    //   trigger, 
+    //   input.casterPlayer, 
+    //   EVENT_PLAYER_UNIT_DAMAGED, 
+    //   Condition(() => {
+    //     return GetFilterUnit() == input.caster.unit && 
+    //       UnitHelper.isUnitStunned(input.caster.unit);
+    //   })
+    // );
 
     // if you deslect the casting unit
     TriggerRegisterPlayerUnitEvent(

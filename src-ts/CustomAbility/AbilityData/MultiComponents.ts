@@ -53,23 +53,6 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
-    name: "multi shining sword attack", 
-    repeatInterval: 1, 
-    startTick: 40,
-    endTick: -1,
-    angleDifference: 0,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    useLastCastPoint: true,
-    components: [
-      { name: "beam finish buster" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: "multi hellzone grenade", 
     repeatInterval: 1, 
     startTick: 0,
@@ -83,57 +66,6 @@ export const MultiComponents = [
     useLastCastPoint: true,
     components: [
       { name: "beam hellzone grenade" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "multi tyrant lancer", 
-    repeatInterval: 1, 
-    startTick: 25,
-    endTick: -1,
-    angleDifference: 0,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    useLastCastPoint: false,
-    components: [
-      { name: "beam tyrant lancer" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "multi saiyan spirit", 
-    repeatInterval: 1, 
-    startTick: 27,
-    endTick: -1,
-    angleDifference: 0,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    useLastCastPoint: false,
-    components: [
-      { name: "beam saiyan spirit" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "multi ss deadly hammer", 
-    repeatInterval: 1, 
-    startTick: 25,
-    endTick: -1,
-    angleDifference: 1,
-    angleMin: 0,
-    angleMax: 1,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.LINEAR_FIRING,
-    multiplyComponents: 1,
-    useLastCastPoint: false,
-    components: [
-      { name: "beam ss deadly bomber" },
     ],
   },
   // -------------------------------------------
@@ -185,6 +117,23 @@ export const MultiComponents = [
     useLastCastPoint: true,
     components: [
       { name: "beam death beam frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "multi double sunday", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 8,
+    angleMin: -4,
+    angleMax: 4,
+    delayBetweenComponents: 1,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 2,
+    useLastCastPoint: true,
+    components: [
+      { name: "beam double sunday" },
     ],
   },
 ];

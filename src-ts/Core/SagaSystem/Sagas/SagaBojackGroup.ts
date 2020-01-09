@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class BojackSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Bojack - Unbound';
@@ -17,7 +18,7 @@ export class BojackSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Bojack", "Bido", "Gokua", "Pujin", "Zangya"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

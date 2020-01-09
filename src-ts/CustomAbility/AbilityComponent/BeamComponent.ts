@@ -199,7 +199,9 @@ export class BeamComponent implements
     } else {
       // possible selection bug again?
       // SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);
-      if (input.targetUnit) {
+      if (input.castUnit) {
+        IssueTargetOrder(this.beamUnit, "attack", input.castUnit);
+      } else if (input.targetUnit) {
         IssueTargetOrder(this.beamUnit, "attack", input.targetUnit);
       } else {
         IssuePointOrder(this.beamUnit, "move", beamTargetPoint.x, beamTargetPoint.y);

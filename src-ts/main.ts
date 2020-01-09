@@ -8,11 +8,18 @@ import { CreepManager } from 'Core/CreepSystem/CreepManager';
 import { TournamentManager } from 'Core/TournamentSystem/TournamentManager';
 import { HostDetectSystem } from 'Core/HostDetectSystem/HostDetectSystem'
 import { ExperienceManager } from 'Core/ExperienceSystem/ExpierenceManager';
+import { CameraZoom } from 'Common/CameraZoom';
+import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
+import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
+import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
 
 let sagaManager: SagaManager;
 let creepManager: CreepManager;
+let itemStackingManager: ItemStackingManager;
 let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
+let dragonBallsManager: DragonBallsManager;
+let itemCleanupManager: ItemCleanupManager;
 
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
@@ -21,7 +28,6 @@ function tsMain() {
   // setup logger
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
-  HostDetectSystem.onInit();
   TimerStart(CreateTimer(), 5.0, false, () => {
     DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());
@@ -34,8 +40,8 @@ function tsMain() {
     // initialize some systems
     PathingCheck.Init();
     creepManager = CreepManager.getInstance();
-  
     sagaManager = SagaManager.getInstance();
+    itemStackingManager = ItemStackingManager.getInstance();
     
     CustomUiTest();
     CustomPlayerTest();
@@ -44,14 +50,19 @@ function tsMain() {
 
   TimerStart(CreateTimer(), 15, false, () => {
     tournamentManager = TournamentManager.getInstance();
-
     experienceManager = ExperienceManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  });
+
+  TimerStart(CreateTimer(), 30, false, () => {
+    dragonBallsManager = DragonBallsManager.getInstance();
+    itemCleanupManager = ItemCleanupManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
   });
 }
 
 // Configure libraries
 //setIsDestructableTreeConfig({ HARVESTER_UNIT_ID: FourCC("opeo") });
-
 
 // Handle initialization 
 function libLoaderLog(libName: string, success: boolean, message: string) {
@@ -59,5 +70,7 @@ function libLoaderLog(libName: string, success: boolean, message: string) {
 }
 
 LibraryLoader.logFunction = libLoaderLog;
+ceres.addHook("main::before", () => HostDetectSystem.onInit());
 ceres.addHook("main::after", () => LibraryLoader.runInitializers());
 ceres.addHook("main::after", () => tsMain());
+ceres.addHook("main::after", () => CameraZoom.onInit());

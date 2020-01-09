@@ -3,7 +3,7 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
-import { UnitHelper } from "Common/UnitHelper";
+import { Constants } from "Common/Constants";
 
 export class LordSlugSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Lord Slug';
@@ -13,7 +13,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
     this.stats = 40;
     this.isSlugKyo = false;
   }
@@ -24,6 +24,11 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Lord Slug"], true);
     this.slug = this.bosses.get("Lord Slug");
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+
     this.ping()
     this.addActionRewardStats(this);
   }

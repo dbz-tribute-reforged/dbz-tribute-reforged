@@ -8,6 +8,8 @@ import { Vector2D } from "Common/Vector2D";
 import { TournamentData } from "./TournamentData";
 import { Logger } from "Libs/TreeLib/Logger";
 import { AllianceHelper } from "Common/AllianceHelper";
+import { UnitHelper } from "Common/UnitHelper";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
@@ -105,13 +107,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
     return (
       "The " + 
       this.tournamentCounter + SuffixNumber(this.tournamentCounter) + " " +
-      "Strongest Under the Heavens Martial Arts Tournament"
+      "Budokai Tenkaichi"
     );
   }
 
   prepareTournament() {
     DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
+      bj_FORCE_ALL_PLAYERS, 20, 
       this.getTournamentName() + " will be held in " + 
       this.toStartDelay + " seconds! " + 
       "Type " + TournamentData.budokaiEnterCommand + " to register."
@@ -130,15 +132,17 @@ export class Budokai extends AdvancedTournament implements Tournament {
   setupTournament() {
     DisableTrigger(this.registerTrigger);
 
+    /*
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 15, 
       "Contestants: " + this.contestants.size
     );
+    */
     
     const numContestants = this.contestants.size;
     if (numContestants < 2) {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
+        bj_FORCE_ALL_PLAYERS, 10, 
         this.getTournamentName() + 
         " has been cancelled due to lack of attendance."
       );
@@ -209,10 +213,10 @@ export class Budokai extends AdvancedTournament implements Tournament {
         Colorizer.getColoredPlayerName(Player(contestant2.id))
       );
     }
-    if (i < this.currentBracket.length) {
+    if (this.currentBracket.length > 1 && i < this.currentBracket.length) {
       
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(this.currentBracket[i].id)) +  
         " receives a bye."
       );
@@ -273,6 +277,21 @@ export class Budokai extends AdvancedTournament implements Tournament {
             if (IsUnitAliveBJ(unit)) {
               SetUnitLifePercentBJ(unit, 100);
               SetUnitManaPercentBJ(unit, 100);
+              if (
+                IsUnitType(unit, UNIT_TYPE_HERO) && 
+                !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+              ) {
+                const trophy = CreateItem(TournamentData.trophyItem, GetUnitX(unit), GetUnitY(unit));
+                UnitAddItem(unit, trophy);
+                UnitUseItem(unit, trophy);
+                // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
+                // TextTagHelper.showPlayerColorTextOnUnit(
+                //   "+" + (numTournaments * 50) + " tournament stats",
+                //   winner.id,
+                //   unit
+                // );
+
+              }
             }
           }
           
@@ -354,6 +373,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
       activeContestants.set(contestant.id, contestant);
     }
+
+    TriggerAddCondition(
+      matchHandlerTrigger, 
+      Condition(() => {
+        return !UnitHelper.isImmortal(GetTriggerUnit())
+      }
+    ));
 
     let wasAllied: boolean;
     let isDoneLoop: boolean = false;
@@ -509,7 +535,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
 
     for (const winner of winners) {
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(winner.id)) +  
         " has won their match."
       );
@@ -517,7 +543,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     for (const loser of losers) {
       loser.isCompeting = false;
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10,
+        bj_FORCE_ALL_PLAYERS, 5,
         Colorizer.getColoredPlayerName(Player(loser.id)) +  
         " has lost their match."
       );

@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
   name: string = '[Movie] Broly - The Legendary Super Saiyan';
@@ -25,7 +26,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 1");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, 2500);
     }
 
     this.ping();
@@ -119,7 +120,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 2");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
@@ -195,7 +196,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 30;
   }
 
   spawnSagaUnits(): void {
@@ -205,7 +206,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Broly Bio"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

@@ -11,6 +11,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SOURCE_UNIT = 0;
   static readonly SOURCE_TARGET_POINT = 1;
   static readonly SOURCE_TARGET_UNIT = 2;
+  static readonly SOURCE_LAST_CAST_UNIT = 3;
 
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
@@ -60,6 +61,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       } else {
         this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
       }
+    } else if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
+      if (input.castUnit) {
+        this.damageCoords = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
+      } else {
+        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      }
     }
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(
@@ -85,10 +92,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         this.damageData.weaponType,
       )
 
-      TextTagHelper.showTempText(
-        Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-        GetUnitX(target), GetUnitY(target), 1.0, 0.8
-      );
+      // TextTagHelper.showTempText(
+      //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+      //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+      // );
     })
 
     DestroyGroup(affectedGroup);

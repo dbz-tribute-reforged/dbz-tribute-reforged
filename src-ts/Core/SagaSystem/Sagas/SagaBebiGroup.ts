@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class BebiSaga extends AdvancedSaga implements Saga {
   name: string = '[DBGT] Bebi Saga';
@@ -10,7 +11,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.sagaDelay = 75;
   }
 
   spawnSagaUnits(): void {
@@ -28,7 +29,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.bebiGooz);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, 1800);
     }
 
     this.ping();

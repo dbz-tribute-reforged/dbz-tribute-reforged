@@ -9,8 +9,10 @@ export module Constants {
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
+  export const creepHeavenHellHeroRespawnDelay: number = 15;
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
+  export const heavenHellMaxHeroLevel: number = 20;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -7000, 20000
   );
@@ -19,6 +21,8 @@ export module Constants {
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 45;
+  export const sagaAggroInterval: number = 500;
+  export const sagaMaxAcquisitionRange: number = 99999;
   export const senzuBean: number = FourCC("I000");
   export const reviveDelay: number = 5;
   export const team1Value: number = 1;
@@ -35,4 +39,8 @@ export module Constants {
   export const maxCreepLvl: number = 99;
   export const finalBattleName: string = "Final Battle";
   export const budokaiName: string = "Tournament";
+  export const locustAbility: number = FourCC("Aloc")
+  export const shopSellItemAbility: number = FourCC("Asit");
+  export const buffImmortal: number = FourCC("B01U");
+  export const floatingTextVisionRange: number = 4000;
 }

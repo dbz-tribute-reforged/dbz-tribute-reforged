@@ -88,6 +88,9 @@ export class TournamentManager {
     // tournament revive trigger
     // if you die in tournament, revive & move to lobby
     TriggerRegisterAnyUnitEventBJ(this.tournamentReviveTrig, EVENT_PLAYER_UNIT_DEATH);
+    TriggerAddCondition(this.tournamentReviveTrig, Condition(() => {
+      return !IsUnitOwnedByPlayer(GetFilterUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE));
+    }));
     TriggerAddAction(this.tournamentReviveTrig, () => {
       const deadHero = GetDyingUnit();
       const x = GetUnitX(deadHero);
@@ -107,6 +110,9 @@ export class TournamentManager {
             TournamentData.tournamentWaitRoom1.y,
             false
           );
+
+          SetUnitLifePercentBJ(deadHero, 100);
+          SetUnitManaPercentBJ(deadHero, 100);
 
           SetUnitInvulnerable(deadHero, true);
           PauseUnit(deadHero, true);

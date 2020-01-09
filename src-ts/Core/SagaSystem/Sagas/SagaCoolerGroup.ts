@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Cooler\'s Revenge';
@@ -23,7 +24,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
     this.cooler = this.bosses.get("Cooler");
     
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping()
@@ -93,7 +94,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
     this.stats = 100;
     this.metalCoolers = [];
     this.revives = 5;

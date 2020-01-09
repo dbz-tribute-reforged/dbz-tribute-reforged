@@ -4,6 +4,7 @@ import { SagaHelper } from "../SagaHelper";
 import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
+import { Constants } from "Common/Constants";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';
@@ -13,7 +14,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 40;
     this.stats = 50;
   }
 
@@ -31,6 +32,10 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
 
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+    
     this.zarbon = this.bosses.get("Zarbon");
     this.zarbon2 = this.bosses.get("Zarbon 2");
     SagaHelper.sagaHideUnit(this.zarbon2);
@@ -110,6 +115,10 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+
     this.ping()
     this.addActionRewardStats(this);
   }
@@ -176,6 +185,10 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     for (let i = 2; i <= 5; ++i) {
       const frieza = this.bosses.get("Frieza " + i);
       SagaHelper.sagaHideUnit(frieza);
+    }
+    
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
     
     this.ping()
@@ -255,6 +268,10 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
     
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
+    
     this.ping()
     this.addActionRewardStats(this);
   }
@@ -309,7 +326,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 60;
   }
 
   spawnSagaUnits(): void {

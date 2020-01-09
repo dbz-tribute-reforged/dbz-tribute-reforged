@@ -1,11 +1,10 @@
-import { Saga, SagaState, BaseSaga } from "./BaseSaga";
+import { Saga } from "./BaseSaga";
 import { Players } from "Libs/TreeLib/Structs/Players";
 import { SagaHelper } from "../SagaHelper";
-import { Trigger } from "w3ts";
 import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
-import { UnitHelper } from "Common/UnitHelper";
+import { Constants } from "Common/Constants";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Saiyan Saga I: Raditz';
@@ -21,6 +20,10 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Raditz has arrived looking for Goku.");
 
     this.addHeroListToSaga(["Raditz"], true);
+
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+    }
     
     this.ping()
     this.addActionRewardStats(this);
@@ -84,7 +87,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have arrived in West City.");
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have looking for the Dragon Balls.");
 
     const maxSaibamen = 5;
     for (let i = 0; i < maxSaibamen; ++i) {

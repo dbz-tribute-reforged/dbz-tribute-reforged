@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Constants } from "Common/Constants";
 
 export class BabidiSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Babidi Saga';
@@ -20,7 +21,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Pui Pui", "Yakon", "Dabura"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
@@ -78,7 +79,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Babidi", "Fat Buu"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
@@ -130,7 +131,7 @@ export class SuperBuuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 30;
   }
 
   spawnSagaUnits(): void {
@@ -140,7 +141,7 @@ export class SuperBuuSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Super Buu"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();
@@ -201,7 +202,7 @@ export class KidBuuSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Kid Buu"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 99999);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

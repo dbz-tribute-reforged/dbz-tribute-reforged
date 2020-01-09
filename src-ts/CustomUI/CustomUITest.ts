@@ -25,6 +25,8 @@ import { AbilityButtonHotbar } from './AbilityButtonHotbar';
 import { FrameHelper } from 'Common/FrameHelper';
 import { Constants } from 'Common/Constants';
 import { Logger } from 'Libs/TreeLib/Logger';
+import { BasicTitledBackdrop } from './BasicTitledBackdrop';
+import { BasicTextFrame } from './BasicTextFrame';
 
 
 // need to add promise + error catching
@@ -258,7 +260,7 @@ export function CustomUiTest() {
 	let hpBar = new HPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.3, 0.02),
+		new Vector2D(0.24, 0.02),
 		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
 		new StatusBarData(0, 0, 100)
 	);
@@ -266,7 +268,7 @@ export function CustomUiTest() {
 	let mpBar = new MPBar(
 		grandpa,
 		0, 
-		new Vector2D(0.3, 0.02),
+		new Vector2D(0.24, 0.02),
 		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
 		new StatusBarData(0, 0, 100)
 	);
@@ -275,7 +277,7 @@ export function CustomUiTest() {
 		grandpa, 
 		0,
 		new Vector2D(0.06, 0.015),
-		new FramePosition(FRAMEPOINT_RIGHT, hpBar.frameHandle, FRAMEPOINT_LEFT, -0.002, 0),
+		new FramePosition(FRAMEPOINT_RIGHT, hpBar.frameHandle, FRAMEPOINT_LEFT, -0.0015, 0),
 		new StatusBarData(0, 0, 100)
 	)
 
@@ -291,8 +293,8 @@ export function CustomUiTest() {
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(0.4, 0.04),
-		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, 0, 0.005),
+		new Vector2D(0.04 * (Constants.maxSubAbilities) + 0.003, 0.04),
+		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.06, 0.005),
 	)
 	
 	for (let i = 0; i < Constants.maxSubAbilities; ++i) {
@@ -328,22 +330,58 @@ export function CustomUiTest() {
 
 	abilityHotBar.autoAlignButtonPositions();
 
+
+	// custom ui 2.0
+
+	// const heroStatsUI = new BasicTitledBackdrop(
+	// 	"heroStatsBackdrop", 
+	// 	"heroStatsBackdropTitle", 
+	// 	grandpa, 
+	// 	0, 
+	// 	new Vector2D(0.1, 0.08), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, levelBar.frameHandle, FRAMEPOINT_TOP, 0.04, 0.02), 
+	// 	Colorizer.Color.White + "Stats"
+	// ).setRenderVisible(false);
+
+	// const heroStatsUI = new Backdrop(
+	// 	"heroStatsBackdrop",
+	// 	"BACKDROP",
+	// 	grandpa,
+	// 	"EscMenuBackdrop",
+	// 	0,
+	// 	new Vector2D(0.15, 0.1), 
+	// 	new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, 0.04, 0.02), 
+	// ).setRenderVisible(false);
+
+	const heroStatStrengthText = new BasicTextFrame(
+		"heroStatStrengthText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.10, 0.003), 
+		"|cffff2020STR:|n0|r",
+	).setRenderVisible(false);
+	
+	const heroStatAgilityText = new BasicTextFrame(
+		"heroStatAgilityText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.06, 0.003), 
+		"|cff20ff20AGI:|n0|r",
+	).setRenderVisible(false);
+	
+	const heroStatIntelligenceText = new BasicTextFrame(
+		"heroStatIntelligenceText",
+		grandpa,
+		"EscMenuLabelTextTemplate",
+		0,
+		new Vector2D(0.04, 0.02), 
+		new FramePosition(FRAMEPOINT_BOTTOM, hpBar.frameHandle, FRAMEPOINT_TOP, -0.02, 0.003), 
+		"|cff20ffffINT:|n0|r",
+	).setRenderVisible(false);
+
 	Logger.LogDebug("Custom UI Setup Complete.");
-
-	const hideTrig = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "iseedeadui", true);
-	}
-	TriggerAddAction(hideTrig, () => {
-		let rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
-		if (GetLocalPlayer() == GetTriggerPlayer()) {
-			BlzHideOriginFrames(true);
-			BlzFrameSetAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0), grandpa);
-			// let frame = BlzGetFrameByName("ConsoleUI", 0);
-			// BlzFrameSetAllPoints(frame, grandpa);
-			// BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
-			BlzFrameSetVisible(rm, false);
-		}
-	});
-
 }

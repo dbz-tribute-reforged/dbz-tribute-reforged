@@ -7,15 +7,19 @@ import { TextTagHelper } from "Common/TextTagHelper";
 export class ExperienceManager {
   static instance: ExperienceManager;
 
+  protected levelReqXP: number[];
   protected creepXP: number[];
   protected heroXP: number[];
 
+  protected unitXPModifier: Map<number, number>;
   protected rewardXPTrigger: trigger;
 
   constructor (
   ) {
+    this.levelReqXP = [];
     this.creepXP = [];
     this.heroXP = [];
+    this.unitXPModifier = new Map();
     this.rewardXPTrigger = CreateTrigger();
     this.initialize();
   }
@@ -29,6 +33,16 @@ export class ExperienceManager {
   }
 
   initialize(): this {
+    this.levelReqXP.push(ExperienceConstants.reqBase);
+    this.setupXPTables(
+      this.levelReqXP, 
+      ExperienceConstants.reqBase,
+      ExperienceConstants.reqPrevMult,
+      ExperienceConstants.reqLevelMult,
+      ExperienceConstants.reqConstant,
+      Constants.maxHeroLevel,
+    )
+
     this.setupXPTables(
       this.heroXP, 
       ExperienceConstants.heroBase,
@@ -47,6 +61,8 @@ export class ExperienceManager {
       Constants.maxCreepLvl,
     )
 
+    this.setupUnitXPModifiers();
+
     this.setupRewardXPTrigger(this.rewardXPTrigger);
 
     return this;
@@ -62,24 +78,38 @@ export class ExperienceManager {
   ) {
     table.push(base);
     table.push(base);
-    for (let i = 2; i <= maxLevel; ++i) {
+    for (let i = table.length; i <= maxLevel; ++i) {
       const value = table[i-1] * prevMult + i * levelMult + constant;
       table.push(value);
     }
   }
 
+  getHeroReqLevelXP(level: number) : number {
+    if (level > 0 && level < this.levelReqXP.length) {
+      return this.levelReqXP[level];
+    }
+    return 0;
+  }
+
   getHeroKillXP(level: number): number {
-    if (level > 0 && level < Constants.maxHeroLevel) {
+    if (level > 0 && level < this.heroXP.length) {
       return this.heroXP[level];
     }
     return 0;
   }
 
   getCreepKillXP(level: number): number {
-    if (level > 0 && level < Constants.maxCreepLvl) {
+    if (level > 0 && level < this.creepXP.length) {
       return this.creepXP[level];
     }
     return 0;
+  }
+
+  setupUnitXPModifiers() {
+    // androids 13/14/15
+    // this.unitXPModifier.set(FourCC("H01V"), 0.5);
+    // this.unitXPModifier.set(FourCC("H01S"), 0.5);
+    // this.unitXPModifier.set(FourCC("H01T"), 0.5);
   }
 
   setupRewardXPTrigger(rewardTrigger: trigger) {
@@ -110,7 +140,7 @@ export class ExperienceManager {
         // const killingPlayerId = GetPlayerId(killingPlayer);
         
         if (dyingPlayerId >= Constants.maxActivePlayers) {
-          // share exp with anyone else who is also 
+          // share exp with anyone else who is also nearby
           // treats dying player as an enemy
           this.getNearbyXPHeroes(
             rewardedGroup, 
@@ -130,15 +160,17 @@ export class ExperienceManager {
 
         // count num different players nearby
         let numUniquePlayers = 0;
-        let seenPlayer: boolean[] = [];
+        let numPlayerUnits: number[] = [];
         for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-          seenPlayer[i] = false;
+          numPlayerUnits[i] = 0;
         }
         ForGroup(rewardedGroup, () => {
           const playerId = GetPlayerId(GetOwningPlayer(GetEnumUnit()));
-          if (playerId >= 0 && playerId < Constants.maxActivePlayers && !seenPlayer[playerId]) {
-            ++numUniquePlayers;
-            seenPlayer[playerId] = true;
+          if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
+            if (numPlayerUnits[playerId] == 0) {
+              ++numUniquePlayers;
+            }
+            ++numPlayerUnits[playerId];
           }
         });
 
@@ -162,9 +194,37 @@ export class ExperienceManager {
 
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
-          
-          AddHeroXP(rewardedUnit, rewardXP, true);
 
+          let xpModifier = 1;
+          const nearbyPlayerUnits = numPlayerUnits[GetPlayerId(GetOwningPlayer(rewardedUnit))];
+          if (nearbyPlayerUnits == 3) {            
+            xpModifier = 0.5;
+          } else if (nearbyPlayerUnits == 2) {
+            xpModifier = 0.75;
+          } else if (nearbyPlayerUnits > 3) {
+            xpModifier = Math.max(0.1, 1.5 / nearbyPlayerUnits);
+          }
+
+          AddHeroXP(
+            rewardedUnit, 
+            Math.floor(rewardXP * xpModifier), 
+            true
+          );
+          
+          // const xpModifier = this.unitXPModifier.get(GetUnitTypeId(rewardedUnit));
+          // if (xpModifier != undefined) {
+          //   AddHeroXP(
+          //     rewardedUnit, 
+          //     Math.floor(rewardXP * xpModifier), 
+          //     true
+          //   );
+          // } else {
+          //   AddHeroXP(
+          //     rewardedUnit, 
+          //     rewardXP, 
+          //     true
+          //   );
+          // }
           // exp floating text is provided for us
           // although it might be possible to disable
           // and manually do it

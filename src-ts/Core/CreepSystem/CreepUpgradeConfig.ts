@@ -148,8 +148,8 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.DemonUnknown, 1.0)
           ]],
           [Creep.TurtleBaby, [
-            new RandomCreepType(Creep.TurtleAdult, 0.6),
-            new RandomCreepType(Creep.TreacherousLobster, 0.4),
+            new RandomCreepType(Creep.TurtleAdult, 0.7),
+            new RandomCreepType(Creep.TreacherousLobster, 0.3),
           ]],
           [Creep.DinosaurTeen, [
             new RandomCreepType(Creep.DinosaurSmall, 0.5),
