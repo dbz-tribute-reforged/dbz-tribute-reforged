@@ -2022,6 +2022,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi blazing storm"},
+      { name: "multi blazing storm sfx"},
     ],
   },
   // -------------------------------------------
@@ -2073,7 +2074,7 @@ export const AbilitiesList = [
         "Saibaman Bomb"
     },
     components: [
-      { name: "dash ground point saibaman bomb" },
+      { name: "dash ground unit saibaman bomb" },
       { name: "damage saibaman bomb explosion" },
       { name: "sfx saibaman bomb" },
       { name: "self destruct generic end" },

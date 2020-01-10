@@ -255,7 +255,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     distance: 40,
   },
 ]
