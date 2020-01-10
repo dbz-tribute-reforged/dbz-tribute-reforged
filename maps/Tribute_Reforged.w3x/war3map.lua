@@ -167,6 +167,7 @@ udg_LvlUpInt = 0
 udg_MaxTransformationStrings = 0
 udg_AutoTransformPlayer = __jarray(false)
 udg_AutoTransformInt = 0
+udg_TempUnitType = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -233,7 +234,7 @@ gg_trg_Buu_Candy_Gobbler = nil
 gg_trg_Buu_Candy_Eating = nil
 gg_trg_Cell_Juniors = nil
 gg_trg_Cell_Sense_Droids = nil
-gg_trg_Raditz_Double_Sundae_End = nil
+gg_trg_Raditz_Double_Sundae = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Solar_Flare_Test = nil
 gg_trg_SolarFlare = nil
@@ -452,6 +453,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Kid_Buu_Bonus_Ability = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -693,42 +695,52 @@ end
 
 function InitSounds()
     gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 5198)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_02_crazy_old_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 5067)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_03_out_of_control_mode.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 4649)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_03_out_of_control_mode, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1071)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_random_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_random_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1097)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_random_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_captains_mode_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 3604)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_captains_mode_03, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1306)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_single_draft_02 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_single_draft_02.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 3657)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_single_draft_02, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_01 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_01.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1018)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_01, 1.0)
     gg_snd_Dlc_rick_and_morty_announcer_all_pick_03 = CreateSound("Audio/Announcer/Dlc_rick_and_morty_announcer_all_pick_03.mp3", false, false, false, 10, 10, "DefaultEAXON")
+    SetSoundDuration(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1123)
     SetSoundChannel(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 0)
     SetSoundVolume(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 127)
     SetSoundPitch(gg_snd_Dlc_rick_and_morty_announcer_all_pick_03, 1.0)
@@ -769,7 +781,7 @@ function InitSounds()
     SetSoundDuration(gg_snd_ClanInvitation, 4295)
     SetSoundVolume(gg_snd_ClanInvitation, 127)
     gg_snd_ShenronSummon = CreateSound("Audio/Effects/ShenronSummon.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    SetSoundDuration(gg_snd_ShenronSummon, 4295)
+    SetSoundDuration(gg_snd_ShenronSummon, 9012)
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
@@ -1064,7 +1076,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 20218.1, 3175.7, 237.312, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 18527.3, 2822.1, 228.446, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 15736.3, 16425.0, 235.528, FourCC("n03G"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 7871.0, 9706.3, 66.381, FourCC("n03G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 7558.2, 9808.0, 18.974, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 8457.9, -1555.7, 267.585, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 19516.5, -6824.7, 137.201, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), -1916.0, 9451.5, 326.568, FourCC("n03G"))
@@ -2476,14 +2488,14 @@ function InitTrig_Cell_Sense_Droids()
     TriggerAddAction(gg_trg_Cell_Sense_Droids, Trig_Cell_Sense_Droids_Actions)
 end
 
-function Trig_Raditz_Double_Sundae_End_Conditions()
+function Trig_Raditz_Double_Sundae_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0MH"))) then
         return false
     end
     return true
 end
 
-function Trig_Raditz_Double_Sundae_End_Actions()
+function Trig_Raditz_Double_Sundae_Actions()
     udg_TempUnit = GetTriggerUnit()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TempUnit)
     udg_TempInt2 = GetUnitAbilityLevelSwapped(FourCC("A0MF"), udg_TempUnit)
@@ -2502,11 +2514,11 @@ function Trig_Raditz_Double_Sundae_End_Actions()
         RemoveLocation(udg_TempLoc)
 end
 
-function InitTrig_Raditz_Double_Sundae_End()
-    gg_trg_Raditz_Double_Sundae_End = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Raditz_Double_Sundae_End, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Raditz_Double_Sundae_End, Condition(Trig_Raditz_Double_Sundae_End_Conditions))
-    TriggerAddAction(gg_trg_Raditz_Double_Sundae_End, Trig_Raditz_Double_Sundae_End_Actions)
+function InitTrig_Raditz_Double_Sundae()
+    gg_trg_Raditz_Double_Sundae = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Raditz_Double_Sundae, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Raditz_Double_Sundae, Condition(Trig_Raditz_Double_Sundae_Conditions))
+    TriggerAddAction(gg_trg_Raditz_Double_Sundae, Trig_Raditz_Double_Sundae_Actions)
 end
 
 function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
@@ -8155,7 +8167,7 @@ function Trig_Piccolo_Kyo_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
     TriggerExecute(gg_trg_Piccolo_Kyo_Get_Str_Mult)
-    udg_StatMultStr = (RMinBJ(3.00, (udg_StatMultStr + udg_TempReal)) + 0.00)
+    udg_StatMultStr = (RMinBJ(3.20, (udg_StatMultStr + udg_TempReal)) + 0.00)
     TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
     TriggerExecute(gg_trg_Update_Current_Stats)
     SetPlayerAbilityAvailableBJ(false, FourCC("A04Y"), GetTriggerPlayer())
@@ -9237,6 +9249,7 @@ function Trig_Super_Buu_to_Kid_Buu_Func001A()
         udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
         MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(udg_TransformationPlayer)], "BTNKidBuu.blp")
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
+        TriggerExecute(gg_trg_Kid_Buu_Bonus_Ability)
         TriggerExecute(gg_trg_Transformations_Exit_Point)
     else
     end
@@ -9251,6 +9264,325 @@ function InitTrig_Super_Buu_to_Kid_Buu()
     DisableTrigger(gg_trg_Super_Buu_to_Kid_Buu)
     TriggerRegisterTimerEventPeriodic(gg_trg_Super_Buu_to_Kid_Buu, 1.00)
     TriggerAddAction(gg_trg_Super_Buu_to_Kid_Buu, Trig_Super_Buu_to_Kid_Buu_Actions)
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func005Func001C()
+    if (udg_TempUnitType == FourCC("H000")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H03G")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H08G")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H08H")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func005Func005Func002C()
+    if (GetUnitLevel(udg_TransformationResultUnit) > 250) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H08H")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func005Func005C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func005Func005Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func005C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func005Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func006C()
+    if (not (udg_TempUnitType == FourCC("E003"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func007C()
+    if (not (udg_TempUnitType == FourCC("H00K"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func008Func001C()
+    if (udg_TempUnitType == FourCC("H016")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H009")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H08I")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func008Func006Func001C()
+    if (udg_TempUnitType == FourCC("H009")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H08I")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func008Func006C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func008Func006Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func008C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func008Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func009C()
+    if (not (udg_TempUnitType == FourCC("H00R"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func010C()
+    if (not (udg_TempUnitType == FourCC("H08M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func011C()
+    if (not (udg_TempUnitType == FourCC("H08P"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func001C()
+    if (udg_TempUnitType == FourCC("H01V")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H01S")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H01T")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H01U")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func012C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func012Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func013C()
+    if (not (udg_TempUnitType == FourCC("O001"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func014C()
+    if (not (udg_TempUnitType == FourCC("H00M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func015Func001C()
+    if (udg_TempUnitType == FourCC("H08S")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H042")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H043")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H05L")) then
+        return true
+    end
+    if (udg_TempUnitType == FourCC("H01A")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func015C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func015Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func016C()
+    if (not (udg_TempUnitType == FourCC("H08U"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func018C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002C()
+    if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Actions()
+        udg_ID = GetHandleId(udg_TransformationResultUnit)
+    if (Trig_Kid_Buu_Bonus_Ability_Func002C()) then
+        udg_TempInt = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
+        udg_TempUnitType = FourCC("hpea")
+                udg_TempUnitType = udg_TempInt
+        udg_TempBool = false
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func005C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
+            UnitAddAbilityBJ(FourCC("A0KR"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KR'))
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func005Func005C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0KR"), udg_TransformationResultUnit, 2)
+            else
+            end
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func006C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A03N"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A03N"), udg_TransformationResultUnit, 7)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A03N'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func007C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
+            UnitAddAbilityBJ(FourCC("A0L8"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L8'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func008C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A02L"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A02L"), udg_TransformationResultUnit, 7)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A02L'))
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func008Func006C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0KT"), udg_TransformationPlayer)
+                UnitAddAbilityBJ(FourCC("A0KT"), udg_TransformationResultUnit)
+                                UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KT'))
+            else
+            end
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func009C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A06F"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A06F"), udg_TransformationResultUnit, 8)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06F'))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), udg_TransformationPlayer)
+            UnitAddAbilityBJ(FourCC("A04Y"), udg_TransformationResultUnit)
+            UnitAddAbilityBJ(FourCC("A03S"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A03S'))
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A04Y'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func010C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A0LO"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0LO"), udg_TransformationResultUnit, 10)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LO'))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0LN"), udg_TransformationPlayer)
+            UnitAddAbilityBJ(FourCC("A0LN"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LN'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func011C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0LY"), udg_TransformationPlayer)
+            UnitAddAbilityBJ(FourCC("A0LY"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LY'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func012C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A0LC"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0LC"), udg_TransformationResultUnit, 7)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LC'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func013C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A02F"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A02F"), udg_TransformationResultUnit, 5)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A02F'))
+            UnitAddAbilityBJ(FourCC("A018"), udg_TransformationResultUnit)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A018'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func014C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A0G8"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0G8"), udg_TransformationResultUnit, 9)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0G8'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func015C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A06C"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A06C"), udg_TransformationResultUnit, 9)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06C'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func016C()) then
+            udg_TempBool = true
+            UnitAddAbilityBJ(FourCC("A0ME"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TransformationResultUnit, 10)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0ME'))
+        else
+        end
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func018C()) then
+            UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Kid_Buu_Bonus_Ability()
+    gg_trg_Kid_Buu_Bonus_Ability = CreateTrigger()
+    TriggerAddAction(gg_trg_Kid_Buu_Bonus_Ability, Trig_Kid_Buu_Bonus_Ability_Actions)
 end
 
 function Trig_Super_Buu_Absorb_Conditions()
@@ -9269,14 +9601,21 @@ function Trig_Super_Buu_Absorb_Conditions()
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func008C()
+function Trig_Super_Buu_Absorb_Func001Func006C()
     if (not (LoadIntegerBJ(15, udg_ID, udg_StatMultHashtable) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Super_Buu_Absorb_Func001Func020C()
+function Trig_Super_Buu_Absorb_Func001Func011C()
+    if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Super_Buu_Absorb_Func001Func021C()
     if (GetUnitLifePercent(GetSpellTargetUnit()) <= 15.00) then
         return true
     end
@@ -9290,7 +9629,7 @@ function Trig_Super_Buu_Absorb_Func001C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
-    if (not Trig_Super_Buu_Absorb_Func001Func020C()) then
+    if (not Trig_Super_Buu_Absorb_Func001Func021C()) then
         return false
     end
     return true
@@ -9298,20 +9637,26 @@ end
 
 function Trig_Super_Buu_Absorb_Actions()
     if (Trig_Super_Buu_Absorb_Func001C()) then
-        SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
-        UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetSpellAbilityUnit(), udg_SuperBuuToKidBuuUnitGroup)
         udg_StatMultUnit = GetSpellAbilityUnit()
-                udg_ID = GetHandleId(udg_TransformationResultUnit)
+                udg_ID = GetHandleId(udg_StatMultUnit)
         SaveIntegerBJ((LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable) + 1), 14, udg_ID, udg_StatMultHashtable)
-        if (Trig_Super_Buu_Absorb_Func001Func008C()) then
+        if (Trig_Super_Buu_Absorb_Func001Func006C()) then
         else
             SaveIntegerBJ(0, 15, udg_ID, udg_StatMultHashtable)
         end
-        udg_StatMultReal = (2.20 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
+        udg_StatMultReal = (2.30 + (0.10 * I2R(LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable))))
         TriggerExecute(gg_trg_Set_Stat_Multiplier)
         TriggerExecute(gg_trg_Update_Current_Stats)
         EnableTrigger(gg_trg_Super_Buu_to_Kid_Buu)
+        if (Trig_Super_Buu_Absorb_Func001Func011C()) then
+            udg_TempUnitType = GetUnitTypeId(GetSpellTargetUnit())
+                        udg_TempInt = udg_TempUnitType
+            SaveIntegerBJ(udg_TempInt, 18, udg_ID, udg_StatMultHashtable)
+        else
+        end
+        SetUnitLifeBJ(GetSpellTargetUnit(), 1.00)
+        UnitDamageTargetBJ(GetSpellAbilityUnit(), GetSpellTargetUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         udg_TempLoc = GetUnitLoc(GetSpellAbilityUnit())
         udg_TempLoc2 = GetUnitLoc(GetSpellTargetUnit())
                 buuLightning = AddLightningLoc("LBUU", udg_TempLoc, udg_TempLoc2)
@@ -10799,9 +11144,13 @@ function Trig_Transformations_Raditz_Actions()
     else
     end
     if (Trig_Transformations_Raditz_Func018C()) then
+                udg_TransformationID = FourCC('H08U')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100, 100, 0)
     else
         if (Trig_Transformations_Raditz_Func018Func001C()) then
+                        udg_TransformationID = FourCC('H08V')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             TriggerExecute(gg_trg_Transformations_Generic_SSG_SSB)
         else
         end
@@ -11283,7 +11632,7 @@ function InitCustomTriggers()
     InitTrig_Buu_Candy_Eating()
     InitTrig_Cell_Juniors()
     InitTrig_Cell_Sense_Droids()
-    InitTrig_Raditz_Double_Sundae_End()
+    InitTrig_Raditz_Double_Sundae()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_SolarFlare()
     InitTrig_Freemode()
@@ -11419,6 +11768,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Broly()
     InitTrig_Transformations_Babidi()
     InitTrig_Super_Buu_to_Kid_Buu()
+    InitTrig_Kid_Buu_Bonus_Ability()
     InitTrig_Super_Buu_Absorb()
     InitTrig_Transformations_Fat_Buu()
     InitTrig_Transformations_Super_Buu()

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.24
+DBZ Tribute Reforged 0.24a
 }
 
 STRING 4
@@ -39396,7 +39396,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6482
-// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
+// Units: H08V (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
 {
 A
 }
@@ -50565,7 +50565,7 @@ W
 }
 
 STRING 8337
-// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -64147,40 +64147,10 @@ STRING 10585
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 3|r]
 }
 
-STRING 10586
-// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
-}
-
-STRING 10587
-// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
-}
-
-STRING 10588
-// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
-}
-
-STRING 10589
-// Abilities: A0LS (Angry Shout), EditorSuffix (Editor Suffix)
-{
-(Bardock)
-}
-
 STRING 10590
 // Abilities: A0LS (Angry Shout), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Angry Shout - [|cffffcc00Level %d|r]
-}
-
-STRING 10591
-// Abilities: A0LS (Angry Shout), Researchubertip (Tooltip - Learn - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
 }
 
 STRING 10592
@@ -64199,18 +64169,6 @@ STRING 10594
 // Abilities: A0LS (Angry Shout), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 5|r]
-}
-
-STRING 10595
-// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
-}
-
-STRING 10596
-// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
-{
-The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
 }
 
 STRING 10597
@@ -64256,7 +64214,7 @@ For Super Buu type "super" at lvl 90.
 Super Buu:
 Carries over some of the stat mult from fat buu.
 Only gains additional stat multiplier by absorbing players.
-Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
+Gains +0.4x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
 
@@ -64266,7 +64224,7 @@ Transformations:
 Super Buu:
 Carries over some of the stat mult from fat buu.
 Only gains additional stat multiplier by absorbing players.
-Gains +0.3x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
+Gains +0.4x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
 Turns into Kid buu 120s after your first absorb.
 }
 
@@ -65025,7 +64983,7 @@ STRING 10713
 }
 
 STRING 10714
-// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67062,7 +67020,7 @@ Q
 }
 
 STRING 11056
-// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67197,12 +67155,6 @@ STRING 11078
 // Abilities: A0MG (Behind You), Researchubertip (Tooltip - Learn - Extended)
 {
 Raditz faces away from his opponent, then as they charge towards him to attack, he kicks out backwards and sends his opponent rolling away. |n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0MG,Cool1> seconds|r
-}
-
-STRING 11079
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: 4/3.5/3 seconds|r|n|cff00ffffCooldown: 12/9/6 seconds|r
 }
 
 STRING 11080
@@ -67367,6 +67319,48 @@ STRING 11106
 (raditz)
 }
 
+STRING 11107
+// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur1>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
+STRING 11108
+// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur2>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
+STRING 11109
+// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur3>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
+STRING 11110
+// Abilities: A0LS (Angry Shout), EditorSuffix (Editor Suffix)
+{
+(Bardock / oozaru)
+}
+
+STRING 11111
+// Abilities: A0LS (Angry Shout), Researchubertip (Tooltip - Learn - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur1>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
+STRING 11112
+// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur4>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
+STRING 11113
+// Abilities: A0LS (Angry Shout), Ubertip (Tooltip - Normal - Extended)
+{
+The user lets out a fierce scream that deals AOE damage and pushes away all nearby enemies.|n|cffff2020Channel Duration: <A0LS,Dur5>|r|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: 27 seconds|r
+}
+
 STRING 11114
 // Abilities: A0MG (Behind You), Tip (Tooltip - Normal)
 {
@@ -67451,6 +67445,30 @@ STRING 11127
 [|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
 }
 
+STRING 11128
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 13/10/7 seconds|r
+}
+
+STRING 11129
+// Units: H08V (Mid-Class Saiyan Warrior), Name (Name)
+{
+Mid-Class Saiyan Warrior
+}
+
+STRING 11130
+// Units: H08V (Mid-Class Saiyan Warrior), Propernames (Proper Names)
+{
+Raditz
+}
+
+STRING 11131
+// Units: H08V (Mid-Class Saiyan Warrior), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00A|r] Choose Raditz
+}
+
 STRING 11132
 // Abilities: A0MG (Behind You), EditorSuffix (Editor Suffix)
 {
@@ -67475,10 +67493,29 @@ STRING 11135
 [|cff00FF00F|r] Double Sundae - [|cffffcc00Level 1|r]
 }
 
+STRING 11136
+// Units: H08V (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A strong early game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 11137
 // Abilities: A0MH (Double Sundae), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Double Sundae - [|cffffcc00Level %d|r]
+}
+
+STRING 11138
+// Units: H08V (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
+{
+[|cffffff00A|r] Choose Raditz
 }
 
 STRING 11139
@@ -67503,6 +67540,18 @@ STRING 11142
 // Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Double Sundae - [|cffffcc00Level 3|r]
+}
+
+STRING 11143
+// Units: H08V (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+{
+SS
+}
+
+STRING 11144
+// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+{
+A
 }
 
 STRING 11145
@@ -67595,6 +67644,24 @@ STRING 11159
 Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
 }
 
+STRING 11160
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 11161
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
+STRING 11162
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+}
+
 STRING 11164
 {
 Type "r" to revert.
@@ -67618,23 +67685,5 @@ A strong early game hero that relies heavily on his teammates to protect him whi
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 11167
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur1> seconds|r|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
-STRING 11169
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur2> seconds|r|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
-}
-
-STRING 11170
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cffff2020Channel Duration: <A0MH,Dur3> seconds|r|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 

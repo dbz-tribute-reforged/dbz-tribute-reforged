@@ -218,7 +218,7 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback behind you",
     repeatInterval: 1, 
-    startTick: 19,
+    startTick: 9,
     endTick: -1,
     knockbackData: {
       speed: 35, 

@@ -11,18 +11,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
-    ["Raditz", new SagaUnit(FourCC("U01D"), 6, 75, 50, 75, new Vector2D(8000, 5000))],
+    ["Raditz", new SagaUnit(FourCC("U01D"), 8, 90, 60, 90, new Vector2D(8000, 5000))],
 
     // saiyan saga
     // ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(-3300, -5500))],
     // ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(-3300, -5500))],
-    ["Nappa", new SagaUnit(FourCC("U019"), 8, 120, 80, 80, new Vector2D(8800, 1400))],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 15, 200, 200, 300, new Vector2D(8800, 1400))],
+    ["Nappa", new SagaUnit(FourCC("U019"), 12, 120, 80, 80, new Vector2D(8800, 1400))],
+    ["Vegeta", new SagaUnit(FourCC("E003"), 16, 200, 200, 300, new Vector2D(8800, 1400))],
     
     // wheelo
     ["Kishime", new SagaUnit(FourCC("O00P"), 6, 75, 75, 75, new Vector2D(800, 18000))],
     ["Misokatsun", new SagaUnit(FourCC("O00O"), 5, 50, 80, 50, new Vector2D(400, 18200))],
-    ["Ebifurya", new SagaUnit(FourCC("O00N"), 7, 150, 80, 75, new Vector2D(-600, 17500))],
+    ["Ebifurya", new SagaUnit(FourCC("O00N"), 11, 150, 80, 75, new Vector2D(-600, 17500))],
     ["Dr. Kochin", new SagaUnit(FourCC("O00Q"), 1, 2, 1, 1, new Vector2D(-600, 17500))],
     ["Wheelo", new SagaUnit(FourCC("U006"), 17, 320, 150, 450, new Vector2D(-300, 18000))],
 

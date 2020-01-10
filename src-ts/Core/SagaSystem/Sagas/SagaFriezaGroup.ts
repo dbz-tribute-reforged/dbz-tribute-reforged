@@ -27,7 +27,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 1500;
       let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaOrlen, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaOrlen, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
@@ -110,7 +110,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 1500;
       let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
@@ -177,7 +177,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
       let offsetX = Math.random() * 2000;
       let offsetY = Math.random() * 2000;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8765 + offsetX, 1400 + offsetY, Math.random() * 360);
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
@@ -207,7 +207,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
         SagaHelper.checkUnitHp(frieza, 0.4, false, false, true) &&
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza: This isn't even my final form!");
+        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Frieza|r: This isn't even my final form!");
         SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
       }
     }

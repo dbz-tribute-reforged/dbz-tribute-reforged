@@ -127,7 +127,10 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
         SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
       } else if (this.revives > 0) {
         --this.revives;
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Metal Cooler: But how could this be? The Big Gete Star allowed me to cheat death!");    
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 15, 
+          "|cffffcc00Metal Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!"
+        );    
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
         SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
         SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
