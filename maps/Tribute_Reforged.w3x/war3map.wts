@@ -36508,7 +36508,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6001
-// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
+// Units: H08W (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
 {
 S
 }
@@ -50049,7 +50049,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 8251
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -50163,7 +50163,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 8270
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -50565,7 +50565,7 @@ W
 }
 
 STRING 8337
-// Units: H08W (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
+// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -52437,7 +52437,7 @@ Item
 }
 
 STRING 8645
-// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65025,7 +65025,7 @@ STRING 10713
 }
 
 STRING 10714
-// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
+// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67062,7 +67062,7 @@ Q
 }
 
 STRING 11056
-// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
+// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67597,7 +67597,7 @@ SS
 }
 
 STRING 11144
-// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67783,19 +67783,6 @@ STRING 11171
 [|cffffff00S|r] Choose Nappa
 }
 
-STRING 11172
-// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A hero.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11173
 // Units: H08W (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
 {
@@ -67806,12 +67793,6 @@ STRING 11174
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
-}
-
-STRING 11175
-// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
-{
-A
 }
 
 STRING 11176
@@ -68598,5 +68579,24 @@ STRING 11310
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 11311
+// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A powerful AOE nuker that is rewarded for having good accuracy. Can summon saibamen to help out.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11312
+// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+{
+S
 }
 

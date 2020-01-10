@@ -1305,7 +1305,7 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
-  // giant storm
+  // break cannon
   {
     name: "damage beam break cannon dps",
     repeatInterval: 1,
@@ -1333,7 +1333,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: true,
     aoe: 600,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 10,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1350,7 +1350,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 10,
+      multiplier: BASE.KAME_DPS * 8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
