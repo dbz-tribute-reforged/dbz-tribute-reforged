@@ -55,7 +55,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // fat buu / super buu / kid buu
     [FourCC("O005"), ["Buu Beam", "Flesh Attack", "Innocence Breath", "Angry Explosion"]],
     [FourCC("O006"), ["Buu Beam", "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball"]],
-    [FourCC("O00C"), ["God Kamehameha", "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",]],
+    [FourCC("O00C"), [
+      "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",
+      "God Kamehameha", "Ultra Instinct", 
+      "Galick Gun", 
+      "Potential Unleashed",
+      "Special Beam Cannon", "Kyodaika",
+      "Tyrant Lancer", "Future Sight",
+      "S.S. Deadly Hammer",
+      "Haretsu no Majutsu", "Summon Pui Pui",
+      "Energy Punch",
+      "Death Beam Frieza",
+      "Double Sunday",
+    ]],
 
     // broly
     [FourCC("H00M"), ["Energy Punch", "Power Level Rising", "Planet Crusher", "Gigantic Roar", "Gigantic Omegastorm"]],
@@ -80,6 +92,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     // raditz
     [FourCC("H08U"), ["Double Sunday", "Saturday Crash", "Behind You", "Moonlight", "Angry Shout", "Double Sundae"]],
-
+    // nappa
+    [FourCC("H08W"), ["Giant Storm", "Blazing Storm", "Plant Saibamen", "Moonlight", "Angry Shout", "Break Cannon"]],
+    // saibaman
+    [FourCC("H08X"), ["Saibaman Bomb", "Saibaman Acid"]],
+    
   ]
 )

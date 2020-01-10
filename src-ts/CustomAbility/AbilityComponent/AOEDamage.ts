@@ -22,6 +22,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public startTick: number = 0,
     public endTick: number = -1,
     public damageSource: number = AOEDamage.SOURCE_UNIT,
+    public useLastCastPoint: boolean = true,
     public aoe: number = 250,
     public damageData: DamageData = new DamageData(
       0.02,
@@ -45,11 +46,19 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
   }
 
+  setDamageSourceToTargettedPoint(input: CustomAbilityInput) {
+    if (this.useLastCastPoint) {
+      this.damageCoords = new Vector2D(input.castPoint.x, input.castPoint.y);
+    } else {
+      this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+    }
+  }
+
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.damageStarted) {
       this.damageStarted = true;
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT) {
-        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.setDamageSourceToTargettedPoint(input);
       }
     }
 
@@ -59,15 +68,19 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       if (input.targetUnit) {
         this.damageCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
       } else {
-        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.setDamageSourceToTargettedPoint(input);
       }
     } else if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
       if (input.castUnit) {
         this.damageCoords = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
       } else {
-        this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.setDamageSourceToTargettedPoint(input);
       }
     }
+    TextTagHelper.showTempText(
+      Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + "Damage!", 
+      this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
+    );
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(
       this.damageCoords, 
@@ -108,7 +121,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   clone(): AbilityComponent {
     return new AOEDamage(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.damageSource, this.aoe, this.damageData,
+      this.damageSource, this.useLastCastPoint ,this.aoe, this.damageData,
     );
   }
 
@@ -119,6 +132,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       startTick: number;
       endTick: number;
       damageSource: number;
+      useLastCastPoint: boolean;
       aoe: number; 
       damageData: {
         multiplier: number; 
@@ -134,6 +148,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.damageSource = input.damageSource;
+    this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
     this.damageData = new DamageData().deserialize(input.damageData);
     return this;

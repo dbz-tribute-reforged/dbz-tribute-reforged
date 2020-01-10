@@ -19,18 +19,27 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     public startTick: number = 0,
     public endTick: number = -1,
     public sfxSource: number = SfxComponent.SOURCE_UNIT,
+    public useLastCastPoint: boolean = true,
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
   ) {
     this.sfxCoords = new Vector2D();
     this.sfxStarted = false;
   }
+
+  setSfxCoordsToTargettedPoint(input: CustomAbilityInput) {
+    if (this.useLastCastPoint) {
+      this.sfxCoords = new Vector2D(input.castPoint.x, input.castPoint.y);
+    } else {
+      this.sfxCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+    }
+  }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.sfxStarted) {
       this.sfxStarted = true;
       if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT) {
-        this.sfxCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.setSfxCoordsToTargettedPoint(input);
       }
     }
 
@@ -40,7 +49,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       if (input.targetUnit) {
         this.sfxCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
       } else {
-        this.sfxCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.setSfxCoordsToTargettedPoint(input);
       }
     }
     
@@ -69,7 +78,8 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   clone(): AbilityComponent {
     return new SfxComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.sfxSource, this.sfxList, this.attachedSfxList,
+      this.sfxSource, this.useLastCastPoint, 
+      this.sfxList, this.attachedSfxList,
     );
   }
 
@@ -80,6 +90,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       startTick: number;
       endTick: number;
       sfxSource: number;
+      useLastCastPoint: boolean;
       sfxList: {
         model: string;
         repeatInterval: number;
@@ -119,6 +130,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.sfxSource = input.sfxSource;
+    this.useLastCastPoint = input.useLastCastPoint;
     this.sfxList = [];
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));

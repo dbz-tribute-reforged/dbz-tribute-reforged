@@ -123,7 +123,7 @@ export const DashComponents = [
     distance: 25,
   },
   {
-    name: "dash ground unit rebellion spear",
+    name: "dash ground target rebellion spear",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -241,10 +241,21 @@ export const DashComponents = [
     name: "dash ground point behind you pushback",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 20,    
+    endTick: 10,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
     distance: -30,
+  },
+  // saibaman bomb
+  {
+    name: "dash ground unit saibaman bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_UNIT_TARGET,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 40,
   },
 ]

@@ -349,6 +349,14 @@ export class DragonBallsManager {
       this.playShenronSFX(this.dummyShenron);
     })
 
+    TimerStart(CreateTimer(), 4, false, () => {
+      SetUnitAnimation(
+        this.dummyShenron,
+        "stand"
+      );
+      DestroyTimer(GetExpiredTimer());
+    });
+
     PingMinimapForForceEx(
       bj_FORCE_ALL_PLAYERS,
       x, y,

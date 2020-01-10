@@ -38,6 +38,8 @@ import { Hook } from "./AbilityComponent/Hook";
 import { AOEApplyComponentComponents } from "./AbilityData/AOEApplyComponentComponents";
 import { AOEApplyComponent } from "./AbilityComponent/AOEApplyComponent";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
+import { SelfDestructComponents } from "./AbilityData/SelfDestructComponents";
+import { SelfDestruct } from "./AbilityComponent/SelfDestruct";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -92,6 +94,10 @@ export class CustomAbilityManager {
 
     for (const component of HookComponents) {
       this.setComponent(new Hook().deserialize(component));
+    }
+
+    for (const component of SelfDestructComponents) {
+      this.setComponent(new SelfDestruct().deserialize(component));
     }
 
     for (const component of SpellAmpComponents) {
