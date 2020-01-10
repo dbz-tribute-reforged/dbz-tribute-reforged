@@ -1970,6 +1970,142 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Giant Storm",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNNappaGiantStorm.blp",
+      disabled: "BTNNappaGiantStorm.blp",
+    },
+    tooltip: {
+      title: "Giant Storm",
+      body: 
+        "Giant Storm"
+    },
+    components: [
+      { name: "damage target giant storm dps" },
+      { name: "damage target giant storm dps 2" },
+      { name: "damage target giant storm explosion" },
+      { name: "damage target giant storm explosion 2" },
+      { name: "sfx giant storm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Blazing Storm",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNNappaBlazingStorm.blp",
+      disabled: "BTNNappaBlazingStorm.blp",
+    },
+    tooltip: {
+      title: "Blazing Storm",
+      body: 
+        "Blazing Storm"
+    },
+    components: [
+      { name: "multi blazing storm"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Break Cannon",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNNappaBreakCannon.blp",
+      disabled: "BTNNappaBreakCannon.blp",
+    },
+    tooltip: {
+      title: "Break Cannon",
+      body: 
+        "Break Cannon"
+    },
+    components: [
+      { name: "beam break cannon"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Saibaman Bomb",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaibamanBomb.blp",
+      disabled: "BTNSaibamanBomb.blp",
+    },
+    tooltip: {
+      title: "Saibaman Bomb",
+      body: 
+        "Saibaman Bomb"
+    },
+    components: [
+      { name: "dash ground point saibaman bomb" },
+      { name: "damage saibaman bomb explosion" },
+      { name: "sfx saibaman bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Saibaman Acid",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaibamanAcid.blp",
+      disabled: "BTNSaibamanAcid.blp",
+    },
+    tooltip: {
+      title: "Saibaman Acid",
+      body: 
+        "Saibaman Acid"
+    },
+    components: [
+      { name: "beam saibaman acid" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Blue Hurricane",
     currentCd: 0,
     maxCd: 10,

@@ -92,6 +92,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     // raditz
     [FourCC("H08U"), ["Double Sunday", "Saturday Crash", "Behind You", "Moonlight", "Angry Shout", "Double Sundae"]],
-
+    // nappa
+    [FourCC("H08W"), ["Giant Storm", "Blazing Storm", "Plant Saibamen", "Moonlight", "Angry Shout", "Break Cannon"]],
+    // saibaman
+    [FourCC("H08X"), ["Saibaman Bomb", "Saibaman Acid"]],
+    
   ]
 )

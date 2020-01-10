@@ -247,4 +247,15 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: -30,
   },
+  // saibaman bomb
+  {
+    name: "dash ground point saibaman bomb",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 10,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: true,
+    distance: 40,
+  },
 ]

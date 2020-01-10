@@ -63,6 +63,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS,
@@ -79,6 +80,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -95,6 +97,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
@@ -110,6 +113,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
@@ -126,6 +130,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
@@ -141,6 +146,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
@@ -157,6 +163,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.DFIST_DPS,
@@ -172,6 +179,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION,
@@ -188,6 +196,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.2,
@@ -203,6 +212,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
@@ -219,6 +229,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 2.5,
@@ -234,6 +245,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 2.5 * 3,
@@ -250,6 +262,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.85,
@@ -266,6 +279,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.12,
@@ -282,6 +296,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.85,
@@ -298,6 +313,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.40,
@@ -313,6 +329,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.30,
@@ -329,6 +346,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 30,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.7,
@@ -345,6 +363,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.8,
@@ -360,6 +379,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.6,
@@ -376,6 +396,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 2,
@@ -392,6 +413,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4,
@@ -407,6 +429,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 2.5,
@@ -423,6 +446,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.4,
@@ -439,6 +463,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.30,
@@ -455,6 +480,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.045,
@@ -470,6 +496,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.45,
@@ -486,6 +513,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.3,
@@ -501,6 +529,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 320,
     damageData: {
       multiplier: BASE.KAME_DPS,
@@ -516,6 +545,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -532,6 +562,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 310,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.7,
@@ -547,6 +578,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 330,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
@@ -562,6 +594,7 @@ export const AOEDamageComponents = [
     startTick: 32,
     endTick: 32,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
@@ -578,6 +611,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 320,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 2,
@@ -593,6 +627,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
@@ -609,6 +644,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 320,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
@@ -625,6 +661,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 900,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 3,
@@ -641,6 +678,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 33,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.08,
@@ -657,6 +695,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4,
@@ -672,6 +711,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.4,
@@ -688,6 +728,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.8,
@@ -703,6 +744,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.8,
@@ -719,6 +761,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4,
@@ -735,6 +778,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.15,
@@ -751,6 +795,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4 * 16,
@@ -767,6 +812,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
     aoe: 900,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.35,
@@ -782,6 +828,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
     aoe: 900,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
@@ -798,6 +845,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 220,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.33,
@@ -814,6 +862,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
+    useLastCastPoint: true,
     aoe: 25,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 1.4,
@@ -830,6 +879,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
+    useLastCastPoint: true,
     aoe: 50,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.7,
@@ -846,6 +896,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.22,
@@ -862,6 +913,7 @@ export const AOEDamageComponents = [
     startTick: 50,
     endTick: 149,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 800,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.33,
@@ -877,6 +929,7 @@ export const AOEDamageComponents = [
     startTick: 50,
     endTick: 50,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 800,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
@@ -893,6 +946,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.KAME_DPS,
@@ -909,6 +963,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
@@ -925,6 +980,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.7,
@@ -941,6 +997,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
@@ -956,6 +1013,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
@@ -972,6 +1030,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.25,
@@ -988,6 +1047,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.3,
@@ -1003,6 +1063,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -1019,6 +1080,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 325,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.6,
@@ -1035,6 +1097,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 300,
     damageData: {
       multiplier: BASE.DFIST_DPS * 1.4,
@@ -1051,6 +1114,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 1.5,
@@ -1066,6 +1130,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 1.5,
@@ -1082,6 +1147,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.45,
@@ -1097,6 +1163,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 500,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.45,
@@ -1113,6 +1180,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 320,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
@@ -1128,6 +1196,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
@@ -1144,10 +1213,145 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 400,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
       attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // giant storm
+  {
+    name: "damage target giant storm dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 600,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.25,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage target giant storm dps 2",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 300,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.25,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage target giant storm explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 600,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 0.25,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage target giant storm explosion 2",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 300,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 0.25,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // blazing storm
+  {
+    name: "damage target blazing storm explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.12,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // giant storm
+  {
+    name: "damage beam break cannon dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    aoe: 600,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 1.1,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // saibaman bomb
+  // note: saibaman skill is lvl 1, so mult needs to be high
+  {
+    name: "damage saibaman bomb explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: true,
+    aoe: 600,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 10,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // saibaman acid
+  {
+    name: "damage saibaman acid dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 10,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,

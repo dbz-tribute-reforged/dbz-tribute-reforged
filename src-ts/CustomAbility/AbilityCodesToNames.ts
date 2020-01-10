@@ -123,6 +123,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MG'), "Behind You"],
     [FourCC('A0MH'), "Double Sundae"],
 
+    // nappa
+    [FourCC('A0MI'), "Giant Storm"],
+    [FourCC('A0MJ'), "Blazing Storm"],
+    [FourCC('A0MK'), "Plant Saibamen"],
+    [FourCC('A0ML'), "Break Cannon"],
+    
+    // saibamen
+    [FourCC('A0MM'), "Saibaman Bomb"],
+    [FourCC('A0MN'), "Acid Spit"],
+
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7

@@ -136,4 +136,22 @@ export const MultiComponents = [
       { name: "beam double sunday" },
     ],
   },
+  // -------------------------------------------
+  {
+    name: "multi blazing storm", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -20,
+    angleMax: 20,
+    delayBetweenComponents: 4,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 5,
+    useLastCastPoint: true,
+    components: [
+      { name: "damage target blazing storm explosion" },
+      { name: "sfx blazing storm" },
+    ],
+  },
 ];
