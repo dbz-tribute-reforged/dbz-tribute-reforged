@@ -3150,7 +3150,7 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Volcano\\VolcanoMissile.mdl",
-        repeatInterval: 4,
+        repeatInterval: 13,
         group: 0,
         scale: 2,
         startHeight: 100,
@@ -3166,7 +3166,7 @@ export const SfxComponents = [
       },
       {
         model: "NewMassiveEX.mdl",
-        repeatInterval: 33,
+        repeatInterval: 0,
         group: 0,
         scale: 2.0,
         startHeight: 50,
@@ -3195,9 +3195,9 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "Firaga.mdl",
-        repeatInterval: 4,
+        repeatInterval: -1,
         group: 0,
-        scale: 3.0,
+        scale: 3.5,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,

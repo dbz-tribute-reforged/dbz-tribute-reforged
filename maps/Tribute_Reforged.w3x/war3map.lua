@@ -238,6 +238,8 @@ gg_trg_Buu_Candy_Eating = nil
 gg_trg_Cell_Juniors = nil
 gg_trg_Cell_Sense_Droids = nil
 gg_trg_Raditz_Double_Sundae = nil
+gg_trg_Nappa_Plant_Saibamen = nil
+gg_trg_Saibamen_Loop = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Solar_Flare_Test = nil
 gg_trg_SolarFlare = nil
@@ -458,8 +460,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Nappa_Plant_Saibamen = nil
-gg_trg_Saibamen_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2543,42 +2543,42 @@ function Trig_Nappa_Plant_Saibamen_Conditions()
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001Func001Func001C()
     if (not (udg_TempInt == 4)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001Func001C()
     if (not (udg_TempInt == 3)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001C()
     if (not (udg_TempInt == 2)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001C()
     if (not (udg_TempInt == 1)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017Func001C()
     if (not (udg_TempInt == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func006Func015C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017C()
     if (not (udg_TempInt < 5)) then
         return false
     end
@@ -2586,19 +2586,18 @@ function Trig_Nappa_Plant_Saibamen_Func006Func015C()
 end
 
 function Trig_Nappa_Plant_Saibamen_Actions()
-    EnableTrigger(gg_trg_Saibamen_Loop)
     udg_TempLoc = GetUnitLoc(GetTriggerUnit())
     udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 5)
     udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 5)
     udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 5)
     udg_TempInt4 = 1
     while (true) do
-        if (udg_TempInt4 > GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit())) then break end
+        if (udg_TempInt4 > 3) then break end
         CreateNUnitsAtLoc(1, FourCC("H08X"), GetOwningPlayer(GetTriggerUnit()), udg_TempLoc, GetUnitFacing(GetTriggerUnit()))
         udg_TempUnit = GetLastCreatedUnit()
         GroupAddUnitSimple(udg_TempUnit, udg_SaibamenGroup)
-                udg_ID = GetHandleID(udg_TempUnit)
-        SaveIntegerBJ(0, 0, udg_ID, udg_SaibamanHashtable)
+                udg_ID = GetHandleId(udg_TempUnit)
+        SaveIntegerBJ(1, 0, udg_ID, udg_SaibamanHashtable)
         SetUnitInvulnerable(udg_TempUnit, true)
         ShowUnitHide(udg_TempUnit)
         PauseUnitBJ(true, udg_TempUnit)
@@ -2606,27 +2605,29 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, udg_TempInt)
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, udg_TempInt2)
         ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit, bj_MODIFYMETHOD_SET, udg_TempInt3)
+        SetUnitAbilityLevelSwapped(FourCC("A0MM"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0MK"), GetTriggerUnit()))
+        SetUnitAbilityLevelSwapped(FourCC("A0MN"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0MK"), GetTriggerUnit()))
         BlzSetHeroProperName(udg_TempUnit, "Saibaman")
         udg_TempInt = GetRandomInt(0, 100)
-        if (Trig_Nappa_Plant_Saibamen_Func006Func015C()) then
-            if (Trig_Nappa_Plant_Saibamen_Func006Func015Func001C()) then
+        if (Trig_Nappa_Plant_Saibamen_Func005Func017C()) then
+            if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001C()) then
                 BlzSetHeroProperName(udg_TempUnit, "Snuggles")
                 SetUnitScalePercent(udg_TempUnit, 130.00, 130.00, 130.00)
             else
-                if (Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001C()) then
+                if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001C()) then
                     BlzSetHeroProperName(udg_TempUnit, "Fufu")
                     SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
                 else
-                    if (Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001C()) then
+                    if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001C()) then
                         BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
                         SetUnitTimeScalePercent(udg_TempUnit, 150.00)
                         SetUnitVertexColorBJ(udg_TempUnit, 100, 100.00, 80.00, 0)
                     else
-                        if (Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001Func001C()) then
+                        if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001Func001C()) then
                             BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
                             SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
                         else
-                            if (Trig_Nappa_Plant_Saibamen_Func006Func015Func001Func001Func001Func001Func001C()) then
+                            if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func001Func001Func001Func001C()) then
                                 BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
                                 SetUnitTimeScalePercent(udg_TempUnit, 75.00)
                                 SetUnitVertexColorBJ(udg_TempUnit, 90.00, 100.00, 80.00, 0)
@@ -2641,6 +2642,7 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         udg_TempInt4 = udg_TempInt4 + 1
     end
         RemoveLocation(udg_TempLoc)
+    EnableTrigger(gg_trg_Saibamen_Loop)
 end
 
 function InitTrig_Nappa_Plant_Saibamen()
@@ -2650,39 +2652,32 @@ function InitTrig_Nappa_Plant_Saibamen()
     TriggerAddAction(gg_trg_Nappa_Plant_Saibamen, Trig_Nappa_Plant_Saibamen_Actions)
 end
 
-function Trig_Saibamen_Loop_Func001C()
-    if (not (CountUnitsInGroup(udg_SaibamenGroup) == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saibamen_Loop_Func003Func004C()
+function Trig_Saibamen_Loop_Func002Func004C()
     if (not (ModuloInteger(udg_TempInt, 10) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func003Func005C()
+function Trig_Saibamen_Loop_Func002Func005C()
     if (not (udg_TempInt > 30)) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func003A()
+function Trig_Saibamen_Loop_Func002A()
     udg_TempUnit = GetEnumUnit()
-        udg_ID = GetHandleID(udg_TempUnit)
+        udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_SaibamanHashtable)
-    if (Trig_Saibamen_Loop_Func003Func004C()) then
+    if (Trig_Saibamen_Loop_Func002Func004C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
                 RemoveLocation(udg_TempLoc)
     else
     end
-    if (Trig_Saibamen_Loop_Func003Func005C()) then
+    if (Trig_Saibamen_Loop_Func002Func005C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Demon\\DarkConversion\\ZombifyTarget.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -2690,6 +2685,7 @@ function Trig_Saibamen_Loop_Func003A()
         SetUnitInvulnerable(udg_TempUnit, false)
         ShowUnitShow(udg_TempUnit)
         PauseUnitBJ(false, udg_TempUnit)
+        UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), udg_TempUnit)
         GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
         FlushChildHashtableBJ(udg_ID, udg_SaibamanHashtable)
     else
@@ -2697,12 +2693,19 @@ function Trig_Saibamen_Loop_Func003A()
     end
 end
 
+function Trig_Saibamen_Loop_Func003C()
+    if (not (CountUnitsInGroup(udg_SaibamenGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Saibamen_Loop_Actions()
-    if (Trig_Saibamen_Loop_Func001C()) then
+    ForGroupBJ(udg_SaibamenGroup, Trig_Saibamen_Loop_Func002A)
+    if (Trig_Saibamen_Loop_Func003C()) then
         DisableTrigger(GetTriggeringTrigger())
     else
     end
-    ForGroupBJ(udg_SaibamenGroup, Trig_Saibamen_Loop_Func003A)
 end
 
 function InitTrig_Saibamen_Loop()

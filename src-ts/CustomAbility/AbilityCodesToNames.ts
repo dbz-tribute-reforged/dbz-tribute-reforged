@@ -131,7 +131,7 @@ export const abilityCodesToNames = new Map<number, string>(
     
     // saibamen
     [FourCC('A0MM'), "Saibaman Bomb"],
-    [FourCC('A0MN'), "Acid Spit"],
+    [FourCC('A0MN'), "Saibaman Acid"],
 
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s

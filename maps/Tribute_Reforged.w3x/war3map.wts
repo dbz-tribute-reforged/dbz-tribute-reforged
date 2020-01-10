@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.24a
+DBZ Tribute Reforged 0.25
 }
 
 STRING 4
@@ -43447,12 +43447,6 @@ STRING 7153
 Q
 }
 
-STRING 7154
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
 STRING 7155
 // Abilities: A0MM (Saibaman Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -43478,102 +43472,6 @@ STRING 7158
 }
 
 STRING 7159
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7160
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7161
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7162
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7163
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7164
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7165
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7166
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7167
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7168
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7169
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7170
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7171
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7172
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 7173
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7174
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7175
 // Abilities: A0MN (Saibaman Acid), Researchubertip (Tooltip - Learn - Extended)
 {
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
@@ -67783,6 +67681,12 @@ STRING 11171
 [|cffffff00S|r] Choose Nappa
 }
 
+STRING 11172
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool1> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
 STRING 11173
 // Units: H08W (Mid-Class Saiyan Warrior), Tip (Tooltip - Basic)
 {
@@ -67793,6 +67697,12 @@ STRING 11174
 // Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 11175
+// Abilities: A0MK (Plant Saibamen), Researchubertip (Tooltip - Learn - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool1>-<A0MK,Cool9> seconds.|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
 }
 
 STRING 11176
@@ -68047,10 +67957,22 @@ STRING 11217
 [|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 1|r]
 }
 
+STRING 11218
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool2> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
 STRING 11219
 // Abilities: A0MK (Plant Saibamen), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Plant Saibamen - [|cffffcc00Level %d|r]
+}
+
+STRING 11220
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 4|r]
 }
 
 STRING 11221
@@ -68075,6 +67997,18 @@ STRING 11224
 // Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 3|r]
+}
+
+STRING 11225
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 5|r]
+}
+
+STRING 11226
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 6|r]
 }
 
 STRING 11227
@@ -68377,46 +68311,16 @@ STRING 11276
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: Lvl * Agi * ?|r|n|cff00FFFFCooldown: <A0G8,Cool9> seconds|r
 }
 
-STRING 11277
-// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
-{
-Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 1|r|n|cff00ffffCooldown: <A0MK,Cool1> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
-}
-
-STRING 11278
-// Abilities: A0MK (Plant Saibamen), Researchubertip (Tooltip - Learn - Extended)
-{
-Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 1 per level.|r|n|cff00ffffCooldown: <A0MK,Cool1>/<A0MK,Cool2>/<A0MK,Cool3> seconds.|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
-}
-
 STRING 11279
 // Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
-STRING 11280
-// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
-{
-Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 2|r|n|cff00ffffCooldown: <A0MK,Cool2> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
-}
-
 STRING 11281
 // Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
 {
 Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool3> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
-}
-
-STRING 11282
-// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Saibaman Bomb
-}
-
-STRING 11283
-// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int *?|r|n|cff00FFFFCooldown: <A0MM,Cool1>s|r
 }
 
 STRING 11284
@@ -68443,18 +68347,6 @@ STRING 11287
 W
 }
 
-STRING 11288
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Saibaman Acid
-}
-
-STRING 11289
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int *2|r|n|cff00FFFFCooldown: <A0MN,Cool1>s|r
-}
-
 STRING 11290
 // Abilities: A0MN (Saibaman Acid), Name (Name)
 {
@@ -68465,96 +68357,6 @@ STRING 11291
 // Abilities: A0MN (Saibaman Acid), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Energy Punch - [|cffffcc00Level %d|r]
-}
-
-STRING 11292
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11293
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11294
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11295
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11296
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11297
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11298
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11299
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11300
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11301
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11302
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11303
-// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r Energy Punch 
-}
-
-STRING 11304
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11305
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 11306
-// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
-{
-Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
 }
 
 STRING 11307
@@ -68598,5 +68400,275 @@ STRING 11312
 // Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
 {
 S
+}
+
+STRING 11313
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 7|r]
+}
+
+STRING 11314
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 8|r]
+}
+
+STRING 11315
+// Abilities: A0MK (Plant Saibamen), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Plant Saibamen - [|cffffcc00Level 9|r]
+}
+
+STRING 11316
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool4> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11317
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool5> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11318
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool6> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11319
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool7> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11320
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool8> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11321
+// Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
+{
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool9> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11322
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 11323
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool1>s|r
+}
+
+STRING 11324
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 11325
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 3|r]
+}
+
+STRING 11326
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 11327
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 5|r]
+}
+
+STRING 11328
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 11329
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool2>s|r
+}
+
+STRING 11330
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool3>s|r
+}
+
+STRING 11331
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool4>s|r
+}
+
+STRING 11332
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool5>s|r
+}
+
+STRING 11333
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool6>s|r
+}
+
+STRING 11334
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 7|r]
+}
+
+STRING 11335
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 8|r]
+}
+
+STRING 11336
+// Abilities: A0MM (Saibaman Bomb), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Saibaman Bomb - [|cffffcc00Level 9|r]
+}
+
+STRING 11337
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool7>s|r
+}
+
+STRING 11338
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool8>s|r
+}
+
+STRING 11339
+// Abilities: A0MM (Saibaman Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+The user grabs hold of their opponent with an extremely tight grip and quickly self-destructs. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MM,Cool9>s|r
+}
+
+STRING 11340
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 1|r]
+}
+
+STRING 11341
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool1>s|r
+}
+
+STRING 11342
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 2|r]
+}
+
+STRING 11343
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 3|r]
+}
+
+STRING 11344
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 4|r]
+}
+
+STRING 11345
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 5|r]
+}
+
+STRING 11346
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 6|r]
+}
+
+STRING 11347
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool2>s|r
+}
+
+STRING 11348
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool3>s|r
+}
+
+STRING 11349
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool4>s|r
+}
+
+STRING 11350
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool5>s|r
+}
+
+STRING 11351
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool6>s|r
+}
+
+STRING 11352
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 7|r]
+}
+
+STRING 11353
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 8|r]
+}
+
+STRING 11354
+// Abilities: A0MN (Saibaman Acid), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Saibaman Acid - [|cffffcc00Level 9|r]
+}
+
+STRING 11355
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool7>s|r
+}
+
+STRING 11356
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool8>s|r
+}
+
+STRING 11357
+// Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
+{
+The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool9>s|r
 }
 

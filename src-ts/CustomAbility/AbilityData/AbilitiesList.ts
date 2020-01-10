@@ -925,7 +925,7 @@ export const AbilitiesList = [
         "Rebellion Spear"
     },
     components: [
-      { name: "dash ground unit rebellion spear" },
+      { name: "dash ground target rebellion spear" },
       { name: "damage rebellion spear dps" },
       { name: "knockback kame" },
       { name: "sfx rebellion spear" },
@@ -2005,7 +2005,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 20,
+    duration: 10,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2057,7 +2057,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 20,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2076,6 +2076,7 @@ export const AbilitiesList = [
       { name: "dash ground point saibaman bomb" },
       { name: "damage saibaman bomb explosion" },
       { name: "sfx saibaman bomb" },
+      { name: "self destruct generic end" },
     ],
   },
   // -------------------------------------------

@@ -98,9 +98,14 @@ export class MultiComponent implements
         this.angleMin = tmp;
         this.angleDirection = -1;
       }
-      this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, input.targetPoint);
-      this.originalDistance = CoordMath.distance(sourceCoords, input.targetPoint);
-      this.originalTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      let targettedPoint = input.targetPoint;
+      if (this.useLastCastPoint) {
+        targettedPoint = input.castPoint;
+      }
+
+      this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, targettedPoint);
+      this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
+      this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
       if (this.angleRange >= 360) {
         this.originalTarget = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       }

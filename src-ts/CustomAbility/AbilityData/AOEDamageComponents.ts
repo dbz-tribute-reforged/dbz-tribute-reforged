@@ -1292,13 +1292,13 @@ export const AOEDamageComponents = [
   {
     name: "damage target blazing storm explosion",
     repeatInterval: 1,
-    startTick: 0,
-    endTick: 0,
+    startTick: -1,
+    endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.12,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1311,8 +1311,8 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
-    useLastCastPoint: true,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
     aoe: 600,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.1,
@@ -1333,7 +1333,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: true,
     aoe: 600,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 8,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1350,7 +1350,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 8,
+      multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
