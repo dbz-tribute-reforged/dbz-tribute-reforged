@@ -140,7 +140,7 @@ export const MultiComponents = [
   {
     name: "multi blazing storm 1", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 3,
     endTick: 3,
     angleDifference: 0,
     angleMin: -20,
@@ -157,7 +157,7 @@ export const MultiComponents = [
   {
     name: "multi blazing storm 2", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 6,
     endTick: 6,
     angleDifference: 0,
     angleMin: -10,
@@ -174,7 +174,7 @@ export const MultiComponents = [
   {
     name: "multi blazing storm 3", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 9,
     endTick: 9,
     angleDifference: 0,
     angleMin: 0,
@@ -191,7 +191,7 @@ export const MultiComponents = [
   {
     name: "multi blazing storm 4", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 12,
     endTick: 12,
     angleDifference: 0,
     angleMin: 10,
@@ -208,7 +208,7 @@ export const MultiComponents = [
   {
     name: "multi blazing storm 5", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 15,
     endTick: 15,
     angleDifference: 0,
     angleMin: 20,

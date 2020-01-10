@@ -77,10 +77,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         this.setDamageSourceToTargettedPoint(input);
       }
     }
-    TextTagHelper.showTempText(
-      Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + "Damage!", 
-      this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
-    );
+    // TextTagHelper.showTempText(
+    //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + "Damage!", 
+    //   this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
+    // );
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(
       this.damageCoords, 
