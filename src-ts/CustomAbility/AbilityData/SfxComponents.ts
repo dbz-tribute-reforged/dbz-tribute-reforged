@@ -3195,7 +3195,7 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "Firaga.mdl",
-        repeatInterval: -1,
+        repeatInterval: 1,
         group: 0,
         scale: 3.5,
         startHeight: 50,
