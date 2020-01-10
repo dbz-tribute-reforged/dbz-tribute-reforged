@@ -1292,7 +1292,7 @@ export const AOEDamageComponents = [
   {
     name: "damage target blazing storm explosion",
     repeatInterval: 1,
-    startTick: 0,
+    startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
     useLastCastPoint: true,

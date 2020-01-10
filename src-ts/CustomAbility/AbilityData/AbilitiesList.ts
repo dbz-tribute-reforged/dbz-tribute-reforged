@@ -2005,7 +2005,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 15,
+    duration: 12,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2026,7 +2026,6 @@ export const AbilitiesList = [
       { name: "multi blazing storm 3" },
       { name: "multi blazing storm 4" },
       { name: "multi blazing storm 5" },
-      { name: "multi blazing storm sfx" },
     ],
   },
   // -------------------------------------------
