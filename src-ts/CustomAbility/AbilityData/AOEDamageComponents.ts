@@ -1333,7 +1333,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: true,
     aoe: 600,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
