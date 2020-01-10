@@ -64045,40 +64045,10 @@ STRING 10585
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 3|r]
 }
 
-STRING 10586
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
-}
-
-STRING 10587
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool2> seconds|r
-}
-
-STRING 10588
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool3> seconds|r
-}
-
-STRING 10589
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool4> seconds|r
-}
-
 STRING 10590
 // Abilities: A0LS (Angry Shout), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Angry Shout - [|cffffcc00Level %d|r]
-}
-
-STRING 10591
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool5> seconds|r
 }
 
 STRING 10592
@@ -64097,18 +64067,6 @@ STRING 10594
 // Abilities: A0LS (Angry Shout), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 5|r]
-}
-
-STRING 10595
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool6> seconds|r
-}
-
-STRING 10596
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool7> seconds|r
 }
 
 STRING 10597
@@ -67753,30 +67711,6 @@ STRING 11183
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
 }
 
-STRING 11184
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool8> seconds|r
-}
-
-STRING 11185
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool9> seconds|r
-}
-
-STRING 11186
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up, releasing a giant volcanic explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
-}
-
-STRING 11187
-// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
-{
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Deals bonus damage to units closer to the centre. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
-}
-
 STRING 11188
 // Abilities: A0MI (Giant Storm), EditorSuffix (Editor Suffix)
 {
@@ -68670,5 +68604,71 @@ STRING 11357
 // Abilities: A0MN (Saibaman Acid), Ubertip (Tooltip - Normal - Extended)
 {
 The Saibaman splits open his head and releases acid from it, powerful enough to melt through anything. |n|cff00FF00Damage: lvl * int * ?|r|n|cff00FFFFCooldown: <A0MN,Cool9>s|r
+}
+
+STRING 11358
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
+}
+
+STRING 11359
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool2> seconds|r
+}
+
+STRING 11360
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool3> seconds|r
+}
+
+STRING 11361
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool4> seconds|r
+}
+
+STRING 11362
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool5> seconds|r
+}
+
+STRING 11363
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool6> seconds|r
+}
+
+STRING 11364
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool7> seconds|r
+}
+
+STRING 11365
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool8> seconds|r
+}
+
+STRING 11366
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool9> seconds|r
+}
+
+STRING 11367
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
+}
+
+STRING 11368
+// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
 }
 
