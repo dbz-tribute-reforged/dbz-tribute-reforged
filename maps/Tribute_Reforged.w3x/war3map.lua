@@ -172,6 +172,9 @@ udg_SaibamenGroup = nil
 udg_SaibamanHashtable = nil
 udg_TempInt4 = 0
 udg_KyodaikaGroup = nil
+udg_PVPHeroKillerStats = 0.0
+udg_PVPHeroKilledStats = 0.0
+udg_PVPBaseStatReward = 0.0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -189,10 +192,11 @@ gg_rct_LowerHellsHellEnter = nil
 gg_rct_HellToLowerHell = nil
 gg_rct_HeavenToLowerHell = nil
 gg_rct_LowerHellsSagaSpawn = nil
-gg_rct_TournamentArena = nil
+gg_rct_FinalBattleArena = nil
 gg_rct_Final_Battle_Detector_Region = nil
 gg_rct_Creep_Vision = nil
 gg_rct_Lookout_Vision = nil
+gg_rct_Budokai_Arena = nil
 gg_cam_Camera_001 = nil
 gg_snd_Dlc_rick_and_morty_announcer_01_never_seen_a_mode_like_this = nil
 gg_snd_Dlc_rick_and_morty_announcer_02_crazy_old_mode = nil
@@ -268,7 +272,7 @@ gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
 gg_trg_Kill_Creep_New_New_Stats_Only = nil
-gg_trg_Kill_Hero_Stats = nil
+gg_trg_Kill_Hero_PvP_and_Saga = nil
 gg_trg_Kill_Hero_Revive = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_Hero_Level_up_New_New = nil
@@ -409,8 +413,10 @@ gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_FT_SS_Rage = nil
 gg_trg_Transformations_Future_Trunks = nil
 gg_trg_Kyodaika_Init = nil
-gg_trg_Kyodaika_Revert_Init = nil
 gg_trg_Kyodaika_Get_Str_Mult = nil
+gg_trg_Kyodaika_Mana_Drain = nil
+gg_trg_Kyodaika_Revert_Init = nil
+gg_trg_Kyodaika_Revert_Actual = nil
 gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
 gg_trg_Transformations_Pan = nil
@@ -461,9 +467,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_rct_Budokai_Arena = nil
-gg_trg_Kyodaika_Revert_Actual = nil
-gg_trg_Kyodaika_Mana_Drain = nil
+gg_trg_Kill_Hero_Give_PvP_Stats = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -704,6 +708,9 @@ function InitGlobals()
     udg_SaibamenGroup = CreateGroup()
     udg_TempInt4 = 0
     udg_KyodaikaGroup = CreateGroup()
+    udg_PVPHeroKillerStats = 0.0
+    udg_PVPHeroKilledStats = 0.0
+    udg_PVPBaseStatReward = 0.0
 end
 
 function InitSounds()
@@ -1922,7 +1929,7 @@ function CreateRegions()
     gg_rct_HellToLowerHell = Rect(-3584.0, 21984.0, -3296.0, 22304.0)
     gg_rct_HeavenToLowerHell = Rect(-5024.0, 21984.0, -4736.0, 22304.0)
     gg_rct_LowerHellsSagaSpawn = Rect(23456.0, 23104.0, 23744.0, 23424.0)
-    gg_rct_TournamentArena = Rect(16800.0, 17824.0, 22624.0, 23648.0)
+    gg_rct_FinalBattleArena = Rect(16800.0, 17824.0, 22624.0, 23648.0)
     gg_rct_Final_Battle_Detector_Region = Rect(-800.0, 22912.0, -640.0, 23040.0)
     gg_rct_Creep_Vision = Rect(-8160.0, -8192.0, 22304.0, 20448.0)
     gg_rct_Lookout_Vision = Rect(4672.0, 20768.0, 7136.0, 23584.0)
@@ -2971,6 +2978,8 @@ function Trig_Setup_Per_Player_Properties_Actions()
         SetPlayerAllianceStateBJ(Player(23), udg_TempPlayer, bj_ALLIANCE_UNALLIED)
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Lookout_Vision)
         FogModifierStart(GetLastCreatedFogModifier())
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_Budokai_Arena)
+        FogModifierStart(GetLastCreatedFogModifier())
         udg_TempInt = udg_TempInt + 1
     end
     udg_TempPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
@@ -3423,99 +3432,6 @@ function InitTrig_Kill_Creep_New_New_Stats_Only()
     TriggerAddAction(gg_trg_Kill_Creep_New_New_Stats_Only, Trig_Kill_Creep_New_New_Stats_Only_Actions)
 end
 
-function Trig_Kill_Hero_Stats_Conditions()
-    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    if (not (IsUnitEnemy(GetDyingUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true)) then
-        return false
-    end
-    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kill_Hero_Stats_Func001Func006002003001001()
-    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
-end
-
-function Trig_Kill_Hero_Stats_Func001Func006002003001002()
-    return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
-end
-
-function Trig_Kill_Hero_Stats_Func001Func006002003001()
-    return GetBooleanAnd(Trig_Kill_Hero_Stats_Func001Func006002003001001(), Trig_Kill_Hero_Stats_Func001Func006002003001002())
-end
-
-function Trig_Kill_Hero_Stats_Func001Func006002003002()
-    return (IsUnitAlly(GetFilterUnit(), udg_TempPlayer) == true)
-end
-
-function Trig_Kill_Hero_Stats_Func001Func006002003()
-    return GetBooleanAnd(Trig_Kill_Hero_Stats_Func001Func006002003001(), Trig_Kill_Hero_Stats_Func001Func006002003002())
-end
-
-function Trig_Kill_Hero_Stats_Func001Func007A()
-    udg_StatMultUnit = GetEnumUnit()
-    udg_StatMultReal = I2R(GetHeroLevel(GetDyingUnit()))
-    TriggerExecute(gg_trg_Add_To_Base_Stats)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " saga stats|r"))
-    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-        RemoveLocation(udg_TempLoc)
-end
-
-function Trig_Kill_Hero_Stats_Func001Func012C()
-    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kill_Hero_Stats_Func001C()
-    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kill_Hero_Stats_Actions()
-    if (Trig_Kill_Hero_Stats_Func001C()) then
-        if (Trig_Kill_Hero_Stats_Func001Func012C()) then
-            udg_StatMultUnit = GetKillingUnitBJ()
-            udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetTriggerUnit())))
-            udg_StatMultReal = (udg_StatMultReal * 0.25)
-            TriggerExecute(gg_trg_Add_To_Base_Stats)
-            TriggerExecute(gg_trg_Update_Current_Stats)
-            udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
-            udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
-            udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-            TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
-                        RemoveLocation(udg_TempLoc)
-                        DestroyForce(udg_TempPlayerGroup)
-        else
-        end
-    else
-        udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
-        udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
-        udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
-        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc2, Condition(Trig_Kill_Hero_Stats_Func001Func006002003))
-        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_Stats_Func001Func007A)
-                DestroyForce(udg_TempPlayerGroup)
-                DestroyGroup(udg_TempGroup)
-                RemoveLocation(udg_TempLoc2)
-    end
-end
-
-function InitTrig_Kill_Hero_Stats()
-    gg_trg_Kill_Hero_Stats = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Stats, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Kill_Hero_Stats, Condition(Trig_Kill_Hero_Stats_Conditions))
-    TriggerAddAction(gg_trg_Kill_Hero_Stats, Trig_Kill_Hero_Stats_Actions)
-end
-
 function Trig_Kill_Hero_Revive_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
         return false
@@ -3533,7 +3449,7 @@ function Trig_Kill_Hero_Revive_Conditions()
 end
 
 function Trig_Kill_Hero_Revive_Func006Func001C()
-    if (RectContainsUnit(gg_rct_TournamentArena, GetDyingUnit()) == true) then
+    if (RectContainsUnit(gg_rct_FinalBattleArena, GetDyingUnit()) == true) then
         return true
     end
     if (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == true) then
@@ -3563,6 +3479,125 @@ function InitTrig_Kill_Hero_Revive()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_Revive, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddCondition(gg_trg_Kill_Hero_Revive, Condition(Trig_Kill_Hero_Revive_Conditions))
     TriggerAddAction(gg_trg_Kill_Hero_Revive, Trig_Kill_Hero_Revive_Actions)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Conditions()
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsUnitEnemy(GetDyingUnit(), GetOwningPlayer(GetKillingUnitBJ())) == true)) then
+        return false
+    end
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001001()
+    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001002()
+    return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001002())
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002()
+    return (IsUnitAlly(GetFilterUnit(), udg_TempPlayer) == true)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002())
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010A()
+    udg_StatMultUnit = GetEnumUnit()
+    udg_StatMultReal = I2R(GetHeroLevel(GetDyingUnit()))
+    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " saga stats|r"))
+    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+        RemoveLocation(udg_TempLoc)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func016Func002A()
+    udg_StatMultUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Get_Base_Stats)
+    udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+    udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(2.00, (udg_PVPHeroKilledStats / RMaxBJ(1.00, udg_PVPHeroKillerStats)))))
+    TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func016C()
+    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsUnitInGroup(GetKillingUnitBJ(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))]) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001C()
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Actions()
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001C()) then
+        udg_StatMultUnit = GetDyingUnit()
+        TriggerExecute(gg_trg_Get_Base_Stats)
+        udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+        udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.25)
+        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func016C()) then
+            udg_StatMultUnit = GetKillingUnitBJ()
+            TriggerExecute(gg_trg_Get_Base_Stats)
+            udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+            udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(2.00, (udg_PVPHeroKilledStats / RMaxBJ(1.00, udg_PVPHeroKillerStats)))))
+            TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
+        else
+            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func016Func002A)
+        end
+    else
+        udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
+        udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
+        udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
+        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003))
+        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_PvP_and_Saga_Func001Func010A)
+                DestroyForce(udg_TempPlayerGroup)
+                DestroyGroup(udg_TempGroup)
+                RemoveLocation(udg_TempLoc2)
+    end
+end
+
+function InitTrig_Kill_Hero_PvP_and_Saga()
+    gg_trg_Kill_Hero_PvP_and_Saga = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kill_Hero_PvP_and_Saga, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Kill_Hero_PvP_and_Saga, Condition(Trig_Kill_Hero_PvP_and_Saga_Conditions))
+    TriggerAddAction(gg_trg_Kill_Hero_PvP_and_Saga, Trig_Kill_Hero_PvP_and_Saga_Actions)
+end
+
+function Trig_Kill_Hero_Give_PvP_Stats_Actions()
+    TriggerExecute(gg_trg_Add_To_Base_Stats)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
+    udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+    udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+    TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+        RemoveLocation(udg_TempLoc)
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Kill_Hero_Give_PvP_Stats()
+    gg_trg_Kill_Hero_Give_PvP_Stats = CreateTrigger()
+    TriggerAddAction(gg_trg_Kill_Hero_Give_PvP_Stats, Trig_Kill_Hero_Give_PvP_Stats_Actions)
 end
 
 function Trig_Hero_Level_up_New_New_Conditions()
@@ -3803,10 +3838,10 @@ function Trig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc_Actions()
     udg_TempFloatingText = GetLastCreatedTextTag()
     ShowTextTagForceBJ(false, udg_TempFloatingText, GetPlayersAll())
     ShowTextTagForceBJ(true, udg_TempFloatingText, udg_TempPlayerGroup)
-    SetTextTagVelocityBJ(udg_TempFloatingText, 64, 90)
+    SetTextTagVelocityBJ(udg_TempFloatingText, 48.00, 90)
     SetTextTagPermanentBJ(udg_TempFloatingText, false)
-    SetTextTagLifespanBJ(udg_TempFloatingText, 4.00)
-    SetTextTagFadepointBJ(udg_TempFloatingText, 1.00)
+    SetTextTagLifespanBJ(udg_TempFloatingText, 5.00)
+    SetTextTagFadepointBJ(udg_TempFloatingText, 3.50)
 end
 
 function InitTrig_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc()
@@ -4653,6 +4688,9 @@ function Trig_Tournament_Trophy_Use_Abil_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A039"))) then
         return false
     end
+    if (not (IsUnitInGroup(GetTriggerUnit(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]) == true)) then
+        return false
+    end
     return true
 end
 
@@ -4687,7 +4725,7 @@ function InitTrig_Tournament_Trophy_Acquire_Item()
 end
 
 function Trig_Tournament_Trophy_Give_Stats_Actions()
-    udg_StatMultReal = (25.00 + (5.00 * I2R(udg_ScoreboardTimeMinutes)))
+    udg_StatMultReal = (5.00 + (1.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
     udg_TempString = ("|cffffcc00+" .. (R2S(udg_StatMultReal) .. " tournament stats|r"))
@@ -9059,6 +9097,12 @@ function Trig_Transformations_Androids_13_Func010C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_StatMultUnit) == false)) then
+        return false
+    end
     return true
 end
 
@@ -9421,6 +9465,12 @@ function Trig_Transformations_Babidi_Func011C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_StatMultUnit) == false)) then
+        return false
+    end
     return true
 end
 
@@ -9507,6 +9557,12 @@ end
 
 function Trig_Super_Buu_to_Kid_Buu_Func001Func006C()
     if (not (udg_TempInt > 120)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_TempUnit) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_TempUnit) == false)) then
         return false
     end
     return true
@@ -9997,6 +10053,12 @@ function Trig_Transformations_Fat_Buu_Func010C()
     if (not (udg_IsLeadingToFinalBattle == false)) then
         return false
     end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_StatMultUnit) == false)) then
+        return false
+    end
     return true
 end
 
@@ -10326,6 +10388,12 @@ function Trig_Transformations_Cell_Larval_Func010C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
         return false
     end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_StatMultUnit) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_StatMultUnit) == false)) then
+        return false
+    end
     return true
 end
 
@@ -10585,6 +10653,12 @@ function Trig_Cooler_Transform_Into_Final_Form_Conditions()
         return false
     end
     if (not (udg_IsLeadingToFinalBattle == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, GetTriggerUnit()) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, GetTriggerUnit()) == false)) then
         return false
     end
     return true
@@ -12157,8 +12231,9 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Floating_Text_Help()
     InitTrig_Force_Remove_T2_Buggy_Vision()
     InitTrig_Kill_Creep_New_New_Stats_Only()
-    InitTrig_Kill_Hero_Stats()
     InitTrig_Kill_Hero_Revive()
+    InitTrig_Kill_Hero_PvP_and_Saga()
+    InitTrig_Kill_Hero_Give_PvP_Stats()
     InitTrig_Hero_Level_up_New_New()
     InitTrig_Auto_Transform()
     InitTrig_Auto_Transform_Toggle()
