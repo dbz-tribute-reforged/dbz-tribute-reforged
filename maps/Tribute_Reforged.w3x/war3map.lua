@@ -272,8 +272,9 @@ gg_trg_Kill_Creep = nil
 gg_trg_Player_Level_up = nil
 gg_trg_Kill_Creep_New = nil
 gg_trg_Kill_Creep_New_New_Stats_Only = nil
-gg_trg_Kill_Hero_PvP_and_Saga = nil
 gg_trg_Kill_Hero_Revive = nil
+gg_trg_Kill_Hero_PvP_and_Saga = nil
+gg_trg_Kill_Hero_Give_PvP_Stats = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_Hero_Level_up_New_New = nil
 gg_trg_Auto_Transform = nil
@@ -467,7 +468,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Kill_Hero_Give_PvP_Stats = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2536,8 +2536,10 @@ function Trig_Raditz_Double_Sundae_Actions()
         UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0ME'))
         UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0MF'))
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
-    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactCaster.mdl")
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\Disenchant\\DisenchantSpecialArt.mdl")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.50)
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+    AddSpecialEffectTargetUnitBJ("origin", udg_TempUnit, "Abilities\\Spells\\NightElf\\Starfall\\StarfallTarget.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
 end
@@ -2686,6 +2688,7 @@ function Trig_Saibamen_Loop_Func002A()
     if (Trig_Saibamen_Loop_Func002Func004C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
         DestroyEffectBJ(GetLastCreatedEffectBJ())
                 RemoveLocation(udg_TempLoc)
     else
@@ -3525,22 +3528,9 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func010A()
         RemoveLocation(udg_TempLoc)
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func016Func002A()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func016A()
     udg_StatMultUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Get_Base_Stats)
-    udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-    udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(2.00, (udg_PVPHeroKilledStats / RMaxBJ(1.00, udg_PVPHeroKillerStats)))))
     TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
-end
-
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func016C()
-    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    if (not (IsUnitInGroup(GetKillingUnitBJ(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))]) == true)) then
-        return false
-    end
-    return true
 end
 
 function Trig_Kill_Hero_PvP_and_Saga_Func001C()
@@ -3556,15 +3546,7 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
         TriggerExecute(gg_trg_Get_Base_Stats)
         udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
         udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.25)
-        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func016C()) then
-            udg_StatMultUnit = GetKillingUnitBJ()
-            TriggerExecute(gg_trg_Get_Base_Stats)
-            udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-            udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(2.00, (udg_PVPHeroKilledStats / RMaxBJ(1.00, udg_PVPHeroKillerStats)))))
-            TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
-        else
-            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func016Func002A)
-        end
+        ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func016A)
     else
         udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
         udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
@@ -3585,6 +3567,9 @@ function InitTrig_Kill_Hero_PvP_and_Saga()
 end
 
 function Trig_Kill_Hero_Give_PvP_Stats_Actions()
+    TriggerExecute(gg_trg_Get_Base_Stats)
+    udg_PVPHeroKillerStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
+    udg_StatMultReal = (udg_PVPBaseStatReward * RMaxBJ(0.50, RMinBJ(2.00, (udg_PVPHeroKilledStats / RMaxBJ(1.00, udg_PVPHeroKillerStats)))))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
     udg_TempString = ("|cffff2020+" .. (R2S(udg_StatMultReal) .. " kill stats|r"))
@@ -4725,7 +4710,7 @@ function InitTrig_Tournament_Trophy_Acquire_Item()
 end
 
 function Trig_Tournament_Trophy_Give_Stats_Actions()
-    udg_StatMultReal = (5.00 + (1.00 * I2R(udg_ScoreboardTimeMinutes)))
+    udg_StatMultReal = (10.00 + (1.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
     udg_TempString = ("|cffffcc00+" .. (R2S(udg_StatMultReal) .. " tournament stats|r"))
@@ -9775,6 +9760,13 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func019Func001C()
     return false
 end
 
+function Trig_Kid_Buu_Bonus_Ability_Func002Func019Func006C()
+    if (not (udg_TempUnitType == FourCC("H01A"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Kid_Buu_Bonus_Ability_Func002Func019C()
     if (not Trig_Kid_Buu_Bonus_Ability_Func002Func019Func001C()) then
         return false
@@ -9909,6 +9901,12 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             UnitAddAbilityBJ(FourCC("A06C"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A06C"), udg_TransformationResultUnit, 9)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06C'))
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func019Func006C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A00H"), udg_TransformationPlayer)
+                UnitAddAbilityBJ(FourCC("A00H"), udg_TransformationResultUnit)
+                                UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A00H'))
+            else
+            end
         else
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func020C()) then
