@@ -103,14 +103,24 @@ export const DashComponents = [
   },
   // ----------------------------
   {
-    name: "dash ground point super dragon flight",
+    name: "dash ground point dragon fist",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 30,    
+    endTick: -1,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 20,
+    distance: 30,
+  },
+  {
+    name: "dash ground point super dragon flight",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 28,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 25,
   },
   {
     name: "dash ground point tyrant lancer",
@@ -235,6 +245,17 @@ export const DashComponents = [
     isFlying: true,
     useLastCastPoint: false,
     distance: 35,
+  },
+  // ----------------------------
+  {
+    name: "dash ground point nova chariot",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 30,
   },
   // behind you
   {

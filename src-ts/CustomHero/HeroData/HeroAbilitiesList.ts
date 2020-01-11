@@ -67,6 +67,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       "Energy Punch",
       "Death Beam Frieza",
       "Double Sunday",
+      "Giant Storm",
     ]],
 
     // broly

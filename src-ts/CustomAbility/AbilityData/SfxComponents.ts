@@ -2094,7 +2094,7 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
-        model: "NewMassiveEX.mdl",
+        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
@@ -3149,7 +3149,7 @@ export const SfxComponents = [
     useLastCastPoint: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Volcano\\VolcanoMissile.mdl",
+        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
         repeatInterval: 13,
         group: 0,
         scale: 2,
@@ -3165,10 +3165,10 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "NewMassiveEX.mdl",
+        model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 2.0,
+        scale: 2.5,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
@@ -3177,7 +3177,7 @@ export const SfxComponents = [
           y: 255,
           z: 255,
         },
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
     ],
@@ -3254,7 +3254,7 @@ export const SfxComponents = [
         model: "Firaga.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 1.5,
+        scale: 2,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
