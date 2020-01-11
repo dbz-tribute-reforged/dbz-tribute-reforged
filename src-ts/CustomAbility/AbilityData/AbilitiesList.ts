@@ -185,7 +185,7 @@ export const AbilitiesList = [
         "Dragon Fisto"
     },
     components: [
-      { name: "dash ground point 25dist" },
+      { name: "dash ground point dragon fist" },
       { name: "damage dragon fist dps" },
       { name: "damage dragon fist explosion" },
       { name: "knockback 1tick 25speed 180angle 250aoe" },
@@ -1802,7 +1802,7 @@ export const AbilitiesList = [
         "Nova Chariot"
     },
     components: [
-      { name: "dash ground point 25dist" },
+      { name: "dash ground point nova chariot" },
       { name: "damage nova chariot dps" },
       { name: "block nova chariot" },
       { name: "sfx nova chariot" },
@@ -2061,7 +2061,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 20,
+    duration: 22,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2232,7 +2232,7 @@ export const AbilitiesList = [
     costAmount: 25,
     duration: 25,
     updateRate: 0.03,
-    castTime: 0.25,
+    castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: true,
     animation: "spell",

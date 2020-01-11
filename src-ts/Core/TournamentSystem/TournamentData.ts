@@ -14,6 +14,10 @@ export module TournamentData {
     tournamentTopRight.x,
     tournamentTopRight.y
   );
+  export const budokaiArenaBottomLeft: Vector2D = new Vector2D(12930, 19964);
+  export const budokaiArenaTopRight: Vector2D = new Vector2D(16737, 23848);
+  export const budokaiSpawn1: Vector2D = new Vector2D(13352, 20467);
+  export const budokaiSpawn2: Vector2D = new Vector2D(16177, 23197);
   export const finalBattleDetector: Vector2D = new Vector2D(-729, 22950);
   export const finalBattleName: string = "Final Battle";
   export const finalBattleTime: number = 33 * 60;
@@ -30,7 +34,7 @@ export module TournamentData {
   export const budokaiDelay: number = 45;
   export const budokaiCounter: number = 23;
   export const budokaiMatchDelay: number = 10;
-  export const budokaiMatchTimeLimit: number = 3 * 60;
+  export const budokaiMatchTimeLimit: number = 2 * 60;
   export const budokaiMatchTimeLimitName: string = "Remaining Time";
   export const budokaiMaxContestantsPerMatch: number = 2;
   export const budokaiTpSfx: string = "BlackBlink.mdl";

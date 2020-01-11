@@ -96,10 +96,21 @@ export class TournamentManager {
       const x = GetUnitX(deadHero);
       const y = GetUnitY(deadHero);
       if ( 
-        x > TournamentData.tournamentBottomLeft.x &&
-        y > TournamentData.tournamentBottomLeft.y && 
-        x < TournamentData.tournamentTopRight.x &&
-        y < TournamentData.tournamentTopRight.y && 
+        (
+          (
+            x > TournamentData.tournamentBottomLeft.x &&
+            y > TournamentData.tournamentBottomLeft.y && 
+            x < TournamentData.tournamentTopRight.x &&
+            y < TournamentData.tournamentTopRight.y
+          ) || 
+          (
+            x > TournamentData.budokaiArenaBottomLeft.x &&
+            y > TournamentData.budokaiArenaBottomLeft.y && 
+            x < TournamentData.budokaiArenaTopRight.x &&
+            y < TournamentData.budokaiArenaTopRight.y
+          )
+        )
+        && 
         UnitHelper.isUnitTournamentViable(deadHero)
       ) {
         // Logger.LogDebug("Reviving Dead Tournament Hero");

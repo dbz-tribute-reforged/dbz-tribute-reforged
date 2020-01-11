@@ -242,10 +242,10 @@ export class Budokai extends AdvancedTournament implements Tournament {
               const y = GetUnitY(filterUnit)
               const x = GetUnitX(filterUnit);
               return (
-                x > TournamentData.tournamentBottomLeft.x &&
-                y > TournamentData.tournamentBottomLeft.y && 
-                x < TournamentData.tournamentTopRight.x &&
-                y < TournamentData.tournamentTopRight.y
+                x > TournamentData.budokaiArenaBottomLeft.x &&
+                y > TournamentData.budokaiArenaBottomLeft.y && 
+                x < TournamentData.budokaiArenaTopRight.x &&
+                y < TournamentData.budokaiArenaTopRight.y
               );
             }));
 
@@ -353,9 +353,9 @@ export class Budokai extends AdvancedTournament implements Tournament {
       // they are disqualiifed
       // if both disqualified that match is just cancelled
 
-      let spawnPos: Vector2D = TournamentData.tournamentSpawn1;
+      let spawnPos: Vector2D = TournamentData.budokaiSpawn1;
       if (j % 2 != 0) {
-        spawnPos = TournamentData.tournamentSpawn2;
+        spawnPos = TournamentData.budokaiSpawn2;
       }
       PanCameraToTimedForPlayer(Player(contestant.id), spawnPos.x, spawnPos.y, 0);
       // Logger.LogDebug("Contestant: " + contestant.id + " units: " + contestant.units.size);
@@ -368,6 +368,8 @@ export class Budokai extends AdvancedTournament implements Tournament {
         );
         SetUnitX(unit, spawnPos.x);
         SetUnitY(unit, spawnPos.y);
+        SetUnitLifePercentBJ(unit, 100);
+        SetUnitManaPercentBJ(unit, 100);
         TriggerRegisterUnitEvent(matchHandlerTrigger, unit, EVENT_UNIT_DEATH);
       }
 

@@ -142,11 +142,17 @@ export class ExperienceManager {
         if (dyingPlayerId >= Constants.maxActivePlayers) {
           // share exp with anyone else who is also nearby
           // treats dying player as an enemy
-          this.getNearbyXPHeroes(
+          // this.getNearbyXPHeroes(
+          //   rewardedGroup, 
+          //   dyingPos, 
+          //   ExperienceConstants.expRange,
+          //   dyingPlayer,
+          // );
+          this.getNearbyAlliedXPHeroes(
             rewardedGroup, 
             dyingPos, 
-            ExperienceConstants.expRange,
-            dyingPlayer,
+            ExperienceConstants.expRange, 
+            killingPlayer,
           );
         } else {
           // share exp with allies only

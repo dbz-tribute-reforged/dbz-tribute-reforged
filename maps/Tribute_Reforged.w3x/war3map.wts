@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.25
+DBZ Tribute Reforged 0.25a
 }
 
 STRING 4
@@ -26770,12 +26770,6 @@ STRING 4388
 E
 }
 
-STRING 4389
-// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
-{
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: 3x)|r|n|cffFF0000(Mana Drain: .5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
-}
-
 STRING 4390
 // Units: H08M (Saiyan Warrior), Awakentip (Tooltip - Awaken)
 {
@@ -26798,12 +26792,6 @@ STRING 4393
 // Units: U012 (Changling Form 2), EditorSuffix (Name - Editor Suffix)
 {
 (form 2)
-}
-
-STRING 4394
-// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
-{
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: 3x)|r|n|cffFF0000(Mana Drain: .5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
 
 STRING 4395
@@ -33808,12 +33796,6 @@ STRING 5557
 Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
-STRING 5558
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
-}
-
 STRING 5559
 // Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -34578,24 +34560,6 @@ STRING 5685
 E
 }
 
-STRING 5686
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
-}
-
-STRING 5687
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
-}
-
-STRING 5688
-// Abilities: A0C8 (Slappy Hand), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
-}
-
 STRING 5689
 {
 Type "r" to revert.
@@ -34633,22 +34597,10 @@ Transformations:
 [lvl 150] 2.50x "ult"
 }
 
-STRING 5692
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
-}
-
 STRING 5693
 // Units: H08M (Saiyan Warrior), Tip (Tooltip - Basic)
 {
 [|cffffff00Q|r] Choose Bardock
-}
-
-STRING 5694
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00(Damage: (Str * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 16 seconds)|r
 }
 
 STRING 5695
@@ -34669,8 +34621,8 @@ Type "r" to revert.
 Transformations:
 [lvl 30]  1.50x "nail"
 [lvl 60]  1.75x "kami"
-[lvl 90]  2.00x "super"
-[lvl 150] 2.50x "super" (TYPE "super" AGAIN FOR UPGRADED SUPER)
+[lvl 90]  2.00x "super namekian"
+[lvl 150] 2.50x "super namekian" (TYPE "super namekian" AGAIN FOR STRONGER STAT MULT)
 
 Kyodaika: +0.2-0.7x str 
 }
@@ -43447,6 +43399,12 @@ STRING 7153
 Q
 }
 
+STRING 7154
+// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
+{
+With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
+}
+
 STRING 7155
 // Abilities: A0MM (Saibaman Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -43475,6 +43433,78 @@ STRING 7159
 // Abilities: A0MN (Saibaman Acid), Researchubertip (Tooltip - Learn - Extended)
 {
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
+}
+
+STRING 7160
+// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
+{
+With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
+}
+
+STRING 7161
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool2> seconds|r
+}
+
+STRING 7162
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool3> seconds|r
+}
+
+STRING 7163
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool4> seconds|r
+}
+
+STRING 7164
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 2r]
+}
+
+STRING 7165
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 3r]
+}
+
+STRING 7166
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4r]
+}
+
+STRING 7167
+// Abilities: A0C8 (Slappy Hand), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool5> seconds|r
+}
+
+STRING 7168
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> seconds|r
+}
+
+STRING 7169
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 1r]
+}
+
+STRING 7170
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5r]
+}
+
+STRING 7171
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool5> seconds|r
 }
 
 STRING 7176
@@ -62435,12 +62465,6 @@ STRING 10319
 [|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 7|r]
 }
 
-STRING 10320
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 2]
-}
-
 STRING 10321
 // Abilities: A0LG (Babidi Barrier), Name (Name)
 {
@@ -62451,12 +62475,6 @@ STRING 10322
 // Abilities: A0LG (Babidi Barrier), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
-}
-
-STRING 10323
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 3]
 }
 
 STRING 10324
@@ -62625,24 +62643,6 @@ STRING 10351
 // Abilities: A0LM (Hellzone Grenade), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Hellzone Grenade - [|cffffcc00Level %d|r]
-}
-
-STRING 10352
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4]
-}
-
-STRING 10353
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 1]
-}
-
-STRING 10354
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5]
 }
 
 STRING 10355
