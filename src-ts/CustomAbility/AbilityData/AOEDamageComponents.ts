@@ -1331,7 +1331,7 @@ export const AOEDamageComponents = [
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     useLastCastPoint: true,
-    aoe: 500,
+    aoe: 450,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_INT,

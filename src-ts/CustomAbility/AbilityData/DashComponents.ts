@@ -277,6 +277,6 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 40,
+    distance: 37,
   },
 ]

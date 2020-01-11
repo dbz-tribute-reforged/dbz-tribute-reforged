@@ -171,6 +171,7 @@ udg_TempUnitType = 0
 udg_SaibamenGroup = nil
 udg_SaibamanHashtable = nil
 udg_TempInt4 = 0
+udg_KyodaikaGroup = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -407,9 +408,9 @@ gg_trg_Transformations_Goten = nil
 gg_trg_Transformations_Kid_Trunks = nil
 gg_trg_FT_SS_Rage = nil
 gg_trg_Transformations_Future_Trunks = nil
-gg_trg_Piccolo_Kyo = nil
-gg_trg_Piccolo_Kyo_Revert = nil
-gg_trg_Piccolo_Kyo_Get_Str_Mult = nil
+gg_trg_Kyodaika_Init = nil
+gg_trg_Kyodaika_Revert_Init = nil
+gg_trg_Kyodaika_Get_Str_Mult = nil
 gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
 gg_trg_Transformations_Pan = nil
@@ -461,6 +462,8 @@ gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
 gg_rct_Budokai_Arena = nil
+gg_trg_Kyodaika_Revert_Actual = nil
+gg_trg_Kyodaika_Mana_Drain = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -700,6 +703,7 @@ function InitGlobals()
     udg_AutoTransformInt = 0
     udg_SaibamenGroup = CreateGroup()
     udg_TempInt4 = 0
+    udg_KyodaikaGroup = CreateGroup()
 end
 
 function InitSounds()
@@ -6417,7 +6421,7 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
     end
     if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        udg_TempReal = RMinBJ(6666.00, RMaxBJ(1200.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.66)))
+        udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.66)))
         CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
         SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
                 RemoveLocation(udg_TempLoc)
@@ -6789,6 +6793,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "ss2"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "uss2"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "super namekian"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "super perfect"
     udg_TempInt = (udg_TempInt + 1)
@@ -8386,110 +8392,83 @@ function InitTrig_Transformations_Future_Trunks()
     TriggerAddAction(gg_trg_Transformations_Future_Trunks, Trig_Transformations_Future_Trunks_Actions)
 end
 
-function Trig_Piccolo_Kyo_Conditions()
+function Trig_Kyodaika_Init_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A04Y"))) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Actions()
+function Trig_Kyodaika_Init_Actions()
     udg_StatMultUnit = GetTriggerUnit()
     SetUnitScalePercent(udg_StatMultUnit, 250.00, 250.00, 250.00)
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        udg_ID = GetHandleId(udg_StatMultUnit)
-    SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
-    TriggerExecute(gg_trg_Piccolo_Kyo_Get_Str_Mult)
+    TriggerExecute(gg_trg_Kyodaika_Get_Str_Mult)
     udg_StatMultStr = (RMinBJ(3.20, (udg_StatMultStr + udg_TempReal)) + 0.00)
     TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
     TriggerExecute(gg_trg_Update_Current_Stats)
     SetPlayerAbilityAvailableBJ(false, FourCC("A04Y"), GetTriggerPlayer())
     SetPlayerAbilityAvailableBJ(true, FourCC("A03S"), GetTriggerPlayer())
+    GroupAddUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
+    EnableTrigger(gg_trg_Kyodaika_Mana_Drain)
 end
 
-function InitTrig_Piccolo_Kyo()
-    gg_trg_Piccolo_Kyo = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Piccolo_Kyo, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Piccolo_Kyo, Condition(Trig_Piccolo_Kyo_Conditions))
-    TriggerAddAction(gg_trg_Piccolo_Kyo, Trig_Piccolo_Kyo_Actions)
+function InitTrig_Kyodaika_Init()
+    gg_trg_Kyodaika_Init = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kyodaika_Init, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Kyodaika_Init, Condition(Trig_Kyodaika_Init_Conditions))
+    TriggerAddAction(gg_trg_Kyodaika_Init, Trig_Kyodaika_Init_Actions)
 end
 
-function Trig_Piccolo_Kyo_Revert_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A03S"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Piccolo_Kyo_Revert_Actions()
-    udg_StatMultUnit = GetTriggerUnit()
-    SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-        udg_ID = GetHandleId(udg_StatMultUnit)
-    SaveRealBJ(udg_StatMultStr, 10, udg_ID, udg_StatMultHashtable)
-    udg_StatMultStr = RMaxBJ(1.00, (udg_StatMultAgi + 0.00))
-    TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
-    SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), GetTriggerPlayer())
-    SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), GetTriggerPlayer())
-end
-
-function InitTrig_Piccolo_Kyo_Revert()
-    gg_trg_Piccolo_Kyo_Revert = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Piccolo_Kyo_Revert, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Piccolo_Kyo_Revert, Condition(Trig_Piccolo_Kyo_Revert_Conditions))
-    TriggerAddAction(gg_trg_Piccolo_Kyo_Revert, Trig_Piccolo_Kyo_Revert_Actions)
-end
-
-function Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001Func001C()
+function Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 150)) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001C()
+function Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 90)) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001C()
+function Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 60)) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001C()
+function Trig_Kyodaika_Get_Str_Mult_Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 30)) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Get_Str_Mult_Func001C()
+function Trig_Kyodaika_Get_Str_Mult_Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 15)) then
         return false
     end
     return true
 end
 
-function Trig_Piccolo_Kyo_Get_Str_Mult_Actions()
-    if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001C()) then
+function Trig_Kyodaika_Get_Str_Mult_Actions()
+    if (Trig_Kyodaika_Get_Str_Mult_Func001C()) then
         udg_TempReal = 0.20
     else
-        if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001C()) then
+        if (Trig_Kyodaika_Get_Str_Mult_Func001Func001C()) then
             udg_TempReal = 0.30
         else
-            if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001C()) then
+            if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001C()) then
                 udg_TempReal = 0.40
             else
-                if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001C()) then
+                if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001C()) then
                     udg_TempReal = 0.50
                 else
-                    if (Trig_Piccolo_Kyo_Get_Str_Mult_Func001Func001Func001Func001Func001C()) then
+                    if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001Func001C()) then
                         udg_TempReal = 0.60
                     else
                         udg_TempReal = 0.70
@@ -8500,9 +8479,82 @@ function Trig_Piccolo_Kyo_Get_Str_Mult_Actions()
     end
 end
 
-function InitTrig_Piccolo_Kyo_Get_Str_Mult()
-    gg_trg_Piccolo_Kyo_Get_Str_Mult = CreateTrigger()
-    TriggerAddAction(gg_trg_Piccolo_Kyo_Get_Str_Mult, Trig_Piccolo_Kyo_Get_Str_Mult_Actions)
+function InitTrig_Kyodaika_Get_Str_Mult()
+    gg_trg_Kyodaika_Get_Str_Mult = CreateTrigger()
+    TriggerAddAction(gg_trg_Kyodaika_Get_Str_Mult, Trig_Kyodaika_Get_Str_Mult_Actions)
+end
+
+function Trig_Kyodaika_Mana_Drain_Func001Func002C()
+    if (not (GetUnitManaPercent(udg_TempUnit) < 1.50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kyodaika_Mana_Drain_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    if (Trig_Kyodaika_Mana_Drain_Func001Func002C()) then
+        udg_StatMultUnit = udg_TempUnit
+        TriggerExecute(gg_trg_Kyodaika_Revert_Actual)
+    else
+        SetUnitManaPercentBJ(udg_TempUnit, (GetUnitManaPercent(udg_TempUnit) - 0.15))
+    end
+end
+
+function Trig_Kyodaika_Mana_Drain_Func002C()
+    if (not (CountUnitsInGroup(udg_KyodaikaGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kyodaika_Mana_Drain_Actions()
+    ForGroupBJ(udg_KyodaikaGroup, Trig_Kyodaika_Mana_Drain_Func001A)
+    if (Trig_Kyodaika_Mana_Drain_Func002C()) then
+        DisableTrigger(GetTriggeringTrigger())
+    else
+    end
+end
+
+function InitTrig_Kyodaika_Mana_Drain()
+    gg_trg_Kyodaika_Mana_Drain = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Kyodaika_Mana_Drain, 0.10)
+    TriggerAddAction(gg_trg_Kyodaika_Mana_Drain, Trig_Kyodaika_Mana_Drain_Actions)
+end
+
+function Trig_Kyodaika_Revert_Init_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A03S"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kyodaika_Revert_Init_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Kyodaika_Revert_Actual)
+end
+
+function InitTrig_Kyodaika_Revert_Init()
+    gg_trg_Kyodaika_Revert_Init = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Kyodaika_Revert_Init, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Kyodaika_Revert_Init, Condition(Trig_Kyodaika_Revert_Init_Conditions))
+    TriggerAddAction(gg_trg_Kyodaika_Revert_Init, Trig_Kyodaika_Revert_Init_Actions)
+end
+
+function Trig_Kyodaika_Revert_Actual_Actions()
+    SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    udg_StatMultStr = RMaxBJ(1.00, (udg_StatMultAgi + 0.00))
+    TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), GetTriggerPlayer())
+    SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), GetTriggerPlayer())
+    GroupRemoveUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
+end
+
+function InitTrig_Kyodaika_Revert_Actual()
+    gg_trg_Kyodaika_Revert_Actual = CreateTrigger()
+    TriggerAddAction(gg_trg_Kyodaika_Revert_Actual, Trig_Kyodaika_Revert_Actual_Actions)
 end
 
 function Trig_Transformations_Piccolo_Func009C()
@@ -8540,7 +8592,7 @@ function Trig_Transformations_Piccolo_Func012C()
 end
 
 function Trig_Transformations_Piccolo_Func013C()
-    if (not (udg_TransformationString == "super")) then
+    if (not (udg_TransformationString == "super namekian")) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
@@ -8550,7 +8602,7 @@ function Trig_Transformations_Piccolo_Func013C()
 end
 
 function Trig_Transformations_Piccolo_Func014C()
-    if (not (udg_TransformationString == "super")) then
+    if (not (udg_TransformationString == "super namekian")) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
@@ -8592,7 +8644,7 @@ function Trig_Transformations_Piccolo_Actions()
     else
     end
     if (Trig_Transformations_Piccolo_Func014C()) then
-        udg_StatMultReal = 2.50
+        udg_StatMultReal = 2.40
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
@@ -12212,9 +12264,11 @@ function InitCustomTriggers()
     InitTrig_Transformations_Kid_Trunks()
     InitTrig_FT_SS_Rage()
     InitTrig_Transformations_Future_Trunks()
-    InitTrig_Piccolo_Kyo()
-    InitTrig_Piccolo_Kyo_Revert()
-    InitTrig_Piccolo_Kyo_Get_Str_Mult()
+    InitTrig_Kyodaika_Init()
+    InitTrig_Kyodaika_Get_Str_Mult()
+    InitTrig_Kyodaika_Mana_Drain()
+    InitTrig_Kyodaika_Revert_Init()
+    InitTrig_Kyodaika_Revert_Actual()
     InitTrig_Transformations_Piccolo()
     InitTrig_Transformations_Bardock()
     InitTrig_Transformations_Pan()

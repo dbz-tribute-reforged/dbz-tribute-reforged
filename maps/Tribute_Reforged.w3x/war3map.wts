@@ -26770,12 +26770,6 @@ STRING 4388
 E
 }
 
-STRING 4389
-// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
-{
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: 3x)|r|n|cffFF0000(Mana Drain: .5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
-}
-
 STRING 4390
 // Units: H08M (Saiyan Warrior), Awakentip (Tooltip - Awaken)
 {
@@ -26798,12 +26792,6 @@ STRING 4393
 // Units: U012 (Changling Form 2), EditorSuffix (Name - Editor Suffix)
 {
 (form 2)
-}
-
-STRING 4394
-// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
-{
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: 3x)|r|n|cffFF0000(Mana Drain: .5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
 
 STRING 4395
@@ -34669,8 +34657,8 @@ Type "r" to revert.
 Transformations:
 [lvl 30]  1.50x "nail"
 [lvl 60]  1.75x "kami"
-[lvl 90]  2.00x "super"
-[lvl 150] 2.50x "super" (TYPE "super" AGAIN FOR UPGRADED SUPER)
+[lvl 90]  2.00x "super namekian"
+[lvl 150] 2.50x "super namekian" (TYPE "super namekian" AGAIN FOR STRONGER STAT MULT)
 
 Kyodaika: +0.2-0.7x str 
 }
@@ -43447,6 +43435,12 @@ STRING 7153
 Q
 }
 
+STRING 7154
+// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
+{
+With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
+}
+
 STRING 7155
 // Abilities: A0MM (Saibaman Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -43475,6 +43469,12 @@ STRING 7159
 // Abilities: A0MN (Saibaman Acid), Researchubertip (Tooltip - Learn - Extended)
 {
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
+}
+
+STRING 7160
+// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
+{
+With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
 
 STRING 7176
