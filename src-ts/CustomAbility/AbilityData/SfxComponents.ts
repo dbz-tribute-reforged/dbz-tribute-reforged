@@ -2170,6 +2170,22 @@ export const SfxComponents = [
         persistent: false,
         attachmentPoint: "",
       },
+      {
+        model: "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 105,
+          z: 155,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
     ],
     attachedSfxList: [
     ],

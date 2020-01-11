@@ -87,7 +87,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have looking for the Dragon Balls.");
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have begun searching for the Dragon Balls.");
 
     const maxSaibamen = 5;
     for (let i = 0; i < maxSaibamen; ++i) {

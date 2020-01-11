@@ -118,6 +118,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
       this.toStartDelay + " seconds! " + 
       "Type " + TournamentData.budokaiEnterCommand + " to register."
     );
+    TimerStart(CreateTimer(), 3, false, () => {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 17, 
+        "|cff80ff80All tournament contestants will receive bonus stats for participating!|r"
+      );
+      DestroyTimer(GetExpiredTimer());
+    });
     
     // enable register trigger
     EnableTrigger(this.registerTrigger);
@@ -223,6 +230,12 @@ export class Budokai extends AdvancedTournament implements Tournament {
     }
   }
 
+  giveTrophy(unit: unit) {
+    const trophy = CreateItem(TournamentData.trophyItem, GetUnitX(unit), GetUnitY(unit));
+    UnitAddItem(unit, trophy);
+    UnitUseItem(unit, trophy);
+  }
+
   runTournament() {
     // timer check, if next match then go, else do nothing
     TimerStart(this.runTournamentTimer, 0.03, true, () => {
@@ -232,6 +245,9 @@ export class Budokai extends AdvancedTournament implements Tournament {
         for (const contestant of this.contestants.values()) {
           if (contestant.isInArena) {
             contestant.returnAllUnits();
+            for (const rewardedUnit of contestant.getUnits()) {
+              this.giveTrophy(rewardedUnit);
+            }
           }
           // check if contestant has any other units in arena
           // if so chuck em to the pos of first unit contestant
@@ -273,7 +289,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
             winner.returnAllUnits();
           }
           
-          for (const unit of winner.units.keys()) {
+          for (const unit of winner.getUnits()) {
             if (IsUnitAliveBJ(unit)) {
               SetUnitLifePercentBJ(unit, 100);
               SetUnitManaPercentBJ(unit, 100);
@@ -281,9 +297,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 IsUnitType(unit, UNIT_TYPE_HERO) && 
                 !IsUnitType(unit, UNIT_TYPE_SUMMONED)
               ) {
-                const trophy = CreateItem(TournamentData.trophyItem, GetUnitX(unit), GetUnitY(unit));
-                UnitAddItem(unit, trophy);
-                UnitUseItem(unit, trophy);
+                this.giveTrophy(unit);
                 // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
                 // TextTagHelper.showPlayerColorTextOnUnit(
                 //   "+" + (numTournaments * 50) + " tournament stats",
