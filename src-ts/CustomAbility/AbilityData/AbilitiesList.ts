@@ -968,7 +968,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -979,12 +979,12 @@ export const AbilitiesList = [
       disabled: "BTNKame2.blp",
     },
     tooltip: {
-      title: "Kamehameha",
+      title: "Pan Kamehameha",
       body: 
-        "Kamehameha"
+        "Pan Kamehameha"
     },
     components: [
-      { name: "beam kamehameha" },
+      { name: "beam pan kamehameha" },
       { name: "aoe apply pan immolation" },
     ],
   },
@@ -995,7 +995,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1024,7 +1024,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

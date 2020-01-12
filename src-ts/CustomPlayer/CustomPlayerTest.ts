@@ -839,8 +839,14 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_ALLIED_VISION);
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7)) + 1;
+    const targetPlayer = Player(targetPlayerId);
+    SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 10, 
+      Colorizer.getColoredPlayerName(player) + " |cff00ffffhas allied|r " + 
+      Colorizer.getColoredPlayerName(targetPlayer)
+    );
   });
 
   const unallyTrig = CreateTrigger();
@@ -849,8 +855,14 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(unallyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9));
-    SetPlayerAllianceStateBJ(player, Player(targetPlayerId), bj_ALLIANCE_UNALLIED);
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9)) + 1;
+    const targetPlayer = Player(targetPlayerId);
+    SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 10, 
+      Colorizer.getColoredPlayerName(player) + " |cffff2020has unallied|r " + 
+      Colorizer.getColoredPlayerName(targetPlayer)
+    );
   });
 
   // rename trig

@@ -4699,7 +4699,7 @@ function Trig_Tournament_Trophy_Acquire_Item_Conditions()
 end
 
 function Trig_Tournament_Trophy_Acquire_Item_Actions()
-    UnitUseItem(udg_StatMultUnit, GetManipulatedItem())
+    UnitUseItem(GetManipulatingUnit(), GetManipulatedItem())
 end
 
 function InitTrig_Tournament_Trophy_Acquire_Item()
@@ -4720,6 +4720,8 @@ function Trig_Tournament_Trophy_Give_Stats_Actions()
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
+    udg_TempInt = (25 * (GetHeroLevel(udg_StatMultUnit) + 1))
+        AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 end
 
 function InitTrig_Tournament_Trophy_Give_Stats()
@@ -6392,7 +6394,7 @@ function InitTrig_Update_MS()
 end
 
 function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
-    udg_TempReal = (RMaxBJ(300.00, RMinBJ(522.00, (RMinBJ(522.00, (300.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.60 + (0.40 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
+    udg_TempReal = (RMaxBJ(400.00, RMinBJ(522.00, (RMinBJ(522.00, (400.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.55 + (0.50 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
     SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
 end
 

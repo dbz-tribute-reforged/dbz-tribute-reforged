@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.25b
+DBZ Tribute Reforged 0.25c
 }
 
 STRING 4
@@ -26770,6 +26770,12 @@ STRING 4388
 E
 }
 
+STRING 4389
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool1> seconds|r
+}
+
 STRING 4390
 // Units: H08M (Saiyan Warrior), Awakentip (Tooltip - Awaken)
 {
@@ -26792,6 +26798,12 @@ STRING 4393
 // Units: U012 (Changling Form 2), EditorSuffix (Name - Editor Suffix)
 {
 (form 2)
+}
+
+STRING 4394
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool2> seconds|r
 }
 
 STRING 4395
@@ -33796,6 +33808,12 @@ STRING 5557
 Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
 }
 
+STRING 5558
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool3> seconds|r
+}
+
 STRING 5559
 // Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -34560,6 +34578,24 @@ STRING 5685
 E
 }
 
+STRING 5686
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool4> seconds|r
+}
+
+STRING 5687
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool5> seconds|r
+}
+
+STRING 5688
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool6> seconds|r
+}
+
 STRING 5689
 {
 Type "r" to revert.
@@ -34597,10 +34633,22 @@ Transformations:
 [lvl 150] 2.50x "ult"
 }
 
+STRING 5692
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool7> seconds|r
+}
+
 STRING 5693
 // Units: H08M (Saiyan Warrior), Tip (Tooltip - Basic)
 {
 [|cffffff00Q|r] Choose Bardock
+}
+
+STRING 5694
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool8> seconds|r
 }
 
 STRING 5695
@@ -43505,6 +43553,30 @@ STRING 7171
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
 Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool5> seconds|r
+}
+
+STRING 7172
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool9> seconds|r
+}
+
+STRING 7173
+// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool10> seconds|r
+}
+
+STRING 7174
+// Abilities: A0ME (Double Sunday), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0ME,Cool1> seconds|r
+}
+
+STRING 7175
+// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool1> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
 }
 
 STRING 7176
@@ -54763,12 +54835,6 @@ STRING 9040
 Dabura is a Minion of Babidi. |n[|cffffcc00History|r] - |cff0066CCAlso known as the Lord of the Underworld, he looks like a demon. Dabura is one of the evils controlled by Babidi and is a very fearsome opponent. He has the ability to change his enemies and everything into stone with his petrifying spittle, the Sekikatsuba. Dabura is killed by Majin Buu who changes him into a cookie and eats him.|r
 }
 
-STRING 9041
-// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
-}
-
 STRING 9042
 // Abilities: A02F (Haretsu no Majutsu), Tip (Tooltip - Normal)
 {
@@ -54785,18 +54851,6 @@ STRING 9044
 // Abilities: A02F (Haretsu no Majutsu), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Haretsu no Majutsu [|cffffcc00Level %d|r]
-}
-
-STRING 9045
-// Abilities: A02F (Haretsu no Majutsu), Researchubertip (Tooltip - Learn - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
-}
-
-STRING 9046
-// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
 }
 
 STRING 9047
@@ -62339,24 +62393,6 @@ STRING 10298
 [|cff00ff00Q|r] Haretsu no Majutsu [|cffffcc00Level 5|r]
 }
 
-STRING 10299
-// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
-}
-
-STRING 10300
-// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
-}
-
-STRING 10301
-// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
-{
-This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ? - 150% dfist)|r|n|cff00ffff(Cooldown: 20 seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
-}
-
 STRING 10302
 // Abilities: A0C0 (Vanishing Ball), Name (Name)
 {
@@ -62465,6 +62501,12 @@ STRING 10319
 [|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 7|r]
 }
 
+STRING 10320
+// Abilities: A02F (Haretsu no Majutsu), Researchubertip (Tooltip - Learn - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool1> - <A02F,Cool5> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
+}
+
 STRING 10321
 // Abilities: A0LG (Babidi Barrier), Name (Name)
 {
@@ -62475,6 +62517,12 @@ STRING 10322
 // Abilities: A0LG (Babidi Barrier), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
+}
+
+STRING 10323
+// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool2> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
 }
 
 STRING 10324
@@ -62643,6 +62691,24 @@ STRING 10351
 // Abilities: A0LM (Hellzone Grenade), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Hellzone Grenade - [|cffffcc00Level %d|r]
+}
+
+STRING 10352
+// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool3> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
+}
+
+STRING 10353
+// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool4> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
+}
+
+STRING 10354
+// Abilities: A02F (Haretsu no Majutsu), Ubertip (Tooltip - Normal - Extended)
+{
+This is a magic spell used by Babidi to make people swell up and explode. Instantly kills creeps and deals damage to heroes.|n|cff00ff00(Damage: (lvl * int * ?)|r|n|cff00ffff(Cooldown: <A02F,Cool5> seconds)|r|n|n[|cffffcc00History|r] - |cff0066CCThis was used on Piccolo but had no effect.|r
 }
 
 STRING 10355
@@ -67480,72 +67546,6 @@ STRING 11148
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 11149
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11150
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11151
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11152
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11153
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11154
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11155
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11156
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11157
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11158
-// Abilities: A0ME (Double Sunday), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
-}
-
-STRING 11159
-// Abilities: A0ME (Double Sunday), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz raises both of his arms up and charges two purple energy spheres. He then brings his hands forward and fires the energy spheres in the form of two energy waves at the opponent, inflicting a great amount of damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 20 seconds|r
 }
 
 STRING 11160

@@ -946,10 +946,10 @@ export const SfxComponents = [
     useLastCastPoint: true,
     sfxList: [
       {
-        model: "NewDirtEXNofire.mdl",
-        repeatInterval: 0,
+        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        repeatInterval: 16,
         group: 0,
-        scale: 1.2,
+        scale: 2,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
@@ -958,7 +958,7 @@ export const SfxComponents = [
           y: 255,
           z: 255,
         },
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
       {
@@ -3168,7 +3168,7 @@ export const SfxComponents = [
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
-        scale: 2,
+        scale: 2.2,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
