@@ -522,12 +522,43 @@ export const BeamComponents = [
       { name: "sfx beam riot javelin" },
     ],
   },
-  // maiden blast
+  // -------------------------------------------
+  { 
+    name: "beam pan kamehameha",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 50,
+    beamHpMult: BASE.KAME_DPS,
+    beamHpAttribute: bj_HEROSTAT_INT,
+    speed: 30,
+    aoe: 300,
+    clashingDelayTicks: 1,
+    maxDelayTicks: 6,
+    durationIncPerDelay: 12,
+    heightVariation: {
+      start: 100,
+      finish: 100,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: false,
+    canClashWithHero: false,
+    useLastCastPoint: true,
+    explodeAtCastPoint: false,
+    beamUnitType: "hpea",
+    components: [
+      { name: "damage kame dps" },
+      { name: "damage kame explosion" },
+      { name: "knockback kame" },
+      { name: "sfx beam kamehameha" },
+    ],
+  },
+  // -------------------------------------------
   { 
     name: "beam maiden blast",
     repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 66,
     beamHpMult: BASE.KAME_DPS * 0.5,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 30,
@@ -553,12 +584,12 @@ export const BeamComponents = [
       { name: "sfx beam maiden blast" },
     ],
   },
-  // reliable friend
+  // -------------------------------------------
   { 
     name: "beam reliable friend",
     repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 66,
     beamHpMult: BASE.KAME_DPS * 0.5,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 30,

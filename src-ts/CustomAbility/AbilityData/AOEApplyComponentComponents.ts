@@ -4,8 +4,8 @@ export const AOEApplyComponentComponents = [
     name: "aoe apply pan immolation", 
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 66,
-    aoe: 2400,
+    endTick: 99,
+    aoe: 2500,
     affectsNonSummons: false,
     affectsAllies: false,
     components: [
@@ -18,7 +18,7 @@ export const AOEApplyComponentComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 66,
-    aoe: 2400,
+    aoe: 2500,
     affectsNonSummons: false,
     affectsAllies: false,
     components: [
