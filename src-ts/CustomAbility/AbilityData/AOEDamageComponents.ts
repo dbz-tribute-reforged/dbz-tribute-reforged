@@ -1359,7 +1359,7 @@ export const AOEDamageComponents = [
   },
   // energy drain moro
   {
-    name: "damage energy drain moro explosion",
+    name: "damage target energy drain moro explosion",
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
@@ -1407,6 +1407,7 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // lava pillars
   {
     name: "damage target lava pillars",
     repeatInterval: 16,

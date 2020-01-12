@@ -69529,3 +69529,18 @@ A PVP-oriented hero that relies on draining the stat multiplier of stronger hero
 
 }
 
+STRING 11484
+{
+moro q enemy
+}
+
+STRING 11485
+{
+moro q enemy hero
+}
+
+STRING 11486
+{
+moro q enemy hero statmult
+}
+

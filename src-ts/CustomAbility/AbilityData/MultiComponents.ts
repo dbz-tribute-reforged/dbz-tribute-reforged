@@ -13,7 +13,7 @@ export const MultiComponents = [
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 2,
     simulatedDistance: 0,
-    useLastCastPoint: false,
+    useLastCastPoint: true,
     sfxList: true,
     components: [
       { name: "beam twin dragon shot" },
@@ -260,8 +260,8 @@ export const MultiComponents = [
     delayBetweenComponents: 4,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 5,
-    simulatedDistance: 0,
-    useLastCastPoint: false,
+    simulatedDistance: 1200,
+    useLastCastPoint: true,
     sfxList: true,
     components: [
       { name: "beam lava burst" },
@@ -279,7 +279,7 @@ export const MultiComponents = [
     delayBetweenComponents: 5,
     firingMode: MultiComponent.RANDOM_FIRING,
     multiplyComponents: 8,
-    simulatedDistance: 1200,
+    simulatedDistance: 1000,
     useLastCastPoint: false,
     sfxList: true,
     components: [

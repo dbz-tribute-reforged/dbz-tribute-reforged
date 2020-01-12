@@ -6777,7 +6777,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
-            CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 10.00, 10, 100, 100, 100, 0)
+            CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 13.00, 10, 100, 100, 100, 0)
             ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
             udg_TempPlayerGroup2 = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
             ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_TempPlayerGroup2)
@@ -12206,14 +12206,14 @@ function Trig_Moro_Energy_Drain_Active_Conditions()
     return true
 end
 
-function Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()
+function Trig_Moro_Energy_Drain_Active_Func004Func002Func002Func002C()
     if (not (IsUnitInGroup(udg_MoroDrainTargetUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainTargetUnit))]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()
+function Trig_Moro_Energy_Drain_Active_Func004Func002Func002C()
     if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
         return false
     end
@@ -12230,8 +12230,11 @@ end
 function Trig_Moro_Energy_Drain_Active_Func004A()
     udg_MoroDrainTargetUnit = GetEnumUnit()
     if (Trig_Moro_Energy_Drain_Active_Func004Func002C()) then
-        if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()) then
-            if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()) then
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11484")
+        if (Trig_Moro_Energy_Drain_Active_Func004Func002Func002C()) then
+            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11485")
+            if (Trig_Moro_Energy_Drain_Active_Func004Func002Func002Func002C()) then
+                DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11486")
                 udg_StatMultUnit = udg_MoroDrainSourceUnit
                 udg_MoroStatMultReal = 0.10
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
@@ -12241,7 +12244,7 @@ function Trig_Moro_Energy_Drain_Active_Func004A()
                 TriggerExecute(gg_trg_Moro_Increase_Perm_Mult)
             else
                 udg_MoroUnit = udg_MoroDrainSourceUnit
-                udg_MoroStatMultReal = (0.10 * 0.50)
+                udg_MoroStatMultReal = (0.10 * 0.25)
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
             end
         else
@@ -12328,7 +12331,8 @@ end
 function Trig_Moro_Text_Tag_Update_Func001A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
-    SetTextTagPosUnitBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), udg_TempUnit, 10.00)
+    SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), ("|cff20ff20" .. (R2S(LoadRealBJ(19, udg_ID, udg_StatMultHashtable)) .. "x|r")), 10)
+    SetTextTagPosUnitBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), udg_TempUnit, 12.00)
 end
 
 function Trig_Moro_Text_Tag_Update_Actions()
@@ -12478,19 +12482,12 @@ function Trig_Moro_Modify_Temp_Mult_Func003C()
     return true
 end
 
-function Trig_Moro_Modify_Temp_Mult_Func004C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08Y"))) then
-        return false
-    end
-    return true
-end
-
 function Trig_Moro_Modify_Temp_Mult_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_MoroReal = LoadRealBJ(19, udg_ID, udg_StatMultHashtable)
     if (Trig_Moro_Modify_Temp_Mult_Func003C()) then
         if (Trig_Moro_Modify_Temp_Mult_Func003Func001C()) then
-            udg_MoroReal = RMinBJ(-0.20, (udg_MoroReal + udg_MoroStatMultReal))
+            udg_MoroReal = RMaxBJ(-0.20, (udg_MoroReal + udg_MoroStatMultReal))
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
         else
         end
@@ -12500,10 +12497,6 @@ function Trig_Moro_Modify_Temp_Mult_Actions()
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
         else
         end
-    end
-    if (Trig_Moro_Modify_Temp_Mult_Func004C()) then
-        SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), ("|cff20ff20" .. (R2S(udg_MoroReal) .. "x|r")), 10)
-    else
     end
     TriggerExecute(gg_trg_Update_Current_Stats)
 end
