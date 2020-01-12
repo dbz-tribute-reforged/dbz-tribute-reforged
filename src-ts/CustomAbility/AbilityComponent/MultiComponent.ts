@@ -36,6 +36,7 @@ export class MultiComponent implements
     public delayBetweenComponents: number = 1,
     public firingMode: number = MultiComponent.SPREAD_FIRING,
     public multiplyComponents: number = 1,
+    public simulatedDistance: number = 0,
     public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
@@ -104,7 +105,11 @@ export class MultiComponent implements
       }
 
       this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, targettedPoint);
-      this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
+      if (this.simulatedDistance < 0.5) {
+        this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
+      } else {
+        this.originalDistance = this.simulatedDistance;
+      }
       this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
       if (this.angleRange >= 360) {
         this.originalTarget = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
@@ -167,6 +172,7 @@ export class MultiComponent implements
       this.angleDifference, this.angleMin, this.angleMax, this.delayBetweenComponents,
       this.firingMode,
       this.multiplyComponents,
+      this.simulatedDistance,
       this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
     );
@@ -184,6 +190,7 @@ export class MultiComponent implements
       delayBetweenComponents: number;
       firingMode: number;
       multiplyComponents: number;
+      simulatedDistance: number;
       useLastCastPoint: boolean;
       components: {
         name: string,
@@ -200,6 +207,7 @@ export class MultiComponent implements
     this.delayBetweenComponents = input.delayBetweenComponents;
     this.firingMode = input.firingMode;
     this.multiplyComponents = input.multiplyComponents;
+    this.simulatedDistance = input.simulatedDistance;
     this.useLastCastPoint = input.useLastCastPoint;
     return this;
   }

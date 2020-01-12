@@ -197,7 +197,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.2,
+    multiplier: 0.4,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -514,6 +514,53 @@ export const DamageBlockComponents = [
         },
         persistent: true,
         attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block power level sharing",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 15,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 0.2,
+    sfxList: [
+      {
+        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 55,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 55,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "overhead",
       },
     ],
   },

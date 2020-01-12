@@ -2111,6 +2111,137 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Energy Drain Moro",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMoro.blp",
+      disabled: "BTNMoro.blp",
+    },
+    tooltip: {
+      title: "Energy Drain Moro",
+      body: 
+        "Energy Drain Moro"
+    },
+    components: [
+      { name: "damage target energy drain moro explosion" },
+      { name: "sfx energy drain moro" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Energy Ball Moro",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMoro.blp",
+      disabled: "BTNMoro.blp",
+    },
+    tooltip: {
+      title: "Energy Ball Moro",
+      body: 
+        "Energy Ball Moro"
+    },
+    components: [
+      { name: "beam energy ball moro" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Lava Burst",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMoro.blp",
+      disabled: "BTNMoro.blp",
+    },
+    tooltip: {
+      title: "Lava Burst",
+      body: 
+        "Lava Burst"
+    },
+    components: [
+      { name: "multi lava burst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Lava Pillars",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMoro.blp",
+      disabled: "BTNMoro.blp",
+    },
+    tooltip: {
+      title: "Lava Pillars",
+      body: 
+        "Lava Pillars"
+    },
+    components: [
+      { name: "multi lava pillars" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Power Level Sharing",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 150,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMoroPowerLevelRising.blp",
+      disabled: "BTNMoroPowerLevelRising.blp",
+    },
+    tooltip: {
+      title: "Power Level Sharing",
+      body: 
+        "Power Level Sharing"
+    },
+    components: [
+      { name: "aoe apply power level sharing" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Blue Hurricane",
     currentCd: 0,
     maxCd: 10,

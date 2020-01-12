@@ -13,4 +13,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 66,
   },
+  {
+    name: "timed life lava pillars", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 50,
+  },
 ];

@@ -7,6 +7,7 @@ export const AOEApplyComponentComponents = [
     endTick: 99,
     aoe: 2500,
     affectsNonSummons: false,
+    affectsNonHeroes: false,
     affectsAllies: false,
     components: [
       { name: "damage pan immolation dps" },
@@ -20,12 +21,26 @@ export const AOEApplyComponentComponents = [
     endTick: 66,
     aoe: 2500,
     affectsNonSummons: false,
+    affectsNonHeroes: false,
     affectsAllies: false,
     components: [
       { name: "dash ground point reliable friend" },
       { name: "knockback reliable friend" },
       { name: "stun reliable friend" },
       { name: "sfx reliable friend" },
+    ],
+  },
+  {
+    name: "aoe apply power level sharing", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    aoe: 2000,
+    affectsNonSummons: true,
+    affectsNonHeroes: false,
+    affectsAllies: true,
+    components: [
+      { name: "block power level sharing" },
     ],
   },
 ]
