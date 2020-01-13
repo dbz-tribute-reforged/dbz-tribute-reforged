@@ -256,7 +256,6 @@ gg_trg_Cell_Sense_Droids = nil
 gg_trg_Raditz_Double_Sundae = nil
 gg_trg_Nappa_Plant_Saibamen = nil
 gg_trg_Saibamen_Loop = nil
-gg_trg_Moro_Energy_Drain_Active = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Kame = nil
 gg_trg_KameLoop = nil
@@ -434,6 +433,7 @@ gg_trg_Kyodaika_Revert_Actual = nil
 gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
 gg_trg_Transformations_Pan = nil
+gg_trg_Transformations_Farmer_with_Shotgun = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -460,7 +460,15 @@ gg_trg_Transformations_Cooler_Final_Form = nil
 gg_trg_Transformations_Metal_Cooler = nil
 gg_trg_Transformations_Raditz = nil
 gg_trg_Transformations_Nappa = nil
-gg_trg_Transformations_Farmer_with_Shotgun = nil
+gg_trg_Transformations_Moro = nil
+gg_trg_Moro_Energy_Drain_Active = nil
+gg_trg_Moro_Energy_Drain_Passive = nil
+gg_trg_Moro_Text_Tag_Update = nil
+gg_trg_Moro_Power_Level_Sharing = nil
+gg_trg_Temp_Stat_Mult_Passive_Update = nil
+gg_trg_Moro_Increase_Perm_Mult = nil
+gg_trg_Moro_Modify_Temp_Mult = nil
+gg_trg_Moro_Get_Max_Permanent_Mult = nil
 gg_trg_Transformations_Apply_SFX = nil
 gg_trg_Transformations_Generic_SSG_SSB = nil
 gg_trg_Replace_Transformation_Group_with_New_Hero = nil
@@ -481,14 +489,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Temp_Stat_Mult_Passive_Update = nil
-gg_trg_Moro_Get_Max_Permanent_Mult = nil
-gg_trg_Moro_Modify_Temp_Mult = nil
-gg_trg_Moro_Increase_Perm_Mult = nil
-gg_trg_Transformations_Moro = nil
-gg_trg_Moro_Energy_Drain_Passive = nil
-gg_trg_Moro_Power_Level_Sharing = nil
-gg_trg_Moro_Text_Tag_Update = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2071,9 +2071,9 @@ function Trig_SolarFlare_Actions()
     udg_TempUnit = GetLastCreatedUnit()
     UnitAddAbilityBJ(FourCC("A045"), udg_TempUnit)
     UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit)
-    udg_TempGroup = GetUnitsInRangeOfLocMatching((udg_SolarFlareAOEBase + (udg_SolarFlareAOEIncrementPerLvl * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit())))), udg_TempLoc, Condition(Trig_SolarFlare_Func010002003))
-    ForGroupBJ(udg_TempGroup, Trig_SolarFlare_Func011A)
-        DestroyGroup(udg_TempGroup)
+    udg_TempUnitGroup = GetUnitsInRangeOfLocMatching((udg_SolarFlareAOEBase + (udg_SolarFlareAOEIncrementPerLvl * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit())))), udg_TempLoc, Condition(Trig_SolarFlare_Func010002003))
+    ForGroupBJ(udg_TempUnitGroup, Trig_SolarFlare_Func011A)
+        DestroyGroup(udg_TempUnitGroup)
         RemoveLocation(udg_TempLoc)
 end
 
@@ -6475,8 +6475,6 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     else
     end
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func017C()) then
-                udg_TransformationID = FourCC('nmed')
-        BlzSetUnitSkin(GetEnumUnit(), udg_TransformationID)
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func017Func003C()) then
             BlzSetHeroProperName(GetEnumUnit(), "Moro Wen?")
         else
@@ -12258,7 +12256,7 @@ function Trig_Moro_Energy_Drain_Active_Actions()
     udg_MoroDrainSourceUnit = GetTriggerUnit()
     udg_TempLoc = GetSpellTargetLoc()
     udg_TempUnitGroup = GetUnitsInRangeOfLocAll(500.00, udg_TempLoc)
-    ForGroupBJ(udg_TempGroup, Trig_Moro_Energy_Drain_Active_Func004A)
+    ForGroupBJ(udg_TempUnitGroup, Trig_Moro_Energy_Drain_Active_Func004A)
         DestroyGroup(udg_TempUnitGroup)
         RemoveLocation(udg_TempLoc)
 end
@@ -12369,7 +12367,6 @@ function Trig_Moro_Power_Level_Sharing_Func011A()
     udg_MoroDrainTargetUnit = GetEnumUnit()
     if (Trig_Moro_Power_Level_Sharing_Func011Func002C()) then
         udg_StatMultUnit = udg_MoroDrainTargetUnit
-        udg_MoroStatMultReal = udg_TempReal
         TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
     else
     end
@@ -12384,8 +12381,8 @@ function Trig_Moro_Power_Level_Sharing_Actions()
     udg_TempReal = LoadRealBJ(19, udg_ID, udg_StatMultHashtable)
     udg_MoroStatMultReal = (-1.00 * udg_TempReal)
     TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
-    udg_TempReal = ((0.05 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MS"), udg_MoroDrainSourceUnit))) + (0.25 * udg_TempReal))
-    ForGroupBJ(udg_TempGroup, Trig_Moro_Power_Level_Sharing_Func011A)
+    udg_MoroStatMultReal = ((0.05 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MS"), udg_MoroDrainSourceUnit))) + (0.25 * udg_TempReal))
+    ForGroupBJ(udg_TempUnitGroup, Trig_Moro_Power_Level_Sharing_Func011A)
         DestroyGroup(udg_TempUnitGroup)
         RemoveLocation(udg_TempLoc)
 end
@@ -12484,21 +12481,22 @@ end
 
 function Trig_Moro_Modify_Temp_Mult_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
-    udg_MoroReal = LoadRealBJ(19, udg_ID, udg_StatMultHashtable)
+    udg_MoroReal = (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + udg_MoroStatMultReal)
     if (Trig_Moro_Modify_Temp_Mult_Func003C()) then
         if (Trig_Moro_Modify_Temp_Mult_Func003Func001C()) then
-            udg_MoroReal = RMaxBJ(-0.20, (udg_MoroReal + udg_MoroStatMultReal))
+            udg_MoroReal = RMaxBJ(-0.20, udg_MoroReal)
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
+            TriggerExecute(gg_trg_Update_Current_Stats)
         else
         end
     else
         if (Trig_Moro_Modify_Temp_Mult_Func003Func002C()) then
-            udg_MoroReal = RMinBJ(0.20, (udg_MoroReal + udg_MoroStatMultReal))
+            udg_MoroReal = RMinBJ(0.20, udg_MoroReal)
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
+            TriggerExecute(gg_trg_Update_Current_Stats)
         else
         end
     end
-    TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
 function InitTrig_Moro_Modify_Temp_Mult()

@@ -3370,7 +3370,7 @@ export const SfxComponents = [
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
-        repeatInterval: 4,
+        repeatInterval: 5,
         group: 0,
         scale: 1.5,
         startHeight: 100,
@@ -3463,22 +3463,6 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [
-      {
-        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
-        repeatInterval: 0,
-        group: 0,
-        scale: 1.0,
-        startHeight: 0,
-        endHeight: 0,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 105,
-          z: 105,
-        },
-        persistent: true,
-        attachmentPoint: "origin",
-      },
     ],
   },
   // --------------------------------------------

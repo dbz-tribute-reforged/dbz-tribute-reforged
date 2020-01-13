@@ -20569,6 +20569,24 @@ STRING 3355
 Energy Generation
 }
 
+STRING 3356
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
+STRING 3357
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
+}
+
+STRING 3358
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
+}
+
 STRING 3359
 {
 Max Permanent Stat Mult:
@@ -20613,6 +20631,12 @@ STRING 3364
 [|cff00ff00W|r] Power Level Rising
 }
 
+STRING 3365
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
+}
+
 STRING 3366
 // Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
 {
@@ -20631,40 +20655,10 @@ STRING 3368
 [|cff00ff00W|r] Learn Power Level Rising - [|cffffcc00Level %d|r]
 }
 
-STRING 3369
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
-}
-
 STRING 3370
 // Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 3371
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
-}
-
-STRING 3372
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
-}
-
-STRING 3373
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
-}
-
-STRING 3374
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
 }
 
 STRING 3375
@@ -40394,12 +40388,6 @@ STRING 6649
 Buu's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
-STRING 6650
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
-}
-
 STRING 6651
 // Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
@@ -59623,24 +59611,6 @@ STRING 9837
 [|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 10|r]
 }
 
-STRING 9838
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
-}
-
-STRING 9839
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
-}
-
-STRING 9840
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
-}
-
 STRING 9841
 // Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
@@ -59849,12 +59819,6 @@ STRING 9875
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
-}
-
-STRING 9876
-// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.05x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 9877
@@ -68525,6 +68489,12 @@ STRING 11297
 [|cffffff00D|r] Choose Moro
 }
 
+STRING 11298
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
+}
+
 STRING 11299
 // Units: H08Y (Planet-Eater), Tip (Tooltip - Basic)
 {
@@ -68892,6 +68862,30 @@ STRING 11358
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
 }
 
+STRING 11359
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
+}
+
+STRING 11360
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
+}
+
+STRING 11361
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
+}
+
+STRING 11362
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
+}
+
 STRING 11363
 // Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
 {
@@ -68922,6 +68916,18 @@ STRING 11367
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
 }
 
+STRING 11368
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+}
+
+STRING 11369
+// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
 STRING 11378
 // Abilities: A0MO (Energy Drain), Name (Name)
 {
@@ -68932,12 +68938,6 @@ STRING 11379
 // Abilities: A0MO (Energy Drain), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Energy Drain - [|cffffcc00Level %d|r]
-}
-
-STRING 11386
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to gather all life on a planet into an energy ball, which he then consumes - making him stronger than before. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 11387

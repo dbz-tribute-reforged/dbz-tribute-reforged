@@ -1414,7 +1414,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT,
-    useLastCastPoint: false,
+    useLastCastPoint: true,
     aoe: 400,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.1,

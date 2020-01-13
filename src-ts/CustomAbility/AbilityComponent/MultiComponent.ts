@@ -36,7 +36,8 @@ export class MultiComponent implements
     public delayBetweenComponents: number = 1,
     public firingMode: number = MultiComponent.SPREAD_FIRING,
     public multiplyComponents: number = 1,
-    public simulatedDistance: number = 0,
+    public forceMinDistance: number = 0,
+    public forceMaxDistance: number = 0,
     public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
@@ -105,10 +106,12 @@ export class MultiComponent implements
       }
 
       this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, targettedPoint);
-      if (this.simulatedDistance < 0.5) {
+      if (this.forceMaxDistance < 0.5 && this.forceMinDistance < 0.5) {
         this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
       } else {
-        this.originalDistance = this.simulatedDistance;
+        this.originalDistance = 
+          this.forceMinDistance + 
+          Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
       this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
       if (this.angleRange >= 360) {
@@ -172,7 +175,8 @@ export class MultiComponent implements
       this.angleDifference, this.angleMin, this.angleMax, this.delayBetweenComponents,
       this.firingMode,
       this.multiplyComponents,
-      this.simulatedDistance,
+      this.forceMinDistance,
+      this.forceMaxDistance,
       this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
     );
@@ -190,7 +194,8 @@ export class MultiComponent implements
       delayBetweenComponents: number;
       firingMode: number;
       multiplyComponents: number;
-      simulatedDistance: number;
+      forceMinDistance: number;
+      forceMaxDistance: number;
       useLastCastPoint: boolean;
       components: {
         name: string,
@@ -207,7 +212,8 @@ export class MultiComponent implements
     this.delayBetweenComponents = input.delayBetweenComponents;
     this.firingMode = input.firingMode;
     this.multiplyComponents = input.multiplyComponents;
-    this.simulatedDistance = input.simulatedDistance;
+    this.forceMinDistance = input.forceMinDistance;
+    this.forceMaxDistance = input.forceMaxDistance;
     this.useLastCastPoint = input.useLastCastPoint;
     return this;
   }
