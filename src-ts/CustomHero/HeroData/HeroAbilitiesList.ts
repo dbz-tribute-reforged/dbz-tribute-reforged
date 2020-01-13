@@ -97,6 +97,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08W"), ["Giant Storm", "Blazing Storm", "Plant Saibamen", "Moonlight", "Angry Shout", "Break Cannon"]],
     // saibaman
     [FourCC("H08X"), ["Saibaman Bomb", "Saibaman Acid"]],
+
+    // moro
+    [FourCC("H08Y"), ["Energy Drain Moro", "Energy Ball Moro", "Lava Burst", "Lava Pillars", "Power Level Sharing"]],
     
   ]
 )

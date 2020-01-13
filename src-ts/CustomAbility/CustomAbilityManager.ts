@@ -169,11 +169,11 @@ export class CustomAbilityManager {
     components: { name: string }[], 
     numRepeatComponents: number,
   ) {
-    for (const component of components) {
-      const retrievedComponent = this.getComponent(component.name);
-      if (retrievedComponent) {
-        for (let i = 0; i < numRepeatComponents; ++i) {
-          addTarget.addComponent(retrievedComponent.clone());
+    for (let i = 0; i < numRepeatComponents; ++i) {
+      for (const component of components) {
+        const retrievedComponent = this.getComponent(component.name);
+        if (retrievedComponent) {
+            addTarget.addComponent(retrievedComponent.clone());
         }
       }
     }

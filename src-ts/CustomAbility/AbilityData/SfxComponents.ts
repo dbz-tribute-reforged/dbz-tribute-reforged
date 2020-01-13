@@ -942,7 +942,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -1791,7 +1791,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -1987,7 +1987,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3161,7 +3161,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3222,7 +3222,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3329,6 +3329,141 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx energy drain moro", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    useLastCastPoint: true,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Other\\Drain\\DrainCaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 6,
+        startHeight: 250,
+        endHeight: 250,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "BlueBigExplosion.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 105,
+          y: 255,
+          z: 75,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam lava burst", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Other\\Doom\\DoomTarget.mdl",
+        repeatInterval: 5,
+        group: 0,
+        scale: 1,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 55,
+          z: 55,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 1,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 55,
+          z: 55,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Weapons\\PhoenixMissile\\Phoenix_Missile_mini.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 55,
+          z: 55,
+        },
+        persistent: true,
+        attachmentPoint: "overhead",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx lava pillars", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_TARGET_POINT_DYNAMIC,
+    useLastCastPoint: true,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.0,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 55,
+          z: 55,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
   },
   // --------------------------------------------
   { 

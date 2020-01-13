@@ -170,7 +170,10 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
-    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+    return (
+      GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
+      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
+    );
   }));
   TriggerAddAction(updatePlayerOrderPoint, () => {
     const x = GetOrderPointX();
@@ -187,7 +190,10 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
   TriggerAddCondition(updatePlayerTargetPoint, Condition(() => {
-    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+    return (
+      GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
+      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
+    );
   }));
   TriggerAddAction(updatePlayerTargetPoint, () => {
     const playerId = GetPlayerId(GetTriggerPlayer());
@@ -839,7 +845,7 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7)) + 1;
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
     const targetPlayer = Player(targetPlayerId);
     SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
     DisplayTimedTextToForce(
@@ -855,7 +861,7 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(unallyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9)) + 1;
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9));
     const targetPlayer = Player(targetPlayerId);
     SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
     DisplayTimedTextToForce(

@@ -246,7 +246,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
           if (contestant.isInArena) {
             contestant.returnAllUnits();
             for (const rewardedUnit of contestant.getUnits()) {
-              this.giveTrophy(rewardedUnit);
+              if (
+                IsUnitType(rewardedUnit, UNIT_TYPE_HERO) && 
+                !IsUnitType(rewardedUnit, UNIT_TYPE_DEAD) && 
+                !IsUnitType(rewardedUnit, UNIT_TYPE_SUMMONED)
+              ) {
+                this.giveTrophy(rewardedUnit);
+              }
             }
           }
           // check if contestant has any other units in arena

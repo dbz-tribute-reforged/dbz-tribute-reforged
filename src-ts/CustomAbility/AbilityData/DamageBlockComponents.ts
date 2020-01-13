@@ -197,7 +197,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.2,
+    multiplier: 0.4,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",

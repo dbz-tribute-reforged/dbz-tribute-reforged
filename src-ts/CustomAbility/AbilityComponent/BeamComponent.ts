@@ -133,12 +133,14 @@ export class BeamComponent implements
   }
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    let sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
     let beamTargetPoint = input.castPoint;
     if (!this.useLastCastPoint) {
       beamTargetPoint = input.targetPoint;
     }
     this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
+    // move beam slightly out of the source unit
+    sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, 75);
 
     this.beamUnit = CreateUnit(
       input.casterPlayer, 

@@ -4,7 +4,8 @@ export module Constants {
   export const maxSubAbilities = 3;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
-  export const dummyCasterId = FourCC('h054');
+  export const dummyBeamUnitId = FourCC("hpea");
+  export const dummyCasterId = FourCC("h054");
   export const creepUpgradeDeathDelay = 10;
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");

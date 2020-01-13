@@ -279,4 +279,15 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: 37,
   },
+  // power level sharing
+  {
+    name: "dash forward power level sharing",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 2,
+  },
 ]

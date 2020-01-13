@@ -133,6 +133,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MM'), "Saibaman Bomb"],
     [FourCC('A0MN'), "Saibaman Acid"],
 
+    // moro
+    [FourCC('A0MO'), "Energy Drain Moro"],
+    [FourCC('A0MP'), "Energy Ball Moro"],
+    [FourCC('A0MQ'), "Lava Burst"],
+    [FourCC('A0MR'), "Lava Pillars"],
+    [FourCC('A0MS'), "Power Level Sharing"],
+
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7

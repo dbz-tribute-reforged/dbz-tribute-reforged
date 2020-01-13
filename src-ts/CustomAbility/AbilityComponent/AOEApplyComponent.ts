@@ -19,6 +19,7 @@ export class AOEApplyComponent implements
     public endTick: number = -1,
     public aoe: number = 900,
     public affectsNonSummons: boolean = false,
+    public affectsNonHeroes: boolean = false,
     public affectsAllies: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
@@ -36,6 +37,7 @@ export class AOEApplyComponent implements
         return (
           IsUnitAliveBJ(testUnit) &&
           IsUnitAlly(testUnit, input.casterPlayer) && 
+          (IsUnitType(testUnit, UNIT_TYPE_HERO) || this.affectsNonHeroes) && 
           (IsUnitType(testUnit, UNIT_TYPE_SUMMONED) || this.affectsNonSummons) &&
           (IsUnitOwnedByPlayer(testUnit, input.casterPlayer) || this.affectsAllies)
         );
@@ -58,7 +60,7 @@ export class AOEApplyComponent implements
   clone(): AbilityComponent {
     return new AOEApplyComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.aoe, this.affectsNonSummons, this.affectsAllies, 
+      this.aoe, this.affectsNonSummons, this.affectsNonHeroes, this.affectsAllies, 
       AbilityComponentHelper.clone(this.components)
     );
   }
@@ -71,6 +73,7 @@ export class AOEApplyComponent implements
       endTick: number;
       aoe: number;
       affectsNonSummons: boolean;
+      affectsNonHeroes: boolean;
       affectsAllies: boolean;
       components: {
         name: string,
@@ -83,6 +86,7 @@ export class AOEApplyComponent implements
     this.endTick = input.endTick;
     this.aoe = input.aoe;
     this.affectsNonSummons = input.affectsNonSummons;
+    this.affectsNonHeroes = input.affectsNonHeroes;
     this.affectsAllies = input.affectsAllies;
     return this;
   }

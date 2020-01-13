@@ -5,6 +5,7 @@ import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { AddableComponent } from "./AddableComponent";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class MultiComponent implements 
   AbilityComponent,
@@ -33,9 +34,13 @@ export class MultiComponent implements
     public angleDifference: number = 30,
     public angleMin: number = -30,
     public angleMax: number = 30,
+    public forceMinDistance: number = 0,
+    public forceMaxDistance: number = 0,
     public delayBetweenComponents: number = 1,
     public firingMode: number = MultiComponent.SPREAD_FIRING,
     public multiplyComponents: number = 1,
+    public componentsAddedPerRound: number = 1,
+    public alwaysUpdateAngle: boolean = false,
     public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
@@ -50,10 +55,12 @@ export class MultiComponent implements
   }
 
   activateComponentsWhenReady() {
-    if (this.components.length > 0 && this.currentDelay >= this.delayBetweenComponents) {
-      const component = this.components.pop();
-      if (component) {
-        this.activeComponents.push(component);
+    if (this.currentDelay >= this.delayBetweenComponents) {
+      for (let i = 0; i < this.componentsAddedPerRound && this.components.length > 0; ++i) {
+        const component = this.components.pop();
+        if (component) {
+          this.activeComponents.push(component);
+        }
       }
       this.currentDelay = 0;
     }
@@ -104,7 +111,13 @@ export class MultiComponent implements
       }
 
       this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, targettedPoint);
-      this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
+      if (this.forceMaxDistance < 0.5 && this.forceMinDistance < 0.5) {
+        this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
+      } else {
+      this.originalDistance = 
+        this.forceMinDistance + 
+        Math.random() * (this.forceMaxDistance - this.forceMinDistance);
+      }
       this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
       if (this.angleRange >= 360) {
         this.originalTarget = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
@@ -115,6 +128,12 @@ export class MultiComponent implements
     // add components to active components when ready
     this.activateComponentsWhenReady();
 
+    if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
+      this.originalDistance = 
+        this.forceMinDistance + 
+        Math.random() * (this.forceMaxDistance - this.forceMinDistance);
+    }
+
     let tmp: Vector2D;
     if (this.useLastCastPoint) {
       tmp = input.castPoint;
@@ -123,6 +142,11 @@ export class MultiComponent implements
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
+      // TextTagHelper.showPlayerColorTextToForce(
+      //   ability.currentTick + "!",
+      //   input.castPoint.x, 
+      //   input.castPoint.y,
+      // );
     } else {
       tmp = input.targetPoint
       input.targetPoint = CoordMath.polarProjectCoords(
@@ -146,7 +170,7 @@ export class MultiComponent implements
     }
 
     // if fired a beam, then adjust angle to next point
-    if (this.currentDelay == 0) {
+    if (this.currentDelay == 0 || this.alwaysUpdateAngle) {
       this.adjustAngleCurrent();
     }
     ++this.currentDelay;
@@ -164,9 +188,14 @@ export class MultiComponent implements
   clone(): AbilityComponent {
     return new MultiComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.angleDifference, this.angleMin, this.angleMax, this.delayBetweenComponents,
+      this.angleDifference, this.angleMin, this.angleMax, 
+      this.forceMinDistance,
+      this.forceMaxDistance,
+      this.delayBetweenComponents,
       this.firingMode,
       this.multiplyComponents,
+      this.componentsAddedPerRound,
+      this.alwaysUpdateAngle,
       this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
     );
@@ -181,9 +210,13 @@ export class MultiComponent implements
       angleDifference: number;
       angleMin: number;
       angleMax: number;
+      forceMinDistance: number;
+      forceMaxDistance: number;
       delayBetweenComponents: number;
       firingMode: number;
       multiplyComponents: number;
+      componentsAddedPerRound: number;
+      alwaysUpdateAngle: boolean;
       useLastCastPoint: boolean;
       components: {
         name: string,
@@ -197,9 +230,13 @@ export class MultiComponent implements
     this.angleDifference = input.angleDifference;
     this.angleMin = input.angleMin;
     this.angleMax = input.angleMax;
+    this.forceMinDistance = input.forceMinDistance;
+    this.forceMaxDistance = input.forceMaxDistance;
     this.delayBetweenComponents = input.delayBetweenComponents;
     this.firingMode = input.firingMode;
+    this.componentsAddedPerRound = input.componentsAddedPerRound;
     this.multiplyComponents = input.multiplyComponents;
+    this.alwaysUpdateAngle = input.alwaysUpdateAngle;
     this.useLastCastPoint = input.useLastCastPoint;
     return this;
   }

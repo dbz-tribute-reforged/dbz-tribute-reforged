@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.25c
+DBZ Tribute Reforged 0.26
 }
 
 STRING 4
@@ -11994,7 +11994,7 @@ STRING 1927
 }
 
 STRING 1928
-// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
+// Units: H08Y (Planet-Eater), Hotkey (Hotkey)
 {
 D
 }
@@ -12018,7 +12018,7 @@ Fires a powerful energy blast from the user's hands, to be used in combination w
 }
 
 STRING 1932
-// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
+// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12114,7 +12114,7 @@ Learn Dabura's Spit - |cffffcc00D|r
 }
 
 STRING 1948
-// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
+// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12138,7 +12138,7 @@ Weakens enemy and disables it from releasing energy.
 }
 
 STRING 1952
-// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
+// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12558,7 +12558,7 @@ STRING 2021
 }
 
 STRING 2022
-// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12576,7 +12576,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 2025
-// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12696,7 +12696,7 @@ STRING 2044
 }
 
 STRING 2045
-// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12720,7 +12720,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2049
-// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13080,7 +13080,7 @@ STRING 2108
 }
 
 STRING 2109
-// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13104,7 +13104,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 2113
-// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13494,7 +13494,7 @@ STRING 2177
 }
 
 STRING 2178
-// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13518,7 +13518,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2182
-// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13860,7 +13860,7 @@ S
 }
 
 STRING 2239
-// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13884,7 +13884,7 @@ STRING 2242
 }
 
 STRING 2243
-// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13908,7 +13908,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 2247
-// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14040,7 +14040,7 @@ STRING 2268
 }
 
 STRING 2269
-// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14064,7 +14064,7 @@ Piccolo fires alot of energy blasts hitting any nearby creatures.
 }
 
 STRING 2273
-// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14718,7 +14718,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14742,7 +14742,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15110,7 +15110,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15122,7 +15122,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15764,7 +15764,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16710,7 +16710,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -16734,7 +16734,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17424,7 +17424,7 @@ STRING 2831
 }
 
 STRING 2832
-// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17448,7 +17448,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2836
-// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17619,6 +17619,8 @@ STRING 2864
 Type "hs" (without the quotation marks ") to get a list of transformations your character has.
 
 Most transformations require you to type a comamnd e.g. "fp", "ss", "metal", "first", "super".
+
+Type "-autotransform" to toggle auto transformations. Note: auto optional transformations e.g. "release", "metal" and "super".
 }
 
 STRING 2865
@@ -17652,7 +17654,7 @@ STRING 2869
 }
 
 STRING 2870
-// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
+// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17664,7 +17666,7 @@ STRING 2871
 }
 
 STRING 2872
-// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
+// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19751,7 +19753,7 @@ STRING 3219
 }
 
 STRING 3220
-// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19775,7 +19777,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 3224
-// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
+// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19950,7 +19952,7 @@ Power Level |cffffcc00R|rising - [|cffffcc00Level 5|r]
 }
 
 STRING 3253
-// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
+// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19974,7 +19976,7 @@ The Geti Star scans for high power levels.|n|n|cff00ff00Shows the location of al
 }
 
 STRING 3257
-// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -20568,63 +20570,73 @@ Energy Generation
 }
 
 STRING 3356
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 3357
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
 }
 
 STRING 3358
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
 }
 
 STRING 3359
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Max Permanent Stat Mult:
+[lvl 1]   1.20x
+[lvl 30]  1.40x
+[lvl 60]  1.80x
+[lvl 90]  2.00x
+[lvl 120] 2.20x
+[lvl 150] 2.40x
+
+Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
+
+Each [Q] increases his permanent stat multiplier by:
+[0.4 * (enemy stat mult - 1.000x) or 0.050x if higher]
+capped at his maximum permanent stat multiplier.
 }
 
 STRING 3360
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+|cff20ff200.000x|r
 }
 
 STRING 3361
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Power Level Rising
 }
 
 STRING 3362
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Power Level Rising
 }
 
 STRING 3363
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Power Level Rising
 }
 
 STRING 3364
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Power Level Rising
 }
 
 STRING 3365
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Power Level Rising
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
 }
 
 STRING 3366
@@ -20646,9 +20658,16 @@ STRING 3368
 }
 
 STRING 3369
-// Abilities: A00J (Power Level Rising), Researchubertip (Tooltip - Learn - Extended)
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his gathered stat multiplier to his allies.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 3370
@@ -20658,27 +20677,27 @@ W
 }
 
 STRING 3371
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00W|r] Power Level Rising
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1> - <A0MR,Cool10>s|r
 }
 
 STRING 3372
-// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Power Level Rising
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
 }
 
 STRING 3373
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
 }
 
 STRING 3374
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units..|n|cff00FF00Damage: str*lvl*2+100|r|n|cff00FFFFColldown:9s|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool2>s|r
 }
 
 STRING 3375
@@ -21102,7 +21121,7 @@ Galick gun mastery - [|cffffcc00Level 1|r]
 }
 
 STRING 3445
-// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -22613,7 +22632,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 3696
-// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
+// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -23644,7 +23663,7 @@ STRING 3867
 }
 
 STRING 3868
-// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -23668,7 +23687,7 @@ Creates Android 19 using spare parts from Gero's other projects.
 }
 
 STRING 3872
-// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -26519,7 +26538,7 @@ STRING 4346
 }
 
 STRING 4347
-// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26543,7 +26562,7 @@ Buu punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cool
 }
 
 STRING 4351
-// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27077,7 +27096,7 @@ STRING 4439
 }
 
 STRING 4440
-// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27101,7 +27120,7 @@ After Guru unlocked his potential, Dende gained the ability to heal others.
 }
 
 STRING 4444
-// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27815,7 +27834,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27839,7 +27858,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 4567
-// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -28008,7 +28027,7 @@ STRING 4594
 }
 
 STRING 4595
-// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28020,7 +28039,7 @@ Detonate
 }
 
 STRING 4597
-// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -29302,7 +29321,7 @@ STRING 4808
 }
 
 STRING 4809
-// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -29326,7 +29345,7 @@ Buu swings his arms so fast they appear to be windmills on his shoulder and pumm
 }
 
 STRING 4813
-// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -30936,7 +30955,7 @@ STRING 5080
 }
 
 STRING 5081
-// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
+// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -30960,7 +30979,7 @@ Cooler transforms into his final, most powerful form.
 }
 
 STRING 5085
-// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -31182,7 +31201,7 @@ STRING 5121
 }
 
 STRING 5122
-// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31206,7 +31225,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 5126
-// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -33863,7 +33882,7 @@ Candy Cane
 }
 
 STRING 5567
-// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -33875,19 +33894,19 @@ Q
 }
 
 STRING 5569
-// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
+// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 5570
-// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
+// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 5571
-// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -36736,7 +36755,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6039
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -37102,13 +37121,13 @@ STRING 6099
 }
 
 STRING 6100
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 6101
-// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37740,7 +37759,7 @@ STRING 6205
 }
 
 STRING 6206
-// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
+// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37764,7 +37783,7 @@ Buu creates ghost clones of Gotenks that will travel to the target location and 
 }
 
 STRING 6210
-// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38820,7 +38839,7 @@ STRING 6385
 }
 
 STRING 6386
-// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -39504,7 +39523,7 @@ STRING 6499
 }
 
 STRING 6500
-// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40068,7 +40087,7 @@ STRING 6593
 }
 
 STRING 6594
-// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40086,7 +40105,7 @@ STRING 6596
 }
 
 STRING 6597
-// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -40229,13 +40248,13 @@ Deactivate Distortion Field
 }
 
 STRING 6620
-// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6621
-// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40259,7 +40278,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 6625
-// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40349,7 +40368,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40373,7 +40392,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40409,27 +40428,27 @@ Buu's power level rapidly rises causing the surrounding area to crumble apart do
 }
 
 STRING 6650
-// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Power Level Rising
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool3>s|r
 }
 
 STRING 6651
-// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-[|cff00ff00W|r] Power Level Rising
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 2|r]
 }
 
 STRING 6652
-// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-[|cff00ff00W|r] Power Level Rising
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 3|r]
 }
 
 STRING 6653
-// Abilities: A0EM (Power Level Rising Buu), Tip (Tooltip - Normal)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-[|cff00ff00W|r] Power Level Rising
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 4|r]
 }
 
 STRING 6654
@@ -40439,7 +40458,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40463,7 +40482,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 6659
-// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40553,7 +40572,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40577,7 +40596,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40667,7 +40686,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40691,7 +40710,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 6697
-// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40805,7 +40824,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40829,7 +40848,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40925,7 +40944,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40949,7 +40968,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44120,7 +44139,7 @@ STRING 7265
 }
 
 STRING 7266
-// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44144,7 +44163,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 7270
-// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44396,7 +44415,7 @@ STRING 7311
 }
 
 STRING 7312
-// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44420,7 +44439,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7316
-// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45062,7 +45081,7 @@ STRING 7422
 }
 
 STRING 7423
-// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45086,7 +45105,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7427
-// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45308,7 +45327,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45332,7 +45351,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45422,7 +45441,7 @@ STRING 7482
 }
 
 STRING 7483
-// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45446,7 +45465,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7487
-// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45560,7 +45579,7 @@ S.S. Deadly Bomber
 }
 
 STRING 7506
-// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45584,7 +45603,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7510
-// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46334,7 +46353,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46358,7 +46377,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46898,7 +46917,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46922,7 +46941,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47132,7 +47151,7 @@ Masenko
 }
 
 STRING 7768
-// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47606,7 +47625,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47630,7 +47649,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -51117,7 +51136,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -52569,7 +52588,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -54782,7 +54801,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54835,6 +54854,11 @@ STRING 9040
 Dabura is a Minion of Babidi. |n[|cffffcc00History|r] - |cff0066CCAlso known as the Lord of the Underworld, he looks like a demon. Dabura is one of the evils controlled by Babidi and is a very fearsome opponent. He has the ability to change his enemies and everything into stone with his petrifying spittle, the Sekikatsuba. Dabura is killed by Majin Buu who changes him into a cookie and eats him.|r
 }
 
+STRING 9041
+{
+|cff00ff00Tegridy Farms.|r
+}
+
 STRING 9042
 // Abilities: A02F (Haretsu no Majutsu), Tip (Tooltip - Normal)
 {
@@ -54851,6 +54875,18 @@ STRING 9044
 // Abilities: A02F (Haretsu no Majutsu), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Haretsu no Majutsu [|cffffcc00Level %d|r]
+}
+
+STRING 9045
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+}
+
+STRING 9046
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool2> seconds|r
 }
 
 STRING 9047
@@ -55400,7 +55436,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -58333,13 +58369,13 @@ Q
 }
 
 STRING 9624
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9625
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59383,21 +59419,21 @@ STRING 9798
 }
 
 STRING 9799
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 5|r]
 }
 
 STRING 9800
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 6|r]
 }
 
 STRING 9801
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 1|r]
 }
 
 STRING 9802
@@ -59407,27 +59443,27 @@ Raditz
 }
 
 STRING 9803
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 7|r]
 }
 
 STRING 9804
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 9|r]
 }
 
 STRING 9805
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 8|r]
 }
 
 STRING 9806
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00ff00Q|r] Energy Drain - [|cffffcc00Level 10|r]
 }
 
 STRING 9807
@@ -59621,21 +59657,21 @@ STRING 9837
 }
 
 STRING 9838
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool4>s|r
 }
 
 STRING 9839
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool5>s|r
 }
 
 STRING 9840
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool6>s|r
 }
 
 STRING 9841
@@ -59849,9 +59885,9 @@ STRING 9875
 }
 
 STRING 9876
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool7>s|r
 }
 
 STRING 9877
@@ -59861,69 +59897,69 @@ STRING 9877
 }
 
 STRING 9878
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool1> seconds|r
 }
 
 STRING 9879
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool2> seconds|r
 }
 
 STRING 9880
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool3> seconds|r
 }
 
 STRING 9881
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool4> seconds|r
 }
 
 STRING 9882
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool5> seconds|r
 }
 
 STRING 9883
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool6> seconds|r
 }
 
 STRING 9884
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool7> seconds|r
 }
 
 STRING 9885
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 2|r]
 }
 
 STRING 9886
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 3|r]
 }
 
 STRING 9887
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 4|r]
 }
 
 STRING 9888
-// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00(Damage: Str * lvl * 3)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 5|r]
 }
 
 STRING 9889
@@ -61219,7 +61255,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61237,7 +61273,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61249,7 +61285,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61267,7 +61303,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61279,7 +61315,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61297,7 +61333,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62393,6 +62429,24 @@ STRING 10298
 [|cff00ff00Q|r] Haretsu no Majutsu [|cffffcc00Level 5|r]
 }
 
+STRING 10299
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool3> seconds|r
+}
+
+STRING 10300
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool4> seconds|r
+}
+
+STRING 10301
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool5> seconds|r
+}
+
 STRING 10302
 // Abilities: A0C0 (Vanishing Ball), Name (Name)
 {
@@ -63181,7 +63235,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -64111,10 +64165,40 @@ STRING 10585
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 3|r]
 }
 
+STRING 10586
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 1|r]
+}
+
+STRING 10587
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 2|r]
+}
+
+STRING 10588
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 3|r]
+}
+
+STRING 10589
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 4|r]
+}
+
 STRING 10590
 // Abilities: A0LS (Angry Shout), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Angry Shout - [|cffffcc00Level %d|r]
+}
+
+STRING 10591
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 5|r]
 }
 
 STRING 10592
@@ -64133,6 +64217,18 @@ STRING 10594
 // Abilities: A0LS (Angry Shout), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Angry Shout - [|cffffcc00Level 5|r]
+}
+
+STRING 10595
+// Abilities: A00J (Power Level Rising), Researchubertip (Tooltip - Learn - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool1> - <A00J,Cool7> seconds|r
+}
+
+STRING 10596
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 6|r]
 }
 
 STRING 10597
@@ -64510,6 +64606,7 @@ ttay24
 Frozenhelfire
 micohelt
 dbsw
+Spoon
 anyone else i'm missing?
 }
 
@@ -64545,7 +64642,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 9.1.20
+This map is under active development - 13.1.20
 }
 
 STRING 10653
@@ -64977,7 +65074,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -65251,7 +65348,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66409,7 +66506,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -66427,7 +66524,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -67548,6 +67645,72 @@ STRING 11148
 Q
 }
 
+STRING 11149
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 7|r]
+}
+
+STRING 11150
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool6> seconds|r
+}
+
+STRING 11151
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
+}
+
+STRING 11152
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+}
+
+STRING 11153
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+}
+
+STRING 11154
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+}
+
+STRING 11155
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
+}
+
+STRING 11156
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+}
+
+STRING 11157
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+}
+
+STRING 11158
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
+}
+
+STRING 11159
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
+}
+
 STRING 11160
 // Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
 {
@@ -67709,6 +67872,30 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 11184
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
+}
+
+STRING 11185
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+}
+
+STRING 11186
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+}
+
+STRING 11187
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
 }
 
 STRING 11188
@@ -68245,16 +68432,46 @@ STRING 11276
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: Lvl * Agi * ?|r|n|cff00FFFFCooldown: <A0G8,Cool9> seconds|r
 }
 
+STRING 11277
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool2> seconds|r
+}
+
+STRING 11278
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool3> seconds|r
+}
+
 STRING 11279
 // Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
+STRING 11280
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool4> seconds|r
+}
+
 STRING 11281
 // Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
 {
 Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool3> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11282
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool5> seconds|r
+}
+
+STRING 11283
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool6> seconds|r
 }
 
 STRING 11284
@@ -68281,6 +68498,18 @@ STRING 11287
 W
 }
 
+STRING 11288
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool7> seconds|r
+}
+
+STRING 11289
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool8> seconds|r
+}
+
 STRING 11290
 // Abilities: A0MN (Saibaman Acid), Name (Name)
 {
@@ -68291,6 +68520,96 @@ STRING 11291
 // Abilities: A0MN (Saibaman Acid), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Energy Punch - [|cffffcc00Level %d|r]
+}
+
+STRING 11292
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool9> seconds|r
+}
+
+STRING 11293
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool10> seconds|r
+}
+
+STRING 11294
+// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
+}
+
+STRING 11295
+// Units: H08Y (Planet-Eater), Name (Name)
+{
+Planet-Eater
+}
+
+STRING 11296
+// Units: H08Y (Planet-Eater), Propernames (Proper Names)
+{
+Moro
+}
+
+STRING 11297
+// Units: H08Y (Planet-Eater), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Moro
+}
+
+STRING 11298
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
+}
+
+STRING 11299
+// Units: H08Y (Planet-Eater), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Moro
+}
+
+STRING 11300
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 11301
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 11302
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
+}
+
+STRING 11303
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool2> seconds|r
+}
+
+STRING 11304
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool3> seconds|r
+}
+
+STRING 11305
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool4> seconds|r
+}
+
+STRING 11306
+// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool5> seconds|r
 }
 
 STRING 11307
@@ -68607,33 +68926,33 @@ The Saibaman splits open his head and releases acid from it, powerful enough to 
 }
 
 STRING 11358
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
 {
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
 }
 
 STRING 11359
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool2> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
 }
 
 STRING 11360
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool3> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
 }
 
 STRING 11361
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool4> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
 }
 
 STRING 11362
-// Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool5> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
 }
 
 STRING 11363
@@ -68667,8 +68986,548 @@ Nappa raises his right hand with his index and middle fingers up causing a giant
 }
 
 STRING 11368
-// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+}
+
+STRING 11369
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool8>s|r
+}
+
+STRING 11370
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool9>s|r
+}
+
+STRING 11371
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 11372
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 11373
+// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
+STRING 11374
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 1|r]
+}
+
+STRING 11375
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
+}
+
+STRING 11376
+// Abilities: A0MR (Lava Pillars), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Lava Pillars - [|cffffcc00Level %d|r]
+}
+
+STRING 11378
+// Abilities: A0MO (Energy Drain), Name (Name)
+{
+Energy Drain
+}
+
+STRING 11379
+// Abilities: A0MO (Energy Drain), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Energy Drain - [|cffffcc00Level %d|r]
+}
+
+STRING 11380
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 2|r]
+}
+
+STRING 11381
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 3|r]
+}
+
+STRING 11382
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 4|r]
+}
+
+STRING 11383
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 5|r]
+}
+
+STRING 11384
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 6|r]
+}
+
+STRING 11385
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
+}
+
+STRING 11386
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
+}
+
+STRING 11387
+// Abilities: A0MO (Energy Drain), EditorSuffix (Editor Suffix)
+{
+(moro)
+}
+
+STRING 11388
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11389
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11390
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 6|r]
+}
+
+STRING 11391
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 1|r]
+}
+
+STRING 11392
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 7|r]
+}
+
+STRING 11393
+// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 11394
+// Abilities: A0MP (Energy Ball), Name (Name)
+{
+Energy Ball
+}
+
+STRING 11395
+// Abilities: A0MP (Energy Ball), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Energy Ball - [|cffffcc00Level %d|r]
+}
+
+STRING 11396
+// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11397
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 9|r]
+}
+
+STRING 11398
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 8|r]
+}
+
+STRING 11399
+// Abilities: A0MP (Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Energy Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 11400
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool8> seconds|r
+}
+
+STRING 11401
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool9> seconds|r
+}
+
+STRING 11402
+// Abilities: A0MP (Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool10> seconds|r
+}
+
+STRING 11403
+// Abilities: A0MP (Energy Ball), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool1> seconds|r
+}
+
+STRING 11404
+// Abilities: A0MP (Energy Ball), EditorSuffix (Editor Suffix)
+{
+(moro)
+}
+
+STRING 11405
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 11406
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 1|r]
+}
+
+STRING 11407
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool1>s|r
+}
+
+STRING 11408
+// Abilities: A0MQ (Lava Burst), Name (Name)
+{
+Lava Burst
+}
+
+STRING 11409
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 11410
+// Abilities: A0MQ (Lava Burst), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Lava Burst - [|cffffcc00Level %d|r]
+}
+
+STRING 11411
+// Abilities: A0MQ (Lava Burst), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool1>s|r
+}
+
+STRING 11412
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 2|r]
+}
+
+STRING 11413
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 3|r]
+}
+
+STRING 11414
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 4|r]
+}
+
+STRING 11415
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 5|r]
+}
+
+STRING 11416
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 6|r]
+}
+
+STRING 11417
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool2>s|r
+}
+
+STRING 11418
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool3>s|r
+}
+
+STRING 11419
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool4>s|r
+}
+
+STRING 11420
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool5>s|r
+}
+
+STRING 11421
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool6>s|r
+}
+
+STRING 11422
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 7|r]
+}
+
+STRING 11423
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool7>s|r
+}
+
+STRING 11424
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool8>s|r
+}
+
+STRING 11425
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool9>s|r
+}
+
+STRING 11426
+// Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
+{
+Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy beams that follow the targeted enemy.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool10>s|r
+}
+
+STRING 11427
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 8|r]
+}
+
+STRING 11428
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 9|r]
+}
+
+STRING 11429
+// Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Lava Burst - [|cffffcc00Level 10|r]
+}
+
+STRING 11430
+// Abilities: A0MQ (Lava Burst), EditorSuffix (Editor Suffix)
+{
+(moro)
+}
+
+STRING 11431
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 11434
+// Abilities: A0MR (Lava Pillars), Name (Name)
+{
+Lava Pillars
+}
+
+STRING 11435
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 11456
+// Abilities: A0MR (Lava Pillars), EditorSuffix (Editor Suffix)
+{
+(moro)
+}
+
+STRING 11458
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 1|r]
+}
+
+STRING 11460
+// Abilities: A0MS (Power Level Sharing), Name (Name)
+{
+Power Level Sharing
+}
+
+STRING 11462
+// Abilities: A0MS (Power Level Sharing), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Power Level Sharing - [|cffffcc00Level %d|r]
+}
+
+STRING 11464
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 2|r]
+}
+
+STRING 11465
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 3|r]
+}
+
+STRING 11466
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 4|r]
+}
+
+STRING 11467
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 5|r]
+}
+
+STRING 11468
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 6|r]
+}
+
+STRING 11474
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 7|r]
+}
+
+STRING 11479
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 8|r]
+}
+
+STRING 11480
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 9|r]
+}
+
+STRING 11481
+// Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 10|r]
+}
+
+STRING 11482
+// Abilities: A0MS (Power Level Sharing), EditorSuffix (Editor Suffix)
+{
+(moro)
+}
+
+STRING 11487
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool3>s|r
+}
+
+STRING 11488
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool4>s|r
+}
+
+STRING 11489
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool5>s|r
+}
+
+STRING 11490
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool6>s|r
+}
+
+STRING 11491
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 7|r]
+}
+
+STRING 11492
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool7>s|r
+}
+
+STRING 11493
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool8>s|r
+}
+
+STRING 11494
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool9>s|r
+}
+
+STRING 11495
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool10>s|r
+}
+
+STRING 11496
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 8|r]
+}
+
+STRING 11497
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 9|r]
+}
+
+STRING 11498
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 10|r]
 }
 
