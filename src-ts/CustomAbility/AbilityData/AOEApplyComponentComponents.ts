@@ -40,7 +40,7 @@ export const AOEApplyComponentComponents = [
     affectsNonHeroes: false,
     affectsAllies: true,
     components: [
-      { name: "block power level sharing" },
+      { name: "dash forward power level sharing" },
     ],
   },
 ]

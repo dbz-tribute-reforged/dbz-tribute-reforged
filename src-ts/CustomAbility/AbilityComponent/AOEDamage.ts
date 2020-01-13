@@ -108,10 +108,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         this.damageData.weaponType,
       )
 
-      TextTagHelper.showTempText(
-        Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-        GetUnitX(target), GetUnitY(target), 1.0, 0.8
-      );
+      // TextTagHelper.showTempText(
+      //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+      //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+      // );
     })
 
     DestroyGroup(affectedGroup);

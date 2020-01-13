@@ -20590,16 +20590,18 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 STRING 3359
 {
 Max Permanent Stat Mult:
-[lvl 1]   1.40x
-[lvl 30]  1.60x
-[lvl 60]  2.00x
-[lvl 90]  2.20x
-[lvl 120] 2.40x
+[lvl 1]   1.20x
+[lvl 30]  1.40x
+[lvl 60]  1.80x
+[lvl 90]  2.00x
+[lvl 120] 2.20x
+[lvl 150] 2.40x
 
-Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult. Sagas and other weaker heroes (clones) provide +0.010x.
+Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
 
-Each use increases his permanent stat multiplier up to his maximum permanent stat multiplier by:
-0.4 * (enemy stat mult - 1.000x) or 0.050x if higher
+Each [Q] increases his permanent stat multiplier by:
+[0.4 * (enemy stat mult - 1.000x) or 0.050x if higher]
+capped at his maximum permanent stat multiplier.
 }
 
 STRING 3360
@@ -20655,10 +20657,47 @@ STRING 3368
 [|cff00ff00W|r] Learn Power Level Rising - [|cffffcc00Level %d|r]
 }
 
+STRING 3369
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+{
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his gathered stat multiplier to his allies.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 3370
 // Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 3371
+// Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1> - <A0MR,Cool10>s|r
+}
+
+STRING 3372
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+}
+
+STRING 3373
+// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+}
+
+STRING 3374
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool2>s|r
 }
 
 STRING 3375
@@ -40388,6 +40427,12 @@ STRING 6649
 Buu's power level rapidly rises causing the surrounding area to crumble apart doing small damage to nearby units. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
+STRING 6650
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool3>s|r
+}
+
 STRING 6651
 // Abilities: A0MO (Energy Drain), Tip (Tooltip - Normal)
 {
@@ -59611,6 +59656,24 @@ STRING 9837
 [|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 10|r]
 }
 
+STRING 9838
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool4>s|r
+}
+
+STRING 9839
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool5>s|r
+}
+
+STRING 9840
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool6>s|r
+}
+
 STRING 9841
 // Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
@@ -59819,6 +59882,12 @@ STRING 9875
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 9876
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool7>s|r
 }
 
 STRING 9877
@@ -68922,6 +68991,18 @@ STRING 11368
 Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
 }
 
+STRING 11369
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool8>s|r
+}
+
+STRING 11370
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool9>s|r
+}
+
 STRING 11371
 // Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
@@ -68956,12 +69037,6 @@ STRING 11376
 // Abilities: A0MR (Lava Pillars), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Lava Pillars - [|cffffcc00Level %d|r]
-}
-
-STRING 11377
-// Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
-{
-Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
 }
 
 STRING 11378
@@ -69010,6 +69085,12 @@ STRING 11385
 // Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
 Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
+}
+
+STRING 11386
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
 }
 
 STRING 11387
@@ -69306,12 +69387,6 @@ STRING 11458
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 1|r]
 }
 
-STRING 11459
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
-}
-
 STRING 11460
 // Abilities: A0MS (Power Level Sharing), Name (Name)
 {
@@ -69322,12 +69397,6 @@ STRING 11462
 // Abilities: A0MS (Power Level Sharing), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Power Level Sharing - [|cffffcc00Level %d|r]
-}
-
-STRING 11463
-// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
-{
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
 }
 
 STRING 11464
@@ -69360,64 +69429,10 @@ STRING 11468
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 6|r]
 }
 
-STRING 11469
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool2>s|r
-}
-
-STRING 11470
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool3>s|r
-}
-
-STRING 11471
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool4>s|r
-}
-
-STRING 11472
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool5>s|r
-}
-
-STRING 11473
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool6>s|r
-}
-
 STRING 11474
 // Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 7|r]
-}
-
-STRING 11475
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool7>s|r
-}
-
-STRING 11476
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool8>s|r
-}
-
-STRING 11477
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool9>s|r
-}
-
-STRING 11478
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his immense powers with his allies to make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with minor damage block.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)Damage Block: Int * lvl * 0.2 @ 15% |r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
 }
 
 STRING 11479
@@ -69442,19 +69457,6 @@ STRING 11482
 // Abilities: A0MS (Power Level Sharing), EditorSuffix (Editor Suffix)
 {
 (moro)
-}
-
-STRING 11483
-// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
-{
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his gathered stat multiplier to his allies.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 11487

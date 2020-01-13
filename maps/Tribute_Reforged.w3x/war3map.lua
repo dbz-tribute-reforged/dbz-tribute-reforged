@@ -467,6 +467,7 @@ gg_trg_Moro_Text_Tag_Update = nil
 gg_trg_Moro_Power_Level_Sharing = nil
 gg_trg_Temp_Stat_Mult_Passive_Update = nil
 gg_trg_Moro_Increase_Perm_Mult_PvP = nil
+gg_trg_Moro_Increase_Perm_Mult_Other_Heroes = nil
 gg_trg_Moro_Modify_Temp_Mult = nil
 gg_trg_Moro_Get_Max_Permanent_Mult = nil
 gg_trg_Transformations_Apply_SFX = nil
@@ -489,7 +490,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Moro_Increase_Perm_Mult_Other_Heroes = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -12219,6 +12219,7 @@ function Trig_Transformations_Moro_Actions()
     if (Trig_Transformations_Moro_Func010C()) then
                 udg_TransformationID = FourCC('nmed')
         BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        SetUnitScalePercent(udg_StatMultUnit, 200.00, 200.00, 200.00)
     else
     end
     if (Trig_Transformations_Moro_Func011C()) then
@@ -12285,7 +12286,7 @@ function Trig_Moro_Energy_Drain_Active_Func004A()
         else
         end
         SetUnitLifePercentBJ(udg_MoroDrainSourceUnit, RMinBJ(100.00, (GetUnitLifePercent(udg_MoroDrainSourceUnit) + 0.30)))
-        UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (60.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (75.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
     else
     end
 end

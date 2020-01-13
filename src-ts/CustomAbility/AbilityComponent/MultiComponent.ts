@@ -142,20 +142,18 @@ export class MultiComponent implements
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
-      TextTagHelper.showPlayerColorTextToForce(
-        ability.currentTick + "!",
-        input.castPoint.x, 
-        input.castPoint.y,
-      );
+      // TextTagHelper.showPlayerColorTextToForce(
+      //   ability.currentTick + "!",
+      //   input.castPoint.x, 
+      //   input.castPoint.y,
+      // );
     } else {
-      BJDebugMsg("i am editing target point for some reason");
       tmp = input.targetPoint
       input.targetPoint = CoordMath.polarProjectCoords(
         sourceCoords, 
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
-      TextTagHelper.showPlayerColorTextToForce("MultiTargetPoint!", input.targetPoint.x, input.targetPoint.y);
     }
 
     // keep showing active components
