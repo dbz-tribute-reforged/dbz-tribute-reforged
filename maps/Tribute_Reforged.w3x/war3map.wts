@@ -17620,7 +17620,7 @@ Type "hs" (without the quotation marks ") to get a list of transformations your 
 
 Most transformations require you to type a comamnd e.g. "fp", "ss", "metal", "first", "super".
 
-Type "-autotransform" to toggle auto transformations. Note: auto transforming ignores "release", "super" and some others.
+Type "-autotransform" to toggle auto transformations. Note: auto optional transformations e.g. "release", "metal" and "super".
 }
 
 STRING 2865
@@ -20596,7 +20596,7 @@ Max Permanent Stat Mult:
 [lvl 90]  2.20x
 [lvl 120] 2.40x
 
-Moro can only increase his permanent stat mult by draining the stat multiplier of other players by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
+Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult. Sagas and other weaker heroes (clones) provide +0.010x.
 
 Each use increases his permanent stat multiplier up to his maximum permanent stat multiplier by:
 0.4 * (enemy stat mult - 1.000x) or 0.050x if higher
@@ -68922,10 +68922,46 @@ STRING 11368
 Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
 }
 
-STRING 11369
+STRING 11371
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 11372
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 11373
 // Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
+STRING 11374
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 1|r]
+}
+
+STRING 11375
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
+}
+
+STRING 11376
+// Abilities: A0MR (Lava Pillars), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Lava Pillars - [|cffffcc00Level %d|r]
+}
+
+STRING 11377
+// Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
 }
 
 STRING 11378
@@ -68938,6 +68974,42 @@ STRING 11379
 // Abilities: A0MO (Energy Drain), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Energy Drain - [|cffffcc00Level %d|r]
+}
+
+STRING 11380
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 2|r]
+}
+
+STRING 11381
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 3|r]
+}
+
+STRING 11382
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 4|r]
+}
+
+STRING 11383
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 5|r]
+}
+
+STRING 11384
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 6|r]
+}
+
+STRING 11385
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
 }
 
 STRING 11387
@@ -69210,18 +69282,6 @@ STRING 11431
 R
 }
 
-STRING 11432
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 1|r]
-}
-
-STRING 11433
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
-}
-
 STRING 11434
 // Abilities: A0MR (Lava Pillars), Name (Name)
 {
@@ -69234,136 +69294,10 @@ STRING 11435
 R
 }
 
-STRING 11436
-// Abilities: A0MR (Lava Pillars), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00R|r] Learn Lava Burst - [|cffffcc00Level %d|r]
-}
-
-STRING 11437
-// Abilities: A0MR (Lava Pillars), Researchubertip (Tooltip - Learn - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool1>s|r
-}
-
-STRING 11438
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 2|r]
-}
-
-STRING 11439
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 3|r]
-}
-
-STRING 11440
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 4|r]
-}
-
-STRING 11441
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 5|r]
-}
-
-STRING 11442
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 6|r]
-}
-
-STRING 11443
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
-}
-
-STRING 11444
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool3>s|r
-}
-
-STRING 11445
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool4>s|r
-}
-
-STRING 11446
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool5>s|r
-}
-
-STRING 11447
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool6>s|r
-}
-
-STRING 11448
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 7|r]
-}
-
-STRING 11449
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool7>s|r
-}
-
-STRING 11450
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool8>s|r
-}
-
-STRING 11451
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool9>s|r
-}
-
-STRING 11452
-// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
-{
-Moro channels the life energy of the planet he is on to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool10>s|r
-}
-
-STRING 11453
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 8|r]
-}
-
-STRING 11454
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 9|r]
-}
-
-STRING 11455
-// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Lava Burst - [|cffffcc00Level 10|r]
-}
-
 STRING 11456
 // Abilities: A0MR (Lava Pillars), EditorSuffix (Editor Suffix)
 {
 (moro)
-}
-
-STRING 11457
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
-{
-R
 }
 
 STRING 11458
@@ -69382,12 +69316,6 @@ STRING 11460
 // Abilities: A0MS (Power Level Sharing), Name (Name)
 {
 Power Level Sharing
-}
-
-STRING 11461
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
-{
-R
 }
 
 STRING 11462
@@ -69529,18 +69457,75 @@ A PVP-oriented hero that relies on draining the stat multiplier of stronger hero
 
 }
 
-STRING 11484
+STRING 11487
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
-moro q enemy
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool3>s|r
 }
 
-STRING 11485
+STRING 11488
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
-moro q enemy hero
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool4>s|r
 }
 
-STRING 11486
+STRING 11489
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
-moro q enemy hero statmult
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool5>s|r
+}
+
+STRING 11490
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool6>s|r
+}
+
+STRING 11491
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 7|r]
+}
+
+STRING 11492
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool7>s|r
+}
+
+STRING 11493
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool8>s|r
+}
+
+STRING 11494
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool9>s|r
+}
+
+STRING 11495
+// Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
+{
+Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool10>s|r
+}
+
+STRING 11496
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 8|r]
+}
+
+STRING 11497
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 9|r]
+}
+
+STRING 11498
+// Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 10|r]
 }
 

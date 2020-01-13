@@ -466,7 +466,7 @@ gg_trg_Moro_Energy_Drain_Passive = nil
 gg_trg_Moro_Text_Tag_Update = nil
 gg_trg_Moro_Power_Level_Sharing = nil
 gg_trg_Temp_Stat_Mult_Passive_Update = nil
-gg_trg_Moro_Increase_Perm_Mult = nil
+gg_trg_Moro_Increase_Perm_Mult_PvP = nil
 gg_trg_Moro_Modify_Temp_Mult = nil
 gg_trg_Moro_Get_Max_Permanent_Mult = nil
 gg_trg_Transformations_Apply_SFX = nil
@@ -489,6 +489,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Moro_Increase_Perm_Mult_Other_Heroes = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -3792,7 +3793,7 @@ function InitTrig_Hero_Level_up_New_New()
     TriggerAddAction(gg_trg_Hero_Level_up_New_New, Trig_Hero_Level_up_New_New_Actions)
 end
 
-function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func007C()
+function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func009C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
@@ -3813,6 +3814,12 @@ function Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002C(
         return false
     end
     if (not (udg_TransformationString ~= "super")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "cloak")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "uncloak")) then
         return false
     end
     return true
@@ -3845,7 +3852,7 @@ function Trig_Auto_Transform_Func001Func002Func005A()
                 udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
                 if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002C()) then
                     TriggerExecute(gg_trg_Transformations_Parse_String)
-                    if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func007C()) then
+                    if (Trig_Auto_Transform_Func001Func002Func005Func003Func003Func001Func002Func009C()) then
                         udg_TempBool = false
                     else
                     end
@@ -4662,7 +4669,7 @@ function Trig_Scoreboard_Update_Actions()
         if (Trig_Scoreboard_Update_Func001Func002C()) then
             udg_TempUnit = GroupPickRandomUnit(udg_StatMultPlayerUnits[udg_TempInt])
             udg_StatMultUnit = udg_TempUnit
-            TriggerExecute(gg_trg_Get_Stat_Multiplier)
+            TriggerExecute(gg_trg_Get_Stat_Multiplier_Include_Moro)
             TriggerExecute(gg_trg_Get_Highest_Stat_Real)
             udg_TempReal = udg_StatMultReal
             ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Scoreboard_Update_Func001Func002Func007A)
@@ -6705,14 +6712,14 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func011Func003C()
+function Trig_Add_Unit_To_StatMult_Func001Func012Func003C()
     if (not (udg_TempUnitType == FourCC("H08Y"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func011C()
+function Trig_Add_Unit_To_StatMult_Func001Func012C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
         return false
     end
@@ -6722,7 +6729,7 @@ function Trig_Add_Unit_To_StatMult_Func001Func011C()
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func012Func010C()
+function Trig_Add_Unit_To_StatMult_Func001Func013Func010C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08Y")) then
         return true
     end
@@ -6732,14 +6739,14 @@ function Trig_Add_Unit_To_StatMult_Func001Func012Func010C()
     return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func012C()
-    if (not Trig_Add_Unit_To_StatMult_Func001Func012Func010C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func013C()
+    if (not Trig_Add_Unit_To_StatMult_Func001Func013Func010C()) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func017C()
+function Trig_Add_Unit_To_StatMult_Func001Func018C()
     if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
@@ -6755,6 +6762,7 @@ end
 
 function Trig_Add_Unit_To_StatMult_Actions()
     if (Trig_Add_Unit_To_StatMult_Func001C()) then
+        BlzSetUnitBaseDamage(udg_StatMultUnit, (BlzGetUnitBaseDamage(udg_StatMultUnit, 0) + 70), 0)
                 udg_ID = GetHandleId(udg_StatMultUnit)
         SaveRealBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_StatMultUnit, false)), 0, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, false)), 1, udg_ID, udg_StatMultHashtable)
@@ -6765,17 +6773,17 @@ function Trig_Add_Unit_To_StatMult_Actions()
         SaveIntegerBJ(GetHeroLevel(udg_StatMultUnit), 17, udg_ID, udg_StatMultHashtable)
         SaveRealBJ(0.00, 19, udg_ID, udg_StatMultHashtable)
         udg_TempBool = false
-        if (Trig_Add_Unit_To_StatMult_Func001Func011C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
             udg_TempInt = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
                         udg_TempUnitType = udg_TempInt
-            if (Trig_Add_Unit_To_StatMult_Func001Func011Func003C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func012Func003C()) then
                 udg_TempBool = true
             else
             end
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func012C()) then
-            CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 13.00, 10, 100, 100, 100, 0)
+        if (Trig_Add_Unit_To_StatMult_Func001Func013C()) then
+            CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 10.00, 10, 100, 100, 100, 0)
             ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
             udg_TempPlayerGroup2 = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
             ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_TempPlayerGroup2)
@@ -6790,7 +6798,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
         AddSpecialEffectTargetUnitBJ("overhead", udg_StatMultUnit, "SantaHat.mdx")
         SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
         udg_TempUnit = udg_StatMultUnit
-        if (Trig_Add_Unit_To_StatMult_Func001Func017C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func018C()) then
             udg_TempLoc = GetUnitLoc(udg_TempUnit)
             udg_TempReal = RMinBJ(4000.00, RMaxBJ(1000.00, (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
             CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -7024,6 +7032,10 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "hs"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "r"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "cloak"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "uncloak"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "first"
     udg_TempInt = (udg_TempInt + 1)
@@ -12175,6 +12187,20 @@ function Trig_Transformations_Moro_Func009C()
     return true
 end
 
+function Trig_Transformations_Moro_Func010C()
+    if (not (udg_TransformationString == "cloak")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Moro_Func011C()
+    if (not (udg_TransformationString == "uncloak")) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Moro_Actions()
     udg_TransformationSFXString = ""
     udg_TransformationSFXString2 = ""
@@ -12188,6 +12214,16 @@ function Trig_Transformations_Moro_Actions()
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
         DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_3359")
                 DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Moro_Func010C()) then
+                udg_TransformationID = FourCC('nmed')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+    else
+    end
+    if (Trig_Transformations_Moro_Func011C()) then
+                udg_TransformationID = FourCC('H08Y')
+        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
     else
     end
 end
@@ -12204,14 +12240,14 @@ function Trig_Moro_Energy_Drain_Active_Conditions()
     return true
 end
 
-function Trig_Moro_Energy_Drain_Active_Func004Func002Func002Func002C()
+function Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()
     if (not (IsUnitInGroup(udg_MoroDrainTargetUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainTargetUnit))]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Moro_Energy_Drain_Active_Func004Func002Func002C()
+function Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()
     if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
         return false
     end
@@ -12222,32 +12258,34 @@ function Trig_Moro_Energy_Drain_Active_Func004Func002C()
     if (not (IsUnitEnemy(udg_MoroDrainTargetUnit, GetOwningPlayer(udg_MoroDrainSourceUnit)) == true)) then
         return false
     end
+    if (not (IsUnitAliveBJ(udg_MoroDrainTargetUnit) == true)) then
+        return false
+    end
     return true
 end
 
 function Trig_Moro_Energy_Drain_Active_Func004A()
     udg_MoroDrainTargetUnit = GetEnumUnit()
     if (Trig_Moro_Energy_Drain_Active_Func004Func002C()) then
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11484")
-        if (Trig_Moro_Energy_Drain_Active_Func004Func002Func002C()) then
-            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11485")
-            if (Trig_Moro_Energy_Drain_Active_Func004Func002Func002Func002C()) then
-                DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11486")
+        if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()) then
+            if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()) then
                 udg_StatMultUnit = udg_MoroDrainSourceUnit
                 udg_MoroStatMultReal = 0.10
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 udg_StatMultUnit = udg_MoroDrainTargetUnit
                 udg_MoroStatMultReal = -0.05
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
-                TriggerExecute(gg_trg_Moro_Increase_Perm_Mult)
+                TriggerExecute(gg_trg_Moro_Increase_Perm_Mult_PvP)
             else
-                udg_MoroUnit = udg_MoroDrainSourceUnit
-                udg_MoroStatMultReal = (0.10 * 0.25)
+                udg_StatMultUnit = udg_MoroDrainSourceUnit
+                udg_MoroStatMultReal = (0.10 * 0.20)
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
+                TriggerExecute(gg_trg_Moro_Increase_Perm_Mult_Other_Heroes)
             end
         else
         end
         SetUnitLifePercentBJ(udg_MoroDrainSourceUnit, RMinBJ(100.00, (GetUnitLifePercent(udg_MoroDrainSourceUnit) + 0.30)))
+        UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (60.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
     else
     end
 end
@@ -12270,6 +12308,9 @@ end
 
 function Trig_Moro_Energy_Drain_Passive_Func002Func002Func005Func002C()
     if (not (IsUnitEnemy(udg_MoroDrainTargetUnit, GetOwningPlayer(udg_MoroDrainSourceUnit)) == true)) then
+        return false
+    end
+    if (not (IsUnitAliveBJ(udg_MoroDrainTargetUnit) == true)) then
         return false
     end
     if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
@@ -12330,7 +12371,7 @@ function Trig_Moro_Text_Tag_Update_Func001A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), ("|cff20ff20" .. (R2S(LoadRealBJ(19, udg_ID, udg_StatMultHashtable)) .. "x|r")), 10)
-    SetTextTagPosUnitBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), udg_TempUnit, 12.00)
+    SetTextTagPosUnitBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), udg_TempUnit, 25.00)
 end
 
 function Trig_Moro_Text_Tag_Update_Actions()
@@ -12354,7 +12395,13 @@ function Trig_Moro_Power_Level_Sharing_Func011Func002C()
     if (not (IsUnitAlly(udg_MoroDrainTargetUnit, GetOwningPlayer(udg_MoroDrainSourceUnit)) == true)) then
         return false
     end
+    if (not (IsUnitAliveBJ(udg_MoroDrainTargetUnit) == true)) then
+        return false
+    end
     if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (udg_MoroDrainSourceUnit ~= udg_MoroDrainTargetUnit)) then
         return false
     end
     if (not (IsUnitInGroup(udg_MoroDrainTargetUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_MoroDrainTargetUnit))]) == true)) then
@@ -12419,6 +12466,8 @@ function Trig_Temp_Stat_Mult_Passive_Update_Func001Func002A()
             udg_TempReal = RMinBJ(0.00, (udg_TempReal + (0.03 * 0.01)))
         end
         SaveRealBJ(udg_TempReal, 19, udg_ID, udg_StatMultHashtable)
+        udg_StatMultUnit = udg_TempUnit
+        TriggerExecute(gg_trg_Update_Current_Stats)
     else
     end
 end
@@ -12439,7 +12488,7 @@ function InitTrig_Temp_Stat_Mult_Passive_Update()
     TriggerAddAction(gg_trg_Temp_Stat_Mult_Passive_Update, Trig_Temp_Stat_Mult_Passive_Update_Actions)
 end
 
-function Trig_Moro_Increase_Perm_Mult_Actions()
+function Trig_Moro_Increase_Perm_Mult_PvP_Actions()
     udg_StatMultUnit = udg_MoroDrainTargetUnit
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     udg_StatMultReal = (((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) - 1.00) * 0.40)
@@ -12453,9 +12502,25 @@ function Trig_Moro_Increase_Perm_Mult_Actions()
     TriggerExecute(gg_trg_Update_Current_Stats)
 end
 
-function InitTrig_Moro_Increase_Perm_Mult()
-    gg_trg_Moro_Increase_Perm_Mult = CreateTrigger()
-    TriggerAddAction(gg_trg_Moro_Increase_Perm_Mult, Trig_Moro_Increase_Perm_Mult_Actions)
+function InitTrig_Moro_Increase_Perm_Mult_PvP()
+    gg_trg_Moro_Increase_Perm_Mult_PvP = CreateTrigger()
+    TriggerAddAction(gg_trg_Moro_Increase_Perm_Mult_PvP, Trig_Moro_Increase_Perm_Mult_PvP_Actions)
+end
+
+function Trig_Moro_Increase_Perm_Mult_Other_Heroes_Actions()
+    udg_StatMultReal = 0.01
+    udg_MoroInt = GetHeroLevel(udg_MoroDrainSourceUnit)
+    TriggerExecute(gg_trg_Moro_Get_Max_Permanent_Mult)
+    udg_StatMultUnit = udg_MoroDrainSourceUnit
+    TriggerExecute(gg_trg_Get_Stat_Multiplier)
+    udg_StatMultReal = RMinBJ(udg_MoroStatMultReal, (udg_StatMultInt + udg_StatMultReal))
+    TriggerExecute(gg_trg_Set_Stat_Multiplier)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+end
+
+function InitTrig_Moro_Increase_Perm_Mult_Other_Heroes()
+    gg_trg_Moro_Increase_Perm_Mult_Other_Heroes = CreateTrigger()
+    TriggerAddAction(gg_trg_Moro_Increase_Perm_Mult_Other_Heroes, Trig_Moro_Increase_Perm_Mult_Other_Heroes_Actions)
 end
 
 function Trig_Moro_Modify_Temp_Mult_Func003Func001C()
@@ -12481,17 +12546,17 @@ end
 
 function Trig_Moro_Modify_Temp_Mult_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
-    udg_MoroReal = (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + udg_MoroStatMultReal)
+    udg_MoroReal = (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + 0.00)
     if (Trig_Moro_Modify_Temp_Mult_Func003C()) then
         if (Trig_Moro_Modify_Temp_Mult_Func003Func001C()) then
-            udg_MoroReal = RMaxBJ(-0.20, udg_MoroReal)
+            udg_MoroReal = RMaxBJ(-0.20, (udg_MoroReal + udg_MoroStatMultReal))
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
             TriggerExecute(gg_trg_Update_Current_Stats)
         else
         end
     else
         if (Trig_Moro_Modify_Temp_Mult_Func003Func002C()) then
-            udg_MoroReal = RMinBJ(0.20, udg_MoroReal)
+            udg_MoroReal = RMinBJ(0.20, (udg_MoroReal + udg_MoroStatMultReal))
             SaveRealBJ(udg_MoroReal, 19, udg_ID, udg_StatMultHashtable)
             TriggerExecute(gg_trg_Update_Current_Stats)
         else
@@ -12502,6 +12567,13 @@ end
 function InitTrig_Moro_Modify_Temp_Mult()
     gg_trg_Moro_Modify_Temp_Mult = CreateTrigger()
     TriggerAddAction(gg_trg_Moro_Modify_Temp_Mult, Trig_Moro_Modify_Temp_Mult_Actions)
+end
+
+function Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001C()
+    if (not (udg_MoroInt < 150)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001C()
@@ -12534,17 +12606,22 @@ end
 
 function Trig_Moro_Get_Max_Permanent_Mult_Actions()
     if (Trig_Moro_Get_Max_Permanent_Mult_Func001C()) then
-        udg_MoroStatMultReal = 1.40
+        udg_MoroStatMultReal = 1.20
     else
         if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002C()) then
-            udg_MoroStatMultReal = 1.60
+            udg_MoroStatMultReal = 1.40
         else
             if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001C()) then
-                udg_MoroStatMultReal = 2.20
+                udg_MoroStatMultReal = 1.80
             else
                 if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001C()) then
-                    udg_MoroStatMultReal = 2.40
+                    udg_MoroStatMultReal = 2.00
                 else
+                    if (Trig_Moro_Get_Max_Permanent_Mult_Func001Func002Func001Func001Func001C()) then
+                        udg_MoroStatMultReal = 2.20
+                    else
+                        udg_MoroStatMultReal = 2.40
+                    end
                 end
             end
         end
@@ -13026,7 +13103,8 @@ function InitCustomTriggers()
     InitTrig_Moro_Text_Tag_Update()
     InitTrig_Moro_Power_Level_Sharing()
     InitTrig_Temp_Stat_Mult_Passive_Update()
-    InitTrig_Moro_Increase_Perm_Mult()
+    InitTrig_Moro_Increase_Perm_Mult_PvP()
+    InitTrig_Moro_Increase_Perm_Mult_Other_Heroes()
     InitTrig_Moro_Modify_Temp_Mult()
     InitTrig_Moro_Get_Max_Permanent_Mult()
     InitTrig_Transformations_Apply_SFX()

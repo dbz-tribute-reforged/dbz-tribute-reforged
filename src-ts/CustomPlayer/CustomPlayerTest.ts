@@ -170,7 +170,10 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
-    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+    return (
+      GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
+      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
+    );
   }));
   TriggerAddAction(updatePlayerOrderPoint, () => {
     const x = GetOrderPointX();
@@ -187,7 +190,10 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
   TriggerAddCondition(updatePlayerTargetPoint, Condition(() => {
-    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+    return (
+      GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
+      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
+    );
   }));
   TriggerAddAction(updatePlayerTargetPoint, () => {
     const playerId = GetPlayerId(GetTriggerPlayer());

@@ -412,7 +412,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -428,7 +428,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -811,7 +811,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 900,
     damageData: {
@@ -827,7 +827,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 900,
     damageData: {
@@ -1229,7 +1229,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 750,
     damageData: {
@@ -1245,7 +1245,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 300,
     damageData: {
@@ -1261,7 +1261,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 750,
     damageData: {
@@ -1277,7 +1277,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 300,
     damageData: {
@@ -1294,7 +1294,7 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -1363,11 +1363,44 @@ export const AOEDamageComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 0,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION,
+      multiplier: BASE.KAME_EXPLOSION * 0.8,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // spirit bomb
+  {
+    name: "damage energy ball moro dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
+    aoe: 500,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.5,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage energy ball moro explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
+    aoe: 600,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1410,14 +1443,14 @@ export const AOEDamageComponents = [
   // lava pillars
   {
     name: "damage target lava pillars",
-    repeatInterval: 16,
+    repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_DYNAMIC,
     useLastCastPoint: true,
-    aoe: 400,
+    aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.1,
+      multiplier: BASE.KAME_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

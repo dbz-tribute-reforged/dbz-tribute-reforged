@@ -7,8 +7,9 @@ import { AbilitySfxHelper } from "CustomAbility/AbilitySfxHelper";
 
 export class SfxComponent implements AbilityComponent, Serializable<SfxComponent>  {
   static readonly SOURCE_UNIT = 0;
-  static readonly SOURCE_TARGET_POINT = 1;
-  static readonly SOURCE_TARGET_UNIT = 2;
+  static readonly SOURCE_TARGET_POINT_FIXED = 1;
+  static readonly SOURCE_TARGET_POINT_DYNAMIC = 2;
+  static readonly SOURCE_TARGET_UNIT = 3;
 
   protected sfxCoords: Vector2D;
   protected sfxStarted: boolean;
@@ -38,12 +39,14 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.sfxStarted) {
       this.sfxStarted = true;
-      if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT) {
+      if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_FIXED) {
         this.setSfxCoordsToTargettedPoint(input);
       }
     }
 
-    if (this.sfxSource == SfxComponent.SOURCE_UNIT) {
+    if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_DYNAMIC) {
+      this.setSfxCoordsToTargettedPoint(input);
+    } else if (this.sfxSource == SfxComponent.SOURCE_UNIT) {
       this.sfxCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
     } else if (this.sfxSource == SfxComponent.SOURCE_TARGET_UNIT) {
       if (input.targetUnit) {

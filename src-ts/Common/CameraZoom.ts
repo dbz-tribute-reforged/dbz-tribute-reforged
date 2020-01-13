@@ -49,7 +49,7 @@ export module CameraZoom {
 
         TriggerAddCondition(zoomTrig, Condition(() => {
             let cam = arr[GetPlayerId(GetTriggerPlayer())];
-            let newZoom = 360 - S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
+            let newZoom = S2R(SubString(GetEventPlayerChatString(), 5, StringLength(GetEventPlayerChatString())));
 
             if (newZoom > ZOOM_MAX) newZoom = ZOOM_MAX;
             else if (newZoom < ZOOM_MIN) newZoom = ZOOM_MIN;

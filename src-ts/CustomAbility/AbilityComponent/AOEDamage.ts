@@ -9,9 +9,10 @@ import { Colorizer } from "Common/Colorizer";
 
 export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SOURCE_UNIT = 0;
-  static readonly SOURCE_TARGET_POINT = 1;
-  static readonly SOURCE_TARGET_UNIT = 2;
-  static readonly SOURCE_LAST_CAST_UNIT = 3;
+  static readonly SOURCE_TARGET_POINT_FIXED = 1;
+  static readonly SOURCE_TARGET_POINT_DYNAMIC = 2;
+  static readonly SOURCE_TARGET_UNIT = 3;
+  static readonly SOURCE_LAST_CAST_UNIT = 4;
 
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
@@ -57,12 +58,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.damageStarted) {
       this.damageStarted = true;
-      if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT) {
+      if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
       }
     }
 
-    if (this.damageSource == AOEDamage.SOURCE_UNIT) {
+    if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_DYNAMIC) {
+      this.setDamageSourceToTargettedPoint(input);
+    } else if (this.damageSource == AOEDamage.SOURCE_UNIT) {
       this.damageCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
     } else if (this.damageSource == AOEDamage.SOURCE_TARGET_UNIT) {
       if (input.targetUnit) {
@@ -105,10 +108,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         this.damageData.weaponType,
       )
 
-      // TextTagHelper.showTempText(
-      //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-      //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
-      // );
+      TextTagHelper.showTempText(
+        Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+        GetUnitX(target), GetUnitY(target), 1.0, 0.8
+      );
     })
 
     DestroyGroup(affectedGroup);
