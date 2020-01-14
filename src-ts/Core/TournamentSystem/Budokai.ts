@@ -279,6 +279,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
               SetUnitInvulnerable(unit, false);
             });
 
+            PanCameraToTimedForPlayer(
+              Player(contestant.id), 
+              unitContestant.oldPosition.x, 
+              unitContestant.oldPosition.y, 
+              0
+            );
+
             DestroyGroup(extraUnitsGroup);
             break;
           }

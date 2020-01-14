@@ -485,11 +485,6 @@ gg_trg_Zanzo_Cooldown = nil
 gg_trg_Zanzo_Move = nil
 gg_trg_Bean_Tick = nil
 gg_trg_Use_Bean = nil
-gg_unit_H000_0014 = nil
-gg_unit_H000_0311 = nil
-gg_unit_U01D_0410 = nil
-gg_unit_H01H_0411 = nil
-gg_unit_H08K_0422 = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1106,7 +1101,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17104.0, 491.1, 322.579, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15360.1, -573.4, 118.986, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14299.4, -1214.6, 149.210, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 16925.2, -5819.1, 174.236, FourCC("n03B"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 16920.3, -5356.1, 227.502, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, 290.234, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17263.8, -1854.8, 258.890, FourCC("n01E"))
@@ -1550,6 +1545,23 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14011.3, 12114.7, 280.918, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16771.4, 10025.5, 280.918, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 16552.2, 10203.9, 280.918, FourCC("n020"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -3617.6, 6638.0, 136.342, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), -4020.9, 3472.5, 197.118, FourCC("n01U"))
+    SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15471.8, -5175.0, 278.092, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 14914.1, -6221.0, 68.018, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 17022.8, -6659.4, 143.187, FourCC("n03B"))
+    SetUnitColor(u, ConvertPlayerColor(8))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15555.7, -6177.1, 105.506, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 6560.5, 15255.4, 45.790, FourCC("n014"))
+    SetUnitColor(u, ConvertPlayerColor(8))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -343.3, -1165.7, 212.400, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), -161.2, -1014.6, 27.191, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), -33.1, -1396.4, 133.495, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -646.3, -5187.2, 232.757, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -1866.6, -4397.6, 53.993, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2290.7, -2009.3, 306.843, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 998.5, -5818.0, 174.600, FourCC("n015"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -1590,327 +1602,21 @@ function CreateNeutralPassive()
     local unitID
     local t
     local life
-    u = BlzCreateUnitWithSkin(p, FourCC("H000"), -479.1, 22700.1, 279.087, FourCC("H000"))
-    SetUnitState(u, UNIT_STATE_MANA, 560)
-    u = BlzCreateUnitWithSkin(p, FourCC("H05C"), 354.9, 22361.7, 271.245, FourCC("H05C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H05D"), 290.0, 22305.4, 249.276, FourCC("H05D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H06M"), 283.3, 22789.1, 270.500, FourCC("H06M"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H04D"), 439.2, 22724.0, 274.500, FourCC("H04D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E01T"), 609.7, 22761.2, 271.773, FourCC("E01T"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H071"), 443.8, 22339.2, 267.404, FourCC("H071"))
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("H086"), -167.3, 22747.1, 246.892, FourCC("H086"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H03G"), -433.0, 22758.9, 304.939, FourCC("H03G"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H04P"), 740.7, 22747.0, 268.114, FourCC("H04P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 845.1, 22781.8, 265.090, FourCC("E00K"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H000"), -610.6, 22906.0, 95.869, FourCC("H000"))
-    SetHeroLevel(u, 10, false)
-    SetUnitState(u, UNIT_STATE_MANA, 560)
-    SelectHeroSkill(u, FourCC("A0KO"))
-    IssueImmediateOrder(u, "")
-    u = BlzCreateUnitWithSkin(p, FourCC("H061"), 630.6, 22398.8, 269.021, FourCC("H061"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E003"), -317.1, 22716.4, 275.180, FourCC("E003"))
-    SetUnitState(u, UNIT_STATE_MANA, 560)
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("U01D"), -591.2, 21353.5, 275.440, FourCC("U01D"))
-    SetHeroLevel(u, 20, false)
-    SetHeroStr(u, 250, true)
-    SetHeroAgi(u, 16, true)
-    SetHeroInt(u, 200, true)
-    SetUnitState(u, UNIT_STATE_MANA, 1400)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    SelectHeroSkill(u, FourCC("A00R"))
-    SelectHeroSkill(u, FourCC("A00R"))
-    SelectHeroSkill(u, FourCC("A00R"))
-    SelectHeroSkill(u, FourCC("A00R"))
-    IssueImmediateOrder(u, "")
-    SelectHeroSkill(u, FourCC("A0KO"))
-    SelectHeroSkill(u, FourCC("A0KO"))
-    SelectHeroSkill(u, FourCC("A0KO"))
-    SelectHeroSkill(u, FourCC("A0KO"))
-    IssueImmediateOrder(u, "")
-    u = BlzCreateUnitWithSkin(p, FourCC("H01H"), -515.4, 21391.2, 272.190, FourCC("H01H"))
-    SetHeroLevel(u, 25, false)
-    SetHeroStr(u, 250, true)
-    SetHeroAgi(u, 16, true)
-    SetHeroInt(u, 200, true)
-    SetUnitState(u, UNIT_STATE_MANA, 1750)
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00K"), -221.5, 22676.5, 259.442, FourCC("H00K"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08K"), -585.1, 22207.5, 267.511, FourCC("H08K"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H008"), -105.6, 22707.4, 264.767, FourCC("H008"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H016"), -40.9, 22752.4, 265.854, FourCC("H016"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H009"), 65.7, 22707.4, 266.652, FourCC("H009"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00R"), 190.0, 22716.4, 278.215, FourCC("H00R"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01V"), 191.1, 22300.1, 277.078, FourCC("H01V"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01S"), 147.2, 22385.0, 272.943, FourCC("H01S"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 247.9, 22404.2, 275.421, FourCC("H01T"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("O001"), -458.4, 22342.7, 272.925, FourCC("O001"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00D"), -324.8, 22332.0, 267.753, FourCC("H00D"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00M"), -192.7, 22345.5, 268.450, FourCC("H00M"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("N00Q"), -70.3, 22334.7, 272.706, FourCC("N00Q"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01A"), 57.8, 22346.0, 271.318, FourCC("H01A"))
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("H04Z"), -315.8, 22200.4, 272.770, FourCC("H04Z"))
-    SetUnitState(u, UNIT_STATE_MANA, 560)
     u = BlzCreateUnitWithSkin(p, FourCC("n007"), 5246.3, 3850.5, 273.400, FourCC("n007"))
     SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("H043"), -54.2, 22400.4, 268.590, FourCC("H043"))
-    SetUnitState(u, UNIT_STATE_MANA, 510)
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00K"), 448.9, 21522.8, 262.654, FourCC("U00K"))
-    SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("h077"), -6608.9, 22128.9, 0.000, FourCC("h077"))
     SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08P"), 454.8, 22604.1, 261.250, FourCC("H08P"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08Q"), 651.4, 22587.8, 234.510, FourCC("H08Q"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08R"), 499.9, 22597.0, 261.380, FourCC("H08R"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H042"), -121.8, 22383.7, 256.690, FourCC("H042"))
-    SetUnitState(u, UNIT_STATE_MANA, 510)
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("E01P"), 557.6, 22678.2, 275.789, FourCC("E01P"))
+    u = BlzCreateUnitWithSkin(p, FourCC("E019"), 1051.4, 21894.2, -57.642, FourCC("E019"))
     SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E01D"), 841.6, 22342.2, 273.260, FourCC("E01D"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H03Y"), 979.3, 22735.2, 356.330, FourCC("H03Y"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E00H"), 959.9, 22313.0, 266.635, FourCC("E00H"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E001"), -454.4, 22589.9, 277.375, FourCC("E001"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H04I"), -436.7, 22195.5, 276.644, FourCC("H04I"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E014"), -305.5, 22595.1, 271.773, FourCC("E014"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H055"), -180.3, 22587.2, 270.967, FourCC("H055"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H085"), 680.4, 22694.6, 276.254, FourCC("H085"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E01I"), -44.8, 22572.3, 268.687, FourCC("E01I"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E010"), 62.7, 22588.0, 268.152, FourCC("E010"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E012"), -204.1, 22217.6, 280.094, FourCC("E012"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E019"), -66.7, 22199.1, 269.359, FourCC("E019"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H04T"), 71.5, 22205.2, 270.854, FourCC("H04T"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E00T"), 195.5, 22586.5, 268.738, FourCC("E00T"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08L"), -252.9, 22874.9, 266.518, FourCC("H08L"))
-    SetUnitState(u, UNIT_STATE_MANA, 560)
-    u = BlzCreateUnitWithSkin(p, FourCC("U019"), -539.9, 21445.3, 276.780, FourCC("U019"))
-    SetHeroStr(u, 250, true)
-    SetHeroAgi(u, 16, true)
-    SetHeroInt(u, 200, true)
-    SetUnitState(u, UNIT_STATE_MANA, 126)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00E"), -278.8, 22000.4, 265.458, FourCC("H00E"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00G"), -171.2, 22000.4, 263.872, FourCC("H00G"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00F"), -230.3, 21997.9, 275.472, FourCC("H00F"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01M"), 64.6, 21708.0, 254.880, FourCC("n01M"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n008"), -7.0, 21696.3, 269.130, FourCC("n008"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01U"), 488.0, 22147.7, 256.497, FourCC("H01U"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H01W"), 348.0, 22162.3, 258.290, FourCC("H01W"))
-    SetUnitState(u, UNIT_STATE_MANA, 400)
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00U"), 615.0, 22021.1, 298.332, FourCC("n00U"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00X"), 670.8, 22054.4, 278.007, FourCC("n00X"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00V"), 758.0, 22052.4, 30.576, FourCC("n00V"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00W"), 863.0, 22046.4, 154.703, FourCC("n00W"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O005"), 700.5, 22147.1, 279.210, FourCC("O005"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O006"), 861.9, 22099.9, 258.173, FourCC("O006"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O00C"), 1062.4, 22110.0, 210.142, FourCC("O00C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H00H"), 952.4, 22120.7, 249.939, FourCC("H00H"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08M"), 290.6, 22588.6, 271.939, FourCC("H08M"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08N"), 368.4, 22586.4, 261.560, FourCC("H08N"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("n00U"), 1010.3, 22304.6, 298.332, FourCC("n00U"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00X"), 1073.8, 21733.6, 278.007, FourCC("n00X"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00V"), 1059.1, 22071.7, 30.576, FourCC("n00V"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00W"), 1021.2, 22613.9, 154.703, FourCC("n00W"))
     u = BlzCreateUnitWithSkin(p, FourCC("h07V"), -6117.3, 14747.6, 320.330, FourCC("h07V"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H004"), -565.8, 21568.2, 297.550, FourCC("H004"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("h038"), -7176.1, -2854.5, 94.500, FourCC("h038"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U015"), -404.3, 21478.3, 258.428, FourCC("U015"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U016"), -352.8, 21387.7, 265.184, FourCC("U016"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U01B"), -268.2, 21482.4, 265.742, FourCC("U01B"))
-    SetUnitColor(u, ConvertPlayerColor(2))
-    u = BlzCreateUnitWithSkin(p, FourCC("U000"), -84.1, 21373.4, 263.017, FourCC("U000"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U005"), -143.0, 21486.4, 271.780, FourCC("U005"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00Z"), -25.4, 21513.3, 272.008, FourCC("U00Z"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U010"), -54.8, 21444.2, 262.988, FourCC("U010"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00Y"), -154.8, 21413.5, 273.664, FourCC("U00Y"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U011"), 74.4, 21411.5, 308.659, FourCC("U011"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U012"), 120.0, 21478.6, 261.375, FourCC("U012"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U013"), 240.8, 21495.8, 262.229, FourCC("U013"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U014"), 314.5, 21426.1, 270.892, FourCC("U014"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U01G"), 312.7, 21647.6, 266.758, FourCC("U01G"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U018"), 346.4, 21505.5, 269.018, FourCC("U018"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00J"), 437.3, 21418.9, 267.568, FourCC("U00J"))
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00D"), -514.0, 21159.7, 357.936, FourCC("U00D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00I"), -602.6, 21184.9, 332.888, FourCC("U00I"))
-    SetUnitColor(u, ConvertPlayerColor(10))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00H"), -433.9, 21305.9, 349.427, FourCC("U00H"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O002"), -623.1, 21294.7, 354.243, FourCC("O002"))
-    u = BlzCreateUnitWithSkin(p, FourCC("O003"), -460.5, 21211.4, 353.250, FourCC("O003"))
-    u = BlzCreateUnitWithSkin(p, FourCC("N00C"), -495.7, 21326.4, 8.592, FourCC("N00C"))
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("O00P"), -107.8, 21744.4, 268.206, FourCC("O00P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U006"), -275.8, 21729.1, 277.384, FourCC("U006"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("O00O"), -116.9, 21835.1, 278.195, FourCC("O00O"))
-    SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("O00N"), -108.7, 21655.0, 267.525, FourCC("O00N"))
-    SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("O00Q"), -204.3, 21913.7, 251.946, FourCC("O00Q"))
-    SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00E"), -349.3, 21173.0, 351.008, FourCC("U00E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00G"), -188.9, 21159.8, 325.755, FourCC("U00G"))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00F"), -90.0, 21217.4, 266.315, FourCC("U00F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 1135.2, 21157.8, 263.911, FourCC("n02P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 763.1, 21316.6, 263.930, FourCC("n03A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00D"), 687.6, 21706.3, 189.674, FourCC("n00D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n037"), 458.6, 21299.6, 287.730, FourCC("n037"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03C"), 652.1, 21387.0, 356.935, FourCC("n03C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n039"), 995.8, 21186.2, 285.423, FourCC("n039"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02H"), 1096.3, 21566.2, 275.068, FourCC("n02H"))
-    SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00A"), 927.1, 21145.8, 318.541, FourCC("n00A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02S"), 1080.8, 21312.3, 162.482, FourCC("n02S"))
-    u = BlzCreateUnitWithSkin(p, FourCC("z004"), 793.5, 21150.0, 309.700, FourCC("z004"))
-    SetUnitColor(u, ConvertPlayerColor(10))
-    u = BlzCreateUnitWithSkin(p, FourCC("n021"), 646.4, 21153.3, 298.013, FourCC("n021"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00N"), 549.3, 21136.9, 261.899, FourCC("n00N"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02G"), 432.9, 21150.2, 302.357, FourCC("n02G"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03M"), 578.1, 21266.7, 283.897, FourCC("n03M"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n023"), 1101.3, 21789.7, 306.817, FourCC("n023"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n032"), 916.6, 21424.3, 282.793, FourCC("n032"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n033"), 780.0, 21473.8, 297.845, FourCC("n033"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03L"), 648.7, 21619.4, 299.892, FourCC("n03L"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00O"), 1119.1, 21943.1, 243.217, FourCC("n00O"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n034"), 1071.0, 21877.0, 298.328, FourCC("n034"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00Y"), 290.4, 21178.8, 268.734, FourCC("n00Y"))
-    SetUnitColor(u, ConvertPlayerColor(5))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00Z"), 240.3, 21145.8, 278.834, FourCC("n00Z"))
-    SetUnitColor(u, ConvertPlayerColor(6))
-    u = BlzCreateUnitWithSkin(p, FourCC("n010"), 144.2, 21146.7, 291.050, FourCC("n010"))
-    SetUnitColor(u, ConvertPlayerColor(11))
-    u = BlzCreateUnitWithSkin(p, FourCC("n011"), 173.0, 21217.4, 281.739, FourCC("n011"))
-    SetUnitColor(u, ConvertPlayerColor(3))
-    u = BlzCreateUnitWithSkin(p, FourCC("n012"), 95.4, 21150.2, 293.556, FourCC("n012"))
-    SetUnitColor(u, ConvertPlayerColor(4))
-    u = BlzCreateUnitWithSkin(p, FourCC("n018"), 164.3, 21377.1, 277.228, FourCC("n018"))
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n017"), 20.3, 21221.6, 300.420, FourCC("n017"))
-    SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("O000"), -587.4, 22382.9, 288.681, FourCC("O000"))
-    SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("O004"), -543.9, 22305.7, 284.191, FourCC("O004"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("O009"), -377.8, 22408.1, 272.974, FourCC("O009"))
-    SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08O"), 325.2, 22388.2, 276.110, FourCC("H08O"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("O00A"), 188.3, 22141.0, 279.910, FourCC("O00A"))
-    SetUnitState(u, UNIT_STATE_MANA, 600)
-    u = BlzCreateUnitWithSkin(p, FourCC("U00L"), 184.5, 21736.9, 267.311, FourCC("U00L"))
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("H062"), 542.0, 22251.3, 303.280, FourCC("H062"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("U00B"), 786.5, 21776.5, 141.411, FourCC("U00B"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    u = BlzCreateUnitWithSkin(p, FourCC("U00C"), 675.6, 21768.1, 146.361, FourCC("U00C"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01Z"), 466.4, 21232.4, 267.860, FourCC("n01Z"))
-    SetUnitColor(u, ConvertPlayerColor(6))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00M"), 257.3, 21856.2, 244.453, FourCC("U00M"))
-    SetUnitState(u, UNIT_STATE_MANA, 100)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00N"), 295.7, 21787.8, 326.920, FourCC("U00N"))
-    SetUnitState(u, UNIT_STATE_MANA, 100)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00O"), 129.1, 21792.3, 289.560, FourCC("U00O"))
-    SetUnitState(u, UNIT_STATE_MANA, 100)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00P"), 297.3, 21941.5, 42.870, FourCC("U00P"))
-    SetUnitState(u, UNIT_STATE_MANA, 100)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U008"), 335.8, 21884.2, 311.090, FourCC("U008"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    u = BlzCreateUnitWithSkin(p, FourCC("H01L"), -570.5, 21814.3, 197.770, FourCC("H01L"))
-    SetUnitState(u, UNIT_STATE_MANA, 450)
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U004"), -286.7, 22373.1, 209.650, FourCC("U004"))
-    SetUnitState(u, UNIT_STATE_MANA, 450)
-    u = BlzCreateUnitWithSkin(p, FourCC("U00S"), 405.1, 21956.1, 238.100, FourCC("U00S"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(10))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00T"), 332.2, 22061.2, 241.500, FourCC("U00T"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(2))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00X"), 586.3, 21801.3, 100.810, FourCC("U00X"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(7))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00U"), 269.0, 22035.6, 277.510, FourCC("U00U"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00W"), 420.8, 21849.2, 304.850, FourCC("U00W"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(9))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00R"), 196.1, 21924.6, 272.125, FourCC("U00R"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00V"), 188.7, 21997.9, 250.430, FourCC("U00V"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(7))
-    u = BlzCreateUnitWithSkin(p, FourCC("U00Q"), 135.7, 21898.4, 257.319, FourCC("U00Q"))
-    SetUnitState(u, UNIT_STATE_MANA, 180)
-    SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
     u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 10163.5, 1925.7, 214.252, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("z001"), 89.3, 22035.7, 273.200, FourCC("z001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08U"), -396.7, 22119.7, 269.550, FourCC("H08U"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08W"), -540.6, 22132.3, 270.000, FourCC("H08W"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08X"), -491.2, 22050.4, 262.824, FourCC("H08X"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08Y"), -572.6, 21967.1, 296.183, FourCC("H08Y"))
-    SetUnitState(u, UNIT_STATE_MANA, 650)
+    u = BlzCreateUnitWithSkin(p, FourCC("z001"), 401.4, 22388.5, 273.200, FourCC("z001"))
 end
 
 function CreatePlayerBuildings()
@@ -2635,42 +2341,49 @@ function Trig_Nappa_Plant_Saibamen_Conditions()
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func017C()
+    if (not (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 11) == "randomkilla")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001Func001C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001C()
     if (not (udg_TempReal < 4.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001C()
     if (not (udg_TempReal < 3.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002C()
+function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002C()
     if (not (udg_TempReal < 2.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func018Func001C()
     if (not (udg_TempReal < 1.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017C()
+function Trig_Nappa_Plant_Saibamen_Func005Func018C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
@@ -2702,27 +2415,33 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         BlzSetHeroProperName(udg_TempUnit, "Saibaman")
         udg_TempReal = GetRandomReal(0, 100.00)
         if (Trig_Nappa_Plant_Saibamen_Func005Func017C()) then
-            if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001C()) then
+            udg_TempReal = GetRandomReal(0, 50.00)
+        else
+        end
+        if (Trig_Nappa_Plant_Saibamen_Func005Func018C()) then
+            if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001C()) then
                 BlzSetHeroProperName(udg_TempUnit, "Snuggles")
-                SetUnitScalePercent(udg_TempUnit, 130.00, 130.00, 130.00)
+                SetUnitScalePercent(udg_TempUnit, 220.00, 220.00, 220.00)
             else
-                if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002C()) then
+                if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002C()) then
                     BlzSetHeroProperName(udg_TempUnit, "Fufu")
                     SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
+                    SetUnitScalePercent(udg_TempUnit, 50.00, 50.00, 50.00)
                 else
-                    if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001C()) then
+                    if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001C()) then
                         BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
                         SetUnitTimeScalePercent(udg_TempUnit, 150.00)
-                        SetUnitVertexColorBJ(udg_TempUnit, 100, 100.00, 80.00, 0)
+                        SetUnitVertexColorBJ(udg_TempUnit, 80.00, 100.00, 60.00, 0)
                     else
-                        if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001Func001C()) then
+                        if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001C()) then
                             BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
                             SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
+                            SetUnitScalePercent(udg_TempUnit, 200.00, 200.00, 200.00)
                         else
-                            if (Trig_Nappa_Plant_Saibamen_Func005Func017Func001Func002Func001Func001Func001C()) then
+                            if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001Func001C()) then
                                 BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
                                 SetUnitTimeScalePercent(udg_TempUnit, 75.00)
-                                SetUnitVertexColorBJ(udg_TempUnit, 90.00, 100.00, 80.00, 0)
+                                SetUnitVertexColorBJ(udg_TempUnit, 60.00, 100.00, 80.00, 0)
                             else
                             end
                         end
@@ -2778,7 +2497,7 @@ function Trig_Saibamen_Loop_Func002A()
         SetUnitInvulnerable(udg_TempUnit, false)
         ShowUnitShow(udg_TempUnit)
         PauseUnitBJ(false, udg_TempUnit)
-        UnitApplyTimedLifeBJ(30.00, FourCC("BTLF"), udg_TempUnit)
+        UnitApplyTimedLifeBJ(35.00, FourCC("BTLF"), udg_TempUnit)
         GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
         FlushChildHashtableBJ(udg_ID, udg_SaibamanHashtable)
     else
@@ -3526,7 +3245,7 @@ function Trig_Kill_Creep_New_New_Stats_Only_Actions()
             else
             end
         else
-            udg_StatMultReal = (0.25 * I2R(GetUnitFoodMade(GetTriggerUnit())))
+            udg_StatMultReal = (0.30 * I2R(GetUnitFoodMade(GetTriggerUnit())))
             if (Trig_Kill_Creep_New_New_Stats_Only_Func001Func001Func002C()) then
                 udg_StatMultReal = (0.50 * I2R(GetUnitFoodMade(GetTriggerUnit())))
             else
@@ -3664,7 +3383,7 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
         udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
         udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
         udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
-        udg_TempGroup = GetUnitsInRangeOfLocMatching(2000.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003))
+        udg_TempGroup = GetUnitsInRangeOfLocMatching(2500.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003))
         ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_PvP_and_Saga_Func001Func010A)
                 DestroyForce(udg_TempPlayerGroup)
                 DestroyGroup(udg_TempGroup)
@@ -4850,7 +4569,7 @@ function Trig_Tournament_Trophy_Give_Stats_Actions()
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
-    udg_TempInt = (25 * (GetHeroLevel(udg_StatMultUnit) + 1))
+    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 2) + 1))
         AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 end
 
@@ -9179,7 +8898,17 @@ function Trig_Transformations_Pan_Func014C()
     return true
 end
 
-function Trig_Transformations_Pan_Func016Func001Func005C()
+function Trig_Transformations_Pan_Func015C()
+    if (not (udg_TransformationString == "ssb")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 210)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Pan_Func017Func001Func005C()
     if (udg_TransformationString == "ss") then
         return true
     end
@@ -9195,17 +8924,17 @@ function Trig_Transformations_Pan_Func016Func001Func005C()
     return false
 end
 
-function Trig_Transformations_Pan_Func016Func001C()
+function Trig_Transformations_Pan_Func017Func001C()
     if (not (udg_TransformationSFXString ~= "")) then
         return false
     end
-    if (not Trig_Transformations_Pan_Func016Func001Func005C()) then
+    if (not Trig_Transformations_Pan_Func017Func001Func005C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Pan_Func016Func005C()
+function Trig_Transformations_Pan_Func017Func005C()
     if (udg_TransformationString == "r") then
         return true
     end
@@ -9215,8 +8944,8 @@ function Trig_Transformations_Pan_Func016Func005C()
     return false
 end
 
-function Trig_Transformations_Pan_Func016C()
-    if (not Trig_Transformations_Pan_Func016Func005C()) then
+function Trig_Transformations_Pan_Func017C()
+    if (not Trig_Transformations_Pan_Func017Func005C()) then
         return false
     end
     return true
@@ -9262,12 +8991,17 @@ function Trig_Transformations_Pan_Actions()
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Pan_Func016C()) then
+    if (Trig_Transformations_Pan_Func015C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationSFXString = "AuraBlue.mdx"
+    else
+    end
+    if (Trig_Transformations_Pan_Func017C()) then
                 udg_TransformationID = FourCC('H08P')
         BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         SetUnitVertexColorBJ(udg_StatMultUnit, 100, 100, 100, 0)
     else
-        if (Trig_Transformations_Pan_Func016Func001C()) then
+        if (Trig_Transformations_Pan_Func017Func001C()) then
                         udg_TransformationID = FourCC('H08R')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             TriggerExecute(gg_trg_Transformations_Generic_SSG_SSB)
@@ -11015,7 +10749,7 @@ function Trig_Transformations_Cell_Perfect_Func010C()
     if (not (udg_TransformationString == "super perfect")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 130)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
         return false
     end
     return true
@@ -11860,7 +11594,7 @@ function Trig_Transformations_Raditz_Func015C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 170)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
         return false
     end
     return true
@@ -11870,7 +11604,7 @@ function Trig_Transformations_Raditz_Func016C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 230)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 210)) then
         return false
     end
     return true
@@ -12051,7 +11785,7 @@ function Trig_Transformations_Nappa_Func015C()
     if (not (udg_TransformationString == "ssg")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 170)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 160)) then
         return false
     end
     return true
@@ -12061,7 +11795,7 @@ function Trig_Transformations_Nappa_Func016C()
     if (not (udg_TransformationString == "ssb")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 230)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 210)) then
         return false
     end
     return true
@@ -12271,10 +12005,10 @@ function Trig_Moro_Energy_Drain_Active_Func004A()
         if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()) then
             if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()) then
                 udg_StatMultUnit = udg_MoroDrainSourceUnit
-                udg_MoroStatMultReal = 0.10
+                udg_MoroStatMultReal = (0.75 * 0.10)
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 udg_StatMultUnit = udg_MoroDrainTargetUnit
-                udg_MoroStatMultReal = -0.05
+                udg_MoroStatMultReal = (-1.00 * (0.75 * 0.05))
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 TriggerExecute(gg_trg_Moro_Increase_Perm_Mult_PvP)
             else
@@ -12347,7 +12081,7 @@ function Trig_Moro_Energy_Drain_Passive_Func002A()
     udg_TempUnit = GetEnumUnit()
     if (Trig_Moro_Energy_Drain_Passive_Func002Func002C()) then
         udg_MoroDrainSourceUnit = udg_TempUnit
-        udg_TempReal = (((3.00 + I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))) * (0.01 * 0.01)) + 0.00)
+        udg_TempReal = (((3.00 + (I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit)) * 0.33)) * (0.01 * 0.01)) + 0.00)
         udg_TempLoc = GetUnitLoc(udg_MoroDrainSourceUnit)
         udg_TempUnitGroup = GetUnitsInRangeOfLocAll(2000.00, udg_TempLoc)
         ForGroupBJ(udg_TempUnitGroup, Trig_Moro_Energy_Drain_Passive_Func002Func002Func005A)
@@ -12414,6 +12148,9 @@ end
 function Trig_Moro_Power_Level_Sharing_Func011A()
     udg_MoroDrainTargetUnit = GetEnumUnit()
     if (Trig_Moro_Power_Level_Sharing_Func011Func002C()) then
+        SetUnitManaPercentBJ(udg_MoroDrainTargetUnit, RMinBJ(100.00, (GetUnitManaPercent(udg_MoroDrainTargetUnit) + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MS"), udg_MoroDrainSourceUnit))))))
+        AddSpecialEffectTargetUnitBJ("origin", udg_MoroDrainTargetUnit, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
+        DestroyEffectBJ(GetLastCreatedEffectBJ())
         udg_StatMultUnit = udg_MoroDrainTargetUnit
         TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
     else

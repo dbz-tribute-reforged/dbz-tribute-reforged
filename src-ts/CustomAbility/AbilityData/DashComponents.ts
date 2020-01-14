@@ -120,7 +120,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 25,
+    distance: 30,
   },
   {
     name: "dash ground point tyrant lancer",
@@ -276,7 +276,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: false,
-    useLastCastPoint: false,
+    useLastCastPoint: true,
     distance: 37,
   },
   // power level sharing

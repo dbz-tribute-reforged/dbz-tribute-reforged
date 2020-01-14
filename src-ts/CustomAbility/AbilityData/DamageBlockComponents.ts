@@ -290,8 +290,8 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 50,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_INT,
-    multiplier: 0.25,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 0.5,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
@@ -432,7 +432,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.5,
+    multiplier: 0.7,
     sfxList: [
       {
         model: "IceNova.mdl",

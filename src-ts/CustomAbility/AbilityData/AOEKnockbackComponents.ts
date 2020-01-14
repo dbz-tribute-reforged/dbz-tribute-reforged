@@ -104,7 +104,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 45, 
       angle: 0, 
-      aoe: 500,
+      aoe: 550,
     },
   },
   // broly energy punch

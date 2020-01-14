@@ -91,8 +91,13 @@ export class CreepManager {
     }
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, Player(i), bj_ALLIANCE_UNALLIED);
-      SetPlayerAllianceStateBJ(Player(i), Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+      let player = Player(i);
+      SetPlayerAllianceStateBJ(Constants.heavenHellCreepPlayer, player, bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateBJ(player, Constants.heavenHellCreepPlayer, bj_ALLIANCE_UNALLIED);
+      SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
+      SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
+      SetPlayerAllianceStateVisionBJ(Player(PLAYER_NEUTRAL_PASSIVE), player, false);
+      SetPlayerAllianceStateVisionBJ(player, Player(PLAYER_NEUTRAL_PASSIVE), false);
     }
 
     

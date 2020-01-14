@@ -33,7 +33,7 @@ export module TournamentData {
   export const budokaiStartTime3: number = 23 * 60;
   export const budokaiDelay: number = 45;
   export const budokaiCounter: number = 23;
-  export const budokaiMatchDelay: number = 5;
+  export const budokaiMatchDelay: number = 6;
   export const budokaiMatchTimeLimit: number = 2 * 60;
   export const budokaiMatchTimeLimitName: string = "Remaining Time";
   export const budokaiMaxContestantsPerMatch: number = 2;
