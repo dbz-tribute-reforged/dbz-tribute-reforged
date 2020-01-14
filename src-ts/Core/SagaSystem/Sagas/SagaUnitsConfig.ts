@@ -38,18 +38,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Zarbon 2", new SagaUnit(FourCC("U01B"), 18, 500, 300, 250, new Vector2D(8800, 1400))],
 
     // ginyu force
-    ["Guldo", new SagaUnit(FourCC("U00Y"), 20, 200, 200, 650, new Vector2D(8800, 1400))],
-    ["Recoome", new SagaUnit(FourCC("U005"), 22, 650, 200, 300, new Vector2D(8800, 1400))],
-    ["Burter", new SagaUnit(FourCC("U00Z"), 23, 200, 650, 350, new Vector2D(8800, 1400))],
-    ["Jeice", new SagaUnit(FourCC("U010"), 23, 650, 250, 600, new Vector2D(8800, 1400))],
-    ["Ginyu", new SagaUnit(FourCC("U000"), 25, 800, 250, 650, new Vector2D(8800, 1400))],
+    ["Guldo", new SagaUnit(FourCC("U00Y"), 17, 200, 200, 650, new Vector2D(8800, 1400))],
+    ["Recoome", new SagaUnit(FourCC("U005"), 20, 900, 200, 300, new Vector2D(8800, 1400))],
+    ["Burter", new SagaUnit(FourCC("U00Z"), 20, 400, 650, 350, new Vector2D(8800, 1400))],
+    ["Jeice", new SagaUnit(FourCC("U010"), 20, 700, 250, 600, new Vector2D(8800, 1400))],
+    ["Ginyu", new SagaUnit(FourCC("U000"), 22, 800, 250, 800, new Vector2D(8800, 1400))],
 
     // frieza
-    ["Frieza 1", new SagaUnit(FourCC("U011"), 25, 800, 200, 800, new Vector2D(8800, 1400))],
+    ["Frieza 1", new SagaUnit(FourCC("U011"), 25, 900, 200, 900, new Vector2D(8800, 1400))],
     ["Frieza 2", new SagaUnit(FourCC("U012"), 26, 1000, 300, 800, new Vector2D(8800, 1400))],
     ["Frieza 3", new SagaUnit(FourCC("U013"), 27, 1100, 350, 850, new Vector2D(8800, 1400))],
-    ["Frieza 4", new SagaUnit(FourCC("U014"), 28, 1200, 400, 1300, new Vector2D(8800, 1400))],
-    ["Frieza 5", new SagaUnit(FourCC("U018"), 29, 1500, 400, 1600, new Vector2D(8800, 1400))],
+    ["Frieza 4", new SagaUnit(FourCC("U014"), 30, 1200, 400, 1300, new Vector2D(8800, 1400))],
+    ["Frieza 5", new SagaUnit(FourCC("U018"), 32, 1500, 400, 1600, new Vector2D(8800, 1400))],
 
     // garlic jr
     ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 25, 750, 350, 750, new Vector2D(6000, 22500))],

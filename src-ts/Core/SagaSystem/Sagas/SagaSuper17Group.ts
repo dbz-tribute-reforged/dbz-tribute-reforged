@@ -23,7 +23,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
     this.super17 = this.bosses.get("Super 17");
     if (this.super17) {
       this.oldHp = GetUnitState(this.super17, UNIT_STATE_LIFE);
-      SetUnitManaPercentBJ(this.super17, 0);
+      SetUnitState(this.super17, UNIT_STATE_MANA, 0);
     }
 
     for (const [name, boss] of this.bosses) {
@@ -45,20 +45,22 @@ export class Super17Saga extends AdvancedSaga implements Saga {
       // had more hp in before
       if (hpDiff > 0) {
         newMp += hpDiff;
+      }
+
+      if (newMp < 0.99 * GetUnitState(this.super17, UNIT_STATE_MAX_MANA)) {
         SetUnitState(
           this.super17, 
           UNIT_STATE_MANA, 
           newMp,
         );
-      }
-
-      if (newMp > 0.75 * GetUnitState(this.super17, UNIT_STATE_MAX_MANA)) {
+      } else {
+        // restore hp equal to 50% of mana pool
         SetUnitState(
           this.super17,
           UNIT_STATE_LIFE,
           newHp + newMp * 0.5
         );
-        SetUnitManaPercentBJ(this.super17, 0);
+        SetUnitState(this.super17, UNIT_STATE_MANA, 0);
         DestroyEffect(
           AddSpecialEffectTarget(
             "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -74,6 +76,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
           )
         );
       }
+      this.oldHp = GetUnitState(this.super17, UNIT_STATE_LIFE);
     }
   }
 

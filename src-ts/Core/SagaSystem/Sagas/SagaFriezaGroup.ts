@@ -97,7 +97,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.sagaDelay = 20;
     this.stats = 100;
   }
 

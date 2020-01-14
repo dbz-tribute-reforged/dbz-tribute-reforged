@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.26
+DBZ Tribute Reforged 0.26a
 }
 
 STRING 4
@@ -20569,24 +20569,6 @@ STRING 3355
 Energy Generation
 }
 
-STRING 3356
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
-}
-
-STRING 3357
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
-}
-
-STRING 3358
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
-}
-
 STRING 3359
 {
 Max Permanent Stat Mult:
@@ -20633,12 +20615,6 @@ STRING 3364
 [|cff00ff00W|r] Power Level Rising
 }
 
-STRING 3365
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
-}
-
 STRING 3366
 // Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
 {
@@ -20660,13 +20636,13 @@ STRING 3368
 STRING 3369
 // Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
 {
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his gathered stat multiplier to his allies.
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
 
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
 }
 
@@ -20683,21 +20659,21 @@ Moro channels the life energy of the planet to sporadically explode around him.|
 }
 
 STRING 3372
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
 }
 
 STRING 3373
-// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
 }
 
 STRING 3374
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool2>s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
 }
 
 STRING 3375
@@ -33792,39 +33768,39 @@ STRING 5551
 }
 
 STRING 5552
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
 }
 
 STRING 5553
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
 }
 
 STRING 5554
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
 }
 
 STRING 5555
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
 }
 
 STRING 5556
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
 }
 
 STRING 5557
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
 
 STRING 5558
@@ -33912,33 +33888,33 @@ D
 }
 
 STRING 5572
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
 }
 
 STRING 5573
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
 }
 
 STRING 5574
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool2> seconds|r
 }
 
 STRING 5575
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool3> seconds|r
 }
 
 STRING 5576
-// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*?x(lvl*?).|r|n|cffFFFF00Duration: ?s|r|n|cff00FFFFCooldown: 13s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool4> seconds|r
 }
 
 STRING 5577
@@ -34623,9 +34599,9 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 85]  2.00x "ss2"
 [lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg"
+[lvl 150] 2.50x "ssg" [unlocks god kame]
 [lvl 200] 2.60x "ssb"
-[lvl 225] 2.70x "ssbkao"
+[lvl 225] 2.70x "ssbkao" [unlocks ultra instinct]
 }
 
 STRING 5690
@@ -34636,7 +34612,7 @@ Transformations:
 [lvl 50]  1.50x "uss"
 [lvl 85]  2.00x "ss2"
 [lvl 150] 2.50x "ssg"
-[lvl 200] 2.60x "ssb"
+[lvl 200] 2.60x "ssb" [unlocks final flash 2]
 [lvl 225] 2.70x "ssbe"
 }
 
@@ -40428,9 +40404,9 @@ Buu's power level rapidly rises causing the surrounding area to crumble apart do
 }
 
 STRING 6650
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool3>s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool5> seconds|r
 }
 
 STRING 6651
@@ -59514,14 +59490,15 @@ Join us at discord.gg/vayXJSZ
 
 STRING 9815
 {
-Game modes (red only):
+|cffff2020Game modes (red only):
 -default (good v evil)
 -ap (all pick)
 -ar (all random)
--freemode to disable win/loss conditions
+-freemode (disable win/loss conditions)
+-catchup (gives bonus stats to people who are behind)
 
 All players commands:
--cam/-ang for camera controls
+-cam/-ang for camera controls|r
 }
 
 STRING 9816
@@ -59657,21 +59634,21 @@ STRING 9837
 }
 
 STRING 9838
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool4>s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool6> seconds|r
 }
 
 STRING 9839
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool5>s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool7> seconds|r
 }
 
 STRING 9840
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool6>s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool8> seconds|r
 }
 
 STRING 9841
@@ -59885,9 +59862,9 @@ STRING 9875
 }
 
 STRING 9876
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool7>s|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool9> seconds|r
 }
 
 STRING 9877
@@ -61344,60 +61321,6 @@ STRING 10121
 Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * ?)) over 5 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r|n
 }
 
-STRING 10122
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10123
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10124
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10125
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10126
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10127
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10128
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10129
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 10130
-// Abilities: A0L9 (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
 STRING 10131
 // Abilities: A0L9 (Kamehameha God), Tip (Tooltip - Normal)
 {
@@ -61462,12 +61385,6 @@ STRING 10141
 // Abilities: A0L9 (Kamehameha God), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn God Kamehameha - [|cffffcc00Level %d|r]
-}
-
-STRING 10142
-// Abilities: A0L9 (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
-{
-A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 10143
@@ -62471,48 +62388,6 @@ STRING 10305
 2.0
 }
 
-STRING 10306
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 1 @ 100%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10307
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 2 @ 200%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10308
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 3 @ 300%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10309
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 4 @ 400%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10310
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 5 @ 500%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10311
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 6 @ 600%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10312
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 7 @ 700%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
 STRING 10313
 // Abilities: A0LG (Babidi Barrier), Tip (Tooltip - Normal)
 {
@@ -62595,30 +62470,6 @@ STRING 10326
 // Abilities: A0LG (Babidi Barrier), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 10|r]
-}
-
-STRING 10327
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 8 @ 800%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10328
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 9 @ 900%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10329
-// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 10 @ 1000%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
-}
-
-STRING 10330
-// Abilities: A0LG (Babidi Barrier), Researchubertip (Tooltip - Learn - Extended)
-{
-With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00(Damage Blocked: lvl * Int * 1 @ 100%)|r|n|cff00ffff(Cooldown: 34->25 seconds)|r
 }
 
 STRING 10331
@@ -63836,45 +63687,45 @@ STRING 10530
 }
 
 STRING 10531
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool10> seconds|r
 }
 
 STRING 10532
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LG (Babidi Barrier), Researchubertip (Tooltip - Learn - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
 }
 
 STRING 10533
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 10534
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
 }
 
 STRING 10535
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
 }
 
 STRING 10536
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
 }
 
 STRING 10537
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
 }
 
 STRING 10538
@@ -63950,27 +63801,27 @@ STRING 10549
 }
 
 STRING 10550
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
 }
 
 STRING 10551
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
 }
 
 STRING 10552
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffff(Cooldown: 25 seconds)|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
 }
 
 STRING 10553
-// Abilities: A0LQ (Rebellion Spear), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: 30 seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
 }
 
 STRING 10554
@@ -63980,45 +63831,15 @@ STRING 10554
 }
 
 STRING 10555
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
 {
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
 }
 
 STRING 10556
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
 {
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10557
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10558
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10559
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10560
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10561
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 10562
@@ -64103,30 +63924,6 @@ STRING 10575
 // Abilities: A0LR (Saiyan Spirit), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Saiyan Spirit - [|cffffcc00Level 10|r]
-}
-
-STRING 10576
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10577
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10578
-// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
-}
-
-STRING 10579
-// Abilities: A0LR (Saiyan Spirit), Researchubertip (Tooltip - Learn - Extended)
-{
-The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 35 seconds|r
 }
 
 STRING 10580
@@ -64642,7 +64439,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 13.1.20
+This map is under active development - 14.1.20
 }
 
 STRING 10653
@@ -64698,7 +64495,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 60+] 2.00x (absorb 17/18)
-[lvl 130] 2.50x "super perfect"
+[lvl 120] 2.50x "super perfect"
 
 To reach Cell's higher forms you must absorb 17/18.
 }
@@ -65111,6 +64908,7 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
 [lvl 160] 2.50x "ssg"
+[lvl 210] 2.60x "ssb"
 }
 
 STRING 10725
@@ -67737,8 +67535,8 @@ Transformations:
 [lvl 35]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
 [lvl 130] 2.25x "ss3"
-[lvl 170] 2.50x "ssg"
-[lvl 230] 2.60x "ssb"
+[lvl 160] 2.50x "ssg"
+[lvl 210] 2.60x "ssb"
 }
 
 STRING 11164
@@ -67749,8 +67547,8 @@ Transformations:
 [lvl 35]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
 [lvl 130] 2.25x "ss3"
-[lvl 170] 2.50x "ssg"
-[lvl 230] 2.60x "ssb"
+[lvl 160] 2.50x "ssg"
+[lvl 210] 2.60x "ssb"
 }
 
 STRING 11165
@@ -68558,12 +68356,6 @@ STRING 11297
 [|cffffff00D|r] Choose Moro
 }
 
-STRING 11298
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
-}
-
 STRING 11299
 // Units: H08Y (Planet-Eater), Tip (Tooltip - Basic)
 {
@@ -68931,30 +68723,6 @@ STRING 11358
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
 }
 
-STRING 11359
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
-}
-
-STRING 11360
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
-}
-
-STRING 11361
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
-}
-
-STRING 11362
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
-}
-
 STRING 11363
 // Abilities: A0MI (Giant Storm), Ubertip (Tooltip - Normal - Extended)
 {
@@ -68985,24 +68753,6 @@ STRING 11367
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
 }
 
-STRING 11368
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (0.025x from sagas)|n(Enemies only lose 50%).|n(Provides bonus permanent stat mult, see "hs")|n(Heals 0.3% of max hp per enemy hit)|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
-}
-
-STRING 11369
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool8>s|r
-}
-
-STRING 11370
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool9>s|r
-}
-
 STRING 11371
 // Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
@@ -69013,12 +68763,6 @@ STRING 11372
 // Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 11373
-// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.1x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 11374
@@ -69085,12 +68829,6 @@ STRING 11385
 // Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
 Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
-}
-
-STRING 11386
-// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
-{
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
 }
 
 STRING 11387
@@ -69363,6 +69101,18 @@ STRING 11431
 R
 }
 
+STRING 11432
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
+}
+
+STRING 11433
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool2> seconds|r
+}
+
 STRING 11434
 // Abilities: A0MR (Lava Pillars), Name (Name)
 {
@@ -69375,10 +69125,136 @@ STRING 11435
 R
 }
 
+STRING 11436
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool3> seconds|r
+}
+
+STRING 11437
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool4> seconds|r
+}
+
+STRING 11438
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool5> seconds|r
+}
+
+STRING 11439
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool6> seconds|r
+}
+
+STRING 11440
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool7> seconds|r
+}
+
+STRING 11441
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool8> seconds|r
+}
+
+STRING 11442
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool9> seconds|r
+}
+
+STRING 11443
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool10> seconds|r
+}
+
+STRING 11444
+// Abilities: A0LQ (Rebellion Spear), Researchubertip (Tooltip - Learn - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
+}
+
+STRING 11445
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool1> seconds|r
+}
+
+STRING 11446
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool2> seconds|r
+}
+
+STRING 11447
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool3> seconds|r
+}
+
+STRING 11448
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool4> seconds|r
+}
+
+STRING 11449
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool5> seconds|r
+}
+
+STRING 11450
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool6> seconds|r
+}
+
+STRING 11451
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool7> seconds|r
+}
+
+STRING 11452
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool8> seconds|r
+}
+
+STRING 11453
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool9> seconds|r
+}
+
+STRING 11454
+// Abilities: A0LR (Saiyan Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool10> seconds|r
+}
+
+STRING 11455
+// Abilities: A0LR (Saiyan Spirit), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charnels the spirit of fallen saiyans into their right hand and rushes toward the opponent with a heavy energy punch, stunning nearby enemies. Once the hit lands, the user performs a backflip before firing a high powered energy wave.|n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LR,Cool1> seconds|r
+}
+
 STRING 11456
 // Abilities: A0MR (Lava Pillars), EditorSuffix (Editor Suffix)
 {
 (moro)
+}
+
+STRING 11457
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
 }
 
 STRING 11458
@@ -69387,16 +69263,34 @@ STRING 11458
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 1|r]
 }
 
+STRING 11459
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool2>s|r
+}
+
 STRING 11460
 // Abilities: A0MS (Power Level Sharing), Name (Name)
 {
 Power Level Sharing
 }
 
+STRING 11461
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool3>s|r
+}
+
 STRING 11462
 // Abilities: A0MS (Power Level Sharing), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Power Level Sharing - [|cffffcc00Level %d|r]
+}
+
+STRING 11463
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool4>s|r
 }
 
 STRING 11464
@@ -69429,10 +69323,64 @@ STRING 11468
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 6|r]
 }
 
+STRING 11469
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool5>s|r
+}
+
+STRING 11470
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool6>s|r
+}
+
+STRING 11471
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool7>s|r
+}
+
+STRING 11472
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool8>s|r
+}
+
+STRING 11473
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool9>s|r
+}
+
 STRING 11474
 // Abilities: A0MS (Power Level Sharing), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Power Level Sharing - [|cffffcc00Level 7|r]
+}
+
+STRING 11475
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool10>s|r
+}
+
+STRING 11476
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
+}
+
+STRING 11477
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+}
+
+STRING 11478
+// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
 }
 
 STRING 11479
@@ -69457,6 +69405,30 @@ STRING 11482
 // Abilities: A0MS (Power Level Sharing), EditorSuffix (Editor Suffix)
 {
 (moro)
+}
+
+STRING 11483
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool2>s|r
+}
+
+STRING 11484
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool3>s|r
+}
+
+STRING 11485
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool4>s|r
+}
+
+STRING 11486
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool5>s|r
 }
 
 STRING 11487
@@ -69529,5 +69501,35 @@ STRING 11498
 // Abilities: A0MR (Lava Pillars), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Lava Pillars - [|cffffcc00Level 10|r]
+}
+
+STRING 11499
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool6>s|r
+}
+
+STRING 11500
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool7>s|r
+}
+
+STRING 11501
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool8>s|r
+}
+
+STRING 11502
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool9>s|r
+}
+
+STRING 11503
+// Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
 }
 

@@ -78,6 +78,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00E"), ["Kamehameha", "Solar Flare", "Absorb"]],
     [FourCC("H00F"), ["Kamehameha", "Special Beam Cannon", "Solar Flare", "Absorb"]],
     [FourCC("H00G"), ["Kamehameha", "Masenko", "Special Beam Cannon", "Perfect Kamehameha", "Spawn Cell Juniors"]],
+    [FourCC("H01J"), ["Kamehameha"]],
+
 
     // fourth form cooler
     [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],

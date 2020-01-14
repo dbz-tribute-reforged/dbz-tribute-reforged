@@ -614,7 +614,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 2,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 1.7,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -647,7 +647,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.6,
+      multiplier: BASE.DFIST_DPS * 0.65,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -1417,7 +1417,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.1,
+      multiplier: BASE.KAME_DPS * 0.12,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1433,7 +1433,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.1,
+      multiplier: BASE.KAME_EXPLOSION * 0.12,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1450,7 +1450,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.8,
+      multiplier: BASE.KAME_EXPLOSION * 0.75,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

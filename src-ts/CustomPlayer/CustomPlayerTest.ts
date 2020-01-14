@@ -657,6 +657,16 @@ export function CustomPlayerTest() {
 
   })
 
+  // clear text
+  const clearTextTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(clearTextTrig, Player(i), "-clear", true);
+  }
+  TriggerAddAction(clearTextTrig, () => {
+    if (GetLocalPlayer() == GetTriggerPlayer()) {
+      ClearTextMessages();
+    }
+  });
 
   /*
   // revive heroes for free
