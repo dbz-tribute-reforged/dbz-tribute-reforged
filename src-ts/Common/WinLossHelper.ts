@@ -35,19 +35,19 @@ export module WinLossHelper {
 
         TimerStart(WinLossHelper.winTimer, WinLossHelper.winDelay, false, () => {
           for (const player of losingPlayers) {
-            DisplayTimedTextToForce(
-              bj_FORCE_ALL_PLAYERS, 15, 
-              Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
-              GetPlayerName(player) + "|r has lost."
-            );
+            // DisplayTimedTextToForce(
+            //   bj_FORCE_ALL_PLAYERS, 15, 
+            //   Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
+            //   GetPlayerName(player) + "|r has lost."
+            // );
             CustomDefeatBJ(player, "Defeat!");
           }
           for (const player of winningPlayers) {
-            DisplayTimedTextToForce(
-              bj_FORCE_ALL_PLAYERS, 15, 
-              Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
-              GetPlayerName(player) + "|r has won."
-            );
+            // DisplayTimedTextToForce(
+            //   bj_FORCE_ALL_PLAYERS, 15, 
+            //   Colorizer.getPlayerColorText(GetConvertedPlayerId(player)) + 
+            //   GetPlayerName(player) + "|r has won."
+            // );
             CustomVictoryBJ(player, true, true);
           }
         })
@@ -57,6 +57,24 @@ export module WinLossHelper {
           "Team " + winTeam + " have won! The game will continue as it is in free mode. " +
           "Congratulations to " + winningPlayerNames
         );
+        
+        for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+          const teleportGroup = CreateGroup();
+          GroupEnumUnitsOfPlayer(teleportGroup, Player(i), Condition(() => {
+            return (
+              IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+            )
+          }));
+
+          ForGroup(teleportGroup, () => {
+            const teleportUnit = GetEnumUnit();
+            SetUnitInvulnerable(teleportUnit, false);
+            PauseUnit(teleportUnit, false);
+            SetUnitX(teleportUnit, 0);
+            SetUnitY(teleportUnit, 0);
+          })
+
+        }
       }
     }
   }

@@ -111,9 +111,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
     if (mc1 && mc2 && mc3) {
       this.metalCoolers.push(mc1, mc2, mc3);
-      SetUnitAcquireRange(mc1, 99999);
-      SetUnitAcquireRange(mc2, 99999);
-      SetUnitAcquireRange(mc3, 99999);
+      SetUnitAcquireRange(mc1, 4000);
+      SetUnitAcquireRange(mc2, 4000);
+      SetUnitAcquireRange(mc3, 4000);
     }
 
     this.ping()
@@ -128,7 +128,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
       } else if (this.revives > 0) {
         --this.revives;
         DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 15, 
+          bj_FORCE_ALL_PLAYERS, 5, 
           "|cffffcc00Metal Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!"
         );    
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);

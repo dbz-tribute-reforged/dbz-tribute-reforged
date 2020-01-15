@@ -26,7 +26,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 1");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2500);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();
@@ -120,7 +120,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 2");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();
@@ -206,7 +206,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Broly Bio"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();
