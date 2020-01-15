@@ -12297,9 +12297,6 @@ function Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()
     if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_HERO) == true)) then
         return false
     end
-    if (not (IsUnitType(udg_MoroDrainTargetUnit, UNIT_TYPE_SUMMONED) == false)) then
-        return false
-    end
     return true
 end
 
