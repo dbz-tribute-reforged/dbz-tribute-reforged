@@ -1156,6 +1156,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Power Blitz",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuVanishingBall.blp",
+      disabled: "BTNBuuVanishingBall.blp",
+    },
+    tooltip: {
+      title: "Power Blitz",
+      body: 
+        "Power Blitz"
+    },
+    components: [
+      { name: "beam power blitz" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "S.S. Deadly Bomber",
     currentCd: 0,
     maxCd: 1,

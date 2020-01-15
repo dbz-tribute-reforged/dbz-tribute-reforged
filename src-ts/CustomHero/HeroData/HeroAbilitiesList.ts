@@ -40,6 +40,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // giru
     [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", "Reliable Friend", "Dragon Radar"]],
 
+    // android 17 dbs
+    [FourCC("H08Z"), ["Power Blitz", "Barrier Prison", "Barrier Wall", "Android Barrier", "Super Electric Strike"]],
+
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],
     [FourCC("H01S"), ["Energy Beam", "Nuke", "Android Barrier", "Overcharge"]],
@@ -62,12 +65,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       "Potential Unleashed",
       "Special Beam Cannon", "Kyodaika",
       "Tyrant Lancer", "Future Sight",
+      "Power Blitz",
       "S.S. Deadly Hammer",
       "Haretsu no Majutsu", "Summon Pui Pui",
       "Energy Punch",
       "Death Beam Frieza",
       "Double Sunday",
       "Giant Storm",
+      "Energy Drain Moro",
     ]],
 
     // broly
@@ -102,6 +107,6 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     // moro
     [FourCC("H08Y"), ["Energy Drain Moro", "Energy Ball Moro", "Lava Burst", "Lava Pillars", "Power Level Sharing"]],
-    
+
   ]
 )

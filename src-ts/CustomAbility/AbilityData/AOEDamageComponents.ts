@@ -754,6 +754,39 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
+  // power blitz
+  {
+    name: "damage power blitz dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
+    aoe: 350,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.25,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage power blitz explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    useLastCastPoint: false,
+    aoe: 400,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
   // 13 energy beam beam
   {
     name: "damage energy beam dps",
@@ -1374,7 +1407,7 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
-  // spirit bomb
+  // energy ball moro
   {
     name: "damage energy ball moro dps",
     repeatInterval: 1,

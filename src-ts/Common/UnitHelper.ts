@@ -49,9 +49,13 @@ export module UnitHelper {
     return numEnemies;
   }
   
-  export function isUnitTargetableForPlayer(unit: unit, caster: player): boolean {
+  export function isUnitTargetableForPlayer(
+    unit: unit, 
+    caster: player, 
+    affectAllies: boolean = false
+  ): boolean {
     return (
-      IsUnitEnemy(unit, caster) == true
+      (IsUnitEnemy(unit, caster) || affectAllies)
       &&
       !BlzIsUnitInvulnerable(unit)
       &&

@@ -124,7 +124,7 @@ export class CustomAbilityManager {
       this.setComponent(beamComponent);
     }
 
-    // load aoe applyable components after multi components
+    // load aoe applyable components after
     for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
       const aoeApplyComponent = new AOEApplyComponent().deserialize(aoeApplyComponentConfig);
       this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
@@ -138,7 +138,7 @@ export class CustomAbilityManager {
       this.setComponent(multiComponent);
     }
 
-    // load abilities after all other components
+    // load abilities after all multi components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
       this.addableComponentAddComponent(ability, abilityData.components, 1);

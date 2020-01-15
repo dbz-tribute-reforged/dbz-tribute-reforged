@@ -140,6 +140,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MR'), "Lava Pillars"],
     [FourCC('A0MS'), "Power Level Sharing"],
 
+    // android 17 dbs
+    [FourCC('A09O'), "Power Blitz"],
+    [FourCC('A0MT'), "Barrier Prison"],
+    [FourCC('A0MU'), "Barrier Wall"],
+    [FourCC('A0MV'), "Super Electric Strike"],
+
+
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7
