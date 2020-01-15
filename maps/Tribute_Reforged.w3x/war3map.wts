@@ -17918,43 +17918,43 @@ Geti star controls
 }
 
 STRING 2914
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2915
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2916
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2917
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2918
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2919
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2920
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
@@ -18044,13 +18044,13 @@ STRING 2934
 }
 
 STRING 2935
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 2936
-// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
@@ -20569,6 +20569,31 @@ STRING 3355
 Energy Generation
 }
 
+STRING 3356
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+{
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 3357
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool1> seconds|r
+}
+
+STRING 3358
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool2> seconds|r
+}
+
 STRING 3359
 {
 Max Permanent Stat Mult:
@@ -20615,6 +20640,12 @@ STRING 3364
 [|cff00ff00W|r] Power Level Rising
 }
 
+STRING 3365
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool3> seconds|r
+}
+
 STRING 3366
 // Abilities: A00J (Power Level Rising), Researchhotkey (Hotkey - Learn)
 {
@@ -20631,19 +20662,6 @@ STRING 3368
 // Abilities: A00J (Power Level Rising), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Power Level Rising - [|cffffcc00Level %d|r]
-}
-
-STRING 3369
-// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
-{
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 3370
@@ -27165,12 +27183,6 @@ STRING 4455
 // Abilities: A00Z (Solar Flare), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Solar Flare - [|cffffcc00Level %d|r]
-}
-
-STRING 4456
-// Abilities: A00Z (Solar Flare), Researchubertip (Tooltip - Learn - Extended)
-{
-Nearby enemies are blinded and cannot attack.|n|cff00FF00Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 100/90/75/50 seconds)|r
 }
 
 STRING 4457
@@ -45332,48 +45344,6 @@ STRING 7468
 D
 }
 
-STRING 7469
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7470
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7471
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7472
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7473
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7474
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7475
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
 STRING 7476
 // Abilities: A0GT (Death Beam), Tip (Tooltip - Normal)
 {
@@ -45456,18 +45426,6 @@ STRING 7489
 // Abilities: A0GT (Death Beam), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Death Beam
-}
-
-STRING 7490
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
-}
-
-STRING 7491
-// Abilities: A0GT (Death Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Shoots a beam of negative energy from the fingertip. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 9 seconds)|r
 }
 
 STRING 7492
@@ -55921,30 +55879,6 @@ STRING 9222
 Saga Generic Spammed Spell
 }
 
-STRING 9223
-// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
-{
-Nearby enemies are stunned for 1s and then blinded,causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 45 seconds)|r
-}
-
-STRING 9224
-// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
-{
-Nearby enemies are stunned for 1s and then blinded,causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 40 seconds)|r
-}
-
-STRING 9225
-// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
-{
-Nearby enemies are stunned for 1s and then blinded,causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 35 seconds)|r
-}
-
-STRING 9226
-// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
-{
-Nearby enemies are stunned for 1s and then blinded,causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 50 seconds)|r
-}
-
 STRING 9227
 // Abilities: A0KO (Solar Flare), Tip (Tooltip - Normal)
 {
@@ -55985,12 +55919,6 @@ STRING 9233
 // Abilities: A0KO (Solar Flare), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Solar Flare - [|cffffcc00Level %d|r]
-}
-
-STRING 9234
-// Abilities: A0KO (Solar Flare), Researchubertip (Tooltip - Learn - Extended)
-{
-Nearby enemies are blinded and cannot attack.|n|cff00FF00Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 100/90/75/50 seconds)|r
 }
 
 STRING 9235
@@ -61080,30 +61008,6 @@ STRING 10082
 Increases Future Trunk's movement speed cap by 165 (can exceed max ms).|nMinistuns enemy units in 200 AOE every second.|nIncreases ability damage by +15% over 9s.|nReduces incoming damage by 20% up to Str x 4.
 }
 
-STRING 10083
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10084
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10085
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10086
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
 STRING 10087
 // Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
@@ -61126,24 +61030,6 @@ STRING 10090
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan unleashes the true extent of his ultimate form boosting ability damage by 15% for the next 10 seconds.
-}
-
-STRING 10091
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10092
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10093
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
 }
 
 STRING 10094
@@ -61321,6 +61207,60 @@ STRING 10121
 Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * ?)) over 5 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r|n
 }
 
+STRING 10122
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool4> seconds|r
+}
+
+STRING 10123
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool5> seconds|r
+}
+
+STRING 10124
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool6> seconds|r
+}
+
+STRING 10125
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool7> seconds|r
+}
+
+STRING 10126
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool8> seconds|r
+}
+
+STRING 10127
+// Abilities: A06C (Death Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06C,Cool9> seconds|r
+}
+
+STRING 10128
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+}
+
+STRING 10129
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+}
+
+STRING 10130
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+}
+
 STRING 10131
 // Abilities: A0L9 (Kamehameha God), Tip (Tooltip - Normal)
 {
@@ -61385,6 +61325,12 @@ STRING 10141
 // Abilities: A0L9 (Kamehameha God), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn God Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 10142
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
 }
 
 STRING 10143
@@ -61539,7 +61485,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 STRING 10165
 {
 Transformations:
-[lvl 30]  1.50x "paparapapa"
+[lvl 25]  1.50x "paparapapa"
 [lvl 90]  2.00x "paparapapa"
 [lvl 150] 2.50x "paparapapa"
 
@@ -62106,30 +62052,6 @@ STRING 10258
 [|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 10|r]
 }
 
-STRING 10259
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10260
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10261
-// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
-STRING 10262
-// Abilities: A0LE (Blazing Rush), Researchubertip (Tooltip - Learn - Extended)
-{
-Future Trunks quickly misses every attack on his opponent. |n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: 30 seconds)|r
-}
-
 STRING 10263
 // Abilities: A0LE (Blazing Rush), EditorSuffix (Editor Suffix)
 {
@@ -62388,6 +62310,48 @@ STRING 10305
 2.0
 }
 
+STRING 10306
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+}
+
+STRING 10307
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+}
+
+STRING 10308
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
+}
+
+STRING 10309
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
+}
+
+STRING 10310
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
+}
+
+STRING 10311
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+}
+
+STRING 10312
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+}
+
 STRING 10313
 // Abilities: A0LG (Babidi Barrier), Tip (Tooltip - Normal)
 {
@@ -62470,6 +62434,30 @@ STRING 10326
 // Abilities: A0LG (Babidi Barrier), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 10327
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool1> seconds)|r
+}
+
+STRING 10328
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool2> seconds)|r
+}
+
+STRING 10329
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool3> seconds)|r
+}
+
+STRING 10330
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool4> seconds)|r
 }
 
 STRING 10331
@@ -63842,6 +63830,36 @@ STRING 10556
 Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
+STRING 10557
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool5> seconds)|r
+}
+
+STRING 10558
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool6> seconds)|r
+}
+
+STRING 10559
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool7> seconds)|r
+}
+
+STRING 10560
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool8> seconds)|r
+}
+
+STRING 10561
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool9> seconds)|r
+}
+
 STRING 10562
 // Abilities: A0LR (Saiyan Spirit), Tip (Tooltip - Normal)
 {
@@ -63924,6 +63942,30 @@ STRING 10575
 // Abilities: A0LR (Saiyan Spirit), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Saiyan Spirit - [|cffffcc00Level 10|r]
+}
+
+STRING 10576
+// Abilities: A0LE (Blazing Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool10> seconds)|r
+}
+
+STRING 10577
+// Abilities: A0LE (Blazing Rush), Researchubertip (Tooltip - Learn - Extended)
+{
+Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool1> seconds)|r
+}
+
+STRING 10578
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+}
+
+STRING 10579
+// Abilities: A00Z (Solar Flare), Researchubertip (Tooltip - Learn - Extended)
+{
+Nearby enemies are blinded and cannot attack.|n|cff00FF00Duration: 10 seconds)|r|n|cff00ffff(Cooldown: 50/45/40/35 seconds)|r
 }
 
 STRING 10580
@@ -64378,8 +64420,8 @@ Triggers final battle
 
 STRING 10643
 {
-=== Final Battle ===
-Some transformations have been disabled. Too slow!
+|cffffcc00=== Final Battle ===|r
+|cffff2020Some transformations have been disabled. Too slow!|r
 }
 
 STRING 10644
@@ -67310,12 +67352,6 @@ STRING 11127
 [|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
 }
 
-STRING 11128
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: 13/10/7 seconds|r
-}
-
 STRING 11129
 // Units: H08V (Mid-Class Saiyan Warrior), Name (Name)
 {
@@ -67459,54 +67495,6 @@ STRING 11151
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
-}
-
-STRING 11152
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
-}
-
-STRING 11153
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
-}
-
-STRING 11154
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
-}
-
-STRING 11155
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
-}
-
-STRING 11156
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
-}
-
-STRING 11157
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
-}
-
-STRING 11158
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
-}
-
-STRING 11159
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool8> seconds|r
 }
 
 STRING 11160
@@ -67670,24 +67658,6 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
-}
-
-STRING 11184
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool9> seconds|r
-}
-
-STRING 11185
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
-}
-
-STRING 11186
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
-{
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * 3|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 11187
@@ -68356,6 +68326,12 @@ STRING 11297
 [|cffffff00D|r] Choose Moro
 }
 
+STRING 11298
+// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool2> seconds)|r
+}
+
 STRING 11299
 // Units: H08Y (Planet-Eater), Tip (Tooltip - Basic)
 {
@@ -68721,6 +68697,30 @@ STRING 11358
 // Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
 {
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
+}
+
+STRING 11359
+// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool3> seconds)|r
+}
+
+STRING 11360
+// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool4> seconds)|r
+}
+
+STRING 11361
+// Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool1> seconds)|r
+}
+
+STRING 11362
+// Abilities: A0KO (Solar Flare), Researchubertip (Tooltip - Learn - Extended)
+{
+Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool1>/<A0KO,Cool2>/<A0KO,Cool3>/<A0KO,Cool4> seconds)|r
 }
 
 STRING 11363

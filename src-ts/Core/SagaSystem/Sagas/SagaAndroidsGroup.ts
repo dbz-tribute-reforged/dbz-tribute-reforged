@@ -25,6 +25,10 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     this.android19 = this.bosses.get("Android 19");
     this.android20 = this.bosses.get("Android 20");
 
+    for (const [name, boss] of this.bosses) {
+      SetUnitAcquireRange(boss, 3000);
+    }
+
     this.ping();
     this.addActionRewardStats(this);
   }
@@ -40,7 +44,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
       this.useCustomAggroClosest = false;
       DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
       IssuePointOrder(this.android20, "move", 14000, 7500);
-      SetUnitMoveSpeed(this.android20, 522);
+      SetUnitMoveSpeed(this.android20, 500);
     }
   }
 
@@ -165,7 +169,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.super13);
     
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 3500);
     }
 
     this.ping();
@@ -236,7 +240,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Future Android 17", "Future Android 18"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 1800);
+      SetUnitAcquireRange(boss, 3500);
     }
 
     this.ping();

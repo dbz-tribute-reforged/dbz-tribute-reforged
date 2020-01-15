@@ -278,6 +278,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
               PauseUnit(unit, false);
               SetUnitInvulnerable(unit, false);
             });
+            DestroyGroup(extraUnitsGroup);
 
             PanCameraToTimedForPlayer(
               Player(contestant.id), 
@@ -286,7 +287,18 @@ export class Budokai extends AdvancedTournament implements Tournament {
               0
             );
 
-            DestroyGroup(extraUnitsGroup);
+            const itemRect = Rect(
+              TournamentData.budokaiArenaBottomLeft.x,
+              TournamentData.budokaiArenaBottomLeft.y,
+              TournamentData.budokaiArenaTopRight.x,
+              TournamentData.budokaiArenaTopRight.y
+            )
+
+            EnumItemsInRectBJ(itemRect, () => {
+              SetItemPosition(GetFilterItem(), unitContestant.oldPosition.x, unitContestant.oldPosition.y)
+            });
+
+            RemoveRect(itemRect);
             break;
           }
         }

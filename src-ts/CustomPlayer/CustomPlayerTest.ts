@@ -853,32 +853,46 @@ export function CustomPlayerTest() {
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(allyTrig, Player(i), "-ally", false);
   }
+  TriggerAddCondition(allyTrig, Condition(() => {
+    return (
+      GetEventPlayerChatString().startsWith("-ally")
+    )
+  }));
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7));
-    const targetPlayer = Player(targetPlayerId);
-    SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 10, 
-      Colorizer.getColoredPlayerName(player) + " |cff00ffffhas allied|r " + 
-      Colorizer.getColoredPlayerName(targetPlayer)
-    );
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7)) - 1;
+    if (targetPlayerId > 0 && targetPlayerId < bj_MAX_PLAYERS) {
+      const targetPlayer = Player(targetPlayerId);
+      SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 10, 
+        Colorizer.getColoredPlayerName(player) + " |cff00ffffhas allied|r " + 
+        Colorizer.getColoredPlayerName(targetPlayer)
+      );
+    }
   });
 
   const unallyTrig = CreateTrigger();
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerChatEvent(unallyTrig, Player(i), "-unally", false);
   }
+  TriggerAddCondition(unallyTrig, Condition(() => {
+    return (
+      GetEventPlayerChatString().startsWith("-unally")
+    )
+  }));
   TriggerAddAction(unallyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9));
-    const targetPlayer = Player(targetPlayerId);
-    SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 10, 
-      Colorizer.getColoredPlayerName(player) + " |cffff2020has unallied|r " + 
-      Colorizer.getColoredPlayerName(targetPlayer)
-    );
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9)) - 1;
+    if (targetPlayerId > 0 && targetPlayerId < bj_MAX_PLAYERS) {
+      const targetPlayer = Player(targetPlayerId);
+      SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 10, 
+        Colorizer.getColoredPlayerName(player) + " |cffff2020has unallied|r " + 
+        Colorizer.getColoredPlayerName(targetPlayer)
+      );
+    }
   });
 
   // rename trig

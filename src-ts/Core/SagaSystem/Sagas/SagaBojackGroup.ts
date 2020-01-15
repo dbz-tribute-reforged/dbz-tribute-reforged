@@ -8,7 +8,7 @@ export class BojackSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.sagaDelay = 45;
   }
 
   spawnSagaUnits(): void {

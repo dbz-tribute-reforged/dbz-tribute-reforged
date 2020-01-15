@@ -18,7 +18,7 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Hit Universe 6"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping();

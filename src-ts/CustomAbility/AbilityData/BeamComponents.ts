@@ -559,7 +559,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: 66,
-    beamHpMult: BASE.KAME_DPS * 0.5,
+    beamHpMult: BASE.KAME_DPS * 0.4,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 30,
     aoe: 300,
@@ -665,7 +665,7 @@ export const BeamComponents = [
     isTracking: false,
     isFixedAngle: false,
     canClashWithHero: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     explodeAtCastPoint: false,
     beamUnitType: "hpea",
     components: [
