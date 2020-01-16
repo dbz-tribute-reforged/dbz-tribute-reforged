@@ -48,6 +48,7 @@ export class BeamComponent implements
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
+    public spawnAtSource: boolean = true,
     public beamUnitType: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
   ) {
@@ -139,8 +140,12 @@ export class BeamComponent implements
       beamTargetPoint = input.targetPoint;
     }
     this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
-    // move beam slightly out of the source unit
-    sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, 75);
+    if (this.spawnAtSource) {
+      // move beam slightly out of the source unit
+      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, 75);
+    } else {
+      sourceCoord = beamTargetPoint;
+    }
 
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
@@ -218,7 +223,9 @@ export class BeamComponent implements
     }
     if (this.hasBeamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == false) {
       this.checkForBeamClash(input);
-      this.moveBeamUnit(ability, input);
+      if (this.speed > 0) {
+        this.moveBeamUnit(ability, input);
+      }
       for (const component of this.components) {
         if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
           component.performTickAction(ability, input, this.beamUnit);
@@ -240,6 +247,7 @@ export class BeamComponent implements
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
       this.isFixedAngle, this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
+      this.spawnAtSource,
       this.beamUnitType, 
       AbilityComponentHelper.clone(this.components),
     );
@@ -268,6 +276,7 @@ export class BeamComponent implements
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
+      spawnAtSource: boolean;
       beamUnitType: string;
       components: {
         name: string,
@@ -291,6 +300,7 @@ export class BeamComponent implements
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
+    this.spawnAtSource = input.spawnAtSource;
     this.beamUnitType = FourCC(input.beamUnitType);
     return this;
   }

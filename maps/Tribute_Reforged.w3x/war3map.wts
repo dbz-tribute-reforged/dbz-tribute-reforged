@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.26b
+DBZ Tribute Reforged 0.27
 }
 
 STRING 4
@@ -8161,7 +8161,7 @@ STRING 1290
 }
 
 STRING 1291
-// Items: I01F (Android 17), Name (Name)
+// Units: H08Z (Park Ranger), Propernames (Proper Names)
 {
 Android 17
 }
@@ -12306,7 +12306,7 @@ Multi Form- Level 3
 }
 
 STRING 1980
-// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Units: H08Z (Park Ranger), Hotkey (Hotkey)
 {
 F
 }
@@ -12330,7 +12330,7 @@ Piccolo spilts into two-three different units. |n[|cffffcc00History|r] - |cff006
 }
 
 STRING 1984
-// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -13866,7 +13866,7 @@ D
 }
 
 STRING 2240
-// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -14250,7 +14250,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14604,7 +14604,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 2363
-// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A075 (Hercule's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -15560,7 +15560,7 @@ A combat style taught by Master Roshi. |n|cffffcc00Evasion|r - <A027,DataD1,%>% 
 }
 
 STRING 2522
-// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16328,7 +16328,7 @@ Buu Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2650
-// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
+// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16662,7 +16662,7 @@ STRING 2704
 }
 
 STRING 2705
-// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
+// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16686,7 +16686,7 @@ Yakon is one of Babidi's majin minions. He is from a distant corner of the unive
 }
 
 STRING 2709
-// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16992,7 +16992,7 @@ STRING 2759
 }
 
 STRING 2760
-// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -18410,7 +18410,7 @@ Combat of Strength - [|cffffcc00Level 15|r]
 }
 
 STRING 2996
-// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -20664,6 +20664,12 @@ STRING 3368
 [|cff00ff00W|r] Learn Power Level Rising - [|cffffcc00Level %d|r]
 }
 
+STRING 3369
+// Units: H08Z (Park Ranger), Name (Name)
+{
+Park Ranger
+}
+
 STRING 3370
 // Abilities: A00J (Power Level Rising), Hotkey (Hotkey - Normal)
 {
@@ -20821,7 +20827,7 @@ STRING 3395
 }
 
 STRING 3396
-// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -20845,7 +20851,7 @@ Fires a powerful energy blast from the users hands, to be used in combination wi
 }
 
 STRING 3400
-// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23051,7 +23057,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -23867,7 +23873,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24456,7 +24462,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24702,7 +24708,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25296,7 +25302,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25830,7 +25836,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27185,6 +27191,12 @@ STRING 4455
 [|cff00FF00E|r] Learn Solar Flare - [|cffffcc00Level %d|r]
 }
 
+STRING 4456
+// Units: H08Z (Park Ranger), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00F|r] Choose Android 17 [|cffffff00Drag|r|cffffa500o|r|cffffff00n|r|cffff0000Ball |r|cffffcc00Super|r]
+}
+
 STRING 4457
 // Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
@@ -27450,7 +27462,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27786,7 +27798,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -29615,7 +29627,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -29657,85 +29669,85 @@ Book Twin Training
 }
 
 STRING 4867
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4868
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4869
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4870
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4871
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4872
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4873
-// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4874
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4875
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4876
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4877
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4878
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4879
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
 
 STRING 4880
-// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Power Blitz
 }
@@ -29753,13 +29765,13 @@ Power Blitz
 }
 
 STRING 4883
-// Abilities: A09O (Power Blitz), Researchtip (Tooltip - Learn)
+// Abilities: A0GW (Power Blitz), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Power Blitz
 }
 
 STRING 4884
-// Abilities: A09O (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A09P (Photon Flash), Researchubertip (Tooltip - Learn - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
@@ -29771,43 +29783,43 @@ Q
 }
 
 STRING 4886
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4887
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4888
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4889
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4890
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4891
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 4892
-// Abilities: A09P (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
@@ -29873,7 +29885,7 @@ STRING 4902
 }
 
 STRING 4903
-// Abilities: A09P (Photon Flash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GV (Photon Flash), Researchubertip (Tooltip - Learn - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
@@ -31830,7 +31842,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -32727,7 +32739,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35019,7 +35031,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35927,7 +35939,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -36857,7 +36869,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38005,7 +38017,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38215,7 +38227,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 6284
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38419,7 +38431,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42387,7 +42399,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42981,7 +42993,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 7075
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43191,7 +43203,7 @@ A combat style used by Hit. |n|cffffcc00Evasion|r - <A0G0,DataD1,%>% |n|cffffcc0
 }
 
 STRING 7110
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44547,7 +44559,7 @@ STRING 7335
 }
 
 STRING 7336
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45344,6 +45356,55 @@ STRING 7468
 D
 }
 
+STRING 7469
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+{
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in disadvantageous situations.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 7470
+// Units: H08Z (Park Ranger), Tip (Tooltip - Basic)
+{
+[|cffffff00F|r] Choose Android 17 [|cffffff00Drag|r|cffffa500o|r|cffffff00n|r|cffff0000Ball |r|cffffcc00Super|r]
+}
+
+STRING 7471
+// Units: H08Z (Park Ranger), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern DBS)
+}
+
+STRING 7472
+// Items: I01F (Android 17), Name (Name)
+{
+Android 17
+}
+
+STRING 7473
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 7474
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
+}
+
+STRING 7475
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool2> seconds|r
+}
+
 STRING 7476
 // Abilities: A0GT (Death Beam), Tip (Tooltip - Normal)
 {
@@ -45426,6 +45487,18 @@ STRING 7489
 // Abilities: A0GT (Death Beam), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Death Beam
+}
+
+STRING 7490
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool3> seconds|r
+}
+
+STRING 7491
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool4> seconds|r
 }
 
 STRING 7492
@@ -45567,43 +45640,43 @@ Shoots a beam of negative energy from the fingertip. (|cff66cceeDamage can vary 
 }
 
 STRING 7515
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7516
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7517
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7518
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7519
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7520
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
 
 STRING 7521
-// Abilities: A0GV (Photon Flash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
@@ -45669,7 +45742,7 @@ STRING 7531
 }
 
 STRING 7532
-// Abilities: A0GV (Photon Flash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0GW (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
 {
 The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
 }
@@ -45681,87 +45754,91 @@ Q
 }
 
 STRING 7534
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 7535
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 7536
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 7537
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 7538
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+Type "r" to revert.
+Transformations:
+[lvl 17]  1.40x "fp"
+[lvl 50]  1.70x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 150] 2.50x "ranger"
 }
 
 STRING 7539
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
 }
 
 STRING 7540
-// Abilities: A0GW (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool2> seconds)|r
 }
 
 STRING 7541
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool3> seconds)|r
 }
 
 STRING 7542
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool4> seconds)|r
 }
 
 STRING 7543
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool5> seconds)|r
 }
 
 STRING 7544
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool6> seconds)|r
 }
 
 STRING 7545
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
 }
 
 STRING 7546
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool8> seconds)|r
 }
 
 STRING 7547
-// Abilities: A0GW (Power Blitz), Tip (Tooltip - Normal)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool9> seconds)|r
 }
 
 STRING 7548
@@ -45777,15 +45854,15 @@ Power Blitz
 }
 
 STRING 7550
-// Abilities: A0GW (Power Blitz), Researchtip (Tooltip - Learn)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00Q|r] Learn Power Blitz
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool10> seconds)|r
 }
 
 STRING 7551
-// Abilities: A0GW (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
 {
-The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage: int * lvl * 2 + 100|r|n|cff00FFFFCooldown: 13 seconds|r
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> - <A0LB,Cool10> seconds)|r
 }
 
 STRING 7552
@@ -55879,6 +55956,30 @@ STRING 9222
 Saga Generic Spammed Spell
 }
 
+STRING 9223
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool5> seconds|r
+}
+
+STRING 9224
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool6> seconds|r
+}
+
+STRING 9225
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool7> seconds|r
+}
+
+STRING 9226
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 2|r]
+}
+
 STRING 9227
 // Abilities: A0KO (Solar Flare), Tip (Tooltip - Normal)
 {
@@ -55919,6 +56020,12 @@ STRING 9233
 // Abilities: A0KO (Solar Flare), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Solar Flare - [|cffffcc00Level %d|r]
+}
+
+STRING 9234
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 3|r]
 }
 
 STRING 9235
@@ -61008,6 +61115,30 @@ STRING 10082
 Increases Future Trunk's movement speed cap by 165 (can exceed max ms).|nMinistuns enemy units in 200 AOE every second.|nIncreases ability damage by +15% over 9s.|nReduces incoming damage by 20% up to Str x 4.
 }
 
+STRING 10083
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 4|r]
+}
+
+STRING 10084
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 5|r]
+}
+
+STRING 10085
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 6|r]
+}
+
+STRING 10086
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 1|r]
+}
+
 STRING 10087
 // Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
@@ -61030,6 +61161,24 @@ STRING 10090
 // Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan unleashes the true extent of his ultimate form boosting ability damage by 15% for the next 10 seconds.
+}
+
+STRING 10091
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 7|r]
+}
+
+STRING 10092
+// Abilities: A09O (Power Blitz), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Power Blitz - [|cffffcc00Level %d|r]
+}
+
+STRING 10093
+// Abilities: A09O (Power Blitz), Researchubertip (Tooltip - Learn - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool1> seconds|r
 }
 
 STRING 10094
@@ -61711,45 +61860,45 @@ E
 }
 
 STRING 10202
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> seconds|r
 }
 
 STRING 10203
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool2> seconds|r
 }
 
 STRING 10204
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool3> seconds|r
 }
 
 STRING 10205
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool4> seconds|r
 }
 
 STRING 10206
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool5> seconds|r
 }
 
 STRING 10207
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool6> seconds|r
 }
 
 STRING 10208
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool7> seconds|r
 }
 
 STRING 10209
@@ -61825,31 +61974,31 @@ STRING 10220
 }
 
 STRING 10221
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool8> seconds|r
 }
 
 STRING 10222
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool9> seconds|r
 }
 
 STRING 10223
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool10> seconds|r
 }
 
 STRING 10224
-// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MT (Barrier Prison), Researchubertip (Tooltip - Learn - Extended)
 {
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: 50 seconds)|r
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> - <A0MT,Cool10> seconds|r
 }
 
 STRING 10225
-// Abilities: A0LB (Android Barrier), EditorSuffix (Editor Suffix)
+// Abilities: A0LC (S.S. Deadly Hammer), EditorSuffix (Editor Suffix)
 {
 (super 13)
 }
@@ -61992,12 +62141,6 @@ STRING 10248
 Super 13 attacks the opponent with a heavy barrage of punches before punching them away and firing a S.S. Deadly Bomber, inflicting a massive amount of damage.  |n|cff00ff00(Damage:  lvl * int * ? / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
-STRING 10249
-// Abilities: A0LC (S.S. Deadly Hammer), EditorSuffix (Editor Suffix)
-{
-(super 13)
-}
-
 STRING 10250
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
@@ -62050,6 +62193,12 @@ STRING 10258
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 10|r]
+}
+
+STRING 10259
+// Abilities: A09O (Power Blitz), EditorSuffix (Editor Suffix)
+{
+(android 17 dbs)
 }
 
 STRING 10263
@@ -64481,7 +64630,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 14.1.20
+This map is under active development - 17.1.20
 }
 
 STRING 10653
@@ -66885,30 +67034,6 @@ STRING 11049
 (Tavern)
 }
 
-STRING 11050
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11051
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11052
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11053
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004/0.005/0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
 STRING 11054
 {
 |cff00ffffCatchup Stats Deactivated|r
@@ -67495,6 +67620,12 @@ STRING 11151
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
+}
+
+STRING 11159
+// Abilities: A0LB (Android Barrier), EditorSuffix (Editor Suffix)
+{
+(super 13 and 17 dbs)
 }
 
 STRING 11160
@@ -68783,6 +68914,12 @@ STRING 11376
 [|cff00ff00R|r] Learn Lava Pillars - [|cffffcc00Level %d|r]
 }
 
+STRING 11377
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 2|r]
+}
+
 STRING 11378
 // Abilities: A0MO (Energy Drain), Name (Name)
 {
@@ -68829,6 +68966,12 @@ STRING 11385
 // Abilities: A0MR (Lava Pillars), Ubertip (Tooltip - Normal - Extended)
 {
 Moro channels the life energy of the planet to sporadically explode around him.|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MR,Cool2>s|r
+}
+
+STRING 11386
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 3|r]
 }
 
 STRING 11387
@@ -69531,5 +69674,395 @@ STRING 11503
 // Abilities: A0MS (Power Level Sharing), Ubertip (Tooltip - Normal - Extended)
 {
 Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool10>s|r
+}
+
+STRING 11504
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 4|r]
+}
+
+STRING 11505
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 5|r]
+}
+
+STRING 11506
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 6|r]
+}
+
+STRING 11507
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 1|r]
+}
+
+STRING 11508
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 7|r]
+}
+
+STRING 11509
+// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 11510
+// Abilities: A0MT (Barrier Prison), Name (Name)
+{
+Barrier Prison
+}
+
+STRING 11511
+// Abilities: A0MT (Barrier Prison), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Barrier Prison - [|cffffcc00Level %d|r]
+}
+
+STRING 11512
+// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11513
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 9|r]
+}
+
+STRING 11514
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 8|r]
+}
+
+STRING 11515
+// Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 10|r]
+}
+
+STRING 11520
+// Abilities: A0MT (Barrier Prison), EditorSuffix (Editor Suffix)
+{
+(android 17 dbs)
+}
+
+STRING 11521
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool1> seconds|r
+}
+
+STRING 11522
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool2> seconds|r
+}
+
+STRING 11523
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool3> seconds|r
+}
+
+STRING 11524
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool4> seconds|r
+}
+
+STRING 11525
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool5> seconds|r
+}
+
+STRING 11526
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool6> seconds|r
+}
+
+STRING 11527
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool7> seconds|r
+}
+
+STRING 11528
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 2|r]
+}
+
+STRING 11529
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 3|r]
+}
+
+STRING 11530
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 4|r]
+}
+
+STRING 11531
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 5|r]
+}
+
+STRING 11532
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 6|r]
+}
+
+STRING 11533
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 1|r]
+}
+
+STRING 11534
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 7|r]
+}
+
+STRING 11535
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 11536
+// Abilities: A0MU (Barrier Wall), Name (Name)
+{
+Barrier Wall
+}
+
+STRING 11537
+// Abilities: A0MU (Barrier Wall), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Barrier Wall - [|cffffcc00Level %d|r]
+}
+
+STRING 11538
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 11539
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 9|r]
+}
+
+STRING 11540
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 8|r]
+}
+
+STRING 11541
+// Abilities: A0MU (Barrier Wall), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Barrier Wall - [|cffffcc00Level 10|r]
+}
+
+STRING 11542
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool8> seconds|r
+}
+
+STRING 11543
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool9> seconds|r
+}
+
+STRING 11544
+// Abilities: A0MU (Barrier Wall), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool10> seconds|r
+}
+
+STRING 11545
+// Abilities: A0MU (Barrier Wall), Researchubertip (Tooltip - Learn - Extended)
+{
+Android 17 can form a massive barrier wall to protect his teammates, blocking all attacks from a wide angle. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MU,Cool1> - <A0MU,Cool10> seconds|r
+}
+
+STRING 11546
+// Abilities: A0MU (Barrier Wall), EditorSuffix (Editor Suffix)
+{
+(android 17 dbs)
+}
+
+STRING 11547
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
+}
+
+STRING 11548
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool2> - <A0MV,Cool20> seconds|r
+}
+
+STRING 11549
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool3> - <A0MV,Cool30> seconds|r
+}
+
+STRING 11550
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool4> - <A0MV,Cool40> seconds|r
+}
+
+STRING 11551
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool5> - <A0MV,Cool50> seconds|r
+}
+
+STRING 11552
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool6> - <A0MV,Cool60> seconds|r
+}
+
+STRING 11553
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool7> - <A0MV,Cool70> seconds|r
+}
+
+STRING 11554
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 2|r]
+}
+
+STRING 11555
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 3|r]
+}
+
+STRING 11556
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 11557
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 5|r]
+}
+
+STRING 11558
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 6|r]
+}
+
+STRING 11559
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 1|r]
+}
+
+STRING 11560
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 7|r]
+}
+
+STRING 11561
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 11562
+// Abilities: A0MV (Super Electric Strike), Name (Name)
+{
+Super Electric Strike
+}
+
+STRING 11563
+// Abilities: A0MV (Super Electric Strike), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Super Electric Strike - [|cffffcc00Level %d|r]
+}
+
+STRING 11564
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 11565
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 9|r]
+}
+
+STRING 11566
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 8|r]
+}
+
+STRING 11567
+// Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 10|r]
+}
+
+STRING 11568
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool8> - <A0MV,Cool80> seconds|r
+}
+
+STRING 11569
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool9> - <A0MV,Cool90> seconds|r
+}
+
+STRING 11570
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool10> - <A0MV,Cool100> seconds|r
+}
+
+STRING 11571
+// Abilities: A0MV (Super Electric Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
+}
+
+STRING 11572
+// Abilities: A0MV (Super Electric Strike), EditorSuffix (Editor Suffix)
+{
+(android 17 dbs)
 }
 

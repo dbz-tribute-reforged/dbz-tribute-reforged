@@ -16,7 +16,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     public endTick: number = -1,
     public knockbackData: KnockbackData = new KnockbackData(
       16, 0, 250,
-    )
+    ),
+    public affectAllies: boolean = false,
   ) {
 
   }
@@ -27,7 +28,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
       sourceCoord, 
       this.knockbackData.aoe,
       () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
+        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies);
       }
     );
 
@@ -44,7 +45,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   clone(): AbilityComponent {
     return new AOEKnockback(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.knockbackData,
+      this.knockbackData, this.affectAllies,
     );
   }
 
@@ -58,7 +59,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
         speed: number; 
         angle: number; 
         aoe: number;
-      }; 
+      };
+      affectAllies: boolean; 
     }
   ) {
     this.name = input.name;
@@ -66,6 +68,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
+    this.affectAllies = input.affectAllies;
     return this;
   }
 }

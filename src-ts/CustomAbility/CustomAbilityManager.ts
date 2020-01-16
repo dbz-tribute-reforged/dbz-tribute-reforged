@@ -40,6 +40,10 @@ import { AOEApplyComponent } from "./AbilityComponent/AOEApplyComponent";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
 import { SelfDestructComponents } from "./AbilityData/SelfDestructComponents";
 import { SelfDestruct } from "./AbilityComponent/SelfDestruct";
+import { LeashComponents } from "./AbilityData/LeashComponents";
+import { Leash } from "./AbilityComponent/Leash";
+import { TeleportComponents } from "./AbilityData/TeleportComponents";
+import { Teleport } from "./AbilityComponent/Teleport";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -96,6 +100,10 @@ export class CustomAbilityManager {
       this.setComponent(new Hook().deserialize(component));
     }
 
+    for (const component of LeashComponents) {
+      this.setComponent(new Leash().deserialize(component));
+    }
+
     for (const component of SelfDestructComponents) {
       this.setComponent(new SelfDestruct().deserialize(component));
     }
@@ -112,6 +120,10 @@ export class CustomAbilityManager {
       this.setComponent(new SwordSlash().deserialize(component));
     }
 
+    for (const component of TeleportComponents) {
+      this.setComponent(new Teleport().deserialize(component));
+    }
+
     for (const component of TimedLifeComponents) {
       this.setComponent(new TimedLife().deserialize(component));
     }
@@ -124,7 +136,7 @@ export class CustomAbilityManager {
       this.setComponent(beamComponent);
     }
 
-    // load aoe applyable components after multi components
+    // load aoe applyable components after
     for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
       const aoeApplyComponent = new AOEApplyComponent().deserialize(aoeApplyComponentConfig);
       this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
@@ -138,7 +150,7 @@ export class CustomAbilityManager {
       this.setComponent(multiComponent);
     }
 
-    // load abilities after all other components
+    // load abilities after all multi components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
       this.addableComponentAddComponent(ability, abilityData.components, 1);
