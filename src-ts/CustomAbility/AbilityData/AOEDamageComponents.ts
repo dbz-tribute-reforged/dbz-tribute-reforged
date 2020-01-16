@@ -63,6 +63,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -80,6 +81,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -97,6 +99,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -113,6 +116,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -130,6 +134,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -146,6 +151,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -163,6 +169,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
@@ -179,6 +186,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -196,6 +204,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -212,6 +221,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -229,6 +239,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -245,6 +256,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -262,6 +274,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -279,6 +292,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
@@ -296,6 +310,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -313,6 +328,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -329,6 +345,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -346,10 +363,11 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 30,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.7,
+      multiplier: BASE.DFIST_DPS * 0.75,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -363,6 +381,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -379,6 +398,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -396,6 +416,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -413,6 +434,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -429,6 +451,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -446,6 +469,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -463,6 +487,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -480,6 +505,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
@@ -496,6 +522,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -513,6 +540,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
@@ -529,6 +557,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
@@ -545,6 +574,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -562,6 +592,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 310,
     damageData: {
@@ -578,6 +609,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 330,
     damageData: {
@@ -594,6 +626,7 @@ export const AOEDamageComponents = [
     startTick: 32,
     endTick: 32,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -611,6 +644,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
@@ -627,6 +661,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -644,6 +679,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
@@ -661,6 +697,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 900,
     damageData: {
@@ -678,6 +715,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 66,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 550,
     damageData: {
@@ -695,6 +733,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -711,6 +750,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -728,6 +768,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -744,6 +785,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -761,6 +803,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
     damageData: {
@@ -777,10 +820,65 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 400,
+    aoe: 500,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // barrier prison
+  {
+    name: "damage barrier prison dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 450,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.001,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // barrier wall
+  {
+    name: "damage barrier wall dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 450,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.001,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // super electric strike
+  {
+    name: "damage super electric strike dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 300,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -794,6 +892,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -811,6 +910,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 25,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -828,6 +928,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -845,6 +946,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 900,
     damageData: {
@@ -861,6 +963,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 900,
     damageData: {
@@ -878,6 +981,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 220,
     damageData: {
@@ -895,6 +999,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 25,
     damageData: {
@@ -912,6 +1017,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 50,
     damageData: {
@@ -929,10 +1035,11 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.22,
+      multiplier: BASE.KAME_DPS * 0.23,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -946,6 +1053,7 @@ export const AOEDamageComponents = [
     startTick: 50,
     endTick: 149,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
     damageData: {
@@ -962,6 +1070,7 @@ export const AOEDamageComponents = [
     startTick: 50,
     endTick: 50,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
     damageData: {
@@ -979,10 +1088,11 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
-      multiplier: BASE.KAME_DPS,
+      multiplier: BASE.KAME_DPS * 0.75,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -996,6 +1106,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1013,6 +1124,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -1030,6 +1142,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1046,6 +1159,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -1063,6 +1177,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1080,6 +1195,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1096,6 +1212,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1113,6 +1230,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 325,
     damageData: {
@@ -1130,6 +1248,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
@@ -1147,6 +1266,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1163,6 +1283,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -1180,6 +1301,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1196,6 +1318,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1213,6 +1336,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
     damageData: {
@@ -1229,6 +1353,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1246,6 +1371,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1263,6 +1389,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 750,
     damageData: {
@@ -1279,6 +1406,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 300,
     damageData: {
@@ -1295,6 +1423,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: true,
     aoe: 750,
     damageData: {
@@ -1311,6 +1440,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: true,
     aoe: 300,
     damageData: {
@@ -1328,6 +1458,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -1345,6 +1476,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -1363,6 +1495,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 450,
     damageData: {
@@ -1380,6 +1513,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1397,6 +1531,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: 0,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {
@@ -1414,6 +1549,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1430,6 +1566,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
     damageData: {
@@ -1447,6 +1584,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
@@ -1463,6 +1601,7 @@ export const AOEDamageComponents = [
     startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
@@ -1480,6 +1619,7 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_TARGET_POINT_DYNAMIC,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
     damageData: {

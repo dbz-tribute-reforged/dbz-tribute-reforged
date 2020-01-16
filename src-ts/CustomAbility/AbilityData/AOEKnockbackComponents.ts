@@ -11,6 +11,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 300,
     },
+    affectAllies: false,
   },
   {
     name: "knockback spirit bomb",
@@ -22,6 +23,7 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 350,
     },
+    affectAllies: false,
   },
   // to here, and replace with unique name
   // kame light knockback
@@ -35,6 +37,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 250,
     },
+    affectAllies: false,
   },
   {
     name: "knockback kame",
@@ -46,6 +49,7 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    affectAllies: false,
   },
   // super dragon flight
   {
@@ -58,6 +62,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 200,
     },
+    affectAllies: false,
   },
   // heat dome attack
   {
@@ -70,6 +75,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 450,
     },
+    affectAllies: false,
   },
   // hellzone grenade
   {
@@ -82,6 +88,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 250,
     },
+    affectAllies: false,
   },
   // ss deadly hammer reverse knockback
   {
@@ -94,6 +101,7 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 400,
     },
+    affectAllies: false,
   },
   // android barrier knockback
   {
@@ -106,6 +114,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 550,
     },
+    affectAllies: false,
   },
   // broly energy punch
   {
@@ -118,6 +127,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 500,
     },
+    affectAllies: false,
   },
   // broly power level rising
   {
@@ -130,6 +140,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 400,
     },
+    affectAllies: false,
   },
   // big bang attack reverse knockback
   {
@@ -142,6 +153,7 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 400,
     },
+    affectAllies: false,
   },
   {
     name: "knockback 1tick 25speed 180angle 250aoe",
@@ -153,6 +165,7 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    affectAllies: false,
   },
   // energy blast volley minor knockback
   {
@@ -165,6 +178,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 250,
     },
+    affectAllies: false,
   },
   // angry shout large aoe knockback
   {
@@ -177,6 +191,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 800,
     },
+    affectAllies: false,
   },
   // reliable friend
   {
@@ -189,6 +204,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 400,
     },
+    affectAllies: false,
   },
   // babidi barrier knockback
   {
@@ -201,6 +217,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 650,
     },
+    affectAllies: false,
   },
   // cooler deafening wave
   {
@@ -213,6 +230,7 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 500,
     },
+    affectAllies: false,
   },
   // raditz behind you
   {
@@ -225,5 +243,6 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 600,
     },
+    affectAllies: false,
   },
 ];

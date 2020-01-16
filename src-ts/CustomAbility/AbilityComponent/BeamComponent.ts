@@ -218,7 +218,9 @@ export class BeamComponent implements
     }
     if (this.hasBeamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == false) {
       this.checkForBeamClash(input);
-      this.moveBeamUnit(ability, input);
+      if (this.speed > 0) {
+        this.moveBeamUnit(ability, input);
+      }
       for (const component of this.components) {
         if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
           component.performTickAction(ability, input, this.beamUnit);

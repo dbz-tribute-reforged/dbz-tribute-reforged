@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.26b
+DBZ Tribute Reforged 0.27
 }
 
 STRING 4
@@ -45753,6 +45753,94 @@ STRING 7533
 Q
 }
 
+STRING 7534
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 7535
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 7536
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 7537
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 7538
+{
+Type "r" to revert.
+Transformations:
+[lvl 17]  1.40x "fp"
+[lvl 50]  1.70x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 150] 2.50x "ranger"
+}
+
+STRING 7539
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
+}
+
+STRING 7540
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool2> seconds)|r
+}
+
+STRING 7541
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool3> seconds)|r
+}
+
+STRING 7542
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool4> seconds)|r
+}
+
+STRING 7543
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool5> seconds)|r
+}
+
+STRING 7544
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool6> seconds)|r
+}
+
+STRING 7545
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
+}
+
+STRING 7546
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool8> seconds)|r
+}
+
+STRING 7547
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool9> seconds)|r
+}
+
 STRING 7548
 // Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
@@ -45763,6 +45851,18 @@ STRING 7549
 // Abilities: A0GW (Power Blitz), Name (Name)
 {
 Power Blitz
+}
+
+STRING 7550
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool10> seconds)|r
+}
+
+STRING 7551
+// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> - <A0LB,Cool10> seconds)|r
 }
 
 STRING 7552
@@ -61759,6 +61859,48 @@ STRING 10201
 E
 }
 
+STRING 10202
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> seconds|r
+}
+
+STRING 10203
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool2> seconds|r
+}
+
+STRING 10204
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool3> seconds|r
+}
+
+STRING 10205
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool4> seconds|r
+}
+
+STRING 10206
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool5> seconds|r
+}
+
+STRING 10207
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool6> seconds|r
+}
+
+STRING 10208
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool7> seconds|r
+}
+
 STRING 10209
 // Abilities: A0LB (Android Barrier), Tip (Tooltip - Normal)
 {
@@ -61829,6 +61971,30 @@ STRING 10220
 // Abilities: A0LB (Android Barrier), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Android Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 10221
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool8> seconds|r
+}
+
+STRING 10222
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool9> seconds|r
+}
+
+STRING 10223
+// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool10> seconds|r
+}
+
+STRING 10224
+// Abilities: A0MT (Barrier Prison), Researchubertip (Tooltip - Learn - Extended)
+{
+Android 17 forms a barrier around someone, preventing all units inside from leaving the barrier and all units outside from entering. Can be used on allies to protect them from danger or on enemies to hold them in place.|n|cff00ff00Damage Blocked: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> - <A0MT,Cool10> seconds|r
 }
 
 STRING 10225
@@ -62033,24 +62199,6 @@ STRING 10259
 // Abilities: A09O (Power Blitz), EditorSuffix (Editor Suffix)
 {
 (android 17 dbs)
-}
-
-STRING 10260
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool1> seconds)|r
-}
-
-STRING 10261
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool2> seconds)|r
-}
-
-STRING 10262
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool3> seconds)|r
 }
 
 STRING 10263
@@ -64482,7 +64630,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 14.1.20
+This map is under active development - 17.1.20
 }
 
 STRING 10653
@@ -66886,30 +67034,6 @@ STRING 11049
 (Tavern)
 }
 
-STRING 11050
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11051
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11052
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 11053
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.004/0.005/0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
 STRING 11054
 {
 |cff00ffffCatchup Stats Deactivated|r
@@ -67353,12 +67477,6 @@ STRING 11127
 [|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
 }
 
-STRING 11128
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool4> seconds)|r
-}
-
 STRING 11129
 // Units: H08V (Mid-Class Saiyan Warrior), Name (Name)
 {
@@ -67502,48 +67620,6 @@ STRING 11151
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
-}
-
-STRING 11152
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool5> seconds)|r
-}
-
-STRING 11153
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool6> seconds)|r
-}
-
-STRING 11154
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool7> seconds)|r
-}
-
-STRING 11155
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool8> seconds)|r
-}
-
-STRING 11156
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool9> seconds)|r
-}
-
-STRING 11157
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool10> seconds)|r
-}
-
-STRING 11158
-// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 10 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.5 @ 100%)|r|n|cff00ffff(Cooldown: <A0L8,Cool1> seconds)|r
 }
 
 STRING 11159
@@ -67713,24 +67789,6 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
-}
-
-STRING 11184
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> seconds|r
-}
-
-STRING 11185
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool2> seconds|r
-}
-
-STRING 11186
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool3> seconds|r
 }
 
 STRING 11187
@@ -68826,24 +68884,6 @@ STRING 11367
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
 }
 
-STRING 11368
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool4> seconds|r
-}
-
-STRING 11369
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool5> seconds|r
-}
-
-STRING 11370
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool6> seconds|r
-}
-
 STRING 11371
 // Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
@@ -68854,12 +68894,6 @@ STRING 11372
 // Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 11373
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool7> seconds|r
 }
 
 STRING 11374
@@ -69712,30 +69746,6 @@ STRING 11515
 // Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 10|r]
-}
-
-STRING 11516
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool8> seconds|r
-}
-
-STRING 11517
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool9> seconds|r
-}
-
-STRING 11518
-// Abilities: A0MT (Barrier Prison), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool10> seconds|r
-}
-
-STRING 11519
-// Abilities: A0MT (Barrier Prison), Researchubertip (Tooltip - Learn - Extended)
-{
-Android 17 forms a barrier around his opponents, trapping them in place. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MT,Cool1> - <A0MT,Cool10> seconds|r
 }
 
 STRING 11520

@@ -434,6 +434,7 @@ gg_trg_Transformations_Piccolo = nil
 gg_trg_Transformations_Bardock = nil
 gg_trg_Transformations_Pan = nil
 gg_trg_Transformations_Farmer_with_Shotgun = nil
+gg_trg_Transformations_Android_17_DBS = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -490,6 +491,7 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Super_Electric_Strike_Warning = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2239,6 +2241,27 @@ function InitTrig_Pan_Summon_Giru()
     TriggerAddAction(gg_trg_Pan_Summon_Giru, Trig_Pan_Summon_Giru_Actions)
 end
 
+function Trig_Super_Electric_Strike_Warning_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0MV"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Super_Electric_Strike_Warning_Actions()
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl")
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_Super_Electric_Strike_Warning()
+    gg_trg_Super_Electric_Strike_Warning = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Super_Electric_Strike_Warning, EVENT_PLAYER_UNIT_SPELL_CAST)
+    TriggerAddCondition(gg_trg_Super_Electric_Strike_Warning, Condition(Trig_Super_Electric_Strike_Warning_Conditions))
+    TriggerAddAction(gg_trg_Super_Electric_Strike_Warning, Trig_Super_Electric_Strike_Warning_Actions)
+end
+
 function Trig_Babidi_Summons_Func002C()
     if (GetUnitTypeId(GetSummonedUnit()) == FourCC("O004")) then
         return true
@@ -2531,7 +2554,7 @@ function Trig_Buu_Candy_Eating_Actions()
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         if (Trig_Buu_Candy_Eating_Func002Func005C()) then
             TriggerExecute(gg_trg_Get_Stat_Multiplier)
-            udg_TempReal = (((0.03 * 0.10) + (I2R(udg_CandyBeamLvl) * (0.01 * 0.10))) + udg_StatMultInt)
+            udg_TempReal = (((0.04 * 0.10) + (I2R(udg_CandyBeamLvl) * (0.01 * 0.10))) + udg_StatMultInt)
             if (Trig_Buu_Candy_Eating_Func002Func005Func004C()) then
                 udg_TempReal2 = 1.75
             else
@@ -4431,6 +4454,13 @@ function InitTrig_Scoreboard_Setup_Team()
     TriggerAddAction(gg_trg_Scoreboard_Setup_Team, Trig_Scoreboard_Setup_Team_Actions)
 end
 
+function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08Z"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08Y"))) then
         return false
@@ -4602,6 +4632,10 @@ function Trig_Scoreboard_Get_TempUnit_Icon_Actions()
                                                                     if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                         udg_TempString = "BTNMoro.blp"
                                                                     else
+                                                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                            udg_TempString = "BTN17DBS.blp"
+                                                                        else
+                                                                        end
                                                                     end
                                                                 end
                                                             end
@@ -5911,6 +5945,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08S")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H08Z")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -7102,6 +7138,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ult"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "ranger"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ultra"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ss3"
@@ -7377,6 +7415,13 @@ function Trig_Transformations_Parse_String_Func001Func016C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func017C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08Z"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001A()
     udg_StatMultUnit = GetEnumUnit()
     if (Trig_Transformations_Parse_String_Func001Func002C()) then
@@ -7490,6 +7535,10 @@ function Trig_Transformations_Parse_String_Func001A()
     end
     if (Trig_Transformations_Parse_String_Func001Func016C()) then
         TriggerExecute(gg_trg_Transformations_Moro)
+    else
+    end
+    if (Trig_Transformations_Parse_String_Func001Func017C()) then
+        TriggerExecute(gg_trg_Transformations_Android_17_DBS)
     else
     end
 end
@@ -9510,6 +9559,134 @@ end
 function InitTrig_Transformations_Farmer_with_Shotgun()
     gg_trg_Transformations_Farmer_with_Shotgun = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Farmer_with_Shotgun, Trig_Transformations_Farmer_with_Shotgun_Actions)
+end
+
+function Trig_Transformations_Android_17_DBS_Func009C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func010C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func011C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 17)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func014C()
+    if (not (udg_TransformationString == "ranger")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func016Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Android_17_DBS_Func016C()
+    if (not Trig_Transformations_Android_17_DBS_Func016Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+    if (Trig_Transformations_Android_17_DBS_Func009C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_7538")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func010C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func011C()) then
+        udg_StatMultReal = 1.40
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func012C()) then
+        udg_StatMultReal = 1.70
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func013C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func014C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func016C()) then
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+    else
+    end
+    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+end
+
+function InitTrig_Transformations_Android_17_DBS()
+    gg_trg_Transformations_Android_17_DBS = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Android_17_DBS, Trig_Transformations_Android_17_DBS_Actions)
 end
 
 function Trig_Transformations_Androids_13_Func009C()
@@ -12537,18 +12714,28 @@ function InitTrig_Temp_Stat_Mult_Passive_Update()
     TriggerAddAction(gg_trg_Temp_Stat_Mult_Passive_Update, Trig_Temp_Stat_Mult_Passive_Update_Actions)
 end
 
+function Trig_Moro_Increase_Perm_Mult_PvP_Func001C()
+    if (not (GetUnitTypeId(udg_MoroDrainSourceUnit) == FourCC("H08Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Moro_Increase_Perm_Mult_PvP_Actions()
-    udg_StatMultUnit = udg_MoroDrainTargetUnit
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_StatMultReal = (((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) - 1.00) * 0.40)
-    udg_StatMultReal = RMaxBJ(0.05, udg_StatMultReal)
-    udg_MoroInt = GetHeroLevel(udg_MoroDrainSourceUnit)
-    TriggerExecute(gg_trg_Moro_Get_Max_Permanent_Mult)
-    udg_StatMultUnit = udg_MoroDrainSourceUnit
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_StatMultReal = RMinBJ(udg_MoroStatMultReal, (udg_StatMultInt + udg_StatMultReal))
-    TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
+    if (Trig_Moro_Increase_Perm_Mult_PvP_Func001C()) then
+        udg_StatMultUnit = udg_MoroDrainTargetUnit
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_StatMultReal = (((((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt) * 0.33) - 1.00) * 0.40)
+        udg_StatMultReal = RMaxBJ(0.05, udg_StatMultReal)
+        udg_MoroInt = GetHeroLevel(udg_MoroDrainSourceUnit)
+        TriggerExecute(gg_trg_Moro_Get_Max_Permanent_Mult)
+        udg_StatMultUnit = udg_MoroDrainSourceUnit
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_StatMultReal = RMinBJ(udg_MoroStatMultReal, (udg_StatMultInt + udg_StatMultReal))
+        TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+    else
+    end
 end
 
 function InitTrig_Moro_Increase_Perm_Mult_PvP()
@@ -12556,15 +12743,25 @@ function InitTrig_Moro_Increase_Perm_Mult_PvP()
     TriggerAddAction(gg_trg_Moro_Increase_Perm_Mult_PvP, Trig_Moro_Increase_Perm_Mult_PvP_Actions)
 end
 
+function Trig_Moro_Increase_Perm_Mult_Other_Heroes_Func001C()
+    if (not (GetUnitTypeId(udg_MoroDrainSourceUnit) == FourCC("H08Y"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Moro_Increase_Perm_Mult_Other_Heroes_Actions()
-    udg_StatMultReal = 0.01
-    udg_MoroInt = GetHeroLevel(udg_MoroDrainSourceUnit)
-    TriggerExecute(gg_trg_Moro_Get_Max_Permanent_Mult)
-    udg_StatMultUnit = udg_MoroDrainSourceUnit
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_StatMultReal = RMinBJ(udg_MoroStatMultReal, (udg_StatMultInt + udg_StatMultReal))
-    TriggerExecute(gg_trg_Set_Stat_Multiplier)
-    TriggerExecute(gg_trg_Update_Current_Stats)
+    if (Trig_Moro_Increase_Perm_Mult_Other_Heroes_Func001C()) then
+        udg_StatMultReal = 0.01
+        udg_MoroInt = GetHeroLevel(udg_MoroDrainSourceUnit)
+        TriggerExecute(gg_trg_Moro_Get_Max_Permanent_Mult)
+        udg_StatMultUnit = udg_MoroDrainSourceUnit
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_StatMultReal = RMinBJ(udg_MoroStatMultReal, (udg_StatMultInt + udg_StatMultReal))
+        TriggerExecute(gg_trg_Set_Stat_Multiplier)
+        TriggerExecute(gg_trg_Update_Current_Stats)
+    else
+    end
 end
 
 function InitTrig_Moro_Increase_Perm_Mult_Other_Heroes()
@@ -12786,9 +12983,9 @@ function Trig_Replace_Transformation_Group_with_New_Hero_Actions()
         RemoveLocation(udg_TempLoc)
         udg_ID = GetHandleId(udg_StatMultUnit)
     if (Trig_Replace_Transformation_Group_with_New_Hero_Func014C()) then
-        udg_TempInt = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
+        udg_TempInt2 = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
                 udg_ID = GetHandleId(udg_TransformationResultUnit)
-        SaveIntegerBJ(udg_TempInt, 18, udg_ID, udg_StatMultHashtable)
+        SaveIntegerBJ(udg_TempInt2, 18, udg_ID, udg_StatMultHashtable)
     else
     end
         AddHeroXP(udg_TransformationResultUnit, udg_TempInt, false)
@@ -12973,6 +13170,7 @@ function InitCustomTriggers()
     InitTrig_Oozaru_Vegeta_New()
     InitTrig_Piccolo_Multi_Form()
     InitTrig_Pan_Summon_Giru()
+    InitTrig_Super_Electric_Strike_Warning()
     InitTrig_Babidi_Summons()
     InitTrig_Babidi_Haretsu_Instagib()
     InitTrig_Buu_Candy_Beam()
@@ -13119,6 +13317,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Bardock()
     InitTrig_Transformations_Pan()
     InitTrig_Transformations_Farmer_with_Shotgun()
+    InitTrig_Transformations_Android_17_DBS()
     InitTrig_Transformations_Androids_13()
     InitTrig_Transformations_Androids_13_14_15()
     InitTrig_Transformations_Androids_Super_13()

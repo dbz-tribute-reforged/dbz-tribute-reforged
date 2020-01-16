@@ -40,6 +40,10 @@ import { AOEApplyComponent } from "./AbilityComponent/AOEApplyComponent";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
 import { SelfDestructComponents } from "./AbilityData/SelfDestructComponents";
 import { SelfDestruct } from "./AbilityComponent/SelfDestruct";
+import { LeashComponents } from "./AbilityData/LeashComponents";
+import { Leash } from "./AbilityComponent/Leash";
+import { TeleportComponents } from "./AbilityData/TeleportComponents";
+import { Teleport } from "./AbilityComponent/Teleport";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -96,6 +100,10 @@ export class CustomAbilityManager {
       this.setComponent(new Hook().deserialize(component));
     }
 
+    for (const component of LeashComponents) {
+      this.setComponent(new Leash().deserialize(component));
+    }
+
     for (const component of SelfDestructComponents) {
       this.setComponent(new SelfDestruct().deserialize(component));
     }
@@ -110,6 +118,10 @@ export class CustomAbilityManager {
 
     for (const component of SwordSlashComponents) {
       this.setComponent(new SwordSlash().deserialize(component));
+    }
+
+    for (const component of TeleportComponents) {
+      this.setComponent(new Teleport().deserialize(component));
     }
 
     for (const component of TimedLifeComponents) {

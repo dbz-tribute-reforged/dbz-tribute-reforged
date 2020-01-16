@@ -23,6 +23,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public startTick: number = 0,
     public endTick: number = -1,
     public damageSource: number = AOEDamage.SOURCE_UNIT,
+    public scaleDamageToSourceHp: boolean = false,
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
     public damageData: DamageData = new DamageData(
@@ -37,14 +38,16 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.damageStarted = false;
   }
 
-  protected calculateDamage(input: CustomAbilityInput): number {
-    return (
-      input.level * input.caster.spellPower * this.damageData.multiplier * 
+  protected calculateDamage(input: CustomAbilityInput, source: unit): number {
+    let damage = input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
-      )
-    );
+      );
+    if (this.scaleDamageToSourceHp) {
+      damage *= GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+    }
+    return damage;
   }
 
   setDamageSourceToTargettedPoint(input: CustomAbilityInput) {
@@ -93,7 +96,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       }
     );
 
-    const damage = this.calculateDamage(input);
+    const damage = this.calculateDamage(input, source);
 
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
@@ -124,7 +127,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   clone(): AbilityComponent {
     return new AOEDamage(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.damageSource, this.useLastCastPoint ,this.aoe, this.damageData,
+      this.damageSource, 
+      this.scaleDamageToSourceHp,
+      this.useLastCastPoint,
+      this.aoe, this.damageData,
     );
   }
 
@@ -135,6 +141,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       startTick: number;
       endTick: number;
       damageSource: number;
+      scaleDamageToSourceHp: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
       damageData: {
@@ -151,6 +158,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.damageSource = input.damageSource;
+    this.scaleDamageToSourceHp = input.scaleDamageToSourceHp;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
     this.damageData = new DamageData().deserialize(input.damageData);

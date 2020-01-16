@@ -561,7 +561,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam finish buster" },
-      { name: "damage heat dome attack explosion" },
       { name: "knockback heat dome attack" },
     ],
   },
@@ -1161,15 +1160,15 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNBuuVanishingBall.blp",
-      disabled: "BTNBuuVanishingBall.blp",
+      enabled: "BTN17PowerBlitz.blp",
+      disabled: "BTN17PowerBlitz.blp",
     },
     tooltip: {
       title: "Power Blitz",
@@ -1178,6 +1177,84 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam power blitz" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Barrier Prison",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN17BarrierPrison.blp",
+      disabled: "BTN17BarrierPrison.blp",
+    },
+    tooltip: {
+      title: "Barrier Prison",
+      body: 
+        "Barrier Prison"
+    },
+    components: [
+      { name: "multi barrier prison" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Barrier Wall",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 231,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN17BarrierWall.blp",
+      disabled: "BTN17BarrierWall.blp",
+    },
+    tooltip: {
+      title: "Barrier Wall",
+      body: 
+        "Barrier Wall"
+    },
+    components: [
+      { name: "multi barrier wall" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: "Super Electric Strike",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN17SuperElectricStrike.blp",
+      disabled: "BTN17SuperElectricStrike.blp",
+    },
+    tooltip: {
+      title:  "Super Electric Strike",
+      body: 
+        "Super Electric Strike",
+    },
+    components: [
+      { name: "multi super electric strike" },
     ],
   },
   // -------------------------------------------
@@ -1241,7 +1318,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 330,
+    duration: 231,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1258,7 +1335,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block android barrier" },
-      { name: "knockback android barrier" },
+      { name: "beam android barrier" },
     ],
   },
   // -------------------------------------------
@@ -1537,7 +1614,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 330,
+    duration: 264,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

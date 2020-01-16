@@ -17,12 +17,14 @@ export class MultiComponent implements
   static readonly WRAPAROUND_FIRING = 2;
   static readonly RANDOM_FIRING = 3;
 
+  protected hasStarted: boolean;
   protected angleCurrent: number;
   protected angleDirection: number;
   protected angleRange: number;
   protected originalAngle: number;
   protected originalDistance: number;
   protected originalTarget: Vector2D;
+  protected sourceCoords: Vector2D;
   protected currentDelay: number;
   protected activeComponents: AbilityComponent[];
 
@@ -41,15 +43,19 @@ export class MultiComponent implements
     public multiplyComponents: number = 1,
     public componentsAddedPerRound: number = 1,
     public alwaysUpdateAngle: boolean = false,
+    public fixedSourceCoords: boolean = false,
+    public useTargetUnitAsSource: boolean = false,
     public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
+    this.hasStarted = false;
     this.angleCurrent = 0;
     this.angleDirection = 1;
     this.angleRange = 0;
     this.originalAngle = 0;
     this.originalDistance = 0;
     this.originalTarget = new Vector2D(0, 0);
+    this.sourceCoords = new Vector2D(0, 0);
     this.currentDelay = 0;
     this.activeComponents = [];
   }
@@ -90,9 +96,24 @@ export class MultiComponent implements
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    let sourceCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+    if (!this.fixedSourceCoords || !this.hasStarted) {
+      if (!this.useTargetUnitAsSource) {
+        this.sourceCoords.x = GetUnitX(source);
+        this.sourceCoords.y = GetUnitY(source);
+      } else {
+        if (input.targetUnit) {
+          this.sourceCoords.x = GetUnitX(input.targetUnit);
+          this.sourceCoords.y = GetUnitY(input.targetUnit);
+        } else {
+          this.sourceCoords.x = GetUnitX(source);
+          this.sourceCoords.y = GetUnitY(source);
+        }
+      }
+    }
 
-    if (ability.currentTick == this.startTick) {
+    if (!this.hasStarted) {
+      this.hasStarted = true;
+
       this.angleCurrent = this.angleMin;
       if (this.angleMax > this.angleMin) {
         this.angleRange = this.angleMax - this.angleMin;
@@ -110,13 +131,17 @@ export class MultiComponent implements
         targettedPoint = input.castPoint;
       }
 
-      this.originalAngle = CoordMath.angleBetweenCoords(sourceCoords, targettedPoint);
-      if (this.forceMaxDistance < 0.5 && this.forceMinDistance < 0.5) {
-        this.originalDistance = CoordMath.distance(sourceCoords, targettedPoint);
-      } else {
-      this.originalDistance = 
-        this.forceMinDistance + 
-        Math.random() * (this.forceMaxDistance - this.forceMinDistance);
+      this.originalAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targettedPoint);
+      if (this.forceMaxDistance < 0.5) {
+        this.originalDistance =
+          Math.max(
+            CoordMath.distance(this.sourceCoords, targettedPoint),
+            this.forceMinDistance
+          );
+      } else if (this.forceMaxDistance >= 0.5) {
+        this.originalDistance = 
+          this.forceMinDistance + 
+          Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
       this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
       if (this.angleRange >= 360) {
@@ -134,11 +159,11 @@ export class MultiComponent implements
         Math.random() * (this.forceMaxDistance - this.forceMinDistance);
     }
 
-    let tmp: Vector2D;
+    let oldPoint: Vector2D;
     if (this.useLastCastPoint) {
-      tmp = input.castPoint;
+      oldPoint = input.castPoint;
       input.castPoint = CoordMath.polarProjectCoords(
-        sourceCoords, 
+        this.sourceCoords, 
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
@@ -148,12 +173,17 @@ export class MultiComponent implements
       //   input.castPoint.y,
       // );
     } else {
-      tmp = input.targetPoint
+      oldPoint = input.targetPoint
       input.targetPoint = CoordMath.polarProjectCoords(
-        sourceCoords, 
+        this.sourceCoords, 
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
+    }
+
+    let oldSource = source;
+    if (this.useTargetUnitAsSource && input.targetUnit) {
+      source = input.targetUnit;
     }
 
     // keep showing active components
@@ -163,10 +193,14 @@ export class MultiComponent implements
       }
     }
 
+    if (this.useTargetUnitAsSource) {
+      source = oldSource;
+    }
+
     if (this.useLastCastPoint) {
-      input.castPoint = tmp;
+      input.castPoint = oldPoint;
     } else {
-      input.targetPoint = tmp;
+      input.targetPoint = oldPoint;
     }
 
     // if fired a beam, then adjust angle to next point
@@ -181,6 +215,7 @@ export class MultiComponent implements
         this.components.push(component);
       }
       this.activeComponents.splice(0, this.activeComponents.length);
+      this.hasStarted = false;
     }
   }
   
@@ -196,6 +231,8 @@ export class MultiComponent implements
       this.multiplyComponents,
       this.componentsAddedPerRound,
       this.alwaysUpdateAngle,
+      this.fixedSourceCoords,
+      this.useTargetUnitAsSource,
       this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
     );
@@ -217,6 +254,8 @@ export class MultiComponent implements
       multiplyComponents: number;
       componentsAddedPerRound: number;
       alwaysUpdateAngle: boolean;
+      fixedSourceCoords: boolean;
+      useTargetUnitAsSource: boolean;
       useLastCastPoint: boolean;
       components: {
         name: string,
@@ -237,6 +276,8 @@ export class MultiComponent implements
     this.componentsAddedPerRound = input.componentsAddedPerRound;
     this.multiplyComponents = input.multiplyComponents;
     this.alwaysUpdateAngle = input.alwaysUpdateAngle;
+    this.fixedSourceCoords = input.fixedSourceCoords;
+    this.useTargetUnitAsSource = input.useTargetUnitAsSource;
     this.useLastCastPoint = input.useLastCastPoint;
     return this;
   }

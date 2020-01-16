@@ -1785,7 +1785,7 @@ export const SfxComponents = [
         model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 1.0,
+        scale: 1.5,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
@@ -1815,6 +1815,109 @@ export const SfxComponents = [
         persistent: true,
         attachmentPoint: "origin",
       },
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam barrier prison", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 12,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 155,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam barrier wall", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 12,
+        startHeight: 200,
+        endHeight: 200,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 155,
+          y: 255,
+          z: 155,
+        },
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam super electric strike", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\DarkSummoning\\DarkSummonMissile.mdl",
+        repeatInterval: 8,
+        group: 0,
+        scale: 1.0,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 75,
+          y: 255,
+          z: 155,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 1.0,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
     ],
   },
   // --------------------------------------------
