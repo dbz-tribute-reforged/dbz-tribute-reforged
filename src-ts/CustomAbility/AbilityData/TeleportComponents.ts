@@ -6,6 +6,7 @@ export const TeleportComponents = [
     endTick: -1,
     teleportOnce: true,
     useLastCastPoint: true,
+    useOriginalPoint: false,
   },
   {
     name: "teleport last cast point continuous", 
@@ -14,5 +15,6 @@ export const TeleportComponents = [
     endTick: -1,
     teleportOnce: false,
     useLastCastPoint: true,
+    useOriginalPoint: false,
   },
 ];

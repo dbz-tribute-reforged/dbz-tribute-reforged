@@ -12,10 +12,10 @@ export const LeashComponents = [
   {
     name: "leash barrier wall", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 2,
     endTick: -1,
     aoe: 400,
-    repelOutsidersSpeed: 70,
+    repelOutsidersSpeed: 60,
     affectAllies: true,
     canWalkOut: true,
   },

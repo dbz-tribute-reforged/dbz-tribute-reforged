@@ -78,18 +78,18 @@ export const AOEKnockbackComponents = [
     affectAllies: false,
   },
   // hellzone grenade
-  {
-    name: "knockback hellzone grenade",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    knockbackData: {
-      speed: 1, 
-      angle: 0, 
-      aoe: 250,
-    },
-    affectAllies: false,
-  },
+  // {
+  //   name: "knockback hellzone grenade",
+  //   repeatInterval: 1, 
+  //   startTick: 0,
+  //   endTick: -1,
+  //   knockbackData: {
+  //     speed: 1, 
+  //     angle: 0, 
+  //     aoe: 250,
+  //   },
+  //   affectAllies: false,
+  // },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",
@@ -242,6 +242,32 @@ export const AOEKnockbackComponents = [
       speed: 35, 
       angle: 0, 
       aoe: 600,
+    },
+    affectAllies: false,
+  },
+  // power blitz
+  {
+    name: "knockback power blitz",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 3, 
+      angle: 180, 
+      aoe: 300,
+    },
+    affectAllies: false,
+  },
+  // super electric strike
+  {
+    name: "knockback super electric strike",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 4, 
+      angle: 0, 
+      aoe: 300,
     },
     affectAllies: false,
   },

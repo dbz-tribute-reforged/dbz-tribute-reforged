@@ -33,35 +33,35 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
 
     if (!this.hasStarted) {
       this.hasStarted = true;
-      if (!this.canWalkOut) {
-        GroupEnumUnitsInRange(
-          this.insideUnits,
-          this.sourceCoords.x,
-          this.sourceCoords.y,
-          this.aoe,
-          Condition(() => {
-            return (
-              UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
-            )
-          })
-        );
-      }
+      GroupEnumUnitsInRange(
+        this.insideUnits,
+        this.sourceCoords.x,
+        this.sourceCoords.y,
+        this.aoe,
+        Condition(() => {
+          return (
+            UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
+          )
+        })
+      );
     }
 
-    ForGroup(this.insideUnits, () => {
-      const target = GetEnumUnit();
-      const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
-      const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-      if (targetDistance > this.aoe) {
-        const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
-        const newCoords = CoordMath.polarProjectCoords(this.sourceCoords, targetAngle, this.aoe);
-        if (IsUnitType(target, UNIT_TYPE_FLYING)) {
-          PathingCheck.moveFlyingUnitToCoord(target, newCoords);
-        } else {
-          PathingCheck.moveGroundUnitToCoord(target, newCoords);
+    if (!this.canWalkOut) {
+      ForGroup(this.insideUnits, () => {
+        const target = GetEnumUnit();
+        const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
+        const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
+        if (targetDistance > this.aoe) {
+          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
+          const newCoords = CoordMath.polarProjectCoords(this.sourceCoords, targetAngle, this.aoe);
+          if (IsUnitType(target, UNIT_TYPE_FLYING)) {
+            PathingCheck.moveFlyingUnitToCoord(target, newCoords);
+          } else {
+            PathingCheck.moveGroundUnitToCoord(target, newCoords);
+          }
         }
-      }
-    });
+      });
+    }
 
     if (this.repelOutsidersSpeed > 0) {
       const outsideUnits = CreateGroup();
@@ -69,7 +69,7 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
         outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe,
+        this.aoe - 5,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&

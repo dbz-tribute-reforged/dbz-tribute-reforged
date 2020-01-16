@@ -150,64 +150,72 @@ export class MultiComponent implements
       this.currentDelay = this.delayBetweenComponents;
     }
 
-    // add components to active components when ready
-    this.activateComponentsWhenReady();
+    // very messy, but i used for 0 delay multis
+    // 2 breaks at the end, if out of components or delay between components != 0, exit
+    for (let activations = 0; activations < 100; ++activations) {
+      // add components to active components when ready
+      this.activateComponentsWhenReady();
 
-    if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
-      this.originalDistance = 
-        this.forceMinDistance + 
-        Math.random() * (this.forceMaxDistance - this.forceMinDistance);
-    }
+      if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
+        this.originalDistance = 
+          this.forceMinDistance + 
+          Math.random() * (this.forceMaxDistance - this.forceMinDistance);
+      }
 
-    let oldPoint: Vector2D;
-    if (this.useLastCastPoint) {
-      oldPoint = input.castPoint;
-      input.castPoint = CoordMath.polarProjectCoords(
-        this.sourceCoords, 
-        this.angleCurrent + this.originalAngle,
-        this.originalDistance
-      );
-      // TextTagHelper.showPlayerColorTextToForce(
-      //   ability.currentTick + "!",
-      //   input.castPoint.x, 
-      //   input.castPoint.y,
-      // );
-    } else {
-      oldPoint = input.targetPoint
-      input.targetPoint = CoordMath.polarProjectCoords(
-        this.sourceCoords, 
-        this.angleCurrent + this.originalAngle,
-        this.originalDistance
-      );
-    }
+      let oldPoint: Vector2D;
+      if (this.useLastCastPoint) {
+        oldPoint = input.castPoint;
+        input.castPoint = CoordMath.polarProjectCoords(
+          this.sourceCoords, 
+          this.angleCurrent + this.originalAngle,
+          this.originalDistance
+        );
+        // TextTagHelper.showPlayerColorTextToForce(
+        //   ability.currentTick + "!",
+        //   input.castPoint.x, 
+        //   input.castPoint.y,
+        // );
+      } else {
+        oldPoint = input.targetPoint
+        input.targetPoint = CoordMath.polarProjectCoords(
+          this.sourceCoords, 
+          this.angleCurrent + this.originalAngle,
+          this.originalDistance
+        );
+      }
 
-    let oldSource = source;
-    if (this.useTargetUnitAsSource && input.targetUnit) {
-      source = input.targetUnit;
-    }
+      let oldSource = source;
+      if (this.useTargetUnitAsSource && input.targetUnit) {
+        source = input.targetUnit;
+      }
 
-    // keep showing active components
-    for (const component of this.activeComponents) {
-      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-        component.performTickAction(ability, input, source);
+      // keep showing active components
+      for (const component of this.activeComponents) {
+        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          component.performTickAction(ability, input, source);
+        }
+      }
+
+      if (this.useTargetUnitAsSource) {
+        source = oldSource;
+      }
+
+      if (this.useLastCastPoint) {
+        input.castPoint = oldPoint;
+      } else {
+        input.targetPoint = oldPoint;
+      }
+
+      // if fired a beam, then adjust angle to next point
+      if (this.currentDelay == 0 || this.alwaysUpdateAngle) {
+        this.adjustAngleCurrent();
+      }
+      ++this.currentDelay;
+
+      if (this.delayBetweenComponents != 0 || this.components.length == 0) {
+        break;
       }
     }
-
-    if (this.useTargetUnitAsSource) {
-      source = oldSource;
-    }
-
-    if (this.useLastCastPoint) {
-      input.castPoint = oldPoint;
-    } else {
-      input.targetPoint = oldPoint;
-    }
-
-    // if fired a beam, then adjust angle to next point
-    if (this.currentDelay == 0 || this.alwaysUpdateAngle) {
-      this.adjustAngleCurrent();
-    }
-    ++this.currentDelay;
     
     // finished, so move active components back to components
     if (ability.isFinishedUsing(this)) {
