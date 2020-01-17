@@ -1,21 +1,21 @@
-export const LeashComponents = [
+export const BarrierComponents = [
   {
-    name: "leash barrier prison", 
+    name: "barrier barrier prison", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     aoe: 450,
-    repelOutsidersSpeed: 60,
+    repelOutsidersSpeed: 65,
     affectAllies: true,
     canWalkOut: false,
   },
   {
-    name: "leash barrier wall", 
+    name: "barrier barrier wall", 
     repeatInterval: 1, 
     startTick: 2,
     endTick: -1,
-    aoe: 400,
-    repelOutsidersSpeed: 60,
+    aoe: 365,
+    repelOutsidersSpeed: 65,
     affectAllies: true,
     canWalkOut: true,
   },

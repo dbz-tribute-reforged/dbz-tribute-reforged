@@ -44,4 +44,5 @@ export module Constants {
   export const shopSellItemAbility: number = FourCC("Asit");
   export const buffImmortal: number = FourCC("B01U");
   export const floatingTextVisionRange: number = 4000;
+  export const beamSpawnOffset: number = 60;
 }

@@ -8,6 +8,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { AddableComponent } from "./AddableComponent";
+import { Constants } from "Common/Constants";
 
 export class BeamComponent implements 
   AbilityComponent, 
@@ -142,7 +143,7 @@ export class BeamComponent implements
     this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
     if (this.spawnAtSource) {
       // move beam slightly out of the source unit
-      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, 75);
+      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, Constants.beamSpawnOffset);
     } else {
       sourceCoord = beamTargetPoint;
     }

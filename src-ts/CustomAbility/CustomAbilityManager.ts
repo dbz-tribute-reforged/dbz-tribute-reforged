@@ -40,8 +40,8 @@ import { AOEApplyComponent } from "./AbilityComponent/AOEApplyComponent";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
 import { SelfDestructComponents } from "./AbilityData/SelfDestructComponents";
 import { SelfDestruct } from "./AbilityComponent/SelfDestruct";
-import { LeashComponents } from "./AbilityData/LeashComponents";
-import { Leash } from "./AbilityComponent/Leash";
+import { BarrierComponents } from "./AbilityData/BarrierComponents";
+import { Barrier } from "./AbilityComponent/Barrier";
 import { TeleportComponents } from "./AbilityData/TeleportComponents";
 import { Teleport } from "./AbilityComponent/Teleport";
 
@@ -72,6 +72,10 @@ export class CustomAbilityManager {
       this.setComponent(new AOEStun().deserialize(component));
     }
 
+    for (const component of BarrierComponents) {
+      this.setComponent(new Barrier().deserialize(component));
+    }
+
     for (const component of ChannellingComponents) {
       this.setComponent(new Channelling().deserialize(component));
     }
@@ -98,10 +102,6 @@ export class CustomAbilityManager {
 
     for (const component of HookComponents) {
       this.setComponent(new Hook().deserialize(component));
-    }
-
-    for (const component of LeashComponents) {
-      this.setComponent(new Leash().deserialize(component));
     }
 
     for (const component of SelfDestructComponents) {

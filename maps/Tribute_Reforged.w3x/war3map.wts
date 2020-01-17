@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27
+DBZ Tribute Reforged 0.27a
 }
 
 STRING 4
@@ -20567,19 +20567,6 @@ STRING 3355
 // Abilities: A07I (Energy Generation), Name (Name)
 {
 Energy Generation
-}
-
-STRING 3356
-// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
-{
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 3357
@@ -45356,19 +45343,6 @@ STRING 7468
 D
 }
 
-STRING 7469
-// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
-{
-A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in disadvantageous situations.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 7470
 // Units: H08Z (Park Ranger), Tip (Tooltip - Basic)
 {
@@ -62141,6 +62115,19 @@ STRING 10248
 Super 13 attacks the opponent with a heavy barrage of punches before punching them away and firing a S.S. Deadly Bomber, inflicting a massive amount of damage.  |n|cff00ff00(Damage:  lvl * int * ? / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
+STRING 10249
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+{
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 10250
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
@@ -62199,6 +62186,19 @@ STRING 10259
 // Abilities: A09O (Power Blitz), EditorSuffix (Editor Suffix)
 {
 (android 17 dbs)
+}
+
+STRING 10260
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+{
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 10263

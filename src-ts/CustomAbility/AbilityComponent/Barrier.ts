@@ -5,15 +5,16 @@ import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
+import { Constants } from "Common/Constants";
 
-export class Leash implements AbilityComponent, Serializable<Leash> {
+export class Barrier implements AbilityComponent, Serializable<Barrier> {
 
   protected hasStarted: boolean;
   protected sourceCoords: Vector2D;
   protected insideUnits: group;
 
   constructor(
-    public name: string = "Leash",
+    public name: string = "Barrier",
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
@@ -33,11 +34,12 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
 
     if (!this.hasStarted) {
       this.hasStarted = true;
+      GroupClear(this.insideUnits);
       GroupEnumUnitsInRange(
         this.insideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe,
+        this.aoe + Constants.beamSpawnOffset,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
@@ -51,7 +53,7 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance > this.aoe) {
+        if (targetDistance > this.aoe && targetDistance < this.aoe * 2.5) {
           const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
           const newCoords = CoordMath.polarProjectCoords(this.sourceCoords, targetAngle, this.aoe);
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
@@ -69,7 +71,7 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
         outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe - 5,
+        this.aoe + Constants.beamSpawnOffset,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&
@@ -82,12 +84,16 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance < this.aoe * 0.5) {
-          // it came / spawned from within
+        if (targetDistance < this.aoe + Constants.beamSpawnOffset - 100) {
+          // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
           const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
-          const newCoords = CoordMath.polarProjectCoords(this.sourceCoords, targetAngle, this.aoe + this.repelOutsidersSpeed);
+          const newCoords = CoordMath.polarProjectCoords(
+            this.sourceCoords, 
+            targetAngle, 
+            this.aoe + Constants.beamSpawnOffset + this.repelOutsidersSpeed
+          );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
             PathingCheck.moveFlyingUnitToCoord(target, newCoords);
           } else {
@@ -107,7 +113,7 @@ export class Leash implements AbilityComponent, Serializable<Leash> {
   
 
   clone(): AbilityComponent {
-    return new Leash(
+    return new Barrier(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.aoe, 
       this.repelOutsidersSpeed,

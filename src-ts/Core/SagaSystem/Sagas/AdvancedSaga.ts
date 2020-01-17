@@ -104,10 +104,9 @@ export class AdvancedSaga {
       () => {
         SagaHelper.pingDeathMinimap(GetDyingUnit());
         if (saga.canComplete()) {
-          DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, this.getColoredName());
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15, 
-            "Completed by " + 
+            this.getColoredName() + " completed by " + 
             Colorizer.getColoredPlayerName(GetOwningPlayer(GetKillingUnit()))
           );
           DestroyTrigger(GetTriggeringTrigger());
