@@ -1013,7 +1013,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 3645.1, -5867.0, 43.276, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 4148.7, -4752.6, 286.993, FourCC("n02E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9779.3, 3402.4, 189.300, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7844.1, -52.3, -33.542, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7844.1, -52.3, 326.458, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9955.5, -1973.7, 0.835, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 12029.3, -3097.2, 327.337, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 10194.7, -4028.4, 308.747, FourCC("n019"))
@@ -9689,6 +9689,11 @@ function Trig_Transformations_Android_17_DBS_Actions()
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraDarkGreen.mdx"
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0MW"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A09O"), udg_TransformationPlayer)
+        UnitAddAbilityBJ(FourCC("A0MW"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_StatMultUnit, 7)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MW'))
     else
     end
     if (Trig_Transformations_Android_17_DBS_Func016C()) then

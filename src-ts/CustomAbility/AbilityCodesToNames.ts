@@ -142,6 +142,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // android 17 dbs
     [FourCC('A09O'), "Power Blitz"],
+    [FourCC('A0MW'), "Power Blitz Barrage"],
     [FourCC('A0MT'), "Barrier Prison"],
     [FourCC('A0MU'), "Barrier Wall"],
     [FourCC('A0MV'), "Super Electric Strike"],

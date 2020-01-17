@@ -459,4 +459,28 @@ export const MultiComponents = [
       { name: "beam super electric strike" },
     ],
   },
+  // -------------------------------------------
+  {
+    name: "multi power blitz barrage", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: -2,
+    angleMax: 2,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 16,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 14,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    sfxList: true,
+    components: [
+      { name: "beam power blitz barrage" },
+    ],
+  },
 ];

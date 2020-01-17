@@ -434,8 +434,24 @@ export const DamageBlockComponents = [
     attribute: bj_HEROSTAT_INT,
     multiplier: 0.7,
     sfxList: [
+      // {
+      //   model: "IceNova.mdl",
+      //   repeatInterval: 1,
+      //   group: 1,
+      //   scale: 1.5,
+      //   startHeight: 25,
+      //   endHeight: 25,
+      //   extraDirectionalYaw: 0,
+      //   color: {
+      //     x: 255,
+      //     y: 255,
+      //     z: 255,
+      //   },
+      //   persistent: false,
+      //   attachmentPoint: "",
+      // },
       {
-        model: "IceNova.mdl",
+        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
         repeatInterval: 1,
         group: 1,
         scale: 1.5,

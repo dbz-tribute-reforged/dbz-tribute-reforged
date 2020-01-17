@@ -1181,6 +1181,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: "Power Blitz Barrage",
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN17PowerBlitzBarrage.blp",
+      disabled: "BTN17PowerBlitzBarrage.blp",
+    },
+    tooltip: {
+      title: "Power Blitz Barrage",
+      body: 
+        "Power Blitz Barrage"
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi power blitz barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Barrier Prison",
     currentCd: 0,
     maxCd: 1,

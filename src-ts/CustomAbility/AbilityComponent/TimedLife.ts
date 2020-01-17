@@ -18,11 +18,12 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (this.currentTime == 0) {
-      UnitApplyTimedLife(source, FourCC("BTLF"), this.duration);
+      // UnitApplyTimedLife(source, FourCC("BTLF"), this.duration);
     }
     ++this.currentTime;
     if (this.currentTime >= this.duration) {
       this.currentTime = 0;
+      SetUnitState(source, UNIT_STATE_LIFE, 0);
       KillUnit(source);
     }
     if (ability.isFinishedUsing(this)) {

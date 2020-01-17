@@ -258,6 +258,19 @@ export const AOEKnockbackComponents = [
     },
     affectAllies: false,
   },
+  // power blitz barrage
+  {
+    name: "knockback power blitz barrage",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 3, 
+      angle: 180, 
+      aoe: 300,
+    },
+    affectAllies: false,
+  },
   // super electric strike
   {
     name: "knockback super electric strike",
