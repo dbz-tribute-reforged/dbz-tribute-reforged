@@ -75,7 +75,8 @@ export class MultiComponent implements
   adjustAngleCurrent() {
     if (this.firingMode == MultiComponent.RANDOM_FIRING) {
       this.angleCurrent = this.angleMin + Math.random() * this.angleRange;
-
+    } else if (this.firingMode == MultiComponent.LINEAR_FIRING) {
+      this.angleCurrent = this.angleMin;
     } else {
       const nextAngle = this.angleCurrent + this.angleDifference * this.angleDirection;
       if (nextAngle > this.angleMax || nextAngle < this.angleMin) {  

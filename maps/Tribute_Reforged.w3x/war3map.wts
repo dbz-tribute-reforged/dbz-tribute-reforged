@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27
+DBZ Tribute Reforged 0.27a
 }
 
 STRING 4
@@ -20570,15 +20570,15 @@ Energy Generation
 }
 
 STRING 3356
-// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
 {
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high saga killing potential during the late game.
 
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
 |cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 
 }
 
@@ -45357,16 +45357,9 @@ D
 }
 
 STRING 7469
-// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
-A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in disadvantageous situations.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
 }
 
 STRING 7470
@@ -45787,60 +45780,6 @@ Transformations:
 [lvl 150] 2.50x "ranger"
 }
 
-STRING 7539
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
-}
-
-STRING 7540
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool2> seconds)|r
-}
-
-STRING 7541
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool3> seconds)|r
-}
-
-STRING 7542
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool4> seconds)|r
-}
-
-STRING 7543
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool5> seconds)|r
-}
-
-STRING 7544
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool6> seconds)|r
-}
-
-STRING 7545
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
-}
-
-STRING 7546
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool8> seconds)|r
-}
-
-STRING 7547
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool9> seconds)|r
-}
-
 STRING 7548
 // Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
@@ -45851,18 +45790,6 @@ STRING 7549
 // Abilities: A0GW (Power Blitz), Name (Name)
 {
 Power Blitz
-}
-
-STRING 7550
-// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool10> seconds)|r
-}
-
-STRING 7551
-// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
-{
-A powerful energy shield used by androids to prevent all incoming damage for 7 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> - <A0LB,Cool10> seconds)|r
 }
 
 STRING 7552
@@ -58392,13 +58319,13 @@ Q
 }
 
 STRING 9626
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9627
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -62141,6 +62068,19 @@ STRING 10248
 Super 13 attacks the opponent with a heavy barrage of punches before punching them away and firing a S.S. Deadly Bomber, inflicting a massive amount of damage.  |n|cff00ff00(Damage:  lvl * int * ? / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
+STRING 10249
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+{
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 10250
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
@@ -62199,6 +62139,18 @@ STRING 10259
 // Abilities: A09O (Power Blitz), EditorSuffix (Editor Suffix)
 {
 (android 17 dbs)
+}
+
+STRING 10261
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool2> seconds)|r
+}
+
+STRING 10262
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool3> seconds)|r
 }
 
 STRING 10263
@@ -67034,6 +66986,30 @@ STRING 11049
 (Tavern)
 }
 
+STRING 11050
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool4> seconds)|r
+}
+
+STRING 11051
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool5> seconds)|r
+}
+
+STRING 11052
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool6> seconds)|r
+}
+
+STRING 11053
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
+}
+
 STRING 11054
 {
 |cff00ffffCatchup Stats Deactivated|r
@@ -67477,6 +67453,12 @@ STRING 11127
 [|cff00ff00E|r] Behind You - [|cffffcc00Level 10|r]
 }
 
+STRING 11128
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool8> seconds)|r
+}
+
 STRING 11129
 // Units: H08V (Mid-Class Saiyan Warrior), Name (Name)
 {
@@ -67620,6 +67602,48 @@ STRING 11151
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
 Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
+}
+
+STRING 11152
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool9> seconds)|r
+}
+
+STRING 11153
+// Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool10> seconds)|r
+}
+
+STRING 11154
+// Abilities: A0LB (Android Barrier), Researchubertip (Tooltip - Learn - Extended)
+{
+A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> - <A0LB,Cool10> seconds)|r
+}
+
+STRING 11155
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
+}
+
+STRING 11156
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur2> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool2> seconds|r
+}
+
+STRING 11157
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff3030Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
+}
+
+STRING 11158
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff4040Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
 }
 
 STRING 11159
@@ -67789,6 +67813,24 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 11184
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff5050Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
+}
+
+STRING 11185
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff6060Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
+}
+
+STRING 11186
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff7070Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
 }
 
 STRING 11187
@@ -68884,6 +68926,24 @@ STRING 11367
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
 }
 
+STRING 11368
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 2|r]
+}
+
+STRING 11369
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 3|r]
+}
+
+STRING 11370
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 4|r]
+}
+
 STRING 11371
 // Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
@@ -68894,6 +68954,12 @@ STRING 11372
 // Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
+}
+
+STRING 11373
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 5|r]
 }
 
 STRING 11374
@@ -69748,6 +69814,30 @@ STRING 11515
 [|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 10|r]
 }
 
+STRING 11516
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 6|r]
+}
+
+STRING 11517
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 1|r]
+}
+
+STRING 11518
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 7|r]
+}
+
+STRING 11519
+// Abilities: A0MW (Power Blitz Barrage), Name (Name)
+{
+Power Blitz Barrage
+}
+
 STRING 11520
 // Abilities: A0MT (Barrier Prison), EditorSuffix (Editor Suffix)
 {
@@ -70064,5 +70154,35 @@ STRING 11572
 // Abilities: A0MV (Super Electric Strike), EditorSuffix (Editor Suffix)
 {
 (android 17 dbs)
+}
+
+STRING 11573
+// Abilities: A0MW (Power Blitz Barrage), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Power Blitz Barrage - [|cffffcc00Level %d|r]
+}
+
+STRING 11574
+// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
+}
+
+STRING 11575
+// Abilities: A0MW (Power Blitz Barrage), EditorSuffix (Editor Suffix)
+{
+(android 17 dbs)
+}
+
+STRING 11576
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11577
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 

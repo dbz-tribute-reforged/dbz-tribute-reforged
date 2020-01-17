@@ -8,6 +8,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { AddableComponent } from "./AddableComponent";
+import { Constants } from "Common/Constants";
 
 export class BeamComponent implements 
   AbilityComponent, 
@@ -27,6 +28,7 @@ export class BeamComponent implements
   protected explodeMinDistance: number;
   protected explodePosition: Vector2D;
   protected forcedExplode: boolean;
+  protected hasExploded: boolean;
 
   constructor(
     public name: string = "BeamComponent",
@@ -48,6 +50,7 @@ export class BeamComponent implements
     public canClashWithHero: boolean = true,
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
+    public explodeOnDeath: boolean = false,
     public spawnAtSource: boolean = true,
     public beamUnitType: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
@@ -61,6 +64,7 @@ export class BeamComponent implements
     this.explodeMinDistance = 0;
     this.explodePosition = new Vector2D(0, 0);
     this.forcedExplode = false;
+    this.hasExploded = false;
   }
 
   protected getNearbyEnemies(input: CustomAbilityInput) {
@@ -111,11 +115,6 @@ export class BeamComponent implements
         CoordMath.distance(currentCoord, this.explodePosition) < this.explodeMinDistance
       ) {
         this.forcedExplode = true;
-        if (this.endTick == -1) {
-          ability.currentTick = ability.duration - 1;
-        } else {
-          ability.currentTick = this.endTick - 1;
-        }
       }
 
     } else {
@@ -142,7 +141,7 @@ export class BeamComponent implements
     this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
     if (this.spawnAtSource) {
       // move beam slightly out of the source unit
-      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, 75);
+      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, Constants.beamSpawnOffset);
     } else {
       sourceCoord = beamTargetPoint;
     }
@@ -221,21 +220,48 @@ export class BeamComponent implements
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
     }
-    if (this.hasBeamUnit && IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) == false) {
-      this.checkForBeamClash(input);
-      if (this.speed > 0) {
-        this.moveBeamUnit(ability, input);
-      }
-      for (const component of this.components) {
-        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-          component.performTickAction(ability, input, this.beamUnit);
+    if (this.hasBeamUnit && !this.hasExploded) {
+      if (
+        (
+          (
+            IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) || 
+            GetUnitState(this.beamUnit, UNIT_STATE_LIFE) <= 0
+          ) && this.explodeOnDeath
+        ) || this.forcedExplode
+      ) {
+        this.hasExploded = true;
+        const oldCurrentTick = ability.currentTick;
+        if (this.endTick == -1) {
+          ability.currentTick = ability.duration;
+        } else {
+          ability.currentTick = this.endTick;
+        }
+        for (const component of this.components) {
+          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+            component.performTickAction(ability, input, this.beamUnit);
+          }
+        }
+        ability.currentTick = oldCurrentTick;
+        RemoveUnit(this.beamUnit);
+      } else {
+        this.checkForBeamClash(input);
+        if (this.speed > 0) {
+          this.moveBeamUnit(ability, input);
+        }
+        for (const component of this.components) {
+          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+            component.performTickAction(ability, input, this.beamUnit);
+          }
         }
       }
     }
     if (ability.isFinishedUsing(this)) {
+      if (!this.hasExploded){
+        RemoveUnit(this.beamUnit);
+      }
       this.hasBeamUnit = false;
       this.forcedExplode = false;
-      RemoveUnit(this.beamUnit);
+      this.hasExploded = false;
     }
   }
 
@@ -247,6 +273,7 @@ export class BeamComponent implements
       this.durationIncPerDelay, this.heightVariation, this.isTracking,
       this.isFixedAngle, this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
+      this.explodeOnDeath,
       this.spawnAtSource,
       this.beamUnitType, 
       AbilityComponentHelper.clone(this.components),
@@ -276,6 +303,7 @@ export class BeamComponent implements
       canClashWithHero: boolean;
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
+      explodeOnDeath: boolean;
       spawnAtSource: boolean;
       beamUnitType: string;
       components: {
@@ -300,6 +328,7 @@ export class BeamComponent implements
     this.canClashWithHero = input.canClashWithHero;
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
+    this.explodeOnDeath = input.explodeOnDeath;
     this.spawnAtSource = input.spawnAtSource;
     this.beamUnitType = FourCC(input.beamUnitType);
     return this;

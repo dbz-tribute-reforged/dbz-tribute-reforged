@@ -41,7 +41,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", "Reliable Friend", "Dragon Radar"]],
 
     // android 17 dbs
-    [FourCC("H08Z"), ["Power Blitz", "Barrier Prison", "Barrier Wall", "Android Barrier", "Super Electric Strike"]],
+    [FourCC("H08Z"), ["Power Blitz", "Power Blitz Barrage", "Barrier Prison", "Barrier Wall", "Android Barrier", "Super Electric Strike"]],
 
     // androids 13 14 15
     [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],

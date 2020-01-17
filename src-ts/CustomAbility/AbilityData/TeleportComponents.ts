@@ -1,3 +1,5 @@
+import { Teleport } from "CustomAbility/AbilityComponent/Teleport";
+
 export const TeleportComponents = [
   {
     name: "teleport last cast point single", 
@@ -5,8 +7,7 @@ export const TeleportComponents = [
     startTick: 0,
     endTick: -1,
     teleportOnce: true,
-    useLastCastPoint: true,
-    useOriginalPoint: false,
+    teleportTarget: Teleport.CAST_POINT,
   },
   {
     name: "teleport last cast point continuous", 
@@ -14,7 +15,14 @@ export const TeleportComponents = [
     startTick: 0,
     endTick: -1,
     teleportOnce: false,
-    useLastCastPoint: true,
-    useOriginalPoint: false,
+    teleportTarget: Teleport.CAST_POINT,
+  },
+  {
+    name: "teleport caster point continuous", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    teleportOnce: false,
+    teleportTarget: Teleport.CASTER_POINT,
   },
 ];

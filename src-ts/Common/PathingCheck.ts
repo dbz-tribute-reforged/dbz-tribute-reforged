@@ -12,6 +12,7 @@ export module PathingCheck {
   export function Init() {
     item = new Item(FourCC('wtlg'), -128, -128);
     item.visible = false;
+    item.invulnerable = true;
     rect = Rect(0, 0, 128, 128);
     hiddenItems = [];
     hiddenMax = 0;
