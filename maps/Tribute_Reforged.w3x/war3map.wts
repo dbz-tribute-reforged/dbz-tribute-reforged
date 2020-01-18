@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27b
+DBZ Tribute Reforged 0.27c
 }
 
 STRING 4
@@ -62207,6 +62207,12 @@ STRING 10259
 (android 17 dbs)
 }
 
+STRING 10260
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 8|r]
+}
+
 STRING 10261
 // Abilities: A0LB (Android Barrier), Ubertip (Tooltip - Normal - Extended)
 {
@@ -63853,6 +63859,36 @@ STRING 10532
 With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
 }
 
+STRING 10533
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 9|r]
+}
+
+STRING 10534
+// Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz - [|cffffcc00Level 10|r]
+}
+
+STRING 10535
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool8> seconds|r
+}
+
+STRING 10536
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool9> seconds|r
+}
+
+STRING 10537
+// Abilities: A09O (Power Blitz), Ubertip (Tooltip - Normal - Extended)
+{
+The user draws their hand back and charges a swirling pink or blue energy sphere. They then bring their hand forward and fires the sphere at the opponent, inflicting a great amount of damage.|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A09O,Cool10> seconds|r
+}
+
 STRING 10538
 // Abilities: A0LQ (Rebellion Spear), Tip (Tooltip - Normal)
 {
@@ -63925,10 +63961,46 @@ STRING 10549
 [|cff00ff00E|r] Rebellion Spear - [|cffffcc00Level 10|r]
 }
 
+STRING 10550
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> seconds|r
+}
+
+STRING 10551
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool2> seconds|r
+}
+
+STRING 10552
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool3> seconds|r
+}
+
+STRING 10553
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool4> seconds|r
+}
+
 STRING 10554
 // Abilities: A0LQ (Rebellion Spear), EditorSuffix (Editor Suffix)
 {
 (Bardock)
+}
+
+STRING 10555
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool5> seconds|r
+}
+
+STRING 10556
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool6> seconds|r
 }
 
 STRING 10557
@@ -64582,7 +64654,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 17.1.20
+This map is under active development - 19.1.20
 }
 
 STRING 10653
@@ -67634,18 +67706,6 @@ STRING 11156
 Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur2> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool2> seconds|r
 }
 
-STRING 11157
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff3030Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
-}
-
-STRING 11158
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff4040Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
-}
-
 STRING 11159
 // Abilities: A0LB (Android Barrier), EditorSuffix (Editor Suffix)
 {
@@ -67813,24 +67873,6 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
-}
-
-STRING 11184
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff5050Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
-}
-
-STRING 11185
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff6060Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
-}
-
-STRING 11186
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff7070Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
 }
 
 STRING 11187
@@ -70001,45 +70043,9 @@ STRING 11546
 }
 
 STRING 11547
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MV (Super Electric Strike), Researchubertip (Tooltip - Learn - Extended)
 {
 After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
-}
-
-STRING 11548
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool2> - <A0MV,Cool20> seconds|r
-}
-
-STRING 11549
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool3> - <A0MV,Cool30> seconds|r
-}
-
-STRING 11550
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool4> - <A0MV,Cool40> seconds|r
-}
-
-STRING 11551
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool5> - <A0MV,Cool50> seconds|r
-}
-
-STRING 11552
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool6> - <A0MV,Cool60> seconds|r
-}
-
-STRING 11553
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool7> - <A0MV,Cool70> seconds|r
 }
 
 STRING 11554
@@ -70126,30 +70132,6 @@ STRING 11567
 [|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 10|r]
 }
 
-STRING 11568
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool8> - <A0MV,Cool80> seconds|r
-}
-
-STRING 11569
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool9> - <A0MV,Cool90> seconds|r
-}
-
-STRING 11570
-// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool10> - <A0MV,Cool100> seconds|r
-}
-
-STRING 11571
-// Abilities: A0MV (Super Electric Strike), Researchubertip (Tooltip - Learn - Extended)
-{
-After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
-}
-
 STRING 11572
 // Abilities: A0MV (Super Electric Strike), EditorSuffix (Editor Suffix)
 {
@@ -70184,5 +70166,95 @@ STRING 11577
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 11578
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool7> seconds|r
+}
+
+STRING 11579
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool8> seconds|r
+}
+
+STRING 11580
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool9> seconds|r
+}
+
+STRING 11581
+// Abilities: A0MV (Super Electric Strike), Ubertip (Tooltip - Normal - Extended)
+{
+After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool10> seconds|r
+}
+
+STRING 11582
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
+}
+
+STRING 11583
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
+}
+
+STRING 11584
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
+}
+
+STRING 11585
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
+}
+
+STRING 11586
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
+}
+
+STRING 11587
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 8|r]
+}
+
+STRING 11588
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 9|r]
+}
+
+STRING 11589
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 10|r]
+}
+
+STRING 11590
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
+}
+
+STRING 11591
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
+}
+
+STRING 11592
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
 }
 

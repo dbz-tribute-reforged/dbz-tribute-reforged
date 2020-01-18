@@ -871,7 +871,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7)) - 1;
-    if (targetPlayerId > 0 && targetPlayerId < bj_MAX_PLAYERS) {
+    if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
       const targetPlayer = Player(targetPlayerId);
       SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
       DisplayTimedTextToForce(
@@ -894,7 +894,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(unallyTrig, () => {
     const player = GetTriggerPlayer();
     const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9)) - 1;
-    if (targetPlayerId > 0 && targetPlayerId < bj_MAX_PLAYERS) {
+    if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
       const targetPlayer = Player(targetPlayerId);
       SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
       DisplayTimedTextToForce(

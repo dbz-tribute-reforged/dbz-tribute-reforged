@@ -9693,7 +9693,7 @@ function Trig_Transformations_Android_17_DBS_Actions()
         SetPlayerAbilityAvailableBJ(true, FourCC("A0MW"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A09O"), udg_TransformationPlayer)
         UnitAddAbilityBJ(FourCC("A0MW"), udg_StatMultUnit)
-        SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_StatMultUnit, 7)
+        SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_StatMultUnit, 10)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MW'))
     else
     end
@@ -10632,9 +10632,9 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func023C()) then
             udg_TempBool = true
-            UnitAddAbilityBJ(FourCC("A09O"), udg_TransformationResultUnit)
-            SetUnitAbilityLevelSwapped(FourCC("A09O"), udg_TransformationResultUnit, 10)
-                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A09O'))
+            UnitAddAbilityBJ(FourCC("A0MW"), udg_TransformationResultUnit)
+            SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_TransformationResultUnit, 10)
+                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0MW'))
         else
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func025C()) then

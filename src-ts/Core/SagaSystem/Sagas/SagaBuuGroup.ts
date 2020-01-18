@@ -118,7 +118,6 @@ export class BuuSaga extends AdvancedSaga implements Saga {
     this.superBuu = this.bosses.get("Super Buu");
     this.kidBuu = this.bosses.get("Kid Buu");
 
-    SagaHelper.sagaHideUnit(this.superBuu);
     SagaHelper.sagaHideUnit(this.kidBuu);
 
     this.ping();

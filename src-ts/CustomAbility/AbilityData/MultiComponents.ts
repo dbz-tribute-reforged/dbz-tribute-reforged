@@ -403,7 +403,7 @@ export const MultiComponents = [
     multiplyComponents: 1,
     componentsAddedPerRound: 1,
     alwaysUpdateAngle: false,
-    fixedSourceCoords: true,
+    fixedSourceCoords: false,
     useTargetUnitAsSource: true,
     useLastCastPoint: true,
     sfxList: true,
