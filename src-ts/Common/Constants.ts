@@ -6,6 +6,12 @@ export module Constants {
   export const maxPlayers = 24;
   export const dummyBeamUnitId = FourCC("hpea");
   export const dummyCasterId = FourCC("h054");
+  export const shortDisplayTextDuration = 5;
+  export const mediumDisplayTextDuration = 10;
+  export const longDisplayTextDuration = 15;
+  export let jokeProbability = 0.03;
+  export const sagaDisplayTextDuration = mediumDisplayTextDuration;
+  export const sagaDisplayTextDelay = shortDisplayTextDuration;
   export const creepUpgradeDeathDelay = 10;
   export const creepRespawnReviveDelay = 55;
   export const creepUpgradeBuff: number = FourCC("BTLF");

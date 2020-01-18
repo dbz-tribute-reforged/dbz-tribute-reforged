@@ -18,7 +18,14 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Turles and the Crusher Corps have arrived on Earth!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Turles and the Crusher Corps have arrived on Earth!",
+      ],
+      [
+        "|cffffcc00Turles|r: All your fruit are belong to us!",
+      ],
+    );
 
     this.addHeroListToSaga(["Turles"], true);
     this.turles = this.bosses.get("Turles");
@@ -31,7 +38,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.turles && this.availableFruits > 0 && 
-      SagaHelper.checkUnitHp(this.turles, 0.15, true, false, true)
+      SagaHelper.checkUnitHp(this.turles, 0.12, true, false, true)
     ) {
       --this.availableFruits;
       SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);

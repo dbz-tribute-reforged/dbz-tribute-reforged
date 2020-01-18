@@ -4,7 +4,7 @@ export module SagaUpgradeNames {
   export const POST_SAIYANS = "PostSaiyans";
   export const PRE_SLUG = "PreSlug";
   export const PRE_TRUNKS = "PreTrunks";
-  export const POST_TRUNKS = "PostTrunks";
+  export const BIG_DINOS = "BigDinos";
 }
 
 export module Creep {
@@ -231,7 +231,7 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
         ]
       )
     },
-    PostTrunks: {
+    BigDinos: {
       map: new Map<number, RandomCreepType[]>(
         [
           [Creep.FriezaOrlen, [

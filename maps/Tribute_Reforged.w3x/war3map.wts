@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27a
+DBZ Tribute Reforged 0.27b
 }
 
 STRING 4
@@ -45780,6 +45780,60 @@ Transformations:
 [lvl 150] 2.50x "ranger"
 }
 
+STRING 7539
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+}
+
+STRING 7540
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
+}
+
+STRING 7541
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
+}
+
+STRING 7542
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
+}
+
+STRING 7543
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
+}
+
+STRING 7544
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
+}
+
+STRING 7545
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
+}
+
+STRING 7546
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
+}
+
+STRING 7547
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
+}
+
 STRING 7548
 // Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
@@ -45790,6 +45844,18 @@ STRING 7549
 // Abilities: A0GW (Power Blitz), Name (Name)
 {
 Power Blitz
+}
+
+STRING 7550
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+}
+
+STRING 7551
+// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 7552
@@ -63787,36 +63853,6 @@ STRING 10532
 With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
 }
 
-STRING 10533
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
-}
-
-STRING 10534
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool2> seconds|r
-}
-
-STRING 10535
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool3> seconds|r
-}
-
-STRING 10536
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool4> seconds|r
-}
-
-STRING 10537
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool5> seconds|r
-}
-
 STRING 10538
 // Abilities: A0LQ (Rebellion Spear), Tip (Tooltip - Normal)
 {
@@ -63889,46 +63925,10 @@ STRING 10549
 [|cff00ff00E|r] Rebellion Spear - [|cffffcc00Level 10|r]
 }
 
-STRING 10550
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
-}
-
-STRING 10551
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
-}
-
-STRING 10552
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
-}
-
-STRING 10553
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
-}
-
 STRING 10554
 // Abilities: A0LQ (Rebellion Spear), EditorSuffix (Editor Suffix)
 {
 (Bardock)
-}
-
-STRING 10555
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
-}
-
-STRING 10556
-// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
-{
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.075x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.3% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
 }
 
 STRING 10557

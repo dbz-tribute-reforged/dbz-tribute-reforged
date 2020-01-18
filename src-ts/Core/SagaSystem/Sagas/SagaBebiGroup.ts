@@ -16,9 +16,10 @@ export class BebiSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Bebi has taken over the body of Vegeta and begun terrorizing the Earth!"
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Bebi has taken over the body of Vegeta and begun terrorizing the Earth!"
+      ],
     );
 
     this.addHeroListToSaga(["Super Bebi", "Bebi Golden Oozaru"], true);
@@ -43,9 +44,10 @@ export class BebiSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.bebi, 0.5, false, false, false) && 
       SagaHelper.isUnitSagaHidden(this.bebiGooz)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Bebi|r: Bulma, beam me up!"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Bebi|r: Bulma, beam me up!",
+        ],
       );
       SagaHelper.genericTransformAndPing(this.bebiGooz, this.bebi, this);
     }

@@ -3,8 +3,12 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
 
-export class ImperfectCellSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Imperfect Cell Saga';
+export class CellSaga extends AdvancedSaga implements Saga {
+  name: string = '[DBZ] Cell Saga';
+
+  protected imperfectCell: unit | undefined;
+  protected semiperfectCell: unit | undefined;
+  protected perfectCell: unit | undefined;
 
   constructor() {
     super();
@@ -13,20 +17,72 @@ export class ImperfectCellSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Imperfect Cell has arrived from the future.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "A mysterious bio-organism has returned from the future!",
+      ],
+      [
+        "|cffffcc00Imperfect Cell|r: Here's Johnny!",
+      ],
+    );
 
-    this.addHeroListToSaga(["Imperfect Cell"], true);
+    this.addHeroListToSaga(["Imperfect Cell", "Semiperfect Cell", "Perfect Cell 1"], true);
 
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
+    this.imperfectCell = this.bosses.get("Imperfect Cell");
+    this.semiperfectCell = this.bosses.get("Semiperfect Cell");
+    this.perfectCell = this.bosses.get("Perfect Cell 1");
+
+    SagaHelper.sagaHideUnit(this.semiperfectCell);
+    SagaHelper.sagaHideUnit(this.perfectCell);
+
     this.ping();
     this.addActionRewardStats(this);
   }
 
   update(t: number): void {
     super.update(t);
+    if (
+      this.imperfectCell && this.semiperfectCell && 
+      SagaHelper.checkUnitHp(this.imperfectCell, 0.25, false, false, false) &&
+      SagaHelper.isUnitSagaHidden(this.semiperfectCell)
+    ) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Semiperfect Cell|r: After absorbing Android 17 I'm one step closer to perfection.",
+        ],
+        [
+          "|cffffcc00Semiperfect Cell|r: So this is what having lips feels like? Fun!",
+          "|cffffcc00Semiperfect Cell|r: Flppttt. Bllpttt.",
+        ],
+      );
+      SagaHelper.genericTransformAndPing(this.semiperfectCell, this.imperfectCell, this);
+    } else if (
+      this.semiperfectCell && this.perfectCell && 
+      SagaHelper.checkUnitHp(this.semiperfectCell, 0.25, false, false, false) &&
+      SagaHelper.isUnitSagaHidden(this.perfectCell)
+    ) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Perfect Cell|r: Witness the power of my perfect form."
+        ],
+        [
+          "|cffffcc00Perfect Cell|r: \"P\" is for \"Priceless\", the look upon your faces.",
+          "|cffffcc00Perfect Cell|r: \"E\" is for \"Extinction\", all your puny races.",
+          "|cffffcc00Perfect Cell|r: \"R\" is for \"Revolution\", which will be televised.",
+          "|cffffcc00Perfect Cell|r: \"F\" is for how \"F-ed\" you are, now allow me to reprise~",
+          "|cffffcc00Perfect Cell|r: \"E\" is for \"Eccentric\" just listen to my song.",
+          "|cffffcc00Perfect Cell|r: \"C\" is for \"Completion\", that I've waited for so long!",
+          "|cffffcc00Perfect Cell|r: \"T\" is for the \"Terror\", upon you I bestow...",
+          "|cffffcc00Perfect Cell|r: My name is Perfect Cell. And I'd like to say...",
+          "|cffffcc00Perfect Cell|r: Hello.",
+        ], Constants.sagaDisplayTextDelay, Constants.sagaDisplayTextDuration, 0.25
+      );
+      SagaHelper.genericTransformAndPing(this.perfectCell, this.semiperfectCell, this);
+    }
   }
 
   canStart(): boolean {
@@ -58,155 +114,40 @@ export class ImperfectCellSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-  }
-}
-
-export class SemiperfectCellSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Semiperfect Cell Saga';
-
-  constructor() {
-    super();
-    this.sagaDelay = 15;
-  }
-
-  spawnSagaUnits(): void {
-    super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Imperfect Cell slipped away and absorbed Android 17 becoming Semiperfect Cell."
-    );
-
-    this.addHeroListToSaga(["Semiperfect Cell"], true);
-
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 5000);
-    }
-
-    this.ping();
-    this.addActionRewardStats(this);
-  }
-
-  update(t: number): void {
-    super.update(t);
-  }
-
-  canStart(): boolean {
-    return true;
-  }
-
-  canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
-  }
-
-  start(): void {
-    super.start();
-    this.spawnWhenDelayFinished();
-  }
-
-  spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
-      this.spawnSagaUnits();
-    } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
-        this.spawnSagaUnits();
-        DestroyTimer(GetExpiredTimer());
-      });
-    }
-  }
-
-  complete(): void {
-    super.complete();
-  }
-}
-
-export class PerfectCellSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Perfect Cell Saga';
-
-  constructor() {
-    super();
-    this.sagaDelay = 15;
-  }
-
-  spawnSagaUnits(): void {
-    super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Semiperfect Cell somehow survived and absorbed Android 18 to become Perfect Cell!"
-    );
-
-    this.addHeroListToSaga(["Perfect Cell 1"], true);
-
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
-    }
-
-    this.ping();
-    this.addActionRewardStats(this);
-  }
-
-  update(t: number): void {
-    super.update(t);
-  }
-
-  canStart(): boolean {
-    return true;
-  }
-
-  canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
-  }
-
-  start(): void {
-    super.start();
-    this.spawnWhenDelayFinished();
-  }
-
-  spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
-      this.spawnSagaUnits();
-    } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
-        this.spawnSagaUnits();
-        DestroyTimer(GetExpiredTimer());
-      });
-    }
-  }
-
-  complete(): void {
-    super.complete();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Perfect Cell|r: Enough playing around, you're no match for me."
-    );
   }
 }
 
 export class CellGamesSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Cell Games Saga I: Perfect Cell';
+  name: string = '[DBZ] Cell Games Saga';
+
+  protected perfectCell: unit | undefined;
+  protected superPerfectCell: unit | undefined;
+  protected goneSuperPerfect: boolean;
 
   constructor() {
     super();
     this.sagaDelay = 60;
+    this.goneSuperPerfect = false;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Let the games begin!"
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffffcc00Perfect Cell|r: Let the games begin!",
+      ],
     );
 
-    this.addHeroListToSaga(["Perfect Cell Games"], true);
+    this.addHeroListToSaga(["Perfect Cell Games", "Super Perfect Cell"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 1600);
+      SetUnitAcquireRange(boss, 1800);
     }
+
+    this.perfectCell = this.bosses.get("Perfect Cell Games");
+    this.superPerfectCell = this.bosses.get("Super Perfect Cell");
+
+    SagaHelper.sagaHideUnit(this.superPerfectCell);
 
     this.ping();
     this.addActionRewardStats(this);
@@ -214,6 +155,36 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
 
   update(t: number): void {
     super.update(t);
+    if (
+      this.perfectCell && this.superPerfectCell && 
+      SagaHelper.checkUnitHp(this.perfectCell, 0.1, false, true, false) &&
+      SagaHelper.isUnitSagaHidden(this.superPerfectCell) && 
+      !this.goneSuperPerfect
+    ) {
+      this.goneSuperPerfect = true;
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Perfect Cell|r: Aaaagh... what's going on. My power is slipping...",
+          "|cffffcc00Perfect Cell|r: 17..? 18..? No! I was Perfect!",
+        ],
+      );
+      TimerStart(CreateTimer(), 30, false, ()=> {
+        if (this.superPerfectCell && this.perfectCell) {
+          SagaHelper.showMessagesChanceOfJoke(
+            [
+              "|cffffcc00Perfect Cell|r: Heh... Heh... Heh... Thought you got rid of me?",
+              "|cffffcc00Perfect Cell|r: With my new found powers, I'm going to crush you all!",
+            ],
+            [
+              "|cffffcc00Perfect Cell|r: I... am now...",
+              "|cffffcc00Yamcha|r: Perfect-er Cell!",
+              "|cffffcc00Perfect Cell|r: Okay, Yamcha. Accurate, but tone it down",
+            ], 4,
+          );
+          SagaHelper.genericTransformAndPing(this.superPerfectCell, this.perfectCell, this);
+        }
+      })
+    }
   }
 
   canStart(): boolean {
@@ -230,80 +201,12 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
   start(): void {
     super.start();
     this.spawnWhenDelayFinished();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Perfect Cell|r: In 10 days time, I will host the Cell Games to determine the fate of this miserable planet."
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffffcc00Perfect Cell|r: Enough playing around, you're no match for me.",
+        "|cffffcc00Perfect Cell|r: In 10 days time, I will host the Cell Games to determine the fate of this miserable planet.",
+      ],
     );
-  }
-
-  spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
-      this.spawnSagaUnits();
-    } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
-        this.spawnSagaUnits();
-        DestroyTimer(GetExpiredTimer());
-      });
-    }
-  }
-
-  complete(): void {
-    super.complete();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Perfect Cell|r: Aaaagh... what's going on. My power is slipping..."
-    );
-  }
-}
-
-
-export class SuperPerfectCellSaga extends AdvancedSaga implements Saga {
-  name: string = '[DBZ] Cell Games Saga II: Super Perfect Cell';
-
-  constructor() {
-    super();
-    this.sagaDelay = 10;
-  }
-
-  spawnSagaUnits(): void {
-    super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Perfect Cell|r: Heh... Heh... Heh... Thought you got rid of me?"
-    );
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Perfect Cell|r: With my new found powers, I'm going to crush you all!"
-    );
-
-    this.addHeroListToSaga(["Super Perfect Cell"], true);
-
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 1700);
-    }
-
-    this.ping();
-    this.addActionRewardStats(this);
-  }
-
-  update(t: number): void {
-    super.update(t);
-  }
-
-  canStart(): boolean {
-    return true;
-  }
-
-  canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
-  }
-
-  start(): void {
-    super.start();
-    this.spawnWhenDelayFinished();
   }
 
   spawnWhenDelayFinished(): void {
@@ -332,7 +235,12 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Future Cell has begun looking for the Androids.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        
+      "Future Cell has begun looking for the Androids.",
+      ],
+    );
 
     this.addHeroListToSaga(["Future Imperfect Cell"], true);
 

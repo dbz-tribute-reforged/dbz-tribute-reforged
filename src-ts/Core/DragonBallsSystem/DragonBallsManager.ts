@@ -106,6 +106,10 @@ export class DragonBallsManager {
             const unitX = GetUnitX(unit);
             const unitY = GetUnitY(unit);
             this.summonShenron(unitX, unitY);
+            TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay + 1, false, () => {
+              SelectUnitForPlayerSingle(this.shenron, GetTriggerPlayer());
+              DestroyTimer(GetExpiredTimer())
+            })
           } else {
             // need to collect all 7
           }
@@ -380,7 +384,7 @@ export class DragonBallsManager {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS,
         15,
-        "|cffc2c5cc(KNOWN BUG: unselectable shenron. Temp Fix: Type -shenron to select shenron)|r"
+        "|cffb0b0b0(KNOWN BUG: Type -shenron to select shenron if you can't click him.|r"
       );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);

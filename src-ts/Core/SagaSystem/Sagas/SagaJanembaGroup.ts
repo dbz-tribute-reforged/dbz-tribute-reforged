@@ -16,9 +16,11 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "The soul cleansing machine in hell has malfunctioned. The stray souls have manifested into the evil demon Janemba"
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "The soul cleansing machine in hell has malfunctioned.",
+        "The stray souls have manifested into the evil demon Janemba",
+      ],
     );
 
     this.addHeroListToSaga(["Janemba", "Super Janemba"], true);
@@ -43,9 +45,10 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.janemba, 0.1, false, true, false) && 
       SagaHelper.isUnitSagaHidden(this.superJanemba)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Janemba|r: JANEMBA! JANEMBA! JANEMBA!"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Janemba|r: JANEMBA! JANEMBA! JANEMBA!"
+        ],
       );
       SagaHelper.genericTransformAndPing(this.superJanemba, this.janemba, this);
       DestroyEffect(

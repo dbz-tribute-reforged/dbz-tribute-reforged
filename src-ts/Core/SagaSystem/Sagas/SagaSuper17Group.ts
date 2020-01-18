@@ -17,7 +17,11 @@ export class Super17Saga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Gero and Dr. Myuu have combined forces to create Super Android 17");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Dr. Gero and Dr. Myuu have combined forces to create Super Android 17"
+      ],
+    );
 
     this.addHeroListToSaga(["Super 17"], true);
     this.super17 = this.bosses.get("Super 17");

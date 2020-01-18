@@ -13,7 +13,11 @@ export class BojackSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Bojack's crew have arrived for the Interstellar Martial Arts Tournament!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Bojack's crew have arrived for the Interstellar Martial Arts Tournament!",
+      ],
+    );
 
     this.addHeroListToSaga(["Bojack", "Bido", "Gokua", "Pujin", "Zangya"], true);
 

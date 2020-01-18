@@ -141,5 +141,10 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffff2020End of DBGT Sagas for now.",
+      ],
+    );
   }
 }

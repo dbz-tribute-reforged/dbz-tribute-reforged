@@ -20,7 +20,11 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Zarbon and Dodoria have arrived looking for the Dragon Balls.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Zarbon and Dodoria have arrived looking for the Dragon Balls.",
+      ],
+    );
 
     // create unit
     const maxFriezaHenchmen = 3;
@@ -52,10 +56,11 @@ export class NamekSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.zarbon, 0.5, false, false, true) &&
       SagaHelper.isUnitSagaHidden(this.zarbon2)
       ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Zarbon|r: Pitiful humans!"
-      );
+        SagaHelper.showMessagesChanceOfJoke(
+          [
+            "|cffffcc00Zarbon|r: Pitiful humans!",
+          ],
+        );
       SagaHelper.genericTransformAndPing(this.zarbon2, this.zarbon, this);
     }
   }
@@ -103,8 +108,29 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "The Ginyu Force have arrived looking for the Dragon Balls.");
-
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffffcc00Recoome|r: Recoome!",
+        "|cffffcc00Burter|r: Burter!",
+        "|cffffcc00Jeice|r: Jeice!",
+        "|cffffcc00Guldo|r: Guldo!",
+        "|cffffcc00Ginyu|r: Ginyu!",
+        "|cffffcc00Ginyu Force|r: And together we are...",
+        "|cffffcc00Ginyu Force|r: The Ginyu Force!",
+      ],
+      [
+        "|cffffcc00Ginyu|r: Men, introductions!",
+        "|cffffcc00Ginyu|r: Ginyu!",
+        "|cffffcc00Jeice|r: Jeice!",
+        "|cffffcc00Burter|r: Burter!",
+        "|cffffcc00Guldo|r: Guldo!",
+        "|cffffcc00Recoome|r: Recoome!",
+        "|cffffcc00Ginyu Force|r: And together we are...",
+        "|cffffcc00Ginyu Force|r: Ginyu Tokusentai!",
+        "|cffffcc00BGM|r: Tokusentai! Tokusentai! Tokusentai!",
+        "|cffffcc00Frieza|r: ...",
+      ], 1, 5,
+    );
     // create unit
     const maxFriezaHenchmen = 5;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
@@ -170,7 +196,16 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Frieza has arrived looking for the Dragon Balls.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Frieza has arrived looking for the Dragon Balls."
+      ],
+      [
+        "|cffffcc00Frieza|r: Why aren't the Ginyu's showing up?!",
+        "|cffffcc00Frieza|r: Oh they're dead.",
+        "|cffffcc00Frieza|r: WHY ARE THEY DEAD?!",
+      ], 3, 5,
+    );
 
     // create unit
     const maxFriezaHenchmen = 8;
@@ -204,10 +239,18 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       if (
         frieza && 
         nextFrieza &&
-        SagaHelper.checkUnitHp(frieza, 0.4, false, false, true) &&
+        SagaHelper.checkUnitHp(frieza, 0.6, false, false, true) &&
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
-        DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Frieza|r: This isn't even my final form!");
+        SagaHelper.showMessagesChanceOfJoke(
+          [
+            "|cffffcc00Frieza|r: This isn't even my final form!",
+          ],
+          [
+            "|cffffcc00Frieza|r: tHiS IsN't eVEn mY FiNaL fOrM!",
+          ],
+          5, 5,
+        );
         SagaHelper.genericTransformAndPing(nextFrieza, frieza, this);
       }
     }
@@ -256,7 +299,16 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "King Cold and Mecha Frieza have come seeking revenge!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "King Cold and Mecha Frieza have come seeking revenge!",
+      ],
+      [
+        "|cffffcc00Future Trunks|r: Is this Super Saiyan enough for ya?",
+        "|cffffcc00Frieza|r: No..! No! NO! NO! Kill! Murder! Destroy!",
+        "|cffffcc00Frieza|r: EXTERMINATE! EXTERMINATE!",
+      ],
+    );
 
     // create unit
     const maxFriezaHenchmen = 8;
@@ -293,7 +345,21 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "The Frieza Force have invaded Earth!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffff2020Earth has been invaded by the Frieza force!|r"
+      ],
+      [
+        "|cffffcc00Appule|r: Appule!",
+        "|cffffcc00Orlen|r: Orlen!",
+        "|cffffcc00Nabana|r: Nabana!",
+        "|cffffcc00Robery|r: Robery!",
+        "|cffffcc00Pineapple|r: Pineapple!",
+        "|cffffcc00Strawberry|r: Strawberry!",
+        "|cffffcc00Greyberry|r: Greyberry!",
+        "|cffffcc00Appule Rangers|r: And together we are ... the Appule Rangers!",
+      ], 1, 5
+    );
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_TRUNKS);
     this.spawnWhenDelayFinished();
   }
@@ -311,7 +377,6 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_TRUNKS);
   }
 }
 
@@ -331,9 +396,10 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Frieza has undergone intense training after being resurrected. He has now returned to Earth seeking his revenge"
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "After undergoing intense training Frieza has returned to Earth seeking his revenge!"
+      ],
     );
 
     this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
@@ -360,9 +426,10 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.frieza1, 0.8, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.friezaFinal)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Frieza|r: Enough playing around. Time to get serious."
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Frieza|r: Enough playing around. Time to get serious.",
+        ],
       );
       SagaHelper.genericTransformAndPing(this.friezaFinal, this.frieza1, this);
     } else if (
@@ -370,11 +437,19 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.friezaFinal, 0.7, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.friezaGolden)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Frieza|r: For the sake of you chimps let's keep the names simple as well, we'll call this form Golden Frieza."
+        ],
       );
       SagaHelper.genericTransformAndPing(this.friezaGolden, this.friezaFinal, this);
+      const goldenSfx = AddSpecialEffect(
+        "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", 
+        GetUnitX(this.friezaGolden), 
+        GetUnitY(this.friezaGolden)
+      );
+      BlzSetSpecialEffectScale(goldenSfx, 4.0);
+      DestroyEffect(goldenSfx);
     }
   }
 

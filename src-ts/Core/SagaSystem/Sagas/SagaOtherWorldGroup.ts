@@ -12,7 +12,11 @@ export class OtherWorldTournamentSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Olibu and Pikkon have arrived for the Other World Tournament!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Olibu and Pikkon have arrived for the Other World Tournament!"
+      ],
+    );
 
     this.addHeroListToSaga(["Olibu", "Pikkon"], true);
 

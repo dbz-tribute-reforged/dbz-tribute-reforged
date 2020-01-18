@@ -18,7 +18,11 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Cooler has come to Earth seeking revenge!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Cooler has come to Earth seeking revenge!"
+      ],
+    );
 
     this.addHeroListToSaga(["Cooler"], true);
     this.cooler = this.bosses.get("Cooler");
@@ -37,6 +41,11 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
       this.cooler && !this.isFinalForm && 
       SagaHelper.checkUnitHp(this.cooler, 0.5, true, false, true)
     ) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Cooler|r: This isn't even my final form!"
+        ],
+      );
       this.isFinalForm = true;
       BlzSetUnitSkin(this.cooler, FourCC("H043"));
       SetUnitScale(this.cooler, 2.0, 2.0, 2.0);
@@ -102,7 +111,11 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Cooler has fused with the Big Gete Star to become Metal Cooler!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Cooler has fused with the Big Gete Star to become Metal Cooler!",
+      ],
+    );
 
     this.addHeroListToSaga(["Metal Cooler 1", "Metal Cooler 2", "Metal Cooler 3"], true);
     const mc1 = this.bosses.get("Metal Cooler 1");
@@ -127,13 +140,15 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
         SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
       } else if (this.revives > 0) {
         --this.revives;
-        DisplayTimedTextToForce(
-          bj_FORCE_ALL_PLAYERS, 5, 
-          "|cffffcc00Metal Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!"
-        );    
+        SagaHelper.showMessagesChanceOfJoke(
+          [],
+          [
+            "|cffffcc00Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!",
+          ], 5, 5
+        );
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
-        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 100), true);
+        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 200), true);
+        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 200), true);
       }
     }
   }

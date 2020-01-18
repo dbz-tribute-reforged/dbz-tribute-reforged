@@ -19,7 +19,11 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Broly has begun rampaging relentlessly!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Broly the Legendary Super Saiyan has arrived on Earth.",
+      ],
+    );
 
     this.addHeroListToSaga(["Broly DBZ 1"], true);
 
@@ -40,15 +44,16 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
       !this.isLSS && 
       SagaHelper.checkUnitHp(this.broly, 0.75, true, false, true)  
     ) { 
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Broly|r: Kakarot!"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Broly|r: Kakarot!",
+        ],
       );
       this.isLSS = true;
       SetUnitScale(this.broly, 2.0, 2.0, 2.0);
       SetHeroLevel(this.broly, GetHeroLevel(this.broly) + 13, true);
-      SetHeroStr(this.broly, Math.floor(GetHeroStr(this.broly, true) * 2 + 500), true);
-      SetHeroAgi(this.broly, Math.floor(GetHeroAgi(this.broly, true) + 100), true);
+      SetHeroStr(this.broly, Math.floor(GetHeroStr(this.broly, true) * 2 + 1000), true);
+      SetHeroAgi(this.broly, Math.floor(GetHeroAgi(this.broly, true) + 200), true);
       this.auraLSS = AddSpecialEffectTarget(
         "AuraDarkGreen.mdl",
         this.broly,
@@ -113,7 +118,14 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Broly has unthawed from the ice and returned for vengeance!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Broly has unthawed from the ice and returned for vengeance!",
+      ],
+      [
+        "|cffffcc00Frozen Broly|r: 'ice to meet you.",
+      ],
+    );
 
     this.addHeroListToSaga(["Broly DBZ 2"], true);
     
@@ -134,9 +146,10 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
       !this.isLSS && 
       SagaHelper.checkUnitHp(this.broly, 0.75, true, false, true)  
     ) { 
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Broly|r: Kakarot!?"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Broly|r: Kakarot!?",
+        ],
       );
       this.isLSS = true;
       SetUnitScale(this.broly, 2.0, 2.0, 2.0);
@@ -201,7 +214,11 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Bio Broly has begun rampaging through the Bio Research Facility!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Bio Broly has begun rampaging through the Bio Research Facility!",
+      ],
+    );
 
     this.addHeroListToSaga(["Broly Bio"], true);
 

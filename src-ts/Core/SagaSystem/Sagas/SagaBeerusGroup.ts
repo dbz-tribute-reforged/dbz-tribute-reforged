@@ -13,9 +13,10 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffffcc00Beerus|r: I'm looking for a Super Saiyan God..."
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffffcc00Beerus|r: I'm looking for a Super Saiyan God...",
+      ],
     );
 
     this.addHeroListToSaga(["Beerus"], true);
@@ -74,9 +75,10 @@ export class WhisTrainingSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Whis is offering training classes in exchange for delicious food."
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Whis is offering training classes in exchange for delicious food.",
+      ],
     );
 
     this.addHeroListToSaga(["Whis"], true);
