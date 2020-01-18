@@ -152,4 +152,45 @@ export module SagaHelper {
       IsUnitHidden(unit)
     )
   }
+
+  export function showMessagesChanceOfJoke(
+    messages: string[],
+    joke: string[] = [],
+    delay: number = Constants.sagaDisplayTextDelay,
+    duration: number = Constants.sagaDisplayTextDuration,
+    jokeProbability: number = Constants.jokeProbability,
+  ) {
+    const rng = Math.random();
+    if (rng > jokeProbability || joke.length == 0) {
+      showMessages(messages, delay, duration);
+    } else {
+      showMessages(joke, delay, duration);
+    }
+  }
+
+  export function showMessages(
+    messages: string[],
+    delay: number = Constants.sagaDisplayTextDelay,
+    duration: number = Constants.sagaDisplayTextDuration,
+  ) {
+    let counter = 0;
+    if (counter < messages.length) {
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, duration, 
+        messages[counter]
+      );
+      ++counter;
+    }
+    TimerStart(CreateTimer(), delay, true, ()=> {
+      if (counter < messages.length) {
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, duration, 
+          messages[counter]
+        );
+        ++counter;
+      } else {
+        DestroyTimer(GetExpiredTimer());
+      }
+    })
+  }
 }

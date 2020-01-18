@@ -16,8 +16,17 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Dr. Kochin has revived Dr Wheelo!");
-
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Dr. Kochin has revived Dr Wheelo!",
+      ],
+      [
+        "|cffffcc00Wheelo|r: I can't fit in a body like this!",
+        "|cffffcc00Dr. Kochin|r: Don't worry about it. Sometimes brain surgery is a little more \"art\" than science",
+        "|cffffcc00Wheelo|r: You're thinking of baking!",
+        "|cffffcc00Dr. Kochin|r: I might be thinking of baking.",
+      ],
+    );
     this.addHeroListToSaga(["Wheelo", "Kishime", "Misokatsun", "Ebifurya", "Dr. Kochin"], true);
     
     this.kochin = this.bosses.get("Dr. Kochin");
@@ -36,9 +45,15 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
       IsUnitDeadBJ(this.kochin) && 
       SagaHelper.isUnitSagaHidden(this.wheelo)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Dr. Wheelo|r: Bring me the body of the strongest man in the world, |cffff4400Master Roshi|r!"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Dr. Wheelo|r: Bring me the body of the strongest man in the world, |cffff4400Master Roshi|r!"
+        ],
+        [
+          "|cffffcc00Wheelo|r: Kochin, why didn't you give me one of the bio-warrior's bodies?",
+          "|cffffcc00Dr. Kochin|r: ... I guess you're right ...",
+          "|cffffcc00Dr. Kochin|r: See, this is why YOU'RE the brains",
+        ],
       );
       SagaHelper.genericTransformAndPing(this.wheelo, this.kochin, this);
     }

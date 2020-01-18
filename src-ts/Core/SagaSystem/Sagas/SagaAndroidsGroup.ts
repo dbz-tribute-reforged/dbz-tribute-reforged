@@ -2,6 +2,8 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
+import { CreepManager } from "Core/CreepSystem/CreepManager";
+import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Androids Saga I: 19/20';
@@ -19,7 +21,18 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 19 and Android 20 have begun terrorizing West City!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Android 19 and Android 20 have begun terrorizing West City!"
+      ],
+      [
+        "|cffffcc00Android 20|r: You're an Android! How did you even DO that?",
+        "|cffffcc00Dr. Gero|r: I took my brain out and put it in this body.",
+        "|cffffcc00Android 20|r: Uh how?",
+        "|cffffcc00Dr. Gero|r: I-- ...huh.",
+        "|cffffcc00Dr. Gero|r: How DID I do that?",
+      ],
+    );
 
     this.addHeroListToSaga(["Android 19", "Android 20"], true);
     this.android19 = this.bosses.get("Android 19");
@@ -42,7 +55,11 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     ) {
       this.isRunningAway = true;
       this.useCustomAggroClosest = false;
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!");    
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!"
+        ],
+      );
       IssuePointOrder(this.android20, "move", 14000, 7500);
       SetUnitMoveSpeed(this.android20, 500);
     }
@@ -77,6 +94,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.BIG_DINOS);
   }
 
 }
@@ -92,7 +110,46 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 16, 17, and 18 have been released from Dr. Gero's lab!");
+
+    const rng = Math.random();
+    if (rng < 0.2) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "Android 16, 17, and 18 have been released from Dr. Gero's lab!"
+        ],
+        [
+          "|cffffcc00Android 17|r: I get this strange feeling that after we kill them, you're just gonna turn us off again. And I don't even know how.",
+          "|cffffcc00Dr. Gero|r: Why... with this remote, of course!",
+          "|cffffcc00Android 17|r: Oh...! You mean *this* remote?",
+          "|cffffcc00Dr. Gero|r: Gha! But... y-you see, that's just the decoy remote!",
+          "|cffffcc00Dr. Gero|r: I wouldn't show you the real thing, hah!",
+          "|cffffcc00Dr. Gero|r: But, uh... I do need that remote back. It was my mother's.",
+        ],
+      );
+    } else if (rng < 0.4) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "Android 16, 17, and 18 have been released from Dr. Gero's lab!"
+        ],
+        [
+          "|cffffcc00Android 18|r: Wait a second... did you build a ginger Android?",
+          "|cffffcc00Android 18|r: Man. There's a soul-less machine joke there.",
+          "|cffffcc00Android 18|r: But, that's beneath me.",
+        ],
+      );
+    } else if (rng < 0.6) {
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "Android 16, 17, and 18 have been released from Dr. Gero's lab!"
+        ],
+        [
+          "|cffffcc00Dr. Gero|r: Do not activate Android 16! He's not properly programmed.",
+          "|cffffcc00Android 17|r: Oh, and how many of us are?",
+          "|cffffcc00Android 17|r: \"Howdy folks, I'm Android 13! Look at ma trucker hat!\"",
+          "|cffffcc00Dr. Gero|r: I was going through a phase!",
+        ],
+      );
+    }
 
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
@@ -151,13 +208,20 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 45;
+    this.sagaDelay = 60;
     this.stats = 100;
   }
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Android 13, 14, and 15 have begun terrorizing West City!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Android 13, 14, and 15 have begun terrorizing West City!"
+      ],
+      [
+        "|cffffcc00Android 13|r: \"Howdy folks, I'm Android 13! Look at ma trucker hat!\"",
+      ]
+    );
 
     this.addHeroListToSaga(["Android 13", "Android 14", "Android 15", "Super Android 13"], true);
 
@@ -186,7 +250,42 @@ export class Super13Saga extends AdvancedSaga implements Saga {
         (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15))
       )
     ) {
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Super Android 13 has arrived!");
+      const rng = Math.random();
+      if (rng < 0.5) {
+        SagaHelper.showMessagesChanceOfJoke(
+          [
+            "Super Android 13 has arrived!"
+          ],
+          [
+            "|cffffcc00Piccolo|r: I feel like we should be stopping this.",
+            "|cffffcc00Goku|r: Nah, I want a good fight.",
+            "|cffffcc00Krillin|r: He's 'roiding out!",
+            "|cffffcc00Goku|r: Vegeta, he stole your 'do!",
+          ]
+        );
+      } else if (rng < 0.75) {
+        SagaHelper.showMessagesChanceOfJoke(
+          [
+            "Super Android 13 has arrived!"
+          ],
+          [
+            "|cffffcc00Gohan|r: Why don't you pick on someone your own size.",
+            "|cffffcc00Gohan|r: Well, clearly not me.",
+            "|cffffcc00Goku|r: Welp, if you can't beat 'em. Bomb 'em.",
+          ]
+        );
+      } else {
+        SagaHelper.showMessagesChanceOfJoke(
+          [
+            "Super Android 13 has arrived!"
+          ],
+          [
+            "|cffffcc00Android 13|r: Did ya'll just kill Androids 14 and 15?",
+            "|cffffcc00Android 13|r: Gooooood.",
+          ]
+        );
+      }
+
       KillUnit(this.android14);
       KillUnit(this.android15);
       SagaHelper.genericTransformAndPing(this.super13, this.android13, this);

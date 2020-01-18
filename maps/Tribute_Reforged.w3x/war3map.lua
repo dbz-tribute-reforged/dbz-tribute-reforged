@@ -301,7 +301,7 @@ gg_trg_Catchup_Toggle = nil
 gg_trg_Catchup_Timer = nil
 gg_trg_Scoreboard_Init = nil
 gg_trg_Scoreboard_Setup_Team = nil
-gg_trg_Scoreboard_Get_TempUnit_Icon = nil
+gg_trg_Scoreboard_Assign_Hero_Icon_and_Name_To_Player = nil
 gg_trg_Scoreboard_Death = nil
 gg_trg_Scoreboard_Update = nil
 gg_trg_Scoreboard_Timer_Increment = nil
@@ -1996,7 +1996,7 @@ function CreateCameras()
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 90.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.0, 0.0)
-    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 3200.0, 0.0)
+    CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 2600.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
     CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FARZ, 5000.0, 0.0)
@@ -4421,16 +4421,21 @@ function InitTrig_Scoreboard_Init()
     TriggerAddAction(gg_trg_Scoreboard_Init, Trig_Scoreboard_Init_Actions)
 end
 
-function Trig_Scoreboard_Setup_Team_Func001Func002Func005A()
-    udg_TempUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Scoreboard_Get_TempUnit_Icon)
-end
-
-function Trig_Scoreboard_Setup_Team_Func001Func002Func006C()
+function Trig_Scoreboard_Setup_Team_Func001Func002Func005Func003C()
     if (not (udg_TempString ~= "IconNotFound")) then
         return false
     end
     return true
+end
+
+function Trig_Scoreboard_Setup_Team_Func001Func002Func005A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Scoreboard_Assign_Hero_Icon_and_Name_To_Player)
+    if (Trig_Scoreboard_Setup_Team_Func001Func002Func005Func003C()) then
+        MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, udg_TempString)
+        SetPlayerName(udg_TempPlayer, ((GetHeroProperName(udg_TempUnit) .. " (") .. (GetPlayerName(udg_TempPlayer) .. ")")))
+    else
+    end
 end
 
 function Trig_Scoreboard_Setup_Team_Func001Func002C()
@@ -4448,10 +4453,6 @@ function Trig_Scoreboard_Setup_Team_Func001A()
         MultiboardSetItemValueBJ(udg_Scoreboard, 1, udg_TempInt2, (udg_PlayerColorString[udg_TempInt3] .. (I2S(udg_TempInt3) .. "|r")))
         udg_TempString = "IconNotFound"
         ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt3], Trig_Scoreboard_Setup_Team_Func001Func002Func005A)
-        if (Trig_Scoreboard_Setup_Team_Func001Func002Func006C()) then
-            MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_TempInt2, udg_TempString)
-        else
-        end
         MultiboardSetItemValueBJ(udg_Scoreboard, 3, udg_TempInt2, "TRIGSTR_11038")
         MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_TempInt2, I2S(udg_PlayerKills[udg_TempInt3]))
         MultiboardSetItemValueBJ(udg_Scoreboard, 6, udg_TempInt2, I2S(udg_PlayerDeaths[udg_TempInt3]))
@@ -4469,185 +4470,185 @@ function InitTrig_Scoreboard_Setup_Team()
     TriggerAddAction(gg_trg_Scoreboard_Setup_Team, Trig_Scoreboard_Setup_Team_Actions)
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08Z"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08Y"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08W"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08U"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H042"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("N00Q"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00M"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("O005"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("O001"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H01V"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08S"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08P"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H08M"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00R"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H009"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H00K"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E003"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Func001C()
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H000"))) then
         return false
     end
     return true
 end
 
-function Trig_Scoreboard_Get_TempUnit_Icon_Actions()
-    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001C()) then
+function Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Actions()
+    if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001C()) then
         udg_TempString = "BTNGoku.blp"
     else
-        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001C()) then
+        if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001C()) then
             udg_TempString = "BTNVegeta.blp"
         else
-            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001C()) then
+            if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001C()) then
                 udg_TempString = "BTNGohan.blp"
             else
-                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001C()) then
+                if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001C()) then
                     udg_TempString = "BTNFutureTrunks.blp"
                 else
-                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001C()) then
+                    if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001C()) then
                         udg_TempString = "BTNPiccolo.blp"
                     else
-                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001C()) then
+                        if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001C()) then
                             udg_TempString = "BTNBardock.blp"
                         else
-                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001C()) then
+                            if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001C()) then
                                 udg_TempString = "BTNPan.blp"
                             else
-                                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                     udg_TempString = "BTNFarmer.blp"
                                 else
-                                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()) then
+                                    if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002C()) then
                                         udg_TempString = "BTNSuper13.blp"
                                     else
-                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()) then
+                                        if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001C()) then
                                             udg_TempString = "BTNBabidi.blp"
                                         else
-                                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()) then
+                                            if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001C()) then
                                                 udg_TempString = "BTNFatBuu.blp"
                                             else
-                                                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()) then
+                                                if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001C()) then
                                                     udg_TempString = "BTNBroly.blp"
                                                 else
-                                                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()) then
+                                                    if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001C()) then
                                                         udg_TempString = "BTNCellPerfect.blp"
                                                     else
-                                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()) then
+                                                        if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001C()) then
                                                             udg_TempString = "BTNCoolerBaseForm.blp"
                                                         else
-                                                            if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()) then
+                                                            if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001C()) then
                                                                 udg_TempString = "BTNRaditz.blp"
                                                             else
-                                                                if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                     udg_TempString = "BTNNappa.blp"
                                                                 else
-                                                                    if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                    if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                         udg_TempString = "BTNMoro.blp"
                                                                     else
-                                                                        if (Trig_Scoreboard_Get_TempUnit_Icon_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                        if (Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Func001Func001Func001Func001Func001Func001Func001Func001Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                             udg_TempString = "BTN17DBS.blp"
                                                                         else
                                                                         end
@@ -4670,9 +4671,9 @@ function Trig_Scoreboard_Get_TempUnit_Icon_Actions()
     end
 end
 
-function InitTrig_Scoreboard_Get_TempUnit_Icon()
-    gg_trg_Scoreboard_Get_TempUnit_Icon = CreateTrigger()
-    TriggerAddAction(gg_trg_Scoreboard_Get_TempUnit_Icon, Trig_Scoreboard_Get_TempUnit_Icon_Actions)
+function InitTrig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player()
+    gg_trg_Scoreboard_Assign_Hero_Icon_and_Name_To_Player = CreateTrigger()
+    TriggerAddAction(gg_trg_Scoreboard_Assign_Hero_Icon_and_Name_To_Player, Trig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player_Actions)
 end
 
 function Trig_Scoreboard_Death_Conditions()
@@ -12527,21 +12528,21 @@ function Trig_Moro_Energy_Drain_Active_Func004A()
         if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001C()) then
             if (Trig_Moro_Energy_Drain_Active_Func004Func002Func001Func001C()) then
                 udg_StatMultUnit = udg_MoroDrainSourceUnit
-                udg_MoroStatMultReal = (0.75 * 0.10)
+                udg_MoroStatMultReal = (0.50 * 0.10)
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 udg_StatMultUnit = udg_MoroDrainTargetUnit
-                udg_MoroStatMultReal = (-1.00 * (0.75 * 0.05))
+                udg_MoroStatMultReal = (-1.00 * (0.50 * 0.05))
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 TriggerExecute(gg_trg_Moro_Increase_Perm_Mult_PvP)
             else
                 udg_StatMultUnit = udg_MoroDrainSourceUnit
-                udg_MoroStatMultReal = (0.10 * 0.20)
+                udg_MoroStatMultReal = (0.10 * 0.25)
                 TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
                 TriggerExecute(gg_trg_Moro_Increase_Perm_Mult_Other_Heroes)
             end
         else
         end
-        SetUnitLifePercentBJ(udg_MoroDrainSourceUnit, RMinBJ(100.00, (GetUnitLifePercent(udg_MoroDrainSourceUnit) + 0.30)))
+        SetUnitLifePercentBJ(udg_MoroDrainSourceUnit, RMinBJ(100.00, (GetUnitLifePercent(udg_MoroDrainSourceUnit) + 0.20)))
         UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (70.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
     else
     end
@@ -13249,7 +13250,7 @@ function InitCustomTriggers()
     InitTrig_Catchup_Timer()
     InitTrig_Scoreboard_Init()
     InitTrig_Scoreboard_Setup_Team()
-    InitTrig_Scoreboard_Get_TempUnit_Icon()
+    InitTrig_Scoreboard_Assign_Hero_Icon_and_Name_To_Player()
     InitTrig_Scoreboard_Death()
     InitTrig_Scoreboard_Update()
     InitTrig_Scoreboard_Timer_Increment()
@@ -13411,61 +13412,61 @@ function InitCustomPlayerSlots()
     ForcePlayerStartLocation(Player(0), 0)
     SetPlayerColor(Player(0), ConvertPlayerColor(0))
     SetPlayerRacePreference(Player(0), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(0), true)
+    SetPlayerRaceSelectable(Player(0), false)
     SetPlayerController(Player(0), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(1), 1)
     ForcePlayerStartLocation(Player(1), 1)
     SetPlayerColor(Player(1), ConvertPlayerColor(1))
     SetPlayerRacePreference(Player(1), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(1), true)
+    SetPlayerRaceSelectable(Player(1), false)
     SetPlayerController(Player(1), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(2), 2)
     ForcePlayerStartLocation(Player(2), 2)
     SetPlayerColor(Player(2), ConvertPlayerColor(2))
     SetPlayerRacePreference(Player(2), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(2), true)
+    SetPlayerRaceSelectable(Player(2), false)
     SetPlayerController(Player(2), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(3), 3)
     ForcePlayerStartLocation(Player(3), 3)
     SetPlayerColor(Player(3), ConvertPlayerColor(3))
     SetPlayerRacePreference(Player(3), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(3), true)
+    SetPlayerRaceSelectable(Player(3), false)
     SetPlayerController(Player(3), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(4), 4)
     ForcePlayerStartLocation(Player(4), 4)
     SetPlayerColor(Player(4), ConvertPlayerColor(4))
     SetPlayerRacePreference(Player(4), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(4), true)
+    SetPlayerRaceSelectable(Player(4), false)
     SetPlayerController(Player(4), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(5), 5)
     ForcePlayerStartLocation(Player(5), 5)
     SetPlayerColor(Player(5), ConvertPlayerColor(5))
     SetPlayerRacePreference(Player(5), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(5), true)
+    SetPlayerRaceSelectable(Player(5), false)
     SetPlayerController(Player(5), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(6), 6)
     ForcePlayerStartLocation(Player(6), 6)
     SetPlayerColor(Player(6), ConvertPlayerColor(6))
     SetPlayerRacePreference(Player(6), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(6), true)
+    SetPlayerRaceSelectable(Player(6), false)
     SetPlayerController(Player(6), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(7), 7)
     ForcePlayerStartLocation(Player(7), 7)
     SetPlayerColor(Player(7), ConvertPlayerColor(7))
     SetPlayerRacePreference(Player(7), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(7), true)
+    SetPlayerRaceSelectable(Player(7), false)
     SetPlayerController(Player(7), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(8), 8)
     ForcePlayerStartLocation(Player(8), 8)
     SetPlayerColor(Player(8), ConvertPlayerColor(8))
     SetPlayerRacePreference(Player(8), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(8), true)
+    SetPlayerRaceSelectable(Player(8), false)
     SetPlayerController(Player(8), MAP_CONTROL_USER)
     SetPlayerStartLocation(Player(9), 9)
     ForcePlayerStartLocation(Player(9), 9)
     SetPlayerColor(Player(9), ConvertPlayerColor(9))
     SetPlayerRacePreference(Player(9), RACE_PREF_HUMAN)
-    SetPlayerRaceSelectable(Player(9), true)
+    SetPlayerRaceSelectable(Player(9), false)
     SetPlayerController(Player(9), MAP_CONTROL_USER)
 end
 

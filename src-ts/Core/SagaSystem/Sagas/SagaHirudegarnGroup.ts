@@ -16,9 +16,10 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Hoi has unsealed Tapion and reformed the legendary monster Hirudegarn!"
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Hoi has unsealed Tapion and reformed the legendary monster Hirudegarn!",
+      ],
     );
 
     this.addHeroListToSaga(["Hirudegarn", "Mature Hirudegarn"], true);
@@ -43,9 +44,10 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.hirudegarn, 0.5, false, false, true) &&
       SagaHelper.isUnitSagaHidden(this.matureHirudegarn)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Hoi|r: Hahahaha, how foolish of you - <gets crushed by Mature Hirudegarn>"
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Hoi|r: Hahahaha, how foolish of you - <gets crushed by Mature Hirudegarn>",
+        ],
       );
       SagaHelper.genericTransformAndPing(this.matureHirudegarn, this.hirudegarn, this);
     }

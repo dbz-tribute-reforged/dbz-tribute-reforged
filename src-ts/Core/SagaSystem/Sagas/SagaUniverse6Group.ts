@@ -13,7 +13,11 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, " - Under Construction - ");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffff2020--- Under Construction ---|r"
+      ],
+    );
 
     this.addHeroListToSaga(["Hit Universe 6"], true);
 

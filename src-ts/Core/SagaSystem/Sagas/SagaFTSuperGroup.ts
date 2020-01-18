@@ -13,7 +13,11 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Goku Black has arrived from the alternate future!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Goku Black has arrived from the alternate future!",
+      ],
+    );
 
     this.addHeroListToSaga(["Goku Black 1"], true);
 
@@ -77,9 +81,10 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(
-      bj_FORCE_ALL_PLAYERS, 15, 
-      "Goku Black and Zamasu team up to execute the Zero Mortal Plan."
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Goku Black and Zamasu team up to execute the Zero Mortal Plan.",
+      ],
     );
 
     this.addHeroListToSaga(["Goku Black 2", "Zamasu"], true);
@@ -100,9 +105,10 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
       this.gokuBlack && !this.isRose && 
       SagaHelper.checkUnitHp(this.gokuBlack, 0.6, false, false, true)
     ) {
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15, 
-        "|cffffcc00Goku Black|r: I call this Super Saiyan Rose."
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Goku Black|r: I call this Super Saiyan Rose.",
+        ],
       );
       this.isRose = true;
       SetUnitScale(this.gokuBlack, 2.0, 2.0, 2.0);
@@ -155,6 +161,10 @@ export class FTSuperSaga2 extends AdvancedSaga implements Saga {
 
   complete(): void {
     super.complete();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Unfinished -> goto Fused Zamasu Saga");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffff2020End of DB Super Sagas for now.",
+      ],
+    );
   }
 }

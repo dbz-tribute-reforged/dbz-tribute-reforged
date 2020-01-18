@@ -20,7 +20,11 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Lord Slug has arrived!");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Lord Slug has arrived!"
+      ],
+    );
 
     this.addHeroListToSaga(["Lord Slug"], true);
     this.slug = this.bosses.get("Lord Slug");

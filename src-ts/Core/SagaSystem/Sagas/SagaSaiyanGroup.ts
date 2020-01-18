@@ -17,12 +17,23 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Raditz has arrived looking for Goku.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Raditz has arrived looking for Goku.",
+      ],
+      [
+        "|cffffcc00Farmer|r: Oh god no, my Marijuana patch!",
+        "|cffffcc00Farmer|r: Ah-ah-I mean er... my carrot patch",
+        "|cffffcc00Farmer|r: I better do what any sensible American would do in this situation",
+        "|cffffcc00Farmer with Shotgun|r: GET MAH GUN",
+        "|cffffcc00Farmer with Shotgun|r: Holy crap, it's Sonic the Hedgehog",
+      ], 3,
+    );
 
     this.addHeroListToSaga(["Raditz"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
     
     this.ping()
@@ -87,7 +98,23 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
     CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.POST_SAIYANS);
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, "Nappa and Vegeta have begun searching for the Dragon Balls.");
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "Nappa and Vegeta have arrived looking for the Dragon Balls.",
+      ],
+      [
+        "|cffffcc00Nappa|r: Are we there yet?",
+        "|cffffcc00Vegeta|r: No.",
+        "|cffffcc00Nappa|r: Are we there yet?",
+        "|cffffcc00Vegeta|r: No.",
+        "|cffffcc00Nappa|r: Are we there yet?",
+        "|cffffcc00Vegeta|r: No.",
+        "|cffffcc00Nappa|r: Are we there yet?",
+        "|cffffcc00Vegeta|r: No.",
+        "|cffffcc00Nappa|r: Are we there yet?",
+        "|cffffcc00Vegeta|r: Yes!",
+      ], 0.5, 5,
+    );
 
     const maxSaibamen = 5;
     for (let i = 0; i < maxSaibamen; ++i) {

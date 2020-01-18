@@ -8,11 +8,11 @@ import { LordSlugSaga } from "./Sagas/SagaSlugGroup";
 import { WheeloSaga } from "./Sagas/SagaWheeloGroup";
 import { AndroidsSaga1, AndroidsSaga2, Super13Saga, FutureAndroidsSaga } from "./Sagas/SagaAndroidsGroup";
 import { CoolerReturnSaga, CoolerRevengeSaga } from "./Sagas/SagaCoolerGroup";
-import { ImperfectCellSaga, SemiperfectCellSaga, PerfectCellSaga, CellGamesSaga, SuperPerfectCellSaga, FutureCellSaga } from "./Sagas/SagaCellGroup";
+import { CellSaga, CellGamesSaga, FutureCellSaga } from "./Sagas/SagaCellGroup";
 import { BrolyDBZMovieSaga1, BrolyDBZMovieSaga2, BioBrolySaga } from "./Sagas/SagaBrolyGroup";
 import { BojackSaga } from "./Sagas/SagaBojackGroup";
 import { OtherWorldTournamentSaga } from "./Sagas/SagaOtherWorldGroup";
-import { BabidiSaga, BuuSaga, SuperBuuSaga, KidBuuSaga } from "./Sagas/SagaBuuGroup";
+import { BabidiSaga, BuuSaga } from "./Sagas/SagaBuuGroup";
 import { JanembaSaga } from "./Sagas/SagaJanembaGroup";
 import { HirudegarnSaga } from "./Sagas/SagaHirudegarnGroup";
 import { BebiSaga } from "./Sagas/SagaBebiGroup";
@@ -43,11 +43,8 @@ export const sagaSystemConfig: SagaSystemConfig = {
     AndroidsSaga1,
     AndroidsSaga2,
     Super13Saga,
-    ImperfectCellSaga,
-    SemiperfectCellSaga,
-    PerfectCellSaga,
+    CellSaga,
     CellGamesSaga,
-    SuperPerfectCellSaga,
     FutureAndroidsSaga,
     FutureCellSaga,
     BrolyDBZMovieSaga1,
@@ -57,8 +54,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
     OtherWorldTournamentSaga,
     BabidiSaga,
     BuuSaga,
-    SuperBuuSaga,
-    KidBuuSaga,
     JanembaSaga,
     HirudegarnSaga,
     BebiSaga,
@@ -85,13 +80,13 @@ export const sagaSystemConfig: SagaSystemConfig = {
     TurlesSaga: [
       [ VegetaSaga, SagaState.Completed ],
     ],
-    LordSlugSaga: [
-      [ TurlesSaga, SagaState.Completed ],
-    ],
     NamekSaga: [
       [ VegetaSaga, SagaState.Completed ],
     ],
     GinyuSaga: [
+      [ NamekSaga, SagaState.Completed ],
+    ],
+    LordSlugSaga: [
       [ NamekSaga, SagaState.Completed ],
     ],
     FriezaSaga: [
@@ -123,29 +118,23 @@ export const sagaSystemConfig: SagaSystemConfig = {
     Super13Saga: [
       [ AndroidsSaga1, SagaState.Completed ],
     ],
-    ImperfectCellSaga: [
+    CellSaga: [
       [ AndroidsSaga1, SagaState.Completed ],
     ],
-    SemiperfectCellSaga: [
-      [ ImperfectCellSaga, SagaState.Completed ],
-    ],
-    PerfectCellSaga: [
-      [ SemiperfectCellSaga, SagaState.Completed ],
-    ],
     CellGamesSaga: [
-      [ PerfectCellSaga, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
     ],
     SuperPerfectCellSaga: [
       [ CellGamesSaga, SagaState.Completed ],
     ],
     FutureAndroidsSaga: [
-      [ PerfectCellSaga, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
     ],
     FutureCellSaga: [
-      [ PerfectCellSaga, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga1: [
-      [ PerfectCellSaga, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga2: [
       [ BrolyDBZMovieSaga1, SagaState.Completed ],
@@ -159,29 +148,23 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ FutureCellSaga, SagaState.Completed ],
     ],
     OtherWorldTournamentSaga: [
-      [ SuperPerfectCellSaga, SagaState.Completed ],
+      [ CellGamesSaga, SagaState.Completed ],
     ],
     BabidiSaga: [
-      [ PerfectCellSaga, SagaState.Completed ],
+      [ CellSaga, SagaState.Completed ],
+    ],
+    JanembaSaga: [
+      [ BabidiSaga, SagaState.Completed ],
     ],
     BuuSaga: [
       [ BabidiSaga, SagaState.Completed ],
     ],
-    SuperBuuSaga: [
-      [ BuuSaga, SagaState.Completed ],
-    ],
-    KidBuuSaga: [
-      [ SuperBuuSaga, SagaState.Completed ],
-    ],
-    JanembaSaga: [
-      [ BuuSaga, SagaState.Completed ],
-    ],
     HirudegarnSaga: [
-      [ KidBuuSaga, SagaState.Completed ],
+      [ BuuSaga, SagaState.Completed ],
     ],
     // GT branch
     BebiSaga: [
-      [ KidBuuSaga, SagaState.Completed ],
+      [ BuuSaga, SagaState.Completed ],
     ],
     Super17Saga: [
       [ BebiSaga, SagaState.Completed ],
@@ -194,7 +177,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     // Super branch
     BeerusSaga: [
-      [ KidBuuSaga, SagaState.Completed ],
+      [ BuuSaga, SagaState.Completed ],
     ],
     WhisTrainingSaga: [
       [ BeerusSaga, SagaState.Completed ],
