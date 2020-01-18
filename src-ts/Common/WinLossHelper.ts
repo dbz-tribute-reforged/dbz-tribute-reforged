@@ -57,24 +57,26 @@ export module WinLossHelper {
           "Team " + winTeam + " have won! The game will continue as it is in free mode. " +
           "Congratulations to " + winningPlayerNames
         );
-        
-        for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-          const teleportGroup = CreateGroup();
-          GroupEnumUnitsOfPlayer(teleportGroup, Player(i), Condition(() => {
-            return (
-              IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-            )
-          }));
-
-          ForGroup(teleportGroup, () => {
-            const teleportUnit = GetEnumUnit();
-            SetUnitInvulnerable(teleportUnit, false);
-            PauseUnit(teleportUnit, false);
-            SetUnitX(teleportUnit, 0);
-            SetUnitY(teleportUnit, 0);
-          })
-
-        }
+        TimerStart(CreateTimer(), 10, false, () => {
+          for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+            const teleportGroup = CreateGroup();
+            GroupEnumUnitsOfPlayer(teleportGroup, Player(i), Condition(() => {
+              return (
+                IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+              )
+            }));
+  
+            ForGroup(teleportGroup, () => {
+              const teleportUnit = GetEnumUnit();
+              SetUnitInvulnerable(teleportUnit, false);
+              PauseUnit(teleportUnit, false);
+              SetUnitX(teleportUnit, 0);
+              SetUnitY(teleportUnit, 0);
+            })
+            DestroyGroup(teleportGroup);
+          }
+          DestroyTimer(GetExpiredTimer());
+        });
       }
     }
   }
