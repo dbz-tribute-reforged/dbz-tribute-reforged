@@ -53,8 +53,8 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
           "|cffffcc00Babidi|r: Paparapapa!",
         ],
       );
+      SagaHelper.sagaShowUnitAtUnit(this.fatBuu, this.dabura);
       SagaHelper.genericTransformAndPing(this.babidi, this.dabura, this);
-      SagaHelper.sagaShowUnitAtUnit(this.fatBuu, this.babidi);
     }
   }
 
@@ -129,7 +129,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.superBuu && this.kidBuu &&
-      SagaHelper.checkUnitHp(this.superBuu, 0.1, false, false, false) &&
+      SagaHelper.checkUnitHp(this.superBuu, 0.1, false, true, false) &&
       SagaHelper.isUnitSagaHidden(this.kidBuu)
     ) {
       SagaHelper.showMessagesChanceOfJoke(
