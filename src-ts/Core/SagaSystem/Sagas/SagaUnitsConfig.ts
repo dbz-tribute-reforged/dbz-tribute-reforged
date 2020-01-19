@@ -46,10 +46,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Ginyu", new SagaUnit(FourCC("U000"), 22, 800, 250, 800, new Vector2D(8800, 1400))],
 
     // frieza
-    ["Frieza 1", new SagaUnit(FourCC("U011"), 25, 1000, 200, 900, new Vector2D(8800, 1400))],
-    ["Frieza 2", new SagaUnit(FourCC("U012"), 30, 1200, 300, 800, new Vector2D(8800, 1400))],
-    ["Frieza 3", new SagaUnit(FourCC("U013"), 40, 1300, 350, 850, new Vector2D(8800, 1400))],
-    ["Frieza 4", new SagaUnit(FourCC("U014"), 50, 1500, 400, 1400, new Vector2D(8800, 1400))],
+    ["Frieza 1", new SagaUnit(FourCC("U011"), 10, 1000, 200, 900, new Vector2D(8800, 1400))],
+    ["Frieza 2", new SagaUnit(FourCC("U012"), 20, 1200, 300, 800, new Vector2D(8800, 1400))],
+    ["Frieza 3", new SagaUnit(FourCC("U013"), 30, 1300, 350, 850, new Vector2D(8800, 1400))],
+    ["Frieza 4", new SagaUnit(FourCC("U014"), 40, 1500, 400, 1400, new Vector2D(8800, 1400))],
     ["Frieza 5", new SagaUnit(FourCC("U018"), 60, 2000, 500, 1800, new Vector2D(8800, 1400))],
 
     // garlic jr
@@ -63,9 +63,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Cooler", new SagaUnit(FourCC("H042"), 40, 1500, 400, 1600, new Vector2D(4500, 9300))],
 
     // return of cooler
-    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 30, 2000, 400, 2000, new Vector2D(-6000, 17200))],
-    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 30, 2000, 400, 2000, new Vector2D(-6000, 17200))],
-    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 30, 2000, 400, 2000, new Vector2D(-6000, 17200))],
+    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 17, 1800, 400, 2000, new Vector2D(-6000, 17200))],
+    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 17, 1800, 400, 2000, new Vector2D(-6000, 17200))],
+    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 17, 1800, 400, 2000, new Vector2D(-6000, 17200))],
 
     // trunks saga
     ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 35, 2500, 410, 1000, new Vector2D(18000, 2000))],
@@ -100,16 +100,16 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Android 18", new SagaUnit(FourCC("H05D"), 35, 2000, 350, 2700, new Vector2D(17500, -6800))],
 
     // future cell saga
-    ["Future Imperfect Cell", new SagaUnit(FourCC("H00E"), 45, 3300, 400, 3300, new Vector2D(-7000, -3000))],
+    ["Future Imperfect Cell", new SagaUnit(FourCC("H00E"), 45, 3300, 400, 3300, new Vector2D(-6000, 14500))],
 
     // broly - lss
     ["Broly DBZ 1", new SagaUnit(FourCC("H00M"), 45, 3000, 400, 2500, new Vector2D(8500, 4000))],
 
     // bojack unbound
     ["Bojack", new SagaUnit(FourCC("U00L"), 50, 6500, 400, 5500, new Vector2D(-4500, 2500))],
-    ["Bido", new SagaUnit(FourCC("U00M"), 20, 2500, 400, 2500, new Vector2D(-4600, 2500))],
-    ["Gokua", new SagaUnit(FourCC("U00N"), 20, 4000, 400, 3500, new Vector2D(-4700, 2100))],
-    ["Pujin", new SagaUnit(FourCC("U00O"), 20, 3500, 400, 3000, new Vector2D(-4200, 2100))],
+    ["Bido", new SagaUnit(FourCC("U00M"), 10, 2500, 400, 2500, new Vector2D(-4600, 2500))],
+    ["Gokua", new SagaUnit(FourCC("U00N"), 15, 4000, 400, 3500, new Vector2D(-4700, 2100))],
+    ["Pujin", new SagaUnit(FourCC("U00O"), 15, 3500, 400, 3000, new Vector2D(-4200, 2100))],
     ["Zangya", new SagaUnit(FourCC("U00P"), 20, 4500, 400, 3500, new Vector2D(-4600, 3000))],
 
     // broly - second coming
@@ -126,7 +126,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // yamu
     
     // bio billy
-    ["Broly Bio", new SagaUnit(FourCC("U008"), 90, 9000, 400, 9000, new Vector2D(-12670, -6264))],
+    ["Broly Bio", new SagaUnit(FourCC("U008"), 90, 9000, 400, 9000, new Vector2D(12670, -6264))],
 
     // babidi ship saga
     // pui pui
@@ -183,7 +183,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Eis Shenron", new SagaUnit(FourCC("U00T"), 95, 17000, 400, 17000, new Vector2D(18000, -6700))],
 
     ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 100, 21000, 400, 21000, new Vector2D(3000, 7000))],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 150, 23000, 400, 23000, new Vector2D(3000, 7000))],
+    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 170, 23000, 400, 23000, new Vector2D(3000, 7000))],
     // gt end?
 
     // battle of gods movie/super
@@ -209,7 +209,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // cabba
     // hit
     // monaka?
-    ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 110, 21000, 400, 21000, new Vector2D(16000, -6000))],
+    ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 130, 21000, 400, 21000, new Vector2D(16000, -6000))],
 
     // copy-vegeta saga
     // purple vege

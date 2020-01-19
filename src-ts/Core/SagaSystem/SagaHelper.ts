@@ -37,8 +37,8 @@ export module SagaHelper {
         0
       );
       SetHeroLevel(sagaUnit, sagaUnitConfig.lvl, false);
-      // TODO: change to relative str/agi/int
-      SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
+      // -> gui automatic stats setting
+      // SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
       if (mustKill) {
         saga.bosses.set(name, sagaUnit);
       }
@@ -125,7 +125,7 @@ export module SagaHelper {
     unit: unit | undefined
   ) {
     if (unit) {
-      SetUnitInvulnerable(unit, false);
+      // SetUnitInvulnerable(unit, false);
       PauseUnit(unit, false);
       ShowUnitShow(unit);
     }
@@ -160,7 +160,7 @@ export module SagaHelper {
     duration: number = Constants.sagaDisplayTextDuration,
     jokeProbability: number = Constants.jokeProbability,
   ) {
-    const rng = Math.random();
+    const rng = Math.random() * 0.999;
     if (rng > jokeProbability || joke.length == 0) {
       showMessages(messages, delay, duration);
     } else {

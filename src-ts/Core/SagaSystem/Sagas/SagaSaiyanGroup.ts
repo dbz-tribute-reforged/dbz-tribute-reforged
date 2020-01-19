@@ -151,7 +151,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
 
   fakeOoz(unit: unit) {
     BlzSetUnitSkin(unit, FourCC("H004"));
-    SetHeroStr(unit, Math.floor(GetHeroStr(unit, true) * 2), true);
+    SetHeroStr(unit, Math.floor(GetHeroStr(unit, true) * 1.5), true);
     SetHeroAgi(unit, Math.floor(GetHeroAgi(unit, true) * 1.5), true);
     DestroyEffect(
       AddSpecialEffectTarget(

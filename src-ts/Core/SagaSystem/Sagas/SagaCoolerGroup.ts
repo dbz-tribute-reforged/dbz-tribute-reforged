@@ -50,8 +50,8 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
       BlzSetUnitSkin(this.cooler, FourCC("H043"));
       SetUnitScale(this.cooler, 2.0, 2.0, 2.0);
       SetHeroLevel(this.cooler, GetHeroLevel(this.cooler) + 5, true);
-      SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.5), true);
-      SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.5), true);
+      SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.2), true);
+      SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.2), true);
       DestroyEffect(
         AddSpecialEffectTarget(
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -137,7 +137,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.update(t);
     for (const mc of this.metalCoolers) {
       if (IsUnitAliveBJ(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.03);
       } else if (this.revives > 0) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(
@@ -147,8 +147,8 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
           ], 5, 5
         );
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 200), true);
-        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.1 + 200), true);
+        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.2 + 200), true);
+        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.2 + 200), true);
       }
     }
   }
