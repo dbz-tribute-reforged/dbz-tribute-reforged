@@ -78,7 +78,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe,
+        this.aoe + this.repelOutsidersSpeed,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&
@@ -91,7 +91,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance < this.aoe - Constants.beamSpawnOffset - 20) {
+        if (targetDistance < this.aoe - Constants.beamSpawnOffset) {
           // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
