@@ -91,7 +91,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance < this.aoe - Constants.beamSpawnOffset) {
+        if (targetDistance < this.aoe - Constants.beamSpawnOffset - 20) {
           // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
