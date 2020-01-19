@@ -251,6 +251,7 @@ gg_trg_Piccolo_Multi_Form = nil
 gg_trg_Pan_Summon_Giru = nil
 gg_trg_Android_17_Super_Electric_Strike_Warning = nil
 gg_trg_Android_17_DBS_Power_Blitz_Barrage = nil
+gg_trg_Infinite_Energy_Android_Loop = nil
 gg_trg_Babidi_Summons = nil
 gg_trg_Babidi_Haretsu_Instagib = nil
 gg_trg_Buu_Candy_Beam = nil
@@ -510,7 +511,6 @@ gg_unit_H000_0311 = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Infinite_Energy_Android_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2309,7 +2309,7 @@ function Trig_Android_17_DBS_Power_Blitz_Barrage_Conditions()
 end
 
 function Trig_Android_17_DBS_Power_Blitz_Barrage_Actions()
-    SetUnitManaPercentBJ(GetTriggerUnit(), (GetUnitManaPercent(GetTriggerUnit()) * 0.75))
+    SetUnitManaPercentBJ(GetTriggerUnit(), (GetUnitManaPercent(GetTriggerUnit()) * 0.70))
 end
 
 function InitTrig_Android_17_DBS_Power_Blitz_Barrage()
@@ -3715,18 +3715,24 @@ function Trig_Kill_Hero_Revive_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_Revive_Func006Func001C()
-    if (RectContainsUnit(gg_rct_FinalBattleArena, GetDyingUnit()) == true) then
-        return true
+function Trig_Kill_Hero_Revive_Func006Func005C()
+    if (not (IsUnitDeadBJ(udg_HeroRespawnUnit) == true)) then
+        return false
     end
-    if (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == true) then
-        return true
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, GetDyingUnit()) == false)) then
+        return false
     end
-    return false
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == false)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Kill_Hero_Revive_Func006C()
-    if (not Trig_Kill_Hero_Revive_Func006Func001C()) then
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, GetDyingUnit()) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == false)) then
         return false
     end
     return true
@@ -3734,10 +3740,13 @@ end
 
 function Trig_Kill_Hero_Revive_Actions()
     if (Trig_Kill_Hero_Revive_Func006C()) then
-    else
         TriggerSleepAction(udg_HeroRespawnDelay)
         udg_HeroRespawnUnit = GetTriggerUnit()
-        TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+        if (Trig_Kill_Hero_Revive_Func006Func005C()) then
+            TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
+        else
+        end
+    else
     end
 end
 
@@ -4336,7 +4345,7 @@ end
 function Trig_Catchup_Turn_On_Actions()
     udg_IsCatchupStatsActivated = true
     udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
-    DisplayTextToForce(GetPlayersAll(), ("|cff00ffff[Only red sees this] Catchup Stats Activated! |r|cffffcc00Threshold: " .. (R2S((udg_CatchupThreshold * 100.00)) .. ("%|r " .. ("|cffff00ffIncrement: " .. (R2S((udg_CatchupIncrement * 100.00)) .. "%|r"))))))
+    DisplayTextToForce(udg_TempPlayerGroup, ("|cff00ffff[Only red sees this] Catchup Stats Activated! |r|cffffcc00Threshold: " .. (R2S((udg_CatchupThreshold * 100.00)) .. ("%|r " .. ("|cffff00ffIncrement: " .. (R2S((udg_CatchupIncrement * 100.00)) .. "%|r"))))))
         DestroyForce(udg_TempPlayerGroup)
     EnableTrigger(gg_trg_Catchup_Timer)
 end
@@ -4377,7 +4386,7 @@ function Trig_Catchup_Timer_Func001Func004Func001A()
     end
 end
 
-function Trig_Catchup_Timer_Func001Func008Func002Func001Func006C()
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func003C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V"))) then
         return false
     end
@@ -4390,17 +4399,40 @@ function Trig_Catchup_Timer_Func001Func008Func002Func001Func006C()
     return true
 end
 
-function Trig_Catchup_Timer_Func001Func008Func002Func001Func007C()
-    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H008"))) then
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func004C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
         return false
     end
-    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H016"))) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
         return false
     end
     return true
 end
 
 function Trig_Catchup_Timer_Func001Func008Func002Func001Func008C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01S"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01T"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func009C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H016"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Catchup_Timer_Func001Func008Func002Func001Func010C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
@@ -4410,18 +4442,30 @@ end
 function Trig_Catchup_Timer_Func001Func008Func002Func001A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func003C()) then
+        udg_StatMultStr = (udg_StatMultStr * 0.33)
+        udg_StatMultAgi = (udg_StatMultAgi * 0.33)
+        udg_StatMultInt = (udg_StatMultInt * 0.33)
+    else
+    end
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func004C()) then
+        udg_StatMultStr = (udg_StatMultStr * 0.33)
+        udg_StatMultAgi = (udg_StatMultAgi * 0.33)
+        udg_StatMultInt = (udg_StatMultInt * 0.33)
+    else
+    end
     udg_StatMultReal = (((udg_TempReal + udg_TempReal2) + udg_TempReal3) - ((udg_StatMultStr + udg_StatMultAgi) + udg_StatMultInt))
     udg_StatMultReal = (udg_StatMultReal * 0.33)
     udg_StatMultReal = (udg_StatMultReal * udg_CatchupIncrement)
-    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func006C()) then
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func008C()) then
         udg_StatMultReal = (udg_StatMultReal * 0.33)
     else
     end
-    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func007C()) then
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func009C()) then
         udg_StatMultReal = (udg_StatMultReal * 0.50)
     else
     end
-    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func008C()) then
+    if (Trig_Catchup_Timer_Func001Func008Func002Func001Func010C()) then
         udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -6962,7 +7006,14 @@ function InitTrig_Test_StatMult_Init()
     TriggerAddAction(gg_trg_Test_StatMult_Init, Trig_Test_StatMult_Init_Actions)
 end
 
-function Trig_Test_Stats_Get_Stats_Command_Func003A()
+function Trig_Test_Stats_Get_Stats_Command_Conditions()
+    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 9) == "-getstats")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Test_Stats_Get_Stats_Command_Func003Func004A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
     DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00" .. (GetHeroProperName(udg_StatMultUnit) .. "|r")))
@@ -6974,12 +7025,24 @@ function Trig_Test_Stats_Get_Stats_Command_Func003A()
     DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Tourney stats: " .. ((R2S(udg_StatMultReal) .. "|r |cff00ffffCatchup Stats: ") .. ((R2S(udg_TempReal) .. "|r") .. ""))))
 end
 
+function Trig_Test_Stats_Get_Stats_Command_Func003C()
+    if (not (udg_TempInt > 0)) then
+        return false
+    end
+    if (not (udg_TempInt <= udg_MaxNumPlayers)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Test_Stats_Get_Stats_Command_Actions()
-    udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
-    udg_TempUnitGroup = GetUnitsSelectedAll(GetTriggerPlayer())
-    ForGroupBJ(udg_TempUnitGroup, Trig_Test_Stats_Get_Stats_Command_Func003A)
-        DestroyForce(udg_TempPlayerGroup)
-        DestroyGroup(udg_TempUnitGroup)
+    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 10, 12))
+    if (Trig_Test_Stats_Get_Stats_Command_Func003C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(GetTriggerPlayer())
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Test_Stats_Get_Stats_Command_Func003Func004A)
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
 end
 
 function InitTrig_Test_Stats_Get_Stats_Command()
@@ -6994,6 +7057,7 @@ function InitTrig_Test_Stats_Get_Stats_Command()
     TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(7), "-getstats", false)
     TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(8), "-getstats", false)
     TriggerRegisterPlayerChatEvent(gg_trg_Test_Stats_Get_Stats_Command, Player(9), "-getstats", false)
+    TriggerAddCondition(gg_trg_Test_Stats_Get_Stats_Command, Condition(Trig_Test_Stats_Get_Stats_Command_Conditions))
     TriggerAddAction(gg_trg_Test_Stats_Get_Stats_Command, Trig_Test_Stats_Get_Stats_Command_Actions)
 end
 
@@ -9898,13 +9962,23 @@ function Trig_Transformations_Android_17_DBS_Func014C()
     if (not (udg_TransformationString == "ranger")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 140)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Android_17_DBS_Func016Func001C()
+function Trig_Transformations_Android_17_DBS_Func015C()
+    if (not (udg_TransformationString == "ranger")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Android_17_DBS_Func017Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -9914,8 +9988,8 @@ function Trig_Transformations_Android_17_DBS_Func016Func001C()
     return false
 end
 
-function Trig_Transformations_Android_17_DBS_Func016C()
-    if (not Trig_Transformations_Android_17_DBS_Func016Func001C()) then
+function Trig_Transformations_Android_17_DBS_Func017C()
+    if (not Trig_Transformations_Android_17_DBS_Func017Func001C()) then
         return false
     end
     return true
@@ -9970,7 +10044,13 @@ function Trig_Transformations_Android_17_DBS_Actions()
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MW'))
     else
     end
-    if (Trig_Transformations_Android_17_DBS_Func016C()) then
+    if (Trig_Transformations_Android_17_DBS_Func015C()) then
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraDarkGreen.mdx"
+    else
+    end
+    if (Trig_Transformations_Android_17_DBS_Func017C()) then
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
     else
@@ -13441,7 +13521,7 @@ function Trig_Saga_Unit_Loop_Func002A()
             end
             udg_TempInt = udg_TempInt + 1
         end
-        udg_TempReal4 = (((1.50 + (0.25 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
+        udg_TempReal4 = (((1.20 + (0.20 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.02)) * 1)
         udg_TempReal = ((udg_TempReal4 * 0.33) * (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))
         ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))

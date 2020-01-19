@@ -39,7 +39,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         this.insideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe + Constants.beamSpawnOffset,
+        this.aoe,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
@@ -53,9 +53,16 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance > this.aoe && targetDistance < this.aoe * 2.5) {
+        if (
+          targetDistance > this.aoe - Constants.beamSpawnOffset * 2 && 
+          targetDistance < this.aoe * 2.5
+        ) {
           const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
-          const newCoords = CoordMath.polarProjectCoords(this.sourceCoords, targetAngle, this.aoe);
+          const newCoords = CoordMath.polarProjectCoords(
+            this.sourceCoords, 
+            targetAngle, 
+            this.aoe - Constants.beamSpawnOffset * 2
+          );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
             PathingCheck.moveFlyingUnitToCoord(target, newCoords);
           } else {
@@ -71,7 +78,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe + Constants.beamSpawnOffset,
+        this.aoe,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&
@@ -84,7 +91,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance < this.aoe + Constants.beamSpawnOffset - 100) {
+        if (targetDistance < this.aoe - Constants.beamSpawnOffset) {
           // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
@@ -92,7 +99,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
           const newCoords = CoordMath.polarProjectCoords(
             this.sourceCoords, 
             targetAngle, 
-            this.aoe + Constants.beamSpawnOffset + this.repelOutsidersSpeed
+            this.aoe + this.repelOutsidersSpeed
           );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
             PathingCheck.moveFlyingUnitToCoord(target, newCoords);
