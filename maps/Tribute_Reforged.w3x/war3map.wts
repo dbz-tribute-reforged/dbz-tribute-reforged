@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27d
+DBZ Tribute Reforged 0.27e
 }
 
 STRING 4
@@ -45770,7 +45770,8 @@ Transformations:
 [lvl 17]  1.40x "fp"
 [lvl 50]  1.70x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.50x "ranger" [upgrades Q]
+[lvl 140] 2.50x "ranger" [upgrades Q]
+[lvl 200] 2.60x "ranger"
 }
 
 STRING 7539

@@ -91,8 +91,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       const playerUnits = CreateGroup();
       GroupEnumUnitsOfPlayer(playerUnits, player, Filter(() => {
         return (
-          UnitHelper.isUnitTournamentViable(GetFilterUnit()) &&
-          IsUnitAliveBJ(GetFilterUnit())
+          UnitHelper.isUnitTournamentViable(GetFilterUnit())
         );
       }));
 
@@ -100,6 +99,9 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
         const unit = GetEnumUnit();
         unitsTeam.push(unit);
         UnitResetCooldown(unit);
+        if (IsUnitDeadBJ(unit)) {
+          ReviveHero(unit, waitRoom.x, waitRoom.y, true);
+        }
         SetUnitLifePercentBJ(unit, 100);
         SetUnitManaPercentBJ(unit, 100);
         SetUnitX(unit, waitRoom.x);

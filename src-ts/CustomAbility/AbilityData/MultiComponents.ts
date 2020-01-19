@@ -420,7 +420,7 @@ export const MultiComponents = [
     angleDifference: 15,
     angleMin: -60,
     angleMax: 60,
-    forceMinDistance: 600,
+    forceMinDistance: 500,
     forceMaxDistance: 0,
     delayBetweenComponents: 0,
     firingMode: MultiComponent.SPREAD_FIRING,
