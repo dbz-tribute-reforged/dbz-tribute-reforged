@@ -171,7 +171,8 @@ export class AdvancedSaga {
         
         if (IsUnitEnemy(closestUnit, bossPlayer)) {
           for (const [orderBossName, orderBoss] of this.bosses) {
-            IssueTargetOrder(orderBoss, "attack", closestUnit);
+            // IssueTargetOrder(orderBoss, "attack", closestUnit);
+            IssueTargetOrder(orderBoss, "smart", closestUnit);
           }
         }
 

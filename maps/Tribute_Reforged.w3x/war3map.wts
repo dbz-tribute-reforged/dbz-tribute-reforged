@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27c
+DBZ Tribute Reforged 0.27d
 }
 
 STRING 4
@@ -20570,16 +20570,9 @@ Energy Generation
 }
 
 STRING 3356
-// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+// Abilities: A0MX (Infinite Energy Android), Name (Name)
 {
-A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high saga killing potential during the late game.
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
+Infinite Energy Android
 }
 
 STRING 3357
@@ -45777,7 +45770,7 @@ Transformations:
 [lvl 17]  1.40x "fp"
 [lvl 50]  1.70x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.50x "ranger"
+[lvl 150] 2.50x "ranger" [upgrades Q]
 }
 
 STRING 7539
@@ -61576,8 +61569,8 @@ STRING 10158
 Type "r" to revert.
 Transformations:
 [lvl 15]  1.50x "fp"
-[lvl 45]  2.00x "fp"
-[lvl 75]  2.25x "fp"
+[lvl 45]  1.75x "fp"
+[lvl 75]  2.00x "fp"
 
 For Super 13 type "super" when all androids lvl greater than 35
 }
@@ -64654,7 +64647,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 19.1.20
+This map is under active development - 20.1.20
 }
 
 STRING 10653
@@ -67083,8 +67076,9 @@ A powerful energy shield used by androids to prevent all incoming damage for 5 s
 }
 
 STRING 11054
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00ffffCatchup Stats Deactivated|r
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 11055
@@ -67695,15 +67689,20 @@ A powerful energy shield used by androids to prevent all incoming damage for 5 s
 }
 
 STRING 11155
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MX (Infinite Energy Android), Tip (Tooltip - Normal)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
+Infinite Energy Android
 }
 
-STRING 11156
+STRING 11157
+{
+|cffff2020Captain's Mode Detected. Automatic catchup stats disabled.|r
+}
+
+STRING 11158
 // Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur2> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool2> seconds|r
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur2> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool2> seconds|r
 }
 
 STRING 11159
@@ -67873,6 +67872,21 @@ STRING 11183
 // Abilities: A0MI (Giant Storm), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 11184
+{
+|cff00ffff[Only red sees this] Catchup Stats Deactivated|r
+}
+
+STRING 11185
+{
+|cff40ff40[Only red can see this] Automatic Catchup Stats Activated (20mins)!|r
+}
+
+STRING 11186
+{
+|cff40ff40[Only red can see this] Automatic Catchup Stats Activated (10mins)!|r
 }
 
 STRING 11187
@@ -70048,6 +70062,49 @@ STRING 11547
 After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
 }
 
+STRING 11548
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+{
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high damage nukes that work best against sagas or enemies that cannot dodge them.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11549
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
+}
+
+STRING 11550
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
+}
+
+STRING 11551
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
+}
+
+STRING 11552
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
+}
+
+STRING 11553
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
+}
+
 STRING 11554
 // Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
 {
@@ -70132,6 +70189,30 @@ STRING 11567
 [|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 10|r]
 }
 
+STRING 11568
+// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
+}
+
+STRING 11569
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
+}
+
+STRING 11570
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
+}
+
+STRING 11571
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 30% of Current Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
 STRING 11572
 // Abilities: A0MV (Super Electric Strike), EditorSuffix (Editor Suffix)
 {
@@ -70142,12 +70223,6 @@ STRING 11573
 // Abilities: A0MW (Power Blitz Barrage), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Power Blitz Barrage - [|cffffcc00Level %d|r]
-}
-
-STRING 11574
-// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 11575
@@ -70193,33 +70268,21 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11582
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B01X (), Bufftip (Tooltip)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
-}
-
-STRING 11583
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
-}
-
-STRING 11584
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
+Infinite Energy Android
 }
 
 STRING 11585
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MX (Infinite Energy Android), Ubertip (Tooltip - Normal - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
+This Android can produce infinite energy.|n|cff2080ffMana Regen: +3% of max mana per second|r
 }
 
 STRING 11586
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B01X (), Buffubertip (Tooltip - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
+This Android can produce infinite energy, restoring 3% of max mana per second.
 }
 
 STRING 11587
@@ -70240,21 +70303,9 @@ STRING 11589
 [|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 10|r]
 }
 
-STRING 11590
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+STRING 11596
+// Abilities: A0MX (Infinite Energy Android), EditorSuffix (Editor Suffix)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
-}
-
-STRING 11591
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
-}
-
-STRING 11592
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+(androids)
 }
 

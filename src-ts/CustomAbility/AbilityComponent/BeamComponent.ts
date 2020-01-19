@@ -220,15 +220,12 @@ export class BeamComponent implements
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
     }
+    const isBeamDead = (IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) || 
+      GetUnitState(this.beamUnit, UNIT_STATE_LIFE) <= 0
+    );
+    
     if (this.hasBeamUnit && !this.hasExploded) {
-      if (
-        (
-          (
-            IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) || 
-            GetUnitState(this.beamUnit, UNIT_STATE_LIFE) <= 0
-          ) && this.explodeOnDeath
-        ) || this.forcedExplode
-      ) {
+      if ((isBeamDead && this.explodeOnDeath) || this.forcedExplode) {
         this.hasExploded = true;
         const oldCurrentTick = ability.currentTick;
         if (this.endTick == -1) {
@@ -243,7 +240,7 @@ export class BeamComponent implements
         }
         ability.currentTick = oldCurrentTick;
         RemoveUnit(this.beamUnit);
-      } else {
+      } else if (!isBeamDead) {
         this.checkForBeamClash(input);
         if (this.speed > 0) {
           this.moveBeamUnit(ability, input);

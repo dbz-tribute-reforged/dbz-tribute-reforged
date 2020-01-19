@@ -40,8 +40,8 @@ export module CameraZoom {
         let zoomTrig = CreateTrigger();
         let angleTrig = CreateTrigger();
         for (let i = 0; i < bj_MAX_PLAYERS; i++) {
+            arr.push(new PlayerCam(Player(i), ZOOM_DEFAULT, ANGLE_DEFAULT));
             if (GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) {
-                arr.push(new PlayerCam(Player(i), ZOOM_DEFAULT, ANGLE_DEFAULT));
                 TriggerRegisterPlayerChatEvent(zoomTrig, Player(i), "-cam ", false);
                 TriggerRegisterPlayerChatEvent(angleTrig, Player(i), "-ang ", false);
             }

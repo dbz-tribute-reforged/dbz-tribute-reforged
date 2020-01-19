@@ -236,11 +236,9 @@ export function CustomPlayerTest() {
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
       customPlayers[playerId].selectedUnit = caster;
-      /*
-      if (GetOrderTargetUnit()) {
-        customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+      if (GetSpellTargetUnit()) {
+        customPlayers[playerId].targetUnit = GetSpellTargetUnit();
       }
-      */
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero) {
         // temp fix for double ss rage trigger
@@ -529,7 +527,7 @@ export function CustomPlayerTest() {
 
       BlzFrameSetVisible(heroPortrait, true);
       BlzFrameClearAllPoints(heroPortrait);
-      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.13, 0.003);
+      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.135, 0.003);
       BlzFrameSetSize(heroPortrait, 0.08, 0.08);
 
       BlzFrameSetVisible(unitPanelParent, true);

@@ -20,6 +20,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   spawnSagaUnits(): void {
     super.spawnSagaUnits();
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_SLUG);
     SagaHelper.showMessagesChanceOfJoke(
       [
         "Lord Slug has arrived!"
@@ -46,8 +47,8 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
       this.isSlugKyo = true;
       SetUnitScale(this.slug, 3.0, 3.0, 3.0);
       SetHeroLevel(this.slug, GetHeroLevel(this.slug) + 1, true);
-      SetHeroStr(this.slug, Math.floor(GetHeroStr(this.slug, true) * 2), true);
-      SetHeroAgi(this.slug, Math.floor(GetHeroAgi(this.slug, true) * 1.5), true);
+      SetHeroStr(this.slug, Math.floor(GetHeroStr(this.slug, true) * 1.2), true);
+      SetHeroAgi(this.slug, Math.floor(GetHeroAgi(this.slug, true) * 1.2), true);
       DestroyEffect(
         AddSpecialEffectTarget(
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -71,7 +72,6 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
 
   start(): void {
     super.start();
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.PRE_SLUG);
     this.spawnWhenDelayFinished();
   }
 

@@ -11,7 +11,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.sagaDelay = 40;
     this.stats = 25;
     this.availableFruits = 2;
   }
@@ -42,7 +42,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     ) {
       --this.availableFruits;
       SetHeroLevel(this.turles, GetHeroLevel(this.turles) + 1, true);
-      SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.1 + 40), true);
+      SetHeroStr(this.turles, Math.floor(GetHeroStr(this.turles, true) * 1.2 + 40), true);
       SetHeroAgi(this.turles, Math.floor(GetHeroAgi(this.turles, true) * 1.05 + 25), true);
       SetUnitState(
         this.turles, 
