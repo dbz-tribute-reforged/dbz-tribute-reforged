@@ -73,7 +73,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 25, 
       angle: 0, 
-      aoe: 450,
+      aoe: 400,
     },
     affectAllies: false,
   },

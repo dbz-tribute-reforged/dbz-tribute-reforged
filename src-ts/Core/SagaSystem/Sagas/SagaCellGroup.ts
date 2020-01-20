@@ -79,7 +79,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
           "|cffffcc00Perfect Cell|r: \"T\" is for the \"Terror\", upon you I bestow...",
           "|cffffcc00Perfect Cell|r: My name is Perfect Cell. And I'd like to say...",
           "|cffffcc00Perfect Cell|r: Hello.",
-        ], Constants.sagaDisplayTextDelay, Constants.sagaDisplayTextDuration, 0.25
+        ], Constants.sagaDisplayTextDelay, Constants.sagaDisplayTextDuration, 0.15
       );
       SagaHelper.genericTransformAndPing(this.perfectCell, this.semiperfectCell, this);
     }

@@ -1227,7 +1227,8 @@ export const AbilitiesList = [
         "Barrier Prison"
     },
     components: [
-      { name: "multi barrier prison" },
+      // { name: "multi barrier prison" },
+      { name: "beam barrier prison" },
     ],
   },
   // -------------------------------------------

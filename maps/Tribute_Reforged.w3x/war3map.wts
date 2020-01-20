@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27f
+DBZ Tribute Reforged 0.27g
 }
 
 STRING 4
@@ -67695,6 +67695,12 @@ STRING 11155
 Infinite Energy Android
 }
 
+STRING 11156
+// Abilities: A0MX (Infinite Energy Android), Ubertip (Tooltip - Normal - Extended)
+{
+This Android can produce infinite energy.|n|cff2080ffMana Regen: +2% of max mana per second|r
+}
+
 STRING 11157
 {
 |cffff2020Captain's Mode Detected. Automatic catchup stats disabled.|r
@@ -70226,6 +70232,12 @@ STRING 11573
 [|cff00ff00Q|r] Learn Power Blitz Barrage - [|cffffcc00Level %d|r]
 }
 
+STRING 11574
+// Buffs/Effects: B01X (), Buffubertip (Tooltip - Extended)
+{
+This Android can produce infinite energy, restoring 2% of max mana per second.
+}
+
 STRING 11575
 // Abilities: A0MW (Power Blitz Barrage), EditorSuffix (Editor Suffix)
 {
@@ -70272,18 +70284,6 @@ STRING 11582
 // Buffs/Effects: B01X (), Bufftip (Tooltip)
 {
 Infinite Energy Android
-}
-
-STRING 11585
-// Abilities: A0MX (Infinite Energy Android), Ubertip (Tooltip - Normal - Extended)
-{
-This Android can produce infinite energy.|n|cff2080ffMana Regen: +3% of max mana per second|r
-}
-
-STRING 11586
-// Buffs/Effects: B01X (), Buffubertip (Tooltip - Extended)
-{
-This Android can produce infinite energy, restoring 3% of max mana per second.
 }
 
 STRING 11587

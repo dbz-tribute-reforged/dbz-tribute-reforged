@@ -243,7 +243,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 500,
     damageData: {
-      multiplier: BASE.KAME_DPS * 2.25,
+      multiplier: BASE.KAME_DPS * 2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -822,7 +822,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 500,
+    aoe: 450,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_INT,
@@ -857,7 +857,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 500,
+    aoe: 450,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.49,
       attribute: bj_HEROSTAT_INT,
@@ -877,7 +877,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 450,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.2,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -905,7 +905,7 @@ export const AOEDamageComponents = [
   // super electric strike
   {
     name: "damage super electric strike dps",
-    repeatInterval: 1,
+    repeatInterval: 16,
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
@@ -913,7 +913,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.1,
+      multiplier: BASE.KAME_DPS * 0.09 * 16,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

@@ -50,7 +50,7 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
     if (!this.hasTeleported) {
       this.hasTeleported = true;
       this.originalPoint.x = GetUnitX(source);
-      this.originalPoint.y = GetUnitX(source);
+      this.originalPoint.y = GetUnitY(source);
       this.doTeleport(input, source);
     } else {
       if (!this.teleportOnce) {
