@@ -29,7 +29,7 @@ function tsMain() {
   Logger.doLogVerbose = false;
   Logger.doLogDebug = true;
   TimerStart(CreateTimer(), 5.0, false, () => {
-    DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
+    // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());
   })
 
@@ -39,14 +39,26 @@ function tsMain() {
   TimerStart(CreateTimer(), 3, false, () => {
     // initialize some systems
     PathingCheck.Init();
-    creepManager = CreepManager.getInstance();
-    sagaManager = SagaManager.getInstance();
-    itemStackingManager = ItemStackingManager.getInstance();
     
     CustomUiTest();
     CustomPlayerTest();
     DestroyTimer(GetExpiredTimer());
   });
+
+  TimerStart(CreateTimer(), 5, false, () => {
+    sagaManager = SagaManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  })
+
+  TimerStart(CreateTimer(), 10, false, () => {
+    creepManager = CreepManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  })
+
+  TimerStart(CreateTimer(), 20, false, () => {
+    itemStackingManager = ItemStackingManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  })
 
   TimerStart(CreateTimer(), 15, false, () => {
     tournamentManager = TournamentManager.getInstance();
@@ -70,7 +82,7 @@ function libLoaderLog(libName: string, success: boolean, message: string) {
 }
 
 LibraryLoader.logFunction = libLoaderLog;
-ceres.addHook("main::before", () => HostDetectSystem.onInit());
+// ceres.addHook("main::before", () => HostDetectSystem.onInit());
 ceres.addHook("main::after", () => LibraryLoader.runInitializers());
 ceres.addHook("main::after", () => tsMain());
 ceres.addHook("main::after", () => CameraZoom.onInit());
