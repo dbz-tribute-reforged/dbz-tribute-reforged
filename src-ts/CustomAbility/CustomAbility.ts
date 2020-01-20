@@ -7,6 +7,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
+import { SfxData } from "Common/SfxData";
 
 export enum CostType {
   HP = "Life",
@@ -29,7 +30,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
 
   public currentTick: number;
   protected abilityTimer: timer;
-  public persistentSfx: effect[];
+  public persistentSfx: Map<SfxData, effect>;
 
   constructor(
     public name: string = "No Ability", 
@@ -49,7 +50,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   ) {
     this.currentTick = 0;
     this.abilityTimer = CreateTimer();
-    this.persistentSfx = [];
+    this.persistentSfx = new Map();
   }
 
   activate(input: CustomAbilityInput): void {
@@ -76,9 +77,9 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
         ++this.currentTick;
       }
       if (this.currentTick > this.duration) {
-        AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx);
+        AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx.values());
         // TODO: investigate if this causes a memory leak ...
-        this.persistentSfx = [];
+        this.persistentSfx.clear();
       }
       this.updateCd();
     });

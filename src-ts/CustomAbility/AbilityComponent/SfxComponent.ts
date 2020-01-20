@@ -73,6 +73,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       BlzGetUnitZ(source),
     )
 
+
     if (ability.isFinishedUsing(this)) {
       this.sfxStarted = false;
     }
@@ -107,6 +108,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];
@@ -123,6 +125,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];

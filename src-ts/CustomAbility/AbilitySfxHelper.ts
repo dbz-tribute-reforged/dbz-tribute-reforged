@@ -12,8 +12,23 @@ export module AbilitySfxHelper {
     target: Vector2D, 
     yaw: number,
     height: number,
-    persistentSfx: effect[],
+    persistentSfx: Map<SfxData, effect>,
   ) {
+    if (
+      displayedSfx.persistent && 
+      displayedSfx.updateCoordsOnly 
+    ) {
+      const currentEffect = persistentSfx.get(displayedSfx);
+      if (currentEffect) {
+        BlzSetSpecialEffectX(currentEffect, target.x);
+        BlzSetSpecialEffectY(currentEffect, target.y);
+        if (height + displayedSfx.startHeight > 0) {
+          BlzSetSpecialEffectHeight(currentEffect, height + displayedSfx.startHeight);
+        }
+        // yes i know, bad, but if current sfx not found, create sfx
+        return;
+      }
+    }
     const createdSfx = AddSpecialEffect(displayedSfx.model, target.x, target.y);
     BlzSetSpecialEffectScale(createdSfx, displayedSfx.scale);
     const newYaw = yaw + displayedSfx.extraDirectionalYaw;
@@ -28,7 +43,7 @@ export module AbilitySfxHelper {
     }
 
     if (displayedSfx.persistent) {
-      persistentSfx.push(createdSfx);
+      persistentSfx.set(displayedSfx, createdSfx);
     } else {
       DestroyEffect(createdSfx);
     }
@@ -52,7 +67,13 @@ export module AbilitySfxHelper {
     }
   }
 
-  export function displaySfxOnUnit(displayedSfx: SfxData, unit: unit, angle: number, height: number, persistentSfx: effect[]) {
+  export function displaySfxOnUnit(
+    displayedSfx: SfxData, 
+    unit: unit, 
+    angle: number, 
+    height: number, 
+    persistentSfx: Map<SfxData, effect>
+  ) {
     const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
     
     if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
@@ -60,7 +81,7 @@ export module AbilitySfxHelper {
     }
 
     if (displayedSfx.persistent) {
-      persistentSfx.push(createdSfx);
+      persistentSfx.set(displayedSfx, createdSfx);
     } else {
       DestroyEffect(createdSfx);
     }
@@ -82,7 +103,7 @@ export module AbilitySfxHelper {
     }
   }
 
-  export function cleanupPersistentSfx(persistentSfx: effect[]) {
+  export function cleanupPersistentSfx(persistentSfx: IterableIterator<effect>) {
     for (const currentSfx of persistentSfx) {
       DestroyEffect(currentSfx);
     }

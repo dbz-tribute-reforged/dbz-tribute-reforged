@@ -418,21 +418,28 @@ export function CustomPlayerTest() {
 	// hides first 5 command buttons
 	// sets parent of inventory to parent of bottom right command buttons
 	const hideTrig = CreateTrigger();
-	// for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-	// 	TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "iseedeadui", true);
-  // }
-  TriggerRegisterTimerEventSingle(hideTrig, 5.0);
+	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
+  }
+  // TriggerRegisterTimerEventSingle(hideTrig, 5.0);
 	TriggerAddAction(hideTrig, () => {
-    BJDebugMsg("Enabling Custom UI for all players.");
-    // const playerId = GetPlayerId(GetTriggerPlayer());
-    for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
-      if (
-        !customPlayers[playerId].usingCustomUI && 
-        IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-        GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-      ) {
-        customPlayers[playerId].usingCustomUI = true;
-      }
+    // BJDebugMsg("Enabling Custom UI for all players.");
+    // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
+    //   if (
+    //     !customPlayers[playerId].usingCustomUI && 
+    //     IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+    //     GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+    //   ) {
+    //     customPlayers[playerId].usingCustomUI = true;
+    //   }
+    // }
+    const playerId = GetPlayerId(GetTriggerPlayer());
+    if (
+      !customPlayers[playerId].usingCustomUI && 
+      IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+      GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+    ) {
+      customPlayers[playerId].usingCustomUI = true;
     }
 
     const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
@@ -490,7 +497,7 @@ export function CustomPlayerTest() {
     const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
     const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
 
-    // if (GetLocalPlayer() == GetTriggerPlayer()) {
+    if (GetLocalPlayer() == GetTriggerPlayer()) {
       BlzHideOriginFrames(true);
       BlzFrameSetAllPoints(worldFrame, grandpa);
       // let frame = BlzGetFrameByName("ConsoleUI", 0);
@@ -547,7 +554,7 @@ export function CustomPlayerTest() {
       BlzFrameSetVisible(customStrengthLabel, true);
       BlzFrameSetVisible(customAgilityLabel, true);
       BlzFrameSetVisible(customIntelligenceLabel, true);
-    // }
+    }
 	});
 
 	const resetUnitPanelTrigger = CreateTrigger();

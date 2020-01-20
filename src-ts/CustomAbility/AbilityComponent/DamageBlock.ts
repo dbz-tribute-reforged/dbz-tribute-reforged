@@ -145,6 +145,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];
@@ -161,6 +162,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];

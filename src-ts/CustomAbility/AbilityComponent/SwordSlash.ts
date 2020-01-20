@@ -164,6 +164,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];
@@ -180,6 +181,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];

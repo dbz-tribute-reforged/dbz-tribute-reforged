@@ -242,6 +242,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
           y: number,
           z: number,
         },
+        updateCoordsOnly: boolean;
         persistent: boolean;
         attachmentPoint: string;
       }[];
