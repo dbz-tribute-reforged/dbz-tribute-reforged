@@ -30,7 +30,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
 
   public currentTick: number;
   protected abilityTimer: timer;
-  public persistentSfx: Map<SfxData, effect>;
+  public persistentUniqueSfx: Map<SfxData, effect[]>;
 
   constructor(
     public name: string = "No Ability", 
@@ -50,7 +50,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   ) {
     this.currentTick = 0;
     this.abilityTimer = CreateTimer();
-    this.persistentSfx = new Map();
+    this.persistentUniqueSfx = new Map();
   }
 
   activate(input: CustomAbilityInput): void {
@@ -77,9 +77,12 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
         ++this.currentTick;
       }
       if (this.currentTick > this.duration) {
-        AbilitySfxHelper.cleanupPersistentSfx(this.persistentSfx.values());
-        // TODO: investigate if this causes a memory leak ...
-        this.persistentSfx.clear();
+        const persistentEffects = this.persistentUniqueSfx.values();
+        for (const effect of persistentEffects) {
+          AbilitySfxHelper.cleanupPersistentSfx(effect);
+          effect.splice(0, effect.length);
+        }
+        this.persistentUniqueSfx.clear();
       }
       this.updateCd();
     });

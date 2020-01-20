@@ -55,16 +55,16 @@ function tsMain() {
     DestroyTimer(GetExpiredTimer());
   })
 
-  TimerStart(CreateTimer(), 20, false, () => {
-    itemStackingManager = ItemStackingManager.getInstance();
-    DestroyTimer(GetExpiredTimer());
-  })
-
   TimerStart(CreateTimer(), 15, false, () => {
     tournamentManager = TournamentManager.getInstance();
     experienceManager = ExperienceManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
+
+  TimerStart(CreateTimer(), 20, false, () => {
+    itemStackingManager = ItemStackingManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  })
 
   TimerStart(CreateTimer(), 30, false, () => {
     dragonBallsManager = DragonBallsManager.getInstance();
