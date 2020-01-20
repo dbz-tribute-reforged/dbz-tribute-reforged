@@ -25,6 +25,10 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
       [
         "Lord Slug has arrived!"
       ],
+      [
+        "|cffffcc00Lord Slug|r: I see trees of brown. And skies of black.",
+        "|cffffcc00Lord Slug|r: And I think to myself... what a wonderful world."
+      ],
     );
 
     this.addHeroListToSaga(["Lord Slug"], true);

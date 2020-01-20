@@ -25,4 +25,12 @@ export const TeleportComponents = [
     teleportOnce: false,
     teleportTarget: Teleport.CASTER_POINT,
   },
+  {
+    name: "teleport original point continuous", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    teleportOnce: false,
+    teleportTarget: Teleport.ORIGINAL_POINT,
+  },
 ];

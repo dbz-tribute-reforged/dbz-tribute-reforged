@@ -2320,7 +2320,7 @@ function InitTrig_Android_17_DBS_Power_Blitz_Barrage()
 end
 
 function Trig_Infinite_Energy_Android_Loop_Func001A()
-    SetUnitManaBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) * (0.03 * 0.33))))
+    SetUnitManaBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) * (0.02 * 0.33))))
 end
 
 function Trig_Infinite_Energy_Android_Loop_Actions()
