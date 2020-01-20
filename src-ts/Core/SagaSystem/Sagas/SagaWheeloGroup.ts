@@ -1,6 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class WheeloSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] The World\'s Strongest';
@@ -42,7 +43,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.kochin && this.wheelo && 
-      IsUnitDeadBJ(this.kochin) && 
+      UnitHelper.isUnitDead(this.kochin) && 
       SagaHelper.isUnitSagaHidden(this.wheelo)
     ) {
       SagaHelper.showMessagesChanceOfJoke(

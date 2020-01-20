@@ -67,30 +67,27 @@ export class BeamComponent implements
     this.hasExploded = false;
   }
 
-  protected getNearbyEnemies(input: CustomAbilityInput) {
-    const sourceCoord = new Vector2D(GetUnitX(this.beamUnit), GetUnitY(this.beamUnit));
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoord, 
-      this.aoe,
-      () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
-      }
-    );
-    const numEnemies = UnitHelper.countEnemyHeroes(affectedGroup, input.casterPlayer);
-    DestroyGroup(affectedGroup);
-    return numEnemies;
-  }
-
   protected checkForBeamClash(input: CustomAbilityInput): this {
     if (this.clashingDelayTicks > 0) {
       const currentHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
+      const beamCoord = new Vector2D(GetUnitX(this.beamUnit), GetUnitY(this.beamUnit));
+      const nearbyEnemies = UnitHelper.getNearbyValidUnits(
+        beamCoord, 
+        this.aoe,
+        () => {
+          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
+        }
+      );;
+      const numEnemyHeroes = UnitHelper.countEnemyHeroes(nearbyEnemies, input.casterPlayer);
+
       if (
-        currentHp < this.previousHp || 
-        (this.canClashWithHero && this.getNearbyEnemies(input) > 0)
+        (currentHp < this.previousHp && CountUnitsInGroup(nearbyEnemies) > 0) || 
+        (this.canClashWithHero && numEnemyHeroes > 0)
       ) {
         this.delayTicks = Math.min(this.maxDelayTicks, (this.delayTicks + this.clashingDelayTicks));
       }
       this.previousHp = currentHp;
+      DestroyGroup(nearbyEnemies);
     }
     return this;
   }
@@ -220,9 +217,7 @@ export class BeamComponent implements
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
     }
-    const isBeamDead = (IsUnitType(this.beamUnit, UNIT_TYPE_DEAD) || 
-      GetUnitState(this.beamUnit, UNIT_STATE_LIFE) <= 0
-    );
+    const isBeamDead = UnitHelper.isUnitDead(this.beamUnit);
     
     if (this.hasBeamUnit && !this.hasExploded) {
       if ((isBeamDead && this.explodeOnDeath) || this.forcedExplode) {

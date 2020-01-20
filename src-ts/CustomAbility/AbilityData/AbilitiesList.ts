@@ -587,9 +587,7 @@ export const AbilitiesList = [
         "Burning Attack"
     },
     components: [
-      { name: "damage target burning attack dps" },
-      { name: "damage target burning attack explosion" },
-      { name: "sfx burning attack" },
+      { name: "beam burning attack" },
     ],
   },
   // -------------------------------------------
@@ -1333,9 +1331,7 @@ export const AbilitiesList = [
         "Nuke"
     },
     components: [
-      { name: "damage target nuke dps" },
-      { name: "damage target nuke explosion" },
-      { name: "sfx nuke" },
+      { name: "beam nuke" },
     ],
   },
   // -------------------------------------------
@@ -2121,11 +2117,7 @@ export const AbilitiesList = [
         "Giant Storm"
     },
     components: [
-      { name: "damage target giant storm dps" },
-      { name: "damage target giant storm dps 2" },
-      { name: "damage target giant storm explosion" },
-      { name: "damage target giant storm explosion 2" },
-      { name: "sfx giant storm" },
+      { name: "beam giant storm" },
     ],
   },
   // -------------------------------------------

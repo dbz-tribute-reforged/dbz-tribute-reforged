@@ -99,7 +99,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
         const unit = GetEnumUnit();
         unitsTeam.push(unit);
         UnitResetCooldown(unit);
-        if (IsUnitDeadBJ(unit)) {
+        if (UnitHelper.isUnitDead(unit)) {
           ReviveHero(unit, waitRoom.x, waitRoom.y, true);
         }
         SetUnitLifePercentBJ(unit, 100);

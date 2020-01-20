@@ -56,7 +56,7 @@ export module SagaHelper {
 
   export function pingMinimap(bosses: Map<string, unit>) {
     for (const [name, boss] of bosses) {
-      if (IsUnitAliveBJ(boss) && !IsUnitHidden(boss)) {
+      if (UnitHelper.isUnitAlive(boss) && !IsUnitHidden(boss)) {
         PingMinimapForForceEx(
           bj_FORCE_ALL_PLAYERS, 
           GetUnitX(boss), 
