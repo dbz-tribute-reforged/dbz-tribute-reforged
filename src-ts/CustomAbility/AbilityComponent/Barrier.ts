@@ -12,6 +12,8 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   protected hasStarted: boolean;
   protected sourceCoords: Vector2D;
   protected insideUnits: group;
+  protected innerAOE: number;
+  protected outerAOE: number;
 
   constructor(
     public name: string = "Barrier",
@@ -26,6 +28,8 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     this.hasStarted = false;
     this.sourceCoords = new Vector2D();
     this.insideUnits = CreateGroup();
+    this.innerAOE = 0;
+    this.outerAOE = 0;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -35,11 +39,13 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     if (!this.hasStarted) {
       this.hasStarted = true;
       GroupClear(this.insideUnits);
+      this.innerAOE = this.aoe - Constants.beamSpawnOffset;
+      this.outerAOE = this.aoe + Constants.beamSpawnOffset + this.repelOutsidersSpeed;
       GroupEnumUnitsInRange(
         this.insideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe,
+        this.innerAOE,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
@@ -54,14 +60,14 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
         if (
-          targetDistance > this.aoe - Constants.beamSpawnOffset * 2 && 
+          targetDistance > this.innerAOE && 
           targetDistance < this.aoe * 2.5
         ) {
           const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
           const newCoords = CoordMath.polarProjectCoords(
             this.sourceCoords, 
             targetAngle, 
-            this.aoe - Constants.beamSpawnOffset * 2
+            this.innerAOE
           );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
             PathingCheck.moveFlyingUnitToCoord(target, newCoords);
@@ -78,7 +84,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
-        this.aoe + this.repelOutsidersSpeed,
+        this.outerAOE,
         Condition(() => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&
@@ -91,7 +97,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         const target = GetEnumUnit();
         const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
         const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
-        if (targetDistance < this.aoe - Constants.beamSpawnOffset) {
+        if (targetDistance < this.innerAOE) {
           // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
@@ -99,7 +105,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
           const newCoords = CoordMath.polarProjectCoords(
             this.sourceCoords, 
             targetAngle, 
-            this.aoe + this.repelOutsidersSpeed
+            this.outerAOE
           );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
             PathingCheck.moveFlyingUnitToCoord(target, newCoords);

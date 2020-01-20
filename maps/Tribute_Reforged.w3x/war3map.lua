@@ -3715,14 +3715,11 @@ function Trig_Kill_Hero_Revive_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_Revive_Func006Func005C()
-    if (not (IsUnitDeadBJ(udg_HeroRespawnUnit) == true)) then
+function Trig_Kill_Hero_Revive_Func006Func006C()
+    if (not (RectContainsUnit(gg_rct_FinalBattleArena, udg_HeroRespawnUnit) == false)) then
         return false
     end
-    if (not (RectContainsUnit(gg_rct_FinalBattleArena, GetDyingUnit()) == false)) then
-        return false
-    end
-    if (not (RectContainsUnit(gg_rct_Budokai_Arena, GetDyingUnit()) == false)) then
+    if (not (RectContainsUnit(gg_rct_Budokai_Arena, udg_HeroRespawnUnit) == false)) then
         return false
     end
     return true
@@ -3742,7 +3739,7 @@ function Trig_Kill_Hero_Revive_Actions()
     if (Trig_Kill_Hero_Revive_Func006C()) then
         TriggerSleepAction(udg_HeroRespawnDelay)
         udg_HeroRespawnUnit = GetTriggerUnit()
-        if (Trig_Kill_Hero_Revive_Func006Func005C()) then
+        if (Trig_Kill_Hero_Revive_Func006Func006C()) then
             TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
         else
         end
@@ -4183,6 +4180,7 @@ end
 function Trig_Spawn_Test_Dummy_Actions()
         udg_TempLoc = Location(0, 0)
     CreateNUnitsAtLoc(1, FourCC("H000"), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempLoc, bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC("A03Z"), GetLastCreatedUnit())
         RemoveLocation(udg_TempLoc)
 end
 
@@ -12103,9 +12101,6 @@ function Trig_Transformations_Cooler_Final_Form_Func010C()
 end
 
 function Trig_Transformations_Cooler_Final_Form_Func011Func012C()
-    if (IsUnitDeadBJ(udg_StatMultUnit) == true) then
-        return true
-    end
     if (RectContainsUnit(gg_rct_HeavenZone, udg_StatMultUnit) == true) then
         return true
     end

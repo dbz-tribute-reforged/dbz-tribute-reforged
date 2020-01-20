@@ -35,7 +35,7 @@ export class AOEApplyComponent implements
       () => {
         const testUnit = GetFilterUnit();
         return (
-          IsUnitAliveBJ(testUnit) &&
+          UnitHelper.isUnitAlive(testUnit) &&
           IsUnitAlly(testUnit, input.casterPlayer) && 
           (IsUnitType(testUnit, UNIT_TYPE_HERO) || this.affectsNonHeroes) && 
           (IsUnitType(testUnit, UNIT_TYPE_SUMMONED) || this.affectsNonSummons) &&

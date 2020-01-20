@@ -4,6 +4,7 @@ import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Androids Saga I: 19/20';
@@ -50,7 +51,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.android19 && this.android20 && !this.isRunningAway && 
-      IsUnitDeadBJ(this.android19) && 
+      UnitHelper.isUnitDead(this.android19) && 
       SagaHelper.checkUnitHp(this.android20, 0.8, true, false, true)
     ) {
       this.isRunningAway = true;
@@ -247,7 +248,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
       SagaHelper.isUnitSagaHidden(this.super13) &&
       (
         SagaHelper.checkUnitHp(this.android13, 0.25, false, false, true) ||
-        (IsUnitDeadBJ(this.android14) && IsUnitDeadBJ(this.android15))
+        (UnitHelper.isUnitDead(this.android14) && UnitHelper.isUnitDead(this.android15))
       )
     ) {
       const rng = Math.random();

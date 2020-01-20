@@ -1,5 +1,6 @@
 import { Vector2D } from "Common/Vector2D";
 import { TournamentData } from "./TournamentData";
+import { UnitHelper } from "Common/UnitHelper";
 
 
 export class UnitContestant {
@@ -52,9 +53,8 @@ export class TournamentContestant {
   setupUnitsOfPlayer(playerId: number) {
     this.units.clear();
     const playerUnits = CreateGroup();
-    // TODO: don't let dead units join
     GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), Filter(() => {
-      return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && IsUnitAliveBJ(GetFilterUnit());
+      return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && !UnitHelper.isUnitDead(GetFilterUnit());
     }));
 
     ForGroup(playerUnits, () => {
@@ -82,6 +82,9 @@ export class TournamentContestant {
     for (const unitContestant of this.units.values()) {
       SetUnitInvulnerable(unitContestant.unit, false);
       PauseUnit(unitContestant.unit, false);
+      if (UnitHelper.isUnitDead(unitContestant.unit)) {
+        ReviveHero(unitContestant.unit, unitContestant.oldPosition.x, unitContestant.oldPosition.y, false);
+      }
       SetUnitX(unitContestant.unit, unitContestant.oldPosition.x);
       SetUnitY(unitContestant.unit, unitContestant.oldPosition.y);
     }

@@ -248,7 +248,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
             for (const rewardedUnit of contestant.getUnits()) {
               if (
                 IsUnitType(rewardedUnit, UNIT_TYPE_HERO) && 
-                !IsUnitType(rewardedUnit, UNIT_TYPE_DEAD) && 
+                !UnitHelper.isUnitDead(rewardedUnit) && 
                 !IsUnitType(rewardedUnit, UNIT_TYPE_SUMMONED)
               ) {
                 this.giveTrophy(rewardedUnit);
@@ -315,22 +315,17 @@ export class Budokai extends AdvancedTournament implements Tournament {
           }
           
           for (const unit of winner.getUnits()) {
-            if (IsUnitAliveBJ(unit)) {
-              SetUnitLifePercentBJ(unit, 100);
-              SetUnitManaPercentBJ(unit, 100);
-              if (
-                IsUnitType(unit, UNIT_TYPE_HERO) && 
-                !IsUnitType(unit, UNIT_TYPE_SUMMONED)
-              ) {
-                this.giveTrophy(unit);
-                // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
-                // TextTagHelper.showPlayerColorTextOnUnit(
-                //   "+" + (numTournaments * 50) + " tournament stats",
-                //   winner.id,
-                //   unit
-                // );
+            SetUnitLifePercentBJ(unit, 100);
+            SetUnitManaPercentBJ(unit, 100);
+            if (UnitHelper.isUnitTournamentViable(unit)) {
+              this.giveTrophy(unit);
+              // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
+              // TextTagHelper.showPlayerColorTextOnUnit(
+              //   "+" + (numTournaments * 50) + " tournament stats",
+              //   winner.id,
+              //   unit
+              // );
 
-              }
             }
           }
           

@@ -2,6 +2,7 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Cooler\'s Revenge';
@@ -136,7 +137,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   update(t: number): void {
     super.update(t);
     for (const mc of this.metalCoolers) {
-      if (IsUnitAliveBJ(mc)) {
+      if (UnitHelper.isUnitAlive(mc)) {
         SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.03);
       } else if (this.revives > 0) {
         --this.revives;

@@ -4,14 +4,22 @@ import { Constants } from "./Constants";
 export module UnitHelper {
   export function isUnitStunned(unit: unit): boolean {
     return (
-      IsUnitType(unit, UNIT_TYPE_POLYMORPHED) 
-      ||
-      IsUnitType(unit, UNIT_TYPE_SNARED)
-      ||
-      IsUnitType(unit, UNIT_TYPE_SLEEPING)
-      ||
+      IsUnitType(unit, UNIT_TYPE_POLYMORPHED) ||
+      IsUnitType(unit, UNIT_TYPE_SNARED) ||
+      IsUnitType(unit, UNIT_TYPE_SLEEPING) ||
       IsUnitType(unit, UNIT_TYPE_STUNNED)
     );
+  }
+
+  export function isUnitDead(unit: unit): boolean {
+    return (
+      GetUnitTypeId(unit) != 0 &&
+      IsUnitType(unit, UNIT_TYPE_DEAD) 
+    );
+  }
+
+  export function isUnitAlive(unit: unit): boolean {
+    return !UnitHelper.isUnitDead(unit);
   }
 
   // remember to destroy returned group after you finish using it
@@ -59,7 +67,7 @@ export module UnitHelper {
       &&
       !BlzIsUnitInvulnerable(unit)
       &&
-      !IsUnitDeadBJ(unit)
+      !UnitHelper.isUnitDead(unit)
     );
   }
 

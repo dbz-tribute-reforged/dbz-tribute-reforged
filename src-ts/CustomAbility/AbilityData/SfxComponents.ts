@@ -974,7 +974,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -1950,22 +1950,22 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [
-      // {
-      //   model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
-      //   repeatInterval: 0,
-      //   group: 0,
-      //   scale: 10,
-      //   startHeight: 400,
-      //   endHeight: 400,
-      //   extraDirectionalYaw: 0,
-      //   color: {
-      //     x: 0,
-      //     y: 255,
-      //     z: 155,
-      //   },
-      //   persistent: true,
-      //   attachmentPoint: "overhead",
-      // },
+      {
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 10,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 0,
+          y: 255,
+          z: 155,
+        },
+        persistent: true,
+        attachmentPoint: "overhead",
+      },
       {
         model: "Abilities\\Spells\\Human\\ManaFlare\\ManaFlareBase.mdl",
         repeatInterval: 0,
@@ -2080,7 +2080,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3450,7 +3450,7 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxSource: SfxComponent.SOURCE_UNIT,
     useLastCastPoint: true,
     sfxList: [
       {
