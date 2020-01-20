@@ -12,18 +12,20 @@ export module AbilitySfxHelper {
     target: Vector2D, 
     yaw: number,
     height: number,
-    persistentSfx: Map<SfxData, effect>,
+    persistentSfx: Map<SfxData, effect[]>,
   ) {
     if (
       displayedSfx.persistent && 
       displayedSfx.updateCoordsOnly 
     ) {
-      const currentEffect = persistentSfx.get(displayedSfx);
-      if (currentEffect) {
-        BlzSetSpecialEffectX(currentEffect, target.x);
-        BlzSetSpecialEffectY(currentEffect, target.y);
-        if (height + displayedSfx.startHeight > 0) {
-          BlzSetSpecialEffectHeight(currentEffect, height + displayedSfx.startHeight);
+      const currentEffects = persistentSfx.get(displayedSfx);
+      if (currentEffects) {
+        for (const effect of currentEffects) {
+          BlzSetSpecialEffectX(effect, target.x);
+          BlzSetSpecialEffectY(effect, target.y);
+          if (height + displayedSfx.startHeight > 0) {
+            BlzSetSpecialEffectHeight(effect, height + displayedSfx.startHeight);
+          }
         }
         // yes i know, bad, but if current sfx not found, create sfx
         return;
@@ -42,11 +44,7 @@ export module AbilitySfxHelper {
       BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
     }
 
-    if (displayedSfx.persistent) {
-      persistentSfx.set(displayedSfx, createdSfx);
-    } else {
-      DestroyEffect(createdSfx);
-    }
+    manageSfxPersistence(displayedSfx, createdSfx, persistentSfx);
   }
 
   // displays the sfx at the caster's location
@@ -61,7 +59,7 @@ export module AbilitySfxHelper {
           target,
           angle,
           height,
-          ability.persistentSfx,
+          ability.persistentUniqueSfx,
         );
       };
     }
@@ -72,7 +70,7 @@ export module AbilitySfxHelper {
     unit: unit, 
     angle: number, 
     height: number, 
-    persistentSfx: Map<SfxData, effect>
+    persistentSfx: Map<SfxData, effect[]>
   ) {
     const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
     
@@ -80,11 +78,7 @@ export module AbilitySfxHelper {
       BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
     }
 
-    if (displayedSfx.persistent) {
-      persistentSfx.set(displayedSfx, createdSfx);
-    } else {
-      DestroyEffect(createdSfx);
-    }
+    manageSfxPersistence(displayedSfx, createdSfx, persistentSfx);
   }
 
   export function displaySfxListOnUnit(ability: CustomAbility, sfxList: SfxData[], unit: unit, group: number, angle: number, height: number) {
@@ -97,15 +91,32 @@ export module AbilitySfxHelper {
           unit,
           angle,
           height,
-          ability.persistentSfx,
+          ability.persistentUniqueSfx,
         );
       }
     }
   }
 
-  export function cleanupPersistentSfx(persistentSfx: IterableIterator<effect>) {
+  export function cleanupPersistentSfx(persistentSfx: effect[]) {
     for (const currentSfx of persistentSfx) {
       DestroyEffect(currentSfx);
+    }
+  }
+
+  export function manageSfxPersistence(
+    displayedSfx: SfxData, 
+    createdSfx: effect, 
+    persistentSfx: Map<SfxData, effect[]>
+  ) {
+    if (displayedSfx.persistent) {
+      const effects = persistentSfx.get(displayedSfx);
+      if (effects) {
+        effects.push(createdSfx);
+      } else {
+        persistentSfx.set(displayedSfx, [createdSfx]);
+      }
+    } else {
+      DestroyEffect(createdSfx);
     }
   }
 }
