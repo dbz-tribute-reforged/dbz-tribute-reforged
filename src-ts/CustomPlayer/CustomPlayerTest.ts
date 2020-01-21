@@ -11,6 +11,7 @@ import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
 import { ExperienceManager } from "Core/ExperienceSystem/ExpierenceManager";
+import { AbilityNames } from "Common/AbilityNames";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -242,7 +243,7 @@ export function CustomPlayerTest() {
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero) {
         // temp fix for double ss rage trigger
-        if (spellName != "Super Saiyan Rage" || GetUnitTypeId(customHero.unit) != FourCC("H08I")) {
+        if (spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || GetUnitTypeId(customHero.unit) != FourCC("H08I")) {
           customHero.useAbility(
             spellName,
             new CustomAbilityInput(
@@ -269,12 +270,12 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil0, BlzGetFrameByName("abilityButton0", 0), FRAMEEVENT_CONTROL_CLICK);
   // replace key events with more organized method of key reading
   addKeyEvent(abil0, OSKEY_Z, 0, true);
-  addAbilityAction(abil0, "Zanzo Dash");
+  addAbilityAction(abil0, AbilityNames.BasicAbility.ZANZO_DASH);
 
   const abil1 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil1, BlzGetFrameByName("abilityButton1", 1), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil1, OSKEY_X, 0, true);
-  addAbilityAction(abil1, "Guard");
+  addAbilityAction(abil1, AbilityNames.BasicAbility.GUARD);
 
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
@@ -286,12 +287,12 @@ export function CustomPlayerTest() {
   const abil3 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil3, OSKEY_Q, 0, true);
-  addAbilityAction(abil3, "Future Sight");
+  addAbilityAction(abil3, AbilityNames.Bardock.FUTURE_SIGHT);
 
   const abil4 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil4, BlzGetFrameByName("abilityButton4", 4), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil4, OSKEY_W, 0, true);
-  addAbilityAction(abil4, "Tyrant Lancer");
+  addAbilityAction(abil4, AbilityNames.Bardock.TYRANT_LANCER);
 
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
@@ -301,7 +302,7 @@ export function CustomPlayerTest() {
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil6, OSKEY_R, 0, true);
-  addAbilityAction(abil6, "Rebellion Spear");
+  addAbilityAction(abil6, AbilityNames.Bardock.REBELLION_SPEAR);
 
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
@@ -311,7 +312,7 @@ export function CustomPlayerTest() {
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil8, OSKEY_F, 0, true);
-  addAbilityAction(abil8, "Saiyan Spirit");
+  addAbilityAction(abil8, AbilityNames.Bardock.SAIYAN_SPIRIT);
 
 
 

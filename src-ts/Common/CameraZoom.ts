@@ -5,7 +5,7 @@ export module CameraZoom {
     const ZOOM_DEFAULT = 2600.0;
     const ANGLE_DEFAULT = 290.0;
     const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
-    const PERIOD = 0.03125;
+    const PERIOD = 0.03;
 
     const ZOOM_MIN = 1400.0;
     const ZOOM_MAX = 4000.0;
@@ -23,11 +23,13 @@ export module CameraZoom {
         }
 
         public performZoom() {
-            SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
-            SetCameraField(CAMERA_FIELD_FARZ, 1.5 * this.zoom, 0.0);
-            SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
-            SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
-            SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);
+            if (GetLocalPlayer() == this.p) {
+                SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
+                SetCameraField(CAMERA_FIELD_FARZ, 1.5 * this.zoom, 0.0);
+                SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
+                SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
+                SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);
+            }
         }
     }
 
@@ -71,18 +73,22 @@ export module CameraZoom {
             return false;
         }));
 
-        TimerStart(CreateTimer(), PERIOD, true, () => {
-            arr.forEach(element => {
-                if (GetLocalPlayer() == element.p) {
-                    // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
-                    // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
-                    // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
-                    // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
-                    if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
-                        element.performZoom();
+        TimerStart(CreateTimer(), 8, false, () => {
+            BJDebugMsg("Applying Automatic Camera");
+            TimerStart(CreateTimer(), PERIOD, true, () => {
+                arr.forEach(element => {
+                    if (GetLocalPlayer() == element.p) {
+                        // print("angle =", GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))
+                        // print("zoom =", GetCameraField(CAMERA_FIELD_TARGET_DISTANCE))
+                        // print("offset=", GetCameraField(CAMERA_FIELD_ZOFFSET))
+                        // print("roll = ", GetCameraField(CAMERA_FIELD_ROLL))
+                        if (GetCameraField(CAMERA_FIELD_TARGET_DISTANCE) != element.zoom) {
+                            element.performZoom();
+                        }
                     }
-                }
+                });
             });
+            DestroyTimer(GetExpiredTimer());
         });
     }
 }

@@ -2,7 +2,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {
-  protected heroes: CustomHero[];
+  protected heroes: Map<unit, CustomHero>;
   protected currentlySelectedUnit: unit;
   protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;
@@ -16,7 +16,7 @@ export class CustomPlayer {
     public id: number, 
     public name: string,
   ) {
-    this.heroes = [];
+    this.heroes = new Map();
     this.currentlySelectedUnit = GetEnumUnit();
     this.lastSelectedOwnedHero = GetEnumUnit();
     this.mouseData = new Vector2D(0, 0);
@@ -35,7 +35,8 @@ export class CustomPlayer {
       &&
       !this.hasHero(hero)
     ) {
-      this.heroes.push(
+      this.heroes.set(
+        hero,
         new CustomHero(
           hero
         )
@@ -45,23 +46,28 @@ export class CustomPlayer {
     return this;
   }
 
+  // slow, loops through all heroes and removes that hero
+  public removeHero(hero: unit): boolean {
+    return this.heroes.delete(hero);
+  }
+
   public hasHero(hero: unit): boolean {
-    if (this.heroes.some(e => e.unit == hero)) {
+    if (this.heroes.get(hero)) {
       return true;
     }
     return false;
   }
 
   public getCustomHero(hero: unit): CustomHero | undefined {
-    return this.heroes.find(e => e.unit == hero);
+    return this.heroes.get(hero);
   }
 
   public getCurrentlySelectedCustomHero(): CustomHero | undefined {
-    return this.heroes.find(e => e.unit == this.currentlySelectedUnit);
+    return this.heroes.get(this.currentlySelectedUnit);
   }
 
   public getLastSelectedOwnedCustomHero(): CustomHero | undefined {
-    return this.heroes.find(e => e.unit == this.lastSelectedOwnedHero);
+    return this.heroes.get(this.lastSelectedOwnedHero);
   }
 
   get selectedUnit(): unit {
@@ -75,7 +81,7 @@ export class CustomPlayer {
     }
   }
 
-  get allHeroes(): CustomHero[] {
-    return this.heroes;
+  get allHeroes(): IterableIterator<CustomHero> {
+    return this.heroes.values();
   }
 }

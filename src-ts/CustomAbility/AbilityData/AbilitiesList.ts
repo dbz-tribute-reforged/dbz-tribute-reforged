@@ -1,7 +1,9 @@
+import { AbilityNames } from "Common/AbilityNames";
+
 export const AbilitiesList = [
   // copy from here
   {
-    name: "Zanzo Dash",
+    name: AbilityNames.BasicAbility.ZANZO_DASH,
     currentCd: 0,
     maxCd: 19,
     costType: "MP",
@@ -30,7 +32,7 @@ export const AbilitiesList = [
   },
   // to here, and replace with unique name
   {
-    name: "Guard",
+    name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
     maxCd: 9,
     costType: "MP",
@@ -57,7 +59,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Max Power",
+    name: AbilityNames.BasicAbility.MAX_POWER,
     currentCd: 0,
     maxCd: 40,
     costType: "MP",
@@ -85,7 +87,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Kamehameha", // Goku's Kame
+    name: AbilityNames.Goku.KAMEHAMEHA, // Goku's Kame
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -101,9 +103,9 @@ export const AbilitiesList = [
       disabled: "BTNKame2.blp",
     },
     tooltip: {
-      title: "Kamehameha",
+      title: AbilityNames.Goku.KAMEHAMEHA,
       body: 
-        "Kamehameha"
+        "Kame"
     },
     components: [
       { name: "beam kamehameha" },
@@ -111,7 +113,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "God Kamehameha", // Goku's Kame 2
+    name: AbilityNames.Goku.GOD_KAMEHAMEHA, // Goku's Kame 2
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -127,7 +129,7 @@ export const AbilitiesList = [
       disabled: "BTNKameGod.blp",
     },
     tooltip: {
-      title: "God Kame",
+      title: AbilityNames.Goku.GOD_KAMEHAMEHA,
       body: 
         "God Kame"
     },
@@ -138,7 +140,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Spirit Bomb",
+    name: AbilityNames.Goku.SPIRIT_BOMB,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -154,7 +156,7 @@ export const AbilitiesList = [
       disabled: "BTNSpiritbomb.blp",
     },
     tooltip: {
-      title: "Spirit bomb",
+      title: AbilityNames.Goku.SPIRIT_BOMB,
       body: 
         "spirit bomb stuff"
     },
@@ -164,7 +166,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Dragon Fist",
+    name: AbilityNames.Goku.DRAGON_FIST,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -180,7 +182,7 @@ export const AbilitiesList = [
       disabled: "BTNDragonFist.blp",
     },
     tooltip: {
-      title: "Dragon fist",
+      title: AbilityNames.Goku.DRAGON_FIST,
       body: 
         "Dragon Fisto"
     },
@@ -194,7 +196,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Ultra Instinct",
+    name: AbilityNames.Goku.ULTRA_INSTINCT,
     currentCd: 0,
     maxCd: 25,
     costType: "HP",
@@ -210,7 +212,7 @@ export const AbilitiesList = [
       disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNMirrorImage.tga",
     },
     tooltip: {
-      title: "Ultra Instinct",
+      title: AbilityNames.Goku.ULTRA_INSTINCT,
       body: 
         "Ultra Instinct (dodging randomly + blocking 20*INT)."
     },
@@ -222,7 +224,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Galick Gun",
+    name: AbilityNames.Vegeta.GALICK_GUN,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -238,7 +240,7 @@ export const AbilitiesList = [
       disabled: "BTNGalickGun.blp",
     },
     tooltip: {
-      title: "galick gun",
+      title: AbilityNames.Vegeta.GALICK_GUN,
       body: 
         "galick gun stuff"
     },
@@ -248,7 +250,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Final Flash",
+    name: AbilityNames.Vegeta.FINAL_FLASH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -264,7 +266,7 @@ export const AbilitiesList = [
       disabled: "BTNFinalFlash.blp",
     },
     tooltip: {
-      title: "Final Flash",
+      title: AbilityNames.Vegeta.FINAL_FLASH,
       body: 
         "Final Flash stuff"
     },
@@ -274,7 +276,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Final Flash 2",
+    name: AbilityNames.Vegeta.FINAL_FLASH_2,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -290,9 +292,9 @@ export const AbilitiesList = [
       disabled: "BTNFinalFlash2.blp",
     },
     tooltip: {
-      title: "Final Flash 2",
+      title: AbilityNames.Vegeta.FINAL_FLASH_2,
       body: 
-        "Final Flash 2"
+        AbilityNames.Vegeta.FINAL_FLASH_2
     },
     components: [
       { name: "multi final flash 2" },
@@ -301,7 +303,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Big Bang Attack",
+    name: AbilityNames.Vegeta.BIG_BANG_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -317,7 +319,7 @@ export const AbilitiesList = [
       disabled: "BTNBigBangAttack.blp",
     },
     tooltip: {
-      title: "Big Bang Attack",
+      title: AbilityNames.Vegeta.BIG_BANG_ATTACK,
       body: 
         "Big Bang Attack stuff"
     },
@@ -327,7 +329,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Energy Blast Volley",
+    name: AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -343,9 +345,9 @@ export const AbilitiesList = [
       disabled: "BTNVegetaEnergyBlastVolley.blp",
     },
     tooltip: {
-      title: "Energy Blast Volley",
+      title: AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
       body: 
-        "Energy Blast Volley"
+        AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY
     },
     components: [
       { name: "multi energy blast volley" },
@@ -353,7 +355,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Twin Dragon Shot",
+    name: AbilityNames.Gohan.TWIN_DRAGON_SHOT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -369,9 +371,9 @@ export const AbilitiesList = [
       disabled: "BTNTwinDragonShot.blp",
     },
     tooltip: {
-      title: "Twin dragon shot",
+      title: AbilityNames.Gohan.TWIN_DRAGON_SHOT,
       body: 
-        "Twin dragon shot"
+        AbilityNames.Gohan.TWIN_DRAGON_SHOT
     },
     components: [
       { name: "multi twin dragon shot" },
@@ -379,7 +381,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Masenko",
+    name: AbilityNames.Gohan.MASENKO,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -395,9 +397,9 @@ export const AbilitiesList = [
       disabled: "BTNMasenko.blp",
     },
     tooltip: {
-      title: "Masenko",
+      title: AbilityNames.Gohan.MASENKO,
       body: 
-        "Masenko"
+        AbilityNames.Gohan.MASENKO
     },
     components: [
       { name: "beam masenko" },
@@ -405,7 +407,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Super Dragon Flight",
+    name: AbilityNames.Gohan.SUPER_DRAGON_FLIGHT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -421,9 +423,9 @@ export const AbilitiesList = [
       disabled: "BTNSuperDragonFlight.blp",
     },
     tooltip: {
-      title: "Super Dragon Flight",
+      title: AbilityNames.Gohan.SUPER_DRAGON_FLIGHT,
       body: 
-        "Super Dragon Flight"
+        AbilityNames.Gohan.SUPER_DRAGON_FLIGHT
     },
     components: [
       { name: "damage super dragon flight dps" },
@@ -435,7 +437,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Unlock Potential",
+    name: AbilityNames.Gohan.UNLOCK_POTENTIAL,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -451,9 +453,9 @@ export const AbilitiesList = [
       disabled: "BTNUnlockPotential.blp",
     },
     tooltip: {
-      title: "Unlock Potential",
+      title: AbilityNames.Gohan.UNLOCK_POTENTIAL,
       body: 
-        "Unlock Potential"
+        AbilityNames.Gohan.UNLOCK_POTENTIAL
     },
     components: [
       { name: "spell amp unlock potential" },
@@ -461,7 +463,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "The Great Saiyaman has arrived!",
+    name: AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -487,7 +489,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Potential Unleashed",
+    name: AbilityNames.Gohan.POTENTIAL_UNLEASHED,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -503,9 +505,9 @@ export const AbilitiesList = [
       disabled: "BTNPotentialUnleashed.blp",
     },
     tooltip: {
-      title: "Potential Unleashed",
+      title: AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       body: 
-        "Potential Unleashed"
+        AbilityNames.Gohan.POTENTIAL_UNLEASHED
     },
     components: [
       { name: "spell amp potential unleashed" },
@@ -513,7 +515,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Finish Buster",
+    name: AbilityNames.FutureTrunks.FINISH_BUSTER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -529,9 +531,9 @@ export const AbilitiesList = [
       disabled: "BTNFTFinishBuster.blp",
     },
     tooltip: {
-      title: "Finish Buster",
+      title: AbilityNames.FutureTrunks.FINISH_BUSTER,
       body: 
-        "Finish Buster"
+        AbilityNames.FutureTrunks.FINISH_BUSTER
     },
     components: [
       { name: "beam finish buster" },
@@ -566,7 +568,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Burning Attack",
+    name: AbilityNames.FutureTrunks.BURNING_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -582,9 +584,9 @@ export const AbilitiesList = [
       disabled: "BTNBurningAttack.blp",
     },
     tooltip: {
-      title: "Burning Attack",
+      title: AbilityNames.FutureTrunks.BURNING_ATTACK,
       body: 
-        "Burning Attack"
+        AbilityNames.FutureTrunks.BURNING_ATTACK
     },
     components: [
       { name: "beam burning attack" },
@@ -592,7 +594,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Shining Sword Attack",
+    name: AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -608,7 +610,7 @@ export const AbilitiesList = [
       disabled: "BTNFTShiningSwordAttack.blp"
     },
     tooltip: {
-      title: "Shining Sword Attack",
+      title: AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK,
       body: 
         "Performs multiple sword slashes as you move your cursor around." + 
         "|nDeals ? * AGI per slash in 225 AOE per damage tick" + 
@@ -622,7 +624,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Blazing Rush",
+    name: AbilityNames.FutureTrunks.BLAZING_RUSH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -638,9 +640,9 @@ export const AbilitiesList = [
       disabled: "BTNFTBlazingRush.blp",
     },
     tooltip: {
-      title: "Blazing Rush",
+      title: AbilityNames.FutureTrunks.BLAZING_RUSH,
       body: 
-        "Blazing Rush"
+        AbilityNames.FutureTrunks.BLAZING_RUSH
     },
     components: [
       { name: "dash ground point 15dist" },
@@ -651,7 +653,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Super Saiyan Rage",
+    name: AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -667,9 +669,9 @@ export const AbilitiesList = [
       disabled: "BTNFTRageIcon.blp",
     },
     tooltip: {
-      title: "Super Saiyan Rage",
+      title: AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
       body: 
-        "Super Saiyan Rage"
+        AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE
     },
     components: [
       { name: "dash ground point 5dist" },
@@ -681,7 +683,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Special Beam Cannon",
+    name: AbilityNames.Piccolo.SPECIAL_BEAM_CANNON,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -697,9 +699,9 @@ export const AbilitiesList = [
       disabled: "BTNSpecialBeamCannon.blp",
     },
     tooltip: {
-      title: "Special Beam Cannon",
+      title: AbilityNames.Piccolo.SPECIAL_BEAM_CANNON,
       body: 
-        "Special Beam Cannon"
+        AbilityNames.Piccolo.SPECIAL_BEAM_CANNON
     },
     components: [
       { name: "beam special beam cannon" },
@@ -707,7 +709,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Slappy Hand",
+    name: AbilityNames.Piccolo.SLAPPY_HAND,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -723,9 +725,9 @@ export const AbilitiesList = [
       disabled: "BTNPiccoloSlappyHand.blp",
     },
     tooltip: {
-      title: "Slappy Hand",
+      title: AbilityNames.Piccolo.SLAPPY_HAND,
       body: 
-        "Slappy Hand"
+        AbilityNames.Piccolo.SLAPPY_HAND
     },
     components: [
       { name: "hook slappy hand" },
@@ -733,7 +735,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Hellzone Grenade",
+    name: AbilityNames.Piccolo.HELLZONE_GRENADE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -749,9 +751,9 @@ export const AbilitiesList = [
       disabled: "BTNPiccoloHellzoneGrenade.blp",
     },
     tooltip: {
-      title: "Hellzone Grenade",
+      title: AbilityNames.Piccolo.HELLZONE_GRENADE,
       body: 
-        "Hellzone Grenade"
+        AbilityNames.Piccolo.HELLZONE_GRENADE
     },
     components: [
       { name: "multi hellzone grenade" },
@@ -759,7 +761,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Kyodaika",
+    name: AbilityNames.Piccolo.KYODAIKA,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -775,9 +777,9 @@ export const AbilitiesList = [
       disabled: "BTNPiccoloKyodaika.blp",
     },
     tooltip: {
-      title: "Kyodaika",
+      title: AbilityNames.Piccolo.KYODAIKA,
       body: 
-        "Kyodaika"
+        AbilityNames.Piccolo.KYODAIKA
     },
     components: [
       { name: "dash ground point 5dist" },
@@ -785,7 +787,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Future Sight",
+    name: AbilityNames.Bardock.FUTURE_SIGHT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -801,9 +803,9 @@ export const AbilitiesList = [
       disabled: "BTNBardockFutureSight.blp",
     },
     tooltip: {
-      title: "Future Sight",
+      title: AbilityNames.Bardock.FUTURE_SIGHT,
       body: 
-        "Future Sight"
+        AbilityNames.Bardock.FUTURE_SIGHT
     },
     components: [
       { name: "dodge future sight" },
@@ -813,7 +815,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Tyrant Lancer",
+    name: AbilityNames.Bardock.TYRANT_LANCER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -829,9 +831,9 @@ export const AbilitiesList = [
       disabled: "BTNBardockTyrantLancer.blp",
     },
     tooltip: {
-      title: "Tyrant Lancer",
+      title: AbilityNames.Bardock.TYRANT_LANCER,
       body: 
-        "Tyrant Lancer"
+        AbilityNames.Bardock.TYRANT_LANCER
     },
     components: [
       { name: "dash ground point tyrant lancer" },
@@ -843,7 +845,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Saiyan Spirit",
+    name: AbilityNames.Bardock.SAIYAN_SPIRIT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -859,9 +861,9 @@ export const AbilitiesList = [
       disabled: "BTNBardockSaiyanSpirit.blp",
     },
     tooltip: {
-      title: "Saiyan Spirit",
+      title: AbilityNames.Bardock.SAIYAN_SPIRIT,
       body: 
-        "Saiyan Spirit"
+        AbilityNames.Bardock.SAIYAN_SPIRIT
     },
     components: [
       { name: "dash ground point saiyan spirit" },
@@ -901,7 +903,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Rebellion Spear",
+    name: AbilityNames.Bardock.REBELLION_SPEAR,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -917,9 +919,9 @@ export const AbilitiesList = [
       disabled: "BTNBardockRebellionSpear.blp",
     },
     tooltip: {
-      title: "Rebellion Spear",
+      title: AbilityNames.Bardock.REBELLION_SPEAR,
       body: 
-        "Rebellion Spear"
+        AbilityNames.Bardock.REBELLION_SPEAR
     },
     components: [
       { name: "dash ground target rebellion spear" },
@@ -960,7 +962,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Pan Kamehameha",
+    name: AbilityNames.Pan.KAMEHAMEHA,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -976,9 +978,9 @@ export const AbilitiesList = [
       disabled: "BTNKame2.blp",
     },
     tooltip: {
-      title: "Pan Kamehameha",
+      title: AbilityNames.Pan.KAMEHAMEHA,
       body: 
-        "Pan Kamehameha"
+        AbilityNames.Pan.KAMEHAMEHA
     },
     components: [
       { name: "beam pan kamehameha" },
@@ -987,7 +989,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Maiden Blast",
+    name: AbilityNames.Pan.MAIDEN_BLAST,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1003,9 +1005,9 @@ export const AbilitiesList = [
       disabled: "BTNPanMaidenBlast.blp",
     },
     tooltip: {
-      title: "Maiden Blast",
+      title: AbilityNames.Pan.MAIDEN_BLAST,
       body: 
-        "Maiden Blast"
+        AbilityNames.Pan.MAIDEN_BLAST
     },
     components: [
       { name: "beam maiden blast" },
@@ -1016,7 +1018,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Reliable Friend",
+    name: AbilityNames.Pan.RELIABLE_FRIEND,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1032,9 +1034,9 @@ export const AbilitiesList = [
       disabled: "BTNPanReliableFriend.blp",
     },
     tooltip: {
-      title: "Reliable Friend",
+      title: AbilityNames.Pan.RELIABLE_FRIEND,
       body: 
-        "Reliable Friend"
+        AbilityNames.Pan.RELIABLE_FRIEND
     },
     components: [
       { name: "beam reliable friend" },
@@ -1044,7 +1046,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Honey Bee Costume",
+    name: AbilityNames.Pan.HONEY_BEE_COSTUME,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1060,7 +1062,7 @@ export const AbilitiesList = [
       disabled: "BTNPanHoneyBee.blp",
     },
     tooltip: {
-      title: "Honey Bee Costume",
+      title: AbilityNames.Pan.HONEY_BEE_COSTUME,
       body: 
         "Honey Bee Custome"
     },
@@ -1071,7 +1073,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Summon Giru",
+    name: AbilityNames.Pan.SUMMON_GIRU,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1087,9 +1089,9 @@ export const AbilitiesList = [
       disabled: "BTNGiru.blp",
     },
     tooltip: {
-      title: "Summon Giru",
+      title: AbilityNames.Pan.SUMMON_GIRU,
       body: 
-        "Summon Giru"
+        AbilityNames.Pan.SUMMON_GIRU
     },
     components: [
       { name: "aoe apply pan immolation" },
@@ -1097,7 +1099,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Energy Beam", // androids 13 14 15 beam
+    name: AbilityNames.Androids13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1123,7 +1125,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "S.S. Deadly Hammer",
+    name: AbilityNames.Androids13.SS_DEADLY_HAMMER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1139,9 +1141,9 @@ export const AbilitiesList = [
       disabled: "BTN13Hammer.blp",
     },
     tooltip: {
-      title: "S.S. Deadly Hammer",
+      title: AbilityNames.Androids13.SS_DEADLY_HAMMER,
       body: 
-        "S.S. Deadly Hammer"
+        AbilityNames.Androids13.SS_DEADLY_HAMMER
     },
     components: [
       { name: "dash ground point ss deadly hammer" },
@@ -1153,7 +1155,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Power Blitz",
+    name: AbilityNames.Android17DBS.POWER_BLITZ,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1169,9 +1171,9 @@ export const AbilitiesList = [
       disabled: "BTN17PowerBlitz.blp",
     },
     tooltip: {
-      title: "Power Blitz",
+      title: AbilityNames.Android17DBS.POWER_BLITZ,
       body: 
-        "Power Blitz"
+        AbilityNames.Android17DBS.POWER_BLITZ
     },
     components: [
       { name: "beam power blitz" },
@@ -1179,7 +1181,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Power Blitz Barrage",
+    name: AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1195,9 +1197,9 @@ export const AbilitiesList = [
       disabled: "BTN17PowerBlitzBarrage.blp",
     },
     tooltip: {
-      title: "Power Blitz Barrage",
+      title: AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE,
       body: 
-        "Power Blitz Barrage"
+        AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE
     },
     components: [
       { name: "channel caster default" },
@@ -1206,7 +1208,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Barrier Prison",
+    name: AbilityNames.Android17DBS.BARRIER_PRISON,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1222,9 +1224,9 @@ export const AbilitiesList = [
       disabled: "BTN17BarrierPrison.blp",
     },
     tooltip: {
-      title: "Barrier Prison",
+      title: AbilityNames.Android17DBS.BARRIER_PRISON,
       body: 
-        "Barrier Prison"
+        AbilityNames.Android17DBS.BARRIER_PRISON
     },
     components: [
       // { name: "multi barrier prison" },
@@ -1233,7 +1235,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Barrier Wall",
+    name: AbilityNames.Android17DBS.BARRIER_WALL,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1249,9 +1251,9 @@ export const AbilitiesList = [
       disabled: "BTN17BarrierWall.blp",
     },
     tooltip: {
-      title: "Barrier Wall",
+      title: AbilityNames.Android17DBS.BARRIER_WALL,
       body: 
-        "Barrier Wall"
+        AbilityNames.Android17DBS.BARRIER_WALL
     },
     components: [
       { name: "multi barrier wall" },
@@ -1259,7 +1261,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Super Electric Strike",
+    name: AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1275,9 +1277,9 @@ export const AbilitiesList = [
       disabled: "BTN17SuperElectricStrike.blp",
     },
     tooltip: {
-      title:  "Super Electric Strike",
+      title:  AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE,
       body: 
-        "Super Electric Strike",
+        AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE,
     },
     components: [
       { name: "multi super electric strike" },
@@ -1285,7 +1287,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "S.S. Deadly Bomber",
+    name: AbilityNames.Androids13.SS_DEADLY_BOMBER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1301,9 +1303,9 @@ export const AbilitiesList = [
       disabled: "BTN13SSDB.blp",
     },
     tooltip: {
-      title: "S.S. Deadly Bomber",
+      title: AbilityNames.Androids13.SS_DEADLY_BOMBER,
       body: 
-        "S.S. Deadly Bomber"
+        AbilityNames.Androids13.SS_DEADLY_BOMBER
     },
     components: [
       { name: "beam ss deadly bomber" },
@@ -1311,7 +1313,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Nuke",
+    name: AbilityNames.Androids13.NUKE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1327,9 +1329,9 @@ export const AbilitiesList = [
       disabled: "BTN13Nuke.blp",
     },
     tooltip: {
-      title: "Nuke",
+      title: AbilityNames.Androids13.NUKE,
       body: 
-        "Nuke"
+        AbilityNames.Androids13.NUKE
     },
     components: [
       { name: "beam nuke" },
@@ -1337,7 +1339,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Android Barrier",
+    name: AbilityNames.Android17DBS.ANDROID_BARRIER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1353,9 +1355,9 @@ export const AbilitiesList = [
       disabled: "BTN13Barrier.blp",
     },
     tooltip: {
-      title: "Android Barrier",
+      title: AbilityNames.Android17DBS.ANDROID_BARRIER,
       body: 
-        "Android Barrier"
+        AbilityNames.Android17DBS.ANDROID_BARRIER
     },
     components: [
       { name: "block android barrier" },
@@ -1364,7 +1366,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Overcharge",
+    name: AbilityNames.Androids13.OVERCHARGE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1380,9 +1382,9 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
     },
     tooltip: {
-      title: "Overcharge",
+      title: AbilityNames.Androids13.OVERCHARGE,
       body: 
-        "Overcharge"
+        AbilityNames.Androids13.OVERCHARGE
     },
     components: [
       { name: "spell amp overcharge" },
@@ -1392,7 +1394,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Haretsu no Majutsu",
+    name: AbilityNames.Babidi.HARETSU,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1408,9 +1410,9 @@ export const AbilitiesList = [
       disabled: "BTNBabidiQ.blp",
     },
     tooltip: {
-      title: "Haretsu no Majutsu",
+      title: AbilityNames.Babidi.HARETSU,
       body: 
-        "Haretsu no Majutsu"
+        AbilityNames.Babidi.HARETSU
     },
     components: [
       { name: "damage target haretsu explosion" },
@@ -1419,7 +1421,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Babidi Barrier",
+    name: AbilityNames.Babidi.BABIDI_BARRIER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1435,9 +1437,9 @@ export const AbilitiesList = [
       disabled: "BTNBabidiW.blp",
     },
     tooltip: {
-      title: "Babidi Barrier",
+      title: AbilityNames.Babidi.BABIDI_BARRIER,
       body: 
-        "Babidi Barrier"
+        AbilityNames.Babidi.BABIDI_BARRIER
     },
     components: [
       { name: "block babidi barrier" },
@@ -1446,7 +1448,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Summon Pui Pui",
+    name: AbilityNames.Babidi.SUMMON_PUI_PUI,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1462,9 +1464,9 @@ export const AbilitiesList = [
       disabled: "BTNPuiPui.blp",
     },
     tooltip: {
-      title: "Summon Pui Pui",
+      title: AbilityNames.Babidi.SUMMON_PUI_PUI,
       body: 
-        "Summon Pui Pui"
+        AbilityNames.Babidi.SUMMON_PUI_PUI
     },
     components: [
       // { name: "summon summon pui pui" },
@@ -1472,7 +1474,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Summon Yakon",
+    name: AbilityNames.Babidi.SUMMON_YAKON,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1488,9 +1490,9 @@ export const AbilitiesList = [
       disabled: "BTNYakon.blp",
     },
     tooltip: {
-      title: "Summon Yakon",
+      title: AbilityNames.Babidi.SUMMON_YAKON,
       body: 
-        "Summon Yakon"
+        AbilityNames.Babidi.SUMMON_YAKON
     },
     components: [
       // { name: "summon summon yakon" },
@@ -1498,7 +1500,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Summon Dabura",
+    name: AbilityNames.Babidi.SUMMON_DABURA,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1514,9 +1516,9 @@ export const AbilitiesList = [
       disabled: "BTNDabura.blp",
     },
     tooltip: {
-      title: "Summon Dabura",
+      title: AbilityNames.Babidi.SUMMON_DABURA,
       body: 
-        "Summon Dabura"
+        AbilityNames.Babidi.SUMMON_DABURA
     },
     components: [
       // { name: "summon summon dabura" },
@@ -1524,7 +1526,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Flesh Attack",
+    name: AbilityNames.Buu.FLESH_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1540,9 +1542,9 @@ export const AbilitiesList = [
       disabled: "BTNBuuFleshAttack.blp",
     },
     tooltip: {
-      title: "Flesh Attack",
+      title: AbilityNames.Buu.FLESH_ATTACK,
       body: 
-        "Flesh Attack"
+        AbilityNames.Buu.FLESH_ATTACK
     },
     components: [
       { name: "damage target flesh attack explosion" },
@@ -1551,7 +1553,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Innocence Breath",
+    name: AbilityNames.Buu.INNOCENCE_BREATH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1567,9 +1569,9 @@ export const AbilitiesList = [
       disabled: "BTNBuuInnocenceBreath.blp",
     },
     tooltip: {
-      title:  "Innocence Breath",
+      title:  AbilityNames.Buu.INNOCENCE_BREATH,
       body: 
-        "Innocence Breath",
+        AbilityNames.Buu.INNOCENCE_BREATH,
     },
     components: [
       { name: "multi innocence breath" },
@@ -1577,7 +1579,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Angry Explosion",
+    name: AbilityNames.Buu.ANGRY_EXPLOSION,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1593,9 +1595,9 @@ export const AbilitiesList = [
       disabled: "BTNBuuAngryExplosion.blp",
     },
     tooltip: {
-      title:  "Angry Explosion",
+      title:  AbilityNames.Buu.ANGRY_EXPLOSION,
       body: 
-        "Angry Explosion",
+        AbilityNames.Buu.ANGRY_EXPLOSION,
     },
     components: [
       { name: "damage angry explosion dps" },
@@ -1607,7 +1609,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Vanishing Ball",
+    name: AbilityNames.Buu.VANISHING_BALL,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1623,9 +1625,9 @@ export const AbilitiesList = [
       disabled: "BTNBuuVanishingBall.blp",
     },
     tooltip: {
-      title: "Vanishing Ball",
+      title: AbilityNames.Buu.VANISHING_BALL,
       body: 
-        "Vanishing Ball"
+        AbilityNames.Buu.VANISHING_BALL
     },
     components: [
       { name: "beam vanishing ball" },
@@ -1633,7 +1635,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Mankind Destruction Attack",
+    name: AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1649,9 +1651,9 @@ export const AbilitiesList = [
       disabled: "BTNBuuMankind.blp",
     },
     tooltip: {
-      title: "Mankind Destruction Attack",
+      title: AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK,
       body: 
-        "Mankind Destruction Attack"
+        AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK
     },
     components: [
       { name: "channel caster default" },
@@ -1660,7 +1662,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Energy Punch",
+    name: AbilityNames.Broly.ENERGY_PUNCH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1676,7 +1678,7 @@ export const AbilitiesList = [
       disabled: "BTNBrolyEnergyPunch.blp",
     },
     tooltip: {
-      title: "Energy Punch",
+      title: AbilityNames.Broly.ENERGY_PUNCH,
       body: 
         "Energy Puncho"
     },
@@ -1692,7 +1694,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Power Level Rising",
+    name: AbilityNames.Broly.POWER_LEVEL_RISING,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1708,9 +1710,9 @@ export const AbilitiesList = [
       disabled: "BTNPowerLevelRising.blp",
     },
     tooltip: {
-      title: "Power Level Rising",
+      title: AbilityNames.Broly.POWER_LEVEL_RISING,
       body: 
-        "Power Level Rising"
+        AbilityNames.Broly.POWER_LEVEL_RISING
     },
     components: [
       { name: "damage power level rising explosion" },
@@ -1721,7 +1723,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Planet Crusher",
+    name: AbilityNames.Broly.PLANET_CRUSHER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1737,9 +1739,9 @@ export const AbilitiesList = [
       disabled: "BTNPlanetCrusher.blp",
     },
     tooltip: {
-      title: "Planet Crusher",
+      title: AbilityNames.Broly.PLANET_CRUSHER,
       body: 
-        "Planet Crusher"
+        AbilityNames.Broly.PLANET_CRUSHER
     },
     components: [
       { name: "beam planet crusher" },
@@ -1748,7 +1750,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Gigantic Roar",
+    name: AbilityNames.Broly.GIGANTIC_ROAR,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1764,9 +1766,9 @@ export const AbilitiesList = [
       disabled: "BTNGiganticRoar.blp",
     },
     tooltip: {
-      title: "Gigantic Roar",
+      title: AbilityNames.Broly.GIGANTIC_ROAR,
       body: 
-        "Gigantic Roar"
+        AbilityNames.Broly.GIGANTIC_ROAR
     },
     components: [
       { name: "beam gigantic roar" },
@@ -1776,7 +1778,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Gigantic Omegastorm",
+    name: AbilityNames.Broly.GIGANTIC_OMEGASTORM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1792,9 +1794,9 @@ export const AbilitiesList = [
       disabled: "BTNGiganticOmegastorm.blp",
     },
     tooltip: {
-      title: "Gigantic Omegastorm",
+      title: AbilityNames.Broly.GIGANTIC_OMEGASTORM,
       body: 
-        "Gigantic Omegastorm"
+        AbilityNames.Broly.GIGANTIC_OMEGASTORM
     },
     components: [
       { name: "beam gigantic omegastorm" },
@@ -1803,7 +1805,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Spawn Cell Juniors",
+    name: AbilityNames.Cell.SPAWN_CELL_JUNIORS,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1819,9 +1821,9 @@ export const AbilitiesList = [
       disabled: "BTNCellJunior.blp",
     },
     tooltip: {
-      title: "Spawn Cell Juniors",
+      title: AbilityNames.Cell.SPAWN_CELL_JUNIORS,
       body: 
-        "Spawn Cell Juniors"
+        AbilityNames.Cell.SPAWN_CELL_JUNIORS
     },
     components: [
       // { name: "summon spawn cell juniors" },
@@ -1829,7 +1831,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Absorb",
+    name: AbilityNames.Cell.ABSORB,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1845,9 +1847,9 @@ export const AbilitiesList = [
       disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNCellAbsorb.blp",
     },
     tooltip: {
-      title: "Absorb",
+      title: AbilityNames.Cell.ABSORB,
       body: 
-        "Absorb"
+        AbilityNames.Cell.ABSORB
     },
     components: [
       { name: "block absorb" },
@@ -1855,7 +1857,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Death Beam Frieza",
+    name: AbilityNames.Frieza.DEATH_BEAM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1872,9 +1874,9 @@ export const AbilitiesList = [
       disabled: "BTNFriezaDeathBeam.blp",
     },
     tooltip: {
-      title: "Death Beam Frieza",
+      title: AbilityNames.Frieza.DEATH_BEAM,
       body: 
-        "Death Beam Frieza"
+        AbilityNames.Frieza.DEATH_BEAM
     },
     components: [
       { name: "beam death beam frieza" },
@@ -1882,7 +1884,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Supernova Cooler",
+    name: AbilityNames.Cooler.SUPERNOVA_COOLER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1898,9 +1900,9 @@ export const AbilitiesList = [
       disabled: "BTNCoolerSupernova.blp",
     },
     tooltip: {
-      title: "Supernova Cooler",
+      title: AbilityNames.Cooler.SUPERNOVA_COOLER,
       body: 
-        "Supernova Cooler"
+        AbilityNames.Cooler.SUPERNOVA_COOLER
     },
     components: [
       { name: "beam supernova cooler" },
@@ -1908,7 +1910,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Nova Chariot",
+    name: AbilityNames.Cooler.NOVA_CHARIOT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1924,9 +1926,9 @@ export const AbilitiesList = [
       disabled: "BTNCoolerNovaChariot.blp",
     },
     tooltip: {
-      title: "Nova Chariot",
+      title: AbilityNames.Cooler.NOVA_CHARIOT,
       body: 
-        "Nova Chariot"
+        AbilityNames.Cooler.NOVA_CHARIOT
     },
     components: [
       { name: "dash ground point nova chariot" },
@@ -1937,7 +1939,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Deafening Wave",
+    name: AbilityNames.Cooler.DEAFENING_WAVE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1953,9 +1955,9 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPurge.blp",
     },
     tooltip: {
-      title: "Deafening Wave",
+      title: AbilityNames.Cooler.DEAFENING_WAVE,
       body: 
-        "Deafening Wave"
+        AbilityNames.Cooler.DEAFENING_WAVE
     },
     components: [
       { name: "beam deafening wave" },
@@ -1963,7 +1965,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Geti Star Repair",
+    name: AbilityNames.Cooler.GETI_STAR_REPAIR,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1979,9 +1981,9 @@ export const AbilitiesList = [
       disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNEngineeringUpgrade.blp",
     },
     tooltip: {
-      title: "Geti Star Repair",
+      title: AbilityNames.Cooler.GETI_STAR_REPAIR,
       body: 
-        "Geti Star Repair"
+        AbilityNames.Cooler.GETI_STAR_REPAIR
     },
     components: [
       { name: "block geti star repair" },
@@ -1989,7 +1991,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Supernova Golden",
+    name: AbilityNames.Cooler.SUPERNOVA_GOLDEN,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2005,9 +2007,9 @@ export const AbilitiesList = [
       disabled: "BTNCoolerGoldenSupernova.blp",
     },
     tooltip: {
-      title: "Supernova Golden",
+      title: AbilityNames.Cooler.SUPERNOVA_GOLDEN,
       body: 
-        "Supernova Golden"
+        AbilityNames.Cooler.SUPERNOVA_GOLDEN
     },
     components: [
       { name: "beam supernova golden" },
@@ -2015,7 +2017,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Double Sunday",
+    name: AbilityNames.Raditz.DOUBLE_SUNDAY,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2031,9 +2033,9 @@ export const AbilitiesList = [
       disabled: "BTNRaditzDoubleSunday.blp",
     },
     tooltip: {
-      title: "Double Sunday",
+      title: AbilityNames.Raditz.DOUBLE_SUNDAY,
       body: 
-        "Double Sunday"
+        AbilityNames.Raditz.DOUBLE_SUNDAY
     },
     components: [
       { name: "multi double sunday" },
@@ -2041,7 +2043,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Saturday Crash",
+    name: AbilityNames.Raditz.SATURDAY_CRASH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2057,9 +2059,9 @@ export const AbilitiesList = [
       disabled: "BTNRaditzSaturdayCrash.blp",
     },
     tooltip: {
-      title: "Saturday Crash",
+      title: AbilityNames.Raditz.SATURDAY_CRASH,
       body: 
-        "Saturday Crash"
+        AbilityNames.Raditz.SATURDAY_CRASH
     },
     components: [
       { name: "beam saturday crash" },
@@ -2067,7 +2069,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Behind You",
+    name: AbilityNames.Raditz.BEHIND_YOU,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2083,9 +2085,9 @@ export const AbilitiesList = [
       disabled: "BTNRaditzBehindYou.blp",
     },
     tooltip: {
-      title: "Behind You",
+      title: AbilityNames.Raditz.BEHIND_YOU,
       body: 
-        "Behind You"
+        AbilityNames.Raditz.BEHIND_YOU
     },
     components: [
       { name: "dash ground point behind you pushback" },
@@ -2097,7 +2099,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Giant Storm",
+    name: AbilityNames.Nappa.GIANT_STORM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2113,9 +2115,9 @@ export const AbilitiesList = [
       disabled: "BTNNappaGiantStorm.blp",
     },
     tooltip: {
-      title: "Giant Storm",
+      title: AbilityNames.Nappa.GIANT_STORM,
       body: 
-        "Giant Storm"
+        AbilityNames.Nappa.GIANT_STORM
     },
     components: [
       { name: "beam giant storm" },
@@ -2123,7 +2125,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Blazing Storm",
+    name: AbilityNames.Nappa.BLAZING_STORM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2139,9 +2141,9 @@ export const AbilitiesList = [
       disabled: "BTNNappaBlazingStorm.blp",
     },
     tooltip: {
-      title: "Blazing Storm",
+      title: AbilityNames.Nappa.BLAZING_STORM,
       body: 
-        "Blazing Storm"
+        AbilityNames.Nappa.BLAZING_STORM
     },
     components: [
       { name: "multi blazing storm 1" },
@@ -2153,7 +2155,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Break Cannon",
+    name: AbilityNames.Nappa.BREAK_CANNON,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2169,9 +2171,9 @@ export const AbilitiesList = [
       disabled: "BTNNappaBreakCannon.blp",
     },
     tooltip: {
-      title: "Break Cannon",
+      title: AbilityNames.Nappa.BREAK_CANNON,
       body: 
-        "Break Cannon"
+        AbilityNames.Nappa.BREAK_CANNON
     },
     components: [
       { name: "beam break cannon"},
@@ -2179,7 +2181,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Saibaman Bomb",
+    name: AbilityNames.Saibaman.BOMB,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2195,9 +2197,9 @@ export const AbilitiesList = [
       disabled: "BTNSaibamanBomb.blp",
     },
     tooltip: {
-      title: "Saibaman Bomb",
+      title: AbilityNames.Saibaman.BOMB,
       body: 
-        "Saibaman Bomb"
+        AbilityNames.Saibaman.BOMB
     },
     components: [
       { name: "dash ground unit saibaman bomb" },
@@ -2208,7 +2210,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Saibaman Acid",
+    name: AbilityNames.Saibaman.ACID,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2224,9 +2226,9 @@ export const AbilitiesList = [
       disabled: "BTNSaibamanAcid.blp",
     },
     tooltip: {
-      title: "Saibaman Acid",
+      title: AbilityNames.Saibaman.ACID,
       body: 
-        "Saibaman Acid"
+        AbilityNames.Saibaman.ACID
     },
     components: [
       { name: "beam saibaman acid" },
@@ -2234,7 +2236,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Energy Drain Moro",
+    name: AbilityNames.Moro.ENERGY_DRAIN,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2250,9 +2252,9 @@ export const AbilitiesList = [
       disabled: "BTNMoro.blp",
     },
     tooltip: {
-      title: "Energy Drain Moro",
+      title: AbilityNames.Moro.ENERGY_DRAIN,
       body: 
-        "Energy Drain Moro"
+        AbilityNames.Moro.ENERGY_DRAIN
     },
     components: [
       { name: "damage target energy drain moro explosion" },
@@ -2261,7 +2263,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Energy Ball Moro",
+    name: AbilityNames.Moro.ENERGY_BALL,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2277,9 +2279,9 @@ export const AbilitiesList = [
       disabled: "BTNMoro.blp",
     },
     tooltip: {
-      title: "Energy Ball Moro",
+      title: AbilityNames.Moro.ENERGY_BALL,
       body: 
-        "Energy Ball Moro"
+        AbilityNames.Moro.ENERGY_BALL
     },
     components: [
       { name: "beam energy ball moro" },
@@ -2287,7 +2289,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Lava Burst",
+    name: AbilityNames.Moro.LAVA_BURST,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2303,9 +2305,9 @@ export const AbilitiesList = [
       disabled: "BTNMoro.blp",
     },
     tooltip: {
-      title: "Lava Burst",
+      title: AbilityNames.Moro.LAVA_BURST,
       body: 
-        "Lava Burst"
+        AbilityNames.Moro.LAVA_BURST
     },
     components: [
       { name: "multi lava burst" },
@@ -2313,7 +2315,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Lava Pillars",
+    name: AbilityNames.Moro.LAVA_PILLARS,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2329,9 +2331,9 @@ export const AbilitiesList = [
       disabled: "BTNMoro.blp",
     },
     tooltip: {
-      title: "Lava Pillars",
+      title: AbilityNames.Moro.LAVA_PILLARS,
       body: 
-        "Lava Pillars"
+        AbilityNames.Moro.LAVA_PILLARS
     },
     components: [
       { name: "multi lava pillars" },
@@ -2340,7 +2342,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Power Level Sharing",
+    name: AbilityNames.Moro.POWER_LEVEL_SHARING,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2356,9 +2358,9 @@ export const AbilitiesList = [
       disabled: "BTNMoroPowerLevelRising.blp",
     },
     tooltip: {
-      title: "Power Level Sharing",
+      title: AbilityNames.Moro.POWER_LEVEL_SHARING,
       body: 
-        "Power Level Sharing"
+        AbilityNames.Moro.POWER_LEVEL_SHARING
     },
     components: [
       { name: "aoe apply power level sharing" },

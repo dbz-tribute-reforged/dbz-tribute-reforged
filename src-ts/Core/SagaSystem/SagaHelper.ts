@@ -160,7 +160,7 @@ export module SagaHelper {
     duration: number = Constants.sagaDisplayTextDuration,
     jokeProbability: number = Constants.jokeProbability,
   ) {
-    const rng = Math.random() * 0.999;
+    const rng = Math.random() * 2;
     if (rng > jokeProbability || joke.length == 0) {
       showMessages(messages, delay, duration);
     } else {

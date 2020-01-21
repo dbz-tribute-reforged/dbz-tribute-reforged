@@ -9,7 +9,7 @@ export module Constants {
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
-  export let jokeProbability = 0.03;
+  export let jokeProbability = 0.06;
   export const sagaDisplayTextDuration = mediumDisplayTextDuration;
   export const sagaDisplayTextDelay = shortDisplayTextDuration;
   export const creepUpgradeDeathDelay = 10;
