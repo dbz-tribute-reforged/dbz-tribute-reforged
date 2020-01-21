@@ -56,7 +56,9 @@ export class CreepManager {
     // init creep players who will have creeps distributed to
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
       let player = Player(i);
-      this.creepPlayers.push(player);
+      if (i != Constants.heavenHellCreepPlayerId) {
+        this.creepPlayers.push(player);
+      }
       // gui does it for us
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
       if (i == Constants.heavenHellCreepPlayerId) {
@@ -84,11 +86,15 @@ export class CreepManager {
     }
 
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
-      if (i == Constants.heavenHellCreepPlayerId) continue;
       let player = Player(i);
+      SetPlayerName(player, "Creeps");
+      SetPlayerColorBJ(player, PLAYER_COLOR_COAL, false);
+      if (i == Constants.heavenHellCreepPlayerId) continue;
+
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
     }
+    SetPlayerColorBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), PLAYER_COLOR_COAL, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       let player = Player(i);
@@ -99,10 +105,9 @@ export class CreepManager {
       SetPlayerAllianceStateVisionBJ(Player(PLAYER_NEUTRAL_PASSIVE), player, false);
       SetPlayerAllianceStateVisionBJ(player, Player(PLAYER_NEUTRAL_PASSIVE), false);
     }
-
     
     // distribute creeps into neutral aggressive as well
-    this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+    // this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
 
     FogModifierStart(
       CreateFogModifierRadius(

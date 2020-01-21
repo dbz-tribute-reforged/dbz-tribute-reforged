@@ -5,6 +5,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityComponentHelper";
 import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
+import { AbilityNames } from "Common/AbilityNames";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -30,90 +31,9 @@ export class CustomHero {
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
     // relevant heroes
-    this.addAbilityFromAll("Zanzo Dash");
-    this.addAbilityFromAll("Guard");
+    this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
+    this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll("Max Power");
-
-    /*
-    this.addAbilityFromAll("Future Sight");
-    this.addAbilityFromAll("Tyrant Lancer");
-    this.addAbilityFromAll("Riot Javelin");
-    this.addAbilityFromAll("Rebellion Spear");
-    this.addAbilityFromAll("Angry Shout");
-    this.addAbilityFromAll("Saiyan Spirit");
-
-    this.addAbilityFromAll("Hellzone Grenade");
-    this.addAbilityFromAll("Slappy Hand");
-
-    this.addAbilityFromAll("Haretsu no Majutsu");
-    this.addAbilityFromAll("Flesh Attack");
-    this.addAbilityFromAll("Innocence Breath");
-    this.addAbilityFromAll("Angry Explosion");
-    this.addAbilityFromAll("Vanishing Ball");
-    this.addAbilityFromAll("Mankind Destruction Attack");
-
-    this.addAbilityFromAll("Finish Buster");
-
-    this.addAbilityFromAll("Burning Attack");
-    this.addAbilityFromAll("Big Bang Attack");
-    this.addAbilityFromAll("Shining Sword Attack");
-    this.addAbilityFromAll("Blazing Rush");
-    this.addAbilityFromAll("Heat Dome Attack");
-    this.addAbilityFromAll("SS Rage");
-
-    
-    this.addAbilityFromAll("Energy Beam");
-
-    this.addAbilityFromAll("Nuke");
-    this.addAbilityFromAll("S.S. Deadly Hammer");
-    this.addAbilityFromAll("S.S. Deadly Bomber");
-    this.addAbilityFromAll("Android Barrier");
-    this.addAbilityFromAll("Overcharge");
-
-
-    this.addAbilityFromAll("Ultra Instinct");
-
-    this.addAbilityFromAll("Kamehameha");
-    this.addAbilityFromAll("Masenko");
-    this.addAbilityFromAll("Special Beam Cannon");
-    this.addAbilityFromAll("Perfect Kamehameha");
-
-    this.addAbilityFromAll("Absorb");
-    
-    this.addAbilityFromAll("Kamehameha");
-    this.addAbilityFromAll("Unlock Potential");
-    this.addAbilityFromAll("The Great Saiyaman has arrived!");
-    this.addAbilityFromAll("Potential Unleashed");
-    
-    this.addAbilityFromAll("Super Dragon Flight");
-    
-    this.addAbilityFromAll("Twin Dragon Shot");
-    this.addAbilityFromAll("Death Beam Barrage");
-    this.addAbilityFromAll("Energy Blast Volley");
-
-    this.addAbilityFromAll("Death Beam Frieza");
-    this.addAbilityFromAll("Supernova Cooler");
-    this.addAbilityFromAll("Nova Chariot");
-    this.addAbilityFromAll("Deafening Wave");
-    
-    
-    this.addAbilityFromAll("Geti Star Repair");
-
-    this.addAbilityFromAll("Supernova Golden");
-
-    this.addAbilityFromAll("Galick Gun");
-    this.addAbilityFromAll("Final Flash");
-    this.addAbilityFromAll("Big Bang Kamehameha");
-    
-    this.addAbilityFromAll("Kamehameha");
-    this.addAbilityFromAll("Spirit Bomb");
-    this.addAbilityFromAll("Dragon Fist");
-
-    this.addAbilityFromAll("Final Flash");
-
-    this.addAbilityFromAll("Planet Crusher");
-    this.addAbilityFromAll("Gigantic Roar");
-    */
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {

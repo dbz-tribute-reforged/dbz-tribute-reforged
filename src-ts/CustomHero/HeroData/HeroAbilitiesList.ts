@@ -1,112 +1,142 @@
+import { AbilityNames } from "Common/AbilityNames";
+
 export const HeroAbilitiesList: Map<number, string[]> = new Map(
   [
     // goku and xeno
-    [FourCC("H000"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "God Kamehameha", "Ultra Instinct"]],
-    [FourCC("H08J"), ["Kamehameha", "Spirit Bomb", "Dragon Fist", "God Kamehameha", "Ultra Instinct"]],
+    [FourCC("H000"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.SPIRIT_BOMB, 
+      AbilityNames.Goku.DRAGON_FIST, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.ULTRA_INSTINCT
+    ]],
+    [FourCC("H08J"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Goku.SPIRIT_BOMB, 
+      AbilityNames.Goku.DRAGON_FIST, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, 
+      AbilityNames.Goku.ULTRA_INSTINCT
+    ]],
 
     // vegeta
-    [FourCC("E003"), ["Galick Gun", "Big Bang Attack", "Final Flash", "Final Flash 2", "Moonlight", "Angry Shout", "Energy Blast Volley"]],
+    [FourCC("E003"), [
+      AbilityNames.Vegeta.GALICK_GUN, 
+      AbilityNames.Vegeta.BIG_BANG_ATTACK, 
+      AbilityNames.Vegeta.FINAL_FLASH, 
+      AbilityNames.Vegeta.FINAL_FLASH_2, 
+      AbilityNames.Vegeta.MOONLIGHT, 
+      "Angry Shout", 
+      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY
+    ]],
     
     // gohan
-    [FourCC("H00K"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
+    [FourCC("H00K"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Gohan.MASENKO, 
+      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
+      AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
+      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
+      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
+      AbilityNames.Gohan.POTENTIAL_UNLEASHED
+    ]],
     // adult gohan
-    [FourCC("H086"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
+    [FourCC("H086"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, AbilityNames.Gohan.UNLOCK_POTENTIAL, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, AbilityNames.Gohan.POTENTIAL_UNLEASHED]],
     // saiyaman
-    [FourCC("H08L"), ["Kamehameha", "Masenko", "Twin Dragon Shot", "Super Dragon Flight", "Unlock Potential", "The Great Saiyaman has arrived!", "Potential Unleashed"]],
+    [FourCC("H08L"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, AbilityNames.Gohan.UNLOCK_POTENTIAL, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, AbilityNames.Gohan.POTENTIAL_UNLEASHED]],
     
     // goten
-    [FourCC("H008"), ["Kamehameha"]],
+    [FourCC("H008"), [AbilityNames.Goku.KAMEHAMEHA]],
     // kid trunks
-    [FourCC("H016"), ["Finish Buster"]],
+    [FourCC("H016"), [AbilityNames.FutureTrunks.FINISH_BUSTER]],
     // gotenks
-    [FourCC("H00A"), ["Kamehameha", "Galactic Donuts", "Super Ghost Kamikaze Attack"]],
+    [FourCC("H00A"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gotenks.GALACTIC_DONUTS, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK]],
 
     // future trunks
-    [FourCC("H009"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Attack", "Blazing Rush", "Heat Dome Attack", "Super Saiyan Rage"]],
+    [FourCC("H009"), [AbilityNames.FutureTrunks.FINISH_BUSTER, AbilityNames.FutureTrunks.BURNING_ATTACK, AbilityNames.Vegeta.BIG_BANG_ATTACK, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, AbilityNames.FutureTrunks.BLAZING_RUSH, "Heat Dome Attack", AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE]],
     // ss rage
-    [FourCC("H08I"), ["Finish Buster", "Burning Attack", "Big Bang Attack", "Shining Sword Attack", "Blazing Rush", "Heat Dome Attack", "Super Saiyan Rage"]],
+    [FourCC("H08I"), [AbilityNames.FutureTrunks.FINISH_BUSTER, AbilityNames.FutureTrunks.BURNING_ATTACK, AbilityNames.Vegeta.BIG_BANG_ATTACK, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, AbilityNames.FutureTrunks.BLAZING_RUSH, "Heat Dome Attack", AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE]],
 
     // piccolo
-    [FourCC("H00R"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
-    [FourCC("H04X"), ["Special Beam Cannon", "Slappy Hand", "Hellzone Grenade", "Multi Form", "Kyodaika"]],
+    [FourCC("H00R"), [AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.SLAPPY_HAND, AbilityNames.Piccolo.HELLZONE_GRENADE, AbilityNames.Piccolo.MULTI_FORM, AbilityNames.Piccolo.KYODAIKA]],
+    [FourCC("H04X"), [AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.SLAPPY_HAND, AbilityNames.Piccolo.HELLZONE_GRENADE, AbilityNames.Piccolo.MULTI_FORM, AbilityNames.Piccolo.KYODAIKA]],
 
     // bardock
-    [FourCC("H08M"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
-    [FourCC("H08N"), ["Tyrant Lancer", "Riot Javelin", "Rebellion Spear", "Moonlight", "Angry Shout", "Saiyan Spirit", "Future Sight"]],
+    [FourCC("H08M"), [AbilityNames.Bardock.TYRANT_LANCER, "Riot Javelin", AbilityNames.Bardock.REBELLION_SPEAR, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Bardock.SAIYAN_SPIRIT, AbilityNames.Bardock.FUTURE_SIGHT]],
+    [FourCC("H08N"), [AbilityNames.Bardock.TYRANT_LANCER, "Riot Javelin", AbilityNames.Bardock.REBELLION_SPEAR, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Bardock.SAIYAN_SPIRIT, AbilityNames.Bardock.FUTURE_SIGHT]],
     
     // pan
-    [FourCC("H08P"), ["Pan Kamehameha", "Maiden Blast", "Reliable Friend", "Summon Giru", "Honey Bee Costume"]],
-    [FourCC("H08R"), ["Pan Kamehameha", "Maiden Blast", "Reliable Friend", "Summon Giru", "Honey Bee Costume"]],
+    [FourCC("H08P"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
+    [FourCC("H08R"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
     // giru
-    [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", "Reliable Friend", "Dragon Radar"]],
+    [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", AbilityNames.Pan.RELIABLE_FRIEND, "Dragon Radar"]],
 
     // android 17 dbs
-    [FourCC("H08Z"), ["Power Blitz", "Power Blitz Barrage", "Barrier Prison", "Barrier Wall", "Android Barrier", "Super Electric Strike"]],
+    [FourCC("H08Z"), [AbilityNames.Android17DBS.POWER_BLITZ, AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE, AbilityNames.Android17DBS.BARRIER_PRISON, AbilityNames.Android17DBS.BARRIER_WALL, AbilityNames.Android17DBS.ANDROID_BARRIER, AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE]],
 
     // androids 13 14 15
-    [FourCC("H01V"), ["Energy Beam", "S.S. Deadly Bomber", "Android Barrier", "Overcharge"]],
-    [FourCC("H01S"), ["Energy Beam", "Nuke", "Android Barrier", "Overcharge"]],
-    [FourCC("H01T"), ["Energy Beam", "Nuke", "Android Barrier", "Overcharge"]],
+    [FourCC("H01V"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
+    [FourCC("H01S"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
+    [FourCC("H01T"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
     // super 13
-    [FourCC("H01U"), ["S.S. Deadly Hammer", "S.S. Deadly Bomber", "Nuke", "Android Barrier", "Overcharge"]],
+    [FourCC("H01U"), [AbilityNames.Androids13.SS_DEADLY_HAMMER, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
     // ultra 13
-    [FourCC("H01W"), ["S.S. Deadly Hammer", "S.S. Deadly Bomber", "Nuke", "Android Barrier", "Overcharge"]],
+    [FourCC("H01W"), [AbilityNames.Androids13.SS_DEADLY_HAMMER, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
 
     // babidi
-    [FourCC("O001"), ["Summon Pui Pui", "Summon Yakon", "Summon Dabura", "Haretsu no Majutsu", "Babidi Barrier", "Babidi Magic"]],
+    [FourCC("O001"), [AbilityNames.Babidi.SUMMON_PUI_PUI, AbilityNames.Babidi.SUMMON_YAKON, AbilityNames.Babidi.SUMMON_DABURA, AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.BABIDI_BARRIER, "Babidi Magic"]],
 
     // fat buu / super buu / kid buu
-    [FourCC("O005"), ["Buu Beam", "Flesh Attack", "Innocence Breath", "Angry Explosion"]],
-    [FourCC("O006"), ["Buu Beam", "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball"]],
+    [FourCC("O005"), [AbilityNames.Buu.BUU_BEAM, AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.INNOCENCE_BREATH, AbilityNames.Buu.ANGRY_EXPLOSION]],
+    [FourCC("O006"), [AbilityNames.Buu.BUU_BEAM, AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL]],
     [FourCC("O00C"), [
-      "Flesh Attack", "Mankind Destruction Attack", "Angry Explosion", "Vanishing Ball",
-      "God Kamehameha", "Ultra Instinct", 
-      "Galick Gun", 
-      "Potential Unleashed",
-      "Special Beam Cannon", "Kyodaika",
-      "Tyrant Lancer", "Future Sight",
-      "Power Blitz",
-      "S.S. Deadly Hammer",
-      "Haretsu no Majutsu", "Summon Pui Pui",
-      "Energy Punch",
-      "Death Beam Frieza",
-      "Double Sunday",
-      "Giant Storm",
-      "Energy Drain Moro",
+      AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL,
+      AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, 
+      AbilityNames.Vegeta.GALICK_GUN, 
+      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
+      AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
+      AbilityNames.Android17DBS.POWER_BLITZ,
+      AbilityNames.Androids13.SS_DEADLY_HAMMER,
+      AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
+      AbilityNames.Broly.ENERGY_PUNCH,
+      AbilityNames.Frieza.DEATH_BEAM,
+      AbilityNames.Raditz.DOUBLE_SUNDAY,
+      AbilityNames.Nappa.GIANT_STORM,
+      AbilityNames.Moro.ENERGY_DRAIN,
     ]],
 
     // broly
-    [FourCC("H00M"), ["Energy Punch", "Power Level Rising", "Planet Crusher", "Gigantic Roar", "Gigantic Omegastorm"]],
+    [FourCC("H00M"), [AbilityNames.Broly.ENERGY_PUNCH, AbilityNames.Broly.POWER_LEVEL_RISING, AbilityNames.Broly.PLANET_CRUSHER, AbilityNames.Broly.GIGANTIC_ROAR, AbilityNames.Broly.GIGANTIC_OMEGASTORM]],
     
     // cell unformed / 1st form / 2nd form / perfect
-    [FourCC("N00Q"), ["Kamehameha"]],
-    [FourCC("H00E"), ["Kamehameha", "Solar Flare", "Absorb"]],
-    [FourCC("H00F"), ["Kamehameha", "Special Beam Cannon", "Solar Flare", "Absorb"]],
-    [FourCC("H00G"), ["Kamehameha", "Masenko", "Special Beam Cannon", "Perfect Kamehameha", "Spawn Cell Juniors"]],
-    [FourCC("H01J"), ["Kamehameha"]],
+    [FourCC("N00Q"), [AbilityNames.Goku.KAMEHAMEHA]],
+    [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, "Solar Flare", AbilityNames.Cell.ABSORB]],
+    [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
+    [FourCC("H00G"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Perfect Kamehameha", AbilityNames.Cell.SPAWN_CELL_JUNIORS]],
+    [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA]],
 
 
     // fourth form cooler
-    [FourCC("H042"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
+    [FourCC("H042"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // final form cooler
-    [FourCC("H043"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
+    [FourCC("H043"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // golden final form
-    [FourCC("H05L"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Deafening Wave", "Supernova Golden"]],
+    [FourCC("H05L"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // metal cooler
-    [FourCC("H01A"), ["Death Beam Frieza", "Supernova Cooler", "Nova Chariot", "Geti Star Repair", "Supernova Golden"]],
+    [FourCC("H01A"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
 
     // farmer with shotgun
-    [FourCC("H08S"), ["Death Beam Frieza", "Final Flash", "Twin Dragon Shot", "Gigantic Roar", "Energy Blast Volley"]],
+    [FourCC("H08S"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Vegeta.FINAL_FLASH, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Broly.GIGANTIC_ROAR, AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY]],
 
     // raditz
-    [FourCC("H08U"), ["Double Sunday", "Saturday Crash", "Behind You", "Moonlight", "Angry Shout", "Double Sundae"]],
+    [FourCC("H08U"), [AbilityNames.Raditz.DOUBLE_SUNDAY, AbilityNames.Raditz.SATURDAY_CRASH, AbilityNames.Raditz.BEHIND_YOU, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Raditz.DOUBLE_SUNDAE]],
     // nappa
-    [FourCC("H08W"), ["Giant Storm", "Blazing Storm", "Plant Saibamen", "Moonlight", "Angry Shout", "Break Cannon"]],
+    [FourCC("H08W"), [AbilityNames.Nappa.GIANT_STORM, AbilityNames.Nappa.BLAZING_STORM, AbilityNames.Nappa.PLANT_SAIBAMEN, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Nappa.BREAK_CANNON]],
     // saibaman
-    [FourCC("H08X"), ["Saibaman Bomb", "Saibaman Acid"]],
+    [FourCC("H08X"), [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
 
     // moro
-    [FourCC("H08Y"), ["Energy Drain Moro", "Energy Ball Moro", "Lava Burst", "Lava Pillars", "Power Level Sharing"]],
+    [FourCC("H08Y"), [AbilityNames.Moro.ENERGY_DRAIN, AbilityNames.Moro.ENERGY_BALL, AbilityNames.Moro.LAVA_BURST, AbilityNames.Moro.LAVA_PILLARS, AbilityNames.Moro.POWER_LEVEL_SHARING]],
 
   ]
 )
