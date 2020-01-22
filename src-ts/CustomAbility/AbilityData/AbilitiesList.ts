@@ -1,4 +1,4 @@
-import { AbilityNames } from "Common/AbilityNames";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export const AbilitiesList = [
   // copy from here
@@ -34,7 +34,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
-    maxCd: 9,
+    maxCd: 15,
     costType: "MP",
     costAmount: 25,
     duration: 40,
@@ -51,7 +51,7 @@ export const AbilitiesList = [
       title: "(X) Guard",
       body: 
         "Basic Guard ability that blocks 50% of incoming damage until more than 5 * STR damage is blocked." + 
-        "|nCost:25 MP|nCD: 9"
+        "|nCost:25 MP|nCD: 15"
     },
     components: [
       { name: "block basic guard" },
@@ -77,7 +77,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Max Power",
       body: 
-        "Boosts your ability damage by 10% for 10seconds." + 
+        "Boosts your ability damage by 10% for 10 seconds." + 
         "|nCost:100 MP|nCD: 40"
     },
     components: [
@@ -2364,6 +2364,58 @@ export const AbilitiesList = [
     },
     components: [
       { name: "aoe apply power level sharing" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.GENERIC_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Saga.GENERIC_BEAM,
+      body: 
+        "Generic Saga Beam"
+    },
+    components: [
+      { name: "beam galick gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.GENERIC_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKame2.blp",
+      disabled: "BTNKame2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Saga.GENERIC_BOMB,
+      body: 
+        "Generic Saga Bomb"
+    },
+    components: [
+      { name: "beam vanishing ball" },
     ],
   },
   // -------------------------------------------

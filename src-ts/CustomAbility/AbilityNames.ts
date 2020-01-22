@@ -158,7 +158,7 @@ export module AbilityNames {
 
   export module Saibaman {
     export const BOMB: string = "Saibaman Bomb";
-    export const ACID: string = "Saibaman Acid";
+    export const ACID: string = "Acid Spit";
   }
 
   export module Moro {
@@ -175,5 +175,10 @@ export module AbilityNames {
     export const TWIN_DRAGON_SHOT: string = Gohan.TWIN_DRAGON_SHOT;
     export const GIGANTIC_ROAR: string = Broly.GIGANTIC_ROAR;
     export const ENERGY_BLAST_VOLLEY: string = Vegeta.ENERGY_BLAST_VOLLEY;
+  }
+
+  export module Saga {
+    export const GENERIC_BEAM: string = "Take this!";
+    export const GENERIC_BOMB: string = "Begone!";
   }
 }

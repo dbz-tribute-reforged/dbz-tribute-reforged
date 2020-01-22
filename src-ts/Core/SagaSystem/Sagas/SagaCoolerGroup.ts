@@ -12,7 +12,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 40;
+    this.delay = 40;
     this.stats = 100;
     this.isFinalForm = false;
   }
@@ -33,7 +33,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
     }
 
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -80,10 +80,10 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -104,7 +104,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 45;
+    this.delay = 45;
     this.stats = 100;
     this.metalCoolers = [];
     this.revives = 5;
@@ -131,7 +131,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     }
 
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -171,10 +171,10 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });

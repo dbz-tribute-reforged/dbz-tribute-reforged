@@ -73,8 +73,8 @@ export module CameraZoom {
             return false;
         }));
 
-        TimerStart(CreateTimer(), 8, false, () => {
-            BJDebugMsg("Applying Automatic Camera");
+        TimerStart(CreateTimer(), 4, false, () => {
+            Logger.LogDebug("Applying Automatic Camera");
             TimerStart(CreateTimer(), PERIOD, true, () => {
                 arr.forEach(element => {
                     if (GetLocalPlayer() == element.p) {

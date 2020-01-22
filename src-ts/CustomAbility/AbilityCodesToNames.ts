@@ -1,4 +1,4 @@
-import { AbilityNames } from "../Common/AbilityNames";
+import { AbilityNames } from "./AbilityNames";
 
 export const abilityCodesToNames = new Map<number, string>(
   [

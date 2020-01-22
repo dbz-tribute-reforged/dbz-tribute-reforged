@@ -1,3 +1,4 @@
+import { Constants } from "./Constants";
 
 export module Colorizer {
   export enum Color {

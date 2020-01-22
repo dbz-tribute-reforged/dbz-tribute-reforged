@@ -84,6 +84,13 @@ export class TournamentManager {
     return this;
   }
 
+  public removeTournament(name: string): boolean {
+    if (this.tournaments.get(name)) {
+      return this.tournaments.delete(name);
+    }
+    return false;
+  }
+
   protected setupReviveTrigger() {
     // tournament revive trigger
     // if you die in tournament, revive & move to lobby
@@ -178,6 +185,8 @@ export class TournamentManager {
       } else {
         Logger.LogDebug("Could not start " + newTournament.name + ", as tournament ring is already in use.");
       }
+    } else {
+      Logger.LogDebug("Could not start " + name + ", as tournament does not exist (anymore)");
     }
   }
 }

@@ -4,6 +4,8 @@ import { AdvancedSaga } from "./Sagas/AdvancedSaga";
 import { sagaUnitsConfig } from "./Sagas/SagaUnitsConfig";
 import { Constants } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
+import { SagaHeroAI } from "./SagaAISystem/SagaHeroAI";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: Map<string, unit>): boolean {
@@ -44,6 +46,25 @@ export module SagaHelper {
       }
       if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
         UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
+      }
+      saga.bossesAI.set(
+        sagaUnit,
+        new SagaHeroAI(
+          sagaUnit
+        ).addWeakBeams(
+          sagaUnitConfig.weakBeams
+        ).addStrongBeams(
+          sagaUnitConfig.strongBeams
+        )
+      )
+      const sagaAI = saga.bossesAI.get(sagaUnit);
+      if (sagaAI) {
+        if (sagaAI.getNumWeakBeams() == 0) {
+          sagaAI.addWeakBeams([AbilityNames.Saga.GENERIC_BEAM]);
+        }
+        if (sagaAI.getNumStrongBeams() == 0) {
+          sagaAI.addStrongBeams([AbilityNames.Saga.GENERIC_BOMB]);
+        }
       }
     }
   }
@@ -160,7 +181,7 @@ export module SagaHelper {
     duration: number = Constants.sagaDisplayTextDuration,
     jokeProbability: number = Constants.jokeProbability,
   ) {
-    const rng = Math.random() * 2;
+    const rng = Math.random();
     if (rng > jokeProbability || joke.length == 0) {
       showMessages(messages, delay, duration);
     } else {

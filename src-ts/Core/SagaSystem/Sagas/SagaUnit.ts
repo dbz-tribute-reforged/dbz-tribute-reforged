@@ -8,6 +8,8 @@ export class SagaUnit {
     public agi: number,
     public int: number,
     public spawnPos: Vector2D,
+    public weakBeams: string[] = [],
+    public strongBeams: string[] = [],
   ) {
 
   }

@@ -49,7 +49,7 @@ export module UnitHelper {
       if (
         IsUnitType(unit, UNIT_TYPE_HERO) &&
         IsUnitEnemy(unit, player) &&
-        !IsUnitType(unit, UNIT_TYPE_DEAD)
+        !isUnitDead(unit)
       ) {
         ++numEnemies;
       }

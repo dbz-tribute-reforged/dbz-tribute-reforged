@@ -37,4 +37,12 @@ export class CustomHeroAbilityManager {
     this.abilities.set(name, ability);
     return this;
   }
+
+  public size(): number {
+    return this.abilities.size;
+  }
+
+  public hasAbility(name: string): boolean {
+    return (this.abilities.get(name) != undefined);
+  }
 }
