@@ -11,7 +11,7 @@ import { WinLossHelper } from "Common/WinLossHelper";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
 import { ExperienceManager } from "Core/ExperienceSystem/ExpierenceManager";
-import { AbilityNames } from "Common/AbilityNames";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 // global?
 let customPlayers: CustomPlayer[];
@@ -97,10 +97,10 @@ export function CustomPlayerTest() {
   customPlayers = [];
   
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    customPlayers[i] = new CustomPlayer(
+    customPlayers.push(new CustomPlayer(
       i,
       GetPlayerName(Player(i)),
-    );
+    ));
   }
 
   // need better way to add heroes of player to their hero list
@@ -280,7 +280,7 @@ export function CustomPlayerTest() {
   const abil2 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
-  addAbilityAction(abil2, "Max Power");
+  addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
   
   /*
 
@@ -623,7 +623,7 @@ export function CustomPlayerTest() {
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(killTrig, Player(i), EVENT_PLAYER_UNIT_DEATH);
   }
-  TriggerRegisterPlayerUnitEventSimple(killTrig, Player(PLAYER_NEUTRAL_AGGRESSIVE), EVENT_PLAYER_UNIT_DEATH);
+  TriggerRegisterPlayerUnitEventSimple(killTrig, Constants.sagaPlayer, EVENT_PLAYER_UNIT_DEATH);
   TriggerAddCondition(killTrig, Condition( () => {
     return (
       IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) && 
@@ -639,14 +639,14 @@ export function CustomPlayerTest() {
     let killerName = Colorizer.getColoredPlayerName(killPlayer);
     let deadName = Colorizer.getColoredPlayerName(deadPlayer);
     if (
-      (killPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || killPlayerId >= Constants.maxActivePlayers) && 
+      (killPlayer == Constants.sagaPlayer || killPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)
     ) {
       killerName = Colorizer.getPlayerColorText(killPlayerId) + GetHeroProperName(GetKillingUnit()) + "|r";
     }
 
     if (
-      (deadPlayer == Player(PLAYER_NEUTRAL_AGGRESSIVE) || deadPlayerId >= Constants.maxActivePlayers) && 
+      (deadPlayer == Constants.sagaPlayer || deadPlayerId >= Constants.maxActivePlayers) && 
       IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO)
     ) {
       deadName = Colorizer.getPlayerColorText(deadPlayerId) + GetHeroProperName(GetDyingUnit()) + "|r";
@@ -657,7 +657,7 @@ export function CustomPlayerTest() {
       GetPlayerName(killPlayer).length > 1 &&
       GetPlayerName(deadPlayer).length > 1 &&
       (
-        killPlayerId == PLAYER_NEUTRAL_AGGRESSIVE || 
+        killPlayer == Constants.sagaPlayer || 
         (killPlayerId >= 0 && killPlayerId < Constants.maxPlayers)
       ) &&
       deadPlayerId != Constants.heavenHellCreepPlayerId
@@ -825,7 +825,7 @@ export function CustomPlayerTest() {
       FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
     }
     */
-    // SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
+    // SetPlayerAllianceStateBJ(Constants.sagaPlayer, udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
   
     // force budokai
     const forceBudokaiTrig = CreateTrigger();

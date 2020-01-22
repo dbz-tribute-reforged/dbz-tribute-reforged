@@ -62,11 +62,11 @@ export class CreepManager {
       // gui does it for us
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
       if (i == Constants.heavenHellCreepPlayerId) {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED);
+        SetPlayerAllianceStateBJ(player, Constants.sagaPlayer, bj_ALLIANCE_ALLIED);
+        SetPlayerAllianceStateBJ(Constants.sagaPlayer, player, bj_ALLIANCE_ALLIED);
       } else {
-        SetPlayerAllianceStateBJ(player, Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_VISION);
-        SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), player, bj_ALLIANCE_ALLIED_VISION);
+        SetPlayerAllianceStateBJ(player, Constants.sagaPlayer, bj_ALLIANCE_ALLIED_VISION);
+        SetPlayerAllianceStateBJ(Constants.sagaPlayer, player, bj_ALLIANCE_ALLIED_VISION);
       }
       for (let j = 0; j < Constants.maxPlayers; ++j) {
         if (i == j) continue;
@@ -94,7 +94,7 @@ export class CreepManager {
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
     }
-    SetPlayerColorBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), PLAYER_COLOR_COAL, false);
+    SetPlayerColorBJ(Constants.sagaPlayer, PLAYER_COLOR_COAL, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       let player = Player(i);
@@ -107,11 +107,11 @@ export class CreepManager {
     }
     
     // distribute creeps into neutral aggressive as well
-    // this.creepPlayers.push(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+    // this.creepPlayers.push(Constants.sagaPlayer);
 
     FogModifierStart(
       CreateFogModifierRadius(
-        Player(PLAYER_NEUTRAL_AGGRESSIVE),
+        Constants.sagaPlayer,
         FOG_OF_WAR_FOGGED,
         (Constants.heavenHellBottomLeft.x + Constants.heavenHellTopRight.x) / 2,
         (Constants.heavenHellBottomLeft.y + Constants.heavenHellTopRight.y) / 2,
@@ -124,7 +124,7 @@ export class CreepManager {
   }
 
   setupCustomCreeps(): this {
-    let allCreeps = GetUnitsOfPlayerAll(Player(PLAYER_NEUTRAL_AGGRESSIVE));
+    let allCreeps = GetUnitsOfPlayerAll(Constants.sagaPlayer);
     
     let creepPlayerIndex = Constants.maxActivePlayers;
     ForGroup(allCreeps, () => {

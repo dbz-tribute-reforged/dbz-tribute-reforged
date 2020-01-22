@@ -6,16 +6,19 @@ import { Colorizer } from "Common/Colorizer";
 import { Constants } from "Common/Constants";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
+import { SagaHeroAI } from "../SagaAISystem/SagaHeroAI";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class AdvancedSaga {
   public name: string = '';
   public state: SagaState;
   
   public bosses: Map<string, unit>;
+  public bossesAI: Map<unit, SagaHeroAI>;
 
-  public sagaRewardTrigger: trigger;
-  public sagaDelayTimer: timer;
-  public sagaDelay: number;
+  public bossDeathTrigger: trigger;
+  public delayTimer: timer;
+  public delay: number;
 
   // deprecated, 
   // stats are given based on lvl of dying saga boss
@@ -24,27 +27,22 @@ export class AdvancedSaga {
   public spawnSound: sound;
   public completeSound: sound;
 
-  public useCustomAggroClosest: boolean;
-  public aggroCounter: number;
-
   constructor() {
     this.state = SagaState.NotStarted;
     this.name = '';
     this.bosses = new Map();
-    this.sagaRewardTrigger = CreateTrigger();
-    this.sagaDelayTimer = CreateTimer();
-    this.sagaDelay = 0;
+    this.bossesAI = new Map();
+    this.bossDeathTrigger = CreateTrigger();
+    this.delayTimer = CreateTimer();
+    this.delay = 0;
     this.stats = 0;
     this.spawnSound = gg_snd_QuestNew;
     this.completeSound = gg_snd_QuestCompleted;
-    this.useCustomAggroClosest = true;
-    this.aggroCounter = 0;
   }
 
   start(): void {
     // Logger.LogDebug(this.name + " Started");
     this.state = SagaState.InProgress;
-    this.aggroCounter = 0;
   }
 
   complete(): void {
@@ -54,11 +52,14 @@ export class AdvancedSaga {
   }
 
   update(t: number): void {
-    if (this.useCustomAggroClosest) {
-      ++this.aggroCounter;
-      if (this.aggroCounter > Constants.sagaAggroInterval) {
-        this.aggroCounter = 0;
-        this.updateSagaAggro();
+    // saga boss ai is done on a per unit level
+    // independent of each other
+    for (const [boss, bossAI] of this.bossesAI) {
+      if (
+        !UnitHelper.isUnitDead(boss) &&
+        !SagaHelper.isUnitSagaHidden(boss)
+      ) {
+        bossAI.performTickActions();
       }
     }
   }
@@ -76,31 +77,27 @@ export class AdvancedSaga {
     for (const name of names) {
       SagaHelper.addHeroToAdvancedSaga(this, name, mustKill);
     }
-  }
-
-  addEventRewardStats(boss: unit) {
-    TriggerRegisterUnitEvent(
-      this.sagaRewardTrigger,
-      boss, 
-      EVENT_UNIT_DEATH,
-    )
-  }
-
-  addActionRewardStats(saga: Saga) {
-    // TriggerRegisterPlayerUnitEvent(
-    //   this.sagaRewardTrigger,
-    //   Players.NEUTRAL_HOSTILE,
-    //   EVENT_PLAYER_UNIT_DEATH,
-    //   Condition(() => {
-    //     return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && saga.canComplete();
-    //   }),
-    // );
     for (const [name, sagaUnit] of this.bosses) {
-      this.addEventRewardStats(sagaUnit);
+      TriggerRegisterUnitEvent(
+        this.bossDeathTrigger,
+        sagaUnit, 
+        EVENT_UNIT_DEATH,
+      )
+      this.bossesAI.set(
+        sagaUnit,
+        new SagaHeroAI(
+          sagaUnit
+        )
+      )
+      if (GetUnitAcquireRange(sagaUnit) < 2000) {
+        SetUnitAcquireRange(sagaUnit, 2000);
+      }
     }
+  }
 
+  setupBossDeathActions(saga: Saga) {
     TriggerAddAction(
-      this.sagaRewardTrigger,
+      this.bossDeathTrigger,
       () => {
         SagaHelper.pingDeathMinimap(GetDyingUnit());
         if (saga.canComplete()) {
@@ -117,68 +114,5 @@ export class AdvancedSaga {
 
   ping() {
     SagaHelper.pingMinimap(this.bosses);
-  }
-
-  updateSagaAggro() {
-    for (const [name, boss] of this.bosses) {
-      if (
-        !IsUnitType(boss, UNIT_TYPE_DEAD) &&
-        !SagaHelper.isUnitSagaHidden(boss)
-      ) {
-        // find closest enemy hero
-        // and go attack them
-        const enemyGroup = CreateGroup();
-        const bossPlayer = GetOwningPlayer(boss);
-        const acquireRange = GetUnitAcquireRange(boss);
-        const bossPos = new Vector2D(GetUnitX(boss), GetUnitY(boss));
-
-        GroupEnumUnitsInRange(
-          enemyGroup,
-          bossPos.x,
-          bossPos.y,
-          acquireRange,
-          Condition(() => {
-            const testUnit = GetFilterUnit();
-            const x = GetUnitX(testUnit);
-            const y = GetUnitY(testUnit);
-            return (
-              IsUnitEnemy(testUnit, bossPlayer) &&
-              IsUnitType(testUnit, UNIT_TYPE_HERO) && 
-              !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
-              !BlzIsUnitInvulnerable(testUnit) && 
-              !IsUnitHidden(testUnit) && 
-              !(
-                x > Constants.heavenHellBottomLeft.x &&
-                y > Constants.heavenHellBottomLeft.y &&
-                x < Constants.heavenHellTopRight.x &&
-                y < Constants.heavenHellTopRight.y
-              )
-            )
-          })
-        );
-
-        let closestUnit = boss;
-        let closestDistance = acquireRange;
-        ForGroup(enemyGroup, () => {
-          const enemyUnit = GetEnumUnit();
-          const enemyPos = new Vector2D(GetUnitX(enemyUnit), GetUnitY(enemyUnit));
-          const enemyDistance = CoordMath.distance(enemyPos, bossPos);
-          if (enemyDistance < closestDistance) {
-            closestUnit = enemyUnit;
-            closestDistance = enemyDistance;
-          }
-        });
-        
-        if (IsUnitEnemy(closestUnit, bossPlayer)) {
-          for (const [orderBossName, orderBoss] of this.bosses) {
-            // IssueTargetOrder(orderBoss, "attack", closestUnit);
-            IssueTargetOrder(orderBoss, "smart", closestUnit);
-          }
-        }
-
-        DestroyGroup(enemyGroup);
-        break;
-      }
-    }
   }
 }

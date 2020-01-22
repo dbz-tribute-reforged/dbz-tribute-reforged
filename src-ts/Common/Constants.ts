@@ -9,7 +9,7 @@ export module Constants {
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
-  export let jokeProbability = 0.06;
+  export let jokeProbability = 0.03;
   export const sagaDisplayTextDuration = mediumDisplayTextDuration;
   export const sagaDisplayTextDelay = shortDisplayTextDuration;
   export const creepUpgradeDeathDelay = 10;
@@ -17,6 +17,8 @@ export module Constants {
   export const creepUpgradeBuff: number = FourCC("BTLF");
   export const creepChainErrorMargin: number = 4;
   export const creepHeavenHellHeroRespawnDelay: number = 15;
+  export const sagaPlayerId = PLAYER_NEUTRAL_AGGRESSIVE;
+  export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 20;

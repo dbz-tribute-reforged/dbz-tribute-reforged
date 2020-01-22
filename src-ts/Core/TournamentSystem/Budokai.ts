@@ -114,9 +114,13 @@ export class Budokai extends AdvancedTournament implements Tournament {
   prepareTournament() {
     DisplayTimedTextToForce(
       bj_FORCE_ALL_PLAYERS, 20, 
-      this.getTournamentName() + " will be held in " + 
-      this.toStartDelay + " seconds! " + 
-      "Type " + TournamentData.budokaiEnterCommand + " to register."
+      "|cffffff00" + this.getTournamentName() + " will be held in " + 
+      this.toStartDelay + " seconds!|r"
+    );
+    DisplayTimedTextToForce(
+      bj_FORCE_ALL_PLAYERS, 20, 
+      "|cffffcc00Type|r |cffff2020" + TournamentData.budokaiEnterCommand + 
+      "|r |cffffcc00to register.|r"
     );
     TimerStart(CreateTimer(), 3, false, () => {
       DisplayTimedTextToForce(

@@ -12,7 +12,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.delay = 30;
   }
 
   spawnSagaUnits(): void {
@@ -40,7 +40,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.perfectCell);
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -102,10 +102,10 @@ export class CellSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -126,7 +126,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.delay = 60;
     this.goneSuperPerfect = false;
   }
 
@@ -141,7 +141,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Perfect Cell Games", "Super Perfect Cell"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 1800);
+      SetUnitAcquireRange(boss, 2500);
     }
 
     this.perfectCell = this.bosses.get("Perfect Cell Games");
@@ -150,7 +150,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.superPerfectCell);
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -210,10 +210,10 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -230,7 +230,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 95;
+    this.delay = 95;
   }
 
   spawnSagaUnits(): void {
@@ -249,7 +249,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
     }
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -273,10 +273,10 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });

@@ -14,7 +14,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.delay = 60;
     this.stats = 50;
   }
 
@@ -45,7 +45,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.zarbon2);
     
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -82,10 +82,10 @@ export class NamekSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -102,7 +102,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 20;
+    this.delay = 20;
     this.stats = 100;
   }
 
@@ -146,7 +146,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     }
 
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -170,10 +170,10 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -190,7 +190,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.delay = 30;
     this.stats = 100;
   }
 
@@ -227,7 +227,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     }
     
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -273,10 +273,10 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -293,7 +293,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 45;
+    this.delay = 45;
     this.stats = 100;
   }
 
@@ -325,7 +325,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
     }
     
     this.ping()
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -365,10 +365,10 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -391,7 +391,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {
@@ -416,7 +416,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.friezaGolden);
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -470,10 +470,10 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });

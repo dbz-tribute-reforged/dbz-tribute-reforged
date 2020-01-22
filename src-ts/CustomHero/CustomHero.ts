@@ -5,7 +5,7 @@ import { CustomAbility } from "CustomAbility/CustomAbility";
 import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityComponentHelper";
 import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
-import { AbilityNames } from "Common/AbilityNames";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -33,7 +33,7 @@ export class CustomHero {
     // relevant heroes
     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
-    this.addAbilityFromAll("Max Power");
+    this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {
@@ -84,6 +84,14 @@ export class CustomHero {
 
   public getAbilityByIndex(index: number): CustomAbility | undefined {
     return this.abilities.getCustomAbilityByIndex(index);
+  }
+
+  public getNumAbilities(): number {
+    return this.abilities.size();
+  }
+
+  public hasAbility(name: string): boolean {
+    return this.abilities.hasAbility(name);
   }
 
   public addAbility(name: string, ability: CustomAbility): this {

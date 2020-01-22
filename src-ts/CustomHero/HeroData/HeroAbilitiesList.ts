@@ -1,4 +1,4 @@
-import { AbilityNames } from "Common/AbilityNames";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export const HeroAbilitiesList: Map<number, string[]> = new Map(
   [

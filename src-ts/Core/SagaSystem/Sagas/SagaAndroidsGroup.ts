@@ -15,7 +15,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 30;
+    this.delay = 30;
     this.stats = 100;
     this.isRunningAway = false;
   }
@@ -44,7 +44,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     }
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -55,7 +55,6 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
       SagaHelper.checkUnitHp(this.android20, 0.8, true, false, true)
     ) {
       this.isRunningAway = true;
-      this.useCustomAggroClosest = false;
       SagaHelper.showMessagesChanceOfJoke(
         [
           "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!"
@@ -83,10 +82,10 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -105,7 +104,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 15;
+    this.delay = 15;
     this.stats = 100;
   }
 
@@ -159,7 +158,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
     }
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -183,10 +182,10 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -209,7 +208,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 60;
+    this.delay = 60;
     this.stats = 100;
   }
 
@@ -238,7 +237,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
     }
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -310,10 +309,10 @@ export class Super13Saga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });
@@ -330,7 +329,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.sagaDelay = 80;
+    this.delay = 80;
   }
 
   spawnSagaUnits(): void {
@@ -344,7 +343,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
     }
 
     this.ping();
-    this.addActionRewardStats(this);
+    this.setupBossDeathActions(this);
   }
 
   update(t: number): void {
@@ -368,10 +367,10 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
   }
 
   spawnWhenDelayFinished(): void {
-    if (this.sagaDelay <= 0) {
+    if (this.delay <= 0) {
       this.spawnSagaUnits();
     } else {
-      TimerStart(this.sagaDelayTimer, this.sagaDelay, false, ()=> {
+      TimerStart(this.delayTimer, this.delay, false, ()=> {
         this.spawnSagaUnits();
         DestroyTimer(GetExpiredTimer());
       });

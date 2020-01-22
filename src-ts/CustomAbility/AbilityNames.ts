@@ -176,4 +176,9 @@ export module AbilityNames {
     export const GIGANTIC_ROAR: string = Broly.GIGANTIC_ROAR;
     export const ENERGY_BLAST_VOLLEY: string = Vegeta.ENERGY_BLAST_VOLLEY;
   }
+
+  export module Saga {
+    export const GENERIC_BEAM: string = "Take this!";
+    export const GENERIC_BOMB: string = "Begone!";
+  }
 }
