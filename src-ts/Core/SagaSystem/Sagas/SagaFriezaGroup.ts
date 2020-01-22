@@ -5,6 +5,7 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 import { Constants } from "Common/Constants";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export class NamekSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Namek Saga: Zarbon and Dodoria';

@@ -29,10 +29,6 @@ export class BebiSaga extends AdvancedSaga implements Saga {
 
     SagaHelper.sagaHideUnit(this.bebiGooz);
 
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2500);
-    }
-
     this.ping();
     this.setupBossDeathActions(this);
   }

@@ -84,7 +84,7 @@ export class WhisTrainingSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Whis"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2500);
+      SetUnitAcquireRange(boss, 3000);
     }
 
     this.ping();

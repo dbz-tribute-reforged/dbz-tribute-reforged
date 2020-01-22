@@ -5,9 +5,12 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 import { Constants } from "Common/Constants";
+import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export class RaditzSaga extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Saiyan Saga I: Raditz';
+
+  protected raditz: unit | undefined;
 
   constructor() {
     super();
@@ -35,6 +38,8 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
     for (const [name, boss] of this.bosses) {
       SetUnitAcquireRange(boss, 4000);
     }
+    
+    this.raditz = this.bosses.get("Raditz");
     
     this.ping()
     this.setupBossDeathActions(this);
@@ -125,7 +130,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2500);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.vegeta = this.bosses.get("Vegeta");

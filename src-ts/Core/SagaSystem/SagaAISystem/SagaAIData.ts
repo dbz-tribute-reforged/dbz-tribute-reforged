@@ -18,13 +18,13 @@ export module SagaAIData {
 
   export const defaultActionInterval: number = 25;
   export const defaultAggroInterval: number = 10;
-  export const defaultConsecutiveAttacksAllowed: number = 12;
-  export const defaultBeamsToDodge: number = 3;
+  export const defaultConsecutiveAttacksAllowed: number = 16;
+  export const defaultBeamsToDodge: number = 4;
   export const defaultDodgeAOE: number = 1600;
   export const defaultDodgeDistance: number = 400;
   export const defaultConsecutiveDodgesAllowed: number = 12;
-  export const defaultWeakBeamCooldown: number = 60;
-  export const defaultStrongBeamCooldown: number = 180;
+  export const defaultWeakBeamCooldown: number = 48;
+  export const defaultStrongBeamCooldown: number = 144;
   export const defaultWeakBeamCastTime: number = 0.5;
   export const defaultStrongBeamCastTime: number = 1.0;
   export const defaultBeamRange: number = 1500;

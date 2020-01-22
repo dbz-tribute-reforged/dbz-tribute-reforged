@@ -724,6 +724,9 @@ export function CustomPlayerTest() {
 
     BJDebugMsg("Special Single Player Commands -lvl -mega -cd");
 
+    BJDebugMsg("Final Battle Disabled");
+    TournamentManager.getInstance().removeTournament(Constants.finalBattleName);
+
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
     TriggerAddAction(megaLvl, () => {

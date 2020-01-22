@@ -20,10 +20,6 @@ export class OtherWorldTournamentSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Olibu", "Pikkon"], true);
 
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2000);
-    }
-
     this.ping();
     this.setupBossDeathActions(this);
   }

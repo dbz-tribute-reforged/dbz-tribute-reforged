@@ -140,10 +140,6 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Perfect Cell Games", "Super Perfect Cell"], true);
 
-    for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 2500);
-    }
-
     this.perfectCell = this.bosses.get("Perfect Cell Games");
     this.superPerfectCell = this.bosses.get("Super Perfect Cell");
 

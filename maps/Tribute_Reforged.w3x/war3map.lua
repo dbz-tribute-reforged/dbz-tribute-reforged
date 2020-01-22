@@ -7914,7 +7914,6 @@ function Trig_Transformations_Exit_Point_Func001A()
     TriggerExecute(gg_trg_Remove_Unit_From_StatMult)
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Remove_Unit_From_HeroRespawn)
-    KillUnit(GetEnumUnit())
     RemoveUnit(GetEnumUnit())
 end
 
@@ -13516,7 +13515,7 @@ function Trig_Saga_Unit_Loop_Func002A()
             end
             udg_TempInt = udg_TempInt + 1
         end
-        udg_TempReal4 = (((1.20 + (0.20 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.02)) * 1)
+        udg_TempReal4 = (((1.05 + (0.30 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.02)) * 1)
         udg_TempReal = ((udg_TempReal4 * 0.33) * (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))
         ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))

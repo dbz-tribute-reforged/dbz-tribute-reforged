@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.27k
+DBZ Tribute Reforged 0.28
 }
 
 STRING 4
@@ -27,6 +27,8 @@ STRING 4
 
 STRING 5
 {
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 17 unique heroes, beam clashes, advanced Saga AI and a custom UI that offers 3 more hotkeys.
+
 discord.gg/vayXJSZ
 }
 
@@ -59520,7 +59522,10 @@ STRING 9815
 -catchup (gives bonus stats to people who are behind)
 
 All players commands:
--cam/-ang for camera controls|r
+-cam/-ang (camera controls)
+-customui (activates custom ui for you)
+
+Also make sure to check out|r |cffffcc00DBZ Tribute |r|cffff1010Elite|r|cffffcc00 2.5.4+|r
 }
 
 STRING 9816
@@ -67888,12 +67893,12 @@ STRING 11184
 
 STRING 11185
 {
-|cff40ff40[Only red can see this] Automatic Catchup Stats Activated (20mins)!|r
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (20mins)!|r
 }
 
 STRING 11186
 {
-|cff40ff40[Only red can see this] Automatic Catchup Stats Activated (10mins)!|r
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (10mins)!|r
 }
 
 STRING 11187

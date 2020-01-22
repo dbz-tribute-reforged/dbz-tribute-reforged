@@ -158,7 +158,7 @@ export module AbilityNames {
 
   export module Saibaman {
     export const BOMB: string = "Saibaman Bomb";
-    export const ACID: string = "Saibaman Acid";
+    export const ACID: string = "Acid Spit";
   }
 
   export module Moro {

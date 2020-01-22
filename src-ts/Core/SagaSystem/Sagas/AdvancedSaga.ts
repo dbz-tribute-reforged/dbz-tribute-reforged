@@ -83,14 +83,8 @@ export class AdvancedSaga {
         sagaUnit, 
         EVENT_UNIT_DEATH,
       )
-      this.bossesAI.set(
-        sagaUnit,
-        new SagaHeroAI(
-          sagaUnit
-        )
-      )
-      if (GetUnitAcquireRange(sagaUnit) < 2000) {
-        SetUnitAcquireRange(sagaUnit, 2000);
+      if (GetUnitAcquireRange(sagaUnit) < Constants.sagaMinAcquisitionRange) {
+        SetUnitAcquireRange(sagaUnit, Constants.sagaMinAcquisitionRange);
       }
     }
   }
