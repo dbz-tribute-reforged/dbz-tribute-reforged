@@ -5,6 +5,8 @@ import { Constants } from "Common/Constants";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 import { UnitHelper } from "Common/UnitHelper";
+import { Vector2D } from "Common/Vector2D";
+import { CoordMath } from "Common/CoordMath";
 
 export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   name: string = '[DBZ] Androids Saga I: 19/20';
@@ -60,8 +62,27 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
           "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!"
         ],
       );
-      IssuePointOrder(this.android20, "move", 14000, 7500);
+      const sagaAI = this.bossesAI.get(this.android20);
+      if (sagaAI) {
+        sagaAI.isEnabled = false;
+      }
+      const targetCoord = new Vector2D(14000, 7500);
+      IssuePointOrder(this.android20, "move", targetCoord.x, targetCoord.y);
       SetUnitMoveSpeed(this.android20, 500);
+
+      TimerStart(CreateTimer(), 5, true, () => {
+        if (this.android20) {
+          const sagaCoord = new Vector2D(GetUnitX(this.android20), GetUnitY(this.android20));
+          const distance = CoordMath.distance(sagaCoord, targetCoord);
+
+          if (distance < 500 || UnitHelper.isUnitDead(this.android20)) {
+            if (sagaAI) {
+              sagaAI.isEnabled = true;
+            }
+            DestroyTimer(GetExpiredTimer());
+          }
+        }
+      })
     }
   }
 
@@ -154,7 +175,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 3000);
     }
 
     this.ping();

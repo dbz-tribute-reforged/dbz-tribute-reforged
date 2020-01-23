@@ -139,11 +139,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [AbilityNames.Android17DBS.POWER_BLITZ],
       [AbilityNames.Android17DBS.ANDROID_BARRIER]
     )],
-    ["Android 17", new SagaUnit(FourCC("H05C"), 37, 3500, 350, 3000, new Vector2D(14000, 7500),
+    ["Android 17", new SagaUnit(FourCC("H05C"), 37, 3500, 350, 3000, new Vector2D(14200, 7500),
       [AbilityNames.Android17DBS.POWER_BLITZ],
       [AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE, AbilityNames.Android17DBS.ANDROID_BARRIER]
     )],
-    ["Android 18", new SagaUnit(FourCC("H05D"), 37, 3000, 350, 3500, new Vector2D(14000, 7500),
+    ["Android 18", new SagaUnit(FourCC("H05D"), 37, 3000, 350, 3500, new Vector2D(14400, 7500),
       [AbilityNames.Android17DBS.POWER_BLITZ],
       [AbilityNames.Android17DBS.ANDROID_BARRIER]
     )],

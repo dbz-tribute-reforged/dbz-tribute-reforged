@@ -8,16 +8,16 @@ export module SagaAIData {
   // action is a state of being
   export enum Action {
     ATTACK,
+    BEAM,
     DODGE,
     REAGGRO,
-    BEAM,
-    DODGE_OR_ATTACK,
-    BEAM_OR_ATTACK,
   }
 
   export const ORDER_DODGE: string = "smart";
   export const ORDER_ATTACK: string = "smart";
   export const ORDER_STOP: string = "stop";
+  export const ORDER_MOVE: string = "smart";
+
 
   export const defaultActionInterval: number = 25;
   export const defaultAggroInterval: number = 10;
@@ -27,8 +27,8 @@ export module SagaAIData {
   export const defaultDodgeDistance: number = 400;
   export const defaultConsecutiveDodgesAllowed: number = 10;
   export const defaultConsecutiveBeamsAllowed: number = 1;
-  export const defaultWeakBeamCooldown: number = 48;
-  export const defaultStrongBeamCooldown: number = 144;
+  export const defaultWeakBeamCooldown: number = 12 * 4;
+  export const defaultStrongBeamCooldown: number = 36 * 4;
   export const defaultWeakBeamCastTime: number = 0.5;
   export const defaultStrongBeamCastTime: number = 1.0;
   export const defaultBeamRange: number = 1500;
