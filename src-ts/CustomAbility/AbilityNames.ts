@@ -180,5 +180,6 @@ export module AbilityNames {
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Begone!";
+    // export const POWER_BLITZ_BARRAGE: string = "Hell's Storm!!";
   }
 }

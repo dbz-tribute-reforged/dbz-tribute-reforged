@@ -138,7 +138,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.update(t);
     for (const mc of this.metalCoolers) {
       if (UnitHelper.isUnitAlive(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.03);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.01);
       } else if (this.revives > 0) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(

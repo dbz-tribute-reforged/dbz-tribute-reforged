@@ -45,7 +45,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // slug
     ["Lord Slug", new SagaUnit(FourCC("O00L"), 30, 600, 300, 500, new Vector2D(8700, -5400),
       [AbilityNames.Piccolo.SLAPPY_HAND], 
-      [AbilityNames.Cooler.NOVA_CHARIOT]
+      [AbilityNames.Saga.GENERIC_BOMB]
     )],
 
     // namek saga
@@ -65,7 +65,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // ginyu force
     ["Guldo", new SagaUnit(FourCC("U00Y"), 12, 200, 200, 650, new Vector2D(8800, 1400))],
     ["Recoome", new SagaUnit(FourCC("U005"), 22, 900, 200, 300, new Vector2D(8800, 1400),
-      [AbilityNames.Saga.GENERIC_BEAM],
+      [AbilityNames.Broly.GIGANTIC_ROAR],
       [AbilityNames.Nappa.BREAK_CANNON]
     )],
     ["Burter", new SagaUnit(FourCC("U00Z"), 16, 400, 650, 350, new Vector2D(8800, 1400))],

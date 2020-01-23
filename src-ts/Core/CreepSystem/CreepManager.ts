@@ -94,7 +94,7 @@ export class CreepManager {
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
     }
-    SetPlayerColorBJ(Constants.sagaPlayer, PLAYER_COLOR_COAL, false);
+    SetPlayerColorBJ(Constants.sagaPlayer, PLAYER_COLOR_MAROON, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       let player = Player(i);
