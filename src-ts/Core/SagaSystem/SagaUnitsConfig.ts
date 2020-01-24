@@ -459,13 +459,13 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // wrath of the dragon
     ["Hirudegarn Lower", new SagaUnit(FourCC("U009"), 40, 4000, 400, 4000, new Vector2D(-6700, -6700))],
     ["Hirudegarn Upper", new SagaUnit(FourCC("U00A"), 40, 4000, 400, 4000, new Vector2D(17333, -7358))],
-    ["Hirudegarn", new SagaUnit(FourCC("U00B"), 100, 12000, 400, 12000, new Vector2D(-6700, -6700),
+    ["Hirudegarn", new SagaUnit(FourCC("U00B"), 90, 12000, 400, 12000, new Vector2D(-6700, -6700),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
-    ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 140, 17000, 400, 15000, new Vector2D(-6700, -6700),
+    ["Mature Hirudegarn", new SagaUnit(FourCC("U00C"), 150, 17000, 400, 15000, new Vector2D(-6700, -6700),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
@@ -479,7 +479,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // bebi saga
     // general rilldo
-    ["Super Bebi", new SagaUnit(FourCC("U004"), 100, 18000, 400, 16000, new Vector2D(-6000, -5500),
+    ["Super Bebi", new SagaUnit(FourCC("U004"), 90, 18000, 400, 16000, new Vector2D(-6000, -5500),
       [
         SagaAbilities.Vegeta.GALICK_GUN,
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
@@ -520,6 +520,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Nuova Shenron", new SagaUnit(FourCC("U00U"), 100, 17000, 400, 17000, new Vector2D(18500, -6700),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.NuovaShenron.BURNING_ATTACK,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
@@ -533,12 +534,15 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 120, 21000, 400, 21000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
     ["Omega Shenron", new SagaUnit(FourCC("U00R"), 170, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Nappa.BREAK_CANNON,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],

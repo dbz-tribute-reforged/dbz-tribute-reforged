@@ -101,10 +101,10 @@ export class SagaHeroAI {
         10, 
         Math.max(
           Math.floor(
-            GetHeroLevel(this.sagaUnit) * 0.2
+            GetHeroLevel(this.sagaUnit) * 0.15
           ),
           Math.floor(
-            GetHeroInt(this.sagaUnit, true) * 0.002
+            GetHeroInt(this.sagaUnit, true) * 0.0015
           )
         )
       ),

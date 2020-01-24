@@ -189,5 +189,11 @@ export module SagaAbilities {
       AbilityNames.Goku.GOD_KAMEHAMEHA, 17, 10, SHORT_CAST_TIME
     );
   }
+
+  export module NuovaShenron {
+    export const BURNING_ATTACK = new SagaAbility(
+      AbilityNames.FutureTrunks.BURNING_ATTACK, 20, 5, MEDIUM_CAST_TIME
+    );
+  }
   
 }
