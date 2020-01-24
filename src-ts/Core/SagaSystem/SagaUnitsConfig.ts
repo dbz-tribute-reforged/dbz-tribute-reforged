@@ -317,7 +317,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Android 18", new SagaUnit(FourCC("H05D"), 50, 2000, 350, 2700, new Vector2D(17500, -6800),
       [
         SagaAbilities.Android17DBS.POWER_BLITZ,
-        SagaAbilities.Android17DBS.ANDROID_BARRIER,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Android17DBS.SUPER_ELECTRIC_STRIKE,
       ],
     )],
@@ -549,7 +549,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Beerus", new SagaUnit(FourCC("U01F"), 200, 20000, 400, 20000, new Vector2D(5000, 3300),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
       ],
     )],
     // possibly spawn in pilaf
@@ -559,7 +559,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(5000, 3300),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Cooler.NOVA_CHARIOT
       ],
     )],
 

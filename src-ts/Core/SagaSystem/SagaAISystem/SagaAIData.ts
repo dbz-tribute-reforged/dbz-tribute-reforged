@@ -35,5 +35,5 @@ export module SagaAIData {
   export const defaultBeamRange: number = 1500;
   export const defaultAggressiveZanzoThreshold: number = 20;
   export const defaultMaxTimeSinceLastDodge: number = 8 * 2;
-  export const defaultGuardLifePercentThreshold: number = 5;
+  export const defaultGuardLifePercentThreshold: number = 3;
 }

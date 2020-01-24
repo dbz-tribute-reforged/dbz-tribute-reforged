@@ -458,9 +458,10 @@ export class SagaHeroAI {
     });
     DestroyGroup(nearbyBeams);
 
+    const currentLife = GetUnitLifePercent(this.sagaUnit);
     if (
       beamsTooClose > beamsAccountedFor && 
-      this.previousLifePercent - GetUnitLifePercent(this.sagaUnit) > this.guardLifePercentThreshold
+      this.previousLifePercent - currentLife > this.guardLifePercentThreshold
     ) {
       this.useCustomAbility(AbilityNames.BasicAbility.GUARD);
     }
@@ -480,7 +481,10 @@ export class SagaHeroAI {
       for (let offset = 0; offset < 1000; offset += 60) {
         if (PathingCheck.isGroundWalkable(dodgeCoord)) {
           IssuePointOrder(this.sagaUnit, SagaAIData.Order.DODGE, dodgeCoord.x, dodgeCoord.y);
-          if (GetUnitLifePercent(this.sagaUnit) <= this.aggressiveZanzoThreshold)  {
+          if (
+            currentLife <= this.aggressiveZanzoThreshold && 
+            this.previousLifePercent - currentLife > this.guardLifePercentThreshold
+          ) {
             this.abilityTarget.x = dodgeCoord.x;
             this.abilityTarget.y = dodgeCoord.y;
             this.useCustomAbility(
