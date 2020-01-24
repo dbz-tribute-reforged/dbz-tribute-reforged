@@ -1099,7 +1099,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Androids13.ENERGY_BEAM, // androids 13 14 15 beam
+    name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1125,7 +1125,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Androids13.SS_DEADLY_HAMMER,
+    name: AbilityNames.Android13.SS_DEADLY_HAMMER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1141,9 +1141,9 @@ export const AbilitiesList = [
       disabled: "BTN13Hammer.blp",
     },
     tooltip: {
-      title: AbilityNames.Androids13.SS_DEADLY_HAMMER,
+      title: AbilityNames.Android13.SS_DEADLY_HAMMER,
       body: 
-        AbilityNames.Androids13.SS_DEADLY_HAMMER
+        AbilityNames.Android13.SS_DEADLY_HAMMER
     },
     components: [
       { name: "dash ground point ss deadly hammer" },
@@ -1287,7 +1287,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Androids13.SS_DEADLY_BOMBER,
+    name: AbilityNames.Android13.SS_DEADLY_BOMBER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1303,9 +1303,9 @@ export const AbilitiesList = [
       disabled: "BTN13SSDB.blp",
     },
     tooltip: {
-      title: AbilityNames.Androids13.SS_DEADLY_BOMBER,
+      title: AbilityNames.Android13.SS_DEADLY_BOMBER,
       body: 
-        AbilityNames.Androids13.SS_DEADLY_BOMBER
+        AbilityNames.Android13.SS_DEADLY_BOMBER
     },
     components: [
       { name: "beam ss deadly bomber" },
@@ -1313,7 +1313,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Androids13.NUKE,
+    name: AbilityNames.Android13.NUKE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1329,9 +1329,9 @@ export const AbilitiesList = [
       disabled: "BTN13Nuke.blp",
     },
     tooltip: {
-      title: AbilityNames.Androids13.NUKE,
+      title: AbilityNames.Android13.NUKE,
       body: 
-        AbilityNames.Androids13.NUKE
+        AbilityNames.Android13.NUKE
     },
     components: [
       { name: "beam nuke" },
@@ -1366,7 +1366,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Androids13.OVERCHARGE,
+    name: AbilityNames.Android13.OVERCHARGE,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -1382,9 +1382,9 @@ export const AbilitiesList = [
       disabled: "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
     },
     tooltip: {
-      title: AbilityNames.Androids13.OVERCHARGE,
+      title: AbilityNames.Android13.OVERCHARGE,
       body: 
-        AbilityNames.Androids13.OVERCHARGE
+        AbilityNames.Android13.OVERCHARGE
     },
     components: [
       { name: "spell amp overcharge" },
@@ -2416,6 +2416,60 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam vanishing ball" },
+    ],
+  },
+  // saga zanzo
+  {
+    name: AbilityNames.Saga.ZANZO_DASH,
+    currentCd: 0,
+    maxCd: 19,
+    costType: "MP",
+    costAmount: 25,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "walk",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+      disabled: "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBlink.blp",
+    },
+    tooltip: {
+      title: "(Z) Zanzo Dash",
+      body: 
+        "Dashes towards your next right click." + 
+        "|nCost: 25 MP |nCD: 19",
+    },
+    components: [
+      { name: "dash ground target zanzo saga" },
+      { name: "sfx zanzo dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN17PowerBlitzBarrage.blp",
+      disabled: "BTN17PowerBlitzBarrage.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM,
+      body: 
+        AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM
+    },
+    components: [
+      { name: "multi power blitz barrage saga" },
     ],
   },
   // -------------------------------------------

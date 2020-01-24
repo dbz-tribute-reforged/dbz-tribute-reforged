@@ -3,29 +3,37 @@ export module SagaAIData {
   export const UNLIMITED_BEAM_DODGES: number = -1;
   export const NO_DODGE_ANGLE: number = -9999;
   export const PERFORMED_DODGE: number = 1;
-  export const PERFORMED_NO_DODGE: number = 0;
+  export const PERFORMED_NO_DODGE: number = 1;
 
-  export enum Intent {
+  // action is a state of being
+  export enum Action {
     ATTACK,
-    // DODGE,
+    BEAM,
+    DODGE,
+    WAIT,
     REAGGRO,
-    DODGE_OR_ATTACK,
-    BEAM_OR_ATTACK,
   }
 
-  export const DODGE_ORDER: string = "smart";
-  export const ATTACK_ORDER: string = "smart";
+  export enum Order {
+    DODGE = "smart",
+    ATTACK = "smart",
+    WAIT = "holdposition",
+    MOVE = "smart",
+  };
 
+  export const DELAY_TO_INTERVALS = 4;
+
+  export const defaultSpellPowerModifier: number = -0.15;
   export const defaultActionInterval: number = 25;
   export const defaultAggroInterval: number = 10;
-  export const defaultConsecutiveAttacksAllowed: number = 16;
+  export const defaultConsecutiveAttacksAllowed: number = 10;
   export const defaultBeamsToDodge: number = 4;
   export const defaultDodgeAOE: number = 1600;
   export const defaultDodgeDistance: number = 400;
-  export const defaultConsecutiveDodgesAllowed: number = 12;
-  export const defaultWeakBeamCooldown: number = 48;
-  export const defaultStrongBeamCooldown: number = 144;
-  export const defaultWeakBeamCastTime: number = 0.5;
-  export const defaultStrongBeamCastTime: number = 1.0;
+  export const defaultConsecutiveDodgesAllowed: number = 8;
+  export const defaultConsecutiveBeamsAllowed: number = 1;
   export const defaultBeamRange: number = 1500;
+  export const defaultAggressiveZanzoThreshold: number = 20;
+  export const defaultMaxTimeSinceLastDodge: number = 8 * 2;
+  export const defaultGuardLifePercentThreshold: number = 3;
 }

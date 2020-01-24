@@ -119,6 +119,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     );
 
     this.addHeroListToSaga(["Metal Cooler 1", "Metal Cooler 2", "Metal Cooler 3"], true);
+
     const mc1 = this.bosses.get("Metal Cooler 1");
     const mc2 = this.bosses.get("Metal Cooler 2");
     const mc3 = this.bosses.get("Metal Cooler 3");
@@ -138,7 +139,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.update(t);
     for (const mc of this.metalCoolers) {
       if (UnitHelper.isUnitAlive(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.03);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
       } else if (this.revives > 0) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(

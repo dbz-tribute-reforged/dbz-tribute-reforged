@@ -56,9 +56,7 @@ export class CreepManager {
     // init creep players who will have creeps distributed to
     for (let i = Constants.maxActivePlayers; i < Constants.maxPlayers; ++i) {
       let player = Player(i);
-      if (i != Constants.heavenHellCreepPlayerId) {
-        this.creepPlayers.push(player);
-      }
+      this.creepPlayers.push(player);
       // gui does it for us
       // CreateFogModifierRectBJ(true, player, FOG_OF_WAR_VISIBLE, GetPlayableMapRect());
       if (i == Constants.heavenHellCreepPlayerId) {
@@ -94,7 +92,7 @@ export class CreepManager {
       SetPlayerAllianceStateVisionBJ(Constants.heavenHellCreepPlayer, player, false);
       SetPlayerAllianceStateVisionBJ(player, Constants.heavenHellCreepPlayer, false);
     }
-    SetPlayerColorBJ(Constants.sagaPlayer, PLAYER_COLOR_COAL, false);
+    SetPlayerColorBJ(Constants.sagaPlayer, PLAYER_COLOR_MAROON, false);
 
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       let player = Player(i);

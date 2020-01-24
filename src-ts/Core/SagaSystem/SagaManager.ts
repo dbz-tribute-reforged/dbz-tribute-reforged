@@ -9,8 +9,7 @@ export class SagaManager extends Entity {
 
   private static instance: SagaManager;
 
-  // constants
-  protected maxNumberConcurrentSagas: number = 6;
+  public maxNumberConcurrentSagas: number = 6;
 
   config: SagaSystemConfig;
   sagas: Saga[] = [];
@@ -47,6 +46,28 @@ export class SagaManager extends Entity {
         }
       }
     });
+    this.calculateMaxNumberOfConcurrentSagas();
+    const updateMaxNumberOfConcurrentSagas = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerEventLeave(updateMaxNumberOfConcurrentSagas, Player(i));
+    }
+    TriggerAddAction(updateMaxNumberOfConcurrentSagas, () => {
+      this.calculateMaxNumberOfConcurrentSagas();
+    })
+  }
+
+  protected calculateMaxNumberOfConcurrentSagas() {
+    let numActivePlayers = 0;
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      const player = Player(i);
+      if (
+        IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING) && 
+        GetPlayerController(player) == MAP_CONTROL_USER
+      ) {
+        ++numActivePlayers;
+      }
+    }
+    this.maxNumberConcurrentSagas = 3 + Math.floor(numActivePlayers / 2);
   }
 
   public step(t: number): void {

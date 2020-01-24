@@ -19,7 +19,10 @@ export module UnitHelper {
   }
 
   export function isUnitAlive(unit: unit): boolean {
-    return !UnitHelper.isUnitDead(unit);
+    return (
+      GetUnitTypeId(unit) != 0 &&
+      !IsUnitType(unit, UNIT_TYPE_DEAD)
+    )
   }
 
   // remember to destroy returned group after you finish using it

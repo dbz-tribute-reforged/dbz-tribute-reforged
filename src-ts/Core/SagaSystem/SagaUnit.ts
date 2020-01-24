@@ -1,4 +1,5 @@
 import { Vector2D } from "Common/Vector2D";
+import { SagaAbility } from "./SagaAbility";
 
 export class SagaUnit {
   constructor (
@@ -8,8 +9,7 @@ export class SagaUnit {
     public agi: number,
     public int: number,
     public spawnPos: Vector2D,
-    public weakBeams: string[] = [],
-    public strongBeams: string[] = [],
+    public abilities: SagaAbility[] = [],
   ) {
 
   }

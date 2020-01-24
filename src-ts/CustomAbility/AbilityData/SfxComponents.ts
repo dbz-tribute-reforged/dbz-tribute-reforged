@@ -663,7 +663,7 @@ export const SfxComponents = [
         model: "Des.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 3,
+        scale: 3.5,
         startHeight: 150,
         endHeight: 150,
         extraDirectionalYaw: 0,

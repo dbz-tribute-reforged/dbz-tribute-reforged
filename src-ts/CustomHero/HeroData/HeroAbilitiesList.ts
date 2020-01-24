@@ -74,13 +74,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08Z"), [AbilityNames.Android17DBS.POWER_BLITZ, AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE, AbilityNames.Android17DBS.BARRIER_PRISON, AbilityNames.Android17DBS.BARRIER_WALL, AbilityNames.Android17DBS.ANDROID_BARRIER, AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE]],
 
     // androids 13 14 15
-    [FourCC("H01V"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
-    [FourCC("H01S"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
-    [FourCC("H01T"), [AbilityNames.Androids13.ENERGY_BEAM, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
+    [FourCC("H01V"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
+    [FourCC("H01S"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
+    [FourCC("H01T"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
     // super 13
-    [FourCC("H01U"), [AbilityNames.Androids13.SS_DEADLY_HAMMER, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
+    [FourCC("H01U"), [AbilityNames.Android13.SS_DEADLY_HAMMER, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
     // ultra 13
-    [FourCC("H01W"), [AbilityNames.Androids13.SS_DEADLY_HAMMER, AbilityNames.Androids13.SS_DEADLY_BOMBER, AbilityNames.Androids13.NUKE, AbilityNames.Androids13.ANDROID_BARRIER, AbilityNames.Androids13.OVERCHARGE]],
+    [FourCC("H01W"), [AbilityNames.Android13.SS_DEADLY_HAMMER, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
 
     // babidi
     [FourCC("O001"), [AbilityNames.Babidi.SUMMON_PUI_PUI, AbilityNames.Babidi.SUMMON_YAKON, AbilityNames.Babidi.SUMMON_DABURA, AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.BABIDI_BARRIER, "Babidi Magic"]],
@@ -96,7 +96,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
       AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
       AbilityNames.Android17DBS.POWER_BLITZ,
-      AbilityNames.Androids13.SS_DEADLY_HAMMER,
+      AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
       AbilityNames.Frieza.DEATH_BEAM,

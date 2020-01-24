@@ -49,6 +49,8 @@ export class AdvancedSaga {
     // Logger.LogDebug(this.name + " Completed");
     this.state = SagaState.Completed;
     PlaySoundBJ(this.completeSound);
+    this.bosses.clear();
+    this.bossesAI.clear();
   }
 
   update(t: number): void {

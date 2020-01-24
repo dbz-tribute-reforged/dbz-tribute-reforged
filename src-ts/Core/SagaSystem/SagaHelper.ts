@@ -1,11 +1,12 @@
 import { Players } from "Libs/TreeLib/Structs/Players";
 import { Saga } from "./Sagas/BaseSaga";
 import { AdvancedSaga } from "./Sagas/AdvancedSaga";
-import { sagaUnitsConfig } from "./Sagas/SagaUnitsConfig";
+import { sagaUnitsConfig } from "./SagaUnitsConfig";
 import { Constants } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { SagaHeroAI } from "./SagaAISystem/SagaHeroAI";
 import { AbilityNames } from "CustomAbility/AbilityNames";
+import { SagaAbility } from "./SagaAbility";
 
 export module SagaHelper {
   export function areAllBossesDead(bosses: Map<string, unit>): boolean {
@@ -47,6 +48,7 @@ export module SagaHelper {
       if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
         UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
       }
+      /*
       saga.bossesAI.set(
         sagaUnit,
         new SagaHeroAI(
@@ -57,15 +59,15 @@ export module SagaHelper {
           sagaUnitConfig.strongBeams
         )
       )
-      const sagaAI = saga.bossesAI.get(sagaUnit);
-      if (sagaAI) {
-        if (sagaAI.getNumWeakBeams() == 0) {
-          sagaAI.addWeakBeams([AbilityNames.Saga.GENERIC_BEAM]);
-        }
-        if (sagaAI.getNumStrongBeams() == 0) {
-          sagaAI.addStrongBeams([AbilityNames.Saga.GENERIC_BOMB]);
-        }
-      }
+      */
+      saga.bossesAI.set(
+        sagaUnit,
+        new SagaHeroAI(
+          sagaUnit
+        ).addAbilities(
+          sagaUnitConfig.abilities
+        )
+      );
     }
   }
 
