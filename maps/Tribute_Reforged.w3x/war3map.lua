@@ -13457,7 +13457,27 @@ function Trig_Saga_Unit_Loop_Func001C()
     return true
 end
 
+function Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func003Func004C()
+    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
+        return true
+    end
+    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01S")) then
+        return true
+    end
+    if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01T")) then
+        return true
+    end
+    return false
+end
+
 function Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func003C()
+    if (not Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func003Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func004C()
     if (not ((udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt)) > (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))) then
         return false
     end
@@ -13468,6 +13488,12 @@ function Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
     if (Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func003C()) then
+        udg_StatMultStr = (udg_StatMultStr * 3.00)
+        udg_StatMultAgi = (udg_StatMultAgi * 3.00)
+        udg_StatMultInt = (udg_StatMultInt * 3.00)
+    else
+    end
+    if (Trig_Saga_Unit_Loop_Func002Func002Func009Func002Func004Func004C()) then
         udg_TempReal = udg_StatMultStr
         udg_TempReal2 = udg_StatMultAgi
         udg_TempReal3 = udg_StatMultInt
@@ -13480,6 +13506,30 @@ function Trig_Saga_Unit_Loop_Func002Func002Func009Func002C()
         return false
     end
     if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saga_Unit_Loop_Func002Func002Func010C()
+    if (not (GetHeroLevel(udg_TempUnit) >= 10)) then
+        return false
+    end
+    if (not (udg_TempReal < 100.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saga_Unit_Loop_Func002Func002Func013Func002C()
+    if (not (GetHeroLevel(udg_TempUnit) >= 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saga_Unit_Loop_Func002Func002Func013C()
+    if (not (GetHeroLevel(udg_TempUnit) >= 50)) then
         return false
     end
     return true
@@ -13515,7 +13565,21 @@ function Trig_Saga_Unit_Loop_Func002A()
             end
             udg_TempInt = udg_TempInt + 1
         end
-        udg_TempReal4 = (((1.05 + (0.30 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.02)) * 1)
+        if (Trig_Saga_Unit_Loop_Func002Func002Func010C()) then
+            udg_TempReal = 120.00
+            udg_TempReal2 = 120.00
+            udg_TempReal3 = 120.00
+        else
+        end
+        udg_TempReal4 = (((0.80 + (0.10 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
+        if (Trig_Saga_Unit_Loop_Func002Func002Func013C()) then
+            udg_TempReal4 = (udg_TempReal4 + 0.40)
+            if (Trig_Saga_Unit_Loop_Func002Func002Func013Func002C()) then
+                udg_TempReal4 = (udg_TempReal4 + 0.40)
+            else
+            end
+        else
+        end
         udg_TempReal = ((udg_TempReal4 * 0.33) * (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))
         ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))

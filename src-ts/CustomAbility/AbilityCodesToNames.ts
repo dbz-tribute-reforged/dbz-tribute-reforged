@@ -89,15 +89,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A01D'), AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK],
 
     // androids 13 14 15
-    [FourCC('A00N'), AbilityNames.Androids13.ENERGY_BEAM],
+    [FourCC('A00N'), AbilityNames.Android13.ENERGY_BEAM],
     // change later distortion field -> android barrier
-    [FourCC('A0LC'), AbilityNames.Androids13.SS_DEADLY_HAMMER],
+    [FourCC('A0LC'), AbilityNames.Android13.SS_DEADLY_HAMMER],
     // new
-    [FourCC('A0LD'), AbilityNames.Androids13.SS_DEADLY_BOMBER],
+    [FourCC('A0LD'), AbilityNames.Android13.SS_DEADLY_BOMBER],
     // old
-    [FourCC('A041'), AbilityNames.Androids13.SS_DEADLY_BOMBER],
-    [FourCC('A01Y'), AbilityNames.Androids13.NUKE],
-    [FourCC('A0K2'), AbilityNames.Androids13.OVERCHARGE],
+    [FourCC('A041'), AbilityNames.Android13.SS_DEADLY_BOMBER],
+    [FourCC('A01Y'), AbilityNames.Android13.NUKE],
+    [FourCC('A0K2'), AbilityNames.Android13.OVERCHARGE],
 
 
 

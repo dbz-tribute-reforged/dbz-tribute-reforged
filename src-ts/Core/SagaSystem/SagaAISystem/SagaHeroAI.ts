@@ -8,7 +8,7 @@ import { CoordMath } from "Common/CoordMath";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { PathingCheck } from "Common/PathingCheck";
-import { SagaAbility } from "./SagaAbility";
+import { SagaAbility } from "../SagaAbility";
 
 
 // TODO:
@@ -31,35 +31,37 @@ export class SagaHeroAI {
   protected numAttacks: number;
   protected numDodges: number;
   protected numBeams: number;
+  protected numWaits: number;
+
+  protected timeSinceLastDodge: number;
+  protected previousLifePercent: number;
+
+  protected maxWait: number;
 
   protected abilities: Map<string, SagaAbility>;
+  protected maxAbilityChance: number;
 
-  // refactor strong and weak beam into just a singular class
-  // with timer delay etc
-  protected weakBeams: string[];
-  protected strongBeams: string[];
-  protected weakBeamDelay: number;
-  protected strongBeamDelay: number;
-  protected weakBeamTimer: timer;
-  protected strongBeamTimer: timer;
-  protected usingWeakBeamTimer: boolean;
-  protected usingStrongBeamTimer: boolean;
+  protected abilityInput: CustomAbilityInput;
+  protected abilityTarget: Vector2D;
 
   constructor (
     public readonly sagaUnit: unit,
     public isEnabled: boolean = true,
+    public spellPowerModifier: number = SagaAIData.defaultSpellPowerModifier,
     public actionInterval: number = SagaAIData.defaultActionInterval,
     public consecutiveAttacksAllowed: number = SagaAIData.defaultConsecutiveAttacksAllowed,
-    public maxBeamsToDodge: number = SagaAIData.defaultBeamsToDodge,
     public consecutiveDodgesAllowed: number = SagaAIData.defaultConsecutiveDodgesAllowed,
     public consecutiveBeamsAllowed: number = SagaAIData.defaultConsecutiveBeamsAllowed,
-    public weakBeamCooldown: number = SagaAIData.defaultWeakBeamCooldown,
-    public strongBeamCooldown: number = SagaAIData.defaultStrongBeamCooldown,
-    public weakBeamCastTime: number = SagaAIData.defaultWeakBeamCastTime,
-    public strongBeamCastTime: number = SagaAIData.defaultStrongBeamCastTime,
+    public maxBeamsToDodge: number = SagaAIData.defaultBeamsToDodge,
+    public maxTimeSinceLastDodge: number = SagaAIData.defaultMaxTimeSinceLastDodge,
     public beamRange: number = SagaAIData.defaultBeamRange,
+    public aggressiveZanzoThreshold: number = SagaAIData.defaultAggressiveZanzoThreshold,
+    public guardLifePercentThreshold: number = SagaAIData.defaultGuardLifePercentThreshold,
   ) {
     this.sagaCustomHero = new CustomHero(sagaUnit);
+    this.sagaCustomHero.addAbilityFromAll(AbilityNames.Saga.ZANZO_DASH);
+    this.sagaCustomHero.addSpellPower(spellPowerModifier);
+
     this.currentTick = 0;
     this.currentAction = SagaAIData.Action.REAGGRO;
     this.aggroTarget = undefined;
@@ -67,26 +69,26 @@ export class SagaHeroAI {
     this.numAttacks = 0;
     this.numDodges = 0;
     this.numBeams = 0;
+    this.numWaits = 0;
+
+    this.timeSinceLastDodge = 0;
+    this.previousLifePercent = 0;
     
+    this.maxWait = 0;
+
     this.abilities = new Map();
+    this.maxAbilityChance = 0;
 
-    this.weakBeams = [];
-    this.strongBeams = [];
-    this.weakBeamDelay = 0;
-    this.strongBeamDelay = 0;
-    this.weakBeamTimer = CreateTimer();
-    this.strongBeamTimer = CreateTimer();
-    this.usingWeakBeamTimer = false;
-    this.usingStrongBeamTimer = false;
-
-    this.initialize();
-  }
-
-  public initialize() {
-    if (this.sagaCustomHero.getNumAbilities() <= Constants.maxSubAbilities) {
-      this.addWeakBeams([AbilityNames.Saga.GENERIC_BEAM]);
-      this.addStrongBeams([AbilityNames.Saga.GENERIC_BOMB]);
-    }
+    this.abilityTarget = new Vector2D();
+    this.abilityInput = new CustomAbilityInput(
+      this.sagaCustomHero, 
+      Constants.sagaPlayer,
+      1,
+      this.abilityTarget,
+      this.abilityTarget,
+      this.abilityTarget,
+    );
+    this.abilityInput.castUnit = this.sagaUnit;
   }
 
   public getBeamLevel(): number {
@@ -99,66 +101,62 @@ export class SagaHeroAI {
         10, 
         Math.max(
           Math.floor(
-            GetHeroLevel(this.sagaUnit) * 0.1
+            GetHeroLevel(this.sagaUnit) * 0.2
           ),
           Math.floor(
-            GetHeroInt(this.sagaUnit, true) * 0.001
+            GetHeroInt(this.sagaUnit, true) * 0.002
           )
         )
       ),
     )
   }
 
-  public addWeakBeams(names: string[]): this {
-    for (const name of names) {
-      if (!this.sagaCustomHero.hasAbility(name)) {
-        this.sagaCustomHero.addAbilityFromAll(name);
+  public addAbilities(abilitiesToAdd: SagaAbility[]): this {
+    for (const ability of abilitiesToAdd) {
+      const addedAbility = ability.clone();
+      addedAbility.maxCd *= 100 / Math.max(1, this.actionInterval);
+      this.abilities.set(addedAbility.name, addedAbility);
+      this.sagaCustomHero.addAbilityFromAll(ability.name);
+      if (!this.sagaCustomHero.hasAbility(addedAbility.name)) {
+        this.sagaCustomHero.addAbilityFromAll(addedAbility.name);
       }
-      this.weakBeams.push(name);
+      this.maxAbilityChance += ability.castChance;
     }
     return this;
   }
 
-  public addStrongBeams(names: string[]): this {
-    for (const name of names) {
-      if (!this.sagaCustomHero.hasAbility(name)) {
-        this.sagaCustomHero.addAbilityFromAll(name);
-      }
-      this.strongBeams.push(name);
-    }
-    return this;
-  }
-
-  public getNumWeakBeams(): number {
-    return this.weakBeams.length;
-  }
-
-  public getNumStrongBeams(): number {
-    return this.strongBeams.length;
+  public getNumAbilities(): number {
+    return this.abilities.size;
   }
 
   public performTickActions() {
-    if (this.isEnabled) {
+    if (this.isEnabled && UnitHelper.isUnitAlive(this.sagaUnit)) {
       if (this.currentTick > this.actionInterval) {
         this.currentTick = 0;
+        this.preUpdate();
         this.performThink();
         this.performAction();
-        this.reduceCooldowns();
+        this.postUpdate();
       } else {
         ++this.currentTick;
       }
     }
   }
 
-  public reduceCooldowns() {
-    if (this.weakBeamDelay > 0) {
-      --this.weakBeamDelay;
+  public preUpdate() {
+    if (this.aggroTarget) {
+      this.abilityTarget.x = GetUnitX(this.aggroTarget);
+      this.abilityTarget.y = GetUnitY(this.aggroTarget);
+      this.abilityInput.targetUnit = this.aggroTarget;
     }
-    if (this.strongBeamDelay > 0) {
-      --this.strongBeamDelay;
+    for (const ability of this.abilities.values()) {
+      ability.updateCd();
     }
-  } 
+  }
 
+  public postUpdate() {
+    this.previousLifePercent = GetUnitLifePercent(this.sagaUnit);
+  }
 
   public performThink() {
     switch (this.currentAction) {
@@ -170,6 +168,9 @@ export class SagaHeroAI {
         break;
       case SagaAIData.Action.DODGE:
         this.thinkDodge();
+        break;
+      case SagaAIData.Action.WAIT:
+        this.thinkWait();
         break;
       case SagaAIData.Action.REAGGRO:
       default:
@@ -188,7 +189,11 @@ export class SagaHeroAI {
 
       if (targetDistance > GetUnitAcquireRange(this.sagaUnit)) {
         this.currentAction = SagaAIData.Action.REAGGRO;
-      } else if (this.numAttacks > 0 && targetDistance < this.beamRange) {
+      } else if (
+        this.numAttacks > 0 && 
+        targetDistance < this.beamRange && 
+        this.getNumAbilities() > 0
+      ) {
         this.currentAction = SagaAIData.Action.BEAM;
       }
     } else {
@@ -198,16 +203,39 @@ export class SagaHeroAI {
   }
 
   public thinkDodge() {
-    if (this.numDodges < this.consecutiveDodgesAllowed) {
+    if (
+      this.numDodges < this.consecutiveDodgesAllowed &&
+      this.timeSinceLastDodge < this.maxTimeSinceLastDodge && 
+      this.aggroTarget != undefined &&
+      UnitHelper.isUnitAlive(this.aggroTarget)
+    ) {
       this.currentAction = SagaAIData.Action.DODGE;
     } else {
       this.numDodges = 0;
+      this.timeSinceLastDodge = 0;
       this.currentAction = SagaAIData.Action.REAGGRO;
     }
   }
 
+  public thinkWait() {
+    if (
+      this.numWaits < this.maxWait
+    ) {
+      this.currentAction = SagaAIData.Action.WAIT;
+    } else {
+      this.numWaits = 0;
+      this.maxWait = 0;
+      if (this.aggroTarget) {
+        IssueTargetOrder(this.sagaUnit, SagaAIData.Order.ATTACK, this.aggroTarget);
+      }
+      this.thinkBeam();
+    }
+  }
+
   public thinkBeam() {
-    if (this.numBeams < this.consecutiveBeamsAllowed) {
+    if (this.maxWait > 0) {
+      this.currentAction = SagaAIData.Action.WAIT;
+    } else if (this.numBeams < this.consecutiveBeamsAllowed) {
       this.currentAction = SagaAIData.Action.ATTACK;
     } else {
       this.numBeams = 0;
@@ -232,6 +260,9 @@ export class SagaHeroAI {
       case SagaAIData.Action.DODGE:
         this.performDodge();
         break;
+      case SagaAIData.Action.WAIT:
+        this.performWait();
+        break;
       case SagaAIData.Action.REAGGRO:
       default:
         this.performReaggro();
@@ -240,7 +271,6 @@ export class SagaHeroAI {
   }
 
   public performAttack() {
-    ++this.numAttacks;
     if (this.aggroTarget) {
       // faster than mod
       switch (this.numAttacks) {
@@ -248,38 +278,80 @@ export class SagaHeroAI {
         case 3:
         case 6:
         case 9:
-        case 12:
-          this.useCustomAbility(AbilityNames.BasicAbility.ZANZO_DASH);
-          IssueTargetOrder(this.sagaUnit, SagaAIData.ORDER_ATTACK, this.aggroTarget);  
+        case 12: 
+          if (GetUnitLifePercent(this.sagaUnit) > this.aggressiveZanzoThreshold) {
+            this.useCustomAbility(AbilityNames.Saga.ZANZO_DASH);
+          }
+          IssueTargetOrder(this.sagaUnit, SagaAIData.Order.ATTACK, this.aggroTarget); 
           break;
         default:
           break;
       }
+      ++this.numAttacks;
     }
   }
 
   public performBeam() {
-    const rng = Math.random();
-    if (
-      rng < 0.7 && 
-      this.weakBeamDelay == 0 && 
-      this.weakBeams.length > 0 && 
-      !this.usingWeakBeamTimer
-    ) {
-      ++this.numBeams;
-      this.useWeakBeam();
-    } else if (
-      this.strongBeamDelay == 0 && 
-      this.strongBeams.length > 0 && 
-      !this.usingStrongBeamTimer
-    ) {
-      ++this.numBeams;
-      this.useStrongBeam();
+    if (this.aggroTarget) {
+      const rng = Math.random() * this.maxAbilityChance;
+      let currentChance = 0;
+      for (const ability of this.abilities.values()) {
+        currentChance += ability.castChance;
+        if (currentChance >= rng && ability.readyToUse()) {
+          ability.applyCd();
+          ++this.numBeams;
+
+          TextTagHelper.showPlayerColorTextOnUnit(
+            ability.name, 
+            Constants.sagaPlayerId,
+            this.sagaUnit
+          );
+          
+          let abilityInput = this.abilityInput;
+          if (!ability.isTracking) {
+            const targetCoord = new Vector2D(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
+            abilityInput = new CustomAbilityInput(
+              this.sagaCustomHero,
+              Constants.sagaPlayer,
+              this.getBeamLevel(),
+              targetCoord,
+              targetCoord,
+              targetCoord,
+              this.aggroTarget,
+              this.sagaUnit
+            )
+          }
+
+          this.numWaits = 0;
+          this.maxWait = ability.castDelay * SagaAIData.DELAY_TO_INTERVALS;
+          this.performWait();
+
+          TimerStart(CreateTimer(), ability.castDelay, false, () => {
+            this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1);
+            this.useCustomAbilityWithInput(ability.name, abilityInput, false);
+            DestroyTimer(GetExpiredTimer());
+          });
+          break;
+        }
+      }
     }
   }
 
   public performDodge() {
-    this.numDodges += this.dodgeNearbyBeams();
+    const dodgeResult = this.dodgeNearbyBeams();
+    if (dodgeResult == SagaAIData.PERFORMED_DODGE) {
+      ++this.numDodges;
+      this.timeSinceLastDodge = 0;
+    } else {
+      ++this.timeSinceLastDodge;
+    }
+  }
+
+  public performWait() {
+    if (this.numWaits < this.maxWait) {
+      IssueImmediateOrder(this.sagaUnit, SagaAIData.Order.WAIT);
+      ++this.numWaits;
+    }
   }
 
   public performReaggro() {
@@ -287,7 +359,7 @@ export class SagaHeroAI {
     if (this.aggroTarget == undefined || UnitHelper.isUnitDead(this.aggroTarget)) {
       IssuePointOrder(
         this.sagaUnit, 
-        SagaAIData.ORDER_MOVE, 
+        SagaAIData.Order.MOVE, 
         GetUnitX(this.sagaUnit), 
         GetUnitY(this.sagaUnit)
       );
@@ -298,76 +370,26 @@ export class SagaHeroAI {
     abilityName: string, 
     showText: boolean = true,
     abilityLevel: number = 1,
-    targetSelf: boolean = true,
-    customTargetCoord?: Vector2D,
   ) {
-    if (this.aggroTarget && UnitHelper.isUnitAlive(this.sagaUnit)) {
-      const bossCoord = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
-      let targetCoord = new Vector2D(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
-      if (targetSelf) {
-        targetCoord = bossCoord;
-      } else if (customTargetCoord) {
-        targetCoord = customTargetCoord;
-      }
-      const abilityInput = new CustomAbilityInput(
-        this.sagaCustomHero, 
-        Constants.sagaPlayer,
-        abilityLevel,
-        targetCoord,
-        targetCoord,
-        targetCoord,
-        this.aggroTarget,
-        this.sagaUnit,
-      );
-      if (showText && this.sagaCustomHero.canCastAbility(abilityName, abilityInput)) {
-        TextTagHelper.showPlayerColorTextOnUnit(
-          abilityName, 
-          Constants.sagaPlayerId,
-          this.sagaUnit
-        )
-      }
-      this.sagaCustomHero.useAbility(abilityName, abilityInput);
+    if (UnitHelper.isUnitAlive(this.sagaUnit)) {
+      this.abilityInput.level = abilityLevel;
+      this.useCustomAbilityWithInput(abilityName, this.abilityInput, showText);
     }
   }
 
-  public useWeakBeam() {
-    const weakBeamAbility = this.weakBeams[
-      Math.floor(Math.random() * this.weakBeams.length)
-    ];
-    this.weakBeamDelay = this.weakBeamCooldown;
-    this.usingWeakBeamTimer = true;
-
-    TextTagHelper.showPlayerColorTextOnUnit(
-      weakBeamAbility, 
-      Constants.sagaPlayerId,
-      this.sagaUnit
-    );
-
-    TimerStart(this.weakBeamTimer, this.weakBeamCastTime, false, () => {
-      this.usingWeakBeamTimer = false;
-      this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1, false);
-      this.useCustomAbility(weakBeamAbility, false, this.getBeamLevel());
-    });
-  }
-
-  public useStrongBeam() {
-    const strongBeamAbility = this.strongBeams[
-      Math.floor(Math.random() * this.strongBeams.length)
-    ];
-    this.strongBeamDelay = this.strongBeamCooldown;
-    this.usingStrongBeamTimer = true;
-
-    TextTagHelper.showPlayerColorTextOnUnit(
-      strongBeamAbility, 
-      Constants.sagaPlayerId,
-      this.sagaUnit
-    );
-
-    TimerStart(this.strongBeamTimer, this.strongBeamCastTime, false, () => {
-      this.usingStrongBeamTimer = false;
-      this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1, false);
-      this.useCustomAbility(strongBeamAbility, false, this.getBeamLevel());
-    });
+  public useCustomAbilityWithInput(
+    abilityName: string, 
+    abilityInput: CustomAbilityInput,
+    showText: boolean = true,
+  ) {
+    if (showText && this.sagaCustomHero.canCastAbility(abilityName, abilityInput)) {
+      TextTagHelper.showPlayerColorTextOnUnit(
+        abilityName, 
+        Constants.sagaPlayerId,
+        this.sagaUnit
+      )
+    }
+    this.sagaCustomHero.useAbility(abilityName, abilityInput);
   }
 
   // dodge distance and AOE are fixed for now
@@ -436,7 +458,10 @@ export class SagaHeroAI {
     });
     DestroyGroup(nearbyBeams);
 
-    if (beamsTooClose > beamsAccountedFor) {
+    if (
+      beamsTooClose > beamsAccountedFor && 
+      this.previousLifePercent - GetUnitLifePercent(this.sagaUnit) > this.guardLifePercentThreshold
+    ) {
       this.useCustomAbility(AbilityNames.BasicAbility.GUARD);
     }
 
@@ -454,7 +479,15 @@ export class SagaHeroAI {
       );
       for (let offset = 0; offset < 1000; offset += 60) {
         if (PathingCheck.isGroundWalkable(dodgeCoord)) {
-          IssuePointOrder(this.sagaUnit, SagaAIData.ORDER_DODGE, dodgeCoord.x, dodgeCoord.y);
+          IssuePointOrder(this.sagaUnit, SagaAIData.Order.DODGE, dodgeCoord.x, dodgeCoord.y);
+          if (GetUnitLifePercent(this.sagaUnit) <= this.aggressiveZanzoThreshold)  {
+            this.abilityTarget.x = dodgeCoord.x;
+            this.abilityTarget.y = dodgeCoord.y;
+            this.useCustomAbility(
+              AbilityNames.Saga.ZANZO_DASH, 
+              true,
+            );
+          }
           break;
         }
         dodgeCoord = CoordMath.polarProjectCoords(
@@ -488,6 +521,7 @@ export class SagaHeroAI {
         return (
           IsUnitEnemy(testUnit, bossPlayer) &&
           IsUnitType(testUnit, UNIT_TYPE_HERO) && 
+          !IsUnitType(testUnit, UNIT_TYPE_SUMMONED) && 
           !UnitHelper.isUnitDead(testUnit) &&
           !BlzIsUnitInvulnerable(testUnit) && 
           !IsUnitHidden(testUnit) && 

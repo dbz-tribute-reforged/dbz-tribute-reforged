@@ -100,7 +100,7 @@ export module AbilityNames {
     export const MANKIND_DESTRUCTION_ATTACK: string = "Mankind Destruction Attack";
   }
 
-  export module Androids13 {
+  export module Android13 {
     export const ENERGY_BEAM: string = "Energy Beam";
     export const SS_DEADLY_HAMMER: string = "S.S. Deadly Hammer";
     export const SS_DEADLY_BOMBER: string = "S.S. Deadly Bomber";
@@ -179,7 +179,8 @@ export module AbilityNames {
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
-    export const GENERIC_BOMB: string = "Begone!";
-    // export const POWER_BLITZ_BARRAGE: string = "Hell's Storm!!";
+    export const GENERIC_BOMB: string = "Die!";
+    export const ZANZO_DASH: string = "Over here!";
+    export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
   }
 }

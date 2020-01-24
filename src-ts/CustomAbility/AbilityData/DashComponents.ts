@@ -290,4 +290,15 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: 2,
   },
+  // saga zanzo
+  {
+    name: "dash ground target zanzo saga",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 40,
+  },
 ]
