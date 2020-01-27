@@ -3,6 +3,7 @@ export class SagaAbility {
 
   constructor (
     public name: string,
+    public maxLevel: number = 10,
     public maxCd: number = 15,
     public castChance: number = 5,
     public castDelay: number = 1.0,
@@ -27,7 +28,7 @@ export class SagaAbility {
 
   public clone() {
     return new SagaAbility(
-      this.name, this.maxCd, 
+      this.name, this.maxLevel, this.maxCd, 
       this.castChance, this.castDelay, 
       this.isTracking
     );

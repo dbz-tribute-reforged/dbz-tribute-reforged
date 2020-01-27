@@ -50,6 +50,9 @@ export class AdvancedSaga {
     this.state = SagaState.Completed;
     PlaySoundBJ(this.completeSound);
     this.bosses.clear();
+    for (const [boss, bossAI] of this.bossesAI) {
+      bossAI.removeAbilities();
+    }
     this.bossesAI.clear();
   }
 

@@ -3,6 +3,8 @@ import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
+import { CreepManager } from "Core/CreepSystem/CreepManager";
+import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
 
 export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Cooler\'s Revenge';
@@ -139,7 +141,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.update(t);
     for (const mc of this.metalCoolers) {
       if (UnitHelper.isUnitAlive(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.02);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.005);
       } else if (this.revives > 0) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(
@@ -149,8 +151,8 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
           ], 5, 5
         );
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.2 + 200), true);
-        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.2 + 200), true);
+        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.15 + 200), true);
+        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.15 + 200), true);
       }
     }
   }
@@ -169,6 +171,12 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   start(): void {
     super.start();
     this.spawnWhenDelayFinished();
+    SagaHelper.showMessagesChanceOfJoke(
+      [
+        "|cffff2020The Big Geti Star has invaded New Namek with clones of Metal Cooler!|r"
+      ],
+    );
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.GETI_STAR);
   }
 
   spawnWhenDelayFinished(): void {

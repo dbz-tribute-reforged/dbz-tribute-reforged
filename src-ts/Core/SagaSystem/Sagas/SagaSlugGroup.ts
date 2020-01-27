@@ -1,8 +1,9 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
+import { Players } from "Libs/TreeLib/Structs/Players";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
-import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { SagaUpgradeNames, Creep } from "Core/CreepSystem/CreepUpgradeConfig";
 import { Constants } from "Common/Constants";
 
 export class LordSlugSaga extends AdvancedSaga implements Saga {
@@ -30,6 +31,13 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
         "|cffffcc00Lord Slug|r: And I think to myself... what a wonderful world."
       ],
     );
+    
+    // create unit
+    for (let i = 0; i < 5; ++i) {
+      let offsetX = Math.random() * 1000;
+      let offsetY = Math.random() * 1000;
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.SlugGuard, 8700 + offsetX, -5200 + offsetY, Math.random() * 360);
+    }
 
     this.addHeroListToSaga(["Lord Slug"], true);
     this.slug = this.bosses.get("Lord Slug");

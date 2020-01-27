@@ -27,7 +27,7 @@ function tsMain() {
 
   // setup logger
   Logger.doLogVerbose = false;
-  Logger.doLogDebug = true;
+  Logger.doLogDebug = false;
   TimerStart(CreateTimer(), 5.0, false, () => {
     // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());

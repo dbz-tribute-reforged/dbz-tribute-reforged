@@ -59,8 +59,57 @@ export const DamageBlockComponents = [
     endTick: -1,
     blockPerDamage: 100,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_INT,
+    attribute: bj_HEROSTAT_STR,
     multiplier: 20,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 105,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl",
+        repeatInterval: 6,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 155,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block mastered ultra instinct",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 100,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 25,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -130,23 +179,6 @@ export const DamageBlockComponents = [
       },
     ],
     attachedSfxList: [
-      {
-        model: "AuraYellow.mdl",
-        repeatInterval: 0,
-        group: 0,
-        scale: 1.0,
-        startHeight: 100,
-        endHeight: 100,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 255,
-          z: 255,
-        },
-        updateCoordsOnly: false,
-        persistent: true,
-        attachmentPoint: "origin",
-      },
     ],
   },
   {
@@ -202,10 +234,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 50,
+    blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.4,
+    multiplier: 0.3,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",

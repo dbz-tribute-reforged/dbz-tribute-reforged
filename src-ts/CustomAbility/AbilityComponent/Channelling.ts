@@ -21,7 +21,10 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   }
 
   forceTerminateAbility(ability: CustomAbility) {
-    ability.currentTick = ability.duration - this.ticksFromEnd;
+    const newTick = ability.duration - this.ticksFromEnd;
+    if (newTick > ability.currentTick) {
+      ability.currentTick = newTick;
+    }
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {

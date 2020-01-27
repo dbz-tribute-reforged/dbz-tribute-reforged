@@ -38,6 +38,8 @@ export class SagaHeroAI {
 
   protected maxWait: number;
 
+  protected isAggroLost: boolean;
+
   protected abilities: Map<string, SagaAbility>;
   protected maxAbilityChance: number;
 
@@ -47,6 +49,7 @@ export class SagaHeroAI {
   constructor (
     public readonly sagaUnit: unit,
     public isEnabled: boolean = true,
+    public owningPlayer: player = Constants.sagaPlayer,
     public spellPowerModifier: number = SagaAIData.defaultSpellPowerModifier,
     public actionInterval: number = SagaAIData.defaultActionInterval,
     public consecutiveAttacksAllowed: number = SagaAIData.defaultConsecutiveAttacksAllowed,
@@ -61,7 +64,7 @@ export class SagaHeroAI {
     this.sagaCustomHero = new CustomHero(sagaUnit);
     this.sagaCustomHero.addAbilityFromAll(AbilityNames.Saga.ZANZO_DASH);
     this.sagaCustomHero.addSpellPower(spellPowerModifier);
-
+    
     this.currentTick = 0;
     this.currentAction = SagaAIData.Action.REAGGRO;
     this.aggroTarget = undefined;
@@ -76,13 +79,15 @@ export class SagaHeroAI {
     
     this.maxWait = 0;
 
+    this.isAggroLost = false;
+
     this.abilities = new Map();
     this.maxAbilityChance = 0;
 
     this.abilityTarget = new Vector2D();
     this.abilityInput = new CustomAbilityInput(
       this.sagaCustomHero, 
-      Constants.sagaPlayer,
+      this.owningPlayer,
       1,
       this.abilityTarget,
       this.abilityTarget,
@@ -91,14 +96,19 @@ export class SagaHeroAI {
     this.abilityInput.castUnit = this.sagaUnit;
   }
 
-  public getBeamLevel(): number {
+  public removeAbilities(): this {
+    this.abilities.clear();
+    return this;
+  }
+
+  public getBeamLevel(maxLevel: number = 10): number {
     // minimum beam = 1
     // maximum beam = 10
     // lvl of beam = max (lvl of saga / 5, int of saga / 1000)
     return Math.max(
       1, 
       Math.min(
-        10, 
+        maxLevel, 
         Math.max(
           Math.floor(
             GetHeroLevel(this.sagaUnit) * 0.15
@@ -303,7 +313,7 @@ export class SagaHeroAI {
 
           TextTagHelper.showPlayerColorTextOnUnit(
             ability.name, 
-            Constants.sagaPlayerId,
+            GetPlayerId(this.owningPlayer),
             this.sagaUnit
           );
           
@@ -312,8 +322,8 @@ export class SagaHeroAI {
             const targetCoord = new Vector2D(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
             abilityInput = new CustomAbilityInput(
               this.sagaCustomHero,
-              Constants.sagaPlayer,
-              this.getBeamLevel(),
+              this.owningPlayer,
+              this.getBeamLevel(ability.maxLevel),
               targetCoord,
               targetCoord,
               targetCoord,
@@ -357,12 +367,17 @@ export class SagaHeroAI {
   public performReaggro() {
     this.aggroTarget = this.findNewAggroTarget();
     if (this.aggroTarget == undefined || UnitHelper.isUnitDead(this.aggroTarget)) {
-      IssuePointOrder(
-        this.sagaUnit, 
-        SagaAIData.Order.MOVE, 
-        GetUnitX(this.sagaUnit), 
-        GetUnitY(this.sagaUnit)
-      );
+      if (!this.isAggroLost) {
+        this.isAggroLost = true;
+        IssuePointOrder(
+          this.sagaUnit, 
+          SagaAIData.Order.MOVE, 
+          GetUnitX(this.sagaUnit), 
+          GetUnitY(this.sagaUnit)
+        );
+      }
+    } else {
+      this.isAggroLost = false;
     }
   }
 
@@ -385,7 +400,7 @@ export class SagaHeroAI {
     if (showText && this.sagaCustomHero.canCastAbility(abilityName, abilityInput)) {
       TextTagHelper.showPlayerColorTextOnUnit(
         abilityName, 
-        Constants.sagaPlayerId,
+        GetPlayerId(this.owningPlayer),
         this.sagaUnit
       )
     }
@@ -398,7 +413,7 @@ export class SagaHeroAI {
     if (this.maxBeamsToDodge <= 0) return dodgeResult;
 
     const nearbyBeams = CreateGroup();
-    const bossPlayer = GetOwningPlayer(this.sagaUnit);
+    const bossPlayer = this.owningPlayer;
     const beamSearchRange = SagaAIData.defaultDodgeAOE;
     const bossCoord = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
@@ -470,7 +485,7 @@ export class SagaHeroAI {
       dodgeResult = SagaAIData.PERFORMED_DODGE;
       // TextTagHelper.showPlayerColorTextOnUnit(
       //   "Cant touch this!" + dodgeAngle, 
-      //   Constants.sagaPlayerId, 
+      //   GetPlayerId(this.owningPlayer), 
       //   this.sagaUnit
       // );
       let dodgeCoord = CoordMath.polarProjectCoords(
@@ -509,7 +524,7 @@ export class SagaHeroAI {
   public findNewAggroTarget(): unit | undefined {
     let result = undefined;
     const enemyGroup = CreateGroup();
-    const bossPlayer = GetOwningPlayer(this.sagaUnit);
+    const bossPlayer = this.owningPlayer;
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
     const bossPos = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 

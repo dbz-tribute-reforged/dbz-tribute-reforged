@@ -931,7 +931,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.4,
+      multiplier: BASE.KAME_DPS * 0.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -949,7 +949,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 400,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.15,
+      multiplier: BASE.DFIST_DPS * 0.25,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
