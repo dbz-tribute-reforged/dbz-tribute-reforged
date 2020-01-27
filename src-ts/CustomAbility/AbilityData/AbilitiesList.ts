@@ -198,7 +198,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Goku.ULTRA_INSTINCT,
     currentCd: 0,
-    maxCd: 25,
+    maxCd: 1,
     costType: "HP",
     costAmount: 0,
     duration: 495,
@@ -208,8 +208,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNMirrorImage.tga",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNMirrorImage.tga",
+      enabled: "BTNGokuUltraInstinct.blp",
+      disabled: "BTNGokuUltraInstinct.blp",
     },
     tooltip: {
       title: AbilityNames.Goku.ULTRA_INSTINCT,
@@ -219,6 +219,36 @@ export const AbilitiesList = [
     components: [
       { name: "dodge ultra instinct" },
       { name: "block ultra instinct" },
+      { name: "sfx ultra instinct" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "HP",
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.03,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGokuMasteredUltraInstinct.blp",
+      disabled: "BTNGokuMasteredUltraInstinct.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+      body: 
+        AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+    },
+    components: [
+      { name: "dash ground point 5dist" },
+      { name: "spell amp mastered ultra instinct" },
+      { name: "dodge ultra instinct" },
+      { name: "block mastered ultra instinct" },
       { name: "sfx ultra instinct" },
     ],
   },
@@ -665,8 +695,8 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFTRageIcon.blp",
-      disabled: "BTNFTRageIcon.blp",
+      enabled: "BTNFTSSRage.blp",
+      disabled: "BTNFTSSRage.blp",
     },
     tooltip: {
       title: AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
@@ -877,7 +907,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Riot Javelin",
+    name: AbilityNames.Bardock.RIOT_JAVELIN,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -893,9 +923,9 @@ export const AbilitiesList = [
       disabled: "BTNBardockRiotJavelin.blp",
     },
     tooltip: {
-      title: "Riot Javelin",
+      title: AbilityNames.Bardock.RIOT_JAVELIN,
       body: 
-        "Riot Javelin"
+        AbilityNames.Bardock.RIOT_JAVELIN
     },
     components: [
       { name: "beam riot javelin" },
@@ -932,7 +962,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Angry Shout",
+    name: AbilityNames.Vegeta.ANGRY_SHOUT,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -948,9 +978,9 @@ export const AbilitiesList = [
       disabled: "BTNOozaru.blp",
     },
     tooltip: {
-      title: "Angry Shout",
+      title: AbilityNames.Vegeta.ANGRY_SHOUT,
       body: 
-        "Angry Shout"
+        AbilityNames.Vegeta.ANGRY_SHOUT
     },
     components: [
       { name: "channel caster default" },

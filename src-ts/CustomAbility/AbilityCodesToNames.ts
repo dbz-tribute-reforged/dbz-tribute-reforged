@@ -8,6 +8,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0JP'), AbilityNames.Goku.SPIRIT_BOMB],
     [FourCC('A00U'), AbilityNames.Goku.DRAGON_FIST],
     [FourCC('A0KR'), AbilityNames.Goku.ULTRA_INSTINCT],
+    [FourCC('A0MZ'), AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
 
     // vegeta
     [FourCC('A03N'), AbilityNames.Vegeta.GALICK_GUN],
@@ -16,6 +17,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0L4'), AbilityNames.Vegeta.FINAL_FLASH_2],
     [FourCC('A0L3'), AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY],
     [FourCC('A035'), AbilityNames.Vegeta.MOONLIGHT],
+    [FourCC('A0LS'), AbilityNames.Vegeta.ANGRY_SHOUT],
 
     // gohan
     [FourCC('A0H8'), AbilityNames.Gohan.MASENKO],
@@ -51,10 +53,9 @@ export const abilityCodesToNames = new Map<number, string>(
     // bardock
     [FourCC('A0LN'), AbilityNames.Bardock.FUTURE_SIGHT],
     [FourCC('A0LO'), AbilityNames.Bardock.TYRANT_LANCER],
-    [FourCC('A0LP'), "Riot Javelin"],
+    [FourCC('A0LP'), AbilityNames.Bardock.RIOT_JAVELIN],
     [FourCC('A0LQ'), AbilityNames.Bardock.REBELLION_SPEAR],
     [FourCC('A0LR'), AbilityNames.Bardock.SAIYAN_SPIRIT],
-    [FourCC('A0LS'), "Angry Shout"],
 
     // pan & giru
     [FourCC('A0LX'), AbilityNames.Pan.KAMEHAMEHA],

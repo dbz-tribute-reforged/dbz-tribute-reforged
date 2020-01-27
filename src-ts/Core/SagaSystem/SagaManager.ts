@@ -67,7 +67,7 @@ export class SagaManager extends Entity {
         ++numActivePlayers;
       }
     }
-    this.maxNumberConcurrentSagas = 3 + Math.floor(numActivePlayers / 2);
+    this.maxNumberConcurrentSagas = 3 + Math.ceil(numActivePlayers / 2);
   }
 
   public step(t: number): void {

@@ -52,7 +52,16 @@ export const SpellAmpComponents = [
     startTick: 0,
     endTick: -1,
     bonus: 0.10,
-    rate: 0.0005,
+    rate: 0.0006,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp mastered ultra instinct", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.05,
+    rate: 0.0003,
   },
   // --------------------------------------------
   { 

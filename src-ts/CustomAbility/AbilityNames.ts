@@ -11,6 +11,7 @@ export module AbilityNames {
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
+    export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
   }
 
   export module Vegeta {
@@ -61,8 +62,6 @@ export module AbilityNames {
     export const RIOT_JAVELIN: string = "Riot Javelin";
     export const REBELLION_SPEAR: string = "Rebellion Spear";
     export const SAIYAN_SPIRIT: string = "Saiyan Spirit";
-    export const MOONLIGHT: string = Vegeta.MOONLIGHT;
-    export const ANGRY_SHOUT: string = Vegeta.ANGRY_SHOUT;
   }
 
   export module Pan {
@@ -143,16 +142,12 @@ export module AbilityNames {
     export const SATURDAY_CRASH: string = "Saturday Crash";
     export const BEHIND_YOU: string = "Behind You";
     export const DOUBLE_SUNDAE: string = "Double Sundae";
-    export const MOONLIGHT: string = Vegeta.MOONLIGHT;
-    export const ANGRY_SHOUT: string = Vegeta.ANGRY_SHOUT;
   }
 
   export module Nappa {
     export const GIANT_STORM: string = "Giant Storm";
     export const BLAZING_STORM: string = "Blazing Storm";
     export const PLANT_SAIBAMEN: string = "Plant Saibamen";
-    export const MOONLIGHT: string = Vegeta.MOONLIGHT;
-    export const ANGRY_SHOUT: string = Vegeta.ANGRY_SHOUT;
     export const BREAK_CANNON: string = "Break Cannon";
   }
 

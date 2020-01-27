@@ -97,8 +97,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         this.sfxList, 
         middleCoord, 
         SfxData.SHOW_ALL_GROUPS,
-        sfxAngle, 
-        0
+        sfxAngle,
+        BlzGetUnitZ(source),
       );
 
       const affectedGroup = UnitHelper.getNearbyValidUnits(

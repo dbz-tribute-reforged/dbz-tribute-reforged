@@ -175,7 +175,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 3000);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping();
@@ -350,7 +350,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 80;
+    this.delay = 70;
   }
 
   spawnSagaUnits(): void {

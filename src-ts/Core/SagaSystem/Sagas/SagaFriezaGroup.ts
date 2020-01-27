@@ -23,17 +23,17 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "Zarbon and Dodoria have arrived looking for the Dragon Balls.",
+        "Zarbon and Dodoria are looking for the Dragon Balls.",
       ],
     );
 
     // create unit
-    const maxFriezaHenchmen = 3;
-    for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 1500;
-      let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaOrlen, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
-    }
+    // const maxFriezaHenchmen = 3;
+    // for (let i = 0; i < maxFriezaHenchmen; ++i) {
+    //   let offsetX = Math.random() * 1500;
+    //   let offsetY = Math.random() * 1500;
+    //   const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaOrlen, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
+    // }
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
 
@@ -133,12 +133,12 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
       ], 1, 5,
     );
     // create unit
-    const maxFriezaHenchmen = 5;
-    for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 1500;
-      let offsetY = Math.random() * 1500;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
-    }
+    // const maxFriezaHenchmen = 5;
+    // for (let i = 0; i < maxFriezaHenchmen; ++i) {
+    //   let offsetX = Math.random() * 1500;
+    //   let offsetY = Math.random() * 1500;
+    //   const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaNabana, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
+    // }
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
@@ -209,12 +209,12 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     );
 
     // create unit
-    const maxFriezaHenchmen = 8;
-    for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 2000;
-      let offsetY = Math.random() * 2000;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
-    }
+    // const maxFriezaHenchmen = 8;
+    // for (let i = 0; i < maxFriezaHenchmen; ++i) {
+    //   let offsetX = Math.random() * 2000;
+    //   let offsetY = Math.random() * 2000;
+    //   const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaAppule, 8100 + offsetX, 900 + offsetY, Math.random() * 360);
+    // }
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
 
@@ -240,7 +240,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       if (
         frieza && 
         nextFrieza &&
-        SagaHelper.checkUnitHp(frieza, 0.6, false, false, true) &&
+        SagaHelper.checkUnitHp(frieza, 0.65, false, false, true) &&
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
@@ -314,9 +314,9 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
     // create unit
     const maxFriezaHenchmen = 8;
     for (let i = 0; i < maxFriezaHenchmen; ++i) {
-      let offsetX = Math.random() * 2000;
-      let offsetY = Math.random() * 2000;
-      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaPineapple, 18000 + offsetX, 2000 + offsetY, Math.random() * 360);
+      let offsetX = Math.random() * 1200;
+      let offsetY = Math.random() * 1200;
+      const sagaCreep = CreateUnit(Players.NEUTRAL_HOSTILE, Creep.FriezaPineapple, 23500 + offsetX, 5000 + offsetY, Math.random() * 360);
     }
 
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);

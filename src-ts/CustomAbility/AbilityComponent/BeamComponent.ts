@@ -199,6 +199,10 @@ export class BeamComponent implements
 
     if (!this.isTracking) {
       PauseUnit(this.beamUnit, true);
+      if (UnitAddAbility(this.beamUnit, Constants.locustAbility)) {
+        UnitRemoveAbility(this.beamUnit, Constants.locustAbility);
+        // SetUnitInvulnerable(this.beamUnit, false);
+      }
     } else {
       // possible selection bug again?
       // SelectUnitAddForPlayer(this.beamUnit, input.casterPlayer);

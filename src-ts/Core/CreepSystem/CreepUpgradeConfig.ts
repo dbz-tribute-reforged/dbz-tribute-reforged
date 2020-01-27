@@ -5,6 +5,7 @@ export module SagaUpgradeNames {
   export const PRE_SLUG = "PreSlug";
   export const PRE_TRUNKS = "PreTrunks";
   export const BIG_DINOS = "BigDinos";
+  export const GETI_STAR = "GetiStar";
 }
 
 export module Creep {
@@ -60,6 +61,7 @@ export module Creep {
   export const FriezaStrawberry = FourCC("n017") // lvl 30 red
   export const FriezaGreyberry = FourCC("n018") // lvl 32 grey
 
+  export const MetalCoolerClone = FourCC("n03W"); // lvl 17
 
   // maybe use these for when hell opens up?
   export const YenmaHelper = FourCC("n01X"); // lvl 2
@@ -151,9 +153,18 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
             new RandomCreepType(Creep.TurtleAdult, 0.7),
             new RandomCreepType(Creep.TreacherousLobster, 0.3),
           ]],
+          [Creep.CrabGiant, [
+            new RandomCreepType(Creep.CrabMother, 1.0),
+          ]],
           [Creep.DinosaurTeen, [
             new RandomCreepType(Creep.DinosaurSmall, 0.5),
             new RandomCreepType(Creep.Pterodactyl, 0.5)
+          ]],
+          [Creep.NamekianFrog, [
+            new RandomCreepType(Creep.CrabGiant, 1.0),
+          ]],
+          [Creep.FriezaScout, [
+            new RandomCreepType(Creep.FriezaHenchmen, 1.0)
           ]],
         ]
       )
@@ -193,9 +204,6 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           ]],
           [Creep.TreacherousLobster, [
             new RandomCreepType(Creep.TurtleAdult, 1.0),
-          ]],
-          [Creep.CrabGiant, [
-            new RandomCreepType(Creep.CrabMother, 1.0),
           ]],
           // dinos
           [Creep.DinosaurTeen, [
@@ -260,6 +268,18 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           ]],
           [Creep.TreacherousLobster, [
             new RandomCreepType(Creep.TurtleAdult, 1.0),
+          ]],
+        ]
+      )
+    },
+    GetiStar: {
+      map: new Map<number, RandomCreepType[]>(
+        [
+          [Creep.FriezaScout, [
+            new RandomCreepType(Creep.MetalCoolerClone, 1.0),
+          ]],
+          [Creep.FriezaHenchmen, [
+            new RandomCreepType(Creep.MetalCoolerClone, 1.0),
           ]],
         ]
       )

@@ -68,8 +68,8 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
-        startHeight: 25,
-        endHeight: 25,
+        startHeight: 50,
+        endHeight: 50,
         extraDirectionalYaw: 0,
         color: {
           x: 255,

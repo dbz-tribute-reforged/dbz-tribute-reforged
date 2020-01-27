@@ -47,7 +47,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.imperfectCell && this.semiperfectCell && 
-      SagaHelper.checkUnitHp(this.imperfectCell, 0.25, false, false, false) &&
+      SagaHelper.checkUnitHp(this.imperfectCell, 0.5, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.semiperfectCell)
     ) {
       SagaHelper.showMessagesChanceOfJoke(
@@ -62,7 +62,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
       SagaHelper.genericTransformAndPing(this.semiperfectCell, this.imperfectCell, this);
     } else if (
       this.semiperfectCell && this.perfectCell && 
-      SagaHelper.checkUnitHp(this.semiperfectCell, 0.25, false, false, false) &&
+      SagaHelper.checkUnitHp(this.semiperfectCell, 0.5, false, false, false) &&
       SagaHelper.isUnitSagaHidden(this.perfectCell)
     ) {
       SagaHelper.showMessagesChanceOfJoke(
@@ -226,7 +226,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 95;
+    this.delay = 100;
   }
 
   spawnSagaUnits(): void {
@@ -241,7 +241,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Future Imperfect Cell"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping();

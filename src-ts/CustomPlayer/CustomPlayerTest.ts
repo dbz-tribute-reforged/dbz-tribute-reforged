@@ -297,7 +297,7 @@ export function CustomPlayerTest() {
   const abil5 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil5, BlzGetFrameByName("abilityButton5", 5), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil5, OSKEY_E, 0, true);
-  addAbilityAction(abil5, "Riot Javelin");
+  addAbilityAction(abil5, AbilityNames.Bardock.RIOT_JAVELIN);
 
   const abil6 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil6, BlzGetFrameByName("abilityButton6", 6), FRAMEEVENT_CONTROL_CLICK);
@@ -307,7 +307,7 @@ export function CustomPlayerTest() {
   const abil7 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil7, BlzGetFrameByName("abilityButton7", 7), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil7, OSKEY_D, 0, true);
-  addAbilityAction(abil7, "Angry Shout");
+  addAbilityAction(abil7, AbilityNames.Vegeta.ANGRY_SHOUT);
 
   const abil8 = CreateTrigger();
   BlzTriggerRegisterFrameEvent(abil8, BlzGetFrameByName("abilityButton8", 8), FRAMEEVENT_CONTROL_CLICK);

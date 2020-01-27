@@ -8,14 +8,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
-      AbilityNames.Goku.ULTRA_INSTINCT
+      AbilityNames.Goku.ULTRA_INSTINCT,
+      AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
     [FourCC("H08J"), [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
-      AbilityNames.Goku.ULTRA_INSTINCT
+      AbilityNames.Goku.ULTRA_INSTINCT,
+      AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     ]],
 
     // vegeta
@@ -25,8 +27,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.FINAL_FLASH, 
       AbilityNames.Vegeta.FINAL_FLASH_2, 
       AbilityNames.Vegeta.MOONLIGHT, 
-      "Angry Shout", 
-      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY
+      AbilityNames.Vegeta.ANGRY_SHOUT, 
+      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
     ]],
     
     // gohan
@@ -40,29 +42,97 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Gohan.POTENTIAL_UNLEASHED
     ]],
     // adult gohan
-    [FourCC("H086"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, AbilityNames.Gohan.UNLOCK_POTENTIAL, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, AbilityNames.Gohan.POTENTIAL_UNLEASHED]],
+    [FourCC("H086"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Gohan.MASENKO, 
+      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
+      AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
+      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
+      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
+      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
+    ]],
     // saiyaman
-    [FourCC("H08L"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, AbilityNames.Gohan.UNLOCK_POTENTIAL, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, AbilityNames.Gohan.POTENTIAL_UNLEASHED]],
+    [FourCC("H08L"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Gohan.MASENKO, 
+      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
+      AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
+      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
+      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
+      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
+    ]],
     
     // goten
-    [FourCC("H008"), [AbilityNames.Goku.KAMEHAMEHA]],
+    [FourCC("H008"), [
+      AbilityNames.Goku.KAMEHAMEHA
+    ]],
     // kid trunks
-    [FourCC("H016"), [AbilityNames.FutureTrunks.FINISH_BUSTER]],
+    [FourCC("H016"), [
+      AbilityNames.FutureTrunks.FINISH_BUSTER
+    ]],
     // gotenks
-    [FourCC("H00A"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gotenks.GALACTIC_DONUTS, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK]],
+    [FourCC("H00A"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Gotenks.GALACTIC_DONUTS, 
+      AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK
+    ]],
 
     // future trunks
-    [FourCC("H009"), [AbilityNames.FutureTrunks.FINISH_BUSTER, AbilityNames.FutureTrunks.BURNING_ATTACK, AbilityNames.Vegeta.BIG_BANG_ATTACK, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, AbilityNames.FutureTrunks.BLAZING_RUSH, "Heat Dome Attack", AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE]],
+    [FourCC("H009"), [
+      AbilityNames.FutureTrunks.FINISH_BUSTER, 
+      AbilityNames.FutureTrunks.BURNING_ATTACK, 
+      AbilityNames.Vegeta.BIG_BANG_ATTACK, 
+      AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, 
+      AbilityNames.FutureTrunks.BLAZING_RUSH, 
+      "Heat Dome Attack", 
+      AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE
+    ]],
     // ss rage
-    [FourCC("H08I"), [AbilityNames.FutureTrunks.FINISH_BUSTER, AbilityNames.FutureTrunks.BURNING_ATTACK, AbilityNames.Vegeta.BIG_BANG_ATTACK, AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, AbilityNames.FutureTrunks.BLAZING_RUSH, "Heat Dome Attack", AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE]],
+    [FourCC("H08I"), [
+      AbilityNames.FutureTrunks.FINISH_BUSTER, 
+      AbilityNames.FutureTrunks.BURNING_ATTACK, 
+      AbilityNames.Vegeta.BIG_BANG_ATTACK, 
+      AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, 
+      AbilityNames.FutureTrunks.BLAZING_RUSH, 
+      "Heat Dome Attack", 
+      AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE
+    ]],
 
     // piccolo
-    [FourCC("H00R"), [AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.SLAPPY_HAND, AbilityNames.Piccolo.HELLZONE_GRENADE, AbilityNames.Piccolo.MULTI_FORM, AbilityNames.Piccolo.KYODAIKA]],
-    [FourCC("H04X"), [AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.SLAPPY_HAND, AbilityNames.Piccolo.HELLZONE_GRENADE, AbilityNames.Piccolo.MULTI_FORM, AbilityNames.Piccolo.KYODAIKA]],
+    [FourCC("H00R"), [
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
+      AbilityNames.Piccolo.SLAPPY_HAND, 
+      AbilityNames.Piccolo.HELLZONE_GRENADE, 
+      AbilityNames.Piccolo.MULTI_FORM, 
+      AbilityNames.Piccolo.KYODAIKA
+    ]],
+    [FourCC("H04X"), [
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
+      AbilityNames.Piccolo.SLAPPY_HAND, 
+      AbilityNames.Piccolo.HELLZONE_GRENADE, 
+      AbilityNames.Piccolo.MULTI_FORM, 
+      AbilityNames.Piccolo.KYODAIKA
+    ]],
 
     // bardock
-    [FourCC("H08M"), [AbilityNames.Bardock.TYRANT_LANCER, "Riot Javelin", AbilityNames.Bardock.REBELLION_SPEAR, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Bardock.SAIYAN_SPIRIT, AbilityNames.Bardock.FUTURE_SIGHT]],
-    [FourCC("H08N"), [AbilityNames.Bardock.TYRANT_LANCER, "Riot Javelin", AbilityNames.Bardock.REBELLION_SPEAR, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Bardock.SAIYAN_SPIRIT, AbilityNames.Bardock.FUTURE_SIGHT]],
+    [FourCC("H08M"), [
+      AbilityNames.Bardock.TYRANT_LANCER, 
+      AbilityNames.Bardock.RIOT_JAVELIN, 
+      AbilityNames.Bardock.REBELLION_SPEAR, 
+      AbilityNames.Vegeta.MOONLIGHT, 
+      AbilityNames.Vegeta.ANGRY_SHOUT, 
+      AbilityNames.Bardock.SAIYAN_SPIRIT, 
+      AbilityNames.Bardock.FUTURE_SIGHT
+    ]],
+    [FourCC("H08N"), [
+      AbilityNames.Bardock.TYRANT_LANCER, 
+      AbilityNames.Bardock.RIOT_JAVELIN, 
+      AbilityNames.Bardock.REBELLION_SPEAR, 
+      AbilityNames.Vegeta.MOONLIGHT, 
+      AbilityNames.Vegeta.ANGRY_SHOUT, 
+      AbilityNames.Bardock.SAIYAN_SPIRIT, 
+      AbilityNames.Bardock.FUTURE_SIGHT
+    ]],
     
     // pan
     [FourCC("H08P"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
@@ -86,11 +156,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("O001"), [AbilityNames.Babidi.SUMMON_PUI_PUI, AbilityNames.Babidi.SUMMON_YAKON, AbilityNames.Babidi.SUMMON_DABURA, AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.BABIDI_BARRIER, "Babidi Magic"]],
 
     // fat buu / super buu / kid buu
-    [FourCC("O005"), [AbilityNames.Buu.BUU_BEAM, AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.INNOCENCE_BREATH, AbilityNames.Buu.ANGRY_EXPLOSION]],
-    [FourCC("O006"), [AbilityNames.Buu.BUU_BEAM, AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL]],
+    [FourCC("O005"), [
+      AbilityNames.Buu.BUU_BEAM, 
+      AbilityNames.Buu.FLESH_ATTACK, 
+      AbilityNames.Buu.INNOCENCE_BREATH, 
+      AbilityNames.Buu.ANGRY_EXPLOSION
+    ]],
+    [FourCC("O006"), [
+      AbilityNames.Buu.BUU_BEAM, 
+      AbilityNames.Buu.FLESH_ATTACK, 
+      AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, 
+      AbilityNames.Buu.ANGRY_EXPLOSION, 
+      AbilityNames.Buu.VANISHING_BALL
+    ]],
     [FourCC("O00C"), [
       AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL,
-      AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, 
+      AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT, 
       AbilityNames.Vegeta.GALICK_GUN, 
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
@@ -126,12 +207,20 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H01A"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
 
     // farmer with shotgun
-    [FourCC("H08S"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Vegeta.FINAL_FLASH, AbilityNames.Gohan.TWIN_DRAGON_SHOT, AbilityNames.Broly.GIGANTIC_ROAR, AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY]],
+    [FourCC("H08S"), [
+      AbilityNames.Frieza.DEATH_BEAM, 
+      AbilityNames.Vegeta.FINAL_FLASH, 
+      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
+      AbilityNames.Broly.GIGANTIC_ROAR, 
+      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
+      AbilityNames.Goku.ULTRA_INSTINCT,
+      AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
+    ]],
 
     // raditz
-    [FourCC("H08U"), [AbilityNames.Raditz.DOUBLE_SUNDAY, AbilityNames.Raditz.SATURDAY_CRASH, AbilityNames.Raditz.BEHIND_YOU, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Raditz.DOUBLE_SUNDAE]],
+    [FourCC("H08U"), [AbilityNames.Raditz.DOUBLE_SUNDAY, AbilityNames.Raditz.SATURDAY_CRASH, AbilityNames.Raditz.BEHIND_YOU, AbilityNames.Vegeta.MOONLIGHT, AbilityNames.Vegeta.ANGRY_SHOUT, AbilityNames.Raditz.DOUBLE_SUNDAE]],
     // nappa
-    [FourCC("H08W"), [AbilityNames.Nappa.GIANT_STORM, AbilityNames.Nappa.BLAZING_STORM, AbilityNames.Nappa.PLANT_SAIBAMEN, AbilityNames.Vegeta.MOONLIGHT, "Angry Shout", AbilityNames.Nappa.BREAK_CANNON]],
+    [FourCC("H08W"), [AbilityNames.Nappa.GIANT_STORM, AbilityNames.Nappa.BLAZING_STORM, AbilityNames.Nappa.PLANT_SAIBAMEN, AbilityNames.Vegeta.MOONLIGHT, AbilityNames.Vegeta.ANGRY_SHOUT, AbilityNames.Nappa.BREAK_CANNON]],
     // saibaman
     [FourCC("H08X"), [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
 
