@@ -95,10 +95,12 @@ export class BuuSaga extends AdvancedSaga implements Saga {
 
   protected superBuu: unit | undefined;
   protected kidBuu: unit | undefined;
+  protected isKid: boolean;
 
   constructor() {
     super();
     this.delay = 30;
+    this.isKid = false;
   }
 
   spawnSagaUnits(): void {
@@ -127,10 +129,11 @@ export class BuuSaga extends AdvancedSaga implements Saga {
   update(t: number): void {
     super.update(t);
     if (
-      this.superBuu && this.kidBuu &&
+      this.superBuu && this.kidBuu && !this.isKid && 
       SagaHelper.checkUnitHp(this.superBuu, 0.1, false, true, false) &&
       SagaHelper.isUnitSagaHidden(this.kidBuu)
     ) {
+      this.isKid = true;
       SagaHelper.showMessagesChanceOfJoke(
         [
           "Majin Buu has returned to his original form!"

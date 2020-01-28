@@ -134,7 +134,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     BioBrolySaga: [
       [ BrolyDBZMovieSaga2, SagaState.Completed ],
-      [ BabidiSaga, SagaState.InProgress ],
+      [ BabidiSaga, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
       [ BioBrolySaga, SagaState.Completed ],

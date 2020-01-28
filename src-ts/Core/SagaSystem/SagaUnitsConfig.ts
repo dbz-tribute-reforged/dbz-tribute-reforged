@@ -210,6 +210,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Android 19", new SagaUnit(FourCC("O00A"), 40, 2500, 350, 2500, new Vector2D(29000, -4300),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
+        SagaAbilities.Saga.GENERIC_BOMB,
       ],
     )],
     ["Android 20", new SagaUnit(FourCC("H04T"), 50, 2500, 350, 3000, new Vector2D(29000, -5000),
@@ -419,7 +420,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // buu saga
     // babidi
-    ["Babidi", new SagaUnit(FourCC("O001"), 50, 4000, 400, 12000, new Vector2D(16500, 12000),
+    ["Babidi", new SagaUnit(FourCC("O001"), 55, 4000, 400, 12000, new Vector2D(16500, 12000),
       [
         SagaAbilities.Babidi.HARETSU,
         SagaAbilities.Babidi.BABIDI_BARRIER
@@ -481,7 +482,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Buu.VANISHING_BALL,
         SagaAbilities.Buu.ANGRY_EXPLOSION,
-        SagaAbilities.Buu.MANKIND_DESTRUCTION_ATTACK,
+        SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
     )],
 
@@ -612,7 +613,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Resurrection Frieza Golden", new SagaUnit(FourCC("U01G"), 150, 20000, 400, 20000, new Vector2D(-3000, 10000),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
-        SagaAbilities.Cooler.SUPERNOVA_COOLER,
+        SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
@@ -628,7 +629,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Hit Universe 6", new SagaUnit(FourCC("E00K"), 160, 21000, 400, 21000, new Vector2D(16000, -6000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Broly.ENERGY_PUNCH,
       ],
     )],
 

@@ -318,11 +318,12 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
     if (
       this.broly &&
       !this.isLSS && 
-      SagaHelper.checkUnitHp(this.broly, 0.75, true, false, true)  
+      SagaHelper.checkUnitHp(this.broly, 0.7, true, false, true)  
     ) { 
       SagaHelper.showMessagesChanceOfJoke(
         [
-          "|cffffcc00Broly|r: Grrrrr!",
+          "|cffffcc00Frieza|r: Oh no! Look Broly, someone killed Paragus. Wasn't me.",
+          "|cffffcc00Broly|r: RAAAAAARRGH!",
         ],
       );
       this.isLSS = true;
@@ -331,8 +332,8 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
       SetPlayerAbilityAvailable(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC("A0N3"), true);
       SetUnitScale(this.broly, 2.5, 2.5, 2.5);
       SetHeroLevel(this.broly, GetHeroLevel(this.broly) + 15, true);
-      SetHeroStr(this.broly, Math.floor(GetHeroStr(this.broly, true) * 1.3 + 1000), true);
-      SetHeroAgi(this.broly, Math.floor(GetHeroAgi(this.broly, true) + 100), true);
+      SetHeroStr(this.broly, Math.floor(GetHeroStr(this.broly, true) * 1.3 + 3000), true);
+      SetHeroAgi(this.broly, Math.floor(GetHeroAgi(this.broly, true) * 1.2 + 2000), true);
       this.auraLSS = AddSpecialEffectTarget(
         "AuraDarkGreen.mdl",
         this.broly,

@@ -177,5 +177,6 @@ export module AbilityNames {
     export const GENERIC_BOMB: string = "Die!";
     export const ZANZO_DASH: string = "Over here!";
     export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
+    export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
   }
 }

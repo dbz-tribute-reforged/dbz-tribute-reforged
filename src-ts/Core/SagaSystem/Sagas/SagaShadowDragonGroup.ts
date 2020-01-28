@@ -82,7 +82,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
       "Syn Shenron is looking for the other 6 Dragon Balls!"
     );
 
-    this.addHeroListToSaga(["Syn Shenron", "Omeega Shenron"], true);
+    this.addHeroListToSaga(["Syn Shenron", "Omega Shenron"], true);
     
     this.syn = this.bosses.get("Syn Shenron");
     this.omega = this.bosses.get("Omega Shenron");

@@ -263,6 +263,7 @@ gg_trg_Hat_Off = nil
 gg_trg_Hat_Init = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
+gg_trg_Lock_Time_To_Day = nil
 gg_trg_Setup_Quests = nil
 gg_trg_Disable_Abilities_for_TempPlayer = nil
 gg_trg_Setup_Spawns = nil
@@ -2423,8 +2424,8 @@ function CreateRegions()
     gg_rct_HeavenLeave = Rect(-6720.0, 21888.0, -6272.0, 22368.0)
     gg_rct_HellLeave = Rect(-1920.0, 21888.0, -1472.0, 22368.0)
     gg_rct_LookoutEntrance = Rect(5120.0, 3744.0, 5376.0, 3968.0)
-    gg_rct_LookoutExit2 = Rect(5280.0, 3136.0, 5472.0, 3296.0)
-    gg_rct_LookoutExit = Rect(-2368.0, 25088.0, -2016.0, 25472.0)
+    gg_rct_LookoutExit2 = Rect(5312.0, 3136.0, 5504.0, 3296.0)
+    gg_rct_LookoutExit = Rect(-2368.0, 25120.0, -1984.0, 25504.0)
     gg_rct_LookoutEntrance2 = Rect(-2272.0, 25792.0, -2080.0, 25984.0)
     gg_rct_LowerHells = Rect(21248.0, 21248.0, 23808.0, 23584.0)
     gg_rct_LowerHellsLeave = Rect(21248.0, 21248.0, 21568.0, 21568.0)
@@ -2440,9 +2441,9 @@ function CreateRegions()
     we = AddWeatherEffect(gg_rct_Lookout_Vision, FourCC("LRaa"))
     EnableWeatherEffect(we, true)
     gg_rct_Budokai_Arena = Rect(12928.0, 19968.0, 16768.0, 23680.0)
-    gg_rct_Popo_Carpet_Entrance = Rect(6208.0, 18432.0, 6592.0, 18752.0)
+    gg_rct_Popo_Carpet_Entrance = Rect(6208.0, 18528.0, 6528.0, 18752.0)
     gg_rct_Popo_Carpet_2_Exit = Rect(6208.0, 17856.0, 6432.0, 18080.0)
-    gg_rct_Popo_Carpet_2_Entrance = Rect(29632.0, -5728.0, 30048.0, -5376.0)
+    gg_rct_Popo_Carpet_2_Entrance = Rect(29632.0, -5696.0, 30048.0, -5440.0)
     gg_rct_Popo_Carpet_Exit = Rect(29248.0, -5280.0, 29440.0, -5088.0)
     gg_rct_Namek_Pod_Entrance = Rect(8608.0, 1280.0, 8832.0, 1504.0)
     gg_rct_Creep_Vision_2 = Rect(5056.0, 24480.0, 31776.0, 31584.0)
@@ -2451,17 +2452,17 @@ function CreateRegions()
     gg_rct_Namek_Pod_2_Exit = Rect(8672.0, 1792.0, 8864.0, 1984.0)
     gg_rct_Namek_Frieza_Entrance = Rect(23904.0, 6976.0, 24416.0, 7616.0)
     gg_rct_Namek_Frieza_Exit = Rect(29728.0, 30112.0, 29984.0, 30368.0)
-    gg_rct_Namek_Frieza_2_Entrance = Rect(30496.0, 30176.0, 31072.0, 30816.0)
+    gg_rct_Namek_Frieza_2_Entrance = Rect(30432.0, 30208.0, 31040.0, 30816.0)
     gg_rct_Namek_Frieza_2_Exit = Rect(24192.0, 6272.0, 24416.0, 6496.0)
-    gg_rct_Future_Trunks_Entrance = Rect(-7520.0, -3424.0, -7200.0, -3104.0)
+    gg_rct_Future_Trunks_Entrance = Rect(-7488.0, -3392.0, -7232.0, -3136.0)
     gg_rct_Future_Trunks_Exit = Rect(6784.0, 25568.0, 6976.0, 25792.0)
     gg_rct_Future_Trunks_2_Entrance = Rect(6240.0, 24832.0, 6624.0, 25184.0)
     gg_rct_Future_Trunks_2_Exit = Rect(-7456.0, -2720.0, -7264.0, -2528.0)
-    gg_rct_Future_Cell_Entrance = Rect(30336.0, 15776.0, 30720.0, 16128.0)
+    gg_rct_Future_Cell_Entrance = Rect(30400.0, 15808.0, 30656.0, 16064.0)
     gg_rct_Future_Cell_Exit = Rect(16768.0, 29952.0, 16960.0, 30144.0)
     gg_rct_Future_Cell_2_Entrance = Rect(17344.0, 30336.0, 17728.0, 30720.0)
     gg_rct_Future_Cell_2_Exit = Rect(29920.0, 15168.0, 30144.0, 15392.0)
-    gg_rct_HeroPickRegion = Rect(1760.0, 20992.0, 3840.0, 23040.0)
+    gg_rct_HeroPickRegion = Rect(1952.0, 21184.0, 3680.0, 22848.0)
 end
 
 function CreateCameras()
@@ -2625,7 +2626,7 @@ end
 
 function Trig_Android_17_Super_Electric_Strike_Warning_Actions()
     udg_TempLoc = GetUnitLoc(GetSpellAbilityUnit())
-    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Weapons\\ChimaeraAcidMissile\\ChimaeraAcidMissile.mdl")
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeTarget.mdl")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
@@ -2646,7 +2647,7 @@ function Trig_Android_17_DBS_Power_Blitz_Barrage_Conditions()
 end
 
 function Trig_Android_17_DBS_Power_Blitz_Barrage_Actions()
-    SetUnitManaBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) - (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.25))))
+    SetUnitManaBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) - (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.40))))
 end
 
 function InitTrig_Android_17_DBS_Power_Blitz_Barrage()
@@ -3541,6 +3542,17 @@ function InitTrig_Setup_Per_Player_Properties()
     gg_trg_Setup_Per_Player_Properties = CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.10)
     TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
+end
+
+function Trig_Lock_Time_To_Day_Actions()
+    SetTimeOfDay(12)
+    UseTimeOfDayBJ(false)
+end
+
+function InitTrig_Lock_Time_To_Day()
+    gg_trg_Lock_Time_To_Day = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Lock_Time_To_Day, 17.00)
+    TriggerAddAction(gg_trg_Lock_Time_To_Day, Trig_Lock_Time_To_Day_Actions)
 end
 
 function Trig_Setup_Quests_Actions()
@@ -15362,6 +15374,7 @@ function InitCustomTriggers()
     InitTrig_Hat_Init()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
+    InitTrig_Lock_Time_To_Day()
     InitTrig_Setup_Quests()
     InitTrig_Disable_Abilities_for_TempPlayer()
     InitTrig_Setup_Spawns_New()

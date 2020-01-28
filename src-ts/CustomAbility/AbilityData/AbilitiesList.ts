@@ -2504,6 +2504,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBuuMankind.blp",
+      disabled: "BTNBuuMankind.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
+      body: 
+        AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
+    },
+    components: [
+      { name: "multi mankind destruction attack saga" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Blue Hurricane",
     currentCd: 0,
     maxCd: 10,

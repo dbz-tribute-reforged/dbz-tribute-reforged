@@ -507,4 +507,28 @@ export const MultiComponents = [
       { name: "beam power blitz barrage saga" },
     ],
   },
+  // -------------------------------------------
+  {
+    name: "multi mankind destruction attack saga", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -180,
+    angleMax: 180,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 6,
+    firingMode: MultiComponent.RANDOM_FIRING,
+    multiplyComponents: 22,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    sfxList: true,
+    components: [
+      { name: "beam mankind destruction attack" },
+    ],
+  },
 ];
