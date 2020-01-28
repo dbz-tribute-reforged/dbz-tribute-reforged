@@ -58,11 +58,11 @@ export class Super17Saga extends AdvancedSaga implements Saga {
           newMp,
         );
       } else {
-        // restore hp equal to 50% of mana pool
+        // restore hp equal to 25% of mana pool
         SetUnitState(
           this.super17,
           UNIT_STATE_LIFE,
-          newHp + newMp * 0.5
+          newHp + newMp * 0.25
         );
         SetUnitState(this.super17, UNIT_STATE_MANA, 0);
         DestroyEffect(

@@ -15,7 +15,10 @@ export module SagaAbilities {
       AbilityNames.Saga.GENERIC_BOMB, 10, 35, 5, LONG_CAST_TIME
     );
     export const POWER_BLITZ_BARRAGE_CUSTOM = new SagaAbility(
-      AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM, 10, 60, 10, EXTRA_LONG_CAST_TIME, true
+      AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM, 10, 45, 10, EXTRA_LONG_CAST_TIME, true
+    );
+    export const MANKIND_DESTRUCTION_ATTACK_CUSTOM = new SagaAbility(
+      AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM, 9, 60, 5, EXTRA_LONG_CAST_TIME, true
     );
   }
   

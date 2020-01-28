@@ -26,7 +26,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "Android 19 and Android 20 have begun terrorizing West City!"
+        "Android 19 and Android 20 have begun terrorizing Satan City!"
       ],
       [
         "|cffffcc00Android 20|r: You're an Android! How did you even DO that?",

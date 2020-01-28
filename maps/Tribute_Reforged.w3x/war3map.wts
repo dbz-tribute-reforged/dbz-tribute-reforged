@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.29a
+DBZ Tribute Reforged 0.29b
 }
 
 STRING 4
@@ -67100,6 +67100,12 @@ STRING 11053
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
 }
 
+STRING 11054
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 35% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
 STRING 11055
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -71090,11 +71096,5 @@ STRING 11725
 // Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
 Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
-}
-
-STRING 11726
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
 }
 

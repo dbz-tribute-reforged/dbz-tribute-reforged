@@ -14,7 +14,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 40;
+    this.delay = 20;
     this.stats = 100;
     this.isFinalForm = false;
   }
@@ -53,8 +53,9 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
       BlzSetUnitSkin(this.cooler, FourCC("H043"));
       SetUnitScale(this.cooler, 2.0, 2.0, 2.0);
       SetHeroLevel(this.cooler, GetHeroLevel(this.cooler) + 5, true);
-      SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.2), true);
-      SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.2), true);
+      SetHeroStr(this.cooler, Math.floor(GetHeroStr(this.cooler, true) * 1.2 + 50), true);
+      SetHeroAgi(this.cooler, Math.floor(GetHeroAgi(this.cooler, true) * 1.2 + 50), true);
+      SetHeroInt(this.cooler, Math.floor(GetHeroInt(this.cooler, true) * 1.2 + 50), true);
       DestroyEffect(
         AddSpecialEffectTarget(
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -152,7 +153,8 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
         );
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
         SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.15 + 200), true);
-        SetHeroInt(mc, Math.floor(GetHeroStr(mc, true) * 1.15 + 200), true);
+        SetHeroAgi(mc, Math.floor(GetHeroAgi(mc, true) * 1.15 + 150), true);
+        SetHeroInt(mc, Math.floor(GetHeroInt(mc, true) * 1.15 + 200), true);
       }
     }
   }
@@ -163,7 +165,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   canComplete(): boolean {
     if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
+      return SagaHelper.areAllBossesDead(this.bosses) && this.revives <= 0;
     }
     return false;
   }
