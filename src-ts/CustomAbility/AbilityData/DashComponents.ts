@@ -299,6 +299,6 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 40,
+    distance: 30,
   },
 ]

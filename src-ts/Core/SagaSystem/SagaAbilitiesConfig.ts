@@ -1,10 +1,10 @@
 import { SagaAbility } from "./SagaAbility";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 
-const SHORT_CAST_TIME = 0.50;
-const MEDIUM_CAST_TIME = 0.75;
-const LONG_CAST_TIME = 1.0;
-const EXTRA_LONG_CAST_TIME = 1.25;
+const SHORT_CAST_TIME = 0.75;
+const MEDIUM_CAST_TIME = 1.0;
+const LONG_CAST_TIME = 1.25;
+const EXTRA_LONG_CAST_TIME = 1.5;
 
 export module SagaAbilities {
   export module Saga {
@@ -12,10 +12,10 @@ export module SagaAbilities {
       AbilityNames.Saga.GENERIC_BEAM, 10, 15, 10, SHORT_CAST_TIME
     );
     export const GENERIC_BOMB = new SagaAbility(
-      AbilityNames.Saga.GENERIC_BOMB, 10, 35, 5, MEDIUM_CAST_TIME
+      AbilityNames.Saga.GENERIC_BOMB, 10, 35, 5, LONG_CAST_TIME
     );
     export const POWER_BLITZ_BARRAGE_CUSTOM = new SagaAbility(
-      AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM, 10, 60, 10, LONG_CAST_TIME, true
+      AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM, 10, 60, 10, EXTRA_LONG_CAST_TIME, true
     );
   }
   
@@ -66,13 +66,13 @@ export module SagaAbilities {
       AbilityNames.Broly.ENERGY_PUNCH, 10, 12, 10, SHORT_CAST_TIME
     );
     export const POWER_LEVEL_RISING = new SagaAbility(
-      AbilityNames.Broly.POWER_LEVEL_RISING, 7, 7, 10, MEDIUM_CAST_TIME
+      AbilityNames.Broly.POWER_LEVEL_RISING, 7, 7, 10, SHORT_CAST_TIME
     );
     export const PLANET_CRUSHER = new SagaAbility(
       AbilityNames.Broly.PLANET_CRUSHER, 10, 35, 3, MEDIUM_CAST_TIME
     );
     export const GIGANTIC_ROAR = new SagaAbility(
-      AbilityNames.Broly.GIGANTIC_ROAR, 10, 20, 5, MEDIUM_CAST_TIME
+      AbilityNames.Broly.GIGANTIC_ROAR, 10, 20, 5, SHORT_CAST_TIME
     );
     export const GIGANTIC_OMEGASTORM = new SagaAbility(
       AbilityNames.Broly.GIGANTIC_OMEGASTORM, 10, 25, 3, LONG_CAST_TIME
@@ -177,7 +177,7 @@ export module SagaAbilities {
       AbilityNames.Buu.VANISHING_BALL, 10, 20, 10, SHORT_CAST_TIME
     );
     export const MANKIND_DESTRUCTION_ATTACK = new SagaAbility(
-      AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, 10, 40, 20, MEDIUM_CAST_TIME
+      AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, 10, 40, 20, LONG_CAST_TIME
     );
   }
 

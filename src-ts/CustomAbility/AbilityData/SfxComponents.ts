@@ -3634,7 +3634,7 @@ export const SfxComponents = [
         model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 3.2,
+        scale: 3.5,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,

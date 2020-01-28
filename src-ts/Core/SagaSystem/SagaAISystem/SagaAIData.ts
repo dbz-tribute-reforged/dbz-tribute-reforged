@@ -23,7 +23,7 @@ export module SagaAIData {
 
   export const DELAY_TO_INTERVALS = 4;
 
-  export const defaultSpellPowerModifier: number = -0.20;
+  export const defaultSpellPowerModifier: number = -0.15;
   export const defaultActionInterval: number = 25;
   export const defaultAggroInterval: number = 10;
   export const defaultConsecutiveAttacksAllowed: number = 10;
@@ -34,6 +34,6 @@ export module SagaAIData {
   export const defaultConsecutiveBeamsAllowed: number = 1;
   export const defaultBeamRange: number = 1500;
   export const defaultAggressiveZanzoThreshold: number = 20;
-  export const defaultMaxTimeSinceLastDodge: number = 8 * 2;
+  export const defaultMaxTimeSinceLastDodge: number = 4 * 5;
   export const defaultGuardLifePercentThreshold: number = 3;
 }
