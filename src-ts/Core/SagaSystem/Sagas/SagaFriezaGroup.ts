@@ -38,7 +38,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 3000);
     }
     
     this.zarbon = this.bosses.get("Zarbon");
@@ -143,7 +143,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping()
@@ -224,7 +224,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
     }
     
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
     
     this.ping()

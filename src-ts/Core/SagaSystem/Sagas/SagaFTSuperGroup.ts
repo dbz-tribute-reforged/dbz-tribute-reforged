@@ -22,7 +22,7 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Goku Black 1"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping();
