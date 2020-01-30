@@ -2367,7 +2367,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H08X"), -491.2, 22050.4, 262.824, FourCC("H08X"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08Y"), 1062.6, 21236.3, 296.180, FourCC("H08Y"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08Y"), 1072.4, 21190.9, 296.180, FourCC("H08Y"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H05B"), -105.2, 22280.3, 271.942, FourCC("H05B"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
@@ -15159,12 +15159,12 @@ function Trig_Saga_Unit_Loop_Func002A()
         udg_TempInt2 = IMaxBJ(udg_TempInt2, 2)
         if (Trig_Saga_Unit_Loop_Func002Func002Func012C()) then
             if (Trig_Saga_Unit_Loop_Func002Func002Func012Func001C()) then
-                udg_TempReal = 150.00
-                udg_TempReal2 = 150.00
-                udg_TempReal3 = 150.00
+                udg_TempReal = 130.00
+                udg_TempReal2 = 130.00
+                udg_TempReal3 = 130.00
             else
             end
-            udg_TempReal4 = (((1.40 + (0.05 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
+            udg_TempReal4 = (((0.90 + (0.05 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
             if (Trig_Saga_Unit_Loop_Func002Func002Func012Func004C()) then
                 udg_TempReal4 = (udg_TempReal4 + 0.30)
                 if (Trig_Saga_Unit_Loop_Func002Func002Func012Func004Func002C()) then
