@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.30
+DBZ Tribute Reforged 0.30a
 }
 
 STRING 4
@@ -65155,6 +65155,12 @@ STRING 10726
 Pan
 }
 
+STRING 10727
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool1> seconds|r
+}
+
 STRING 10728
 // Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
@@ -67094,6 +67100,12 @@ STRING 11053
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
 }
 
+STRING 11054
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool2> seconds|r
+}
+
 STRING 11055
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -67250,48 +67262,6 @@ STRING 11080
 (raditz)
 }
 
-STRING 11081
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11082
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11083
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11084
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11085
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11086
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11087
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
 STRING 11088
 // Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
 {
@@ -67374,30 +67344,6 @@ STRING 11101
 // Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 10|r]
-}
-
-STRING 11102
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11103
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11104
-// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
-}
-
-STRING 11105
-// Abilities: A0MF (Saturday Crash), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: 28 seconds|r
 }
 
 STRING 11106
@@ -67627,6 +67573,12 @@ STRING 11142
 // Abilities: A0MH (Double Sundae), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Double Sundae - [|cffffcc00Level 3|r]
+}
+
+STRING 11143
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool3> seconds|r
 }
 
 STRING 11144
@@ -71511,5 +71463,53 @@ STRING 11786
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 11787
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool4> seconds|r
+}
+
+STRING 11788
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool5> seconds|r
+}
+
+STRING 11789
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool6> seconds|r
+}
+
+STRING 11790
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool7> seconds|r
+}
+
+STRING 11791
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool8> seconds|r
+}
+
+STRING 11792
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool9> seconds|r
+}
+
+STRING 11793
+// Abilities: A0MF (Saturday Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool10> seconds|r
+}
+
+STRING 11794
+// Abilities: A0MF (Saturday Crash), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool1> seconds|r
 }
 

@@ -60,7 +60,7 @@ export module SagaAbilities {
 
   export module LordSlug {
     export const SLAPPY_HAND = new SagaAbility(
-      AbilityNames.Piccolo.SLAPPY_HAND, 10, 12, 10, SHORT_CAST_TIME
+      AbilityNames.Piccolo.SLAPPY_HAND, 5, 12, 10, SHORT_CAST_TIME
     );
   }
 

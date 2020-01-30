@@ -121,18 +121,20 @@ export class TournamentManager {
       ) {
         // Logger.LogDebug("Reviving Dead Tournament Hero");
         TimerStart(CreateTimer(), Constants.reviveDelay, false, () => {
-          ReviveHero(
-            deadHero, 
-            TournamentData.tournamentWaitRoom1.x,
-            TournamentData.tournamentWaitRoom1.y,
-            false
-          );
+          if (UnitHelper.isUnitDead(deadHero)) {
+            ReviveHero(
+              deadHero, 
+              TournamentData.tournamentWaitRoom1.x,
+              TournamentData.tournamentWaitRoom1.y,
+              false
+            );
 
-          SetUnitLifePercentBJ(deadHero, 100);
-          SetUnitManaPercentBJ(deadHero, 100);
+            SetUnitLifePercentBJ(deadHero, 100);
+            SetUnitManaPercentBJ(deadHero, 100);
 
-          SetUnitInvulnerable(deadHero, true);
-          PauseUnit(deadHero, true);
+            SetUnitInvulnerable(deadHero, true);
+            PauseUnit(deadHero, true);
+          }
 
           DestroyTimer(GetExpiredTimer());
         });
