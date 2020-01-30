@@ -97,7 +97,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: 25,
     knockbackData: {
-      speed: 15, 
+      speed: 10, 
       angle: 180, 
       aoe: 400,
     },
@@ -162,6 +162,19 @@ export const AOEKnockbackComponents = [
     endTick: -1,
     knockbackData: {
       speed: 25, 
+      angle: 180, 
+      aoe: 250,
+    },
+    affectAllies: false,
+  },
+  // dfist knock-in
+  {
+    name: "knockback dfist",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
       angle: 180, 
       aoe: 250,
     },

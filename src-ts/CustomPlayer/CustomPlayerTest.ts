@@ -237,8 +237,10 @@ export function CustomPlayerTest() {
       const caster = GetTriggerUnit();
       const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
       customPlayers[playerId].selectedUnit = caster;
+      let spellTargetUnit = undefined;
       if (GetSpellTargetUnit()) {
         customPlayers[playerId].targetUnit = GetSpellTargetUnit();
+        spellTargetUnit = customPlayers[playerId].targetUnit;
       }
       const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
       if (customHero) {
@@ -253,7 +255,7 @@ export function CustomPlayerTest() {
               customPlayers[playerId].orderPoint,
               customPlayers[playerId].mouseData,
               customPlayers[playerId].lastCastPoint.clone(),
-              customPlayers[playerId].targetUnit,
+              spellTargetUnit,
               GetSpellTargetUnit(),
             ),
           );
@@ -879,7 +881,7 @@ export function CustomPlayerTest() {
   }));
   TriggerAddAction(allyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 7)) - 1;
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
     if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
       const targetPlayer = Player(targetPlayerId);
       SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
@@ -902,7 +904,7 @@ export function CustomPlayerTest() {
   }));
   TriggerAddAction(unallyTrig, () => {
     const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 9)) - 1;
+    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 10)) - 1;
     if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
       const targetPlayer = Player(targetPlayerId);
       SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);

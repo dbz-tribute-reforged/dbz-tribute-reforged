@@ -80,11 +80,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // future trunks
     [FourCC("H009"), [
       AbilityNames.FutureTrunks.FINISH_BUSTER, 
+      AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, 
       AbilityNames.FutureTrunks.BURNING_ATTACK, 
       AbilityNames.Vegeta.BIG_BANG_ATTACK, 
       AbilityNames.FutureTrunks.SHINING_SWORD_ATTACK, 
       AbilityNames.FutureTrunks.BLAZING_RUSH, 
-      "Heat Dome Attack", 
       AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE
     ]],
     // ss rage
@@ -175,6 +175,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.GALICK_GUN, 
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
+      AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
       AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
       AbilityNames.Android17DBS.POWER_BLITZ,
       AbilityNames.Android13.SS_DEADLY_HAMMER,

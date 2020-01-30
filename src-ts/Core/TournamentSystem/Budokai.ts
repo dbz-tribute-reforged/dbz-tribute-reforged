@@ -258,52 +258,40 @@ export class Budokai extends AdvancedTournament implements Tournament {
                 this.giveTrophy(rewardedUnit);
               }
             }
-          }
-          // check if contestant has any other units in arena
-          // if so chuck em to the pos of first unit contestant
-          for (const unitContestant of contestant.units.values()) {
-            const extraUnitsGroup = CreateGroup();
-            GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), Condition(() => {
-              const filterUnit = GetFilterUnit();
-              const y = GetUnitY(filterUnit)
-              const x = GetUnitX(filterUnit);
-              return (
-                x > TournamentData.budokaiArenaBottomLeft.x &&
-                y > TournamentData.budokaiArenaBottomLeft.y && 
-                x < TournamentData.budokaiArenaTopRight.x &&
-                y < TournamentData.budokaiArenaTopRight.y
+            // check if contestant has any other units in arena
+            // if so chuck em to the pos of first unit contestant
+            for (const unitContestant of contestant.units.values()) {
+              const extraUnitsGroup = CreateGroup();
+              GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), Condition(() => {
+                const filterUnit = GetFilterUnit();
+                const y = GetUnitY(filterUnit)
+                const x = GetUnitX(filterUnit);
+                return (
+                  UnitHelper.isUnitAlive(filterUnit) && 
+                  x > TournamentData.budokaiArenaBottomLeft.x &&
+                  y > TournamentData.budokaiArenaBottomLeft.y && 
+                  x < TournamentData.budokaiArenaTopRight.x &&
+                  y < TournamentData.budokaiArenaTopRight.y
+                );
+              }));
+
+              ForGroup(extraUnitsGroup, () => {
+                const unit = GetEnumUnit();
+                SetUnitX(unit, unitContestant.oldPosition.x);
+                SetUnitY(unit, unitContestant.oldPosition.y);
+                PauseUnit(unit, false);
+                SetUnitInvulnerable(unit, false);
+              });
+              DestroyGroup(extraUnitsGroup);
+
+              PanCameraToTimedForPlayer(
+                Player(contestant.id), 
+                unitContestant.oldPosition.x, 
+                unitContestant.oldPosition.y, 
+                0
               );
-            }));
-
-            ForGroup(extraUnitsGroup, () => {
-              const unit = GetEnumUnit();
-              SetUnitX(unit, unitContestant.oldPosition.x);
-              SetUnitY(unit, unitContestant.oldPosition.y);
-              PauseUnit(unit, false);
-              SetUnitInvulnerable(unit, false);
-            });
-            DestroyGroup(extraUnitsGroup);
-
-            PanCameraToTimedForPlayer(
-              Player(contestant.id), 
-              unitContestant.oldPosition.x, 
-              unitContestant.oldPosition.y, 
-              0
-            );
-
-            const itemRect = Rect(
-              TournamentData.budokaiArenaBottomLeft.x,
-              TournamentData.budokaiArenaBottomLeft.y,
-              TournamentData.budokaiArenaTopRight.x,
-              TournamentData.budokaiArenaTopRight.y
-            )
-
-            EnumItemsInRectBJ(itemRect, () => {
-              SetItemPosition(GetFilterItem(), unitContestant.oldPosition.x, unitContestant.oldPosition.y)
-            });
-
-            RemoveRect(itemRect);
-            break;
+              break;
+            }
           }
         }
 
@@ -331,6 +319,22 @@ export class Budokai extends AdvancedTournament implements Tournament {
               // );
 
             }
+          }
+          
+          for (const unitContestant of winner.units.values()) {
+            const itemRect = Rect(
+              TournamentData.budokaiArenaBottomLeft.x,
+              TournamentData.budokaiArenaBottomLeft.y,
+              TournamentData.budokaiArenaTopRight.x,
+              TournamentData.budokaiArenaTopRight.y
+            )
+  
+            EnumItemsInRectBJ(itemRect, () => {
+              SetItemPosition(GetFilterItem(), unitContestant.oldPosition.x, unitContestant.oldPosition.y)
+            });
+  
+            RemoveRect(itemRect);
+            break;
           }
           
           DisplayTimedTextToForce(

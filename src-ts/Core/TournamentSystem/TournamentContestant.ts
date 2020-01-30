@@ -80,11 +80,11 @@ export class TournamentContestant {
 
   returnAllUnits() {
     for (const unitContestant of this.units.values()) {
-      SetUnitInvulnerable(unitContestant.unit, false);
-      PauseUnit(unitContestant.unit, false);
       if (UnitHelper.isUnitDead(unitContestant.unit)) {
         ReviveHero(unitContestant.unit, unitContestant.oldPosition.x, unitContestant.oldPosition.y, false);
       }
+      SetUnitInvulnerable(unitContestant.unit, false);
+      PauseUnit(unitContestant.unit, false);
       SetUnitX(unitContestant.unit, unitContestant.oldPosition.x);
       SetUnitY(unitContestant.unit, unitContestant.oldPosition.y);
     }
