@@ -162,7 +162,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(-2000, 27000))],
 
     // cooler's revenge
-    ["Cooler", new SagaUnit(FourCC("H042"), 50, 1500, 400, 1600, new Vector2D(30500, 8500),
+    ["Cooler", new SagaUnit(FourCC("H042"), 50, 1500, 400, 1600, new Vector2D(4400, 9300),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
@@ -292,14 +292,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     
     // cell games saga
-    ["Perfect Cell Games", new SagaUnit(FourCC("H00G"), 90, 6000, 400, 6000, new Vector2D(19300, 20500),
+    ["Perfect Cell Games", new SagaUnit(FourCC("H00G"), 90, 6000, 400, 6000, new Vector2D(20200, 20800),
       [
         SagaAbilities.Cell.KAMEHAMEHA,
         SagaAbilities.Cell.MASENKO,
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
       ],
     )],
-    ["Super Perfect Cell", new SagaUnit(FourCC("H00G"), 110, 6500, 500, 6500, new Vector2D(19300, 20500),
+    ["Super Perfect Cell", new SagaUnit(FourCC("H00G"), 110, 6500, 500, 6500, new Vector2D(20200, 20800),
       [
         SagaAbilities.Cell.KAMEHAMEHA,
         SagaAbilities.Cell.MASENKO,

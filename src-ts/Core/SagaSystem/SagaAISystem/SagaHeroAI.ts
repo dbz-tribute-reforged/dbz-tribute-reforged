@@ -337,8 +337,10 @@ export class SagaHeroAI {
           this.performWait();
 
           TimerStart(CreateTimer(), ability.castDelay, false, () => {
-            this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1);
-            this.useCustomAbilityWithInput(ability.name, abilityInput, false);
+            if (UnitHelper.isUnitAlive(this.sagaUnit)) {
+              this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1);
+              this.useCustomAbilityWithInput(ability.name, abilityInput, false);
+            }
             DestroyTimer(GetExpiredTimer());
           });
           break;

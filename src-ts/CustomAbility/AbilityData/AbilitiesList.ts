@@ -190,7 +190,7 @@ export const AbilitiesList = [
       { name: "dash ground point dragon fist" },
       { name: "damage dragon fist dps" },
       { name: "damage dragon fist explosion" },
-      { name: "knockback 1tick 25speed 180angle 250aoe" },
+      { name: "knockback dfist" },
       { name: "sfx dragon fist" },
     ],
   },
@@ -571,7 +571,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: "Heat Dome Attack",
+    name: AbilityNames.FutureTrunks.HEAT_DOME_ATTACK,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -583,17 +583,19 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFTFinishBuster.blp",
-      disabled: "BTNFTFinishBuster.blp",
+      enabled: "BTNFTHeatDomeAttack.blp",
+      disabled: "BTNFTHeatDomeAttackblp",
     },
     tooltip: {
-      title: "Heat Dome Attack",
+      title: AbilityNames.FutureTrunks.HEAT_DOME_ATTACK,
       body: 
-        "Heat Dome Attack"
+        AbilityNames.FutureTrunks.HEAT_DOME_ATTACK
     },
     components: [
-      { name: "beam finish buster" },
+      { name: "beam heat dome attack" },
+      { name: "damage heat dome attack explosion" },
       { name: "knockback heat dome attack" },
+      { name: "sfx heat dome attack" },
     ],
   },
   // -------------------------------------------

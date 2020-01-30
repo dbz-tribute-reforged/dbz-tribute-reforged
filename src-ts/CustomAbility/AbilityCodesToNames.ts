@@ -35,6 +35,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0CP'), AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK],
 
     // future trunks
+    [FourCC('A0NL'), AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],
     [FourCC('A03I'), AbilityNames.FutureTrunks.BURNING_ATTACK],
     // [FourCC('A064'), "High Power Rush"],
     [FourCC('A0LE'), AbilityNames.FutureTrunks.BLAZING_RUSH],

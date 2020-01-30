@@ -176,6 +176,8 @@ export class CreepManager {
     if (IsUnitType(newCreepUnit, UNIT_TYPE_HERO)) {
       if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
         SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
+      } else {
+        SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep), false);
       }
       SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 50), false);
       SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 50), false);

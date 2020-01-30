@@ -48,7 +48,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
       SetUnitState(
         this.turles, 
         UNIT_STATE_LIFE, 
-        GetUnitState(this.turles, UNIT_STATE_LIFE) + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.15
+        GetUnitState(this.turles, UNIT_STATE_LIFE) + GetUnitState(this.turles, UNIT_STATE_MAX_LIFE) * 0.12
       );
       DestroyEffect(
         AddSpecialEffectTarget(

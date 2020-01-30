@@ -126,7 +126,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 99999;
     this.goneSuperPerfect = false;
   }
 
@@ -201,6 +201,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
       [
         "|cffffcc00Perfect Cell|r: Enough playing around, you're no match for me.",
         "|cffffcc00Perfect Cell|r: In 10 days time, I will host the Cell Games to determine the fate of this miserable planet.",
+        "|cffff2020Cell games saga has been temporarily disabled for pressing ceremonial reasons.",
       ],
     );
   }

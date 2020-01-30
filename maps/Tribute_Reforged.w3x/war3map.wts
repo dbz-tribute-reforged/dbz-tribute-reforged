@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.29b
+DBZ Tribute Reforged 0.30
 }
 
 STRING 4
@@ -34679,7 +34679,7 @@ Type "r" to revert.
 Transformations:
 [lvl 25]  1.50x  "ss"
 [lvl 50]  1.75x  "uss"
-[lvl 75]  3/1.5/1.5x  "uss2"
+[lvl 75]  3/1.5/1.5x  "uss2" [unlocks heat dome attack]
 [lvl 100] 2.00x  "ss2"
 [lvl 150] 2.40x  "ss2"
 [lvl 200] 2.50x  "ss2" [unlocks ss rage]
@@ -46841,7 +46841,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+// Abilities: A00U (Dragon Fist), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -50592,7 +50592,7 @@ W
 }
 
 STRING 8337
-// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
+// Units: H092 (Shaggy Rogers), Hotkey (Hotkey)
 {
 A
 }
@@ -53735,7 +53735,7 @@ STRING 8854
 }
 
 STRING 8855
-// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
+// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -53749,7 +53749,7 @@ STRING 8857
 {
 Revive in 5 seconds at heaven/hell. Walk through portal to revive back to Earth.
 
-Note: if you want to complain about no snakeway or tickets (non-canon btw), you should probably focus on why you're spending so much time dead instead of playing the game. Hrm?
+If you find yourself stuck you can type -unstuck to attempt to fix it but it will cause you to end up dead in heaven/hell.
 }
 
 STRING 8858
@@ -58433,13 +58433,13 @@ Q
 }
 
 STRING 9632
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9633
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60289,7 +60289,7 @@ Cooler surrounds himself with a purple barrier and flies at the enemy, ramming t
 }
 
 STRING 9940
-// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
+// Abilities: A0BZ (Planet Crusher), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60622,7 +60622,7 @@ STRING 9998
 }
 
 STRING 9999
-// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
+// Abilities: A0ER (Angry Explosion), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -60808,7 +60808,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 10030
-// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
+// Abilities: A0G8 (Energy Punch), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -61271,7 +61271,7 @@ E
 }
 
 STRING 10106
-// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
+// Abilities: A084 (Gigantic Roar), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -61520,7 +61520,7 @@ STRING 10147
 -cam <zoom distance>
 -ang <angle>
 
-Alternatively, TR Menu (top left) - Button 1 contains camera zoom, angle and rotation sliders.
+-customui (activates custom UI HUD)
 }
 
 STRING 10148
@@ -63167,7 +63167,7 @@ Buu gets so angry he makes himself explode damaging nearby units. |n|cff00ff00(D
 }
 
 STRING 10416
-// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
+// Abilities: A0H6 (Gigantic Omegastorm), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -64590,7 +64590,7 @@ X
 }
 
 STRING 10640
-// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
+// Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -64671,7 +64671,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 28.1.20
+This map is under active development - 31.1.20
 }
 
 STRING 10653
@@ -65073,7 +65073,7 @@ STRING 10713
 }
 
 STRING 10714
-// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -65153,12 +65153,6 @@ STRING 10726
 // Units: H08R (Spoiled Brat), Propernames (Proper Names)
 {
 Pan
-}
-
-STRING 10727
-// Units: H08R (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
-{
-SS
 }
 
 STRING 10728
@@ -67100,12 +67094,6 @@ STRING 11053
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool7> seconds)|r
 }
 
-STRING 11054
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 35% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
-}
-
 STRING 11055
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -67113,7 +67101,7 @@ Q
 }
 
 STRING 11056
-// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67449,7 +67437,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 11112
-// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
+// Abilities: A0L3 (Energy Blast Volley), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -67641,14 +67629,8 @@ STRING 11142
 [|cff00FF00F|r] Double Sundae - [|cffffcc00Level 3|r]
 }
 
-STRING 11143
-// Units: H08V (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
-{
-SS
-}
-
 STRING 11144
-// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -67730,6 +67712,12 @@ STRING 11157
 |cffff2020Captain's Mode Detected. Automatic catchup stats disabled.|r
 }
 
+STRING 11158
+// Abilities: A0LM (Hellzone Grenade), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
 STRING 11159
 // Abilities: A0LB (Android Barrier), EditorSuffix (Editor Suffix)
 {
@@ -67761,7 +67749,7 @@ Transformations:
 [lvl 2]   1.15x "fp"
 [lvl 35]  1.50x "ss"
 [lvl 90]  2.00x "ss2"
-[lvl 130] 2.25x "ss3"
+[lvl 120] 2.25x "ss3"
 [lvl 160] 2.50x "ssg"
 [lvl 210] 2.60x "ssb"
 }
@@ -70100,6 +70088,36 @@ A versatile support hero that erects powerful barriers to deflect incoming beams
 
 }
 
+STRING 11549
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
+STRING 11550
+// Abilities: A0N5 (PanRevert), Name (Name)
+{
+PanRevert
+}
+
+STRING 11551
+// Abilities: A0N6 (PanSS), Name (Name)
+{
+PanSS
+}
+
+STRING 11552
+// Abilities: A0N7 (PanSSG), Name (Name)
+{
+PanSSG
+}
+
+STRING 11553
+// Abilities: A0N8 (PanSSB), Name (Name)
+{
+PanSSB
+}
+
 STRING 11554
 // Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
 {
@@ -70182,6 +70200,30 @@ STRING 11567
 // Abilities: A0MV (Super Electric Strike), Tip (Tooltip - Normal)
 {
 [|cff00ff00F|r] Super Electric Strike - [|cffffcc00Level 10|r]
+}
+
+STRING 11568
+// Abilities: A0N9 (Book Pan Heads), Name (Name)
+{
+Book Pan Heads
+}
+
+STRING 11569
+// Abilities: A0NA (NappaRevert), Name (Name)
+{
+NappaRevert
+}
+
+STRING 11570
+// Abilities: A0NB (NappaSS), Name (Name)
+{
+NappaSS
+}
+
+STRING 11571
+// Abilities: A0NC (NappaSS3), Name (Name)
+{
+NappaSS3
 }
 
 STRING 11572
@@ -71096,5 +71138,378 @@ STRING 11725
 // Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
 Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
+}
+
+STRING 11726
+// Abilities: A0ND (NappaSSG), Name (Name)
+{
+NappaSSG
+}
+
+STRING 11727
+// Abilities: A0NE (NappaSSB), Name (Name)
+{
+NappaSSB
+}
+
+STRING 11728
+// Abilities: A0NF (Book Nappa Heads), Name (Name)
+{
+Book Nappa Heads
+}
+
+STRING 11729
+// Buffs/Effects: B01Z (), Buffubertip (Tooltip - Extended)
+{
+It's a spoiled brat!
+}
+
+STRING 11730
+// Buffs/Effects: B01Z (), Bufftip (Tooltip)
+{
+Pan
+}
+
+STRING 11731
+// Buffs/Effects: B020 (), Buffubertip (Tooltip - Extended)
+{
+it's Nappa!
+}
+
+STRING 11732
+// Buffs/Effects: B020 (), Bufftip (Tooltip)
+{
+Nappa
+}
+
+STRING 11733
+// Units: H092 (Shaggy Rogers), Name (Name)
+{
+Shaggy Rogers
+}
+
+STRING 11734
+// Units: H092 (Shaggy Rogers), Propernames (Proper Names)
+{
+Shaggy Rogers
+}
+
+STRING 11735
+// Units: H092 (Shaggy Rogers), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00A|r] Choose Goku
+}
+
+STRING 11736
+// Units: H092 (Shaggy Rogers), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11737
+// Units: H092 (Shaggy Rogers), Tip (Tooltip - Basic)
+{
+[|cffffff00A|r] Choose Goku
+}
+
+STRING 11738
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 11739
+// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 11740
+// Abilities: A0NG (RaditzRevert), Name (Name)
+{
+RaditzRevert
+}
+
+STRING 11741
+// Abilities: A0NH (RaditzSS), Name (Name)
+{
+RaditzSS
+}
+
+STRING 11742
+// Abilities: A0NI (RaditzSSG), Name (Name)
+{
+RaditzSSG
+}
+
+STRING 11743
+// Abilities: A0NJ (RaditzSSB), Name (Name)
+{
+RaditzSSB
+}
+
+STRING 11744
+// Abilities: A0NK (Book Raditz Heads), Name (Name)
+{
+Book Raditz Heads
+}
+
+STRING 11745
+// Buffs/Effects: B021 (), Buffubertip (Tooltip - Extended)
+{
+It's Sonic the Hedgehog!
+}
+
+STRING 11746
+// Buffs/Effects: B021 (), Bufftip (Tooltip)
+{
+Raditz
+}
+
+STRING 11747
+// Units: H08R (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+{
+SS deprecated
+}
+
+STRING 11748
+// Units: H08V (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+{
+SS deprecated
+}
+
+STRING 11749
+// Units: H093 (Oozaru), Name (Name)
+{
+Oozaru
+}
+
+STRING 11750
+// Units: H093 (Oozaru), Propernames (Proper Names)
+{
+Oozaru
+}
+
+STRING 11751
+// Units: H093 (Oozaru), Ubertip (Tooltip - Extended)
+{
+When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
+}
+
+STRING 11752
+// Units: H093 (Oozaru), EditorSuffix (Name - Editor Suffix)
+{
+(bardock armored ooz ss)
+}
+
+STRING 11753
+// Units: H094 (Oozaru), Name (Name)
+{
+Oozaru
+}
+
+STRING 11754
+// Units: H094 (Oozaru), Propernames (Proper Names)
+{
+Oozaru
+}
+
+STRING 11755
+// Units: H094 (Oozaru), Ubertip (Tooltip - Extended)
+{
+When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
+}
+
+STRING 11756
+// Units: H094 (Oozaru), EditorSuffix (Name - Editor Suffix)
+{
+(bardock armored ooz ssg)
+}
+
+STRING 11757
+// Units: H095 (Oozaru), Name (Name)
+{
+Oozaru
+}
+
+STRING 11758
+// Units: H095 (Oozaru), Propernames (Proper Names)
+{
+Oozaru
+}
+
+STRING 11759
+// Units: H095 (Oozaru), Ubertip (Tooltip - Extended)
+{
+When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
+}
+
+STRING 11760
+// Units: H095 (Oozaru), EditorSuffix (Name - Editor Suffix)
+{
+(bardock armored ooz ssb)
+}
+
+STRING 11761
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
+}
+
+STRING 11762
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool2>s|r
+}
+
+STRING 11763
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool3>s|r
+}
+
+STRING 11764
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool4>s|r
+}
+
+STRING 11765
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool5>s|r
+}
+
+STRING 11766
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool6>s|r
+}
+
+STRING 11767
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool7>s|r
+}
+
+STRING 11768
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 11769
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 11770
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 11771
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 11772
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 11773
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 11774
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 11775
+// Abilities: A0NL (Heat Dome Attack), Name (Name)
+{
+Heat Dome Attack
+}
+
+STRING 11776
+// Abilities: A0NL (Heat Dome Attack), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Heat Dome Attack - [|cffffcc00Level %d|r]
+}
+
+STRING 11777
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 11778
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 11779
+// Abilities: A0NL (Heat Dome Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Heat Dome Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 11780
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool8>s|r
+}
+
+STRING 11781
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool9>s|r
+}
+
+STRING 11782
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Future Trunks charges a large dome of yellow energy around himself, knocking away enemies. He then expels a gigantic Finish Buster up at the opponent, inflicting an enormous amount of damage.|n|cff00ff00Initial Explosion Damage: Str * lvl * ?|nBeam Damage: Int * lvl * ?).|r|n|cff00FFFFCooldown: <A0NL,Cool10>s|r
+}
+
+STRING 11783
+// Abilities: A0NL (Heat Dome Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Future Trunks charges a large dome of yellow energy around himself, knocking away enemies. He then expels a gigantic Finish Buster up at the opponent, inflicting an enormous amount of damage.|n|cff00ff00Initial Explosion Damage: Str * lvl * ?|nBeam Damage: Int * lvl * ?).|r|n|cff00FFFFCooldown: <A0NL,Cool10>s|r
+}
+
+STRING 11784
+// Abilities: A0NL (Heat Dome Attack), EditorSuffix (Editor Suffix)
+{
+(future trunks)
+}
+
+STRING 11785
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11786
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 

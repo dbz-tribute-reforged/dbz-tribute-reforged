@@ -201,6 +201,18 @@ export class ExperienceManager {
         ForGroup(rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
 
+          const heroLevel = GetHeroLevel(rewardedUnit);
+          rewardXP += (
+            ExperienceConstants.bonusXPToNextLevel *
+            rewardMult * 
+            (
+              this.levelReqXP[heroLevel + 1 % this.levelReqXP.length] 
+              -
+              this.levelReqXP[heroLevel % this.levelReqXP.length]
+            ) *
+            ExperienceConstants.globalXPRateModifier
+          );
+
           let xpModifier = 1;
           const nearbyPlayerUnits = numPlayerUnits[GetPlayerId(GetOwningPlayer(rewardedUnit))];
           if (nearbyPlayerUnits == 3) {            

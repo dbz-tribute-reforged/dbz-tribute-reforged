@@ -42,6 +42,7 @@ export module AbilityNames {
 
   export module FutureTrunks {
     export const FINISH_BUSTER: string = "Finish Buster";
+    export const HEAT_DOME_ATTACK: string = "Heat Dome Attack";
     export const BURNING_ATTACK: string = "Burning Attack";
     export const BLAZING_RUSH: string = "Blazing Rush";
     export const SHINING_SWORD_ATTACK: string = "Shining Sword Attack";

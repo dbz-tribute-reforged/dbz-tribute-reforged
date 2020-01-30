@@ -23,6 +23,7 @@ export module ExperienceConstants {
 
   export const globalXPRateModifier = 1.1;
   export const nearbyPlayerXPMult = 0.1;
+  export const bonusXPToNextLevel = 0.07;
   // legacy range: 3000
   export const expRange = 2500;
 }
