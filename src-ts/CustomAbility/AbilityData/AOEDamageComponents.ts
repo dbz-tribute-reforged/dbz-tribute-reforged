@@ -45,7 +45,7 @@ constant weapontype         WEAPON_TYPE_ROCK_HEAVY_BASH     = ConvertWeaponType(
 export module BASE {
   export const KAME_DPS = 0.009;
   export const KAME_EXPLOSION = 0.05;
-  export const SPIRIT_BOMB_DPS = 0.002;
+  export const SPIRIT_BOMB_DPS = 0.007;
   export const SPIRIT_BOMB_EXPLOSION = 0.32;
   export const DFIST_DPS = 0.013;
   export const DFIST_EXPLOSION = 0.3;
@@ -1127,7 +1127,7 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 300,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.,
+      multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

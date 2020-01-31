@@ -17,6 +17,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
 
+  protected damagedHeroes: Map<unit, number>;
+
   constructor(
     public name: string = "AOEDamage",
     public repeatInterval: number = 1,
@@ -36,6 +38,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   ) {
     this.damageCoords = new Vector2D(0, 0);
     this.damageStarted = false;
+    this.damagedHeroes = new Map();
   }
 
   protected calculateDamage(input: CustomAbilityInput, source: unit): number {
@@ -45,7 +48,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
       );
     if (this.scaleDamageToSourceHp) {
-      damage *= GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+      const percentHP = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+      damage *= percentHP * percentHP;
     }
     return damage;
   }
@@ -60,6 +64,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.damageStarted) {
+      this.damagedHeroes.clear();
       this.damageStarted = true;
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
@@ -100,16 +105,38 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
-      UnitDamageTarget(
-        input.caster.unit, 
-        target, 
-        damage,
-        true,
-        false,
-        this.damageData.attackType,
-        this.damageData.damageType,
-        this.damageData.weaponType,
-      )
+
+      if (IsUnitType(target, UNIT_TYPE_HERO)) {
+        const damageCount = this.damagedHeroes.get(target);
+        if (damageCount) {
+          if (damageCount < 20) {
+            this.damagedHeroes.set(target, damageCount + 1);
+            UnitDamageTarget(
+              input.caster.unit, 
+              target, 
+              damage,
+              true,
+              false,
+              this.damageData.attackType,
+              this.damageData.damageType,
+              this.damageData.weaponType,
+            )
+          }
+        } else {
+          this.damagedHeroes.set(target, 0);
+        }
+      } else {    
+        UnitDamageTarget(
+          input.caster.unit, 
+          target, 
+          damage,
+          true,
+          false,
+          this.damageData.attackType,
+          this.damageData.damageType,
+          this.damageData.weaponType,
+        )
+      }
 
       // TextTagHelper.showTempText(
       //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 

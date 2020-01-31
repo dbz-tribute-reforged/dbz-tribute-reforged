@@ -419,146 +419,164 @@ export function CustomPlayerTest() {
 	// minimap + minimap buttons
 	// chat msgs, game msgs
 	// hides first 5 command buttons
-	// sets parent of inventory to parent of bottom right command buttons
+  // sets parent of inventory to parent of bottom right command buttons
+
+  let canUseCustomUi = true;
 	const hideTrig = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
 		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
   }
   // TriggerRegisterTimerEventSingle(hideTrig, 5.0);
 	TriggerAddAction(hideTrig, () => {
-    // BJDebugMsg("Enabling Custom UI for all players.");
-    // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
-    //   if (
-    //     !customPlayers[playerId].usingCustomUI && 
-    //     IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-    //     GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-    //   ) {
-    //     customPlayers[playerId].usingCustomUI = true;
-    //   }
-    // }
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    if (
-      !customPlayers[playerId].usingCustomUI && 
-      IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-      GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-    ) {
-      customPlayers[playerId].usingCustomUI = true;
-    }
-
-    const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
-    const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
-    const rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
-
-    const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
-    const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
-
-    const abilityButtonHotbar = BlzGetFrameByName("abilityButtonHotBar", 0);
-    
-    const hpBar = BlzGetFrameByName("MyHPBar", 0);
-    const mpBar = BlzGetFrameByName("MyMPBar", 0);
-
-    const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
-    
-    const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
-    const minimapParent = BlzFrameGetParent(minimap);
-    const minimapButtons: framehandle[] = [];
-    for (let i = 0; i < 5; ++i) {
-      minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
-    }
-
-    const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
-    const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
-
-    const heroPortrait = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0);
-    const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
-    const unitPanelParent = BlzFrameGetParent(unitPanel);
-    
-    const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
-    const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
-
-    const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
-    // const inventoryFrames: framehandle[] = [];
-    // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryCover",0));
-    // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryBar",0));
-    // inventoryFrames.push(BlzGetFrameByName("InventoryCoverTexture",0));
-    // inventoryFrames.push(BlzGetFrameByName("InventoryText",0));
-
-    const inventoryButtons: framehandle[] = [];
-    for (let i = 0; i < 6; ++i) {
-      const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
-      inventoryButtons.push(frame);
-      // inventoryFrames.push(frame);
-    }
-
-    const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
-    const commandCardButtons: framehandle[] = [];
-    for (let i = 0; i < 12; ++i) {
-      commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
-    }
-    
-    const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
-    const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
-    const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
-
-    if (GetLocalPlayer() == GetTriggerPlayer()) {
-      BlzHideOriginFrames(true);
-      BlzFrameSetAllPoints(worldFrame, grandpa);
-      // let frame = BlzGetFrameByName("ConsoleUI", 0);
-      // BlzFrameSetAllPoints(frame, grandpa);
-      // BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
-      BlzFrameSetVisible(rm, false);
-
-      BlzFrameSetVisible(upperBar, true);
-      BlzFrameSetVisible(resourceBar, true);
-      
-      BlzFrameClearAllPoints(abilityButtonHotbar);
-      BlzFrameSetPoint(
-        abilityButtonHotbar, 
-        FRAMEPOINT_BOTTOMRIGHT, 
-        hpBar, 
-        FRAMEPOINT_TOPRIGHT, 
-        -0.008, 0.001
+    if (!canUseCustomUi) {
+      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 10, 
+        "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
       );
+    } else {
+      // BJDebugMsg("Enabling Custom UI for all players.");
+      // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
+      //   if (
+      //     !customPlayers[playerId].usingCustomUI && 
+      //     IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+      //     GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+      //   ) {
+      //     customPlayers[playerId].usingCustomUI = true;
+      //   }
+      // }
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      if (
+        !customPlayers[playerId].usingCustomUI && 
+        IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+        GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+      ) {
+        customPlayers[playerId].usingCustomUI = true;
+      }
 
-      BlzFrameClearAllPoints(hpBar);
-      BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
-      BlzFrameClearAllPoints(mpBar);
-      BlzFrameSetPoint(mpBar, FRAMEPOINT_TOP, hpBar, FRAMEPOINT_BOTTOM, 0, 0.00);
+      const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
+      const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
+      const rm = BlzGetFrameByName("ConsoleUIBackdrop", 0);
+
+      const upperBar = BlzGetFrameByName("UpperButtonBarFrame", 0);
+      const resourceBar = BlzGetFrameByName("ResourceBarFrame", 0);
+
+      const abilityButtonHotbar = BlzGetFrameByName("abilityButtonHotBar", 0);
       
-      BlzFrameSetVisible(heroBarButtons, true);
+      const hpBar = BlzGetFrameByName("MyHPBar", 0);
+      const mpBar = BlzGetFrameByName("MyMPBar", 0);
 
-      BlzFrameSetVisible(minimapParent, true);
-      BlzFrameSetVisible(minimap, true);
-      // buttons still not showing up
-      FrameHelper.setFramesVisibility(minimapButtons, true);
-
-      BlzFrameSetVisible(chatMsg, true);
-      BlzFrameSetVisible(gameMsg, true);
-
-      BlzFrameSetVisible(heroPortrait, true);
-      BlzFrameClearAllPoints(heroPortrait);
-      BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.135, 0.003);
-      BlzFrameSetSize(heroPortrait, 0.08, 0.08);
-
-      BlzFrameSetVisible(unitPanelParent, true);
-      BlzFrameSetVisible(unitPanel, false);
-
-      BlzFrameSetVisible(inventoryCover, false);
-      BlzFrameSetVisible(inventoryCoverTexture, false);
+      const heroBarButtons = BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0);
       
-      BlzFrameSetParent(inventoryParent, commandCardParent);
+      const minimap = BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0);
+      const minimapParent = BlzFrameGetParent(minimap);
+      const minimapButtons: framehandle[] = [];
+      for (let i = 0; i < 5; ++i) {
+        minimapButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, i));
+      }
 
-      BlzFrameSetVisible(commandCardParent, true);
-      BlzFrameSetVisible(inventoryParent, true);
-      FrameHelper.setFramesVisibility(inventoryButtons, true);
-      // FrameHelper.setFramesVisibility(inventoryFrames, true);
+      const chatMsg = BlzGetOriginFrame(ORIGIN_FRAME_CHAT_MSG, 0);
+      const gameMsg = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_MSG, 0);
 
-      // heroStatsUI.setRenderVisible(true);
-      BlzFrameSetVisible(customStrengthLabel, true);
-      BlzFrameSetVisible(customAgilityLabel, true);
-      BlzFrameSetVisible(customIntelligenceLabel, true);
+      const heroPortrait = BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0);
+      const unitPanel = BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0);
+      const unitPanelParent = BlzFrameGetParent(unitPanel);
+      
+      const inventoryCover = BlzGetFrameByName("SimpleInventoryCover", 0);
+      const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
+
+      const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
+      // const inventoryFrames: framehandle[] = [];
+      // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryCover",0));
+      // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryBar",0));
+      // inventoryFrames.push(BlzGetFrameByName("InventoryCoverTexture",0));
+      // inventoryFrames.push(BlzGetFrameByName("InventoryText",0));
+
+      const inventoryButtons: framehandle[] = [];
+      for (let i = 0; i < 6; ++i) {
+        const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
+        inventoryButtons.push(frame);
+        // inventoryFrames.push(frame);
+      }
+
+      const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
+      const commandCardButtons: framehandle[] = [];
+      for (let i = 0; i < 12; ++i) {
+        commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
+      }
+      
+      const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
+      const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
+      const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
+
+      if (GetLocalPlayer() == GetTriggerPlayer()) {
+        BlzHideOriginFrames(true);
+        BlzFrameSetAllPoints(worldFrame, grandpa);
+        // let frame = BlzGetFrameByName("ConsoleUI", 0);
+        // BlzFrameSetAllPoints(frame, grandpa);
+        // BlzFrameSetPoint(frame, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, -1, -1);
+        BlzFrameSetVisible(rm, false);
+
+        BlzFrameSetVisible(upperBar, true);
+        BlzFrameSetVisible(resourceBar, true);
+        
+        BlzFrameClearAllPoints(abilityButtonHotbar);
+        BlzFrameSetPoint(
+          abilityButtonHotbar, 
+          FRAMEPOINT_BOTTOMRIGHT, 
+          hpBar, 
+          FRAMEPOINT_TOPRIGHT, 
+          -0.008, 0.001
+        );
+
+        BlzFrameClearAllPoints(hpBar);
+        BlzFrameSetPoint(hpBar, FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.02);
+        BlzFrameClearAllPoints(mpBar);
+        BlzFrameSetPoint(mpBar, FRAMEPOINT_TOP, hpBar, FRAMEPOINT_BOTTOM, 0, 0.00);
+        
+        BlzFrameSetVisible(heroBarButtons, true);
+
+        BlzFrameSetVisible(minimapParent, true);
+        BlzFrameSetVisible(minimap, true);
+        // buttons still not showing up
+        FrameHelper.setFramesVisibility(minimapButtons, true);
+
+        BlzFrameSetVisible(chatMsg, true);
+        BlzFrameSetVisible(gameMsg, true);
+
+        BlzFrameSetVisible(heroPortrait, true);
+        BlzFrameClearAllPoints(heroPortrait);
+        BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.135, 0.003);
+        BlzFrameSetSize(heroPortrait, 0.08, 0.08);
+
+        BlzFrameSetVisible(unitPanelParent, true);
+        BlzFrameSetVisible(unitPanel, false);
+
+        BlzFrameSetVisible(inventoryCover, false);
+        BlzFrameSetVisible(inventoryCoverTexture, false);
+        
+        BlzFrameSetParent(inventoryParent, commandCardParent);
+
+        BlzFrameSetVisible(commandCardParent, true);
+        BlzFrameSetVisible(inventoryParent, true);
+        FrameHelper.setFramesVisibility(inventoryButtons, true);
+        // FrameHelper.setFramesVisibility(inventoryFrames, true);
+
+        // heroStatsUI.setRenderVisible(true);
+        BlzFrameSetVisible(customStrengthLabel, true);
+        BlzFrameSetVisible(customAgilityLabel, true);
+        BlzFrameSetVisible(customIntelligenceLabel, true);
+      }
     }
-	});
+  });
+  
+  // disable after pick phase
+  TimerStart(CreateTimer(), 60, false, () => {
+    canUseCustomUi = false;
+    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, 
+      "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
+    );
+    DestroyTimer(GetExpiredTimer());
+  })
+
 
 	const resetUnitPanelTrigger = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
