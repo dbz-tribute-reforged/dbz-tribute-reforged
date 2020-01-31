@@ -51,6 +51,8 @@ export module BASE {
   export const DFIST_EXPLOSION = 0.3;
 }
 
+export const DEFAULT_MAX_DAMAGE_TICKS = 20;
+
 export const AOEDamageComponents = [
   // used for kame
   // note: i named the dmg components differently
@@ -66,6 +68,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS,
       attribute: bj_HEROSTAT_INT,
@@ -84,6 +87,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -102,6 +106,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
@@ -119,6 +124,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
@@ -137,6 +143,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
       attribute: bj_HEROSTAT_INT,
@@ -154,6 +161,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -172,6 +180,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS,
       attribute: bj_HEROSTAT_INT,
@@ -189,6 +198,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -207,6 +217,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.2,
       attribute: bj_HEROSTAT_INT,
@@ -224,6 +235,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
       attribute: bj_HEROSTAT_INT,
@@ -242,6 +254,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 2,
       attribute: bj_HEROSTAT_INT,
@@ -259,6 +272,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -277,6 +291,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -295,6 +310,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.18,
       attribute: bj_HEROSTAT_INT,
@@ -313,6 +329,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.85,
       attribute: bj_HEROSTAT_INT,
@@ -331,8 +348,9 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.3,
+      multiplier: BASE.KAME_DPS * 0.32,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -348,6 +366,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -366,6 +385,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.75,
       attribute: bj_HEROSTAT_AGI,
@@ -384,6 +404,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.9,
       attribute: bj_HEROSTAT_INT,
@@ -401,6 +422,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.4,
       attribute: bj_HEROSTAT_INT,
@@ -419,6 +441,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 2,
       attribute: bj_HEROSTAT_STR,
@@ -437,6 +460,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.3,
       attribute: bj_HEROSTAT_INT,
@@ -454,6 +478,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 3,
       attribute: bj_HEROSTAT_INT,
@@ -472,6 +497,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_STR,
@@ -490,6 +516,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.30,
       attribute: bj_HEROSTAT_INT,
@@ -508,6 +535,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.045,
       attribute: bj_HEROSTAT_INT,
@@ -525,6 +553,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_INT,
@@ -543,6 +572,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.3,
       attribute: bj_HEROSTAT_STR,
@@ -560,6 +590,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.9,
       attribute: bj_HEROSTAT_INT,
@@ -577,6 +608,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.9,
       attribute: bj_HEROSTAT_INT,
@@ -595,6 +627,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 310,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.7,
       attribute: bj_HEROSTAT_STR,
@@ -612,6 +645,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 330,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.6,
       attribute: bj_HEROSTAT_INT,
@@ -629,6 +663,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.6,
       attribute: bj_HEROSTAT_INT,
@@ -647,6 +682,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 1.7,
       attribute: bj_HEROSTAT_INT,
@@ -664,6 +700,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_INT,
@@ -682,6 +719,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS,
       attribute: bj_HEROSTAT_STR,
@@ -692,7 +730,7 @@ export const AOEDamageComponents = [
   },
   // angry shout
   {
-    name: "damage angry shout spear dps",
+    name: "damage angry shout dps",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
@@ -700,8 +738,9 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 900,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 3,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 1.5,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -718,6 +757,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 550,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.07,
       attribute: bj_HEROSTAT_INT,
@@ -736,6 +776,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
@@ -753,6 +794,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.5,
       attribute: bj_HEROSTAT_INT,
@@ -771,6 +813,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.7,
       attribute: bj_HEROSTAT_INT,
@@ -788,6 +831,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_INT,
@@ -806,6 +850,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.35,
       attribute: bj_HEROSTAT_INT,
@@ -823,6 +868,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 450,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.65,
       attribute: bj_HEROSTAT_INT,
@@ -841,8 +887,9 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.245,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.23,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -858,6 +905,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 450,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.455,
       attribute: bj_HEROSTAT_INT,
@@ -876,6 +924,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 450,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.1,
       attribute: bj_HEROSTAT_INT,
@@ -894,6 +943,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.01,
       attribute: bj_HEROSTAT_INT,
@@ -912,6 +962,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.09 * 16,
       attribute: bj_HEROSTAT_INT,
@@ -930,6 +981,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: 50,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.25,
       attribute: bj_HEROSTAT_INT,
@@ -948,6 +1000,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.5,
       attribute: bj_HEROSTAT_AGI,
@@ -966,6 +1019,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.5 * 16,
       attribute: bj_HEROSTAT_INT,
@@ -984,6 +1038,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 800,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.32,
       attribute: bj_HEROSTAT_INT,
@@ -1001,6 +1056,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 800,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.7,
       attribute: bj_HEROSTAT_INT,
@@ -1019,6 +1075,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 220,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.33,
       attribute: bj_HEROSTAT_INT,
@@ -1037,6 +1094,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 25,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 1.4,
       attribute: bj_HEROSTAT_INT,
@@ -1055,6 +1113,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 50,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_INT,
@@ -1073,6 +1132,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.25,
       attribute: bj_HEROSTAT_INT,
@@ -1091,6 +1151,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.33,
       attribute: bj_HEROSTAT_INT,
@@ -1108,6 +1169,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_INT,
@@ -1126,6 +1188,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.5,
       attribute: bj_HEROSTAT_INT,
@@ -1144,6 +1207,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
       attribute: bj_HEROSTAT_AGI,
@@ -1162,6 +1226,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_STR,
@@ -1180,6 +1245,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
       attribute: bj_HEROSTAT_STR,
@@ -1197,6 +1263,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
       attribute: bj_HEROSTAT_STR,
@@ -1215,6 +1282,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.3,
       attribute: bj_HEROSTAT_STR,
@@ -1233,6 +1301,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_STR,
@@ -1250,6 +1319,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
       attribute: bj_HEROSTAT_STR,
@@ -1268,6 +1338,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 325,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.8,
       attribute: bj_HEROSTAT_INT,
@@ -1286,6 +1357,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 1.4,
       attribute: bj_HEROSTAT_AGI,
@@ -1304,6 +1376,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
@@ -1321,6 +1394,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
@@ -1339,6 +1413,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.55,
       attribute: bj_HEROSTAT_INT,
@@ -1356,6 +1431,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.55,
       attribute: bj_HEROSTAT_INT,
@@ -1374,6 +1450,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.85,
       attribute: bj_HEROSTAT_INT,
@@ -1391,6 +1468,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.60,
       attribute: bj_HEROSTAT_INT,
@@ -1409,6 +1487,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.7,
       attribute: bj_HEROSTAT_STR,
@@ -1427,6 +1506,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 750,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.1,
       attribute: bj_HEROSTAT_INT,
@@ -1444,6 +1524,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.3,
       attribute: bj_HEROSTAT_INT,
@@ -1461,6 +1542,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 750,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_INT,
@@ -1478,6 +1560,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
       attribute: bj_HEROSTAT_INT,
@@ -1496,6 +1579,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.17,
       attribute: bj_HEROSTAT_INT,
@@ -1514,6 +1598,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.6,
       attribute: bj_HEROSTAT_INT,
@@ -1533,6 +1618,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 450,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_INT,
@@ -1551,6 +1637,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.25,
       attribute: bj_HEROSTAT_INT,
@@ -1569,6 +1656,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
       attribute: bj_HEROSTAT_INT,
@@ -1587,6 +1675,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.60,
       attribute: bj_HEROSTAT_INT,
@@ -1604,6 +1693,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.60,
       attribute: bj_HEROSTAT_INT,
@@ -1622,8 +1712,9 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.11,
+      multiplier: BASE.KAME_DPS * 0.12,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1639,6 +1730,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.115,
       attribute: bj_HEROSTAT_INT,
@@ -1657,6 +1749,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_INT,
