@@ -18,7 +18,7 @@ export const MultiComponents = [
     alwaysUpdateAngle: false,
     fixedSourceCoords: false,
     useTargetUnitAsSource: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     sfxList: true,
     components: [
       { name: "beam twin dragon shot" },
@@ -331,7 +331,7 @@ export const MultiComponents = [
     alwaysUpdateAngle: false,
     fixedSourceCoords: false,
     useTargetUnitAsSource: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     sfxList: true,
     components: [
       { name: "beam lava burst" },
