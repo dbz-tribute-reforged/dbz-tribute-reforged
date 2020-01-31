@@ -180,7 +180,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       scaleDamageToSourceHp: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
-      maxDamageticks: number;
+      maxDamageTicks: number;
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -198,7 +198,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.scaleDamageToSourceHp = input.scaleDamageToSourceHp;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
-    this.maxDamageTicks = input.maxDamageticks;
+    this.maxDamageTicks = input.maxDamageTicks;
     this.damageData = new DamageData().deserialize(input.damageData);
     return this;
   }
