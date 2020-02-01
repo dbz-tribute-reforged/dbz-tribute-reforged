@@ -465,7 +465,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 0.3,
+    beamHpMult: BASE.KAME_DPS * 0.4,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 0,
     aoe: 300,
@@ -490,6 +490,7 @@ export const BeamComponents = [
       { name: "damage hellzone grenade explosion" },
       { name: "dash flying point hellzone grenade" },
       { name: "dash flying unit hellzone grenade" },
+      { name: "sfx beam hellzone grenade" },
     ],
   },
   // -------------------------------------------

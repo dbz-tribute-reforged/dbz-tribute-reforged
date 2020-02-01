@@ -1339,6 +1339,35 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam hellzone grenade", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 1.1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx future sight", 
     repeatInterval: 1,
     startTick: 0,
