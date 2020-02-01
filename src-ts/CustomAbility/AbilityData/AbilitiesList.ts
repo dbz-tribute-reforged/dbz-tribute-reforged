@@ -988,7 +988,7 @@ export const AbilitiesList = [
       { name: "channel caster default" },
       { name: "block angry shout" },
       { name: "damage angry shout dps" },
-      { name: "knockback 1tick 20speed 0angle 900aoe" },
+      { name: "knockback angry shout" },
       { name: "sfx angry shout" },
     ],
   },
@@ -2162,7 +2162,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 12,
+    duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2178,6 +2178,7 @@ export const AbilitiesList = [
         AbilityNames.Nappa.BLAZING_STORM
     },
     components: [
+      // { name: "multi blazing storm" },
       { name: "multi blazing storm 1" },
       { name: "multi blazing storm 2" },
       { name: "multi blazing storm 3" },

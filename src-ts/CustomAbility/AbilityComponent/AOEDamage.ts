@@ -66,9 +66,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.damageStarted) {
-      this.damagedHeroes.clear();
+    if (
+      !this.damageStarted || 
+      ability.currentTick == this.startTick
+    ) {
       this.damageStarted = true;
+      this.damagedHeroes.clear();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
       }
@@ -127,7 +130,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
               this.damageData.attackType,
               this.damageData.damageType,
               this.damageData.weaponType,
-            )
+            );
+            // TextTagHelper.showTempText(
+            //   "@" + Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+            //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+            // );
           }
         } else {
           this.damagedHeroes.set(target, 1);
@@ -142,19 +149,21 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           this.damageData.attackType,
           this.damageData.damageType,
           this.damageData.weaponType,
-        )
+        );
+        // TextTagHelper.showTempText(
+        //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+        //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+        // );
       }
 
-      // TextTagHelper.showTempText(
-      //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-      //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
-      // );
+
     })
 
     DestroyGroup(affectedGroup);
     
     if (ability.isFinishedUsing(this)) {
       this.damageStarted = false;
+      this.damagedHeroes.clear();
     }
   }
 

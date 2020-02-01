@@ -21,7 +21,7 @@ export module Constants {
   export const sagaPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
   export const heavenHellCreepPlayerId: number = maxPlayers - 1;
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
-  export const heavenHellMaxHeroLevel: number = 20;
+  export const heavenHellMaxHeroLevel: number = 10;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
     -7000, 20000
   );

@@ -174,14 +174,19 @@ export class CreepManager {
     );
 
     if (IsUnitType(newCreepUnit, UNIT_TYPE_HERO)) {
-      if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel) {
+      const rng = Math.random();
+      if (GetHeroLevel(oldCreep) < Constants.heavenHellMaxHeroLevel && rng < 0.5) {
         SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep) + 1, false);
       } else {
-        SetHeroLevel(newCreepUnit, GetHeroLevel(oldCreep), false);
+        SetHeroLevel(
+          newCreepUnit, 
+          Math.min(GetHeroLevel(oldCreep), Constants.heavenHellMaxHeroLevel),
+          false
+        );
       }
-      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.05 + 50), false);
-      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.05 + 50), false);
-      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.05 + 50), false);
+      SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.1 + 50), false);
+      SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.1 + 50), false);
+      SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.1 + 50), false);
     }
     
     // in with the new, out with the old

@@ -195,14 +195,14 @@ export const AOEKnockbackComponents = [
   },
   // angry shout large aoe knockback
   {
-    name: "knockback 1tick 20speed 0angle 900aoe",
+    name: "knockback angry shout",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     knockbackData: {
       speed: 20, 
       angle: 0, 
-      aoe: 800,
+      aoe: 700,
     },
     affectAllies: false,
   },

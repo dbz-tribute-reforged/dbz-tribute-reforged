@@ -29,9 +29,9 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
         "Android 19 and Android 20 have begun terrorizing Satan City!"
       ],
       [
-        "|cffffcc00Android 20|r: You're an Android! How did you even DO that?",
+        "|cffffcc00Android 19|r: You're an Android! How did you even DO that?",
         "|cffffcc00Dr. Gero|r: I took my brain out and put it in this body.",
-        "|cffffcc00Android 20|r: Uh how?",
+        "|cffffcc00Android 19|r: Uh how?",
         "|cffffcc00Dr. Gero|r: I-- ...huh.",
         "|cffffcc00Dr. Gero|r: How DID I do that?",
       ],

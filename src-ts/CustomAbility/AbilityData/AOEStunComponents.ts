@@ -13,7 +13,7 @@ export const AOEStunComponents = [
   {
     name: "stun blazing rush",
     repeatInterval: 1,
-    startTick: 25,
+    startTick: 20,
     endTick: -1,
     duration: 1,
     aoe: 400,

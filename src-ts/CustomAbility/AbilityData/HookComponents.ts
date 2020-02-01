@@ -7,7 +7,7 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 1.7,  
+      multiplier: BASE.DFIST_EXPLOSION * 1.6,  
       attribute: bj_HEROSTAT_STR, 
       attackType: 6,
       damageType: 0, 
@@ -15,7 +15,7 @@ export const HookComponents = [
     }, 
     maxRange: 1400,
     speed: 50,
-    aoe: 180,
+    aoe: 200,
     onlyHookHeroes: false,
     useLastCastPoint: true,
     sfxList: [

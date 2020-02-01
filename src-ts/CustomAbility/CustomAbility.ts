@@ -173,7 +173,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       this.currentTick >= component.endTick && 
       (
         component.endTick != ComponentConstants.MAX_DURATION ||
-        this.currentTick == this.duration
+        this.currentTick >= this.duration
       )
     );
   }
