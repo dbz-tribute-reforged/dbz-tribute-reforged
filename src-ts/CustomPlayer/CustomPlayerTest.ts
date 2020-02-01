@@ -742,7 +742,7 @@ export function CustomPlayerTest() {
 
   if (numActivePlayers == 1) {
 
-    BJDebugMsg("Special Single Player Commands -lvl -mega -cd");
+    BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
     BJDebugMsg("Final Battle Disabled");
     TournamentManager.getInstance().removeTournament(Constants.finalBattleName);
@@ -767,10 +767,10 @@ export function CustomPlayerTest() {
 
     const statsTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-stats", false);
+      TriggerRegisterPlayerChatEvent(statsTrig, Player(i), "-setstats", false);
     }
     TriggerAddAction(statsTrig, () => {
-      const value = S2I(SubString(GetEventPlayerChatString(), 7, 12));
+      const value = S2I(SubString(GetEventPlayerChatString(), 10, 17));
       const group = GetUnitsSelectedAll(GetTriggerPlayer());
       ForGroup(group, () => {
         const target = GetEnumUnit();
@@ -785,10 +785,10 @@ export function CustomPlayerTest() {
   
     const lvlTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-lvl", false);
+      TriggerRegisterPlayerChatEvent(lvlTrig, Player(i), "-level", false);
     }
     TriggerAddAction(lvlTrig, () => {
-      const value = S2I(SubString(GetEventPlayerChatString(), 5, 8));
+      const value = S2I(SubString(GetEventPlayerChatString(), 7, 11));
       const group = GetUnitsSelectedAll(GetTriggerPlayer());
       ForGroup(group, () => {
         const target = GetEnumUnit();
@@ -953,6 +953,7 @@ export function CustomPlayerTest() {
   //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
   // }
   TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-freemode", true);
+  TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-fbsimtest", true);
   TriggerAddAction(freeModeTrig, () => {
     WinLossHelper.freeMode = true;
   });

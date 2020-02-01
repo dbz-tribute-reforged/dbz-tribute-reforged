@@ -387,7 +387,7 @@ export const AOEDamageComponents = [
     aoe: 300,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.75,
+      multiplier: BASE.DFIST_DPS * 0.8,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -462,7 +462,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.3,
+      multiplier: BASE.KAME_DPS * 0.25,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -480,7 +480,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 3,
+      multiplier: BASE.KAME_EXPLOSION * 3.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -552,10 +552,10 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 400,
+    aoe: 350,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.6,
+      multiplier: BASE.KAME_EXPLOSION * 0.65,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -971,7 +971,7 @@ export const AOEDamageComponents = [
       weaponType: 0,
     },
   },
-  // 13 energy beam beam
+  // 13 energy beam
   {
     name: "damage energy beam dps",
     repeatInterval: 1,
@@ -983,7 +983,7 @@ export const AOEDamageComponents = [
     aoe: 400,
     maxDamageTicks: 50,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.25,
+      multiplier: BASE.KAME_DPS * 0.23,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1040,7 +1040,7 @@ export const AOEDamageComponents = [
     aoe: 800,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.32,
+      multiplier: BASE.KAME_DPS * 0.4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1058,14 +1058,14 @@ export const AOEDamageComponents = [
     aoe: 800,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1.7,
+      multiplier: BASE.KAME_EXPLOSION * 2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
   },
-  // 13 energy beam beam
+  // 13 overcharge
   {
     name: "damage overcharge dps",
     repeatInterval: 1,

@@ -328,7 +328,7 @@ gg_trg_Shenron_Wish_Granted_Sound = nil
 gg_trg_Tournament_Trophy = nil
 gg_trg_Tournament_Trophy_Use_Abil = nil
 gg_trg_Tournament_Trophy_Acquire_Item = nil
-gg_trg_Tournament_Trophy_Give_Stats = nil
+gg_trg_Tournament_Trophy_Give_Reward = nil
 gg_trg_Final_Battle_Detector = nil
 gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
@@ -522,6 +522,12 @@ gg_trg_Regen_Items_Do_Regen = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
+gg_trg_Final_Battle_Sim_On = nil
+gg_trg_Final_Battle_Sim_Set_Stats = nil
+gg_trg_Final_Battle_Sim_Set_Mult = nil
+gg_trg_Final_Battle_Sim_Set_Level = nil
+gg_trg_Final_Battle_Sim_Teleport = nil
+gg_trg_Final_Battle_Sim_Set_All_Stats = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -882,7 +888,7 @@ function CreateBuildingsForPlayer3()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2432.0, 22336.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 6016.0, -6592.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 6016.0, -7040.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer4()
@@ -902,7 +908,7 @@ function CreateBuildingsForPlayer5()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 22656.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 30528.0, 13248.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 30656.0, 12672.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -922,7 +928,7 @@ function CreateBuildingsForPlayer7()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 22336.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), -5824.0, 14080.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), -6080.0, 14208.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer8()
@@ -932,7 +938,7 @@ function CreateBuildingsForPlayer8()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 22336.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 15360.0, 7296.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 15360.0, 7104.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer9()
@@ -1081,8 +1087,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3944.5, 11196.9, 205.198, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5234.0, 11820.6, 57.702, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -1373.4, 7743.0, 203.099, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4844.2, 13128.1, 341.103, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4656.1, 13991.5, 141.926, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4417.0, 12606.6, 341.103, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4068.7, 14202.3, 141.926, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2962.1, 7262.8, 85.311, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3708.2, 14077.8, 148.562, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3290.9, 13021.0, 271.579, FourCC("n015"))
@@ -1114,8 +1120,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18173.9, 9002.8, 351.551, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 20836.0, 8543.6, 354.397, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 20903.4, 6212.4, 329.721, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17452.9, 5291.8, 2.637, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 16807.0, 5965.1, 189.300, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17444.9, 5291.1, 2.637, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 16725.0, 5409.1, 189.300, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 15066.8, 5043.1, 209.944, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14404.5, 3933.8, 285.466, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13540.4, 2661.4, 60.723, FourCC("n01E"))
@@ -1129,8 +1135,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 16920.3, -5356.1, 227.502, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16225.2, -1039.9, 290.234, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17263.8, -1854.8, 258.890, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 17026.6, -2987.0, 64.569, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17374.3, -1493.3, 258.890, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16545.8, -2830.4, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15157.1, -3811.7, 64.569, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 15684.5, -2536.5, 72.627, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16859.4, -4666.8, 86.491, FourCC("n01D"))
@@ -1345,8 +1351,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 10313.0, 15370.1, 331.748, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 15667.6, 14599.6, 90.794, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 15948.3, 14008.0, 238.773, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16765.5, 14374.2, 229.118, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 17407.6, 14755.2, 286.758, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16414.6, 13287.2, 229.118, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16929.2, 14889.4, 286.758, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 17466.1, 13719.0, 286.758, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 3217.8, 8273.9, 321.478, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 4509.4, 11429.0, 84.888, FourCC("n01D"))
@@ -1380,8 +1386,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8864.6, 18158.1, 221.964, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 6204.0, 6546.4, 274.875, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 5340.1, -1992.7, 121.993, FourCC("n02E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16827.1, 6553.9, 347.391, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16724.4, 6334.5, 355.314, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16784.9, 6459.3, 347.391, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16666.8, 6217.2, 355.314, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17401.7, 6478.4, 349.651, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17306.6, 5853.9, 27.157, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), -1395.7, 18096.1, 346.636, FourCC("n014"))
@@ -1404,10 +1410,10 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 10419.6, 18826.3, 298.636, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 10719.8, 18821.7, 198.738, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 5064.6, 4581.5, 288.488, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18982.1, -3877.3, 224.774, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 19149.8, -3816.9, 224.774, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18652.7, -3448.4, 214.312, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 5884.8, -2388.3, 274.787, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 20527.0, 12560.4, 212.423, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 20750.0, 12557.0, 212.423, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 3635.3, -4923.5, 303.297, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 3203.6, -6566.4, 63.927, FourCC("n02E"))
@@ -1583,8 +1589,8 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14317.6, -3198.7, 42.325, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -3806.7, 11978.3, 346.629, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 18792.8, 14591.1, 249.263, FourCC("n01A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 18512.5, 14332.9, 235.528, FourCC("n03G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 17473.4, 13005.3, 70.841, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 18462.2, 14414.5, 235.528, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -7214.5, -5738.4, 320.883, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -7341.9, -5371.4, 40.942, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4518.4, -7256.3, 146.713, FourCC("n015"))
@@ -1593,6 +1599,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2312.6, -5218.2, 242.706, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15346.4, 29569.1, 57.988, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6054.1, 30646.7, 47.605, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 3263.0, 13089.7, 16.778, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 15872.7, 26636.5, 344.966, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14578.2, 27642.1, 70.743, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 6357.0, 26720.7, 161.427, FourCC("n015"))
@@ -1642,6 +1649,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16280.7, 31104.8, 285.126, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 12649.4, 30564.3, 277.578, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 12424.8, 25929.9, 179.203, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 21826.7, -7382.7, 223.262, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9523.5, 29323.8, 350.211, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 16190.6, 26935.4, 280.512, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 15626.7, 25384.0, 94.500, FourCC("n019"))
@@ -1664,6 +1672,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8000.9, 28611.2, 275.458, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8783.9, 28078.2, 241.333, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7943.8, 29361.7, 326.370, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 20347.1, -6762.0, 84.723, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 20509.8, -7029.9, 84.723, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13232.4, 25555.8, 207.615, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14770.2, 31026.8, 277.263, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 14361.2, 30955.6, 301.626, FourCC("n019"))
@@ -1860,7 +1870,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 25104.1, 5352.1, 136.872, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 23993.5, 16131.0, 302.865, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30592.2, 11594.8, 142.882, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29653.1, 14549.1, 142.882, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29618.3, 10709.0, 52.847, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27895.3, 12588.1, 218.986, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 28481.7, 5578.6, 258.824, FourCC("n01U"))
@@ -1912,15 +1922,15 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28829.8, 16067.4, 262.096, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 27695.3, 16210.9, 334.673, FourCC("n03A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29519.0, 10265.2, 40.203, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02Q"), 25486.8, 13228.5, 35.804, FourCC("n02Q"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02Q"), 24733.9, 13884.0, 35.804, FourCC("n02Q"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 31388.4, 10681.6, 166.687, FourCC("n03A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27459.1, 15792.3, 333.289, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 25218.0, -7715.6, 105.944, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 22910.4, -6377.5, 195.167, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 21424.9, -6621.6, 195.167, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 25087.7, -6218.1, 60.921, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 21072.3, -6599.5, 155.242, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 21419.3, -6486.0, 158.054, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 20470.4, -7943.9, 155.242, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23098.7, -6352.7, 158.054, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 28665.6, -6655.7, 0.604, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 30540.3, -6616.4, 36.399, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 31411.7, -5990.2, 235.499, FourCC("n01A"))
@@ -1996,6 +2006,9 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 30853.1, -5601.6, 224.249, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n028"), 23053.4, 25895.9, 274.821, FourCC("n028"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 20784.3, 29170.4, 11.569, FourCC("n02P"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14612.4, 5269.1, 158.054, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23476.7, -6179.3, 21.547, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23871.0, -6301.7, -27.501, FourCC("n015"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2605,8 +2618,8 @@ function Trig_Piccolo_Multi_Form_Actions()
         CreateNUnitsAtLoc(1, FourCC("H04X"), GetTriggerPlayer(), udg_TempLoc, GetUnitFacing(udg_TempUnit))
         udg_TempUnit2 = GetLastCreatedUnit()
         UnitApplyTimedLifeBJ(60, FourCC("BTLF"), udg_TempUnit2)
-        SetUnitAbilityLevelSwapped(FourCC("A0ES"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A06F"), udg_TempUnit2))
-        SetUnitAbilityLevelSwapped(FourCC("A0DS"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A00V"), udg_TempUnit2))
+        SetUnitAbilityLevelSwapped(FourCC("A0ES"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A06F"), udg_TempUnit))
+        SetUnitAbilityLevelSwapped(FourCC("A0DS"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A00V"), udg_TempUnit))
         ModifyHeroStat(bj_HEROSTAT_STR, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
         ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
@@ -3559,6 +3572,164 @@ function InitTrig_Unstuck_Units()
     TriggerAddAction(gg_trg_Unstuck_Units, Trig_Unstuck_Units_Actions)
 end
 
+function Trig_Final_Battle_Sim_On_Actions()
+    udg_TeamAboutToLose[0] = false
+    udg_TeamAboutToLose[1] = false
+    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11081")
+    udg_IsFreeMode = true
+    DisableTrigger(gg_trg_Force_Win_Loss)
+    EnableTrigger(gg_trg_Spawn_Test_Dummy)
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_Set_Stats, udg_TempPlayer, "-stats", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_Set_All_Stats, udg_TempPlayer, "-allstats", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_Set_Mult, udg_TempPlayer, "-mult", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_Set_Level, udg_TempPlayer, "-lvl", false)
+        TriggerRegisterPlayerUnitEventSimple(gg_trg_Final_Battle_Sim_Teleport, udg_TempPlayer, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+        udg_TempInt = udg_TempInt + 1
+    end
+    EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
+    EnableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
+    EnableTrigger(gg_trg_Hero_Pick_Secret_Bardock)
+end
+
+function InitTrig_Final_Battle_Sim_On()
+    gg_trg_Final_Battle_Sim_On = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_Final_Battle_Sim_On, Player(0), "-fbsimtest", true)
+    TriggerAddAction(gg_trg_Final_Battle_Sim_On, Trig_Final_Battle_Sim_On_Actions)
+end
+
+function Trig_Final_Battle_Sim_Set_Stats_Conditions()
+    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 6) == "-stats")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Final_Battle_Sim_Set_Stats_Func003A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    SaveRealBJ(udg_StatMultReal, 0, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 1, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 2, udg_ID, udg_StatMultHashtable)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+end
+
+function Trig_Final_Battle_Sim_Set_Stats_Actions()
+    udg_StatMultReal = S2R(SubStringBJ(GetEventPlayerChatString(), 8, 20))
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Final_Battle_Sim_Set_Stats_Func003A)
+end
+
+function InitTrig_Final_Battle_Sim_Set_Stats()
+    gg_trg_Final_Battle_Sim_Set_Stats = CreateTrigger()
+    TriggerAddCondition(gg_trg_Final_Battle_Sim_Set_Stats, Condition(Trig_Final_Battle_Sim_Set_Stats_Conditions))
+    TriggerAddAction(gg_trg_Final_Battle_Sim_Set_Stats, Trig_Final_Battle_Sim_Set_Stats_Actions)
+end
+
+function Trig_Final_Battle_Sim_Set_All_Stats_Conditions()
+    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 9) == "-allstats")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Final_Battle_Sim_Set_All_Stats_Func003Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    SaveRealBJ(udg_StatMultReal, 0, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 1, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 2, udg_ID, udg_StatMultHashtable)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+end
+
+function Trig_Final_Battle_Sim_Set_All_Stats_Actions()
+    udg_StatMultReal = S2R(SubStringBJ(GetEventPlayerChatString(), 11, 21))
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Final_Battle_Sim_Set_All_Stats_Func003Func001A)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Final_Battle_Sim_Set_All_Stats()
+    gg_trg_Final_Battle_Sim_Set_All_Stats = CreateTrigger()
+    TriggerAddCondition(gg_trg_Final_Battle_Sim_Set_All_Stats, Condition(Trig_Final_Battle_Sim_Set_All_Stats_Conditions))
+    TriggerAddAction(gg_trg_Final_Battle_Sim_Set_All_Stats, Trig_Final_Battle_Sim_Set_All_Stats_Actions)
+end
+
+function Trig_Final_Battle_Sim_Set_Mult_Conditions()
+    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 5) == "-mult")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Final_Battle_Sim_Set_Mult_Func003A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    SaveRealBJ(udg_StatMultReal, 3, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 4, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(udg_StatMultReal, 5, udg_ID, udg_StatMultHashtable)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+end
+
+function Trig_Final_Battle_Sim_Set_Mult_Actions()
+    udg_StatMultReal = S2R(SubStringBJ(GetEventPlayerChatString(), 7, 12))
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Final_Battle_Sim_Set_Mult_Func003A)
+end
+
+function InitTrig_Final_Battle_Sim_Set_Mult()
+    gg_trg_Final_Battle_Sim_Set_Mult = CreateTrigger()
+    TriggerAddCondition(gg_trg_Final_Battle_Sim_Set_Mult, Condition(Trig_Final_Battle_Sim_Set_Mult_Conditions))
+    TriggerAddAction(gg_trg_Final_Battle_Sim_Set_Mult, Trig_Final_Battle_Sim_Set_Mult_Actions)
+end
+
+function Trig_Final_Battle_Sim_Set_Level_Conditions()
+    if (not (SubStringBJ(GetEventPlayerChatString(), 1, 4) == "-lvl")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Final_Battle_Sim_Set_Level_Func003A()
+    udg_StatMultUnit = GetEnumUnit()
+    SetHeroLevelBJ(udg_StatMultUnit, udg_TempInt, false)
+    ModifyHeroSkillPoints(udg_StatMultUnit, bj_MODIFYMETHOD_ADD, 100)
+end
+
+function Trig_Final_Battle_Sim_Set_Level_Actions()
+    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 6, 9))
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Final_Battle_Sim_Set_Level_Func003A)
+end
+
+function InitTrig_Final_Battle_Sim_Set_Level()
+    gg_trg_Final_Battle_Sim_Set_Level = CreateTrigger()
+    TriggerAddCondition(gg_trg_Final_Battle_Sim_Set_Level, Condition(Trig_Final_Battle_Sim_Set_Level_Conditions))
+    TriggerAddAction(gg_trg_Final_Battle_Sim_Set_Level, Trig_Final_Battle_Sim_Set_Level_Actions)
+end
+
+function Trig_Final_Battle_Sim_Teleport_Conditions()
+    if (not (GetIssuedOrderIdBJ() == String2OrderIdBJ("patrol"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Final_Battle_Sim_Teleport_Actions()
+    udg_TempLoc = GetOrderPointLoc()
+    SetUnitPositionLoc(GetOrderedUnit(), udg_TempLoc)
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_Final_Battle_Sim_Teleport()
+    gg_trg_Final_Battle_Sim_Teleport = CreateTrigger()
+    TriggerAddCondition(gg_trg_Final_Battle_Sim_Teleport, Condition(Trig_Final_Battle_Sim_Teleport_Conditions))
+    TriggerAddAction(gg_trg_Final_Battle_Sim_Teleport, Trig_Final_Battle_Sim_Teleport_Actions)
+end
+
 function Trig_Map_Setup_Actions()
     TriggerExecute(gg_trg_Map_Setup_Hashtables)
     udg_TempInt = 0
@@ -4324,42 +4495,49 @@ function Trig_Kill_Hero_PvP_and_Saga_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001001()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func006C()
+    if (not (GetHeroLevel(GetDyingUnit()) >= 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001001()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001002()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001002()
     return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001()
-    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001002())
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001002())
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002001()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002001()
     return (IsUnitAlly(GetFilterUnit(), udg_TempPlayer) == true)
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002002()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002002()
     return (IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) == false)
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002()
-    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002002())
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002002())
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003()
-    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003002())
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003002())
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func003C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func003C()
     if (not (GetHeroLevel(GetDyingUnit()) < 25)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func004Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func004Func002C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
         return true
     end
@@ -4372,22 +4550,39 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func004Func002C()
     return false
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func004C()
-    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func004Func002C()) then
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func004C()
+    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func004Func002C()) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func011A()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func012Func001C()
+    if (not (GetHeroLevel(GetDyingUnit()) < 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func012C()
+    if (not (GetHeroLevel(GetDyingUnit()) > 10)) then
+        return false
+    end
+    if (not (GetHeroLevel(GetDyingUnit()) < 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func012A()
     udg_StatMultUnit = GetEnumUnit()
     udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) * 1.00)
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func003C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func003C()) then
         udg_StatMultReal = (udg_StatMultReal * 2.00)
     else
         udg_StatMultReal = (udg_StatMultReal + 50.00)
     end
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func011Func004C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func004C()) then
         udg_StatMultReal = (udg_StatMultReal * 0.50)
     else
     end
@@ -4398,6 +4593,15 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func011A()
     udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func012C()) then
+                AddHeroXP(udg_StatMultUnit, 25 * (1 + GetHeroLevel(udg_StatMultUnit)) , true)
+    else
+        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func012Func012Func001C()) then
+                        AddHeroXP(udg_StatMultUnit, 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit)) , true)
+        else
+                        AddHeroXP(udg_StatMultUnit, 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit)) , true)
+        end
+    end
 end
 
 function Trig_Kill_Hero_PvP_and_Saga_Func001Func017A()
@@ -4417,15 +4621,20 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
         udg_StatMultUnit = GetDyingUnit()
         TriggerExecute(gg_trg_Get_Base_Stats)
         udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-        udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.25)
+        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func006C()) then
+            udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + (I2R(GetUnitFoodMade(GetDyingUnit())) - 100.00)) * 0.33)
+            udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 50.00)
+        else
+            udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.50)
+        end
         ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func017A)
     else
         udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
         udg_TempPlayer = GetOwningPlayer(GetKillingUnitBJ())
         udg_TempPlayerGroup = GetPlayersAllies(udg_TempPlayer)
-        udg_TempGroup = GetUnitsInRangeOfLocMatching(2500.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func009002003))
+        udg_TempGroup = GetUnitsInRangeOfLocMatching(2500.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func010002003))
         GroupAddGroup(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], udg_TempGroup)
-        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_PvP_and_Saga_Func001Func011A)
+        ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_PvP_and_Saga_Func001Func012A)
                 DestroyForce(udg_TempPlayerGroup)
                 DestroyGroup(udg_TempGroup)
                 RemoveLocation(udg_TempLoc2)
@@ -6160,9 +6369,11 @@ end
 
 function Trig_Shenron_Wish_for_Power_Actions()
     udg_StatMultUnit = GetBuyingUnit()
-    udg_StatMultReal = 150.00
+    udg_StatMultReal = 200.00
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Update_Current_Stats)
+    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 5) + 15))
+        AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 end
 
 function InitTrig_Shenron_Wish_for_Power()
@@ -6202,7 +6413,7 @@ end
 
 function Trig_Tournament_Trophy_Use_Abil_Actions()
     udg_StatMultUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Tournament_Trophy_Give_Stats)
+    TriggerExecute(gg_trg_Tournament_Trophy_Give_Reward)
 end
 
 function InitTrig_Tournament_Trophy_Use_Abil()
@@ -6230,8 +6441,8 @@ function InitTrig_Tournament_Trophy_Acquire_Item()
     TriggerAddAction(gg_trg_Tournament_Trophy_Acquire_Item, Trig_Tournament_Trophy_Acquire_Item_Actions)
 end
 
-function Trig_Tournament_Trophy_Give_Stats_Actions()
-    udg_StatMultReal = (20.00 + (4.00 * I2R(udg_ScoreboardTimeMinutes)))
+function Trig_Tournament_Trophy_Give_Reward_Actions()
+    udg_StatMultReal = (20.00 + (3.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Add_To_Tourney_Stats_Data)
     TriggerExecute(gg_trg_Update_Current_Stats)
@@ -6242,13 +6453,13 @@ function Trig_Tournament_Trophy_Give_Stats_Actions()
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
-    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 3) + 3))
-        AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
+    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 3) + 6))
+        AddHeroXP(udg_StatMultUnit, 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit)), true)
 end
 
-function InitTrig_Tournament_Trophy_Give_Stats()
-    gg_trg_Tournament_Trophy_Give_Stats = CreateTrigger()
-    TriggerAddAction(gg_trg_Tournament_Trophy_Give_Stats, Trig_Tournament_Trophy_Give_Stats_Actions)
+function InitTrig_Tournament_Trophy_Give_Reward()
+    gg_trg_Tournament_Trophy_Give_Reward = CreateTrigger()
+    TriggerAddAction(gg_trg_Tournament_Trophy_Give_Reward, Trig_Tournament_Trophy_Give_Reward_Actions)
 end
 
 function Trig_Final_Battle_Detector_Conditions()
@@ -7428,9 +7639,25 @@ function InitTrig_Hero_Pick_Disable_Spellcasting()
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Spellcasting, Trig_Hero_Pick_Disable_Spellcasting_Actions)
 end
 
+function Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003Func002C()
+    if (not (udg_ScoreboardTimeSeconds == 0)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeMinutes == 0)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeHours == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003A()
-    SetUnitInvulnerable(GetEnumUnit(), true)
-    ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_SET, 0)
+    if (Trig_Hero_Pick_Add_TempUnit_To_PickedUnitGroup_Func003Func002C()) then
+        SetUnitInvulnerable(GetEnumUnit(), true)
+        ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_SET, 0)
+    else
+    end
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Add_Unit_To_StatMult)
 end
@@ -10589,21 +10816,21 @@ end
 
 function Trig_Kyodaika_Get_Str_Mult_Actions()
     if (Trig_Kyodaika_Get_Str_Mult_Func001C()) then
-        udg_TempReal = 0.20
+        udg_TempReal = 0.30
     else
         if (Trig_Kyodaika_Get_Str_Mult_Func001Func001C()) then
-            udg_TempReal = 0.30
+            udg_TempReal = 0.40
         else
             if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001C()) then
-                udg_TempReal = 0.40
+                udg_TempReal = 0.50
             else
                 if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001C()) then
-                    udg_TempReal = 0.50
+                    udg_TempReal = 0.60
                 else
                     if (Trig_Kyodaika_Get_Str_Mult_Func001Func001Func001Func001Func001C()) then
-                        udg_TempReal = 0.60
-                    else
                         udg_TempReal = 0.70
+                    else
+                        udg_TempReal = 0.80
                     end
                 end
             end
@@ -15597,6 +15824,12 @@ function InitCustomTriggers()
     InitTrig_Shaggy_On()
     InitTrig_Unstuck_Init()
     InitTrig_Unstuck_Units()
+    InitTrig_Final_Battle_Sim_On()
+    InitTrig_Final_Battle_Sim_Set_Stats()
+    InitTrig_Final_Battle_Sim_Set_All_Stats()
+    InitTrig_Final_Battle_Sim_Set_Mult()
+    InitTrig_Final_Battle_Sim_Set_Level()
+    InitTrig_Final_Battle_Sim_Teleport()
     InitTrig_Map_Setup()
     InitTrig_Setup_Per_Player_Properties()
     InitTrig_Lock_Time_To_Day()
@@ -15652,7 +15885,7 @@ function InitCustomTriggers()
     InitTrig_Shenron_Wish_Granted_Sound()
     InitTrig_Tournament_Trophy_Use_Abil()
     InitTrig_Tournament_Trophy_Acquire_Item()
-    InitTrig_Tournament_Trophy_Give_Stats()
+    InitTrig_Tournament_Trophy_Give_Reward()
     InitTrig_Final_Battle_Detector()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()
@@ -16043,12 +16276,12 @@ function config()
     DefineStartLocation(0, 18112.0, -4608.0)
     DefineStartLocation(1, -6016.0, -6784.0)
     DefineStartLocation(2, -6976.0, 6592.0)
-    DefineStartLocation(3, 6016.0, -6592.0)
+    DefineStartLocation(3, 6016.0, -7040.0)
     DefineStartLocation(4, 31168.0, 25536.0)
-    DefineStartLocation(5, 30528.0, 13312.0)
+    DefineStartLocation(5, 30656.0, 12736.0)
     DefineStartLocation(6, 12928.0, 16000.0)
-    DefineStartLocation(7, -5824.0, 14080.0)
-    DefineStartLocation(8, 15360.0, 7296.0)
+    DefineStartLocation(7, -6080.0, 14208.0)
+    DefineStartLocation(8, 15360.0, 7104.0)
     DefineStartLocation(9, 20096.0, 30720.0)
     InitCustomPlayerSlots()
     InitCustomTeams()

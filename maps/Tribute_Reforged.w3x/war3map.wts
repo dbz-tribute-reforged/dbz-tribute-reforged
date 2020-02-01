@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.31
+DBZ Tribute Reforged 0.31a
 }
 
 STRING 4
@@ -34694,7 +34694,7 @@ Transformations:
 [lvl 90]  2.00x "super namekian"
 [lvl 150] 2.50x "super namekian" (TYPE "super namekian" AGAIN FOR STRONGER STAT MULT)
 
-Kyodaika: +0.2-0.7x str 
+Kyodaika: +0.3-0.8x str 
 }
 
 STRING 5697
@@ -64671,7 +64671,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 31.1.20
+This map is under active development - 1.Feb.20
 }
 
 STRING 10653
@@ -67260,6 +67260,11 @@ STRING 11080
 // Abilities: A0ME (Double Sunday), EditorSuffix (Editor Suffix)
 {
 (raditz)
+}
+
+STRING 11081
+{
+Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode Enabled, forced win/loss conditions are disabled.
 }
 
 STRING 11088
