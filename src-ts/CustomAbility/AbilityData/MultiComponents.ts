@@ -194,6 +194,31 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi blazing storm", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 10,
+    angleMin: -20,
+    angleMax: 20,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 5,
+    componentsAddedPerRound: 2,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    sfxList: true,
+    components: [
+      { name: "damage target blazing storm explosion" },
+      { name: "sfx blazing storm" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi blazing storm 1", 
     repeatInterval: 1, 
     startTick: 0,

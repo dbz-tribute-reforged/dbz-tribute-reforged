@@ -6231,7 +6231,7 @@ function InitTrig_Tournament_Trophy_Acquire_Item()
 end
 
 function Trig_Tournament_Trophy_Give_Stats_Actions()
-    udg_StatMultReal = (10.00 + (1.00 * I2R(udg_ScoreboardTimeMinutes)))
+    udg_StatMultReal = (20.00 + (4.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Add_To_Tourney_Stats_Data)
     TriggerExecute(gg_trg_Update_Current_Stats)
@@ -6242,7 +6242,7 @@ function Trig_Tournament_Trophy_Give_Stats_Actions()
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
-    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 2) + 1))
+    udg_TempInt = (25 * ((GetHeroLevel(udg_StatMultUnit) * 3) + 3))
         AddHeroXP(udg_StatMultUnit, udg_TempInt, true)
 end
 

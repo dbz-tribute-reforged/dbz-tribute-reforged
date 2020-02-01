@@ -226,7 +226,7 @@ export const BeamComponents = [
     beamUnitType: "hpea",
     components: [
       { name: "damage energy blast volley dps" },
-      { name: "knockback 1tick 5speed 0angle 250aoe" },
+      // { name: "knockback 1tick 5speed 0angle 250aoe" },
       { name: "sfx beam energy blast volley" },
     ],
   },
