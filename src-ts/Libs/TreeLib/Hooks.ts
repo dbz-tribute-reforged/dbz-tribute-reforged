@@ -1,5 +1,12 @@
 import {Logger} from "./Logger";
 
+interface TheGlobe {
+    __hooks: { [key: string]: any };
+    [key: string]: any;
+}
+
+declare let _G: TheGlobe;
+
 _G.__hooks = {};
 
 /**
@@ -8,16 +15,15 @@ _G.__hooks = {};
  */
 export class Hooks {
     public static get(name: string): object | undefined {
-        let test: { [key: string]: any } = _G.__hooks;
-        return test[name];
+        return _G.__hooks[name];
     }
 
     public static set(name: string, value: any) {
-        let test: { [key: string]: any } = _G.__hooks;
-        test[name] = value;
+        _G.__hooks[name] = value;
         Logger.LogDebug("Hooked: " + name)
     }
 }
+
 
 /*
 What is das hooks?
