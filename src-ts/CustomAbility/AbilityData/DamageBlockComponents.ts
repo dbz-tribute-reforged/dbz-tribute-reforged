@@ -384,7 +384,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 0.75,
+    multiplier: 0.6,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",

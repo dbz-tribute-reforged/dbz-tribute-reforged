@@ -4,8 +4,9 @@ export module CameraZoom {
 
     const ZOOM_DEFAULT = 2600.0;
     const ANGLE_DEFAULT = 290.0;
-    const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
-    const PERIOD = 0.03;
+    // const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 70.0; //?? but it works tho, thanks adam
+    const FOV_DEFAULT = ((4000.00 - 1400.0) / 45.0) + 50.0; //?? but it works tho, thanks adam
+    const PERIOD = 1.0;
 
     const ZOOM_MIN = 1400.0;
     const ZOOM_MAX = 4000.0;

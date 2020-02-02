@@ -21,6 +21,7 @@ export class BeamComponent implements
   public angle: number;
   public previousHp: number;
   protected hasBeamUnit: boolean;
+  protected beamCoord: Vector2D;
   // time to explode = 
   // distance from start position to cast point
   // divided by speed
@@ -60,6 +61,7 @@ export class BeamComponent implements
     this.angle = 0;
     this.previousHp = 0;
     this.hasBeamUnit = false;
+    this.beamCoord = new Vector2D();
     this.explodeTick = 0;
     this.explodeMinDistance = 0;
     this.explodePosition = new Vector2D(0, 0);
@@ -70,9 +72,8 @@ export class BeamComponent implements
   protected checkForBeamClash(input: CustomAbilityInput): this {
     if (this.clashingDelayTicks > 0) {
       const currentHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
-      const beamCoord = new Vector2D(GetUnitX(this.beamUnit), GetUnitY(this.beamUnit));
       const nearbyEnemies = UnitHelper.getNearbyValidUnits(
-        beamCoord, 
+        this.beamCoord, 
         this.aoe,
         () => {
           return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
@@ -95,11 +96,10 @@ export class BeamComponent implements
   protected moveBeamUnit(ability: CustomAbility, input: CustomAbilityInput): this {
     
     if (this.delayTicks <= 0) {
-      const currentCoord = new Vector2D(GetUnitX(this.beamUnit), GetUnitY(this.beamUnit));
       if (!this.isFixedAngle) {
         this.angle = GetUnitFacing(this.beamUnit);
       }
-      const targetCoord = CoordMath.polarProjectCoords(currentCoord, this.angle, this.speed);
+      const targetCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, this.speed);
 
       PathingCheck.moveFlyingUnitToCoord(this.beamUnit, targetCoord);
 
@@ -109,7 +109,7 @@ export class BeamComponent implements
         this.explodeAtCastPoint && 
         !this.forcedExplode &&
         ability.currentTick > this.explodeTick &&
-        CoordMath.distance(currentCoord, this.explodePosition) < this.explodeMinDistance
+        CoordMath.distance(this.beamCoord, this.explodePosition) < this.explodeMinDistance
       ) {
         this.forcedExplode = true;
       }
@@ -130,24 +130,25 @@ export class BeamComponent implements
   }
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    let sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.beamCoord.x = GetUnitX(source)
+    this.beamCoord.y = GetUnitY(source);
     let beamTargetPoint = input.castPoint;
     if (!this.useLastCastPoint) {
       beamTargetPoint = input.targetPoint;
     }
-    this.angle = CoordMath.angleBetweenCoords(sourceCoord, beamTargetPoint);
+    this.angle = CoordMath.angleBetweenCoords(this.beamCoord, beamTargetPoint);
     if (this.spawnAtSource) {
       // move beam slightly out of the source unit
-      sourceCoord = CoordMath.polarProjectCoords(sourceCoord, this.angle, Constants.beamSpawnOffset);
+      this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     } else {
-      sourceCoord = beamTargetPoint;
+      this.beamCoord = beamTargetPoint;
     }
 
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
       this.beamUnitType, 
-      sourceCoord.x, 
-      sourceCoord.y, 
+      this.beamCoord.x, 
+      this.beamCoord.y, 
       this.angle,
     );
 
@@ -166,7 +167,7 @@ export class BeamComponent implements
       this.explodeMinDistance = this.aoe * 0.5;
 
       this.explodeTick = ability.currentTick + Math.floor(
-        CoordMath.distance(sourceCoord, input.castPoint) / Math.floor(this.speed)
+        CoordMath.distance(this.beamCoord, input.castPoint) / Math.floor(this.speed)
       )
       endHeightTick = this.explodeTick;
     }
@@ -236,6 +237,8 @@ export class BeamComponent implements
         ability.currentTick = oldCurrentTick;
         RemoveUnit(this.beamUnit);
       } else if (!isBeamDead) {
+        this.beamCoord.x = GetUnitX(this.beamUnit);
+        this.beamCoord.y = GetUnitY(this.beamUnit);
         this.checkForBeamClash(input);
         if (this.speed > 0) {
           this.moveBeamUnit(ability, input);

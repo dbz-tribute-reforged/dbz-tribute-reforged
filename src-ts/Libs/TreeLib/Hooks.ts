@@ -1,5 +1,12 @@
 import {Logger} from "./Logger";
 
+interface TheGlobe {
+    __hooks: { [key: string]: any };
+    [key: string]: any;
+}
+
+declare let _G: TheGlobe;
+
 _G.__hooks = {};
 
 /**
@@ -16,6 +23,7 @@ export class Hooks {
         Logger.LogDebug("Hooked: " + name)
     }
 }
+
 
 /*
 What is das hooks?

@@ -198,5 +198,11 @@ export module SagaAbilities {
       AbilityNames.FutureTrunks.BURNING_ATTACK, 10, 20, 5, MEDIUM_CAST_TIME
     );
   }
+
+  export module Whis {
+    export const ULTRA_INSTINCT = new SagaAbility(
+      AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
+    );
+  }
   
 }

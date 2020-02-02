@@ -25,6 +25,7 @@ export class MultiComponent implements
   protected originalDistance: number;
   protected originalTarget: Vector2D;
   protected sourceCoords: Vector2D;
+  protected oldPoint: Vector2D;
   protected currentDelay: number;
   protected activeComponents: AbilityComponent[];
 
@@ -56,6 +57,7 @@ export class MultiComponent implements
     this.originalDistance = 0;
     this.originalTarget = new Vector2D(0, 0);
     this.sourceCoords = new Vector2D(0, 0);
+    this.oldPoint = new Vector2D(0, 0);
     this.currentDelay = 0;
     this.activeComponents = [];
   }
@@ -144,9 +146,11 @@ export class MultiComponent implements
           this.forceMinDistance + 
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
-      this.originalTarget = new Vector2D(targettedPoint.x, targettedPoint.y);
+      this.originalTarget.x = targettedPoint.x
+      this.originalTarget.y = targettedPoint.y;
       if (this.angleRange >= 360) {
-        this.originalTarget = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+        this.originalTarget.x = GetUnitX(input.caster.unit);
+        this.originalTarget.y = GetUnitY(input.caster.unit);
       }
       this.currentDelay = this.delayBetweenComponents;
     }
@@ -163,9 +167,9 @@ export class MultiComponent implements
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
 
-      let oldPoint: Vector2D;
       if (this.useLastCastPoint) {
-        oldPoint = input.castPoint;
+        this.oldPoint.x = input.castPoint.x;
+        this.oldPoint.y = input.castPoint.y;
         input.castPoint = CoordMath.polarProjectCoords(
           this.sourceCoords, 
           this.angleCurrent + this.originalAngle,
@@ -177,7 +181,8 @@ export class MultiComponent implements
         //   input.castPoint.y,
         // );
       } else {
-        oldPoint = input.targetPoint
+        this.oldPoint.x = input.targetPoint.x;
+        this.oldPoint.y = input.targetPoint.y;
         input.targetPoint = CoordMath.polarProjectCoords(
           this.sourceCoords, 
           this.angleCurrent + this.originalAngle,
@@ -202,9 +207,11 @@ export class MultiComponent implements
       }
 
       if (this.useLastCastPoint) {
-        input.castPoint = oldPoint;
+        input.castPoint.x = this.oldPoint.x;
+        input.castPoint.y = this.oldPoint.y;
       } else {
-        input.targetPoint = oldPoint;
+        input.targetPoint.x = this.oldPoint.x;
+        input.targetPoint.y = this.oldPoint.y;
       }
 
       // if fired a beam, then adjust angle to next point

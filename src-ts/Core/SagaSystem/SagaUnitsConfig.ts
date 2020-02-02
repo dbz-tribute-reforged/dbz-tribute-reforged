@@ -592,7 +592,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Whis", new SagaUnit(FourCC("E01I"), 150, 17000, 400, 17000, new Vector2D(5000, 3300),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT
+        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Whis.ULTRA_INSTINCT,
       ],
     )],
 

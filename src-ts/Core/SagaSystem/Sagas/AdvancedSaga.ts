@@ -51,7 +51,7 @@ export class AdvancedSaga {
     PlaySoundBJ(this.completeSound);
     this.bosses.clear();
     for (const [boss, bossAI] of this.bossesAI) {
-      bossAI.removeAbilities();
+      bossAI.cleanup();
     }
     this.bossesAI.clear();
   }
