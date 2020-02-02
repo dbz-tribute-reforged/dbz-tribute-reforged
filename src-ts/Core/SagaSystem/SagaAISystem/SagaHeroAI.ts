@@ -96,8 +96,10 @@ export class SagaHeroAI {
     this.abilityInput.castUnit = this.sagaUnit;
   }
 
-  public removeAbilities(): this {
+  public cleanup(): this {
     this.abilities.clear();
+    this.sagaCustomHero.abilities.abilities.clear();
+    this.sagaCustomHero.isCasting.clear();
     return this;
   }
 

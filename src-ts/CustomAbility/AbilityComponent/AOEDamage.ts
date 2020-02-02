@@ -57,6 +57,23 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return damage;
   }
 
+  protected performDamage(input: CustomAbilityInput, target: unit, damage: number) {
+    UnitDamageTarget(
+      input.caster.unit, 
+      target, 
+      damage,
+      true,
+      false,
+      this.damageData.attackType,
+      this.damageData.damageType,
+      this.damageData.weaponType,
+    );
+    // TextTagHelper.showTempText(
+    //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
+    //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+    // );
+  }
+
   setDamageSourceToTargettedPoint(input: CustomAbilityInput) {
     if (this.useLastCastPoint) {
       this.damageCoords = new Vector2D(input.castPoint.x, input.castPoint.y);
@@ -121,42 +138,15 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         if (damageCount) {
           if (damageCount <= this.maxDamageTicks) {
             this.damagedHeroes.set(target, damageCount + 1);
-            UnitDamageTarget(
-              input.caster.unit, 
-              target, 
-              damage,
-              true,
-              false,
-              this.damageData.attackType,
-              this.damageData.damageType,
-              this.damageData.weaponType,
-            );
-            // TextTagHelper.showTempText(
-            //   "@" + Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-            //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
-            // );
+            this.performDamage(input, target, damage);
           }
         } else {
           this.damagedHeroes.set(target, 1);
+          this.performDamage(input, target, damage);
         }
       } else {    
-        UnitDamageTarget(
-          input.caster.unit, 
-          target, 
-          damage,
-          true,
-          false,
-          this.damageData.attackType,
-          this.damageData.damageType,
-          this.damageData.weaponType,
-        );
-        // TextTagHelper.showTempText(
-        //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-        //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
-        // );
+        this.performDamage(input, target, damage);
       }
-
-
     })
 
     DestroyGroup(affectedGroup);

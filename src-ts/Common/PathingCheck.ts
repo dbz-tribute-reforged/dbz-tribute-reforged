@@ -8,6 +8,7 @@ export module PathingCheck {
   let hiddenItems: item[];
   let hiddenMax: number;
   let maxRange: number;
+  let target: Vector2D;
 
   export function Init() {
     item = new Item(FourCC('wtlg'), -128, -128);
@@ -17,6 +18,7 @@ export module PathingCheck {
     hiddenItems = [];
     hiddenMax = 0;
     maxRange = 100;
+    target = new Vector2D();
   }
 
   export function IsWalkable(source: Vector2D): boolean {
@@ -32,7 +34,8 @@ export module PathingCheck {
 
     item.setPosition(source.x, source.y);
 
-    const target = new Vector2D(item.x, item.y);
+    target.x = item.x; 
+    target.y = item.y;
     item.visible = false;
 
     while (hiddenMax > 0) {

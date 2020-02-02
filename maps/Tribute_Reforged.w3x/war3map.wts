@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.31a
+DBZ Tribute Reforged 0.32
 }
 
 STRING 4
@@ -17607,7 +17607,7 @@ Slow
 }
 
 STRING 2861
-// Units: Pann ("Pan"), Propernames (Proper Names)
+// Units: H08P (Spoiled Brat), Propernames (Proper Names)
 {
 Pan
 }
@@ -17648,12 +17648,6 @@ STRING 2867
 // Abilities: A0LL (Candy Gobbler), Name (Name)
 {
 Candy Gobbler
-}
-
-STRING 2868
-// Abilities: A0LL (Candy Gobbler), Tip (Tooltip - Normal)
-{
-[|cff00ff00D|r] Candy Gobbler
 }
 
 STRING 2869
@@ -28047,9 +28041,9 @@ D
 }
 
 STRING 4598
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LL (Candy Gobbler), Tip (Tooltip - Normal)
 {
-Piccolo splits into 2. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return half the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+[|cff00ff00D|r] Candy Gobbler - [|cffffcc00Level 1|r]
 }
 
 STRING 4599
@@ -28071,9 +28065,9 @@ STRING 4601
 }
 
 STRING 4602
-// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
-Piccolo splits into 2/3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return half the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 700|r|n|cff00FFFFCooldown: <A0LL,Cool1> seconds|r
 }
 
 STRING 4603
@@ -28089,9 +28083,9 @@ R
 }
 
 STRING 4605
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LL (Candy Gobbler), Tip (Tooltip - Normal)
 {
-Piccolo splits into 3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return half the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+[|cff00ff00D|r] Candy Gobbler - [|cffffcc00Level 2|r]
 }
 
 STRING 4606
@@ -37840,93 +37834,21 @@ VegetaSSB
 }
 
 STRING 6219
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LL (Candy Gobbler), Tip (Tooltip - Normal)
 {
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD1,%>% |n|cffffcc00Critical|r - <A00V,DataA1>% |n|cffffcc00Damage|r - <A00V,DataB1,.> times
-}
-
-STRING 6220
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD2,%>% |n|cffffcc00Critical|r - <A00V,DataA2>% |n|cffffcc00Damage|r - <A00V,DataB2,.> times
-}
-
-STRING 6221
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD3,%>% |n|cffffcc00Critical|r - <A00V,DataA3>% |n|cffffcc00Damage|r - <A00V,DataB3,.> times
+[|cff00ff00D|r] Candy Gobbler - [|cffffcc00Level 3|r]
 }
 
 STRING 6222
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD4,%>% |n|cffffcc00Critical|r - <A00V,DataA4>% |n|cffffcc00Damage|r - <A00V,DataB4,.> times
+Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 1400|r|n|cff00FFFFCooldown: <A0LL,Cool2> seconds|r
 }
 
 STRING 6223
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD5,%>% |n|cffffcc00Critical|r - <A00V,DataA5>% |n|cffffcc00Damage|r - <A00V,DataB5,.> times
-}
-
-STRING 6224
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD6,%>% |n|cffffcc00Critical|r - <A00V,DataA6>% |n|cffffcc00Damage|r - <A00V,DataB6,.> times
-}
-
-STRING 6225
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD7,%>% |n|cffffcc00Critical|r - <A00V,DataA7>% |n|cffffcc00Damage|r - <A00V,DataB7,.> times
-}
-
-STRING 6226
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD8,%>% |n|cffffcc00Critical|r - <A00V,DataA8>% |n|cffffcc00Damage|r - <A00V,DataB8,.> times
-}
-
-STRING 6227
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD9,%>% |n|cffffcc00Critical|r - <A00V,DataA9>% |n|cffffcc00Damage|r - <A00V,DataB9,.> times
-}
-
-STRING 6228
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD10,%>% |n|cffffcc00Critical|r - <A00V,DataA10>% |n|cffffcc00Damage|r - <A00V,DataB10,.> times
-}
-
-STRING 6229
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD11,%>% |n|cffffcc00Critical|r - <A00V,DataA11>% |n|cffffcc00Damage|r - <A00V,DataB11,.> times
-}
-
-STRING 6230
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD12,%>% |n|cffffcc00Critical|r - <A00V,DataA12>% |n|cffffcc00Damage|r - <A00V,DataB12,.> times
-}
-
-STRING 6231
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD13,%>% |n|cffffcc00Critical|r - <A00V,DataA13>% |n|cffffcc00Damage|r - <A00V,DataB13,.> times
-}
-
-STRING 6232
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD14,%>% |n|cffffcc00Critical|r - <A00V,DataA14>% |n|cffffcc00Damage|r - <A00V,DataB14,.> times
-}
-
-STRING 6233
-// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
-{
-Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A00V,DataD15,%>% |n|cffffcc00Critical|r - <A00V,DataA15>% |n|cffffcc00Damage|r - <A00V,DataB15,.> times
+Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 2100|r|n|cff00FFFFCooldown: <A0LL,Cool3> seconds|r
 }
 
 STRING 6234
@@ -53252,7 +53174,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8775
-// Abilities: A0KW (P. Maiden Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53277,7 +53199,7 @@ Temporal Do-Over
 }
 
 STRING 8779
-// Abilities: A0L2 (Supernova Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53681,7 +53603,7 @@ BEB/VEG/GOT/DEF
 }
 
 STRING 8846
-// Abilities: A0L2 (Supernova Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -53705,7 +53627,7 @@ Spirit Bomb
 }
 
 STRING 8850
-// Abilities: A0LD (S.S. Deadly Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -53848,13 +53770,13 @@ Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all atta
 }
 
 STRING 8872
-// Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 8873
-// Abilities: A0LG (Babidi Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -55138,7 +55060,7 @@ R
 }
 
 STRING 9087
-// Abilities: A0LG (Babidi Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -55222,7 +55144,7 @@ STRING 9100
 }
 
 STRING 9101
-// Abilities: A0LH (Innocence Breath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -56002,7 +55924,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A0KV (P. Call Giru), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56026,7 +55948,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56327,13 +56249,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56345,7 +56267,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56356,7 +56278,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -59587,13 +59509,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60132,14 +60054,8 @@ STRING 9913
 Pyre Keeper of Hell
 }
 
-STRING 9914
-// Units: Pann ("Pan"), Name (Name)
-{
-"Pan"
-}
-
 STRING 9915
-// Units: H08P (Spoiled Brat), Propernames (Proper Names)
+// Units: H08R (Spoiled Brat), Propernames (Proper Names)
 {
 Pan
 }
@@ -60156,40 +60072,10 @@ STRING 9917
 [|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level %d|r]
 }
 
-STRING 9918
-// Units: Giru ("Giru"), Name (Name)
-{
-"Giru"
-}
-
-STRING 9919
-// Units: Giru ("Giru"), Propernames (Proper Names)
-{
-Pan's best friend
-}
-
 STRING 9920
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
-}
-
-STRING 9921
-// Abilities: A0KV (P. Call Giru), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Call Giru
-}
-
-STRING 9922
-// Abilities: A0KV (P. Call Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Duration: 50s|r|n|cff00FFFFCooldown: 60s|r
-}
-
-STRING 9923
-// Abilities: A0KV (P. Call Giru), Name (Name)
-{
-P. Call Giru
 }
 
 STRING 9924
@@ -60198,46 +60084,10 @@ STRING 9924
 Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
-STRING 9925
-// Abilities: A0KW (P. Maiden Blast), Tip (Tooltip - Normal)
-{
-|cffFFFF00E|r] Maiden Blast
-}
-
-STRING 9926
-// Abilities: A0KW (P. Maiden Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a blast in your targets direction. Pan gain a temporary damaging aura from charging up the spell.|nAura dmg: |cff00ff00 int*1x(lvl*1)+20.|r|n|cffFFFF00Duration: 8s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 9927
-// Abilities: A0KW (P. Maiden Blast), Name (Name)
-{
-P. Maiden Blast
-}
-
 STRING 9928
 // Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 9929
-// Abilities: A0KX (P. Reliable Friend), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Reliable Friend
-}
-
-STRING 9930
-// Abilities: A0KX (P. Reliable Friend), Ubertip (Tooltip - Normal - Extended)
-{
-Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 9931
-// Abilities: A0KX (P. Reliable Friend), Name (Name)
-{
-P. Reliable Friend
 }
 
 STRING 9932
@@ -61150,7 +61000,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61863,7 +61713,7 @@ E
 }
 
 STRING 10201
-// Abilities: A0KX (P. Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62176,7 +62026,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62194,7 +62044,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -62794,7 +62644,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62812,7 +62662,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -63792,7 +63642,7 @@ STRING 10518
 }
 
 STRING 10519
-// Abilities: A0LH (Innocence Breath), Hotkey (Hotkey - Normal)
+// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -63810,7 +63660,7 @@ STRING 10521
 }
 
 STRING 10522
-// Abilities: A0LP (Riot Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -64164,7 +64014,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64230,7 +64080,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64636,6 +64486,8 @@ micohelt
 Shine
 dbsw
 Spoon
+Xenoform
+Janemba50
 anyone else i'm missing?
 }
 
@@ -64657,7 +64509,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64671,7 +64523,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 1.Feb.20
+This map is under active development - 3.Feb.20
 }
 
 STRING 10653
@@ -64685,7 +64537,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64825,7 +64677,7 @@ STRING 10674
 }
 
 STRING 10675
-// Abilities: A0LP (Riot Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -64843,7 +64695,7 @@ STRING 10677
 }
 
 STRING 10678
-// Abilities: A0LU (Maiden Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -64922,7 +64774,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64988,7 +64840,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65006,7 +64858,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65150,7 +65002,7 @@ Spoiled Brat
 }
 
 STRING 10726
-// Units: H08R (Spoiled Brat), Propernames (Proper Names)
+// Buffs/Effects: B01Z (), Bufftip (Tooltip)
 {
 Pan
 }
@@ -65162,7 +65014,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65180,7 +65032,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65198,7 +65050,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth dealing massive dam
 }
 
 STRING 10734
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66068,7 +65920,7 @@ STRING 10878
 }
 
 STRING 10879
-// Abilities: A0LU (Maiden Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -66086,7 +65938,7 @@ STRING 10881
 }
 
 STRING 10882
-// Abilities: A0M3 (Frozen W), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -66224,7 +66076,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66242,7 +66094,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66380,7 +66232,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -66398,7 +66250,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66846,7 +66698,7 @@ STRING 11008
 }
 
 STRING 11009
-// Abilities: A0M3 (Frozen W), Hotkey (Hotkey - Normal)
+// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -67064,12 +66916,6 @@ STRING 11047
 [|cffffff00A|r] Choose Raditz
 }
 
-STRING 11048
-// Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
-{
-Instantly consumes all nearby candy. |n|cff00ff00AOE: 700/800/900|r|n|cff00FFFFCooldown: 40 seconds|r
-}
-
 STRING 11049
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
@@ -67267,6 +67113,42 @@ STRING 11081
 Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode Enabled, forced win/loss conditions are disabled.
 }
 
+STRING 11082
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 2. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 11083
+// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo splits into 2/3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 11084
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 11085
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD1,%>% |n|cffffcc00Critical|r - <A0DS,DataA1>% |n|cffffcc00Damage|r - <A0DS,DataB1,.> times
+}
+
+STRING 11086
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD2,%>% |n|cffffcc00Critical|r - <A0DS,DataA2>% |n|cffffcc00Damage|r - <A0DS,DataB2,.> times
+}
+
+STRING 11087
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD3,%>% |n|cffffcc00Critical|r - <A0DS,DataA3>% |n|cffffcc00Damage|r - <A0DS,DataB3,.> times
+}
+
 STRING 11088
 // Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
 {
@@ -67310,7 +67192,7 @@ STRING 11094
 }
 
 STRING 11095
-// Abilities: A0MF (Saturday Crash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -67328,7 +67210,7 @@ STRING 11097
 }
 
 STRING 11098
-// Abilities: A0MF (Saturday Crash), Hotkey (Hotkey - Normal)
+// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -67349,6 +67231,30 @@ STRING 11101
 // Abilities: A0MF (Saturday Crash), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Saturday Crash - [|cffffcc00Level 10|r]
+}
+
+STRING 11102
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD4,%>% |n|cffffcc00Critical|r - <A0DS,DataA4>% |n|cffffcc00Damage|r - <A0DS,DataB4,.> times
+}
+
+STRING 11103
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD5,%>% |n|cffffcc00Critical|r - <A0DS,DataA5>% |n|cffffcc00Damage|r - <A0DS,DataB5,.> times
+}
+
+STRING 11104
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD6,%>% |n|cffffcc00Critical|r - <A0DS,DataA6>% |n|cffffcc00Damage|r - <A0DS,DataB6,.> times
+}
+
+STRING 11105
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD7,%>% |n|cffffcc00Critical|r - <A0DS,DataA7>% |n|cffffcc00Damage|r - <A0DS,DataB7,.> times
 }
 
 STRING 11106
@@ -67442,7 +67348,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67460,7 +67366,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67956,7 +67862,7 @@ STRING 11202
 }
 
 STRING 11203
-// Abilities: A0MJ (Blazing Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -67974,7 +67880,7 @@ STRING 11205
 }
 
 STRING 11206
-// Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -68028,7 +67934,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68064,7 +67970,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68412,7 +68318,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 11279
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68460,7 +68366,7 @@ STRING 11286
 }
 
 STRING 11287
-// Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
+// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -69103,7 +69009,7 @@ STRING 11392
 }
 
 STRING 11393
-// Abilities: A0MP (Energy Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69121,7 +69027,7 @@ STRING 11395
 }
 
 STRING 11396
-// Abilities: A0MP (Energy Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -69175,7 +69081,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69199,7 +69105,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69331,7 +69237,7 @@ STRING 11430
 }
 
 STRING 11431
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -69352,12 +69258,6 @@ STRING 11434
 // Abilities: A0MR (Lava Pillars), Name (Name)
 {
 Lava Pillars
-}
-
-STRING 11435
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
-{
-R
 }
 
 STRING 11436
@@ -69799,7 +69699,7 @@ STRING 11508
 }
 
 STRING 11509
-// Abilities: A0MT (Barrier Prison), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -69814,12 +69714,6 @@ STRING 11511
 // Abilities: A0MT (Barrier Prison), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Barrier Prison - [|cffffcc00Level %d|r]
-}
-
-STRING 11512
-// Abilities: A0MT (Barrier Prison), Hotkey (Hotkey - Normal)
-{
-W
 }
 
 STRING 11513
@@ -69955,7 +69849,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69970,12 +69864,6 @@ STRING 11537
 // Abilities: A0MU (Barrier Wall), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Barrier Wall - [|cffffcc00Level %d|r]
-}
-
-STRING 11538
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
-{
-E
 }
 
 STRING 11539
@@ -71121,12 +71009,6 @@ STRING 11729
 It's a spoiled brat!
 }
 
-STRING 11730
-// Buffs/Effects: B01Z (), Bufftip (Tooltip)
-{
-Pan
-}
-
 STRING 11731
 // Buffs/Effects: B020 (), Buffubertip (Tooltip - Extended)
 {
@@ -71516,5 +71398,53 @@ STRING 11794
 // Abilities: A0MF (Saturday Crash), Researchubertip (Tooltip - Learn - Extended)
 {
 Raditz holds his right hand high in the air and forms a pink energy sphere that he fires off at the opponent.  |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MF,Cool1> seconds|r
+}
+
+STRING 11795
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD8,%>% |n|cffffcc00Critical|r - <A0DS,DataA8>% |n|cffffcc00Damage|r - <A0DS,DataB8,.> times
+}
+
+STRING 11796
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD9,%>% |n|cffffcc00Critical|r - <A0DS,DataA9>% |n|cffffcc00Damage|r - <A0DS,DataB9,.> times
+}
+
+STRING 11797
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD10,%>% |n|cffffcc00Critical|r - <A0DS,DataA10>% |n|cffffcc00Damage|r - <A0DS,DataB10,.> times
+}
+
+STRING 11798
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD11,%>% |n|cffffcc00Critical|r - <A0DS,DataA11>% |n|cffffcc00Damage|r - <A0DS,DataB11,.> times
+}
+
+STRING 11799
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD12,%>% |n|cffffcc00Critical|r - <A0DS,DataA12>% |n|cffffcc00Damage|r - <A0DS,DataB12,.> times
+}
+
+STRING 11800
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD13,%>% |n|cffffcc00Critical|r - <A0DS,DataA13>% |n|cffffcc00Damage|r - <A0DS,DataB13,.> times
+}
+
+STRING 11801
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD14,%>% |n|cffffcc00Critical|r - <A0DS,DataA14>% |n|cffffcc00Damage|r - <A0DS,DataB14,.> times
+}
+
+STRING 11802
+// Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD15,%>% |n|cffffcc00Critical|r - <A0DS,DataA15>% |n|cffffcc00Damage|r - <A0DS,DataB15,.> times
 }
 

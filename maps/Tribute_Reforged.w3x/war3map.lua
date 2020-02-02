@@ -108,7 +108,6 @@ udg_TransformationCell18 = nil
 udg_TransformationCellDroidsReady = false
 udg_TransformationCellDroidsX = __jarray(0.0)
 udg_TransformationCellDroidsY = __jarray(0.0)
-udg_CellJrAutoPatrolAngle = 0.0
 udg_TransformationResultUnit = nil
 udg_SuperBuuToKidBuuUnitGroup = nil
 udg_TempUnit2 = nil
@@ -266,6 +265,12 @@ gg_trg_Shaggy_Init = nil
 gg_trg_Shaggy_On = nil
 gg_trg_Unstuck_Init = nil
 gg_trg_Unstuck_Units = nil
+gg_trg_Final_Battle_Sim_On = nil
+gg_trg_Final_Battle_Sim_Set_Stats = nil
+gg_trg_Final_Battle_Sim_Set_All_Stats = nil
+gg_trg_Final_Battle_Sim_Set_Mult = nil
+gg_trg_Final_Battle_Sim_Set_Level = nil
+gg_trg_Final_Battle_Sim_Teleport = nil
 gg_trg_Map_Setup = nil
 gg_trg_Setup_Per_Player_Properties = nil
 gg_trg_Lock_Time_To_Day = nil
@@ -522,12 +527,6 @@ gg_trg_Regen_Items_Do_Regen = nil
 gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
-gg_trg_Final_Battle_Sim_On = nil
-gg_trg_Final_Battle_Sim_Set_Stats = nil
-gg_trg_Final_Battle_Sim_Set_Mult = nil
-gg_trg_Final_Battle_Sim_Set_Level = nil
-gg_trg_Final_Battle_Sim_Teleport = nil
-gg_trg_Final_Battle_Sim_Set_All_Stats = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -673,7 +672,6 @@ function InitGlobals()
         udg_TransformationCellDroidsY[i] = 0.0
         i = i + 1
     end
-    udg_CellJrAutoPatrolAngle = 0.0
     udg_SuperBuuToKidBuuUnitGroup = CreateGroup()
     i = 0
     while (true) do
@@ -1621,7 +1619,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6203.0, 28200.9, 316.526, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6361.1, 28579.0, 139.761, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6196.7, 27861.7, 132.752, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n031"), 11420.6, 29386.0, 277.721, FourCC("n031"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n031"), 11584.7, 29278.2, 277.721, FourCC("n031"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15906.0, 30779.7, 220.074, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 15491.2, 28613.5, 44.386, FourCC("n01D"))
@@ -2008,7 +2006,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 20784.3, 29170.4, 11.569, FourCC("n02P"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 14612.4, 5269.1, 158.054, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23476.7, -6179.3, 21.547, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23871.0, -6301.7, -27.501, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23871.0, -6301.7, 332.499, FourCC("n015"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2419,7 +2417,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H01B"), -2817.2, 26215.1, 300.460, FourCC("H01B"))
     SetUnitState(u, UNIT_STATE_MANA, 170)
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08Z"), 23362.1, 16009.9, 304.110, FourCC("H08Z"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08Z"), 23239.3, 16219.6, 304.110, FourCC("H08Z"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("h00T"), 21669.0, 26452.4, 280.160, FourCC("h00T"))
     u = BlzCreateUnitWithSkin(p, FourCC("H095"), 394.6, 21999.7, 78.290, FourCC("H095"))
@@ -2518,8 +2516,8 @@ function CreateCameras()
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_ANGLE_OF_ATTACK, 290.0, 0.0)
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_TARGET_DISTANCE, 3000.0, 0.0)
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_ROLL, 0.0, 0.0)
-    CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
-    CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_FARZ, 7000.0, 0.0)
+    CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_FIELD_OF_VIEW, 100.0, 0.0)
+    CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_FARZ, 4500.0, 0.0)
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_NEARZ, 16.0, 0.0)
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
     CameraSetupSetField(gg_cam_Hero_Pick_Camera, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
@@ -2947,42 +2945,53 @@ function Trig_Buu_Candy_Gobbler_Conditions()
     return true
 end
 
-function Trig_Buu_Candy_Gobbler_Func010002003001()
+function Trig_Buu_Candy_Gobbler_Func007C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TempUnit2) > GetUnitAbilityLevelSwapped(FourCC("A0LL"), udg_TempUnit2))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Buu_Candy_Gobbler_Func011002003001()
     return (IsUnitAliveBJ(GetFilterUnit()) == true)
 end
 
-function Trig_Buu_Candy_Gobbler_Func010002003002001()
+function Trig_Buu_Candy_Gobbler_Func011002003002001()
     return (UnitHasBuffBJ(GetFilterUnit(), FourCC("B01O")) == true)
 end
 
-function Trig_Buu_Candy_Gobbler_Func010002003002002()
+function Trig_Buu_Candy_Gobbler_Func011002003002002()
     return (IsUnitEnemy(GetFilterUnit(), GetTriggerPlayer()) == true)
 end
 
-function Trig_Buu_Candy_Gobbler_Func010002003002()
-    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func010002003002001(), Trig_Buu_Candy_Gobbler_Func010002003002002())
+function Trig_Buu_Candy_Gobbler_Func011002003002()
+    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func011002003002001(), Trig_Buu_Candy_Gobbler_Func011002003002002())
 end
 
-function Trig_Buu_Candy_Gobbler_Func010002003()
-    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func010002003001(), Trig_Buu_Candy_Gobbler_Func010002003002())
+function Trig_Buu_Candy_Gobbler_Func011002003()
+    return GetBooleanAnd(Trig_Buu_Candy_Gobbler_Func011002003001(), Trig_Buu_Candy_Gobbler_Func011002003002())
 end
 
-function Trig_Buu_Candy_Gobbler_Func011A()
+function Trig_Buu_Candy_Gobbler_Func012A()
     udg_TempUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Buu_Candy_Eating)
 end
 
 function Trig_Buu_Candy_Gobbler_Actions()
-    udg_TempUnit2 = GetTriggerUnit()
+    udg_TempUnit2 = GetSpellAbilityUnit()
     udg_TempLoc = GetUnitLoc(GetTriggerUnit())
     AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactCaster.mdl")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     udg_CandyBeamLvl = GetUnitAbilityLevelSwapped(FourCC("A0EI"), GetTriggerUnit())
+    if (Trig_Buu_Candy_Gobbler_Func007C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0LL"), udg_TempUnit2, GetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TempUnit2))
+    else
+    end
     udg_TempInt = udg_CandyBeamLvl
-    udg_TempReal = (600.00 + (100.00 * I2R(udg_CandyBeamLvl)))
-    udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal, udg_TempLoc, Condition(Trig_Buu_Candy_Gobbler_Func010002003))
-    ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Gobbler_Func011A)
+    udg_TempReal = (700.00 * (0.00 + I2R(udg_CandyBeamLvl)))
+    udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(udg_TempReal, udg_TempLoc, Condition(Trig_Buu_Candy_Gobbler_Func011002003))
+    ForGroupBJ(udg_TempUnitGroup, Trig_Buu_Candy_Gobbler_Func012A)
         DestroyGroup(udg_TempUnitGroup)
         RemoveLocation(udg_TempLoc)
 end
@@ -8276,7 +8285,7 @@ function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
     end
     if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
         udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.66)))
+        udg_TempReal = RMinBJ(5000.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.66)))
         CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
         SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
                 RemoveLocation(udg_TempLoc)
@@ -12934,7 +12943,8 @@ function Trig_Transformations_Fat_Buu_Actions()
         udg_TransformationStatMult = RMaxBJ(2.00, (udg_StatMultInt - 0.30))
         TriggerExecute(gg_trg_Replace_Transformation_Group_with_New_Hero)
         SelectHeroSkill(udg_TransformationResultUnit, FourCC("A0EI"))
-        SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 2)
+        SetUnitAbilityLevelSwapped(FourCC("A0EI"), udg_TransformationResultUnit, 3)
+        SetUnitAbilityLevelSwapped(FourCC("A0LL"), udg_TransformationResultUnit, 3)
         udg_StatMultReal = 0.00
         MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(udg_TransformationPlayer)], "BTNSuperBuu.blp")
     else
@@ -15194,14 +15204,14 @@ function InitTrig_Replace_Transformation_Group_with_New_Hero()
     TriggerAddAction(gg_trg_Replace_Transformation_Group_with_New_Hero, Trig_Replace_Transformation_Group_with_New_Hero_Actions)
 end
 
-function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func001C()
+function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func002C()
     if (not (HaveSavedValue(14, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func002C()
+function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func003C()
     if (not (HaveSavedValue(18, bj_HASHTABLE_INTEGER, udg_ID, udg_StatMultHashtable) == true)) then
         return false
     end
@@ -15209,27 +15219,28 @@ function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func002C()
 end
 
 function Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Actions()
-    if (Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func001C()) then
-                udg_ID = GetHandleId(udg_StatMultUnit)
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func002C()) then
         udg_TempInt2 = LoadIntegerBJ(14, udg_ID, udg_StatMultHashtable)
                 udg_ID = GetHandleId(udg_TransformationResultUnit)
         SaveIntegerBJ(udg_TempInt2, 14, udg_ID, udg_StatMultHashtable)
+                udg_ID = GetHandleId(udg_StatMultUnit)
     else
     end
-    if (Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func002C()) then
-                udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Copy_Stat_Mult_Hashtable_To_New_Unit_Func003C()) then
         udg_TempInt2 = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
                 udg_ID = GetHandleId(udg_TransformationResultUnit)
         SaveIntegerBJ(udg_TempInt2, 18, udg_ID, udg_StatMultHashtable)
+                udg_ID = GetHandleId(udg_StatMultUnit)
     else
     end
     udg_TempInt2 = 21
     while (true) do
         if (udg_TempInt2 > 25) then break end
-                udg_ID = GetHandleId(udg_StatMultUnit)
         udg_TempReal2 = LoadRealBJ(udg_TempInt2, udg_ID, udg_StatMultHashtable)
                 udg_ID = GetHandleId(udg_TransformationResultUnit)
         SaveRealBJ((udg_TempReal2 + LoadRealBJ(udg_TempInt2, udg_ID, udg_StatMultHashtable)), udg_TempInt2, udg_ID, udg_StatMultHashtable)
+                udg_ID = GetHandleId(udg_StatMultUnit)
         udg_TempInt2 = udg_TempInt2 + 1
     end
 end

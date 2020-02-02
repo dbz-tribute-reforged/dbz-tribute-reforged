@@ -58,8 +58,8 @@ export const AOEStunComponents = [
   {
     name: "stun behind you",
     repeatInterval: 1,
-    startTick: 7,
-    endTick: 13,
+    startTick: 5,
+    endTick: 15,
     duration: 1,
     aoe: 400,
     keepStunning: false, 
