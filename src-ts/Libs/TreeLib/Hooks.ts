@@ -8,11 +8,13 @@ _G.__hooks = {};
  */
 export class Hooks {
     public static get(name: string): object | undefined {
-        return _G.__hooks[name];
+        let test: { [key: string]: any } = _G.__hooks;
+        return test[name];
     }
 
     public static set(name: string, value: any) {
-        _G.__hooks[name] = value;
+        let test: { [key: string]: any } = _G.__hooks;
+        test[name] = value;
         Logger.LogDebug("Hooked: " + name)
     }
 }
