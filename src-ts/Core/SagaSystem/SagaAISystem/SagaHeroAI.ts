@@ -150,7 +150,8 @@ export class SagaHeroAI {
         this.performAction();
         this.postUpdate();
       } else {
-        ++this.currentTick;
+        // increment tick based on speed of Saga's Update rate
+        this.currentTick += 2;
       }
     }
   }

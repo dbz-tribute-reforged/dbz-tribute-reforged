@@ -2,16 +2,17 @@ import { SfxData } from "Common/SfxData";
 import { Vector2D } from "Common/Vector2D";
 import { CustomAbility } from "./CustomAbility";
 import { ComponentConstants } from "./AbilityComponent/AbilityComponent";
+import { CoordMath } from "Common/CoordMath";
 
 export module AbilitySfxHelper {
   // probably move sfx stuff to a sfx displaying class
-  // TODO: vary height of the sfx over their lifetime...
   // also expand to cover more sfx attributes for greater customisability
   export function displaySfxAtCoord(
     displayedSfx: SfxData, 
     target: Vector2D, 
     yaw: number,
     height: number,
+    timeRatio: number,
     persistentSfx: Map<SfxData, effect[]>,
   ) {
     if (
@@ -23,22 +24,35 @@ export module AbilitySfxHelper {
         for (const effect of currentEffects) {
           BlzSetSpecialEffectX(effect, target.x);
           BlzSetSpecialEffectY(effect, target.y);
+
+          const newYaw = yaw + displayedSfx.extraDirectionalYaw * CoordMath.degreesToRadians;
+          if (newYaw > 0) {
+            BlzSetSpecialEffectYaw(effect, newYaw);
+          }
+          
           if (height + displayedSfx.startHeight > 0) {
-            BlzSetSpecialEffectHeight(effect, height + displayedSfx.startHeight);
+            BlzSetSpecialEffectHeight(effect, 
+              height + displayedSfx.startHeight + 
+              (displayedSfx.endHeight - displayedSfx.startHeight) * timeRatio
+            );
           }
         }
-        // yes i know, bad, but if current sfx not found, create sfx
+        // yes i know, bad, but if current sfx is found, dont create sfx again
         return;
       }
     }
     const createdSfx = AddSpecialEffect(displayedSfx.model, target.x, target.y);
     BlzSetSpecialEffectScale(createdSfx, displayedSfx.scale);
-    const newYaw = yaw + displayedSfx.extraDirectionalYaw;
+    const newYaw = yaw + displayedSfx.extraDirectionalYaw * CoordMath.degreesToRadians;
     if (newYaw > 0) {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);
     }
+
     if (height + displayedSfx.startHeight > 0) {
-      BlzSetSpecialEffectHeight(createdSfx, height + displayedSfx.startHeight);
+      BlzSetSpecialEffectHeight(createdSfx, 
+        height + displayedSfx.startHeight + 
+        (displayedSfx.endHeight - displayedSfx.startHeight) * timeRatio
+      );
     }
     if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
       BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
@@ -49,7 +63,15 @@ export module AbilitySfxHelper {
 
   // displays the sfx at the caster's location
   // if the current tick is divisible by the repeat interval
-  export function displaySfxListAtCoord(ability: CustomAbility, sfxList: SfxData[], target: Vector2D, group: number, angle: number, height: number) {
+  export function displaySfxListAtCoord(
+    ability: CustomAbility, 
+    sfxList: SfxData[], 
+    target: Vector2D, 
+    group: number, 
+    angle: number, 
+    height: number,
+    timeRatio: number,
+  ) {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       // NOTE: avoid mod by 0 
@@ -59,7 +81,8 @@ export module AbilitySfxHelper {
           target,
           angle,
           height,
-          ability.persistentUniqueSfx,
+          timeRatio,
+          ability.persistentSfx,
         );
       };
     }
@@ -70,6 +93,7 @@ export module AbilitySfxHelper {
     unit: unit, 
     angle: number, 
     height: number, 
+    timeRatio: number,
     persistentSfx: Map<SfxData, effect[]>
   ) {
     const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
@@ -81,7 +105,15 @@ export module AbilitySfxHelper {
     manageSfxPersistence(displayedSfx, createdSfx, persistentSfx);
   }
 
-  export function displaySfxListOnUnit(ability: CustomAbility, sfxList: SfxData[], unit: unit, group: number, angle: number, height: number) {
+  export function displaySfxListOnUnit(
+    ability: CustomAbility, 
+    sfxList: SfxData[], 
+    unit: unit, 
+    group: number, 
+    angle: number, 
+    height: number,
+    timeRatio: number,
+  ) {
     for (const sfx of sfxList) {
       if (sfx.group != group && group != SfxData.SHOW_ALL_GROUPS) continue;
       
@@ -91,7 +123,8 @@ export module AbilitySfxHelper {
           unit,
           angle,
           height,
-          ability.persistentUniqueSfx,
+          timeRatio,
+          ability.persistentSfx,
         );
       }
     }
@@ -118,5 +151,13 @@ export module AbilitySfxHelper {
     } else {
       DestroyEffect(createdSfx);
     }
+  }
+
+  export function duplicateSfxList(sfxList: SfxData[]): SfxData[] {
+    const duplicate: SfxData[] = [];
+    for (const sfx of sfxList) {
+      duplicate.push(sfx.clone());
+    }
+    return duplicate;
   }
 }

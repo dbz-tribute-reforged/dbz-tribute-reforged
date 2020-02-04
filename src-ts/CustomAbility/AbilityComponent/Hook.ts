@@ -134,14 +134,17 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       this.hookAngle = CoordMath.angleBetweenCoords(this.hookSource, this.hookTarget);
     }
 
-        
+    const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
+    const yaw = (this.hookAngle + 360) * CoordMath.degreesToRadians;
+
     AbilitySfxHelper.displaySfxListAtCoord(
       ability,
       this.sfxList, 
       this.hookCoords, 
       SfxData.SHOW_ALL_GROUPS,
-      this.hookAngle, 
+      yaw, 
       BlzGetUnitZ(source),
+      timeRatio,
     );
 
     if (this.startedHook) {

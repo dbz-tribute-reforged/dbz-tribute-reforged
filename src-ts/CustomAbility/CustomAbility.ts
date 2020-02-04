@@ -25,12 +25,12 @@ export function stringToCostType(costType: string): CostType {
 }
 
 export class CustomAbility implements Serializable<CustomAbility>, AddableComponent {
-  static readonly BASE_DAMAGE = 1200;
+  static readonly BASE_DAMAGE = 1100;
   static readonly BASE_AVG_TICKS = 2;
 
   public currentTick: number;
   protected abilityTimer: timer;
-  public persistentUniqueSfx: Map<SfxData, effect[]>;
+  public persistentSfx: Map<SfxData, effect[]>;
 
   constructor(
     public name: string = "No Ability", 
@@ -50,7 +50,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   ) {
     this.currentTick = 0;
     this.abilityTimer = CreateTimer();
-    this.persistentUniqueSfx = new Map();
+    this.persistentSfx = new Map();
   }
 
   activate(input: CustomAbilityInput): void {
@@ -77,12 +77,12 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
         ++this.currentTick;
       }
       if (this.currentTick > this.duration) {
-        const persistentEffects = this.persistentUniqueSfx.values();
+        const persistentEffects = this.persistentSfx.values();
         for (const effect of persistentEffects) {
           AbilitySfxHelper.cleanupPersistentSfx(effect);
           effect.splice(0, effect.length);
         }
-        this.persistentUniqueSfx.clear();
+        this.persistentSfx.clear();
       }
       this.updateCd();
     });
@@ -176,6 +176,25 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
         this.currentTick >= this.duration
       )
     );
+  }
+
+  calculateTimeRatio(
+    startTick: number, 
+    endTick: number
+  ): number {
+    let timeRatio = 0;
+    if (startTick == ComponentConstants.MAX_DURATION) {
+      timeRatio = 1;
+    } else {
+      let lastTick = endTick;
+      if (endTick == ComponentConstants.MAX_DURATION) {
+        lastTick = this.duration;
+      }
+      if (lastTick >= startTick) {
+        timeRatio = (this.currentTick - startTick) / (lastTick - startTick);
+      }
+    }
+    return timeRatio;
   }
 
   deserialize(

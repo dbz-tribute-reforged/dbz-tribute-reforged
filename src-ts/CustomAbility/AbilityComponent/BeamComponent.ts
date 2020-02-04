@@ -54,6 +54,7 @@ export class BeamComponent implements
     public explodeOnDeath: boolean = false,
     public spawnAtSource: boolean = true,
     public beamUnitType: number = FourCC('hpea'),
+    public beamUnitSkin: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
   ) {
     this.beamUnit = GetEnumUnit();
@@ -126,6 +127,23 @@ export class BeamComponent implements
         ability.reduceCurrentTick(1);
       }
     }
+
+    // move beam unit on Z axis
+    let finishHeightTick = this.endTick;
+    if (this.explodeTick > 0) {
+      finishHeightTick = this.explodeTick;
+    }
+    SetUnitFlyHeight(
+      this.beamUnit, 
+      this.heightVariation.start + (
+        (
+          this.heightVariation.finish - this.heightVariation.start
+        ) * 
+        ability.calculateTimeRatio(this.startTick, finishHeightTick)
+      ),
+      0
+    );
+
     return this;
   }
 
@@ -151,6 +169,7 @@ export class BeamComponent implements
       this.beamCoord.y, 
       this.angle,
     );
+    BlzSetUnitSkin(this.beamUnit, this.beamUnitSkin);
 
     UnitHelper.giveUnitFlying(this.beamUnit);
     SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
@@ -172,15 +191,15 @@ export class BeamComponent implements
       endHeightTick = this.explodeTick;
     }
 
-    SetUnitFlyHeight(
-      this.beamUnit, 
-      this.heightVariation.finish, 
-      Math.abs(
-        (this.heightVariation.finish - this.heightVariation.start) 
-        / 
-        ((endHeightTick - ability.currentTick) * ability.updateRate)
-      ),
-    );
+    // SetUnitFlyHeight(
+    //   this.beamUnit, 
+    //   this.heightVariation.finish, 
+    //   Math.abs(
+    //     (this.heightVariation.finish - this.heightVariation.start) 
+    //     / 
+    //     ((endHeightTick - ability.currentTick) * ability.updateRate)
+    //   ),
+    // );
     // hp MUST be a multiple of 50??? or something
     // else it causes a crash / uncatched exception
     // and prevents the rest of the beam code from firing
@@ -270,7 +289,7 @@ export class BeamComponent implements
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
       this.spawnAtSource,
-      this.beamUnitType, 
+      this.beamUnitType, this.beamUnitSkin,
       AbilityComponentHelper.clone(this.components),
     );
   }
@@ -301,6 +320,7 @@ export class BeamComponent implements
       explodeOnDeath: boolean;
       spawnAtSource: boolean;
       beamUnitType: string;
+      beamUnitSkin: number;
       components: {
         name: string,
       }[];
@@ -326,6 +346,7 @@ export class BeamComponent implements
     this.explodeOnDeath = input.explodeOnDeath;
     this.spawnAtSource = input.spawnAtSource;
     this.beamUnitType = FourCC(input.beamUnitType);
+    this.beamUnitSkin = input.beamUnitSkin;
     return this;
   }
 

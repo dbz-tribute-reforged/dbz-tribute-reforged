@@ -1,8 +1,11 @@
 import { Vector3D } from "Common/Vector3D";
 
 export class SfxData implements Serializable<SfxData> {
+  public static MAX_ID = 0;
   public static readonly SHOW_ALL_GROUPS = -1;
   // maybe move to Commmon, not sure, should only used for CustomAbility right now
+  protected id: number;
+
   constructor(
     public model: string = "none.mdl",
     public repeatInterval: number = 1,
@@ -16,7 +19,20 @@ export class SfxData implements Serializable<SfxData> {
     public persistent: boolean = false,
     public attachmentPoint: string = "origin",
   ) {
+    this.id = SfxData.MAX_ID++;
+  }
 
+  clone(): SfxData {
+    return new SfxData(
+      this.model, this.repeatInterval, this.group,
+      this.scale, 
+      this.startHeight, this.endHeight,
+      this.extraDirectionalYaw,
+      this.color,
+      this.updateCoordsOnly,
+      this.persistent,
+      this.attachmentPoint,
+    );
   }
   
   deserialize(

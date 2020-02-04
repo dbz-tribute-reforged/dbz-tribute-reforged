@@ -22,7 +22,9 @@ export class Timers {
 
     private constructor() {
         this.fastTimer = CreateTrigger();
-        TriggerRegisterTimerEvent(this.fastTimer, 0.01, true);
+        // fast timer has been slowed down to 0.02s from 0.01s because
+        // 0.01s can cause desyncs on reforged
+        TriggerRegisterTimerEvent(this.fastTimer, 0.02, true);
         TriggerAddAction(this.fastTimer, () => {
             this.fastTimerCallbacks.forEach((callback) => {
                 callback();

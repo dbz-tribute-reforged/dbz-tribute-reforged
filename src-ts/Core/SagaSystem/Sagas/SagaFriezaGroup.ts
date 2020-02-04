@@ -240,7 +240,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
       if (
         frieza && 
         nextFrieza &&
-        SagaHelper.checkUnitHp(frieza, 0.65, false, false, true) &&
+        SagaHelper.checkUnitHp(frieza, 0.75, false, false, true) &&
         SagaHelper.isUnitSagaHidden(nextFrieza)
       ) {
         SagaHelper.showMessagesChanceOfJoke(
