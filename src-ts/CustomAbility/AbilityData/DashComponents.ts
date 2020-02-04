@@ -234,7 +234,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: true,
     useLastCastPoint: false,
-    distance: 25,
+    distance: 30,
   },
   {
     name: "dash flying unit hellzone grenade",
@@ -244,7 +244,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: true,
     useLastCastPoint: false,
-    distance: 35,
+    distance: 40,
   },
   // ----------------------------
   {

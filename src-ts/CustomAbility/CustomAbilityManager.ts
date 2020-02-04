@@ -185,7 +185,7 @@ export class CustomAbilityManager {
       for (const component of components) {
         const retrievedComponent = this.getComponent(component.name);
         if (retrievedComponent) {
-            addTarget.addComponent(retrievedComponent.clone());
+          addTarget.addComponent(retrievedComponent.clone());
         }
       }
     }

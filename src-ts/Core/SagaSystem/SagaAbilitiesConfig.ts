@@ -96,10 +96,10 @@ export module SagaAbilities {
       AbilityNames.Cooler.SUPERNOVA_GOLDEN, 10, 25, 5, MEDIUM_CAST_TIME
     );
     export const NOVA_CHARIOT = new SagaAbility(
-      AbilityNames.Cooler.NOVA_CHARIOT, 10, 25, 5, SHORT_CAST_TIME
+      AbilityNames.Cooler.NOVA_CHARIOT, 10, 26, 3, SHORT_CAST_TIME
     );
     export const GETI_STAR_REPAIR = new SagaAbility(
-      AbilityNames.Cooler.GETI_STAR_REPAIR, 10, 30, 5, SHORT_CAST_TIME
+      AbilityNames.Cooler.GETI_STAR_REPAIR, 10, 35, 5, SHORT_CAST_TIME
     );
   }
 

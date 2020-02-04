@@ -4,6 +4,7 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { SfxData } from "Common/SfxData";
 import { AbilitySfxHelper } from "CustomAbility/AbilitySfxHelper";
 import { Vector2D } from "Common/Vector2D";
+import { CoordMath } from "Common/CoordMath";
 
 export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> {
 
@@ -45,23 +46,27 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
     }
     
     if (this.remainingBlock > 0) {
-
+      const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
       // show group 0 of sfx while remainingBlock > 0
+      const yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
+
       AbilitySfxHelper.displaySfxListOnUnit(
         ability,
         this.attachedSfxList, 
         source, 
         0,
-        0, 
-        BlzGetUnitZ(source)
+        yaw, 
+        BlzGetUnitZ(source),
+        timeRatio,
       );
       AbilitySfxHelper.displaySfxListAtCoord(
         ability,
         this.sfxList, 
         new Vector2D(GetUnitX(source), GetUnitY(source)), 
         0,
-        0, 
-        BlzGetUnitZ(source)
+        yaw, 
+        BlzGetUnitZ(source),
+        timeRatio,
       );
 
       const hpDifference = this.previousHp - currentHp;
@@ -83,16 +88,18 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
             this.attachedSfxList, 
             source, 
             1,
-            0, 
-            BlzGetUnitZ(source)
+            yaw, 
+            BlzGetUnitZ(source),
+            timeRatio,
           );
           AbilitySfxHelper.displaySfxListAtCoord(
             ability,
             this.sfxList, 
             new Vector2D(GetUnitX(source), GetUnitY(source)), 
             1,
-            0, 
-            BlzGetUnitZ(source)
+            yaw, 
+            BlzGetUnitZ(source),
+            timeRatio,
           );
         }
 

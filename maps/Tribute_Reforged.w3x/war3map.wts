@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.32
+DBZ Tribute Reforged 0.33
 }
 
 STRING 4
@@ -280,7 +280,7 @@ STRING 47
 }
 
 STRING 48
-// Units: H000 (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H05Q (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -534,20 +534,6 @@ STRING 85
 // Units: O001 (Evil Wizard), Tip (Tooltip - Basic)
 {
 [|cffffff00W|r] Choose Babidi
-}
-
-STRING 86
-// Units: O001 (Evil Wizard), Ubertip (Tooltip - Extended)
-{
-A summoner hero who can gather stats extremely quickly while supporting from the backline with crowd control and a powerful single-target nuke.
-He may choose to turn into Majin Buu, who can devastate teamfights with immensely powerful AoE spells and absorb low-health enemy heroes for power.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 87
@@ -5057,7 +5043,7 @@ STRING 814
 }
 
 STRING 815
-// Units: H05Q (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H03G (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -7949,7 +7935,7 @@ STRING 1259
 }
 
 STRING 1260
-// Units: H03G (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H08G (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -7998,7 +7984,7 @@ STRING 1266
 }
 
 STRING 1267
-// Units: H08G (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H08H (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -8047,7 +8033,7 @@ STRING 1273
 }
 
 STRING 1274
-// Units: H08H (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H08J (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -17144,42 +17130,6 @@ STRING 2783
 W
 }
 
-STRING 2784
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 2785
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 2786
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 2787
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 2788
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 2789
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
 STRING 2790
 // Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
 {
@@ -17241,15 +17191,9 @@ VEG
 }
 
 STRING 2800
-// Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
+// Abilities: A0GN (Final Flash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
-}
-
-STRING 2801
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 3.5) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 2802
@@ -17648,6 +17592,22 @@ STRING 2867
 // Abilities: A0LL (Candy Gobbler), Name (Name)
 {
 Candy Gobbler
+}
+
+STRING 2868
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "kao"
+[lvl 30]  1.50x "ss"
+[lvl 85]  2.00x "ss2"
+[lvl 125] 2.25x "ss3"
+[lvl 150] 2.50x "ssg" [unlocks god kame]
+[lvl 200] 2.60x "ssb"
+[lvl 225] 2.70x "ssbkao"
+
+|cff00ffffUltra Instinct:|r
+Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.|n3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
 }
 
 STRING 2869
@@ -34021,12 +33981,6 @@ STRING 5590
 W
 }
 
-STRING 5591
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
 STRING 5592
 // Abilities: A0C1 (Supernova), Researchtip (Tooltip - Learn)
 {
@@ -34622,7 +34576,9 @@ Transformations:
 [lvl 150] 2.50x "ssg" [unlocks god kame]
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.70x "ssbkao"
-[lvl 250] 2.70x "ui" [unlocks ultra instinct]
+
+|cff00ffffUltra Instinct:|r
+Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.|n3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
 }
 
 STRING 5690
@@ -37839,6 +37795,20 @@ STRING 6219
 [|cff00ff00D|r] Candy Gobbler - [|cffffcc00Level 3|r]
 }
 
+STRING 6220
+{
+Transformations:
+Kid Buu:
+Carries over the stat multiplier from Super Buu's absorbs.
+Does not gain any additional stat multiplier.
+Gains the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of whoever Super Buu absorbed first.
+}
+
+STRING 6221
+{
+Those with Immortality cannot enter the Hyperbolic Time Chamber.
+}
+
 STRING 6222
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
@@ -37849,6 +37819,57 @@ STRING 6223
 // Abilities: A0LL (Candy Gobbler), Ubertip (Tooltip - Normal - Extended)
 {
 Instantly consumes all nearby candy. Procs candy beam damage and lifesteal against candied heroes. |n|cff00ff00AOE: 2100|r|n|cff00FFFFCooldown: <A0LL,Cool3> seconds|r
+}
+
+STRING 6224
+{
+The Hyperbolic Time Chamber is currently being repaired by Mr. Popo.
+}
+
+STRING 6227
+{
+|cff00ffff[Hyperbolic Time Chamber]|r
+Mr. Popo has repaired the Hyperbolic Time Chamber.
+If you are feeling too weak, use the Hyperbolic Time Chamber to catchup!
+}
+
+STRING 6228
+{
+|cff00ffff[Hyperbolic Time Chamber]|r
+Mr. Popo has upgraded the Hyperbolic Time Chamber.
+If you are still feeling too weak, use the Hyperbolic Time Chamber to catchup!
+}
+
+STRING 6229
+// Units: O001 (Evil Wizard), Ubertip (Tooltip - Extended)
+{
+A summoner hero who can gather stats extremely quickly while supporting from the backline with crowd control and a powerful single-target nuke.
+Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Tavern) with level 3 candy beam as a bonus.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 6231
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A02B,Cool2> seconds|r
+}
+
+STRING 6232
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A03B,Cool3> seconds|r
+}
+
+STRING 6233
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A04B,Cool4> seconds|r
 }
 
 STRING 6234
@@ -40971,12 +40992,6 @@ STRING 6750
 // Units: H08N (Saiyan Warrior), Tip (Tooltip - Basic)
 {
 [|cffffff00Q|r] Choose Bardock
-}
-
-STRING 6751
-// Units: H08N (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
-{
-SS
 }
 
 STRING 6752
@@ -44664,7 +44679,7 @@ STRING 7365
 }
 
 STRING 7366
-// Abilities: A0GN (Final Flash), Tip (Tooltip - Normal)
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
 }
@@ -53715,7 +53730,7 @@ STRING 8863
 }
 
 STRING 8864
-// Units: H08J (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+// Units: H08T (Frozeny helfirey), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -56221,21 +56236,6 @@ STRING 9278
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
 }
 
-STRING 9279
-{
-Type "r" to revert.
-Transformations:
-[lvl 15]  1.25x "kao"
-[lvl 30]  1.50x "ss"
-[lvl 85]  2.00x "ss2"
-[lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg" [unlocks god kame]
-[lvl 200] 2.60x "ssb"
-[lvl 225] 2.70x "ssbkao"
-[lvl 250] 2.70x "ui" [unlocks ultra instinct]
-[lvl 300] 2.70x "mui" [unlocks mastered ultra instinct]
-}
-
 STRING 9280
 // Abilities: A0KS (Moonlight), Tip (Tooltip - Normal)
 {
@@ -56359,19 +56359,6 @@ STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
 Super Saiyan Rage
-}
-
-STRING 9301
-// Units: H08P (Spoiled Brat), Ubertip (Tooltip - Extended)
-{
-A hero.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 9302
@@ -60054,6 +60041,12 @@ STRING 9913
 Pyre Keeper of Hell
 }
 
+STRING 9914
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A05B,Cool5> seconds|r
+}
+
 STRING 9915
 // Units: H08R (Spoiled Brat), Propernames (Proper Names)
 {
@@ -60072,10 +60065,40 @@ STRING 9917
 [|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level %d|r]
 }
 
+STRING 9918
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06B,Cool6> seconds|r
+}
+
+STRING 9919
+// Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 7|r]
+}
+
 STRING 9920
 // Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
+}
+
+STRING 9921
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A07B,Cool7> seconds|r
+}
+
+STRING 9922
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool1> seconds|r
+}
+
+STRING 9923
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool1>|r
 }
 
 STRING 9924
@@ -60084,10 +60107,46 @@ STRING 9924
 Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
+STRING 9925
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool2>|r
+}
+
+STRING 9926
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool3>|r
+}
+
+STRING 9927
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool4>|r
+}
+
 STRING 9928
 // Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 9929
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool5>|r
+}
+
+STRING 9930
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool6>|r
+}
+
+STRING 9931
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool7>|r
 }
 
 STRING 9932
@@ -60699,42 +60758,6 @@ STRING 10036
 (Golden Final Form)
 }
 
-STRING 10037
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10038
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10039
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10040
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10041
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10042
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
 STRING 10043
 // Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
 {
@@ -60765,12 +60788,6 @@ STRING 10047
 [|cff00FF00W|r] Final Flash - [|cffffcc00Level 5|r]
 }
 
-STRING 10048
-// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
-}
-
 STRING 10049
 // Abilities: A0L4 (Final Flash 2), Name (Name)
 {
@@ -60793,18 +60810,6 @@ STRING 10052
 // Abilities: A0L4 (Final Flash 2), EditorSuffix (Editor Suffix)
 {
 VEG
-}
-
-STRING 10053
-// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
-}
-
-STRING 10054
-// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00(Damage: (Int * lvl * 6) +100)|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 10055
@@ -61646,48 +61651,6 @@ STRING 10189
 F
 }
 
-STRING 10190
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10191
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10192
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10193
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10194
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10195
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10196
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
 STRING 10197
 // Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
 {
@@ -61956,18 +61919,6 @@ STRING 10241
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 6|r]
-}
-
-STRING 10242
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
-STRING 10243
-// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
 }
 
 STRING 10244
@@ -62775,12 +62726,6 @@ STRING 10376
 [|cff00ff00E|r] Learn Flesh Attack - [|cffffcc00Level %d|r]
 }
 
-STRING 10377
-// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
-{
-This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb Z fighters with less than 1000 or 15% hp.|r
-}
-
 STRING 10378
 // Abilities: A01C (Flesh Attack), EditorSuffix (Editor Suffix)
 {
@@ -63188,19 +63133,6 @@ STRING 10444
 // Units: O005 (Fat Buu), Tip (Tooltip - Basic)
 {
 [|cffffff00W|r] Choose Majin Buu
-}
-
-STRING 10445
-// Units: O005 (Fat Buu), Ubertip (Tooltip - Extended)
-{
-Majin Buu but starts at level 1. Relies heavily on candy beam and focusing down targets that have turned into candy.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 10446
@@ -64150,25 +64082,25 @@ Only gains stat multiplier by eating candy (see candy beam ability).
 For Super Buu type "super" at lvl 90.
 
 Super Buu:
-Carries over some of the stat mult from fat buu.
-Only gains additional stat multiplier by absorbing players.
+Carries over some of the stat mult from Fat Buu.
+Only gains additional stat multiplier by absorbing players using [|cff00ff00E|r] Flesh Attack when they are on low hp.
 Gains +0.4x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
-Turns into Kid buu 120s after your first absorb.
+Turns into Kid Buu 120s after your first absorb.
 }
 
 STRING 10603
 {
 Transformations:
 Super Buu:
-Carries over some of the stat mult from fat buu.
-Only gains additional stat multiplier by absorbing players.
+Carries over some of the stat mult from Fat Buu.
+Only gains additional stat multiplier by absorbing players using [|cff00ff00E|r] Flesh Attack when they are on low hp.
 Gains +0.4x for the first person you absorb with flesh attack. +0.1x for every subsequent absorb.
-Turns into Kid buu 120s after your first absorb.
-}
+Turns into Kid Buu 120s after your first absorb.
 
-STRING 10604
-{
-Kid buu retains the stat mult gained from Fat Buu's candy and Super Buu's absorbs. (minimum 2.4x)
+Kid Buu:
+Carries over the stat multiplier from Super Buu's absorbs.
+Does not gain any additional stat multiplier.
+Gains the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of whoever Super Buu absorbed first.
 }
 
 STRING 10605
@@ -64252,11 +64184,11 @@ STRING 10610
 Transformations:
 [lvl 250]  2.70x "golden"
 
-Metal Cooler gains stat multiplier from kills/deaths up to a max of 2.50x. Works with allied Metal Coolers at a reduced rate.
-[kill] +0.10x / +0.03x
-[death] +0.02x / +0.01x
+Metal Cooler gains stat multiplier from kills and deaths up to a max of 2.50x. (Allied Metal Cooler players also provide a bonus on kills and deaths but at a reduced rate)
+[kill] +0.10x (+0.03x)
+[death] +0.02x (+0.01x)
 
-Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 2 bonus stats per 0.01x traded in. Stops at lvl 250.
+Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 4 bonus stats per 0.01x traded in. Stops at lvl 250.
 }
 
 STRING 10611
@@ -64488,6 +64420,7 @@ dbsw
 Spoon
 Xenoform
 Janemba50
+Viet
 anyone else i'm missing?
 }
 
@@ -64523,7 +64456,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 3.Feb.20
+This map is under active development - 5.Feb.20
 }
 
 STRING 10653
@@ -64754,19 +64687,6 @@ STRING 10687
 [|cffffff00R|r] Choose Farmer with Shotgun
 }
 
-STRING 10688
-// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
-{
-A farmer with a shotgun.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 10689
 // Units: H08S (Slayer of Raditz), Tip (Tooltip - Basic)
 {
@@ -64894,7 +64814,7 @@ STRING 10709
 }
 
 STRING 10710
-// Units: H08T (Frozeny helfirey), Ubertip (Tooltip - Extended)
+// Units: H092 (Shaggy Rogers), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -66916,6 +66836,12 @@ STRING 11047
 [|cffffff00A|r] Choose Raditz
 }
 
+STRING 11048
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool8>|r
+}
+
 STRING 11049
 // Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
@@ -67438,7 +67364,7 @@ STRING 11135
 }
 
 STRING 11136
-// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+// Units: H08V (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
 {
 A strong early game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
 
@@ -67633,19 +67559,6 @@ STRING 11165
 // Units: H08W (Mid-Class Saiyan Warrior), Name (Name)
 {
 Mid-Class Saiyan Warrior
-}
-
-STRING 11166
-// Units: H08V (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A strong early game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 11167
@@ -68509,19 +68422,6 @@ STRING 11310
 Q
 }
 
-STRING 11311
-// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A powerful AOE nuker that is rewarded for having good accuracy. Can summon saibamen to help out.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11312
 // Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
 {
@@ -69260,6 +69160,12 @@ STRING 11434
 Lava Pillars
 }
 
+STRING 11435
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool9>|r
+}
+
 STRING 11436
 // Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
 {
@@ -69716,6 +69622,12 @@ STRING 11511
 [|cff00ff00W|r] Learn Barrier Prison - [|cffffcc00Level %d|r]
 }
 
+STRING 11512
+// Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool10>|r
+}
+
 STRING 11513
 // Abilities: A0MT (Barrier Prison), Tip (Tooltip - Normal)
 {
@@ -69864,6 +69776,12 @@ STRING 11537
 // Abilities: A0MU (Barrier Wall), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Barrier Wall - [|cffffcc00Level %d|r]
+}
+
+STRING 11538
+// Abilities: A01C (Flesh Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool1> - <A01C,Cool10> seconds|r
 }
 
 STRING 11539
@@ -71009,6 +70927,12 @@ STRING 11729
 It's a spoiled brat!
 }
 
+STRING 11730
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool2> seconds|r
+}
+
 STRING 11731
 // Buffs/Effects: B020 (), Buffubertip (Tooltip - Extended)
 {
@@ -71037,19 +70961,6 @@ STRING 11735
 // Units: H092 (Shaggy Rogers), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00A|r] Choose Goku
-}
-
-STRING 11736
-// Units: H092 (Shaggy Rogers), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 11737
@@ -71113,13 +71024,13 @@ Raditz
 }
 
 STRING 11747
-// Units: H08R (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+// Units: H08N (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 SS deprecated
 }
 
 STRING 11748
-// Units: H08V (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08R (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 SS deprecated
 }
@@ -71446,5 +71357,174 @@ STRING 11802
 // Abilities: A0DS (Namekian Fighting Style), Ubertip (Tooltip - Normal - Extended)
 {
 Namekians have developed their own fighting style. |n|cffffcc00Evasion|r - <A0DS,DataD15,%>% |n|cffffcc00Critical|r - <A0DS,DataA15>% |n|cffffcc00Damage|r - <A0DS,DataB15,.> times
+}
+
+STRING 11803
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool3> seconds|r
+}
+
+STRING 11804
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool1> seconds|r
+}
+
+STRING 11805
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool4> seconds|r
+}
+
+STRING 11806
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool5> seconds|r
+}
+
+STRING 11807
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool6> seconds|r
+}
+
+STRING 11808
+// Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Flash - [|cffffcc00Level 7|r]
+}
+
+STRING 11809
+// Abilities: A0L4 (Final Flash 2), Ubertip (Tooltip - Normal - Extended)
+{
+An upgraded version of Final Flash that is twice as strong. Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0L4,Cool7> seconds|r
+}
+
+STRING 11810
+// Units: H000 (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11811
+// Units: O005 (Fat Buu), Ubertip (Tooltip - Extended)
+{
+Majin Buu that Babidi can "release" but starts at level 1. At the start he relies heavily on using his candy beam to quickly gain stat multiplier. Eventually he gains access to extremely powerful AOE damage abilities and 2 strong disables.
+Can turn into Super Buu who absorbs other enemy heroes using [|cff00ff00E|r] Flesh Attack. Super Buu will turn into Kid Buu some time after the first absorb duplicating the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of the first enemy absorbed.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11812
+// Units: H08P (Spoiled Brat), Ubertip (Tooltip - Extended)
+{
+A hero that relies heavily on combo-ing her multiple low cooldown beams with her robot Giru. Has a unique passive that summons a powerful AOE damage aura around Giru whenever she casts a spell.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11813
+// Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
+{
+A farmer with a shotgun.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11814
+// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A strong early-game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11815
+// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A powerful AOE nuker that is rewarded for having good accuracy. Can summon saibamen to help out.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 11816
+// Units: H08V (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+{
+SS deprecated
+}
+
+STRING 11817
+// Abilities: A0KV (Book Bardock Heads), Name (Name)
+{
+Book Bardock Heads
+}
+
+STRING 11818
+// Abilities: A0KW (BardockRevert), Name (Name)
+{
+BardockRevert
+}
+
+STRING 11819
+// Abilities: A0KX (BardockSS), Name (Name)
+{
+BardockSS
+}
+
+STRING 11820
+// Abilities: A0NM (BardockSSB), Name (Name)
+{
+BardockSSB
+}
+
+STRING 11821
+// Abilities: A0NN (BardockSSG), Name (Name)
+{
+BardockSSG
+}
+
+STRING 11822
+// Buffs/Effects: B022 (), Buffubertip (Tooltip - Extended)
+{
+It's Bardock!
+}
+
+STRING 11823
+// Buffs/Effects: B022 (), Bufftip (Tooltip)
+{
+Bardock
 }
 

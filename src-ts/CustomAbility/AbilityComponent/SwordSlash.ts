@@ -71,6 +71,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       this.previousCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       this.nextDamageTick = 0;
     }
+
+    const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
     
     AbilitySfxHelper.displaySfxListOnUnit(
       ability,
@@ -78,7 +80,8 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       source, 
       SfxData.SHOW_ALL_GROUPS,
       0, 
-      BlzGetUnitZ(input.caster.unit)
+      BlzGetUnitZ(input.caster.unit),
+      timeRatio,
     );
 
     const currentCoord = this.previousCoord;
@@ -90,7 +93,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       const middleCoord = CoordMath.polarProjectCoords(currentCoord, slashDirection, slashDistance/2);
       
       const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-      const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord);
+      const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord) * CoordMath.degreesToRadians;
 
       AbilitySfxHelper.displaySfxListAtCoord(
         ability,
@@ -99,6 +102,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         SfxData.SHOW_ALL_GROUPS,
         sfxAngle,
         BlzGetUnitZ(source),
+        timeRatio,
       );
 
       const affectedGroup = UnitHelper.getNearbyValidUnits(

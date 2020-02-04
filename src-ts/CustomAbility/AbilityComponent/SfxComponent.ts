@@ -4,6 +4,7 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
 import { SfxData } from "Common/SfxData";
 import { AbilitySfxHelper } from "CustomAbility/AbilitySfxHelper";
+import { CoordMath } from "Common/CoordMath";
 
 export class SfxComponent implements AbilityComponent, Serializable<SfxComponent>  {
   static readonly SOURCE_UNIT = 0;
@@ -55,22 +56,28 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         this.setSfxCoordsToTargettedPoint(input);
       }
     }
-    
+
+    const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
+    const yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
+    const height = GetUnitFlyHeight(source) + BlzGetUnitZ(source);
+
     AbilitySfxHelper.displaySfxListAtCoord(
       ability,
       this.sfxList, 
       this.sfxCoords, 
       SfxData.SHOW_ALL_GROUPS,
-      0, 
-      BlzGetUnitZ(source),
+      yaw, 
+      height,
+      timeRatio,
     );
     AbilitySfxHelper.displaySfxListOnUnit(
       ability,
       this.attachedSfxList,
       source,
       SfxData.SHOW_ALL_GROUPS,
-      0,
-      BlzGetUnitZ(source),
+      yaw, 
+      height,
+      timeRatio,
     )
 
 
@@ -82,8 +89,9 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   clone(): AbilityComponent {
     return new SfxComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.sfxSource, this.useLastCastPoint, 
-      this.sfxList, this.attachedSfxList,
+      this.sfxSource, this.useLastCastPoint,
+      AbilitySfxHelper.duplicateSfxList(this.sfxList),
+      AbilitySfxHelper.duplicateSfxList(this.attachedSfxList),
     );
   }
 

@@ -171,24 +171,23 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // return of cooler
-    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 20, 1800, 400, 2000, new Vector2D(25000, 30000),
+    ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30000),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
     )],
-    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 20, 1800, 400, 2000, new Vector2D(25000, 30000),
+    ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
     )],
-    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 20, 1800, 400, 2000, new Vector2D(25000, 30000),
+    ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
     )],
