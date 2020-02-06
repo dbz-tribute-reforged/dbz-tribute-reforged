@@ -4,6 +4,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { CustomHero } from "./CustomHero";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export module CastTimeHelper {
   export function addEventRightClick(trigger: trigger, input: CustomAbilityInput) {
@@ -113,13 +114,18 @@ export module CastTimeHelper {
     
     addEventStopCasting(stopCastingTrigger, input);
     TriggerAddAction(stopCastingTrigger, ()=> {
-      DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
+      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " cancelled.");
+      TextTagHelper.showPlayerColorTextOnUnit(
+        ability.name + " cancelled", 
+        GetPlayerId(GetOwningPlayer(hero.unit)), 
+        hero.unit
+      );
       cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
     })
     
     if (ability.waitsForNextClick) {
       // TODO: make this into UI instead of just print to screen
-      DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " on next right click.");
+      // DisplayTimedTextToPlayer(input.casterPlayer, 0, 0, 2, "Casting " + ability.name + " on next right click.");
       addEventRightClick(readyTrigger, input);
       TriggerAddAction(readyTrigger, () => {
         startCastTimeTimer(castTimeTimer, hero, ability, input, readyTrigger, stopCastingTrigger);

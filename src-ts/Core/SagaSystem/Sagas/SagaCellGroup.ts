@@ -227,7 +227,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 100;
+    this.delay = 90;
   }
 
   spawnSagaUnits(): void {

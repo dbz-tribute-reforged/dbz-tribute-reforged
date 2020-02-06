@@ -15,6 +15,9 @@ export class BeamComponent implements
   Serializable<BeamComponent>,
   AddableComponent
 {
+  static readonly BEAM_UNIT_SPAWN_CASTER = 0;
+  static readonly BEAM_UNIT_SPAWN_SOURCE = 1;
+  static readonly BEAM_UNIT_SPAWN_TARGET = 2;
 
   public beamUnit: unit;
   public delayTicks: number;
@@ -52,7 +55,7 @@ export class BeamComponent implements
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
     public explodeOnDeath: boolean = false,
-    public spawnAtSource: boolean = true,
+    public beamUnitSpawn: number = BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     public beamUnitType: number = FourCC('hpea'),
     public beamUnitSkin: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
@@ -154,12 +157,18 @@ export class BeamComponent implements
     if (!this.useLastCastPoint) {
       beamTargetPoint = input.targetPoint;
     }
+
     this.angle = CoordMath.angleBetweenCoords(this.beamCoord, beamTargetPoint);
-    if (this.spawnAtSource) {
+    if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_SOURCE) {
       // move beam slightly out of the source unit
       this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
-    } else {
+    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
       this.beamCoord = beamTargetPoint;
+    } else {
+      // caster
+      this.beamCoord.x = GetUnitX(input.caster.unit);
+      this.beamCoord.y = GetUnitY(input.caster.unit);
+      this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     }
 
     this.beamUnit = CreateUnit(
@@ -288,7 +297,7 @@ export class BeamComponent implements
       this.isFixedAngle, this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
-      this.spawnAtSource,
+      this.beamUnitSpawn,
       this.beamUnitType, this.beamUnitSkin,
       AbilityComponentHelper.clone(this.components),
     );
@@ -318,7 +327,7 @@ export class BeamComponent implements
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
       explodeOnDeath: boolean;
-      spawnAtSource: boolean;
+      beamUnitSpawn: number;
       beamUnitType: string;
       beamUnitSkin: number;
       components: {
@@ -344,7 +353,7 @@ export class BeamComponent implements
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.explodeOnDeath = input.explodeOnDeath;
-    this.spawnAtSource = input.spawnAtSource;
+    this.beamUnitSpawn = input.beamUnitSpawn;
     this.beamUnitType = FourCC(input.beamUnitType);
     this.beamUnitSkin = input.beamUnitSkin;
     return this;

@@ -22,7 +22,7 @@ export class BojackSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Bojack", "Bido", "Gokua", "Pujin", "Zangya"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();

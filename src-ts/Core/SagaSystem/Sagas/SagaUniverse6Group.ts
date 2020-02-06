@@ -8,7 +8,7 @@ export class Universe6Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 75;
   }
 
   spawnSagaUnits(): void {

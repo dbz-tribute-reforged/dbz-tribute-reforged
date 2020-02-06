@@ -38,7 +38,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON,
       ]
     )],
-    ["Vegeta", new SagaUnit(FourCC("E003"), 30, 200, 200, 300, new Vector2D(8800, 1700),
+    ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(8800, 1700),
       [
         SagaAbilities.Vegeta.GALICK_GUN, 
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
@@ -71,7 +71,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // slug
-    ["Lord Slug", new SagaUnit(FourCC("O00L"), 35, 600, 300, 500, new Vector2D(8700, -5400),
+    ["Lord Slug", new SagaUnit(FourCC("O00L"), 40, 600, 300, 500, new Vector2D(8700, -5400),
       [
         SagaAbilities.LordSlug.SLAPPY_HAND,
         SagaAbilities.Broly.ENERGY_PUNCH,
@@ -92,7 +92,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
-    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 30, 700, 300, 500, new Vector2D(30500, 25500),
+    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 40, 700, 300, 500, new Vector2D(30500, 25500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,
@@ -102,7 +102,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // ginyu force
     ["Guldo", new SagaUnit(FourCC("U00Y"), 9, 200, 200, 650, new Vector2D(25000, 30000))],
-    ["Recoome", new SagaUnit(FourCC("U005"), 25, 900, 200, 300, new Vector2D(24400, 30000),
+    ["Recoome", new SagaUnit(FourCC("U005"), 30, 900, 200, 300, new Vector2D(24400, 30000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH, 
         SagaAbilities.Broly.GIGANTIC_ROAR,
@@ -111,7 +111,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     ["Burter", new SagaUnit(FourCC("U00Z"), 10, 400, 650, 350, new Vector2D(24000, 29700))],
     ["Jeice", new SagaUnit(FourCC("U010"), 10, 700, 250, 600, new Vector2D(25000, 29700))],
-    ["Ginyu", new SagaUnit(FourCC("U000"), 40, 800, 250, 800, new Vector2D(24500, 29600),
+    ["Ginyu", new SagaUnit(FourCC("U000"), 45, 800, 250, 800, new Vector2D(24500, 29600),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,

@@ -65,11 +65,11 @@ export class CustomHero {
     let customAbility = this.abilities.getCustomAbilityByName(name);
     if (customAbility && customAbility.canCastAbility(input)) {
       if (!this.isCastTimeWaiting || customAbility.canMultiCast) {
-          if (!this.isCasting.get(customAbility)) {
-            this.isCastTimeWaiting = true;
-            this.isCasting.set(customAbility, true);
-            CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
-          }
+        if (!this.isCasting.get(customAbility)) {
+          this.isCastTimeWaiting = true;
+          this.isCasting.set(customAbility, true);
+          CastTimeHelper.waitCastTimeThenActivate(this, customAbility, input);
+        }
       }
     }
   }

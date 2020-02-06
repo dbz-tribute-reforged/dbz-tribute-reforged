@@ -12,7 +12,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
   constructor() {
     super();
     this.oldHp = 0;
-    this.delay = 15;
+    this.delay = 30;
   }
 
   spawnSagaUnits(): void {
