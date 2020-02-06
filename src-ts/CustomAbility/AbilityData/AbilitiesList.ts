@@ -771,7 +771,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 165,
+    duration: 150,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -788,6 +788,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi hellzone grenade" },
+      { name: "multi hellzone grenade 2" },
     ],
   },
   // -------------------------------------------
@@ -814,6 +815,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point 5dist" },
+      { name: "block kyodaika" },
     ],
   },
   // -------------------------------------------
@@ -913,7 +915,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

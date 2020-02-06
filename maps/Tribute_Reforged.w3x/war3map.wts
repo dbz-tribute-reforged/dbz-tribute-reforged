@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.33
+DBZ Tribute Reforged 0.34
 }
 
 STRING 4
@@ -534,6 +534,12 @@ STRING 85
 // Units: O001 (Evil Wizard), Tip (Tooltip - Basic)
 {
 [|cffffff00W|r] Choose Babidi
+}
+
+STRING 86
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool1> seconds|r
 }
 
 STRING 87
@@ -17130,6 +17136,42 @@ STRING 2783
 W
 }
 
+STRING 2784
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool2> seconds|r
+}
+
+STRING 2785
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool3> seconds|r
+}
+
+STRING 2786
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool4> seconds|r
+}
+
+STRING 2787
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool5> seconds|r
+}
+
+STRING 2788
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool6> seconds|r
+}
+
+STRING 2789
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool7> seconds|r
+}
+
 STRING 2790
 // Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
 {
@@ -17194,6 +17236,12 @@ STRING 2800
 // Abilities: A0GN (Final Flash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Final Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 2801
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool8> seconds|r
 }
 
 STRING 2802
@@ -17602,7 +17650,7 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 85]  2.00x "ss2"
 [lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg" [unlocks god kame]
+[lvl 150] 2.50x "ssg"
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.70x "ssbkao"
 
@@ -28007,9 +28055,8 @@ STRING 4598
 }
 
 STRING 4599
-// Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Multi Form
+|cff00ff00Download the latest official versions at discord.gg/vayXJSZ|r
 }
 
 STRING 4600
@@ -28019,9 +28066,9 @@ Multi Form
 }
 
 STRING 4601
-// Abilities: A088 (Multi Form), Researchtip (Tooltip - Learn)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00R|r] Learn Multi Form
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur1> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool1> seconds|r
 }
 
 STRING 4602
@@ -28049,9 +28096,9 @@ STRING 4605
 }
 
 STRING 4606
-// Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
+// Abilities: A0MY (Moonlight), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00FF00R|r] Multi Form
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur1> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool1> - <A0MY,Cool10> seconds|r
 }
 
 STRING 4607
@@ -33592,45 +33639,42 @@ R
 }
 
 STRING 5526
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+|cff40ff40Kami's Lookout|r
 }
 
 STRING 5527
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur2> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool2> seconds|r
 }
 
 STRING 5528
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur3> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool3> seconds|r
 }
 
 STRING 5529
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+|cff00ffff----------------------------------------|r
 }
 
 STRING 5530
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur4> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool4> seconds|r
 }
 
 STRING 5531
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+|cff00ffff----------------------------------------|r
 }
 
 STRING 5532
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00R|r] Multi Form - [|cffffcc00Level 1|r]
 }
 
 STRING 5533
@@ -33718,27 +33762,27 @@ STRING 5546
 }
 
 STRING 5547
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A088 (Multi Form), Researchtip (Tooltip - Learn)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00R|r] Learn Multi Form - [|cffffcc00Level %d|r]
 }
 
 STRING 5548
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+Piccolo splits into multiple clones. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 5549
-// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00R|r] Multi Form - [|cffffcc00Level 2|r]
 }
 
 STRING 5550
-// Abilities: A0BZ (Planet Crusher), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
 {
-A sphere thrown from Broly's hand causing wide area damage.|cff00ff00(Damage: (Str * lvl * 3) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+[|cff00FF00R|r] Multi Form - [|cffffcc00Level 3|r]
 }
 
 STRING 5551
@@ -33979,6 +34023,12 @@ STRING 5590
 // Abilities: A0CC (Revive - Gohan Spawn), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 5591
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool9> seconds|r
 }
 
 STRING 5592
@@ -34639,12 +34689,13 @@ STRING 5696
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.50x "nail"
+[lvl 30]  1.50x "nail" [just type "nail" into all chat]
 [lvl 60]  1.75x "kami"
 [lvl 90]  2.00x "super namekian"
-[lvl 150] 2.50x "super namekian" (TYPE "super namekian" AGAIN FOR STRONGER STAT MULT)
+[lvl 150] 2.50x "super namekian"
 
 Kyodaika: +0.3-0.8x str 
+|cffff2020Warning: You cannot transform to higher stat multipliers while in Kyodaika|r
 }
 
 STRING 5697
@@ -37826,18 +37877,28 @@ STRING 6224
 The Hyperbolic Time Chamber is currently being repaired by Mr. Popo.
 }
 
+STRING 6225
+// Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool10> seconds|r
+}
+
+STRING 6226
+// Abilities: A0BZ (Planet Crusher), Researchubertip (Tooltip - Learn - Extended)
+{
+A sphere thrown from Broly's hand causing wide area damage.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0BZ,Cool1> seconds|r
+}
+
 STRING 6227
 {
 |cff00ffff[Hyperbolic Time Chamber]|r
 Mr. Popo has repaired the Hyperbolic Time Chamber.
-If you are feeling too weak, use the Hyperbolic Time Chamber to catchup!
 }
 
 STRING 6228
 {
 |cff00ffff[Hyperbolic Time Chamber]|r
 Mr. Popo has upgraded the Hyperbolic Time Chamber.
-If you are still feeling too weak, use the Hyperbolic Time Chamber to catchup!
 }
 
 STRING 6229
@@ -37852,6 +37913,12 @@ Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Ta
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 6230
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
 }
 
 STRING 6231
@@ -40994,6 +41061,12 @@ STRING 6750
 [|cffffff00Q|r] Choose Bardock
 }
 
+STRING 6751
+// Abilities: A0JP (Spirit Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
+}
+
 STRING 6752
 // Abilities: A0ER (Angry Explosion), Tip (Tooltip - Normal)
 {
@@ -43407,7 +43480,7 @@ Q
 }
 
 STRING 7154
-// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
 {
 With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
@@ -43440,12 +43513,6 @@ STRING 7159
 // Abilities: A0MN (Saibaman Acid), Researchubertip (Tooltip - Learn - Extended)
 {
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
-}
-
-STRING 7160
-// Abilities: A04Y (Kyodaika), Researchubertip (Tooltip - Learn - Extended)
-{
-With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.2-0.7x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
 
 STRING 7161
@@ -54801,7 +54868,7 @@ Dabura is a Minion of Babidi. |n[|cffffcc00History|r] - |cff0066CCAlso known as 
 
 STRING 9041
 {
-|cff00ff00Tegridy Farms.|r
+|cff00ff00Tegridy Farms|r
 }
 
 STRING 9042
@@ -56236,6 +56303,12 @@ STRING 9278
 Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user takes 30% reduced damage from all sources.|n|cff00FF00(Duration: 25s)|r |n|cff00FFFF(Cooldown: 200 seconds)|r
 }
 
+STRING 9279
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool2>s|r
+}
+
 STRING 9280
 // Abilities: A0KS (Moonlight), Tip (Tooltip - Normal)
 {
@@ -56359,6 +56432,12 @@ STRING 9300
 // Abilities: A0KT (Super Saiyan Rage), Name (Name)
 {
 Super Saiyan Rage
+}
+
+STRING 9301
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool3>s|r
 }
 
 STRING 9302
@@ -60758,6 +60837,42 @@ STRING 10036
 (Golden Final Form)
 }
 
+STRING 10037
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool4>s|r
+}
+
+STRING 10038
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool5>s|r
+}
+
+STRING 10039
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool6>s|r
+}
+
+STRING 10040
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool7>s|r
+}
+
+STRING 10041
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool8>s|r
+}
+
+STRING 10042
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool9>s|r
+}
+
 STRING 10043
 // Abilities: A0L4 (Final Flash 2), Tip (Tooltip - Normal)
 {
@@ -60788,6 +60903,12 @@ STRING 10047
 [|cff00FF00W|r] Final Flash - [|cffffcc00Level 5|r]
 }
 
+STRING 10048
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool10>s|r
+}
+
 STRING 10049
 // Abilities: A0L4 (Final Flash 2), Name (Name)
 {
@@ -60810,6 +60931,18 @@ STRING 10052
 // Abilities: A0L4 (Final Flash 2), EditorSuffix (Editor Suffix)
 {
 VEG
+}
+
+STRING 10053
+// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
+}
+
+STRING 10054
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool1> seconds|r
 }
 
 STRING 10055
@@ -61651,6 +61784,48 @@ STRING 10189
 F
 }
 
+STRING 10190
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool2> seconds|r
+}
+
+STRING 10191
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool3> seconds|r
+}
+
+STRING 10192
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool4> seconds|r
+}
+
+STRING 10193
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool5> seconds|r
+}
+
+STRING 10194
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool6> seconds|r
+}
+
+STRING 10195
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool7> seconds|r
+}
+
+STRING 10196
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool8> seconds|r
+}
+
 STRING 10197
 // Abilities: A0LD (S.S. Deadly Bomber), Tip (Tooltip - Normal)
 {
@@ -61919,6 +62094,18 @@ STRING 10241
 // Abilities: A0LE (Blazing Rush), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Blazing Rush - [|cffffcc00Level 6|r]
+}
+
+STRING 10242
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool9> seconds|r
+}
+
+STRING 10243
+// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool10> seconds|r
 }
 
 STRING 10244
@@ -62726,6 +62913,12 @@ STRING 10376
 [|cff00ff00E|r] Learn Flesh Attack - [|cffffcc00Level %d|r]
 }
 
+STRING 10377
+// Abilities: A0LO (Tyrant Lancer), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: <A0LO,Cool1> seconds|r
+}
+
 STRING 10378
 // Abilities: A01C (Flesh Attack), EditorSuffix (Editor Suffix)
 {
@@ -63135,6 +63328,12 @@ STRING 10444
 [|cffffff00W|r] Choose Majin Buu
 }
 
+STRING 10445
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
+}
+
 STRING 10446
 // Units: O005 (Fat Buu), Awakentip (Tooltip - Awaken)
 {
@@ -63346,45 +63545,45 @@ STRING 10480
 }
 
 STRING 10481
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Piccolo splits into 4. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 10482
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Units: H096 (Oozaru Tail), Name (Name)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Oozaru Tail
 }
 
 STRING 10483
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Units: H096 (Oozaru Tail), Propernames (Proper Names)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Oozaru Tail
 }
 
 STRING 10484
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Units: H093 (Oozaru), Ubertip (Tooltip - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
 }
 
 STRING 10485
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Units: H096 (Oozaru Tail), EditorSuffix (Name - Editor Suffix)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+(ooz tail dummy)
 }
 
 STRING 10486
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur5> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool5> seconds|r
 }
 
 STRING 10487
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur6> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool6> seconds|r
 }
 
 STRING 10488
@@ -63460,27 +63659,27 @@ STRING 10499
 }
 
 STRING 10500
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur7> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool7> seconds|r
 }
 
 STRING 10501
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur8> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool8> seconds|r
 }
 
 STRING 10502
-// Abilities: A0LO (Tyrant Lancer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur9> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool9> seconds|r
 }
 
 STRING 10503
-// Abilities: A0LO (Tyrant Lancer), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
 {
-The user charges energy into their right hand and charges forward with an Energy Punch followed by an energy wave |n|cff00ff00Damage: Lvl x Str x ? Punch + Lvl x Int x ? Beam |r|n|cff00ffffCooldown: 22 seconds|r
+Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cffff2020Taking too much damage from behind will break the Oozaru's tail and end the transformation early!|r|n|cff00FF00Duration: <A0MY,Dur10> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool10> seconds|r
 }
 
 STRING 10504
@@ -64103,6 +64302,12 @@ Does not gain any additional stat multiplier.
 Gains the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of whoever Super Buu absorbed first.
 }
 
+STRING 10604
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool2> seconds|r
+}
+
 STRING 10605
 {
 Transformations:
@@ -64192,8 +64397,9 @@ Can type "upg" to convert half your stat multiplier above 2.00x into bonus base 
 }
 
 STRING 10611
+// Abilities: A04Y (Kyodaika), Ubertip (Tooltip - Normal - Extended)
 {
-Download the latest official versions only at: discord.gg/vayXJSZ
+With this technique the user makes his body grow larger and increases his strength.|n|cff00FF00(Strength Multiplier: +0.3-0.8x)|r|n|cffFF0000(Mana Drain: 1.5% per second)|r|n|cff00FFFF(Cooldown: 20s after revert)|r
 }
 
 STRING 10612
@@ -64456,7 +64662,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 5.Feb.20
+This map is under active development - 6.Feb.20
 }
 
 STRING 10653
@@ -64685,6 +64891,12 @@ STRING 10687
 // Units: H08S (Slayer of Raditz), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00R|r] Choose Farmer with Shotgun
+}
+
+STRING 10688
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool3> seconds|r
 }
 
 STRING 10689
@@ -65557,22 +65769,10 @@ STRING 10831
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
 }
 
-STRING 10832
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
 STRING 10833
 // Abilities: A0JP (Spirit Bomb), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00W|r] Learn Spirit Bomb - [|cffffcc00Level %d|r]
-}
-
-STRING 10834
-// Abilities: A0JP (Spirit Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
 }
 
 STRING 10835
@@ -65605,76 +65805,16 @@ STRING 10839
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
 }
 
-STRING 10840
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10841
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10842
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10843
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10844
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
 STRING 10845
 // Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
 }
 
-STRING 10846
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
 STRING 10847
 // Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
-}
-
-STRING 10848
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10849
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10850
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 10851
-// Abilities: A0JP (Spirit Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: 30s|r
 }
 
 STRING 10852
@@ -67045,12 +67185,6 @@ STRING 11082
 Piccolo splits into 2. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
-STRING 11083
-// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo splits into 2/3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
 STRING 11084
 // Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
 {
@@ -67559,6 +67693,12 @@ STRING 11165
 // Units: H08W (Mid-Class Saiyan Warrior), Name (Name)
 {
 Mid-Class Saiyan Warrior
+}
+
+STRING 11166
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool4> seconds|r
 }
 
 STRING 11167
@@ -68422,6 +68562,12 @@ STRING 11310
 Q
 }
 
+STRING 11311
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool5> seconds|r
+}
+
 STRING 11312
 // Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
 {
@@ -69142,18 +69288,6 @@ STRING 11431
 R
 }
 
-STRING 11432
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
-}
-
-STRING 11433
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool2> seconds|r
-}
-
 STRING 11434
 // Abilities: A0MR (Lava Pillars), Name (Name)
 {
@@ -69164,60 +69298,6 @@ STRING 11435
 // Abilities: A01C (Flesh Attack), Ubertip (Tooltip - Normal - Extended)
 {
 This is the technique used by Fat Buu when he tears off a part of his body and hurls it at his target to wrap around it so the target cannot move anymore.|n|cffee2222Super Buu: Can absorb enemy heroes with less than 2000 or 20% hp.|r|n|cff00ffffCooldown: <A01C,Cool9>|r
-}
-
-STRING 11436
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool3> seconds|r
-}
-
-STRING 11437
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool4> seconds|r
-}
-
-STRING 11438
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool5> seconds|r
-}
-
-STRING 11439
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool6> seconds|r
-}
-
-STRING 11440
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool7> seconds|r
-}
-
-STRING 11441
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool8> seconds|r
-}
-
-STRING 11442
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool9> seconds|r
-}
-
-STRING 11443
-// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool10> seconds|r
-}
-
-STRING 11444
-// Abilities: A0LQ (Rebellion Spear), Researchubertip (Tooltip - Learn - Extended)
-{
-Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
 }
 
 STRING 11445
@@ -70193,12 +70273,6 @@ STRING 11605
 [|cff00FF00R|r] Moonlight - [|cffffcc00Level 1|r]
 }
 
-STRING 11606
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur1> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool1> seconds|r
-}
-
 STRING 11607
 // Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
 {
@@ -70209,12 +70283,6 @@ STRING 11608
 // Abilities: A0MY (Moonlight), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Moonlight - [|cffffcc00Level %d|r]
-}
-
-STRING 11609
-// Abilities: A0MY (Moonlight), Researchubertip (Tooltip - Learn - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur1> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool1> - <A0MY,Cool10> seconds|r
 }
 
 STRING 11610
@@ -70247,64 +70315,10 @@ STRING 11614
 [|cff00FF00R|r] Moonlight - [|cffffcc00Level 6|r]
 }
 
-STRING 11615
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur2> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool2> seconds|r
-}
-
-STRING 11616
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur3> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool3> seconds|r
-}
-
-STRING 11617
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur4> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool4> seconds|r
-}
-
-STRING 11618
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur5> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool5> seconds|r
-}
-
-STRING 11619
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur6> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool6> seconds|r
-}
-
 STRING 11620
 // Abilities: A0MY (Moonlight), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Moonlight - [|cffffcc00Level 7|r]
-}
-
-STRING 11621
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur7> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool7> seconds|r
-}
-
-STRING 11622
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur8> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool8> seconds|r
-}
-
-STRING 11623
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur9> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool9> seconds|r
-}
-
-STRING 11624
-// Abilities: A0MY (Moonlight), Ubertip (Tooltip - Normal - Extended)
-{
-Creates an artificial moon, causing the user to transform into a great ape. While in this form, the user gains the Angry Shout ability.|n|cff00FF00Duration: <A0MY,Dur10> seconds|r |n|cff00FFFFCooldown: <A0MY,Cool10> seconds|r
 }
 
 STRING 11625
@@ -70963,6 +70977,12 @@ STRING 11735
 [|cffffff00A|r] Choose Goku
 }
 
+STRING 11736
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool6> seconds|r
+}
+
 STRING 11737
 // Units: H092 (Shaggy Rogers), Tip (Tooltip - Basic)
 {
@@ -71048,7 +71068,7 @@ Oozaru
 }
 
 STRING 11751
-// Units: H093 (Oozaru), Ubertip (Tooltip - Extended)
+// Units: H094 (Oozaru), Ubertip (Tooltip - Extended)
 {
 When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
 }
@@ -71072,7 +71092,7 @@ Oozaru
 }
 
 STRING 11755
-// Units: H094 (Oozaru), Ubertip (Tooltip - Extended)
+// Units: H095 (Oozaru), Ubertip (Tooltip - Extended)
 {
 When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
 }
@@ -71096,7 +71116,7 @@ Oozaru
 }
 
 STRING 11759
-// Units: H095 (Oozaru), Ubertip (Tooltip - Extended)
+// Units: H096 (Oozaru Tail), Ubertip (Tooltip - Extended)
 {
 When a saiyan see's a full moon. Their bodys transform into huge ape like creatures of unbelieveable power. 
 }
@@ -71526,5 +71546,35 @@ STRING 11823
 // Buffs/Effects: B022 (), Bufftip (Tooltip)
 {
 Bardock
+}
+
+STRING 11824
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool7> seconds|r
+}
+
+STRING 11825
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool8> seconds|r
+}
+
+STRING 11826
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool9> seconds|r
+}
+
+STRING 11827
+// Abilities: A0LQ (Rebellion Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool10> seconds|r
+}
+
+STRING 11828
+// Abilities: A0LQ (Rebellion Spear), Researchubertip (Tooltip - Learn - Extended)
+{
+Bardock charges toward the opponent surrounded in a blue aura inflicting a great amount of damage. It doubles as a movement technique as the user can change the direction of the charge to avoid attacks. Deals bonus damage at high health percentages.|n|cff00ff00Damage: Lvl x Str x ? |r|n|cff00ffffCooldown: <A0LQ,Cool1> seconds|r
 }
 

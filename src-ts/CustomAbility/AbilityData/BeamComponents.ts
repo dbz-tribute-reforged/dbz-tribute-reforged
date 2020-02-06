@@ -1,5 +1,6 @@
 import { BASE } from "./AOEDamageComponents";
 import { BeamUnitSkin } from "CustomAbility/BeamUnitSkinConfig";
+import { BeamComponent } from "CustomAbility/AbilityComponent/BeamComponent";
 
 export const BeamComponents = [
   // copy from here
@@ -16,8 +17,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -26,7 +27,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -50,8 +51,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 20,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -60,7 +61,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -94,7 +95,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -118,8 +119,8 @@ export const BeamComponents = [
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -128,7 +129,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -162,7 +163,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -185,8 +186,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
     heightVariation: {
-      start: 150,
-      finish: 100,
+      start: 200,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -195,7 +196,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -229,7 +230,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -262,7 +263,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -296,7 +297,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -319,8 +320,8 @@ export const BeamComponents = [
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -329,7 +330,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -353,8 +354,8 @@ export const BeamComponents = [
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -363,7 +364,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -397,7 +398,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -431,7 +432,7 @@ export const BeamComponents = [
     useLastCastPoint: false,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -465,7 +466,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -480,7 +481,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 0.4,
+    beamHpMult: BASE.KAME_DPS * 0.6,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 0,
     aoe: 300,
@@ -496,9 +497,9 @@ export const BeamComponents = [
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
-    explodeOnDeath: false,
+    explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_CASTER,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -523,8 +524,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 150,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -533,7 +534,7 @@ export const BeamComponents = [
     useLastCastPoint: false,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -556,8 +557,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 150,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -566,7 +567,7 @@ export const BeamComponents = [
     useLastCastPoint: false,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -590,7 +591,7 @@ export const BeamComponents = [
     durationIncPerDelay: 11,
     heightVariation: {
       start: 300,
-      finish: 0,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -599,7 +600,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -623,8 +624,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -633,7 +634,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -657,8 +658,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 6,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 0,
     },
     isTracking: false,
@@ -667,7 +668,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -701,7 +702,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -726,7 +727,7 @@ export const BeamComponents = [
     durationIncPerDelay: 11,
     heightVariation: {
       start: 300,
-      finish: 200,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -735,7 +736,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -760,7 +761,7 @@ export const BeamComponents = [
     durationIncPerDelay: 11,
     heightVariation: {
       start: 300,
-      finish: 200,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -769,7 +770,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -804,7 +805,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -838,7 +839,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -872,7 +873,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -906,7 +907,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -939,7 +940,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -971,7 +972,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1005,7 +1006,7 @@ export const BeamComponents = [
     useLastCastPoint: false,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1037,7 +1038,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1069,7 +1070,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1093,8 +1094,8 @@ export const BeamComponents = [
     maxDelayTicks: 14,
     durationIncPerDelay: 4,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 75,
+      finish: 75,
       scaling: 0,
     },
     isTracking: false,
@@ -1103,7 +1104,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1136,7 +1137,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1170,7 +1171,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1204,7 +1205,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1228,7 +1229,7 @@ export const BeamComponents = [
     durationIncPerDelay: 11,
     heightVariation: {
       start: 400,
-      finish: 100,
+      finish: 0,
       scaling: 1,
     },
     isTracking: false,
@@ -1237,7 +1238,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1261,8 +1262,8 @@ export const BeamComponents = [
     maxDelayTicks: 9,
     durationIncPerDelay: 17,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -1271,7 +1272,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1294,8 +1295,8 @@ export const BeamComponents = [
     maxDelayTicks: 6,
     durationIncPerDelay: 11,
     heightVariation: {
-      start: 100,
-      finish: 100,
+      start: 150,
+      finish: 150,
       scaling: 1,
     },
     isTracking: false,
@@ -1304,7 +1305,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1338,7 +1339,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1370,7 +1371,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1404,7 +1405,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1436,7 +1437,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1460,8 +1461,8 @@ export const BeamComponents = [
     maxDelayTicks: 5,
     durationIncPerDelay: 5,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 75,
+      finish: 75,
       scaling: 0,
     },
     isTracking: false,
@@ -1470,7 +1471,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1504,7 +1505,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1538,7 +1539,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1564,8 +1565,8 @@ export const BeamComponents = [
     maxDelayTicks: 9,
     durationIncPerDelay: 17,
     heightVariation: {
-      start: 150,
-      finish: 150,
+      start: 300,
+      finish: 300,
       scaling: 1,
     },
     isTracking: false,
@@ -1574,7 +1575,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1597,8 +1598,8 @@ export const BeamComponents = [
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
     heightVariation: {
-      start: 50,
-      finish: 50,
+      start: 75,
+      finish: 75,
       scaling: 0,
     },
     isTracking: false,
@@ -1607,7 +1608,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1639,7 +1640,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: true,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1655,7 +1656,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 0.39,
+    beamHpMult: BASE.KAME_DPS * 0.4,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 30,
     aoe: 300,
@@ -1664,8 +1665,8 @@ export const BeamComponents = [
     durationIncPerDelay: 10,
     heightVariation: {
       start: 75,
-      finish: 150,
-      scaling: 150,
+      finish: 75,
+      scaling: 1,
     },
     isTracking: true,
     isFixedAngle: false,
@@ -1673,7 +1674,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1706,7 +1707,7 @@ export const BeamComponents = [
     useLastCastPoint: false,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1741,7 +1742,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1775,7 +1776,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
@@ -1808,7 +1809,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: false,
     explodeAtCastPoint: false,
-    spawnAtSource: true,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [

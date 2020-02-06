@@ -421,36 +421,36 @@ export function CustomPlayerTest() {
 	// hides first 5 command buttons
   // sets parent of inventory to parent of bottom right command buttons
 
-  let canUseCustomUi = true;
-	const hideTrig = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
-  }
+  // let canUseCustomUi = true;
+	// const hideTrig = CreateTrigger();
   // TriggerRegisterTimerEventSingle(hideTrig, 5.0);
-	TriggerAddAction(hideTrig, () => {
-    if (!canUseCustomUi) {
-      DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 10, 
-        "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
-      );
-    } else {
-      // BJDebugMsg("Enabling Custom UI for all players.");
-      // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
-      //   if (
-      //     !customPlayers[playerId].usingCustomUI && 
-      //     IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-      //     GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-      //   ) {
-      //     customPlayers[playerId].usingCustomUI = true;
-      //   }
-      // }
-      const playerId = GetPlayerId(GetTriggerPlayer());
-      if (
-        !customPlayers[playerId].usingCustomUI && 
-        IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-        GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-      ) {
-        customPlayers[playerId].usingCustomUI = true;
+	// for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+	// 	TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
+  // }
+	// TriggerAddAction(hideTrig, () => {
+  //   if (!canUseCustomUi) {
+  //     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 10, 
+  //       "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
+  //     );
+  //   } else {
+      BJDebugMsg("Enabling Custom UI for all players.");
+      for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
+        if (
+          !customPlayers[playerId].usingCustomUI && 
+          IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+          GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+        ) {
+          customPlayers[playerId].usingCustomUI = true;
+        }
       }
+      // const playerId = GetPlayerId(GetTriggerPlayer());
+      // if (
+      //   !customPlayers[playerId].usingCustomUI && 
+      //   IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+      //   GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+      // ) {
+      //   customPlayers[playerId].usingCustomUI = true;
+      // }
 
       const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
       const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);
@@ -507,7 +507,7 @@ export function CustomPlayerTest() {
       const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
       const customIntelligenceLabel = BlzGetFrameByName("heroStatIntelligenceText", 0);
 
-      if (GetLocalPlayer() == GetTriggerPlayer()) {
+      // if (GetLocalPlayer() == GetTriggerPlayer()) {
         BlzHideOriginFrames(true);
         BlzFrameSetAllPoints(worldFrame, grandpa);
         // let frame = BlzGetFrameByName("ConsoleUI", 0);
@@ -564,19 +564,18 @@ export function CustomPlayerTest() {
         BlzFrameSetVisible(customStrengthLabel, true);
         BlzFrameSetVisible(customAgilityLabel, true);
         BlzFrameSetVisible(customIntelligenceLabel, true);
-      }
-    }
-  });
+      // }
+  //   }
+  // });
   
   // disable after pick phase
-  TimerStart(CreateTimer(), 60, false, () => {
-    canUseCustomUi = false;
-    DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, 
-      "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
-    );
-    DestroyTimer(GetExpiredTimer());
-  })
-
+  // TimerStart(CreateTimer(), 60, false, () => {
+  //   canUseCustomUi = false;
+  //   DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, 
+  //     "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
+  //   );
+  //   DestroyTimer(GetExpiredTimer());
+  // }))
 
 	const resetUnitPanelTrigger = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {

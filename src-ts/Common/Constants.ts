@@ -29,7 +29,7 @@ export module Constants {
     -1000, 24000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
-  export const sagaPingInterval: number = 45;
+  export const sagaPingInterval: number = 30;
   export const sagaAggroInterval: number = 500;
   export const sagaMinAcquisitionRange: number = 2500;
   export const sagaMaxAcquisitionRange: number = 99999;

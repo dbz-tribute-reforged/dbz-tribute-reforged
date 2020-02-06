@@ -350,7 +350,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 70;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {

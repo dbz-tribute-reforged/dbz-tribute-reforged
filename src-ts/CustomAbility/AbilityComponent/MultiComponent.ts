@@ -26,6 +26,7 @@ export class MultiComponent implements
   protected originalTarget: Vector2D;
   protected sourceCoords: Vector2D;
   protected oldPoint: Vector2D;
+  protected replacementCoords: Map<AbilityComponent, Vector2D>;
   protected currentDelay: number;
   protected activeComponents: AbilityComponent[];
 
@@ -45,6 +46,7 @@ export class MultiComponent implements
     public componentsAddedPerRound: number = 1,
     public alwaysUpdateAngle: boolean = false,
     public fixedSourceCoords: boolean = false,
+    public fixedReplacementCoords: boolean = false,
     public useTargetUnitAsSource: boolean = false,
     public useLastCastPoint: boolean = false,
     public components: AbilityComponent[] = [],
@@ -55,9 +57,10 @@ export class MultiComponent implements
     this.angleRange = 0;
     this.originalAngle = 0;
     this.originalDistance = 0;
-    this.originalTarget = new Vector2D(0, 0);
-    this.sourceCoords = new Vector2D(0, 0);
-    this.oldPoint = new Vector2D(0, 0);
+    this.originalTarget = new Vector2D();
+    this.sourceCoords = new Vector2D();
+    this.oldPoint = new Vector2D();
+    this.replacementCoords = new Map();
     this.currentDelay = 0;
     this.activeComponents = [];
   }
@@ -95,6 +98,25 @@ export class MultiComponent implements
       } else {
         this.angleCurrent = nextAngle;
       }
+    }
+  }
+
+  manageFixedReplacementCoords(
+    component: AbilityComponent, 
+    input: CustomAbilityInput, 
+    newCoord: Vector2D,
+  ) {
+    const replacedCoord = this.replacementCoords.get(component)
+    if (replacedCoord) {
+      if (this.useLastCastPoint) {
+        input.castPoint.x = replacedCoord.x;
+        input.castPoint.y = replacedCoord.y;
+      } else {
+        input.targetPoint.x = replacedCoord.x;
+        input.targetPoint.y = replacedCoord.y;
+      }
+    } else {
+      this.replacementCoords.set(component, new Vector2D(newCoord.x, newCoord.y));
     }
   }
   
@@ -156,7 +178,8 @@ export class MultiComponent implements
     }
 
     // very messy, but i used for 0 delay multis
-    // 2 breaks at the end, if out of components or delay between components != 0, exit
+    // 2 conditions for break at the end, 
+    // if out of components or delay between components != 0, exit
     for (let activations = 0; activations < 100; ++activations) {
       // add components to active components when ready
       this.activateComponentsWhenReady();
@@ -167,14 +190,17 @@ export class MultiComponent implements
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
 
+      const newCoord = CoordMath.polarProjectCoords(
+        this.sourceCoords, 
+        this.angleCurrent + this.originalAngle,
+        this.originalDistance
+      );
+
       if (this.useLastCastPoint) {
         this.oldPoint.x = input.castPoint.x;
         this.oldPoint.y = input.castPoint.y;
-        input.castPoint = CoordMath.polarProjectCoords(
-          this.sourceCoords, 
-          this.angleCurrent + this.originalAngle,
-          this.originalDistance
-        );
+        input.castPoint.x = newCoord.x;
+        input.castPoint.y = newCoord.y;
         // TextTagHelper.showPlayerColorTextToForce(
         //   ability.currentTick + "!",
         //   input.castPoint.x, 
@@ -183,11 +209,8 @@ export class MultiComponent implements
       } else {
         this.oldPoint.x = input.targetPoint.x;
         this.oldPoint.y = input.targetPoint.y;
-        input.targetPoint = CoordMath.polarProjectCoords(
-          this.sourceCoords, 
-          this.angleCurrent + this.originalAngle,
-          this.originalDistance
-        );
+        input.targetPoint.x = newCoord.x;
+        input.targetPoint.y = newCoord.y;
       }
 
       let oldSource = source;
@@ -198,6 +221,9 @@ export class MultiComponent implements
       // keep showing active components
       for (const component of this.activeComponents) {
         if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+          if (this.fixedReplacementCoords) {
+            this.manageFixedReplacementCoords(component, input, newCoord);
+          }
           component.performTickAction(ability, input, source);
         }
       }
@@ -231,6 +257,7 @@ export class MultiComponent implements
         this.components.push(component);
       }
       this.activeComponents.splice(0, this.activeComponents.length);
+      this.replacementCoords.clear();
       this.hasStarted = false;
     }
   }
@@ -248,6 +275,7 @@ export class MultiComponent implements
       this.componentsAddedPerRound,
       this.alwaysUpdateAngle,
       this.fixedSourceCoords,
+      this.fixedReplacementCoords,
       this.useTargetUnitAsSource,
       this.useLastCastPoint,
       AbilityComponentHelper.clone(this.components)
@@ -271,6 +299,7 @@ export class MultiComponent implements
       componentsAddedPerRound: number;
       alwaysUpdateAngle: boolean;
       fixedSourceCoords: boolean;
+      fixedReplacementCoords: boolean;
       useTargetUnitAsSource: boolean;
       useLastCastPoint: boolean;
       components: {
@@ -293,6 +322,7 @@ export class MultiComponent implements
     this.multiplyComponents = input.multiplyComponents;
     this.alwaysUpdateAngle = input.alwaysUpdateAngle;
     this.fixedSourceCoords = input.fixedSourceCoords;
+    this.fixedReplacementCoords = input.fixedReplacementCoords;
     this.useTargetUnitAsSource = input.useTargetUnitAsSource;
     this.useLastCastPoint = input.useLastCastPoint;
     return this;

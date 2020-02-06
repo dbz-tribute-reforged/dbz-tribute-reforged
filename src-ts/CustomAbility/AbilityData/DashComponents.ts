@@ -126,11 +126,11 @@ export const DashComponents = [
     name: "dash ground point tyrant lancer",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 25,    
+    endTick: 24,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 25,
+    distance: 20,
   },
   {
     name: "dash ground target rebellion spear",
@@ -140,7 +140,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: true,
     useLastCastPoint: false,
-    distance: 15,
+    distance: 12,
   },
   {
     name: "dash ground point saiyan spirit",
@@ -150,7 +150,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 35,
+    distance: 30,
   },
   {
     name: "dash ground point saiyan spirit pushback",
@@ -180,7 +180,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 25,
+    distance: 20,
   },
   // energy punch
   {
@@ -231,10 +231,10 @@ export const DashComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: 66,
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: true,
-    useLastCastPoint: false,
-    distance: 30,
+    useLastCastPoint: true,
+    distance: 45,
   },
   {
     name: "dash flying unit hellzone grenade",
@@ -244,7 +244,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_UNIT_TARGET,
     isFlying: true,
     useLastCastPoint: false,
-    distance: 40,
+    distance: 45,
   },
   // ----------------------------
   {
