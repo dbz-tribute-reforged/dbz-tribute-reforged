@@ -34,6 +34,10 @@ export class CustomHero {
     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    
+    // TODO: fix item abilities for heroes... 
+    // item workaround.... for now
+    this.addAbilityFromAll(AbilityNames.Items.ANDROID_BOMB);
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {

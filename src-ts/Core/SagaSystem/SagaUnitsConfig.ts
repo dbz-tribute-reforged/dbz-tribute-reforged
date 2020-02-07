@@ -2,6 +2,7 @@ import { SagaUnit } from "./SagaUnit";
 import { Vector2D } from "Common/Vector2D";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbilities } from "./SagaAbilitiesConfig";
+import { SagaItemConstants } from "Core/SagaItemSystem/SagaItemConstants";
 
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
@@ -24,6 +25,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
         SagaAbilities.Raditz.DOUBLE_SUNDAY, 
         SagaAbilities.Raditz.SATURDAY_CRASH
+      ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
 
@@ -36,12 +40,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BLAZING_STORM, 
         SagaAbilities.Nappa.GIANT_STORM, 
         SagaAbilities.Nappa.BREAK_CANNON,
+      ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
     ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(8800, 1700),
       [
         SagaAbilities.Vegeta.GALICK_GUN, 
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
+      ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
     
@@ -60,6 +70,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.WHEELO_RESEARCH_1,
+      ]
     )],
 
     // turles
@@ -68,6 +81,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
+      ]
     )],
 
     // slug
@@ -76,6 +92,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.LordSlug.SLAPPY_HAND,
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Saga.GENERIC_BEAM,
+      ],
+      [
+        SagaItemConstants.SagaDrops.DARKNESS_GENERATOR,
       ]
     )],
 
@@ -84,13 +103,16 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
         SagaAbilities.Nappa.BREAK_CANNON,
+      ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
     ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(30700, 25500),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
-      ],
+      ]
     )],
     ["Zarbon 2", new SagaUnit(FourCC("U01B"), 40, 700, 300, 500, new Vector2D(30500, 25500),
       [
@@ -98,6 +120,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_3,
+      ]
     )],
 
     // ginyu force
@@ -108,14 +133,28 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Nappa.BREAK_CANNON
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_4,
+      ]
     )],
     ["Burter", new SagaUnit(FourCC("U00Z"), 10, 400, 650, 350, new Vector2D(24000, 29700))],
-    ["Jeice", new SagaUnit(FourCC("U010"), 10, 700, 250, 600, new Vector2D(25000, 29700))],
+    ["Jeice", new SagaUnit(FourCC("U010"), 10, 700, 250, 600, new Vector2D(25000, 29700), 
+      [
+        SagaAbilities.Saga.GENERIC_BEAM,
+      ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_3,
+      ]
+    )],
     ["Ginyu", new SagaUnit(FourCC("U000"), 45, 800, 250, 800, new Vector2D(24500, 29600),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        SagaItemConstants.SagaDrops.SCOUTER_2,
+      ]
     )],
 
     // frieza
@@ -147,6 +186,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_5,
+      ]
     )],
 
     // garlic jr
@@ -155,6 +197,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT,
+      ]
     )],
     ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(-2500, 27000))],
     ["Vinegar", new SagaUnit(FourCC("U00F"), 10, 500, 300, 600, new Vector2D(-1000, 26000))],
@@ -225,6 +270,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Android17DBS.POWER_BLITZ,
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
       ],
+      [
+        SagaItemConstants.SagaDrops.ANDROID_BOMB,
+      ]
     )],
     ["Android 17", new SagaUnit(FourCC("H05C"), 50, 3500, 350, 3000, new Vector2D(15500, 6500),
       [
@@ -241,7 +289,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // super android 13
-    ["Android 13", new SagaUnit(FourCC("H01V"), 20, 4000, 350, 4000, new Vector2D(-5000, -5000),
+    ["Android 13", new SagaUnit(FourCC("H01V"), 50, 4000, 350, 4000, new Vector2D(-5000, -5000),
       [
         SagaAbilities.Android13.ENERGY_BEAM,
         SagaAbilities.Android13.SS_DEADLY_BOMBER,
@@ -465,6 +513,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Broly.ENERGY_PUNCH,
       ],
+      [
+        SagaItemConstants.SagaDrops.DIMENSION_SWORD,
+      ]
     )],
 
     // buu saga
@@ -500,6 +551,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.BRAVE_SWORD,
+      ]
     )],
 
     // gt + super split
@@ -522,6 +576,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Vegeta.FINAL_FLASH,
         SagaAbilities.Vegeta.BIG_BANG_ATTACK,
       ],
+      [
+        SagaItemConstants.SagaDrops.BATTLE_ARMOR_5,
+      ]
     )],
 
     // super 17 saga
@@ -617,6 +674,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
+      [
+        SagaItemConstants.SagaDrops.SORBET_RING,
+      ]
     )],
     // sorbet
 

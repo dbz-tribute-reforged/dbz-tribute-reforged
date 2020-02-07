@@ -428,11 +428,16 @@ export function CustomPlayerTest() {
 		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
   }
 	TriggerAddAction(hideTrig, () => {
+    const playerId = GetPlayerId(GetTriggerPlayer());
     if (!canUseCustomUi) {
       DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 10, 
         "|cffff2020Post-pick phase: Custom UI has been disabled. Too slow!"
       );
-    } else {
+    } else if (
+      !customPlayers[playerId].usingCustomUI && 
+      IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
+      GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
+    ) {
       // BJDebugMsg("Enabling Custom UI for all players.");
       // for (let playerId = 0; playerId < Constants.maxActivePlayers; ++playerId) {
       //   if (
@@ -443,14 +448,7 @@ export function CustomPlayerTest() {
       //     customPlayers[playerId].usingCustomUI = true;
       //   }
       // }
-      const playerId = GetPlayerId(GetTriggerPlayer());
-      if (
-        !customPlayers[playerId].usingCustomUI && 
-        IsPlayerSlotState(Player(playerId), PLAYER_SLOT_STATE_PLAYING) && 
-        GetPlayerController(Player(playerId)) == MAP_CONTROL_USER
-      ) {
-        customPlayers[playerId].usingCustomUI = true;
-      }
+      customPlayers[playerId].usingCustomUI = true;
 
       const grandpa = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0);
       const worldFrame = BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0);

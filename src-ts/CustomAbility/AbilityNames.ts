@@ -180,4 +180,8 @@ export module AbilityNames {
     export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
   }
+
+  export module Items {
+    export const ANDROID_BOMB: string = "Android Bomb!";
+  }
 }

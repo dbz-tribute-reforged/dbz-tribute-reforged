@@ -10,6 +10,7 @@ export class SagaUnit {
     public int: number,
     public spawnPos: Vector2D,
     public abilities: SagaAbility[] = [],
+    public itemDrops: number[] = [],
   ) {
 
   }

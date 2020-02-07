@@ -518,7 +518,7 @@ export const AOEDamageComponents = [
     aoe: 250,
     maxDamageTicks: 10,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.2,
+      multiplier: BASE.KAME_DPS * 1.15,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -537,7 +537,7 @@ export const AOEDamageComponents = [
     aoe: 200,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.04,
+      multiplier: BASE.KAME_DPS * 0.035,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1751,6 +1751,25 @@ export const AOEDamageComponents = [
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.55,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // saibaman bomb
+  {
+    name: "damage android bomb explosion",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: true,
+    aoe: 800,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    damageData: {
+      multiplier: 5.0,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

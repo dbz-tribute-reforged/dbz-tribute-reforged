@@ -23,7 +23,7 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
     ++this.currentTime;
     if (this.currentTime >= this.duration) {
       this.currentTime = 0;
-      SetUnitState(source, UNIT_STATE_LIFE, 0);
+      // SetUnitState(source, UNIT_STATE_LIFE, 0);
       KillUnit(source);
     }
     if (ability.isFinishedUsing(this)) {

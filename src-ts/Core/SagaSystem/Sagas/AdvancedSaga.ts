@@ -15,13 +15,14 @@ export class AdvancedSaga {
   
   public bosses: Map<string, unit>;
   public bossesAI: Map<unit, SagaHeroAI>;
+  public bossDrops: Map<unit, number[]>;
 
   public bossDeathTrigger: trigger;
   public delayTimer: timer;
   public delay: number;
 
   // deprecated, 
-  // stats are given based on lvl of dying saga boss
+  // stats are now given based on lvl of dying saga boss
   public stats: number;
 
   public spawnSound: sound;
@@ -32,6 +33,7 @@ export class AdvancedSaga {
     this.name = '';
     this.bosses = new Map();
     this.bossesAI = new Map();
+    this.bossDrops = new Map();
     this.bossDeathTrigger = CreateTrigger();
     this.delayTimer = CreateTimer();
     this.delay = 0;
@@ -54,6 +56,7 @@ export class AdvancedSaga {
       bossAI.cleanup();
     }
     this.bossesAI.clear();
+    this.bossDrops.clear();
   }
 
   update(t: number): void {
@@ -98,7 +101,18 @@ export class AdvancedSaga {
     TriggerAddAction(
       this.bossDeathTrigger,
       () => {
-        SagaHelper.pingDeathMinimap(GetDyingUnit());
+        const deadUnit = GetDyingUnit();
+        SagaHelper.pingDeathMinimap(deadUnit);
+        
+        const itemDrops = this.bossDrops.get(deadUnit);
+        if (itemDrops) {
+          const x = GetUnitX(deadUnit);
+          const y = GetUnitY(deadUnit);
+          for (const item of itemDrops) {
+            CreateItem(item, x, y);
+          }
+        }
+
         if (saga.canComplete()) {
           DisplayTimedTextToForce(
             bj_FORCE_ALL_PLAYERS, 15, 
