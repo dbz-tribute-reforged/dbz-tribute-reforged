@@ -12,7 +12,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 45;
   }
 
   spawnSagaUnits(): void {

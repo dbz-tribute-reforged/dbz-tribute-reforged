@@ -2534,6 +2534,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Items.ANDROID_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 22,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSaibamanBomb.blp",
+      disabled: "BTNSaibamanBomb.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Items.ANDROID_BOMB,
+      body: 
+      AbilityNames.Items.ANDROID_BOMB
+    },
+    components: [
+      { name: "dash ground unit saibaman bomb" },
+      { name: "damage android bomb explosion" },
+      { name: "sfx android bomb" },
+      { name: "self destruct generic end" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "Blue Hurricane",
     currentCd: 0,
     maxCd: 10,
