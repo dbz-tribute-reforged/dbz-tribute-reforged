@@ -106,17 +106,17 @@ export class SagaHeroAI {
   public getBeamLevel(maxLevel: number = 10): number {
     // minimum beam = 1
     // maximum beam = 10
-    // lvl of beam = max (lvl of saga / 5, int of saga / 1000)
+    // lvl of beam = max (lvl of saga * 0.17, int of saga * 0.0017)
     return Math.max(
       1, 
       Math.min(
         maxLevel, 
         Math.max(
           Math.floor(
-            GetHeroLevel(this.sagaUnit) * 0.15
+            GetHeroLevel(this.sagaUnit) * 0.17
           ),
           Math.floor(
-            GetHeroInt(this.sagaUnit, true) * 0.0015
+            GetHeroInt(this.sagaUnit, true) * 0.0017
           )
         )
       ),

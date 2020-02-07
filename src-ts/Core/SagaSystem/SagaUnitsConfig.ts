@@ -473,7 +473,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Buu.VANISHING_BALL,
         SagaAbilities.Buu.ANGRY_EXPLOSION,
-        SagaAbilities.Buu.MANKIND_DESTRUCTION_ATTACK,
+        SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
     )],
     ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(21000, -4700),
@@ -582,6 +582,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
     // possibly spawn in pilaf
