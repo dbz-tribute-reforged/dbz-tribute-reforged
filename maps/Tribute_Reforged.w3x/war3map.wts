@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34
+DBZ Tribute Reforged 0.34a
 }
 
 STRING 4
@@ -59527,7 +59527,6 @@ STRING 9815
 
 All players commands:
 -cam/-ang (camera controls)
--customui (activates custom ui for you)
 
 Also make sure to check out|r |cffffcc00DBZ Tribute |r|cffff1010Elite|r|cffffcc00 2.5.4+|r
 }
