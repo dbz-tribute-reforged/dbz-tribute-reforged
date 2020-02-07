@@ -423,7 +423,7 @@ export function CustomPlayerTest() {
 
   let canUseCustomUi = true;
 	const hideTrig = CreateTrigger();
-  TriggerRegisterTimerEventSingle(hideTrig, 5.0);
+  // TriggerRegisterTimerEventSingle(hideTrig, 5.0);
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
 		TriggerRegisterPlayerChatEvent(hideTrig, Player(i), "-customui", true);
   }
