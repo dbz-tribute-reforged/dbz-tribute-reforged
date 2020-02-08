@@ -174,7 +174,7 @@ export module SagaAbilities {
       AbilityNames.Buu.INNOCENCE_BREATH, 10, 22, 10, SHORT_CAST_TIME
     );
     export const ANGRY_EXPLOSION = new SagaAbility(
-      AbilityNames.Buu.ANGRY_EXPLOSION, 10, 30, 10, MEDIUM_CAST_TIME
+      AbilityNames.Buu.ANGRY_EXPLOSION, 10, 45, 10, MEDIUM_CAST_TIME
     );
     export const VANISHING_BALL = new SagaAbility(
       AbilityNames.Buu.VANISHING_BALL, 10, 20, 10, SHORT_CAST_TIME

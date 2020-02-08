@@ -86,4 +86,13 @@ export module UnitHelper {
       UnitHasBuffBJ(unit, Constants.buffImmortal)
     );
   }
+
+  export function healMaxHPPercent(unit: unit, healPercent: number) {
+    SetUnitState(
+      unit, 
+      UNIT_STATE_LIFE, 
+      GetUnitState(unit, UNIT_STATE_LIFE) + 
+      GetUnitState(unit, UNIT_STATE_MAX_LIFE) * healPercent
+    );
+  }
 }

@@ -720,12 +720,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.GokuBlack.GOD_KAMEHAMEHA,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.SORROWFUL_SCYTHE,
+      ]
     )],
     ["Zamasu", new SagaUnit(FourCC("E012"), 110, 14000, 400, 17000, new Vector2D(12000, 28000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        SagaItemConstants.SagaDrops.TIME_RING,
+      ]
     )],
     
     // fused zamasu saga

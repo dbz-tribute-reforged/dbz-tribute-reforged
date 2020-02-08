@@ -50,6 +50,12 @@ export module SagaItemConstants {
   export const sorbetRing = [
     FourCC("I046"),
   ];
+  export const timeRing = [
+    FourCC("I049"),
+  ];
+  export const sorrowfulScythe = [
+    FourCC("I04A"),
+  ]
 
   export const BIO_LAB_AOE = 600;
   export const BIO_LAB_DAMAGE = 0.014;
@@ -80,5 +86,9 @@ export module SagaItemConstants {
     export const BRAVE_SWORD = braveSword[0];
 
     export const SORBET_RING = sorbetRing[0];
+
+    export const TIME_RING = timeRing[0];
+
+    export const SORROWFUL_SCYTHE = sorrowfulScythe[0];
   }
 }

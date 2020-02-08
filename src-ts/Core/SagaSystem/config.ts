@@ -76,10 +76,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
     VegetaSaga: [
       [ RaditzSaga, SagaState.Completed ],
     ],
-    WheeloSaga: [
-      [ VegetaSaga, SagaState.Completed ],
-    ],
     TurlesSaga: [
+      [ DeadZoneSaga, SagaState.Completed ],
+    ],
+    WheeloSaga: [
       [ VegetaSaga, SagaState.Completed ],
     ],
     NamekSaga: [
@@ -95,18 +95,14 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ GinyuSaga, SagaState.Completed ],
     ],
     GarlicJrSaga: [
-      [ FriezaSaga, SagaState.Completed ],
-      [ DeadZoneSaga, SagaState.Completed ],
+      [ LordSlugSaga, SagaState.Completed ],
     ],
     CoolerRevengeSaga: [
-      [ FriezaSaga, SagaState.Completed ],
+      [ GarlicJrSaga, SagaState.Completed ],
     ],
     CoolerReturnSaga: [
       [ CoolerRevengeSaga, SagaState.Completed ],
-      [ AndroidsSaga2, SagaState.Completed ]
-    ],
-    CoolerSaga: [
-      [ FriezaSaga, SagaState.Completed ],
+      [ FriezaSaga, SagaState.Completed ]
     ],
     TrunksSaga: [
       [ FriezaSaga, SagaState.Completed ],
@@ -134,11 +130,9 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     BioBrolySaga: [
       [ BrolyDBZMovieSaga2, SagaState.Completed ],
-      [ BabidiSaga, SagaState.Completed ],
     ],
     BrolyDBSSaga: [
       [ BioBrolySaga, SagaState.Completed ],
-      [ GoldenFriezaSaga, SagaState.Completed ],
       [ WhisTrainingSaga, SagaState.Completed ],
     ],
     FutureAndroidsSaga: [
@@ -159,7 +153,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     FutureBabidiSaga: [
       [ FutureCellSaga, SagaState.Completed ],
-      [ BabidiSaga, SagaState.Completed ],
     ],
     JanembaSaga: [
       [ BabidiSaga, SagaState.Completed ],
@@ -191,14 +184,13 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BeerusSaga, SagaState.Completed ],
     ],
     GoldenFriezaSaga: [
-      [ BeerusSaga, SagaState.Completed ],
+      [ WhisTrainingSaga, SagaState.Completed ],
     ],
     Universe6Saga: [
       [ BeerusSaga, SagaState.Completed ],
     ],
     FTSuperSaga1: [
       [ FutureBabidiSaga, SagaState.Completed ],
-      [ Universe6Saga, SagaState.Completed ],
     ],
     FTSuperSaga2: [
       [ FTSuperSaga1, SagaState.Completed ],

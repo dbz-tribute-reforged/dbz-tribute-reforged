@@ -221,7 +221,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 45;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {

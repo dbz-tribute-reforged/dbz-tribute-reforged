@@ -14,7 +14,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 20;
+    this.delay = 30;
     this.stats = 100;
     this.isFinalForm = false;
   }
@@ -117,9 +117,10 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.spawnSagaUnits();
     SagaHelper.showMessagesChanceOfJoke(
       [
-        "Cooler has fused with the Big Gete Star to become Metal Cooler!",
+        "|cffff2020The Big Geti Star has fused with Cooler and invaded New Namek!|r"
       ],
     );
+    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.GETI_STAR);
 
     this.addHeroListToSaga(["Metal Cooler 1", "Metal Cooler 2", "Metal Cooler 3"], true);
 
@@ -173,12 +174,6 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   start(): void {
     super.start();
     this.spawnWhenDelayFinished();
-    SagaHelper.showMessagesChanceOfJoke(
-      [
-        "|cffff2020The Big Geti Star has invaded New Namek with clones of Metal Cooler!|r"
-      ],
-    );
-    CreepManager.getInstance().upgradeCreeps(SagaUpgradeNames.GETI_STAR);
   }
 
   spawnWhenDelayFinished(): void {

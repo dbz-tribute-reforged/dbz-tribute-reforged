@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34d
+DBZ Tribute Reforged 0.34e
 }
 
 STRING 4
@@ -10576,7 +10576,7 @@ Purchase Saiyan Armor [|cffFFFF001/5|r]
 }
 
 STRING 1692
-// Items: I048 (Geti Star Fragment), Tip (Tooltip - Basic)
+// Items: I047 (Android Bomb), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
 }
@@ -10645,18 +10645,6 @@ STRING 1703
 // Items: I03F (Brave Sword [|cffFFFF001/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Brave Sword [|cffFFFF001/5|r]
-}
-
-STRING 1704
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2000 damage. Burns 1000 mana from the target enemy with each attack|n|cff999999"Sharp and Shiny!"!|r
-}
-
-STRING 1705
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2000 damage. Burns 1000 mana from the target enemy with each attack|n|cff999999"Sharp and Shiny!"!|r
 }
 
 STRING 1706
@@ -11044,7 +11032,7 @@ Adds 4000 bonus damage to the carrier and attacks reduce the target's armor by 6
 }
 
 STRING 1770
-// Items: I047 (Android Bomb), Tip (Tooltip - Basic)
+// Items: I048 (Geti Star Fragment), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
 }
@@ -34130,6 +34118,12 @@ STRING 5609
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level %d|r]
 }
 
+STRING 5610
+// Items: I049 (Time Ring), Name (Name)
+{
+Time Ring
+}
+
 STRING 5611
 // Abilities: A07S (MC Head), EditorSuffix (Editor Suffix)
 {
@@ -46853,6 +46847,60 @@ STRING 7717
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 10|r]
 }
 
+STRING 7718
+// Items: I04A (Sorrowful Scythe), Description (Description)
+{
+|cffffff0010% of melee damage cleaves to nearby enemies.|r
+}
+
+STRING 7719
+// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
+{
+|cffffff0010% of melee damage cleaves to nearby enemies.|r
+}
+
+STRING 7720
+// Abilities: A0IP (Sorrowful Scythe), Name (Name)
+{
+Sorrowful Scythe
+}
+
+STRING 7721
+// Abilities: A0NU (Time Ring), Name (Name)
+{
+Time Ring
+}
+
+STRING 7722
+// Abilities: A0NV (Sorrowful Scythe), Name (Name)
+{
+Sorrowful Scythe
+}
+
+STRING 7723
+// Abilities: A0NV (Sorrowful Scythe), EditorSuffix (Editor Suffix)
+{
+Item
+}
+
+STRING 7724
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 7725
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 7726
+// Items: I049 (Time Ring), Description (Description)
+{
+|cffffff00Instantly swap positions with an allied hero by travelling through time. Both units will also receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
+}
+
 STRING 7727
 // Abilities: A06N (Deafening Wave), Tip (Tooltip - Normal)
 {
@@ -51103,7 +51151,7 @@ Goku Black and his clones rush towards the target area, spinning in a circle and
 }
 
 STRING 8432
-// Abilities: A0IP (Sorrowful Scythe), Name (Name)
+// Items: I04A (Sorrowful Scythe), Name (Name)
 {
 Sorrowful Scythe
 }
@@ -64598,7 +64646,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 8.Feb.20
+This map is under active development - 9.Feb.20
 }
 
 STRING 10653
@@ -70369,6 +70417,12 @@ STRING 11608
 // Abilities: A0MY (Moonlight), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Moonlight - [|cffffcc00Level %d|r]
+}
+
+STRING 11609
+// Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
+{
+|cffffff00Instantly swap positions with an allied hero by travelling through time. Both units will also receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
 }
 
 STRING 11610
