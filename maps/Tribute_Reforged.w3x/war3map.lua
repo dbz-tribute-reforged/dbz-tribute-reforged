@@ -983,7 +983,7 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I03R"), 582.4, 21734.3, FourCC("I03R"))
     BlzCreateItemWithSkin(FourCC("I046"), 649.6, 21452.6, FourCC("I046"))
     BlzCreateItemWithSkin(FourCC("I047"), 638.7, 21228.9, FourCC("I047"))
-    BlzCreateItemWithSkin(FourCC("I048"), 667.9, 21721.1, FourCC("I048"))
+    BlzCreateItemWithSkin(FourCC("I048"), 698.2, 21702.9, FourCC("I048"))
 end
 
 function CreateBuildingsForPlayer0()
