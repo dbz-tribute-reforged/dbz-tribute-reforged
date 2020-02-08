@@ -981,6 +981,7 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I03F"), 616.9, 21871.8, FourCC("I03F"))
     BlzCreateItemWithSkin(FourCC("I03Q"), 710.4, 21572.0, FourCC("I03Q"))
     BlzCreateItemWithSkin(FourCC("I03R"), 582.4, 21734.3, FourCC("I03R"))
+    BlzCreateItemWithSkin(FourCC("I040"), 721.6, 21875.3, FourCC("I040"))
     BlzCreateItemWithSkin(FourCC("I046"), 649.6, 21452.6, FourCC("I046"))
     BlzCreateItemWithSkin(FourCC("I047"), 638.7, 21228.9, FourCC("I047"))
     BlzCreateItemWithSkin(FourCC("I048"), 698.2, 21702.9, FourCC("I048"))
@@ -16395,7 +16396,6 @@ function Trig_Darkness_Generator_Init_Actions()
         if (Trig_Darkness_Generator_Init_Func002Func001C()) then
             udg_DarknessGeneratorPlayerValues[udg_TempInt] = (udg_DarknessGeneratorPlayerValues[udg_TempInt] + 1)
         else
-            udg_DarknessGeneratorPlayerValues[udg_TempInt] = (udg_DarknessGeneratorPlayerValues[udg_TempInt] + 1)
         end
         udg_TempInt = udg_TempInt + 1
     end
