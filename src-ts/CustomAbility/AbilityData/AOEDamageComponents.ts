@@ -1759,7 +1759,7 @@ export const AOEDamageComponents = [
   },
   // saibaman bomb
   {
-    name: "damage android bomb explosion",
+    name: "damage android bomb item explosion",
     repeatInterval: 1,
     startTick: -1,
     endTick: -1,

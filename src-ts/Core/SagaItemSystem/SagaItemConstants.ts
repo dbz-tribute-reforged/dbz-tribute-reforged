@@ -26,6 +26,9 @@ export module SagaItemConstants {
   ];
   export const androidBomb = [
     FourCC("I047"),
+  ];
+  export const getiStarFragment = [
+    FourCC("I048"),
   ]
   export const bioLabResearch = [
     FourCC("I02E"),
@@ -46,7 +49,10 @@ export module SagaItemConstants {
   ];
   export const sorbetRing = [
     FourCC("I046"),
-  ]
+  ];
+
+  export const BIO_LAB_AOE = 600;
+  export const BIO_LAB_DAMAGE = 0.014;
 
   export module SagaDrops {
     export const BATTLE_ARMOR_1 = battleArmor[0];
@@ -64,6 +70,8 @@ export module SagaItemConstants {
     export const DEAD_ZONE_FRAGMENT = deadZoneFragment[0];
 
     export const ANDROID_BOMB = androidBomb[0];
+
+    export const GETI_STAR_FRAGMENT = getiStarFragment[0];
 
     export const BIO_LAB_RESEARCH = bioLabResearch[0];
 

@@ -5883,7 +5883,7 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
-    name: "sfx android bomb", 
+    name: "sfx android bomb item", 
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,

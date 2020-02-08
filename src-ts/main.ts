@@ -38,12 +38,14 @@ function tsMain() {
   SetCreepCampFilterState(false);
 
   // delay init
-  // initialize some systems
-  PathingCheck.Init();
-  
-  CustomUiTest();
-  CustomPlayerTest();
-  DestroyTimer(GetExpiredTimer());
+  TimerStart(CreateTimer(), 3, false, () => {
+    // initialize some systems
+    PathingCheck.Init();
+    
+    CustomUiTest();
+    CustomPlayerTest();
+    DestroyTimer(GetExpiredTimer());
+  })
 
   TimerStart(CreateTimer(), 5, false, () => {
     sagaManager = SagaManager.getInstance();

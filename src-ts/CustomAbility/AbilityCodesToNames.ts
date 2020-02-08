@@ -151,8 +151,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MR'), AbilityNames.Moro.LAVA_PILLARS],
     [FourCC('A0MS'), AbilityNames.Moro.POWER_LEVEL_SHARING],
 
-
+    // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
+    [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],
     // dummy caster FourCC("h054")
     // dummy stun micro / 1s / 2s
     // A08K / A0IY / A0I7

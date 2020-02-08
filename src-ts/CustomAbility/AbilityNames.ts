@@ -182,6 +182,7 @@ export module AbilityNames {
   }
 
   export module Items {
-    export const ANDROID_BOMB: string = "Android Bomb!";
+    export const ANDROID_BOMB: string = "Android Bomb";
+    export const GETI_STAR_FRAGMENT: string = "Geti Star Fragment";
   }
 }
