@@ -2539,7 +2539,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 22,
+    duration: 23,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2556,9 +2556,35 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground unit saibaman bomb" },
-      { name: "damage android bomb explosion" },
-      { name: "sfx android bomb" },
+      { name: "damage android bomb item explosion" },
+      { name: "sfx android bomb item" },
       { name: "self destruct generic end" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Items.GETI_STAR_FRAGMENT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNEngineeringUpgrade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Items.GETI_STAR_FRAGMENT,
+      body: 
+        AbilityNames.Items.GETI_STAR_FRAGMENT
+    },
+    components: [
+      { name: "block geti star fragment item" },
     ],
   },
   // -------------------------------------------

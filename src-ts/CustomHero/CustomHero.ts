@@ -38,6 +38,7 @@ export class CustomHero {
     // TODO: fix item abilities for heroes... 
     // item workaround.... for now
     this.addAbilityFromAll(AbilityNames.Items.ANDROID_BOMB);
+    this.addAbilityFromAll(AbilityNames.Items.GETI_STAR_FRAGMENT);
 
     const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
     if (abilities) {

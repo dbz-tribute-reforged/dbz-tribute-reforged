@@ -89,13 +89,6 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     });
 
     DestroyGroup(hookedGroup);
-
-    if (this.hookedUnit) {
-      this.hookPause = IsUnitPaused(this.hookedUnit);
-      if (!this.hookPause) {
-        PauseUnit(this.hookedUnit, true);
-      }
-    }
     return this;
   }
 
@@ -156,6 +149,22 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
         // hook forwards
         this.moveHook(this.speed);
         this.hookNearbyUnits(this.aoe, input.casterPlayer);
+        if (this.hookedUnit) {
+          this.hookPause = IsUnitPaused(this.hookedUnit);
+          if (!this.hookPause) {
+            PauseUnit(this.hookedUnit, true);
+          }
+          UnitDamageTarget(
+            input.caster.unit, 
+            this.hookedUnit, 
+            this.calculateDamage(input),
+            true,
+            false,
+            this.damageData.attackType,
+            this.damageData.damageType,
+            this.damageData.weaponType,
+          )
+        }
       } else if (this.currentRange > 0) {
         // hook backwards
         this.hookDirection = Hook.DIRECTION_BACKWARDS;
@@ -166,16 +175,6 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
             if (!this.hookPause) {
               PauseUnit(this.hookedUnit, false);
             }
-            UnitDamageTarget(
-              input.caster.unit, 
-              this.hookedUnit, 
-              this.calculateDamage(input),
-              true,
-              false,
-              this.damageData.attackType,
-              this.damageData.damageType,
-              this.damageData.weaponType,
-            )
           } else {
             this.moveHookedUnit(this.hookedUnit);
           }

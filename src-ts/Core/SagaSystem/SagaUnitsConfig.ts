@@ -222,6 +222,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        SagaItemConstants.SagaDrops.GETI_STAR_FRAGMENT,
+      ]
     )],
     ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
       [
@@ -404,6 +407,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.POWER_LEVEL_RISING,
         SagaAbilities.Broly.GIGANTIC_ROAR,
       ],
+      [
+        SagaItemConstants.SagaDrops.BIO_LAB_RESEARCH,
+      ]
     )],
     
     // dbs: broly

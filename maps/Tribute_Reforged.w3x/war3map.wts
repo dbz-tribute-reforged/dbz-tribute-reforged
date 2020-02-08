@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34c
+DBZ Tribute Reforged 0.34d
 }
 
 STRING 4
@@ -8916,9 +8916,17 @@ Bio Lab Research
 }
 
 STRING 1417
-// Items: I02E (Bio Lab Research), Description (Description)
+// Items: I01Y (Bio Lab Research), Description (Description)
 {
 Allows the holder to slowly drain the life out of nearby enemies.
+}
+
+STRING 1418
+// Items: I02E (Bio Lab Research), Description (Description)
+{
+|cffffff00Reduces the health of nearby enemies by 1.4% of their current health per second.|r
+
+A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
 STRING 1419
@@ -9829,16 +9837,18 @@ STRING 1569
 Bio Lab Research
 }
 
-STRING 1570
-// Items: I01Y (Bio Lab Research), Description (Description)
-{
-Allows the holder to slowly drain the life out of nearby enemies.
-}
-
 STRING 1571
 // Items: I01Y (Bio Lab Research), Ubertip (Tooltip - Extended)
 {
 |cffffff00Drains 1% of nearby enemy's health per second.|r
+A sample of the substance |cffff8c00Bio Broly|r was covered in
+}
+
+STRING 1572
+// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
+{
+|cffffff00Reduces the health of nearby enemies by 1.4% of their current health per second.|r
+
 A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
@@ -10541,6 +10551,18 @@ STRING 1687
 Purchase Saiyan Armor [|cffFFFF001/5|r]
 }
 
+STRING 1688
+// Items: I048 (Geti Star Fragment), Name (Name)
+{
+Geti Star Fragment
+}
+
+STRING 1689
+// Items: I048 (Geti Star Fragment), Description (Description)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
 STRING 1690
 // Items: I03C (Battle Armor [|cffFFFF003/5|r]), Name (Name)
 {
@@ -10551,6 +10573,18 @@ STRING 1691
 // Items: I03C (Battle Armor [|cffFFFF003/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Saiyan Armor [|cffFFFF001/5|r]
+}
+
+STRING 1692
+// Items: I048 (Geti Star Fragment), Tip (Tooltip - Basic)
+{
+Purchase Senzu Bean
+}
+
+STRING 1693
+// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2 @ 200%|r|n|cff00ffffCooldown: 90s|r
 }
 
 STRING 1694
@@ -10565,6 +10599,18 @@ STRING 1695
 Purchase Saiyan Armor [|cffFFFF001/5|r]
 }
 
+STRING 1696
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool1>s|r
+}
+
+STRING 1697
+// Abilities: A063 (Geti Star Repair), Researchubertip (Tooltip - Learn - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool1>s|r
+}
+
 STRING 1698
 // Items: I03E (Battle Armor [|cffFFFF005/5|r]), Name (Name)
 {
@@ -10575,6 +10621,18 @@ STRING 1699
 // Items: I03E (Battle Armor [|cffFFFF005/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Saiyan Armor [|cffFFFF001/5|r]
+}
+
+STRING 1700
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool2>s|r
+}
+
+STRING 1701
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool3>s|r
 }
 
 STRING 1702
@@ -11034,7 +11092,7 @@ Adds 8000 bonus damage to the carrier and attacks reduce the target's armor by 8
 }
 
 STRING 1778
-// Abilities: AIta (Scouter 2.0), Name (Name)
+// Items: I041 (Scouter 2.0), Name (Name)
 {
 Scouter 2.0
 }
@@ -11058,7 +11116,7 @@ Adds 10000 bonus damage to the carrier and attacks reduce the target's armor by 
 }
 
 STRING 1782
-// Abilities: A0J9 (Dead Zone Fragment), Name (Name)
+// Items: I040 (Dead Zone Fragment), Name (Name)
 {
 Dead Zone Fragment
 }
@@ -11075,14 +11133,26 @@ STRING 1784
 Sorbet's Ring
 }
 
+STRING 1785
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool4>s|r
+}
+
+STRING 1786
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool5>s|r
+}
+
 STRING 1787
-// Items: I040 (Dead Zone Fragment), Name (Name)
+// Abilities: A0J9 (Dead Zone Fragment), Name (Name)
 {
 Dead Zone Fragment
 }
 
 STRING 1788
-// Items: I041 (Scouter 2.0), Name (Name)
+// Abilities: AIta (Scouter 2.0), Name (Name)
 {
 Scouter 2.0
 }
@@ -15650,7 +15720,7 @@ Broly packs energy into his punch knocking back and stunning the target opponent
 }
 
 STRING 2549
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
 {
 Q
 }
@@ -17940,7 +18010,7 @@ STRING 2927
 }
 
 STRING 2928
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -17964,7 +18034,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2932
-// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18822,7 +18892,7 @@ STRING 3074
 }
 
 STRING 3075
-// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18846,7 +18916,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth.
 }
 
 STRING 3079
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19283,13 +19353,13 @@ Muffin
 }
 
 STRING 3152
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3153
-// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19499,13 +19569,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 3188
-// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3189
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19788,7 +19858,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20004,7 +20074,7 @@ STRING 3271
 }
 
 STRING 3272
-// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -20028,7 +20098,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 3276
-// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21010,7 +21080,7 @@ STRING 3437
 }
 
 STRING 3438
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21034,7 +21104,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21358,7 +21428,7 @@ STRING 3495
 }
 
 STRING 3496
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21382,7 +21452,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 3500
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21736,7 +21806,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21760,7 +21830,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21850,7 +21920,7 @@ S.S. Deadly |cffffcc00B|romb - [|cffffcc00Level 7|r]
 }
 
 STRING 3578
-// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21874,7 +21944,7 @@ Fires a beam of energy from the users palm.
 }
 
 STRING 3582
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22138,7 +22208,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22162,7 +22232,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 3630
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23294,7 +23364,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23312,7 +23382,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23948,7 +24018,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23972,7 +24042,7 @@ Dende creates a beam of healing energy connecting him and the target unit. If De
 }
 
 STRING 3931
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -25017,7 +25087,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25041,7 +25111,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26307,7 +26377,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26331,7 +26401,7 @@ Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane
 }
 
 STRING 4324
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28125,7 +28195,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28149,7 +28219,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28549,7 +28619,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28663,7 +28733,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29137,7 +29207,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29683,7 +29753,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29707,7 +29777,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29797,7 +29867,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29821,7 +29891,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30483,7 +30553,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30501,7 +30571,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31473,7 +31543,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31496,7 +31566,7 @@ You have received +0.02x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31892,7 +31962,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31916,7 +31986,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32006,7 +32076,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32120,7 +32190,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32234,7 +32304,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32348,7 +32418,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32932,7 +33002,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32957,7 +33027,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33078,7 +33148,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33090,7 +33160,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33272,7 +33342,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33296,7 +33366,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33386,7 +33456,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33404,7 +33474,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33536,7 +33606,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33650,12 +33720,6 @@ STRING 5540
 // Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 5541
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
 }
 
 STRING 5542
@@ -33797,7 +33861,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33815,7 +33879,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34066,12 +34130,6 @@ STRING 5609
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level %d|r]
 }
 
-STRING 5610
-// Abilities: A063 (Geti Star Repair), Researchubertip (Tooltip - Learn - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
 STRING 5611
 // Abilities: A07S (MC Head), EditorSuffix (Editor Suffix)
 {
@@ -34277,7 +34335,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34301,7 +34359,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 5649
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34746,7 +34804,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5717
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34842,7 +34900,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34890,7 +34948,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35576,7 +35634,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35594,7 +35652,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36002,7 +36060,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38387,7 +38445,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38609,7 +38667,7 @@ STRING 6358
 }
 
 STRING 6359
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38633,7 +38691,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38891,7 +38949,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39605,7 +39663,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39923,13 +39981,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41197,13 +41255,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 6787
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41641,7 +41699,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41773,7 +41831,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 6883
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41875,7 +41933,7 @@ R
 }
 
 STRING 6900
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42007,7 +42065,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42379,7 +42437,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42511,7 +42569,7 @@ Hit travels forward in time a fraction of a second, striking the target unit and
 }
 
 STRING 7006
-// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43297,7 +43355,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7137
-// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43321,7 +43379,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43345,7 +43403,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43393,7 +43451,7 @@ Dragon Fist
 }
 
 STRING 7153
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43417,7 +43475,7 @@ Energy Punch
 }
 
 STRING 7157
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43539,7 +43597,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 7176
-// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43587,7 +43645,7 @@ Final Flash
 }
 
 STRING 7184
-// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43611,7 +43669,7 @@ Galick Gun
 }
 
 STRING 7188
-// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43755,7 +43813,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43779,7 +43837,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43803,7 +43861,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43935,7 +43993,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43959,7 +44017,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 7246
-// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44583,7 +44641,7 @@ STRING 7349
 }
 
 STRING 7350
-// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44607,7 +44665,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44925,13 +44983,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7407
-// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45657,7 +45715,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45681,7 +45739,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45776,7 +45834,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 7548
-// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45800,7 +45858,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 7552
-// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45890,7 +45948,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45914,7 +45972,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46010,7 +46068,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46028,7 +46086,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46160,7 +46218,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46184,7 +46242,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46514,7 +46572,7 @@ STRING 7670
 }
 
 STRING 7671
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46538,7 +46596,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 7675
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46628,7 +46686,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46652,7 +46710,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 7694
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46742,7 +46800,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46754,7 +46812,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46793,60 +46851,6 @@ STRING 7717
 // Abilities: A063 (Geti Star Repair), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 10|r]
-}
-
-STRING 7718
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7719
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7720
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7721
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7722
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7723
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7724
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7725
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
-}
-
-STRING 7726
-// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
-{
-Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*2 @ 200%|r|n|cff00FFFFCooldown: 30s|r
 }
 
 STRING 7727
@@ -46994,13 +46998,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7751
-// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47258,7 +47262,7 @@ STRING 7794
 }
 
 STRING 7795
-// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47282,7 +47286,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Damage: (Int * 
 }
 
 STRING 7799
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48212,7 +48216,7 @@ STRING 7953
 }
 
 STRING 7954
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48236,13 +48240,13 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7958
-// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48380,7 +48384,7 @@ Learn God Splitter (|cffffcc00Q|r)
 }
 
 STRING 7982
-// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48920,7 +48924,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49055,7 +49059,7 @@ Tapion fires a sphere of energy in the target direction. The sphere will damage 
 }
 
 STRING 8093
-// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49171,7 +49175,7 @@ STRING 8110
 }
 
 STRING 8111
-// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50661,7 +50665,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50685,7 +50689,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51309,7 +51313,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51333,7 +51337,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8471
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51416,9 +51420,21 @@ STRING 8484
 }
 
 STRING 8485
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
+}
+
+STRING 8486
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool6>s|r
+}
+
+STRING 8487
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool7>s|r
 }
 
 STRING 8488
@@ -52374,6 +52390,12 @@ STRING 8642
 // Abilities: A0J8 (Dimension Sword 5s), Name (Name)
 {
 Dimension Sword 5s
+}
+
+STRING 8643
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool8>s|r
 }
 
 STRING 8644
@@ -69240,6 +69262,24 @@ STRING 11423
 +15 armor.|n|cff999999"One size fits all!"!|r
 }
 
+STRING 11424
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool9>s|r
+}
+
+STRING 11425
+// Abilities: A063 (Geti Star Repair), Ubertip (Tooltip - Normal - Extended)
+{
+Using advanced technology, Cooler is able to convert non-lethal damage to repair his body.|n|nNote: If the damage block isn't depleted, heals 1hp/dmg up to the remaining block amount. If the block is depleted, then it only negates and does not heal.|n|n|cff00FF00Damage Blocked: int*lvl*0.7 @ 200%|r|n|cff00FFFFCooldown: <A063,Cool10>s|r
+}
+
+STRING 11426
+// Abilities: A0NT (Geti Star Fragment), Name (Name)
+{
+Geti Star Fragment
+}
+
 STRING 11427
 // Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
 {
@@ -69965,6 +70005,12 @@ STRING 11547
 After the user charges green energy in both of their hands, the user throws out their hands, launching an arcing electrical Ki Wave at the opponent to inflict massive damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MV,Cool1> - <A0MV,Cool10> seconds|r
 }
 
+STRING 11548
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
 STRING 11549
 // Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -70353,14 +70399,6 @@ STRING 11614
 // Abilities: A0MY (Moonlight), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Moonlight - [|cffffcc00Level 6|r]
-}
-
-STRING 11616
-// Items: I02E (Bio Lab Research), Ubertip (Tooltip - Extended)
-{
-|cffffff00Drains 1% of nearby enemy's current health per second.|r
-
-A sample of the substance |cffff8c00Bio Broly|r was covered in
 }
 
 STRING 11617
