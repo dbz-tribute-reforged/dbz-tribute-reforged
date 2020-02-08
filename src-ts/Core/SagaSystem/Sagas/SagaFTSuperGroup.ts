@@ -8,7 +8,7 @@ export class FTSuperSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 120;
   }
 
   spawnSagaUnits(): void {

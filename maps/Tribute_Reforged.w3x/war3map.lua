@@ -540,6 +540,8 @@ gg_trg_Regen_Items_All_Looper = nil
 gg_trg_Regen_Items_Do_Regen = nil
 gg_trg_Sorbets_Ring = nil
 gg_trg_Sorbets_Ring_Lightning = nil
+gg_trg_Darkness_Generator_Init = nil
+gg_trg_Darkness_Generator_Loop = nil
 gg_trg_Upgrade_Item_Init = nil
 gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
@@ -547,8 +549,6 @@ gg_unit_U01D_0410 = nil
 gg_unit_H01H_0411 = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Darkness_Generator_Init = nil
-gg_trg_Darkness_Generator_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -984,7 +984,9 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I040"), 721.6, 21875.3, FourCC("I040"))
     BlzCreateItemWithSkin(FourCC("I046"), 649.6, 21452.6, FourCC("I046"))
     BlzCreateItemWithSkin(FourCC("I047"), 638.7, 21228.9, FourCC("I047"))
-    BlzCreateItemWithSkin(FourCC("I048"), 698.2, 21702.9, FourCC("I048"))
+    BlzCreateItemWithSkin(FourCC("I048"), 722.0, 21490.9, FourCC("I048"))
+    BlzCreateItemWithSkin(FourCC("I049"), 732.4, 21702.8, FourCC("I049"))
+    BlzCreateItemWithSkin(FourCC("I04A"), 787.8, 21470.7, FourCC("I04A"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -4712,16 +4714,66 @@ function Trig_Kill_Hero_PvP_and_Saga_Conditions()
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func008C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func005C()
     if (not (GetHeroLevel(GetDyingUnit()) >= 100)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009A()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001001()
+    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001002()
+    return (GetOwningPlayer(GetFilterUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001002())
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002001()
+    return (IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(GetDyingUnit())) == true)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002002()
+    return (IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED) == false)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002002())
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003()
+    return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003002())
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func005Func002C()
+    if (not (IsPlayerInForce(GetOwningPlayer(udg_StatMultUnit), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func005A()
+    udg_StatMultUnit = GetEnumUnit()
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func005Func002C()) then
+        TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
+    else
+    end
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009C()
+    if (not (IsPlayerInForce(GetOwningPlayer(GetKillingUnitBJ()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Kill_Hero_PvP_and_Saga_Func001Func001C()
@@ -4860,13 +4912,22 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
             udg_StatMultUnit = GetDyingUnit()
             TriggerExecute(gg_trg_Get_Base_Stats)
             udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
-            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func008C()) then
+            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func005C()) then
                 udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + (I2R(GetUnitFoodMade(GetDyingUnit())) - 100.00)) * 0.33)
                 udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 50.00)
             else
                 udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.50)
             end
-            ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009A)
+            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009C()) then
+                ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008A)
+            else
+                udg_PVPBaseStatReward = (udg_PVPBaseStatReward * 0.25)
+                udg_TempLoc2 = GetUnitLoc(GetDyingUnit())
+                udg_TempGroup = GetUnitsInRangeOfLocMatching(1600.00, udg_TempLoc2, Condition(Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func004002003))
+                ForGroupBJ(udg_TempGroup, Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func005A)
+                                DestroyGroup(udg_TempGroup)
+                                RemoveLocation(udg_TempLoc2)
+            end
         else
         end
     else
@@ -5502,12 +5563,12 @@ function InitTrig_Catchup_Turn_Off()
     TriggerAddAction(gg_trg_Catchup_Turn_Off, Trig_Catchup_Turn_Off_Actions)
 end
 
-function Trig_Catchup_Timer_Func001Func002Func002Func001A()
+function Trig_Catchup_Timer_Func001Func003Func002Func001A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats)
 end
 
-function Trig_Catchup_Timer_Func001Func002Func002C()
+function Trig_Catchup_Timer_Func001Func003Func002C()
     if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
         return false
     end
@@ -5521,6 +5582,9 @@ function Trig_Catchup_Timer_Func001C()
     if (not (udg_IsCatchupStatsActivated == true)) then
         return false
     end
+    if (not (udg_HeroPickMode ~= "cm")) then
+        return false
+    end
     return true
 end
 
@@ -5531,13 +5595,14 @@ function Trig_Catchup_Timer_Actions()
         while (true) do
             if (udg_TempInt > udg_MaxNumPlayers) then break end
             udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-            if (Trig_Catchup_Timer_Func001Func002Func002C()) then
-                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Catchup_Timer_Func001Func002Func002Func001A)
+            if (Trig_Catchup_Timer_Func001Func003Func002C()) then
+                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Catchup_Timer_Func001Func003Func002Func001A)
             else
             end
             udg_TempInt = udg_TempInt + 1
         end
     else
+        TriggerExecute(gg_trg_Catchup_Turn_Off)
     end
 end
 
@@ -5710,34 +5775,34 @@ function InitTrig_Catchup_Give_StatMultUnit_Catchup_Stats()
     TriggerAddAction(gg_trg_Catchup_Give_StatMultUnit_Catchup_Stats, Trig_Catchup_Give_StatMultUnit_Catchup_Stats_Actions)
 end
 
+function Trig_Catchup_Automatic_Loop_Func001Func001Func001C()
+    if (not (udg_ScoreboardTimeHours == 0)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeMinutes == 7)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeSeconds == 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Catchup_Automatic_Loop_Func001Func001Func002C()
+    if (not (udg_ScoreboardTimeHours == 0)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeMinutes == 15)) then
+        return false
+    end
+    if (not (udg_ScoreboardTimeSeconds == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Catchup_Automatic_Loop_Func001Func001C()
     if (not (udg_HeroPickMode == "cm")) then
-        return false
-    end
-    return true
-end
-
-function Trig_Catchup_Automatic_Loop_Func001Func002C()
-    if (not (udg_ScoreboardTimeHours == 0)) then
-        return false
-    end
-    if (not (udg_ScoreboardTimeMinutes == 10)) then
-        return false
-    end
-    if (not (udg_ScoreboardTimeSeconds == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Catchup_Automatic_Loop_Func001Func003C()
-    if (not (udg_ScoreboardTimeHours == 0)) then
-        return false
-    end
-    if (not (udg_ScoreboardTimeMinutes == 20)) then
-        return false
-    end
-    if (not (udg_ScoreboardTimeSeconds == 0)) then
         return false
     end
     return true
@@ -5756,32 +5821,32 @@ function Trig_Catchup_Automatic_Loop_Actions()
             DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11157")
             udg_IsCatchupSettingsAutomatic = false
         else
-        end
-        if (Trig_Catchup_Automatic_Loop_Func001Func002C()) then
-            udg_CatchupThreshold = 0.50
-            udg_CatchupIncrement = 0.50
-            udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
-            DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11186")
-                        DestroyForce(udg_TempPlayerGroup)
-            TriggerExecute(gg_trg_Catchup_Turn_On)
-            udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-            PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6227")
-                        RemoveLocation(udg_TempLoc)
-        else
-        end
-        if (Trig_Catchup_Automatic_Loop_Func001Func003C()) then
-            udg_CatchupThreshold = 0.70
-            udg_CatchupIncrement = 0.50
-            udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
-            DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11185")
-                        DestroyForce(udg_TempPlayerGroup)
-            TriggerExecute(gg_trg_Catchup_Turn_On)
-            udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
-            PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
-            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6228")
-                        RemoveLocation(udg_TempLoc)
-        else
+            if (Trig_Catchup_Automatic_Loop_Func001Func001Func001C()) then
+                udg_CatchupThreshold = 0.70
+                udg_CatchupIncrement = 0.50
+                udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
+                DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11186")
+                                DestroyForce(udg_TempPlayerGroup)
+                TriggerExecute(gg_trg_Catchup_Turn_On)
+                udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
+                PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
+                DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6227")
+                                RemoveLocation(udg_TempLoc)
+            else
+            end
+            if (Trig_Catchup_Automatic_Loop_Func001Func001Func002C()) then
+                udg_CatchupThreshold = 0.75
+                udg_CatchupIncrement = 0.50
+                udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
+                DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11185")
+                                DestroyForce(udg_TempPlayerGroup)
+                TriggerExecute(gg_trg_Catchup_Turn_On)
+                udg_TempLoc = GetRectCenter(gg_rct_HBTC_2_Exit)
+                PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 5.00, bj_MINIMAPPINGSTYLE_FLASHY, 0.00, 100.00, 100.00)
+                DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6228")
+                                RemoveLocation(udg_TempLoc)
+            else
+            end
         end
     else
     end
@@ -15729,7 +15794,7 @@ function Trig_Saga_Unit_Loop_Func001C()
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func003Func004C()
+function Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004Func004Func004C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
         return true
     end
@@ -15742,38 +15807,29 @@ function Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func003Func004C(
     return false
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func003C()
-    if (not Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func003Func004C()) then
+function Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004Func004C()
+    if (not Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004Func004Func004C()) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func004C()
-    if (not ((udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt)) > (udg_TempReal + (udg_TempReal2 + udg_TempReal3)))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004A()
+function Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004A()
+    udg_TempInt3 = (udg_TempInt3 + 1)
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
-    if (Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func003C()) then
+    if (Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004Func004C()) then
         udg_StatMultStr = (udg_StatMultStr * 3.00)
         udg_StatMultAgi = (udg_StatMultAgi * 3.00)
         udg_StatMultInt = (udg_StatMultInt * 3.00)
     else
     end
-    if (Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004Func004C()) then
-        udg_TempReal = udg_StatMultStr
-        udg_TempReal2 = udg_StatMultAgi
-        udg_TempReal3 = udg_StatMultInt
-    else
-    end
+    udg_TempReal = (udg_TempReal + udg_StatMultStr)
+    udg_TempReal2 = (udg_TempReal2 + udg_StatMultAgi)
+    udg_TempReal3 = (udg_TempReal3 + udg_StatMultInt)
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func010Func002C()
+function Trig_Saga_Unit_Loop_Func002Func002Func012Func002C()
     if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
         return false
     end
@@ -15783,49 +15839,49 @@ function Trig_Saga_Unit_Loop_Func002Func002Func010Func002C()
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func001C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func001C()
     if (not (udg_TempReal < 100.00)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func002C()
-    if (not (udg_TempReal < 150.00)) then
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func002C()
+    if (not (udg_TempReal < 120.00)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003Func002Func002C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003Func002Func002C()
     if (not (GetHeroLevel(udg_TempUnit) >= 150)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003Func002C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003Func002C()
     if (not (GetHeroLevel(udg_TempUnit) >= 100)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003C()
     if (not (GetHeroLevel(udg_TempUnit) >= 50)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012Func005C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019Func005C()
     if (not (GetHeroLevel(udg_TempUnit) >= 30)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func012C()
+function Trig_Saga_Unit_Loop_Func002Func002Func019C()
     if (not (GetHeroLevel(udg_TempUnit) >= 10)) then
         return false
     end
@@ -15851,34 +15907,39 @@ function Trig_Saga_Unit_Loop_Func002A()
         udg_TempReal2 = 30.00
         udg_TempReal3 = 30.00
         udg_TempInt2 = 0
+        udg_TempInt3 = 0
         udg_TempInt = 1
         while (true) do
             if (udg_TempInt > udg_MaxNumPlayers) then break end
             udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-            if (Trig_Saga_Unit_Loop_Func002Func002Func010Func002C()) then
+            if (Trig_Saga_Unit_Loop_Func002Func002Func012Func002C()) then
                 udg_TempInt2 = (udg_TempInt2 + 1)
-                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func002Func002Func010Func002Func004A)
+                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func002Func002Func012Func002Func004A)
             else
             end
             udg_TempInt = udg_TempInt + 1
         end
         udg_TempInt2 = IMaxBJ(udg_TempInt2, 2)
-        if (Trig_Saga_Unit_Loop_Func002Func002Func012C()) then
-            if (Trig_Saga_Unit_Loop_Func002Func002Func012Func002C()) then
-                udg_TempReal = 150.00
-                udg_TempReal2 = 150.00
-                udg_TempReal3 = 150.00
+        udg_TempInt3 = IMaxBJ(1, udg_TempInt3)
+        udg_TempReal = (udg_TempReal / I2R(udg_TempInt3))
+        udg_TempReal2 = (udg_TempReal2 / I2R(udg_TempInt3))
+        udg_TempReal3 = (udg_TempReal3 / I2R(udg_TempInt3))
+        if (Trig_Saga_Unit_Loop_Func002Func002Func019C()) then
+            if (Trig_Saga_Unit_Loop_Func002Func002Func019Func002C()) then
+                udg_TempReal = 120.00
+                udg_TempReal2 = 120.00
+                udg_TempReal3 = 120.00
             else
             end
             udg_TempReal4 = (((0.60 + (0.06 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
-            if (Trig_Saga_Unit_Loop_Func002Func002Func012Func005C()) then
+            if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005C()) then
                 udg_TempReal4 = (udg_TempReal4 + 0.10)
-                if (Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003C()) then
+                if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003C()) then
                     udg_TempReal4 = (udg_TempReal4 + 0.20)
-                    if (Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003Func002C()) then
-                        udg_TempReal4 = (udg_TempReal4 + 0.30)
-                        if (Trig_Saga_Unit_Loop_Func002Func002Func012Func005Func003Func002Func002C()) then
-                            udg_TempReal4 = (udg_TempReal4 + 0.40)
+                    if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003Func002C()) then
+                        udg_TempReal4 = (udg_TempReal4 + 0.20)
+                        if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003Func002Func002C()) then
+                            udg_TempReal4 = (udg_TempReal4 + 0.20)
                         else
                         end
                     else
@@ -15888,7 +15949,7 @@ function Trig_Saga_Unit_Loop_Func002A()
             else
             end
         else
-            if (Trig_Saga_Unit_Loop_Func002Func002Func012Func001C()) then
+            if (Trig_Saga_Unit_Loop_Func002Func002Func019Func001C()) then
                 udg_TempReal = 100.00
                 udg_TempReal2 = 100.00
                 udg_TempReal3 = 100.00

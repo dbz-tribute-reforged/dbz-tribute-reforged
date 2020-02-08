@@ -3,6 +3,9 @@ import { Constants } from "Common/Constants";
 import { SagaItemConstants } from "./SagaItemConstants";
 import { UnitHelper } from "Common/UnitHelper";
 import { Vector2D } from "Common/Vector2D";
+import { SagaItemAbility } from "./SagaitemAbility/SagaItemAbility";
+import { TimeRing } from "./SagaitemAbility/TimeRing";
+import { sagaItemAbilityConfig } from "./SagaitemAbility/SagaItemAbilityConfig";
 
 export class SagaItemManager {
   static instance: SagaItemManager;
@@ -10,12 +13,15 @@ export class SagaItemManager {
   protected upgradeItemTrigger: trigger;
   protected battleArmorLimitTrigger: trigger;
   protected bioLabTrigger: trigger;
+  protected sagaItemAbilityTrigger: trigger;
+
 
   constructor (
   ) {
     this.upgradeItemTrigger = CreateTrigger();
     this.battleArmorLimitTrigger = CreateTrigger();
     this.bioLabTrigger = CreateTrigger();
+    this.sagaItemAbilityTrigger = CreateTrigger();
     this.initialize();
   }
 
@@ -31,6 +37,7 @@ export class SagaItemManager {
     this.setupUpgradeItems();
     this.setupBattleArmorLimit();
     this.setupBioLab();
+    this.setupSagaItemAbilityTrigger();
   }
 
   setupUpgradeItems() {
@@ -175,5 +182,27 @@ export class SagaItemManager {
         return false;
       })
     )
+  }
+
+  setupSagaItemAbilityTrigger() {
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      const player = Player(i);
+      TriggerRegisterPlayerUnitEventSimple(
+        this.sagaItemAbilityTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_SPELL_EFFECT
+      );
+    }
+
+    TriggerAddAction(
+      this.sagaItemAbilityTrigger,
+      () => {
+        const sagaItemAbility = sagaItemAbilityConfig.get(GetSpellAbilityId());
+        if (sagaItemAbility) {
+          sagaItemAbility.performTriggerAction();
+        }
+      }
+    )
+
   }
 }
