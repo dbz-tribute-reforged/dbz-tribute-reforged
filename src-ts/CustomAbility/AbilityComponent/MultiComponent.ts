@@ -201,18 +201,12 @@ export class MultiComponent implements
         this.oldPoint.y = input.castPoint.y;
         input.castPoint.x = newCoord.x;
         input.castPoint.y = newCoord.y;
-        // TextTagHelper.showPlayerColorTextToForce(
-        //   ability.currentTick + "!",
-        //   input.castPoint.x, 
-        //   input.castPoint.y,
-        // );
       } else {
         this.oldPoint.x = input.targetPoint.x;
         this.oldPoint.y = input.targetPoint.y;
         input.targetPoint.x = newCoord.x;
         input.targetPoint.y = newCoord.y;
       }
-
       let oldSource = source;
       if (this.useTargetUnitAsSource && input.targetUnit) {
         source = input.targetUnit;
@@ -260,6 +254,18 @@ export class MultiComponent implements
       this.replacementCoords.clear();
       this.hasStarted = false;
     }
+  }
+
+  cleanup() {
+    for (const component of this.components) {
+      component.cleanup();
+    }
+    for (const component of this.activeComponents) {
+      component.cleanup();
+    }
+    this.components.splice(0, this.components.length);
+    this.activeComponents.splice(0, this.activeComponents.length);
+    this.replacementCoords.clear();
   }
   
 

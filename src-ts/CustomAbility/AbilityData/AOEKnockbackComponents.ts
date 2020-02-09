@@ -71,7 +71,7 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: 9,
     knockbackData: {
-      speed: 25, 
+      speed: 23, 
       angle: 0, 
       aoe: 400,
     },

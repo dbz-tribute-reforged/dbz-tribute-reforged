@@ -16,6 +16,10 @@ export class SelfDestruct implements AbilityComponent, Serializable<SelfDestruct
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     KillUnit(source);
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

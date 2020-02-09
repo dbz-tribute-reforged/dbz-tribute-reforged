@@ -45,4 +45,8 @@ export class CustomHeroAbilityManager {
   public hasAbility(name: string): boolean {
     return (this.abilities.get(name) != undefined);
   }
+
+  public cleanup() {
+    
+  }
 }

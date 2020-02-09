@@ -1,10 +1,12 @@
 import { Vector3D } from "Common/Vector3D";
 
+// maybe move to Commmon, not sure, should only used for CustomAbility right now
 export class SfxData implements Serializable<SfxData> {
   public static MAX_ID = 0;
   public static readonly SHOW_ALL_GROUPS = -1;
-  // maybe move to Commmon, not sure, should only used for CustomAbility right now
+  
   protected id: number;
+  public effects: effect[];
 
   constructor(
     public model: string = "none.mdl",
@@ -20,6 +22,14 @@ export class SfxData implements Serializable<SfxData> {
     public attachmentPoint: string = "origin",
   ) {
     this.id = SfxData.MAX_ID++;
+    this.effects = [];
+  }
+
+  cleanup() {
+    for (const effect of this.effects) {
+      DestroyEffect(effect);
+    }
+    this.effects.splice(0, this.effects.length);
   }
 
   clone(): SfxData {

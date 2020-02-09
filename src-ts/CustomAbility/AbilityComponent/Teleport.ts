@@ -62,6 +62,10 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
       this.hasTeleported = false;
     }
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

@@ -55,6 +55,13 @@ export class AOEApplyComponent implements
 
     DestroyGroup(affectedGroup);
   }
+
+  cleanup() {
+    for (const component of this.components) {
+      component.cleanup();
+    }
+    this.components.splice(0, this.components.length);
+  }
   
 
   clone(): AbilityComponent {

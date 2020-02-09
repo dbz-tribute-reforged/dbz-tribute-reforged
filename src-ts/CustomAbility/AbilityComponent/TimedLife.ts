@@ -30,6 +30,10 @@ export class TimedLife implements AbilityComponent, Serializable<TimedLife> {
       this.currentTime = 0;
     }
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

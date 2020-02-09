@@ -237,7 +237,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 40,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.3,
+    multiplier: 0.2,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -286,7 +286,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 20,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 0.2,
+    multiplier: 0.12,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
@@ -433,7 +433,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 50,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 0.6,
+    multiplier: 0.5,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
@@ -482,7 +482,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 200,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.7,
+    multiplier: 0.6,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
@@ -531,7 +531,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.7,
+    multiplier: 0.6,
     sfxList: [
       // {
       //   model: "IceNova.mdl",
@@ -596,7 +596,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 1,
+    multiplier: 0.9,
     sfxList: [
       {
         model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",

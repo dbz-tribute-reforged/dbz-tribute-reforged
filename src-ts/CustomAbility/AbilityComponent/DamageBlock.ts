@@ -113,6 +113,16 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
 
       this.previousHp = currentHp;
     }
+
+    if (ability.isFinishedUsing(this)) {
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+    }
+  }
+  
+  cleanup() {
+    AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+    AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
   }
   
 

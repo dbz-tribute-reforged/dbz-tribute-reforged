@@ -119,9 +119,13 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.hasStarted = false;
-      GroupClear(this.insideUnits);
+      this.cleanup();
     }
+  }
+
+  cleanup() {
+    this.hasStarted = false;
+    GroupClear(this.insideUnits);
   }
   
 

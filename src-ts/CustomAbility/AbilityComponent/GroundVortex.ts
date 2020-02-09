@@ -97,6 +97,10 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
     DestroyGroup(affectedGroup);
   }
 
+  cleanup() {
+
+  }
+
   clone(): AbilityComponent {
     return new GroundVortex(
       this.name, this.repeatInterval, this.startTick, this.endTick, 

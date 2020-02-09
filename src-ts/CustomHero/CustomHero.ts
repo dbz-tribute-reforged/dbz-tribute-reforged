@@ -111,4 +111,9 @@ export class CustomHero {
   public removeSpellPower(modifier: number) {
     this.spellPower -= modifier;
   }
+
+  public cleanup() {
+    this.isCasting.clear();
+    this.abilities.cleanup();
+  }
 }
