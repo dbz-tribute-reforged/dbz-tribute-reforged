@@ -39,6 +39,8 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.sfxStarted) {
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
       this.sfxStarted = true;
       if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_FIXED) {
         this.setSfxCoordsToTargettedPoint(input);
@@ -82,8 +84,15 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
 
 
     if (ability.isFinishedUsing(this)) {
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
       this.sfxStarted = false;
     }
+  }
+
+  cleanup() {    
+    AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+    AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
   }
 
   clone(): AbilityComponent {

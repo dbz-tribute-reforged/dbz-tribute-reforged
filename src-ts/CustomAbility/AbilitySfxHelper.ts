@@ -8,57 +8,55 @@ export module AbilitySfxHelper {
   // probably move sfx stuff to a sfx displaying class
   // also expand to cover more sfx attributes for greater customisability
   export function displaySfxAtCoord(
-    displayedSfx: SfxData, 
+    sfxData: SfxData, 
     target: Vector2D, 
     yaw: number,
     height: number,
     timeRatio: number,
-    persistentSfx: Map<SfxData, effect[]>,
   ) {
     if (
-      displayedSfx.persistent && 
-      displayedSfx.updateCoordsOnly 
+      sfxData.persistent && 
+      sfxData.updateCoordsOnly 
     ) {
-      const currentEffects = persistentSfx.get(displayedSfx);
-      if (currentEffects) {
-        for (const effect of currentEffects) {
-          BlzSetSpecialEffectX(effect, target.x);
-          BlzSetSpecialEffectY(effect, target.y);
+      if (sfxData.effects.length > 0) {
+        const effect = sfxData.effects[0];
+        BlzSetSpecialEffectX(effect, target.x);
+        BlzSetSpecialEffectY(effect, target.y);
 
-          const newYaw = yaw + displayedSfx.extraDirectionalYaw * CoordMath.degreesToRadians;
-          if (newYaw > 0) {
-            BlzSetSpecialEffectYaw(effect, newYaw);
-          }
-          
-          if (height + displayedSfx.startHeight > 0) {
-            BlzSetSpecialEffectHeight(effect, 
-              height + displayedSfx.startHeight + 
-              (displayedSfx.endHeight - displayedSfx.startHeight) * timeRatio
-            );
-          }
+        const newYaw = yaw + sfxData.extraDirectionalYaw * CoordMath.degreesToRadians;
+        if (newYaw > 0) {
+          BlzSetSpecialEffectYaw(effect, newYaw);
         }
-        // yes i know, bad, but if current sfx is found, dont create sfx again
+        
+        if (height + sfxData.startHeight > 0) {
+          BlzSetSpecialEffectHeight(effect, 
+            height + sfxData.startHeight + 
+            (sfxData.endHeight - sfxData.startHeight) * timeRatio
+          );
+        }
+        // if effect exists, modify, then return
+        // otherwise: still need to create sfx
         return;
       }
     }
-    const createdSfx = AddSpecialEffect(displayedSfx.model, target.x, target.y);
-    BlzSetSpecialEffectScale(createdSfx, displayedSfx.scale);
-    const newYaw = yaw + displayedSfx.extraDirectionalYaw * CoordMath.degreesToRadians;
+    const createdSfx = AddSpecialEffect(sfxData.model, target.x, target.y);
+    BlzSetSpecialEffectScale(createdSfx, sfxData.scale);
+    const newYaw = yaw + sfxData.extraDirectionalYaw * CoordMath.degreesToRadians;
     if (newYaw > 0) {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);
     }
 
-    if (height + displayedSfx.startHeight > 0) {
+    if (height + sfxData.startHeight > 0) {
       BlzSetSpecialEffectHeight(createdSfx, 
-        height + displayedSfx.startHeight + 
-        (displayedSfx.endHeight - displayedSfx.startHeight) * timeRatio
+        height + sfxData.startHeight + 
+        (sfxData.endHeight - sfxData.startHeight) * timeRatio
       );
     }
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
-      BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
+    if (sfxData.color.x + sfxData.color.y + sfxData.color.z < 255 * 3) {
+      BlzSetSpecialEffectColor(createdSfx, sfxData.color.r, sfxData.color.g, sfxData.color.b);
     }
 
-    manageSfxPersistence(displayedSfx, createdSfx, persistentSfx);
+    manageSfxPersistence(sfxData, createdSfx);
   }
 
   // displays the sfx at the caster's location
@@ -82,27 +80,25 @@ export module AbilitySfxHelper {
           angle,
           height,
           timeRatio,
-          ability.persistentSfx,
         );
       };
     }
   }
 
   export function displaySfxOnUnit(
-    displayedSfx: SfxData, 
+    sfxData: SfxData, 
     unit: unit, 
     angle: number, 
     height: number, 
     timeRatio: number,
-    persistentSfx: Map<SfxData, effect[]>
   ) {
-    const createdSfx = AddSpecialEffectTarget(displayedSfx.model, unit, displayedSfx.attachmentPoint);
+    const createdSfx = AddSpecialEffectTarget(sfxData.model, unit, sfxData.attachmentPoint);
     
-    if (displayedSfx.color.x + displayedSfx.color.y + displayedSfx.color.z < 255 * 3) {
-      BlzSetSpecialEffectColor(createdSfx, displayedSfx.color.r, displayedSfx.color.g, displayedSfx.color.b);
+    if (sfxData.color.x + sfxData.color.y + sfxData.color.z < 255 * 3) {
+      BlzSetSpecialEffectColor(createdSfx, sfxData.color.r, sfxData.color.g, sfxData.color.b);
     }
 
-    manageSfxPersistence(displayedSfx, createdSfx, persistentSfx);
+    manageSfxPersistence(sfxData, createdSfx);
   }
 
   export function displaySfxListOnUnit(
@@ -124,30 +120,26 @@ export module AbilitySfxHelper {
           angle,
           height,
           timeRatio,
-          ability.persistentSfx,
         );
       }
     }
   }
 
-  export function cleanupPersistentSfx(persistentSfx: effect[]) {
-    for (const currentSfx of persistentSfx) {
-      DestroyEffect(currentSfx);
+  export function cleanupPersistentSfx(sfxData: SfxData[]) {
+    for (const currentSfx of sfxData) {
+      for (const effect of currentSfx.effects) {
+        DestroyEffect(effect);
+      }
+      currentSfx.effects.splice(0, currentSfx.effects.length);
     }
   }
 
   export function manageSfxPersistence(
-    displayedSfx: SfxData, 
+    sfxData: SfxData, 
     createdSfx: effect, 
-    persistentSfx: Map<SfxData, effect[]>
   ) {
-    if (displayedSfx.persistent) {
-      const effects = persistentSfx.get(displayedSfx);
-      if (effects) {
-        effects.push(createdSfx);
-      } else {
-        persistentSfx.set(displayedSfx, [createdSfx]);
-      }
+    if (sfxData.persistent) {
+      sfxData.effects.push(createdSfx);
     } else {
       DestroyEffect(createdSfx);
     }

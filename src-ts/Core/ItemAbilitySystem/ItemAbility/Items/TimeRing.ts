@@ -1,15 +1,7 @@
-import { SagaItemAbility } from "./SagaItemAbility";
+import { ItemAbility } from "../ItemAbility";
 import { UnitHelper } from "Common/UnitHelper";
 
-export class TimeRing implements SagaItemAbility {
-  static readonly abilityId: number = FourCC("A0NU");
-
-  constructor(
-
-  ) {
-
-  }
-
+export class TimeRing implements ItemAbility {
   performTriggerAction() {
     const unit = GetTriggerUnit();
     const target = GetSpellTargetUnit();

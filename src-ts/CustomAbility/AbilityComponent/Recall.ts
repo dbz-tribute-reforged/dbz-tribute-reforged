@@ -17,6 +17,10 @@ export class Recall implements AbilityComponent, Serializable<Recall> {
 
   }
   
+  cleanup() {
+
+  }
+  
 
   clone(): AbilityComponent {
     return new Recall(

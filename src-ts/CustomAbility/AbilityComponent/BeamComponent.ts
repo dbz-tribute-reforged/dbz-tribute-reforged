@@ -9,6 +9,7 @@ import { PathingCheck } from "Common/PathingCheck";
 import { AbilityComponentHelper } from "./AbilityComponentHelper";
 import { AddableComponent } from "./AddableComponent";
 import { Constants } from "Common/Constants";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export class BeamComponent implements 
   AbilityComponent, 
@@ -151,7 +152,7 @@ export class BeamComponent implements
   }
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.beamCoord.x = GetUnitX(source)
+    this.beamCoord.x = GetUnitX(source);
     this.beamCoord.y = GetUnitY(source);
     let beamTargetPoint = input.castPoint;
     if (!this.useLastCastPoint) {
@@ -163,14 +164,14 @@ export class BeamComponent implements
       // move beam slightly out of the source unit
       this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
-      this.beamCoord = beamTargetPoint;
+      this.beamCoord.x = beamTargetPoint.x;
+      this.beamCoord.y = beamTargetPoint.y;
     } else {
       // caster
       this.beamCoord.x = GetUnitX(input.caster.unit);
       this.beamCoord.y = GetUnitY(input.caster.unit);
       this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     }
-
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
       this.beamUnitType, 
@@ -286,6 +287,16 @@ export class BeamComponent implements
       this.forcedExplode = false;
       this.hasExploded = false;
     }
+  }
+
+  cleanup() {
+    if (GetUnitTypeId(this.beamUnit) != 0) {
+      RemoveUnit(this.beamUnit);
+    }
+    for (const component of this.components) {
+      component.cleanup();
+    }
+    this.components.splice(0, this.components.length);
   }
 
   clone(): AbilityComponent {

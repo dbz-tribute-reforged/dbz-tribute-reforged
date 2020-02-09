@@ -13,5 +13,6 @@ export interface AbilityComponent {
   endTick: number;
 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit): void;
+  cleanup(): void;
   clone(): AbilityComponent;
 }

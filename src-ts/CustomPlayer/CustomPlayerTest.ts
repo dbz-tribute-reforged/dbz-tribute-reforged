@@ -143,7 +143,14 @@ export function CustomPlayerTest() {
         }
       }
     }
-	});
+  });
+  
+  TimerStart(CreateTimer(), 30.0, true, () => {
+    for (const customPlayer of customPlayers) {
+      customPlayer.cleanupRemovedHeroes();
+    }
+  });
+
   
 
   // update mouse positions for now
@@ -616,7 +623,7 @@ export function CustomPlayerTest() {
 		}
 
   });
-  
+
 
 
   // ==== other player related triggers ====

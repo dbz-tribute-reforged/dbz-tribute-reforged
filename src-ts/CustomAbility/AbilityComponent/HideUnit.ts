@@ -35,6 +35,10 @@ export class HideUnit implements AbilityComponent, Serializable<HideUnit> {
       SetUnitInvulnerable(source, false);
     }
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

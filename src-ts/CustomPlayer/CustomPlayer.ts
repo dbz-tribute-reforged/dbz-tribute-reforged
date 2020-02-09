@@ -84,4 +84,18 @@ export class CustomPlayer {
   get allHeroes(): IterableIterator<CustomHero> {
     return this.heroes.values();
   }
+
+  cleanupRemovedHeroes() {
+    const removed = [];
+    for (const [unit, customHero] of this.heroes) {
+      if (GetUnitTypeId(unit) == 0) {
+        customHero.cleanup();
+        removed.push(unit);
+      }
+    }
+    removed.map((removedUnit: unit) => {
+      this.heroes.delete(removedUnit);
+    }, this);
+
+  }
 }

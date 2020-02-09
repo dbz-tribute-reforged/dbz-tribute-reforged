@@ -200,7 +200,15 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       this.hookDirection = Hook.DIRECTION_FORWARDS;
       this.hookedUnit = null;
       this.hookPause = false;
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
     }
+  }
+
+  cleanup() {
+    if (this.hookedUnit) {
+      PauseUnit(this.hookedUnit, false);
+    }
+    AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
   }
   
 

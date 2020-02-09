@@ -12,10 +12,10 @@ import { CameraZoom } from 'Common/CameraZoom';
 import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
 import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
-import { SagaItemManager } from 'Core/SagaItemSystem/SagaItemManager';
+import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
 
 let sagaManager: SagaManager;
-let sagaItemManager: SagaItemManager;
+let itemAbilityManager: ItemAbilityManager;
 let creepManager: CreepManager;
 let itemStackingManager: ItemStackingManager;
 let tournamentManager: TournamentManager;
@@ -49,7 +49,7 @@ function tsMain() {
 
   TimerStart(CreateTimer(), 5, false, () => {
     sagaManager = SagaManager.getInstance();
-    sagaItemManager = SagaItemManager.getInstance();
+    itemAbilityManager = ItemAbilityManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })
 

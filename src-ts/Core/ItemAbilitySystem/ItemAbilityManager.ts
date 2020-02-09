@@ -1,33 +1,31 @@
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { Constants } from "Common/Constants";
-import { SagaItemConstants } from "./SagaItemConstants";
-import { UnitHelper } from "Common/UnitHelper";
+import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
-import { SagaItemAbility } from "./SagaitemAbility/SagaItemAbility";
-import { TimeRing } from "./SagaitemAbility/TimeRing";
-import { sagaItemAbilityConfig } from "./SagaitemAbility/SagaItemAbilityConfig";
+import { UnitHelper } from "Common/UnitHelper";
+import { itemAbilityConfig } from "./ItemAbility/ItemAbilityConfig";
 
-export class SagaItemManager {
-  static instance: SagaItemManager;
+export class ItemAbilityManager {
+  static instance: ItemAbilityManager;
 
   protected upgradeItemTrigger: trigger;
   protected battleArmorLimitTrigger: trigger;
-  protected bioLabTrigger: trigger;
-  protected sagaItemAbilityTrigger: trigger;
+  protected itemActiveAbilityTrigger: trigger;
+  protected itemPassiveAbilityTrigger: trigger;
 
 
   constructor (
   ) {
     this.upgradeItemTrigger = CreateTrigger();
     this.battleArmorLimitTrigger = CreateTrigger();
-    this.bioLabTrigger = CreateTrigger();
-    this.sagaItemAbilityTrigger = CreateTrigger();
+    this.itemActiveAbilityTrigger = CreateTrigger();
+    this.itemPassiveAbilityTrigger = CreateTrigger();
     this.initialize();
   }
 
   public static getInstance() {
     if (this.instance == null) {
-      this.instance = new SagaItemManager();
+      this.instance = new ItemAbilityManager();
       Hooks.set("SagaItemManager", this.instance);
     }
     return this.instance;
@@ -36,8 +34,8 @@ export class SagaItemManager {
   initialize() {
     this.setupUpgradeItems();
     this.setupBattleArmorLimit();
-    this.setupBioLab();
-    this.setupSagaItemAbilityTrigger();
+    this.setupItemActiveAbilityTrigger();
+    this.setupItemPassiveAbilityTrigger();
   }
 
   setupUpgradeItems() {
@@ -48,7 +46,7 @@ export class SagaItemManager {
         player, 
         EVENT_PLAYER_UNIT_SPELL_EFFECT,
         Condition(() => {
-          return GetSpellAbilityId() == SagaItemConstants.upgradeItemAbility;
+          return GetSpellAbilityId() == ItemConstants.ABILITY_UPGRADE_ITEM;
         })
       );
     }
@@ -87,7 +85,7 @@ export class SagaItemManager {
         const unit = GetManipulatingUnit();
         const item = GetManipulatedItem();
         let isBattleArmor = false;
-        for (const battleArmor of SagaItemConstants.battleArmor) {
+        for (const battleArmor of ItemConstants.battleArmor) {
           if (GetItemTypeId(item) == battleArmor) {
             isBattleArmor = true;
             break;
@@ -95,7 +93,7 @@ export class SagaItemManager {
         }
         if (isBattleArmor) {
           let carried = 0;
-          for (const battleArmor of SagaItemConstants.battleArmor) {
+          for (const battleArmor of ItemConstants.battleArmor) {
             for (let j = 0; j < 6; ++j) {
               if (GetItemTypeId(UnitItemInSlot(unit, j)) == battleArmor) {
                 ++carried;
@@ -123,86 +121,47 @@ export class SagaItemManager {
     )
   }
 
-  setupBioLab() {
+  setupItemActiveAbilityTrigger() {
     for (let i = 0; i < Constants.maxActivePlayers; ++i) {
       const player = Player(i);
       TriggerRegisterPlayerUnitEventSimple(
-        this.bioLabTrigger,
+        this.itemActiveAbilityTrigger, 
+        player, 
+        EVENT_PLAYER_UNIT_SPELL_EFFECT
+      );
+    }
+
+    TriggerAddCondition(
+      this.itemActiveAbilityTrigger,
+      Condition(() => {
+        const itemAbility = itemAbilityConfig.get(GetSpellAbilityId());
+        if (itemAbility) {
+          itemAbility.performTriggerAction();
+        }
+        return false;
+      })
+    );
+  }
+
+  setupItemPassiveAbilityTrigger() {
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      const player = Player(i);
+      TriggerRegisterPlayerUnitEventSimple(
+        this.itemPassiveAbilityTrigger,
         player,
         EVENT_PLAYER_UNIT_PICKUP_ITEM,
       );
     }
 
     TriggerAddCondition(
-      this.bioLabTrigger,
+      this.itemPassiveAbilityTrigger,
       Condition(() => {
-        const unit = GetTriggerUnit();
-        const bioLab = GetManipulatedItem();
-        if (
-          GetItemTypeId(bioLab) == SagaItemConstants.SagaDrops.BIO_LAB_RESEARCH &&
-          IsUnitType(unit, UNIT_TYPE_HERO)
-        ) {
-          const position = new Vector2D(GetUnitX(unit), GetUnitY(unit));
-          const player = GetOwningPlayer(unit);
-          TimerStart(CreateTimer(), 1.0, true, () => {
-            if (UnitHasItem(unit, bioLab)) {
-              position.x = GetUnitX(unit);
-              position.y = GetUnitY(unit);
-              const damagedGroup = UnitHelper.getNearbyValidUnits(
-                position, 
-                SagaItemConstants.BIO_LAB_AOE, 
-                () => {
-                  return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player);
-                }
-              )
-
-              ForGroup(damagedGroup, () => {
-                const target = GetEnumUnit();
-                const damage = GetUnitState(target, UNIT_STATE_LIFE) * SagaItemConstants.BIO_LAB_DAMAGE;
-                if (damage > 0) {
-                  UnitDamageTarget(
-                    unit, 
-                    target, 
-                    damage,
-                    true,
-                    false,
-                    ATTACK_TYPE_HERO,
-                    DAMAGE_TYPE_UNKNOWN,
-                    WEAPON_TYPE_WHOKNOWS,
-                  )
-                }
-              })
-              
-              DestroyGroup(damagedGroup);
-            } else {
-              DestroyTimer(GetExpiredTimer());
-            }
-          })
+        const itemAbility = itemAbilityConfig.get(GetItemTypeId(GetManipulatedItem()));
+        if (itemAbility) {
+          itemAbility.performTriggerAction();
         }
         return false;
       })
-    )
-  }
-
-  setupSagaItemAbilityTrigger() {
-    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-      const player = Player(i);
-      TriggerRegisterPlayerUnitEventSimple(
-        this.sagaItemAbilityTrigger, 
-        player, 
-        EVENT_PLAYER_UNIT_SPELL_EFFECT
-      );
-    }
-
-    TriggerAddAction(
-      this.sagaItemAbilityTrigger,
-      () => {
-        const sagaItemAbility = sagaItemAbilityConfig.get(GetSpellAbilityId());
-        if (sagaItemAbility) {
-          sagaItemAbility.performTriggerAction();
-        }
-      }
-    )
-
+    );
   }
 }

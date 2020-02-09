@@ -127,7 +127,18 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       this.previousCoord = new Vector2D(targetCoord.x, targetCoord.y);
       this.nextDamageTick = ability.currentTick + this.delayBetweenDamageTicks;
     }
+    
+    if (ability.isFinishedUsing(this)) {
+      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+    }
   }
+
+  cleanup() {
+    AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+    AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+  }
+
 
   clone(): AbilityComponent {
     return new SwordSlash(

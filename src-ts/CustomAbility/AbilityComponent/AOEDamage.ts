@@ -152,9 +152,13 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     DestroyGroup(affectedGroup);
     
     if (ability.isFinishedUsing(this)) {
-      this.damageStarted = false;
-      this.damagedHeroes.clear();
+      this.cleanup();
     }
+  }
+
+  cleanup() {
+    this.damageStarted = false;
+    this.damagedHeroes.clear();
   }
 
   clone(): AbilityComponent {

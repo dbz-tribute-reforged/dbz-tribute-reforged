@@ -72,6 +72,10 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       }
     }
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

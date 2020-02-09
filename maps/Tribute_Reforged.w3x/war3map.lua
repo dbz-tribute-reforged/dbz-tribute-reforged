@@ -971,22 +971,24 @@ end
 
 function CreateAllItems()
     local itemID
-    BlzCreateItemWithSkin(FourCC("I02E"), 739.9, 21334.7, FourCC("I02E"))
+    BlzCreateItemWithSkin(FourCC("I02E"), 742.0, 21360.5, FourCC("I02E"))
     BlzCreateItemWithSkin(FourCC("I035"), 628.5, 21333.1, FourCC("I035"))
     BlzCreateItemWithSkin(FourCC("I036"), 571.2, 21212.6, FourCC("I036"))
     BlzCreateItemWithSkin(FourCC("I037"), 579.8, 21319.0, FourCC("I037"))
     BlzCreateItemWithSkin(FourCC("I03C"), 566.6, 21425.2, FourCC("I03C"))
     BlzCreateItemWithSkin(FourCC("I03D"), 594.0, 21516.2, FourCC("I03D"))
     BlzCreateItemWithSkin(FourCC("I03E"), 588.6, 21620.6, FourCC("I03E"))
-    BlzCreateItemWithSkin(FourCC("I03F"), 616.9, 21871.8, FourCC("I03F"))
+    BlzCreateItemWithSkin(FourCC("I03F"), 800.5, 21843.8, FourCC("I03F"))
     BlzCreateItemWithSkin(FourCC("I03Q"), 710.4, 21572.0, FourCC("I03Q"))
-    BlzCreateItemWithSkin(FourCC("I03R"), 582.4, 21734.3, FourCC("I03R"))
-    BlzCreateItemWithSkin(FourCC("I040"), 721.6, 21875.3, FourCC("I040"))
+    BlzCreateItemWithSkin(FourCC("I03R"), 609.2, 21916.9, FourCC("I03R"))
+    BlzCreateItemWithSkin(FourCC("I040"), 708.1, 21916.9, FourCC("I040"))
     BlzCreateItemWithSkin(FourCC("I046"), 649.6, 21452.6, FourCC("I046"))
     BlzCreateItemWithSkin(FourCC("I047"), 638.7, 21228.9, FourCC("I047"))
-    BlzCreateItemWithSkin(FourCC("I048"), 722.0, 21490.9, FourCC("I048"))
+    BlzCreateItemWithSkin(FourCC("I048"), 708.6, 21427.2, FourCC("I048"))
     BlzCreateItemWithSkin(FourCC("I049"), 732.4, 21702.8, FourCC("I049"))
     BlzCreateItemWithSkin(FourCC("I04A"), 787.8, 21470.7, FourCC("I04A"))
+    BlzCreateItemWithSkin(FourCC("I04B"), 579.1, 21768.9, FourCC("I04B"))
+    BlzCreateItemWithSkin(FourCC("I04C"), 791.7, 21623.9, FourCC("I04C"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -2556,7 +2558,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H090"), 758.7, 22183.4, 264.672, FourCC("H090"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 513.9, 21820.1, 288.250, FourCC("H08G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 464.7, 21812.1, 288.250, FourCC("H08G"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H08H"), 540.4, 21271.1, 229.460, FourCC("H08H"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
@@ -5439,11 +5441,11 @@ function Trig_Hints_Init_Actions()
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Press 'X' to Guard, greatly reducing incoming damage! Use it when you can't dodge an attack."
     udg_NumHints = (udg_NumHints + 1)
+    udg_HintMessages[udg_NumHints] = "Don't give up! Your base stats will always be at least 70% as strong as the strongest player's."
+    udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Saga locations are pinged on the minimap once every 30 seconds"
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Beam clashes exist! Firing a beam spell at an enemy beam will stop them in their tracks!"
-    udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "Use the HBTC after the 10 and 20 minutes mark to gain catchup stats!"
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "There are multiple food vendors located around the map that sell useful non-combat consumable regen items."
     udg_NumHints = (udg_NumHints + 1)
@@ -11499,20 +11501,24 @@ function Trig_Transformations_Piccolo_Actions()
     end
     if (Trig_Transformations_Piccolo_Func012C()) then
         udg_StatMultReal = 1.50
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Piccolo_Func013C()) then
         udg_StatMultReal = 1.75
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Piccolo_Func014C()) then
         udg_StatMultReal = 2.00
         udg_TransformationSFXString = "AuraWhite.mdx"
+        udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
     else
     end
     if (Trig_Transformations_Piccolo_Func015C()) then
         udg_StatMultReal = 2.40
         udg_TransformationSFXString = "AuraWhite.mdx"
+        udg_TransformationSFXString2 = "AuraDarkGreen.mdx"
     else
     end
     if (Trig_Transformations_Piccolo_Func019C()) then
@@ -12577,7 +12583,7 @@ function Trig_Transformations_Broly_Func019Func001Func001C()
     return false
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010Func001Func001Func003C()
+function Trig_Transformations_Broly_Func019Func001Func002Func001Func001Func003C()
     if (udg_TransformationString == "uss") then
         return true
     end
@@ -12587,14 +12593,14 @@ function Trig_Transformations_Broly_Func019Func001Func010Func001Func001Func003C(
     return false
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010Func001Func001C()
-    if (not Trig_Transformations_Broly_Func019Func001Func010Func001Func001Func003C()) then
+function Trig_Transformations_Broly_Func019Func001Func002Func001Func001C()
+    if (not Trig_Transformations_Broly_Func019Func001Func002Func001Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010Func001Func004C()
+function Trig_Transformations_Broly_Func019Func001Func002Func001Func004C()
     if (udg_TransformationString == "ss") then
         return true
     end
@@ -12604,21 +12610,21 @@ function Trig_Transformations_Broly_Func019Func001Func010Func001Func004C()
     return false
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010Func001C()
-    if (not Trig_Transformations_Broly_Func019Func001Func010Func001Func004C()) then
+function Trig_Transformations_Broly_Func019Func001Func002Func001C()
+    if (not Trig_Transformations_Broly_Func019Func001Func002Func001Func004C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010Func002C()
+function Trig_Transformations_Broly_Func019Func001Func002Func002C()
     if (not (GetHeroLevel(udg_StatMultUnit) < 150)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Broly_Func019Func001Func010C()
+function Trig_Transformations_Broly_Func019Func001Func002C()
     if (not (udg_TransformationString == "r")) then
         return false
     end
@@ -12702,6 +12708,26 @@ function Trig_Transformations_Broly_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     if (Trig_Transformations_Broly_Func019C()) then
         if (Trig_Transformations_Broly_Func019Func001C()) then
+            if (Trig_Transformations_Broly_Func019Func001Func002C()) then
+                if (Trig_Transformations_Broly_Func019Func001Func002Func002C()) then
+                                        udg_TransformationID = FourCC('H00M')
+                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+                else
+                                        udg_TransformationID = FourCC('H091')
+                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+                end
+            else
+                if (Trig_Transformations_Broly_Func019Func001Func002Func001C()) then
+                                        udg_TransformationID = FourCC('H00M')
+                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+                else
+                    if (Trig_Transformations_Broly_Func019Func001Func002Func001Func001C()) then
+                                                udg_TransformationID = FourCC('H091')
+                        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+                    else
+                    end
+                end
+            end
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AX"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0N1"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TransformationPlayer)
@@ -12710,26 +12736,6 @@ function Trig_Transformations_Broly_Actions()
             SetPlayerAbilityAvailableBJ(false, FourCC("A0N3"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            if (Trig_Transformations_Broly_Func019Func001Func010C()) then
-                if (Trig_Transformations_Broly_Func019Func001Func010Func002C()) then
-                                        udg_TransformationID = FourCC('H00M')
-                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-                else
-                                        udg_TransformationID = FourCC('H091')
-                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-                end
-            else
-                if (Trig_Transformations_Broly_Func019Func001Func010Func001C()) then
-                                        udg_TransformationID = FourCC('H00M')
-                    BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-                else
-                    if (Trig_Transformations_Broly_Func019Func001Func010Func001Func001C()) then
-                                                udg_TransformationID = FourCC('H091')
-                        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-                    else
-                    end
-                end
-            end
         else
         end
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)

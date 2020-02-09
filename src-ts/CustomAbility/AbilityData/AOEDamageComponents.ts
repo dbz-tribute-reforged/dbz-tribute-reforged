@@ -443,7 +443,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 2,
+      multiplier: BASE.KAME_EXPLOSION * 1.8,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -665,7 +665,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1,
+      multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -721,7 +721,7 @@ export const AOEDamageComponents = [
     aoe: 320,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.75,
+      multiplier: BASE.DFIST_DPS * 0.85,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -1146,14 +1146,14 @@ export const AOEDamageComponents = [
     name: "damage angry explosion dps",
     repeatInterval: 1,
     startTick: 50,
-    endTick: 149,
+    endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.2,
+      multiplier: BASE.KAME_DPS * 0.22,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1171,7 +1171,7 @@ export const AOEDamageComponents = [
     aoe: 800,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.8,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.85,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

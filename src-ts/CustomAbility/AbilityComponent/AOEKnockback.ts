@@ -48,6 +48,10 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     DestroyGroup(affectedGroup);
   }
 
+  cleanup() {
+    
+  }
+
   clone(): AbilityComponent {
     return new AOEKnockback(
       this.name, this.repeatInterval, this.startTick, this.endTick, 

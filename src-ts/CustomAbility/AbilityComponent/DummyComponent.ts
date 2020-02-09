@@ -16,6 +16,10 @@ export class DummyComponent implements AbilityComponent, Serializable<DummyCompo
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
 
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {

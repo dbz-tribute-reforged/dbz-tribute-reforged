@@ -72,8 +72,15 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick
     if (ability.isFinishedUsing(this)) {
+      this.cleanup();
+    }
+  }
+
+  cleanup() {
+    if (GetUnitTypeId(this.stunDummy) != 0) {
       RemoveUnit(this.stunDummy);
     }
+    this.alreadyStunned.clear();
   }
   
 

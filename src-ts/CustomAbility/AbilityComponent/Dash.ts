@@ -64,6 +64,9 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     }
   }
   
+  cleanup() {
+    
+  }
 
   clone(): AbilityComponent {
     return new Dash(

@@ -55,6 +55,10 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       DisableTrigger(this.cancelChannelTrigger);
     }
   }
+
+  cleanup() {
+    DestroyTrigger(this.cancelChannelTrigger);
+  }
   
 
   clone(): AbilityComponent {

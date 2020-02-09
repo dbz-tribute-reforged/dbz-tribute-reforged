@@ -44,6 +44,10 @@ export class Summon implements AbilityComponent, Serializable<Summon> {
       DestroyGroup(summonGroup);
     }
   }
+
+  cleanup() {
+    
+  }
   
 
   clone(): AbilityComponent {
