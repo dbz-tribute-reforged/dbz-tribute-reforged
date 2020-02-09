@@ -2,7 +2,7 @@ import { SagaUnit } from "./SagaUnit";
 import { Vector2D } from "Common/Vector2D";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbilities } from "./SagaAbilitiesConfig";
-import { SagaItemConstants } from "Core/SagaItemSystem/SagaItemConstants";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
@@ -27,7 +27,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Raditz.SATURDAY_CRASH
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
 
@@ -42,7 +42,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
     ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(8800, 1700),
@@ -51,7 +51,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
     
@@ -71,7 +71,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.WHEELO_RESEARCH_1,
+        ItemConstants.SagaDrops.WHEELO_RESEARCH_1,
       ]
     )],
 
@@ -82,7 +82,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
 
@@ -94,7 +94,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
       [
-        SagaItemConstants.SagaDrops.DARKNESS_GENERATOR,
+        ItemConstants.SagaDrops.DARKNESS_GENERATOR,
       ]
     )],
 
@@ -105,7 +105,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
     ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(30700, 25500),
@@ -121,7 +121,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_3,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
       ]
     )],
 
@@ -134,7 +134,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_4,
       ]
     )],
     ["Burter", new SagaUnit(FourCC("U00Z"), 10, 400, 650, 350, new Vector2D(24000, 29700))],
@@ -143,7 +143,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_3,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
       ]
     )],
     ["Ginyu", new SagaUnit(FourCC("U000"), 45, 800, 250, 800, new Vector2D(24500, 29600),
@@ -152,8 +152,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_4,
-        SagaItemConstants.SagaDrops.SCOUTER_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        ItemConstants.SagaDrops.SCOUTER_2,
       ]
     )],
 
@@ -174,20 +174,20 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
-    ["Frieza 4", new SagaUnit(FourCC("U014"), 30, 1500, 400, 1400, new Vector2D(21500, 26100),
+    ["Frieza 4", new SagaUnit(FourCC("U014"), 35, 1500, 400, 1400, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
-    ["Frieza 5", new SagaUnit(FourCC("U018"), 60, 2000, 500, 1800, new Vector2D(21500, 26100),
+    ["Frieza 5", new SagaUnit(FourCC("U018"), 70, 2000, 500, 1800, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_5,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_5,
       ]
     )],
 
@@ -198,7 +198,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT,
+        ItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT,
       ]
     )],
     ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(-2500, 27000))],
@@ -223,7 +223,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
       [
-        SagaItemConstants.SagaDrops.GETI_STAR_FRAGMENT,
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT,
       ]
     )],
     ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
@@ -265,6 +265,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
       ],
+      [
+        ItemConstants.SagaDrops.GERO_BOOTS,
+      ]
     )],
 
     // androids 16/17/18 saga
@@ -274,7 +277,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Android17DBS.ANDROID_BARRIER,
       ],
       [
-        SagaItemConstants.SagaDrops.ANDROID_BOMB,
+        ItemConstants.SagaDrops.ANDROID_BOMB,
       ]
     )],
     ["Android 17", new SagaUnit(FourCC("H05C"), 50, 3500, 350, 3000, new Vector2D(15500, 6500),
@@ -408,7 +411,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
       ],
       [
-        SagaItemConstants.SagaDrops.BIO_LAB_RESEARCH,
+        ItemConstants.SagaDrops.BIO_LAB_RESEARCH,
       ]
     )],
     
@@ -421,6 +424,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Broly.GIGANTIC_OMEGASTORM,
       ],
+      [
+        ItemConstants.SagaDrops.BROLY_FUR,
+      ]
     )],
 
     // bojack unbound
@@ -520,7 +526,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.ENERGY_PUNCH,
       ],
       [
-        SagaItemConstants.SagaDrops.DIMENSION_SWORD,
+        ItemConstants.SagaDrops.DIMENSION_SWORD,
       ]
     )],
 
@@ -558,7 +564,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.BRAVE_SWORD,
+        ItemConstants.SagaDrops.BRAVE_SWORD,
       ]
     )],
 
@@ -583,7 +589,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Vegeta.BIG_BANG_ATTACK,
       ],
       [
-        SagaItemConstants.SagaDrops.BATTLE_ARMOR_5,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_5,
       ]
     )],
 
@@ -681,7 +687,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
       [
-        SagaItemConstants.SagaDrops.SORBET_RING,
+        ItemConstants.SagaDrops.SORBET_RING,
       ]
     )],
     // sorbet
@@ -721,7 +727,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.SORROWFUL_SCYTHE,
+        ItemConstants.SagaDrops.SORROWFUL_SCYTHE,
       ]
     )],
     ["Zamasu", new SagaUnit(FourCC("E012"), 110, 14000, 400, 17000, new Vector2D(12000, 28000),
@@ -730,7 +736,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        SagaItemConstants.SagaDrops.TIME_RING,
+        ItemConstants.SagaDrops.TIME_RING,
       ]
     )],
     

@@ -665,7 +665,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1,
+      multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -721,7 +721,7 @@ export const AOEDamageComponents = [
     aoe: 320,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.75,
+      multiplier: BASE.DFIST_DPS * 0.85,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,

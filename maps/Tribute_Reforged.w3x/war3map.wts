@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34e
+DBZ Tribute Reforged 0.34f
 }
 
 STRING 4
@@ -9837,6 +9837,12 @@ STRING 1569
 Bio Lab Research
 }
 
+STRING 1570
+// Items: I048 (Geti Star Fragment), Description (Description)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 3 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
 STRING 1571
 // Items: I01Y (Bio Lab Research), Ubertip (Tooltip - Extended)
 {
@@ -10557,12 +10563,6 @@ STRING 1688
 Geti Star Fragment
 }
 
-STRING 1689
-// Items: I048 (Geti Star Fragment), Description (Description)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2 @ 200%|r|n|cff00ffffCooldown: 90s|r
-}
-
 STRING 1690
 // Items: I03C (Battle Armor [|cffFFFF003/5|r]), Name (Name)
 {
@@ -10579,12 +10579,6 @@ STRING 1692
 // Items: I047 (Android Bomb), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
-}
-
-STRING 1693
-// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2 @ 200%|r|n|cff00ffffCooldown: 90s|r
 }
 
 STRING 1694
@@ -10645,6 +10639,18 @@ STRING 1703
 // Items: I03F (Brave Sword [|cffFFFF001/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Brave Sword [|cffFFFF001/5|r]
+}
+
+STRING 1704
+// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 3 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
+STRING 1705
+// Items: I04A (Sorrowful Scythe), Description (Description)
+{
+|cffffff0040% of melee damage cleaves to nearby enemies.|r
 }
 
 STRING 1706
@@ -33710,6 +33716,12 @@ STRING 5540
 E
 }
 
+STRING 5541
+// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
+{
+|cffffff0040% of melee damage cleaves to nearby enemies.|r
+}
+
 STRING 5542
 // Abilities: A0C3 (BeerusBall), Researchtip (Tooltip - Learn)
 {
@@ -46847,20 +46859,8 @@ STRING 7717
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 10|r]
 }
 
-STRING 7718
-// Items: I04A (Sorrowful Scythe), Description (Description)
-{
-|cffffff0010% of melee damage cleaves to nearby enemies.|r
-}
-
-STRING 7719
-// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
-{
-|cffffff0010% of melee damage cleaves to nearby enemies.|r
-}
-
 STRING 7720
-// Abilities: A0IP (Sorrowful Scythe), Name (Name)
+// Items: I04A (Sorrowful Scythe), Name (Name)
 {
 Sorrowful Scythe
 }
@@ -46872,27 +46872,15 @@ Time Ring
 }
 
 STRING 7722
-// Abilities: A0NV (Sorrowful Scythe), Name (Name)
+// Abilities: A0IP (Sorrowful Scythe), Name (Name)
 {
 Sorrowful Scythe
 }
 
 STRING 7723
-// Abilities: A0NV (Sorrowful Scythe), EditorSuffix (Editor Suffix)
+// Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
 {
 Item
-}
-
-STRING 7724
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage.|n|cff999999"Sharp and Shiny!"|r
-}
-
-STRING 7725
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage.|n|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 7726
@@ -51151,7 +51139,7 @@ Goku Black and his clones rush towards the target area, spinning in a circle and
 }
 
 STRING 8432
-// Items: I04A (Sorrowful Scythe), Name (Name)
+// Abilities: A0NV (Sorrowful Scythe), Name (Name)
 {
 Sorrowful Scythe
 }
@@ -52447,7 +52435,7 @@ Using advanced technology, Cooler is able to convert non-lethal damage to repair
 }
 
 STRING 8644
-// Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
+// Abilities: A0NV (Sorrowful Scythe), EditorSuffix (Editor Suffix)
 {
 Item
 }
@@ -70455,10 +70443,34 @@ STRING 11614
 [|cff00FF00R|r] Moonlight - [|cffffcc00Level 6|r]
 }
 
+STRING 11615
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Name (Name)
+{
+Broly's Fur Pelt [|cffFFFF006/5|r]
+}
+
+STRING 11616
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Tip (Tooltip - Basic)
+{
+Purchase Saiyan Armor [|cffFFFF001/5|r]
+}
+
 STRING 11617
 // Items: I02W (Dimension Sword 1 Janemba), Name (Name)
 {
 Dimension Sword 1 Janemba
+}
+
+STRING 11618
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+{
+|cffffff00+18 armor.|r|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 11619
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+{
+|cffffff00+18 armor.|r|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 11620
@@ -71854,5 +71866,47 @@ STRING 11846
 // Buffs/Effects: B023 (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Wheelo's Research; damage it deals to enemy units will restore hit points.
+}
+
+STRING 11847
+// Abilities: A0NW (Battle Armor 6), Name (Name)
+{
+Battle Armor 6
+}
+
+STRING 11848
+// Abilities: A0NW (Battle Armor 6), EditorSuffix (Editor Suffix)
+{
+broly fur
+}
+
+STRING 11849
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+250 damage. Reduces the mana of nearby enemy units by 4% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 11850
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+250 damage. Reduces the mana of nearby enemy units by 4% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 11851
+// Items: I04C (Gero's Boots), Name (Name)
+{
+Gero's Boots
+}
+
+STRING 11852
+// Items: I04C (Gero's Boots), Ubertip (Tooltip - Extended)
+{
+|cffffff00Increases the movement speed of the Hero by 60. Only useful when on low hp (and below max movement speed).|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+}
+
+STRING 11853
+// Items: I04C (Gero's Boots), Description (Description)
+{
+|cffffff00Increases the movement speed of the Hero by 60. Only useful when on low hp (and below max movement speed).|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
 }
 

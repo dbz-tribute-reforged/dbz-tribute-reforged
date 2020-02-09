@@ -54,7 +54,11 @@ export class TournamentContestant {
     this.units.clear();
     const playerUnits = CreateGroup();
     GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), Filter(() => {
-      return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && !UnitHelper.isUnitDead(GetFilterUnit());
+      return (
+        IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && 
+        !UnitHelper.isUnitDead(GetFilterUnit()) && 
+        !BlzIsUnitInvulnerable(GetFilterUnit())
+      );
     }));
 
     ForGroup(playerUnits, () => {

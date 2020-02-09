@@ -132,6 +132,7 @@ export module AbilitySfxHelper {
 
   export function cleanupPersistentSfx(persistentSfx: effect[]) {
     for (const currentSfx of persistentSfx) {
+      BlzPlaySpecialEffect(currentSfx, ANIM_TYPE_DEATH);
       DestroyEffect(currentSfx);
     }
   }
