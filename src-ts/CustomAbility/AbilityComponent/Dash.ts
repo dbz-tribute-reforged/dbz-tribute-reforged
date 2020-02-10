@@ -35,6 +35,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     
     if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
       direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+      SetUnitFacing(source, direction);
 
     } else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
       direction = GetUnitFacing(source);
@@ -65,7 +66,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   }
   
   cleanup() {
-    
+
   }
 
   clone(): AbilityComponent {

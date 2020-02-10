@@ -8,6 +8,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 0,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -57,6 +58,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 0,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -87,6 +89,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -219,6 +222,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -368,6 +372,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -517,6 +522,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -556,6 +562,23 @@ export const SfxComponents = [
       {
         model: "DragonSegment2.mdl",
         repeatInterval: 1,
+        group: 0,
+        scale: 3,
+        startHeight: 75,
+        endHeight: 200,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 25,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "DragonTail.mdl",
+        repeatInterval: 0,
         group: 0,
         scale: 3,
         startHeight: 75,
@@ -717,6 +740,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -848,6 +872,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -946,6 +971,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1044,6 +1070,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1074,6 +1101,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1172,6 +1200,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1253,6 +1282,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1350,6 +1380,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1380,6 +1411,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1478,13 +1510,14 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
         repeatInterval: 16,
         group: 0,
-        scale: 2,
+        scale: 1.5,
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
@@ -1495,6 +1528,23 @@ export const SfxComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 1.5,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 205,
+          z: 105,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
         attachmentPoint: "",
       },
       {
@@ -1509,23 +1559,6 @@ export const SfxComponents = [
           x: 255,
           y: 155,
           z: 25,
-        },
-        updateCoordsOnly: false,
-        persistent: false,
-        attachmentPoint: "",
-      },
-      {
-        model: "LightStrikeArray2.mdl",
-        repeatInterval: 0,
-        group: 0,
-        scale: 1.0,
-        startHeight: 100,
-        endHeight: 100,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 255,
-          z: 255,
         },
         updateCoordsOnly: false,
         persistent: false,
@@ -1559,6 +1592,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1691,6 +1725,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1772,6 +1807,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1853,6 +1889,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1916,6 +1953,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -1963,6 +2001,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 25,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2027,6 +2066,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2108,6 +2148,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 22,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2172,6 +2213,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2253,6 +2295,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2351,6 +2394,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2432,6 +2476,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2513,6 +2558,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 99,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2572,11 +2618,145 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam pan kamehameha", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 40,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "KameBase.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "WindCircleFaster.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 135,
+          y: 245,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 3.75,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 135,
+          y: 245,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        repeatInterval: 3,
+        group: 0,
+        scale: 1.2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "IceNova.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 2,
+        startHeight: 100,
+        endHeight: 100,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 205,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+        repeatInterval: 5,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        color: {
+          x: 105,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx beam maiden blast", 
     repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 50,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2674,8 +2854,9 @@ export const SfxComponents = [
     name: "sfx reliable friend", 
     repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 66,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2706,6 +2887,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2753,15 +2935,16 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 10,
-        startHeight: 400,
-        endHeight: 400,
+        scale: 6.6,
+        startHeight: 300,
+        endHeight: 300,
         extraDirectionalYaw: 0,
         color: {
           x: 0,
@@ -2783,15 +2966,16 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 6,
-        startHeight: 400,
-        endHeight: 400,
+        scale: 4,
+        startHeight: 300,
+        endHeight: 300,
         extraDirectionalYaw: 0,
         color: {
           x: 155,
@@ -2813,15 +2997,16 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 10,
-        startHeight: 400,
-        endHeight: 400,
+        scale: 6.6,
+        startHeight: 300,
+        endHeight: 300,
         extraDirectionalYaw: 0,
         color: {
           x: 0,
@@ -2843,6 +3028,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2907,6 +3093,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -2988,6 +3175,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3018,6 +3206,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 25,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3065,6 +3254,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3180,6 +3370,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3244,6 +3435,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3274,15 +3466,16 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
+        model: "WhisShield.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 4,
-        startHeight: 75,
-        endHeight: 75,
+        scale: 3,
+        startHeight: 50,
+        endHeight: 50,
         extraDirectionalYaw: 0,
         color: {
           x: 0,
@@ -3304,6 +3497,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3385,6 +3579,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 50,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3432,6 +3627,7 @@ export const SfxComponents = [
     startTick: 50,
     endTick: 50,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3479,6 +3675,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3577,6 +3774,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3641,6 +3839,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3739,6 +3938,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3803,6 +4003,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -3987,6 +4188,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4153,6 +4355,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4303,6 +4506,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4384,6 +4588,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4533,6 +4738,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4597,6 +4803,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4644,6 +4851,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4776,6 +4984,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4873,6 +5082,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4953,6 +5163,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: 0,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -4982,6 +5193,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -5046,6 +5258,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -5093,6 +5306,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5173,6 +5387,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5220,6 +5435,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5283,6 +5499,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5330,6 +5547,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -5377,6 +5595,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5475,6 +5694,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_DYNAMIC,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -5505,6 +5725,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5569,6 +5790,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5633,6 +5855,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5697,6 +5920,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5795,6 +6019,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5841,6 +6066,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {
@@ -5905,6 +6131,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
     sfxList: [
       {

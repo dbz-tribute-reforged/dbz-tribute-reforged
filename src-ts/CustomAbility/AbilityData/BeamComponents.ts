@@ -639,9 +639,11 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage kame dps" },
-      { name: "damage kame explosion" },
+      // doesnt trigger due to beam end tick being earlier than duration
+      // { name: "damage kame explosion" },
       { name: "knockback kame" },
-      { name: "sfx beam kamehameha" },
+      // note: must change sfx endtick to match beam endtick
+      { name: "sfx beam pan kamehameha" },
     ],
   },
   // -------------------------------------------
@@ -675,6 +677,7 @@ export const BeamComponents = [
       { name: "damage beam maiden blast dps" },
       { name: "damage beam maiden blast explosion" },
       { name: "knockback kame" },
+      // note: must change sfx end tick to match beam end tick
       { name: "sfx beam maiden blast" },
     ],
   },

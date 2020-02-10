@@ -69,6 +69,7 @@ export class TournamentContestant {
           new Vector2D(GetUnitX(unit), GetUnitY(unit))
         ),
       );
+      UnitResetCooldown(unit);
     })
 
     DestroyGroup(playerUnits);

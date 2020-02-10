@@ -32,7 +32,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
+        model: "WhisShield.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -259,7 +259,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
+        model: "WhisShield.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
@@ -618,7 +618,7 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl",
+        model: "WhisShield.mdl",
         repeatInterval: 0,
         group: 0,
         scale: 1.0,

@@ -788,8 +788,8 @@ export const AOEDamageComponents = [
   {
     name: "damage beam maiden blast explosion",
     repeatInterval: 1,
-    startTick: -1,
-    endTick: -1,
+    startTick: 50,
+    endTick: 50,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
@@ -923,10 +923,10 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 450,
+    aoe: 300,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.1,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.08,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -942,7 +942,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 400,
+    aoe: 300,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.01,
@@ -1657,7 +1657,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1.2,
+      multiplier: BASE.KAME_EXPLOSION * 1.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
