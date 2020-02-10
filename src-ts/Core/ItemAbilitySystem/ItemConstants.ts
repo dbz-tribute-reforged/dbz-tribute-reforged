@@ -67,11 +67,12 @@ export module ItemConstants {
     FourCC("I04A"),
   ];
 
-  export module Regen {
+  export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
     export const ROAST_HAM = FourCC("I001");
     export const BANANA = FourCC("I044");
     export const KRABBY_PATTY = FourCC("I045");
+    export const PUDDING = FourCC("I04D");
   }
 
   export module SagaDrops {
@@ -102,6 +103,8 @@ export module ItemConstants {
     export const DIMENSION_SWORD = dimensionSwordSaga[0];
 
     export const BRAVE_SWORD = braveSword[0];
+
+    export const BEERUS_PUDDING = Consumables.PUDDING;
 
     export const SORBET_RING = sorbetRing[0];
 

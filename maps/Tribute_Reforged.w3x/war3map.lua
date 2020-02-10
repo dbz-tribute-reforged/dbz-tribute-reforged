@@ -171,6 +171,7 @@ udg_HintMessageIndex = 0
 udg_SorbetLightning = nil
 udg_SorbetTimer = nil
 udg_DarknessGeneratorPlayerValues = __jarray(0)
+udg_DarknessGeneratorDuration = 0.0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -790,6 +791,7 @@ function InitGlobals()
         udg_DarknessGeneratorPlayerValues[i] = 0
         i = i + 1
     end
+    udg_DarknessGeneratorDuration = 0.0
 end
 
 function Angle_Diff(a1, a2)
@@ -971,24 +973,25 @@ end
 
 function CreateAllItems()
     local itemID
-    BlzCreateItemWithSkin(FourCC("I02E"), 742.0, 21360.5, FourCC("I02E"))
+    BlzCreateItemWithSkin(FourCC("I02E"), 692.4, 21350.5, FourCC("I02E"))
     BlzCreateItemWithSkin(FourCC("I035"), 628.5, 21333.1, FourCC("I035"))
     BlzCreateItemWithSkin(FourCC("I036"), 571.2, 21212.6, FourCC("I036"))
     BlzCreateItemWithSkin(FourCC("I037"), 579.8, 21319.0, FourCC("I037"))
     BlzCreateItemWithSkin(FourCC("I03C"), 566.6, 21425.2, FourCC("I03C"))
     BlzCreateItemWithSkin(FourCC("I03D"), 594.0, 21516.2, FourCC("I03D"))
     BlzCreateItemWithSkin(FourCC("I03E"), 588.6, 21620.6, FourCC("I03E"))
-    BlzCreateItemWithSkin(FourCC("I03F"), 800.5, 21843.8, FourCC("I03F"))
+    BlzCreateItemWithSkin(FourCC("I03F"), 757.3, 21897.9, FourCC("I03F"))
     BlzCreateItemWithSkin(FourCC("I03Q"), 710.4, 21572.0, FourCC("I03Q"))
-    BlzCreateItemWithSkin(FourCC("I03R"), 609.2, 21916.9, FourCC("I03R"))
-    BlzCreateItemWithSkin(FourCC("I040"), 708.1, 21916.9, FourCC("I040"))
+    BlzCreateItemWithSkin(FourCC("I03R"), 585.3, 21940.0, FourCC("I03R"))
+    BlzCreateItemWithSkin(FourCC("I040"), 670.4, 21958.3, FourCC("I040"))
     BlzCreateItemWithSkin(FourCC("I046"), 649.6, 21452.6, FourCC("I046"))
     BlzCreateItemWithSkin(FourCC("I047"), 638.7, 21228.9, FourCC("I047"))
-    BlzCreateItemWithSkin(FourCC("I048"), 708.6, 21427.2, FourCC("I048"))
+    BlzCreateItemWithSkin(FourCC("I048"), 685.8, 21537.1, FourCC("I048"))
     BlzCreateItemWithSkin(FourCC("I049"), 732.4, 21702.8, FourCC("I049"))
     BlzCreateItemWithSkin(FourCC("I04A"), 787.8, 21470.7, FourCC("I04A"))
     BlzCreateItemWithSkin(FourCC("I04B"), 579.1, 21768.9, FourCC("I04B"))
-    BlzCreateItemWithSkin(FourCC("I04C"), 791.7, 21623.9, FourCC("I04C"))
+    BlzCreateItemWithSkin(FourCC("I04C"), 627.1, 21819.0, FourCC("I04C"))
+    BlzCreateItemWithSkin(FourCC("I04D"), 645.3, 21710.4, FourCC("I04D"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -1311,7 +1314,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 7872.5, 19034.9, 265.536, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 11803.1, 18655.8, 249.054, FourCC("n014"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 3647.3, 18592.8, 277.853, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n031"), 10751.8, 17089.9, 250.166, FourCC("n031"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -1521,9 +1524,9 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 2478.5, -7509.5, 22.200, FourCC("n02E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 11725.9, 16870.3, 331.742, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12016.3, 17834.2, 184.068, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8963.7, 18352.1, 44.573, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 8864.6, 18158.1, 221.964, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 12026.0, 18046.7, 269.321, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6078.0, 17194.0, 44.573, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6264.4, 16950.1, 221.964, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 6204.0, 6546.4, 274.875, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 5340.1, -1992.7, 121.993, FourCC("n02E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16784.9, 6459.3, 347.391, FourCC("n015"))
@@ -1534,7 +1537,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 1563.9, 18547.5, 288.675, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 3128.4, 18219.7, 248.846, FourCC("n014"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n014"), 2965.5, 18562.3, 248.846, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6716.0, -3686.3, 91.134, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 2931.3, 15743.4, 248.846, FourCC("n014"))
@@ -2182,6 +2185,12 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 27942.3, 3856.5, 324.002, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 26161.4, 8900.3, 163.365, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02P"), 26057.8, 26832.9, 304.408, FourCC("n02P"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 8982.0, 18486.6, 315.764, FourCC("n03B"))
+    SetUnitColor(u, ConvertPlayerColor(8))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 7125.2, 17962.9, 342.197, FourCC("n03B"))
+    SetUnitColor(u, ConvertPlayerColor(8))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 11313.7, 18877.6, 267.090, FourCC("n03B"))
+    SetUnitColor(u, ConvertPlayerColor(8))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -2342,7 +2351,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("E012"), -204.1, 22217.6, 280.094, FourCC("E012"))
     SetUnitColor(u, ConvertPlayerColor(1))
-    u = BlzCreateUnitWithSkin(p, FourCC("E019"), 1051.4, 21894.2, 302.358, FourCC("E019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("E019"), 590.3, 22534.8, 302.358, FourCC("E019"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("H04T"), 71.5, 22205.2, 270.854, FourCC("H04T"))
     u = BlzCreateUnitWithSkin(p, FourCC("E00T"), 195.5, 22586.5, 268.738, FourCC("E00T"))
@@ -2558,9 +2567,9 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H090"), 758.7, 22183.4, 264.672, FourCC("H090"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 464.7, 21812.1, 288.250, FourCC("H08G"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 956.8, 21928.0, 288.250, FourCC("H08G"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08H"), 540.4, 21271.1, 229.460, FourCC("H08H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08H"), 880.3, 21610.8, 273.983, FourCC("H08H"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("O005"), 21631.0, -4429.6, 245.203, FourCC("O005"))
     SetUnitState(u, UNIT_STATE_MANA, 400)
@@ -2574,7 +2583,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("n03W"), 119.2, 22036.2, 273.121, FourCC("n03W"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n028"), 41.7, 22005.6, 102.510, FourCC("n028"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08I"), 493.3, 21950.0, 278.520, FourCC("H08I"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08I"), 876.2, 21744.2, 126.008, FourCC("H08I"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n02R"), -45.7, 21952.5, 147.730, FourCC("n02R"))
@@ -3290,6 +3299,8 @@ function Trig_Cell_Juniors_Actions()
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt2)
     ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt3)
     SuspendHeroXPBJ(false, GetSummonedUnit())
+    UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
+    SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
 end
 
 function InitTrig_Cell_Juniors()
@@ -4916,9 +4927,9 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
             udg_PVPHeroKilledStats = (udg_StatMultStr + (udg_StatMultAgi + udg_StatMultInt))
             if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func005C()) then
                 udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + (I2R(GetUnitFoodMade(GetDyingUnit())) - 100.00)) * 0.33)
-                udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 50.00)
+                udg_PVPBaseStatReward = (udg_PVPBaseStatReward + 75.00)
             else
-                udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.50)
+                udg_PVPBaseStatReward = ((I2R(GetHeroLevel(GetDyingUnit())) + I2R(GetUnitFoodMade(GetDyingUnit()))) * 0.75)
             end
             if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009C()) then
                 ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))], Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008A)
@@ -6926,7 +6937,7 @@ function InitTrig_Tournament_Trophy_Acquire_Item()
 end
 
 function Trig_Tournament_Trophy_Give_Reward_Actions()
-    udg_StatMultReal = (20.00 + (3.00 * I2R(udg_ScoreboardTimeMinutes)))
+    udg_StatMultReal = (25.00 + (2.00 * I2R(udg_ScoreboardTimeMinutes)))
     TriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Add_To_Tourney_Stats_Data)
     TriggerExecute(gg_trg_Update_Current_Stats)
@@ -7444,7 +7455,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
         SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
                 SetUnitPosition(udg_HeroRespawnUnit, udg_PlayerSpawnX[udg_TempInt], udg_PlayerSpawnY[udg_TempInt])
-        udg_TempReal = (15.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50))
+        udg_TempReal = RMinBJ(150.00, (20.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
         SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
         udg_TempLoc = GetUnitLoc(udg_HeroRespawnUnit)
@@ -12028,7 +12039,7 @@ function Trig_Transformations_Farmer_with_Shotgun_MUI_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     if (Trig_Transformations_Farmer_with_Shotgun_MUI_Func010C()) then
         udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
-        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_2868")
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_1689")
                 DestroyForce(udg_TempPlayerGroup)
     else
     end
@@ -16466,6 +16477,7 @@ function Trig_Darkness_Generator_Init_Actions()
         end
         udg_TempInt = udg_TempInt + 1
     end
+    udg_DarknessGeneratorDuration = 15.00
     EnableTrigger(gg_trg_Darkness_Generator_Loop)
 end
 
@@ -16476,34 +16488,45 @@ function InitTrig_Darkness_Generator_Init()
     TriggerAddAction(gg_trg_Darkness_Generator_Init, Trig_Darkness_Generator_Init_Actions)
 end
 
-function Trig_Darkness_Generator_Loop_Func002Func002C()
+function Trig_Darkness_Generator_Loop_Func002Func002Func002C()
     if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Darkness_Generator_Loop_Func003C()
+function Trig_Darkness_Generator_Loop_Func002Func003C()
     if (not (udg_TempBool == true)) then
         return false
     end
     return true
 end
 
+function Trig_Darkness_Generator_Loop_Func002C()
+    if (not (udg_DarknessGeneratorDuration <= 0.00)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Darkness_Generator_Loop_Actions()
-    udg_TempBool = true
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_DarknessGeneratorPlayerValues[udg_TempInt] = IMaxBJ(0, (udg_DarknessGeneratorPlayerValues[udg_TempInt] - 1))
-        if (Trig_Darkness_Generator_Loop_Func002Func002C()) then
-            udg_TempBool = false
+    udg_DarknessGeneratorDuration = (udg_DarknessGeneratorDuration - 1.00)
+    if (Trig_Darkness_Generator_Loop_Func002C()) then
+        udg_TempBool = true
+        udg_TempInt = 1
+        while (true) do
+            if (udg_TempInt > udg_MaxNumPlayers) then break end
+            udg_DarknessGeneratorPlayerValues[udg_TempInt] = IMaxBJ(0, (udg_DarknessGeneratorPlayerValues[udg_TempInt] - 1))
+            if (Trig_Darkness_Generator_Loop_Func002Func002Func002C()) then
+                udg_TempBool = false
+            else
+            end
+            udg_TempInt = udg_TempInt + 1
+        end
+        if (Trig_Darkness_Generator_Loop_Func002Func003C()) then
+            DisableTrigger(GetTriggeringTrigger())
         else
         end
-        udg_TempInt = udg_TempInt + 1
-    end
-    if (Trig_Darkness_Generator_Loop_Func003C()) then
-        DisableTrigger(GetTriggeringTrigger())
     else
     end
 end
@@ -16511,7 +16534,7 @@ end
 function InitTrig_Darkness_Generator_Loop()
     gg_trg_Darkness_Generator_Loop = CreateTrigger()
     DisableTrigger(gg_trg_Darkness_Generator_Loop)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Darkness_Generator_Loop, 15.00)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Darkness_Generator_Loop, 1.00)
     TriggerAddAction(gg_trg_Darkness_Generator_Loop, Trig_Darkness_Generator_Loop_Actions)
 end
 

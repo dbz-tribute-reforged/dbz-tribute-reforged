@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34f
+DBZ Tribute Reforged 0.34g
 }
 
 STRING 4
@@ -10407,24 +10407,6 @@ STRING 1662
 Darkness Generator
 }
 
-STRING 1663
-// Items: I035 (Darkness Generator), Ubertip (Tooltip - Extended)
-{
-Reduces the sight radius of all heroes for a brief period of time.
-}
-
-STRING 1664
-// Items: I035 (Darkness Generator), Description (Description)
-{
-Reduces the sight radius of all heroes for a brief period of time.
-}
-
-STRING 1665
-// Items: I035 (Darkness Generator), Tip (Tooltip - Basic)
-{
-Reduces the sight radius of all heroes for a brief period of time.
-}
-
 STRING 1666
 // Items: I036 (Battle Armor [|cffFFFF001/5|r]), Name (Name)
 {
@@ -10563,6 +10545,23 @@ STRING 1688
 Geti Star Fragment
 }
 
+STRING 1689
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "kao"
+[lvl 30]  1.50x "ss"
+[lvl 85]  2.00x "ss2"
+[lvl 125] 2.25x "ss3"
+[lvl 150] 2.50x "ssg" [unlocks god kame]
+[lvl 200] 2.60x "ssb"
+[lvl 225] 2.70x "ssbkao"
+
+|cff00ffffUltra Instinct:|r
+Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.
+3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
+}
+
 STRING 1690
 // Items: I03C (Battle Armor [|cffFFFF003/5|r]), Name (Name)
 {
@@ -10579,6 +10578,12 @@ STRING 1692
 // Items: I047 (Android Bomb), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
+}
+
+STRING 1693
+// Items: I00I (Dr Wheelo's Research [1/5]), Description (Description)
+{
+The owner of this item will convert 7% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
 }
 
 STRING 1694
@@ -10912,9 +10917,9 @@ Scouter 2.0
 }
 
 STRING 1749
-// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
+// Items: I00I (Dr Wheelo's Research [1/5]), Ubertip (Tooltip - Extended)
 {
-Adds 2000 bonus damage to the carrier and attacks reduce the target's armor by 50.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
+The owner of this item will convert 7% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
 }
 
 STRING 1750
@@ -10924,9 +10929,9 @@ STRING 1750
 }
 
 STRING 1751
-// Items: I03R (Dimension Sword S [1/5]), Description (Description)
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
 {
-Adds 2000 bonus damage to the carrier and attacks reduce the target's armor by 50.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
+|cffffff00+18 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 1752
@@ -17634,19 +17639,9 @@ Candy Gobbler
 }
 
 STRING 2868
+// Items: I04D (Beerus' Pudding), Name (Name)
 {
-Type "r" to revert.
-Transformations:
-[lvl 15]  1.25x "kao"
-[lvl 30]  1.50x "ss"
-[lvl 85]  2.00x "ss2"
-[lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg"
-[lvl 200] 2.60x "ssb"
-[lvl 225] 2.70x "ssbkao"
-
-|cff00ffffUltra Instinct:|r
-Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.|n3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
+Beerus' Pudding
 }
 
 STRING 2869
@@ -34619,7 +34614,8 @@ Transformations:
 [lvl 225] 2.70x "ssbkao"
 
 |cff00ffffUltra Instinct:|r
-Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.|n3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
+Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.
+3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
 }
 
 STRING 5690
@@ -43512,24 +43508,6 @@ Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Ta
 
 }
 
-STRING 7161
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool2> seconds|r
-}
-
-STRING 7162
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool3> seconds|r
-}
-
-STRING 7163
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool4> seconds|r
-}
-
 STRING 7164
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
@@ -43548,18 +43526,6 @@ STRING 7166
 [|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4r]
 }
 
-STRING 7167
-// Abilities: A0C8 (Slappy Hand), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool5> seconds|r
-}
-
-STRING 7168
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> seconds|r
-}
-
 STRING 7169
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
@@ -43570,12 +43536,6 @@ STRING 7170
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5r]
-}
-
-STRING 7171
-// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo stretches his arm out and grabs the first unit he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool5> seconds|r
 }
 
 STRING 7172
@@ -46859,6 +46819,18 @@ STRING 7717
 [|cff00ff00R|r] Geti Star Repair - [|cffffcc00Level 10|r]
 }
 
+STRING 7718
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+{
+|cffffff00+18 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 7719
+// Items: I04C (Gero's Boots), Ubertip (Tooltip - Extended)
+{
+|cffffff00Increases the movement speed of the Hero by 40 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+}
+
 STRING 7720
 // Items: I04A (Sorrowful Scythe), Name (Name)
 {
@@ -46881,6 +46853,12 @@ STRING 7723
 // Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
 {
 Item
+}
+
+STRING 7724
+// Items: I04C (Gero's Boots), Description (Description)
+{
+|cffffff00Increases the movement speed of the Hero by 40 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
 }
 
 STRING 7726
@@ -51492,15 +51470,15 @@ STRING 8490
 }
 
 STRING 8491
-// Items: I00I (Dr Wheelo's Research [1/5]), Description (Description)
+// Items: I04D (Beerus' Pudding), Description (Description)
 {
-The owner of this item will convert 5% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
+Renders Hero immune to debuffs.
 }
 
 STRING 8492
-// Items: I00I (Dr Wheelo's Research [1/5]), Ubertip (Tooltip - Extended)
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
-The owner of this item will convert 5% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool2>s|r
 }
 
 STRING 8493
@@ -64634,7 +64612,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 9.Feb.20
+This map is under active development - 11.Feb.20
 }
 
 STRING 10653
@@ -64665,10 +64643,11 @@ Transformations:
 [lvl 15]  1.25x "first"
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
+[lvl 30+] 2.00x (absorb 17/18)
 [lvl 130] 2.50x "super"
 
 To reach Cell's higher forms you must absorb 17/18.
+To find Androids 17/18 use [|cff00ff00D|r] Sense Androids.
 }
 
 STRING 10658
@@ -70462,15 +70441,15 @@ Dimension Sword 1 Janemba
 }
 
 STRING 11618
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+18 armor.|r|n|cff808080Made from the fur of an old friend.|r|n
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool3>s|r
 }
 
 STRING 11619
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+18 armor.|r|n|cff808080Made from the fur of an old friend.|r|n
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool4>s|r
 }
 
 STRING 11620
@@ -71881,15 +71860,15 @@ broly fur
 }
 
 STRING 11849
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+// Abilities: A0C8 (Slappy Hand), Researchubertip (Tooltip - Learn - Extended)
 {
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+250 damage. Reduces the mana of nearby enemy units by 4% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool5> seconds|r
 }
 
 STRING 11850
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+250 damage. Reduces the mana of nearby enemy units by 4% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1>s|r
 }
 
 STRING 11851
@@ -71899,14 +71878,74 @@ Gero's Boots
 }
 
 STRING 11852
-// Items: I04C (Gero's Boots), Ubertip (Tooltip - Extended)
+// Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Increases the movement speed of the Hero by 60. Only useful when on low hp (and below max movement speed).|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool5>s|r
 }
 
 STRING 11853
-// Items: I04C (Gero's Boots), Description (Description)
+// Items: I035 (Darkness Generator), Ubertip (Tooltip - Extended)
 {
-|cffffff00Increases the movement speed of the Hero by 60. Only useful when on low hp (and below max movement speed).|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
+}
+
+STRING 11856
+// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
+{
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
+}
+
+STRING 11857
+// Items: I03R (Dimension Sword S [1/5]), Description (Description)
+{
+Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
+}
+
+STRING 11858
+// Items: I035 (Darkness Generator), Description (Description)
+{
+Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
+}
+
+STRING 11859
+// Items: I035 (Darkness Generator), Tip (Tooltip - Basic)
+{
+Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
+}
+
+STRING 11860
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+500 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 11861
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+500 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 11862
+// Items: I04D (Beerus' Pudding), Ubertip (Tooltip - Extended)
+{
+|cffffff00Grants immunity to debuffs for <AIxs,Dur1> seconds. Debuffs include stun, silence, blind, slow, hex.|r|n|cffff2020Exceptions: Slappy Hand.|r|n|cff00ffffCooldown: <A0NX,Cool1>s|r
+}
+
+STRING 11863
+// Abilities: A0NX (Beerus' Pudding), Name (Name)
+{
+Beerus' Pudding
+}
+
+STRING 11864
+// Buffs/Effects: B024 (), Bufftip (Tooltip)
+{
+Beerus Pudding
+}
+
+STRING 11865
+// Buffs/Effects: B024 (), Buffubertip (Tooltip - Extended)
+{
+This unit has eaten Beerus' Pudding! It is immune to negative spell debuffs.
 }
 

@@ -16,7 +16,7 @@ export const HookComponents = [
     maxRange: 1400,
     speed: 50,
     aoe: 200,
-    onlyHookHeroes: false,
+    onlyHookHeroes: true,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -49,8 +49,8 @@ export const HookComponents = [
           y: 255,
           z: 255,
         },
-        updateCoordsOnly: false,
-        persistent: false,
+        updateCoordsOnly: true,
+        persistent: true,
         attachmentPoint: "",
       },
       {

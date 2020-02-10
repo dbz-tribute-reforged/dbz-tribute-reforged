@@ -28,6 +28,7 @@ export module TournamentData {
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
   export const budokaiName: string = "Tournament";
   export const budokaiEnterCommand: string = "-enter";
+  export const budokaiShowBracketCommand: string = "-bracket";
   export const budokaiStartTime1: number = 2 * 60;
   export const budokaiStartTime2: number = 13 * 60;
   export const budokaiStartTime3: number = 23 * 60;

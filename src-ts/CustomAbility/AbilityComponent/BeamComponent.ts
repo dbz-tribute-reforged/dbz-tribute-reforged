@@ -151,6 +151,21 @@ export class BeamComponent implements
     return this;
   }
 
+  protected fakeExplode(ability: CustomAbility, input: CustomAbilityInput) {
+    const oldCurrentTick = ability.currentTick;
+    if (this.endTick == -1) {
+      ability.currentTick = ability.duration;
+    } else {
+      ability.currentTick = this.endTick;
+    }
+    for (const component of this.components) {
+      if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+        component.performTickAction(ability, input, this.beamUnit);
+      }
+    }
+    ability.currentTick = oldCurrentTick;
+  }
+
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.beamCoord.x = GetUnitX(source);
     this.beamCoord.y = GetUnitY(source);
@@ -252,18 +267,7 @@ export class BeamComponent implements
     if (this.hasBeamUnit && !this.hasExploded) {
       if ((isBeamDead && this.explodeOnDeath) || this.forcedExplode) {
         this.hasExploded = true;
-        const oldCurrentTick = ability.currentTick;
-        if (this.endTick == -1) {
-          ability.currentTick = ability.duration;
-        } else {
-          ability.currentTick = this.endTick;
-        }
-        for (const component of this.components) {
-          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-            component.performTickAction(ability, input, this.beamUnit);
-          }
-        }
-        ability.currentTick = oldCurrentTick;
+        this.fakeExplode(ability, input);
         RemoveUnit(this.beamUnit);
       } else if (!isBeamDead) {
         this.beamCoord.x = GetUnitX(this.beamUnit);
@@ -281,6 +285,9 @@ export class BeamComponent implements
     }
     if (ability.isFinishedUsing(this)) {
       if (!this.hasExploded){
+        if (this.explodeOnDeath) {
+          this.fakeExplode(ability, input);
+        }
         RemoveUnit(this.beamUnit);
       }
       this.hasBeamUnit = false;

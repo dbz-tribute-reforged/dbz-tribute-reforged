@@ -18,6 +18,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
   protected bracketIndex: number;
   protected isMatchOver: boolean;
   protected runTournamentTimer: timer;
+  protected showBracketTrigger: trigger;
 
   constructor(
     public name: string = TournamentData.budokaiName,
@@ -32,6 +33,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     this.bracketIndex = 0;
     this.isMatchOver = false;
     this.runTournamentTimer = CreateTimer();
+    this.showBracketTrigger = CreateTrigger();
     this.initialize();
   }
 
@@ -56,18 +58,33 @@ export class Budokai extends AdvancedTournament implements Tournament {
   initialize() {
     // setup register trigger
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      const player = Player(i);
       TriggerRegisterPlayerChatEvent(
         this.registerTrigger, 
-        Player(i), 
+        player, 
         TournamentData.budokaiEnterCommand,
         true
       );
+      TriggerRegisterPlayerChatEvent(
+        this.showBracketTrigger,
+        player,
+        TournamentData.budokaiShowBracketCommand,
+        true
+      )
     }
     // TODO: dont let heaven/hell people register
     TriggerAddAction(this.registerTrigger, () => {
       const player = GetTriggerPlayer();
       this.addPlayerContestant(player);
     });
+
+    TriggerAddCondition(this.showBracketTrigger, Condition(() => {
+      const displayForce = CreateForce();
+      ForceAddPlayer(displayForce, GetTriggerPlayer());
+      this.showBracket(displayForce);
+      DestroyForce(displayForce);
+      return false;
+    }));
 
     // remove later
     // debug trigger
@@ -210,7 +227,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     }
   }
 
-  showBracket() {
+  showBracket(force: force = bj_FORCE_ALL_PLAYERS) {
     // adapt for any bracket?
     // 0 v 1, 2 v 3, 4 v 5, etc, odd player gets a bye till next round
     let i: number;
@@ -218,7 +235,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
       const contestant1 = this.currentBracket[i];
       const contestant2 = this.currentBracket[i+1];
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 15,
+        force, 15,
         Colorizer.getColoredPlayerName(Player(contestant1.id)) +  
         " vs " + 
         Colorizer.getColoredPlayerName(Player(contestant2.id))
@@ -227,7 +244,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     if (this.currentBracket.length > 1 && i < this.currentBracket.length) {
       
       DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 5,
+        force, 5,
         Colorizer.getColoredPlayerName(Player(this.currentBracket[i].id)) +  
         " receives a bye."
       );
@@ -477,7 +494,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     });
 
     // force check if lose
-    TimerStart(CreateTimer(), 15, true, () => {
+    TimerStart(CreateTimer(), 3, true, () => {
       if (IsTriggerEnabled(matchHandlerTrigger)) {
         // if somehow no contestants, end
         if (activeContestants.size == 0) {
@@ -497,7 +514,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
         for (const [playerId, contestant] of activeContestants) {
           let allUnitsDead = true;
           for (const [unit, unitContestant] of contestant.units) {
-            if (!IsUnitType(unit, UNIT_TYPE_DEAD)) {
+            if (UnitHelper.isUnitAlive(unit)) {
               allUnitsDead = false;
             }
           }

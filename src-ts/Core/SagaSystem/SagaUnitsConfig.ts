@@ -653,6 +653,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.SUPERNOVA_GOLDEN,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
+      [
+        ItemConstants.SagaDrops.BEERUS_PUDDING,
+      ]
     )],
     // possibly spawn in pilaf
 

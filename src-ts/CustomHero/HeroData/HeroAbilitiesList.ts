@@ -195,6 +195,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00G"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Perfect Kamehameha", AbilityNames.Cell.SPAWN_CELL_JUNIORS]],
+    // cell junior
     [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA]],
 
 

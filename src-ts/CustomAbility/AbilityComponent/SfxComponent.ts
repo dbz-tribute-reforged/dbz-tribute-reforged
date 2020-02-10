@@ -12,6 +12,9 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   static readonly SOURCE_TARGET_POINT_DYNAMIC = 2;
   static readonly SOURCE_TARGET_UNIT = 3;
 
+  static readonly YAW_SOURCE_FACING = 0;
+  static readonly YAW_SOURCE_TO_TARGET = 1;
+
   protected sfxCoords: Vector2D;
   protected sfxStarted: boolean;
 
@@ -21,6 +24,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     public startTick: number = 0,
     public endTick: number = -1,
     public sfxSource: number = SfxComponent.SOURCE_UNIT,
+    public sfxYawType: number = SfxComponent.YAW_SOURCE_FACING,
     public useLastCastPoint: boolean = true,
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
@@ -29,12 +33,16 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     this.sfxStarted = false;
   }
 
-  setSfxCoordsToTargettedPoint(input: CustomAbilityInput) {
+  getActualTargetPoint(input: CustomAbilityInput): Vector2D {
     if (this.useLastCastPoint) {
-      this.sfxCoords = new Vector2D(input.castPoint.x, input.castPoint.y);
-    } else {
-      this.sfxCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      return input.castPoint;
     }
+    return input.targetPoint;
+  }
+
+  setSfxCoordsToTargettedPoint(input: CustomAbilityInput) {
+    const actualTargetPoint = this.getActualTargetPoint(input);
+    this.sfxCoords = new Vector2D(actualTargetPoint.x, actualTargetPoint.y);
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -50,7 +58,8 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_DYNAMIC) {
       this.setSfxCoordsToTargettedPoint(input);
     } else if (this.sfxSource == SfxComponent.SOURCE_UNIT) {
-      this.sfxCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+      this.sfxCoords.x = GetUnitX(source);
+      this.sfxCoords.y = GetUnitY(source);
     } else if (this.sfxSource == SfxComponent.SOURCE_TARGET_UNIT) {
       if (input.targetUnit) {
         this.sfxCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
@@ -60,7 +69,15 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     }
 
     const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
-    const yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
+    let yaw = 0;
+    if (this.sfxYawType == SfxComponent.YAW_SOURCE_FACING) {
+      yaw = GetUnitFacing(source) * CoordMath.degreesToRadians;
+    } else {
+      yaw = (
+        CoordMath.angleBetweenCoords(this.sfxCoords, this.getActualTargetPoint(input))
+        + 360
+      ) * CoordMath.degreesToRadians;
+    }
     const height = GetUnitFlyHeight(source) + BlzGetUnitZ(source);
 
     AbilitySfxHelper.displaySfxListAtCoord(
@@ -98,7 +115,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   clone(): AbilityComponent {
     return new SfxComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.sfxSource, this.useLastCastPoint,
+      this.sfxSource, this.sfxYawType, this.useLastCastPoint,
       AbilitySfxHelper.duplicateSfxList(this.sfxList),
       AbilitySfxHelper.duplicateSfxList(this.attachedSfxList),
     );
@@ -111,6 +128,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       startTick: number;
       endTick: number;
       sfxSource: number;
+      sfxYawType: number;
       useLastCastPoint: boolean;
       sfxList: {
         model: string;
@@ -153,6 +171,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.sfxSource = input.sfxSource;
+    this.sfxYawType = input.sfxYawType;
     this.useLastCastPoint = input.useLastCastPoint;
     this.sfxList = [];
     for (const sfx of input.sfxList) {
