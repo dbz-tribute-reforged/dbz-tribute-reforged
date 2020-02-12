@@ -44,6 +44,8 @@ import { BarrierComponents } from "./AbilityData/BarrierComponents";
 import { Barrier } from "./AbilityComponent/Barrier";
 import { TeleportComponents } from "./AbilityData/TeleportComponents";
 import { Teleport } from "./AbilityComponent/Teleport";
+import { TempAbilityComponents } from "./AbilityData/TempAbilityComponents";
+import { TempAbility } from "./AbilityComponent/TempAbility";
 
 export class CustomAbilityManager {
   public components: Map<string, AbilityComponent>;
@@ -122,6 +124,10 @@ export class CustomAbilityManager {
 
     for (const component of TeleportComponents) {
       this.setComponent(new Teleport().deserialize(component));
+    }
+
+    for (const component of TempAbilityComponents) {
+      this.setComponent(new TempAbility().deserialize(component));
     }
 
     for (const component of TimedLifeComponents) {

@@ -229,5 +229,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // moro
     [FourCC("H08Y"), [AbilityNames.Moro.ENERGY_DRAIN, AbilityNames.Moro.ENERGY_BALL, AbilityNames.Moro.LAVA_BURST, AbilityNames.Moro.LAVA_PILLARS, AbilityNames.Moro.POWER_LEVEL_SHARING]],
 
+    // super janemba
+    [FourCC("H062"), [
+      AbilityNames.SuperJanemba.DEMONS_MARK,
+      AbilityNames.SuperJanemba.DEMON_RUSH,
+      AbilityNames.SuperJanemba.RAKSHASA_CLAW,
+      AbilityNames.SuperJanemba.RAKSHASA_CLAW_ON_HIT,
+      AbilityNames.SuperJanemba.DEVIL_CLAW,
+      AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
+      AbilityNames.SuperJanemba.BUNKAI_TELEPORT,
+      AbilityNames.SuperJanemba.HELLS_GATE,
+      AbilityNames.SuperJanemba.COSMIC_ILLUSION,
+      AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,
+    ]],
+    
   ]
 )

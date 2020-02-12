@@ -23,7 +23,7 @@ export module SagaAIData {
 
   export const DELAY_TO_INTERVALS = 4;
 
-  export const defaultSpellPowerModifier: number = 0.05;
+  export const defaultSpellPowerModifier: number = 0.1;
   export const defaultActionInterval: number = 25;
   export const defaultAggroInterval: number = 10;
   export const defaultConsecutiveAttacksAllowed: number = 10;

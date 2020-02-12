@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.34g
+DBZ Tribute Reforged 0.35
 }
 
 STRING 4
@@ -5450,13 +5450,13 @@ Janemba
 }
 
 STRING 875
-// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
+// Units: H00C (Demon), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00C|r] Choose ????
 }
 
 STRING 876
-// Units: H062 (Demon), Ubertip (Tooltip - Extended)
+// Units: E004 (Master Roshi), Ubertip (Tooltip - Extended)
 {
 Extra character. Not selected by default.
  |cffFF0000To choose a new hero, hit the Repick button.|r
@@ -5469,7 +5469,7 @@ Janemba
 }
 
 STRING 878
-// Units: H062 (Demon), Hotkey (Hotkey)
+// Units: H06M (God of Destruction), Hotkey (Hotkey)
 {
 C
 }
@@ -5686,7 +5686,7 @@ STRING 912
 }
 
 STRING 913
-// Units: H06M (God of Destruction), Hotkey (Hotkey)
+// Units: E01I (Angel), Hotkey (Hotkey)
 {
 C
 }
@@ -6236,7 +6236,7 @@ STRING 1001
 }
 
 STRING 1002
-// Units: E004 (Master Roshi), Ubertip (Tooltip - Extended)
+// Units: H00C (Demon), Ubertip (Tooltip - Extended)
 {
 Extra character. Not selected by default.
  |cffFF0000To choose a new hero, hit the Repick button.|r
@@ -6836,7 +6836,7 @@ STRING 1093
 }
 
 STRING 1094
-// Units: E019 (Stolen Body), Hotkey (Hotkey)
+// Units: H062 (Demon), Hotkey (Hotkey)
 {
 Z
 }
@@ -6872,7 +6872,7 @@ STRING 1099
 }
 
 STRING 1100
-// Units: E01A (At least 1 living clone), Hotkey (Hotkey)
+// Units: E019 (Stolen Body), Hotkey (Hotkey)
 {
 Z
 }
@@ -7006,7 +7006,7 @@ STRING 1119
 }
 
 STRING 1120
-// Units: E01I (Angel), Hotkey (Hotkey)
+// Units: H00C (Demon), Hotkey (Hotkey)
 {
 C
 }
@@ -7072,16 +7072,16 @@ Janemba
 }
 
 STRING 1131
-// Units: H00C (Demon), Awakentip (Tooltip - Awaken)
+// Units: H062 (Demon), Ubertip (Tooltip - Extended)
 {
-[|cffffff00C|r] Choose ????
-}
+Super Janemba is a close-quarters bruiser who has powerful offensive abilities once in melee range. He is supplemented by strong single-target abilities and high mobilitiy skills that focus on taking down one target at a time.
 
-STRING 1132
-// Units: H00C (Demon), Ubertip (Tooltip - Extended)
-{
-Extra character. Not selected by default.
- |cffFF0000To choose a new hero, hit the Repick button.|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 1133
@@ -7091,7 +7091,7 @@ Janemba
 }
 
 STRING 1134
-// Units: H00C (Demon), Hotkey (Hotkey)
+// Units: H07X (God of Destruction), Hotkey (Hotkey)
 {
 C
 }
@@ -7140,7 +7140,7 @@ STRING 1140
 }
 
 STRING 1141
-// Units: H07X (God of Destruction), Hotkey (Hotkey)
+// Units: E01L (Angel), Hotkey (Hotkey)
 {
 C
 }
@@ -7385,7 +7385,7 @@ STRING 1176
 }
 
 STRING 1177
-// Units: E01L (Angel), Hotkey (Hotkey)
+// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
 {
 C
 }
@@ -7753,7 +7753,7 @@ STRING 1229
 }
 
 STRING 1230
-// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
+// Units: E01A (At least 1 living clone), Hotkey (Hotkey)
 {
 Z
 }
@@ -10405,6 +10405,24 @@ STRING 1662
 // Items: I035 (Darkness Generator), Name (Name)
 {
 Darkness Generator
+}
+
+STRING 1663
+// Units: hgyr (Flying Machine), EditorSuffix (Name - Editor Suffix)
+{
+sfx test dummy
+}
+
+STRING 1664
+// Units: H062 (Demon), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern Super)
+}
+
+STRING 1665
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 1666
@@ -15971,7 +15989,7 @@ STRING 2590
 }
 
 STRING 2591
-// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -15995,7 +16013,7 @@ Bulma created a giant satellite dish that directs concentrated energy at a targe
 }
 
 STRING 2595
-// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
+// Abilities: A03J (Change Back), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -17583,13 +17601,13 @@ STRING 2858
 }
 
 STRING 2859
-// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 5%), Tip (Tooltip - Normal)
 {
 Slow
 }
 
 STRING 2860
-// Abilities: A0LK (Buu Candy Slow 10%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Slow 5%), Tip (Tooltip - Normal)
 {
 Slow
 }
@@ -20865,7 +20883,7 @@ Change Back
 }
 
 STRING 3404
-// Abilities: A03J (Change Back), Hotkey (Hotkey - Normal)
+// Abilities: A02X (Cyclonic Sword Dash), Researchhotkey (Hotkey - Learn)
 {
 C
 }
@@ -26180,7 +26198,7 @@ STRING 4288
 }
 
 STRING 4289
-// Abilities: A02X (Cyclonic Sword Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A02X (Cyclonic Sword Dash), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -26204,9 +26222,9 @@ A Rapid Sword spin attack.
 }
 
 STRING 4293
-// Abilities: A02X (Cyclonic Sword Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0O1 (Demon Rush), Ubertip (Tooltip - Normal - Extended)
 {
-C
+Teleports behind the closest cursed enemy hero and then cripples their movement and attack speed.|n|cffff2020This ability can only be used within the next 5 seconds!|n|r|cff00ffffCooldown: <A0O1,Cool1>s|r
 }
 
 STRING 4294
@@ -34998,7 +35016,7 @@ R
 }
 
 STRING 5749
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
 {
 Z
 }
@@ -36974,7 +36992,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6077
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -38489,9 +38507,9 @@ Evil Aura
 }
 
 STRING 6329
-// Abilities: A0DW (Evil Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O0 (Demon's Mark), Name (Name)
 {
-Removes 30 armor from nearby enemies.
+Demon's Mark
 }
 
 STRING 6330
@@ -38501,7 +38519,7 @@ Removes 60 armor from nearby enemies.
 }
 
 STRING 6331
-// Abilities: A0DW (Evil Aura), Untip (Tooltip - Turn Off)
+// Abilities: A0EW (Collision Aura), Researchubertip (Tooltip - Learn - Extended)
 {
 Removes armor from nearby enemies.
 }
@@ -38519,7 +38537,7 @@ E
 }
 
 STRING 6334
-// Abilities: A0DW (Evil Aura), Tip (Tooltip - Normal)
+// Abilities: A0EW (Collision Aura), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Evil Aura - [|cffffcc00Level 1|r]
 }
@@ -41353,7 +41371,7 @@ STRING 6802
 }
 
 STRING 6803
-// Abilities: A0EU (Bunkai Teleport), Hotkey (Hotkey - Normal)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41377,33 +41395,37 @@ The Destructo Disk is a razor-sharp disk of energy that can slice through nearly
 }
 
 STRING 6807
-// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6809
-// Abilities: A0EU (Bunkai Teleport), Name (Name)
+// Abilities: A0O2 (Bunkai Teleport), Name (Name)
 {
 Bunkai Teleport
 }
 
 STRING 6810
-// Abilities: A0EU (Bunkai Teleport), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Bunkai Teleport
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.5x "fp"
+[lvl 90]  2.0x "fp"
+[lvl 150] 2.5x "fp"
+[lvl 200] 2.6x "xeno janemba" [uprgrades Q]
 }
 
 STRING 6811
-// Abilities: A0EU (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
 {
-Janemba becomes invisible for a few seconds, creating an uncontrollable clone that attacks for a few seconds and allowing him to reposition himself.|n|cff00FFFF(Cooldown: 20 seconds)|r
+[|cffffff00Z|r] Choose Super Janemba
 }
 
 STRING 6812
@@ -41425,7 +41447,7 @@ STRING 6814
 }
 
 STRING 6815
-// Abilities: A0EW (Collision Aura), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0EW (Collision Aura), Untip (Tooltip - Turn Off)
 {
 Removes armor from nearby enemies.
 }
@@ -41449,9 +41471,9 @@ Removes 100 armor from nearby enemies.
 }
 
 STRING 6819
-// Abilities: A0EW (Collision Aura), Untip (Tooltip - Turn Off)
+// Buffs/Effects: B028 (), Bufftip (Tooltip)
 {
-Removes armor from nearby enemies.
+Demon's Rush
 }
 
 STRING 6820
@@ -41467,9 +41489,9 @@ E
 }
 
 STRING 6822
-// Abilities: A0EW (Collision Aura), Tip (Tooltip - Normal)
+// Abilities: A0O0 (Demon's Mark), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00E|r] Evil Aura - [|cffffcc00Level 1|r]
+Applies a powerful curse on enemy units causing them to miss attacks. Using this ability will replace it with the Demon Rush ability for the next 5 seconds.|n|cff00ffffCooldown: <A0O0,Cool1>s|r
 }
 
 STRING 6823
@@ -41905,7 +41927,7 @@ Transforms Yamcha back to normal.
 }
 
 STRING 6895
-// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41929,7 +41951,7 @@ Roshi beefs up, increasing his power multiplier by 0.3x and causing his spells t
 }
 
 STRING 6899
-// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42157,7 +42179,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
+// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42193,7 +42215,7 @@ Madara calls down a gigantic meteor that will crash into the target location, de
 }
 
 STRING 6943
-// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42745,7 +42767,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7035
-// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42781,7 +42803,7 @@ Hit traps an opponent in a time cage, stunning them for 1.5 seconds.|n|cff00FFFF
 }
 
 STRING 7041
-// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43399,7 +43421,7 @@ Caster does a thing|n|cff00FF00Damage:int*lvl*2+100|r|n|cff00FFFFCooldown:15s|r
 }
 
 STRING 7144
-// Abilities: A0G5 (Cosmic Illusion), Name (Name)
+// Abilities: A0EU (Cosmic Illusion), Name (Name)
 {
 Cosmic Illusion
 }
@@ -43508,6 +43530,24 @@ Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Ta
 
 }
 
+STRING 7161
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+}
+
+STRING 7162
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+}
+
+STRING 7163
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
+}
+
 STRING 7164
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
@@ -43526,6 +43566,18 @@ STRING 7166
 [|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4r]
 }
 
+STRING 7167
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+}
+
+STRING 7168
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+}
+
 STRING 7169
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
@@ -43536,6 +43588,12 @@ STRING 7170
 // Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5r]
+}
+
+STRING 7171
+// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
 }
 
 STRING 7172
@@ -44469,7 +44527,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44493,7 +44551,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 7331
-// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -46040,7 +46098,7 @@ Q
 }
 
 STRING 7588
-// Abilities: A0GY (Cosmic Illusion), Name (Name)
+// Abilities: A0G5 (Cosmic Illusion), Name (Name)
 {
 Cosmic Illusion
 }
@@ -46772,7 +46830,7 @@ Q
 }
 
 STRING 7710
-// Abilities: A0H4 (Cosmic Illusion), Name (Name)
+// Abilities: A0GY (Cosmic Illusion), Name (Name)
 {
 Cosmic Illusion
 }
@@ -46859,6 +46917,12 @@ STRING 7724
 // Items: I04C (Gero's Boots), Description (Description)
 {
 |cffffff00Increases the movement speed of the Hero by 40 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+}
+
+STRING 7725
+// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 2|r]
 }
 
 STRING 7726
@@ -48038,7 +48102,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48056,7 +48120,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49221,7 +49285,7 @@ Tapion slashes units in the target direction for damage. If he successfully uses
 }
 
 STRING 8116
-// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -49305,7 +49369,7 @@ Tapion jumps above a target affected by “Hero’s Song”. Upon arrival, Tapio
 }
 
 STRING 8130
-// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
+// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50415,7 +50479,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51057,7 +51121,7 @@ Goku Black rushes the target area at max move speed,damaging units in his path.|
 }
 
 STRING 8422
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51093,7 +51157,7 @@ Goku black creates two clones of himself that last for 12 seconds. While clones 
 }
 
 STRING 8428
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51976,7 +52040,7 @@ King K Rool charges 1,000 distance forward, dealing damage and stunning all unit
 }
 
 STRING 8572
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52000,7 +52064,7 @@ Monkey Smasher
 }
 
 STRING 8576
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53251,7 +53315,7 @@ Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to 
 }
 
 STRING 8782
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53275,7 +53339,7 @@ Temporal Warp
 }
 
 STRING 8786
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53545,7 +53609,7 @@ STRING 8830
 }
 
 STRING 8831
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53569,7 +53633,7 @@ Dende links all units near him for 5s, causing all damage received by linked uni
 }
 
 STRING 8835
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53600,13 +53664,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8840
-// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 8841
-// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53857,7 +53921,7 @@ VegetaSSB2
 }
 
 STRING 8881
-// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53881,7 +53945,7 @@ Super Saiyan Blue Evolution
 }
 
 STRING 8885
-// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53995,7 +54059,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8904
-// Abilities: A0JW (Flying Satan Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54019,7 +54083,7 @@ Super Saiyan Blue Revert
 }
 
 STRING 8908
-// Abilities: A0JW (Flying Satan Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Satan Kick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54211,7 +54275,7 @@ Bio Broly
 }
 
 STRING 8940
-// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Satan Kick), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54295,7 +54359,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8954
-// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
+// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54391,7 +54455,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8970
-// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54409,7 +54473,7 @@ STRING 8972
 }
 
 STRING 8973
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54493,7 +54557,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8987
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54530,13 +54594,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8993
-// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 8994
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54650,7 +54714,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 9013
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54776,7 +54840,7 @@ all
 }
 
 STRING 9034
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54859,7 +54923,7 @@ STRING 9047
 }
 
 STRING 9048
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55051,7 +55115,7 @@ STRING 9079
 }
 
 STRING 9080
-// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55087,7 +55151,7 @@ Jiren fires a slowly expanding wall of burning energy towards the target directi
 }
 
 STRING 9086
-// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55375,7 +55439,7 @@ Follow-Up
 }
 
 STRING 9134
-// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55957,7 +56021,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55981,7 +56045,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56273,13 +56337,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56291,7 +56355,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56302,7 +56366,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -58390,25 +58454,25 @@ Q
 }
 
 STRING 9635
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9636
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9637
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9638
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59427,12 +59491,6 @@ STRING 9807
 Saiyan
 }
 
-STRING 9808
-// Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 2|r]
-}
-
 STRING 9809
 // Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
 {
@@ -59474,7 +59532,6 @@ STRING 9815
 -ap (all pick)
 -ar (all random)
 -freemode (disable win/loss conditions)
--catchup (gives bonus stats to people who are behind)
 
 All players commands:
 -cam/-ang (camera controls)
@@ -59525,13 +59582,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60107,7 +60164,7 @@ STRING 9919
 }
 
 STRING 9920
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61088,7 +61145,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -61341,21 +61398,21 @@ Shoots a beam of negative energy from the fingertip. |n|cff00ff00Damage: Int * l
 }
 
 STRING 10128
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
 {
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
 STRING 10129
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool2> seconds|r
+Z
 }
 
 STRING 10130
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DW (Evil Aura), EditorSuffix (Editor Suffix)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool3> seconds|r
+(Bunkai Teleport Passive)
 }
 
 STRING 10131
@@ -61425,9 +61482,9 @@ STRING 10141
 }
 
 STRING 10142
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O5 (Book Janemba Heads), Name (Name)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool4> seconds|r
+Book Janemba Heads
 }
 
 STRING 10143
@@ -62114,7 +62171,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62132,7 +62189,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62438,21 +62495,21 @@ STRING 10305
 }
 
 STRING 10306
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B026 (), Bufftip (Tooltip)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool5> seconds|r
+Evil Aura
 }
 
 STRING 10307
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B026 (), Buffubertip (Tooltip - Extended)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool6> seconds|r
+This unit is under the effects of Evil Aura; it has decreased armor.
 }
 
 STRING 10308
-// Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
+// Items: I04E (Cosmic Illusion Caster), Name (Name)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool7> seconds|r
+Cosmic Illusion Caster
 }
 
 STRING 10309
@@ -62474,9 +62531,9 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 10312
-// Abilities: A084 (Gigantic Roar), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LK (Buu Candy Slow 5%), Name (Name)
 {
-First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
+Buu Candy Slow 5%
 }
 
 STRING 10313
@@ -64095,7 +64152,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64161,7 +64218,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64612,7 +64669,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 11.Feb.20
+This map is under active development - 12.Feb.20
 }
 
 STRING 10653
@@ -64629,12 +64686,6 @@ STRING 10655
 // Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 10656
-// Abilities: A0LK (Buu Candy Slow 10%), Name (Name)
-{
-Buu Candy Slow 10%
 }
 
 STRING 10657
@@ -64857,7 +64908,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65115,7 +65166,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -65133,7 +65184,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth dealing massive dam
 }
 
 STRING 10734
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66323,7 +66374,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66341,7 +66392,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -69320,7 +69371,7 @@ STRING 11430
 }
 
 STRING 11431
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -71947,5 +71998,1031 @@ STRING 11865
 // Buffs/Effects: B024 (), Buffubertip (Tooltip - Extended)
 {
 This unit has eaten Beerus' Pudding! It is immune to negative spell debuffs.
+}
+
+STRING 11866
+// Abilities: A0O6 (Cosmic Illusion Clone), Name (Name)
+{
+Cosmic Illusion Clone
+}
+
+STRING 11867
+// Abilities: A0O6 (Cosmic Illusion Clone), EditorSuffix (Editor Suffix)
+{
+(dummy casted spell)
+}
+
+STRING 11868
+// Abilities: A0O7 (Demon's Mark Curse 25%), Name (Name)
+{
+Demon's Mark Curse 25%
+}
+
+STRING 11869
+// Abilities: A0O8 (Demon's Mark Slow 10%), Name (Name)
+{
+Demon's Mark Slow 10%
+}
+
+STRING 11870
+// Abilities: A0NY (Rakshasa's Claw), Name (Name)
+{
+Rakshasa's Claw
+}
+
+STRING 11871
+// Abilities: A0NY (Rakshasa's Claw), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Rakshasa's Claw - [|cffffcc00Level %d|r]
+}
+
+STRING 11872
+// Abilities: A0O8 (Demon's Mark Slow 10%), Tip (Tooltip - Normal)
+{
+Slow
+}
+
+STRING 11873
+// Abilities: A0O8 (Demon's Mark Slow 10%), Tip (Tooltip - Normal)
+{
+Slow
+}
+
+STRING 11876
+// Buffs/Effects: B028 (), Buffubertip (Tooltip - Extended)
+{
+This unit is slowed; its movement speed and attack rate are reduced.
+}
+
+STRING 11879
+// Abilities: A0EU (Cosmic Illusion), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11880
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11881
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 11882
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 1|r]
+}
+
+STRING 11883
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> seconds|r
+}
+
+STRING 11884
+// Abilities: A0EU (Cosmic Illusion), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Cosmic Illusion - [|cffffcc00Level %d|r]
+}
+
+STRING 11885
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 2|r]
+}
+
+STRING 11886
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 3|r]
+}
+
+STRING 11887
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 4|r]
+}
+
+STRING 11888
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 5|r]
+}
+
+STRING 11889
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 6|r]
+}
+
+STRING 11890
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 7|r]
+}
+
+STRING 11891
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 8|r]
+}
+
+STRING 11892
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 9|r]
+}
+
+STRING 11893
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 10|r]
+}
+
+STRING 11894
+// Abilities: A0EU (Cosmic Illusion), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> - <A0EU,Cool10> seconds|r
+}
+
+STRING 11895
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur2>|n|cff00FFFFCooldown: <A0EU,Cool2> seconds|r
+}
+
+STRING 11896
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur3>|n|cff00FFFFCooldown: <A0EU,Cool3> seconds|r
+}
+
+STRING 11897
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur4>|n|cff00FFFFCooldown: <A0EU,Cool4> seconds|r
+}
+
+STRING 11898
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur5>|n|cff00FFFFCooldown: <A0EU,Cool5> seconds|r
+}
+
+STRING 11899
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur6>|n|cff00FFFFCooldown: <A0EU,Cool6> seconds|r
+}
+
+STRING 11900
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur7>|n|cff00FFFFCooldown: <A0EU,Cool7> seconds|r
+}
+
+STRING 11901
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur8>|n|cff00FFFFCooldown: <A0EU,Cool8> seconds|r
+}
+
+STRING 11902
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur9>|n|cff00FFFFCooldown: <A0EU,Cool9> seconds|r
+}
+
+STRING 11903
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur10>|n|cff00FFFFCooldown: <A0EU,Cool10> seconds|r
+}
+
+STRING 11904
+// Abilities: A0H4 (Cosmic Illusion), Name (Name)
+{
+Cosmic Illusion
+}
+
+STRING 11905
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 11906
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+}
+
+STRING 11907
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool2> seconds|r
+}
+
+STRING 11908
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool3> seconds|r
+}
+
+STRING 11909
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool4> seconds|r
+}
+
+STRING 11910
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool5> seconds|r
+}
+
+STRING 11911
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool6> seconds|r
+}
+
+STRING 11912
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool7> seconds|r
+}
+
+STRING 11913
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 2|r]
+}
+
+STRING 11914
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 3|r]
+}
+
+STRING 11915
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 4|r]
+}
+
+STRING 11916
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 5|r]
+}
+
+STRING 11917
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 6|r]
+}
+
+STRING 11918
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 1|r]
+}
+
+STRING 11919
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 7|r]
+}
+
+STRING 11920
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 9|r]
+}
+
+STRING 11921
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 8|r]
+}
+
+STRING 11922
+// Abilities: A0NY (Rakshasa's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Rakshasa's Claw - [|cffffcc00Level 10|r]
+}
+
+STRING 11923
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool8> seconds|r
+}
+
+STRING 11924
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool9> seconds|r
+}
+
+STRING 11925
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r
+}
+
+STRING 11926
+// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+}
+
+STRING 11927
+// Abilities: A0NY (Rakshasa's Claw), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11928
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+}
+
+STRING 11929
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
+}
+
+STRING 11930
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
+}
+
+STRING 11931
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
+}
+
+STRING 11932
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
+}
+
+STRING 11933
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
+}
+
+STRING 11934
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
+}
+
+STRING 11935
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 2|r]
+}
+
+STRING 11936
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 3|r]
+}
+
+STRING 11937
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 4|r]
+}
+
+STRING 11938
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 5|r]
+}
+
+STRING 11939
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 6|r]
+}
+
+STRING 11940
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 1|r]
+}
+
+STRING 11941
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 7|r]
+}
+
+STRING 11942
+// Abilities: A0NZ (Devil's Claw), Name (Name)
+{
+Devil's Claw
+}
+
+STRING 11943
+// Abilities: A0NZ (Devil's Claw), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Devil's Claw - [|cffffcc00Level %d|r]
+}
+
+STRING 11944
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 9|r]
+}
+
+STRING 11945
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 8|r]
+}
+
+STRING 11946
+// Abilities: A0NZ (Devil's Claw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Devil's Claw - [|cffffcc00Level 10|r]
+}
+
+STRING 11947
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
+}
+
+STRING 11948
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
+}
+
+STRING 11949
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
+}
+
+STRING 11950
+// Abilities: A0NZ (Devil's Claw), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+}
+
+STRING 11951
+// Abilities: A0NZ (Devil's Claw), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11952
+// Buffs/Effects: B027 (), Bufftip (Tooltip)
+{
+Demon's Mark
+}
+
+STRING 11954
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 11955
+// Abilities: A0O0 (Demon's Mark), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Demon's Mark
+}
+
+STRING 11956
+// Abilities: A0O0 (Demon's Mark), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11957
+// Abilities: A0O1 (Demon Rush), Name (Name)
+{
+Demon Rush
+}
+
+STRING 11959
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 11960
+// Abilities: A0O1 (Demon Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Demon Rush
+}
+
+STRING 11961
+// Abilities: A0O1 (Demon Rush), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11962
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
+}
+
+STRING 11963
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool2> seconds|r
+}
+
+STRING 11964
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool3> seconds|r
+}
+
+STRING 11965
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool4> seconds|r
+}
+
+STRING 11966
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool5> seconds|r
+}
+
+STRING 11967
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool6> seconds|r
+}
+
+STRING 11968
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool7> seconds|r
+}
+
+STRING 11969
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 2|r]
+}
+
+STRING 11970
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 3|r]
+}
+
+STRING 11971
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 4|r]
+}
+
+STRING 11972
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 5|r]
+}
+
+STRING 11973
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 6|r]
+}
+
+STRING 11974
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 1|r]
+}
+
+STRING 11975
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 7|r]
+}
+
+STRING 11976
+// Abilities: A0O2 (Bunkai Teleport), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 11977
+// Abilities: A0O2 (Bunkai Teleport), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Bunkai Teleport - [|cffffcc00Level %d|r]
+}
+
+STRING 11978
+// Abilities: A0O2 (Bunkai Teleport), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11979
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 9|r]
+}
+
+STRING 11980
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 8|r]
+}
+
+STRING 11981
+// Abilities: A0O2 (Bunkai Teleport), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Bunkai Teleport - [|cffffcc00Level 10|r]
+}
+
+STRING 11982
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool8> seconds|r
+}
+
+STRING 11983
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool9> seconds|r
+}
+
+STRING 11984
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
+}
+
+STRING 11985
+// Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
+}
+
+STRING 11986
+// Abilities: A0O2 (Bunkai Teleport), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 11987
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool1> seconds|r
+}
+
+STRING 11988
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool2> seconds|r
+}
+
+STRING 11989
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool3> seconds|r
+}
+
+STRING 11990
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool4> seconds|r
+}
+
+STRING 11991
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool5> seconds|r
+}
+
+STRING 11992
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool6> seconds|r
+}
+
+STRING 11993
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool7> seconds|r
+}
+
+STRING 11994
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 2|r]
+}
+
+STRING 11995
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 3|r]
+}
+
+STRING 11996
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 4|r]
+}
+
+STRING 11997
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 5|r]
+}
+
+STRING 11998
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 6|r]
+}
+
+STRING 11999
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 1|r]
+}
+
+STRING 12000
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 7|r]
+}
+
+STRING 12001
+// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 12002
+// Abilities: A0O3 (Hell's Gate), Name (Name)
+{
+Hell's Gate
+}
+
+STRING 12003
+// Abilities: A0O3 (Hell's Gate), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Hell's Gate - [|cffffcc00Level %d|r]
+}
+
+STRING 12004
+// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 12005
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 9|r]
+}
+
+STRING 12006
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 8|r]
+}
+
+STRING 12007
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 10|r]
+}
+
+STRING 12008
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool8> seconds|r
+}
+
+STRING 12009
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool9> seconds|r
+}
+
+STRING 12010
+// Abilities: A0O3 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool10> seconds|r
+}
+
+STRING 12011
+// Abilities: A0O3 (Hell's Gate), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Janemba places his hands at the sides of his face as he charges a green energy sphere in his mouth. Then, he yells and fires the green energy in the form of an energy wave from his mouth at the opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O3,Cool1> seconds|r
+}
+
+STRING 12012
+// Abilities: A0O3 (Hell's Gate), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 12013
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool1> seconds|r
+}
+
+STRING 12014
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool2> seconds|r
+}
+
+STRING 12015
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool3> seconds|r
+}
+
+STRING 12016
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool4> seconds|r
+}
+
+STRING 12017
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool5> seconds|r
+}
+
+STRING 12018
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool6> seconds|r
+}
+
+STRING 12019
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool7> seconds|r
+}
+
+STRING 12020
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 2|r]
+}
+
+STRING 12021
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 3|r]
+}
+
+STRING 12022
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 4|r]
+}
+
+STRING 12023
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 5|r]
+}
+
+STRING 12024
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 6|r]
+}
+
+STRING 12025
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 1|r]
+}
+
+STRING 12026
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 7|r]
+}
+
+STRING 12027
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 12028
+// Abilities: A0O4 (Lightning Shower Rain), Name (Name)
+{
+Lightning Shower Rain
+}
+
+STRING 12029
+// Abilities: A0O4 (Lightning Shower Rain), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Lightning Shower Rain - [|cffffcc00Level %d|r]
+}
+
+STRING 12030
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 12031
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 9|r]
+}
+
+STRING 12032
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 8|r]
+}
+
+STRING 12033
+// Abilities: A0O4 (Lightning Shower Rain), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Lightning Shower Rain - [|cffffcc00Level 10|r]
+}
+
+STRING 12034
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool8> seconds|r
+}
+
+STRING 12035
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool9> seconds|r
+}
+
+STRING 12036
+// Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool10> seconds|r
+}
+
+STRING 12037
+// Abilities: A0O4 (Lightning Shower Rain), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool1> seconds|r
+}
+
+STRING 12038
+// Abilities: A0O4 (Lightning Shower Rain), EditorSuffix (Editor Suffix)
+{
+(actual janemba)
+}
+
+STRING 12039
+// Buffs/Effects: B025 (), Bufftip (Tooltip)
+{
+Cosmic Illusion
+}
+
+STRING 12040
+// Buffs/Effects: B025 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Cosmic Illusion; it is invisible, moves faster, and the first attack it makes while invisible will deal bonus damage.
+}
+
+STRING 12041
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12042
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
