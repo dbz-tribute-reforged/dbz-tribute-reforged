@@ -17,6 +17,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     public enableAbility: boolean = false,
     public addAbility: boolean = false,
     public tempPermanence: boolean = false,
+    public equalizeLevels: boolean = false,
   ) {
     this.hasStarted = false;
     this.abilityWasAdded = false;
@@ -36,6 +37,15 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       }
       if (this.tempPermanence) {
         UnitMakeAbilityPermanent(source, true, this.newAbility);
+      }
+      if (this.equalizeLevels) {
+        const newAbilityLevel = GetUnitAbilityLevel(source, this.newAbility);
+        const oldAbilityLevel = GetUnitAbilityLevel(source, this.oldAbility);
+        if (newAbilityLevel > oldAbilityLevel) {
+          SetUnitAbilityLevel(source, this.oldAbility, newAbilityLevel);
+        } else if (oldAbilityLevel > newAbilityLevel) {
+          SetUnitAbilityLevel(source, this.newAbility, oldAbilityLevel);
+        }
       }
     }
 
@@ -70,6 +80,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       this.enableAbility,
       this.addAbility,
       this.tempPermanence,
+      this.equalizeLevels,
     );
   }
   
@@ -85,6 +96,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       enableAbility: boolean;
       addAbility: boolean;
       tempPermanence: boolean;
+      equalizeLevels: boolean;
     }
   ) {
     this.name = input.name;
@@ -97,6 +109,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     this.enableAbility = input.enableAbility;
     this.addAbility = input.addAbility;
     this.tempPermanence = input.tempPermanence;
+    this.equalizeLevels = input.equalizeLevels;
     return this;
   }
 }

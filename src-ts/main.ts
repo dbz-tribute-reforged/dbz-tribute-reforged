@@ -13,10 +13,12 @@ import { DragonBallsManager } from 'Core/DragonBallsSystem/DragonBallsManager';
 import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager';
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
 import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
+import { TeamManager } from 'Core/TeamSystem/TeamManager';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
 let creepManager: CreepManager;
+let teamManager: TeamManager;
 let itemStackingManager: ItemStackingManager;
 let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
@@ -26,6 +28,12 @@ let itemCleanupManager: ItemCleanupManager;
 function tsMain() {
   // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
   // unit.name = "TypeScript!";
+
+  // preload (temp)
+  Preload("DragonHead2.mdx");
+  Preload("DragonSegment2.mdx");
+  Preload("DragonTail.mdx");
+  Preload("Conflagrate.mdx");
 
   // setup logger
   Logger.doLogVerbose = false;
@@ -54,6 +62,7 @@ function tsMain() {
   })
 
   TimerStart(CreateTimer(), 10, false, () => {
+    // teamManager = TeamManager.getInstance();
     creepManager = CreepManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })

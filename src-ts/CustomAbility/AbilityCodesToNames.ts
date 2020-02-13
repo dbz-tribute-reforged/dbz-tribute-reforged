@@ -119,6 +119,7 @@ export const abilityCodesToNames = new Map<number, string>(
     // masenko CELL
     [FourCC('A0GD'), AbilityNames.Cell.MASENKO],
     [FourCC('A01Z'), AbilityNames.Cell.SPAWN_CELL_JUNIORS],
+    [FourCC('A0O9'), AbilityNames.Cell.SOLAR_KAMEHAMEHA],
 
     // cooler
     [FourCC('A06C'), AbilityNames.Frieza.DEATH_BEAM],
@@ -157,6 +158,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0NY'), AbilityNames.SuperJanemba.RAKSHASA_CLAW],
     [FourCC('A0NZ'), AbilityNames.SuperJanemba.DEVIL_CLAW],
     [FourCC('A0O2'), AbilityNames.SuperJanemba.BUNKAI_TELEPORT],
+    [FourCC('A0OA'), AbilityNames.SuperJanemba.DEMONIC_BLADE],
     [FourCC('A0O3'), AbilityNames.SuperJanemba.HELLS_GATE],
     [FourCC('A0EU'), AbilityNames.SuperJanemba.COSMIC_ILLUSION],
     [FourCC('A0O4'), AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN],

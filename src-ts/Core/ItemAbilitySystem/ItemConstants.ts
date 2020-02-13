@@ -37,6 +37,9 @@ export module ItemConstants {
   export const androidBomb = [
     FourCC("I047"),
   ];
+  export const bananaGenerator = [
+    FourCC("I04F"),
+  ];
   export const getiStarFragment = [
     FourCC("I048"),
   ]
@@ -49,6 +52,9 @@ export module ItemConstants {
     FourCC("I03X"),
     FourCC("I03Y"),
     FourCC("I03Z"),
+  ];
+  export const beeDogItem = [
+    FourCC("I04G"),
   ];
   export const braveSword = [
     FourCC("I03F"),
@@ -81,35 +87,23 @@ export module ItemConstants {
     export const BATTLE_ARMOR_3 = battleArmor[2];
     export const BATTLE_ARMOR_4 = battleArmor[3];
     export const BATTLE_ARMOR_5 = battleArmor[4];
-
     export const BROLY_FUR = battleArmor[5];
-  
-    export const WHEELO_RESEARCH_1 = wheeloResearch[0];
-
-    export const DARKNESS_GENERATOR = darknessGenerator[0];
     
+    export const WHEELO_RESEARCH_1 = wheeloResearch[0];
+    export const DARKNESS_GENERATOR = darknessGenerator[0];
     export const SCOUTER_2 = scouter[1];
-
     export const DEAD_ZONE_FRAGMENT = deadZoneFragment[0];
-
     export const GERO_BOOTS = geroBoots[0];
-
     export const ANDROID_BOMB = androidBomb[0];
-
+    export const BANANA_GENERATOR = bananaGenerator[0];
     export const GETI_STAR_FRAGMENT = getiStarFragment[0];
-
     export const BIO_LAB_RESEARCH = bioLabResearch[0];
-
     export const DIMENSION_SWORD = dimensionSwordSaga[0];
-
+    export const BEE_DOG_ITEM = beeDogItem[0];
     export const BRAVE_SWORD = braveSword[0];
-
     export const BEERUS_PUDDING = Consumables.PUDDING;
-
     export const SORBET_RING = sorbetRing[0];
-
     export const TIME_RING = timeRing[0];
-
     export const SORROWFUL_SCYTHE = sorrowfulScythe[0];
   }
 }

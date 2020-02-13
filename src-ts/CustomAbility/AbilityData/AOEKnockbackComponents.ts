@@ -118,12 +118,24 @@ export const AOEKnockbackComponents = [
   },
   // broly energy punch
   {
+    name: "knockback energy punch reverse",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 19,
+    knockbackData: {
+      speed: -30, 
+      angle: 0, 
+      aoe: 500,
+    },
+    affectAllies: false,
+  },
+  {
     name: "knockback energy punch",
     repeatInterval: 1, 
     startTick: 19,
     endTick: -1,
     knockbackData: {
-      speed: 25, 
+      speed: 30, 
       angle: 0, 
       aoe: 500,
     },
@@ -241,6 +253,18 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 25, 
       angle: 0, 
+      aoe: 500,
+    },
+    affectAllies: false,
+  },
+  {
+    name: "knockback solar kame",
+    repeatInterval: 1, 
+    startTick: 66,
+    endTick: -1,
+    knockbackData: {
+      speed: 40, 
+      angle: 180, 
       aoe: 500,
     },
     affectAllies: false,

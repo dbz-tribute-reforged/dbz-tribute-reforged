@@ -6,12 +6,10 @@ import { Vector2D } from "Common/Vector2D";
 import { TextTagHelper } from "Common/TextTagHelper";
 
 export class SuperJanemba implements HeroPassive {
-  protected rakshasaClawAbility: number;
-  protected devilClawAbility: number;
+  static readonly RAKSHASA_CLAW_ABILITY: number = FourCC("A0NY");
+  static readonly DEVIL_CLAW_ABILITY: number = FourCC("A0NZ");
 
   constructor() {
-    this.rakshasaClawAbility = FourCC("A0NY");
-    this.devilClawAbility = FourCC("A0NZ");
   }
 
   initialize(customHero: CustomHero) {
@@ -27,16 +25,16 @@ export class SuperJanemba implements HeroPassive {
         if (
           GetUnitTypeId(GetAttacker()) == heroId
         ) {
-          const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, this.rakshasaClawAbility);
-          const devilClawLevel = GetUnitAbilityLevel(customHero.unit, this.devilClawAbility);
+          const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, SuperJanemba.RAKSHASA_CLAW_ABILITY);
+          const devilClawLevel = GetUnitAbilityLevel(customHero.unit, SuperJanemba.DEVIL_CLAW_ABILITY);
           if (rakshasaClawLevel + devilClawLevel > 0) {
             const target = GetTriggerUnit();
             const targetPos = new Vector2D(GetUnitX(target), GetUnitY(target));
             let onHitName = AbilityNames.SuperJanemba.RAKSHASA_CLAW_ON_HIT;
-            let onHitAbility = this.rakshasaClawAbility;
+            let onHitAbility = SuperJanemba.RAKSHASA_CLAW_ABILITY;
             if (devilClawLevel > 0) {
               onHitName = AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT;
-              onHitAbility = this.devilClawAbility;
+              onHitAbility = SuperJanemba.DEVIL_CLAW_ABILITY;
             }
             const input = new CustomAbilityInput(
               customHero, 
@@ -50,11 +48,11 @@ export class SuperJanemba implements HeroPassive {
             );
             
             if (customHero.canCastAbility(onHitName, input)) {
-              TextTagHelper.showPlayerColorTextOnUnit(
-                onHitName, 
-                GetPlayerId(GetOwningPlayer(customHero.unit)), 
-                customHero.unit
-              );
+              // TextTagHelper.showPlayerColorTextOnUnit(
+              //   onHitName, 
+              //   GetPlayerId(GetOwningPlayer(customHero.unit)), 
+              //   customHero.unit
+              // );
               
               customHero.useAbility(
                 onHitName,

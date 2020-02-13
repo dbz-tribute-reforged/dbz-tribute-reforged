@@ -184,7 +184,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Frieza.DEATH_BEAM,
       AbilityNames.Raditz.DOUBLE_SUNDAY,
       AbilityNames.Nappa.GIANT_STORM,
-      AbilityNames.Moro.ENERGY_DRAIN,
+      AbilityNames.SuperJanemba.DEMONS_MARK, AbilityNames.SuperJanemba.DEMON_RUSH, AbilityNames.SuperJanemba.DEVIL_CLAW, AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT, 
     ]],
 
     // broly
@@ -194,7 +194,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("N00Q"), [AbilityNames.Goku.KAMEHAMEHA]],
     [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
-    [FourCC("H00G"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Gohan.MASENKO, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Perfect Kamehameha", AbilityNames.Cell.SPAWN_CELL_JUNIORS]],
+    [FourCC("H00G"), [
+      AbilityNames.Goku.KAMEHAMEHA, 
+      AbilityNames.Gohan.MASENKO, 
+      AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
+      AbilityNames.Cell.SPAWN_CELL_JUNIORS,
+      AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+    ]],
     // cell junior
     [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA]],
 
@@ -238,6 +244,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.SuperJanemba.DEVIL_CLAW,
       AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
       AbilityNames.SuperJanemba.BUNKAI_TELEPORT,
+      AbilityNames.SuperJanemba.DEMONIC_BLADE,
       AbilityNames.SuperJanemba.HELLS_GATE,
       AbilityNames.SuperJanemba.COSMIC_ILLUSION,
       AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,

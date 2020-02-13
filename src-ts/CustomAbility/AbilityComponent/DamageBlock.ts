@@ -156,6 +156,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
+        extraPitch: number;
         color: {
           x: number,
           y: number,
@@ -173,6 +174,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
+        extraPitch: number;
         color: {
           x: number,
           y: number,

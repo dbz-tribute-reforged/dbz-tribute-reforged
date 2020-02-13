@@ -57,7 +57,8 @@ export class TournamentContestant {
       return (
         IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && 
         !UnitHelper.isUnitDead(GetFilterUnit()) && 
-        !BlzIsUnitInvulnerable(GetFilterUnit())
+        !BlzIsUnitInvulnerable(GetFilterUnit()) &&
+        !IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED)
       );
     }));
 

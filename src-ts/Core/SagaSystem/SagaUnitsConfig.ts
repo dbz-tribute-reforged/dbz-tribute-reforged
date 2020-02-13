@@ -1,6 +1,5 @@
 import { SagaUnit } from "./SagaUnit";
 import { Vector2D } from "Common/Vector2D";
-import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbilities } from "./SagaAbilitiesConfig";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
@@ -99,7 +98,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // namek saga
-    ["Dodoria", new SagaUnit(FourCC("U015"), 20, 350, 150, 200, new Vector2D(30500, 25500),
+    ["Dodoria", new SagaUnit(FourCC("U015"), 25, 350, 150, 200, new Vector2D(30500, 25500),
       [
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
         SagaAbilities.Nappa.BREAK_CANNON,
@@ -114,7 +113,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ]
     )],
-    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 40, 700, 300, 500, new Vector2D(30500, 25500),
+    ["Zarbon 2", new SagaUnit(FourCC("U01B"), 45, 700, 300, 500, new Vector2D(30500, 25500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,
@@ -127,7 +126,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // ginyu force
     ["Guldo", new SagaUnit(FourCC("U00Y"), 9, 200, 200, 650, new Vector2D(25000, 30000))],
-    ["Recoome", new SagaUnit(FourCC("U005"), 30, 900, 200, 300, new Vector2D(24400, 30000),
+    ["Recoome", new SagaUnit(FourCC("U005"), 35, 900, 200, 300, new Vector2D(24400, 30000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH, 
         SagaAbilities.Broly.GIGANTIC_ROAR,
@@ -146,7 +145,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.BATTLE_ARMOR_3,
       ]
     )],
-    ["Ginyu", new SagaUnit(FourCC("U000"), 45, 800, 250, 800, new Vector2D(24500, 29600),
+    ["Ginyu", new SagaUnit(FourCC("U000"), 50, 800, 250, 800, new Vector2D(24500, 29600),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -192,7 +191,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // garlic jr
-    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 50, 800, 350, 850, new Vector2D(-2200, 28000),
+    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 60, 800, 350, 850, new Vector2D(-2200, 28000),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -207,7 +206,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(-2000, 27000))],
 
     // cooler's revenge
-    ["Cooler", new SagaUnit(FourCC("H042"), 50, 1500, 400, 1600, new Vector2D(4400, 9300),
+    ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(4400, 9300),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
@@ -241,13 +240,13 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // trunks saga
-    ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 50, 2500, 410, 1000, new Vector2D(24000, 6500),
+    ["Mecha Frieza", new SagaUnit(FourCC("U00J"), 70, 2500, 410, 1000, new Vector2D(24000, 6500),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
       ],
     )],
-    ["King Cold", new SagaUnit(FourCC("U00K"), 50, 2500, 410, 2000, new Vector2D(24400, 6500),
+    ["King Cold", new SagaUnit(FourCC("U00K"), 30, 2500, 410, 2000, new Vector2D(24400, 6500),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
@@ -321,6 +320,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Android13.ANDROID_BARRIER,
         SagaAbilities.Android13.OVERCHARGE,
       ],
+      [
+        ItemConstants.SagaDrops.BANANA_GENERATOR
+      ]
     )],
 
     // cell saga
@@ -341,6 +343,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cell.KAMEHAMEHA,
         SagaAbilities.Cell.MASENKO,
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
+        SagaAbilities.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
       ],
     )],
     
@@ -518,16 +521,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.ENERGY_PUNCH,
       ],
     )],
-    ["Super Janemba", new SagaUnit(FourCC("U007"), 120, 15000, 400, 15000, new Vector2D(8500, 4000),
+    ["Super Janemba", new SagaUnit(FourCC("H062"), 120, 15000, 400, 15000, new Vector2D(8500, 4000),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.SuperJanemba.RAKSHASA_CLAW,
+        SagaAbilities.SuperJanemba.BUNKAI_TELEPORT,
+        SagaAbilities.SuperJanemba.HELLS_GATE,
+        SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
       ],
-      [
-        ItemConstants.SagaDrops.DIMENSION_SWORD,
-      ]
     )],
 
     // buu saga
@@ -538,6 +539,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Buu.ANGRY_EXPLOSION,
         SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
+      [
+        ItemConstants.SagaDrops.BEE_DOG_ITEM,
+      ]
     )],
     ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(21000, -4700),
       [

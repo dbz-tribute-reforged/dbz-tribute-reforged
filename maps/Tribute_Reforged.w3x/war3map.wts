@@ -7084,6 +7084,12 @@ Super Janemba is a close-quarters bruiser who has powerful offensive abilities o
 
 }
 
+STRING 1132
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool1> seconds|r
+}
+
 STRING 1133
 // Units: H00C (Demon), Tip (Tooltip - Basic)
 {
@@ -9837,12 +9843,6 @@ STRING 1569
 Bio Lab Research
 }
 
-STRING 1570
-// Items: I048 (Geti Star Fragment), Description (Description)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 3 @ 200%|r|n|cff00ffffCooldown: 90s|r
-}
-
 STRING 1571
 // Items: I01Y (Bio Lab Research), Ubertip (Tooltip - Extended)
 {
@@ -10664,12 +10664,6 @@ STRING 1703
 Purchase Brave Sword [|cffFFFF001/5|r]
 }
 
-STRING 1704
-// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 3 @ 200%|r|n|cff00ffffCooldown: 90s|r
-}
-
 STRING 1705
 // Items: I04A (Sorrowful Scythe), Description (Description)
 {
@@ -10947,9 +10941,9 @@ STRING 1750
 }
 
 STRING 1751
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+// Items: I01V (|cffffcc00Dragon Ball|r), Description (Description)
 {
-|cffffff00+18 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.|n|cffff2020Note: If you cannot select Shenron, type "-shenron" after summong him to make your wish.
 }
 
 STRING 1752
@@ -18017,7 +18011,7 @@ STRING 2927
 }
 
 STRING 2928
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
@@ -18041,7 +18035,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2932
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -18899,7 +18893,7 @@ STRING 3074
 }
 
 STRING 3075
-// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -18923,7 +18917,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth.
 }
 
 STRING 3079
-// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19360,13 +19354,13 @@ Muffin
 }
 
 STRING 3152
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3153
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19576,13 +19570,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 3188
-// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 3189
-// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -19865,7 +19859,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -20081,7 +20075,7 @@ STRING 3271
 }
 
 STRING 3272
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20105,7 +20099,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 3276
-// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21087,7 +21081,7 @@ STRING 3437
 }
 
 STRING 3438
-// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21111,7 +21105,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21435,7 +21429,7 @@ STRING 3495
 }
 
 STRING 3496
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21459,7 +21453,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 3500
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21813,7 +21807,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21837,7 +21831,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21927,7 +21921,7 @@ S.S. Deadly |cffffcc00B|romb - [|cffffcc00Level 7|r]
 }
 
 STRING 3578
-// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21951,7 +21945,7 @@ Fires a beam of energy from the users palm.
 }
 
 STRING 3582
-// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22215,7 +22209,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22239,7 +22233,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 3630
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23371,7 +23365,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23389,7 +23383,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -24025,7 +24019,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24049,7 +24043,7 @@ Dende creates a beam of healing energy connecting him and the target unit. If De
 }
 
 STRING 3931
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25094,7 +25088,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -25118,7 +25112,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26384,7 +26378,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26408,7 +26402,7 @@ Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane
 }
 
 STRING 4324
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28202,7 +28196,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28226,7 +28220,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28626,7 +28620,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28740,7 +28734,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29214,7 +29208,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29760,7 +29754,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29784,7 +29778,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29874,7 +29868,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29898,7 +29892,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30560,7 +30554,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30578,7 +30572,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -31550,7 +31544,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31573,7 +31567,7 @@ You have received +0.02x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31969,7 +31963,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31993,7 +31987,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32083,7 +32077,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32197,7 +32191,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32311,7 +32305,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32425,7 +32419,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33009,7 +33003,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33034,7 +33028,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33155,7 +33149,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33167,7 +33161,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33349,7 +33343,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33373,7 +33367,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33463,7 +33457,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33481,7 +33475,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33613,7 +33607,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33874,7 +33868,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33892,7 +33886,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34354,7 +34348,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34378,7 +34372,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 5649
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34824,7 +34818,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5717
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34920,7 +34914,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34968,7 +34962,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35654,7 +35648,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35672,7 +35666,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36080,7 +36074,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38465,7 +38459,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38687,7 +38681,7 @@ STRING 6358
 }
 
 STRING 6359
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38711,7 +38705,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38969,7 +38963,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39683,7 +39677,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40001,13 +39995,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41275,13 +41269,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 6787
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -41371,7 +41365,7 @@ STRING 6802
 }
 
 STRING 6803
-// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -41395,13 +41389,13 @@ The Destructo Disk is a razor-sharp disk of energy that can slice through nearly
 }
 
 STRING 6807
-// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41420,6 +41414,8 @@ Transformations:
 [lvl 90]  2.0x "fp"
 [lvl 150] 2.5x "fp"
 [lvl 200] 2.6x "xeno janemba" [uprgrades Q]
+
+Type "-swordon" for a comsetic Dimension Sword. To receive the real Dimension Sword item, kill the Super Janemba saga and pick up the dropped item.
 }
 
 STRING 6811
@@ -41489,9 +41485,9 @@ E
 }
 
 STRING 6822
-// Abilities: A0O0 (Demon's Mark), Ubertip (Tooltip - Normal - Extended)
+// Items: I04F (Banana Generator), Name (Name)
 {
-Applies a powerful curse on enemy units causing them to miss attacks. Using this ability will replace it with the Demon Rush ability for the next 5 seconds.|n|cff00ffffCooldown: <A0O0,Cool1>s|r
+Banana Generator
 }
 
 STRING 6823
@@ -41723,7 +41719,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41855,7 +41851,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 6883
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41927,7 +41923,7 @@ Transforms Yamcha back to normal.
 }
 
 STRING 6895
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -41951,13 +41947,13 @@ Roshi beefs up, increasing his power multiplier by 0.3x and causing his spells t
 }
 
 STRING 6899
-// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
+// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6900
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42089,7 +42085,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42179,7 +42175,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42215,7 +42211,7 @@ Madara calls down a gigantic meteor that will crash into the target location, de
 }
 
 STRING 6943
-// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
+// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42461,7 +42457,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42593,7 +42589,7 @@ Hit travels forward in time a fraction of a second, striking the target unit and
 }
 
 STRING 7006
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42767,7 +42763,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7035
-// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42803,7 +42799,7 @@ Hit traps an opponent in a time cage, stunning them for 1.5 seconds.|n|cff00FFFF
 }
 
 STRING 7041
-// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43247,13 +43243,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43337,7 +43333,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43361,7 +43357,7 @@ Big Bang Attack
 }
 
 STRING 7134
-// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43379,7 +43375,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7137
-// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43403,7 +43399,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43427,7 +43423,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43475,7 +43471,7 @@ Dragon Fist
 }
 
 STRING 7153
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43499,7 +43495,7 @@ Energy Punch
 }
 
 STRING 7157
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43621,7 +43617,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 7176
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43669,7 +43665,7 @@ Final Flash
 }
 
 STRING 7184
-// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43693,7 +43689,7 @@ Galick Gun
 }
 
 STRING 7188
-// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43717,7 +43713,7 @@ Kamehameha
 }
 
 STRING 7192
-// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43825,7 +43821,7 @@ Fires a beam in that deals damage in a line and stuns heroes that are struck. |n
 }
 
 STRING 7210
-// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43837,7 +43833,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43861,7 +43857,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43885,7 +43881,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44017,7 +44013,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44041,7 +44037,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 7246
-// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44299,7 +44295,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44323,7 +44319,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7293
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44527,7 +44523,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44551,7 +44547,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 7331
-// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44665,7 +44661,7 @@ STRING 7349
 }
 
 STRING 7350
-// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44689,7 +44685,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44869,7 +44865,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44893,7 +44889,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7388
-// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45007,13 +45003,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7407
-// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45739,7 +45735,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45763,7 +45759,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45858,7 +45854,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 7548
-// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45882,7 +45878,7 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 7552
-// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45972,7 +45968,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45996,7 +45992,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46092,7 +46088,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46110,7 +46106,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46242,7 +46238,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46266,7 +46262,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46596,7 +46592,7 @@ STRING 7670
 }
 
 STRING 7671
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46620,7 +46616,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 7675
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46710,7 +46706,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46734,7 +46730,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 7694
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46824,7 +46820,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46836,7 +46832,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46878,9 +46874,9 @@ STRING 7717
 }
 
 STRING 7718
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+// Items: I01V (|cffffcc00Dragon Ball|r), Ubertip (Tooltip - Extended)
 {
-|cffffff00+18 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.|n|cffff2020Note: If you cannot select Shenron, type "-shenron" after summong him to make your wish.
 }
 
 STRING 7719
@@ -47076,13 +47072,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7751
-// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47190,13 +47186,13 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7770
-// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47340,7 +47336,7 @@ STRING 7794
 }
 
 STRING 7795
-// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47364,7 +47360,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Damage: (Int * 
 }
 
 STRING 7799
-// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47478,7 +47474,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47496,7 +47492,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47952,7 +47948,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47970,7 +47966,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48102,7 +48098,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -48120,7 +48116,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48294,7 +48290,7 @@ STRING 7953
 }
 
 STRING 7954
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48318,13 +48314,13 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7958
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48462,7 +48458,7 @@ Learn God Splitter (|cffffcc00Q|r)
 }
 
 STRING 7982
-// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48600,7 +48596,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48624,7 +48620,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49002,7 +48998,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49137,7 +49133,7 @@ Tapion fires a sphere of energy in the target direction. The sphere will damage 
 }
 
 STRING 8093
-// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49253,7 +49249,7 @@ STRING 8110
 }
 
 STRING 8111
-// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49285,7 +49281,7 @@ Tapion slashes units in the target direction for damage. If he successfully uses
 }
 
 STRING 8116
-// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49369,7 +49365,7 @@ Tapion jumps above a target affected by “Hero’s Song”. Upon arrival, Tapio
 }
 
 STRING 8130
-// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -49381,7 +49377,7 @@ Tapion jumps above a target affected by “Hero’s Song”. Upon arrival, Tapio
 }
 
 STRING 8132
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49417,7 +49413,7 @@ Tapion plays his flute.|n|CffFFFF00Applies  |rlvl*200|cffFFFF00 armor to Tapion 
 }
 
 STRING 8138
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50071,7 +50067,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50185,7 +50181,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50347,7 +50343,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50479,7 +50475,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -50743,7 +50739,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -50767,7 +50763,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50983,7 +50979,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 8399
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51007,7 +51003,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51121,7 +51117,7 @@ Goku Black rushes the target area at max move speed,damaging units in his path.|
 }
 
 STRING 8422
-// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51157,7 +51153,7 @@ Goku black creates two clones of himself that last for 12 seconds. While clones 
 }
 
 STRING 8428
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51391,7 +51387,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51415,7 +51411,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8471
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51498,7 +51494,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51582,13 +51578,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51666,7 +51662,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51690,7 +51686,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51792,7 +51788,7 @@ King K Rool pulls in nearby units in front of him and unleashes a massive cannon
 }
 
 STRING 8534
-// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51818,7 +51814,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52040,7 +52036,7 @@ King K Rool charges 1,000 distance forward, dealing damage and stunning all unit
 }
 
 STRING 8572
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52064,7 +52060,7 @@ Monkey Smasher
 }
 
 STRING 8576
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52885,7 +52881,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53043,7 +53039,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53067,7 +53063,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53133,7 +53129,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53157,7 +53153,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53315,7 +53311,7 @@ Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to 
 }
 
 STRING 8782
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53339,7 +53335,7 @@ Temporal Warp
 }
 
 STRING 8786
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53609,7 +53605,7 @@ STRING 8830
 }
 
 STRING 8831
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -53633,7 +53629,7 @@ Dende links all units near him for 5s, causing all damage received by linked uni
 }
 
 STRING 8835
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53664,13 +53660,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8840
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 8841
-// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53837,7 +53833,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53921,7 +53917,7 @@ VegetaSSB2
 }
 
 STRING 8881
-// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53945,7 +53941,7 @@ Super Saiyan Blue Evolution
 }
 
 STRING 8885
-// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Satan Kick), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54059,7 +54055,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8904
-// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Satan Kick), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54083,7 +54079,7 @@ Super Saiyan Blue Revert
 }
 
 STRING 8908
-// Abilities: A0JW (Flying Satan Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54209,7 +54205,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54233,7 +54229,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54275,7 +54271,7 @@ Bio Broly
 }
 
 STRING 8940
-// Abilities: A0JW (Flying Satan Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54359,7 +54355,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8954
-// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54371,7 +54367,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8956
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54455,7 +54451,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8970
-// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54473,7 +54469,7 @@ STRING 8972
 }
 
 STRING 8973
-// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -54557,7 +54553,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8987
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54594,13 +54590,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8993
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8994
-// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54690,7 +54686,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54714,7 +54710,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 9013
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54804,7 +54800,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54840,7 +54836,7 @@ all
 }
 
 STRING 9034
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54923,7 +54919,7 @@ STRING 9047
 }
 
 STRING 9048
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54989,7 +54985,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55013,7 +55009,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55025,7 +55021,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55097,7 +55093,7 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 }
 
 STRING 9077
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55115,7 +55111,7 @@ STRING 9079
 }
 
 STRING 9080
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55151,7 +55147,7 @@ Jiren fires a slowly expanding wall of burning energy towards the target directi
 }
 
 STRING 9086
-// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55247,7 +55243,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0JE (Roshi Kame Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55271,7 +55267,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Roshi Kame Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55385,7 +55381,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55439,7 +55435,7 @@ Follow-Up
 }
 
 STRING 9134
-// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55703,7 +55699,7 @@ F
 }
 
 STRING 9178
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56021,7 +56017,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56045,7 +56041,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56063,7 +56059,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56204,7 +56200,7 @@ Hero
 }
 
 STRING 9260
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56337,13 +56333,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56355,7 +56351,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56366,7 +56362,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56498,13 +56494,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -58292,193 +58288,193 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9609
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9610
-// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9611
-// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9612
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9613
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9614
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9615
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9616
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9617
-// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9618
-// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9619
-// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9620
-// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9621
-// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9622
-// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9623
-// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9624
-// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9625
-// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9626
-// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9627
-// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9628
-// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9629
-// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9630
-// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9631
-// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9632
-// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9633
-// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9634
-// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9635
-// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9636
-// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9637
-// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9638
-// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9639
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59491,6 +59487,12 @@ STRING 9807
 Saiyan
 }
 
+STRING 9808
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur2> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool2> seconds|r
+}
+
 STRING 9809
 // Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
 {
@@ -59582,13 +59584,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60116,7 +60118,7 @@ STRING 9911
 }
 
 STRING 9912
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60164,7 +60166,7 @@ STRING 9919
 }
 
 STRING 9920
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -60212,7 +60214,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 9928
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60236,7 +60238,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 9932
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61145,7 +61147,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61260,7 +61262,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61594,7 +61596,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61624,7 +61626,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61852,13 +61854,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62171,7 +62173,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -62189,7 +62191,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -62789,7 +62791,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62807,7 +62809,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64152,7 +64154,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64218,7 +64220,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64655,7 +64657,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64669,7 +64671,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 12.Feb.20
+This map is under active development - 14.Feb.20
 }
 
 STRING 10653
@@ -64683,9 +64685,15 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 10656
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur3> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool3> seconds|r
 }
 
 STRING 10657
@@ -64719,7 +64727,7 @@ Transformations:
 [lvl 15]  1.25x "first"
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
+[lvl 30+] 2.00x (absorb 17/18)
 [lvl 120] 2.50x "super perfect"
 
 To reach Cell's higher forms you must absorb 17/18.
@@ -64908,7 +64916,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64926,9 +64934,9 @@ Book Farmer Heads
 }
 
 STRING 10693
-// Items: I01V (|cffffcc00Dragon Ball|r), Description (Description)
+// Abilities: A0O0 (Demon's Mark), Ubertip (Tooltip - Normal - Extended)
 {
-An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.
+Applies a powerful curse on enemy units causing them to miss attacks. Using this ability will replace it with the [|cff00ff00D|r] Demon Rush ability for the next 5 seconds.|n|cff00ffffCooldown: <A0O0,Cool1>s|r
 }
 
 STRING 10694
@@ -64974,7 +64982,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64992,7 +65000,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65016,9 +65024,9 @@ STRING 10707
 }
 
 STRING 10708
-// Items: I01V (|cffffcc00Dragon Ball|r), Ubertip (Tooltip - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
 }
 
 STRING 10709
@@ -65148,7 +65156,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65166,7 +65174,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -65184,7 +65192,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth dealing massive dam
 }
 
 STRING 10734
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -66218,7 +66226,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66236,7 +66244,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66374,7 +66382,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66392,7 +66400,7 @@ STRING 10933
 }
 
 STRING 10934
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -67496,7 +67504,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67514,7 +67522,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68075,7 +68083,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68111,7 +68119,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68459,7 +68467,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 11279
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69215,7 +69223,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69239,7 +69247,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69371,7 +69379,7 @@ STRING 11430
 }
 
 STRING 11431
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -69994,7 +70002,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -71940,6 +71948,18 @@ STRING 11853
 Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
 }
 
+STRING 11854
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur4> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool4> seconds|r
+}
+
+STRING 11855
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur5> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool5> seconds|r
+}
+
 STRING 11856
 // Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
 {
@@ -72013,9 +72033,9 @@ STRING 11867
 }
 
 STRING 11868
-// Abilities: A0O7 (Demon's Mark Curse 25%), Name (Name)
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
-Demon's Mark Curse 25%
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur6> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool6> seconds|r
 }
 
 STRING 11869
@@ -72048,10 +72068,34 @@ STRING 11873
 Slow
 }
 
+STRING 11874
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur7> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool7> seconds|r
+}
+
+STRING 11875
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 2|r]
+}
+
 STRING 11876
 // Buffs/Effects: B028 (), Buffubertip (Tooltip - Extended)
 {
 This unit is slowed; its movement speed and attack rate are reduced.
+}
+
+STRING 11877
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 11878
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 4|r]
 }
 
 STRING 11879
@@ -72073,135 +72117,135 @@ Q
 }
 
 STRING 11882
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 1|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 5|r]
 }
 
 STRING 11883
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> seconds|r
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 6|r]
 }
 
 STRING 11884
-// Abilities: A0EU (Cosmic Illusion), Researchtip (Tooltip - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Learn Cosmic Illusion - [|cffffcc00Level %d|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 1|r]
 }
 
 STRING 11885
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 2|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 7|r]
 }
 
 STRING 11886
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 3|r]
+F
 }
 
 STRING 11887
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Name (Name)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 4|r]
+Solar Kamehameha
 }
 
 STRING 11888
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Researchtip (Tooltip - Learn)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 5|r]
+[|cff00ff00F|r] Learn Solar Kamehameha - [|cffffcc00Level %d|r]
 }
 
 STRING 11889
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 6|r]
+F
 }
 
 STRING 11890
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 7|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 9|r]
 }
 
 STRING 11891
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 8|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 8|r]
 }
 
 STRING 11892
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Tip (Tooltip - Normal)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 9|r]
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 10|r]
 }
 
 STRING 11893
-// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00R|r] Cosmic Illusion - [|cffffcc00Level 10|r]
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur8> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool8> seconds|r
 }
 
 STRING 11894
-// Abilities: A0EU (Cosmic Illusion), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> - <A0EU,Cool10> seconds|r
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur9> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool9> seconds|r
 }
 
 STRING 11895
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur2>|n|cff00FFFFCooldown: <A0EU,Cool2> seconds|r
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur10> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool10> seconds|r
 }
 
 STRING 11896
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O9 (Solar Kamehameha), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur3>|n|cff00FFFFCooldown: <A0EU,Cool3> seconds|r
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool1> - <A0O9,Cool10> seconds|r
 }
 
 STRING 11897
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O9 (Solar Kamehameha), EditorSuffix (Editor Suffix)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur4>|n|cff00FFFFCooldown: <A0EU,Cool4> seconds|r
+(cell)
 }
 
 STRING 11898
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur5>|n|cff00FFFFCooldown: <A0EU,Cool5> seconds|r
+|cffffff00+20 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 11899
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur6>|n|cff00FFFFCooldown: <A0EU,Cool6> seconds|r
+|cffffff00+20 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 11900
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur7>|n|cff00FFFFCooldown: <A0EU,Cool7> seconds|r
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool2> seconds|r
 }
 
 STRING 11901
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur8>|n|cff00FFFFCooldown: <A0EU,Cool8> seconds|r
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool3> seconds|r
 }
 
 STRING 11902
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur9>|n|cff00FFFFCooldown: <A0EU,Cool9> seconds|r
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool4> seconds|r
 }
 
 STRING 11903
-// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cff00ff00Duration: <A0EU,Dur10>|n|cff00FFFFCooldown: <A0EU,Cool10> seconds|r
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool5> seconds|r
 }
 
 STRING 11904
@@ -72211,7 +72255,7 @@ Cosmic Illusion
 }
 
 STRING 11905
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -72498,6 +72542,12 @@ STRING 11952
 Demon's Mark
 }
 
+STRING 11953
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool6> seconds|r
+}
+
 STRING 11954
 // Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
@@ -72522,6 +72572,12 @@ STRING 11957
 Demon Rush
 }
 
+STRING 11958
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool7> seconds|r
+}
+
 STRING 11959
 // Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
@@ -72541,45 +72597,45 @@ STRING 11961
 }
 
 STRING 11962
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 1|r]
 }
 
 STRING 11963
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool2> seconds|r
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> seconds|r
 }
 
 STRING 11964
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Researchtip (Tooltip - Learn)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool3> seconds|r
+[|cff00ff00E|r] Learn Cosmic Illusion - [|cffffcc00Level %d|r]
 }
 
 STRING 11965
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool4> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 2|r]
 }
 
 STRING 11966
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool5> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 3|r]
 }
 
 STRING 11967
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool6> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 4|r]
 }
 
 STRING 11968
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool7> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 5|r]
 }
 
 STRING 11969
@@ -72661,27 +72717,27 @@ STRING 11981
 }
 
 STRING 11982
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool8> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 6|r]
 }
 
 STRING 11983
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool9> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 7|r]
 }
 
 STRING 11984
-// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 8|r]
 }
 
 STRING 11985
-// Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his enemies. After a short delay he returns to where he started. Deals AOE damage upon arrival. During the teleport he gains minor damage block.|n|cff00ff00Damage: ? * Agi * Lvl|nDamage Block: 0.2 * Str * Lvl @ 25%|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 9|r]
 }
 
 STRING 11986
@@ -72733,49 +72789,49 @@ First, Janemba places his hands at the sides of his face as he charges a green e
 }
 
 STRING 11994
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 2|r]
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool8> seconds|r
 }
 
 STRING 11995
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 3|r]
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool9> seconds|r
 }
 
 STRING 11996
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 4|r]
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
 }
 
 STRING 11997
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 5|r]
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
 }
 
 STRING 11998
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 6|r]
+W
 }
 
 STRING 11999
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Name (Name)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 1|r]
+Demonic Blade
 }
 
 STRING 12000
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 7|r]
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 1|r]
 }
 
 STRING 12001
-// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72787,33 +72843,33 @@ Hell's Gate
 }
 
 STRING 12003
-// Abilities: A0O3 (Hell's Gate), Researchtip (Tooltip - Learn)
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Learn Hell's Gate - [|cffffcc00Level %d|r]
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool1> seconds|r
 }
 
 STRING 12004
-// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12005
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Researchtip (Tooltip - Learn)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 9|r]
+[|cff00FF00E|r] Learn Plant Saibamen - [|cffffcc00Level %d|r]
 }
 
 STRING 12006
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 8|r]
+Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool1>-<A0MK,Cool9> seconds.|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
 }
 
 STRING 12007
-// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
-[|cff00ff00E|r] Hell's Gate - [|cffffcc00Level 10|r]
+E
 }
 
 STRING 12008
@@ -72931,7 +72987,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72949,7 +73005,7 @@ STRING 12029
 }
 
 STRING 12030
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -73024,5 +73080,323 @@ STRING 12042
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12043
+// Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 10|r]
+}
+
+STRING 12044
+// Abilities: A0EU (Cosmic Illusion), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur1>|n|cff00FFFFCooldown: <A0EU,Cool1> - <A0EU,Cool10> seconds|r
+}
+
+STRING 12045
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur2>|n|cff00FFFFCooldown: <A0EU,Cool2> seconds|r
+}
+
+STRING 12046
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur3>|n|cff00FFFFCooldown: <A0EU,Cool3> seconds|r
+}
+
+STRING 12047
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur4>|n|cff00FFFFCooldown: <A0EU,Cool4> seconds|r
+}
+
+STRING 12048
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur5>|n|cff00FFFFCooldown: <A0EU,Cool5> seconds|r
+}
+
+STRING 12049
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur6>|n|cff00FFFFCooldown: <A0EU,Cool6> seconds|r
+}
+
+STRING 12050
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur7>|n|cff00FFFFCooldown: <A0EU,Cool7> seconds|r
+}
+
+STRING 12051
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur8>|n|cff00FFFFCooldown: <A0EU,Cool8> seconds|r
+}
+
+STRING 12052
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur9>|n|cff00FFFFCooldown: <A0EU,Cool9> seconds|r
+}
+
+STRING 12053
+// Abilities: A0EU (Cosmic Illusion), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba turns invisible and creates a clone of himself that can attack nearby enemies. Breaking the invisiblity deals bonus damage.|n|cffffff00Auto-attacks from the illusion will also proc Q.|n|cff00ff00Duration: <A0EU,Dur10>|n|cff00FFFFCooldown: <A0EU,Cool10> seconds|r
+}
+
+STRING 12054
+// Items: I04F (Banana Generator), Description (Description)
+{
+For all your energy needs!
+}
+
+STRING 12055
+// Items: I04F (Banana Generator), Tip (Tooltip - Basic)
+{
+Purchase Banana
+}
+
+STRING 12056
+// Items: I04F (Banana Generator), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00A powerful matter manipulator used by Super Android 13 to produce infinite amounts of energy. Each use restores 5% of max mana per second and drops a banana at your feet.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080That's bananas...|r
+}
+
+STRING 12057
+// Items: I04G (Bee), Name (Name)
+{
+Bee
+}
+
+STRING 12058
+// Items: I04G (Bee), Ubertip (Tooltip - Extended)
+{
+Grants true strike and 15% evasion.|n|cffffff00Majin Buu's best friend will assist you in landing your attacks and bark at you when you're about to be hit.|r
+}
+
+STRING 12059
+// Items: I04G (Bee), Description (Description)
+{
+Grants true strike and evasion.
+}
+
+STRING 12060
+// Abilities: A0OB (Bee True Strike), Name (Name)
+{
+Bee True Strike
+}
+
+STRING 12061
+// Abilities: A0OC (Bee Evasion), Name (Name)
+{
+Bee Evasion
+}
+
+STRING 12062
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12063
+// Items: I048 (Geti Star Fragment), Description (Description)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
+STRING 12064
+// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
+{
+|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
+STRING 12065
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 2|r]
+}
+
+STRING 12066
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 3|r]
+}
+
+STRING 12067
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 4|r]
+}
+
+STRING 12068
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 5|r]
+}
+
+STRING 12069
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 6|r]
+}
+
+STRING 12070
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 1|r]
+}
+
+STRING 12071
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 7|r]
+}
+
+STRING 12072
+// Abilities: A0O3 (Hell's Gate), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Hell's Gate - [|cffffcc00Level %d|r]
+}
+
+STRING 12073
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 9|r]
+}
+
+STRING 12074
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 8|r]
+}
+
+STRING 12075
+// Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 10|r]
+}
+
+STRING 12076
+// Abilities: A0O7 (Demon's Mark Curse 35%), Name (Name)
+{
+Demon's Mark Curse 35%
+}
+
+STRING 12077
+// Abilities: A0OA (Demonic Blade), EditorSuffix (Editor Suffix)
+{
+(janemba)
+}
+
+STRING 12078
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 2|r]
+}
+
+STRING 12079
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 3|r]
+}
+
+STRING 12080
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool2> seconds|r
+}
+
+STRING 12081
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool3> seconds|r
+}
+
+STRING 12082
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 4|r]
+}
+
+STRING 12083
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 5|r]
+}
+
+STRING 12084
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 6|r]
+}
+
+STRING 12085
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 7|r]
+}
+
+STRING 12086
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 8|r]
+}
+
+STRING 12087
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 9|r]
+}
+
+STRING 12088
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool4> seconds|r
+}
+
+STRING 12089
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool5> seconds|r
+}
+
+STRING 12090
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool6> seconds|r
+}
+
+STRING 12091
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool7> seconds|r
+}
+
+STRING 12092
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool8> seconds|r
+}
+
+STRING 12093
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool9> seconds|r
+}
+
+STRING 12094
+// Abilities: A0OA (Demonic Blade), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Demonic Blade - [|cffffcc00Level 10|r]
+}
+
+STRING 12095
+// Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
+{
+A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool10> seconds|r
 }
 

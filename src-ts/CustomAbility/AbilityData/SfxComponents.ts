@@ -19,6 +19,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -40,6 +41,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -69,6 +71,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -100,6 +103,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -117,6 +121,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -134,6 +139,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 135,
           y: 245,
@@ -151,6 +157,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 135,
           y: 245,
@@ -168,6 +175,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -185,6 +193,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -204,6 +213,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -233,6 +243,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -250,6 +261,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 245,
@@ -267,6 +279,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 245,
@@ -284,6 +297,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -301,6 +315,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -318,6 +333,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -335,6 +351,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -354,6 +371,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -383,6 +401,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -400,6 +419,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 146,
           y: 251,
@@ -417,6 +437,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -434,6 +455,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -451,6 +473,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -468,6 +491,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 25,
           y: 105,
@@ -485,10 +509,11 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
-          x: 255,
-          y: 255,
-          z: 225,
+          x: 225,
+          y: 225,
+          z: 255,
         },
         updateCoordsOnly: false,
         persistent: false,
@@ -504,6 +529,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -533,6 +559,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -550,6 +577,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -567,6 +595,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -584,6 +613,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -601,6 +631,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -618,6 +649,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -635,6 +667,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -652,6 +685,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 245,
@@ -671,6 +705,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -688,6 +723,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -705,6 +741,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -722,6 +759,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -751,6 +789,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 155,
@@ -768,6 +807,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 55,
@@ -785,6 +825,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 155,
@@ -802,6 +843,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 55,
@@ -819,6 +861,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -853,6 +896,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -883,6 +927,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -900,6 +945,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 115,
           y: 195,
@@ -917,6 +963,7 @@ export const SfxComponents = [
         startHeight: 200,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -934,6 +981,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -953,6 +1001,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -982,6 +1031,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -999,6 +1049,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1016,6 +1067,7 @@ export const SfxComponents = [
         startHeight: 150,
         endHeight: 150,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1033,6 +1085,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1050,6 +1103,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1081,6 +1135,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1112,6 +1167,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -1129,6 +1185,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1146,6 +1203,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1163,6 +1221,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1182,6 +1241,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1211,6 +1271,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1228,6 +1289,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -1245,6 +1307,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1264,6 +1327,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1293,6 +1357,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 215,
@@ -1310,6 +1375,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1327,6 +1393,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1361,6 +1428,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1391,6 +1459,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 215,
@@ -1422,6 +1491,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 215,
@@ -1439,6 +1509,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -1456,6 +1527,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -1490,6 +1562,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1521,6 +1594,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1531,51 +1605,36 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
-        repeatInterval: 16,
+        model: "Conflagrate.mdl",
+        repeatInterval: 33,
         group: 0,
-        scale: 1.5,
-        startHeight: 100,
-        endHeight: 100,
+        scale: 2.5,
+        startHeight: 50,
+        endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
-          y: 205,
-          z: 105,
+          y: 255,
+          z: 255,
         },
         updateCoordsOnly: false,
-        persistent: false,
+        persistent: true,
         attachmentPoint: "",
       },
       {
         model: "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl",
         repeatInterval: 16,
         group: 0,
-        scale: 1.5,
+        scale: 2.0,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
           z: 25,
-        },
-        updateCoordsOnly: false,
-        persistent: false,
-        attachmentPoint: "",
-      },
-      {
-        model: "Impact.mdl",
-        repeatInterval: 0,
-        group: 0,
-        scale: 1.0,
-        startHeight: 50,
-        endHeight: 50,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 155,
-          z: 155,
         },
         updateCoordsOnly: false,
         persistent: false,
@@ -1603,6 +1662,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1620,6 +1680,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1637,6 +1698,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1654,6 +1716,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1671,6 +1734,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1690,6 +1754,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1707,6 +1772,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1736,6 +1802,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 136,
           y: 205,
@@ -1753,6 +1820,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1770,6 +1838,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1787,6 +1856,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1818,6 +1888,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -1835,6 +1906,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -1852,6 +1924,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1900,6 +1973,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1917,6 +1991,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1934,6 +2009,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -1964,6 +2040,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -1983,6 +2060,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2012,6 +2090,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2029,6 +2108,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 245,
           y: 165,
@@ -2046,6 +2126,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2077,6 +2158,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 245,
           y: 165,
@@ -2094,6 +2176,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -2128,6 +2211,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -2159,6 +2243,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -2176,6 +2261,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -2193,6 +2279,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2224,6 +2311,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -2241,6 +2329,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2258,6 +2347,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -2275,6 +2365,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -2306,6 +2397,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2323,6 +2415,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 205,
@@ -2340,6 +2433,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 105,
@@ -2357,6 +2451,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 25,
           y: 105,
@@ -2374,6 +2469,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2405,6 +2501,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 125,
           y: 125,
@@ -2422,6 +2519,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 225,
@@ -2439,6 +2537,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2456,6 +2555,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2487,6 +2587,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -2504,6 +2605,7 @@ export const SfxComponents = [
         startHeight: 200,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -2521,6 +2623,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 234,
           y: 202,
@@ -2538,6 +2641,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -2569,6 +2673,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 235,
           y: 205,
@@ -2586,6 +2691,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 25,
@@ -2605,6 +2711,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2634,6 +2741,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2651,6 +2759,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2668,6 +2777,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 135,
           y: 245,
@@ -2685,6 +2795,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 135,
           y: 245,
@@ -2702,6 +2813,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2719,6 +2831,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -2738,6 +2851,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -2767,6 +2881,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -2784,6 +2899,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -2801,6 +2917,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2835,6 +2952,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2867,6 +2985,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2898,6 +3017,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -2915,6 +3035,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -2946,6 +3067,7 @@ export const SfxComponents = [
         startHeight: 300,
         endHeight: 300,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 0,
           y: 255,
@@ -2977,6 +3099,7 @@ export const SfxComponents = [
         startHeight: 300,
         endHeight: 300,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -3008,6 +3131,7 @@ export const SfxComponents = [
         startHeight: 300,
         endHeight: 300,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 0,
           y: 255,
@@ -3039,6 +3163,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 185,
@@ -3056,6 +3181,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 95,
           y: 255,
@@ -3073,6 +3199,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3104,6 +3231,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 255,
@@ -3121,6 +3249,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 125,
           y: 255,
@@ -3138,6 +3267,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3155,6 +3285,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3186,6 +3317,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3217,6 +3349,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3234,6 +3367,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3265,6 +3399,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3282,6 +3417,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -3299,6 +3435,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -3316,6 +3453,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3333,6 +3471,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -3350,6 +3489,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3381,6 +3521,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 0,
@@ -3398,6 +3539,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 125,
@@ -3417,6 +3559,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -3446,6 +3589,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -3477,6 +3621,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 0,
           y: 155,
@@ -3508,6 +3653,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3525,6 +3671,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -3542,6 +3689,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 225,
@@ -3559,6 +3707,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 225,
@@ -3590,6 +3739,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -3607,6 +3757,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 225,
@@ -3638,6 +3789,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -3655,6 +3807,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 225,
@@ -3686,6 +3839,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3703,6 +3857,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 100,
@@ -3720,6 +3875,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 225,
@@ -3737,6 +3893,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -3754,6 +3911,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -3785,6 +3943,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3802,6 +3961,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -3850,6 +4010,7 @@ export const SfxComponents = [
         startHeight: 150,
         endHeight: 150,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 25,
           y: 255,
@@ -3867,6 +4028,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3884,6 +4046,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3903,6 +4066,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3920,6 +4084,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3949,6 +4114,7 @@ export const SfxComponents = [
         startHeight: 150,
         endHeight: 150,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 25,
           y: 255,
@@ -3966,6 +4132,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -3983,6 +4150,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4014,6 +4182,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4031,6 +4200,7 @@ export const SfxComponents = [
         startHeight: 200,
         endHeight: 200,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 125,
           y: 255,
@@ -4048,6 +4218,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4065,6 +4236,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4082,6 +4254,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4099,6 +4272,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4116,6 +4290,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4133,6 +4308,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 255,
@@ -4150,6 +4326,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4167,6 +4344,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4199,6 +4377,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 255,
@@ -4216,6 +4395,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 205,
@@ -4233,6 +4413,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 255,
@@ -4250,6 +4431,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 205,
@@ -4267,6 +4449,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4284,6 +4467,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4301,6 +4485,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4318,6 +4503,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 255,
@@ -4335,6 +4521,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4366,6 +4553,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4383,6 +4571,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 205,
@@ -4400,6 +4589,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4417,6 +4607,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4434,6 +4625,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4451,6 +4643,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -4468,6 +4661,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4485,6 +4679,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 255,
@@ -4497,6 +4692,210 @@ export const SfxComponents = [
     ],
     attachedSfxList: [
 
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx solar kame caster", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 4.5,
+        startHeight: 150,
+        endHeight: 150,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 145,
+          y: 235,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        repeatInterval: 8,
+        group: 0,
+        scale: 2.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "DustWave.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 2.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam solar kame release", 
+    repeatInterval: 1,
+    startTick: 99,
+    endTick: 99,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "KameBase.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 2.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam solar kame", 
+    repeatInterval: 1,
+    startTick: 99,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 2,
+        group: 0,
+        scale: 3.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 125,
+          y: 215,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 11.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 115,
+          y: 205,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 3.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "IceNova.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 4,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 155,
+          y: 155,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "BlueBigExplosion.mdl",
+        repeatInterval: -1,
+        group: 0,
+        scale: 3.5,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 225,
+          y: 225,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
     ],
   },
   // --------------------------------------------
@@ -4517,6 +4916,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4534,6 +4934,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4553,6 +4954,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -4570,6 +4972,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 75,
@@ -4599,6 +5002,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 235,
           y: 255,
@@ -4616,6 +5020,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 235,
           y: 135,
@@ -4633,6 +5038,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4650,6 +5056,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -4667,6 +5074,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4684,6 +5092,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -4701,6 +5110,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4720,6 +5130,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -4749,6 +5160,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 175,
           y: 0,
@@ -4766,6 +5178,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4785,6 +5198,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4814,6 +5228,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4833,6 +5248,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4862,6 +5278,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 225,
           y: 205,
@@ -4879,6 +5296,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 145,
@@ -4896,6 +5314,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4913,6 +5332,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -4930,6 +5350,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4947,6 +5368,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -4964,6 +5386,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -4995,6 +5418,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 230,
           y: 120,
@@ -5012,6 +5436,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 230,
           y: 120,
@@ -5029,6 +5454,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5063,6 +5489,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -5093,6 +5520,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 155,
@@ -5110,6 +5538,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 25,
@@ -5127,6 +5556,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -5144,6 +5574,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 55,
@@ -5174,6 +5605,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -5204,6 +5636,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5221,6 +5654,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -5238,6 +5672,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5269,6 +5704,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 175,
@@ -5286,6 +5722,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 0,
@@ -5317,6 +5754,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 185,
@@ -5334,6 +5772,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 185,
@@ -5351,6 +5790,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5368,6 +5808,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -5398,6 +5839,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 0,
@@ -5415,6 +5857,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5446,6 +5889,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 0,
           y: 255,
@@ -5463,6 +5907,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5480,6 +5925,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 155,
           y: 255,
@@ -5510,6 +5956,7 @@ export const SfxComponents = [
         startHeight: 600,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5527,6 +5974,7 @@ export const SfxComponents = [
         startHeight: 600,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 245,
@@ -5558,6 +6006,7 @@ export const SfxComponents = [
         startHeight: 250,
         endHeight: 250,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5575,6 +6024,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 255,
@@ -5606,6 +6056,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -5623,6 +6074,7 @@ export const SfxComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -5640,6 +6092,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -5657,6 +6110,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -5676,6 +6130,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -5705,6 +6160,7 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 55,
@@ -5729,13 +6185,14 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
-        model: "AuraBunkai.mdl",
+        model: "BunkeroniLong.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 1.0,
-        startHeight: 0,
-        endHeight: 0,
+        scale: 1.1,
+        startHeight: 90,
+        endHeight: 90,
         extraDirectionalYaw: 0,
+        extraPitch: 90,
         color: {
           x: 255,
           y: 255,
@@ -5767,10 +6224,43 @@ export const SfxComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 75,
           z: 235,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx beam devil claw", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "BladeBeamFinal.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.3,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 245,
+          y: 65,
+          z: 215,
         },
         updateCoordsOnly: true,
         persistent: true,
@@ -5791,48 +6281,18 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
-        model: "AuraBunkai.mdl",
+        model: "BunkeroniLong.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.1,
-        startHeight: 50,
-        endHeight: 50,
+        startHeight: 90,
+        endHeight: 90,
         extraDirectionalYaw: 0,
+        extraPitch: 90,
         color: {
           x: 255,
           y: 255,
           z: 255,
-        },
-        updateCoordsOnly: true,
-        persistent: true,
-        attachmentPoint: "",
-      },
-    ],
-    attachedSfxList: [
-    ],
-  },
-  // --------------------------------------------
-  { 
-    name: "sfx bunkai teleport caster 1 attack", 
-    repeatInterval: 1,
-    startTick: 16,
-    endTick: 16,
-    sfxSource: SfxComponent.SOURCE_UNIT,
-    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
-    useLastCastPoint: false,
-    sfxList: [
-      {
-        model: "animeslashfinal.mdl",
-        repeatInterval: 1,
-        group: 0,
-        scale: 2.5,
-        startHeight: 50,
-        endHeight: 50,
-        extraDirectionalYaw: 0,
-        color: {
-          x: 255,
-          y: 75,
-          z: 235,
         },
         updateCoordsOnly: true,
         persistent: true,
@@ -5853,13 +6313,14 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
-        model: "AuraBunkai.mdl",
+        model: "BunkeroniLong.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 1.1,
-        startHeight: 50,
-        endHeight: 50,
+        startHeight: 90,
+        endHeight: 90,
         extraDirectionalYaw: 0,
+        extraPitch: 90,
         color: {
           x: 255,
           y: 255,
@@ -5875,10 +6336,10 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
-    name: "sfx bunkai teleport caster 2 attack", 
+    name: "sfx demonic blade", 
     repeatInterval: 1,
-    startTick: 199,
-    endTick: 199,
+    startTick: 0,
+    endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
@@ -5888,9 +6349,10 @@ export const SfxComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 2.5,
-        startHeight: 50,
-        endHeight: 50,
+        startHeight: 75,
+        endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 75,
@@ -5922,6 +6384,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 255,
@@ -5939,6 +6402,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 205,
@@ -5956,6 +6420,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 255,
@@ -5973,6 +6438,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 205,
@@ -5990,10 +6456,29 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
           z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl",
+        repeatInterval: 3,
+        group: 0,
+        scale: 2,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 155,
+          y: 255,
+          z: 155,
         },
         updateCoordsOnly: false,
         persistent: false,
@@ -6007,6 +6492,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 125,
           y: 255,
@@ -6038,6 +6524,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6055,6 +6542,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 195,
           y: 225,
@@ -6062,6 +6550,24 @@ export const SfxComponents = [
         },
         updateCoordsOnly: true,
         persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
+        repeatInterval: 50,
+        group: 0,
+        scale: 0.5,
+        startHeight: 75,
+        endHeight: 75,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
         attachmentPoint: "",
       },
     ],
@@ -6086,6 +6592,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6117,6 +6624,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6136,6 +6644,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 155,
@@ -6153,6 +6662,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 105,
@@ -6182,6 +6692,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6199,6 +6710,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 205,
           y: 205,
@@ -6218,6 +6730,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -6247,6 +6760,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6264,6 +6778,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -6283,6 +6798,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 105,
           y: 155,
@@ -6312,6 +6828,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -6329,6 +6846,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -6346,6 +6864,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -6365,6 +6884,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6382,6 +6902,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 205,
@@ -6411,6 +6932,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6458,6 +6980,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6475,6 +6998,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6494,6 +7018,7 @@ export const SfxComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,
@@ -6523,6 +7048,7 @@ export const SfxComponents = [
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 0,
@@ -6540,6 +7066,7 @@ export const SfxComponents = [
         startHeight: 100,
         endHeight: 100,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 255,

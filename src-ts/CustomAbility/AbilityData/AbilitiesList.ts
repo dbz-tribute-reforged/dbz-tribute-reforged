@@ -1719,6 +1719,7 @@ export const AbilitiesList = [
       { name: "dash ground point energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
+      { name: "knockback energy punch reverse" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
       { name: "block broly" },
@@ -1886,6 +1887,35 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block absorb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellSolarKamehameha.blp",
+      disabled: "BTNCellSolarKamehameha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+      body: 
+        AbilityNames.Cell.SOLAR_KAMEHAMEHA
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi solar kame" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx solar kame caster" },
     ],
   },
   // -------------------------------------------
@@ -2485,7 +2515,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
-    costAmount: 0,
+    costAmount: 25,
     duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
@@ -2537,7 +2567,7 @@ export const AbilitiesList = [
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
-    costAmount: 0,
+    costAmount: 500,
     duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
@@ -2583,12 +2613,36 @@ export const AbilitiesList = [
       { name: "teleport bunkai teleport return" },
       { name: "dash ground target bunkai teleport" },
       { name: "temp ability evil aura" },
-      { name: "damage bunkai teleport explosion" },
-      { name: "damage bunkai teleport explosion return" },
+      { name: "temp ability demonic blade" },
       { name: "sfx bunkai teleport caster 1" },
-      { name: "sfx bunkai teleport caster 1 attack" },
       { name: "sfx bunkai teleport caster 2" },
-      { name: "sfx bunkai teleport caster 2 attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.DEMONIC_BLADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperDemonicBlade.blp",
+      disabled: "BTNJanembaSuperDemonicBlade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEMONIC_BLADE,
+      body: 
+        "."
+    },
+    components: [
+      { name: "damage demonic blade" },
+      { name: "sfx demonic blade" },
     ],
   },
   // -------------------------------------------
@@ -2747,6 +2801,35 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi power blitz barrage saga" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellSolarKamehameha.blp",
+      disabled: "BTNCellSolarKamehameha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+      body: 
+        AbilityNames.Cell.SOLAR_KAMEHAMEHA
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi solar kame" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx solar kame caster" },
     ],
   },
   // -------------------------------------------

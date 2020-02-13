@@ -252,9 +252,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
   }
 
   giveTrophy(unit: unit) {
-    const trophy = CreateItem(TournamentData.trophyItem, GetUnitX(unit), GetUnitY(unit));
-    UnitAddItem(unit, trophy);
-    UnitUseItem(unit, trophy);
+    UnitAddItemById(unit, TournamentData.trophyItem);
   }
 
   runTournament() {

@@ -92,6 +92,18 @@ export function updateSelectedUnitBars(
   BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + level);
 }
 
+export function isValidOrderByPlayer(
+  unit: unit,
+  player: player,
+): boolean {
+  const unitTypeId = GetUnitTypeId(unit);
+  return (
+    GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING&&
+    unitTypeId != Constants.dummyBeamUnitId && 
+    unitTypeId != Constants.dummyCasterId
+  );
+}
+
 export function CustomPlayerTest() {
   
   customPlayers = [];
@@ -178,99 +190,100 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerOrderPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER);
   }
   TriggerAddCondition(updatePlayerOrderPoint, Condition(() => {
-    return (
+    const unitTypeId = GetUnitTypeId(GetTriggerUnit());
+    if (
       GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
-      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
-    );
-  }));
-  TriggerAddAction(updatePlayerOrderPoint, () => {
-    const x = GetOrderPointX();
-    const y = GetOrderPointY();
-    if (x != 0 && y != 0) {
-      const playerId = GetPlayerId(GetTriggerPlayer());
-      customPlayers[playerId].orderPoint.x = x;
-      customPlayers[playerId].orderPoint.y = y;
+      unitTypeId != Constants.dummyBeamUnitId && 
+      unitTypeId != Constants.dummyCasterId
+    ) {
+      const x = GetOrderPointX();
+      const y = GetOrderPointY();
+      if (x != 0 && y != 0) {
+        const playerId = GetPlayerId(GetTriggerPlayer());
+        customPlayers[playerId].orderPoint.x = x;
+        customPlayers[playerId].orderPoint.y = y;
+      }
     }
-  });
+    return false;
+  }));
 
   const updatePlayerTargetPoint = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerTargetPoint, Player(i), EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER);
   }
   TriggerAddCondition(updatePlayerTargetPoint, Condition(() => {
-    return (
-      GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING &&
-      GetUnitTypeId(GetTriggerUnit()) != Constants.dummyBeamUnitId
-    );
+    if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      customPlayers[playerId].targetUnit = GetOrderTargetUnit();
+      customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
+      customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
+    }
+    return false;
   }));
-  TriggerAddAction(updatePlayerTargetPoint, () => {
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    customPlayers[playerId].targetUnit = GetOrderTargetUnit();
-    customPlayers[playerId].orderPoint.x = GetUnitX(customPlayers[playerId].targetUnit);
-    customPlayers[playerId].orderPoint.y = GetUnitY(customPlayers[playerId].targetUnit);
-  });
 
   const updatePlayerLastCastPoint = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(updatePlayerLastCastPoint, Player(i), EVENT_PLAYER_UNIT_SPELL_CAST);
   }
   TriggerAddCondition(updatePlayerLastCastPoint, Condition(() => {
-    return GetPlayerSlotState(GetTriggerPlayer()) == PLAYER_SLOT_STATE_PLAYING;
+    if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
+      const playerId = GetPlayerId(GetTriggerPlayer());
+      customPlayers[playerId].lastCastPoint.x = GetSpellTargetX();
+      customPlayers[playerId].lastCastPoint.y = GetSpellTargetY();
+    }
+    return false;
   }));
-  TriggerAddAction(updatePlayerLastCastPoint, () => {
-    const playerId = GetPlayerId(GetTriggerPlayer());
-    customPlayers[playerId].lastCastPoint.x = GetSpellTargetX();
-    customPlayers[playerId].lastCastPoint.y = GetSpellTargetY();
-  });
 
   const linkNormalAbilityToCustomAbility = CreateTrigger();
 	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     TriggerRegisterPlayerUnitEventSimple(linkNormalAbilityToCustomAbility, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT);
   }
-  TriggerAddAction(linkNormalAbilityToCustomAbility, () => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
-    const abilityId = GetSpellAbilityId();
-    customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
-
-    if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
-      // show ability name on activation
-      TextTagHelper.showPlayerColorTextOnUnit(GetAbilityName(abilityId), playerId, GetTriggerUnit());
-    }
-
-    const spellName = abilityCodesToNames.get(abilityId);
-
-    if (spellName) { 
-      const caster = GetTriggerUnit();
-      const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
-      customPlayers[playerId].selectedUnit = caster;
-      let spellTargetUnit = undefined;
-      if (GetSpellTargetUnit()) {
-        customPlayers[playerId].targetUnit = GetSpellTargetUnit();
-        spellTargetUnit = customPlayers[playerId].targetUnit;
+  TriggerAddCondition(linkNormalAbilityToCustomAbility, Condition(() => {
+    if (isValidOrderByPlayer(GetTriggerUnit(), GetTriggerPlayer())) {
+      const player = GetTriggerPlayer();
+      const playerId = GetPlayerId(player);
+      const abilityId = GetSpellAbilityId();
+      customPlayers[playerId].lastCastUnit = GetSpellTargetUnit();
+  
+      if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
+        // show ability name on activation
+        TextTagHelper.showPlayerColorTextOnUnit(GetAbilityName(abilityId), playerId, GetTriggerUnit());
       }
-      const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
-      if (customHero) {
-        // temp fix for double ss rage trigger
-        if (spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || GetUnitTypeId(customHero.unit) != FourCC("H08I")) {
-          customHero.useAbility(
-            spellName,
-            new CustomAbilityInput(
-              customHero,
-              player,
-              abilityLevel,
-              customPlayers[playerId].orderPoint,
-              customPlayers[playerId].mouseData,
-              customPlayers[playerId].lastCastPoint.clone(),
-              spellTargetUnit,
-              GetSpellTargetUnit(),
-            ),
-          );
+  
+      const spellName = abilityCodesToNames.get(abilityId);
+  
+      if (spellName) { 
+        const caster = GetTriggerUnit();
+        const abilityLevel = GetUnitAbilityLevel(caster, abilityId);
+        customPlayers[playerId].selectedUnit = caster;
+        let spellTargetUnit = undefined;
+        if (GetSpellTargetUnit()) {
+          customPlayers[playerId].targetUnit = GetSpellTargetUnit();
+          spellTargetUnit = customPlayers[playerId].targetUnit;
+        }
+        const customHero = customPlayers[playerId].getCurrentlySelectedCustomHero();
+        if (customHero) {
+          // temp fix for double ss rage trigger
+          if (spellName != AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE || GetUnitTypeId(customHero.unit) != FourCC("H08I")) {
+            customHero.useAbility(
+              spellName,
+              new CustomAbilityInput(
+                customHero,
+                player,
+                abilityLevel,
+                customPlayers[playerId].orderPoint,
+                customPlayers[playerId].mouseData,
+                customPlayers[playerId].lastCastPoint.clone(),
+                spellTargetUnit,
+                GetSpellTargetUnit(),
+              ),
+            );
+          }
         }
       }
     }
-
-  });
+    return false;
+  }));
 
   
   // zanzo activation trigger

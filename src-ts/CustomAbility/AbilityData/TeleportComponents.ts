@@ -49,6 +49,6 @@ export const TeleportComponents = [
     teleportTick: 198,
     teleportOnce: true,
     teleportTarget: Teleport.ORIGINAL_POINT,
-    maxRange: Teleport.INFINITE_RANGE,
+    maxRange: 1200,
   },
 ];

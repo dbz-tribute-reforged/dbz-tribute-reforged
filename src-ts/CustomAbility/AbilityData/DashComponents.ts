@@ -258,6 +258,7 @@ export const DashComponents = [
     distance: 45,
   },
   // ----------------------------
+  // nova chariot
   {
     name: "dash ground point nova chariot",
     repeatInterval: 1, 
@@ -332,6 +333,6 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 30,
+    distance: 32,
   },
 ]

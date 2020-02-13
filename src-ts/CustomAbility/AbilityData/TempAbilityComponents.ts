@@ -10,6 +10,20 @@ export const TempAbilityComponents = [
     enableAbility: true,
     addAbility: false,
     tempPermanence: false,
+    equalizeLevels: false,
+  },
+  {
+    name: "temp ability demonic blade", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0OA"),
+    oldAbility: FourCC("A0O2"),
+    performSwap: true,
+    enableAbility: true,
+    addAbility: false,
+    tempPermanence: false,
+    equalizeLevels: true,
   },
   {
     name: "temp ability swap demon mark", 
@@ -22,5 +36,6 @@ export const TempAbilityComponents = [
     enableAbility: true,
     addAbility: false,
     tempPermanence: false,
+    equalizeLevels: false,
   },
 ];

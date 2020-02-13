@@ -8,6 +8,7 @@ import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive } from "./HeroPassive/HeroPassive";
 import { heroPassiveConfig } from "./HeroPassive/HeroPassiveConfig";
+import { SuperJanemba } from "./HeroPassive/SuperJanemba";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -56,6 +57,11 @@ export class CustomHero {
     this.passive = heroPassiveConfig.get(unitTypeId);
     if (this.passive) {
       this.passive.initialize(this);
+    } else if (
+      unitTypeId == FourCC("O00C") && 
+      GetUnitAbilityLevel(unit, FourCC("A0NZ")) > 0
+    ) {
+      new SuperJanemba().initialize(this);
     }
 
   }
