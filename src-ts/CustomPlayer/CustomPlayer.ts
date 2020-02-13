@@ -34,6 +34,8 @@ export class CustomPlayer {
       IsUnitOwnedByPlayer(hero, Player(this.id))
       &&
       !this.hasHero(hero)
+      &&
+      !IsUnitIllusion(hero)
     ) {
       this.heroes.set(
         hero,

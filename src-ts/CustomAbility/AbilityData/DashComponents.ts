@@ -101,6 +101,17 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: 50,
   },
+  // max power
+  {
+    name: "dash ground forward max power",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 2,
+  },
   // ----------------------------
   {
     name: "dash ground point dragon fist",
@@ -247,6 +258,7 @@ export const DashComponents = [
     distance: 45,
   },
   // ----------------------------
+  // nova chariot
   {
     name: "dash ground point nova chariot",
     repeatInterval: 1, 
@@ -290,6 +302,28 @@ export const DashComponents = [
     useLastCastPoint: false,
     distance: 2,
   },
+  // bunkai teleport dash
+  {
+    name: "dash ground target bunkai teleport",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 16,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 66,
+  },
+  // lightning shower rain
+  {
+    name: "dash flying forward lightning shower rain",
+    repeatInterval: 1, 
+    startTick: 50,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: true,
+    useLastCastPoint: false,
+    distance: 50,
+  },
   // saga zanzo
   {
     name: "dash ground target zanzo saga",
@@ -299,6 +333,6 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 30,
+    distance: 32,
   },
 ]

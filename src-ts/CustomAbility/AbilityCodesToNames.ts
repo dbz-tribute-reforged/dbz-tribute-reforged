@@ -119,6 +119,7 @@ export const abilityCodesToNames = new Map<number, string>(
     // masenko CELL
     [FourCC('A0GD'), AbilityNames.Cell.MASENKO],
     [FourCC('A01Z'), AbilityNames.Cell.SPAWN_CELL_JUNIORS],
+    [FourCC('A0O9'), AbilityNames.Cell.SOLAR_KAMEHAMEHA],
 
     // cooler
     [FourCC('A06C'), AbilityNames.Frieza.DEATH_BEAM],
@@ -150,6 +151,17 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MQ'), AbilityNames.Moro.LAVA_BURST],
     [FourCC('A0MR'), AbilityNames.Moro.LAVA_PILLARS],
     [FourCC('A0MS'), AbilityNames.Moro.POWER_LEVEL_SHARING],
+
+    // super janemba
+    [FourCC('A0O0'), AbilityNames.SuperJanemba.DEMONS_MARK],
+    [FourCC('A0O1'), AbilityNames.SuperJanemba.DEMON_RUSH],
+    [FourCC('A0NY'), AbilityNames.SuperJanemba.RAKSHASA_CLAW],
+    [FourCC('A0NZ'), AbilityNames.SuperJanemba.DEVIL_CLAW],
+    [FourCC('A0O2'), AbilityNames.SuperJanemba.BUNKAI_TELEPORT],
+    [FourCC('A0OA'), AbilityNames.SuperJanemba.DEMONIC_BLADE],
+    [FourCC('A0O3'), AbilityNames.SuperJanemba.HELLS_GATE],
+    [FourCC('A0EU'), AbilityNames.SuperJanemba.COSMIC_ILLUSION],
+    [FourCC('A0O4'), AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

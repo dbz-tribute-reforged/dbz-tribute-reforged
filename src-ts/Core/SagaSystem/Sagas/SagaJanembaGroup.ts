@@ -2,6 +2,7 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class JanembaSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Fusion Reborn';
@@ -27,6 +28,10 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     
     this.janemba = this.bosses.get("Janemba");
     this.superJanemba = this.bosses.get("Super Janemba");
+
+    if (this.superJanemba) {
+      UnitAddItemById(this.superJanemba, ItemConstants.SagaDrops.DIMENSION_SWORD);
+    };
 
     SagaHelper.sagaHideUnit(this.superJanemba);
 

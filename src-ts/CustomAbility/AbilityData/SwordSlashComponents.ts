@@ -71,6 +71,7 @@ export const SwordSlashComponents = [
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -90,6 +91,7 @@ export const SwordSlashComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 155,
@@ -127,6 +129,7 @@ export const SwordSlashComponents = [
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 255,
           y: 105,
@@ -146,6 +149,7 @@ export const SwordSlashComponents = [
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
+        extraPitch: 0,
         color: {
           x: 55,
           y: 0,

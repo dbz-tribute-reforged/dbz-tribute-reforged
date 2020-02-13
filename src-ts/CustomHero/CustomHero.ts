@@ -6,10 +6,15 @@ import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityCo
 import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
+import { HeroPassive } from "./HeroPassive/HeroPassive";
+import { heroPassiveConfig } from "./HeroPassive/HeroPassiveConfig";
+import { SuperJanemba } from "./HeroPassive/SuperJanemba";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
   public isCasting: Map<CustomAbility, boolean>;
+
+  public passive: HeroPassive | undefined;
 
   public isCastTimeWaiting: boolean;
   public spellPower: number;
@@ -40,11 +45,23 @@ export class CustomHero {
     this.addAbilityFromAll(AbilityNames.Items.ANDROID_BOMB);
     this.addAbilityFromAll(AbilityNames.Items.GETI_STAR_FRAGMENT);
 
-    const abilities = HeroAbilitiesList.get(GetUnitTypeId(unit));
+    const unitTypeId = GetUnitTypeId(unit);
+
+    const abilities = HeroAbilitiesList.get(unitTypeId);
     if (abilities) {
       for (const ability of abilities) {
         this.addAbilityFromAll(ability);
       }
+    }
+
+    this.passive = heroPassiveConfig.get(unitTypeId);
+    if (this.passive) {
+      this.passive.initialize(this);
+    } else if (
+      unitTypeId == FourCC("O00C") && 
+      GetUnitAbilityLevel(unit, FourCC("A0NZ")) > 0
+    ) {
+      new SuperJanemba().initialize(this);
     }
 
   }

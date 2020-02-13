@@ -20,6 +20,9 @@ export module SagaAbilities {
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM = new SagaAbility(
       AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM, 9, 60, 5, EXTRA_LONG_CAST_TIME, true
     );
+    export const SOLAR_KAMEHAMEHA_CUSTOM = new SagaAbility(
+      AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM, 10, 120, 2, MEDIUM_CAST_TIME,
+    );
   }
   
   export module Raditz {
@@ -181,6 +184,24 @@ export module SagaAbilities {
     );
     export const MANKIND_DESTRUCTION_ATTACK = new SagaAbility(
       AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, 10, 40, 20, LONG_CAST_TIME
+    );
+  }
+
+  export module SuperJanemba {
+    export const RAKSHASA_CLAW = new SagaAbility(
+      AbilityNames.SuperJanemba.RAKSHASA_CLAW, 10, 6, 15, SHORT_CAST_TIME
+    );
+    export const BUNKAI_TELEPORT = new SagaAbility(
+      AbilityNames.SuperJanemba.BUNKAI_TELEPORT, 10, 16, 10, MEDIUM_CAST_TIME
+    );
+    export const DEMONIC_BLADE = new SagaAbility(
+      AbilityNames.SuperJanemba.DEMONIC_BLADE, 10, 5, 5, SHORT_CAST_TIME
+    );
+    export const HELLS_GATE = new SagaAbility(
+      AbilityNames.SuperJanemba.HELLS_GATE, 10, 22, 5, MEDIUM_CAST_TIME
+    );
+    export const LIGHTNING_SHOWER_RAIN = new SagaAbility(
+      AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN, 10, 40, 3, LONG_CAST_TIME
     );
   }
 

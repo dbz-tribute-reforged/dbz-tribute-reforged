@@ -123,6 +123,7 @@ export module AbilityNames {
     export const SPECIAL_BEAM_CANNON: string = Piccolo.SPECIAL_BEAM_CANNON;
     export const SPAWN_CELL_JUNIORS: string = "Spawn Cell Juniors";
     export const ABSORB: string = "Absorb Cell";
+    export const SOLAR_KAMEHAMEHA: string = "Solar Kamehameha";
   }
 
   export module Frieza {
@@ -173,12 +174,27 @@ export module AbilityNames {
     export const ENERGY_BLAST_VOLLEY: string = Vegeta.ENERGY_BLAST_VOLLEY;
   }
 
+  export module SuperJanemba {
+    export const DEMONS_MARK = "Demon's Mark";
+    export const DEMON_RUSH = "Demon Rush";
+    export const RAKSHASA_CLAW = "Rakshasa's Claw";
+    export const RAKSHASA_CLAW_ON_HIT = "Rakshasa's Claw!";
+    export const DEVIL_CLAW = "Devil's Claw";
+    export const DEVIL_CLAW_ON_HIT = "Devil's Claw!";
+    export const BUNKAI_TELEPORT = "Bunkai Teleport";
+    export const DEMONIC_BLADE = "Demonic Blade";
+    export const HELLS_GATE = "Hell's Gate";
+    export const COSMIC_ILLUSION = "Cosmic Illusion";
+    export const LIGHTNING_SHOWER_RAIN = "Lightning Shower Rain";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";
     export const ZANZO_DASH: string = "Over here!";
     export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
+    export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";
   }
 
   export module Items {

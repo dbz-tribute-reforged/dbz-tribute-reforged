@@ -21,9 +21,9 @@ export module ExperienceConstants {
   export const heroLevelMult = 0.0;
   export const heroConstant = 100;
 
-  export const globalXPRateModifier = 1.1;
+  export const globalXPRateModifier = 1.08;
   export const nearbyPlayerXPMult = 0.1;
-  export const bonusXPToNextLevel = 0.07;
+  export const bonusXPToNextLevel = 0.06;
   // legacy range: 3000
   export const expRange = 2500;
 }

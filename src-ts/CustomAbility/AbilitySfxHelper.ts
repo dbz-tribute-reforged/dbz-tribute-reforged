@@ -46,6 +46,10 @@ export module AbilitySfxHelper {
       BlzSetSpecialEffectYaw(createdSfx, newYaw);
     }
 
+    if (sfxData.extraPitch > 0) {
+      BlzSetSpecialEffectPitch(createdSfx, sfxData.extraPitch);
+    }
+
     if (height + sfxData.startHeight > 0) {
       BlzSetSpecialEffectHeight(createdSfx, 
         height + sfxData.startHeight + 

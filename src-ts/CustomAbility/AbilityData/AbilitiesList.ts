@@ -77,11 +77,12 @@ export const AbilitiesList = [
     tooltip: {
       title: "(C) Max Power",
       body: 
-        "Boosts your ability damage by 10% for 10 seconds." + 
+        "Boosts your ability damage by 10% and increases movement speed by 66 for 10 seconds." + 
         "|nCost:100 MP|nCD: 40"
     },
     components: [
       { name: "spell amp max power" },
+      { name: "dash ground forward max power" },
       { name: "sfx max power" },
     ],
   },
@@ -1718,6 +1719,7 @@ export const AbilitiesList = [
       { name: "dash ground point energy punch" },
       { name: "damage energy punch dps" },
       { name: "knockback energy punch" },
+      { name: "knockback energy punch reverse" },
       { name: "stun energy punch" },
       // every broly spell gives broly a lvl x str shield that reduces incoming dmg by 15%
       { name: "block broly" },
@@ -1885,6 +1887,35 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block absorb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellSolarKamehameha.blp",
+      disabled: "BTNCellSolarKamehameha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+      body: 
+        AbilityNames.Cell.SOLAR_KAMEHAMEHA
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi solar kame" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx solar kame caster" },
     ],
   },
   // -------------------------------------------
@@ -2402,6 +2433,272 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.SuperJanemba.DEMONS_MARK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperDemonMark1.blp",
+      disabled: "BTNJanembaSuperDemonMark1.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEMONS_MARK,
+      body: 
+        "."
+    },
+    components: [
+      { name: "temp ability swap demon mark" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.DEMON_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperDemonMark2.blp",
+      disabled: "BTNJanembaSuperDemonMark2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEMON_RUSH,
+      body: 
+        "."
+    },
+    components: [
+      { name: "sfx demon rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.RAKSHASA_CLAW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperRakshasaClaw.blp",
+      disabled: "BTNJanembaSuperRakshasaClaw.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.RAKSHASA_CLAW,
+      body: 
+        "."
+    },
+    components: [
+      { name: "beam rakshasa claw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.RAKSHASA_CLAW_ON_HIT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 25,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperRakshasaClaw.blp",
+      disabled: "BTNJanembaSuperRakshasaClaw.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.RAKSHASA_CLAW,
+      body: 
+        "."
+    },
+    components: [
+      { name: "beam rakshasa claw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.DEVIL_CLAW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperRakshasaClaw2.blp",
+      disabled: "BTNJanembaSuperRakshasaClaw2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEVIL_CLAW,
+      body: 
+        "."
+    },
+    components: [
+      { name: "multi devil claw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 500,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperRakshasaClaw2.blp",
+      disabled: "BTNJanembaSuperRakshasaClaw2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
+      body: 
+        "."
+    },
+    components: [
+      { name: "multi devil claw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.BUNKAI_TELEPORT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 215,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperBunkaiTeleport.blp",
+      disabled: "BTNJanembaSuperBunkaiTeleport.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.BUNKAI_TELEPORT,
+      body: 
+        "."
+    },
+    components: [
+      { name: "teleport bunkai teleport return" },
+      { name: "dash ground target bunkai teleport" },
+      { name: "temp ability evil aura" },
+      { name: "temp ability demonic blade" },
+      { name: "sfx bunkai teleport caster 1" },
+      { name: "sfx bunkai teleport caster 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.DEMONIC_BLADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperDemonicBlade.blp",
+      disabled: "BTNJanembaSuperDemonicBlade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.DEMONIC_BLADE,
+      body: 
+        "."
+    },
+    components: [
+      { name: "damage demonic blade" },
+      { name: "sfx demonic blade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.HELLS_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperHellsGate.blp",
+      disabled: "BTNJanembaSuperHellsGate.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.HELLS_GATE,
+      body: 
+        AbilityNames.SuperJanemba.HELLS_GATE
+    },
+    components: [
+      { name: "beam hells gate"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperLightningShowerRain.blp",
+      disabled: "BTNJanembaSuperLightningShowerRain.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,
+      body: 
+        AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,
+    },
+    components: [
+      { name: "multi lightning shower rain" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,
@@ -2504,6 +2801,35 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi power blitz barrage saga" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellSolarKamehameha.blp",
+      disabled: "BTNCellSolarKamehameha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+      body: 
+        AbilityNames.Cell.SOLAR_KAMEHAMEHA
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi solar kame" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx solar kame caster" },
     ],
   },
   // -------------------------------------------
