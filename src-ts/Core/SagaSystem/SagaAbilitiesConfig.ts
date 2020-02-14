@@ -21,7 +21,7 @@ export module SagaAbilities {
       AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM, 9, 60, 5, EXTRA_LONG_CAST_TIME, true
     );
     export const SOLAR_KAMEHAMEHA_CUSTOM = new SagaAbility(
-      AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM, 10, 120, 2, MEDIUM_CAST_TIME,
+      AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM, 10, 120, 3, MEDIUM_CAST_TIME,
     );
   }
   

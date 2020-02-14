@@ -1843,7 +1843,7 @@ export const AOEDamageComponents = [
     aoe: 250,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.35,
+      multiplier: BASE.KAME_DPS * 0.34,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1881,7 +1881,7 @@ export const AOEDamageComponents = [
     aoe: 500,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.25,
+      multiplier: BASE.DFIST_EXPLOSION * 0.24,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1955,7 +1955,7 @@ export const AOEDamageComponents = [
     aoe: 300,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.33,
+      multiplier: BASE.DFIST_EXPLOSION * 0.31,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
