@@ -14,6 +14,7 @@ export class SuperJanemba implements HeroPassive {
 
   initialize(customHero: CustomHero) {
     const heroId = GetUnitTypeId(customHero.unit);
+    const janembaPlayer = GetOwningPlayer(customHero.unit);
     const onHitTrigger = CreateTrigger();
     TriggerRegisterAnyUnitEventBJ(
       onHitTrigger,
@@ -22,8 +23,10 @@ export class SuperJanemba implements HeroPassive {
     TriggerAddCondition(
       onHitTrigger,
       Condition(() => {
+        const attacker = GetAttacker();
         if (
-          GetUnitTypeId(GetAttacker()) == heroId
+          GetUnitTypeId(attacker) == heroId && 
+          GetOwningPlayer(attacker) == janembaPlayer
         ) {
           const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, SuperJanemba.RAKSHASA_CLAW_ABILITY);
           const devilClawLevel = GetUnitAbilityLevel(customHero.unit, SuperJanemba.DEVIL_CLAW_ABILITY);
