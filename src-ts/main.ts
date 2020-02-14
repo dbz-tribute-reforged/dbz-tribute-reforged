@@ -30,10 +30,10 @@ function tsMain() {
   // unit.name = "TypeScript!";
 
   // preload (temp)
-  Preload("DragonHead2.mdx");
-  Preload("DragonSegment2.mdx");
-  Preload("DragonTail.mdx");
-  Preload("Conflagrate.mdx");
+  // Preload("DragonHead2.mdx");
+  // Preload("DragonSegment2.mdx");
+  // Preload("DragonTail.mdx");
+  // Preload("Conflagrate.mdx");
 
   // setup logger
   Logger.doLogVerbose = false;
