@@ -188,6 +188,7 @@ export const DamageBlockComponents = [
     attachedSfxList: [
     ],
   },
+  // ----------------------------------------
   {
     name: "block future sight",
     repeatInterval: 1,
@@ -238,6 +239,7 @@ export const DamageBlockComponents = [
       },
     ],
   },
+  // ----------------------------------------
   {
     name: "block angry shout",
     repeatInterval: 1,
@@ -438,6 +440,57 @@ export const DamageBlockComponents = [
         updateCoordsOnly: false,
         persistent: true,
         attachmentPoint: "overhead",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block cell-x",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 50,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 5.0,
+    sfxList: [
+      {
+        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 2.0,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\Web\\WebTarget.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
       },
     ],
   },

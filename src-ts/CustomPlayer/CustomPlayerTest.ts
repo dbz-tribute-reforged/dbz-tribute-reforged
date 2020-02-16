@@ -706,6 +706,7 @@ export function CustomPlayerTest() {
         " has killed " + 
         deadName
       );
+      
     }
 
   })

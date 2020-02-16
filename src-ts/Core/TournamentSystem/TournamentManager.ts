@@ -184,7 +184,11 @@ export class TournamentManager {
         newTournament.start();
         this.currentTournament = newTournament;
       } else {
-        Logger.LogDebug("Could not start " + newTournament.name + ", as tournament ring is already in use.");
+        // DisplayTimedTextToForce(
+        //   bj_FORCE_ALL_PLAYERS,
+        //   5,
+        //   "Could not start " + newTournament.name + ", as tournament ring is already in use."
+        // )
       }
     } else {
       Logger.LogDebug("Could not start " + name + ", as tournament does not exist (anymore)");

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.35b
+DBZ Tribute Reforged 0.35c
 }
 
 STRING 4
@@ -9843,6 +9843,12 @@ STRING 1569
 Bio Lab Research
 }
 
+STRING 1570
+// Units: H097 (Two-Star Dark Dragon Ball Fusion), Name (Name)
+{
+Two-Star Dark Dragon Ball Fusion
+}
+
 STRING 1571
 // Items: I01Y (Bio Lab Research), Ubertip (Tooltip - Extended)
 {
@@ -10176,12 +10182,6 @@ STRING 1625
 // Items: I02V (Cleansed Dragon Ball), Tip (Tooltip - Basic)
 {
 Cleansed Dragon Ball
-}
-
-STRING 1626
-// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
-{
-A Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 1627
@@ -10662,6 +10662,12 @@ STRING 1703
 // Items: I03F (Brave Sword [|cffFFFF001/5|r]), Tip (Tooltip - Basic)
 {
 Purchase Brave Sword [|cffFFFF001/5|r]
+}
+
+STRING 1704
+// Units: H097 (Two-Star Dark Dragon Ball Fusion), Propernames (Proper Names)
+{
+Cell-X
 }
 
 STRING 1705
@@ -26213,12 +26219,6 @@ STRING 4292
 // Abilities: A02X (Cyclonic Sword Dash), Researchubertip (Tooltip - Learn - Extended)
 {
 A Rapid Sword spin attack.
-}
-
-STRING 4293
-// Abilities: A0O1 (Demon Rush), Ubertip (Tooltip - Normal - Extended)
-{
-Teleports behind the closest cursed enemy hero and then cripples their movement and attack speed.|n|cffff2020This ability can only be used within the next 5 seconds!|n|r|cff00ffffCooldown: <A0O1,Cool1>s|r
 }
 
 STRING 4294
@@ -64671,7 +64671,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 15.Feb.20
+This map is under active development - 16.Feb.20
 }
 
 STRING 10653
@@ -64729,6 +64729,7 @@ Transformations:
 [lvl 30+] 1.75x (absorb 17/18)
 [lvl 30+] 2.00x (absorb 17/18)
 [lvl 120] 2.50x "super perfect"
+[lvl 250] 2.50x "cell-x" [unlocks cell-x form]
 
 To reach Cell's higher forms you must absorb 17/18.
 }
@@ -70590,9 +70591,9 @@ STRING 11632
 }
 
 STRING 11633
-// Buffs/Effects: B01I (), Buffubertip (Tooltip - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-This unit has achieved ultra instinct: it will dodge all incoming attacks.
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
 }
 
 STRING 11634
@@ -72263,43 +72264,43 @@ R
 STRING 11906
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool3> seconds|r
 }
 
 STRING 11907
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool2> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool4> seconds|r
 }
 
 STRING 11908
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool3> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool5> seconds|r
 }
 
 STRING 11909
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool4> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool6> seconds|r
 }
 
 STRING 11910
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool5> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool7> seconds|r
 }
 
 STRING 11911
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool6> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool8> seconds|r
 }
 
 STRING 11912
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool7> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool9> seconds|r
 }
 
 STRING 11913
@@ -72365,25 +72366,25 @@ STRING 11922
 STRING 11923
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool8> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r
 }
 
 STRING 11924
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool9> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
 }
 
 STRING 11925
 // Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool2> seconds|r
 }
 
 STRING 11926
-// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil.|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r|n
 }
 
 STRING 11927
@@ -72393,45 +72394,39 @@ STRING 11927
 }
 
 STRING 11928
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
-}
-
-STRING 11929
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
-{
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
 }
 
 STRING 11930
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
+Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool1> - <A0O2,Cool10> seconds|r
 }
 
 STRING 11931
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O7 (Demon's Mark Curse 30%), Name (Name)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
+Demon's Mark Curse 30%
 }
 
 STRING 11932
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
+Undergo a dark transformation...|n|cffffff002.70x stat multiplier.|n"Reduces" movement speed by 165ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
 STRING 11933
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O4 (Lightning Shower Rain), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
+Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool1> - <A0O4,Cool10> seconds|r
 }
 
 STRING 11934
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OE (Item Hero Stat bonus), Name (Name)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
+Item Hero Stat bonus
 }
 
 STRING 11935
@@ -72507,27 +72502,21 @@ STRING 11946
 }
 
 STRING 11947
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OE (Item Hero Stat bonus), EditorSuffix (Editor Suffix)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
+(cleansed dragonball)
 }
 
 STRING 11948
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O1 (Demon Rush), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
+Janemba teleports behind the closest enemy hero cursed with the Demon's Mark and then strikes them with a blow that amplifies the curse to reduce their movement and attack speed.|n|cff00ffffCooldown: <A0O1,Cool1>s|r
 }
 
 STRING 11949
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
-}
-
-STRING 11950
-// Abilities: A0NZ (Devil's Claw), Researchubertip (Tooltip - Learn - Extended)
-{
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+|cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
 STRING 11951
@@ -72561,7 +72550,7 @@ STRING 11955
 }
 
 STRING 11956
-// Abilities: A0O0 (Demon's Mark), EditorSuffix (Editor Suffix)
+// Abilities: A0O1 (Demon Rush), EditorSuffix (Editor Suffix)
 {
 (actual janemba)
 }
@@ -72591,7 +72580,7 @@ STRING 11960
 }
 
 STRING 11961
-// Abilities: A0O1 (Demon Rush), EditorSuffix (Editor Suffix)
+// Abilities: A0O2 (Bunkai Teleport), EditorSuffix (Editor Suffix)
 {
 (actual janemba)
 }
@@ -72741,7 +72730,7 @@ STRING 11985
 }
 
 STRING 11986
-// Abilities: A0O2 (Bunkai Teleport), EditorSuffix (Editor Suffix)
+// Abilities: A0O3 (Hell's Gate), EditorSuffix (Editor Suffix)
 {
 (actual janemba)
 }
@@ -72804,12 +72793,6 @@ STRING 11996
 // Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
-}
-
-STRING 11997
-// Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
-{
-Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool1> seconds|r
 }
 
 STRING 11998
@@ -72897,7 +72880,7 @@ First, Janemba places his hands at the sides of his face as he charges a green e
 }
 
 STRING 12012
-// Abilities: A0O3 (Hell's Gate), EditorSuffix (Editor Suffix)
+// Abilities: A0O4 (Lightning Shower Rain), EditorSuffix (Editor Suffix)
 {
 (actual janemba)
 }
@@ -73044,18 +73027,6 @@ STRING 12036
 // Abilities: A0O4 (Lightning Shower Rain), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool10> seconds|r
-}
-
-STRING 12037
-// Abilities: A0O4 (Lightning Shower Rain), Researchubertip (Tooltip - Learn - Extended)
-{
-Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool1> seconds|r
-}
-
-STRING 12038
-// Abilities: A0O4 (Lightning Shower Rain), EditorSuffix (Editor Suffix)
-{
-(actual janemba)
 }
 
 STRING 12039
@@ -73280,12 +73251,6 @@ STRING 12075
 [|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 10|r]
 }
 
-STRING 12076
-// Abilities: A0O7 (Demon's Mark Curse 35%), Name (Name)
-{
-Demon's Mark Curse 35%
-}
-
 STRING 12077
 // Abilities: A0OA (Demonic Blade), EditorSuffix (Editor Suffix)
 {
@@ -73398,5 +73363,113 @@ STRING 12095
 // Abilities: A0OA (Demonic Blade), Ubertip (Tooltip - Normal - Extended)
 {
 A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0OA,Cool10> seconds|r
+}
+
+STRING 12096
+// Units: H097 (Two-Star Dark Dragon Ball Fusion), EditorSuffix (Name - Editor Suffix)
+{
+(xeno form)
+}
+
+STRING 12097
+// Abilities: A0O0 (Demon's Mark), EditorSuffix (Editor Suffix)
+{
+(actual janemba deprecated)
+}
+
+STRING 12098
+// Abilities: A0OD (Cell-X), Name (Name)
+{
+Cell-X
+}
+
+STRING 12100
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 12101
+// Abilities: A0OD (Cell-X), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Cell-X
+}
+
+STRING 12102
+// Abilities: A0OD (Cell-X), EditorSuffix (Editor Suffix)
+{
+(cell)
+}
+
+STRING 12103
+// Buffs/Effects: B01I (), Buffubertip (Tooltip - Extended)
+{
+This unit has achieved partial ultra instinct: it will dodge all incoming attacks.
+}
+
+STRING 12104
+// Buffs/Effects: B029 (), Bufftip (Tooltip)
+{
+Cell-X
+}
+
+STRING 12105
+// Buffs/Effects: B029 (), Buffubertip (Tooltip - Extended)
+{
+A giant form of Cell that possesses bottomless Ki.
+}
+
+STRING 12117
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA1,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+}
+
+STRING 12118
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA2,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
+}
+
+STRING 12119
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA3,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
+}
+
+STRING 12120
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA4,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
+}
+
+STRING 12121
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA5,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
+}
+
+STRING 12122
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA6,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
+}
+
+STRING 12123
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA7,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
+}
+
+STRING 12124
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA8,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
+}
+
+STRING 12125
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA9,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
 }
 

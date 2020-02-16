@@ -181,6 +181,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
+      AbilityNames.Cell.CELL_X_FORM,
       AbilityNames.Frieza.DEATH_BEAM,
       AbilityNames.Raditz.DOUBLE_SUNDAY,
       AbilityNames.Nappa.GIANT_STORM,
@@ -200,6 +201,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
       AbilityNames.Cell.SPAWN_CELL_JUNIORS,
       AbilityNames.Cell.SOLAR_KAMEHAMEHA,
+      AbilityNames.Cell.CELL_X_FORM,
     ]],
     // cell junior
     [FourCC("H01J"), [AbilityNames.Goku.KAMEHAMEHA]],

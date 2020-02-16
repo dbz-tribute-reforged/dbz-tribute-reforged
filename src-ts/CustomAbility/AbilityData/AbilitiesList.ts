@@ -82,7 +82,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp max power" },
-      { name: "dash ground forward max power" },
+      { name: "dash ground point max power" },
       { name: "sfx max power" },
     ],
   },
@@ -1920,6 +1920,35 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Cell.CELL_X_FORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 990,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCellXForm.blp",
+      disabled: "BTNCellXForm.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Cell.CELL_X_FORM,
+      body: 
+        AbilityNames.Cell.CELL_X_FORM
+    },
+    components: [
+      { name: "dash ground forward cell-x pushback" },
+      { name: "spell amp cell-x" },
+      { name: "block cell-x" },
+      { name: "sfx cell-x" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Frieza.DEATH_BEAM,
     currentCd: 0,
     maxCd: 1,
@@ -2775,6 +2804,35 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground target zanzo saga" },
       { name: "sfx zanzo dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.MAX_POWER,
+    currentCd: 0,
+    maxCd: 40,
+    costType: "MP",
+    costAmount: 100,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNNagaUnBurrow.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNNagaUnBurrow.blp",
+    },
+    tooltip: {
+      title: "(C) Max Power",
+      body: 
+        "Boosts your ability damage by 10% and increases movement speed by 66 for 10 seconds." + 
+        "|nCost:100 MP|nCD: 40"
+    },
+    components: [
+      { name: "spell amp max power" },
+      { name: "dash ground forward max power saga" },
+      { name: "sfx max power" },
     ],
   },
   // -------------------------------------------

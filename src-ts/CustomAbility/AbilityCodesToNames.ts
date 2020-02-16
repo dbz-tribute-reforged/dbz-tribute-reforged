@@ -120,6 +120,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0GD'), AbilityNames.Cell.MASENKO],
     [FourCC('A01Z'), AbilityNames.Cell.SPAWN_CELL_JUNIORS],
     [FourCC('A0O9'), AbilityNames.Cell.SOLAR_KAMEHAMEHA],
+    [FourCC('A0OD'), AbilityNames.Cell.CELL_X_FORM],
 
     // cooler
     [FourCC('A06C'), AbilityNames.Frieza.DEATH_BEAM],
