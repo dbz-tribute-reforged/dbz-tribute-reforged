@@ -28,6 +28,7 @@ export module AbilityNames {
     export const MASENKO: string = "Masenko";
     export const TWIN_DRAGON_SHOT: string = "Twin Dragon Shot";
     export const SUPER_DRAGON_FLIGHT: string = "Super Dragon Flight";
+    export const FATHER_SON_KAMEHAMEHA: string = "Father-Son Kamehameha";
     export const UNLOCK_POTENTIAL: string = "Unlock Potential";
     export const THE_GREAT_SAIYAMAN_HAS_ARRIVED: string = "The Great Saiyaman has arrived!";
     export const POTENTIAL_UNLEASHED: string = "Potential Unleashed";
@@ -124,6 +125,7 @@ export module AbilityNames {
     export const SPAWN_CELL_JUNIORS: string = "Spawn Cell Juniors";
     export const ABSORB: string = "Absorb Cell";
     export const SOLAR_KAMEHAMEHA: string = "Solar Kamehameha";
+    export const CELL_X_FORM: string = "Cell-X";
   }
 
   export module Frieza {
@@ -192,6 +194,7 @@ export module AbilityNames {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";
     export const ZANZO_DASH: string = "Over here!";
+    export const MAX_POWER: string = "Max Power!";
     export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
     export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";

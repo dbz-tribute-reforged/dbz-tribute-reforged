@@ -63,6 +63,7 @@ export class SagaHeroAI {
   ) {
     this.sagaCustomHero = new CustomHero(sagaUnit);
     this.sagaCustomHero.addAbilityFromAll(AbilityNames.Saga.ZANZO_DASH);
+    this.sagaCustomHero.addAbilityFromAll(AbilityNames.Saga.MAX_POWER);
     this.sagaCustomHero.addSpellPower(spellPowerModifier);
     
     this.currentTick = 0;
@@ -341,7 +342,7 @@ export class SagaHeroAI {
 
           TimerStart(CreateTimer(), ability.castDelay, false, () => {
             if (UnitHelper.isUnitAlive(this.sagaUnit)) {
-              this.useCustomAbility(AbilityNames.BasicAbility.MAX_POWER, true, 1);
+              this.useCustomAbility(AbilityNames.Saga.MAX_POWER, true, 1);
               this.useCustomAbilityWithInput(ability.name, abilityInput, false);
             }
             DestroyTimer(GetExpiredTimer());

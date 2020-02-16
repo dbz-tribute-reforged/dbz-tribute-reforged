@@ -639,13 +639,16 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 170, 23000, 400, 23000, new Vector2D(3000, 7000),
+    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Nappa.BREAK_CANNON,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        ItemConstants.CLEANSED_DRAGONBALL,
+      ]
     )],
     // gt end?
 

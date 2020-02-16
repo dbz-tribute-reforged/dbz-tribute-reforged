@@ -4,6 +4,7 @@ import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { itemAbilityConfig } from "./ItemAbility/ItemAbilityConfig";
+import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 
 export class ItemAbilityManager {
   static instance: ItemAbilityManager;
@@ -12,6 +13,7 @@ export class ItemAbilityManager {
   protected battleArmorLimitTrigger: trigger;
   protected itemActiveAbilityTrigger: trigger;
   protected itemPassiveAbilityTrigger: trigger;
+  protected itemFinalBattleTrigger: trigger;
 
 
   constructor (
@@ -20,6 +22,7 @@ export class ItemAbilityManager {
     this.battleArmorLimitTrigger = CreateTrigger();
     this.itemActiveAbilityTrigger = CreateTrigger();
     this.itemPassiveAbilityTrigger = CreateTrigger();
+    this.itemFinalBattleTrigger = CreateTrigger();
     this.initialize();
   }
 
@@ -36,6 +39,7 @@ export class ItemAbilityManager {
     this.setupBattleArmorLimit();
     this.setupItemActiveAbilityTrigger();
     this.setupItemPassiveAbilityTrigger();
+    this.setupItemFinalBattleTrigger();
   }
 
   setupUpgradeItems() {
@@ -163,5 +167,26 @@ export class ItemAbilityManager {
         return false;
       })
     );
+  }
+
+  setupItemFinalBattleTrigger() {
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      const player = Player(i);
+      TriggerRegisterPlayerUnitEventSimple(
+        this.itemFinalBattleTrigger,
+        player,
+        EVENT_PLAYER_UNIT_USE_ITEM,
+      );
+    }
+
+    TriggerAddCondition(
+      this.itemFinalBattleTrigger,
+      Condition(() => {
+        if (GetItemTypeId(GetManipulatedItem()) == ItemConstants.CLEANSED_DRAGONBALL) {
+          TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+        }
+        return false;
+      })
+    )
   }
 }

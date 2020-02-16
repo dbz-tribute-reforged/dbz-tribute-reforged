@@ -11,11 +11,12 @@ export module TextTagHelper {
     y: number, 
     duration: number = 5.0, 
     fading: number = 4.0,
-    force: force = GetPlayersAll(),
+    force: force = bj_FORCE_ALL_PLAYERS,
   ) {
     const tagLoc = Location(x, y);
     let tag = CreateTextTagLocBJ(text, tagLoc, 0, 10, 100, 100, 100, 0);
     RemoveLocation(tagLoc);
+    ShowTextTagForceBJ(false, tag, bj_FORCE_ALL_PLAYERS);
     ShowTextTagForceBJ(true, tag, force);
     SetTextTagVelocityBJ(tag, 64, 90);
     SetTextTagPermanentBJ(tag, false);

@@ -103,11 +103,11 @@ export const DashComponents = [
   },
   // max power
   {
-    name: "dash ground forward max power",
+    name: "dash ground point max power",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,    
-    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
     distance: 2,
@@ -258,6 +258,17 @@ export const DashComponents = [
     distance: 45,
   },
   // ----------------------------
+  // cell-x
+  {
+    name: "dash ground forward cell-x pushback",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: -5,
+  },
   // nova chariot
   {
     name: "dash ground point nova chariot",
@@ -307,11 +318,11 @@ export const DashComponents = [
     name: "dash ground target bunkai teleport",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 16,    
+    endTick: 12,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: 66,
+    distance: 60,
   },
   // lightning shower rain
   {
@@ -334,5 +345,16 @@ export const DashComponents = [
     isFlying: false,
     useLastCastPoint: false,
     distance: 32,
+  },
+  // saga max power
+  {
+    name: "dash ground forward max power saga",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    useLastCastPoint: false,
+    distance: 2,
   },
 ]

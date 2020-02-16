@@ -46,10 +46,23 @@ import { TeleportComponents } from "./AbilityData/TeleportComponents";
 import { Teleport } from "./AbilityComponent/Teleport";
 import { TempAbilityComponents } from "./AbilityData/TempAbilityComponents";
 import { TempAbility } from "./AbilityComponent/TempAbility";
+import { AOEDebuffComponents } from "./AbilityData/AOEDebuffComponents";
+import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
+import { Hooks } from "Libs/TreeLib/Hooks";
 
 export class CustomAbilityManager {
+  private static instance: CustomAbilityManager; 
+
   public components: Map<string, AbilityComponent>;
   public abilities: Map<string, CustomAbility>;
+
+  public static getInstance() {
+    if (this.instance == null) {
+      this.instance = new CustomAbilityManager();
+      Hooks.set("CustomAbilityManager", this.instance);
+    }
+    return this.instance;
+  }
 
   constructor() {
     this.abilities = new Map();
@@ -66,13 +79,19 @@ export class CustomAbilityManager {
       this.setComponent(new AOEDamage().deserialize(component));
     }
 
+    for (const component of AOEDebuffComponents) {
+      this.setComponent(new AOEDebuff().deserialize(component));
+    }
+
     for (const component of AOEKnockbackComponents) {
       this.setComponent(new AOEKnockback().deserialize(component));
     }
 
-    for (const component of AOEStunComponents) {
-      this.setComponent(new AOEStun().deserialize(component));
-    }
+    // this component has been deprecated
+    // it is superseded by the AOEDebuff component
+    // for (const component of AOEStunComponents) {
+    //   this.setComponent(new AOEStun().deserialize(component));
+    // }
 
     for (const component of BarrierComponents) {
       this.setComponent(new Barrier().deserialize(component));
@@ -197,5 +216,3 @@ export class CustomAbilityManager {
     }
   }
 }
-
-export const AllCustomAbilities: CustomAbilityManager = new CustomAbilityManager();

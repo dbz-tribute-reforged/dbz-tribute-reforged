@@ -260,10 +260,10 @@ export const AOEKnockbackComponents = [
   {
     name: "knockback solar kame",
     repeatInterval: 1, 
-    startTick: 66,
+    startTick: 115,
     endTick: -1,
     knockbackData: {
-      speed: 40, 
+      speed: 37, 
       angle: 180, 
       aoe: 500,
     },

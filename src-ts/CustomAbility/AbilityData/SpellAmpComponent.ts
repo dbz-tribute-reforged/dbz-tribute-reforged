@@ -81,4 +81,13 @@ export const SpellAmpComponents = [
     bonus: 0.15,
     rate: 0.001,
   },
+  // --------------------------------------------
+  { 
+    name: "spell amp cell-x", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.20,
+    rate: 0.0003,
+  },
 ];

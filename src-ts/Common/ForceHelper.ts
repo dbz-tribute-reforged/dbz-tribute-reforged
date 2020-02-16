@@ -7,7 +7,7 @@ export module ForceHelper {
     const friendlyAllies = GetPlayersAllies(Player(playerId));
     ForForce(friendlyAllies, () => {
       ForceAddPlayer(force, GetEnumPlayer());
-    })
+    });
     DestroyForce(friendlyAllies);
   }
 
@@ -22,7 +22,7 @@ export module ForceHelper {
         const enemy = GetOwningPlayer(GetFilterUnit());
         const enemyId = GetPlayerId(enemy);
         if (
-          enemyId > 0 && enemyId < Constants.maxActivePlayers && 
+          enemyId >= 0 && enemyId < Constants.maxActivePlayers && 
           IsPlayerEnemy(Player(playerId), enemy) && 
           !IsPlayerInForce(enemy, force)
         ) {

@@ -72,6 +72,7 @@ export module ItemConstants {
   export const sorrowfulScythe = [
     FourCC("I04A"),
   ];
+  export const CLEANSED_DRAGONBALL = FourCC("I02V");
 
   export module Consumables {
     export const SENZU_BEAN = FourCC("I000");
@@ -88,7 +89,7 @@ export module ItemConstants {
     export const BATTLE_ARMOR_4 = battleArmor[3];
     export const BATTLE_ARMOR_5 = battleArmor[4];
     export const BROLY_FUR = battleArmor[5];
-    
+
     export const WHEELO_RESEARCH_1 = wheeloResearch[0];
     export const DARKNESS_GENERATOR = darknessGenerator[0];
     export const SCOUTER_2 = scouter[1];

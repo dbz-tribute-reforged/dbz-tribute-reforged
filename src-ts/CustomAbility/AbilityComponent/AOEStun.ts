@@ -5,6 +5,7 @@ import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { Constants } from "Common/Constants";
 
+// THIS COMPONENT HAS BEEN DEPRECATED, DO NOT USE
 export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   static readonly MICRO = 0.03;
   static readonly ONE_SECOND = 1;

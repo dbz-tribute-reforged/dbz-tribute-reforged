@@ -3,12 +3,12 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CastTimeHelper } from "./CastTimeHelper";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { AbilityComponentHelper } from "CustomAbility/AbilityComponent/AbilityComponentHelper";
-import { AllCustomAbilities } from "CustomAbility/CustomAbilityManager";
 import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive } from "./HeroPassive/HeroPassive";
 import { heroPassiveConfig } from "./HeroPassive/HeroPassiveConfig";
 import { SuperJanemba } from "./HeroPassive/SuperJanemba";
+import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -67,7 +67,7 @@ export class CustomHero {
   }
 
   public addAbilityFromAll(name: string) {
-    const abil = AllCustomAbilities.getAbility(name);
+    const abil = CustomAbilityManager.getInstance().getAbility(name);
     if (abil) {
       // possiblity that ability was not fully copied correctly
       const abilCopy = new CustomAbility(
