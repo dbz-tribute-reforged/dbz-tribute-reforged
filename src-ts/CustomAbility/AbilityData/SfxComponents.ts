@@ -6684,9 +6684,9 @@ export const SfxComponents = [
         extraDirectionalYaw: 0,
         extraPitch: 0,
         color: {
-          x: 195,
-          y: 225,
-          z: 255,
+          x: 125,
+          y: 255,
+          z: 205,
         },
         updateCoordsOnly: true,
         persistent: true,

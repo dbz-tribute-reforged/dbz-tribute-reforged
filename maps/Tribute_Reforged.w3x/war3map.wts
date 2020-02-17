@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.35c
+DBZ Tribute Reforged 0.35d
 }
 
 STRING 4
@@ -7071,19 +7071,6 @@ STRING 1130
 Janemba
 }
 
-STRING 1131
-// Units: H062 (Demon), Ubertip (Tooltip - Extended)
-{
-Super Janemba is a close-quarters bruiser who has powerful offensive abilities once in melee range. He is supplemented by strong single-target abilities and high mobilitiy skills that focus on taking down one target at a time.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 1132
 // Abilities: A0O9 (Solar Kamehameha), Ubertip (Tooltip - Normal - Extended)
 {
@@ -10182,6 +10169,20 @@ STRING 1625
 // Items: I02V (Cleansed Dragon Ball), Tip (Tooltip - Basic)
 {
 Cleansed Dragon Ball
+}
+
+STRING 1626
+// Units: H062 (Demon), Ubertip (Tooltip - Extended)
+{
+Super Janemba is a close-quarters PvP-based assassin who has powerful offensive abilities once in melee range. He is supplemented by strong single-target abilities and high mobilitiy skills that enable him to win 1v1 fights exceptionally well.
+|cffff2020Super Janemba's stat multiplier relies on killing enemy heroes!|r
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 1627
@@ -26221,6 +26222,12 @@ STRING 4292
 A Rapid Sword spin attack.
 }
 
+STRING 4293
+// Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 9|r]
+}
+
 STRING 4294
 // Units: n03O (Shenron), Name (Name)
 {
@@ -38254,12 +38261,6 @@ STRING 6287
 A combat style taught by Master Shen and Mercenary Tao. Students include Tien and Chiaotzu.
 }
 
-STRING 6288
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
-{
-Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD1,%>% |n|cffffcc00Critical|r - <A00Q,DataA1>% |n|cffffcc00Damage|r - <A00Q,DataB1,.> times
-}
-
 STRING 6289
 // Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
@@ -38348,12 +38349,6 @@ STRING 6303
 // Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 3|r]
-}
-
-STRING 6304
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
-{
-Cellular Enhancement - [|cffffcc00Level 1|r]
 }
 
 STRING 6305
@@ -41409,13 +41404,17 @@ Bunkai Teleport
 STRING 6810
 {
 Type "r" to revert.
-Transformations:
-[lvl 30]  1.5x "fp"
-[lvl 90]  2.0x "fp"
-[lvl 150] 2.5x "fp"
-[lvl 200] 2.6x "xeno janemba" [upgrades Q]
+Transformations: (base stat multiplier excluding kills)
+[lvl 90]  1.5x "fp"
+[lvl 120] 1.7x "fp"
+[lvl 150] 1.9x "xeno janemba" [upgrades Q]
+[lvl 200] 2.2x "xeno janemba"
 
-Type "-swordon" for a comsetic Dimension Sword. To receive the real Dimension Sword item, kill the Super Janemba saga and pick up the dropped item.
+|cffffff00On player kill:|r 
+Permanently gain +0.1x up to +0.5x (cannot exceed 2.4x). 
+Temporarily gain +0.2x for 60 seconds.
+
+Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to receive the real version..
 }
 
 STRING 6811
@@ -43718,12 +43717,6 @@ STRING 7192
 E
 }
 
-STRING 7193
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
 STRING 7194
 // Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
 {
@@ -43737,7 +43730,7 @@ Masenko
 }
 
 STRING 7196
-// Abilities: A0GD (Masenko), Researchtip (Tooltip - Learn)
+// Abilities: A0GJ (Masenko), Researchtip (Tooltip - Learn)
 {
 Learn Mas|cffffcc00e|rnko - [|cffffcc00Level %d|r]
 }
@@ -43746,42 +43739,6 @@ STRING 7197
 // Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
 {
 Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7198
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
-STRING 7199
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
-STRING 7200
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
-STRING 7201
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
-STRING 7202
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
-}
-
-STRING 7203
-// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
-{
-[|cffFFFF00E|r] Masenko
 }
 
 STRING 7204
@@ -44307,7 +44264,7 @@ Masenko
 }
 
 STRING 7291
-// Abilities: A0GJ (Masenko), Researchtip (Tooltip - Learn)
+// Abilities: A0GK (Masenko), Researchtip (Tooltip - Learn)
 {
 Learn Mas|cffffcc00e|rnko - [|cffffcc00Level %d|r]
 }
@@ -44442,12 +44399,6 @@ STRING 7313
 // Abilities: A0GK (Masenko), Name (Name)
 {
 Masenko
-}
-
-STRING 7314
-// Abilities: A0GK (Masenko), Researchtip (Tooltip - Learn)
-{
-Learn Mas|cffffcc00e|rnko - [|cffffcc00Level %d|r]
 }
 
 STRING 7315
@@ -72399,6 +72350,12 @@ STRING 11928
 Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
 }
 
+STRING 11929
+// Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 10|r]
+}
+
 STRING 11930
 // Abilities: A0O2 (Bunkai Teleport), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -72409,12 +72366,6 @@ STRING 11931
 // Abilities: A0O7 (Demon's Mark Curse 30%), Name (Name)
 {
 Demon's Mark Curse 30%
-}
-
-STRING 11932
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
-{
-Undergo a dark transformation...|n|cffffff002.70x stat multiplier.|n"Reduces" movement speed by 165ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
 STRING 11933
@@ -72517,6 +72468,12 @@ STRING 11949
 // Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
 |cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
+}
+
+STRING 11950
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 11951
@@ -72795,6 +72752,12 @@ STRING 11996
 Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
 }
 
+STRING 11997
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
 STRING 11998
 // Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
@@ -73029,6 +72992,18 @@ STRING 12036
 Janemba traces his finger in the air and creates a streak of green energy light that breaks into sharp, glass-like needles. Then, he swings his arm back and fires the energy needles at his opponent, inflicting a high amount of damage.|n|cff00ff00Damage: ? * Int * Lvl|r|n|cff00ffffCooldown: <A0O4,Cool10> seconds|r
 }
 
+STRING 12037
+// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+{
+Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A0DU,DataD1,%>% |n|cffffcc00Critical|r - <A0DU,DataA1>% |n|cffffcc00Damage|r - <A0DU,DataB1,.> times
+}
+
+STRING 12038
+// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+{
+Cellular Enhancement - [|cffffcc00Cell Jr|r]
+}
+
 STRING 12039
 // Buffs/Effects: B025 (), Bufftip (Tooltip)
 {
@@ -73251,6 +73226,12 @@ STRING 12075
 [|cff00ff00R|r] Hell's Gate - [|cffffcc00Level 10|r]
 }
 
+STRING 12076
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 1|r]
+}
+
 STRING 12077
 // Abilities: A0OA (Demonic Blade), EditorSuffix (Editor Suffix)
 {
@@ -73383,6 +73364,12 @@ STRING 12098
 Cell-X
 }
 
+STRING 12099
+// Abilities: A0GD (Masenko), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00E|r] Learn Masenko - [|cffffcc00Level 1|r]
+}
+
 STRING 12100
 // Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
@@ -73417,6 +73404,60 @@ STRING 12105
 // Buffs/Effects: B029 (), Buffubertip (Tooltip - Extended)
 {
 A giant form of Cell that possesses bottomless Ki.
+}
+
+STRING 12106
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 2|r]
+}
+
+STRING 12107
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 3|r]
+}
+
+STRING 12108
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 4|r]
+}
+
+STRING 12109
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 5|r]
+}
+
+STRING 12110
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 6|r]
+}
+
+STRING 12111
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 7|r]
+}
+
+STRING 12112
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 8|r]
+}
+
+STRING 12113
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
+}
+
+STRING 12114
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+{
+Undergo a dark transformation...|n|cffffff002.70x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
 STRING 12117
