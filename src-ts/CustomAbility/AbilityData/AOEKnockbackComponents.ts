@@ -150,7 +150,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 15, 
       angle: 0, 
-      aoe: 400,
+      aoe: 350,
     },
     affectAllies: false,
   },
@@ -263,7 +263,7 @@ export const AOEKnockbackComponents = [
     startTick: 115,
     endTick: -1,
     knockbackData: {
-      speed: 37, 
+      speed: 40, 
       angle: 180, 
       aoe: 500,
     },

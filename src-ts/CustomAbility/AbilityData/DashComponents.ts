@@ -267,7 +267,7 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     useLastCastPoint: false,
-    distance: -5,
+    distance: -4,
   },
   // nova chariot
   {

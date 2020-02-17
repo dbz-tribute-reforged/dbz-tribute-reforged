@@ -5074,9 +5074,21 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func005A()
     end
 end
 
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008Func003C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H062"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008A()
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Kill_Hero_Give_PvP_Stats)
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009Func008Func003C()) then
+        udg_MoroStatMultReal = 0.20
+        TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
+    else
+    end
 end
 
 function Trig_Kill_Hero_PvP_and_Saga_Func001Func001Func009C()
@@ -5179,9 +5191,9 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008A()
     udg_StatMultUnit = GetEnumUnit()
     udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) * 1.00)
     if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003C()) then
-        udg_StatMultReal = (udg_StatMultReal * 2.00)
+        udg_StatMultReal = (udg_StatMultReal * 1.50)
     else
-        udg_StatMultReal = (udg_StatMultReal + 30.00)
+        udg_StatMultReal = (udg_StatMultReal + 15.00)
     end
     if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004C()) then
         udg_StatMultReal = (udg_StatMultReal * 0.50)
@@ -5747,11 +5759,9 @@ function Trig_Hints_Init_Actions()
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Press 'Z' and then right-click to perform a Zanzo Dash! Use it to get out of Spirit Bombs."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "Press 'X' to Guard, greatly reducing incoming damage! Use it when you can't dodge an attack."
-    udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Don't give up! Your base stats will always be at least 70% as strong as the strongest player's."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "Saga locations are pinged on the minimap once every 30 seconds"
+    udg_HintMessages[udg_NumHints] = "Saga stats are shared! All nearby allies gain 100% of the reward stats. You have nothing to lose by doing sagas together!"
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Beam clashes exist! Firing a beam spell at an enemy beam will stop them in their tracks!"
     udg_NumHints = (udg_NumHints + 1)
@@ -5764,6 +5774,8 @@ function Trig_Hints_Init_Actions()
     udg_HintMessages[udg_NumHints] = "The longer a beam clash lasts the less damage that beam will deal to heroes."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "You can revert an enemy player who has gone Oozaru by cutting off their tail. The tail can only be damaged from behind."
+    udg_NumHints = (udg_NumHints + 1)
+    udg_HintMessages[udg_NumHints] = "Press 'X' to Guard, greatly reducing incoming damage! Use it when you can't dodge an attack."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Press 'C' to temporarily increase the damage of your spells!"
     udg_NumHints = (udg_NumHints + 1)
@@ -6089,10 +6101,10 @@ function Trig_Catchup_Automatic_Loop_Func001Func001Func001C()
     if (not (udg_ScoreboardTimeHours == 0)) then
         return false
     end
-    if (not (udg_ScoreboardTimeMinutes == 7)) then
+    if (not (udg_ScoreboardTimeMinutes == 5)) then
         return false
     end
-    if (not (udg_ScoreboardTimeSeconds == 30)) then
+    if (not (udg_ScoreboardTimeSeconds == 0)) then
         return false
     end
     return true
@@ -6102,7 +6114,7 @@ function Trig_Catchup_Automatic_Loop_Func001Func001Func002C()
     if (not (udg_ScoreboardTimeHours == 0)) then
         return false
     end
-    if (not (udg_ScoreboardTimeMinutes == 15)) then
+    if (not (udg_ScoreboardTimeMinutes == 12)) then
         return false
     end
     if (not (udg_ScoreboardTimeSeconds == 0)) then
@@ -6628,6 +6640,13 @@ function Trig_Scoreboard_Death_Conditions()
     return true
 end
 
+function Trig_Scoreboard_Death_Func009Func004C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H062"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Death_Func009C()
     if (not (IsPlayerInForce(GetOwningPlayer(GetKillingUnitBJ()), udg_ActivePlayerGroup) == true)) then
         return false
@@ -6643,6 +6662,11 @@ function Trig_Scoreboard_Death_Actions()
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetKillingUnitBJ()))
         udg_PlayerKills[udg_TempInt] = (udg_PlayerKills[udg_TempInt] + 1)
         MultiboardSetItemValueBJ(udg_Scoreboard, 4, udg_ScoreboardPlayerRowIndex[udg_TempInt], I2S(udg_PlayerKills[udg_TempInt]))
+        if (Trig_Scoreboard_Death_Func009Func004C()) then
+            udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
+            TriggerExecute(gg_trg_Auto_Transform_Player_Units)
+        else
+        end
     else
     end
 end
@@ -14434,6 +14458,23 @@ function Trig_Transformations_Cell_Perfect_Func013C()
     return true
 end
 
+function Trig_Transformations_Cell_Perfect_Func015Func001Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Cell_Perfect_Func015Func001C()
+    if (not Trig_Transformations_Cell_Perfect_Func015Func001Func001C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Cell_Perfect_Func015C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
@@ -14459,16 +14500,19 @@ function Trig_Transformations_Cell_Perfect_Actions()
     end
     if (Trig_Transformations_Cell_Perfect_Func011C()) then
         udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Cell_Perfect_Func012C()) then
         udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
     else
     end
     if (Trig_Transformations_Cell_Perfect_Func013C()) then
         udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraSS.mdx"
         udg_TransformationSFXString2 = "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl"
         UnitAddAbilityBJ(FourCC("A0OD"), udg_StatMultUnit)
@@ -14476,9 +14520,12 @@ function Trig_Transformations_Cell_Perfect_Actions()
     else
     end
     if (Trig_Transformations_Cell_Perfect_Func015C()) then
-                udg_TransformationID = FourCC('H00G')
-        BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        if (Trig_Transformations_Cell_Perfect_Func015Func001C()) then
+                        udg_TransformationID = FourCC('H00G')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        else
+        end
     else
         udg_StatMultReal = 0.00
     end
@@ -16085,9 +16132,6 @@ function Trig_Transformations_Super_Janemba_Func012C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
-        return false
-    end
     return true
 end
 
@@ -16105,7 +16149,7 @@ function Trig_Transformations_Super_Janemba_Func014C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
         return false
     end
     return true
@@ -16115,13 +16159,40 @@ function Trig_Transformations_Super_Janemba_Func015C()
     if (not (udg_TransformationString == "xeno janemba")) then
         return false
     end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Janemba_Func016C()
+    if (not (udg_TransformationString == "xeno janemba")) then
+        return false
+    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Super_Janemba_Func017C()
+function Trig_Transformations_Super_Janemba_Func018Func001Func003C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Super_Janemba_Func018Func001C()
+    if (not Trig_Transformations_Super_Janemba_Func018Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Janemba_Func018C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -16146,25 +16217,29 @@ function Trig_Transformations_Super_Janemba_Actions()
     end
     if (Trig_Transformations_Super_Janemba_Func011C()) then
         udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Super_Janemba_Func012C()) then
-        udg_StatMultReal = 1.50
-        udg_TransformationSFXString = "AuraWhite.mdx"
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Super_Janemba_Func013C()) then
-        udg_StatMultReal = 2.00
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink.mdx"
     else
     end
     if (Trig_Transformations_Super_Janemba_Func014C()) then
-        udg_StatMultReal = 2.50
+        udg_StatMultReal = 1.70
+        udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
     if (Trig_Transformations_Super_Janemba_Func015C()) then
-        udg_StatMultReal = 2.60
+        udg_StatMultReal = 1.90
+        udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
         udg_TransformationSFXString2 = "AuraWhite.mdx"
         UnitAddAbilityBJ(FourCC("A0NZ"), udg_StatMultUnit)
@@ -16173,8 +16248,19 @@ function Trig_Transformations_Super_Janemba_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0NY"), udg_TransformationPlayer)
     else
     end
-    if (Trig_Transformations_Super_Janemba_Func017C()) then
-        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    if (Trig_Transformations_Super_Janemba_Func016C()) then
+        udg_StatMultReal = 2.20
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraPink2.mdx"
+        udg_TransformationSFXString2 = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Super_Janemba_Func018C()) then
+        if (Trig_Transformations_Super_Janemba_Func018Func001C()) then
+            udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + RMinBJ(0.50, (0.10 * I2R(udg_PlayerKills[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])))))
+            TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        else
+        end
     else
         udg_StatMultReal = 0.00
     end
@@ -16526,7 +16612,7 @@ function Trig_Saga_Unit_Loop_Func002A()
                 udg_TempReal3 = 120.00
             else
             end
-            udg_TempReal4 = (((0.60 + (0.07 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
+            udg_TempReal4 = (((0.60 + (0.08 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
             if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005C()) then
                 udg_TempReal4 = (udg_TempReal4 + 0.10)
                 if (Trig_Saga_Unit_Loop_Func002Func002Func019Func005Func003C()) then

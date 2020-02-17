@@ -824,7 +824,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 0.5,
+    beamHpMult: BASE.KAME_DPS * 0.65,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 0,
     aoe: 300,
