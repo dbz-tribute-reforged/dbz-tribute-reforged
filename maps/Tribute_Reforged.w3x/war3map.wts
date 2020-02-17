@@ -73148,18 +73148,6 @@ STRING 12062
 Q
 }
 
-STRING 12063
-// Items: I048 (Geti Star Fragment), Description (Description)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
-}
-
-STRING 12064
-// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
-{
-|cffffff00Use a fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
-}
-
 STRING 12065
 // Abilities: A0O3 (Hell's Gate), Tip (Tooltip - Normal)
 {
@@ -73460,6 +73448,18 @@ STRING 12114
 Undergo a dark transformation...|n|cffffff002.70x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
+STRING 12115
+// Items: I048 (Geti Star Fragment), Description (Description)
+{
+|cffffff00+50 stats.|nActive this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
+STRING 12116
+// Items: I048 (Geti Star Fragment), Ubertip (Tooltip - Extended)
+{
+|cffffff00+50 stats.|nActive this fragment of the Geti Star to absorb incoming damage and convert it into health.|r|n|cff00ff00Duration: 3s|n|cff00ff00Damage Block: Int * 2.5 @ 200%|r|n|cff00ffffCooldown: 90s|r
+}
+
 STRING 12117
 // Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73512,5 +73512,11 @@ STRING 12125
 // Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
 Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA9,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
+}
+
+STRING 12126
+// Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
+{
+(geti star fragment)
 }
 
