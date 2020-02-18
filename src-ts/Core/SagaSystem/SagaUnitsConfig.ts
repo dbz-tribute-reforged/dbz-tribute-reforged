@@ -235,6 +235,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
     )],

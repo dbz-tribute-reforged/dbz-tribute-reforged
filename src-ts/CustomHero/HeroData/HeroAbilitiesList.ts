@@ -185,6 +185,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Frieza.DEATH_BEAM,
       AbilityNames.Raditz.DOUBLE_SUNDAY,
       AbilityNames.Nappa.GIANT_STORM,
+      AbilityNames.Moro.ENERGY_DRAIN,
       AbilityNames.SuperJanemba.DEMONS_MARK, AbilityNames.SuperJanemba.DEMON_RUSH, AbilityNames.SuperJanemba.DEVIL_CLAW, AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT, 
     ]],
 

@@ -97,27 +97,42 @@ export class ItemAbilityManager {
         }
         if (isBattleArmor) {
           let carried = 0;
-          for (const battleArmor of ItemConstants.battleArmor) {
-            for (let j = 0; j < 6; ++j) {
-              if (GetItemTypeId(UnitItemInSlot(unit, j)) == battleArmor) {
+          let worstArmorSlot = -1;
+          let worstArmorValue = ItemConstants.battleArmor.length;
+          for (let i = 0; i < bj_MAX_INVENTORY; ++i) {
+            for (let j = 0; j < ItemConstants.battleArmor.length; ++j) {
+              if (GetItemTypeId(UnitItemInSlot(unit, i)) == ItemConstants.battleArmor[j]) {
                 ++carried;
+                if (j < worstArmorValue) {
+                  worstArmorValue = j;
+                  worstArmorSlot = i;
+                }
               }
             }
           }
           if (carried > 1) {
+            let armorMessage;
+
+            const droppedItem = UnitItemInSlot(unit, worstArmorSlot);
+            if (droppedItem != GetManipulatedItem()) {
+              armorMessage = "|cffff2020Armor " + (worstArmorValue + 1) + "/5 has been replaced.|r"
+            } else {
+              armorMessage = "|cffff2020You can only carry 1 set of battle armor!|r";
+            }
+
             const messageForce = CreateForce();
             ForceAddPlayer(messageForce, GetTriggerPlayer());
             DisplayTimedTextToForce(
               messageForce, 
               10, 
-              "|cffff2020You can only carry 1 set of battle armor!|r"
+              armorMessage
             );
             DestroyForce(messageForce);
   
             const x = GetUnitX(unit);
             const y = GetUnitY(unit);
             // UnitDropItemPoint(unit, GetManipulatedItem(), x, y);
-            SetItemPosition(GetManipulatedItem(), x, y);
+            SetItemPosition(droppedItem, x, y);
           }
         }
         return false;

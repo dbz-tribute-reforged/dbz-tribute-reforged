@@ -128,6 +128,21 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
     PreSlug: {
       map: new Map<number, RandomCreepType[]>(
         [
+          [Creep.Bandit, [
+            new RandomCreepType(Creep.SlugGuard, 1.0)
+          ]],
+          [Creep.RRDefenseDroid, [
+            new RandomCreepType(Creep.SlugGuard, 1.0)
+          ]],
+          [Creep.RRBattleDroid, [
+            new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
+          ]],
+          [Creep.Rogue, [
+            new RandomCreepType(Creep.SlugDefenseDroid, 1.0)
+          ]],
+          [Creep.RREnforcerDroid, [
+            new RandomCreepType(Creep.NocturnalCreature, 1.0)
+          ]],
           [Creep.Saibaman, [
             new RandomCreepType(Creep.SlugGuard, 1.0)
           ]],
@@ -159,6 +174,11 @@ export let DefaultCreepUpgradeConfig: CreepUpgradeConfig = {
           [Creep.DinosaurTeen, [
             new RandomCreepType(Creep.DinosaurSmall, 0.5),
             new RandomCreepType(Creep.Pterodactyl, 0.5)
+          ]],
+          [Creep.DinosaurBaby, [
+            new RandomCreepType(Creep.DinosaurSmall, 0.5),
+            new RandomCreepType(Creep.DinosaurTeen, 0.4),
+            new RandomCreepType(Creep.Pterodactyl, 0.1)
           ]],
           [Creep.NamekianFrog, [
             new RandomCreepType(Creep.CrabGiant, 1.0),

@@ -14,7 +14,7 @@ export module DragonBallsConstants {
   export const shenronVisionRadius: number = 600;
   export const shenronSfxInterval: number = 2;
   export const shenronDelay: number = 7.7;
-  export const restoreDragonBallsTime: number = 60;
+  export const restoreDragonBallsTime: number = 120;
   export const wishImmortalityItem: number = FourCC("I042");
   export const wishImmortalityAbility: number = FourCC("A0M9");
   export const immortalDelay: number = 4.1;
