@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.35d
+DBZ Tribute Reforged 0.35e
 }
 
 STRING 4
@@ -41405,6 +41405,7 @@ STRING 6810
 {
 Type "r" to revert.
 Transformations: (base stat multiplier excluding kills)
+[lvl 30]  1.25x "fp"
 [lvl 90]  1.5x "fp"
 [lvl 120] 1.7x "fp"
 [lvl 150] 1.9x "xeno janemba" [upgrades Q]

@@ -3793,7 +3793,7 @@ function Trig_Demon_Rush_Actions()
         UnitAddAbilityBJ(FourCC("A0O8"), udg_TempUnit2)
         IssueTargetOrderBJ(udg_TempUnit2, "slow", udg_TempUnit)
         AddSpecialEffectLocBJ(udg_TempLoc2, "KingdomCome.mdx")
-        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.75)
         DestroyEffectBJ(GetLastCreatedEffectBJ())
         AddSpecialEffectLocBJ(udg_TempLoc2, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -13750,8 +13750,6 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             UnitAddAbilityBJ(FourCC("A0NZ"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0NZ"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0NZ'))
-            UnitAddAbilityBJ(FourCC("A0O0"), udg_TransformationResultUnit)
-                        UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0O0'))
             UnitAddAbilityBJ(FourCC("A0O1"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0O1'))
         else
@@ -16139,7 +16137,7 @@ function Trig_Transformations_Super_Janemba_Func013C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
         return false
     end
     return true
@@ -16149,17 +16147,17 @@ function Trig_Transformations_Super_Janemba_Func014C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Super_Janemba_Func015C()
-    if (not (udg_TransformationString == "xeno janemba")) then
+    if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
         return false
     end
     return true
@@ -16169,13 +16167,23 @@ function Trig_Transformations_Super_Janemba_Func016C()
     if (not (udg_TransformationString == "xeno janemba")) then
         return false
     end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Janemba_Func017C()
+    if (not (udg_TransformationString == "xeno janemba")) then
+        return false
+    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Super_Janemba_Func018Func001Func003C()
+function Trig_Transformations_Super_Janemba_Func019Func001Func003C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -16185,14 +16193,14 @@ function Trig_Transformations_Super_Janemba_Func018Func001Func003C()
     return false
 end
 
-function Trig_Transformations_Super_Janemba_Func018Func001C()
-    if (not Trig_Transformations_Super_Janemba_Func018Func001Func003C()) then
+function Trig_Transformations_Super_Janemba_Func019Func001C()
+    if (not Trig_Transformations_Super_Janemba_Func019Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Super_Janemba_Func018C()
+function Trig_Transformations_Super_Janemba_Func019C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -16226,18 +16234,24 @@ function Trig_Transformations_Super_Janemba_Actions()
     else
     end
     if (Trig_Transformations_Super_Janemba_Func013C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Super_Janemba_Func014C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink.mdx"
     else
     end
-    if (Trig_Transformations_Super_Janemba_Func014C()) then
+    if (Trig_Transformations_Super_Janemba_Func015C()) then
         udg_StatMultReal = 1.70
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Super_Janemba_Func015C()) then
+    if (Trig_Transformations_Super_Janemba_Func016C()) then
         udg_StatMultReal = 1.90
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
@@ -16248,15 +16262,15 @@ function Trig_Transformations_Super_Janemba_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC("A0NY"), udg_TransformationPlayer)
     else
     end
-    if (Trig_Transformations_Super_Janemba_Func016C()) then
+    if (Trig_Transformations_Super_Janemba_Func017C()) then
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
         udg_TransformationSFXString2 = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Super_Janemba_Func018C()) then
-        if (Trig_Transformations_Super_Janemba_Func018Func001C()) then
+    if (Trig_Transformations_Super_Janemba_Func019C()) then
+        if (Trig_Transformations_Super_Janemba_Func019Func001C()) then
             udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + RMinBJ(0.50, (0.10 * I2R(udg_PlayerKills[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])))))
             TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         else
