@@ -3052,6 +3052,8 @@ function Trig_Babidi_Summons_Actions()
         else
             if (Trig_Babidi_Summons_Func001Func001Func001C()) then
                 udg_TempReal4 = 1.00
+                UnitAddAbilityBJ(FourCC("A0OG"), GetSummonedUnit())
+                SetUnitAbilityLevelSwapped(FourCC("A0OG"), GetSummonedUnit(), IMinBJ(10, IMaxBJ(1, ((GetHeroLevel(GetSummoningUnit()) + 30) // 60))))
             else
             end
         end
@@ -3301,7 +3303,7 @@ function Trig_Buu_Candy_Eating_Actions()
     SetUnitLifePercentBJ(udg_TempUnit2, (GetUnitLifePercent(udg_TempUnit2) + (0.30 * I2R(udg_CandyBeamLvl))))
     if (Trig_Buu_Candy_Eating_Func002C()) then
         udg_StatMultUnit = udg_TempUnit2
-        udg_StatMultReal = ((0.05 + (0.05 * I2R(udg_CandyBeamLvl))) * I2R(GetUnitFoodMade(udg_TempUnit)))
+        udg_StatMultReal = ((0.00 + (0.10 * I2R(udg_CandyBeamLvl))) * I2R(GetUnitFoodMade(udg_TempUnit)))
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
         if (Trig_Buu_Candy_Eating_Func002Func006C()) then
@@ -9774,7 +9776,7 @@ function Trig_Goku_UI_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     udg_StatMultReal = 2.80
-    udg_TransformationSFXString = "AuraWhite.mdx"
+    udg_TransformationSFXString = "AuraUI3.mdx"
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(1, 30, udg_ID, udg_StatMultHashtable)
@@ -9803,7 +9805,7 @@ function Trig_Goku_MUI_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     udg_StatMultReal = 2.85
-    udg_TransformationSFXString = "AuraWhite.mdx"
+    udg_TransformationSFXString = "AuraUI3.mdx"
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(2, 30, udg_ID, udg_StatMultHashtable)
@@ -16183,7 +16185,14 @@ function Trig_Transformations_Super_Janemba_Func017C()
     return true
 end
 
-function Trig_Transformations_Super_Janemba_Func019Func001Func003C()
+function Trig_Transformations_Super_Janemba_Func019Func001Func001C()
+    if (not (udg_TransformationString == "xeno janemba")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Super_Janemba_Func019Func001Func005C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -16194,7 +16203,7 @@ function Trig_Transformations_Super_Janemba_Func019Func001Func003C()
 end
 
 function Trig_Transformations_Super_Janemba_Func019Func001C()
-    if (not Trig_Transformations_Super_Janemba_Func019Func001Func003C()) then
+    if (not Trig_Transformations_Super_Janemba_Func019Func001Func005C()) then
         return false
     end
     return true
@@ -16271,6 +16280,12 @@ function Trig_Transformations_Super_Janemba_Actions()
     end
     if (Trig_Transformations_Super_Janemba_Func019C()) then
         if (Trig_Transformations_Super_Janemba_Func019Func001C()) then
+            if (Trig_Transformations_Super_Janemba_Func019Func001Func001C()) then
+                                udg_TransformationID = FourCC('H098')
+            else
+                                udg_TransformationID = FourCC('H062')
+            end
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + RMinBJ(0.50, (0.10 * I2R(udg_PlayerKills[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])))))
             TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         else
@@ -16976,7 +16991,7 @@ function Trig_Regen_Items_All_Looper_Actions()
     udg_TempReal2 = (0.25 * 0.10)
     TriggerExecute(gg_trg_Regen_Items_Do_Regen)
     udg_TempUnitGroup = udg_BananaUnitGroup
-    udg_TempReal = 0.00
+    udg_TempReal = 0.01
     udg_TempReal2 = 0.05
     TriggerExecute(gg_trg_Regen_Items_Do_Regen)
     udg_TempUnitGroup = udg_KrabbyPattyGroup

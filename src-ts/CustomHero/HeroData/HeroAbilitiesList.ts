@@ -153,7 +153,19 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H01W"), [AbilityNames.Android13.SS_DEADLY_HAMMER, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
 
     // babidi
-    [FourCC("O001"), [AbilityNames.Babidi.SUMMON_PUI_PUI, AbilityNames.Babidi.SUMMON_YAKON, AbilityNames.Babidi.SUMMON_DABURA, AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.BABIDI_BARRIER, "Babidi Magic"]],
+    [FourCC("O001"), [
+      AbilityNames.Babidi.SUMMON_PUI_PUI, 
+      AbilityNames.Babidi.SUMMON_YAKON, 
+      AbilityNames.Babidi.SUMMON_DABURA, 
+      AbilityNames.Babidi.HARETSU, 
+      AbilityNames.Babidi.BABIDI_BARRIER, 
+      "Babidi Magic"
+    ]],
+
+    // dabura
+    [FourCC("O000"), [
+      AbilityNames.Dabura.EVIL_SPEAR,
+    ]],
 
     // fat buu / super buu / kid buu
     [FourCC("O005"), [
@@ -229,7 +241,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // raditz
-    [FourCC("H08U"), [AbilityNames.Raditz.DOUBLE_SUNDAY, AbilityNames.Raditz.SATURDAY_CRASH, AbilityNames.Raditz.BEHIND_YOU, AbilityNames.Vegeta.MOONLIGHT, AbilityNames.Vegeta.ANGRY_SHOUT, AbilityNames.Raditz.DOUBLE_SUNDAE]],
+    [FourCC("H08U"), [
+      AbilityNames.Raditz.DOUBLE_SUNDAY, 
+      AbilityNames.Raditz.SATURDAY_CRASH, 
+      AbilityNames.Raditz.BEHIND_YOU, 
+      AbilityNames.Vegeta.MOONLIGHT, 
+      AbilityNames.Vegeta.ANGRY_SHOUT, 
+      AbilityNames.Raditz.DOUBLE_SUNDAE
+    ]],
     // nappa
     [FourCC("H08W"), [AbilityNames.Nappa.GIANT_STORM, AbilityNames.Nappa.BLAZING_STORM, AbilityNames.Nappa.PLANT_SAIBAMEN, AbilityNames.Vegeta.MOONLIGHT, AbilityNames.Vegeta.ANGRY_SHOUT, AbilityNames.Nappa.BREAK_CANNON]],
     // saibaman

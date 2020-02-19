@@ -3655,6 +3655,38 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx evil spear", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "Abilities\\Weapons\\Banditmissile\\Banditmissile.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 5.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx innocence breath", 
     repeatInterval: 1,
     startTick: 0,

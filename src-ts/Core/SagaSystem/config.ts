@@ -161,7 +161,7 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BabidiSaga, SagaState.Completed ],
     ],
     HirudegarnSaga: [
-      [ BuuSaga, SagaState.Completed ],
+      [ JanembaSaga, SagaState.Completed ],
     ],
     // GT branch
     BebiSaga: [

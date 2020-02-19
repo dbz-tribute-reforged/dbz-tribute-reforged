@@ -1099,7 +1099,7 @@ export const AOEDamageComponents = [
     aoe: 25,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 1.4,
+      multiplier: BASE.DFIST_EXPLOSION * 1.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1118,8 +1118,27 @@ export const AOEDamageComponents = [
     aoe: 50,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.7,
+      multiplier: BASE.DFIST_EXPLOSION * 0.65,
       attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // evil spear
+  {
+    name: "damage evil spear dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 100,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.DFIST_DPS * 2,
+      attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
@@ -1135,7 +1154,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.21,
       attribute: bj_HEROSTAT_INT,

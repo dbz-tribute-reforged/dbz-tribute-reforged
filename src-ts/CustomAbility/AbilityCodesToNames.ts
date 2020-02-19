@@ -82,6 +82,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A01A'), AbilityNames.Babidi.SUMMON_YAKON],
     [FourCC('A03E'), AbilityNames.Babidi.SUMMON_DABURA],
 
+    // dabura
+    [FourCC('A0OG'), AbilityNames.Dabura.EVIL_SPEAR],
+
     // buus
     [FourCC('A0EI'), AbilityNames.Buu.BUU_BEAM],
     [FourCC('A01C'), AbilityNames.Buu.FLESH_ATTACK],

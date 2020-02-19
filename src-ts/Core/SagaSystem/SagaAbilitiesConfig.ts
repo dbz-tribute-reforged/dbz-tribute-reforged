@@ -169,6 +169,12 @@ export module SagaAbilities {
     );
   }
 
+  export module Dabura {
+    export const EVIL_SPEAR = new SagaAbility(
+      AbilityNames.Dabura.EVIL_SPEAR, 10, 17, 10, MEDIUM_CAST_TIME
+    );
+  }
+
   export module Buu {
     export const FLESH_ATTACK = new SagaAbility(
       AbilityNames.Buu.FLESH_ATTACK, 10, 15, 10, SHORT_CAST_TIME

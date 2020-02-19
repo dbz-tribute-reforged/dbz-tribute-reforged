@@ -92,6 +92,10 @@ export module AbilityNames {
     export const SUMMON_DABURA: string = "Summon Dabura";
   }
 
+  export module Dabura {
+    export const EVIL_SPEAR: string = "Evil Spear";
+  }
+
   export module Buu {
     export const BUU_BEAM: string = "Buu Beam";
     export const FLESH_ATTACK: string = "Flesh Attack";

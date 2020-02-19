@@ -477,7 +477,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Dabura", new SagaUnit(FourCC("O000"), 80, 7500, 400, 7500, new Vector2D(16500, 12000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Dabura.EVIL_SPEAR,
       ],
     )],
 
@@ -503,7 +504,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Dabura", new SagaUnit(FourCC("O000"), 60, 7500, 400, 7500, new Vector2D(17000, 26000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Dabura.EVIL_SPEAR,
       ],
     )],
     ["Future Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(17100, 25500),

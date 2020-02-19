@@ -1561,6 +1561,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Dabura.EVIL_SPEAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNImpalingBolt.blp",
+      disabled: "ReplaceableTextures\\CommandButtons\\BTNImpalingBolt.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dabura.EVIL_SPEAR,
+      body: 
+        AbilityNames.Dabura.EVIL_SPEAR
+    },
+    components: [
+      { name: "beam evil spear" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Buu.FLESH_ATTACK,
     currentCd: 0,
     maxCd: 1,
@@ -2187,6 +2213,32 @@ export const AbilitiesList = [
       { name: "knockback behind you" },
       { name: "stun behind you" },
       { name: "sfx behind you" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Raditz.DOUBLE_SUNDAE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRaditzDoubleSundae.blp",
+      disabled: "BTNRaditzDoubleSundae.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Raditz.DOUBLE_SUNDAE,
+      body: 
+        AbilityNames.Raditz.DOUBLE_SUNDAE
+    },
+    components: [
+      { name: "spell amp double sundae" },
     ],
   },
   // -------------------------------------------

@@ -77,9 +77,9 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom1.x, TournamentData.tournamentWaitRoom1.y - 500);
     CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom2.x, TournamentData.tournamentWaitRoom2.y + 500);
     
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
-    }
+    // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    //   FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
+    // }
     
     this.state = TournamentState.InProgress;
     this.lobbyWaitForTournament();

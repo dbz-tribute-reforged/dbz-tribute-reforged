@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.35e
+DBZ Tribute Reforged 0.35f
 }
 
 STRING 4
@@ -7069,6 +7069,12 @@ STRING 1130
 // Units: H00C (Demon), Propernames (Proper Names)
 {
 Janemba
+}
+
+STRING 1131
+// Units: H098 (Demon), Name (Name)
+{
+Demon
 }
 
 STRING 1132
@@ -36993,7 +36999,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6077
-// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+// Units: H098 (Demon), Hotkey (Hotkey)
 {
 Z
 }
@@ -38261,6 +38267,12 @@ STRING 6287
 A combat style taught by Master Shen and Mercenary Tao. Students include Tien and Chiaotzu.
 }
 
+STRING 6288
+// Units: H098 (Demon), Propernames (Proper Names)
+{
+Janemba
+}
+
 STRING 6289
 // Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
@@ -38349,6 +38361,12 @@ STRING 6303
 // Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 3|r]
+}
+
+STRING 6304
+// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Super Janemba
 }
 
 STRING 6305
@@ -41419,7 +41437,7 @@ Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to r
 }
 
 STRING 6811
-// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
+// Units: H098 (Demon), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Z|r] Choose Super Janemba
 }
@@ -43718,6 +43736,20 @@ STRING 7192
 E
 }
 
+STRING 7193
+// Units: H098 (Demon), Ubertip (Tooltip - Extended)
+{
+Super Janemba is a close-quarters PvP-based assassin who has powerful offensive abilities once in melee range. He is supplemented by strong single-target abilities and high mobilitiy skills that enable him to win 1v1 fights exceptionally well.
+|cffff2020Super Janemba's stat multiplier relies on killing enemy heroes!|r
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 7194
 // Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
 {
@@ -43740,6 +43772,42 @@ STRING 7197
 // Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
 {
 Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
+}
+
+STRING 7198
+// Units: H098 (Demon), Tip (Tooltip - Basic)
+{
+Janemba
+}
+
+STRING 7199
+// Units: H098 (Demon), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern Super Xeno)
+}
+
+STRING 7200
+// Abilities: A0CJ (Revive - Cell Spawn), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7201
+// Items: I044 (Banana), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 1% of max hp and 5% of max mana per second|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
+}
+
+STRING 7202
+// Items: I04F (Banana Generator), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00A powerful matter manipulator used by Super Android 13 to produce infinite amounts of energy. Activating this item gives you the regeneration benefits of 1 banana. Also produces another banana at your feet.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080That's bananas...|r
+}
+
+STRING 7203
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
 }
 
 STRING 7204
@@ -44400,6 +44468,12 @@ STRING 7313
 // Abilities: A0GK (Masenko), Name (Name)
 {
 Masenko
+}
+
+STRING 7314
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
 }
 
 STRING 7315
@@ -45720,24 +45794,6 @@ STRING 7534
 // Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
 Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3% Self Max HP|r|n|cff00ff00Bonus Stats: 10%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 7535
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 7536
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
-}
-
-STRING 7537
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
-{
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
 }
 
 STRING 7538
@@ -56325,12 +56381,6 @@ STRING 9288
 An incomplete version of ultra instinct that automatically dodges all incoming attacks.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.80x stat multiplier.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0KR,Dur1> seconds|n|cff00ffffGives access to Mastered Ultra Instinct 200 seconds after use.
 }
 
-STRING 9289
-// Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
-{
-The mastered version of ultra instinct that allows the user to instinctively attack and dodge without thinking.Try as you might, you will never be able to repeat this feat.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.85x stat multiplier.|n+165ms and unlocks movement speed cap.|n+1% spell power per second up to +5%.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0MZ,Dur1> seconds|n|cff00ffffCooldown: Once per game.
-}
-
 STRING 9290
 // Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -58432,13 +58482,13 @@ Q
 }
 
 STRING 9640
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9641
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64087,12 +64137,6 @@ STRING 10577
 Future Trunks charges his opponent with flaming ferocity and stuns them with how often he misses his attacks.|n|cff00ff00(Damage: 50% Dfist * lvl)|r|n|cff00ffff(Cooldown: <A0LE,Cool1> seconds)|r
 }
 
-STRING 10578
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
-}
-
 STRING 10579
 // Abilities: A00Z (Solar Flare), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -64542,12 +64586,6 @@ STRING 10640
 // Abilities: A0KY (Nova Chariot), EditorSuffix (Editor Suffix)
 {
 (actual)
-}
-
-STRING 10641
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
-{
-This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 150% extra damage.|r
 }
 
 STRING 10642
@@ -67694,24 +67732,6 @@ STRING 11159
 // Abilities: A0LB (Android Barrier), EditorSuffix (Editor Suffix)
 {
 (super 13 and 17 dbs)
-}
-
-STRING 11160
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
-STRING 11161
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
-}
-
-STRING 11162
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
 STRING 11163
@@ -70919,12 +70939,6 @@ STRING 11695
 Full of potassium!
 }
 
-STRING 11696
-// Items: I044 (Banana), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 5% of max mana per second|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
-}
-
 STRING 11697
 // Items: I045 (Krabby Patty), Name (Name)
 {
@@ -72369,6 +72383,12 @@ STRING 11931
 Demon's Mark Curse 30%
 }
 
+STRING 11932
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
 STRING 11933
 // Abilities: A0O4 (Lightning Shower Rain), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -73107,12 +73127,6 @@ STRING 12055
 Purchase Banana
 }
 
-STRING 12056
-// Items: I04F (Banana Generator), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|n|r|cffffff00A powerful matter manipulator used by Super Android 13 to produce infinite amounts of energy. Each use restores 5% of max mana per second and drops a banana at your feet.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080That's bananas...|r
-}
-
 STRING 12057
 // Items: I04G (Bee), Name (Name)
 {
@@ -73147,6 +73161,18 @@ STRING 12062
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12063
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+}
+
+STRING 12064
+// Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+{
+The mastered version of ultra instinct that allows the user to instinctively attack and dodge without thinking. Try as you might, you will never be able to repeat this feat.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.85x stat multiplier.|n+165ms and unlocks movement speed cap.|n+1% spell power per second up to +5%.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0MZ,Dur1> seconds|n|cff00ffffCooldown: Once per game.
 }
 
 STRING 12065
@@ -73519,5 +73545,185 @@ STRING 12126
 // Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
 (geti star fragment)
+}
+
+STRING 12151
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> seconds|r
+}
+
+STRING 12152
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool3> seconds|r
+}
+
+STRING 12153
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool4> seconds|r
+}
+
+STRING 12154
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool5> seconds|r
+}
+
+STRING 12155
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool6> seconds|r
+}
+
+STRING 12156
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool7> seconds|r
+}
+
+STRING 12157
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 2|r]
+}
+
+STRING 12158
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 3|r]
+}
+
+STRING 12159
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 4|r]
+}
+
+STRING 12160
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 5|r]
+}
+
+STRING 12161
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 6|r]
+}
+
+STRING 12162
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 1|r]
+}
+
+STRING 12163
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 7|r]
+}
+
+STRING 12164
+// Abilities: A0OG (Evil Spear), Name (Name)
+{
+Evil Spear
+}
+
+STRING 12165
+// Abilities: A0OG (Evil Spear), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Evil Spear - [|cffffcc00Level %d|r]
+}
+
+STRING 12166
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 9|r]
+}
+
+STRING 12167
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 8|r]
+}
+
+STRING 12168
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 10|r]
+}
+
+STRING 12169
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool8> seconds|r
+}
+
+STRING 12170
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool9> seconds|r
+}
+
+STRING 12171
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool10> seconds|r
+}
+
+STRING 12172
+// Abilities: A0OG (Evil Spear), Researchubertip (Tooltip - Learn - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> - <A0OF,Cool10> seconds|r
+}
+
+STRING 12173
+// Abilities: A0OG (Evil Spear), EditorSuffix (Editor Suffix)
+{
+(dabura)
+}
+
+STRING 12174
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool2> seconds|r
+}
+
+STRING 12175
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12176
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12179
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12180
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 30%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12181
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/20/30%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12182
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+{
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 75% extra damage.|r
 }
 
