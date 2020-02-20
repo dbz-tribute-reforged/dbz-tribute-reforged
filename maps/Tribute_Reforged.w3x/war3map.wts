@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.35e
+DBZ Tribute Reforged 0.36
 }
 
 STRING 4
@@ -5487,13 +5487,13 @@ Dummy Calamity meteor
 }
 
 STRING 881
-// Units: h065 (Revive Point), Name (Name)
+// Units: n02L (Revive Point), Name (Name)
 {
 Revive Point
 }
 
 STRING 882
-// Units: h065 (Revive Point), Tip (Tooltip - Basic)
+// Units: h065 (Revive Point), Name (Name)
 {
 Revive Point
 }
@@ -6429,7 +6429,7 @@ R
 }
 
 STRING 1032
-// Units: h07K (Revive Point), Name (Name)
+// Units: h065 (Revive Point), Tip (Tooltip - Basic)
 {
 Revive Point
 }
@@ -7069,6 +7069,12 @@ STRING 1130
 // Units: H00C (Demon), Propernames (Proper Names)
 {
 Janemba
+}
+
+STRING 1131
+// Units: H098 (Demon), Name (Name)
+{
+Demon
 }
 
 STRING 1132
@@ -7717,32 +7723,6 @@ STRING 1226
 // Units: H085 (Daughter of Hercule), Propernames (Proper Names)
 {
 Videl
-}
-
-STRING 1227
-// Units: H085 (Daughter of Hercule), Awakentip (Tooltip - Awaken)
-{
-[|cffffff00Z|r] Choose Hercule
-}
-
-STRING 1228
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
-{
-A bulky, close-combat hero who constantly attacks with melee-range abilities and tricky item bombs.
-|cffC03232(Note: Hercule depends on winning Tournaments to obtain multiplier quickly.)|r
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
-STRING 1229
-// Units: H085 (Daughter of Hercule), Tip (Tooltip - Basic)
-{
-[|cffffff00Z|r] Choose Hercule
 }
 
 STRING 1230
@@ -12351,86 +12331,74 @@ STRING 1984
 F
 }
 
-STRING 1985
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 4 seconds)|r
-}
-
 STRING 1986
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 4.5 seconds)|r
 }
 
 STRING 1987
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 5 seconds)|r
 }
 
 STRING 1988
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 5.5 seconds)|r
 }
 
 STRING 1989
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 6 seconds)|r
 }
 
 STRING 1990
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 6.5 seconds)|r
 }
 
 STRING 1991
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 7 seconds)|r
 }
 
 STRING 1992
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 1993
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 1994
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 1995
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 1996
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 1997
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 1998
-// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Dynamite Kick
 }
@@ -12445,18 +12413,6 @@ STRING 2000
 // Abilities: A071 (Kick), Name (Name)
 {
 Kick
-}
-
-STRING 2001
-// Abilities: A071 (Kick), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00W|r] Learn Dynamite Kick
-}
-
-STRING 2002
-// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown:3.5 + .5 * lvl seconds)|r
 }
 
 STRING 2003
@@ -13288,109 +13244,103 @@ Bulma blasts you with another ray of energy healing you. |n[|cffffcc00History|r]
 }
 
 STRING 2141
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 2.5 seconds)|r
 }
 
 STRING 2142
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 2.75 seconds)|r
 }
 
 STRING 2143
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3 seconds)|r
 }
 
 STRING 2144
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.25 seconds)|r
 }
 
 STRING 2145
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.5 seconds)|r
 }
 
 STRING 2146
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.75 seconds)|r
 }
 
 STRING 2147
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4 seconds)|r
 }
 
 STRING 2148
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4.25 seconds)|r
 }
 
 STRING 2149
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
 {
 Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4.5 seconds)|r
 }
 
 STRING 2150
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2151
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2152
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2153
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2154
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2155
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2156
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
 
 STRING 2157
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 2158
-// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Satan Punch
 }
@@ -13405,18 +13355,6 @@ STRING 2160
 // Abilities: A073 (Punch), Name (Name)
 {
 Punch
-}
-
-STRING 2161
-// Abilities: A073 (Punch), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00Q|r] Learn Satan Punch
-}
-
-STRING 2162
-// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 2.25 + lvl*.25|r)
 }
 
 STRING 2163
@@ -19475,43 +19413,43 @@ Gain 15 damage
 }
 
 STRING 3171
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3172
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3173
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3174
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3175
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3176
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 3177
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -19571,7 +19509,7 @@ STRING 3186
 }
 
 STRING 3187
-// Abilities: A06F (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -24417,7 +24355,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 3992
-// Units: H08O (Android of Birds), Hotkey (Hotkey)
+// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
 {
 X
 }
@@ -31886,9 +31824,9 @@ Book Main Heroes
 }
 
 STRING 5235
-// Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-+2 str, -1 agi/int per level.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
 }
 
 STRING 5236
@@ -32000,9 +31938,9 @@ Q
 }
 
 STRING 5254
-// Abilities: A0BI (Train Agility), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-+2 agi, -1 str/int per level.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
 }
 
 STRING 5255
@@ -32114,9 +32052,9 @@ W
 }
 
 STRING 5273
-// Abilities: A0BJ (Train Intellect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-+2 int, -1 str/agi per level.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
 }
 
 STRING 5274
@@ -32487,7 +32425,7 @@ Allows the Dragon Balls to grant one additional wish per cast.
 }
 
 STRING 5335
-// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
+// Units: H08O (Android of Birds), Hotkey (Hotkey)
 {
 X
 }
@@ -32920,7 +32858,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 5407
-// Abilities: A0CI (Revive - Default Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0D0 (Sample Ramen), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -33638,7 +33576,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5525
-// Abilities: A0D0 (Sample Ramen), Hotkey (Hotkey - Normal)
+// Abilities: A0D8 (Augment), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -33839,7 +33777,7 @@ Raditz raises both of his arms up and charges two purple energy spheres. He then
 }
 
 STRING 5559
-// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
@@ -34716,36 +34654,6 @@ STRING 5698
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
-STRING 5699
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 5700
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 5701
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 5702
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
-STRING 5703
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
 STRING 5704
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -34800,12 +34708,6 @@ STRING 5712
 [|cff00FF00W|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
 }
 
-STRING 5713
-// Abilities: A0C9 (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
 STRING 5714
 // Abilities: A0C9 (Special Beam Cannon), EditorSuffix (Editor Suffix)
 {
@@ -34816,12 +34718,6 @@ STRING 5715
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 8|r]
-}
-
-STRING 5716
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 5717
@@ -34993,31 +34889,31 @@ Moves your revive point to the area north of the Lookout.
 }
 
 STRING 5745
-// Abilities: A0CI (Revive - Default Respawn), Name (Name)
+// Items: I04H (HBTC Training Ticket), Name (Name)
 {
-Revive - Default Respawn
+HBTC Training Ticket
 }
 
 STRING 5746
-// Abilities: A0CI (Revive - Default Respawn), Tip (Tooltip - Normal)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00R|r] Revive - Center
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
 }
 
 STRING 5747
-// Abilities: A0CI (Revive - Default Respawn), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Moves your revive point to the middle of the map, southeast of Saiyan Saga's spawn.|n|cffFF0000Contested Spawn:|r Both teams can revive here.
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
 }
 
 STRING 5748
-// Abilities: A0D8 (Augment), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D8 (Augment), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 5749
-// Units: H085 (Daughter of Hercule), Hotkey (Hotkey)
+// Units: H098 (Demon), Hotkey (Hotkey)
 {
 Z
 }
@@ -36423,7 +36319,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5982
-// Abilities: A0D8 (Augment), Hotkey (Hotkey - Normal)
+// Abilities: A0DB (Beerus Inner Fire), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -36879,7 +36775,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -37107,7 +37003,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6096
-// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
+// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -37227,7 +37123,7 @@ STRING 6115
 }
 
 STRING 6116
-// Abilities: A0DB (Beerus Inner Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0DB (Beerus Inner Fire), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -37251,7 +37147,7 @@ Enhances the target hero with a cybernetic augmentation. Grants one beneficial e
 }
 
 STRING 6120
-// Abilities: A0DB (Beerus Inner Fire), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37275,13 +37171,13 @@ Beerus Inner Fire
 }
 
 STRING 6124
-// Abilities: A0DC (Beerus Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 6125
-// Abilities: A0DC (Beerus Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37319,13 +37215,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 6131
-// Abilities: A0DD (Beerus Fart), Hotkey (Hotkey - Normal)
+// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6132
-// Abilities: A0E4 (Transform - Fourth), Hotkey (Hotkey - Normal)
+// Abilities: A0EH (Instant Stun 1s), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -37337,7 +37233,7 @@ Beerus Fart
 }
 
 STRING 6134
-// Abilities: A0EH (Instant Stun 1s), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EH (Instant Stun 1s), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37661,7 +37557,7 @@ Beerus fires many ki blasts in all directions. |n|cff00FF00Channeled for 30s|r|n
 }
 
 STRING 6188
-// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
+// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -38028,7 +37924,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38238,7 +38134,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 6284
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38259,6 +38155,12 @@ STRING 6287
 // Abilities: A0DT (Crane School Teachings), Researchubertip (Tooltip - Learn - Extended)
 {
 A combat style taught by Master Shen and Mercenary Tao. Students include Tien and Chiaotzu.
+}
+
+STRING 6288
+// Units: H098 (Demon), Propernames (Proper Names)
+{
+Janemba
 }
 
 STRING 6289
@@ -38351,6 +38253,12 @@ STRING 6303
 Celluar Enhancement - [|cffffcc00Level 3|r]
 }
 
+STRING 6304
+// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Z|r] Choose Super Janemba
+}
+
 STRING 6305
 // Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
 {
@@ -38430,7 +38338,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38567,112 +38475,10 @@ STRING 6340
 Removes 150 armor from nearby enemies.
 }
 
-STRING 6341
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 2.5 seconds)|r
-}
-
-STRING 6342
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 2.75 seconds)|r
-}
-
-STRING 6343
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3 seconds)|r
-}
-
-STRING 6344
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.25 seconds)|r
-}
-
-STRING 6345
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.5 seconds)|r
-}
-
-STRING 6346
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 3.75 seconds)|r
-}
-
-STRING 6347
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4 seconds)|r
-}
-
-STRING 6348
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4.25 seconds)|r
-}
-
-STRING 6349
-// Abilities: A0DX (Super Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cooldown: 4.5 seconds)|r
-}
-
-STRING 6350
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6351
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6352
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6353
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6354
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
 STRING 6355
 // Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Super Satan Punch
-}
-
-STRING 6356
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6357
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
-}
-
-STRING 6358
-// Abilities: A0DX (Super Punch), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Satan Punch
 }
 
 STRING 6359
@@ -38711,82 +38517,10 @@ STRING 6364
 Hercule kicks the target. |n|cff00ff00(Damage: Agi * 11 + 100)|r|n|cff00FFFF(Cooldown: 4.5 seconds)|r
 }
 
-STRING 6365
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 4.5 seconds)|r
-}
-
-STRING 6366
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 5 seconds)|r
-}
-
-STRING 6367
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 5.5 seconds)|r
-}
-
-STRING 6368
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 6 seconds)|r
-}
-
-STRING 6369
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 6.5 seconds)|r
-}
-
-STRING 6370
-// Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule kicks the target. |n|cff00ff00(Damage: Agi * lvl * 2 + 100)|r|n|cff00FFFF(Cooldown: 7 seconds)|r
-}
-
-STRING 6371
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 6372
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 6373
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 6374
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
-STRING 6375
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
-}
-
 STRING 6376
 // Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Super Dynamite Kick
-}
-
-STRING 6377
-// Abilities: A0DY (Super Kick), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Dynamite Kick
 }
 
 STRING 6378
@@ -39300,7 +39034,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6463
-// Abilities: A0EH (Instant Stun 1s), Hotkey (Hotkey - Normal)
+// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39858,7 +39592,7 @@ STRING 6555
 }
 
 STRING 6556
-// Abilities: A0ER (Angry Explosion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39882,7 +39616,7 @@ Trunks teleports behind the enemy and punches it with all of his might.
 }
 
 STRING 6560
-// Abilities: A0ER (Angry Explosion), Hotkey (Hotkey - Normal)
+// Abilities: A0ET (Destructo Disc), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -39924,7 +39658,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 6567
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
@@ -41096,7 +40830,7 @@ STRING 6758
 }
 
 STRING 6759
-// Abilities: A0ET (Destructo Disc), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ET (Destructo Disc), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41114,7 +40848,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 6762
-// Abilities: A0ET (Destructo Disc), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -41162,43 +40896,43 @@ STRING 6769
 }
 
 STRING 6770
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6771
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6772
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6773
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6774
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6775
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 6776
-// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
@@ -41360,7 +41094,7 @@ STRING 6802
 }
 
 STRING 6803
-// Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41384,13 +41118,13 @@ The Destructo Disk is a razor-sharp disk of energy that can slice through nearly
 }
 
 STRING 6807
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 6808
-// Abilities: A0FL (Tengai Shinsei), Hotkey (Hotkey - Normal)
+// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -41419,7 +41153,7 @@ Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to r
 }
 
 STRING 6811
-// Units: H062 (Demon), Awakentip (Tooltip - Awaken)
+// Units: H098 (Demon), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Z|r] Choose Super Janemba
 }
@@ -41923,7 +41657,7 @@ Transforms Yamcha back to normal.
 }
 
 STRING 6895
-// Abilities: A0FL (Tengai Shinsei), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -41947,7 +41681,7 @@ Roshi beefs up, increasing his power multiplier by 0.3x and causing his spells t
 }
 
 STRING 6899
-// Abilities: A0FW (Time Cage), Hotkey (Hotkey - Normal)
+// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42175,7 +41909,7 @@ E
 }
 
 STRING 6937
-// Abilities: A0FW (Time Cage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42211,7 +41945,7 @@ Madara calls down a gigantic meteor that will crash into the target location, de
 }
 
 STRING 6943
-// Abilities: A0GL (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42409,7 +42143,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42763,7 +42497,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7035
-// Abilities: A0GL (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42799,7 +42533,7 @@ Hit traps an opponent in a time cage, stunning them for 1.5 seconds.|n|cff00FFFF
 }
 
 STRING 7041
-// Abilities: A0HP (Home Run), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43003,7 +42737,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 7075
-// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43213,7 +42947,7 @@ A combat style used by Hit. |n|cffffcc00Evasion|r - <A0G0,DataD1,%>% |n|cffffcc0
 }
 
 STRING 7110
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43718,6 +43452,20 @@ STRING 7192
 E
 }
 
+STRING 7193
+// Units: H098 (Demon), Ubertip (Tooltip - Extended)
+{
+Super Janemba is a close-quarters PvP-based assassin who has powerful offensive abilities once in melee range. He is supplemented by strong single-target abilities and high mobilitiy skills that enable him to win 1v1 fights exceptionally well.
+|cffff2020Super Janemba's stat multiplier relies on killing enemy heroes!|r
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 7194
 // Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
 {
@@ -43740,6 +43488,42 @@ STRING 7197
 // Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
 {
 Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
+}
+
+STRING 7198
+// Units: H098 (Demon), Tip (Tooltip - Basic)
+{
+Janemba
+}
+
+STRING 7199
+// Units: H098 (Demon), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern Super Xeno)
+}
+
+STRING 7200
+// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 7201
+// Items: I044 (Banana), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 1% of max hp and 5% of max mana per second|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
+}
+
+STRING 7202
+// Items: I04F (Banana Generator), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|n|r|cffffff00A powerful matter manipulator used by Super Android 13 to produce infinite amounts of energy. Activating this item gives you the regeneration benefits of 1 banana. Also produces another banana at your feet.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080That's bananas...|r
+}
+
+STRING 7203
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
 }
 
 STRING 7204
@@ -44402,6 +44186,12 @@ STRING 7313
 Masenko
 }
 
+STRING 7314
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+}
+
 STRING 7315
 // Abilities: A0GK (Masenko), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -44475,7 +44265,7 @@ STRING 7326
 }
 
 STRING 7327
-// Abilities: A0HP (Home Run), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -44499,7 +44289,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 7331
-// Abilities: A0IA (Brave Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44529,7 +44319,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44853,43 +44643,43 @@ VEG
 }
 
 STRING 7390
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7391
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7392
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7393
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7394
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7395
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7396
-// Abilities: A0GP (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
@@ -44967,43 +44757,43 @@ Q
 }
 
 STRING 7409
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7410
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7411
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7412
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7413
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7414
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7415
-// Abilities: A0GQ (Special Buu Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
@@ -45351,7 +45141,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45723,21 +45513,21 @@ Turns every unit in a line into a defenseless piece of candy. Basic attacks agai
 }
 
 STRING 7535
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Units: h07K (Revive Point), Name (Name)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 15%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+Revive Point
 }
 
 STRING 7536
-// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CI (Revive - Center Respawn), Name (Name)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+Revive - Center Respawn
 }
 
 STRING 7537
-// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0CI (Revive - Center Respawn), Ubertip (Tooltip - Normal - Extended)
 {
-Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/15/20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+Moves your revive point to the middle of the map, north-east of Kami's Lookout.|n|cffFF0000Contested Spawn:|r Both teams can revive here.
 }
 
 STRING 7538
@@ -46358,43 +46148,37 @@ D
 }
 
 STRING 7640
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7641
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7642
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7643
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7644
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7645
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7646
-// Abilities: A0H1 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
@@ -46919,48 +46703,6 @@ STRING 7733
 // Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 7734
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7735
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7736
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7737
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7738
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7739
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
-}
-
-STRING 7740
-// Abilities: A0H7 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
 STRING 7741
@@ -48050,7 +47792,7 @@ STRING 7921
 }
 
 STRING 7922
-// Abilities: A0IA (Brave Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48068,7 +47810,7 @@ STRING 7924
 }
 
 STRING 7925
-// Abilities: A0IJ (Wish for Brave Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -48848,7 +48590,7 @@ Zamasu's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8055
-// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -49233,7 +48975,7 @@ Tapion slashes units in the target direction for damage. If he successfully uses
 }
 
 STRING 8116
-// Abilities: A0IO (The Work of Gods), Hotkey (Hotkey - Normal)
+// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -49317,7 +49059,7 @@ Tapion jumps above a target affected by “Hero’s Song”. Upon arrival, Tapio
 }
 
 STRING 8130
-// Abilities: A0IO (The Work of Gods), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49725,7 +49467,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50427,7 +50169,7 @@ W
 }
 
 STRING 8315
-// Abilities: A0IX (Monkey Smasher), Hotkey (Hotkey - Normal)
+// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51069,7 +50811,7 @@ Goku Black rushes the target area at max move speed,damaging units in his path.|
 }
 
 STRING 8422
-// Abilities: A0IX (Monkey Smasher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -51105,7 +50847,7 @@ Goku black creates two clones of himself that last for 12 seconds. While clones 
 }
 
 STRING 8428
-// Abilities: A0JK (Temporal Warp), Hotkey (Hotkey - Normal)
+// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -51988,7 +51730,7 @@ King K Rool charges 1,000 distance forward, dealing damage and stunning all unit
 }
 
 STRING 8572
-// Abilities: A0JK (Temporal Warp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -52012,7 +51754,7 @@ Monkey Smasher
 }
 
 STRING 8576
-// Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -52216,7 +51958,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -52695,7 +52437,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53263,7 +53005,7 @@ Places a buff on an ally or Whis, allowing them to go back 3 seconds in time to 
 }
 
 STRING 8782
-// Abilities: A0JM (Go Down Together!), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53287,7 +53029,7 @@ Temporal Warp
 }
 
 STRING 8786
-// Abilities: A0JN (Dende Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -53515,7 +53257,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -53557,7 +53299,7 @@ STRING 8830
 }
 
 STRING 8831
-// Abilities: A0JN (Dende Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -53581,7 +53323,7 @@ Dende links all units near him for 5s, causing all damage received by linked uni
 }
 
 STRING 8835
-// Abilities: A0JS (Super Saiyan Blue Evolution), Hotkey (Hotkey - Normal)
+// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53612,13 +53354,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8840
-// Abilities: A0JS (Super Saiyan Blue Evolution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8841
-// Abilities: A0JT (Super Saiyan Blue Revert), Hotkey (Hotkey - Normal)
+// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53869,7 +53611,7 @@ VegetaSSB2
 }
 
 STRING 8881
-// Abilities: A0JT (Super Saiyan Blue Revert), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -53893,7 +53635,7 @@ Super Saiyan Blue Evolution
 }
 
 STRING 8885
-// Abilities: A0JW (Flying Satan Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54007,7 +53749,7 @@ Whis fires a blue beam that deals damage in a line.|n|cff00FF00Dmg:int*lvl*2+10|
 }
 
 STRING 8904
-// Abilities: A0JW (Flying Satan Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54031,7 +53773,7 @@ Super Saiyan Blue Revert
 }
 
 STRING 8908
-// Abilities: A0JX (Recharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54223,99 +53965,51 @@ Bio Broly
 }
 
 STRING 8940
-// Abilities: A0JY (Overclock), Hotkey (Hotkey - Normal)
+// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 8941
-// Abilities: A0JW (Flying Satan Kick), Tip (Tooltip - Normal)
+// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
-STRING 8942
-// Abilities: A0JW (Flying Satan Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
-STRING 8943
-// Abilities: A0JW (Flying Satan Kick), Name (Name)
-{
-Flying Satan Kick
-}
-
 STRING 8944
-// Abilities: A0JW (Flying Satan Kick), Researchtip (Tooltip - Learn)
+// Abilities: A0JX (Recharge), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00R|r] Learn Flying Satan Kick
 }
 
-STRING 8945
-// Abilities: A0JW (Flying Satan Kick), Researchubertip (Tooltip - Learn - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
 STRING 8946
-// Abilities: A0JW (Flying Satan Kick), Tip (Tooltip - Normal)
+// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8947
-// Abilities: A0JW (Flying Satan Kick), Tip (Tooltip - Normal)
+// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8948
-// Abilities: A0JW (Flying Satan Kick), Tip (Tooltip - Normal)
+// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8949
-// Abilities: A0JW (Flying Satan Kick), Tip (Tooltip - Normal)
+// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
-STRING 8950
-// Abilities: A0JW (Flying Satan Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
-STRING 8951
-// Abilities: A0JW (Flying Satan Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
-STRING 8952
-// Abilities: A0JW (Flying Satan Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
-STRING 8953
-// Abilities: A0JW (Flying Satan Kick), Ubertip (Tooltip - Normal - Extended)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
-}
-
 STRING 8954
-// Abilities: A0JY (Overclock), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 8955
-// Abilities: A0JW (Flying Satan Kick), Untip (Tooltip - Turn Off)
-{
-Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 17s|r
 }
 
 STRING 8956
@@ -54343,7 +54037,7 @@ Recharge
 }
 
 STRING 8960
-// Abilities: A0JX (Recharge), Researchtip (Tooltip - Learn)
+// Abilities: A0JY (Overclock), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00R|r] Learn Flying Satan Kick
 }
@@ -54355,25 +54049,19 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8962
-// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
+// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8963
-// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
+// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8964
-// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Flying Satan Kick
-}
-
-STRING 8965
-// Abilities: A0JX (Recharge), Tip (Tooltip - Normal)
+// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
 {
 [|cffFFFF00R|r] Flying Satan Kick
 }
@@ -54403,7 +54091,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8970
-// Abilities: A0JZ (13 bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54421,7 +54109,7 @@ STRING 8972
 }
 
 STRING 8973
-// Abilities: A0JZ (13 bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54444,40 +54132,10 @@ STRING 8976
 Overclock
 }
 
-STRING 8977
-// Abilities: A0JY (Overclock), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00R|r] Learn Flying Satan Kick
-}
-
 STRING 8978
 // Abilities: A0JY (Overclock), Researchubertip (Tooltip - Learn - Extended)
 {
 Hercule leaps into the air, avoiding all incoming damage and smashes the target area, dealing damage."|n|cff00FF00Dmg: Agi*lvl*2|r|n|cff00FFFFCooldown: 15s|r
-}
-
-STRING 8979
-// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Flying Satan Kick
-}
-
-STRING 8980
-// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Flying Satan Kick
-}
-
-STRING 8981
-// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Flying Satan Kick
-}
-
-STRING 8982
-// Abilities: A0JY (Overclock), Tip (Tooltip - Normal)
-{
-[|cffFFFF00R|r] Flying Satan Kick
 }
 
 STRING 8983
@@ -54505,7 +54163,7 @@ Hercule leaps into the air, avoiding all incoming damage and smashes the target 
 }
 
 STRING 8987
-// Abilities: A0K0 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54542,13 +54200,13 @@ Increases Beerus' move speed by 25% for 15 seconds.
 }
 
 STRING 8993
-// Abilities: A0K7 (Heatwave), Hotkey (Hotkey - Normal)
+// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 8994
-// Abilities: A0K7 (Heatwave), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54662,7 +54320,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 9013
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -54788,7 +54446,7 @@ all
 }
 
 STRING 9034
-// Abilities: A0KO (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -54871,7 +54529,7 @@ STRING 9047
 }
 
 STRING 9048
-// Abilities: A0KO (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55063,7 +54721,7 @@ STRING 9079
 }
 
 STRING 9080
-// Abilities: A0KS (Moonlight), Researchhotkey (Hotkey - Learn)
+// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55099,7 +54757,7 @@ Jiren fires a slowly expanding wall of burning energy towards the target directi
 }
 
 STRING 9086
-// Abilities: A0KS (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55387,7 +55045,7 @@ Follow-Up
 }
 
 STRING 9134
-// Abilities: A084 (Gigantic Roar), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -55615,7 +55273,7 @@ Jiren's Fighting Style
 }
 
 STRING 9172
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55639,13 +55297,13 @@ Jiren's strength is overwhelming.|n|cff00FF00Crit %:|r 15|n|cff00FF00Crit Dmg:|r
 }
 
 STRING 9176
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55867,7 +55525,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55891,7 +55549,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55969,7 +55627,7 @@ STRING 9230
 }
 
 STRING 9231
-// Abilities: A084 (Gigantic Roar), Hotkey (Hotkey - Normal)
+// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -55993,7 +55651,7 @@ STRING 9234
 }
 
 STRING 9235
-// Abilities: A0L1 (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56285,13 +55943,13 @@ STRING 9281
 }
 
 STRING 9282
-// Abilities: A0L1 (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 9283
-// Abilities: A0L5 (Super Dragon Flight), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56303,7 +55961,7 @@ Moonlight
 }
 
 STRING 9285
-// Abilities: A0L5 (Super Dragon Flight), Hotkey (Hotkey - Normal)
+// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -56314,7 +55972,7 @@ STRING 9286
 }
 
 STRING 9287
-// Abilities: A0LB (Android Barrier), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -56326,9 +55984,9 @@ An incomplete version of ultra instinct that automatically dodges all incoming a
 }
 
 STRING 9289
-// Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OF (Revive - Original Respawn), Name (Name)
 {
-The mastered version of ultra instinct that allows the user to instinctively attack and dodge without thinking.Try as you might, you will never be able to repeat this feat.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.85x stat multiplier.|n+165ms and unlocks movement speed cap.|n+1% spell power per second up to +5%.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0MZ,Dur1> seconds|n|cff00ffffCooldown: Once per game.
+Revive - Original Respawn
 }
 
 STRING 9290
@@ -58432,13 +58090,13 @@ Q
 }
 
 STRING 9640
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9641
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59536,13 +59194,13 @@ STRING 9822
 }
 
 STRING 9823
-// Abilities: A0LB (Android Barrier), Hotkey (Hotkey - Normal)
+// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 9824
-// Abilities: A0LE (Blazing Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -59848,7 +59506,7 @@ STRING 9874
 }
 
 STRING 9875
-// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60118,7 +59776,7 @@ STRING 9919
 }
 
 STRING 9920
-// Abilities: A0LE (Blazing Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -60166,7 +59824,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 9928
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60190,7 +59848,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 9932
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60334,23 +59992,27 @@ Broly
 }
 
 STRING 9956
+// Abilities: A0BH (Train Strength), Ubertip (Tooltip - Normal - Extended)
 {
-|cffe60000L|r|cffde050do|r|cffd60a1aw|r|cffce1027e|r|cffc71634r|r|cffbf1b42 |r|cffb7214fH|r|cffaf265ce|r|cffa82c69l|r|cffa03177l|r
++1 str, -0.5 agi/int per level.
 }
 
 STRING 9957
+// Abilities: A0BI (Train Agility), Ubertip (Tooltip - Normal - Extended)
 {
-|cffff0000M|r|cfff70106o|r|cfff0030dv|r|cffe80514e|r|cffe1071b |r|cffd90922h|r|cffd20b28e|r|cffca0d2fr|r|cffc20f36e|r|cffbb113d |r|cffb31344t|r|cffac154bo|r|cffa41752 |r|cff9d1959R|r|cff951b5fe|r|cff8d1d66s|r|cff861e6dp|r|cff7e2074a|r|cff77227bw|r|cff6f2482n|r
++1 agi, -0.5 str/int per level.
 }
 
 STRING 9958
+// Abilities: A0BJ (Train Intellect), Ubertip (Tooltip - Normal - Extended)
 {
-|cffe60000E|r|cffe20205n|r|cffdf040at|r|cffdc060fr|r|cffd90815a|r|cffd60b1an|r|cffd30d20c|r|cffcf0f25e|r|cffcc112b |r|cffc91430t|r|cffc61635o|r|cffc3183b |r|cffbf1b41L|r|cffbc1d46o|r|cffb91f4bw|r|cffb62151e|r|cffb32456r|r|cffb0265c |r|cffad2861H|r|cffa92a67e|r|cffa62d6cl|r|cffa32f71l|r|cffa03177s|r
++1 int, -0.5 str/agi per level.
 }
 
 STRING 9959
+// Items: I04H (HBTC Training Ticket), Description (Description)
 {
-|cffe60000E|r|cffe20205n|r|cffdf040at|r|cffdc060fr|r|cffd90815a|r|cffd60b1an|r|cffd30d20c|r|cffcf0f25e|r|cffcc112b |r|cffc91430t|r|cffc61635o|r|cffc3183b |r|cffbf1b41L|r|cffbc1d46o|r|cffb91f4bw|r|cffb62151e|r|cffb32456r|r|cffb0265c |r|cffad2861H|r|cffa92a67e|r|cffa62d6cl|r|cffa32f71l|r|cffa03177s|r
+A special ticket that allows the user to master the art of training.
 }
 
 STRING 9960
@@ -60433,18 +60095,21 @@ Freemode Enabled, forced win/loss conditions are disabled.
 }
 
 STRING 9974
+// Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
 {
-Raditz: And this ... is to go ... even further ... beyond
+|cffffff00Take this ticket to the Hyberbolic Time Chamber to receive +2/2/2 level up stats for the rest of the game.|r
 }
 
 STRING 9975
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffbf00[Saiyan Saga]|r
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
 }
 
 STRING 9976
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffbf00[Turles Saga]|r
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
 }
 
 STRING 9977
@@ -60691,7 +60356,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -60709,7 +60374,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61099,7 +60764,7 @@ STRING 10086
 }
 
 STRING 10087
-// Abilities: A0LS (Angry Shout), Hotkey (Hotkey - Normal)
+// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -61214,7 +60879,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61357,12 +61022,6 @@ STRING 10128
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
-STRING 10129
-// Abilities: A0D5 (Sample Beer), Hotkey (Hotkey - Normal)
-{
-Z
-}
-
 STRING 10130
 // Abilities: A0DW (Evil Aura), EditorSuffix (Editor Suffix)
 {
@@ -61473,7 +61132,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
+// Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61548,7 +61207,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61578,7 +61237,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61734,13 +61393,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61806,13 +61465,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62125,7 +61784,7 @@ STRING 10251
 }
 
 STRING 10252
-// Abilities: A0LS (Angry Shout), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -62143,7 +61802,7 @@ STRING 10254
 }
 
 STRING 10255
-// Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62281,7 +61940,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62299,7 +61958,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62743,7 +62402,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62761,7 +62420,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63014,7 +62673,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63122,19 +62781,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63302,7 +62961,7 @@ STRING 10446
 }
 
 STRING 10447
-// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64034,7 +63693,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64052,7 +63711,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64088,9 +63747,9 @@ Future Trunks charges his opponent with flaming ferocity and stuns them with how
 }
 
 STRING 10578
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A06F (Special Beam Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
 }
 
 STRING 10579
@@ -64106,7 +63765,7 @@ STRING 10580
 }
 
 STRING 10581
-// Abilities: A0LW (Summon Giru), Hotkey (Hotkey - Normal)
+// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64172,7 +63831,7 @@ STRING 10591
 }
 
 STRING 10592
-// Abilities: A0M5 (Frozen R), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -64275,7 +63934,7 @@ Transformations:
 [lvl 15]  1.25x "first" <-- TYPE IT IN CHAT
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
+[lvl 30+] 2.00x (absorb 17/18)
 [lvl 130] 2.50x "super"
 
 To reach Cell's higher forms you must absorb 17/18.
@@ -64527,13 +64186,13 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
+// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 10639
-// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -64545,9 +64204,9 @@ STRING 10640
 }
 
 STRING 10641
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OF (Revive - Original Respawn), Ubertip (Tooltip - Normal - Extended)
 {
-This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 150% extra damage.|r
+Moves your revive point to where you originally started.
 }
 
 STRING 10642
@@ -64609,7 +64268,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64623,7 +64282,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 16.Feb.20
+This map is under active development - 21.Feb.20
 }
 
 STRING 10653
@@ -64637,7 +64296,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64667,7 +64326,7 @@ Transformations:
 [lvl 15]  1.25x "first"
 [lvl 30]  1.50x "fp"
 [lvl 30+] 1.75x (absorb 17/18)
-[lvl 60+] 2.00x (absorb 17/18)
+[lvl 30+] 2.00x (absorb 17/18)
 [lvl 130] 2.50x "super"
 
 To reach Cell's higher forms you must absorb 17/18.
@@ -64869,7 +64528,7 @@ STRING 10689
 }
 
 STRING 10690
-// Abilities: A0M5 (Frozen R), Hotkey (Hotkey - Normal)
+// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -64935,7 +64594,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64953,7 +64612,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65014,7 +64673,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65109,7 +64768,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65127,7 +64786,7 @@ STRING 10730
 }
 
 STRING 10731
-// Abilities: A0MR (Lava Pillars), Hotkey (Hotkey - Normal)
+// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -65145,7 +64804,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth dealing massive dam
 }
 
 STRING 10734
-// Abilities: A0MR (Lava Pillars), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -65517,7 +65176,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66179,7 +65838,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66197,7 +65856,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66335,7 +65994,7 @@ STRING 10930
 }
 
 STRING 10931
-// Abilities: A0MY (Moonlight), Hotkey (Hotkey - Normal)
+// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -66350,12 +66009,6 @@ STRING 10933
 // Abilities: A0M5 (Frozen R), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Abil - [|cffffcc00Level %d|r]
-}
-
-STRING 10934
-// Abilities: A0MY (Moonlight), Researchhotkey (Hotkey - Learn)
-{
-R
 }
 
 STRING 10935
@@ -66647,7 +66300,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66665,7 +66318,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67026,7 +66679,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 11049
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67457,7 +67110,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67475,7 +67128,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67529,7 +67182,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67572,7 +67225,7 @@ STRING 11138
 }
 
 STRING 11139
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67697,21 +67350,21 @@ STRING 11159
 }
 
 STRING 11160
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
 }
 
 STRING 11161
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0CI (Revive - Center Respawn), Tip (Tooltip - Normal)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+[|cff00ff00F|r] Revive - Center
 }
 
 STRING 11162
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+F
 }
 
 STRING 11163
@@ -67793,7 +67446,7 @@ STRING 11173
 }
 
 STRING 11174
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68036,7 +67689,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68072,7 +67725,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68420,7 +68073,7 @@ First, Broly charges a green ball of ki in front of him. He then fires the attac
 }
 
 STRING 11279
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68546,7 +68199,7 @@ STRING 11299
 }
 
 STRING 11300
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69176,7 +68829,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69200,7 +68853,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69329,12 +68982,6 @@ STRING 11430
 // Abilities: A0MQ (Lava Burst), EditorSuffix (Editor Suffix)
 {
 (moro)
-}
-
-STRING 11431
-// Abilities: A0O3 (Hell's Gate), Researchhotkey (Hotkey - Learn)
-{
-R
 }
 
 STRING 11432
@@ -69955,7 +69602,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70872,7 +70519,7 @@ Namek Tree
 }
 
 STRING 11688
-// Units: n02L (Circle of Power), EditorSuffix (Name - Editor Suffix)
+// Units: n02L (Revive Point), EditorSuffix (Name - Editor Suffix)
 {
 (large, spawn loc)
 }
@@ -70920,9 +70567,9 @@ Full of potassium!
 }
 
 STRING 11696
-// Items: I044 (Banana), Ubertip (Tooltip - Extended)
+// Abilities: A0OF (Revive - Original Respawn), Tip (Tooltip - Normal)
 {
-|cff87ceebNon-Combat Consumable|n|r|cffffff00Restores 5% of max mana per second|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080Here, have a banana.|r
+[|cff00ff00A|r] Revive - Original
 }
 
 STRING 11697
@@ -71163,7 +70810,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72208,9 +71855,9 @@ Cosmic Illusion
 }
 
 STRING 11905
-// Abilities: A0O3 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Tip (Tooltip - Normal)
 {
-R
+[|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 9|r]
 }
 
 STRING 11906
@@ -72369,6 +72016,12 @@ STRING 11931
 Demon's Mark Curse 30%
 }
 
+STRING 11932
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
 STRING 11933
 // Abilities: A0O4 (Lightning Shower Rain), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -72469,12 +72122,6 @@ STRING 11949
 // Items: I02V (Cleansed Dragon Ball), Ubertip (Tooltip - Extended)
 {
 |cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
-}
-
-STRING 11950
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
 STRING 11951
@@ -72753,12 +72400,6 @@ STRING 11996
 Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
 }
 
-STRING 11997
-// Abilities: A0C9 (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
-}
-
 STRING 11998
 // Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
@@ -72778,7 +72419,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72796,7 +72437,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72814,7 +72455,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -73108,9 +72749,9 @@ Purchase Banana
 }
 
 STRING 12056
-// Items: I04F (Banana Generator), Ubertip (Tooltip - Extended)
+// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
 {
-|cff87ceebNon-Combat Consumable|n|r|cffffff00A powerful matter manipulator used by Super Android 13 to produce infinite amounts of energy. Each use restores 5% of max mana per second and drops a banana at your feet.|r|cff00ff00|nDuration: <A0N0,Dur1>s|r|n|cff00ffffCooldown: <A0N0,Cool1>s|r|n|cff808080That's bananas...|r
+A
 }
 
 STRING 12057
@@ -73147,6 +72788,18 @@ STRING 12062
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12063
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+}
+
+STRING 12064
+// Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
+{
+The mastered version of ultra instinct that allows the user to instinctively attack and dodge without thinking. Try as you might, you will never be able to repeat this feat.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.85x stat multiplier.|n+165ms and unlocks movement speed cap.|n+1% spell power per second up to +5%.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0MZ,Dur1> seconds|n|cff00ffffCooldown: Once per game.
 }
 
 STRING 12065
@@ -73519,5 +73172,756 @@ STRING 12126
 // Abilities: A000 (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
 (geti star fragment)
+}
+
+STRING 12127
+// Abilities: A06F (Special Beam Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 10|r]
+}
+
+STRING 12128
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
+}
+
+STRING 12129
+// Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
+}
+
+STRING 12130
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool1> seconds|r
+}
+
+STRING 12131
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool2> seconds|r
+}
+
+STRING 12132
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool3> seconds|r
+}
+
+STRING 12133
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool4> seconds|r
+}
+
+STRING 12134
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool5> seconds|r
+}
+
+STRING 12135
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool6> seconds|r
+}
+
+STRING 12136
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool7> seconds|r
+}
+
+STRING 12137
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool8> seconds|r
+}
+
+STRING 12138
+// Abilities: A0ES (Special Beam Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 9|r]
+}
+
+STRING 12139
+// Abilities: A0ES (Special Beam Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 10|r]
+}
+
+STRING 12140
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool9> seconds|r
+}
+
+STRING 12141
+// Abilities: A0ES (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06F,Cool10> seconds|r
+}
+
+STRING 12142
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 120] 2.25x "fp"
+[lvl 150] 2.50x "fp"
+}
+
+STRING 12143
+// Units: H085 (Daughter of Hercule), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00X|r] Choose Videl
+}
+
+STRING 12145
+// Units: H085 (Daughter of Hercule), Tip (Tooltip - Basic)
+{
+[|cffffff00X|r] Choose Videl
+}
+
+STRING 12146
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 12147
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 12148
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool2>s|r
+}
+
+STRING 12149
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool3>s|r
+}
+
+STRING 12150
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool4>s|r
+}
+
+STRING 12151
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> seconds|r
+}
+
+STRING 12152
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool3> seconds|r
+}
+
+STRING 12153
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool4> seconds|r
+}
+
+STRING 12154
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool5> seconds|r
+}
+
+STRING 12155
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool6> seconds|r
+}
+
+STRING 12156
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool7> seconds|r
+}
+
+STRING 12157
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 2|r]
+}
+
+STRING 12158
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 3|r]
+}
+
+STRING 12159
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 4|r]
+}
+
+STRING 12160
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 5|r]
+}
+
+STRING 12161
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 6|r]
+}
+
+STRING 12162
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 1|r]
+}
+
+STRING 12163
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 7|r]
+}
+
+STRING 12164
+// Abilities: A0OG (Evil Spear), Name (Name)
+{
+Evil Spear
+}
+
+STRING 12165
+// Abilities: A0OG (Evil Spear), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Evil Spear - [|cffffcc00Level %d|r]
+}
+
+STRING 12166
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 9|r]
+}
+
+STRING 12167
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 8|r]
+}
+
+STRING 12168
+// Abilities: A0OG (Evil Spear), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Evil Spear - [|cffffcc00Level 10|r]
+}
+
+STRING 12169
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool8> seconds|r
+}
+
+STRING 12170
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool9> seconds|r
+}
+
+STRING 12171
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool10> seconds|r
+}
+
+STRING 12172
+// Abilities: A0OG (Evil Spear), Researchubertip (Tooltip - Learn - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> - <A0OF,Cool10> seconds|r
+}
+
+STRING 12173
+// Abilities: A0OG (Evil Spear), EditorSuffix (Editor Suffix)
+{
+(dabura)
+}
+
+STRING 12174
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool2> seconds|r
+}
+
+STRING 12175
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12176
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12177
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool5>s|r
+}
+
+STRING 12178
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool6>s|r
+}
+
+STRING 12179
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1% Enemy Max HP|r|n|cff00ff00Heal: 0.6% Self Max HP|r|n|cff00ff00Bonus Stats: 20%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.006x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12180
+// Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 30%|r|n|cff00ff00Fat Buu Stat Multiplier: 0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12181
+// Abilities: A0EI (Candy Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Turns every unit in a line into a defenseless piece of candy. Basic attacks against candy heal Buu. Deals bonus damage to heroes and instantly kills creeps for bonus stats.|n|cff00ff00Damage: 0.5/1/1.5% Enemy Max HP|r|n|cff00ff00Heal: 0.3/0.6/0.9% Self Max HP|r|n|cff00ff00Bonus Stats: 10/20/30%|r|n|cff00ff00Fat Buu Stat Multiplier: +0.005/0.006/0.007x|r|n|cff00FFFFCooldown: 17 seconds|r
+}
+
+STRING 12182
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+{
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 75% extra damage.|r
+}
+
+STRING 12183
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool7>s|r
+}
+
+STRING 12184
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 2|r]
+}
+
+STRING 12185
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 3|r]
+}
+
+STRING 12186
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 4|r]
+}
+
+STRING 12187
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 5|r]
+}
+
+STRING 12188
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 6|r]
+}
+
+STRING 12189
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 1|r]
+}
+
+STRING 12190
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 7|r]
+}
+
+STRING 12191
+// Abilities: A071 (Kick), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 12192
+// Abilities: A071 (Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool1>s|r
+}
+
+STRING 12193
+// Abilities: A071 (Kick), EditorSuffix (Editor Suffix)
+{
+(videl)
+}
+
+STRING 12194
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 8|r]
+}
+
+STRING 12195
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 9|r]
+}
+
+STRING 12196
+// Abilities: A071 (Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 12197
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool8>s|r
+}
+
+STRING 12198
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool9>s|r
+}
+
+STRING 12199
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool10>s|r
+}
+
+STRING 12200
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
+}
+
+STRING 12201
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool2>s|r
+}
+
+STRING 12202
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool3>s|r
+}
+
+STRING 12203
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool4>s|r
+}
+
+STRING 12204
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool5>s|r
+}
+
+STRING 12205
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool6>s|r
+}
+
+STRING 12206
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool7>s|r
+}
+
+STRING 12207
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool8>s|r
+}
+
+STRING 12208
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool9>s|r
+}
+
+STRING 12209
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 2|r]
+}
+
+STRING 12210
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 3|r]
+}
+
+STRING 12211
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 4|r]
+}
+
+STRING 12212
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 5|r]
+}
+
+STRING 12213
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 6|r]
+}
+
+STRING 12214
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 1|r]
+}
+
+STRING 12215
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 7|r]
+}
+
+STRING 12216
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 8|r]
+}
+
+STRING 12217
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 9|r]
+}
+
+STRING 12218
+// Abilities: A073 (Punch), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Punch - [|cffffcc00Level %d|r]
+}
+
+STRING 12219
+// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
+}
+
+STRING 12220
+// Abilities: A073 (Punch), EditorSuffix (Editor Suffix)
+{
+(videl)
+}
+
+STRING 12221
+// Abilities: A073 (Punch), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 12222
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool10>s|r
+}
+
+STRING 12223
+// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 12224
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 1|r]
+}
+
+STRING 12225
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool1>s|r
+}
+
+STRING 12226
+// Abilities: A0JW (Flying Kick), Name (Name)
+{
+Flying Kick
+}
+
+STRING 12227
+// Abilities: A0JW (Flying Kick), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Flying Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 12228
+// Abilities: A0JW (Flying Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool1>s|r
+}
+
+STRING 12229
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 2|r]
+}
+
+STRING 12230
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 3|r]
+}
+
+STRING 12231
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 4|r]
+}
+
+STRING 12232
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 5|r]
+}
+
+STRING 12233
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool2>s|r
+}
+
+STRING 12234
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool3>s|r
+}
+
+STRING 12235
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool4>s|r
+}
+
+STRING 12236
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool5>s|r
+}
+
+STRING 12237
+// Abilities: A0JW (Flying Kick), EditorSuffix (Editor Suffix)
+{
+(videl)
+}
+
+STRING 12238
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool6>s|r
+}
+
+STRING 12239
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool7>s|r
+}
+
+STRING 12240
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool8>s|r
+}
+
+STRING 12241
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool9>s|r
+}
+
+STRING 12242
+// Abilities: A0JW (Flying Kick), Ubertip (Tooltip - Normal - Extended)
+{
+The user leaps into the air with a kick as they fly towards the targetted area.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0JW,Cool10>s|r
+}
+
+STRING 12243
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 6|r]
+}
+
+STRING 12244
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 7|r]
+}
+
+STRING 12245
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 8|r]
+}
+
+STRING 12246
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 9|r]
+}
+
+STRING 12247
+// Abilities: A0JW (Flying Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Flying Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 12248
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 12249
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 12250
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+{
+|cffff2020UNFINISHED HERO|r
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 

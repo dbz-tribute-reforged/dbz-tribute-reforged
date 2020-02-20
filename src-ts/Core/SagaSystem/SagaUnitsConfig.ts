@@ -50,7 +50,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Vegeta.ENERGY_BLAST_VOLLEY,
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
     
@@ -81,7 +81,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
 
@@ -104,7 +104,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON,
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_1,
       ]
     )],
     ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(30700, 25500),
@@ -120,7 +120,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
 
@@ -133,7 +133,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Nappa.BREAK_CANNON
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
       ]
     )],
     ["Burter", new SagaUnit(FourCC("U00Z"), 10, 400, 650, 350, new Vector2D(24000, 29700))],
@@ -142,7 +142,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
     ["Ginyu", new SagaUnit(FourCC("U000"), 50, 800, 250, 800, new Vector2D(24500, 29600),
@@ -151,7 +151,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB,
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_3,
         ItemConstants.SagaDrops.SCOUTER_2,
       ]
     )],
@@ -186,7 +186,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
       [
-        ItemConstants.SagaDrops.BATTLE_ARMOR_5,
+        ItemConstants.SagaDrops.BATTLE_ARMOR_4,
       ]
     )],
 
@@ -338,7 +338,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
       ],
     )],
-    ["Perfect Cell 1", new SagaUnit(FourCC("H00G"), 90, 6000, 400, 7000, new Vector2D(30500, 16000),
+    ["Perfect Cell 1", new SagaUnit(FourCC("H00G"), 95, 6000, 400, 7000, new Vector2D(30500, 16000),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cell.KAMEHAMEHA,
@@ -346,6 +346,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
         SagaAbilities.Saga.SOLAR_KAMEHAMEHA_CUSTOM,
       ],
+      [
+        ItemConstants.SagaDrops.HBTC_TRAINING_TICKET,
+      ]
     )],
     
     // cell games saga
@@ -477,7 +480,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Dabura", new SagaUnit(FourCC("O000"), 80, 7500, 400, 7500, new Vector2D(16500, 12000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Dabura.EVIL_SPEAR,
       ],
     )],
 
@@ -503,7 +507,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Dabura", new SagaUnit(FourCC("O000"), 60, 7500, 400, 7500, new Vector2D(17000, 26000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Dabura.EVIL_SPEAR,
       ],
     )],
     ["Future Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(17100, 25500),

@@ -83,6 +83,12 @@ export module AbilityNames {
     export const SUPER_ELECTRIC_STRIKE: string = "Super Electric Strike";
   }
 
+  export module Videl {
+    export const PUNCH: string = "Punch";
+    export const KICK: string = "Kick";
+    export const FLYING_KICK: string = "Flying Kick";
+  }
+
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
     export const BABIDI_BARRIER: string = "Babidi Barrier";
@@ -90,6 +96,10 @@ export module AbilityNames {
     export const SUMMON_PUI_PUI: string = "Summon Pui Pui";
     export const SUMMON_YAKON: string = "Summon Yakon";
     export const SUMMON_DABURA: string = "Summon Dabura";
+  }
+
+  export module Dabura {
+    export const EVIL_SPEAR: string = "Evil Spear";
   }
 
   export module Buu {

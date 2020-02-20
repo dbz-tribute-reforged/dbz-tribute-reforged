@@ -11,6 +11,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_UNIT_TARGET = 2;
   static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
 
+  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.002;
 
   protected previousCoord: Vector2D;
 
@@ -62,11 +63,19 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
       direction += this.angleOffset;
 
-      let targetCoord;
+      let distanceToMove = this.distance;
+      if (IsUnitType(source, UNIT_TYPE_HERO)) {
+        distanceToMove = distanceToMove * 
+          (
+            1 + GetHeroAgi(source, true) * Dash.AGI_TO_BONUS_SPEED_PERCENT * 0.01
+          );
+      }
 
       const distanceToTarget = CoordMath.distance(currentCoord, dashTargetPoint);
-      if (distanceToTarget > this.distance) {
-        targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, this.distance);
+
+      let targetCoord;
+      if (distanceToTarget > distanceToMove) {
+        targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, distanceToMove);
       } else {
         targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, distanceToTarget);
       }

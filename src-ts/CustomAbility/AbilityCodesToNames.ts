@@ -65,7 +65,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LY'), AbilityNames.Pan.HONEY_BEE_COSTUME],
     [FourCC('A0LW'), AbilityNames.Pan.SUMMON_GIRU],
 
-
     // android 17 dbs
     [FourCC('A09O'), AbilityNames.Android17DBS.POWER_BLITZ],
     [FourCC('A0MW'), AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE],
@@ -74,6 +73,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LB'), AbilityNames.Android17DBS.ANDROID_BARRIER],
     [FourCC('A0MV'), AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE],
 
+    // videl
+    [FourCC('A073'), AbilityNames.Videl.PUNCH],
+    [FourCC('A071'), AbilityNames.Videl.KICK],
+    [FourCC('A0JW'), AbilityNames.Videl.FLYING_KICK],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],
@@ -81,6 +85,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A018'), AbilityNames.Babidi.SUMMON_PUI_PUI],
     [FourCC('A01A'), AbilityNames.Babidi.SUMMON_YAKON],
     [FourCC('A03E'), AbilityNames.Babidi.SUMMON_DABURA],
+
+    // dabura
+    [FourCC('A0OG'), AbilityNames.Dabura.EVIL_SPEAR],
 
     // buus
     [FourCC('A0EI'), AbilityNames.Buu.BUU_BEAM],

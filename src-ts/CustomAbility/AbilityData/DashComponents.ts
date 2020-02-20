@@ -305,7 +305,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 45,
+    distance: 50,
   },
   {
     name: "dash flying unit hellzone grenade",
@@ -317,7 +317,33 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 45,
+    distance: 50,
+  },
+  // videl speed boost
+  {
+    name: "dash ground forward videl speed boost",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 2,
+  },
+  // videl flying kick
+  {
+    name: "dash ground point videl flying kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 30,
   },
   // ----------------------------
   // cell-x
@@ -326,7 +352,7 @@ export const DashComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,    
-    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
     checkPreviousCoord: true,
     useLastCastPoint: false,

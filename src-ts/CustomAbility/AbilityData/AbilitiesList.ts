@@ -772,7 +772,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 150,
+    duration: 140,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1321,6 +1321,93 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Videl.PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVidel.blp",
+      disabled: "BTNVidel.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Videl.PUNCH,
+      body: 
+        AbilityNames.Videl.PUNCH,
+    },
+    components: [
+      { name: "multi videl punch" },
+      { name: "dash ground forward videl speed boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Videl.KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVidel.blp",
+      disabled: "BTNVidel.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Videl.KICK,
+      body: 
+        AbilityNames.Videl.KICK,
+    },
+    components: [
+      { name: "damage videl kick" },
+      { name: "knockback videl kick" },
+      { name: "dash ground forward videl speed boost" },
+      { name: "sfx videl kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Videl.FLYING_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNVidel.blp",
+      disabled: "BTNVidel.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Videl.KICK,
+      body: 
+        AbilityNames.Videl.KICK,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "dash ground point videl flying kick" },
+      { name: "damage videl flying kick dps" },
+      { name: "damage videl flying kick explosion" },
+      { name: "knockback videl flying kick" },
+      { name: "sfx videl flying kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.SS_DEADLY_BOMBER,
     currentCd: 0,
     maxCd: 1,
@@ -1557,6 +1644,32 @@ export const AbilitiesList = [
     },
     components: [
       // { name: "summon summon dabura" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dabura.EVIL_SPEAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "ReplaceableTextures\\CommandButtons\\BTNImpalingBolt.blp",
+      disabled: "ReplaceableTextures\\CommandButtons\\BTNImpalingBolt.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dabura.EVIL_SPEAR,
+      body: 
+        AbilityNames.Dabura.EVIL_SPEAR
+    },
+    components: [
+      { name: "beam evil spear" },
     ],
   },
   // -------------------------------------------
@@ -2187,6 +2300,32 @@ export const AbilitiesList = [
       { name: "knockback behind you" },
       { name: "stun behind you" },
       { name: "sfx behind you" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Raditz.DOUBLE_SUNDAE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRaditzDoubleSundae.blp",
+      disabled: "BTNRaditzDoubleSundae.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Raditz.DOUBLE_SUNDAE,
+      body: 
+        AbilityNames.Raditz.DOUBLE_SUNDAE
+    },
+    components: [
+      { name: "spell amp double sundae" },
     ],
   },
   // -------------------------------------------

@@ -90,4 +90,13 @@ export const SpellAmpComponents = [
     bonus: 0.20,
     rate: 0.0003,
   },
+  // --------------------------------------------
+  { 
+    name: "spell amp double sundae", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.05,
+    rate: 0.05,
+  },
 ];

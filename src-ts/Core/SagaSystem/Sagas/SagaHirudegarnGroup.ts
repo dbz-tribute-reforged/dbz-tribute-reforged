@@ -11,7 +11,7 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {

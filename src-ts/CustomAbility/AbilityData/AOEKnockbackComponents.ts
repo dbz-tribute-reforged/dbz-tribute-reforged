@@ -90,6 +90,45 @@ export const AOEKnockbackComponents = [
   //   },
   //   affectAllies: false,
   // },
+  // videl punch
+  {
+    name: "knockback videl punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 300,
+    },
+    affectAllies: false,
+  },
+  // videl kick
+  {
+    name: "knockback videl kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 350,
+    },
+    affectAllies: false,
+  },
+  // videl flying kick
+  {
+    name: "knockback videl flying kick",
+    repeatInterval: 1, 
+    startTick: -1,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 400,
+    },
+    affectAllies: false,
+  },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",
@@ -244,6 +283,19 @@ export const AOEKnockbackComponents = [
     },
     affectAllies: false,
   },
+  // evil spear knock in
+  {
+    name: "knockback evil spear",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 60, 
+      angle: 180, 
+      aoe: 100,
+    },
+    affectAllies: false,
+  },
   // cooler deafening wave
   {
     name: "knockback 1tick 25speed 0angle 500aoe",
@@ -257,10 +309,11 @@ export const AOEKnockbackComponents = [
     },
     affectAllies: false,
   },
+  // solar kame
   {
     name: "knockback solar kame",
     repeatInterval: 1, 
-    startTick: 115,
+    startTick: 111,
     endTick: -1,
     knockbackData: {
       speed: 40, 

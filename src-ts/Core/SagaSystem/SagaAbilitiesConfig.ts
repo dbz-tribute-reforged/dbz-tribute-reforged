@@ -153,10 +153,10 @@ export module SagaAbilities {
       AbilityNames.Cell.KAMEHAMEHA, 10, 13, 10, SHORT_CAST_TIME
     );
     export const MASENKO = new SagaAbility(
-      AbilityNames.Cell.MASENKO, 10, 14, 10, SHORT_CAST_TIME
+      AbilityNames.Cell.MASENKO, 9, 11, 10, SHORT_CAST_TIME
     );
     export const SPECIAL_BEAM_CANNON = new SagaAbility(
-      AbilityNames.Cell.SPECIAL_BEAM_CANNON, 10, 15, 10, SHORT_CAST_TIME
+      AbilityNames.Cell.SPECIAL_BEAM_CANNON, 10, 14, 10, SHORT_CAST_TIME
     );
   }
 
@@ -166,6 +166,12 @@ export module SagaAbilities {
     );
     export const BABIDI_BARRIER = new SagaAbility(
       AbilityNames.Babidi.BABIDI_BARRIER, 10, 30, 5, SHORT_CAST_TIME
+    );
+  }
+
+  export module Dabura {
+    export const EVIL_SPEAR = new SagaAbility(
+      AbilityNames.Dabura.EVIL_SPEAR, 8, 17, 10, MEDIUM_CAST_TIME
     );
   }
 

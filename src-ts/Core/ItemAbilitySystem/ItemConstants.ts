@@ -43,6 +43,9 @@ export module ItemConstants {
   export const getiStarFragment = [
     FourCC("I048"),
   ]
+  export const trainingTicket = [
+    FourCC("I04H"),
+  ]
   export const bioLabResearch = [
     FourCC("I02E"),
   ];
@@ -98,6 +101,7 @@ export module ItemConstants {
     export const ANDROID_BOMB = androidBomb[0];
     export const BANANA_GENERATOR = bananaGenerator[0];
     export const GETI_STAR_FRAGMENT = getiStarFragment[0];
+    export const HBTC_TRAINING_TICKET = trainingTicket[0];
     export const BIO_LAB_RESEARCH = bioLabResearch[0];
     export const DIMENSION_SWORD = dimensionSwordSaga[0];
     export const BEE_DOG_ITEM = beeDogItem[0];
