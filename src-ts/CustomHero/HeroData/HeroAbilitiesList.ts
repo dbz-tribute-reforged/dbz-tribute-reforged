@@ -141,7 +141,21 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", AbilityNames.Pan.RELIABLE_FRIEND, "Dragon Radar"]],
 
     // android 17 dbs
-    [FourCC("H08Z"), [AbilityNames.Android17DBS.POWER_BLITZ, AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE, AbilityNames.Android17DBS.BARRIER_PRISON, AbilityNames.Android17DBS.BARRIER_WALL, AbilityNames.Android17DBS.ANDROID_BARRIER, AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE]],
+    [FourCC("H08Z"), [
+      AbilityNames.Android17DBS.POWER_BLITZ, 
+      AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE, 
+      AbilityNames.Android17DBS.BARRIER_PRISON, 
+      AbilityNames.Android17DBS.BARRIER_WALL, 
+      AbilityNames.Android17DBS.ANDROID_BARRIER, 
+      AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE
+    ]],
+
+    // videl
+    [FourCC("H085"), [
+      AbilityNames.Videl.PUNCH, 
+      AbilityNames.Videl.KICK, 
+      AbilityNames.Videl.FLYING_KICK, 
+    ]],
 
     // androids 13 14 15
     [FourCC("H01V"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],

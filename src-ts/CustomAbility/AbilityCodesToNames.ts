@@ -65,7 +65,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LY'), AbilityNames.Pan.HONEY_BEE_COSTUME],
     [FourCC('A0LW'), AbilityNames.Pan.SUMMON_GIRU],
 
-
     // android 17 dbs
     [FourCC('A09O'), AbilityNames.Android17DBS.POWER_BLITZ],
     [FourCC('A0MW'), AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE],
@@ -73,6 +72,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0MU'), AbilityNames.Android17DBS.BARRIER_WALL],
     [FourCC('A0LB'), AbilityNames.Android17DBS.ANDROID_BARRIER],
     [FourCC('A0MV'), AbilityNames.Android17DBS.SUPER_ELECTRIC_STRIKE],
+
+    // videl
+    [FourCC('A073'), AbilityNames.Videl.PUNCH],
+    [FourCC('A071'), AbilityNames.Videl.KICK],
+    [FourCC('A0JW'), AbilityNames.Videl.FLYING_KICK],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

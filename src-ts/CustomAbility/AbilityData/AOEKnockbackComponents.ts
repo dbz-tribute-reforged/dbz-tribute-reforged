@@ -90,6 +90,45 @@ export const AOEKnockbackComponents = [
   //   },
   //   affectAllies: false,
   // },
+  // videl punch
+  {
+    name: "knockback videl punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 300,
+    },
+    affectAllies: false,
+  },
+  // videl kick
+  {
+    name: "knockback videl kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 350,
+    },
+    affectAllies: false,
+  },
+  // videl flying kick
+  {
+    name: "knockback videl flying kick",
+    repeatInterval: 1, 
+    startTick: -1,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 400,
+    },
+    affectAllies: false,
+  },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",
