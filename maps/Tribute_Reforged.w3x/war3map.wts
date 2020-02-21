@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.36
+DBZ Tribute Reforged 0.36a
 }
 
 STRING 4
@@ -7725,6 +7725,32 @@ STRING 1226
 Videl
 }
 
+STRING 1227
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+{
+|cffff2020UNFINISHED HERO.|r
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 1228
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
+}
+
+STRING 1229
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool2>s|r
+}
+
 STRING 1230
 // Units: E01A (At least 1 living clone), Hotkey (Hotkey)
 {
@@ -12331,6 +12357,12 @@ STRING 1984
 F
 }
 
+STRING 1985
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool3>s|r
+}
+
 STRING 1986
 // Abilities: A0DY (Super Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -12403,6 +12435,12 @@ STRING 1997
 [|cff00FF00W|r] Dynamite Kick
 }
 
+STRING 1998
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool4>s|r
+}
+
 STRING 1999
 // Abilities: A011 (Babidi's Magic), Researchhotkey (Hotkey - Learn)
 {
@@ -12413,6 +12451,18 @@ STRING 2000
 // Abilities: A071 (Kick), Name (Name)
 {
 Kick
+}
+
+STRING 2001
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool5>s|r
+}
+
+STRING 2002
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool6>s|r
 }
 
 STRING 2003
@@ -13345,6 +13395,12 @@ STRING 2157
 [|cff00FF00Q|r] Satan Punch
 }
 
+STRING 2158
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool7>s|r
+}
+
 STRING 2159
 // Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
 {
@@ -13355,6 +13411,18 @@ STRING 2160
 // Abilities: A073 (Punch), Name (Name)
 {
 Punch
+}
+
+STRING 2161
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool8>s|r
+}
+
+STRING 2162
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool9>s|r
 }
 
 STRING 2163
@@ -34654,6 +34722,36 @@ STRING 5698
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
 }
 
+STRING 5699
+// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
+}
+
+STRING 5700
+// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Punches enemies in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool10>s|r
+}
+
+STRING 5701
+// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2 armor.|n|cff808080"One size fits all!"!|r
+}
+
+STRING 5702
+// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Description (Description)
+{
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2 armor.|n|cff808080"One size fits all!"!|r
+}
+
+STRING 5703
+// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+4 armor.|n|cff999999"One size fits all!"!|r
+}
+
 STRING 5704
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -34708,6 +34806,12 @@ STRING 5712
 [|cff00FF00W|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
 }
 
+STRING 5713
+// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Description (Description)
+{
+|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+4 armor.|n|cff999999"One size fits all!"!|r
+}
+
 STRING 5714
 // Abilities: A0C9 (Special Beam Cannon), EditorSuffix (Editor Suffix)
 {
@@ -34718,6 +34822,12 @@ STRING 5715
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 8|r]
+}
+
+STRING 5716
+// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 5717
@@ -38473,6 +38583,48 @@ STRING 6340
 // Abilities: A0DW (Evil Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Removes 150 armor from nearby enemies.
+}
+
+STRING 6341
+// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Description (Description)
+{
+|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 6342
+// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+8 armor.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 6343
+// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Description (Description)
+{
+|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+8 armor.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 6344
+// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Ubertip (Tooltip - Extended)
+{
++10 armor.|n|cff999999"One size fits all!"!|r|n|cff00FF00Max lvl Bonus:|r +0 additional armor
+}
+
+STRING 6345
+// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Description (Description)
+{
++10 armor.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 6346
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+{
+|cffffff00+15 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 6347
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+{
+|cffffff00+15 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 6355
@@ -51233,18 +51385,6 @@ STRING 8492
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool2>s|r
-}
-
-STRING 8493
-// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+3 armor.|n|cff808080"One size fits all!"!|r
-}
-
-STRING 8494
-// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Description (Description)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+3 armor.|n|cff808080"One size fits all!"!|r
 }
 
 STRING 8495
@@ -68840,12 +68980,6 @@ STRING 11406
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 1|r]
 }
 
-STRING 11407
-// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
-}
-
 STRING 11408
 // Abilities: A0MQ (Lava Burst), Name (Name)
 {
@@ -68862,12 +68996,6 @@ STRING 11410
 // Abilities: A0MQ (Lava Burst), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Lava Burst - [|cffffcc00Level %d|r]
-}
-
-STRING 11411
-// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Description (Description)
-{
-|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 11412
@@ -68900,46 +69028,10 @@ STRING 11416
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 6|r]
 }
 
-STRING 11417
-// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+9 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 11418
-// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Description (Description)
-{
-|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+9 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 11419
-// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+12 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 11420
-// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Description (Description)
-{
-|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+12 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 11421
-// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Ubertip (Tooltip - Extended)
-{
-+15 armor.|n|cff999999"One size fits all!"!|r|n|cff00FF00Max lvl Bonus:|r +0 additional armor
-}
-
 STRING 11422
 // Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 7|r]
-}
-
-STRING 11423
-// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Description (Description)
-{
-+15 armor.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 11424
@@ -71812,18 +71904,6 @@ STRING 11897
 (cell)
 }
 
-STRING 11898
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
-{
-|cffffff00+20 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
-}
-
-STRING 11899
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
-{
-|cffffff00+20 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
-}
-
 STRING 11900
 // Abilities: A0O2 (Bunkai Teleport), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73612,60 +73692,6 @@ STRING 12199
 A sweeping kick. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool10>s|r
 }
 
-STRING 12200
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
-}
-
-STRING 12201
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool2>s|r
-}
-
-STRING 12202
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool3>s|r
-}
-
-STRING 12203
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool4>s|r
-}
-
-STRING 12204
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool5>s|r
-}
-
-STRING 12205
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool6>s|r
-}
-
-STRING 12206
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool7>s|r
-}
-
-STRING 12207
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool8>s|r
-}
-
-STRING 12208
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool9>s|r
-}
-
 STRING 12209
 // Abilities: A073 (Punch), Tip (Tooltip - Normal)
 {
@@ -73726,12 +73752,6 @@ STRING 12218
 [|cff00FF00Q|r] Learn Punch - [|cffffcc00Level %d|r]
 }
 
-STRING 12219
-// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1>s|r
-}
-
 STRING 12220
 // Abilities: A073 (Punch), EditorSuffix (Editor Suffix)
 {
@@ -73742,12 +73762,6 @@ STRING 12221
 // Abilities: A073 (Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Punch - [|cffffcc00Level 10|r]
-}
-
-STRING 12222
-// Abilities: A073 (Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Punches in front of the user.|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool10>s|r
 }
 
 STRING 12223
@@ -73910,18 +73924,5 @@ STRING 12249
 // Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 12250
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
-{
-|cffff2020UNFINISHED HERO|r
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
 }
 

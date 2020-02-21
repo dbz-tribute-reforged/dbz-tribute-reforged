@@ -163,6 +163,7 @@ udg_OriginalSpawnX = __jarray(0.0)
 udg_OriginalSpawnY = __jarray(0.0)
 udg_BaseArmorMin = 0.0
 udg_BaseArmorReal = 0.0
+udg_SpellAudioInt = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -229,7 +230,6 @@ gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
 gg_snd_ShenronSummon = nil
-gg_snd_JanembaSuperBunkai = nil
 gg_trg_SolarFlare = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
@@ -253,8 +253,8 @@ gg_trg_Saibamen_Loop = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Demon_Mark = nil
 gg_trg_Demon_Rush = nil
-gg_trg_Bunkai_Teleport = nil
 gg_trg_Cosmic_Illusion = nil
+gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Auto_Zoom = nil
@@ -474,6 +474,7 @@ gg_trg_Transformations_Pan = nil
 gg_trg_Transformations_Farmer_with_Shotgun_MUI = nil
 gg_trg_Transformations_Farmer_with_Shotgun_Old = nil
 gg_trg_Transformations_Android_17_DBS = nil
+gg_trg_Transformations_Videl = nil
 gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
@@ -537,7 +538,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Videl = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -793,6 +793,7 @@ function InitGlobals()
     end
     udg_BaseArmorMin = 10.00
     udg_BaseArmorReal = 0.0
+    udg_SpellAudioInt = 0
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -984,15 +985,6 @@ function InitSounds()
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
-    gg_snd_JanembaSuperBunkai = CreateSound("Audio/Effects/JanembaSuperBunkai.mp3", false, true, false, 1, 1, "SpellsEAX")
-    SetSoundDuration(gg_snd_JanembaSuperBunkai, 1985)
-    SetSoundChannel(gg_snd_JanembaSuperBunkai, 0)
-    SetSoundVolume(gg_snd_JanembaSuperBunkai, 127)
-    SetSoundPitch(gg_snd_JanembaSuperBunkai, 1.0)
-    SetSoundDistances(gg_snd_JanembaSuperBunkai, 600.0, 10000.0)
-    SetSoundDistanceCutoff(gg_snd_JanembaSuperBunkai, 3000.0)
-    SetSoundConeAngles(gg_snd_JanembaSuperBunkai, 0.0, 0.0, 127)
-    SetSoundConeOrientation(gg_snd_JanembaSuperBunkai, 0.0, 0.0, 0.0)
 end
 
 function CreateAllItems()
@@ -2381,7 +2373,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("E014"), -305.5, 22595.1, 271.773, FourCC("E014"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("H055"), -180.3, 22587.2, 270.967, FourCC("H055"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H085"), 462.5, 22624.2, 276.254, FourCC("H085"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H085"), 393.8, 22653.7, 276.254, FourCC("H085"))
     u = BlzCreateUnitWithSkin(p, FourCC("E01I"), -44.8, 22572.3, 268.687, FourCC("E01I"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("E010"), 62.7, 22588.0, 268.152, FourCC("E010"))
@@ -3804,34 +3796,6 @@ function InitTrig_Demon_Rush()
     TriggerAddAction(gg_trg_Demon_Rush, Trig_Demon_Rush_Actions)
 end
 
-function Trig_Bunkai_Teleport_Func002C()
-    if (GetSpellAbilityId() == FourCC("A0O2")) then
-        return true
-    end
-    if (GetSpellAbilityId() == FourCC("A0EU")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Bunkai_Teleport_Conditions()
-    if (not Trig_Bunkai_Teleport_Func002C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Bunkai_Teleport_Actions()
-        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/JanembaSuperBunkai.mp3", 1985)
-end
-
-function InitTrig_Bunkai_Teleport()
-    gg_trg_Bunkai_Teleport = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Bunkai_Teleport, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Bunkai_Teleport, Condition(Trig_Bunkai_Teleport_Conditions))
-    TriggerAddAction(gg_trg_Bunkai_Teleport, Trig_Bunkai_Teleport_Actions)
-end
-
 function Trig_Cosmic_Illusion_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0EU"))) then
         return false
@@ -3855,6 +3819,84 @@ function InitTrig_Cosmic_Illusion()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cosmic_Illusion, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Cosmic_Illusion, Condition(Trig_Cosmic_Illusion_Conditions))
     TriggerAddAction(gg_trg_Cosmic_Illusion, Trig_Cosmic_Illusion_Actions)
+end
+
+function Trig_Play_Ability_Spell_Audio_Func001C()
+    if (GetSpellAbilityId() == FourCC("A0O2")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0EU")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0JW")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Play_Ability_Spell_Audio_Conditions()
+    if (not Trig_Play_Ability_Spell_Audio_Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0O2"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0EU"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003Func002Func001C()
+    if (not (udg_SpellAudioInt < 66)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003Func002C()
+    if (not (udg_SpellAudioInt < 33)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0JW"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Actions()
+    if (Trig_Play_Ability_Spell_Audio_Func002C()) then
+                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/JanembaSuperBunkai.mp3", 1985)
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func003C()) then
+        udg_SpellAudioInt = GetRandomInt(1, 100)
+        if (Trig_Play_Ability_Spell_Audio_Func003Func002C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelHereICome.mp3", 705)
+        else
+            if (Trig_Play_Ability_Spell_Audio_Func003Func002Func001C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelHyaa.mp3", 679)
+            else
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelOutOfMyWay.mp3", 705)
+            end
+        end
+    else
+    end
+end
+
+function InitTrig_Play_Ability_Spell_Audio()
+    gg_trg_Play_Ability_Spell_Audio = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Play_Ability_Spell_Audio, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Play_Ability_Spell_Audio, Condition(Trig_Play_Ability_Spell_Audio_Conditions))
+    TriggerAddAction(gg_trg_Play_Ability_Spell_Audio, Trig_Play_Ability_Spell_Audio_Actions)
 end
 
 function Trig_Freemode_Func003C()
@@ -5799,22 +5841,22 @@ end
 function Trig_Base_Armor_Set_Actions()
     udg_BaseArmorReal = (udg_BaseArmorMin + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * (0.01 * 0.10)))
     if (Trig_Base_Armor_Set_Func002C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 3.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 2.00)
     else
         if (Trig_Base_Armor_Set_Func002Func001C()) then
-            udg_BaseArmorReal = (udg_BaseArmorReal + 6.00)
+            udg_BaseArmorReal = (udg_BaseArmorReal + 4.00)
         else
             if (Trig_Base_Armor_Set_Func002Func001Func001C()) then
-                udg_BaseArmorReal = (udg_BaseArmorReal + 9.00)
+                udg_BaseArmorReal = (udg_BaseArmorReal + 6.00)
             else
                 if (Trig_Base_Armor_Set_Func002Func001Func001Func001C()) then
-                    udg_BaseArmorReal = (udg_BaseArmorReal + 12.00)
+                    udg_BaseArmorReal = (udg_BaseArmorReal + 8.00)
                 else
                     if (Trig_Base_Armor_Set_Func002Func001Func001Func001Func001C()) then
-                        udg_BaseArmorReal = (udg_BaseArmorReal + 15.00)
+                        udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
                     else
                         if (Trig_Base_Armor_Set_Func002Func001Func001Func001Func001Func001C()) then
-                            udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
+                            udg_BaseArmorReal = (udg_BaseArmorReal + 15.00)
                         else
                         end
                     end
@@ -17974,8 +18016,8 @@ function InitCustomTriggers()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_Demon_Mark()
     InitTrig_Demon_Rush()
-    InitTrig_Bunkai_Teleport()
     InitTrig_Cosmic_Illusion()
+    InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Cosmetic_Init()
