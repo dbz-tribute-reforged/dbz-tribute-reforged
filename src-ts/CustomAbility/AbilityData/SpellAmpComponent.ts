@@ -74,6 +74,15 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp videl boost", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.05,
+    rate: 0.05,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp overcharge", 
     repeatInterval: 1, 
     startTick: 0,

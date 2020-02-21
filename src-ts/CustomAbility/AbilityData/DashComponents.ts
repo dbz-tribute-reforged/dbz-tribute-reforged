@@ -343,7 +343,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 30,
+    distance: 40,
   },
   // ----------------------------
   // cell-x

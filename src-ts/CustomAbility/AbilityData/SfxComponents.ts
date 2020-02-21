@@ -3238,7 +3238,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
-    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -3295,7 +3295,7 @@ export const SfxComponents = [
         model: "animeslashfinal.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 1.5,
+        scale: 2.0,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,

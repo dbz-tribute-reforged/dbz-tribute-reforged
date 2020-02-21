@@ -127,33 +127,6 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
-    name: "multi videl punch", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    angleDifference: 1,
-    angleMin: 0,
-    angleMax: 1,
-    forceMinDistance: 100,
-    forceMaxDistance: 100,
-    delayBetweenComponents: 1,
-    firingMode: MultiComponent.SPREAD_FIRING,
-    multiplyComponents: 1,
-    componentsAddedPerRound: 3,
-    alwaysUpdateAngle: false,
-    fixedSourceCoords: true,
-    fixedReplacementCoords: false,
-    useTargetUnitAsSource: false,
-    useLastCastPoint: true,
-    sfxList: true,
-    components: [
-      { name: "damage videl punch" },
-      { name: "knockback videl punch" },
-      { name: "sfx videl punch" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: "multi innocence breath", 
     repeatInterval: 1, 
     startTick: 0,

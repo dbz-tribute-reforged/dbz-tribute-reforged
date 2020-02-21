@@ -1342,7 +1342,10 @@ export const AbilitiesList = [
         AbilityNames.Videl.PUNCH,
     },
     components: [
-      { name: "multi videl punch" },
+      { name: "spell amp videl boost" },
+      { name: "damage videl punch" },
+      { name: "knockback videl punch" },
+      { name: "sfx videl punch" },
       { name: "dash ground forward videl speed boost" },
     ],
   },
@@ -1369,6 +1372,7 @@ export const AbilitiesList = [
         AbilityNames.Videl.KICK,
     },
     components: [
+      { name: "spell amp videl boost" },
       { name: "damage videl kick" },
       { name: "knockback videl kick" },
       { name: "dash ground forward videl speed boost" },
