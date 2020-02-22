@@ -1,3 +1,5 @@
+import { AOEKnockback } from "CustomAbility/AbilityComponent/AOEKnockback";
+
 export const AOEKnockbackComponents = [
   // spirit bomb stronger knockback
   // copy from here
@@ -11,6 +13,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 300,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   {
@@ -23,6 +28,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 350,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // to here, and replace with unique name
@@ -37,6 +45,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   {
@@ -49,6 +60,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // super dragon flight
@@ -62,6 +76,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 200,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // heat dome attack
@@ -75,6 +92,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 400,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // hellzone grenade
@@ -95,12 +115,15 @@ export const AOEKnockbackComponents = [
     name: "knockback videl punch",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 6,
+    endTick: 4,
     knockbackData: {
-      speed: 45, 
+      speed: 25, 
       angle: 0, 
       aoe: 300,
     },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    reflectBeams: true,
     affectAllies: false,
   },
   // videl kick
@@ -108,12 +131,15 @@ export const AOEKnockbackComponents = [
     name: "knockback videl kick",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 6,
+    endTick: 7,
     knockbackData: {
-      speed: 45, 
+      speed: 25, 
       angle: 0, 
       aoe: 350,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
     affectAllies: false,
   },
   // videl flying kick
@@ -127,6 +153,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 400,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
     affectAllies: false,
   },
   // ss deadly hammer reverse knockback
@@ -140,6 +169,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 400,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // android barrier knockback
@@ -153,6 +185,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 550,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // broly energy punch
@@ -166,6 +201,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 500,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   {
@@ -178,6 +216,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 500,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // broly power level rising
@@ -191,6 +232,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 350,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // big bang attack reverse knockback
@@ -204,6 +248,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 400,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   {
@@ -216,6 +263,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // dfist knock-in
@@ -229,6 +279,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // energy blast volley minor knockback
@@ -242,6 +295,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // angry shout large aoe knockback
@@ -255,6 +311,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 700,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // reliable friend
@@ -268,6 +327,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 400,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // babidi barrier knockback
@@ -281,6 +343,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 650,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // evil spear knock in
@@ -294,6 +359,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 100,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // cooler deafening wave
@@ -307,6 +375,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 500,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // solar kame
@@ -320,6 +391,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 500,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // raditz behind you
@@ -333,6 +407,9 @@ export const AOEKnockbackComponents = [
       angle: 0, 
       aoe: 600,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // power blitz
@@ -346,6 +423,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 300,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // power blitz barrage
@@ -359,6 +439,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 250,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
   // super electric strike
@@ -372,6 +455,9 @@ export const AOEKnockbackComponents = [
       angle: 180, 
       aoe: 300,
     },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
 ];

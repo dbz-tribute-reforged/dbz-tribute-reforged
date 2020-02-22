@@ -47,6 +47,7 @@ export class BeamComponent implements
     public clashingDelayTicks: number = 1,
     public maxDelayTicks: number = 8,
     public durationIncPerDelay: number = 15,
+    public turnSpeed: number = 0.1,
     public heightVariation: HeightVariation = new HeightVariation(
       250, 0, HeightVariation.LINEAR_VARIATION
     ),
@@ -196,6 +197,8 @@ export class BeamComponent implements
     );
     BlzSetUnitSkin(this.beamUnit, this.beamUnitSkin);
 
+    SetUnitTurnSpeed(this.beamUnit, this.turnSpeed);
+
     UnitHelper.giveUnitFlying(this.beamUnit);
     SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
     
@@ -311,7 +314,8 @@ export class BeamComponent implements
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.beamHpMult, this.beamHpAttribute, 
       this.speed, this. aoe, this.clashingDelayTicks, this.maxDelayTicks,
-      this.durationIncPerDelay, this.heightVariation, this.isTracking,
+      this.durationIncPerDelay, this.turnSpeed,
+      this.heightVariation, this.isTracking,
       this.isFixedAngle, this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
@@ -334,6 +338,7 @@ export class BeamComponent implements
       clashingDelayTicks: number;
       maxDelayTicks: number;
       durationIncPerDelay: number;
+      turnSpeed: number;
       heightVariation: {
         start: number;
         finish: number;
@@ -364,6 +369,7 @@ export class BeamComponent implements
     this.clashingDelayTicks = input.clashingDelayTicks;
     this.maxDelayTicks = input.maxDelayTicks;
     this.durationIncPerDelay = input.durationIncPerDelay;
+    this.turnSpeed = input.turnSpeed;
     this.heightVariation = new HeightVariation().deserialize(input.heightVariation);
     this.isTracking = input.isTracking;
     this.isFixedAngle = input.isFixedAngle;

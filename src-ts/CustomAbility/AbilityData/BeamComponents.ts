@@ -16,6 +16,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -50,6 +51,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 20,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -84,6 +86,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 10,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 600,
       finish: 200,
@@ -118,6 +121,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -152,13 +156,14 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
       scaling: 1,
     },
     isTracking: false,
-    isFixedAngle: false,
+    isFixedAngle: true,
     canClashWithHero: false,
     useLastCastPoint: true,
     explodeOnDeath: true,
@@ -185,6 +190,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 200,
       finish: 150,
@@ -219,6 +225,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 50,
       finish: 50,
@@ -252,6 +259,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 4,
     durationIncPerDelay: 17,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -286,6 +294,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 20,
+    turnSpeed: 0.3,
     heightVariation: {
       start: 75,
       finish: 250,
@@ -319,6 +328,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -353,6 +363,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -387,6 +398,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 1,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -421,6 +433,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 50,
       finish: 50,
@@ -455,6 +468,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -488,6 +502,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 5,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 50,
       finish: 50,
@@ -523,6 +538,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -556,13 +572,14 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
       scaling: 1,
     },
     isTracking: false,
-    isFixedAngle: false,
+    isFixedAngle: true,
     canClashWithHero: false,
     useLastCastPoint: false,
     explodeOnDeath: true,
@@ -589,6 +606,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 150,
@@ -623,6 +641,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -659,6 +678,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -694,6 +714,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -728,6 +749,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 150,
@@ -762,6 +784,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 150,
@@ -797,6 +820,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -831,6 +855,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -865,6 +890,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -899,6 +925,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 2,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -932,6 +959,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -964,6 +992,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 1,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -998,6 +1027,7 @@ export const BeamComponents = [
     clashingDelayTicks: 4,
     maxDelayTicks: 15,
     durationIncPerDelay: 30,
+    turnSpeed: 3,
     heightVariation: {
       start: 50,
       finish: 50,
@@ -1030,6 +1060,7 @@ export const BeamComponents = [
     clashingDelayTicks: 4,
     maxDelayTicks: 15,
     durationIncPerDelay: 30,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1062,6 +1093,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1096,6 +1128,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 5,
     durationIncPerDelay: 3,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -1129,6 +1162,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 14,
     durationIncPerDelay: 4,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1162,6 +1196,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 1,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -1196,6 +1231,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 600,
       finish: 200,
@@ -1230,6 +1266,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 20,
     durationIncPerDelay: 4,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -1263,6 +1300,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 400,
       finish: 0,
@@ -1297,6 +1335,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 9,
     durationIncPerDelay: 17,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -1330,13 +1369,14 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 6,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
       scaling: 1,
     },
     isTracking: false,
-    isFixedAngle: false,
+    isFixedAngle: true,
     canClashWithHero: false,
     useLastCastPoint: true,
     explodeOnDeath: true,
@@ -1364,13 +1404,14 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 3,
     durationIncPerDelay: 33,
+    turnSpeed: 3,
     heightVariation: {
       start: 250,
       finish: 250,
       scaling: 0,
     },
     isTracking: false,
-    isFixedAngle: false,
+    isFixedAngle: true,
     canClashWithHero: false,
     useLastCastPoint: true,
     explodeOnDeath: true,
@@ -1399,6 +1440,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 1,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1431,6 +1473,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 10,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 600,
       finish: 200,
@@ -1465,6 +1508,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 1,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -1497,6 +1541,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 10,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 600,
       finish: 200,
@@ -1531,6 +1576,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 5,
     durationIncPerDelay: 5,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1565,6 +1611,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 100,
@@ -1599,6 +1646,7 @@ export const BeamComponents = [
     clashingDelayTicks: 0,
     maxDelayTicks: 0,
     durationIncPerDelay: 1,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -1635,13 +1683,14 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 9,
     durationIncPerDelay: 17,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 300,
       scaling: 1,
     },
     isTracking: false,
-    isFixedAngle: false,
+    isFixedAngle: true,
     canClashWithHero: false,
     useLastCastPoint: true,
     explodeOnDeath: true,
@@ -1668,6 +1717,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 6,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1700,6 +1750,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 600,
       finish: 200,
@@ -1734,6 +1785,7 @@ export const BeamComponents = [
     clashingDelayTicks: 2,
     maxDelayTicks: 7,
     durationIncPerDelay: 10,
+    turnSpeed: 0.3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1767,6 +1819,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 3,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -1800,6 +1853,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 3,
     durationIncPerDelay: 0,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 150,
@@ -1833,6 +1887,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 9,
     durationIncPerDelay: 15,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 300,
@@ -1867,6 +1922,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 2,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1902,6 +1958,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 7,
     durationIncPerDelay: 11,
+    turnSpeed: 3,
     heightVariation: {
       start: 300,
       finish: 200,
@@ -1937,6 +1994,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 75,
       finish: 75,
@@ -1971,6 +2029,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 100,
       finish: 100,
@@ -2004,6 +2063,7 @@ export const BeamComponents = [
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
     durationIncPerDelay: 12,
+    turnSpeed: 3,
     heightVariation: {
       start: 150,
       finish: 0,

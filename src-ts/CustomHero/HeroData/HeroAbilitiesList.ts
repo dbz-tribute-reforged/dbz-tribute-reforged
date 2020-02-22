@@ -155,6 +155,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Videl.PUNCH, 
       AbilityNames.Videl.KICK, 
       AbilityNames.Videl.FLYING_KICK, 
+      AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY, 
     ]],
 
     // androids 13 14 15
