@@ -3238,7 +3238,7 @@ export const SfxComponents = [
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
-    sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
     sfxList: [
       {

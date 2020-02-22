@@ -230,6 +230,7 @@ gg_snd_SecretFound = nil
 gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
 gg_snd_ShenronSummon = nil
+gg_snd_Warning = nil
 gg_trg_SolarFlare = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
@@ -532,7 +533,8 @@ gg_trg_Sorbets_Ring_Lightning = nil
 gg_trg_Darkness_Generator_Init = nil
 gg_trg_Darkness_Generator_Loop = nil
 gg_trg_Banana_Generator = nil
-gg_trg_HBTC_Training_Ticket = nil
+gg_trg_HBTC_Training_Ticket_Pickup = nil
+gg_trg_HBTC_Training_Ticket_Deliver = nil
 gg_trg_Upgrade_Item_Init = nil
 gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
@@ -985,6 +987,10 @@ function InitSounds()
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
+    gg_snd_Warning = CreateSound("Sound/Interface/Warning.flac", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundParamsFromLabel(gg_snd_Warning, "Warning")
+    SetSoundDuration(gg_snd_Warning, 1903)
+    SetSoundVolume(gg_snd_Warning, 80)
 end
 
 function CreateAllItems()
@@ -1222,7 +1228,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -4206.5, -4260.9, 229.593, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -4752.3, -5408.9, 236.809, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -5655.5, -2157.3, 28.840, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -6386.4, 11729.4, 196.156, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -6386.4, 11729.4, 24.225, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -6322.3, 12753.1, 180.093, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -2320.6, 14154.9, 9.361, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -611.4, 12832.2, 297.574, FourCC("n019"))
@@ -1243,7 +1249,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2150.6, -3549.6, 130.456, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4664.3, -6306.8, 229.797, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6220.8, 8398.8, 162.921, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6176.9, 8028.3, 106.637, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6611.5, 8158.5, 106.637, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4056.6, 7522.5, 308.396, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5104.7, 10169.9, 341.641, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4916.6, 9729.3, 192.069, FourCC("n015"))
@@ -1935,7 +1941,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29033.2, 6884.3, 136.806, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29508.3, 1033.6, 180.000, FourCC("n01U"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29233.0, 1153.1, 180.000, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 27896.9, -7502.5, 142.446, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
@@ -1953,7 +1959,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22811.8, -7563.3, 99.809, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n00A"), 29426.5, -7830.4, 150.067, FourCC("n00A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n00A"), 29633.3, -7634.3, 178.822, FourCC("n00A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23988.0, -4365.5, 254.034, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 24292.1, -4708.4, 263.680, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23944.1, -1883.7, 190.783, FourCC("n015"))
@@ -2003,7 +2009,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 21557.2, 12144.8, 322.085, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 22553.5, 7690.8, 225.908, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 23998.5, 11505.5, 68.194, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 23090.2, 12342.1, 42.365, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 22968.5, 11928.3, 42.365, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 21391.0, 13010.3, 292.795, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 22826.8, 8833.4, 160.153, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23811.5, 9744.8, 158.900, FourCC("n015"))
@@ -2125,6 +2131,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 31221.1, 674.8, 197.584, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 23863.6, 9187.6, 50.938, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 23980.8, 15473.5, 307.091, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 13853.8, -7534.5, 109.196, FourCC("n01U"))
+    SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 26521.6, -4682.9, 31.082, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 24899.0, -1839.3, 111.460, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 25751.2, 5151.2, 164.283, FourCC("n014"))
@@ -2220,6 +2228,19 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 18467.6, -7835.4, 83.063, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 7891.1, 17024.3, 235.415, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29820.1, -8073.6, 53.208, FourCC("n01U"))
+    SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29102.6, 15355.6, 307.076, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27928.5, 14516.2, 4.603, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28941.5, 12765.5, 80.980, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 25372.8, 12228.1, 326.336, FourCC("n01U"))
+    SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29091.2, 406.4, 243.034, FourCC("n01U"))
+    SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6170.0, 11840.9, 281.629, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3827.0, 9140.8, 281.629, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -527.3, 11510.9, 346.629, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5038.7, 7828.9, 308.396, FourCC("n015"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -4382,11 +4403,13 @@ function Trig_Setup_Quests_Actions()
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_3710", "TRIGSTR_10646", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
-    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_2862", "TRIGSTR_2864", "ReplaceableTextures\\CommandButtons\\BTNNagaUnBurrow.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_10145", "TRIGSTR_10147", "ReplaceableTextures\\PassiveButtons\\PASBTNMagicalSentry.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_6348", "TRIGSTR_6349", "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
 end
@@ -9421,6 +9444,13 @@ function InitTrig_Hero_Pick_Disable_Pick_Modes()
     TriggerAddAction(gg_trg_Hero_Pick_Disable_Pick_Modes, Trig_Hero_Pick_Disable_Pick_Modes_Actions)
 end
 
+function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H085"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H08U"))) then
         return false
@@ -9460,6 +9490,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016C()) then
         ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_ADD, 1)
     else
+        if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func016Func001C()) then
+            ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_ADD, 1)
+        else
+        end
     end
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func017C()) then
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func017Func001C()) then
@@ -17964,7 +17998,29 @@ function InitTrig_Banana_Generator()
     TriggerAddAction(gg_trg_Banana_Generator, Trig_Banana_Generator_Actions)
 end
 
-function Trig_HBTC_Training_Ticket_Conditions()
+function Trig_HBTC_Training_Ticket_Pickup_Conditions()
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04H"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_HBTC_Training_Ticket_Pickup_Actions()
+    PlaySoundBJ(gg_snd_Warning)
+    DisplayTimedTextToForce(GetPlayersAll(), 15.00, "TRIGSTR_1228")
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    PingMinimapLocForForceEx(GetPlayersAll(), udg_TempLoc, 3.00, bj_MINIMAPPINGSTYLE_FLASHY, 100.00, 0.00, 100)
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_HBTC_Training_Ticket_Pickup()
+    gg_trg_HBTC_Training_Ticket_Pickup = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HBTC_Training_Ticket_Pickup, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerAddCondition(gg_trg_HBTC_Training_Ticket_Pickup, Condition(Trig_HBTC_Training_Ticket_Pickup_Conditions))
+    TriggerAddAction(gg_trg_HBTC_Training_Ticket_Pickup, Trig_HBTC_Training_Ticket_Pickup_Actions)
+end
+
+function Trig_HBTC_Training_Ticket_Deliver_Conditions()
     if (not (UnitHasItemOfTypeBJ(GetTriggerUnit(), FourCC("I04H")) == true)) then
         return false
     end
@@ -17977,7 +18033,7 @@ function Trig_HBTC_Training_Ticket_Conditions()
     return true
 end
 
-function Trig_HBTC_Training_Ticket_Actions()
+function Trig_HBTC_Training_Ticket_Deliver_Actions()
     RemoveItem(GetItemOfTypeFromUnitBJ(GetTriggerUnit(), FourCC("I04H")))
     udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))
     udg_PlayerStatModTotal[udg_TempInt] = (udg_PlayerStatModTotal[udg_TempInt] + 6.00)
@@ -17987,11 +18043,11 @@ function Trig_HBTC_Training_Ticket_Actions()
     TriggerExecute(gg_trg_Stat_Mod_Print)
 end
 
-function InitTrig_HBTC_Training_Ticket()
-    gg_trg_HBTC_Training_Ticket = CreateTrigger()
-    TriggerRegisterEnterRectSimple(gg_trg_HBTC_Training_Ticket, gg_rct_HBTC_Entrance)
-    TriggerAddCondition(gg_trg_HBTC_Training_Ticket, Condition(Trig_HBTC_Training_Ticket_Conditions))
-    TriggerAddAction(gg_trg_HBTC_Training_Ticket, Trig_HBTC_Training_Ticket_Actions)
+function InitTrig_HBTC_Training_Ticket_Deliver()
+    gg_trg_HBTC_Training_Ticket_Deliver = CreateTrigger()
+    TriggerRegisterEnterRectSimple(gg_trg_HBTC_Training_Ticket_Deliver, gg_rct_HBTC_Entrance)
+    TriggerAddCondition(gg_trg_HBTC_Training_Ticket_Deliver, Condition(Trig_HBTC_Training_Ticket_Deliver_Conditions))
+    TriggerAddAction(gg_trg_HBTC_Training_Ticket_Deliver, Trig_HBTC_Training_Ticket_Deliver_Actions)
 end
 
 function InitCustomTriggers()
@@ -18272,7 +18328,8 @@ function InitCustomTriggers()
     InitTrig_Darkness_Generator_Init()
     InitTrig_Darkness_Generator_Loop()
     InitTrig_Banana_Generator()
-    InitTrig_HBTC_Training_Ticket()
+    InitTrig_HBTC_Training_Ticket_Pickup()
+    InitTrig_HBTC_Training_Ticket_Deliver()
 end
 
 function RunInitializationTriggers()

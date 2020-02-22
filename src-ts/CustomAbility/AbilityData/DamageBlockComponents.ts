@@ -62,7 +62,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 20,
+    multiplier: 10,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -113,7 +113,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 25,
+    multiplier: 15,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",

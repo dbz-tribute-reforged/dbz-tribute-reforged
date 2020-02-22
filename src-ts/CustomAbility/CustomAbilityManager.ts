@@ -49,6 +49,8 @@ import { TempAbility } from "./AbilityComponent/TempAbility";
 import { AOEDebuffComponents } from "./AbilityData/AOEDebuffComponents";
 import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
 import { Hooks } from "Libs/TreeLib/Hooks";
+import { DeflectorComponents } from "./AbilityData/DeflectorComponents";
+import { Deflector } from "./AbilityComponent/Deflector";
 
 export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
@@ -108,6 +110,11 @@ export class CustomAbilityManager {
     for (const component of DashComponents) {
       this.setComponent(new Dash().deserialize(component));
     }
+
+    // cant add cause of weird error
+    // for (const component of DeflectorComponents) {
+    //   this.setComponent(new Deflector().deserialize(component));
+    // }
 
     for (const component of DodgeComponents) {
       this.setComponent(new Dodge().deserialize(component));
