@@ -1,4 +1,5 @@
 import { Vector2D } from "Common/Vector2D";
+import { Constants } from "Common/Constants";
 
 export class CustomCreep {
   constructor (

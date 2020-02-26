@@ -487,7 +487,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     // buu saga
     // babidi
-    ["Babidi", new SagaUnit(FourCC("O001"), 55, 4000, 400, 12000, new Vector2D(16500, 12000),
+    ["Babidi", new SagaUnit(FourCC("O001"), 50, 4000, 400, 12000, new Vector2D(16500, 12000),
       [
         SagaAbilities.Babidi.HARETSU,
         SagaAbilities.Babidi.BABIDI_BARRIER
@@ -519,7 +519,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // fusion reborn
-    ["Janemba", new SagaUnit(FourCC("H061"), 80, 11000, 400, 11000, new Vector2D(8500, 4000),
+    ["Janemba", new SagaUnit(FourCC("H061"), 80, 11000, 400, 11000, new Vector2D(19000, 16000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BEAM,
@@ -527,7 +527,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.ENERGY_PUNCH,
       ],
     )],
-    ["Super Janemba", new SagaUnit(FourCC("H062"), 120, 15000, 400, 15000, new Vector2D(8500, 4000),
+    ["Super Janemba", new SagaUnit(FourCC("H062"), 120, 15000, 400, 15000, new Vector2D(19000, 16000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.SuperJanemba.RAKSHASA_CLAW,

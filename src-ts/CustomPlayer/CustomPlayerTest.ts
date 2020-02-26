@@ -693,11 +693,13 @@ export function CustomPlayerTest() {
       killerName && deadName && 
       GetPlayerName(killPlayer).length > 1 &&
       GetPlayerName(deadPlayer).length > 1 &&
-      (
-        killPlayer == Constants.sagaPlayer || 
-        (killPlayerId >= 0 && killPlayerId < Constants.maxPlayers)
-      ) &&
-      deadPlayerId != Constants.heavenHellCreepPlayerId
+      killPlayerId >= 0 && killPlayerId < Constants.maxPlayers &&
+      deadPlayerId >= 0 && deadPlayerId < Constants.maxActivePlayers
+      // (
+      //   killPlayer == Constants.sagaPlayer || 
+      //   (killPlayerId >= 0 && killPlayerId < Constants.maxPlayers)
+      // ) &&
+      // deadPlayerId != Constants.heavenHellCreepPlayerId
     ) {
       DisplayTimedTextToForce(
         GetPlayersAll(), 
@@ -706,9 +708,14 @@ export function CustomPlayerTest() {
         " has killed " + 
         deadName
       );
-      
+      PingMinimapForForceEx(
+        bj_FORCE_ALL_PLAYERS, 
+        GetUnitX(GetDyingUnit()), 
+        GetUnitY(GetDyingUnit()), 
+        3, bj_MINIMAPPINGSTYLE_ATTACK, 
+        100, 0, 0
+      );
     }
-
   })
 
   // clear text
