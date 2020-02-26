@@ -29,7 +29,7 @@ export module TournamentData {
   export const budokaiName: string = "Tournament";
   export const budokaiEnterCommand: string = "-enter";
   export const budokaiShowBracketCommand: string = "-bracket";
-  export const budokaiStartTime1: number = 2 * 60;
+  export const budokaiStartTime1: number = 3 * 60;
   export const budokaiStartTime2: number = 13 * 60;
   export const budokaiStartTime3: number = 23 * 60;
   export const budokaiDelay: number = 45;

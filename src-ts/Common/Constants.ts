@@ -47,6 +47,7 @@ export module Constants {
   ];
   export const maxHeroLevel: number = 1000;
   export const maxCreepLvl: number = 99;
+  export const creepAggroRange: number = 900;
   export const finalBattleName: string = "Final Battle";
   export const budokaiName: string = "Tournament";
   export const locustAbility: number = FourCC("Aloc")
@@ -54,4 +55,5 @@ export module Constants {
   export const buffImmortal: number = FourCC("B01U");
   export const floatingTextVisionRange: number = 3000;
   export const beamSpawnOffset: number = 40;
+  export const gameStartIndicatorUnit: number = FourCC("hkni");
 }

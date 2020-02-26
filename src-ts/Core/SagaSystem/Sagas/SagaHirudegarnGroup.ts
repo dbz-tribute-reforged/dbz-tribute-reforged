@@ -30,7 +30,7 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
     SagaHelper.sagaHideUnit(this.matureHirudegarn);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 5000);
     }
 
     this.ping();

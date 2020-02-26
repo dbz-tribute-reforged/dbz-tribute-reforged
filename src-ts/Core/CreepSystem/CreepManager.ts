@@ -146,8 +146,11 @@ export class CreepManager {
       ) {
         creepPlayer = Constants.heavenHellCreepPlayer;
       }
-
       SetUnitOwner(creepUnit, creepPlayer, false);
+
+      if (!IsUnitType(creepUnit, UNIT_TYPE_HERO)) {
+        SetUnitAcquireRange(creepUnit, Constants.creepAggroRange);
+      }
 
       this.customCreeps.set(
         creepUnit, 
@@ -187,6 +190,8 @@ export class CreepManager {
       SetHeroStr(newCreepUnit, Math.floor(GetHeroStr(oldCreep, false) * 1.1 + 50), false);
       SetHeroAgi(newCreepUnit, Math.floor(GetHeroAgi(oldCreep, false) * 1.1 + 50), false);
       SetHeroInt(newCreepUnit, Math.floor(GetHeroInt(oldCreep, false) * 1.1 + 50), false);
+    } else {
+      SetUnitAcquireRange(newCreepUnit, Constants.creepAggroRange);
     }
     
     // in with the new, out with the old

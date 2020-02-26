@@ -113,27 +113,18 @@ export const sagaSystemConfig: SagaSystemConfig = {
     AndroidsSaga2: [
       [ AndroidsSaga1, SagaState.Completed ],
     ],
-    Super13Saga: [
-      [ AndroidsSaga1, SagaState.Completed ],
-    ],
     CellSaga: [
       [ AndroidsSaga1, SagaState.Completed ],
     ],
-    CellGamesSaga: [
-      [ CellSaga, SagaState.Completed ],
+    Super13Saga: [
+      [ AndroidsSaga1, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga1: [
       [ CellSaga, SagaState.Completed ],
     ],
-    BrolyDBZMovieSaga2: [
-      [ BrolyDBZMovieSaga1, SagaState.Completed ],
-    ],
-    BioBrolySaga: [
-      [ BrolyDBZMovieSaga2, SagaState.Completed ],
-    ],
-    BrolyDBSSaga: [
-      [ BioBrolySaga, SagaState.Completed ],
-      [ WhisTrainingSaga, SagaState.Completed ],
+    CellGamesSaga: [
+      [ CellSaga, SagaState.NotStarted ],
+      [ CellSaga, SagaState.Completed ],
     ],
     FutureAndroidsSaga: [
       [ CellSaga, SagaState.Completed ],
@@ -151,30 +142,30 @@ export const sagaSystemConfig: SagaSystemConfig = {
     BabidiSaga: [
       [ CellSaga, SagaState.Completed ],
     ],
+    BrolyDBZMovieSaga2: [
+      [ BrolyDBZMovieSaga1, SagaState.Completed ],
+    ],
+    BioBrolySaga: [
+      [ BrolyDBZMovieSaga2, SagaState.Completed ],
+    ],
     FutureBabidiSaga: [
       [ FutureCellSaga, SagaState.Completed ],
     ],
-    JanembaSaga: [
+    BuuSaga: [
       [ BabidiSaga, SagaState.Completed ],
     ],
-    BuuSaga: [
+    JanembaSaga: [
       [ BabidiSaga, SagaState.Completed ],
     ],
     HirudegarnSaga: [
       [ JanembaSaga, SagaState.Completed ],
     ],
-    // GT branch
-    BebiSaga: [
-      [ BuuSaga, SagaState.Completed ],
+    // future branch
+    FTSuperSaga1: [
+      [ FutureBabidiSaga, SagaState.Completed ],
     ],
-    Super17Saga: [
-      [ BebiSaga, SagaState.Completed ],
-    ],
-    ShadowDragonSaga1: [
-      [ Super17Saga, SagaState.Completed ],
-    ],
-    ShadowDragonSaga2: [
-      [ ShadowDragonSaga1, SagaState.Completed ],
+    FTSuperSaga2: [
+      [ FTSuperSaga1, SagaState.Completed ],
     ],
     // Super branch
     BeerusSaga: [
@@ -188,12 +179,24 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     Universe6Saga: [
       [ BeerusSaga, SagaState.Completed ],
+      [ BeerusSaga, SagaState.NotStarted ],
     ],
-    FTSuperSaga1: [
-      [ FutureBabidiSaga, SagaState.Completed ],
+    BrolyDBSSaga: [
+      [ BioBrolySaga, SagaState.Completed ],
+      [ GoldenFriezaSaga, SagaState.Completed ],
     ],
-    FTSuperSaga2: [
-      [ FTSuperSaga1, SagaState.Completed ],
+    // GT branch
+    BebiSaga: [
+      [ BuuSaga, SagaState.Completed ],
+    ],
+    Super17Saga: [
+      [ BebiSaga, SagaState.Completed ],
+    ],
+    ShadowDragonSaga1: [
+      [ Super17Saga, SagaState.Completed ],
+    ],
+    ShadowDragonSaga2: [
+      [ ShadowDragonSaga1, SagaState.Completed ],
     ],
   }
 };

@@ -7,10 +7,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 50,
+    blockPerDamage: 60,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_STR,
-    multiplier: 5,
+    attribute: bj_HEROSTAT_AGI,
+    multiplier: 4,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -672,7 +672,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 100,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.9,
+    multiplier: 0.8,
     sfxList: [
       {
         model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",

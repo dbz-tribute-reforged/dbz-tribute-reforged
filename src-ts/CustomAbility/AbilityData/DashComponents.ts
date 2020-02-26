@@ -305,7 +305,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 50,
+    distance: 55,
   },
   {
     name: "dash flying unit hellzone grenade",
@@ -317,7 +317,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 50,
+    distance: 55,
   },
   // videl speed boost
   {

@@ -14,6 +14,8 @@ import { ItemStackingManager } from 'Core/ItemStackingSystem/ItemStackingManager
 import { ItemCleanupManager } from 'Core/ItemCleanupSystem/ItemCleanupManager';
 import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
 import { TeamManager } from 'Core/TeamSystem/TeamManager';
+import { Constants } from 'Common/Constants';
+import { UnitHelper } from 'Common/UnitHelper';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
@@ -26,14 +28,12 @@ let dragonBallsManager: DragonBallsManager;
 let itemCleanupManager: ItemCleanupManager;
 
 function tsMain() {
-  // const unit = new Unit(MapPlayer.fromIndex(0), FourCC('H05D'), 0, 0, 0);
-  // unit.name = "TypeScript!";
 
-  // preload (temp)
-  // Preload("DragonHead2.mdx");
-  // Preload("DragonSegment2.mdx");
-  // Preload("DragonTail.mdx");
-  // Preload("Conflagrate.mdx");
+  // preload (temp) test
+  Preload("DragonHead2.mdx");
+  Preload("DragonSegment2.mdx");
+  Preload("DragonTail.mdx");
+  Preload("Conflagrate.mdx");
 
   // setup logger
   Logger.doLogVerbose = false;
@@ -56,7 +56,6 @@ function tsMain() {
   })
 
   TimerStart(CreateTimer(), 5, false, () => {
-    sagaManager = SagaManager.getInstance();
     itemAbilityManager = ItemAbilityManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   })
@@ -64,11 +63,25 @@ function tsMain() {
   TimerStart(CreateTimer(), 10, false, () => {
     // teamManager = TeamManager.getInstance();
     creepManager = CreepManager.getInstance();
+
+    const checkUnit = CreateUnit(
+      Player(PLAYER_NEUTRAL_PASSIVE), 
+      Constants.gameStartIndicatorUnit,
+      0, 22000, 0
+    );
+    TimerStart(CreateTimer(), 1, true, () => {
+      if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
+        // anything that happens after hero picking is done, should be placed here
+        sagaManager = SagaManager.getInstance();
+        tournamentManager = TournamentManager.getInstance();
+        dragonBallsManager = DragonBallsManager.getInstance();
+        DestroyTimer(GetExpiredTimer());
+      }
+    })
     DestroyTimer(GetExpiredTimer());
   })
 
   TimerStart(CreateTimer(), 15, false, () => {
-    tournamentManager = TournamentManager.getInstance();
     experienceManager = ExperienceManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
@@ -79,8 +92,11 @@ function tsMain() {
   })
 
   TimerStart(CreateTimer(), 30, false, () => {
-    dragonBallsManager = DragonBallsManager.getInstance();
     itemCleanupManager = ItemCleanupManager.getInstance();
+    DestroyTimer(GetExpiredTimer());
+  });
+
+  TimerStart(CreateTimer(), 30, false, () => {
     DestroyTimer(GetExpiredTimer());
   });
 }

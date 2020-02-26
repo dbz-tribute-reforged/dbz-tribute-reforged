@@ -31,12 +31,12 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
 
     if (this.superJanemba) {
       UnitAddItemById(this.superJanemba, ItemConstants.SagaDrops.DIMENSION_SWORD);
-    };
+    }
 
     SagaHelper.sagaHideUnit(this.superJanemba);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 4000);
     }
 
     this.ping();

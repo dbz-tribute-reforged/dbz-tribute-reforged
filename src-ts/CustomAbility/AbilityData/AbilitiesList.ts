@@ -34,7 +34,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.BasicAbility.GUARD,
     currentCd: 0,
-    maxCd: 15,
+    maxCd: 16,
     costType: "MP",
     costAmount: 25,
     duration: 99,
@@ -50,8 +50,8 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 50% of incoming damage until more than 5 * STR damage is blocked." + 
-        "|nCost:25 MP|nCD: 15"
+        "Basic Guard ability that blocks 60% of incoming damage until more than 4 * AGI damage is blocked." + 
+        "|nCost:25 MP|nCD: 16"
     },
     components: [
       { name: "block basic guard" },
@@ -720,8 +720,8 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 35,
-    updateRate: 0.03,
+    duration: 40,
+    updateRate: 0.02,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
@@ -772,7 +772,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 140,
+    duration: 132,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
