@@ -255,6 +255,7 @@ gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Demon_Mark = nil
 gg_trg_Demon_Rush = nil
 gg_trg_Cosmic_Illusion = nil
+gg_trg_Cosmic_Illusion_Enter = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
@@ -540,7 +541,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Cosmic_Illusion_Enter = nil
+gg_trg_TS_Game_Start_Indicator_Unit_Removal = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1157,7 +1158,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 7823.1, 293.8, 19.120, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 10276.9, -1985.1, 315.482, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 12138.7, -2757.5, 315.482, FourCC("n01A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9791.6, 3738.4, 167.134, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 9868.4, 3542.0, 167.134, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 8104.8, 6190.8, 315.482, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 7239.0, 7429.4, 315.482, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 7820.5, 9173.2, 315.482, FourCC("n01A"))
@@ -1206,7 +1207,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 4525.8, -5349.8, 182.236, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 3645.1, -5867.0, 43.276, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02E"), 4148.7, -4752.6, 286.993, FourCC("n02E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9779.3, 3402.4, 189.300, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9994.0, 3800.2, 189.300, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7844.1, -52.3, 326.458, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9955.5, -1973.7, 0.835, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 12029.3, -3097.2, 327.337, FourCC("n019"))
@@ -2602,7 +2603,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 180)
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("U01F"), 71.3, 21912.6, 232.920, FourCC("U01F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 9389.6, 2568.3, 213.152, FourCC("H08S"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08S"), 9508.3, 2561.5, 213.152, FourCC("H08S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("z001"), -342.1, 22244.3, 273.200, FourCC("z001"))
     u = BlzCreateUnitWithSkin(p, FourCC("H08U"), -396.7, 22119.7, 269.550, FourCC("H08U"))
@@ -3057,7 +3058,7 @@ function Trig_Babidi_Summons_Actions()
             if (Trig_Babidi_Summons_Func001Func001Func001C()) then
                 udg_TempReal4 = 1.00
                 UnitAddAbilityBJ(FourCC("A0OG"), GetSummonedUnit())
-                SetUnitAbilityLevelSwapped(FourCC("A0OG"), GetSummonedUnit(), IMinBJ(10, IMaxBJ(1, ((GetHeroLevel(GetSummoningUnit()) + 30) // 60))))
+                SetUnitAbilityLevelSwapped(FourCC("A0OG"), GetSummonedUnit(), IMinBJ(10, IMaxBJ(1, ((GetHeroLevel(GetSummoningUnit()) + 20) // 50))))
             else
             end
         end
@@ -4746,6 +4747,9 @@ function Trig_Force_Remove_T2_Buggy_Vision_Func005Func002C()
     if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("z001"))) then
         return false
     end
+    if (not (GetUnitTypeId(udg_TempUnit) ~= FourCC("hkni"))) then
+        return false
+    end
     if (not (IsUnitType(udg_TempUnit, UNIT_TYPE_STRUCTURE) == false)) then
         return false
     end
@@ -5250,31 +5254,35 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004C()
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func002Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001Func002C()
     if (not (GetHeroLevel(GetDyingUnit()) < 100)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001C()
     if (not (GetHeroLevel(GetDyingUnit()) < 50)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012C()
-    if (not (GetHeroLevel(GetDyingUnit()) >= 10)) then
-        return false
-    end
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001C()
     if (not (GetHeroLevel(GetDyingUnit()) < 30)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()
+    if (not (GetHeroLevel(GetDyingUnit()) >= 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014Func002C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
         return true
     end
@@ -5287,8 +5295,8 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func002C()
     return false
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()
-    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func002C()) then
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014C()
+    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014Func002C()) then
         return false
     end
     return true
@@ -5313,20 +5321,24 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008A()
     udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012C()) then
-                udg_TempInt = 25 * (1 + GetHeroLevel(udg_StatMultUnit))
-    else
-        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func002C()) then
-                        udg_TempInt = 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit))
+    udg_TempInt = 25
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()) then
+        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001C()) then
+                        udg_TempInt = 25 * (1 + GetHeroLevel(udg_StatMultUnit))
         else
-            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func002Func002C()) then
-                                udg_TempInt = 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit))
+            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001C()) then
+                                udg_TempInt = 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit))
             else
-                                udg_TempInt = 25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit))
+                if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001Func002C()) then
+                                        udg_TempInt = 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit))
+                else
+                                        udg_TempInt = 25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit))
+                end
             end
         end
+    else
     end
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014C()) then
         udg_TempInt = (udg_TempInt // 3)
     else
     end
@@ -8101,6 +8113,119 @@ function InitTrig_Prevent_Team_Killing()
     TriggerAddAction(gg_trg_Prevent_Team_Killing, Trig_Prevent_Team_Killing_Actions)
 end
 
+function Trig_Update_MS_Func002Func001A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit)
+end
+
+function Trig_Update_MS_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_MS_Func002Func001A)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Update_MS()
+    gg_trg_Update_MS = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Update_MS, 0.50)
+    TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
+    udg_TempReal = (RMaxBJ(400.00, RMinBJ(522.00, (RMinBJ(522.00, (400.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.75 + (0.30 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
+    SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
+end
+
+function InitTrig_Set_HP_scaled_MS_for_TempUnit()
+    gg_trg_Set_HP_scaled_MS_for_TempUnit = CreateTrigger()
+    TriggerAddAction(gg_trg_Set_HP_scaled_MS_for_TempUnit, Trig_Set_HP_scaled_MS_for_TempUnit_Actions)
+end
+
+function Trig_Update_AOE_Flying_Vision_Func001Func002A()
+    udg_TempUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Set_AOE_Flying_Vision_for_TempUnit)
+end
+
+function Trig_Update_AOE_Flying_Vision_Actions()
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_AOE_Flying_Vision_Func001Func002A)
+        udg_TempInt = udg_TempInt + 1
+    end
+end
+
+function InitTrig_Update_AOE_Flying_Vision()
+    gg_trg_Update_AOE_Flying_Vision = CreateTrigger()
+    TriggerRegisterTimerEventPeriodic(gg_trg_Update_AOE_Flying_Vision, 0.50)
+    TriggerAddAction(gg_trg_Update_AOE_Flying_Vision, Trig_Update_AOE_Flying_Vision_Actions)
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()
+    if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()
+    if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
+        udg_ID = GetHandleId(udg_TempUnit)
+    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()) then
+        DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
+    else
+    end
+    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
+        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+        udg_TempReal = RMinBJ(5000.00, (1400.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
+        CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
+        SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+end
+
+function InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
+    gg_trg_Set_AOE_Flying_Vision_for_TempUnit = CreateTrigger()
+    TriggerAddAction(gg_trg_Set_AOE_Flying_Vision_for_TempUnit, Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions)
+end
+
+function Trig_TS_Game_Start_Indicator_Unit_Removal_Func001Func002C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("hkni"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_TS_Game_Start_Indicator_Unit_Removal_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    if (Trig_TS_Game_Start_Indicator_Unit_Removal_Func001Func002C()) then
+        KillUnit(udg_TempUnit)
+    else
+    end
+end
+
+function Trig_TS_Game_Start_Indicator_Unit_Removal_Actions()
+    ForGroupBJ(GetUnitsInRectOfPlayer(gg_rct_HeroInit, Player(PLAYER_NEUTRAL_PASSIVE)), Trig_TS_Game_Start_Indicator_Unit_Removal_Func001A)
+end
+
+function InitTrig_TS_Game_Start_Indicator_Unit_Removal()
+    gg_trg_TS_Game_Start_Indicator_Unit_Removal = CreateTrigger()
+    TriggerAddAction(gg_trg_TS_Game_Start_Indicator_Unit_Removal, Trig_TS_Game_Start_Indicator_Unit_Removal_Actions)
+end
+
 function Trig_Hero_Respawn_Init_Actions()
     udg_HeavenLoc = GetRectCenter(gg_rct_HeavenZone)
     udg_HellLoc = GetRectCenter(gg_rct_HellZone)
@@ -9629,101 +9754,13 @@ function Trig_Hero_Pick_Completion_Actions()
     EnableTrigger(gg_trg_Moro_Energy_Drain_Passive)
     TriggerExecute(gg_trg_Revive_Point_Add_Revive_Locs)
     TriggerExecute(gg_trg_Scoreboard_Init)
+    TriggerExecute(gg_trg_TS_Game_Start_Indicator_Unit_Removal)
     DisableTrigger(GetTriggeringTrigger())
 end
 
 function InitTrig_Hero_Pick_Completion()
     gg_trg_Hero_Pick_Completion = CreateTrigger()
     TriggerAddAction(gg_trg_Hero_Pick_Completion, Trig_Hero_Pick_Completion_Actions)
-end
-
-function Trig_Update_MS_Func002Func001A()
-    udg_TempUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Set_HP_scaled_MS_for_TempUnit)
-end
-
-function Trig_Update_MS_Actions()
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_MS_Func002Func001A)
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Update_MS()
-    gg_trg_Update_MS = CreateTrigger()
-    TriggerRegisterTimerEventPeriodic(gg_trg_Update_MS, 0.50)
-    TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
-    udg_TempReal = (RMaxBJ(400.00, RMinBJ(522.00, (RMinBJ(522.00, (400.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.75 + (0.30 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
-    SetUnitMoveSpeed(udg_TempUnit, udg_TempReal)
-end
-
-function InitTrig_Set_HP_scaled_MS_for_TempUnit()
-    gg_trg_Set_HP_scaled_MS_for_TempUnit = CreateTrigger()
-    TriggerAddAction(gg_trg_Set_HP_scaled_MS_for_TempUnit, Trig_Set_HP_scaled_MS_for_TempUnit_Actions)
-end
-
-function Trig_Update_AOE_Flying_Vision_Func001Func002A()
-    udg_TempUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Set_AOE_Flying_Vision_for_TempUnit)
-end
-
-function Trig_Update_AOE_Flying_Vision_Actions()
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_MaxNumPlayers) then break end
-        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Update_AOE_Flying_Vision_Func001Func002A)
-        udg_TempInt = udg_TempInt + 1
-    end
-end
-
-function InitTrig_Update_AOE_Flying_Vision()
-    gg_trg_Update_AOE_Flying_Vision = CreateTrigger()
-    TriggerRegisterTimerEventPeriodic(gg_trg_Update_AOE_Flying_Vision, 0.50)
-    TriggerAddAction(gg_trg_Update_AOE_Flying_Vision, Trig_Update_AOE_Flying_Vision_Actions)
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()
-    if (not (HaveSavedValue(16, bj_HASHTABLE_HANDLE, udg_ID, udg_StatMultHashtable) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()
-    if (not (udg_IsAOEFlyingVision == true)) then
-        return false
-    end
-    if (not (udg_DarknessGeneratorPlayerValues[udg_TempInt] == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions()
-        udg_ID = GetHandleId(udg_TempUnit)
-    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func002C()) then
-        DestroyFogModifier(LoadFogModifierHandleBJ(16, udg_ID, udg_StatMultHashtable))
-    else
-    end
-    if (Trig_Set_AOE_Flying_Vision_for_TempUnit_Func003C()) then
-        udg_TempLoc = GetUnitLoc(udg_TempUnit)
-        udg_TempReal = RMinBJ(5000.00, (1400.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * 0.50)))
-        CreateFogModifierRadiusLocBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
-        SaveFogModifierHandleBJ(GetLastCreatedFogModifier(), 16, udg_ID, udg_StatMultHashtable)
-                RemoveLocation(udg_TempLoc)
-    else
-    end
-end
-
-function InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
-    gg_trg_Set_AOE_Flying_Vision_for_TempUnit = CreateTrigger()
-    TriggerAddAction(gg_trg_Set_AOE_Flying_Vision_for_TempUnit, Trig_Set_AOE_Flying_Vision_for_TempUnit_Actions)
 end
 
 function Trig_Test_StatMult_Init_Func001002002()
@@ -14565,6 +14602,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             UnitAddAbilityBJ(FourCC("A0ME"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0ME'))
+            BlzSetUnitAbilityCooldown(udg_TransformationResultUnit, FourCC("A0ME"), 9, 7.00)
         else
         end
         if (Trig_Kid_Buu_Bonus_Ability_Func002Func022C()) then
@@ -18288,6 +18326,11 @@ function InitCustomTriggers()
     InitTrig_Swap_Teams_for_SwapPlayer()
     InitTrig_Enable_TK_Copy()
     InitTrig_Prevent_Team_Killing()
+    InitTrig_Update_MS()
+    InitTrig_Set_HP_scaled_MS_for_TempUnit()
+    InitTrig_Update_AOE_Flying_Vision()
+    InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
+    InitTrig_TS_Game_Start_Indicator_Unit_Removal()
     InitTrig_Hero_Respawn_Init()
     InitTrig_Add_Unit_to_HeroRespawn()
     InitTrig_Remove_Unit_From_HeroRespawn()
@@ -18334,10 +18377,6 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
     InitTrig_Hero_Pick_Completion()
-    InitTrig_Update_MS()
-    InitTrig_Set_HP_scaled_MS_for_TempUnit()
-    InitTrig_Update_AOE_Flying_Vision()
-    InitTrig_Set_AOE_Flying_Vision_for_TempUnit()
     InitTrig_Test_StatMult_Init()
     InitTrig_Test_Stats_Get_Stats_Command()
     InitTrig_Add_Unit_To_StatMult()

@@ -51,7 +51,10 @@ export class TournamentManager {
 
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
-    // this.setupTimedStartFinalBattle();
+
+    const budokai = new Budokai();
+    this.tournaments.set(budokai.name, budokai);
+
     this.startPreTournamentTimer(
       TournamentData.finalBattleName,
       TournamentData.finalBattleTime,
@@ -59,8 +62,6 @@ export class TournamentManager {
       true,
     );
 
-    const budokai = new Budokai();
-    this.tournaments.set(budokai.name, budokai);
     this.startPreTournamentTimer(
       TournamentData.budokaiName,
       TournamentData.budokaiStartTime1,
@@ -153,9 +154,7 @@ export class TournamentManager {
     const tournamentIntervalTimer = CreateTimer();
     const tournamentTimerDialog = CreateTimerDialog(tournamentIntervalTimer);
 
-    TriggerRegisterTimerEvent(tournamentStartTrig, initialDelay, false);
-
-    TriggerAddAction(tournamentStartTrig, () => {
+    TimerStart(CreateTimer(), initialDelay, false, () => {
       TimerStart(tournamentIntervalTimer, timerDuration, timerRepeat, () => {
         TournamentManager.getInstance().startTournament(tournamentName);
         const currentTournament = TournamentManager.getInstance().currentTournament;
@@ -167,10 +166,11 @@ export class TournamentManager {
         } else {
           // Logger.LogDebug("Another tournament is active...");
         }
-      })
+      });
 
       TimerDialogSetTitle(tournamentTimerDialog, tournamentName);
       TimerDialogDisplay(tournamentTimerDialog, true);
+      DestroyTimer(GetExpiredTimer());
     });
   }
   

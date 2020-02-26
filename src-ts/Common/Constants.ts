@@ -55,4 +55,5 @@ export module Constants {
   export const buffImmortal: number = FourCC("B01U");
   export const floatingTextVisionRange: number = 3000;
   export const beamSpawnOffset: number = 40;
+  export const gameStartIndicatorUnit: number = FourCC("hkni");
 }
