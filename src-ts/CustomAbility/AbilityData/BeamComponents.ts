@@ -623,7 +623,6 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage beam riot javelin dps" },
-      { name: "damage beam riot javelin explosion" },
       { name: "knockback kame" },
       { name: "sfx beam riot javelin" },
     ],
@@ -975,7 +974,7 @@ export const BeamComponents = [
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
-      { name: "damage javelin throw explosion" },
+      { name: "damage javelin throw dps" },
       { name: "knockback javelin throw" },
       { name: "sfx javelin throw" },
     ],
@@ -1019,7 +1018,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 2,
+    beamHpMult: BASE.KAME_DPS * 3,
     beamHpAttribute: bj_HEROSTAT_STR,
     speed: 0,
     aoe: 300,
