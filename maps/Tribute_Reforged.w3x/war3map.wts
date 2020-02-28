@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.37
+DBZ Tribute Reforged 0.37a
 }
 
 STRING 4
@@ -54541,19 +54541,6 @@ STRING 8980
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool10>s|r
 }
 
-STRING 8981
-// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
-{
-A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 8982
 // Units: H099 (Karinga Tribe Warrior), Propernames (Proper Names)
 {
@@ -62569,6 +62556,19 @@ STRING 10311
 // Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+}
+
+STRING 10312
+// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
+{
+A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 10313

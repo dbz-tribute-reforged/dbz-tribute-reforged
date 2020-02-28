@@ -3600,8 +3600,8 @@ export const SfxComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 5,
-        startHeight: -300,
-        endHeight: -300,
+        startHeight: -400,
+        endHeight: -800,
         extraDirectionalYaw: 0,
         extraPitch: 0,
         color: {
