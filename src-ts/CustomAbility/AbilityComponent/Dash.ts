@@ -13,6 +13,8 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
   static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0025;
 
+  static readonly MIN_DISTANCE_FROM_PREVIOUS = 10;
+
   protected previousCoord: Vector2D;
 
   constructor(
@@ -34,7 +36,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     const currentCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
     if (
       !this.checkPreviousCoord ||
-      CoordMath.distance(this.previousCoord, currentCoord) > this.distance
+      CoordMath.distance(this.previousCoord, currentCoord) > Dash.MIN_DISTANCE_FROM_PREVIOUS
     ) {
       let direction: number = 0;
       let dashTargetPoint = input.targetPoint;
@@ -66,8 +68,11 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       let distanceToMove = this.distance;
       if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
         distanceToMove = distanceToMove * 
-          (
-            1 + GetHeroAgi(source, true) * Dash.AGI_TO_BONUS_SPEED_PERCENT * 0.01
+          Math.min(
+            3.0,
+            (
+              1 + GetHeroAgi(source, true) * Dash.AGI_TO_BONUS_SPEED_PERCENT * 0.01
+            )
           );
       }
 

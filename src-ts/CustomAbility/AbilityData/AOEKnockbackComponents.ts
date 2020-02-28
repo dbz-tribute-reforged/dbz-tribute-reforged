@@ -158,6 +158,22 @@ export const AOEKnockbackComponents = [
     reflectBeams: true,
     affectAllies: false,
   },
+  // javelin throw
+  {
+    name: "knockback javelin throw",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 55, 
+      angle: 180, 
+      aoe: 150,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
   // ss deadly hammer reverse knockback
   {
     name: "knockback ss deadly hammer",

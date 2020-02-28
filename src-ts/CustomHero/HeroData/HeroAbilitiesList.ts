@@ -158,6 +158,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY, 
     ]],
 
+    // upa
+    [FourCC("H099"), [
+      AbilityNames.Upa.JAVELIN_THROW, 
+      AbilityNames.Upa.WHIRLWIND_TEMPEST, 
+      AbilityNames.Upa.KORIN_FLAG, 
+      AbilityNames.Upa.LAST_STAND, 
+    ]],
+
     // androids 13 14 15
     [FourCC("H01V"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
     [FourCC("H01S"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
@@ -206,6 +214,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
       AbilityNames.Android17DBS.POWER_BLITZ,
       AbilityNames.Videl.PUNCH,
+      AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

@@ -184,7 +184,7 @@ export const DashComponents = [
     distance: 20,
   },
   {
-    name: "dash ground target rebellion spear",
+    name: "dash ground point rebellion spear",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -345,6 +345,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 40,
   },
+  // whirlwind tempest
+  {
+    name: "dash ground point whirlwind tempest",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 30,
+  },
+  // last stand
+  {
+    name: "dash ground forward last stand",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1,
+  },
   // ----------------------------
   // cell-x
   {
@@ -413,7 +439,7 @@ export const DashComponents = [
   },
   // bunkai teleport dash
   {
-    name: "dash ground target bunkai teleport",
+    name: "dash ground point bunkai teleport",
     repeatInterval: 1, 
     startTick: 0,
     endTick: 12,    
@@ -439,7 +465,7 @@ export const DashComponents = [
   },
   // saga zanzo
   {
-    name: "dash ground target zanzo saga",
+    name: "dash ground point zanzo saga",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,    

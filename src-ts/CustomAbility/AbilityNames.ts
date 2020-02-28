@@ -89,6 +89,14 @@ export module AbilityNames {
     export const FLYING_KICK: string = "Flying Kick";
   }
 
+  export module Upa {
+    export const JAVELIN_THROW: string = "Javelin Throw";
+    export const WHIRLWIND_TEMPEST: string = "Whirlwind Tempest";
+    export const KORIN_FLAG: string = "Korin's Flag";
+    export const LAST_STAND: string = "Last Stand";
+  }
+
+
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
     export const BABIDI_BARRIER: string = "Babidi Barrier";

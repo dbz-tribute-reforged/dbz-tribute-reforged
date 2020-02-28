@@ -68,6 +68,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS,
@@ -87,6 +88,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -106,6 +108,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
@@ -124,6 +127,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 450,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
@@ -143,6 +147,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
@@ -161,6 +166,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
@@ -180,10 +186,11 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS,
-      attribute: bj_HEROSTAT_INT,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
@@ -198,10 +205,11 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION,
-      attribute: bj_HEROSTAT_INT,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
@@ -217,6 +225,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.2,
@@ -235,6 +244,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.2,
@@ -254,6 +264,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: 10,
     damageData: {
       multiplier: BASE.KAME_DPS * 2.4,
@@ -272,6 +283,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -291,6 +303,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.85,
@@ -310,6 +323,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.15,
@@ -331,6 +345,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.2,
@@ -350,6 +365,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.32,
@@ -368,6 +384,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -387,6 +404,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.8,
@@ -406,6 +424,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.9,
@@ -424,6 +443,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.4,
@@ -443,6 +463,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.8,
@@ -462,6 +483,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.3,
@@ -480,6 +502,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 2.5,
@@ -499,6 +522,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.4,
@@ -519,9 +543,10 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.6,
+      multiplier: BASE.KAME_DPS * 1.5,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -538,6 +563,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 200,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.03,
@@ -556,6 +582,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.27,
@@ -575,6 +602,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.25,
@@ -593,6 +621,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 280,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS,
@@ -611,6 +640,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -630,6 +660,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 310,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.55,
@@ -648,6 +679,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 280,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.9,
@@ -666,6 +698,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
@@ -685,6 +718,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 1.1,
@@ -703,6 +737,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
@@ -722,6 +757,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 320,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.85,
@@ -741,6 +777,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: 50,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.5,
@@ -760,6 +797,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.05,
@@ -779,6 +817,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.7,
@@ -797,6 +836,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.7,
@@ -816,6 +856,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.8,
@@ -834,6 +875,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.8,
@@ -853,6 +895,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.4,
@@ -871,6 +914,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.75,
@@ -890,6 +934,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.35,
@@ -908,6 +953,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.35,
@@ -927,6 +973,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.08,
@@ -946,6 +993,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.01,
@@ -965,6 +1013,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.08 * 16,
@@ -984,6 +1033,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.35,
@@ -1003,6 +1053,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.35,
@@ -1022,6 +1073,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.65,
@@ -1040,10 +1092,110 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.65,
       attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // javelin throw
+  {
+    name: "damage javelin throw explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 200,
+    onlyDamageCapHeroes: false,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 1.25,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // whirlwind tempest
+  {
+    name: "damage whirlwind tempest dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 300,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.DFIST_DPS * 0.9,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // korin flag
+  {
+    name: "damage korin flag explosion",
+    repeatInterval: 1,
+    startTick: 16,
+    endTick: 16,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.KAME_EXPLOSION * 2.5,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  // last stand
+  {
+    name: "damage last stand dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 500,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.04,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+  },
+  {
+    name: "damage last stand explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 500,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
+      attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
@@ -1059,6 +1211,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: 50,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.23,
@@ -1078,6 +1231,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
@@ -1097,6 +1251,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4 * 16,
@@ -1116,6 +1271,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.4,
@@ -1134,6 +1290,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 2.25,
@@ -1153,6 +1310,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 230,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.33,
@@ -1172,6 +1330,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 50,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 2,
@@ -1191,6 +1350,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 50,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.65,
@@ -1210,6 +1370,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 100,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 2,
@@ -1229,6 +1390,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.21,
@@ -1248,6 +1410,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.2,
@@ -1266,6 +1429,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.75,
@@ -1285,6 +1449,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 200,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.7,
@@ -1304,6 +1469,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.6,
@@ -1324,6 +1490,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.8,
@@ -1343,6 +1510,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS,
@@ -1361,6 +1529,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION,
@@ -1380,6 +1549,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.2,
@@ -1399,6 +1569,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.5,
@@ -1417,6 +1588,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
@@ -1436,6 +1608,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS * 2,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.5,
@@ -1454,6 +1627,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 700,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: 120,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.75,
@@ -1472,6 +1646,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.6,
@@ -1491,6 +1666,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.85,
@@ -1510,6 +1686,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 1,
@@ -1529,6 +1706,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 1.25,
@@ -1547,6 +1725,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 1.5,
@@ -1566,6 +1745,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.6,
@@ -1584,6 +1764,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.6,
@@ -1603,6 +1784,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.6,
@@ -1621,6 +1803,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 350,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
@@ -1640,6 +1823,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_DPS * 0.7,
@@ -1659,6 +1843,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 750,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.1,
@@ -1677,6 +1862,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.25,
@@ -1695,6 +1881,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 750,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.5,
@@ -1713,6 +1900,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.1,
@@ -1732,6 +1920,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.17,
@@ -1751,6 +1940,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.7,
@@ -1770,6 +1960,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 450,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.45,
@@ -1789,6 +1980,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.25,
@@ -1808,6 +2000,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.4,
@@ -1827,6 +2020,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_DPS * 0.69,
@@ -1845,6 +2039,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 600,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.69,
@@ -1864,6 +2059,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.125,
@@ -1882,6 +2078,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.115,
@@ -1901,6 +2098,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 0.55,
@@ -1920,6 +2118,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: true,
     aoe: 800,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: 5.0,
@@ -1939,6 +2138,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 250,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.42,
@@ -1958,6 +2158,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 0.22,
@@ -1977,6 +2178,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.29,
@@ -1996,6 +2198,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.15,
@@ -2014,6 +2217,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 500,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.4,
@@ -2033,6 +2237,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 1.3,
@@ -2051,6 +2256,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
+    onlyDamageCapHeroes: true,
     maxDamageTicks: 1,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.18,
