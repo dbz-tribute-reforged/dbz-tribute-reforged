@@ -31,8 +31,8 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
     }
 
     if (ability.isFinishedUsing(this)) {
+      input.caster.removeSpellPower(this.currentBonus);
       this.currentBonus = 0;
-      input.caster.removeSpellPower(this.bonus);
     }
   }
 

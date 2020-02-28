@@ -19,4 +19,14 @@ export const BarrierComponents = [
     affectAllies: true,
     canWalkOut: true,
   },
+  {
+    name: "barrier last stand", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    aoe: 500,
+    repelOutsidersSpeed: 15,
+    affectAllies: true,
+    canWalkOut: false,
+  },
 ];

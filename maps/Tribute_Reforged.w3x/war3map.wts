@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.36c
+DBZ Tribute Reforged 0.37
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 17 unique heroes, beam clashes, advanced Saga AI and a custom UI that offers 3 more hotkeys.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 20 unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -7384,7 +7384,7 @@ STRING 1176
 }
 
 STRING 1177
-// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
+// Units: H099 (Karinga Tribe Warrior), Hotkey (Hotkey)
 {
 C
 }
@@ -13405,17 +13405,15 @@ Punch
 }
 
 STRING 2161
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
 {
-|cffff2020UNFINISHED HERO.|r
-A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 50]  1.75x "fp"
+[lvl 85]  2.00x "fp"
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.40x "rage"
 }
 
 STRING 2162
@@ -15995,7 +15993,7 @@ STRING 2590
 }
 
 STRING 2591
-// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
 {
 C
 }
@@ -16019,7 +16017,7 @@ Bulma created a giant satellite dish that directs concentrated energy at a targe
 }
 
 STRING 2595
-// Abilities: A03J (Change Back), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -20889,7 +20887,7 @@ Change Back
 }
 
 STRING 3404
-// Abilities: A02X (Cyclonic Sword Dash), Researchhotkey (Hotkey - Learn)
+// Abilities: A03J (Change Back), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -26204,7 +26202,7 @@ STRING 4288
 }
 
 STRING 4289
-// Abilities: A02X (Cyclonic Sword Dash), Hotkey (Hotkey - Normal)
+// Abilities: A02X (Cyclonic Sword Dash), Researchhotkey (Hotkey - Learn)
 {
 C
 }
@@ -54543,6 +54541,25 @@ STRING 8980
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool10>s|r
 }
 
+STRING 8981
+// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
+{
+A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 8982
+// Units: H099 (Karinga Tribe Warrior), Propernames (Proper Names)
+{
+Upa
+}
+
 STRING 8983
 // Abilities: A0JY (Overclock), Ubertip (Tooltip - Normal - Extended)
 {
@@ -57463,9 +57480,9 @@ Ultra Instinct
 }
 
 STRING 9468
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Units: h09A (Korin's Flag), EditorSuffix (Name - Editor Suffix)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool2> seconds|r
+(Upa)
 }
 
 STRING 9469
@@ -57475,9 +57492,9 @@ Super Saiyan Rage
 }
 
 STRING 9470
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Units: h09A (Korin's Flag), Name (Name)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool3> seconds|r
+Korin's Flag
 }
 
 STRING 9471
@@ -58507,13 +58524,13 @@ Q
 }
 
 STRING 9642
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9643
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -61139,9 +61156,9 @@ Overcharges the android to maximise combat performance. Ability damage increases
 }
 
 STRING 10082
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OL (Life Regeneration Aura Korin's Flag), Name (Name)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool4> seconds|r
+Life Regeneration Aura Korin's Flag
 }
 
 STRING 10083
@@ -61427,6 +61444,12 @@ STRING 10128
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
+STRING 10129
+// Units: H099 (Karinga Tribe Warrior), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00C|r] Choose Upa
+}
+
 STRING 10130
 // Abilities: A0DW (Evil Aura), EditorSuffix (Editor Suffix)
 {
@@ -61572,9 +61595,9 @@ STRING 10152
 }
 
 STRING 10153
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OL (Life Regeneration Aura Korin's Flag), EditorSuffix (Editor Suffix)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool5> seconds|r
+(Upa)
 }
 
 STRING 10154
@@ -64670,7 +64693,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 27.Feb.20
+This map is under active development - 29.Feb.20
 }
 
 STRING 10653
@@ -66399,6 +66422,12 @@ STRING 10933
 [|cff00ff00R|r] Learn Abil - [|cffffcc00Level %d|r]
 }
 
+STRING 10934
+// Units: H099 (Karinga Tribe Warrior), Tip (Tooltip - Basic)
+{
+[|cffffff00C|r] Choose Upa
+}
+
 STRING 10935
 // Abilities: A0M5 (Frozen R), Tip (Tooltip - Normal)
 {
@@ -66817,6 +66846,18 @@ STRING 11004
 |cffffcc00Wish for Power|r
 }
 
+STRING 11005
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 11006
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool2> seconds|r
+}
+
 STRING 11007
 // Items: I043 (|cffffcc00Wish for Power|r), Tip (Tooltip - Basic)
 {
@@ -67055,7 +67096,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 11049
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67822,7 +67863,7 @@ STRING 11173
 }
 
 STRING 11174
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68575,15 +68616,15 @@ STRING 11299
 }
 
 STRING 11300
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 11301
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Units: H099 (Karinga Tribe Warrior), Name (Name)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> seconds|r
+Karinga Tribe Warrior
 }
 
 STRING 11302
@@ -69216,6 +69257,12 @@ STRING 11406
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 1|r]
 }
 
+STRING 11407
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool3> seconds|r
+}
+
 STRING 11408
 // Abilities: A0MQ (Lava Burst), Name (Name)
 {
@@ -69232,6 +69279,12 @@ STRING 11410
 // Abilities: A0MQ (Lava Burst), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Lava Burst - [|cffffcc00Level %d|r]
+}
+
+STRING 11411
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool4> seconds|r
 }
 
 STRING 11412
@@ -69264,10 +69317,46 @@ STRING 11416
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 6|r]
 }
 
+STRING 11417
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool5> seconds|r
+}
+
+STRING 11418
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> seconds|r
+}
+
+STRING 11419
+// Abilities: A00U (Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> - <A00U,Cool7> seconds|r
+}
+
+STRING 11420
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool6> seconds|r
+}
+
+STRING 11421
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool7> seconds|r
+}
+
 STRING 11422
 // Abilities: A0MQ (Lava Burst), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Lava Burst - [|cffffcc00Level 7|r]
+}
+
+STRING 11423
+// Abilities: A02X (Cyclonic Sword Dash), Hotkey (Hotkey - Normal)
+{
+C
 }
 
 STRING 11424
@@ -69310,6 +69399,12 @@ STRING 11430
 // Abilities: A0MQ (Lava Burst), EditorSuffix (Editor Suffix)
 {
 (moro)
+}
+
+STRING 11431
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool1> seconds|r
 }
 
 STRING 11432
@@ -70541,22 +70636,16 @@ STRING 11636
 This unit has mastered ultra instinct: it will dodge all incoming attacks and always land its counterattacks.
 }
 
-STRING 11637
-// Abilities: A00U (Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
-{
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> - <A00U,Cool7> seconds|r
-}
-
 STRING 11638
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0ON (Mana Regeneration Aura Korin's Flag), EditorSuffix (Editor Suffix)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool6> seconds|r
+(Upa)
 }
 
 STRING 11639
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OO (Upa's Rage 1), Tip (Tooltip - Normal)
 {
-Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool7> seconds|r
+Upa's Rage - [|cffffcc00Level 1|r]
 }
 
 STRING 11640
@@ -71138,7 +71227,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -71846,6 +71935,12 @@ STRING 11848
 broly fur
 }
 
+STRING 11849
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool3> seconds|r
+}
+
 STRING 11850
 // Abilities: A0C8 (Slappy Hand), Ubertip (Tooltip - Normal - Extended)
 {
@@ -72132,6 +72227,18 @@ STRING 11897
 // Abilities: A0O9 (Solar Kamehameha), EditorSuffix (Editor Suffix)
 {
 (cell)
+}
+
+STRING 11898
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool4> seconds|r
+}
+
+STRING 11899
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool5> seconds|r
 }
 
 STRING 11900
@@ -72434,6 +72541,12 @@ STRING 11949
 |cffffff00+500 stats.|r|nA Dragon Ball cleansed of negative energy. Several of these were created when Omega Shenron was destroyed. Using it will trigger a final battle for the fate of the universe.
 }
 
+STRING 11950
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool6> seconds|r
+}
+
 STRING 11951
 // Abilities: A0NZ (Devil's Claw), EditorSuffix (Editor Suffix)
 {
@@ -72710,6 +72823,12 @@ STRING 11996
 Janemba disassembles into cubes and teleports to the target location, reassembling himself in front of his surprised enemies. For the next 6 seconds, the armor of nearby enemies is reduced by 5 and [|cff00ff00W|r] Demonic Blade is unlocked. Janemba returns to where he started if he is within 1200 range after 6 seconds.|n|cff00ffffCooldown: <A0O2,Cool10> seconds|r
 }
 
+STRING 11997
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool7> seconds|r
+}
+
 STRING 11998
 // Abilities: A0OA (Demonic Blade), Hotkey (Hotkey - Normal)
 {
@@ -72900,6 +73019,12 @@ STRING 12029
 // Abilities: A0O4 (Lightning Shower Rain), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Lightning Shower Rain - [|cffffcc00Level %d|r]
+}
+
+STRING 12030
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool8> seconds|r
 }
 
 STRING 12031
@@ -73573,7 +73698,7 @@ STRING 12142
 Type "r" to revert.
 Transformations:
 [lvl 15]  1.25x "fp"
-[lvl 30]  1.50x "fp"
+[lvl 35]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 120] 2.25x "fp"
@@ -73586,6 +73711,12 @@ STRING 12143
 [|cffffff00X|r] Choose Videl
 }
 
+STRING 12144
+// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+{
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool9> seconds|r
+}
+
 STRING 12145
 // Units: H085 (Daughter of Hercule), Tip (Tooltip - Basic)
 {
@@ -73593,45 +73724,39 @@ STRING 12145
 }
 
 STRING 12146
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 12151
+STRING 12147
 // Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> seconds|r
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool10> seconds|r
 }
 
-STRING 12152
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+STRING 12148
+// Abilities: A0OG (Evil Spear), Researchubertip (Tooltip - Learn - Extended)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool3> seconds|r
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool1> - <A0OG,Cool10> seconds|r
 }
 
-STRING 12153
+STRING 12149
 // Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool4> seconds|r
+Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool2> seconds|r
 }
 
-STRING 12154
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+STRING 12150
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool5> seconds|r
-}
-
-STRING 12155
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool6> seconds|r
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
 }
 
 STRING 12156
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OP (Upa's Rage 2), Tip (Tooltip - Normal)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool7> seconds|r
+Upa's Rage - [|cffffcc00Level 2|r]
 }
 
 STRING 12157
@@ -73707,39 +73832,27 @@ STRING 12168
 }
 
 STRING 12169
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OQ (Upa's Rage 3), Tip (Tooltip - Normal)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool8> seconds|r
+Upa's Rage - [|cffffcc00Level 3|r]
 }
 
 STRING 12170
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OR (Upa's Rage 4), Tip (Tooltip - Normal)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool9> seconds|r
+Upa's Rage - [|cffffcc00Level 4|r]
 }
 
 STRING 12171
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OS (Upa's Rage 5), Tip (Tooltip - Normal)
 {
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool10> seconds|r
-}
-
-STRING 12172
-// Abilities: A0OG (Evil Spear), Researchubertip (Tooltip - Learn - Extended)
-{
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool1> - <A0OF,Cool10> seconds|r
+Upa's Rage - [|cffffcc00Level 5|r]
 }
 
 STRING 12173
 // Abilities: A0OG (Evil Spear), EditorSuffix (Editor Suffix)
 {
 (dabura)
-}
-
-STRING 12174
-// Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
-{
-Dabura a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OF,Cool2> seconds|r
 }
 
 STRING 12175
@@ -73754,10 +73867,46 @@ STRING 12176
 Q
 }
 
+STRING 12177
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 3 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool3> seconds|r
+}
+
+STRING 12178
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 4 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool4> seconds|r
+}
+
+STRING 12179
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 5 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool5> seconds|r
+}
+
+STRING 12180
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 6 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool6> seconds|r
+}
+
+STRING 12181
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 7 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool7> seconds|r
+}
+
 STRING 12182
 // Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 75% extra damage.|r
+}
+
+STRING 12183
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 2|r]
 }
 
 STRING 12184
@@ -73808,6 +73957,12 @@ STRING 12191
 [|cff00FF00W|r] Learn Kick - [|cffffcc00Level %d|r]
 }
 
+STRING 12192
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 3|r]
+}
+
 STRING 12193
 // Abilities: A071 (Kick), EditorSuffix (Editor Suffix)
 {
@@ -73830,6 +73985,78 @@ STRING 12196
 // Abilities: A071 (Kick), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 12197
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 4|r]
+}
+
+STRING 12198
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 5|r]
+}
+
+STRING 12199
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 6|r]
+}
+
+STRING 12200
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 1|r]
+}
+
+STRING 12201
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 7|r]
+}
+
+STRING 12202
+// Abilities: A0OH (Javelin Throw), Name (Name)
+{
+Javelin Throw
+}
+
+STRING 12203
+// Abilities: A0OH (Javelin Throw), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Javelin Throw - [|cffffcc00Level %d|r]
+}
+
+STRING 12204
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 9|r]
+}
+
+STRING 12205
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 8|r]
+}
+
+STRING 12206
+// Abilities: A0OH (Javelin Throw), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 10|r]
+}
+
+STRING 12207
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 8 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool8> seconds|r
+}
+
+STRING 12208
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 9 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool9> seconds|r
 }
 
 STRING 12209
@@ -73892,6 +74119,12 @@ STRING 12218
 [|cff00FF00Q|r] Learn Punch - [|cffffcc00Level %d|r]
 }
 
+STRING 12219
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 10 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool10> seconds|r
+}
+
 STRING 12220
 // Abilities: A073 (Punch), EditorSuffix (Editor Suffix)
 {
@@ -73902,6 +74135,12 @@ STRING 12221
 // Abilities: A073 (Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 12222
+// Abilities: A0OH (Javelin Throw), Researchubertip (Tooltip - Learn - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> - <A0OH,Cool10> seconds|r
 }
 
 STRING 12223
@@ -73916,6 +74155,12 @@ STRING 12224
 [|cff00FF00E|r] Flying Kick - [|cffffcc00Level 1|r]
 }
 
+STRING 12225
+// Abilities: A0OH (Javelin Throw), EditorSuffix (Editor Suffix)
+{
+(upa)
+}
+
 STRING 12226
 // Abilities: A0JW (Flying Kick), Name (Name)
 {
@@ -73926,6 +74171,12 @@ STRING 12227
 // Abilities: A0JW (Flying Kick), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Flying Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 12228
+// Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 2 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool2> seconds|r
 }
 
 STRING 12229
@@ -73952,10 +74203,64 @@ STRING 12232
 [|cff00FF00E|r] Flying Kick - [|cffffcc00Level 5|r]
 }
 
+STRING 12233
+// Abilities: A0OI (Whirlwind Tempest), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 12234
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 1|r]
+}
+
+STRING 12235
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
+}
+
+STRING 12236
+// Abilities: A0OI (Whirlwind Tempest), Name (Name)
+{
+Whirlwind Tempest
+}
+
 STRING 12237
 // Abilities: A0JW (Flying Kick), EditorSuffix (Editor Suffix)
 {
 (videl)
+}
+
+STRING 12238
+// Abilities: A0OI (Whirlwind Tempest), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Whirlwind Tempest - [|cffffcc00Level %d|r]
+}
+
+STRING 12239
+// Abilities: A0OI (Whirlwind Tempest), Researchubertip (Tooltip - Learn - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
+}
+
+STRING 12240
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 2|r]
+}
+
+STRING 12241
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 3|r]
+}
+
+STRING 12242
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 4|r]
 }
 
 STRING 12243
@@ -73998,5 +74303,550 @@ STRING 12249
 // Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 12250
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 5|r]
+}
+
+STRING 12251
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool2>s|r
+}
+
+STRING 12252
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool3>s|r
+}
+
+STRING 12253
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool4>s|r
+}
+
+STRING 12254
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool5>s|r
+}
+
+STRING 12255
+// Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 12256
+// Abilities: A0OI (Whirlwind Tempest), EditorSuffix (Editor Suffix)
+{
+(upa)
+}
+
+STRING 12257
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool6>s|r
+}
+
+STRING 12258
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool7>s|r
+}
+
+STRING 12259
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool8>s|r
+}
+
+STRING 12260
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool9>s|r
+}
+
+STRING 12261
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool10>s|r
+}
+
+STRING 12262
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 6|r]
+}
+
+STRING 12263
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 7|r]
+}
+
+STRING 12264
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 8|r]
+}
+
+STRING 12265
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 9|r]
+}
+
+STRING 12266
+// Abilities: A0OI (Whirlwind Tempest), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Whirlwind Tempest - [|cffffcc00Level 10|r]
+}
+
+STRING 12267
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 12268
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 1|r]
+}
+
+STRING 12270
+// Abilities: A0OJ (Korin's Flag), Name (Name)
+{
+Korin's Flag
+}
+
+STRING 12271
+// Abilities: A0OJ (Korin's Flag), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Korin's Flag - [|cffffcc00Level %d|r]
+}
+
+STRING 12273
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 2|r]
+}
+
+STRING 12274
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 3|r]
+}
+
+STRING 12275
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 4|r]
+}
+
+STRING 12276
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 5|r]
+}
+
+STRING 12281
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 12282
+// Abilities: A0OJ (Korin's Flag), EditorSuffix (Editor Suffix)
+{
+(upa)
+}
+
+STRING 12286
+// Abilities: A0ON (Mana Regeneration Aura Korin's Flag), Name (Name)
+{
+Mana Regeneration Aura Korin's Flag
+}
+
+STRING 12287
+// Abilities: A0OO (Upa's Rage 1), EditorSuffix (Editor Suffix)
+{
+(Upa)
+}
+
+STRING 12288
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 6|r]
+}
+
+STRING 12289
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 7|r]
+}
+
+STRING 12290
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 8|r]
+}
+
+STRING 12291
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 9|r]
+}
+
+STRING 12292
+// Abilities: A0OJ (Korin's Flag), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 10|r]
+}
+
+STRING 12293
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12294
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12295
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+{
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 12307
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool1> seconds|r
+}
+
+STRING 12308
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool2> seconds|r
+}
+
+STRING 12309
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool3> seconds|r
+}
+
+STRING 12310
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool4> seconds|r
+}
+
+STRING 12311
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool5> seconds|r
+}
+
+STRING 12312
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool6> seconds|r
+}
+
+STRING 12313
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool7> seconds|r
+}
+
+STRING 12314
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 2|r]
+}
+
+STRING 12315
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 3|r]
+}
+
+STRING 12316
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 4|r]
+}
+
+STRING 12317
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 5|r]
+}
+
+STRING 12318
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 6|r]
+}
+
+STRING 12319
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 1|r]
+}
+
+STRING 12320
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 7|r]
+}
+
+STRING 12321
+// Abilities: A0OK (Last Stand), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 12322
+// Abilities: A0OK (Last Stand), Name (Name)
+{
+Last Stand
+}
+
+STRING 12323
+// Abilities: A0OK (Last Stand), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Last Stand - [|cffffcc00Level %d|r]
+}
+
+STRING 12324
+// Abilities: A0OK (Last Stand), Researchubertip (Tooltip - Learn - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool1> - <A0OK,Cool10> seconds|r
+}
+
+STRING 12325
+// Abilities: A0OK (Last Stand), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 12326
+// Abilities: A0OK (Last Stand), EditorSuffix (Editor Suffix)
+{
+(upa)
+}
+
+STRING 12327
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 8|r]
+}
+
+STRING 12328
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 9|r]
+}
+
+STRING 12329
+// Abilities: A0OK (Last Stand), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Last Stand - [|cffffcc00Level 10|r]
+}
+
+STRING 12330
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool8> seconds|r
+}
+
+STRING 12331
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool9> seconds|r
+}
+
+STRING 12332
+// Abilities: A0OK (Last Stand), Ubertip (Tooltip - Normal - Extended)
+{
+Upa slams the ground creating an impassable crater around his target and himself for 5 seconds. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0OK,Cool10> seconds|r
+}
+
+STRING 12333
+// Abilities: A0OO (Upa's Rage 1), Name (Name)
+{
+Upa's Rage 1
+}
+
+STRING 12335
+// Abilities: A0OO (Upa's Rage 1), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OO,DataD1,%>% |n|cffffcc00Critical|r - <A0OO,DataA1>% |n|cffffcc00Damage|r - <A0OO,DataB1,.> times
+}
+
+STRING 12336
+// Abilities: A0OP (Upa's Rage 2), EditorSuffix (Editor Suffix)
+{
+(Upa)
+}
+
+STRING 12337
+// Abilities: A0OP (Upa's Rage 2), Name (Name)
+{
+Upa's Rage 2
+}
+
+STRING 12339
+// Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OP,DataD1,%>% |n|cffffcc00Critical|r - <A0OP,DataA1>% |n|cffffcc00Damage|r - <A0OP,DataB1,.> times
+}
+
+STRING 12340
+// Abilities: A0OQ (Upa's Rage 3), EditorSuffix (Editor Suffix)
+{
+(Upa)
+}
+
+STRING 12341
+// Abilities: A0OQ (Upa's Rage 3), Name (Name)
+{
+Upa's Rage 3
+}
+
+STRING 12343
+// Abilities: A0OQ (Upa's Rage 3), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OQ,DataD1,%>% |n|cffffcc00Critical|r - <A0OQ,DataA1>% |n|cffffcc00Damage|r - <A0OQ,DataB1,.> times
+}
+
+STRING 12344
+// Abilities: A0OR (Upa's Rage 4), EditorSuffix (Editor Suffix)
+{
+(Upa)
+}
+
+STRING 12345
+// Abilities: A0OR (Upa's Rage 4), Name (Name)
+{
+Upa's Rage 4
+}
+
+STRING 12347
+// Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OR,DataD1,%>% |n|cffffcc00Critical|r - <A0OR,DataA1>% |n|cffffcc00Damage|r - <A0OR,DataB1,.> times
+}
+
+STRING 12348
+// Abilities: A0OS (Upa's Rage 5), EditorSuffix (Editor Suffix)
+{
+(Upa)
+}
+
+STRING 12349
+// Abilities: A0OS (Upa's Rage 5), Name (Name)
+{
+Upa's Rage 5
+}
+
+STRING 12351
+// Abilities: A0OS (Upa's Rage 5), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OS,DataD1,%>% |n|cffffcc00Critical|r - <A0OS,DataA1>% |n|cffffcc00Damage|r - <A0OS,DataB1,.> times
+}
+
+STRING 12352
+{
+ - Every 1000 points increase armor by 1
+}
+
+STRING 12353
+{
+ - Every 1000 points increase armor by 1
+}
+
+STRING 12354
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool1> seconds|r
+}
+
+STRING 12355
+// Abilities: A0OJ (Korin's Flag), Researchubertip (Tooltip - Learn - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool1> - <A0OJ,Cool10> seconds|r
+}
+
+STRING 12356
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool2> seconds|r
+}
+
+STRING 12357
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool3> seconds|r
+}
+
+STRING 12358
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool4> seconds|r
+}
+
+STRING 12359
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool5> seconds|r
+}
+
+STRING 12360
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool6> seconds|r
+}
+
+STRING 12361
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool7> seconds|r
+}
+
+STRING 12362
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool8> seconds|r
+}
+
+STRING 12363
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool9> seconds|r
+}
+
+STRING 12364
+// Abilities: A0OJ (Korin's Flag), Ubertip (Tooltip - Normal - Extended)
+{
+Upa throws his javelin into the sky which falls back down after a short delay to deal damage to enemies. Plants Korin's flag at the targeted location which heals nearby allies 1% of their max life and mana per second.|n|cff00FF00Damage: Str * Lvl * ? |r|n|cff00FFFFCooldown: <A0OJ,Cool10> seconds|r
 }
 

@@ -958,7 +958,7 @@ export const AbilitiesList = [
         AbilityNames.Bardock.REBELLION_SPEAR
     },
     components: [
-      { name: "dash ground target rebellion spear" },
+      { name: "dash ground point rebellion spear" },
       { name: "damage rebellion spear dps" },
       { name: "knockback kame" },
       { name: "sfx rebellion spear" },
@@ -1129,62 +1129,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "aoe apply pan immolation" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 99,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTN13Beam.blp",
-      disabled: "BTN13Beam.blp",
-    },
-    tooltip: {
-      title: "Energy Beam 13",
-      body: 
-        "Energy Beam 13"
-    },
-    components: [
-      { name: "beam energy beam" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Android13.SS_DEADLY_HAMMER,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 124,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTN13Hammer.blp",
-      disabled: "BTN13Hammer.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Android13.SS_DEADLY_HAMMER,
-      body: 
-        AbilityNames.Android13.SS_DEADLY_HAMMER
-    },
-    components: [
-      { name: "dash ground point ss deadly hammer" },
-      { name: "damage ss deadly hammer dps" },
-      { name: "beam ss deadly hammer" },
-      { name: "knockback ss deadly hammer" },
-      { name: "sfx ss deadly hammer" },
     ],
   },
   // -------------------------------------------
@@ -1406,6 +1350,173 @@ export const AbilitiesList = [
       { name: "damage videl flying kick explosion" },
       { name: "knockback videl flying kick" },
       { name: "sfx videl flying kick" },
+    ],
+  },
+  // -------------------------------------------
+  // NOTE: ANY CHANGES TO THIS ABILITY REQUIRES CHANGES TO THE GUI
+  // COUNTERPART RESPONSIBLE FOR DRAGGING UPA TOWARDS KORIN'S FLAG
+  // (more component classes seems to crash the game, so gui workaround...)
+  {
+    name: AbilityNames.Upa.JAVELIN_THROW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 35,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNUpaQ.blp",
+      disabled: "BTNUpaQ.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Upa.JAVELIN_THROW,
+      body: 
+        AbilityNames.Upa.JAVELIN_THROW
+    },
+    components: [
+      { name: "beam javelin throw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Upa.WHIRLWIND_TEMPEST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNUpaW.blp",
+      disabled: "BTNUpaW.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Upa.WHIRLWIND_TEMPEST,
+      body: 
+        AbilityNames.Upa.WHIRLWIND_TEMPEST
+    },
+    components: [
+      { name: "dash ground point whirlwind tempest" },
+      { name: "damage whirlwind tempest dps" },
+      { name: "knockback kame" },
+      { name: "sfx whirlwind tempest" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Upa.KORIN_FLAG,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 216,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNUpaE.blp",
+      disabled: "BTNUpaE.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Upa.KORIN_FLAG,
+      body: 
+        AbilityNames.Upa.KORIN_FLAG
+    },
+    components: [
+      { name: "beam korin flag" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Upa.LAST_STAND,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 250,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNUpaR.blp",
+      disabled: "BTNUpaR.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Upa.LAST_STAND,
+      body: 
+        AbilityNames.Upa.LAST_STAND
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "beam last stand" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Beam.blp",
+      disabled: "BTN13Beam.blp",
+    },
+    tooltip: {
+      title: "Energy Beam 13",
+      body: 
+        "Energy Beam 13"
+    },
+    components: [
+      { name: "beam energy beam" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Android13.SS_DEADLY_HAMMER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 124,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTN13Hammer.blp",
+      disabled: "BTN13Hammer.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Android13.SS_DEADLY_HAMMER,
+      body: 
+        AbilityNames.Android13.SS_DEADLY_HAMMER
+    },
+    components: [
+      { name: "dash ground point ss deadly hammer" },
+      { name: "damage ss deadly hammer dps" },
+      { name: "beam ss deadly hammer" },
+      { name: "knockback ss deadly hammer" },
+      { name: "sfx ss deadly hammer" },
     ],
   },
   // -------------------------------------------
@@ -2781,7 +2892,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "teleport bunkai teleport return" },
-      { name: "dash ground target bunkai teleport" },
+      { name: "dash ground point bunkai teleport" },
       { name: "temp ability evil aura" },
       { name: "temp ability demonic blade" },
       { name: "sfx bunkai teleport caster 1" },
@@ -2943,7 +3054,7 @@ export const AbilitiesList = [
         "|nCost: 25 MP |nCD: 19",
     },
     components: [
-      { name: "dash ground target zanzo saga" },
+      { name: "dash ground point zanzo saga" },
       { name: "sfx zanzo dash" },
     ],
   },
@@ -3226,88 +3337,4 @@ export const AbilitiesList = [
       // { name: "beam homing kamehameha" },
     ],
   },
-  // -------------------------------------------
-  {
-    name: "Test Ability 2",
-    currentCd: 0,
-    maxCd: 4,
-    costType: "MP",
-    costAmount: 25,
-    duration: 25,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: true,
-    animation: "spell",
-    icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNPeon.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNPeon.blp",
-    },
-    tooltip: {
-      title: "Test Ability 2 (D)",
-      body: 
-        "Dragon Fisto. 25mp, cd4"
-    },
-    components: [
-      { name: "dash ground point 25dist" },
-      { name: "damage 1tick 1int 250aoe" },
-      { name: "damage final 10int 500aoe" },
-      { name: "knockback 1tick 25speed 180angle 200aoe" },
-      { name: "sfx dragon fist" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Test Ability 3",
-    currentCd: 0,
-    maxCd: 12,
-    costType: "MP",
-    costAmount: 125,
-    duration: 67,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: true,
-    waitsForNextClick: true,
-    animation: "spell",
-    icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNPeasant.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNPeasant.blp",
-    },
-    tooltip: {
-      title: "Test Ability 3 (F)",
-      body: 
-        "Beam kame. 125 mp, cd 12"
-    },
-    components: [
-      { name: "beam kamehameha" },
-      { name: "sfx blue wind aura" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Test Ability 4",
-    currentCd: 0,
-    maxCd: 7,
-    costType: "MP",
-    costAmount: 25,
-    duration: 120,
-    updateRate: 0.03,
-    castTime: 0.25,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "Replaceabletextures\\CommandButtons\\BTNDefend.blp",
-      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNDefend.blp",
-    },
-    tooltip: {
-      title: "Test Ability 4 (V)",
-      body: 
-        "Energy Absorption Guard, blocks 150% of incoming dmg until the dmg block exceeds 10*INT. 25 mp, cd 7"
-    },
-    components: [
-      { name: "block energy absorption" },
-    ],
-  },
-  // -------------------------------------------
 ];

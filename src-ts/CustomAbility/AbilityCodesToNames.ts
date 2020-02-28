@@ -78,6 +78,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A071'), AbilityNames.Videl.KICK],
     [FourCC('A0JW'), AbilityNames.Videl.FLYING_KICK],
 
+    // upa
+    [FourCC('A0OH'), AbilityNames.Upa.JAVELIN_THROW],
+    [FourCC('A0OI'), AbilityNames.Upa.WHIRLWIND_TEMPEST],
+    [FourCC('A0OJ'), AbilityNames.Upa.KORIN_FLAG],
+    [FourCC('A0OK'), AbilityNames.Upa.LAST_STAND],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],

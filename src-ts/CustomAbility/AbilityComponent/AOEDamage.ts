@@ -19,7 +19,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
 
-  protected damagedHeroes: Map<unit, number>;
+  protected damagedTargets: Map<unit, number>;
 
   constructor(
     public name: string = "AOEDamage",
@@ -31,6 +31,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
     public maxDamageTicks: number = 20,
+    public onlyDamageCapHeroes: boolean = true,
     public damageData: DamageData = new DamageData(
       0.02,
       bj_HEROSTAT_AGI,
@@ -41,7 +42,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   ) {
     this.damageCoords = new Vector2D(0, 0);
     this.damageStarted = false;
-    this.damagedHeroes = new Map();
+    this.damagedTargets = new Map();
   }
 
   protected calculateDamage(input: CustomAbilityInput, source: unit): number {
@@ -88,7 +89,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       ability.currentTick == this.startTick
     ) {
       this.damageStarted = true;
-      this.damagedHeroes.clear();
+      this.damagedTargets.clear();
       if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_FIXED) {
         this.setDamageSourceToTargettedPoint(input);
       }
@@ -131,17 +132,16 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
       if (
         this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
-        IsUnitType(target, UNIT_TYPE_HERO) && 
-        !IsUnitType(target, UNIT_TYPE_SUMMONED)
+        (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
       ) {
-        const damageCount = this.damagedHeroes.get(target);
+        const damageCount = this.damagedTargets.get(target);
         if (damageCount) {
           if (damageCount <= this.maxDamageTicks) {
-            this.damagedHeroes.set(target, damageCount + 1);
+            this.damagedTargets.set(target, damageCount + 1);
             this.performDamage(input, target, damage);
           }
         } else {
-          this.damagedHeroes.set(target, 1);
+          this.damagedTargets.set(target, 1);
           this.performDamage(input, target, damage);
         }
       } else {    
@@ -158,7 +158,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   cleanup() {
     this.damageStarted = false;
-    this.damagedHeroes.clear();
+    this.damagedTargets.clear();
   }
 
   clone(): AbilityComponent {
@@ -169,6 +169,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.useLastCastPoint,
       this.aoe, 
       this.maxDamageTicks,
+      this.onlyDamageCapHeroes,
       this.damageData,
     );
   }
@@ -184,6 +185,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       useLastCastPoint: boolean;
       aoe: number; 
       maxDamageTicks: number;
+      onlyDamageCapHeroes: boolean;
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -202,6 +204,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
     this.maxDamageTicks = input.maxDamageTicks;
+    this.onlyDamageCapHeroes = input.onlyDamageCapHeroes;
     this.damageData = new DamageData().deserialize(input.damageData);
     return this;
   }

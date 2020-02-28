@@ -23,7 +23,7 @@ export module TournamentData {
   export const finalBattleTime: number = 33 * 60;
   export const finalBattleInterval: number = 60;
   export const finalBattleDelay: number = 60;
-  export const finalBattleLobbyWait: number = 15;
+  export const finalBattleLobbyWait: number = 30;
   export const finalBattleSpell: number = FourCC("A0LT");
   export const finalBattleOrder: number = String2OrderIdBJ("thunderclap");
   export const budokaiName: string = "Tournament";
