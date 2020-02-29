@@ -48,7 +48,10 @@ export class TournamentManager {
       );
     }
     */
+    return this;
+  }
 
+  public setupStandardTournaments(): this {
     const finalBattle = new FinalBattle();
     this.tournaments.set(finalBattle.name, finalBattle);
 
@@ -80,8 +83,7 @@ export class TournamentManager {
       3,
       false,
     );
-
-
+    
     return this;
   }
 

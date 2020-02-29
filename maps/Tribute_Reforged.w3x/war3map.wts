@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.37a
+DBZ Tribute Reforged 0.37b
 }
 
 STRING 4
@@ -732,7 +732,7 @@ Gohan
 }
 
 STRING 115
-// Units: H00K (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
+// Units: H086 (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who works best when constantly kiting with nukes rather than dealing burst damage. Has various opportunities to gain free stats.
 
@@ -821,19 +821,6 @@ STRING 127
 // Units: H00R (Namekian), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00S|r] Choose Piccolo
-}
-
-STRING 128
-// Units: H00R (Namekian), Ubertip (Tooltip - Extended)
-{
-An extremely bulky, combo-oriented hero who can isolate enemies from their team and deal heavy damage with both melee attacks and abilities.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 129
@@ -1863,20 +1850,6 @@ STRING 298
 // Units: H01V (Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Android 13
-}
-
-STRING 299
-// Units: H01V (Android), Ubertip (Tooltip - Extended)
-{
-A split hero who controls three weaker heroes at once, allowing for quick farming if left untouched.
-They fuse into Super Android 13, who specializes in using massive AoE nukes to control space and clear sagas with ease.
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 300
@@ -7761,7 +7734,7 @@ Gohan
 }
 
 STRING 1233
-// Units: H086 (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
+// Units: H08L (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who works best when constantly kiting with nukes rather than dealing burst damage. Has various opportunities to gain free stats.
 
@@ -13413,7 +13386,7 @@ Transformations:
 [lvl 50]  1.75x "fp"
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
-[lvl 150] 2.40x "rage"
+[lvl 150] 2.40x "rage" [unlocks Upa's Rage]
 }
 
 STRING 2162
@@ -43529,20 +43502,6 @@ STRING 7159
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
 }
 
-STRING 7160
-// Units: O001 (Evil Wizard), Ubertip (Tooltip - Extended)
-{
-A summoner hero who can gather stats extremely quickly while supporting from the backline with crowd control and a powerful single-target nuke.
-Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Tavern) but receives an earlier level 3 candy beam as a bonus.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 7161
 // Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
@@ -54541,6 +54500,14 @@ STRING 8980
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool10>s|r
 }
 
+STRING 8981
+// Abilities: A0OO (Upa's Rage 1), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OO,DataA1,%>% 
+}
+
 STRING 8982
 // Units: H099 (Karinga Tribe Warrior), Propernames (Proper Names)
 {
@@ -61256,19 +61223,6 @@ STRING 10100
 Half Human / Half Saiyan
 }
 
-STRING 10101
-// Units: H08L (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who works best when constantly kiting with nukes rather than dealing burst damage. Has various opportunities to gain free stats.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 10102
 // Units: H08L (Half Human / Half Saiyan), Awakentip (Tooltip - Awaken)
 {
@@ -62556,19 +62510,6 @@ STRING 10311
 // Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
-}
-
-STRING 10312
-// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
-{
-A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 10313
@@ -64693,7 +64634,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 29.Feb.20
+This map is under active development - 1.Mar.20
 }
 
 STRING 10653
@@ -65800,20 +65741,6 @@ STRING 10831
 // Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
-}
-
-STRING 10832
-// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
-{
-A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high damage nukes that work best against sagas or enemies that cannot dodge them.
-|cffff2020Warning: One of the hardest heroes to play correctly!|r
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 10833
@@ -70111,7 +70038,7 @@ Q
 STRING 11549
 // Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. Cancelling the channel of the ability will prematurely detonate all power blitzes in transit.|n|cff2080ffMana Cost: 10k + 30% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
 }
 
 STRING 11550
@@ -70634,6 +70561,14 @@ STRING 11636
 // Buffs/Effects: B01Y (), Buffubertip (Tooltip - Extended)
 {
 This unit has mastered ultra instinct: it will dodge all incoming attacks and always land its counterattacks.
+}
+
+STRING 11637
+// Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
 }
 
 STRING 11638
@@ -71671,33 +71606,6 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 
 }
 
-STRING 11811
-// Units: O005 (Fat Buu), Ubertip (Tooltip - Extended)
-{
-Majin Buu that Babidi can "release" but starts at level 1. At the start he relies heavily on using his candy beam to quickly gain stat multiplier. Eventually he gains access to extremely powerful AOE damage abilities and 2 strong disables.
-Can turn into Super Buu who absorbs other enemy heroes using [|cff00ff00E|r] Flesh Attack. Super Buu will turn into Kid Buu some time after the first absorb duplicating the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of the first enemy absorbed.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
-STRING 11812
-// Units: H08P (Spoiled Brat), Ubertip (Tooltip - Extended)
-{
-A hero that relies heavily on combo-ing her multiple low cooldown beams with her robot Giru. Has a unique passive that summons a powerful AOE damage aura around Giru whenever she casts a spell.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11813
 // Units: H08S (Slayer of Raditz), Ubertip (Tooltip - Extended)
 {
@@ -71721,19 +71629,6 @@ A strong early-game hero that relies heavily on his teammates to protect him whi
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
-STRING 11815
-// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A powerful AOE nuker that is rewarded for having good accuracy. Can summon saibamen to help out.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 
 }
 
@@ -73189,12 +73084,6 @@ STRING 12057
 Bee
 }
 
-STRING 12058
-// Items: I04G (Bee), Ubertip (Tooltip - Extended)
-{
-Grants true strike and 15% evasion.|n|cffffff00Majin Buu's best friend will assist you in landing your attacks and bark at you when you're about to be hit.|r
-}
-
 STRING 12059
 // Items: I04G (Bee), Description (Description)
 {
@@ -73753,6 +73642,42 @@ STRING 12150
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
 }
 
+STRING 12151
+// Abilities: A0OQ (Upa's Rage 3), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OQ,DataA1,%>% 
+}
+
+STRING 12152
+// Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OR,DataA1,%>% 
+}
+
+STRING 12153
+// Abilities: A0OS (Upa's Rage 5), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OS,DataA1,%>% 
+}
+
+STRING 12154
+// Abilities: A0OO (Upa's Rage 1), Name (Name)
+{
+Upa's Rage 1
+}
+
+STRING 12155
+// Buffs/Effects: B02A (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Upa's Rage; it has increased attack damage.
+}
+
 STRING 12156
 // Abilities: A0OP (Upa's Rage 2), Tip (Tooltip - Normal)
 {
@@ -73849,10 +73774,22 @@ STRING 12171
 Upa's Rage - [|cffffcc00Level 5|r]
 }
 
+STRING 12172
+// Abilities: A0OP (Upa's Rage 2), Name (Name)
+{
+Upa's Rage 2
+}
+
 STRING 12173
 // Abilities: A0OG (Evil Spear), EditorSuffix (Editor Suffix)
 {
 (dabura)
+}
+
+STRING 12174
+// Buffs/Effects: B02B (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
@@ -74216,9 +74153,9 @@ STRING 12234
 }
 
 STRING 12235
-// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B02F (), Bufftip (Tooltip)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
+Upa's Rage
 }
 
 STRING 12236
@@ -74240,9 +74177,9 @@ STRING 12238
 }
 
 STRING 12239
-// Abilities: A0OI (Whirlwind Tempest), Researchubertip (Tooltip - Learn - Extended)
+// Buffs/Effects: B02C (), Buffubertip (Tooltip - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
+This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12240
@@ -74312,27 +74249,27 @@ STRING 12250
 }
 
 STRING 12251
-// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+// Items: I04G (Bee), Ubertip (Tooltip - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool2>s|r
+Grants true strike and 40% evasion.|n|cffffff00Majin Buu's best friend will assist you in landing your attacks and bark at you when you're about to be hit.|r
 }
 
 STRING 12252
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool3>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
 }
 
 STRING 12253
-// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OI (Whirlwind Tempest), Researchubertip (Tooltip - Learn - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool4>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool1>s|r
 }
 
 STRING 12254
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool5>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool2>s|r
 }
 
 STRING 12255
@@ -74350,31 +74287,31 @@ STRING 12256
 STRING 12257
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool6>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool3>s|r
 }
 
 STRING 12258
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool7>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool4>s|r
 }
 
 STRING 12259
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool8>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool5>s|r
 }
 
 STRING 12260
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool9>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool6>s|r
 }
 
 STRING 12261
 // Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool10>s|r
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool7>s|r
 }
 
 STRING 12262
@@ -74419,6 +74356,12 @@ STRING 12268
 [|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 1|r]
 }
 
+STRING 12269
+// Abilities: A0OQ (Upa's Rage 3), Name (Name)
+{
+Upa's Rage 3
+}
+
 STRING 12270
 // Abilities: A0OJ (Korin's Flag), Name (Name)
 {
@@ -74429,6 +74372,12 @@ STRING 12271
 // Abilities: A0OJ (Korin's Flag), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Korin's Flag - [|cffffcc00Level %d|r]
+}
+
+STRING 12272
+// Buffs/Effects: B02D (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12273
@@ -74455,6 +74404,30 @@ STRING 12276
 [|cff00FF00E|r] Korin's Flag - [|cffffcc00Level 5|r]
 }
 
+STRING 12277
+// Abilities: A0OR (Upa's Rage 4), Name (Name)
+{
+Upa's Rage 4
+}
+
+STRING 12278
+// Buffs/Effects: B02E (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Upa's Rage; it has increased attack damage.
+}
+
+STRING 12279
+// Abilities: A0OS (Upa's Rage 5), Name (Name)
+{
+Upa's Rage 5
+}
+
+STRING 12280
+// Buffs/Effects: B02F (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Upa's Rage; it has increased attack damage.
+}
+
 STRING 12281
 // Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
@@ -74474,9 +74447,9 @@ Mana Regeneration Aura Korin's Flag
 }
 
 STRING 12287
-// Abilities: A0OO (Upa's Rage 1), EditorSuffix (Editor Suffix)
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-(Upa)
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool8>s|r
 }
 
 STRING 12288
@@ -74521,17 +74494,16 @@ STRING 12294
 Q
 }
 
-STRING 12295
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
+STRING 12305
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
 {
-A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool9>s|r
+}
 
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
+STRING 12306
+// Abilities: A0OI (Whirlwind Tempest), Ubertip (Tooltip - Normal - Extended)
+{
+Upa recklessly charges forwards, dealing damage to anyone in front of him.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0OI,Cool10>s|r
 }
 
 STRING 12307
@@ -74691,87 +74663,167 @@ Upa slams the ground creating an impassable crater around his target and himself
 }
 
 STRING 12333
-// Abilities: A0OO (Upa's Rage 1), Name (Name)
+// Buffs/Effects: B02A (), Bufftip (Tooltip)
 {
 Upa's Rage 1
 }
 
-STRING 12335
-// Abilities: A0OO (Upa's Rage 1), Ubertip (Tooltip - Normal - Extended)
+STRING 12334
+// Units: O001 (Evil Wizard), Ubertip (Tooltip - Extended)
 {
-Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OO,DataD1,%>% |n|cffffcc00Critical|r - <A0OO,DataA1>% |n|cffffcc00Damage|r - <A0OO,DataB1,.> times
+A summoner hero who can gather stats extremely quickly while supporting from the backline with crowd control and a powerful single-target nuke.
+Once he reaches level 45 he may choose to turn into Majin Buu (Extra Heroes 2 Tavern) but receives an earlier level 3 candy beam as a bonus.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 12335
+// Units: H00K (Half Human / Half Saiyan), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who works best when constantly kiting with nukes rather than dealing burst damage. Has various opportunities to gain free stats.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12336
-// Abilities: A0OP (Upa's Rage 2), EditorSuffix (Editor Suffix)
+// Units: H00R (Namekian), Ubertip (Tooltip - Extended)
 {
-(Upa)
+An extremely bulky, combo-oriented hero who can isolate enemies from their team and deal heavy damage with both melee attacks and abilities.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12337
-// Abilities: A0OP (Upa's Rage 2), Name (Name)
+// Buffs/Effects: B02B (), Bufftip (Tooltip)
 {
 Upa's Rage 2
 }
 
-STRING 12339
-// Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
+STRING 12338
+// Units: O005 (Fat Buu), Ubertip (Tooltip - Extended)
 {
-Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OP,DataD1,%>% |n|cffffcc00Critical|r - <A0OP,DataA1>% |n|cffffcc00Damage|r - <A0OP,DataB1,.> times
+Majin Buu that Babidi can "release" but starts at level 1. At the start he relies heavily on using his candy beam to quickly gain stat multiplier. Eventually he gains access to extremely powerful AOE damage abilities and 2 strong disables.
+Can turn into Super Buu who absorbs other enemy heroes using [|cff00ff00E|r] Flesh Attack. Super Buu will turn into Kid Buu some time after the first absorb duplicating the [|cff00ff00Q|r] and [|cff00ff00D|r] abilities of the first enemy absorbed.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 12339
+// Units: H01V (Android), Ubertip (Tooltip - Extended)
+{
+A split hero who controls three weaker heroes at once, allowing for quick farming if left untouched.
+They fuse into Super Android 13, who specializes in using massive high DPS AoE nukes to control space and clear sagas with ease.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12340
-// Abilities: A0OQ (Upa's Rage 3), EditorSuffix (Editor Suffix)
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
 {
-(Upa)
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12341
-// Abilities: A0OQ (Upa's Rage 3), Name (Name)
+// Buffs/Effects: B02C (), Bufftip (Tooltip)
 {
 Upa's Rage 3
 }
 
-STRING 12343
-// Abilities: A0OQ (Upa's Rage 3), Ubertip (Tooltip - Normal - Extended)
+STRING 12342
+// Units: H08P (Spoiled Brat), Ubertip (Tooltip - Extended)
 {
-Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OQ,DataD1,%>% |n|cffffcc00Critical|r - <A0OQ,DataA1>% |n|cffffcc00Damage|r - <A0OQ,DataB1,.> times
+A hero that relies heavily on combo-ing her multiple low cooldown beams with her robot Giru. Whenever she casts a spell Giru will be surrounded by a powerful AOE damage aura.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 12343
+// Units: H08W (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A powerful AOE nuker that is rewarded for having good accuracy. Can summon saibamen to help out.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12344
-// Abilities: A0OR (Upa's Rage 4), EditorSuffix (Editor Suffix)
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
 {
-(Upa)
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high damage nukes that work best against sagas or enemies that cannot dodge them.
+|cffff2020Warning: One of the hardest heroes to play correctly!|r
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIIIII|r|cff383838|r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12345
-// Abilities: A0OR (Upa's Rage 4), Name (Name)
+// Buffs/Effects: B02D (), Bufftip (Tooltip)
 {
 Upa's Rage 4
 }
 
-STRING 12347
-// Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
+STRING 12346
+// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
 {
-Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OR,DataD1,%>% |n|cffffcc00Critical|r - <A0OR,DataA1>% |n|cffffcc00Damage|r - <A0OR,DataB1,.> times
-}
+A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off. His final transformation turns him into a combo-oriented hero that relies heavily on timing his spell usage to work with his upgrade auto attacks.
 
-STRING 12348
-// Abilities: A0OS (Upa's Rage 5), EditorSuffix (Editor Suffix)
-{
-(Upa)
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 12349
-// Abilities: A0OS (Upa's Rage 5), Name (Name)
+// Buffs/Effects: B02E (), Bufftip (Tooltip)
 {
 Upa's Rage 5
-}
-
-STRING 12351
-// Abilities: A0OS (Upa's Rage 5), Ubertip (Tooltip - Normal - Extended)
-{
-Upa's rage empowers his throwing axes to deal devastating damage.|n|cffffff00Whenever Upa casts a spell, Upa's Rage increases by 1 level. Casting at level 5 resets to level 1.|r|n|cffffcc00Evasion|r - <A0OS,DataD1,%>% |n|cffffcc00Critical|r - <A0OS,DataA1>% |n|cffffcc00Damage|r - <A0OS,DataB1,.> times
 }
 
 STRING 12352

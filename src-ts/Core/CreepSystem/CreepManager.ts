@@ -1,7 +1,7 @@
 import { Constants } from "Common/Constants";
 import { CustomCreep } from "./CustomCreep";
 import { Vector2D } from "Common/Vector2D";
-import { DefaultCreepUpgradeConfig, CreepUpgradeConfig } from "./CreepUpgradeConfig";
+import { DefaultCreepUpgradeConfig, CreepUpgradeConfig, CreepResearchUpgrade } from "./CreepUpgradeConfig";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { RandomCreepTypeHelper } from "./CreepUpgradeTypes";
 import { Logger } from "Libs/TreeLib/Logger";
@@ -18,9 +18,11 @@ export class CreepManager {
   // Note: this version of creep respawn forgoes using the custom value of a unit
   // thus, accessing the associated respawn data for a creep is slower;
   // O(1) vs O(log n), assuming we have around 500 or so creeps 
-  // then this system is about 9 times slower, 
+  // then this system is about 9 times slower, should be low impact
   protected customCreeps: Map<unit, CustomCreep>;
   protected creepRespawnTrigger: trigger;
+  
+  protected creepResearchUpgradeTimer: timer;
 
 
   constructor (
@@ -30,6 +32,7 @@ export class CreepManager {
     this.maxNumCreeps = 0;
     this.customCreeps = new Map();
     this.creepRespawnTrigger = CreateTrigger();
+    this.creepResearchUpgradeTimer = CreateTimer();
     this.initialize();
   }
 
@@ -48,6 +51,28 @@ export class CreepManager {
     this.setupCustomCreeps().setupCustomCreepRespawn();
 
     return this;
+  }
+
+  setupCreepResearchUpgrade() {
+    TimerStart(this.creepResearchUpgradeTimer, CreepResearchUpgrade.INTERVAL, true, () => {
+      for (const player of this.creepPlayers) {
+        for (const upgrade of CreepResearchUpgrade.UPGRADES_TO_RESEARCH) {
+          SetPlayerTechResearched(
+            player, 
+            upgrade, 
+            Math.min(
+              CreepResearchUpgrade.MAX_LEVEL,
+              1 + 
+              GetPlayerTechCount(
+                player,
+                upgrade,
+                true,
+              )
+            )
+          )
+        }
+      }
+    });
   }
 
 
