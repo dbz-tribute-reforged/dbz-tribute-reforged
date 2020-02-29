@@ -8,6 +8,18 @@ export module SagaUpgradeNames {
   export const GETI_STAR = "GetiStar";
 }
 
+export module CreepResearchUpgrade {
+  export const INTERVAL = 60;
+  export const MAX_LEVEL = 50;
+  export const ATTACK_SPEED_HP_UPG = FourCC("R008");
+  export const ARMOR_UPG = FourCC("R009");
+
+  export const UPGRADES_TO_RESEARCH = [
+    ATTACK_SPEED_HP_UPG,
+    // ARMOR_UPG,
+  ]
+}
+
 export module Creep {
   export const ForestSpider = FourCC("n020");
   export const NamekianFrog = FourCC("n02P");

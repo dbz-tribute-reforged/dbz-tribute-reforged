@@ -451,9 +451,9 @@ export const AOEKnockbackComponents = [
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 2, 
+      speed: 1.5, 
       angle: 180, 
-      aoe: 250,
+      aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,

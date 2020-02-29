@@ -73,8 +73,9 @@ function tsMain() {
       if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {
         // anything that happens after hero picking is done, should be placed here
         sagaManager = SagaManager.getInstance();
-        tournamentManager = TournamentManager.getInstance();
+        tournamentManager = TournamentManager.getInstance().setupStandardTournaments();
         dragonBallsManager = DragonBallsManager.getInstance();
+        creepManager.setupCreepResearchUpgrade();
         DestroyTimer(GetExpiredTimer());
       }
     })

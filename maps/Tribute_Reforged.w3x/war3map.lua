@@ -2965,8 +2965,19 @@ function Trig_Android_17_DBS_Power_Blitz_Barrage_Conditions()
     return true
 end
 
+function Trig_Android_17_DBS_Power_Blitz_Barrage_Func002C()
+    if (not (udg_TempInt > BlzGetAbilityIntegerLevelField(BlzGetUnitAbility(GetTriggerUnit(), FourCC("A0MW")), ABILITY_ILF_MANA_COST, 9))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Android_17_DBS_Power_Blitz_Barrage_Actions()
-    SetUnitManaBJ(GetTriggerUnit(), RMaxBJ(0.00, (GetUnitStateSwap(UNIT_STATE_MANA, GetTriggerUnit()) - (GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.33))))
+    udg_TempInt = (10000 + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetTriggerUnit()) * 0.30)))
+    if (Trig_Android_17_DBS_Power_Blitz_Barrage_Func002C()) then
+        BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(GetTriggerUnit(), FourCC("A0MW")), ABILITY_ILF_MANA_COST, 9, udg_TempInt)
+    else
+    end
 end
 
 function InitTrig_Android_17_DBS_Power_Blitz_Barrage()
@@ -4102,9 +4113,12 @@ function Trig_Upa_Javelin_Throw_Loop_Func001A()
                 UnitApplyTimedLifeBJ(2.00, FourCC("BTLF"), udg_TempUnit)
                 SaveUnitHandleBJ(udg_TempUnit, 5, udg_ID, udg_UpaJavelinHashtable)
                 GroupAddUnitSimple(udg_TempUnit2, udg_UpaJavelinGroup)
-                AddSpecialEffectLocBJ(udg_TempLoc2, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
+                AddSpecialEffectLocBJ(udg_TempLoc2, "DTBlueNoRingWhite.mdx")
+                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                 DestroyEffectBJ(GetLastCreatedEffectBJ())
-                AddSpecialEffectTargetUnitBJ("overhead", udg_TempUnit2, "Abilities\\Spells\\Items\\AIsp\\SpeedTarget.mdl")
+                AddSpecialEffectLocBJ(udg_TempLoc2, "Abilities\\Spells\\Human\\Defend\\DefendCaster.mdl")
+                DestroyEffectBJ(GetLastCreatedEffectBJ())
+                AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIsp\\SpeedTarget.mdl")
                 DestroyEffectBJ(GetLastCreatedEffectBJ())
             else
                                 udg_TempBool = IsTerrainPathable(GetLocationX(udg_TempLoc2), GetLocationY(udg_TempLoc2), PATHING_TYPE_WALKABILITY)
@@ -8295,14 +8309,14 @@ function InitTrig_Tournament_Trophy_Use_Trophy()
 end
 
 function Trig_Tournament_Trophy_Give_Reward_Func012Func001C()
-    if (not (I2R(udg_ScoreboardTimeMinutes) < 22.00)) then
+    if (not (I2R(udg_ScoreboardTimeMinutes) < 23.00)) then
         return false
     end
     return true
 end
 
 function Trig_Tournament_Trophy_Give_Reward_Func012C()
-    if (not (I2R(udg_ScoreboardTimeMinutes) < 11.00)) then
+    if (not (I2R(udg_ScoreboardTimeMinutes) < 13.00)) then
         return false
     end
     return true
