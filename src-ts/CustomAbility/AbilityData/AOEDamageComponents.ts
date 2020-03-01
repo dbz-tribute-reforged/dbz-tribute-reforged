@@ -1135,7 +1135,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.85,
+      multiplier: BASE.DFIST_DPS * 0.8,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,

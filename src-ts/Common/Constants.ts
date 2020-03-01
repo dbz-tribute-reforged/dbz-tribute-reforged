@@ -56,4 +56,5 @@ export module Constants {
   export const floatingTextVisionRange: number = 3000;
   export const beamSpawnOffset: number = 40;
   export const gameStartIndicatorUnit: number = FourCC("hkni");
+  export const silenceBuff: number = FourCC("BNsi");
 }

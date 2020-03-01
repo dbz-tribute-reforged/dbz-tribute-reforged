@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.37c
+DBZ Tribute Reforged 0.37d
 }
 
 STRING 4
@@ -22762,6 +22762,12 @@ STRING 3717
 // Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 gives you more power and more control
+}
+
+STRING 3719
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
 STRING 3720
@@ -64659,7 +64665,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 1.Mar.20
+This map is under active development - 2.Mar.20
 }
 
 STRING 10653
@@ -73135,12 +73141,6 @@ STRING 12062
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 12063
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
 STRING 12064
