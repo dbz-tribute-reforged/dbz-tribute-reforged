@@ -9,7 +9,7 @@ export module SagaUpgradeNames {
 }
 
 export module CreepResearchUpgrade {
-  export const INTERVAL = 45;
+  export const INTERVAL = 90;
   export const MAX_LEVEL = 50;
   export const ATTACK_SPEED_HP_UPG = FourCC("R008");
   export const ARMOR_UPG = FourCC("R009");

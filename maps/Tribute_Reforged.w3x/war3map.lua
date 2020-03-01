@@ -3469,6 +3469,13 @@ function Trig_Raditz_Double_Sundae_Conditions()
     return true
 end
 
+function Trig_Raditz_Double_Sundae_Func020C()
+    if (not (udg_TempInt > BlzGetAbilityIntegerLevelField(BlzGetUnitAbility(udg_TempUnit, FourCC("A0MH")), ABILITY_ILF_MANA_COST, 2))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Raditz_Double_Sundae_Actions()
     udg_TempUnit = GetTriggerUnit()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TempUnit)
@@ -3488,6 +3495,11 @@ function Trig_Raditz_Double_Sundae_Actions()
     AddSpecialEffectTargetUnitBJ("origin", udg_TempUnit, "Abilities\\Spells\\NightElf\\Starfall\\StarfallCaster.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
+    udg_TempInt = (4000 + R2I((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_TempUnit) * 0.08)))
+    if (Trig_Raditz_Double_Sundae_Func020C()) then
+        BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_TempUnit, FourCC("A0MH")), ABILITY_ILF_MANA_COST, 2, udg_TempInt)
+    else
+    end
 end
 
 function InitTrig_Raditz_Double_Sundae()

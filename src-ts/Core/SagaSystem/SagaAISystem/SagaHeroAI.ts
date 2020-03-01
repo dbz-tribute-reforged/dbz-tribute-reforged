@@ -403,14 +403,19 @@ export class SagaHeroAI {
     abilityInput: CustomAbilityInput,
     showText: boolean = true,
   ) {
-    if (showText && this.sagaCustomHero.canCastAbility(abilityName, abilityInput)) {
-      TextTagHelper.showPlayerColorTextOnUnit(
-        abilityName, 
-        GetPlayerId(this.owningPlayer),
-        this.sagaUnit
-      )
+    if (
+      this.sagaCustomHero.canCastAbility(abilityName, abilityInput) && 
+      !UnitHasBuffBJ(this.sagaUnit, Constants.silenceBuff)
+    ) {
+      if (showText) {
+        TextTagHelper.showPlayerColorTextOnUnit(
+          abilityName, 
+          GetPlayerId(this.owningPlayer),
+          this.sagaUnit
+        )
+      }
+      this.sagaCustomHero.useAbility(abilityName, abilityInput);
     }
-    this.sagaCustomHero.useAbility(abilityName, abilityInput);
   }
 
   // dodge distance and AOE are fixed for now
