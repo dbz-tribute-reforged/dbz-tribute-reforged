@@ -823,6 +823,14 @@ STRING 127
 [|cffffff00S|r] Choose Piccolo
 }
 
+STRING 128
+// Abilities: A0OO (Upa's Rage 1), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OO,DataA1,%>% 
+}
+
 STRING 129
 // Units: H00R (Namekian), Tip (Tooltip - Basic)
 {
@@ -1850,6 +1858,14 @@ STRING 298
 // Units: H01V (Android), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00Q|r] Choose Android 13
+}
+
+STRING 299
+// Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
 }
 
 STRING 300
@@ -13382,11 +13398,12 @@ STRING 2161
 Type "r" to revert.
 Transformations:
 [lvl 15]  1.25x "fp"
-[lvl 30]  1.50x "fp"
+[lvl 30]  1.50x "fp" [unlocks Upa's Rage 1 & 2]
 [lvl 50]  1.75x "fp"
-[lvl 85]  2.00x "fp"
+[lvl 90]  2.00x "fp" [unlocks Upa's Rage 3]
 [lvl 125] 2.25x "fp"
-[lvl 150] 2.40x "rage" [unlocks Upa's Rage]
+[lvl 150] 2.40x "rage" [unlocks Upa's Rage 4]
+[lvl 250] 2.50x "rage" [unlocks Upa's Rage 5]
 }
 
 STRING 2162
@@ -22012,13 +22029,13 @@ gives you more power and more control
 }
 
 STRING 3596
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 gives you more power and more control
 }
 
 STRING 3597
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 gives you more power and more control
 }
@@ -22742,18 +22759,6 @@ gives you more power and more control
 }
 
 STRING 3717
-// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
-{
-gives you more power and more control
-}
-
-STRING 3718
-// Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
-{
-gives you more power and more control
-}
-
-STRING 3719
 // Abilities: A06P (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
 gives you more power and more control
@@ -43502,6 +43507,14 @@ STRING 7159
 Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: agi*lvl*2+100|r|n|cff00FFFFColldown:20s|r
 }
 
+STRING 7160
+// Abilities: A0OQ (Upa's Rage 3), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OQ,DataA1,%>% 
+}
+
 STRING 7161
 // Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
@@ -54501,11 +54514,9 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8981
-// Abilities: A0OO (Upa's Rage 1), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
-Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
-|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
-|cffffcc00Bonus Attack Damage:|r +<A0OO,DataA1,%>% 
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds <A02N,DataA1,%>% extra damage.|r
 }
 
 STRING 8982
@@ -61223,6 +61234,14 @@ STRING 10100
 Half Human / Half Saiyan
 }
 
+STRING 10101
+// Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OR,DataA1,%>% 
+}
+
 STRING 10102
 // Units: H08L (Half Human / Half Saiyan), Awakentip (Tooltip - Awaken)
 {
@@ -61621,8 +61640,8 @@ STRING 10165
 {
 Transformations:
 [lvl 25]  1.50x "paparapapa"
-[lvl 90]  2.00x "paparapapa"
-[lvl 150] 2.50x "paparapapa"
+[lvl 90]  2.00x "paparapapa" [unlocks Majin Influence 2]
+[lvl 150] 2.50x "paparapapa" [unlocks Majin Influence 3]
 
 For Majin Buu type "release" at lvl 45.
 Majin Buu from Babidi gains lvl2 candy beam.
@@ -62510,6 +62529,14 @@ STRING 10311
 // Abilities: A084 (Gigantic Roar), Ubertip (Tooltip - Normal - Extended)
 {
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool10> seconds|r
+}
+
+STRING 10312
+// Abilities: A0OS (Upa's Rage 5), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0OS,DataA1,%>% 
 }
 
 STRING 10313
@@ -64580,7 +64607,6 @@ Triggers final battle
 
 STRING 10643
 {
-|cffffcc00=== Final Battle ===|r
 |cffff2020Some transformations have been disabled. Too slow!|r
 }
 
@@ -64598,8 +64624,7 @@ Final Battle
 
 STRING 10646
 {
-phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire, micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben
-anyone else i'm missing?
+phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire, micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, ?
 }
 
 STRING 10647
@@ -65741,6 +65766,12 @@ STRING 10831
 // Abilities: A0JP (Spirit Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 10832
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
+{
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds <A02N,DataA2,%>% extra damage.|r
 }
 
 STRING 10833
@@ -70564,11 +70595,9 @@ This unit has mastered ultra instinct: it will dodge all incoming attacks and al
 }
 
 STRING 11637
-// Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
 {
-Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
-|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
-|cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
+This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds <A02N,DataA3,%>% extra damage.|r
 }
 
 STRING 11638
@@ -73642,30 +73671,6 @@ STRING 12150
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
 }
 
-STRING 12151
-// Abilities: A0OQ (Upa's Rage 3), Ubertip (Tooltip - Normal - Extended)
-{
-Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
-|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
-|cffffcc00Bonus Attack Damage:|r +<A0OQ,DataA1,%>% 
-}
-
-STRING 12152
-// Abilities: A0OR (Upa's Rage 4), Ubertip (Tooltip - Normal - Extended)
-{
-Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
-|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
-|cffffcc00Bonus Attack Damage:|r +<A0OR,DataA1,%>% 
-}
-
-STRING 12153
-// Abilities: A0OS (Upa's Rage 5), Ubertip (Tooltip - Normal - Extended)
-{
-Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
-|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at level 5 resets it to level 1.|r
-|cffffcc00Bonus Attack Damage:|r +<A0OS,DataA1,%>% 
-}
-
 STRING 12154
 // Abilities: A0OO (Upa's Rage 1), Name (Name)
 {
@@ -73832,12 +73837,6 @@ STRING 12181
 // Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 7 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool7> seconds|r
-}
-
-STRING 12182
-// Abilities: A02N (Majin influence), Ubertip (Tooltip - Normal - Extended)
-{
-This unit is being influenced by Babidi. It has enhanced attack power, and anything killed while under this effect will add to Babidi's collected power.|n|n|cff00ff00Adds 75% extra damage.|r
 }
 
 STRING 12183

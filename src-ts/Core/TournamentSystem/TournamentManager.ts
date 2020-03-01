@@ -51,9 +51,23 @@ export class TournamentManager {
     return this;
   }
 
-  public setupStandardTournaments(): this {
-    const finalBattle = new FinalBattle();
-    this.tournaments.set(finalBattle.name, finalBattle);
+  public setupStandardTournaments(): this {  let numActivePlayers = 0;
+    for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+      let player = Player(i);
+      if (
+        IsPlayerSlotState(player, PLAYER_SLOT_STATE_PLAYING) &&
+        GetPlayerController(player) == MAP_CONTROL_USER && 
+        GetPlayerController(player) != MAP_CONTROL_COMPUTER
+      ) {
+        ++numActivePlayers;
+      }
+    }
+    if (numActivePlayers > 1) {
+      const finalBattle = new FinalBattle();
+      this.tournaments.set(finalBattle.name, finalBattle);
+    } else {
+      BJDebugMsg("|cffff2020Final battle disabled.|r");
+    }
 
     const budokai = new Budokai();
     this.tournaments.set(budokai.name, budokai);
@@ -83,7 +97,7 @@ export class TournamentManager {
       3,
       false,
     );
-    
+
     return this;
   }
 
