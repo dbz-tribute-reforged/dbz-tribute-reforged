@@ -13,8 +13,8 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
     )],
     ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(-2500, 27000))],
-    ["Nicky", new SagaUnit(FourCC("O003"), 2, 5, 5, 5, new Vector2D(-1000, 26000))],
-    ["Sansho", new SagaUnit(FourCC("N00C"), 4, 10, 5, 5, new Vector2D(-3500, 26000))],
+    ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(-1000, 26000))],
+    ["Sansho", new SagaUnit(FourCC("N00C"), 3, 10, 5, 5, new Vector2D(-3500, 26000))],
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],

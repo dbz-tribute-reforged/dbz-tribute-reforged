@@ -10,6 +10,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_SOURCE_FORWARD = 1;
   static readonly DIRECTION_UNIT_TARGET = 2;
   static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
+  static readonly DIRECTION_CASTER_POINT = 4;
 
   static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0025;
 
@@ -60,6 +61,9 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         if (input.castUnit){
           dashTargetPoint = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
         }
+        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+      } else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
+        dashTargetPoint = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
         direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
       }
 

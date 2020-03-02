@@ -177,6 +177,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0EU'), AbilityNames.SuperJanemba.COSMIC_ILLUSION],
     [FourCC('A0O4'), AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN],
 
+    // king k rool
+    [FourCC('A0OT'), AbilityNames.KingKRool.BELLY_ARMOR],
+    [FourCC('A0IV'), AbilityNames.KingKRool.KROWN_TOSS],
+    [FourCC('A0IW'), AbilityNames.KingKRool.KHARGE],
+    [FourCC('A0IU'), AbilityNames.KingKRool.HAND_KANNON],
+    [FourCC('A0IX'), AbilityNames.KingKRool.MONKEY_SMASHER],
+    [FourCC('A0OU'), AbilityNames.KingKRool.BLAST_O_MATIC],
+    [FourCC('A0OV'), AbilityNames.KingKRool.KINGS_THRONE],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

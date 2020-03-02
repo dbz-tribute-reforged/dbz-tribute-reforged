@@ -247,7 +247,11 @@ export function CustomPlayerTest() {
   
       if (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) {
         // show ability name on activation
-        TextTagHelper.showPlayerColorTextOnUnit(GetAbilityName(abilityId), playerId, GetTriggerUnit());
+        TextTagHelper.showPlayerColorTextOnUnit(
+          GetAbilityName(abilityId), 
+          playerId, 
+          GetTriggerUnit()
+        );
       }
   
       const spellName = abilityCodesToNames.get(abilityId);
@@ -693,7 +697,10 @@ export function CustomPlayerTest() {
       killerName && deadName && 
       GetPlayerName(killPlayer).length > 1 &&
       GetPlayerName(deadPlayer).length > 1 &&
-      killPlayerId >= 0 && killPlayerId < Constants.maxPlayers &&
+      killPlayerId >= 0 && (
+        killPlayerId < Constants.maxPlayers ||
+        killPlayer == Constants.sagaPlayer
+      ) &&
       deadPlayerId >= 0 && deadPlayerId < Constants.maxActivePlayers
       // (
       //   killPlayer == Constants.sagaPlayer || 
@@ -768,7 +775,6 @@ export function CustomPlayerTest() {
   if (numActivePlayers == 1) {
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
-
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);

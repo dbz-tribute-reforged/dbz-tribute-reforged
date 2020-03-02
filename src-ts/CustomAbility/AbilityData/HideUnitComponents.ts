@@ -6,4 +6,11 @@ export const HideUnitComponents = [
     endTick: -1,
     preventMovement: true,
   },
+  {
+    name: "hide unit monkey smasher", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    preventMovement: false,
+  },
 ];

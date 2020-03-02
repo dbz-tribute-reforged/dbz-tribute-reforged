@@ -2980,6 +2980,200 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.KingKRool.BELLY_ARMOR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolBellyArmor.blp",
+      disabled: "BTNKingKRoolBellyArmor.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.BELLY_ARMOR,
+      body: 
+        AbilityNames.KingKRool.BELLY_ARMOR
+    },
+    components: [
+      { name: "dash ground forward belly armor" },
+      { name: "block belly armor" },
+      { name: "knockback belly armor" },
+      { name: "sfx belly armor" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.KROWN_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 110,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKroolCrownToss.blp",
+      disabled: "BTNKingKroolCrownToss.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.KROWN_TOSS,
+      body: 
+        AbilityNames.KingKRool.KROWN_TOSS
+    },
+    components: [
+      { name: "beam krown toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.KHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKroolCharge.blp",
+      disabled: "BTNKingKroolCharge.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.KHARGE,
+      body: 
+        AbilityNames.KingKRool.KHARGE
+    },
+    components: [
+      { name: "dash ground point kharge" },
+      { name: "damage kharge explosion" },
+      { name: "debuff stun kharge" },
+      { name: "sfx kharge" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.HAND_KANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 83,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolCannon.blp",
+      disabled: "BTNKingKRoolCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.HAND_KANNON,
+      body: 
+        AbilityNames.KingKRool.HAND_KANNON
+    },
+    components: [
+      { name: "multi hand kannon" },
+      { name: "beam hand kannon" },
+      { name: "sfx hand kannon gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.MONKEY_SMASHER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 88,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMonkeySmasher.blp",
+      disabled: "BTNMonkeySmasher.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.MONKEY_SMASHER,
+      body: 
+        AbilityNames.KingKRool.MONKEY_SMASHER
+    },
+    components: [
+      { name: "beam monkey smasher" },
+      { name: "sfx hand kannon gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.BLAST_O_MATIC,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolBlastOMatic.blp",
+      disabled: "BTNKingKRoolBlastOMatic.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.BLAST_O_MATIC,
+      body: 
+        AbilityNames.KingKRool.BLAST_O_MATIC
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi blast-o-matic" },
+      { name: "damage blast-o-matic charging" },
+      { name: "sfx blast-o-matic caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.KINGS_THRONE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 660,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolKingsThrone.blp",
+      disabled: "BTNKingKRoolKingsThrone.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.KINGS_THRONE,
+      body: 
+        AbilityNames.KingKRool.KINGS_THRONE
+    },
+    components: [
+      { name: "spell amp kings throne" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,
