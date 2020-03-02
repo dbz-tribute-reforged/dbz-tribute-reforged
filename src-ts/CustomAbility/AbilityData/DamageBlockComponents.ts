@@ -716,6 +716,57 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
+    name: "block belly armor",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 100,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 2.0,
+    sfxList: [
+      {
+        model: "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
     name: "block energy absorption",
     repeatInterval: 1,
     startTick: 0,

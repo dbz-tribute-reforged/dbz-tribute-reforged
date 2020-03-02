@@ -223,7 +223,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Raditz.DOUBLE_SUNDAY,
       AbilityNames.Nappa.GIANT_STORM,
       AbilityNames.Moro.ENERGY_DRAIN,
-      AbilityNames.SuperJanemba.DEMONS_MARK, AbilityNames.SuperJanemba.DEMON_RUSH, AbilityNames.SuperJanemba.DEVIL_CLAW, AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT, 
+      AbilityNames.SuperJanemba.DEMONS_MARK, AbilityNames.SuperJanemba.DEMON_RUSH, AbilityNames.SuperJanemba.DEVIL_CLAW, AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
+      AbilityNames.KingKRool.BELLY_ARMOR, AbilityNames.KingKRool.KROWN_TOSS, 
     ]],
 
     // broly
@@ -297,5 +298,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.SuperJanemba.LIGHTNING_SHOWER_RAIN,
     ]],
     
+    // king k rool
+    [FourCC("E01D"), [
+      AbilityNames.KingKRool.BELLY_ARMOR,
+      AbilityNames.KingKRool.KROWN_TOSS,
+      AbilityNames.KingKRool.KHARGE,
+      AbilityNames.KingKRool.HAND_KANNON,
+      AbilityNames.KingKRool.MONKEY_SMASHER,
+      AbilityNames.KingKRool.KINGS_THRONE,
+    ]],
+    // blast-o-matic
+    [FourCC("E01U"), [
+      AbilityNames.KingKRool.BLAST_O_MATIC,
+    ]],
   ]
 )

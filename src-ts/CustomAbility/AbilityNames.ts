@@ -208,6 +208,16 @@ export module AbilityNames {
     export const LIGHTNING_SHOWER_RAIN = "Lightning Shower Rain";
   }
 
+  export module KingKRool {
+    export const BELLY_ARMOR = "Belly Armor";
+    export const KROWN_TOSS = "Krown Toss";
+    export const KHARGE = "Kharge";
+    export const HAND_KANNON = "Hand Kannon";
+    export const MONKEY_SMASHER = "Monkey Smasher";
+    export const KINGS_THRONE = "King's Throne";
+    export const BLAST_O_MATIC = "Blast-o-Matic";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

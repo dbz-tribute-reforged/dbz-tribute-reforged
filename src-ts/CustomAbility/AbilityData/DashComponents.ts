@@ -356,7 +356,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 20,
   },
   // last stand
   {
@@ -463,6 +463,58 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 50,
   },
+  // belly armor
+  {
+    name: "dash ground forward belly armor",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 8,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
+  },
+  // krown toss
+  {
+    name: "dash flying forward krown toss",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 50,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: true,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
+  },
+  {
+    name: "dash flying caster krown toss return",
+    repeatInterval: 1, 
+    startTick: 51,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    isFlying: true,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 63,
+  },
+  // kharge
+  {
+    name: "dash ground point kharge",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 35,
+  },
+  // ---
   // saga zanzo
   {
     name: "dash ground point zanzo saga",

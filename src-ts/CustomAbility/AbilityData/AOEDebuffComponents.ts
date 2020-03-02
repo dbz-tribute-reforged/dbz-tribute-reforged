@@ -99,4 +99,14 @@ export const AOEDebuffComponents = [
     aoe: 300,
     keepCasting: false, 
   },
+  {
+    name: "debuff stun kharge",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.STUN_ONE_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 200,
+    keepCasting: false, 
+  },
 ]
