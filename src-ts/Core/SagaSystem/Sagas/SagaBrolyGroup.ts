@@ -12,7 +12,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 20;
+    this.delay = 30;
     this.isLSS = false;
     this.auraLSS = GetLastCreatedEffectBJ();
   }
@@ -108,7 +108,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
 }
 
 export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
-  name: string = '[Movie] Broly -  Second Coming';
+  name: string = '[Movie] Broly - Second Coming';
 
   protected broly: unit | undefined;
   protected isLSS: boolean;
@@ -221,7 +221,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 30;
   }
 
   spawnSagaUnits(): void {
@@ -288,7 +288,7 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 120;
+    this.delay = 60;
     this.isLSS = false;
     this.auraLSS = GetLastCreatedEffectBJ();
   }

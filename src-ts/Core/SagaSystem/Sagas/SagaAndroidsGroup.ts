@@ -229,7 +229,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 60;
     this.stats = 100;
   }
 

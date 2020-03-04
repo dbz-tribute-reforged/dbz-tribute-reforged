@@ -27,60 +27,59 @@ export const sagaSystemConfig: SagaSystemConfig = {
   sagas: [
     // TestSaga,
     // TestSagaTwo,
-    DeadZoneSaga,
+    // main line
     RaditzSaga,
     VegetaSaga,
-    WheeloSaga,
-    TurlesSaga,
     NamekSaga,
     GinyuSaga,
-    LordSlugSaga,
     FriezaSaga,
-    GarlicJrSaga,
-    CoolerReturnSaga,
-    CoolerRevengeSaga,
     TrunksSaga,
     AndroidsSaga1,
     AndroidsSaga2,
-    Super13Saga,
     CellSaga,
     CellGamesSaga,
-    FutureAndroidsSaga,
-    FutureCellSaga,
-    BrolyDBZMovieSaga1,
-    BrolyDBZMovieSaga2,
-    BioBrolySaga,
-    BrolyDBSSaga,
-    BojackSaga,
     OtherWorldTournamentSaga,
     BabidiSaga,
     BuuSaga,
-    FutureBabidiSaga,
+    // movies
+    DeadZoneSaga,
+    WheeloSaga,
+    TurlesSaga,
+    LordSlugSaga,
+    GarlicJrSaga,
+    CoolerReturnSaga,
+    CoolerRevengeSaga,
+    Super13Saga,
+    BrolyDBZMovieSaga1,
+    BrolyDBZMovieSaga2,
+    BioBrolySaga,
     JanembaSaga,
     HirudegarnSaga,
-    BebiSaga,
-    Super17Saga,
-    ShadowDragonSaga1,
-    ShadowDragonSaga2,
+    // super branch
     BeerusSaga,
     WhisTrainingSaga,
     GoldenFriezaSaga,
     Universe6Saga,
+    BrolyDBSSaga,
+    // gt branch
+    BebiSaga,
+    Super17Saga,
+    ShadowDragonSaga1,
+    ShadowDragonSaga2,
+    // future branch
+    FutureAndroidsSaga,
+    FutureCellSaga,
+    BojackSaga,
+    FutureBabidiSaga,
     FTSuperSaga1,
     FTSuperSaga2,
   ],
 
   sagaDependencies: {
-    DeadZoneSaga: [],
+    // main branch
     RaditzSaga: [],
     VegetaSaga: [
       [ RaditzSaga, SagaState.Completed ],
-    ],
-    TurlesSaga: [
-      [ DeadZoneSaga, SagaState.Completed ],
-    ],
-    WheeloSaga: [
-      [ VegetaSaga, SagaState.Completed ],
     ],
     NamekSaga: [
       [ VegetaSaga, SagaState.Completed ],
@@ -88,21 +87,8 @@ export const sagaSystemConfig: SagaSystemConfig = {
     GinyuSaga: [
       [ NamekSaga, SagaState.Completed ],
     ],
-    LordSlugSaga: [
-      [ TurlesSaga, SagaState.Completed ],
-    ],
     FriezaSaga: [
       [ GinyuSaga, SagaState.Completed ],
-    ],
-    GarlicJrSaga: [
-      [ LordSlugSaga, SagaState.Completed ],
-    ],
-    CoolerRevengeSaga: [
-      [ GarlicJrSaga, SagaState.Completed ],
-    ],
-    CoolerReturnSaga: [
-      [ CoolerRevengeSaga, SagaState.Completed ],
-      [ FriezaSaga, SagaState.Completed ]
     ],
     TrunksSaga: [
       [ FriezaSaga, SagaState.Completed ],
@@ -116,30 +102,44 @@ export const sagaSystemConfig: SagaSystemConfig = {
     CellSaga: [
       [ AndroidsSaga1, SagaState.Completed ],
     ],
-    Super13Saga: [
-      [ AndroidsSaga1, SagaState.Completed ],
-    ],
-    BrolyDBZMovieSaga1: [
-      [ CellSaga, SagaState.Completed ],
-    ],
     CellGamesSaga: [
       [ CellSaga, SagaState.NotStarted ],
       [ CellSaga, SagaState.Completed ],
-    ],
-    FutureAndroidsSaga: [
-      [ CellSaga, SagaState.Completed ],
-    ],
-    FutureCellSaga: [
-      [ CellSaga, SagaState.Completed ],
-    ],
-    BojackSaga: [
-      [ FutureAndroidsSaga, SagaState.Completed ],
-      [ FutureCellSaga, SagaState.Completed ],
     ],
     OtherWorldTournamentSaga: [
       [ CellGamesSaga, SagaState.Completed ],
     ],
     BabidiSaga: [
+      [ CellSaga, SagaState.Completed ],
+    ],
+    BuuSaga: [
+      [ BabidiSaga, SagaState.Completed ],
+    ],
+    // z movie branch
+    DeadZoneSaga: [],
+    TurlesSaga: [
+      [ DeadZoneSaga, SagaState.Completed ],
+    ],
+    WheeloSaga: [
+      [ VegetaSaga, SagaState.Completed ],
+    ],
+    LordSlugSaga: [
+      [ TurlesSaga, SagaState.Completed ],
+    ],
+    GarlicJrSaga: [
+      [ LordSlugSaga, SagaState.Completed ],
+    ],
+    CoolerRevengeSaga: [
+      [ GarlicJrSaga, SagaState.Completed ],
+    ],
+    CoolerReturnSaga: [
+      [ CoolerRevengeSaga, SagaState.Completed ],
+      [ FriezaSaga, SagaState.Completed ]
+    ],
+    Super13Saga: [
+      [ CoolerReturnSaga, SagaState.Completed ],
+    ],
+    BrolyDBZMovieSaga1: [
       [ CellSaga, SagaState.Completed ],
     ],
     BrolyDBZMovieSaga2: [
@@ -148,19 +148,26 @@ export const sagaSystemConfig: SagaSystemConfig = {
     BioBrolySaga: [
       [ BrolyDBZMovieSaga2, SagaState.Completed ],
     ],
-    FutureBabidiSaga: [
-      [ FutureCellSaga, SagaState.Completed ],
-    ],
-    BuuSaga: [
-      [ BabidiSaga, SagaState.Completed ],
-    ],
     JanembaSaga: [
-      [ BabidiSaga, SagaState.Completed ],
+      [ BioBrolySaga, SagaState.Completed ],
     ],
     HirudegarnSaga: [
       [ JanembaSaga, SagaState.Completed ],
     ],
     // future branch
+    FutureAndroidsSaga: [
+      [ CellSaga, SagaState.Completed ],
+    ],
+    FutureCellSaga: [
+      [ FutureAndroidsSaga, SagaState.Completed ],
+    ],
+    BojackSaga: [
+      [ FutureAndroidsSaga, SagaState.Completed ],
+      [ FutureCellSaga, SagaState.Completed ],
+    ],
+    FutureBabidiSaga: [
+      [ BojackSaga, SagaState.Completed ],
+    ],
     FTSuperSaga1: [
       [ FutureBabidiSaga, SagaState.Completed ],
     ],

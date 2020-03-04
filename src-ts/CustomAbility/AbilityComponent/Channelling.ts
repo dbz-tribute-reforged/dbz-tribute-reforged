@@ -7,7 +7,9 @@ import { UnitHelper } from "Common/UnitHelper";
 export class Channelling implements AbilityComponent, Serializable<Channelling> {
 
   protected isChannelling: boolean;
+  protected finishedChannel: boolean;
   protected cancelChannelTrigger: trigger;
+
 
   constructor(
     public name: string = "Channelling",
@@ -17,6 +19,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
     public ticksFromEnd: number = 1,
   ) {
     this.isChannelling = false;
+    this.finishedChannel = false;
     this.cancelChannelTrigger = CreateTrigger();
   }
 
@@ -30,6 +33,7 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.isChannelling) {
       this.isChannelling = true;
+      this.finishedChannel = false;
       DestroyTrigger(this.cancelChannelTrigger);
       this.cancelChannelTrigger = CreateTrigger();
 
@@ -40,13 +44,25 @@ export class Channelling implements AbilityComponent, Serializable<Channelling> 
       TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_DEATH);
       // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_CHANNEL);
       // TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_ENDCAST);
+      
+      TriggerRegisterUnitEvent(this.cancelChannelTrigger, input.caster.unit, EVENT_UNIT_SPELL_ENDCAST);
+      // TriggerAddCondition(this.cancelChannelTrigger, Condition(() => {
+      //   if (GetSpellAbilityId() == input.abilityId) {
+      //     this.finishedChannel = true;
+      //   }
+      //   return false;
+      // }))
 
       TriggerAddAction(this.cancelChannelTrigger, () => {
-        this.forceTerminateAbility(ability);
+        this.finishedChannel = true;
       })
     }
 
     if (UnitHelper.isUnitStunned(input.caster.unit)) {
+      this.finishedChannel = true;
+    }
+
+    if (this.isChannelling && this.finishedChannel) {
       this.forceTerminateAbility(ability);
     }
 

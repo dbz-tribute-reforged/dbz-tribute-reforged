@@ -812,7 +812,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS,
+    beamHpMult: BASE.KAME_DPS * 0.8,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 0,
     aoe: 300,
@@ -2086,7 +2086,7 @@ export const BeamComponents = [
   { 
     name: "beam hand kannon",
     repeatInterval: 1,
-    startTick: 30,
+    startTick: 0,
     endTick: -1,
     beamHpMult: BASE.KAME_DPS * 1.4,
     beamHpAttribute: bj_HEROSTAT_STR,

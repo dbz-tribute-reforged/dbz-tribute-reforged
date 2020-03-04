@@ -499,7 +499,7 @@ gg_trg_Transformations_Androids_13 = nil
 gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
 gg_trg_Transformations_Broly = nil
-gg_trg_Broly_Bio_Skin = nil
+gg_trg_Broly_Bio_Skin_Pickup = nil
 gg_trg_Transformations_Babidi = nil
 gg_trg_Super_Buu_to_Kid_Buu = nil
 gg_trg_Kid_Buu_Bonus_Ability = nil
@@ -561,6 +561,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Broly_Bio_Skin_Drop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -4552,11 +4553,11 @@ function Trig_KKR_Kings_Throne_Actions()
     SaveRealBJ(20.00, 9, udg_ID, udg_StatMultHashtable)
     GroupAddUnitSimple(udg_TempUnit, udg_KingsThroneUnitGroup)
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
-    udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 64.00, (180.00 + GetUnitFacing(udg_TempUnit)))
+    udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 90.00, (180.00 + GetUnitFacing(udg_TempUnit)))
     AddSpecialEffectLocBJ(udg_TempLoc2, "Doodads\\Cityscape\\Props\\Throne\\Throne.mdl")
     udg_TempSpecialEffect = GetLastCreatedEffectBJ()
     SaveEffectHandleBJ(udg_TempSpecialEffect, 4, udg_ID, udg_SummonsHashtable)
-    BlzSetSpecialEffectScale(udg_TempSpecialEffect, 2.00)
+    BlzSetSpecialEffectScale(udg_TempSpecialEffect, 3.00)
     BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, 75, 25)
     BlzSetSpecialEffectYaw(udg_TempSpecialEffect, (GetUnitFacing(udg_TempUnit) * (3.14 / 180.00)))
         RemoveLocation(udg_TempLoc2)
@@ -4571,14 +4572,18 @@ function InitTrig_KKR_Kings_Throne()
     TriggerAddAction(gg_trg_KKR_Kings_Throne, Trig_KKR_Kings_Throne_Actions)
 end
 
-function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002C()
-    if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
-        return false
-    end
+function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func003C()
     if (not (ModuloInteger(udg_TempInt, 33) == 0)) then
         return false
     end
     if (not (udg_TempInt > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002C()
+    if (not (LoadIntegerBJ(1, udg_ID, udg_SummonsHashtable) == 1)) then
         return false
     end
     if (not (udg_TempInt <= 165)) then
@@ -4607,22 +4612,27 @@ function Trig_KKR_Kings_Throne_Loop_Func001A()
     else
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
         if (Trig_KKR_Kings_Throne_Loop_Func001Func004Func002C()) then
-            udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
-            AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
-            BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
-            DestroyEffectBJ(GetLastCreatedEffectBJ())
-                        RemoveLocation(udg_TempLoc)
-            udg_StatMultStr = 0.00
-            udg_StatMultAgi = 0.00
-            udg_StatMultInt = 0.00
-            udg_StatMultReal = (2.50 + (0.08 * I2R((udg_TempInt // 33))))
-            udg_StatMultReal = RMinBJ(3.20, udg_StatMultReal)
-            udg_TransformationSFXString = "AuraKaox10.mdx"
-            TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+            if (Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func003C()) then
+                udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
+                AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
+                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 4.00)
+                DestroyEffectBJ(GetLastCreatedEffectBJ())
+                                RemoveLocation(udg_TempLoc)
+                udg_StatMultStr = 0.00
+                udg_StatMultAgi = 0.00
+                udg_StatMultInt = 0.00
+                udg_StatMultReal = (2.50 + (0.10 * I2R((udg_TempInt // 33))))
+                udg_StatMultReal = RMinBJ(3.20, udg_StatMultReal)
+                udg_TransformationSFXString = "AuraKaox10.mdx"
+                TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+            else
+            end
             TriggerExecute(gg_trg_King_K_Rool_Get_Size)
-            udg_KKRSize = (udg_KKRSize + (8.00 * I2R((udg_TempInt // 33))))
+            udg_KKRSize = (udg_KKRSize + (0.50 * I2R((udg_TempInt + 0))))
             SetUnitScalePercent(udg_StatMultUnit, udg_KKRSize, udg_KKRSize, udg_KKRSize)
             SetUnitTimeScalePercent(udg_StatMultUnit, udg_KKRSize)
+            udg_TempSpecialEffect = LoadEffectHandleBJ(4, udg_ID, udg_SummonsHashtable)
+            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (3.00 + (0.01 * I2R(udg_TempInt))))
         else
         end
     end
@@ -7163,15 +7173,15 @@ function Trig_Hints_Init_Actions()
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Saga stats are shared! All nearby allies gain 100% of the reward stats. You have nothing to lose by doing sagas together!"
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "Beam clashes exist! Firing a beam spell at an enemy beam will stop them in their tracks!"
+    udg_HintMessages[udg_NumHints] = "Beam clashes exist! Firing a beam spell at an enemy beam will stop them in their tracks. The longer a clash, the less damage you take!"
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "There are multiple food vendors located around the map that sell useful non-combat consumable regen items."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "For each 1000 agility you have, you will receive +1 base armor."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 34th minute. You will receive 2 separate warnings before it starts, so make sure to prepare beforehand."
+    udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 35th minute. You will receive 2 separate warnings before it starts, so make sure to prepare beforehand."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "The longer a beam clash lasts the less damage that beam will deal to heroes."
+    udg_HintMessages[udg_NumHints] = "If your agility is greater than your strength, your dash abilities (e.g Zanzo Dash) will have higher speed."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "You can revert an enemy player who has gone Oozaru by cutting off their tail. The tail can only be damaged from behind."
     udg_NumHints = (udg_NumHints + 1)
@@ -8743,10 +8753,10 @@ function Trig_Tournament_Trophy_Give_Reward_Actions()
         RemoveLocation(udg_TempLoc)
         DestroyForce(udg_TempPlayerGroup)
     if (Trig_Tournament_Trophy_Give_Reward_Func013C()) then
-                AddHeroXP(udg_StatMultUnit, 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit)), true)
+                AddHeroXP(udg_StatMultUnit, 25 * (1 + GetHeroLevel(udg_StatMultUnit)), true)
     else
         if (Trig_Tournament_Trophy_Give_Reward_Func013Func001C()) then
-                        AddHeroXP(udg_StatMultUnit, 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit)), true)
+                        AddHeroXP(udg_StatMultUnit, 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit)), true)
         else
                         AddHeroXP(udg_StatMultUnit, 25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit)), true)
         end
@@ -9375,7 +9385,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
         SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
                 SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
-        udg_TempReal = RMinBJ(140.00, (20.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.75)))
+        udg_TempReal = RMinBJ(140.00, (30.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.60)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
         SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
                 udg_TempLoc = Location(GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
@@ -15065,6 +15075,13 @@ function Trig_Transformations_Broly_Func020Func002Func002C()
     return true
 end
 
+function Trig_Transformations_Broly_Func020Func002Func003C()
+    if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I02E")) == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Broly_Func020Func002C()
     if (not Trig_Transformations_Broly_Func020Func002Func001C()) then
         return false
@@ -15167,6 +15184,11 @@ function Trig_Transformations_Broly_Actions()
                     end
                 end
             end
+            if (Trig_Transformations_Broly_Func020Func002Func003C()) then
+                                udg_TransformationID = FourCC('U008')
+                BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+            else
+            end
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AX"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0N1"), udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0AY"), udg_TransformationPlayer)
@@ -15187,7 +15209,7 @@ function InitTrig_Transformations_Broly()
     TriggerAddAction(gg_trg_Transformations_Broly, Trig_Transformations_Broly_Actions)
 end
 
-function Trig_Broly_Bio_Skin_Conditions()
+function Trig_Broly_Bio_Skin_Pickup_Conditions()
     if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H00M"))) then
         return false
     end
@@ -15197,16 +15219,38 @@ function Trig_Broly_Bio_Skin_Conditions()
     return true
 end
 
-function Trig_Broly_Bio_Skin_Actions()
+function Trig_Broly_Bio_Skin_Pickup_Actions()
         udg_TransformationID = FourCC('U008')
     BlzSetUnitSkin(GetTriggerUnit(), udg_TransformationID)
 end
 
-function InitTrig_Broly_Bio_Skin()
-    gg_trg_Broly_Bio_Skin = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Broly_Bio_Skin, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    TriggerAddCondition(gg_trg_Broly_Bio_Skin, Condition(Trig_Broly_Bio_Skin_Conditions))
-    TriggerAddAction(gg_trg_Broly_Bio_Skin, Trig_Broly_Bio_Skin_Actions)
+function InitTrig_Broly_Bio_Skin_Pickup()
+    gg_trg_Broly_Bio_Skin_Pickup = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Broly_Bio_Skin_Pickup, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerAddCondition(gg_trg_Broly_Bio_Skin_Pickup, Condition(Trig_Broly_Bio_Skin_Pickup_Conditions))
+    TriggerAddAction(gg_trg_Broly_Bio_Skin_Pickup, Trig_Broly_Bio_Skin_Pickup_Actions)
+end
+
+function Trig_Broly_Bio_Skin_Drop_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H00M"))) then
+        return false
+    end
+    if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I02E"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Broly_Bio_Skin_Drop_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Temp_Skin_Revert)
+end
+
+function InitTrig_Broly_Bio_Skin_Drop()
+    gg_trg_Broly_Bio_Skin_Drop = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Broly_Bio_Skin_Drop, EVENT_PLAYER_UNIT_DROP_ITEM)
+    TriggerAddCondition(gg_trg_Broly_Bio_Skin_Drop, Condition(Trig_Broly_Bio_Skin_Drop_Conditions))
+    TriggerAddAction(gg_trg_Broly_Bio_Skin_Drop, Trig_Broly_Bio_Skin_Drop_Actions)
 end
 
 function Trig_Transformations_Babidi_Func010C()
@@ -18758,7 +18802,7 @@ function InitTrig_Transformations_King_K_Rool()
 end
 
 function Trig_King_K_Rool_Get_Size_Actions()
-    udg_KKRSize = (100.00 + RMaxBJ(0.00, (3.20 * SquareRoot(I2R(GetHeroLevel(udg_StatMultUnit))))))
+    udg_KKRSize = (100.00 + RMaxBJ(0.00, (0.22 * I2R(GetHeroLevel(udg_StatMultUnit)))))
 end
 
 function InitTrig_King_K_Rool_Get_Size()
@@ -19102,9 +19146,9 @@ function Trig_Saga_Unit_Loop_Func002A()
         udg_TempReal3 = (udg_TempReal3 / I2R(udg_TempInt3))
         if (Trig_Saga_Unit_Loop_Func002Func002Func019C()) then
             if (Trig_Saga_Unit_Loop_Func002Func002Func019Func002C()) then
-                udg_TempReal = 120.00
-                udg_TempReal2 = 120.00
-                udg_TempReal3 = 120.00
+                udg_TempReal = 180.00
+                udg_TempReal2 = 180.00
+                udg_TempReal3 = 180.00
             else
             end
             udg_TempReal4 = (((0.60 + (0.08 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
@@ -19126,9 +19170,9 @@ function Trig_Saga_Unit_Loop_Func002A()
             end
         else
             if (Trig_Saga_Unit_Loop_Func002Func002Func019Func001C()) then
-                udg_TempReal = 100.00
-                udg_TempReal2 = 100.00
-                udg_TempReal3 = 100.00
+                udg_TempReal = 150.00
+                udg_TempReal2 = 150.00
+                udg_TempReal3 = 150.00
             else
             end
             udg_TempReal4 = (((0.00 + (0.01 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.07)) * 1)
@@ -19139,6 +19183,8 @@ function Trig_Saga_Unit_Loop_Func002A()
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit, bj_MODIFYMETHOD_SET, R2I(udg_TempReal))
         SetUnitMoveSpeed(udg_TempUnit, RMinBJ(400.00, (350.00 + (0.50 * I2R(GetHeroLevel(udg_TempUnit))))))
+        udg_StatMultUnit = udg_TempUnit
+        TriggerExecute(gg_trg_Base_Armor_Set)
     else
     end
 end
@@ -20020,7 +20066,8 @@ function InitCustomTriggers()
     InitTrig_Transformations_Androids_13_14_15()
     InitTrig_Transformations_Androids_Super_13()
     InitTrig_Transformations_Broly()
-    InitTrig_Broly_Bio_Skin()
+    InitTrig_Broly_Bio_Skin_Pickup()
+    InitTrig_Broly_Bio_Skin_Drop()
     InitTrig_Transformations_Babidi()
     InitTrig_Super_Buu_to_Kid_Buu()
     InitTrig_Kid_Buu_Bonus_Ability()

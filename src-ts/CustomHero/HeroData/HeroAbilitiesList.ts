@@ -304,6 +304,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.KingKRool.KROWN_TOSS,
       AbilityNames.KingKRool.KHARGE,
       AbilityNames.KingKRool.HAND_KANNON,
+      AbilityNames.KingKRool.KANNONBLAST,
       AbilityNames.KingKRool.MONKEY_SMASHER,
       AbilityNames.KingKRool.KINGS_THRONE,
     ]],
