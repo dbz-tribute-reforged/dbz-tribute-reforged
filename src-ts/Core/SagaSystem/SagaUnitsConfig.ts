@@ -20,7 +20,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
     // ["Raditz", new SagaUnit(FourCC("U01D"), 10, 90, 60, 90, new Vector2D(8000, 5000))],
     // ["Raditz", new SagaUnit(FourCC("U01D"), 10, 90, 60, 90, new Vector2D(8800, 1400))],
-    ["Raditz", new SagaUnit(FourCC("H08U"), 10, 90, 60, 90, new Vector2D(8800, 1700), 
+    ["Raditz", new SagaUnit(FourCC("H08U"), 12, 90, 60, 90, new Vector2D(8800, 1700), 
       [
         SagaAbilities.Raditz.DOUBLE_SUNDAY, 
         SagaAbilities.Raditz.SATURDAY_CRASH

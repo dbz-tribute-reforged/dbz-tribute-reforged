@@ -12,7 +12,9 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_LAST_CAST_UNIT_TARGET = 3;
   static readonly DIRECTION_CASTER_POINT = 4;
 
-  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0025;
+  static readonly AGI_TO_BONUS_SPEED_PERCENT = 0.0015 * 0.01;
+  static readonly MINIMUM_STR_AGI_RATIO = 0.75;
+  static readonly MAXIMUM_AGI_DISTANCE_MULTIPLIER = 3.0;
 
   static readonly MIN_DISTANCE_FROM_PREVIOUS = 10;
 
@@ -71,12 +73,20 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
       let distanceToMove = this.distance;
       if (IsUnitType(source, UNIT_TYPE_HERO) && this.angleOffset != 180) {
+        const sourceAgi = GetHeroAgi(source, true);
+        const bonusAgiSpeed = 1 + sourceAgi * Dash.AGI_TO_BONUS_SPEED_PERCENT;
+        const bonusAgiToStrRatioSpeed = Math.max(
+          Dash.MINIMUM_STR_AGI_RATIO,
+          -0.1 + Math.min(
+            bonusAgiSpeed,
+            sourceAgi / Math.max(1, GetHeroStr(source, true))
+          )
+        );
+        
         distanceToMove = distanceToMove * 
           Math.min(
-            3.0,
-            (
-              1 + GetHeroAgi(source, true) * Dash.AGI_TO_BONUS_SPEED_PERCENT * 0.01
-            )
+            Dash.MAXIMUM_AGI_DISTANCE_MULTIPLIER, 
+            bonusAgiSpeed * bonusAgiToStrRatioSpeed
           );
       }
 

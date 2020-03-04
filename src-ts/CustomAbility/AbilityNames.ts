@@ -213,6 +213,7 @@ export module AbilityNames {
     export const KROWN_TOSS = "Krown Toss";
     export const KHARGE = "Kharge";
     export const HAND_KANNON = "Hand Kannon";
+    export const KANNONBLAST = "Kannonblast";
     export const MONKEY_SMASHER = "Monkey Smasher";
     export const KINGS_THRONE = "King's Throne";
     export const BLAST_O_MATIC = "Blast-o-Matic";

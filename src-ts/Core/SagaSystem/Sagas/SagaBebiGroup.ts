@@ -11,7 +11,7 @@ export class BebiSaga extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.delay = 120;
+    this.delay = 90;
   }
 
   spawnSagaUnits(): void {

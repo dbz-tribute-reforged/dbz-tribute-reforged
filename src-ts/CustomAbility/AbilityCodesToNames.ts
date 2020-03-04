@@ -182,6 +182,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0IV'), AbilityNames.KingKRool.KROWN_TOSS],
     [FourCC('A0IW'), AbilityNames.KingKRool.KHARGE],
     [FourCC('A0IU'), AbilityNames.KingKRool.HAND_KANNON],
+    [FourCC('A0OW'), AbilityNames.KingKRool.KANNONBLAST],
     [FourCC('A0IX'), AbilityNames.KingKRool.MONKEY_SMASHER],
     [FourCC('A0OU'), AbilityNames.KingKRool.BLAST_O_MATIC],
     [FourCC('A0OV'), AbilityNames.KingKRool.KINGS_THRONE],

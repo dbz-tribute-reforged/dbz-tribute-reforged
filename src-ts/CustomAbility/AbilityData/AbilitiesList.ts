@@ -1182,6 +1182,7 @@ export const AbilitiesList = [
     components: [
       { name: "channel caster default" },
       { name: "multi power blitz barrage" },
+      { name: "spell amp power blitz barrage" },
     ],
   },
   // -------------------------------------------
@@ -3069,7 +3070,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 83,
+    duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3086,6 +3087,33 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi hand kannon" },
+      { name: "temp ability kannonblast" },
+      { name: "sfx hand kannon gun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KingKRool.KANNONBLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolHandKannon2.blp",
+      disabled: "BTNKingKRoolHandKannon2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.HAND_KANNON,
+      body: 
+        AbilityNames.KingKRool.HAND_KANNON
+    },
+    components: [
       { name: "beam hand kannon" },
       { name: "sfx hand kannon gun" },
     ],
@@ -3305,6 +3333,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi power blitz barrage saga" },
+      { name: "spell amp power blitz barrage" },
     ],
   },
   // -------------------------------------------

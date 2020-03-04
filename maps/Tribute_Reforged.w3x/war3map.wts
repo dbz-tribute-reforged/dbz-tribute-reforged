@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.38
+DBZ Tribute Reforged 0.38a
 }
 
 STRING 4
@@ -10655,6 +10655,12 @@ STRING 1704
 // Units: H097 (Two-Star Dark Dragon Ball Fusion), Propernames (Proper Names)
 {
 Cell-X
+}
+
+STRING 1705
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 15% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: <A0K2,Cool1> seconds)|r
 }
 
 STRING 1706
@@ -33717,6 +33723,12 @@ STRING 5540
 E
 }
 
+STRING 5541
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 15% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: <A0K2,Cool2> seconds)|r
+}
+
 STRING 5542
 // Abilities: A0C3 (BeerusBall), Researchtip (Tooltip - Learn)
 {
@@ -51874,10 +51886,70 @@ STRING 8548
 |cffffff0050% of melee damage cleaves to nearby enemies.|r
 }
 
+STRING 8549
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 15% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: <A0K2,Cool3> seconds)|r
+}
+
+STRING 8550
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 15% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: <A0K2,Cool4> seconds)|r
+}
+
+STRING 8551
+// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 15% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: <A0K2,Cool5> seconds)|r
+}
+
+STRING 8552
+// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
+{
+A powered up version of Cooler's supernova. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L2,Cool1> seconds)|r
+}
+
+STRING 8553
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. The longer Android 17 launches energy blasts the more powerful they become. Cancelling the channel of the ability will prematurely detonate all power blitzes still in motion.|n|cff2080ffMana Cost: 10k + 30% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|nSpell Amp: +15% per second|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
+}
+
+STRING 8554
+// Abilities: A0OV (King's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool is the mightiest being to sit upon the throne of Krokodile Island. Slapping the armrest of his throne empowers him for a brief duration.|n|cffff2020Channel Duration: up to 5s|r|n|cff00ff00Stat Multiplier: +0.1x per second channeled|nSpell Amp: +10%|r|n|cffffff00Duration: <A0OV,Dur1>s|r|n|cff00ffffCooldown: <A0OV,Cool1>s
+}
+
+STRING 8555
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
+}
+
+STRING 8556
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
+}
+
 STRING 8557
 // Abilities: A0JC (Wish for Scouter 2.0), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 8558
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
+}
+
+STRING 8559
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
 }
 
 STRING 8560
@@ -51892,10 +51964,82 @@ STRING 8561
 W
 }
 
+STRING 8562
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
+}
+
+STRING 8563
+// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+}
+
+STRING 8564
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
+}
+
+STRING 8565
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
+}
+
+STRING 8566
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
+}
+
+STRING 8567
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
+}
+
+STRING 8568
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+}
+
+STRING 8569
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 8570
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 1|r]
+}
+
+STRING 8571
+// Abilities: A0OW (Kannonblast), Name (Name)
+{
+Kannonblast
+}
+
 STRING 8572
 // Abilities: A0JM (Go Down Together!), Researchhotkey (Hotkey - Learn)
 {
 R
+}
+
+STRING 8573
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 8574
+// Abilities: A0OW (Kannonblast), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00E|r] Learn Hand Kannon - [|cffffcc00Level %d|r]
 }
 
 STRING 8575
@@ -51920,6 +52064,54 @@ STRING 8580
 // Abilities: A0IZ (King K Rool's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
 {
 King K Rool is a formidable fighter. He can absorb incoming punches using only his gut. |n|cff00FF00Passive: Boss battle:|r King K Rool and his basic abilities increase in size with level.
+}
+
+STRING 8584
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 2|r]
+}
+
+STRING 8585
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 3|r]
+}
+
+STRING 8586
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 4|r]
+}
+
+STRING 8587
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 5|r]
+}
+
+STRING 8588
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 6|r]
+}
+
+STRING 8590
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 7|r]
+}
+
+STRING 8591
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 8|r]
+}
+
+STRING 8594
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 9|r]
 }
 
 STRING 8595
@@ -52028,6 +52220,12 @@ STRING 8612
 // Abilities: A0IZ (King K Rool's Fighting Style), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn King K Rool's Fighting Style - [|cffffcc00Level %d|r]
+}
+
+STRING 8613
+// Abilities: A0OW (Kannonblast), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Kannonblast - [|cffffcc00Level 10|r]
 }
 
 STRING 8614
@@ -59933,7 +60131,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 9924
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0K2 (Overcharge), Researchubertip (Tooltip - Learn - Extended)
 {
 Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
@@ -60393,12 +60591,6 @@ A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)
 }
 
 STRING 10003
-// Abilities: A0L2 (Supernova Golden), Ubertip (Tooltip - Normal - Extended)
-{
-A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10004
 // Abilities: A0L2 (Supernova Golden), Researchubertip (Tooltip - Learn - Extended)
 {
 A powered up version of Cooler's supernova. |n|cff00ff00(Damage: (Int * lvl * 5)|r|n|cff00FF00Damage over time: int*lvl*1.5 over 4 seconds|r|n|cff00ffff(Cooldown: 20 seconds)|r
@@ -60852,18 +61044,6 @@ STRING 10079
 // Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10080
-// Abilities: A0K2 (Overcharge), Researchubertip (Tooltip - Learn - Extended)
-{
-Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10081
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
-{
-Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 10082
@@ -62161,24 +62341,6 @@ STRING 10292
 // Abilities: A0K2 (Overcharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00F|r] Overcharge - [|cffffcc00Level 5|r]
-}
-
-STRING 10293
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
-{
-Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10294
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
-{
-Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
-}
-
-STRING 10295
-// Abilities: A0K2 (Overcharge), Ubertip (Tooltip - Normal - Extended)
-{
-Overcharges the android to maximise combat performance. Ability damage increases by 3% per second up to a maximum of 20% while dealing damage to enemies that are very close.|n|cff00ff00(Damage: (Int * lvl * ?)) over 7 seconds.|r|n|cff00ffff(Cooldown: 20 seconds)|r
 }
 
 STRING 10296
@@ -64124,7 +64286,7 @@ Transformations:
 [lvl 140] 2.20x "fp"
 [lvl 160] 2.60x "golden"
 
-To [D] Transform into Final Form Cooler, you must kill at least (1) enemy hero.
+To [D] Transform into Final Form Cooler, you must kill at least (1) enemy hero when above level 20.
 }
 
 STRING 10609
@@ -69812,12 +69974,6 @@ STRING 11548
 Q
 }
 
-STRING 11549
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line that eventually explode after a short delay for massive amounts of damage. Cancelling the channel of the ability will prematurely detonate all power blitzes in transit.|n|cff2080ffMana Cost: 10k + 30% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur10> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool10> seconds|r
-}
-
 STRING 11550
 // Abilities: A0N5 (PanRevert), Name (Name)
 {
@@ -72889,6 +73045,12 @@ STRING 12062
 Q
 }
 
+STRING 12063
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
 STRING 12064
 // Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73415,6 +73577,18 @@ STRING 12150
 // Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
+}
+
+STRING 12151
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
+STRING 12152
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12153
@@ -74269,6 +74443,12 @@ STRING 12294
 Q
 }
 
+STRING 12295
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
 STRING 12296
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74281,6 +74461,18 @@ STRING 12297
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 8|r]
 }
 
+STRING 12298
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
+STRING 12299
+// Abilities: A0OW (Kannonblast), Researchubertip (Tooltip - Learn - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
 STRING 12300
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74291,6 +74483,18 @@ STRING 12301
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 10|r]
+}
+
+STRING 12302
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
+STRING 12303
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12304
@@ -74625,6 +74829,12 @@ A powerful medium-range brawler that excels in outmaneuvering his opponents befo
 
 }
 
+STRING 12347
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
 STRING 12348
 // Abilities: A0IV (Krown Toss), Researchtip (Tooltip - Learn)
 {
@@ -74759,6 +74969,18 @@ STRING 12370
 // Abilities: A0IV (Krown Toss), Tip (Tooltip - Normal)
 {
 [|cffFFFF00Q|r] Krown Toss - [|cffffcc00Level 9|r]
+}
+
+STRING 12371
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
+}
+
+STRING 12372
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12380
@@ -75129,72 +75351,6 @@ STRING 12445
 X
 }
 
-STRING 12446
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
-}
-
-STRING 12447
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
-}
-
-STRING 12448
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
-}
-
-STRING 12449
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
-}
-
-STRING 12450
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
-}
-
-STRING 12451
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
-}
-
-STRING 12452
-// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
-}
-
-STRING 12453
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
-}
-
-STRING 12454
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
-}
-
-STRING 12455
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
-}
-
-STRING 12456
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool pulls in nearby units in front of him and unleashes a massive cannonball from his gun.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
-}
-
 STRING 12458
 // Abilities: A0OM (Summon Blast-o-Matic), Tip (Tooltip - Normal)
 {
@@ -75553,12 +75709,6 @@ STRING 12518
 // Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
-}
-
-STRING 12519
-// Abilities: A0OV (King's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool is the mightiest being to sit upon the throne of Krokodile Island. Slapping the armrest empowers him for a brief duration.|n|cffff2020Channel Duration: up to 5s|r|n|cff00ff00Stat Multiplier: +0.08x per second|nSpell Amp: +10%|r|n|cffffff00Duration: <A0OV,Dur1>s|r|n|cff00ffffCooldown: <A0OV,Cool1>s
 }
 
 STRING 12520

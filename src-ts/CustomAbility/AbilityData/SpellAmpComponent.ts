@@ -74,6 +74,15 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp power blitz barrage", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.6,
+    rate: 0.0045,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp videl boost", 
     repeatInterval: 1, 
     startTick: 0,

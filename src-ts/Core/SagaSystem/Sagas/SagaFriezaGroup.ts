@@ -392,7 +392,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 30;
   }
 
   spawnSagaUnits(): void {

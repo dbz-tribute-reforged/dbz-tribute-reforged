@@ -261,13 +261,13 @@ export class BeamComponent implements
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (!this.hasBeamUnit) {
+    if (!this.hasBeamUnit && !ability.isFinishedUsing(this)) {
       this.setupBeamUnit(ability, input, source);
       this.hasBeamUnit = true;
     }
-    const isBeamDead = UnitHelper.isUnitDead(this.beamUnit);
     
     if (this.hasBeamUnit && !this.hasExploded) {
+      const isBeamDead = UnitHelper.isUnitDead(this.beamUnit);
       if ((isBeamDead && this.explodeOnDeath) || this.forcedExplode) {
         this.hasExploded = true;
         this.fakeExplode(ability, input);
