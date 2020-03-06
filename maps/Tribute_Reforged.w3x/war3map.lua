@@ -408,7 +408,7 @@ gg_trg_Hero_Pick_End_Bans_Command = nil
 gg_trg_Hero_Pick_Show_Pickable_Heroes = nil
 gg_trg_Hero_Pick_Repick_Randomly = nil
 gg_trg_Hero_Pick_Secret_Heroes = nil
-gg_trg_Hero_Pick_Secret_Bardock = nil
+gg_trg_Hero_Pick_Secret_Old_Krillin_Code = nil
 gg_trg_Hero_Pick_Modes_Show = nil
 gg_trg_Hero_Pick_Mode_Default = nil
 gg_trg_Hero_Pick_Mode_All_Pick = nil
@@ -500,6 +500,7 @@ gg_trg_Transformations_Androids_13_14_15 = nil
 gg_trg_Transformations_Androids_Super_13 = nil
 gg_trg_Transformations_Broly = nil
 gg_trg_Broly_Bio_Skin_Pickup = nil
+gg_trg_Broly_Bio_Skin_Drop = nil
 gg_trg_Transformations_Babidi = nil
 gg_trg_Super_Buu_to_Kid_Buu = nil
 gg_trg_Kid_Buu_Bonus_Ability = nil
@@ -561,7 +562,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Broly_Bio_Skin_Drop = nil
+gg_trg_Hero_Pick_Force_Pick_Unit_Type = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2282,24 +2283,14 @@ function CreateNeutralPassiveBuildings()
     local unitID
     local t
     local life
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2432.0, 21696.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2112.0, 21696.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2432.0, 22016.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2432.0, 21376.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 2112.0, 21376.0, 270.000, FourCC("n001"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03X"), 2816.0, 22592.0, 270.000, FourCC("n03X"))
+    SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01V"), 2816.0, 21824.0, 270.000, FourCC("n01V"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n016"), 2816.0, 21440.0, 270.000, FourCC("n016"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03D"), 2816.0, 22592.0, 270.000, FourCC("n03D"))
-    SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01C"), 2816.0, 22208.0, 270.000, FourCC("n01C"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 21696.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 21696.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 22016.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3456.0, 21376.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 21376.0, 270.000, FourCC("n001"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01P"), -2560.0, 26240.0, 270.000, FourCC("n01P"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00R"), -2496.0, 28416.0, 270.000, FourCC("n00R"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03P"), -3520.0, 5888.0, 270.000, FourCC("n03P"))
@@ -2919,6 +2910,8 @@ function Trig_Piccolo_Multi_Form_Actions()
         ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
         ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
         SuspendHeroXPBJ(false, udg_TempUnit2)
+        udg_StatMultUnit = udg_TempUnit2
+        TriggerExecute(gg_trg_Base_Armor_Set)
         udg_TempInt = udg_TempInt + 1
     end
         RemoveLocation(udg_TempLoc)
@@ -2949,6 +2942,8 @@ function Trig_Pan_Summon_Giru_Actions()
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
     ModifyHeroStat(bj_HEROSTAT_INT, GetSummonedUnit(), bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
     SuspendHeroXPBJ(false, GetSummonedUnit())
+    udg_StatMultUnit = GetSummonedUnit()
+    TriggerExecute(gg_trg_Base_Armor_Set)
 end
 
 function InitTrig_Pan_Summon_Giru()
@@ -3040,7 +3035,7 @@ function Trig_Power_Level_Rising_Actions()
     udg_StatMultReal = (I2R(udg_TempInt) * 0.33)
     ConditionalTriggerExecute(gg_trg_Add_To_Base_Stats)
     TriggerExecute(gg_trg_Add_To_Creep_Stats_Data)
-    udg_MoroStatMultReal = (I2R(udg_TempInt) * 0.01)
+    udg_MoroStatMultReal = (((I2R(udg_TempInt) * 0.50) * 0.01) + 0.01)
     TriggerExecute(gg_trg_Moro_Modify_Temp_Mult)
 end
 
@@ -3449,6 +3444,8 @@ function Trig_Cell_Juniors_Actions()
     SuspendHeroXPBJ(false, GetSummonedUnit())
     UnitAddAbilityBJ(FourCC("A00R"), GetSummonedUnit())
     SetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummonedUnit(), GetUnitAbilityLevelSwapped(FourCC("A00R"), GetSummoningUnit()))
+    udg_StatMultUnit = GetSummonedUnit()
+    TriggerExecute(gg_trg_Base_Armor_Set)
 end
 
 function InitTrig_Cell_Juniors()
@@ -3538,49 +3535,49 @@ function Trig_Nappa_Plant_Saibamen_Conditions()
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func017C()
+function Trig_Nappa_Plant_Saibamen_Func005Func019C()
     if (not (SubStringBJ(udg_OriginalPlayerNames[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))], 1, 11) == "randomkilla")) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001Func001C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001C()
     if (not (udg_TempReal < 4.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001C()
     if (not (udg_TempReal < 3.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002C()
     if (not (udg_TempReal < 2.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018Func001C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020Func001C()
     if (not (udg_TempReal < 1.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func018C()
+function Trig_Nappa_Plant_Saibamen_Func005Func020C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
@@ -3610,32 +3607,34 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         SetUnitAbilityLevelSwapped(FourCC("A0MM"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0MK"), GetTriggerUnit()))
         SetUnitAbilityLevelSwapped(FourCC("A0MN"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0MK"), GetTriggerUnit()))
         BlzSetHeroProperName(udg_TempUnit, "Saibaman")
+        udg_StatMultUnit = udg_TempUnit
+        TriggerExecute(gg_trg_Base_Armor_Set)
         udg_TempReal = GetRandomReal(0, 100.00)
-        if (Trig_Nappa_Plant_Saibamen_Func005Func017C()) then
+        if (Trig_Nappa_Plant_Saibamen_Func005Func019C()) then
             udg_TempReal = GetRandomReal(0, 50.00)
         else
         end
-        if (Trig_Nappa_Plant_Saibamen_Func005Func018C()) then
-            if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001C()) then
+        if (Trig_Nappa_Plant_Saibamen_Func005Func020C()) then
+            if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001C()) then
                 BlzSetHeroProperName(udg_TempUnit, "Snuggles")
                 SetUnitScalePercent(udg_TempUnit, 220.00, 220.00, 220.00)
             else
-                if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002C()) then
+                if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002C()) then
                     BlzSetHeroProperName(udg_TempUnit, "Fufu")
                     SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
                     SetUnitScalePercent(udg_TempUnit, 50.00, 50.00, 50.00)
                 else
-                    if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001C()) then
+                    if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001C()) then
                         BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
                         SetUnitTimeScalePercent(udg_TempUnit, 150.00)
                         SetUnitVertexColorBJ(udg_TempUnit, 80.00, 100.00, 60.00, 0)
                     else
-                        if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001C()) then
+                        if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001C()) then
                             BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
                             SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
                             SetUnitScalePercent(udg_TempUnit, 200.00, 200.00, 200.00)
                         else
-                            if (Trig_Nappa_Plant_Saibamen_Func005Func018Func001Func002Func001Func001Func001C()) then
+                            if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001Func001C()) then
                                 BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
                                 SetUnitTimeScalePercent(udg_TempUnit, 75.00)
                                 SetUnitVertexColorBJ(udg_TempUnit, 60.00, 100.00, 80.00, 0)
@@ -5019,7 +5018,7 @@ function Trig_Final_Battle_Sim_On_Actions()
     end
     EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     EnableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
-    EnableTrigger(gg_trg_Hero_Pick_Secret_Bardock)
+    EnableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code)
 end
 
 function InitTrig_Final_Battle_Sim_On()
@@ -9589,7 +9588,7 @@ function Trig_Hero_Pick_Secret_Heroes_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Bardock, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
+        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Old_Krillin_Code, udg_TempPlayer, ("-8" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 3, 3) .. ("W" .. (SubStringBJ(GetPlayerName(udg_TempPlayer), 1, 1) .. ("27f" .. SubStringBJ(GetPlayerName(udg_TempPlayer), 2, 2)))))), true)
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -9600,23 +9599,35 @@ function InitTrig_Hero_Pick_Secret_Heroes()
     TriggerAddAction(gg_trg_Hero_Pick_Secret_Heroes, Trig_Hero_Pick_Secret_Heroes_Actions)
 end
 
-function Trig_Hero_Pick_Secret_Bardock_Func005C()
+function Trig_Hero_Pick_Secret_Old_Krillin_Code_Actions()
+    udg_HeroPickUnitType = FourCC("E01D")
+    udg_TempPlayer = GetTriggerPlayer()
+    TriggerExecute(gg_trg_Hero_Pick_Force_Pick_Unit_Type)
+end
+
+function InitTrig_Hero_Pick_Secret_Old_Krillin_Code()
+    gg_trg_Hero_Pick_Secret_Old_Krillin_Code = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Secret_Old_Krillin_Code, Trig_Hero_Pick_Secret_Old_Krillin_Code_Actions)
+end
+
+function Trig_Hero_Pick_Force_Pick_Unit_Type_Func003C()
     if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
+    if (not (IsTriggerEnabled(gg_trg_Hero_Pick_Pick_A_Hero) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Pick_Secret_Bardock_Actions()
-    udg_TempPlayer = GetTriggerPlayer()
+function Trig_Hero_Pick_Force_Pick_Unit_Type_Actions()
     udg_TempInt = GetConvertedPlayerId(GetTriggerPlayer())
-    udg_HeroPickUnitType = FourCC("H08M")
         udg_HeroAvailabilityKey = udg_HeroPickUnitType
-    if (Trig_Hero_Pick_Secret_Bardock_Func005C()) then
+    if (Trig_Hero_Pick_Force_Pick_Unit_Type_Func003C()) then
         PlaySoundBJ(gg_snd_SecretFound)
         TriggerExecute(gg_trg_Hero_Pick_Remove_Picked_Heroes)
                 udg_TempLoc = Location(udg_HeroPickSpawnX[udg_TempInt], udg_HeroPickSpawnY[udg_TempInt])
-        CreateNUnitsAtLoc(1, FourCC("H08M"), udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, udg_HeroPickUnitType, udg_TempPlayer, udg_TempLoc, bj_UNIT_FACING)
         udg_TempUnit = GetLastCreatedUnit()
                 RemoveLocation(udg_TempLoc)
         TriggerExecute(gg_trg_Hero_Pick_Add_TempUnit_To_PickedUnitGroup)
@@ -9624,9 +9635,9 @@ function Trig_Hero_Pick_Secret_Bardock_Actions()
     end
 end
 
-function InitTrig_Hero_Pick_Secret_Bardock()
-    gg_trg_Hero_Pick_Secret_Bardock = CreateTrigger()
-    TriggerAddAction(gg_trg_Hero_Pick_Secret_Bardock, Trig_Hero_Pick_Secret_Bardock_Actions)
+function InitTrig_Hero_Pick_Force_Pick_Unit_Type()
+    gg_trg_Hero_Pick_Force_Pick_Unit_Type = CreateTrigger()
+    TriggerAddAction(gg_trg_Hero_Pick_Force_Pick_Unit_Type, Trig_Hero_Pick_Force_Pick_Unit_Type_Actions)
 end
 
 function Trig_Hero_Pick_Modes_Show_Actions()
@@ -10683,7 +10694,7 @@ function Trig_Hero_Pick_Completion_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
     DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
     DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
-    DisableTrigger(gg_trg_Hero_Pick_Secret_Bardock)
+    DisableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code)
     EnableTrigger(gg_trg_Force_Win_Loss)
     EnableTrigger(gg_trg_Moro_Energy_Drain_Passive)
     TriggerExecute(gg_trg_Revive_Point_Add_Revive_Locs)
@@ -18288,7 +18299,7 @@ function Trig_Transformations_Super_Janemba_Func014C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
         return false
     end
     return true
@@ -18394,7 +18405,7 @@ function Trig_Transformations_Super_Janemba_Actions()
     else
     end
     if (Trig_Transformations_Super_Janemba_Func015C()) then
-        udg_StatMultReal = 1.70
+        udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
@@ -19981,7 +19992,8 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Show_Pickable_Heroes()
     InitTrig_Hero_Pick_Repick_Randomly()
     InitTrig_Hero_Pick_Secret_Heroes()
-    InitTrig_Hero_Pick_Secret_Bardock()
+    InitTrig_Hero_Pick_Secret_Old_Krillin_Code()
+    InitTrig_Hero_Pick_Force_Pick_Unit_Type()
     InitTrig_Hero_Pick_Modes_Show()
     InitTrig_Hero_Pick_Mode_Default()
     InitTrig_Hero_Pick_Mode_All_Pick()

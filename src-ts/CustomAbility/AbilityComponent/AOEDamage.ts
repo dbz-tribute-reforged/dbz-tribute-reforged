@@ -136,7 +136,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       ) {
         const damageCount = this.damagedTargets.get(target);
         if (damageCount) {
-          if (damageCount <= this.maxDamageTicks) {
+          if (damageCount < this.maxDamageTicks) {
             this.damagedTargets.set(target, damageCount + 1);
             this.performDamage(input, target, damage);
           }

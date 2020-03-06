@@ -266,10 +266,11 @@ export class Budokai extends AdvancedTournament implements Tournament {
             contestant.returnAllUnits();
             for (const rewardedUnit of contestant.getUnits()) {
               if (
-                IsUnitType(rewardedUnit, UNIT_TYPE_HERO) && 
-                !UnitHelper.isUnitDead(rewardedUnit) && 
-                !IsUnitType(rewardedUnit, UNIT_TYPE_SUMMONED)
+                UnitHelper.isUnitTournamentViable(rewardedUnit) &&
+                !UnitHelper.isUnitDead(rewardedUnit)
               ) {
+                SetUnitLifePercentBJ(rewardedUnit, 100);
+                SetUnitManaPercentBJ(rewardedUnit, 100);
                 this.giveTrophy(rewardedUnit);
               }
             }
@@ -322,9 +323,9 @@ export class Budokai extends AdvancedTournament implements Tournament {
           }
           
           for (const unit of winner.getUnits()) {
-            SetUnitLifePercentBJ(unit, 100);
-            SetUnitManaPercentBJ(unit, 100);
             if (UnitHelper.isUnitTournamentViable(unit)) {
+              SetUnitLifePercentBJ(unit, 100);
+              SetUnitManaPercentBJ(unit, 100);
               this.giveTrophy(unit);
               // const numTournaments = this.tournamentCounter - TournamentData.budokaiCounter + 1;
               // TextTagHelper.showPlayerColorTextOnUnit(
