@@ -296,7 +296,7 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 20,
+    blockPerDamage: 15,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
     multiplier: 0.12,

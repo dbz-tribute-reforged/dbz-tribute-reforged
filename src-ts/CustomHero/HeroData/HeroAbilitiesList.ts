@@ -212,7 +212,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
       AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
       AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
-      AbilityNames.Android17DBS.POWER_BLITZ,
+      AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE,
       AbilityNames.Videl.PUNCH,
       AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Android13.SS_DEADLY_HAMMER,

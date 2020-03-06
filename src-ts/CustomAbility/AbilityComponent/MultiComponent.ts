@@ -181,9 +181,12 @@ export class MultiComponent implements
     // 2 conditions for break at the end, 
     // if out of components or delay between components != 0, exit
     for (let activations = 0; activations < 100; ++activations) {
-      // add components to active components when ready
-      this.activateComponentsWhenReady();
 
+      if (this.components.length > 0) {
+        // add components to active components when ready
+        this.activateComponentsWhenReady();  
+      }
+      
       if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
         this.originalDistance = 
           this.forceMinDistance + 
