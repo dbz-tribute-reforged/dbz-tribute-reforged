@@ -22,6 +22,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     ),
     public maxEnemies: number = 3,
     public addRandomAngle: boolean = false,
+    public ignoreHeroes: boolean = false,
   ) {
     
   }
@@ -42,21 +43,23 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     ForGroup(affectedGroup, () => {
       if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
         const enemy = GetEnumUnit();
-        const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
-        let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
-        if (this.addRandomAngle) {
-          dodgeAngle += Math.random() * this.knockbackData.angle - this.knockbackData.angle / 2;
-        } else {
-          dodgeAngle += this.knockbackData.angle;
+        if (!IsUnitType(enemy, UNIT_TYPE_HERO) || !this.ignoreHeroes) {
+          const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
+          let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
+          if (this.addRandomAngle) {
+            dodgeAngle += Math.random() * this.knockbackData.angle - this.knockbackData.angle / 2;
+          } else {
+            dodgeAngle += this.knockbackData.angle;
+          }
+          const dodgeCoord = CoordMath.polarProjectCoords(sourceCoord, dodgeAngle, this.knockbackData.speed);
+          dodgeVector.add(dodgeCoord);
+          /*
+          const newDodgeAngle = CoordMath.angleBetweenCoords(newSourceCoord, dodgeCoord);
+          const newDodgeDistance = CoordMath.distance(newSourceCoord, dodgeCoord);
+          newSourceCoord = CoordMath.polarProjectCoords(newSourceCoord, newDodgeAngle, newDodgeDistance / 2);
+          */
+          ++currentEnemies;
         }
-        const dodgeCoord = CoordMath.polarProjectCoords(sourceCoord, dodgeAngle, this.knockbackData.speed);
-        dodgeVector.add(dodgeCoord);
-        /*
-        const newDodgeAngle = CoordMath.angleBetweenCoords(newSourceCoord, dodgeCoord);
-        const newDodgeDistance = CoordMath.distance(newSourceCoord, dodgeCoord);
-        newSourceCoord = CoordMath.polarProjectCoords(newSourceCoord, newDodgeAngle, newDodgeDistance / 2);
-        */
-        ++currentEnemies;
       }
     });
 
@@ -82,7 +85,8 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     return new Dodge(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.groundOnly, this.knockbackData, 
-      this.maxEnemies, this.addRandomAngle
+      this.maxEnemies, this.addRandomAngle,
+      this.ignoreHeroes,
     );
   }
   
@@ -100,6 +104,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
       }; 
       maxEnemies: number;
       addRandomAngle: boolean;
+      ignoreHeroes: boolean;
     }
   ) {
     this.name = input.name;
@@ -110,6 +115,7 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     this.knockbackData = new KnockbackData().deserialize(input.knockbackData);
     this.maxEnemies = input.maxEnemies;
     this.addRandomAngle = input.addRandomAngle;
+    this.ignoreHeroes = input.ignoreHeroes;
     return this;
   }
 }

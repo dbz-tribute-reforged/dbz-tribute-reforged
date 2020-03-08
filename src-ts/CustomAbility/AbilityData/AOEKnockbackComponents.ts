@@ -316,6 +316,22 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // tyrant breaker knockback
+  {
+    name: "knockback tyrant breaker",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    knockbackData: {
+      speed: 4, 
+      angle: 0, 
+      aoe: 250,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
   // angry shout large aoe knockback
   {
     name: "knockback angry shout",

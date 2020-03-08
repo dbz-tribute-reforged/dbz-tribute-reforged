@@ -20,12 +20,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0LS'), AbilityNames.Vegeta.ANGRY_SHOUT],
 
     // gohan
-    [FourCC('A0H8'), AbilityNames.Gohan.MASENKO],
-    [FourCC('A0IS'), AbilityNames.Gohan.TWIN_DRAGON_SHOT],
-    [FourCC('A0L5'), AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
     [FourCC('A0L6'), AbilityNames.Gohan.UNLOCK_POTENTIAL],
     [FourCC('A0L7'), AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
     [FourCC('A0L8'), AbilityNames.Gohan.POTENTIAL_UNLEASHED],
+    [FourCC('A0H8'), AbilityNames.Gohan.MASENKO],
+    [FourCC('A0IS'), AbilityNames.Gohan.TWIN_DRAGON_SHOT],
+    [FourCC('A0L5'), AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
+    [FourCC('A0OY'), AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA],
 
     // kid trunks
     [FourCC('A02L'), AbilityNames.FutureTrunks.FINISH_BUSTER],
@@ -53,6 +54,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // bardock
     [FourCC('A0LN'), AbilityNames.Bardock.FUTURE_SIGHT],
+    [FourCC('A0OX'), AbilityNames.Bardock.TYRANT_BREAKER],
     [FourCC('A0LO'), AbilityNames.Bardock.TYRANT_LANCER],
     [FourCC('A0LP'), AbilityNames.Bardock.RIOT_JAVELIN],
     [FourCC('A0LQ'), AbilityNames.Bardock.REBELLION_SPEAR],
@@ -83,6 +85,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0OI'), AbilityNames.Upa.WHIRLWIND_TEMPEST],
     [FourCC('A0OJ'), AbilityNames.Upa.KORIN_FLAG],
     [FourCC('A0OK'), AbilityNames.Upa.LAST_STAND],
+
+    // tapion
+    [FourCC('A0I9'), AbilityNames.Tapion.BRAVE_SLASH],
+    [FourCC('A0I8'), AbilityNames.Tapion.BRAVE_CANNON],
+    [FourCC('A0IC'), AbilityNames.Tapion.SHINING_SWORD],
+    [FourCC('A0IB'), AbilityNames.Tapion.HEROS_FLUTE],
+    [FourCC('A0IA'), AbilityNames.Tapion.BRAVE_SWORD_ATTACK],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

@@ -39,6 +39,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ), 
+    public requireBuff: boolean = false,
+    public buffId: number = 0,
   ) {
     this.damageCoords = new Vector2D(0, 0);
     this.damageStarted = false;
@@ -130,22 +132,24 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
 
-      if (
-        this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
-        (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
-      ) {
-        const damageCount = this.damagedTargets.get(target);
-        if (damageCount) {
-          if (damageCount < this.maxDamageTicks) {
-            this.damagedTargets.set(target, damageCount + 1);
+      if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+        if (
+          this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
+          (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
+        ) {
+          const damageCount = this.damagedTargets.get(target);
+          if (damageCount) {
+            if (damageCount < this.maxDamageTicks) {
+              this.damagedTargets.set(target, damageCount + 1);
+              this.performDamage(input, target, damage);
+            }
+          } else {
+            this.damagedTargets.set(target, 1);
             this.performDamage(input, target, damage);
           }
-        } else {
-          this.damagedTargets.set(target, 1);
+        } else {    
           this.performDamage(input, target, damage);
         }
-      } else {    
-        this.performDamage(input, target, damage);
       }
     })
 
@@ -171,6 +175,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.maxDamageTicks,
       this.onlyDamageCapHeroes,
       this.damageData,
+      this.requireBuff,
+      this.buffId,
     );
   }
 
@@ -193,6 +199,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         damageType: number; 
         weaponType: number; 
       }; 
+      requireBuff: boolean;
+      buffId: number;
     }
   ) {
     this.name = input.name;
@@ -206,6 +214,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.maxDamageTicks = input.maxDamageTicks;
     this.onlyDamageCapHeroes = input.onlyDamageCapHeroes;
     this.damageData = new DamageData().deserialize(input.damageData);
+    this.requireBuff = input.requireBuff;
+    this.buffId = input.buffId;
     return this;
   }
 }

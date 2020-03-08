@@ -60,6 +60,7 @@ export module AbilityNames {
 
   export module Bardock {
     export const FUTURE_SIGHT: string = "Future Sight";
+    export const TYRANT_BREAKER: string = "Tyrant Breaker";
     export const TYRANT_LANCER: string = "Tyrant Lancer";
     export const RIOT_JAVELIN: string = "Riot Javelin";
     export const REBELLION_SPEAR: string = "Rebellion Spear";
@@ -94,6 +95,14 @@ export module AbilityNames {
     export const WHIRLWIND_TEMPEST: string = "Whirlwind Tempest";
     export const KORIN_FLAG: string = "Korin's Flag";
     export const LAST_STAND: string = "Last Stand";
+  }
+
+  export module Tapion {
+    export const BRAVE_SLASH = "Brave Slash";
+    export const BRAVE_CANNON = "Brave Cannon";
+    export const SHINING_SWORD = "Shining Sword";
+    export const HEROS_FLUTE = "Hero's Flute";
+    export const BRAVE_SWORD_ATTACK = "Brave Sword Attack";
   }
 
 
