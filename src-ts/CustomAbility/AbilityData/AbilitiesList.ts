@@ -50,7 +50,7 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 60% of incoming damage until more than 4 * AGI damage is blocked." + 
+        "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked." + 
         "|nCost:25 MP|nCD: 16"
     },
     components: [
@@ -467,6 +467,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGohanFatherSonKame.blp",
+      disabled: "BTNGohanFatherSonKame.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA,
+      body: 
+        AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi father-son kame" },
+      { name: "multi father-son kame goku" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx solar kame caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Gohan.UNLOCK_POTENTIAL,
     currentCd: 0,
     maxCd: 1,
@@ -849,12 +879,42 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Bardock.TYRANT_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBardockTyrantBreaker.blp",
+      disabled: "BTNBardockTyrantBreaker.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Bardock.TYRANT_BREAKER,
+      body: 
+        AbilityNames.Bardock.TYRANT_BREAKER
+    },
+    components: [
+      { name: "dash ground point tyrant breaker" },
+      { name: "damage tyrant breaker dps" },
+      { name: "knockback tyrant breaker" },
+      { name: "temp ability tyrant lancer" },
+      { name: "sfx tyrant breaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Bardock.TYRANT_LANCER,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 65,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -870,11 +930,7 @@ export const AbilitiesList = [
         AbilityNames.Bardock.TYRANT_LANCER
     },
     components: [
-      { name: "dash ground point tyrant lancer" },
-      { name: "damage tyrant lancer dps" },
-      { name: "knockback 1tick 5speed 0angle 250aoe" },
       { name: "beam tyrant lancer" },
-      { name: "sfx tyrant lancer" },
     ],
   },
   // -------------------------------------------
@@ -958,7 +1014,7 @@ export const AbilitiesList = [
         AbilityNames.Bardock.REBELLION_SPEAR
     },
     components: [
-      { name: "dash ground point rebellion spear" },
+      { name: "dash ground forward rebellion spear" },
       { name: "damage rebellion spear dps" },
       { name: "knockback kame" },
       { name: "sfx rebellion spear" },
@@ -1462,6 +1518,147 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward last stand" },
       { name: "beam last stand" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tapion.BRAVE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTapion.blp",
+      disabled: "BTNTapion.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Tapion.BRAVE_SLASH,
+      body: 
+        AbilityNames.Tapion.BRAVE_SLASH,
+    },
+    components: [
+      { name: "multi brave slash" },
+      // { name: "temp ability brave cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tapion.BRAVE_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTapion.blp",
+      disabled: "BTNTapion.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Tapion.BRAVE_CANNON,
+      body: 
+        AbilityNames.Tapion.BRAVE_CANNON,
+    },
+    components: [
+      { name: "beam brave cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tapion.SHINING_SWORD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTapionShiningSword.blp",
+      disabled: "BTNTapionShiningSword.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Tapion.SHINING_SWORD,
+      body: 
+        AbilityNames.Tapion.SHINING_SWORD,
+    },
+    components: [
+      { name: "dash ground point shining sword" },
+      { name: "damage shining sword explosion" },
+      { name: "damage shining sword bonus buff explosion" },
+      { name: "sfx shining sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tapion.HEROS_FLUTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTapionHerosFlute.blp",
+      disabled: "BTNTapionHerosFlute.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Tapion.HEROS_FLUTE,
+      body: 
+        AbilityNames.Tapion.HEROS_FLUTE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "debuff heros song heros flute" },
+      { name: "debuff heros song heros flute finish" },
+      { name: "block heros flute" },
+      { name: "beam heros flute barrier" },
+      { name: "temp ability heros flute armor aura" },
+      { name: "sfx heros flute" },
+      // { name: "knockback babidi barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tapion.BRAVE_SWORD_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTapionBraveSwordAttack.blp",
+      disabled: "BTNTapionBraveSwordAttack.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Tapion.BRAVE_SWORD_ATTACK,
+      body: 
+        AbilityNames.Tapion.BRAVE_SWORD_ATTACK,
+    },
+    components: [
+      { name: "sfx brave sword attack" },
     ],
   },
   // -------------------------------------------

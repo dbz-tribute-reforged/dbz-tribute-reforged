@@ -33,33 +33,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     
     // gohan
     [FourCC("H00K"), [
-      AbilityNames.Goku.KAMEHAMEHA, 
-      AbilityNames.Gohan.MASENKO, 
-      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
-      AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
-      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
-      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
-      AbilityNames.Gohan.POTENTIAL_UNLEASHED
-    ]],
-    // adult gohan
-    [FourCC("H086"), [
-      AbilityNames.Goku.KAMEHAMEHA, 
-      AbilityNames.Gohan.MASENKO, 
-      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
-      AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
       AbilityNames.Gohan.UNLOCK_POTENTIAL, 
       AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
-    ]],
-    // saiyaman
-    [FourCC("H08L"), [
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Gohan.MASENKO, 
-      AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
+      AbilityNames.Gohan.TWIN_DRAGON_SHOT,
       AbilityNames.Gohan.SUPER_DRAGON_FLIGHT, 
-      AbilityNames.Gohan.UNLOCK_POTENTIAL, 
-      AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED, 
-      AbilityNames.Gohan.POTENTIAL_UNLEASHED,
+      AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA, 
     ]],
     
     // goten
@@ -116,22 +97,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     // bardock
     [FourCC("H08M"), [
+      AbilityNames.Bardock.FUTURE_SIGHT,
+      AbilityNames.Bardock.TYRANT_BREAKER, 
       AbilityNames.Bardock.TYRANT_LANCER, 
       AbilityNames.Bardock.RIOT_JAVELIN, 
       AbilityNames.Bardock.REBELLION_SPEAR, 
       AbilityNames.Vegeta.MOONLIGHT, 
       AbilityNames.Vegeta.ANGRY_SHOUT, 
       AbilityNames.Bardock.SAIYAN_SPIRIT, 
-      AbilityNames.Bardock.FUTURE_SIGHT
-    ]],
-    [FourCC("H08N"), [
-      AbilityNames.Bardock.TYRANT_LANCER, 
-      AbilityNames.Bardock.RIOT_JAVELIN, 
-      AbilityNames.Bardock.REBELLION_SPEAR, 
-      AbilityNames.Vegeta.MOONLIGHT, 
-      AbilityNames.Vegeta.ANGRY_SHOUT, 
-      AbilityNames.Bardock.SAIYAN_SPIRIT, 
-      AbilityNames.Bardock.FUTURE_SIGHT
     ]],
     
     // pan
@@ -164,6 +137,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Upa.WHIRLWIND_TEMPEST, 
       AbilityNames.Upa.KORIN_FLAG, 
       AbilityNames.Upa.LAST_STAND, 
+    ]],
+
+    // tapion
+    [FourCC("E014"), [
+      AbilityNames.Tapion.BRAVE_SLASH, 
+      AbilityNames.Tapion.BRAVE_CANNON, 
+      AbilityNames.Tapion.SHINING_SWORD, 
+      AbilityNames.Tapion.HEROS_FLUTE,
+      AbilityNames.Tapion.BRAVE_SWORD_ATTACK, 
     ]],
 
     // androids 13 14 15
@@ -211,10 +193,11 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Gohan.POTENTIAL_UNLEASHED,
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, AbilityNames.Piccolo.KYODAIKA,
       AbilityNames.FutureTrunks.HEAT_DOME_ATTACK, AbilityNames.FutureTrunks.SUPER_SAIYAN_RAGE,
-      AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
+      AbilityNames.Bardock.TYRANT_BREAKER, AbilityNames.Bardock.TYRANT_LANCER, AbilityNames.Bardock.FUTURE_SIGHT,
       AbilityNames.Android17DBS.POWER_BLITZ_BARRAGE,
       AbilityNames.Videl.PUNCH,
       AbilityNames.Upa.JAVELIN_THROW,
+      AbilityNames.Tapion.BRAVE_SLASH, AbilityNames.Tapion.BRAVE_CANNON,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

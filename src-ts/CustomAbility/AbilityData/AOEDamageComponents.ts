@@ -77,6 +77,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // to here, and replace with unique name
   {
@@ -97,6 +99,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // god kame
   {
@@ -117,6 +121,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage god kame explosion",
@@ -136,6 +142,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // used for spirit bomb
   {
@@ -156,6 +164,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage spirit bomb explosion",
@@ -175,6 +185,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // used for dfist
   {
@@ -195,6 +207,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage dragon fist explosion",
@@ -214,6 +228,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // galick gun
   {
@@ -234,6 +250,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage galick gun explosion",
@@ -253,6 +271,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // final flash
   {
@@ -273,6 +293,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage final flash explosion",
@@ -292,6 +314,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // big bang attack
   {
@@ -312,6 +336,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // energy blast volley
   {
@@ -332,6 +358,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // masenko 
   // gohan 7 lvls
@@ -348,12 +376,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.2,
+      multiplier: BASE.KAME_DPS * 1.15,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // twin dragon shot
   {
@@ -366,14 +396,16 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 300,
     onlyDamageCapHeroes: true,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.32,
+      multiplier: BASE.KAME_DPS * 1.0,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage twin dragon shot explosion",
@@ -387,12 +419,36 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION,
+      multiplier: BASE.KAME_EXPLOSION * 1.0,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
+  },
+  // father-son kame goku
+  {
+    name: "damage father-son kame goku dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 700,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: 30,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 0.05,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    requireBuff: false,
+    buffId: 0,
   },
   // super dragon flight
   {
@@ -407,12 +463,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.8,
+      multiplier: BASE.DFIST_DPS * 0.5,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // finish buster 
   {
@@ -433,6 +491,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage finish buster explosion",
@@ -452,6 +512,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // heat dome attack initial explosion
   {
@@ -472,6 +534,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // burning attack 
   {
@@ -492,6 +556,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage burning attack explosion",
@@ -511,6 +577,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // blazing rush
   {
@@ -531,6 +599,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // special beam cannon
   // piccolo 10 lvls, cell 10 lvls
@@ -552,6 +622,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // hellzone grenade
   {
@@ -572,6 +644,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage hellzone grenade explosion",
@@ -591,10 +665,12 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
-  // tyrant lancer
+  // tyrant breaker
   {
-    name: "damage tyrant lancer dps",
+    name: "damage tyrant breaker dps",
     repeatInterval: 1,
     startTick: 0,
     endTick: 25,
@@ -602,15 +678,17 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 300,
-    onlyDamageCapHeroes: true,
-    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    onlyDamageCapHeroes: false,
+    maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.25,
-      attribute: bj_HEROSTAT_STR,
+      multiplier: BASE.DFIST_DPS * 1.5,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam tyrant lancer dps",
@@ -620,7 +698,7 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
-    aoe: 280,
+    aoe: 300,
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
@@ -630,6 +708,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam tyrant lancer explosion",
@@ -649,6 +729,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // saiyan spirit
   {
@@ -661,14 +743,16 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 310,
     onlyDamageCapHeroes: true,
-    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.55,
-      attribute: bj_HEROSTAT_STR,
+      multiplier: BASE.DFIST_DPS * 2.5,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam saiyan spirit dps",
@@ -688,6 +772,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam saiyan spirit explosion",
@@ -699,14 +785,16 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 500,
     onlyDamageCapHeroes: true,
-    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1.5,
+      multiplier: BASE.KAME_EXPLOSION * 1.75,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // riot javelin
   {
@@ -721,12 +809,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 1.1,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.7,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam riot javelin explosion",
@@ -746,6 +836,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // rebellion spear
   {
@@ -754,18 +846,20 @@ export const AOEDamageComponents = [
     startTick: 0,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
-    scaleDamageToSourceHp: true,
+    scaleDamageToSourceHp: false,
     useLastCastPoint: false,
-    aoe: 320,
+    aoe: 350,
     onlyDamageCapHeroes: true,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    maxDamageTicks: 33,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.85,
-      attribute: bj_HEROSTAT_STR,
+      multiplier: BASE.DFIST_DPS * 0.75,
+      attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // angry shout
   {
@@ -786,6 +880,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // pan immolation
   {
@@ -806,6 +902,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // maiden blast beam
   {
@@ -826,6 +924,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam maiden blast explosion",
@@ -845,6 +945,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // reliable friend beam
   {
@@ -865,6 +967,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam reliable friend explosion",
@@ -884,6 +988,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // power blitz
   {
@@ -904,6 +1010,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage power blitz explosion",
@@ -923,6 +1031,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // power blitz barrage
   {
@@ -943,6 +1053,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage power blitz barrage explosion",
@@ -962,6 +1074,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // barrier prison
   {
@@ -982,6 +1096,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // barrier wall
   {
@@ -1002,6 +1118,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // super electric strike
   {
@@ -1022,6 +1140,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // videl punch
   {
@@ -1042,6 +1162,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // videl kick
   {
@@ -1062,6 +1184,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // videl flying kick
   {
@@ -1082,6 +1206,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage videl flying kick explosion",
@@ -1101,6 +1227,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // javelin throw
   {
@@ -1121,6 +1249,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // whirlwind tempest
   {
@@ -1141,6 +1271,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // korin flag
   {
@@ -1161,6 +1293,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // last stand
   {
@@ -1181,6 +1315,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage last stand explosion",
@@ -1200,6 +1336,95 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
+  },
+  // brave slash
+  {
+    name: "damage brave slash",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: true,
+    aoe: 300,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.25,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    requireBuff: false,
+    buffId: 0,
+  },
+  // brave cannon
+  {
+    name: "damage brave cannon dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: true,
+    maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 1.1,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    requireBuff: false,
+    buffId: 0,
+  },
+  // shining sword
+  {
+    name: "damage shining sword explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: false,
+    maxDamageTicks: 3,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.21,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "damage shining sword bonus buff explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: false,
+    maxDamageTicks: 3,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.07,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    requireBuff: true,
+    buffId: FourCC("B01H"),
   },
   // 13 energy beam
   {
@@ -1220,6 +1445,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // ss deadly hammer
   {
@@ -1240,6 +1467,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // ss deadly bomber
   {
@@ -1260,6 +1489,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // 13 nuke 
   {
@@ -1274,12 +1505,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.4,
+      multiplier: BASE.KAME_DPS * 0.35,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage nuke explosion",
@@ -1299,6 +1532,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // 13 overcharge
   {
@@ -1319,6 +1554,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // babidi
   {
@@ -1339,6 +1576,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // buu flesh attack
   {
@@ -1353,12 +1592,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.65,
+      multiplier: BASE.DFIST_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // evil spear
   {
@@ -1379,6 +1620,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // innocence breath
   {
@@ -1399,6 +1642,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // angry explosion
   {
@@ -1419,6 +1664,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage angry explosion explosion",
@@ -1438,6 +1685,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // mankind attack
   {
@@ -1458,6 +1707,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // energy punch
   {
@@ -1478,6 +1729,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // power level rising
   // has 7 lvls
@@ -1499,6 +1752,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // planet crusher
   {
@@ -1519,6 +1774,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage planet crusher explosion",
@@ -1538,6 +1795,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // gigantic roar dps
   {
@@ -1558,6 +1817,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // gigantic omegastorm
   {
@@ -1578,6 +1839,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage gigantic omegastorm explosion",
@@ -1597,6 +1860,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // solar kame
   {
@@ -1617,6 +1882,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage solar kame dps",
@@ -1636,6 +1903,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage solar kame explosion",
@@ -1655,6 +1924,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // death beam
   {
@@ -1675,6 +1946,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // nova chariot (match with dfist but agi-version)
   {
@@ -1695,6 +1968,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // supernova golden, upped spirit bomb dmg
   {
@@ -1715,6 +1990,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage supernova golden explosion",
@@ -1734,6 +2011,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // double sunday
   {
@@ -1754,6 +2033,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage double sunday explosion",
@@ -1773,6 +2054,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // saturday crash
   {
@@ -1793,6 +2076,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage beam saturday crash explosion",
@@ -1812,6 +2097,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // behind you
   {
@@ -1832,6 +2119,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // giant storm
   {
@@ -1852,6 +2141,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage giant storm dps inner",
@@ -1871,6 +2162,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage giant storm explosion outer",
@@ -1890,6 +2183,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage giant storm explosion inner",
@@ -1909,6 +2204,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // blazing storm
   {
@@ -1929,6 +2226,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // break cannon
   {
@@ -1949,6 +2248,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // saibaman bomb
   {
@@ -1969,6 +2270,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // saibaman acid
   {
@@ -1989,6 +2292,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // energy drain moro
   {
@@ -2009,6 +2314,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // energy ball moro
   {
@@ -2029,6 +2336,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage energy ball moro explosion",
@@ -2048,6 +2357,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // lava burst
   {
@@ -2068,6 +2379,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage lava burst explosion",
@@ -2087,6 +2400,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // lava pillars
   {
@@ -2107,6 +2422,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // saibaman bomb
   {
@@ -2127,6 +2444,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // rakshasa claw
   {
@@ -2147,6 +2466,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // devil claw
   {
@@ -2167,6 +2488,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // demonic blade
   {
@@ -2187,6 +2510,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // hells gate
   {
@@ -2207,6 +2532,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage hells gate explosion",
@@ -2226,6 +2553,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // lightning shower rain
   {
@@ -2246,6 +2575,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage lightning shower rain explosion",
@@ -2256,7 +2587,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
-    onlyDamageCapHeroes: true,
+    onlyDamageCapHeroes: false,
     maxDamageTicks: 1,
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.22,
@@ -2265,6 +2596,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // krown toss
   {
@@ -2277,14 +2610,16 @@ export const AOEDamageComponents = [
     useLastCastPoint: false,
     aoe: 250,
     onlyDamageCapHeroes: false,
-    maxDamageTicks: 31,
+    maxDamageTicks: 32,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.7,
+      multiplier: BASE.KAME_DPS * 0.6,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // kharge
   {
@@ -2305,6 +2640,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // hand kannon
   {
@@ -2325,6 +2662,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // beam hand kannon
   {
@@ -2345,6 +2684,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // monkey smasher
   {
@@ -2365,6 +2706,8 @@ export const AOEDamageComponents = [
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   // blast-o-matic
   {
@@ -2379,12 +2722,15 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS * 2,
     damageData: {
+      // 0.2
       multiplier: BASE.KAME_DPS * 2,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage blast-o-matic dps",
@@ -2398,12 +2744,15 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: 97,
     damageData: {
+      // 0.4
       multiplier: BASE.KAME_DPS * 4,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "damage blast-o-matic explosion",
@@ -2417,11 +2766,14 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
+      // 1.0
       multiplier: BASE.KAME_EXPLOSION * 10,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,
     },
+    requireBuff: false,
+    buffId: 0,
   },
 ];

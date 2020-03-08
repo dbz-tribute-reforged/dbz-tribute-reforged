@@ -7,14 +7,30 @@ export const DodgeComponents = [
     endTick: -1,
     groundOnly: true,
     knockbackData: {
-      speed: 100, 
+      speed: 60, 
       angle: 270, 
-      aoe: 600,
+      aoe: 450,
     },
     maxEnemies: 3,
     addRandomAngle: true,
+    ignoreHeroes: true,
   },
   // to here, and replace with unique name
+  {
+    name: "dodge mastered ultra instinct",
+    repeatInterval: 2, 
+    startTick: 0,
+    endTick: -1,
+    groundOnly: true,
+    knockbackData: {
+      speed: 30, 
+      angle: 180, 
+      aoe: 350,
+    },
+    maxEnemies: 3,
+    addRandomAngle: true,
+    ignoreHeroes: true,
+  },
   {
     name: "dodge future sight",
     repeatInterval: 1, 
@@ -28,6 +44,7 @@ export const DodgeComponents = [
     },
     maxEnemies: 3,
     addRandomAngle: true,
+    ignoreHeroes: false,
   },
   {
     name: "dodge homing beam",
@@ -42,6 +59,7 @@ export const DodgeComponents = [
     },
     maxEnemies: 1,
     addRandomAngle: false,
+    ignoreHeroes: false,
   },
   // --------------------------------------------
   {
@@ -57,5 +75,6 @@ export const DodgeComponents = [
     },
     maxEnemies: 3,
     addRandomAngle: true,
+    ignoreHeroes: false,
   },
 ];

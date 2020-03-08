@@ -6,6 +6,9 @@ export module Debuffs {
 
   export const CURSE_ORDER_ID = 852190;
   export const DEMONS_MARK = FourCC("A0O7");
+
+  export const SLOW_ORDER_ID = 852075;
+  export const HEROS_SONG = FourCC("A0I6");
 }
 
 export const AOEDebuffComponents = [
@@ -77,6 +80,36 @@ export const AOEDebuffComponents = [
     abilityId: Debuffs.STUN_ONE_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
+    keepCasting: false, 
+  },
+  {
+    name: "debuff heros song brave cannon",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.HEROS_SONG,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 400,
+    keepCasting: false, 
+  },
+  {
+    name: "debuff heros song heros flute",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.HEROS_SONG,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 900,
+    keepCasting: false, 
+  },
+  {
+    name: "debuff heros song heros flute finish",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    abilityId: Debuffs.HEROS_SONG,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 1400,
     keepCasting: false, 
   },
   {
