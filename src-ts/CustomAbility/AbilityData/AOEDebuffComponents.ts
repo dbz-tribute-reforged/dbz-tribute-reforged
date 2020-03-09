@@ -109,7 +109,7 @@ export const AOEDebuffComponents = [
     endTick: -1,
     abilityId: Debuffs.HEROS_SONG,
     orderId: Debuffs.SLOW_ORDER_ID,
-    aoe: 1400,
+    aoe: 900,
     keepCasting: false, 
   },
   {
