@@ -9,9 +9,15 @@ STRING 1
 Player 1
 }
 
+STRING 2
+// Items: I04C (Gero's Boots), Ubertip (Tooltip - Extended)
+{
+|cffffff00Increases the movement speed of the Hero by 30 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
+}
+
 STRING 3
 {
-DBZ Tribute Reforged 0.39
+DBZ Tribute Reforged 0.39a
 }
 
 STRING 4
@@ -103,6 +109,12 @@ A fast and versatile teamfight hero. Can transform into Metal Cooler if he dies 
 |cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 20
+// Items: I04C (Gero's Boots), Description (Description)
+{
+|cffffff00Increases the movement speed of the Hero by 30 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
 }
 
 STRING 21
@@ -512,6 +524,18 @@ STRING 83
 Babidi
 }
 
+STRING 84
+// Abilities: AIms (Item Move Speed Bonus), EditorSuffix (Editor Suffix)
+{
+gero's boots
+}
+
+STRING 85
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
+}
+
 STRING 86
 // Abilities: A0BZ (Planet Crusher), Ubertip (Tooltip - Normal - Extended)
 {
@@ -534,6 +558,18 @@ STRING 89
 // Units: N00Q (Cell  "Unformed"), Propernames (Proper Names)
 {
 Cell
+}
+
+STRING 90
+// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
+}
+
+STRING 91
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
 }
 
 STRING 92
@@ -1818,12 +1854,24 @@ STRING 297
 Android 13
 }
 
+STRING 298
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
+}
+
 STRING 299
 // Abilities: A0OP (Upa's Rage 2), Ubertip (Tooltip - Normal - Extended)
 {
 Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
 |cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
 |cffffcc00Bonus Attack Damage:|r +<A0OP,DataA1,%>% 
+}
+
+STRING 300
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
 }
 
 STRING 301
@@ -6636,6 +6684,12 @@ STRING 1072
 Tapion
 }
 
+STRING 1073
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
+}
+
 STRING 1074
 // Units: E014 (Legendary Hero), Ubertip (Tooltip - Extended)
 {
@@ -6647,6 +6701,12 @@ A bulky, close-combat hero who disrupts the flow of a teamfight with constant at
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 1075
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
 }
 
 STRING 1076
@@ -8000,6 +8060,12 @@ STRING 1279
 Future Trunks
 }
 
+STRING 1280
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
+}
+
 STRING 1281
 // Units: H08I (Saiyan from the Future), Ubertip (Tooltip - Extended)
 {
@@ -8011,6 +8077,12 @@ A close-combat hero that can completely dominate the early and mid game, but tra
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 1282
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
 }
 
 STRING 1283
@@ -9653,6 +9725,12 @@ STRING 1554
 Senzu Bean
 }
 
+STRING 1555
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
+}
+
 STRING 1556
 // Items: I01I (Senzu Bean UNUSED), Tip (Tooltip - Basic)
 {
@@ -10200,6 +10278,12 @@ STRING 1643
 // Items: I02Z (King Kai's food), Description (Description)
 {
 A little undercooked, but it fills you up.
+}
+
+STRING 1644
+// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
+{
+Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
 }
 
 STRING 1645
@@ -27102,6 +27186,12 @@ STRING 4455
 [|cff00FF00E|r] Learn Solar Flare - [|cffffcc00Level %d|r]
 }
 
+STRING 4456
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
 STRING 4457
 // Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
@@ -40932,6 +41022,12 @@ STRING 6747
 Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit the orb and send it flying.|cff00ff00(Damage: (????) +???)|r|n|cff00ffff(Cooldown: 25 seconds)|r
 }
 
+STRING 6748
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
 STRING 6749
 // Units: H08N (Saiyan Warrior), Ubertip (Tooltip - Extended)
 {
@@ -40943,6 +41039,12 @@ A secret hero that can only be randomed. One of the strongest PvP fighters due t
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 6750
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur2>s|r|n|cff00FFFFCooldown: <A0LW,Cool2>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 6751
@@ -43646,6 +43748,12 @@ STRING 7197
 // Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
 {
 Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
+}
+
+STRING 7198
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur3>s|r|n|cff00FFFFCooldown: <A0LW,Cool3>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 7199
@@ -46767,12 +46875,6 @@ STRING 7718
 An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.|n|cffff2020Note: If you cannot select Shenron, type "-shenron" after summong him to make your wish.
 }
 
-STRING 7719
-// Items: I04C (Gero's Boots), Ubertip (Tooltip - Extended)
-{
-|cffffff00Increases the movement speed of the Hero by 40 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
-}
-
 STRING 7720
 // Items: I04A (Sorrowful Scythe), Name (Name)
 {
@@ -46795,12 +46897,6 @@ STRING 7723
 // Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
 {
 Item
-}
-
-STRING 7724
-// Items: I04C (Gero's Boots), Description (Description)
-{
-|cffffff00Increases the movement speed of the Hero by 40 when on low hp.|r|n|cff808080"Number 17 and 18 will be coming to kill you all!"
 }
 
 STRING 7725
@@ -49194,30 +49290,6 @@ STRING 8121
 [|cffffff00Z|r] Choose Cell
 }
 
-STRING 8122
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +1|n|cff00FFFFCooldown: <A0IB,Cool1>s|r
-}
-
-STRING 8123
-// Abilities: A0IB (Hero's Flute), Researchubertip (Tooltip - Learn - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +1 * Lvl|n|cff00FFFFCooldown: <A0IB,Cool1> - <A0IB,Cool10>s|r
-}
-
-STRING 8124
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +2|n|cff00FFFFCooldown: <A0IB,Cool2>s|r
-}
-
-STRING 8125
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +3|n|cff00FFFFCooldown: <A0IB,Cool3>s|r
-}
-
 STRING 8126
 // Units: H00K (Half Human / Half Saiyan), Awakentip (Tooltip - Awaken)
 {
@@ -49260,12 +49332,6 @@ STRING 8132
 E
 }
 
-STRING 8133
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +4|n|cff00FFFFCooldown: <A0IB,Cool4>s|r
-}
-
 STRING 8134
 // Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -49276,12 +49342,6 @@ STRING 8135
 // Abilities: A0IB (Hero's Flute), Name (Name)
 {
 Hero's Flute
-}
-
-STRING 8136
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +5|n|cff00FFFFCooldown: <A0IB,Cool5>s|r
 }
 
 STRING 8137
@@ -49308,28 +49368,10 @@ STRING 8140
 Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
 }
 
-STRING 8141
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +6|n|cff00FFFFCooldown: <A0IB,Cool6>s|r
-}
-
-STRING 8142
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
-}
-
 STRING 8143
 // Abilities: A0IH (Wish for Book), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 8144
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +8|n|cff00FFFFCooldown: <A0IB,Cool8>s|r
 }
 
 STRING 8145
@@ -49344,22 +49386,10 @@ STRING 8146
 Shining Sword
 }
 
-STRING 8147
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +9|n|cff00FFFFCooldown: <A0IB,Cool9>s|r
-}
-
 STRING 8148
 // Abilities: A0IC (Shining Sword), Researchubertip (Tooltip - Learn - Extended)
 {
 Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
-}
-
-STRING 8149
-// Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
-{
-Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 70%|nArmor Aura: +10|n|cff00FFFFCooldown: <A0IB,Cool10>s|r
 }
 
 STRING 8150
@@ -53560,12 +53590,6 @@ STRING 8847
 Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
-STRING 8848
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
 STRING 8849
 // Abilities: A0JP (Spirit Bomb), Name (Name)
 {
@@ -53576,24 +53600,6 @@ STRING 8850
 // Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 8851
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 8852
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 8853
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.8/1.0x|n|cff00FF00Duration: 40s|r|n|cff00FFFFCooldown: 40s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 8854

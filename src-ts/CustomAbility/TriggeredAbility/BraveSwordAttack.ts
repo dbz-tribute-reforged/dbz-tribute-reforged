@@ -3,6 +3,7 @@ import { UnitHelper } from "Common/UnitHelper";
 import { CoordMath } from "Common/CoordMath";
 import { Constants } from "Common/Constants";
 import { PathingCheck } from "Common/PathingCheck";
+import { CustomAbility } from "CustomAbility/CustomAbility";
 
 
 export function SetupBraveSwordAttack() {
@@ -10,10 +11,12 @@ export function SetupBraveSwordAttack() {
   const herosSongDebuff = FourCC("B01H");
   const dummyStunSpell = FourCC('A0IY');
   const dummyStunOrder = 852095;
-  const jumpDuration = 50;
+  const jumpDuration = 40;
   const jumpHeight = 900;
-  const jumpMoveDistance = 23;
-  const braveSwordDamageMult = 0.5;
+  const jumpMoveDistance = 26;
+  const braveSwordAOE = 400;
+  const braveSwordMaxRange = 1100;
+  const braveSwordDamageMult = 0.45;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -28,7 +31,7 @@ export function SetupBraveSwordAttack() {
       const player = GetTriggerPlayer();
 
       const targetGroup = UnitHelper.getNearbyValidUnits(
-        targetPos, 375, 
+        targetPos, braveSwordAOE, 
         () => {
           return (
             UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player) && 
@@ -49,7 +52,7 @@ export function SetupBraveSwordAttack() {
           casterPos.y = GetUnitY(caster);
           const distanceToTarget = CoordMath.distance(casterPos, targetPos);
           if (
-            distanceToTarget > 1000 ||
+            distanceToTarget > braveSwordMaxRange ||
             time > jumpDuration ||
             BlzIsUnitInvulnerable(caster)
           ) {
@@ -65,7 +68,7 @@ export function SetupBraveSwordAttack() {
             // PauseUnit(caster, false);
             // SetUnitInvulnerable(caster, false);
             const damageGroup = UnitHelper.getNearbyValidUnits(
-              targetPos, 400, 
+              casterPos, braveSwordAOE, 
               () => {
                 return (
                   UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player)
@@ -73,7 +76,9 @@ export function SetupBraveSwordAttack() {
               }
             );
 
-            const damage = GetHeroAgi(caster, true) * abilityLevel * braveSwordDamageMult;
+            const damage = abilityLevel * braveSwordDamageMult * (
+              CustomAbility.BASE_DAMAGE + GetHeroAgi(caster, true)
+            );
             const manaBurn = damage * braveSwordManaBurnMult * abilityLevel;
 
             ForGroup(damageGroup, () => {
