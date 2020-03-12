@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.39a
+DBZ Tribute Reforged 0.39b
 }
 
 STRING 4
@@ -7715,9 +7715,9 @@ Videl
 }
 
 STRING 1227
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Have Shenron increase your hero's power. Increases your level by 5 and adds +200 stats.
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool2> seconds|r
 }
 
 STRING 1228
@@ -34608,19 +34608,20 @@ Raditz raises both of his arms up and charges two purple energy spheres. He then
 
 STRING 5689
 {
-Type "r" to revert.
 Transformations:
 [lvl 15]  1.25x "kao"
 [lvl 30]  1.50x "ss"
 [lvl 85]  2.00x "ss2"
 [lvl 125] 2.25x "ss3"
-[lvl 150] 2.50x "ssg" [unlocks god kame]
+[lvl 150] 2.50x "ssg"
 [lvl 200] 2.60x "ssb"
 [lvl 225] 2.70x "ssbkao"
-
+|cff00ff00Pick ONE of the following:|r
+[lvl 150] "|cff00afffgod kame|r"
+[lvl 150] "|cffffcc00super dfist|r"
 |cff00ffffUltra Instinct:|r
-Type "ui" at lvl 250 to receive [D] Ultra Instinct ability. You can use that ability |cffff2020ONCE PER GAME|r.
-3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct which also can only be used |cffff1010ONCE PER GAME|r.
+Type "ui" at lvl 250 to receive [D] Ultra Instinct. 
+3 minutes after using [D] Ultra Instinct you will receive [D] Mastered Ultra Instinct. Both of these abilities can only be used |cffff1010ONCE PER GAME|r.
 }
 
 STRING 5690
@@ -34703,9 +34704,9 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5699
-// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
-Have Shenron increase your hero's power. Increases your level by 5 and adds +200 stats.
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool3> seconds|r
 }
 
 STRING 5700
@@ -45382,6 +45383,11 @@ STRING 7469
 A powerful energy shield used by androids to prevent all incoming damage for 5 seconds.|n|cff00ff00(Damage Blocked: lvl * Int * 0.7 @ 100%)|r|n|cff00ffff(Cooldown: <A0LB,Cool1> seconds)|r
 }
 
+STRING 7470
+{
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (20mins)!|r
+}
+
 STRING 7471
 // Units: H08Z (Park Ranger), EditorSuffix (Name - Editor Suffix)
 {
@@ -46875,6 +46881,12 @@ STRING 7718
 An ancient jewel of extraordinary magic and power. Collect all seven to have a wish granted by the great dragon god Shenron.|n|cffff2020Note: If you cannot select Shenron, type "-shenron" after summong him to make your wish.
 }
 
+STRING 7719
+{
+|cff00ffff[Hyperbolic Time Chamber]|r
+Mr. Popo has upgraded the Hyperbolic Time Chamber again.
+}
+
 STRING 7720
 // Items: I04A (Sorrowful Scythe), Name (Name)
 {
@@ -46897,6 +46909,11 @@ STRING 7723
 // Abilities: A0J9 (Dead Zone Fragment), EditorSuffix (Editor Suffix)
 {
 Item
+}
+
+STRING 7724
+{
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (30mins)!|r
 }
 
 STRING 7725
@@ -49290,6 +49307,30 @@ STRING 8121
 [|cffffff00Z|r] Choose Cell
 }
 
+STRING 8122
+{
+|cff00ffff[Hyperbolic Time Chamber]|r
+Mr. Popo has perfected the Hyperbolic Time Chamber.
+}
+
+STRING 8123
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+{
+Have Shenron increase your hero's power. Increases your level by 5 and adds +200 base stats.
+}
+
+STRING 8124
+// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+{
+Have Shenron increase your hero's power. Increases your level by 5 and adds +200 base stats.
+}
+
+STRING 8125
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
+}
+
 STRING 8126
 // Units: H00K (Half Human / Half Saiyan), Awakentip (Tooltip - Awaken)
 {
@@ -49332,6 +49373,12 @@ STRING 8132
 E
 }
 
+STRING 8133
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
+}
+
 STRING 8134
 // Abilities: A0I9 (Brave Slash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -49342,6 +49389,12 @@ STRING 8135
 // Abilities: A0IB (Hero's Flute), Name (Name)
 {
 Hero's Flute
+}
+
+STRING 8136
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
 }
 
 STRING 8137
@@ -49368,10 +49421,28 @@ STRING 8140
 Tapion slashes units in melee range towards the target direction for damage. If he successfully uses this ability three times, he temporarily unlocks [|cff00ff00Q|r] Brave Cannon which can apply |cffFFFF00Hero's Song|r on enemies.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0I9,Cool6>s|r
 }
 
+STRING 8141
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
+}
+
+STRING 8142
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
+}
+
 STRING 8143
 // Abilities: A0IH (Wish for Book), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 8144
+// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
 }
 
 STRING 8145
@@ -49386,10 +49457,22 @@ STRING 8146
 Shining Sword
 }
 
+STRING 8147
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
+}
+
 STRING 8148
 // Abilities: A0IC (Shining Sword), Researchubertip (Tooltip - Learn - Extended)
 {
 Tapion dances across the battlefield, bouncing and damaging up to 15 times between enemies 600 range away from each other. Tapion starts on the targeted enemy and jumps to nearby enemies. |n|cff00FF00Dmg: agi*lvl*3+100|r|n|cff00FF00Bonus DMG:|r +33% if targets are affected by Hero's Song|n|cff00FFFFCooldown: 16s|r
+}
+
+STRING 8149
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
 }
 
 STRING 8150
@@ -51822,15 +51905,15 @@ King K Rool is the mightiest being to sit upon the throne of Krokodile Island. S
 }
 
 STRING 8555
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool4> seconds|r
 }
 
 STRING 8556
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool5> seconds|r
 }
 
 STRING 8557
@@ -51840,15 +51923,15 @@ W
 }
 
 STRING 8558
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> seconds|r
 }
 
 STRING 8559
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 1|r]
 }
 
 STRING 8560
@@ -51864,45 +51947,45 @@ W
 }
 
 STRING 8562
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 2|r]
 }
 
 STRING 8563
-// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 3|r]
 }
 
 STRING 8564
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 4|r]
 }
 
 STRING 8565
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 5|r]
 }
 
 STRING 8566
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
+E
 }
 
 STRING 8567
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Name (Name)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
+Super Dragon Fist
 }
 
 STRING 8568
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Researchtip (Tooltip - Learn)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast for the next 5 seconds.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+[|cff00FF00E|r] Super Dragon Fist - [|cffffcc00Level %d|r]
 }
 
 STRING 8569
@@ -51964,6 +52047,12 @@ A strong PvP fighters due to his extremely high mobility, burst damage, and inna
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 8578
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
 }
 
 STRING 8579
@@ -52365,6 +52454,12 @@ STRING 8644
 // Abilities: A0NV (Sorrowful Scythe), EditorSuffix (Editor Suffix)
 {
 Item
+}
+
+STRING 8645
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
 }
 
 STRING 8646
@@ -53590,6 +53685,12 @@ STRING 8847
 Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff00 (int*1x(lvl*1)+20)/10.|r|n|cffFFFF00s|r|n|cff00FFFFCooldown: 20s|r
 }
 
+STRING 8848
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+}
+
 STRING 8849
 // Abilities: A0JP (Spirit Bomb), Name (Name)
 {
@@ -53600,6 +53701,24 @@ STRING 8850
 // Abilities: A0LD (S.S. Deadly Bomber), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 8851
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool2>s
+}
+
+STRING 8852
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool3>s
+}
+
+STRING 8853
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool4>s
 }
 
 STRING 8854
@@ -54097,6 +54216,12 @@ STRING 8934
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
 {
 Unlocks the Gohan's hidden potential, boosting ability damage by 5% for the next 10 seconds.
+}
+
+STRING 8935
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool5>s
 }
 
 STRING 8936
@@ -61089,6 +61214,18 @@ Upa's attacks are empowered by his rage to deal devastating damage to his enemie
 |cffffcc00Bonus Attack Damage:|r +<A0OR,DataA1,%>% 
 }
 
+STRING 10102
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool6>s
+}
+
+STRING 10103
+// Abilities: A0OW (Kannonblast), Researchubertip (Tooltip - Learn - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool1>s
+}
+
 STRING 10104
 // Units: H08L (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
@@ -61239,6 +61376,12 @@ STRING 10128
 First, Broly opens his mouth and charges a green energy sphere. Then, he fires the energy sphere from his mouth in the form of an energy wave at the opponent. The attack is so powerful it pushes Broly back. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A084,Cool1> seconds|r
 }
 
+STRING 10129
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool8>s
+}
+
 STRING 10130
 // Abilities: A0DW (Evil Aura), EditorSuffix (Editor Suffix)
 {
@@ -61332,6 +61475,12 @@ Gohan
 STRING 10145
 {
 Camera
+}
+
+STRING 10146
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool7>s
 }
 
 STRING 10147
@@ -63155,10 +63304,22 @@ STRING 10443
 This unit has been transformed into candy and takes extra damage from Buu.
 }
 
+STRING 10444
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool9>s
+}
+
 STRING 10445
 // Abilities: A0OX (Tyrant Breaker), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Tyrant Breaker - [|cffffcc00Level 2|r]
+}
+
+STRING 10446
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool10>s
 }
 
 STRING 10447
@@ -64474,7 +64635,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 9.Mar.20
+This map is under active development - 13.Mar.20
 }
 
 STRING 10653
@@ -66195,6 +66356,12 @@ STRING 10933
 [|cff00ff00R|r] Learn Abil - [|cffffcc00Level %d|r]
 }
 
+STRING 10934
+// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool1>s
+}
+
 STRING 10935
 // Abilities: A0M5 (Frozen R), Tip (Tooltip - Normal)
 {
@@ -67353,6 +67520,12 @@ STRING 11130
 Raditz
 }
 
+STRING 11131
+// Abilities: A0P0 (Super Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> - <A00U,Cool7> seconds|r
+}
+
 STRING 11132
 // Abilities: A0MG (Behind You), EditorSuffix (Editor Suffix)
 {
@@ -67394,6 +67567,12 @@ STRING 11137
 // Abilities: A0MH (Double Sundae), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Double Sundae - [|cffffcc00Level %d|r]
+}
+
+STRING 11138
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+{
+E
 }
 
 STRING 11139
@@ -67599,10 +67778,22 @@ STRING 11170
 [|cff00ff00Q|r] Giant Storm - [|cffffcc00Level 5|r]
 }
 
+STRING 11171
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool6> seconds|r
+}
+
 STRING 11172
 // Abilities: A0MK (Plant Saibamen), Ubertip (Tooltip - Normal - Extended)
 {
 Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibamen Planted: 3|r|n|cff00ffffCooldown: <A0MK,Cool1> seconds|r|n|n|cff808080Nappa is very knowledgeable about Saibamen; he knows how to grow them and seems to enjoy planting them.|r
+}
+
+STRING 11173
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ? * 1.5|r|n|cff00ffffCooldown: <A0P0,Cool7> seconds|r
 }
 
 STRING 11174
@@ -67672,12 +67863,12 @@ STRING 11184
 
 STRING 11185
 {
-|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (20mins)!|r
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (10mins)!|r
 }
 
 STRING 11186
 {
-|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (10mins)!|r
+|cff40ff40[Only red sees this] Automatic Catchup Stats Activated (5 mins)!|r
 }
 
 STRING 11187
@@ -68340,6 +68531,12 @@ STRING 11296
 Moro
 }
 
+STRING 11297
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 6|r]
+}
+
 STRING 11298
 // Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
 {
@@ -68416,6 +68613,12 @@ STRING 11311
 // Abilities: A0OX (Tyrant Breaker), EditorSuffix (Editor Suffix)
 {
 (Bardock)
+}
+
+STRING 11312
+// Abilities: A0P0 (Super Dragon Fist), EditorSuffix (Editor Suffix)
+{
+(actual)
 }
 
 STRING 11313
@@ -70963,6 +71166,12 @@ STRING 11738
 (Tavern)
 }
 
+STRING 11739
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Super Dragon Fist - [|cffffcc00Level 7|r]
+}
+
 STRING 11740
 // Abilities: A0NG (RaditzRevert), Name (Name)
 {
@@ -72916,12 +73125,6 @@ STRING 12062
 Q
 }
 
-STRING 12063
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
 STRING 12064
 // Abilities: A0MZ (Mastered Ultra Instinct), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73436,18 +73639,6 @@ STRING 12150
 // Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
-}
-
-STRING 12151
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
-STRING 12152
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12153
@@ -74296,12 +74487,6 @@ STRING 12294
 Q
 }
 
-STRING 12295
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
 STRING 12296
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74314,18 +74499,6 @@ STRING 12297
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 8|r]
 }
 
-STRING 12298
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
-STRING 12299
-// Abilities: A0OW (Kannonblast), Researchubertip (Tooltip - Learn - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
 STRING 12300
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74336,18 +74509,6 @@ STRING 12301
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 10|r]
-}
-
-STRING 12302
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
-STRING 12303
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12304
@@ -74682,12 +74843,6 @@ A powerful medium-range brawler that excels in outmaneuvering his opponents befo
 
 }
 
-STRING 12347
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
 STRING 12348
 // Abilities: A0IV (Krown Toss), Researchtip (Tooltip - Learn)
 {
@@ -74822,18 +74977,6 @@ STRING 12370
 // Abilities: A0IV (Krown Toss), Tip (Tooltip - Normal)
 {
 [|cffFFFF00Q|r] Krown Toss - [|cffffcc00Level 9|r]
-}
-
-STRING 12371
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
-}
-
-STRING 12372
-// Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
-{
-King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line.|n|cff00FF00Damage: Str * lvl * ?|r
 }
 
 STRING 12373

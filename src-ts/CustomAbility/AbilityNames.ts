@@ -10,6 +10,7 @@ export module AbilityNames {
     export const GOD_KAMEHAMEHA: string = "God Kamehameha";
     export const SPIRIT_BOMB: string = "Spirit Bomb";
     export const DRAGON_FIST: string = "Dragon Fist";
+    export const SUPER_DRAGON_FIST: string = "Super Dragon Fist";
     export const ULTRA_INSTINCT: string = "Ultra Instinct";
     export const MASTERED_ULTRA_INSTINCT: string = "Mastered Ultra Instinct";
   }

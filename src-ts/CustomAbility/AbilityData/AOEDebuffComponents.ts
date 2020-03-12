@@ -93,7 +93,7 @@ export const AOEDebuffComponents = [
     keepCasting: false, 
   },
   {
-    name: "debuff heros song heros flute",
+    name: "debuff heros song heros flute start",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
@@ -103,14 +103,14 @@ export const AOEDebuffComponents = [
     keepCasting: false, 
   },
   {
-    name: "debuff heros song heros flute finish",
-    repeatInterval: 1,
-    startTick: -1,
+    name: "debuff heros song heros flute continuous",
+    repeatInterval: 33,
+    startTick: 0,
     endTick: -1,
     abilityId: Debuffs.HEROS_SONG,
     orderId: Debuffs.SLOW_ORDER_ID,
     aoe: 900,
-    keepCasting: false, 
+    keepCasting: true, 
   },
   {
     name: "debuff demons mark rakshasa claw",

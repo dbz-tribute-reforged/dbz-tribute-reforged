@@ -513,7 +513,7 @@ export const AOEKnockbackComponents = [
     name: "knockback hand kannon",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 33,
+    endTick: -1,
     knockbackData: {
       speed: 25, 
       angle: 180, 
@@ -528,7 +528,7 @@ export const AOEKnockbackComponents = [
     name: "knockback hand kannon deflect",
     repeatInterval: 1, 
     startTick: 29,
-    endTick: 33,
+    endTick: -1,
     knockbackData: {
       speed: 0, 
       angle: 180, 

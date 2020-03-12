@@ -12,9 +12,13 @@ import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
 import { FrameHelper } from "Common/FrameHelper";
 import { ExperienceManager } from "Core/ExperienceSystem/ExpierenceManager";
 import { AbilityNames } from "CustomAbility/AbilityNames";
+import { Vector2D } from "Common/Vector2D";
+import { UnitHelper } from "Common/UnitHelper";
+import { CoordMath } from "Common/CoordMath";
+import { PathingCheck } from "Common/PathingCheck";
 
 // global?
-let customPlayers: CustomPlayer[];
+export const customPlayers: CustomPlayer[] = [];
 
 export function addAbilityAction(abilityTrigger: trigger, name: string) {
   TriggerAddAction(abilityTrigger, () => {
@@ -106,7 +110,7 @@ export function isValidOrderByPlayer(
 
 export function CustomPlayerTest() {
   
-  customPlayers = [];
+  // customPlayers = [];
   
   for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     customPlayers.push(new CustomPlayer(
@@ -1084,4 +1088,322 @@ export function CustomPlayerTest() {
       BlzFrameSetSize(frame, x, y);
 		}
   });
+
+  SetupBraveSwordAttack(customPlayers);
+  SetupDragonFistSfx(customPlayers);
+}
+
+export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
+  const braveSwordAttackId = FourCC("A0IA");
+  const herosSongDebuff = FourCC("B01H");
+  const dummyStunSpell = FourCC('A0IY');
+  const dummyStunOrder = 852095;
+  const tickRate = 0.02;
+  const jumpDuration = 40;
+  const jumpHeight = 900;
+  const jumpMoveDistance = 26;
+  const braveSwordAOE = 400;
+  const braveSwordMaxRange = 1100;
+  const braveSwordDamageMult = 0.4;
+  const braveSwordManaBurnMult = 0.01;
+
+  const trigger = CreateTrigger();
+
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == braveSwordAttackId) {
+      const caster = GetTriggerUnit();
+      const abilityLevel = GetUnitAbilityLevel(caster, spellId);
+      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+      const player = GetTriggerPlayer();
+
+      const targetGroup = UnitHelper.getNearbyValidUnits(
+        targetPos, braveSwordAOE, 
+        () => {
+          return (
+            UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player) && 
+            GetUnitAbilityLevel(GetFilterUnit(), herosSongDebuff) > 0
+          );
+        }
+      )
+      
+      if (CountUnitsInGroup(targetGroup) > 0) {
+        let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+        let time = 0;
+        // PauseUnit(caster, true);
+        // SetUnitInvulnerable(caster, true);
+        UnitHelper.giveUnitFlying(caster);
+
+        TimerStart(CreateTimer(), tickRate, true, () => {
+          casterPos.x = GetUnitX(caster);
+          casterPos.y = GetUnitY(caster);
+          const distanceToTarget = CoordMath.distance(casterPos, targetPos);
+          if (
+            distanceToTarget > braveSwordMaxRange ||
+            time > jumpDuration ||
+            BlzIsUnitInvulnerable(caster)
+          ) {
+            
+            const castDummy = CreateUnit(
+              player, 
+              Constants.dummyCasterId, 
+              casterPos.x, casterPos.y, 
+              0
+            );
+            UnitAddAbility(castDummy, dummyStunSpell);
+
+            // PauseUnit(caster, false);
+            // SetUnitInvulnerable(caster, false);
+            const damageGroup = UnitHelper.getNearbyValidUnits(
+              casterPos, braveSwordAOE, 
+              () => {
+                return (
+                  UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player)
+                );
+              }
+            );
+
+            let spellPower = 1.0;
+            const customHero = customPlayers[GetPlayerId(player)].getCustomHero(caster);
+            if (customHero) {
+              spellPower = customHero.spellPower;
+            }
+            const damage = abilityLevel * spellPower * braveSwordDamageMult * (
+              CustomAbility.BASE_DAMAGE + 
+              GetHeroAgi(caster, true)
+            );
+            const manaBurn = damage * braveSwordManaBurnMult * abilityLevel;
+
+            ForGroup(damageGroup, () => {
+              const damagedUnit = GetEnumUnit();
+              SetUnitState(
+                damagedUnit, 
+                UNIT_STATE_MANA, 
+                Math.max(
+                  0, 
+                  GetUnitState(damagedUnit, UNIT_STATE_MANA) - manaBurn
+                )
+              );
+
+              UnitDamageTarget(
+                caster, 
+                damagedUnit, 
+                damage, 
+                true, 
+                false, 
+                ATTACK_TYPE_HERO, 
+                DAMAGE_TYPE_UNKNOWN, 
+                WEAPON_TYPE_WHOKNOWS
+              );
+
+              if (IsUnitType(damagedUnit, UNIT_TYPE_HERO)) {
+                IssueTargetOrderById(castDummy, dummyStunOrder, damagedUnit);
+              }
+            });
+
+            DestroyGroup(damageGroup);
+
+            const clapSfx = AddSpecialEffect(
+              "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+              casterPos.x, casterPos.y
+            );
+            BlzSetSpecialEffectScale(clapSfx, 2.0);
+            DestroyEffect(clapSfx);
+
+            const novaSfx = AddSpecialEffect(
+              "IceNova.mdl",
+              casterPos.x, casterPos.y
+            );
+            BlzSetSpecialEffectScale(novaSfx, 1.0);
+            BlzSetSpecialEffectTimeScale(novaSfx, 1.25);
+            DestroyEffect(novaSfx);
+
+            const feedbackSfx = AddSpecialEffect(
+              "Abilities\\Spells\\Human\\Feedback\\ArcaneTowerAttack.mdl",
+              casterPos.x, casterPos.y
+            );
+            BlzSetSpecialEffectScale(feedbackSfx, 3.0);
+            DestroyEffect(feedbackSfx);
+
+            SetUnitFlyHeight(caster, 0, 0);
+            DestroyTimer(GetExpiredTimer());
+          } else {
+            const timeJumpRatio = -1 + 2 * time / jumpDuration;
+            const height = jumpHeight * (
+              1 - timeJumpRatio * timeJumpRatio
+            );
+            SetUnitFlyHeight(caster, height, 0);
+
+            const moveAngle = CoordMath.angleBetweenCoords(casterPos, targetPos);
+            let movePos;
+            if (distanceToTarget < jumpMoveDistance) {
+              movePos = CoordMath.polarProjectCoords(casterPos, moveAngle, distanceToTarget);
+            } else {
+              movePos = CoordMath.polarProjectCoords(casterPos, moveAngle, jumpMoveDistance);
+            }
+
+            PathingCheck.moveGroundUnitToCoord(caster, movePos);
+          }
+          ++time;
+        });
+
+      } else {
+        const playerForce = CreateForce();
+        ForceAddPlayer(playerForce, player);
+        DisplayTimedTextToForce(
+          playerForce, 
+          5, 
+          "|cffff2020Error|r: No unit with |cffffff00Hero's Song|r in target area."
+        );
+        DestroyForce(playerForce);
+
+        UnitRemoveAbility(caster, spellId);
+        UnitAddAbility(caster, spellId);
+        SetUnitAbilityLevel(caster, spellId, abilityLevel);
+        UnitMakeAbilityPermanent(caster, true, spellId);
+      }
+      
+      DestroyGroup(targetGroup);
+    }
+    return false;
+  }));
+}
+
+export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
+  const dragonFistId = FourCC("A00U");
+  const superDragonFistId = FourCC("A0P0");
+  const tickRate = 0.02;
+  const updatesPerTick = 1;
+  // const duration = 45;
+  // const duration = 0.91 * updatesPerTick/tickRate;
+  const baseDuration = 1.8 * updatesPerTick/tickRate;
+  const startingAngle = 0;
+  // const anglesPerTick = -20;
+  const anglesPerTick = 5;
+  const bonusUpdatesPerDistance = 0.07;
+  const distanceFromMiddle = 240;
+  const maxTimeBasedDistanceMult = 1.3;
+  const heightOffset = 100 + maxTimeBasedDistanceMult * distanceFromMiddle;
+  const facingAnglePerTick = 5;
+  const sfxScale = 3.0;
+  const sfxHeadScale = 3.5;
+  const startingPitch = 90.0;
+  const sfxRed = 255;
+  const sfxGreen = 205;
+  const sfxBlue = 25;
+  const sfxSpiralModel = "DragonSegment2.mdl";
+
+  const trigger = CreateTrigger();
+
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == dragonFistId || spellId == superDragonFistId) {
+      const caster = GetTriggerUnit();
+      let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+      let oldPos = new Vector2D(casterPos.x, casterPos.y);
+
+      // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
+      const sfxList: effect[] = [];
+      let sfxIndex = 0;
+      const sfxHead = AddSpecialEffect("DragonHead2.mdl", casterPos.x, casterPos.y);
+      BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
+      BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
+      sfxList.push(sfxHead);  
+      ++sfxIndex;
+
+      let duration = baseDuration;
+
+      let time = 0; 
+      TimerStart(CreateTimer(), tickRate, true, () => {
+        oldPos.x = casterPos.x;
+        oldPos.y = casterPos.y;
+        casterPos.x = GetUnitX(caster);
+        casterPos.y = GetUnitY(caster);
+        const distanceTravelled = CoordMath.distance(casterPos, oldPos);
+        let facingAngle = GetUnitFacing(caster);
+        // if (distanceTravelled < 1) {
+        //   facingAngle = GetUnitFacing(caster);
+        // } else {
+        //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
+        // }
+        const bonusUpdates = Math.min(
+          25,
+          Math.floor(distanceTravelled * bonusUpdatesPerDistance)
+        );
+        const updatesThisTick = updatesPerTick + bonusUpdates;
+        const segmentedDistance = distanceTravelled / updatesThisTick;
+
+        duration += updatesThisTick - 1;
+        for (let i = 0; i < updatesThisTick; ++i) {    
+          if (time > duration) {
+            for (const removeSfx of sfxList) {
+              DestroyEffect(removeSfx);
+            }
+            DestroyTimer(GetExpiredTimer());
+          } else {
+            const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
+            const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
+            // const timeRatio = (maxTimeBasedDistanceMult);
+            const x = timeRatio * distanceFromMiddle * Math.cos(angle);
+            const y = timeRatio * distanceFromMiddle * Math.sin(angle);
+            const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
+            (
+              heightOffset + y
+            );
+
+            const currentPos = CoordMath.polarProjectCoords(
+              oldPos, 
+              facingAngle, 
+              (i+1) * distanceTravelled / updatesThisTick
+            );
+            const newPos = CoordMath.polarProjectCoords(
+              currentPos, 
+              facingAngle - 90, 
+              x
+            );
+            let yawModifier = 1;
+            if (y < 0) {
+              yawModifier = 1;
+            }
+            const yaw = CoordMath.degreesToRadians * (
+              facingAngle + yawModifier * (
+                90 - Math.min(90, segmentedDistance)
+              )
+            );
+            // const targetYaw = facingAngle * CoordMath.degreesToRadians;
+
+            const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
+
+            const sfx = AddSpecialEffect(sfxSpiralModel, newPos.x, newPos.y);
+            // sfxList.push(sfx);
+            // ++sfxIndex;
+            DestroyEffect(sfx);
+            BlzSetSpecialEffectScale(sfx, sfxScale);
+            BlzSetSpecialEffectHeight(sfx, height);
+            BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
+            // BlzSetSpecialEffectYaw(sfx, targetYaw);
+            BlzSetSpecialEffectYaw(sfx, yaw);
+            BlzSetSpecialEffectPitch(sfx, pitch);
+            //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
+            //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
+            //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
+            // );
+
+            // update dragon head
+            if (i >= updatesThisTick - 1) {
+              BlzSetSpecialEffectX(sfxHead, newPos.x);
+              BlzSetSpecialEffectY(sfxHead, newPos.y);
+              BlzSetSpecialEffectHeight(sfxHead, height);
+              BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
+              // BlzSetSpecialEffectPitch(sfxHead, pitch);
+            }
+          }
+          ++time;
+        }
+      });
+    }
+    return false;
+  }));
 }
