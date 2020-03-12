@@ -145,7 +145,19 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 15,
+  },
+  {
+    name: "dash ground point super dragon fist",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
   },
   {
     name: "dash ground point super dragon flight",
@@ -193,7 +205,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 10,
+    distance: 15,
   },
   {
     name: "dash ground point saiyan spirit",
@@ -382,7 +394,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 39,
   },
   // ----------------------------
   // cell-x

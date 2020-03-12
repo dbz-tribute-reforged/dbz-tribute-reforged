@@ -7,6 +7,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0L9'), AbilityNames.Goku.GOD_KAMEHAMEHA],
     [FourCC('A0JP'), AbilityNames.Goku.SPIRIT_BOMB],
     [FourCC('A00U'), AbilityNames.Goku.DRAGON_FIST],
+    [FourCC('A0P0'), AbilityNames.Goku.SUPER_DRAGON_FIST],
     [FourCC('A0KR'), AbilityNames.Goku.ULTRA_INSTINCT],
     [FourCC('A0MZ'), AbilityNames.Goku.MASTERED_ULTRA_INSTINCT],
 

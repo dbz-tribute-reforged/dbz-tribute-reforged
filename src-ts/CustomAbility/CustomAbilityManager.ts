@@ -51,7 +51,6 @@ import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { DeflectorComponents } from "./AbilityData/DeflectorComponents";
 import { Deflector } from "./AbilityComponent/Deflector";
-import { SetupBraveSwordAttack } from "./TriggeredAbility/BraveSwordAttack";
 
 export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
@@ -190,7 +189,6 @@ export class CustomAbilityManager {
       this.setAbility(ability);
     }
 
-    SetupBraveSwordAttack();
   }
 
   setComponent(component: AbilityComponent): this {

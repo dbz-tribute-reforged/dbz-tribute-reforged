@@ -30,10 +30,10 @@ let itemCleanupManager: ItemCleanupManager;
 function tsMain() {
 
   // preload (temp) test
-  Preload("DragonHead2.mdx");
-  Preload("DragonSegment2.mdx");
-  Preload("DragonTail.mdx");
-  Preload("Conflagrate.mdx");
+  Preload("DragonHead2.mdl");
+  Preload("DragonSegment2.mdl");
+  Preload("DragonTail.mdl");
+  Preload("Conflagrate.mdl");
 
   // setup logger
   Logger.doLogVerbose = false;

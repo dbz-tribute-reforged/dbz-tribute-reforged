@@ -7,6 +7,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Goku.KAMEHAMEHA, 
       AbilityNames.Goku.SPIRIT_BOMB, 
       AbilityNames.Goku.DRAGON_FIST, 
+      AbilityNames.Goku.SUPER_DRAGON_FIST, 
       AbilityNames.Goku.GOD_KAMEHAMEHA, 
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
