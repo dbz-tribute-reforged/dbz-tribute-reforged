@@ -136,6 +136,18 @@ export const DashComponents = [
     distance: 2,
   },
   {
+    name: "dash ground forward mastered ultra instinct",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 5,
+  },
+  {
     name: "dash ground point dragon fist",
     repeatInterval: 1, 
     startTick: 0,

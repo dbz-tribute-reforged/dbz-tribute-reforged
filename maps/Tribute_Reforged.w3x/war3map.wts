@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.39b
+DBZ Tribute Reforged 0.39c
 }
 
 STRING 4
@@ -7715,7 +7715,7 @@ Videl
 }
 
 STRING 1227
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool2> seconds|r
 }
@@ -34704,7 +34704,7 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5699
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool3> seconds|r
 }
@@ -51905,13 +51905,13 @@ King K Rool is the mightiest being to sit upon the throne of Krokodile Island. S
 }
 
 STRING 8555
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool4> seconds|r
 }
 
 STRING 8556
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool5> seconds|r
 }
@@ -51923,7 +51923,7 @@ W
 }
 
 STRING 8558
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> seconds|r
 }
@@ -51947,31 +51947,31 @@ W
 }
 
 STRING 8562
-// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 2|r]
 }
 
 STRING 8563
-// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 3|r]
 }
 
 STRING 8564
-// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 4|r]
 }
 
 STRING 8565
-// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 5|r]
 }
 
 STRING 8566
-// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51989,7 +51989,7 @@ STRING 8568
 }
 
 STRING 8569
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52013,7 +52013,7 @@ R
 }
 
 STRING 8573
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53017,7 +53017,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53041,7 +53041,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54183,7 +54183,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54207,7 +54207,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54345,7 +54345,7 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8956
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54664,7 +54664,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54963,7 +54963,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54987,7 +54987,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54999,7 +54999,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55071,7 +55071,7 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 }
 
 STRING 9077
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -56463,13 +56463,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60021,25 +60021,25 @@ STRING 9900
 }
 
 STRING 9901
-// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 2|r]
 }
 
 STRING 9902
-// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 3|r]
 }
 
 STRING 9903
-// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 4|r]
 }
 
 STRING 9904
-// Abilities: A00U (Dragon Fist), Tip (Tooltip - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Dragon Fist - [|cffffcc00Level 5|r]
 }
@@ -60087,7 +60087,7 @@ STRING 9911
 }
 
 STRING 9912
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60183,7 +60183,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9928
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60207,7 +60207,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9932
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61233,7 +61233,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61567,7 +61567,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61597,7 +61597,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61825,13 +61825,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62764,7 +62764,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62782,7 +62782,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64621,7 +64621,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64635,7 +64635,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 13.Mar.20
+This map is under active development - 14.Mar.20
 }
 
 STRING 10653
@@ -64649,7 +64649,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64947,7 +64947,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64965,7 +64965,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65121,7 +65121,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66183,7 +66183,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66201,7 +66201,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66787,7 +66787,7 @@ STRING 11005
 }
 
 STRING 11006
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool2> seconds|r
 }
@@ -67461,7 +67461,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67479,7 +67479,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67521,7 +67521,7 @@ Raditz
 }
 
 STRING 11131
-// Abilities: A0P0 (Super Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A00U (Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> - <A00U,Cool7> seconds|r
 }
@@ -67570,7 +67570,7 @@ STRING 11137
 }
 
 STRING 11138
-// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67779,7 +67779,7 @@ STRING 11170
 }
 
 STRING 11171
-// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool6> seconds|r
 }
@@ -68040,7 +68040,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68076,7 +68076,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68424,7 +68424,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11279
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68616,7 +68616,7 @@ STRING 11311
 }
 
 STRING 11312
-// Abilities: A0P0 (Super Dragon Fist), EditorSuffix (Editor Suffix)
+// Abilities: A0KR (Ultra Instinct), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -69174,7 +69174,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69186,7 +69186,7 @@ STRING 11406
 }
 
 STRING 11407
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool3> seconds|r
 }
@@ -69198,7 +69198,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69210,7 +69210,7 @@ STRING 11410
 }
 
 STRING 11411
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool4> seconds|r
 }
@@ -69246,25 +69246,25 @@ STRING 11416
 }
 
 STRING 11417
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool5> seconds|r
 }
 
 STRING 11418
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> seconds|r
 }
 
 STRING 11419
-// Abilities: A00U (Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool1> - <A00U,Cool7> seconds|r
 }
 
 STRING 11420
-// Abilities: A00U (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P0 (Super Dragon Fist), Ubertip (Tooltip - Normal - Extended)
 {
 Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A00U,Cool6> seconds|r
 }
@@ -69953,7 +69953,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70535,7 +70535,7 @@ STRING 11631
 }
 
 STRING 11632
-// Abilities: A0KR (Ultra Instinct), EditorSuffix (Editor Suffix)
+// Abilities: A0MZ (Mastered Ultra Instinct), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -70595,7 +70595,7 @@ STRING 11641
 }
 
 STRING 11642
-// Abilities: A0MZ (Mastered Ultra Instinct), EditorSuffix (Editor Suffix)
+// Abilities: A0NP (Dimension Sword 1), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -71818,7 +71818,7 @@ Dimension Sword 1
 }
 
 STRING 11844
-// Abilities: A0NP (Dimension Sword 1), EditorSuffix (Editor Suffix)
+// Abilities: A0P0 (Super Dragon Fist), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -72760,7 +72760,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72778,7 +72778,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72796,7 +72796,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -74212,13 +74212,13 @@ STRING 12247
 }
 
 STRING 12248
-// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 12249
-// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74326,7 +74326,7 @@ STRING 12266
 }
 
 STRING 12267
-// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }

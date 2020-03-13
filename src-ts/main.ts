@@ -102,6 +102,10 @@ function tsMain() {
   });
 }
 
+function playLobbyMusic() {
+  PlayMusic("Audio\\Music\\DBSuperOp2.mp3");
+}
+
 // Configure libraries
 //setIsDestructableTreeConfig({ HARVESTER_UNIT_ID: FourCC("opeo") });
 
@@ -115,3 +119,4 @@ LibraryLoader.logFunction = libLoaderLog;
 ceres.addHook("main::after", () => LibraryLoader.runInitializers());
 ceres.addHook("main::after", () => tsMain());
 ceres.addHook("main::after", () => CameraZoom.onInit());
+ceres.addHook("config::after", () => playLobbyMusic());
