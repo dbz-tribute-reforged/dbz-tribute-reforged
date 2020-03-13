@@ -275,7 +275,7 @@ export const AbilitiesList = [
         AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,
     },
     components: [
-      { name: "dash ground point 5dist" },
+      { name: "dash ground forward mastered ultra instinct" },
       { name: "spell amp mastered ultra instinct" },
       { name: "dodge ultra instinct" },
       { name: "block mastered ultra instinct" },

@@ -173,6 +173,12 @@ udg_KingsThroneUnitGroup = nil
 udg_BuuLightningUnitGroup = nil
 udg_TapionSpellsHashtable = nil
 udg_TempSound = nil
+udg_FinalBattleTimer = nil
+udg_KillHeroVoicelineTimer = nil
+udg_KillHeroVoicelinePath = ""
+udg_KillHeroVoicelineDuration = 0
+udg_KillHeroVoicelineUnit = nil
+udg_KillHeroVoicelineDelay = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_KillZone1 = nil
@@ -240,6 +246,7 @@ gg_snd_QuestFailed = nil
 gg_snd_ClanInvitation = nil
 gg_snd_ShenronSummon = nil
 gg_snd_Warning = nil
+gg_snd_KachiDaze = ""
 gg_trg_SolarFlare = nil
 gg_trg_Oozaru_Vegeta_Old = nil
 gg_trg_Oozaru_Vegeta_New = nil
@@ -261,6 +268,7 @@ gg_trg_Cell_Sense_Droids = nil
 gg_trg_Raditz_Double_Sundae = nil
 gg_trg_Nappa_Plant_Saibamen = nil
 gg_trg_Saibamen_Loop = nil
+gg_trg_Saibamen_Vegeta_Jr_Death = nil
 gg_trg_Metal_Cooler_Scan_For_Powers = nil
 gg_trg_Demon_Mark = nil
 gg_trg_Demon_Rush = nil
@@ -281,6 +289,7 @@ gg_trg_Tapion_Brave_Slash = nil
 gg_trg_Tapion_Brave_Cannon = nil
 gg_trg_Tapion_Heros_Flute_Finish = nil
 gg_trg_Play_Ability_Spell_Audio = nil
+gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
 gg_trg_Cam_Angle = nil
 gg_trg_Auto_Zoom = nil
@@ -323,6 +332,9 @@ gg_trg_Kill_Creep_New_New_Stats_Only = nil
 gg_trg_Kill_Hero_Revive = nil
 gg_trg_Kill_Hero_PvP_and_Saga = nil
 gg_trg_Kill_Hero_Give_PvP_Stats = nil
+gg_trg_Kill_Hero_Voiceline = nil
+gg_trg_Kill_Hero_Voiceline_Init = nil
+gg_trg_Kill_Hero_Voiceline_Timer = nil
 gg_trg_Player_Level_up_New = nil
 gg_trg_Hero_Level_up_New_New = nil
 gg_trg_Auto_Transform = nil
@@ -381,6 +393,7 @@ gg_trg_Tournament_Trophy_Use_Trophy = nil
 gg_trg_Tournament_Trophy_Acquire_Item = nil
 gg_trg_Tournament_Trophy_Give_Reward = nil
 gg_trg_Final_Battle_Detector = nil
+gg_trg_Final_Battle_Timer_Finish = nil
 gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
 gg_trg_Team_System_Init = nil
@@ -573,6 +586,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_snd_GokuKamehameha = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -835,6 +849,11 @@ function InitGlobals()
     udg_BlastOMaticUnitGroup = CreateGroup()
     udg_KingsThroneUnitGroup = CreateGroup()
     udg_BuuLightningUnitGroup = CreateGroup()
+    udg_FinalBattleTimer = CreateTimer()
+    udg_KillHeroVoicelineTimer = CreateTimer()
+    udg_KillHeroVoicelinePath = ""
+    udg_KillHeroVoicelineDuration = 0
+    udg_KillHeroVoicelineDelay = 0
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -844,7 +863,7 @@ function playGenericSpellSound(target, soundPath, duration)
 	SetSoundVolume(udg_TempSound, 127)
 	SetSoundPitch(udg_TempSound, 1.0)
 	SetSoundDistances(udg_TempSound, 600.0, 10000.0)
-	SetSoundDistanceCutoff(udg_TempSound, 3000.0)
+	SetSoundDistanceCutoff(udg_TempSound, 4000.0)
 	SetSoundConeAngles(udg_TempSound, 0.0, 0.0, 127)
 	SetSoundConeOrientation(udg_TempSound, 0.0, 0.0, 0.0)
 	PlaySoundOnUnitBJ(udg_TempSound, 100, target)
@@ -1022,7 +1041,7 @@ function InitSounds()
     SetSoundDuration(gg_snd_ClanInvitation, 4295)
     SetSoundVolume(gg_snd_ClanInvitation, 127)
     gg_snd_ShenronSummon = CreateSound("Audio/Effects/ShenronSummon.mp3", false, false, false, 1, 1, "DefaultEAXON")
-    SetSoundDuration(gg_snd_ShenronSummon, 9012)
+    SetSoundDuration(gg_snd_ShenronSummon, 8960)
     SetSoundChannel(gg_snd_ShenronSummon, 0)
     SetSoundVolume(gg_snd_ShenronSummon, 127)
     SetSoundPitch(gg_snd_ShenronSummon, 1.0)
@@ -1030,6 +1049,12 @@ function InitSounds()
     SetSoundParamsFromLabel(gg_snd_Warning, "Warning")
     SetSoundDuration(gg_snd_Warning, 1903)
     SetSoundVolume(gg_snd_Warning, 80)
+    gg_snd_KachiDaze = "Audio/Music/KachiDaze.mp3"
+    gg_snd_GokuKamehameha = CreateSound("Audio/Voice/GokuKamehameha.mp3", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundDuration(gg_snd_GokuKamehameha, 2832)
+    SetSoundChannel(gg_snd_GokuKamehameha, 0)
+    SetSoundVolume(gg_snd_GokuKamehameha, 127)
+    SetSoundPitch(gg_snd_GokuKamehameha, 1.0)
 end
 
 function CreateAllItems()
@@ -3593,50 +3618,67 @@ function Trig_Nappa_Plant_Saibamen_Conditions()
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func019C()
-    if (not (SubStringBJ(udg_OriginalPlayerNames[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))], 1, 11) == "randomkilla")) then
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func002Func001C()
+    if (SubStringBJ(udg_OriginalPlayerNames[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))], 1, 11) == "randomkilla") then
+        return true
+    end
+    if (SubStringBJ(udg_OriginalPlayerNames[GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))], 1, 12) == "Local Player") then
+        return true
+    end
+    return false
+end
+
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func002C()
+    if (not Trig_Nappa_Plant_Saibamen_Func006Func018Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001Func001C()
     if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001C()
     if (not (udg_TempReal < 4.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001C()
     if (not (udg_TempReal < 3.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002C()
     if (not (udg_TempReal < 2.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020Func001C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002C()
     if (not (udg_TempReal < 1.00)) then
         return false
     end
     return true
 end
 
-function Trig_Nappa_Plant_Saibamen_Func005Func020C()
+function Trig_Nappa_Plant_Saibamen_Func006Func018Func003C()
     if (not (udg_TempReal < 5.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Nappa_Plant_Saibamen_Func006Func018C()
+    if (not (udg_TempBool == true)) then
         return false
     end
     return true
@@ -3647,6 +3689,7 @@ function Trig_Nappa_Plant_Saibamen_Actions()
     udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 5)
     udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 5)
     udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 5)
+    udg_TempBool = true
     udg_TempInt4 = 1
     while (true) do
         if (udg_TempInt4 > 3) then break end
@@ -3667,40 +3710,44 @@ function Trig_Nappa_Plant_Saibamen_Actions()
         BlzSetHeroProperName(udg_TempUnit, "Saibaman")
         udg_StatMultUnit = udg_TempUnit
         TriggerExecute(gg_trg_Base_Armor_Set)
-        udg_TempReal = GetRandomReal(0, 100.00)
-        if (Trig_Nappa_Plant_Saibamen_Func005Func019C()) then
-            udg_TempReal = GetRandomReal(0, 50.00)
-        else
-        end
-        if (Trig_Nappa_Plant_Saibamen_Func005Func020C()) then
-            if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001C()) then
-                BlzSetHeroProperName(udg_TempUnit, "Snuggles")
-                SetUnitScalePercent(udg_TempUnit, 220.00, 220.00, 220.00)
+        if (Trig_Nappa_Plant_Saibamen_Func006Func018C()) then
+            udg_TempReal = GetRandomReal(0, 100.00)
+            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func002C()) then
+                udg_TempReal = GetRandomReal(0, 50.00)
             else
-                if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002C()) then
-                    BlzSetHeroProperName(udg_TempUnit, "Fufu")
-                    SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
-                    SetUnitScalePercent(udg_TempUnit, 50.00, 50.00, 50.00)
+            end
+            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003C()) then
+                udg_TempBool = false
+                if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002C()) then
+                    BlzSetHeroProperName(udg_TempUnit, "Snuggles")
+                    SetUnitScalePercent(udg_TempUnit, 220.00, 220.00, 220.00)
                 else
-                    if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001C()) then
-                        BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
-                        SetUnitTimeScalePercent(udg_TempUnit, 150.00)
-                        SetUnitVertexColorBJ(udg_TempUnit, 80.00, 100.00, 60.00, 0)
+                    if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002C()) then
+                        BlzSetHeroProperName(udg_TempUnit, "Fufu")
+                        SetUnitVertexColorBJ(udg_TempUnit, 100, 80.00, 60.00, 0)
+                        SetUnitScalePercent(udg_TempUnit, 75.00, 75.00, 75.00)
                     else
-                        if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001C()) then
-                            BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
-                            SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
-                            SetUnitScalePercent(udg_TempUnit, 200.00, 200.00, 200.00)
+                        if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001C()) then
+                            BlzSetHeroProperName(udg_TempUnit, "Cabbagehead")
+                            SetUnitTimeScalePercent(udg_TempUnit, 150.00)
+                            SetUnitVertexColorBJ(udg_TempUnit, 80.00, 100.00, 60.00, 0)
                         else
-                            if (Trig_Nappa_Plant_Saibamen_Func005Func020Func001Func002Func001Func001Func001C()) then
-                                BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
-                                SetUnitTimeScalePercent(udg_TempUnit, 75.00)
-                                SetUnitVertexColorBJ(udg_TempUnit, 60.00, 100.00, 80.00, 0)
+                            if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001C()) then
+                                BlzSetHeroProperName(udg_TempUnit, "Vegeta Jr.")
+                                SetUnitVertexColorBJ(udg_TempUnit, 100, 60.00, 80.00, 0)
+                                SetUnitScalePercent(udg_TempUnit, 200.00, 200.00, 200.00)
                             else
+                                if (Trig_Nappa_Plant_Saibamen_Func006Func018Func003Func002Func002Func001Func001Func001C()) then
+                                    BlzSetHeroProperName(udg_TempUnit, "Other Cabbagehead")
+                                    SetUnitTimeScalePercent(udg_TempUnit, 75.00)
+                                    SetUnitVertexColorBJ(udg_TempUnit, 60.00, 100.00, 80.00, 0)
+                                else
+                                end
                             end
                         end
                     end
                 end
+            else
             end
         else
         end
@@ -3719,6 +3766,41 @@ end
 
 function Trig_Saibamen_Loop_Func002Func004C()
     if (not (ModuloInteger(udg_TempInt, 10) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001Func001C()
+    if (not (GetHeroProperName(udg_TempUnit) == "Vegeta Jr.")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001C()
+    if (not (GetHeroProperName(udg_TempUnit) == "Other Cabbagehead")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001C()
+    if (not (GetHeroProperName(udg_TempUnit) == "Cabbagehead")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Loop_Func002Func005Func013Func001C()
+    if (not (GetHeroProperName(udg_TempUnit) == "Fufu")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Loop_Func002Func005Func013C()
+    if (not (GetHeroProperName(udg_TempUnit) == "Snuggles")) then
         return false
     end
     return true
@@ -3754,6 +3836,26 @@ function Trig_Saibamen_Loop_Func002A()
         UnitApplyTimedLifeBJ(35.00, FourCC("BTLF"), udg_TempUnit)
         GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
         FlushChildHashtableBJ(udg_ID, udg_SummonsHashtable)
+        if (Trig_Saibamen_Loop_Func002Func005Func013C()) then
+                        playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenSnuggles.mp3", 2352)
+        else
+            if (Trig_Saibamen_Loop_Func002Func005Func013Func001C()) then
+                                playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenFufu.mp3", 2544)
+            else
+                if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001C()) then
+                                        playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead1.mp3", 2256)
+                else
+                    if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001C()) then
+                                                playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead2.mp3", 3360)
+                    else
+                        if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001Func001C()) then
+                                                        playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenVegetaJr.mp3", 3936)
+                        else
+                        end
+                    end
+                end
+            end
+        end
     else
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
     end
@@ -3778,6 +3880,27 @@ function InitTrig_Saibamen_Loop()
     gg_trg_Saibamen_Loop = CreateTrigger()
     TriggerRegisterTimerEventPeriodic(gg_trg_Saibamen_Loop, 0.10)
     TriggerAddAction(gg_trg_Saibamen_Loop, Trig_Saibamen_Loop_Actions)
+end
+
+function Trig_Saibamen_Vegeta_Jr_Death_Conditions()
+    if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("H08X"))) then
+        return false
+    end
+    if (not (GetHeroProperName(GetDyingUnit()) == "Vegeta Jr.")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Saibamen_Vegeta_Jr_Death_Actions()
+        playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/NappaSaibamenVegetaJrNo.mp3", 8064)
+end
+
+function InitTrig_Saibamen_Vegeta_Jr_Death()
+    gg_trg_Saibamen_Vegeta_Jr_Death = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Saibamen_Vegeta_Jr_Death, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Saibamen_Vegeta_Jr_Death, Condition(Trig_Saibamen_Vegeta_Jr_Death_Conditions))
+    TriggerAddAction(gg_trg_Saibamen_Vegeta_Jr_Death, Trig_Saibamen_Vegeta_Jr_Death_Actions)
 end
 
 function Trig_Metal_Cooler_Scan_For_Powers_Conditions()
@@ -4669,6 +4792,16 @@ function InitTrig_KKR_Kings_Throne()
 end
 
 function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func003C()
+    if (not (ModuloInteger(udg_TempInt, 29) == 0)) then
+        return false
+    end
+    if (not (udg_TempInt > 99)) then
+        return false
+    end
+    return true
+end
+
+function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func004C()
     if (not (ModuloInteger(udg_TempInt, 33) == 0)) then
         return false
     end
@@ -4709,6 +4842,10 @@ function Trig_KKR_Kings_Throne_Loop_Func001A()
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
         if (Trig_KKR_Kings_Throne_Loop_Func001Func004Func002C()) then
             if (Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func003C()) then
+                                playGenericSpellSound(udg_StatMultUnit, "Audio/Effects/KKRThrone2.mp3", 864)
+            else
+            end
+            if (Trig_KKR_Kings_Throne_Loop_Func001Func004Func002Func004C()) then
                 udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
                 AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
                 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 4.00)
@@ -4876,19 +5013,7 @@ function InitTrig_Tapion_Heros_Flute_Finish()
     TriggerAddAction(gg_trg_Tapion_Heros_Flute_Finish, Trig_Tapion_Heros_Flute_Finish_Actions)
 end
 
-function Trig_Play_Ability_Spell_Audio_Func001C()
-    if (GetSpellAbilityId() == FourCC("A0O2")) then
-        return true
-    end
-    if (GetSpellAbilityId() == FourCC("A0EU")) then
-        return true
-    end
-    if (GetSpellAbilityId() == FourCC("A0JW")) then
-        return true
-    end
-    if (GetSpellAbilityId() == FourCC("A0IB")) then
-        return true
-    end
+function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
     if (GetSpellAbilityId() == FourCC("A00U")) then
         return true
     end
@@ -4898,14 +5023,182 @@ function Trig_Play_Ability_Spell_Audio_Func001C()
     return false
 end
 
-function Trig_Play_Ability_Spell_Audio_Conditions()
-    if (not Trig_Play_Ability_Spell_Audio_Func001C()) then
+function Trig_Play_Ability_Spell_Audio_Func001Func001C()
+    if (not Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func001C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H000"))) then
         return false
     end
     return true
 end
 
 function Trig_Play_Ability_Spell_Audio_Func002Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0EI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func002C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("O005"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003Func001C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H01A"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003Func002C()
+    if (GetSpellAbilityId() == FourCC("A0C1")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0L2")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Play_Ability_Spell_Audio_Func003C()
+    if (not Trig_Play_Ability_Spell_Audio_Func003Func002C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func004Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0KT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func004C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H009"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IX"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IV"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func003C()
+    if (not (udg_SpellAudioInt < 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IV"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0OV"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0OW"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IW"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0OT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func005C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E01D"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func006C()
+    if (not (GetSpellAbilityId() == FourCC("A0OU"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003001()
+    return (true == true)
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003002()
+    return (GetUnitTypeId(GetFilterUnit()) == FourCC("H08W"))
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003()
+    return GetBooleanAnd(Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003001(), Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003002())
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func004Func002C()
+    if (not (udg_SpellAudioInt < 25)) then
+        return false
+    end
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func004A()
+    udg_SpellAudioInt = GetRandomInt(1, 100)
+    if (Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func004Func002C()) then
+        udg_TempBool = false
+        udg_TempUnit = GetEnumUnit()
+                playGenericSpellSound(udg_TempUnit, "Audio/Effects/NappaWhereDidHeGo.mp3", 16512)
+    else
+    end
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0EU"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func007Func001Func003C()
     if (GetSpellAbilityId() == FourCC("A0O2")) then
         return true
     end
@@ -4915,94 +5208,392 @@ function Trig_Play_Ability_Spell_Audio_Func002Func001C()
     return false
 end
 
-function Trig_Play_Ability_Spell_Audio_Func002Func002Func001C()
-    if (not (GetSpellAbilityId() == FourCC("A0IB"))) then
+function Trig_Play_Ability_Spell_Audio_Func007Func001C()
+    if (not Trig_Play_Ability_Spell_Audio_Func007Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func002Func002Func003Func001C()
+function Trig_Play_Ability_Spell_Audio_Func007C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H062"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func008Func001Func002Func001C()
     if (not (udg_SpellAudioInt < 66)) then
         return false
     end
     return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func002Func002Func003C()
+function Trig_Play_Ability_Spell_Audio_Func008Func001Func002C()
     if (not (udg_SpellAudioInt < 33)) then
         return false
     end
     return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func002Func002C()
+function Trig_Play_Ability_Spell_Audio_Func008Func001C()
     if (not (GetSpellAbilityId() == FourCC("A0JW"))) then
         return false
     end
     return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func002C()
-    if (not Trig_Play_Ability_Spell_Audio_Func002Func001C()) then
+function Trig_Play_Ability_Spell_Audio_Func008C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H085"))) then
         return false
     end
     return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func003Func001C()
-    if (GetSpellAbilityId() == FourCC("A00U")) then
-        return true
+function Trig_Play_Ability_Spell_Audio_Func009Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IB"))) then
+        return false
     end
-    if (GetSpellAbilityId() == FourCC("A0P0")) then
-        return true
-    end
-    return false
+    return true
 end
 
-function Trig_Play_Ability_Spell_Audio_Func003C()
-    if (not Trig_Play_Ability_Spell_Audio_Func003Func001C()) then
+function Trig_Play_Ability_Spell_Audio_Func009C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E014"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func002C()
+    if (not (udg_SpellAudioInt < 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func002C()
+    if (not (udg_SpellAudioInt < 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0MK"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003Func003C()
+    if (not (udg_SpellAudioInt < 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0MJ"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0MI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0ML"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func010C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08W"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func011Func002Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0LW"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func011Func002Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0LV"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func011Func002Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0LU"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func011Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0LY"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func011C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H08P"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func012Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A06F"))) then
+        return false
+    end
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H00R"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func012Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0LM"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_Func012C()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H00R"))) then
         return false
     end
     return true
 end
 
 function Trig_Play_Ability_Spell_Audio_Actions()
-    if (Trig_Play_Ability_Spell_Audio_Func002C()) then
-                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/JanembaSuperBunkai.mp3", 1985)
+    if (Trig_Play_Ability_Spell_Audio_Func001C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func001Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/GokuDragonFist.mp3", 3552)
+        else
+        end
     else
-        if (Trig_Play_Ability_Spell_Audio_Func002Func002C()) then
-            udg_SpellAudioInt = GetRandomInt(1, 100)
-            if (Trig_Play_Ability_Spell_Audio_Func002Func002Func003C()) then
-                                playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelHereICome.mp3", 705)
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func002C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func002Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/BuuCandyBeam.mp3", 1872)
+        else
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func003C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func003Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/CoolerMetalSupernova.mp3", 1944)
+        else
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/CoolerSupernova.mp3", 1416)
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func004C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func004Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/FTSS.mp3", 1008)
+        else
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func005C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func005Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRBellyArmor.mp3", 552)
+        else
+            if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRGrunt3.mp3", 792)
             else
-                if (Trig_Play_Ability_Spell_Audio_Func002Func002Func003Func001C()) then
-                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelHyaa.mp3", 679)
+                if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001C()) then
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRKannonblast.mp3", 1440)
                 else
-                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Voice/VidelOutOfMyWay.mp3", 705)
+                    if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001C()) then
+                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRThrone1.mp3", 2904)
+                    else
+                        if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001C()) then
+                            udg_SpellAudioInt = GetRandomInt(1, 100)
+                            if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func003C()) then
+                                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRGrunt1.mp3", 432)
+                            else
+                                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRGrunt2.mp3", 384)
+                            end
+                        else
+                            if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func001C()) then
+                                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRGrunt1.mp3", 432)
+                            else
+                                if (Trig_Play_Ability_Spell_Audio_Func005Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRKannonblast.mp3", 1440)
+                                                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRGrunt4.mp3", 480)
+                                else
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func006C()) then
+                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/KKRBlasto.mp3", 4896)
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func007C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func007Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/JanembaSuperBunkai.mp3", 1985)
+            if (Trig_Play_Ability_Spell_Audio_Func007Func001Func002C()) then
+                udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+                udg_TempBool = true
+                udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(1800.00, udg_TempLoc, Condition(Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func003002003))
+                ForGroupBJ(udg_TempUnitGroup, Trig_Play_Ability_Spell_Audio_Func007Func001Func002Func004A)
+                                DestroyGroup(udg_TempUnitGroup)
+                                RemoveLocation(udg_TempLoc)
+            else
+            end
+        else
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func008C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func008Func001C()) then
+            udg_SpellAudioInt = GetRandomInt(1, 100)
+            if (Trig_Play_Ability_Spell_Audio_Func008Func001Func002C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/VidelHereICome.mp3", 705)
+            else
+                if (Trig_Play_Ability_Spell_Audio_Func008Func001Func002Func001C()) then
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/VidelHyaa.mp3", 679)
+                else
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/VidelOutOfMyWay.mp3", 705)
                 end
             end
         else
-            if (Trig_Play_Ability_Spell_Audio_Func002Func002Func001C()) then
-                udg_TempUnit = GetTriggerUnit()
-                                udg_ID = GetHandleId(udg_TempUnit)
-                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/TapionHerosFlute.mp3", 11755)
-                SaveSoundHandleBJ(udg_TempSound, 1, udg_ID, udg_TapionSpellsHashtable)
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func009C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func009Func001C()) then
+            udg_TempUnit = GetTriggerUnit()
+                        udg_ID = GetHandleId(udg_TempUnit)
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/TapionHerosFlute.mp3", 11755)
+            SaveSoundHandleBJ(udg_TempSound, 1, udg_ID, udg_TapionSpellsHashtable)
+        else
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func010C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func010Func001C()) then
+            udg_SpellAudioInt = GetRandomInt(1, 100)
+            if (Trig_Play_Ability_Spell_Audio_Func010Func001Func002C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaSneeze.mp3", 1248)
+            else
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaBreakCannon.mp3", 1176)
+            end
+        else
+            if (Trig_Play_Ability_Spell_Audio_Func010Func001Func003C()) then
+                udg_SpellAudioInt = GetRandomInt(1, 100)
+                if (Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func002C()) then
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaKapow.mp3", 1728)
+                else
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaKapow.mp3", 1728)
+                end
+            else
+                if (Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003C()) then
+                    udg_SpellAudioInt = GetRandomInt(1, 100)
+                    if (Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003Func003C()) then
+                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaBlahBlahBlah.mp3", 5664)
+                    else
+                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaDodgeBall.mp3", 1920)
+                    end
+                else
+                    if (Trig_Play_Ability_Spell_Audio_Func010Func001Func003Func003Func001C()) then
+                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/NappaUnitedWeStand.mp3", 5328)
+                    else
+                    end
+                end
+            end
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func011C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func011Func002C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PanYouGottaSmile.mp3", 1824)
+        else
+            if (Trig_Play_Ability_Spell_Audio_Func011Func002Func001C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PanCantStandYou.mp3", 1512)
+            else
+                if (Trig_Play_Ability_Spell_Audio_Func011Func002Func001Func001C()) then
+                                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PanTeachYouALesson.mp3", 1680)
+                else
+                    if (Trig_Play_Ability_Spell_Audio_Func011Func002Func001Func001Func001C()) then
+                                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PanPrepareYourself.mp3", 1344)
+                    else
+                    end
+                end
+            end
+        end
+    else
+    end
+    if (Trig_Play_Ability_Spell_Audio_Func012C()) then
+        if (Trig_Play_Ability_Spell_Audio_Func012Func001C()) then
+                        playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PiccoloHellzoneGrenade.mp3", 1200)
+        else
+            if (Trig_Play_Ability_Spell_Audio_Func012Func001Func001C()) then
+                                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/PiccoloSBC.mp3", 1776)
             else
             end
         end
-    end
-    if (Trig_Play_Ability_Spell_Audio_Func003C()) then
-                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/GokuDragonFist.mp3", 1593)
     else
     end
 end
 
 function InitTrig_Play_Ability_Spell_Audio()
     gg_trg_Play_Ability_Spell_Audio = CreateTrigger()
+    DisableTrigger(gg_trg_Play_Ability_Spell_Audio)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Play_Ability_Spell_Audio, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Play_Ability_Spell_Audio, Condition(Trig_Play_Ability_Spell_Audio_Conditions))
     TriggerAddAction(gg_trg_Play_Ability_Spell_Audio, Trig_Play_Ability_Spell_Audio_Actions)
+end
+
+function Trig_Play_Ability_Spell_Audio_2_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("E014"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_2_Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0IB"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Play_Ability_Spell_Audio_2_Actions()
+    if (Trig_Play_Ability_Spell_Audio_2_Func001C()) then
+        udg_TempUnit = GetTriggerUnit()
+                udg_ID = GetHandleId(udg_TempUnit)
+                playGenericSpellSound(GetTriggerUnit(), "Audio/Effects/HerosFlute.mp3", 11755)
+        SaveSoundHandleBJ(udg_TempSound, 1, udg_ID, udg_TapionSpellsHashtable)
+    else
+    end
+end
+
+function InitTrig_Play_Ability_Spell_Audio_2()
+    gg_trg_Play_Ability_Spell_Audio_2 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Play_Ability_Spell_Audio_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Play_Ability_Spell_Audio_2, Condition(Trig_Play_Ability_Spell_Audio_2_Conditions))
+    TriggerAddAction(gg_trg_Play_Ability_Spell_Audio_2, Trig_Play_Ability_Spell_Audio_2_Actions)
 end
 
 function Trig_Freemode_Func003C()
@@ -6420,6 +7011,7 @@ function Trig_Kill_Hero_PvP_and_Saga_Actions()
                                 DestroyGroup(udg_TempGroup)
                                 RemoveLocation(udg_TempLoc2)
             end
+            TriggerExecute(gg_trg_Kill_Hero_Voiceline)
         else
         end
     else
@@ -6460,6 +7052,259 @@ end
 function InitTrig_Kill_Hero_Give_PvP_Stats()
     gg_trg_Kill_Hero_Give_PvP_Stats = CreateTrigger()
     TriggerAddAction(gg_trg_Kill_Hero_Give_PvP_Stats, Trig_Kill_Hero_Give_PvP_Stats_Actions)
+end
+
+function Trig_Kill_Hero_Voiceline_Func002Func002C()
+    if (not (udg_TempReal < 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func002C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H00K"))) then
+        return false
+    end
+    if (not (GetHeroLevel(GetKillingUnitBJ()) >= 150)) then
+        return false
+    end
+    if (not (GetUnitLifePercent(GetKillingUnitBJ()) >= 66.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func003Func002Func001Func001C()
+    if (not (udg_TempReal < 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func003Func002Func001C()
+    if (not (udg_TempReal < 30.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func003Func002C()
+    if (not (udg_TempReal < 15.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func003C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H009"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func001Func002Func003Func003C()
+    if (not (udg_TempReal < 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func001Func002Func003C()
+    if (not (udg_TempReal < 30.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func001Func002C()
+    if (not (udg_TempReal < 10.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func001C()
+    if (not (GetUnitTypeId(GetDyingUnit()) == FourCC("H08W"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func003Func001Func001Func001C()
+    if (not (udg_TempReal < 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func003Func001Func001C()
+    if (not (udg_TempReal < 50.00)) then
+        return false
+    end
+    if (not (GetUnitLifePercent(GetKillingUnitBJ()) >= 75.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func003Func001C()
+    if (not (udg_TempReal < 30.00)) then
+        return false
+    end
+    if (not (GetUnitLifePercent(GetKillingUnitBJ()) >= 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004Func003C()
+    if (not (udg_TempReal < 10.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Func004C()
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H08W"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Actions()
+    udg_TempReal = GetRandomReal(0, 100.00)
+    if (Trig_Kill_Hero_Voiceline_Func002C()) then
+        udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+        if (Trig_Kill_Hero_Voiceline_Func002Func002C()) then
+            udg_KillHeroVoicelinePath = "Audio/Voice/GohanUltimate.mp3"
+            udg_KillHeroVoicelineDuration = 2640
+        else
+        end
+    else
+    end
+    if (Trig_Kill_Hero_Voiceline_Func003C()) then
+        udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+        if (Trig_Kill_Hero_Voiceline_Func003Func002C()) then
+            udg_KillHeroVoicelinePath = "Audio/Voice/FTWhatsTheProblem.mp3"
+            udg_KillHeroVoicelineDuration = 2544
+        else
+            if (Trig_Kill_Hero_Voiceline_Func003Func002Func001C()) then
+                udg_KillHeroVoicelinePath = "Audio/Voice/FTUnderestimatedMe.mp3"
+                udg_KillHeroVoicelineDuration = 3600
+            else
+                if (Trig_Kill_Hero_Voiceline_Func003Func002Func001Func001C()) then
+                    udg_KillHeroVoicelinePath = "Audio/Voice/FTEndOfTheLine.mp3"
+                    udg_KillHeroVoicelineDuration = 3264
+                else
+                end
+            end
+        end
+    else
+    end
+    if (Trig_Kill_Hero_Voiceline_Func004C()) then
+        udg_KillHeroVoicelineUnit = GetKillingUnitBJ()
+        if (Trig_Kill_Hero_Voiceline_Func004Func003C()) then
+            udg_KillHeroVoicelinePath = "Audio/Voice/NappaLoveMe.mp3"
+            udg_KillHeroVoicelineDuration = 8112
+        else
+            if (Trig_Kill_Hero_Voiceline_Func004Func003Func001C()) then
+                udg_KillHeroVoicelinePath = "Audio/Voice/NappaTakeAwayMyBaby.mp3"
+                udg_KillHeroVoicelineDuration = 3696
+            else
+                if (Trig_Kill_Hero_Voiceline_Func004Func003Func001Func001C()) then
+                    udg_KillHeroVoicelinePath = "Audio/Voice/NappaMad.mp3"
+                    udg_KillHeroVoicelineDuration = 3696
+                else
+                    if (Trig_Kill_Hero_Voiceline_Func004Func003Func001Func001Func001C()) then
+                        udg_KillHeroVoicelinePath = "Audio/Voice/NappaCya.mp3"
+                        udg_KillHeroVoicelineDuration = 1392
+                    else
+                    end
+                end
+            end
+        end
+    else
+        if (Trig_Kill_Hero_Voiceline_Func004Func001C()) then
+            udg_KillHeroVoicelineUnit = GetDyingUnit()
+            if (Trig_Kill_Hero_Voiceline_Func004Func001Func002C()) then
+                udg_KillHeroVoicelinePath = "Audio/Voice/NappaPreciousModellingCareer.mp3"
+                udg_KillHeroVoicelineDuration = 7536
+            else
+                if (Trig_Kill_Hero_Voiceline_Func004Func001Func002Func003C()) then
+                    udg_KillHeroVoicelinePath = "Audio/Voice/NappaFiddlesticks.mp3"
+                    udg_KillHeroVoicelineDuration = 3792
+                else
+                    if (Trig_Kill_Hero_Voiceline_Func004Func001Func002Func003Func003C()) then
+                        udg_KillHeroVoicelinePath = "Audio/Voice/NappaWhatTheWhat.mp3"
+                        udg_KillHeroVoicelineDuration = 1392
+                    else
+                    end
+                end
+            end
+        else
+        end
+    end
+end
+
+function InitTrig_Kill_Hero_Voiceline()
+    gg_trg_Kill_Hero_Voiceline = CreateTrigger()
+    TriggerAddAction(gg_trg_Kill_Hero_Voiceline, Trig_Kill_Hero_Voiceline_Actions)
+end
+
+function Trig_Kill_Hero_Voiceline_Init_Actions()
+    udg_KillHeroVoicelineDelay = 0
+    StartTimerBJ(udg_KillHeroVoicelineTimer, true, 0.20)
+end
+
+function InitTrig_Kill_Hero_Voiceline_Init()
+    gg_trg_Kill_Hero_Voiceline_Init = CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_Kill_Hero_Voiceline_Init, 10.00)
+    TriggerAddAction(gg_trg_Kill_Hero_Voiceline_Init, Trig_Kill_Hero_Voiceline_Init_Actions)
+end
+
+function Trig_Kill_Hero_Voiceline_Timer_Func002C()
+    if (not (udg_KillHeroVoicelineDelay < 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Timer_Func003C()
+    if (not (udg_KillHeroVoicelineUnit ~= nil)) then
+        return false
+    end
+    if (not (udg_KillHeroVoicelinePath ~= "")) then
+        return false
+    end
+    if (not (udg_KillHeroVoicelineDuration > 0)) then
+        return false
+    end
+    if (not (udg_KillHeroVoicelineDelay == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kill_Hero_Voiceline_Timer_Actions()
+    udg_KillHeroVoicelineDelay = (udg_KillHeroVoicelineDelay - 1)
+    if (Trig_Kill_Hero_Voiceline_Timer_Func002C()) then
+        udg_KillHeroVoicelineDelay = 0
+    else
+    end
+    if (Trig_Kill_Hero_Voiceline_Timer_Func003C()) then
+                playGenericSpellSound(udg_KillHeroVoicelineUnit, udg_KillHeroVoicelinePath, udg_KillHeroVoicelineDuration)
+        udg_KillHeroVoicelineDelay = 25
+    else
+    end
+    udg_KillHeroVoicelineUnit = nil
+    udg_KillHeroVoicelinePath = ""
+    udg_KillHeroVoicelineDuration = 0
+end
+
+function InitTrig_Kill_Hero_Voiceline_Timer()
+    gg_trg_Kill_Hero_Voiceline_Timer = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Kill_Hero_Voiceline_Timer, udg_KillHeroVoicelineTimer)
+    TriggerAddAction(gg_trg_Kill_Hero_Voiceline_Timer, Trig_Kill_Hero_Voiceline_Timer_Actions)
 end
 
 function Trig_Hero_Level_up_New_New_Conditions()
@@ -9201,6 +10046,7 @@ function Trig_Final_Battle_Detector_Actions()
     DisableTrigger(gg_trg_Hero_Leaves_Hell)
     DisableTrigger(gg_trg_Force_Win_Loss)
     udg_IsLeadingToFinalBattle = true
+    StartTimerBJ(udg_FinalBattleTimer, false, 60.00)
 end
 
 function InitTrig_Final_Battle_Detector()
@@ -9208,6 +10054,18 @@ function InitTrig_Final_Battle_Detector()
     TriggerRegisterEnterRectSimple(gg_trg_Final_Battle_Detector, gg_rct_Final_Battle_Detector_Region)
     TriggerAddCondition(gg_trg_Final_Battle_Detector, Condition(Trig_Final_Battle_Detector_Conditions))
     TriggerAddAction(gg_trg_Final_Battle_Detector, Trig_Final_Battle_Detector_Actions)
+end
+
+function Trig_Final_Battle_Timer_Finish_Actions()
+    StopMusicBJ(false)
+    PlayMusicBJ(gg_snd_KachiDaze)
+    StartTimerBJ(udg_FinalBattleTimer, false, 250.00)
+end
+
+function InitTrig_Final_Battle_Timer_Finish()
+    gg_trg_Final_Battle_Timer_Finish = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Final_Battle_Timer_Finish, udg_FinalBattleTimer)
+    TriggerAddAction(gg_trg_Final_Battle_Timer_Finish, Trig_Final_Battle_Timer_Finish_Actions)
 end
 
 function Trig_Final_Battle_Tagger_Conditions()
@@ -12637,6 +13495,19 @@ function Trig_Transformations_Goku_Func014C()
     return true
 end
 
+function Trig_Transformations_Goku_Func015Func002C()
+    if (not (udg_StatMultStr < 2.25)) then
+        return false
+    end
+    if (not (udg_StatMultAgi < 2.25)) then
+        return false
+    end
+    if (not (udg_StatMultInt < 2.25)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Goku_Func015C()
     if (not (udg_TransformationString == "ss3")) then
         return false
@@ -12812,6 +13683,17 @@ function Trig_Transformations_Goku_Actions()
     else
     end
     if (Trig_Transformations_Goku_Func015C()) then
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        if (Trig_Transformations_Goku_Func015Func002C()) then
+                        playGenericSpellSound(udg_StatMultUnit, "Audio/Voice/GokuSS3.mp3", 5568)
+            udg_StatMultStr = 0.00
+            udg_StatMultAgi = 0.00
+            udg_StatMultInt = 0.00
+        else
+            udg_StatMultStr = 0.00
+            udg_StatMultAgi = 0.00
+            udg_StatMultInt = 0.00
+        end
         udg_StatMultReal = 2.25
         udg_TransformationAbility = FourCC("A0AC")
         udg_TransformationSFXString = "AuraSS.mdx"
@@ -20521,6 +21403,7 @@ function InitCustomTriggers()
     InitTrig_Raditz_Double_Sundae()
     InitTrig_Nappa_Plant_Saibamen()
     InitTrig_Saibamen_Loop()
+    InitTrig_Saibamen_Vegeta_Jr_Death()
     InitTrig_Metal_Cooler_Scan_For_Powers()
     InitTrig_Demon_Mark()
     InitTrig_Demon_Rush()
@@ -20541,6 +21424,7 @@ function InitCustomTriggers()
     InitTrig_Tapion_Brave_Cannon()
     InitTrig_Tapion_Heros_Flute_Finish()
     InitTrig_Play_Ability_Spell_Audio()
+    InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
     InitTrig_Lights_toggle()
     InitTrig_Cosmetic_Init()
@@ -20575,6 +21459,9 @@ function InitCustomTriggers()
     InitTrig_Kill_Hero_Revive()
     InitTrig_Kill_Hero_PvP_and_Saga()
     InitTrig_Kill_Hero_Give_PvP_Stats()
+    InitTrig_Kill_Hero_Voiceline()
+    InitTrig_Kill_Hero_Voiceline_Init()
+    InitTrig_Kill_Hero_Voiceline_Timer()
     InitTrig_Hero_Level_up_New_New()
     InitTrig_Auto_Transform()
     InitTrig_Auto_Transform_Player_Units()
@@ -20629,6 +21516,7 @@ function InitCustomTriggers()
     InitTrig_Tournament_Trophy_Use_Trophy()
     InitTrig_Tournament_Trophy_Give_Reward()
     InitTrig_Final_Battle_Detector()
+    InitTrig_Final_Battle_Timer_Finish()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
