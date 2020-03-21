@@ -27,6 +27,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
 
@@ -42,6 +43,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
     ["Vegeta", new SagaUnit(FourCC("E003"), 25, 200, 200, 300, new Vector2D(8800, 1700),
@@ -51,6 +53,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
     
@@ -82,6 +85,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
 
@@ -105,6 +109,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
     ["Zarbon", new SagaUnit(FourCC("U016"), 25, 500, 300, 250, new Vector2D(30700, 25500),
@@ -121,6 +126,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_2,
+        ItemConstants.SagaDrops.SCOUTER_1,
       ]
     )],
 
@@ -179,7 +185,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
     )],
-    ["Frieza 5", new SagaUnit(FourCC("U018"), 70, 2000, 500, 1800, new Vector2D(21500, 26100),
+    ["Frieza 5", new SagaUnit(FourCC("U018"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
@@ -212,6 +218,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
+      [
+        ItemConstants.SagaDrops.SCOUTER_1,
+      ]
     )],
 
     // return of cooler

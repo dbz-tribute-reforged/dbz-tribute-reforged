@@ -45,6 +45,11 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
         if (customHero.canCastAbility(name, abilityInput)) {
           // show custom ability name on activation, if castable
           TextTagHelper.showPlayerColorTextOnUnit(name, playerId, customHero.unit);
+          if (name == AbilityNames.BasicAbility.ZANZO_DASH) {
+            playSoundOnUnit(customHero.unit, "Audio/Effects/Zanzo.mp3", 1149);
+          } else if (name == AbilityNames.BasicAbility.MAX_POWER) {
+            playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
+          }
         }
         customHero.useAbility(name, abilityInput);
       }
@@ -567,6 +572,7 @@ export function CustomPlayerTest() {
 
         BlzFrameSetVisible(chatMsg, true);
         BlzFrameSetVisible(gameMsg, true);
+        BlzFrameSetPoint(gameMsg, FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOMLEFT, -0.15, 0.22);
 
         BlzFrameSetVisible(heroPortrait, true);
         BlzFrameClearAllPoints(heroPortrait);
@@ -1415,8 +1421,8 @@ export function playSoundOnUnit(target: unit, soundFile: string, duration: numbe
 	SetSoundChannel(udg_TempSound, 0)
 	SetSoundVolume(udg_TempSound, 127)
 	SetSoundPitch(udg_TempSound, 1.0)
-	SetSoundDistances(udg_TempSound, 600.0, 10000.0)
-	SetSoundDistanceCutoff(udg_TempSound, 4500.0)
+	SetSoundDistances(udg_TempSound, 600.0, 15000.0)
+	SetSoundDistanceCutoff(udg_TempSound, 5500.0)
 	SetSoundConeAngles(udg_TempSound, 0.0, 0.0, 127)
 	SetSoundConeOrientation(udg_TempSound, 0.0, 0.0, 0.0)
 	PlaySoundOnUnitBJ(udg_TempSound, 100, target)
@@ -1435,32 +1441,83 @@ export function SetupSpellSoundEffects() {
 }
 
 export module Id {
+  export const android13 = FourCC("H01V");
+  export const android14 = FourCC("H01S");
+  export const android15 = FourCC("H01T");
+  export const superAndroid13 = FourCC("H01U");
+  export const android13EnergyBeam = FourCC("A00N");
+  export const ssDeadlyBomber = FourCC("A0LD");
+  export const ssDeadlyHammer = FourCC("A0LC");
+  export const android13Nuke = FourCC("A01Y");
+  export const android13Overcharge = FourCC("A0K2");
+
   export const android17dbs = FourCC("H08Z");
   export const powerBlitz = FourCC("A09O");
   export const powerBlitzBarrage = FourCC("A0MW");
   export const androidBarrier = FourCC("A0LB");
   export const superElectricStrike = FourCC("A0MV");
 
+  export const babidi = FourCC("O001");
+  export const haretsu = FourCC("A02E");
+  export const babidiBarrier = FourCC("A0LG");
+  export const babidiMagic = FourCC("A0JQ");
+  export const babidiDabura = FourCC("A03E");
+
   export const bardock = FourCC("H08M");
+  export const tyrantBreaker = FourCC("A0OX");
+  export const tyrantLancer = FourCC("A0LO");
   export const riotJavelin = FourCC("A0LP");
   export const rebellionSpear = FourCC("A0LQ");
+  export const saiyanSpirit = FourCC("A0LR");
 
-  export const buu = FourCC("O005");
+  export const broly = FourCC("H00M");
+  export const energyPunch = FourCC("A0G8");
+  export const powerLevelRising = FourCC("A00J");
+  export const planetCrusher = FourCC("A0BZ");
+  export const giganticRoar = FourCC("A084");
+  export const giganticOmegastorm = FourCC("A0H6");
+
+  export const fatBuu = FourCC("O005");
+  export const superBuu = FourCC("O006");
+  export const kidBuu = FourCC("O00C");
   export const candyBeam = FourCC("A0EI");
+  export const fleshAttack = FourCC("A01C");
+  export const innocenceBreath = FourCC("A0LH");
+  export const angryExplosion = FourCC("A0ER")
+  export const vanishingBall = FourCC("A0C0");
+  export const mankindDestructionAttack = FourCC("A01D");
 
+  export const cellFirst = FourCC("H00E");
+  export const cellSemi = FourCC("H00F");
+  export const cellPerfect = FourCC("H00G");
   export const cellSBC = FourCC("A0C9");
   export const cellMasenko = FourCC("A0GD");
+  export const cellAbsorb1 = FourCC("A029");
+  export const cellAbsorb2 = FourCC("A0JU");
+  export const cellAbsorb3 = FourCC("A0LA");
+  export const cellJuniors = FourCC("A01Z");
+  export const cellSolarKame = FourCC("A0O9");
+  export const cellXForm = FourCC("A00D");
 
   export const metalCooler = FourCC("H01A");
   export const fourthCooler = FourCC("H042");
   export const fifthCooler = FourCC("H043");
+  export const deathBeam = FourCC("A06C");
   export const supernova = FourCC("A0C1");
   export const goldenSupernova = FourCC("A0L2");
+  export const novaChariot = FourCC("A0KY");
+  export const deafeningWave = FourCC("A06N");
+  export const getiStarRepair = FourCC("A063");
+
+  export const farmerWithShotgun = FourCC("H08S");
 
   export const ft = FourCC("H009");
   export const ftss = FourCC("A0KT");
   export const finishBuster = FourCC("A02L");
+  export const heatDomeAttack = FourCC("A0NL");
   export const burningAttack = FourCC("A03I");
+  export const blazingRush = FourCC("A0LE");
+  export const shiningSwordAttack = FourCC("A0LF");
 
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");
@@ -1469,12 +1526,22 @@ export module Id {
   export const solarFlare = FourCC("A0KO");
 
   export const gohan = FourCC("H00K");
-  export const masenko = FourCC("A0H8");
+  export const unlockPotential = FourCC("A0L6");
   export const greatSaiyamanHasArrived = FourCC("A0L7");
+  export const potentialUnleashed = FourCC("A0L8");
+  export const masenko = FourCC("A0H8");
+  export const twinDragonShot = FourCC("A0IS");
+  export const superDragonFlight = FourCC("A0L5");
 
   export const janemba = FourCC("H062");
+  export const demonRush = FourCC("A0O1");
+  export const rakshasaClaw = FourCC("A0NY");
+  export const devilClaw = FourCC("A0NZ");
   export const bunkaiTeleport = FourCC("A0O2");
+  export const demonicBlade = FourCC("A0OA");
   export const cosmicIllusion = FourCC("A0EU");
+  export const hellsGate = FourCC("A0O3");
+  export const lightningShowerRain = FourCC("A0O4");
 
   export const kkr = FourCC("E01D");
   export const bellyArmor = FourCC("A0OT");
@@ -1484,6 +1551,12 @@ export module Id {
   export const monkeySmasher = FourCC("A0IX");
   export const blasto = FourCC("A0OU");
   export const kingsThrone = FourCC("A0OV");
+
+  export const raditz = FourCC("H08U");
+  export const doubleSunday = FourCC("A0ME");
+  export const saturdayCrash = FourCC("A0MF");
+  export const behindYou = FourCC("A0MG");
+  export const doubleSundae = FourCC("A0MH");
 
   export const nappa = FourCC("H08W");
   export const giantStorm = FourCC("A0MI");
@@ -1499,8 +1572,10 @@ export module Id {
   export const summonGiru = FourCC("A0LW");
 
   export const piccolo = FourCC("H00R");
+  export const kyodaika = FourCC("A04Y");
   export const piccoloSBC = FourCC("A06F");
   export const piccoloCloneSBC = FourCC("A0ES");
+  export const slappyHand = FourCC("A0C8");
   export const hellzoneGrenade = FourCC("A0LM");
 
   export const tapion = FourCC("E014");
@@ -1513,8 +1588,11 @@ export module Id {
   export const finalFlash = FourCC("A01B");
   export const finalFlash2 = FourCC("A0L4");
   export const energyBlastVolley = FourCC("A0L3");
+  export const angryShout = FourCC("A0LS");
 
   export const videl = FourCC("H085");
+  export const punch = FourCC("A073");
+  export const kick = FourCC("A071");
   export const flyingKick = FourCC("A0JW");
 }
 
@@ -1548,12 +1626,47 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
 
 
   switch (spellId) {
+    // android 13
+    case Id.android13EnergyBeam:
+      if (unitId == Id.android13) {
+        playSoundOnUnit(unit, "Audio/Voice/Android13TakeThis.mp3", 1392);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam3.mp3", 9822);
+      break;
+    
+    case Id.android13Nuke:
+      if (unitId == Id.android13) {
+        playSoundOnUnit(unit, "Audio/Voice/Android13YoureFinished.mp3", 1488);
+      }
+      break;
+
+    case Id.android13Overcharge:
+      if (unitId == Id.android13) {
+        playSoundOnUnit(unit, "Audio/Voice/Android13TimeToDie.mp3", 2016);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      break;
+
+    case Id.ssDeadlyHammer:
+      if (unitId == Id.android13 || unitId == Id.superAndroid13) {
+        playSoundOnUnit(unit, "Audio/Voice/Android13HowsThat.mp3", 1392);
+        playSoundOnUnit(unit, "Audio/Voice/Android13SSDB.mp3", 4224);
+      }
+      break;
+
+    case Id.ssDeadlyBomber:
+      if (unitId == Id.android13 || unitId == Id.superAndroid13) {
+        playSoundOnUnit(unit, "Audio/Voice/Android13SSDB.mp3", 4224);
+      }
+      break;
+
     // android 17 dbs
     case Id.powerBlitz:
     case Id.powerBlitzBarrage:
       if (unitId == Id.android17dbs) {
         playSoundOnUnit(unit, "Audio/Voice/Android17TakeThis.mp3", 984);
       }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam3.mp3", 9822);
       break;
 
     case Id.androidBarrier:
@@ -1567,8 +1680,57 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         playSoundOnUnit(unit, "Audio/Voice/Android17BeatYouLikeARug.mp3", 1608);
       }
       break;
+    
+    // babidi
+    case Id.haretsu:
+      if (unitId == Id.babidi) {
+        if (rng < 2) {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
+        } else if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapa.mp3", 1968);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiHaretsu.mp3", 3984);
+        }
+      }
+      break;
+
+    case Id.babidiBarrier:
+      if (unitId == Id.babidi) {
+        if (rng < 2) {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
+        } else if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiDontWantToDie.mp3", 5808);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapa.mp3", 1968);
+        }
+      }
+      break;
+
+    case Id.babidiMagic:
+      if (unitId == Id.babidi) {
+        if (rng < 2) {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapa.mp3", 1968);
+        }
+      }
+      break;
 
     // bardock
+    case Id.tyrantBreaker:
+      if (unitId == Id.bardock) {
+        playSoundOnUnit(unit, "Audio/Voice/BardockTakeYouDown.mp3", 1608);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+
+    case Id.tyrantLancer:
+      if (unitId == Id.bardock) {
+        playSoundOnUnit(unit, "Audio/Voice/BardockGrunt1.mp3", 1032);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
     case Id.riotJavelin:
       if (unitId == Id.bardock) {
         playSoundOnUnit(unit, "Audio/Voice/BardockEverything.mp3", 1392);
@@ -1579,23 +1741,151 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       if (unitId == Id.bardock) {
         playSoundOnUnit(unit, "Audio/Voice/BardockPerish.mp3", 1440);
       }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+      break;
+
+    case Id.saiyanSpirit:
+      if (unitId == Id.bardock) {
+        playSoundOnUnit(unit, "Audio/Voice/BardockThisIsTheEnd.mp3", 2736);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+    
+    // broly
+    case Id.energyPunch:
+      if (unitId == Id.broly) {
+        playSoundOnUnit(unit, "Audio/Voice/BrolyRoar3.mp3", 2016);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+
+    case Id.powerLevelRising:
+      if (unitId == Id.broly) {
+        playSoundOnUnit(unit, "Audio/Voice/BrolyRoar5.mp3", 1944);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+      break;
+
+    case Id.planetCrusher:
+      if (unitId == Id.broly) {
+        playSoundOnUnit(unit, "Audio/Voice/BrolyRoar1.mp3", 1896);
+      }
+      break;
+
+    case Id.giganticRoar:
+      if (unitId == Id.broly) {
+        playSoundOnUnit(unit, "Audio/Voice/BrolyRoar6.mp3", 1560);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
+    case Id.giganticOmegastorm:
+      if (unitId == Id.broly) {
+        playSoundOnUnit(unit, "Audio/Voice/BrolyRoar2.mp3", 2880);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam1.mp3", 10919);
       break;
 
     // buu 
     case Id.candyBeam:
-      if (unitId == Id.buu) {
+      if (unitId == Id.fatBuu) {
         playSoundOnUnit(unit, "Audio/Voice/BuuCandyBeam.mp3", 1872);
+      } else if (unitId == Id.superBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuSuperCandyBeam.mp3", 1752);
       }
       playSoundOnUnit(unit, "Audio/Effects/CandyBeam.mp3", 1436);
       break;
 
+    case Id.innocenceBreath:
+      if (unitId == Id.fatBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuDisappear.mp3", 1032);
+      }
+      break;
+
+    case Id.fleshAttack:
+      if (unitId == Id.fatBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuYoureInTheWay.mp3", 1008);
+      } else if (unitId == Id.superBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuSuperLaugh2.mp3", 1392);
+      } else if (unitId == Id.kidBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuKidGrunt2.mp3", 792);
+      }
+      break;
+
+    case Id.angryExplosion:
+      if (unitId == Id.fatBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuExplosion.mp3", 2160);
+      } else if (unitId == Id.superBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuSuperGrunt1.mp3", 1296);
+      } else if (unitId == Id.kidBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuKidGrunt1.mp3", 1632);
+      }
+      break;
+
+    case Id.vanishingBall:
+      if (unitId == Id.superBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuSuperGrunt2.mp3", 1032);
+      } else if (unitId == Id.kidBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuKidGrunt3.mp3", 816);
+      }
+      break;
+
+    case Id.mankindDestructionAttack:
+      if (unitId == Id.superBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuSuperLaugh3.mp3", 1272);
+      } else if (unitId == Id.kidBuu) {
+        playSoundOnUnit(unit, "Audio/Voice/BuuKidGrunt1.mp3", 1632);
+      }
+      break;
+    
+    // cell
+    case Id.cellAbsorb1:
+    case Id.cellAbsorb2:
+    case Id.cellAbsorb3:
+      if (rng < 5) {
+        if (unitId == Id.cellFirst) {
+          playSoundOnUnit(unit, "Audio/Voice/CellFirstDrinkThisGuy.mp3", 1536);
+        }
+      }
+      break;
+
     // cooler 
+    case Id.deathBeam:
+      if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerGrunt1.mp3", 480);
+      } else if (unitId == Id.metalCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerMetalGrunt1.mp3", 864);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+      break;
+
     case Id.supernova:
     case Id.goldenSupernova:
       if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerSupernova.mp3", 1416);
       } else if (unitId == Id.metalCooler) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerMetalSupernova.mp3", 1944);
+      }
+      break;
+
+    case Id.novaChariot:
+      if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerGrunt2.mp3", 552);
+      } else if (unitId == Id.metalCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerMetalGrunt2.mp3", 960);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
+    case Id.deafeningWave:
+      if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerTakeThis.mp3", 624);
+      }
+      break;
+
+    case Id.getiStarRepair:
+      if (unitId == Id.metalCooler) {
+        playSoundOnUnit(unit, "Audio/Voice/CoolerMetalTakeThis.mp3", 960);
       }
       break;
     
@@ -1605,22 +1895,63 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
 
     case Id.finishBuster:
+      if (unitId == Id.ft) {
+        playSoundOnUnit(unit, "Audio/Voice/FTFinishBuster.mp3", 3504);
+      }
       playSoundOnUnit(unit, "Audio/Effects/FinishBuster.mp3", 1593);
+      break;
+
+    case Id.heatDomeAttack:
+      if (unitId == Id.ft) {
+        playSoundOnUnit(unit, "Audio/Voice/FTEraseYouCompletely.mp3", 3144);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam1.mp3", 10919);
       break;
 
     case Id.burningAttack:
       if (unitId == Id.ft) {
-        playSoundOnUnit(unit, "Audio/Voice/FTBurningAttack.mp3", 2952);
+        playSoundOnUnit(unit, "Audio/Voice/FTBurningAttack.mp3", 2496);
       }
       playSoundOnUnit(unit, "Audio/Effects/BurningAttack.mp3", 2136);
       break;
-    
+
+    case Id.bigBangAttack:
+      if (unitId == Id.vegeta) {
+        playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
+      } else if (unitId == Id.ft) {
+        playSoundOnUnit(unit, "Audio/Voice/FTTakeThis.mp3", 744);
+      }
+      break;
+
+    case Id.blazingRush:
+      if (unitId == Id.ft) {
+        playSoundOnUnit(unit, "Audio/Voice/FTGrunt3.mp3", 552);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+
+    case Id.shiningSwordAttack:
+      if (unitId == Id.ft) {
+        playSoundOnUnit(unit, "Audio/Voice/FTGrunt2.mp3", 528);
+      }
+      break;
+
     // goku
     case Id.kamehameha:
       if (unitId == Id.goku) {
         playSoundOnUnit(unit, "Audio/Voice/GokuKamehameha.mp3", 2832);
+      } else if (unitId == Id.gohan) {
+        if (GetHeroLevel(unit) < 115) {
+          playSoundOnUnit(unit, "Audio/Voice/GohanTeenKamehameha.mp3", 1201);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GohanAdultKamehameha.mp3", 1440);
+        }
+      } else if (unitId == Id.cellFirst) {
+        if (rng < 10) {
+          playSoundOnUnit(unit, "Audio/Voice/CellFirstImitation.mp3", 2808);
+        }
       }
-      playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3108);
+      playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
       break;
       
     case Id.dragonFist:
@@ -1628,19 +1959,43 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       if (unitId == Id.goku) {
         playSoundOnUnit(unit, "Audio/Voice/GokuDragonFist.mp3", 3552);
       }
-      playSoundOnUnit(unit, "Audio/Effects/DragonFist.mp3", 5041);
+      playSoundOnUnit(unit, "Audio/Effects/DragonFist.mp3", 5093);
       break;
     
     case Id.solarFlare:
       if (unitId == Id.goku) {
         playSoundOnUnit(unit, "Audio/Voice/GokuSolarFlare.mp3", 2976);
+      } else if (unitId == Id.cellFirst) {
+        playSoundOnUnit(unit, "Audio/Voice/CellFirstSolarFlare.mp3", 1671);
+      } else if (unitId == Id.cellSemi) {
+        playSoundOnUnit(unit, "Audio/Voice/CellSemiSolarFlare.mp3", 2455);
       }
       break;
     
     // gohan
+    case Id.twinDragonShot:
+      if (unitId == Id.gohan) {
+      } else if (unitId == Id.farmerWithShotgun) {
+        playSoundOnUnit(unit, "Audio/Voice/FarmerProtectMeGun.mp3", 1697);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam1.mp3", 10919);
+      break;
+
     case Id.masenko:
     case Id.cellMasenko:
-      playSoundOnUnit(unit, "Audio/Effects/Masenko.mp3", 1593);
+      if (unitId == Id.gohan) {
+        if (GetHeroLevel(unit) < 115) {
+          playSoundOnUnit(unit, "Audio/Voice/GohanTeenMasenko.mp3", 960);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GohanAdultMasenko.mp3", 1128);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/Masenko.mp3", 1645);
+      break;
+
+    case Id.unlockPotential:
+    case Id.potentialUnleashed:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
       break;
 
     case Id.greatSaiyamanHasArrived:
@@ -1650,10 +2005,40 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/JusticePose.mp3", 1645);
       break;
 
+    case Id.superDragonFlight:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
     // janemba
+    case Id.rakshasaClaw:
+    case Id.devilClaw:
+    case Id.demonicBlade:
+      if (unitId == Id.janemba) {
+        if (rng < 33) {
+          playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt1.mp3", 528);
+        } else if (rng < 66) {
+          playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt2.mp3", 720);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt3.mp3", 960);
+        }
+      }
+      break;
+
     case Id.cosmicIllusion:
     case Id.bunkaiTeleport:
       playSoundOnUnit(unit, "Audio/Effects/JanembaSuperBunkai.mp3", 1985);
+      break;
+
+    case Id.hellsGate:
+      if (unitId == Id.janemba) {
+        playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt4.mp3", 1656);
+      }
+      break;
+
+    case Id.lightningShowerRain:
+      if (unitId == Id.janemba) {
+        playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt5.mp3", 1848);
+      }
       break;
     
     // king k rool kkr
@@ -1696,6 +2081,21 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/KKRBlasto.mp3", 4896);
       break;
     
+    // raditz
+    case Id.doubleSunday:
+      if (unitId == Id.raditz) {
+
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+      break;
+
+    case Id.behindYou:
+      if (unitId == Id.raditz) {
+
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+    
     // nappa
     case Id.giantStorm:
       if (unitId == Id.nappa) {
@@ -1715,6 +2115,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
           playSoundOnUnit(unit, "Audio/Voice/NappaKapow.mp3", 7488);
         }
       }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
       break;
 
     case Id.plantSaibamen:
@@ -1731,6 +2132,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
           playSoundOnUnit(unit, "Audio/Voice/NappaBreakCannon.mp3", 1176);
         }
       }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
       break;
     
     // pan
@@ -1744,7 +2146,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       if (unitId == Id.pan) {
         playSoundOnUnit(unit, "Audio/Voice/PanKamehameha.mp3", 1296);
       }
-      playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3108);
+      playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
       break;
 
     case Id.maidenBlast:
@@ -1766,18 +2168,42 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
 
     // piccolo
+    case Id.kyodaika:
+      if (unitId == Id.piccolo) {
+        playSoundOnUnit(unit, "Audio/Voice/PiccoloGrunt2.mp3", 672);
+      }
+      break;
+
     case Id.piccoloSBC:
     case Id.piccoloCloneSBC:
     case Id.cellSBC:
       if (unitId == Id.piccolo) {
-        playSoundOnUnit(unit, "Audio/Voice/PiccoloSBC.mp3", 1776);
+        if (rng < 3) {
+          playSoundOnUnit(unit, "Audio/Voice/PiccoloSBCMeme.mp3", 6138);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/PiccoloSBC.mp3", 1776);
+        }
+      } else if (unitId == Id.cellFirst) {
+        if (rng < 10) {
+          playSoundOnUnit(unit, "Audio/Voice/CellFirstImitation.mp3", 2808);
+        }
       }
-      playSoundOnUnit(unit, "Audio/Effects/SBC.mp3", 2194);
+      playSoundOnUnit(unit, "Audio/Effects/SBC.mp3", 2246);
+      break;
+
+    case Id.slappyHand:
+      if (unitId == Id.piccolo) {
+        playSoundOnUnit(unit, "Audio/Voice/PiccoloGrunt1.mp3", 552);
+      }
       break;
 
     case Id.hellzoneGrenade:
       if (unitId == Id.piccolo) {
-        playSoundOnUnit(unit, "Audio/Voice/PiccoloHellzoneGrenade.mp3", 1200);
+        if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/PiccoloHellzoneGrenade.mp3", 1200);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/PiccoloHellzoneGrenade2.mp3", 1296);
+        }
       }
       break;
 
@@ -1795,27 +2221,36 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       if (unitId == Id.vegeta) {
         playSoundOnUnit(unit, "Audio/Voice/VegetaGalickGun.mp3", 2352);
       }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
       break;
 
     case Id.finalFlash:
     case Id.finalFlash2:
       if (unitId == Id.vegeta) {
         playSoundOnUnit(unit, "Audio/Voice/VegetaFinalFlash.mp3", 3408);
+      } else if (unitId == Id.farmerWithShotgun) {
+        playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
       }
-      playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4205);
-      break;
-
-    case Id.bigBangAttack:
-      if (unitId == Id.vegeta) {
-        playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
-      }
+      playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
       break;
 
     case Id.energyBlastVolley:
       playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
       break;
     
+    case Id.angryShout:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+      break;
+    
     // videl
+    case Id.punch:
+      // playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
+    case Id.kick:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+    
     case Id.flyingKick:
       if (unitId == Id.videl) {
         if (rng < 25) {

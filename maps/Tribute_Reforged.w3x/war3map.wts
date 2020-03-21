@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.39c
+DBZ Tribute Reforged 0.40
 }
 
 STRING 4
@@ -9179,15 +9179,15 @@ Scouter
 }
 
 STRING 1464
-// Items: I00D (Scouter), Description (Description)
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's name.|r|n|cffffff00Example: scout goku|r|n|cffff0000Warning: Can break.|r
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool2> seconds|r
 }
 
 STRING 1465
-// Items: I00D (Scouter), Ubertip (Tooltip - Extended)
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's name.|r|n|cffffff00Example: scout goku|r|n|cffff0000Warning: Can break.|r
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool3> seconds|r
 }
 
 STRING 1466
@@ -17222,7 +17222,7 @@ STRING 2797
 }
 
 STRING 2798
-// Abilities: A01B (Final Flash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0L4 (Final Flash 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose! |n[|cffffcc00History|r] - |cff0066CCHe uses this to finish his opponents, most memorable is when he uses this to finish off Jeice of the Ginyu Force.|r
 }
@@ -37907,21 +37907,18 @@ Goku throws a Spirit Bomb at the target area, causing it to explode and deal dam
 }
 
 STRING 6231
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A02B,Cool2> seconds|r
+ 
 }
 
 STRING 6232
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A03B,Cool3> seconds|r
+ 
 }
 
 STRING 6233
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
 {
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A04B,Cool4> seconds|r
+ .
 }
 
 STRING 6234
@@ -59486,30 +59483,6 @@ STRING 9812
 Saiyan Defender of the earth
 }
 
-STRING 9813
-{
-DBZ Tribute Reforged
-}
-
-STRING 9814
-{
-Join us at discord.gg/vayXJSZ
-}
-
-STRING 9815
-{
-|cffff2020Game modes (red only):
--default (good v evil, no meme heroes)
--ap (all pick)
--ar (all random)
--freemode (disable win/loss conditions)
-
-All players commands:
--cam/-ang (camera controls)
-
-Also make sure to check out|r |cffffcc00DBZ Tribute |r|cffff1010Elite|r|cffffcc00 2.5.4+|r
-}
-
 STRING 9816
 // Buffs/Effects: B010 (), Bufftip (Tooltip)
 {
@@ -60098,12 +60071,6 @@ STRING 9913
 Pyre Keeper of Hell
 }
 
-STRING 9914
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A05B,Cool5> seconds|r
-}
-
 STRING 9915
 // Units: H08R (Spoiled Brat), Propernames (Proper Names)
 {
@@ -60122,12 +60089,6 @@ STRING 9917
 [|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level %d|r]
 }
 
-STRING 9918
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A06B,Cool6> seconds|r
-}
-
 STRING 9919
 // Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
 {
@@ -60138,12 +60099,6 @@ STRING 9920
 // Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
-}
-
-STRING 9921
-// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A07B,Cool7> seconds|r
 }
 
 STRING 9922
@@ -60904,12 +60859,6 @@ STRING 10050
 // Abilities: A0L4 (Final Flash 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Final Flash - [|cffffcc00Level %d|r]
-}
-
-STRING 10051
-// Abilities: A0L4 (Final Flash 2), Researchubertip (Tooltip - Learn - Extended)
-{
-Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose! |n[|cffffcc00History|r] - |cff0066CCHe uses this to finish his opponents, most memorable is when he uses this to finish off Jeice of the Ginyu Force.|r
 }
 
 STRING 10052
@@ -64635,7 +64584,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 14.Mar.20
+This map is under active development - 22.Mar.20
 }
 
 STRING 10653
@@ -68541,6 +68490,12 @@ STRING 11298
 // Abilities: A0KO (Solar Flare), Ubertip (Tooltip - Normal - Extended)
 {
 Nearby enemies are stunned for 1s and then blinded, causing them to miss all attacks.|n|cff00FF00(Duration: 10 seconds)|r|n|cff00ffff(Cooldown: <A0KO,Cool2> seconds)|r
+}
+
+STRING 11299
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool4> seconds|r
 }
 
 STRING 11300
@@ -73089,6 +73044,12 @@ STRING 12055
 Purchase Banana
 }
 
+STRING 12056
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool5> seconds|r
+}
+
 STRING 12057
 // Items: I04G (Bee), Name (Name)
 {
@@ -73123,6 +73084,11 @@ STRING 12062
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12063
+{
+Your scouter detects nothing (maybe they're hiding their power level?)
 }
 
 STRING 12064
@@ -73605,10 +73571,22 @@ Transformations:
 [lvl 150] 2.50x "fp"
 }
 
+STRING 12143
+// Items: I00D (Scouter), Description (Description)
+{
+Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's number.|r|n|cffffff00Example: "scout 1" to scout player red|r|n|cffff0000Warning: % chance of breaking on each use.|r
+}
+
 STRING 12144
 // Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
 {
 Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool9> seconds|r
+}
+
+STRING 12145
+// Items: I00D (Scouter), Ubertip (Tooltip - Extended)
+{
+Gives detailed information on the location and power level of enemies. |n|cff00ff00To use, type scout, followed by the enemy's number.|r|n|cffffff00Example: "scout 1" to scout player red|r|n|cffff0000Warning: % chance of breaking on each use.|r
 }
 
 STRING 12146
@@ -73639,6 +73617,18 @@ STRING 12150
 // Abilities: A0OH (Javelin Throw), Ubertip (Tooltip - Normal - Extended)
 {
 Upa throws his Javelin at his enemies. If this ability comes into contact with Korin’s Flag, it will transport Upa to the flag’s location and stun all enemies for 1 second in Upa’s path to the flag.|n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OH,Cool1> seconds|r
+}
+
+STRING 12151
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool6> seconds|r
+}
+
+STRING 12152
+// Abilities: A01B (Final Flash), Researchubertip (Tooltip - Learn - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose! |n|cff00ffffCooldown: <A01B,Cool1>s|r|n[|cffffcc00History|r] - |cff0066CCHe uses this to finish his opponents, most memorable is when he uses this to finish off Jeice of the Ginyu Force.|r
 }
 
 STRING 12153
@@ -74407,6 +74397,12 @@ STRING 12280
 // Buffs/Effects: B02F (), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Upa's Rage; it has increased attack damage.
+}
+
+STRING 12281
+// Abilities: A01B (Final Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Vegeta charges with his arms spread out and palms facing the opponent. Then his wrists are brought together, and an almighty blast of Ki is let loose!|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A01B,Cool7> seconds|r
 }
 
 STRING 12282

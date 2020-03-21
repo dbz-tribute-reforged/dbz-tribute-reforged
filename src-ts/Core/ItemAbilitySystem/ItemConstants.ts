@@ -95,6 +95,7 @@ export module ItemConstants {
 
     export const WHEELO_RESEARCH_1 = wheeloResearch[0];
     export const DARKNESS_GENERATOR = darknessGenerator[0];
+    export const SCOUTER_1 = scouter[0];
     export const SCOUTER_2 = scouter[1];
     export const DEAD_ZONE_FRAGMENT = deadZoneFragment[0];
     export const GERO_BOOTS = geroBoots[0];

@@ -8,7 +8,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 60;
   }
 
   spawnSagaUnits(): void {
@@ -72,7 +72,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
   
   constructor() {
     super();
-    this.delay = 15;
+    this.delay = 20;
   }
 
   spawnSagaUnits(): void {

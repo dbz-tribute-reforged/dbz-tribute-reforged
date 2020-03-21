@@ -17,7 +17,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 30;
+    this.delay = 45;
     this.stats = 100;
     this.isRunningAway = false;
   }
@@ -125,7 +125,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 15;
+    this.delay = 20;
     this.stats = 100;
   }
 
@@ -229,7 +229,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 45;
     this.stats = 100;
   }
 
