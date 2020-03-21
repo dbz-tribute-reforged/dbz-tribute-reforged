@@ -21902,7 +21902,7 @@ function Trig_Scouter_Drop_Func003Func002Func002Func002C()
 end
 
 function Trig_Scouter_Drop_Func003Func002Func002C()
-    if (not (udg_TempReal < 990.00)) then
+    if (not (udg_TempReal >= 990.00)) then
         return false
     end
     if (not Trig_Scouter_Drop_Func003Func002Func002Func002C()) then
@@ -21912,7 +21912,7 @@ function Trig_Scouter_Drop_Func003Func002Func002C()
 end
 
 function Trig_Scouter_Drop_Func003Func002C()
-    if (udg_TempReal > 999.00) then
+    if (udg_TempReal >= 999.00) then
         return true
     end
     if (Trig_Scouter_Drop_Func003Func002Func002C()) then
