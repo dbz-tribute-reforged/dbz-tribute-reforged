@@ -78,7 +78,18 @@ export class AdvancedSaga {
 
   spawnSagaUnits(): void {
     PlaySoundBJ(this.spawnSound);
+    this.playSoundSagaTheme();
     DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 15, this.getColoredName());
+  }
+
+  private playSoundSagaTheme() {
+    udg_TempSound = CreateSound("Audio/Music/DBZSagaTheme", false, false, false, 0, 0, "DefaultEAXON")
+    SetSoundDuration(udg_TempSound, 7653)
+    SetSoundChannel(udg_TempSound, 0)
+    SetSoundVolume(udg_TempSound, 64)
+    SetSoundPitch(udg_TempSound, 1.0)
+    PlaySoundBJ(udg_TempSound)
+    KillSoundWhenDone(udg_TempSound)
   }
 
   addHeroListToSaga(names: string[], mustKill: boolean) {

@@ -150,11 +150,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
 
     // androids 13 14 15
-    [FourCC("H01V"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
+    [FourCC("H01V"), [
+      AbilityNames.Android13.ENERGY_BEAM, 
+      AbilityNames.Android13.SS_DEADLY_BOMBER, 
+      AbilityNames.Android13.ANDROID_BARRIER, 
+      AbilityNames.Android13.OVERCHARGE
+    ]],
     [FourCC("H01S"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
     [FourCC("H01T"), [AbilityNames.Android13.ENERGY_BEAM, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
     // super 13
-    [FourCC("H01U"), [AbilityNames.Android13.SS_DEADLY_HAMMER, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
+    [FourCC("H01U"), [
+      AbilityNames.Android13.SS_DEADLY_HAMMER, 
+      AbilityNames.Android13.SS_DEADLY_BOMBER, 
+      AbilityNames.Android13.NUKE, 
+      AbilityNames.Android13.ANDROID_BARRIER, 
+      AbilityNames.Android13.OVERCHARGE
+    ]],
     // ultra 13
     [FourCC("H01W"), [AbilityNames.Android13.SS_DEADLY_HAMMER, AbilityNames.Android13.SS_DEADLY_BOMBER, AbilityNames.Android13.NUKE, AbilityNames.Android13.ANDROID_BARRIER, AbilityNames.Android13.OVERCHARGE]],
 
