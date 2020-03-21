@@ -1916,7 +1916,9 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
 
     case Id.bigBangAttack:
-      if (unitId == Id.ft) {
+      if (unitId == Id.vegeta) {
+        playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
+      } else if (unitId == Id.ft) {
         playSoundOnUnit(unit, "Audio/Voice/FTTakeThis.mp3", 744);
       }
       break;
@@ -2230,12 +2232,6 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         playSoundOnUnit(unit, "Audio/Voice/FarmerHeyYou.mp3", 1384);
       }
       playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);
-      break;
-
-    case Id.bigBangAttack:
-      if (unitId == Id.vegeta) {
-        playSoundOnUnit(unit, "Audio/Voice/VegetaBigBangAttack.mp3", 3744);
-      }
       break;
 
     case Id.energyBlastVolley:
