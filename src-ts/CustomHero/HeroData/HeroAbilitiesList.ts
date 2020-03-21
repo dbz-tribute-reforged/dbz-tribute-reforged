@@ -227,7 +227,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     
     // cell unformed / 1st form / 2nd form / perfect
     [FourCC("N00Q"), [AbilityNames.Goku.KAMEHAMEHA]],
-    [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, "Solar Flare", AbilityNames.Cell.ABSORB]],
+    [FourCC("H00E"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00F"), [AbilityNames.Goku.KAMEHAMEHA, AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, "Solar Flare", AbilityNames.Cell.ABSORB]],
     [FourCC("H00G"), [
       AbilityNames.Goku.KAMEHAMEHA, 

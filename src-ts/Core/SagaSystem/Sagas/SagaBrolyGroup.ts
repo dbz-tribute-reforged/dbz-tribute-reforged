@@ -291,6 +291,7 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
     this.delay = 60;
     this.isLSS = false;
     this.auraLSS = GetLastCreatedEffectBJ();
+    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

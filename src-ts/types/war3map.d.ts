@@ -234,3 +234,4 @@ declare var gg_snd_SecretFound: sound;
 declare var gg_snd_QuestFailed: sound;
 declare var gg_snd_ShenronSummon: sound;
 declare var udg_TempSound: sound;
+declare var gg_snd_DBZSagaTheme: sound;

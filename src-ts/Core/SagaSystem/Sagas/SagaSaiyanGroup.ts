@@ -98,6 +98,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     this.stats = 30;
     this.isNappaOoz = false;
     this.isVegetaOoz = false;
+    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

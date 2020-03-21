@@ -101,6 +101,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
     super();
     this.delay = 30;
     this.isKid = false;
+    this.spawnSound = gg_snd_DBZSagaTheme;
   }
 
   spawnSagaUnits(): void {

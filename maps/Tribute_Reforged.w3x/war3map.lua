@@ -465,6 +465,7 @@ gg_trg_Test_StatMult_Init = nil
 gg_trg_Test_Stats_Add_Command = nil
 gg_trg_Test_Stats_Get_Stats_Command = nil
 gg_trg_Test_Stats_Get_Stats_Print = nil
+gg_trg_Test_Stats_Get_Stats_Print_Copy = nil
 gg_trg_Add_Unit_To_StatMult = nil
 gg_trg_Remove_Unit_From_StatMult = nil
 gg_trg_Add_To_Base_Stats = nil
@@ -1067,7 +1068,8 @@ end
 
 function CreateAllItems()
     local itemID
-    BlzCreateItemWithSkin(FourCC("I00I"), 690.4, 21857.0, FourCC("I00I"))
+    BlzCreateItemWithSkin(FourCC("I00D"), 762.0, 21620.7, FourCC("I00D"))
+    BlzCreateItemWithSkin(FourCC("I00I"), 683.3, 21908.2, FourCC("I00I"))
     BlzCreateItemWithSkin(FourCC("I02E"), 692.4, 21350.5, FourCC("I02E"))
     BlzCreateItemWithSkin(FourCC("I02V"), 548.5, 22104.6, FourCC("I02V"))
     BlzCreateItemWithSkin(FourCC("I035"), 628.5, 21333.1, FourCC("I035"))
@@ -1090,7 +1092,7 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I04D"), 645.3, 21710.4, FourCC("I04D"))
     BlzCreateItemWithSkin(FourCC("I04F"), 542.2, 21945.7, FourCC("I04F"))
     BlzCreateItemWithSkin(FourCC("I04G"), 717.6, 21459.9, FourCC("I04G"))
-    BlzCreateItemWithSkin(FourCC("I04H"), 542.7, 22063.5, FourCC("I04H"))
+    BlzCreateItemWithSkin(FourCC("I04H"), 560.8, 22046.9, FourCC("I04H"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -12551,9 +12553,9 @@ end
 
 function Trig_Test_Stats_Get_Stats_Print_Func001Func004A()
     udg_StatMultUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Get_Base_Stats)
+    TriggerExecute(gg_trg_Get_Multiplied_Stats)
     DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00" .. (GetHeroProperName(udg_StatMultUnit) .. "|r")))
-    DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Base Stats:|r |cffff2020" .. ((R2S(udg_StatMultStr) .. "|r / |cff20ff20") .. ((R2S(udg_StatMultAgi) .. "|r / |cff00ffff") .. (R2S(udg_StatMultInt) .. "|r")))))
+    DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Current Stats:|r |cffff2020" .. ((R2S(udg_StatMultStr) .. "|r / |cff20ff20") .. ((R2S(udg_StatMultAgi) .. "|r / |cff00ffff") .. (R2S(udg_StatMultInt) .. "|r")))))
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     DisplayTextToForce(udg_TempPlayerGroup, ("|cffffcc00Stat Mult:|r |cffff2020" .. ((R2S(udg_StatMultStr) .. "|r / |cff20ff20") .. ((R2S(udg_StatMultAgi) .. "|r / |cff00ffff") .. (R2S(udg_StatMultInt) .. "|r")))))
     TriggerExecute(gg_trg_Get_Stat_Sources_Data)
@@ -21748,7 +21750,7 @@ function Trig_Scouter_Scout_Func002Func002A()
     end
 end
 
-function Trig_Scouter_Scout_Func002Func004Func003Func001Func004Func006C()
+function Trig_Scouter_Scout_Func002Func004Func003Func001Func004Func007C()
     if (not (GetRandomReal(0, 100.00) < udg_TempReal)) then
         return false
     end
@@ -21774,10 +21776,10 @@ function Trig_Scouter_Scout_Func002Func004Func003A()
         udg_StatMultUnit = GetEnumUnit()
         TriggerExecute(gg_trg_Get_Stat_Multiplier_Include_Moro)
         if (Trig_Scouter_Scout_Func002Func004Func003Func001Func004C()) then
-            udg_TempInt2 = (((GetHeroStatBJ(bj_HEROSTAT_STR, udg_StatMultUnit, true) + (GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true) + GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true))) // 3) + 30)
+            udg_TempInt2 = (((GetHeroStatBJ(bj_HEROSTAT_STR, udg_StatMultUnit, true) + (GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true) + GetHeroStatBJ(bj_HEROSTAT_INT, udg_StatMultUnit, true))) + 3) + 1)
             udg_TempReal = (I2R(udg_TempInt2) * (0.10 * 0.01))
-            udg_TempReal = RMaxBJ(5.00, RMinBJ(95.00, (udg_TempReal + 5.00)))
-            if (Trig_Scouter_Scout_Func002Func004Func003Func001Func004Func006C()) then
+            udg_TempReal = RMaxBJ(5.00, RMinBJ(95.00, (udg_TempReal + 0.01)))
+            if (Trig_Scouter_Scout_Func002Func004Func003Func001Func004Func007C()) then
                 udg_TempBool = false
                 DisplayTextToForce(udg_TempPlayerGroup, ("Your scouter has exploded! (" .. (R2S(udg_TempReal) .. "% chance)")))
                 RemoveItem(udg_TempItem)
@@ -21787,6 +21789,7 @@ function Trig_Scouter_Scout_Func002Func004Func003A()
                                 RemoveLocation(udg_TempLoc)
             end
         else
+            udg_TempBool = false
             DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_12063")
         end
     else
@@ -21891,6 +21894,23 @@ function Trig_Scouter_Drop_Conditions()
     return true
 end
 
+function Trig_Scouter_Drop_Func001Func003C()
+    if (GetUnitTypeId(GetDyingUnit()) == FourCC("n028")) then
+        return true
+    end
+    if (GetUnitTypeId(GetDyingUnit()) == FourCC("n02R")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Scouter_Drop_Func001C()
+    if (not Trig_Scouter_Drop_Func001Func003C()) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scouter_Drop_Func003Func002Func002Func002C()
     if (GetUnitTypeId(GetDyingUnit()) == FourCC("n028")) then
         return true
@@ -21929,7 +21949,11 @@ function Trig_Scouter_Drop_Func003C()
 end
 
 function Trig_Scouter_Drop_Actions()
-    udg_ScouterDropCounter = (udg_ScouterDropCounter + 1)
+    if (Trig_Scouter_Drop_Func001C()) then
+        udg_ScouterDropCounter = IMinBJ(990, (udg_ScouterDropCounter + 10))
+    else
+        udg_ScouterDropCounter = IMinBJ(999, (udg_ScouterDropCounter + 1))
+    end
     udg_TempReal = GetRandomReal(I2R(udg_ScouterDropCounter), 1000.00)
     if (Trig_Scouter_Drop_Func003C()) then
         udg_ScouterDropCounter = 0

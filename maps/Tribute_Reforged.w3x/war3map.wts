@@ -37906,6 +37906,21 @@ STRING 6230
 Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
 }
 
+STRING 6231
+{
+ 
+}
+
+STRING 6232
+{
+ 
+}
+
+STRING 6233
+{
+ .
+}
+
 STRING 6234
 // Abilities: A0DS (Namekian Fighting Style), Tip (Tooltip - Normal)
 {
@@ -59468,30 +59483,6 @@ STRING 9812
 Saiyan Defender of the earth
 }
 
-STRING 9813
-{
-DBZ Tribute Reforged
-}
-
-STRING 9814
-{
-Join us at discord.gg/vayXJSZ
-}
-
-STRING 9815
-{
-|cffff2020Game modes (red only):
--default (good v evil, no meme heroes)
--ap (all pick)
--ar (all random)
--freemode (disable win/loss conditions)
-
-All players commands:
--cam/-ang (camera controls)
-(blizz why u flip loading screen text...)
-Also make sure to check out|r |cffffcc00DBZ Tribute |r|cffff1010Elite|r|cffffcc00 2.5.4+|r
-}
-
 STRING 9816
 // Buffs/Effects: B010 (), Bufftip (Tooltip)
 {
@@ -64593,7 +64584,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 21.Mar.20
+This map is under active development - 22.Mar.20
 }
 
 STRING 10653
