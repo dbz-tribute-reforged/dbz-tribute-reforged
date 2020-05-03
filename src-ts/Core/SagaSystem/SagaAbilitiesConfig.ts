@@ -226,6 +226,18 @@ export module SagaAbilities {
     );
   }
 
+  export module EisShenron {
+    export const FROST_CLAWS = new SagaAbility(
+      AbilityNames.EisShenron.FROST_CLAWS, 10, 14, 10, MEDIUM_CAST_TIME
+    );
+    export const ICE_SLASH = new SagaAbility(
+      AbilityNames.EisShenron.ICE_SLASH, 10, 3, 10, SHORT_CAST_TIME
+    );
+    export const ICE_CANNON = new SagaAbility(
+      AbilityNames.EisShenron.ICE_CANNON, 10, 30, 5, EXTRA_LONG_CAST_TIME
+    );
+  }
+
   export module Whis {
     export const ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME

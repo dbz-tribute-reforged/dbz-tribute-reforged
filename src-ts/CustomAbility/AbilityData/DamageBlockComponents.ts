@@ -869,6 +869,57 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
+    name: "block absolute zero",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 50,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 0.5,
+    sfxList: [
+      {
+        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.25,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "WhisShield.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 0.75,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
+  // ----------------------------------------
+  {
     name: "block geti star fragment item",
     repeatInterval: 1,
     startTick: 0,

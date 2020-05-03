@@ -6,9 +6,11 @@ export module Debuffs {
 
   export const CURSE_ORDER_ID = 852190;
   export const DEMONS_MARK = FourCC("A0O7");
+  export const FROST_CLAWS_BLIND = FourCC("A0P6");
 
   export const SLOW_ORDER_ID = 852075;
   export const HEROS_SONG = FourCC("A0I6");
+  export const EIS_FROSTBITE = FourCC("A0P5");
 }
 
 export const AOEDebuffComponents = [
@@ -21,6 +23,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 300,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun blazing rush",
@@ -31,6 +36,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun super saiyan rage",
@@ -41,6 +49,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 200,
     keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun saiyan spirit",
@@ -51,6 +62,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 250,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun reliable friend",
@@ -61,6 +75,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun energy punch",
@@ -71,6 +88,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "stun behind you",
@@ -81,6 +101,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff heros song brave cannon",
@@ -91,6 +114,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.SLOW_ORDER_ID,
     aoe: 400,
     keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff heros song heros flute start",
@@ -101,6 +127,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.SLOW_ORDER_ID,
     aoe: 900,
     keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff heros song heros flute continuous",
@@ -111,6 +140,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.SLOW_ORDER_ID,
     aoe: 900,
     keepCasting: true, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff demons mark rakshasa claw",
@@ -121,6 +153,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.CURSE_ORDER_ID,
     aoe: 250,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff demons mark devil claw",
@@ -131,6 +166,9 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.CURSE_ORDER_ID,
     aoe: 300,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
   {
     name: "debuff stun kharge",
@@ -141,5 +179,60 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 200,
     keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff blind frost claws",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.FROST_CLAWS_BLIND,
+    orderId: Debuffs.CURSE_ORDER_ID,
+    aoe: 250,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow frost claws",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.EIS_FROSTBITE,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 250,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow ice slash",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.EIS_FROSTBITE,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 400,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun ice cannon",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.STUN_TWO_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 600,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: true,
+    buffId: FourCC("B02T"),
   },
 ]

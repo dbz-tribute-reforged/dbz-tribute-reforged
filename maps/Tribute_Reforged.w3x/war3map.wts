@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.40
+DBZ Tribute Reforged 0.41
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 20 unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 20+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -7324,7 +7324,7 @@ STRING 1169
 }
 
 STRING 1170
-// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Units: H09B (Three-Star Shadow Dragon), Hotkey (Hotkey)
 {
 F
 }
@@ -12308,7 +12308,7 @@ Multi Form- Level 3
 }
 
 STRING 1980
-// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -12332,7 +12332,7 @@ Piccolo spilts into two-three different units. |n[|cffffcc00History|r] - |cff006
 }
 
 STRING 1984
-// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -13875,7 +13875,7 @@ D
 }
 
 STRING 2240
-// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14259,7 +14259,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14613,7 +14613,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 2363
-// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
+// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -15569,7 +15569,7 @@ A combat style taught by Master Roshi. |n|cffffcc00Evasion|r - <A027,DataD1,%>% 
 }
 
 STRING 2522
-// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
+// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16337,7 +16337,7 @@ Buu Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2650
-// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16664,7 +16664,7 @@ STRING 2704
 }
 
 STRING 2705
-// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16688,7 +16688,7 @@ Yakon is one of Babidi's majin minions. He is from a distant corner of the unive
 }
 
 STRING 2709
-// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16994,7 +16994,7 @@ STRING 2759
 }
 
 STRING 2760
-// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -18412,7 +18412,7 @@ Combat of Strength - [|cffffcc00Level 15|r]
 }
 
 STRING 2996
-// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -20822,7 +20822,7 @@ STRING 3395
 }
 
 STRING 3396
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -20846,7 +20846,7 @@ Fires a powerful energy blast from the users hands, to be used in combination wi
 }
 
 STRING 3400
-// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23052,7 +23052,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23868,7 +23868,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24457,7 +24457,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24703,7 +24703,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25297,7 +25297,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25831,7 +25831,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27187,9 +27187,9 @@ STRING 4455
 }
 
 STRING 4456
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool1> seconds|r
 }
 
 STRING 4457
@@ -27457,7 +27457,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27793,7 +27793,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -29621,7 +29621,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -31836,7 +31836,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -32733,7 +32733,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -35028,7 +35028,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -35936,7 +35936,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -36866,7 +36866,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38012,7 +38012,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38222,7 +38222,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 6284
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38426,7 +38426,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -41021,9 +41021,9 @@ Beerus spawns an orb that detonates upon contact with an enemy. Beerus can hit t
 }
 
 STRING 6748
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool2> seconds|r
 }
 
 STRING 6749
@@ -41040,9 +41040,9 @@ A secret hero that can only be randomed. One of the strongest PvP fighters due t
 }
 
 STRING 6750
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur2>s|r|n|cff00FFFFCooldown: <A0LW,Cool2>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool3> seconds|r
 }
 
 STRING 6751
@@ -42407,7 +42407,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43001,7 +43001,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 7075
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43211,7 +43211,7 @@ A combat style used by Hit. |n|cffffcc00Evasion|r - <A0G0,DataD1,%>% |n|cffffcc0
 }
 
 STRING 7110
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43749,9 +43749,9 @@ Fires a beam in that deals damage in a line and stuns heroes that are struck. |n
 }
 
 STRING 7198
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.7/0.8/0.9x|n|cff00FF00Duration: <A0LW,Dur3>s|r|n|cff00FFFFCooldown: <A0LW,Cool3>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool4> seconds|r
 }
 
 STRING 7199
@@ -44577,7 +44577,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45398,7 +45398,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -48894,7 +48894,7 @@ Zamasu's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8055
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -49761,7 +49761,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -52239,7 +52239,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -52718,7 +52718,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53538,7 +53538,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55638,7 +55638,7 @@ Jiren's Fighting Style
 }
 
 STRING 9172
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55662,13 +55662,13 @@ Jiren's strength is overwhelming.|n|cff00FF00Crit %:|r 15|n|cff00FF00Crit Dmg:|r
 }
 
 STRING 9176
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55890,7 +55890,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -55914,7 +55914,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -58494,13 +58494,13 @@ Q
 }
 
 STRING 9648
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9649
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59483,6 +59483,24 @@ STRING 9812
 Saiyan Defender of the earth
 }
 
+STRING 9813
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 9814
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 9815
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur2>s|r|n|cff00FFFFCooldown: <A0LW,Cool2>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
 STRING 9816
 // Buffs/Effects: B010 (), Bufftip (Tooltip)
 {
@@ -60071,6 +60089,12 @@ STRING 9913
 Pyre Keeper of Hell
 }
 
+STRING 9914
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur3>s|r|n|cff00FFFFCooldown: <A0LW,Cool3>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
 STRING 9915
 // Units: H08R (Spoiled Brat), Propernames (Proper Names)
 {
@@ -60089,6 +60113,12 @@ STRING 9917
 [|cff00ff00E|r] Learn Nova Chariot - [|cffffcc00Level %d|r]
 }
 
+STRING 9918
+// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
+{
+Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> - <A0MI,Cool10> seconds|r
+}
+
 STRING 9919
 // Abilities: A01B (Final Flash), Tip (Tooltip - Normal)
 {
@@ -60099,6 +60129,12 @@ STRING 9920
 // Abilities: A0LW (Summon Giru), Researchhotkey (Hotkey - Learn)
 {
 R
+}
+
+STRING 9921
+// Abilities: A0MP (Energy Ball), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool1> - <A0MP,Cool10> seconds|r
 }
 
 STRING 9922
@@ -60670,7 +60706,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -60688,7 +60724,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -60859,6 +60895,12 @@ STRING 10050
 // Abilities: A0L4 (Final Flash 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Final Flash - [|cffffcc00Level %d|r]
+}
+
+STRING 10051
+// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
+{
+Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool1> - <A0MS,Cool10>s|r
 }
 
 STRING 10052
@@ -61702,13 +61744,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62249,7 +62291,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62267,7 +62309,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62984,7 +63026,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63092,19 +63134,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64004,7 +64046,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64022,7 +64064,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64584,7 +64626,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 22.Mar.20
+This map is under active development - 4.May.20
 }
 
 STRING 10653
@@ -65478,7 +65520,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66600,7 +66642,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66618,7 +66660,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67482,7 +67524,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67525,7 +67567,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67662,7 +67704,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68145,7 +68187,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68163,7 +68205,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68847,9 +68889,9 @@ The Saibaman splits open his head and releases acid from it, powerful enough to 
 }
 
 STRING 11358
-// Abilities: A0MI (Giant Storm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool1> seconds|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool5> seconds|r
 }
 
 STRING 11359
@@ -68925,13 +68967,13 @@ STRING 11370
 }
 
 STRING 11371
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69117,9 +69159,9 @@ Moro manipulates the life force of living things into a powerful ball of energy 
 }
 
 STRING 11403
-// Abilities: A0MP (Energy Ball), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Moro manipulates the life force of living things into a powerful ball of energy that explodes with terrifying destructive power upon hitting at an enemy. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MP,Cool1> seconds|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool6> seconds|r
 }
 
 STRING 11404
@@ -69566,9 +69608,9 @@ Once Moro has had his fill, he is willing to share his collected life energy wit
 }
 
 STRING 11478
-// Abilities: A0MS (Power Level Sharing), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
 {
-Once Moro has had his fill, he is willing to share his collected life energy with his allies and make them temporarily stronger. Moro distributes his temporary stat multiplier to all allies in 2000 AOE. Also provides them with bonus speed and restores 15% of their max mana.|n|cffff2020Warning: Sets Moro's TEMPORARY stat mult to 0.0x|r|n|cff00FF00Stat Mult: +(0.05 * lvl + 25% of Moro's temp stat mult)|nBonus Speed: +66ms|nMana Restore: 15%|r|n|cff00FFFFCooldown: <A0MS,Cool1>s|r
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool7> seconds|r
 }
 
 STRING 11479
@@ -70064,7 +70106,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70082,7 +70124,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72025,7 +72067,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72043,7 +72085,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72871,7 +72913,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -74483,6 +74525,12 @@ STRING 12294
 Q
 }
 
+STRING 12295
+// Units: H09B (Three-Star Shadow Dragon), Name (Name)
+{
+Three-Star Shadow Dragon
+}
+
 STRING 12296
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74495,6 +74543,18 @@ STRING 12297
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 8|r]
 }
 
+STRING 12298
+// Units: H09B (Three-Star Shadow Dragon), Propernames (Proper Names)
+{
+Eis Shenron
+}
+
+STRING 12299
+// Units: H09B (Three-Star Shadow Dragon), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00F|r] Choose Eis Shenron
+}
+
 STRING 12300
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74505,6 +74565,12 @@ STRING 12301
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
 [|cffFFFF00E|r] Hand Kannon - [|cffffcc00Level 10|r]
+}
+
+STRING 12303
+// Units: H09B (Three-Star Shadow Dragon), Tip (Tooltip - Basic)
+{
+[|cffffff00F|r] Choose Eis Shenron
 }
 
 STRING 12304
@@ -74839,6 +74905,12 @@ A powerful medium-range brawler that excels in outmaneuvering his opponents befo
 
 }
 
+STRING 12347
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
 STRING 12348
 // Abilities: A0IV (Krown Toss), Researchtip (Tooltip - Learn)
 {
@@ -74973,6 +75045,18 @@ STRING 12370
 // Abilities: A0IV (Krown Toss), Tip (Tooltip - Normal)
 {
 [|cffFFFF00Q|r] Krown Toss - [|cffffcc00Level 9|r]
+}
+
+STRING 12371
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 12372
+// Abilities: A0P8 (Absolute Zero Buff Spell), Name (Name)
+{
+Absolute Zero Buff Spell
 }
 
 STRING 12373
@@ -75432,6 +75516,12 @@ STRING 12441
 Blast-o-Matic
 }
 
+STRING 12442
+// Abilities: A0P3 (Absolute Zero), Name (Name)
+{
+Absolute Zero
+}
+
 STRING 12443
 // Units: E01U (Laser Cannon), Ubertip (Tooltip - Extended)
 {
@@ -75443,6 +75533,12 @@ A bulky, combo-oriented hero who increases in size as he grows stronger.
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 12444
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool1> seconds|r
 }
 
 STRING 12445
@@ -75689,6 +75785,12 @@ STRING 12485
 // Abilities: A0OT (Belly Armor), Tip (Tooltip - Normal)
 {
 [|cffFFFF00D|r] Belly Armor
+}
+
+STRING 12486
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool2> seconds|r
 }
 
 STRING 12487
@@ -76207,6 +76309,12 @@ STRING 12571
 [|cff00ff00F|r] Father-Son Kamehameha - [|cffffcc00Level 7|r]
 }
 
+STRING 12572
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool3> seconds|r
+}
+
 STRING 12573
 // Abilities: A0OY (Father-Son Kamehameha), Name (Name)
 {
@@ -76217,6 +76325,12 @@ STRING 12574
 // Abilities: A0OY (Father-Son Kamehameha), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00F|r] Learn Father-Son Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 12575
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool4> seconds|r
 }
 
 STRING 12576
@@ -76298,7 +76412,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76562,7 +76676,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76574,7 +76688,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76586,7 +76700,7 @@ Beamers / Backline
 }
 
 STRING 12637
-// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76643,5 +76757,844 @@ STRING 12646
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12647
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool5> seconds|r
+}
+
+STRING 12648
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 2|r]
+}
+
+STRING 12649
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 3|r]
+}
+
+STRING 12650
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 4|r]
+}
+
+STRING 12651
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 5|r]
+}
+
+STRING 12652
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 6|r]
+}
+
+STRING 12653
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 1|r]
+}
+
+STRING 12654
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 7|r]
+}
+
+STRING 12655
+// Abilities: A0P1 (Frost Claws), Name (Name)
+{
+Frost Claws
+}
+
+STRING 12656
+// Abilities: A0P1 (Frost Claws), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Frost Claws - [|cffffcc00Level %d|r]
+}
+
+STRING 12657
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 9|r]
+}
+
+STRING 12658
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 8|r]
+}
+
+STRING 12659
+// Abilities: A0P1 (Frost Claws), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Frost Claws - [|cffffcc00Level 10|r]
+}
+
+STRING 12660
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool6> seconds|r
+}
+
+STRING 12661
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool7> seconds|r
+}
+
+STRING 12662
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool8> seconds|r
+}
+
+STRING 12663
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool9> seconds|r
+}
+
+STRING 12664
+// Abilities: A0P1 (Frost Claws), EditorSuffix (Editor Suffix)
+{
+(eis shenron)
+}
+
+STRING 12665
+// Abilities: A0P2 (Ice Slash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 12666
+// Abilities: A0P2 (Ice Slash), Name (Name)
+{
+Ice Slash
+}
+
+STRING 12667
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 1|r]
+}
+
+STRING 12668
+// Abilities: A0P4 (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool10> seconds|r
+}
+
+STRING 12669
+// Abilities: A0P2 (Ice Slash), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Ice Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 12671
+// Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 12672
+// Abilities: A0P2 (Ice Slash), EditorSuffix (Editor Suffix)
+{
+(eis shenron)
+}
+
+STRING 12673
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 2|r]
+}
+
+STRING 12674
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 12676
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 150] 2.30x "fp"
+[lvl 200] 2.40x "fp"
+[lvl 250] 2.50x "fp"
+
+Gains +0.03x for each dragon ball held.
+Gains +0.03x for holding 3 or more dragon balls.
+Gains +0.06x for holding the cleansed dragon ball (omega shenron drop)
+}
+
+STRING 12677
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 4|r]
+}
+
+STRING 12678
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 5|r]
+}
+
+STRING 12679
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 6|r]
+}
+
+STRING 12680
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 7|r]
+}
+
+STRING 12681
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 8|r]
+}
+
+STRING 12682
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 9|r]
+}
+
+STRING 12689
+// Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 12691
+// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 12692
+// Abilities: A0P8 (Absolute Zero Buff Spell), Tip (Tooltip - Normal)
+{
+Absolute Zero
+}
+
+STRING 12693
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 1|r]
+}
+
+STRING 12695
+// Abilities: A0P3 (Absolute Zero), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Absolute Zero - [|cffffcc00Level %d|r]
+}
+
+STRING 12697
+// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 12698
+// Abilities: A0P3 (Absolute Zero), EditorSuffix (Editor Suffix)
+{
+(eis shenron)
+}
+
+STRING 12699
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 2|r]
+}
+
+STRING 12700
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 3|r]
+}
+
+STRING 12703
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 4|r]
+}
+
+STRING 12704
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 5|r]
+}
+
+STRING 12705
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 6|r]
+}
+
+STRING 12706
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 7|r]
+}
+
+STRING 12707
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 8|r]
+}
+
+STRING 12708
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 9|r]
+}
+
+STRING 12709
+// Abilities: A0P1 (Frost Claws), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool1> - <A0P1,Cool10> seconds|r
+}
+
+STRING 12710
+// Abilities: A0P4 (Ice Cannon), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool1> - <A0P4,Cool10> seconds|r
+}
+
+STRING 12711
+// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
+}
+
+STRING 12715
+// Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 10|r]
+}
+
+STRING 12723
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds.|r
+}
+
+STRING 12724
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds.|r
+}
+
+STRING 12725
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds.|r
+}
+
+STRING 12726
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds.|r
+}
+
+STRING 12727
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds.|r
+}
+
+STRING 12728
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds.|r
+}
+
+STRING 12729
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds.|r
+}
+
+STRING 12730
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds.|r
+}
+
+STRING 12731
+// Abilities: A0P4 (Ice Cannon), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 12732
+// Abilities: A0P4 (Ice Cannon), Name (Name)
+{
+Ice Cannon
+}
+
+STRING 12733
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds.|r
+}
+
+STRING 12734
+// Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 12735
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
+}
+
+STRING 12736
+// Units: H09B (Three-Star Shadow Dragon), Ubertip (Tooltip - Extended)
+{
+A combo-oriented close-quarters fighter that can apply powerful debuffs to stun, blind and slow his enemies.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 12737
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on hitting harder against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD1,%>% |n|cffffcc00Critical|r - <A0P7,DataA1>% |n|cffffcc00Damage|r - <A0P7,DataB1,.> times
+}
+
+STRING 12738
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD2,%>% |n|cffffcc00Critical|r - <A0P7,DataA2>% |n|cffffcc00Damage|r - <A0P7,DataB2,.> times
+}
+
+STRING 12739
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD3,%>% |n|cffffcc00Critical|r - <A0P7,DataA3>% |n|cffffcc00Damage|r - <A0P7,DataB3,.> times
+}
+
+STRING 12740
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD4,%>% |n|cffffcc00Critical|r - <A0P7,DataA4>% |n|cffffcc00Damage|r - <A0P7,DataB4,.> times
+}
+
+STRING 12741
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD5,%>% |n|cffffcc00Critical|r - <A0P7,DataA5>% |n|cffffcc00Damage|r - <A0P7,DataB5,.> times
+}
+
+STRING 12742
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD6,%>% |n|cffffcc00Critical|r - <A0P7,DataA6>% |n|cffffcc00Damage|r - <A0P7,DataB6,.> times
+}
+
+STRING 12743
+// Abilities: A0P5 (Eis Frostbite Slow), Name (Name)
+{
+Eis Frostbite Slow
+}
+
+STRING 12744
+// Abilities: A0P5 (Eis Frostbite Slow), Tip (Tooltip - Normal)
+{
+Eis Frostbite Slow
+}
+
+STRING 12745
+// Buffs/Effects: B02T (), Bufftip (Tooltip)
+{
+Frostbite
+}
+
+STRING 12746
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12747
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 12748
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool8> seconds|r
+}
+
+STRING 12749
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool9> seconds|r
+}
+
+STRING 12750
+// Abilities: A0P1 (Frost Claws), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool10> seconds|r
+}
+
+STRING 12752
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool1> seconds|r
+}
+
+STRING 12753
+// Abilities: A0P2 (Ice Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool1> seconds|r
+}
+
+STRING 12754
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool2> seconds|r
+}
+
+STRING 12755
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool3> seconds|r
+}
+
+STRING 12756
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool4> seconds|r
+}
+
+STRING 12757
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool5> seconds|r
+}
+
+STRING 12758
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool6> seconds|r
+}
+
+STRING 12759
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool7> seconds|r
+}
+
+STRING 12760
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool8> seconds|r
+}
+
+STRING 12761
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool9> seconds|r
+}
+
+STRING 12762
+// Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool10> seconds|r
+}
+
+STRING 12774
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD7,%>% |n|cffffcc00Critical|r - <A0P7,DataA7>% |n|cffffcc00Damage|r - <A0P7,DataB7,.> times
+}
+
+STRING 12775
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD8,%>% |n|cffffcc00Critical|r - <A0P7,DataA8>% |n|cffffcc00Damage|r - <A0P7,DataB8,.> times
+}
+
+STRING 12776
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD9,%>% |n|cffffcc00Critical|r - <A0P7,DataA9>% |n|cffffcc00Damage|r - <A0P7,DataB9,.> times
+}
+
+STRING 12777
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD10,%>% |n|cffffcc00Critical|r - <A0P7,DataA10>% |n|cffffcc00Damage|r - <A0P7,DataB10,.> times
+}
+
+STRING 12778
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD11,%>% |n|cffffcc00Critical|r - <A0P7,DataA11>% |n|cffffcc00Damage|r - <A0P7,DataB11,.> times
+}
+
+STRING 12779
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD12,%>% |n|cffffcc00Critical|r - <A0P7,DataA12>% |n|cffffcc00Damage|r - <A0P7,DataB12,.> times
+}
+
+STRING 12780
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD13,%>% |n|cffffcc00Critical|r - <A0P7,DataA13>% |n|cffffcc00Damage|r - <A0P7,DataB13,.> times
+}
+
+STRING 12781
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 2|r]
+}
+
+STRING 12782
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 3|r]
+}
+
+STRING 12783
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 4|r]
+}
+
+STRING 12784
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 5|r]
+}
+
+STRING 12785
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 6|r]
+}
+
+STRING 12786
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 1|r]
+}
+
+STRING 12787
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 7|r]
+}
+
+STRING 12788
+// Abilities: A0P4 (Ice Cannon), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Ice Cannon - [|cffffcc00Level %d|r]
+}
+
+STRING 12789
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 9|r]
+}
+
+STRING 12790
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 8|r]
+}
+
+STRING 12791
+// Abilities: A0P4 (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Ice Cannon - [|cffffcc00Level 10|r]
+}
+
+STRING 12792
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD14,%>% |n|cffffcc00Critical|r - <A0P7,DataA14>% |n|cffffcc00Damage|r - <A0P7,DataB14,.> times
+}
+
+STRING 12793
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on more stronger attacks against his frozen enemies.|n|cffffcc00Evasion|r - <A0P7,DataD15,%>% |n|cffffcc00Critical|r - <A0P7,DataA15>% |n|cffffcc00Damage|r - <A0P7,DataB15,.> times
+}
+
+STRING 12794
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron's fighting style sacrifices evasion to focus on hitting harder against his frozen enemies.
+}
+
+STRING 12796
+// Abilities: A0P4 (Ice Cannon), EditorSuffix (Editor Suffix)
+{
+(eis shenron)
+}
+
+STRING 12797
+// Abilities: A0P6 (Frost Claws Blind), Name (Name)
+{
+Frost Claws Blind
+}
+
+STRING 12798
+// Buffs/Effects: B02U (), Bufftip (Tooltip)
+{
+Absolute Zero
+}
+
+STRING 12799
+// Buffs/Effects: B02U (), Buffubertip (Tooltip - Extended)
+{
+This unit is surrounded by a freezing cold field that will stun any enemey that attacks it.
+}
+
+STRING 12800
+// Buffs/Effects: B02V (), Bufftip (Tooltip)
+{
+Frost Claws Blind
+}
+
+STRING 12801
+// Buffs/Effects: B02V (), Buffubertip (Tooltip - Extended)
+{
+This unit is temporarily blinded.
+}
+
+STRING 12817
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 1|r]
+}
+
+STRING 12818
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 2|r]
+}
+
+STRING 12819
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 3|r]
+}
+
+STRING 12820
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 4|r]
+}
+
+STRING 12821
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 5|r]
+}
+
+STRING 12822
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 6|r]
+}
+
+STRING 12823
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 7|r]
+}
+
+STRING 12824
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 8|r]
+}
+
+STRING 12825
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 9|r]
+}
+
+STRING 12826
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 10|r]
+}
+
+STRING 12827
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 11|r]
+}
+
+STRING 12828
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 12|r]
+}
+
+STRING 12829
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 13|r]
+}
+
+STRING 12830
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 14|r]
+}
+
+STRING 12831
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Tip (Tooltip - Normal)
+{
+Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
+}
+
+STRING 12832
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 12833
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Name (Name)
+{
+Eis Shenron's Fighting Style
+}
+
+STRING 12834
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Eis Shenron's Fighting Style - [|cffffcc00Level %d|r]
 }
 
