@@ -19,6 +19,9 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     public orderId: number = 0,
     public aoe: number = 500,
     public keepCasting: boolean = false,
+    public onlyAffectHeroes: boolean = true,
+    public requireBuff: boolean = false,
+    public buffId: number = 0,
   ) {
     this.alreadyDebuffed = new Map();
     this.castDummy = GetEnumUnit();
@@ -38,7 +41,10 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
       () => {
         return (
           UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) &&
-          IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+          (
+            !this.onlyAffectHeroes ||
+            IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+          )
         );
       }
     );
@@ -46,11 +52,13 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
       const targetId = GetHandleId(target);
-      if (this.keepCasting) {
-        IssueTargetOrderById(this.castDummy, this.orderId, target);
-      } else if (!this.alreadyDebuffed.get(targetId)) {
-        this.alreadyDebuffed.set(targetId, true);
-        IssueTargetOrderById(this.castDummy, this.orderId, target);
+      if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+        if (this.keepCasting) {
+          IssueTargetOrderById(this.castDummy, this.orderId, target);
+        } else if (!this.alreadyDebuffed.get(targetId)) {
+          this.alreadyDebuffed.set(targetId, true);
+          IssueTargetOrderById(this.castDummy, this.orderId, target);
+        }
       }
     });
 
@@ -75,6 +83,8 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     return new AOEDebuff(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.abilityId, this.orderId, this.aoe, this.keepCasting,
+      this.onlyAffectHeroes,
+      this.requireBuff, this.buffId,
     );
   }
   
@@ -88,6 +98,9 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
       orderId: number; 
       aoe: number; 
       keepCasting: boolean; 
+      onlyAffectHeroes: boolean;
+      requireBuff: boolean;
+      buffId: number;
     }
   ) {
     this.name = input.name;
@@ -98,6 +111,9 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     this.orderId = input.orderId;
     this.aoe = input.aoe;
     this.keepCasting = input.keepCasting;
+    this.onlyAffectHeroes = input.onlyAffectHeroes;
+    this.requireBuff = input.requireBuff;
+    this.buffId = input.buffId;
     return this;
   }
 }

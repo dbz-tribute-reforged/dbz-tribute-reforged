@@ -632,7 +632,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Haze Shenron", new SagaUnit(FourCC("U00S"), 9, 3500, 400, 3500, new Vector2D(4400, 9500))],
     ["Rage Shenron", new SagaUnit(FourCC("U00V"), 50, 15000, 400, 15000, new Vector2D(-2000, -6000))],
     ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 70, 15000, 400, 15000, new Vector2D(-5000, 3500))],
-    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 70, 15000, 400, 15000, new Vector2D(-3500, -5500))],
+    ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 70, 15000, 400, 15000, new Vector2D(-3500, -5500), 
+      [
+        SagaAbilities.Saga.GENERIC_BEAM,
+      ],
+    )],
 
     ["Nuova Shenron", new SagaUnit(FourCC("U00U"), 100, 17000, 400, 17000, new Vector2D(29000, -4300),
       [
@@ -640,21 +644,22 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.NuovaShenron.BURNING_ATTACK,
       ],
     )],
-    ["Eis Shenron", new SagaUnit(FourCC("U00T"), 100, 17000, 400, 17000, new Vector2D(29000, -4800),
+    ["Eis Shenron", new SagaUnit(FourCC("H09B"), 100, 17000, 400, 17000, new Vector2D(29000, -4800),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.EisShenron.FROST_CLAWS,
+        SagaAbilities.EisShenron.ICE_SLASH,
+        SagaAbilities.EisShenron.ICE_CANNON,
       ],
     )],
 
-    ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 120, 21000, 400, 21000, new Vector2D(3000, 7000),
+    ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 140, 21000, 400, 21000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
+    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 190, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,

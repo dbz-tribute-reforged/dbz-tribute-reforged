@@ -3430,6 +3430,113 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.EisShenron.FROST_CLAWS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 6,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEisShenronFrostClaws.blp",
+      disabled: "BTNEisShenronFrostClaws.blp",
+    },
+    tooltip: {
+      title: AbilityNames.EisShenron.FROST_CLAWS,
+      body: 
+        AbilityNames.EisShenron.FROST_CLAWS
+    },
+    components: [
+      { name: "multi frost claws" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.EisShenron.ICE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEisShenronIceSlash.blp",
+      disabled: "BTNEisShenronIceSlash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.EisShenron.ICE_SLASH,
+      body: 
+        AbilityNames.EisShenron.ICE_SLASH,
+    },
+    components: [
+      { name: "damage ice slash" },
+      { name: "debuff slow ice slash" },
+      { name: "sfx ice slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.EisShenron.ABSOLUTE_ZERO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEisShenronAbsoluteZero.blp",
+      disabled: "BTNEisShenronAbsoluteZero.blp",
+    },
+    tooltip: {
+      title: AbilityNames.EisShenron.ABSOLUTE_ZERO,
+      body: 
+        AbilityNames.EisShenron.ABSOLUTE_ZERO
+    },
+    components: [
+      { name: "block absolute zero" },
+      { name: "sfx absolute zero" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.EisShenron.ICE_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEisShenronIceCannon.blp",
+      disabled: "BTNEisShenronIceCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.EisShenron.ICE_CANNON,
+      body: 
+        AbilityNames.EisShenron.ICE_CANNON
+    },
+    components: [
+      { name: "beam ice cannon"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,

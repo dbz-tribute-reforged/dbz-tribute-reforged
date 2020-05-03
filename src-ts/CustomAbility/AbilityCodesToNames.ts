@@ -198,6 +198,12 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0OU'), AbilityNames.KingKRool.BLAST_O_MATIC],
     [FourCC('A0OV'), AbilityNames.KingKRool.KINGS_THRONE],
 
+    // eis shenron
+    [FourCC('A0P1'), AbilityNames.EisShenron.FROST_CLAWS],
+    [FourCC('A0P2'), AbilityNames.EisShenron.ICE_SLASH],
+    [FourCC('A0P3'), AbilityNames.EisShenron.ABSOLUTE_ZERO],
+    [FourCC('A0P4'), AbilityNames.EisShenron.ICE_CANNON],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

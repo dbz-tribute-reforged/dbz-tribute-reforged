@@ -229,6 +229,13 @@ export module AbilityNames {
     export const BLAST_O_MATIC = "Blast-o-Matic";
   }
 
+  export module EisShenron {
+    export const FROST_CLAWS = "Frost Claws";
+    export const ICE_SLASH = "Ice Slash";
+    export const ABSOLUTE_ZERO = "Absolute Zero";
+    export const ICE_CANNON = "Ice Cannon";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

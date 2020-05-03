@@ -220,6 +220,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Moro.ENERGY_DRAIN,
       AbilityNames.SuperJanemba.DEMONS_MARK, AbilityNames.SuperJanemba.DEMON_RUSH, AbilityNames.SuperJanemba.DEVIL_CLAW, AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT,
       AbilityNames.KingKRool.BELLY_ARMOR, AbilityNames.KingKRool.KROWN_TOSS, 
+      AbilityNames.EisShenron.FROST_CLAWS,
     ]],
 
     // broly
@@ -306,6 +307,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // blast-o-matic
     [FourCC("E01U"), [
       AbilityNames.KingKRool.BLAST_O_MATIC,
+    ]],
+
+    // eis shenron
+    [FourCC("H09B"), [
+      AbilityNames.EisShenron.FROST_CLAWS,
+      AbilityNames.EisShenron.ICE_SLASH,
+      AbilityNames.EisShenron.ABSOLUTE_ZERO,
+      AbilityNames.EisShenron.ICE_CANNON,
     ]],
   ]
 )

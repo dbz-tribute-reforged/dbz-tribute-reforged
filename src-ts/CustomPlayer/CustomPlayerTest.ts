@@ -1509,6 +1509,13 @@ export module Id {
   export const deafeningWave = FourCC("A06N");
   export const getiStarRepair = FourCC("A063");
 
+  // eis shenron
+  export const eisShenron = FourCC("H09B");
+  export const frostClaws = FourCC("A0P1");
+  export const iceSlash = FourCC("A0P2");
+  export const absoluteZero = FourCC("A0P3");
+  export const iceCannon = FourCC("A0P4");
+
   export const farmerWithShotgun = FourCC("H08S");
 
   export const ft = FourCC("H009");
@@ -1888,7 +1895,24 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerMetalTakeThis.mp3", 960);
       }
       break;
+      
+    // eis shenron
+    case Id.frostClaws:
+      // playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);
+      break;
     
+    case Id.iceSlash:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+      
+    case Id.absoluteZero:
+      playSoundOnUnit(unit, "Audio/Effects/JusticePose.mp3", 1645);
+      break;
+    
+    case Id.iceCannon:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
     // ft 
     case Id.ftss:
       playSoundOnUnit(unit, "Audio/Voice/FTSS.mp3", 1008);
