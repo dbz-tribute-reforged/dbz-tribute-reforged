@@ -3506,6 +3506,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "block absolute zero" },
+      { name: "debuff stun absolute zero finish" },
       { name: "sfx absolute zero" },
     ],
   },

@@ -3,6 +3,7 @@ export module Debuffs {
   export const STUN_MICRO = FourCC('A08K')
   export const STUN_TWO_SECOND = FourCC('A0I7');
   export const STUN_ONE_SECOND = FourCC('A0IY');
+  export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
 
   export const CURSE_ORDER_ID = 852190;
   export const DEMONS_MARK = FourCC("A0O7");
@@ -11,6 +12,7 @@ export module Debuffs {
   export const SLOW_ORDER_ID = 852075;
   export const HEROS_SONG = FourCC("A0I6");
   export const EIS_FROSTBITE = FourCC("A0P5");
+  export const KROWN_TOSS = FourCC("A0P9");
 }
 
 export const AOEDebuffComponents = [
@@ -171,6 +173,19 @@ export const AOEDebuffComponents = [
     buffId: 0,
   },
   {
+    name: "debuff krown toss",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 50,
+    abilityId: Debuffs.KROWN_TOSS,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 250,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
     name: "debuff stun kharge",
     repeatInterval: 1,
     startTick: 0,
@@ -190,7 +205,7 @@ export const AOEDebuffComponents = [
     endTick: -1,
     abilityId: Debuffs.FROST_CLAWS_BLIND,
     orderId: Debuffs.CURSE_ORDER_ID,
-    aoe: 250,
+    aoe: 275,
     keepCasting: false, 
     onlyAffectHeroes: false,
     requireBuff: false,
@@ -216,18 +231,31 @@ export const AOEDebuffComponents = [
     endTick: -1,
     abilityId: Debuffs.EIS_FROSTBITE,
     orderId: Debuffs.SLOW_ORDER_ID,
-    aoe: 400,
+    aoe: 600,
     keepCasting: false, 
     onlyAffectHeroes: false,
     requireBuff: false,
     buffId: 0,
   },
   {
+    name: "debuff stun absolute zero finish",
+    repeatInterval: 1,
+    startTick: 131,
+    endTick: -1,
+    abilityId: Debuffs.STUN_FROZEN_EIS_SHENRON,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 450,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: true,
+    buffId: FourCC("B02T"),
+  },
+  {
     name: "debuff stun ice cannon",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    abilityId: Debuffs.STUN_TWO_SECOND,
+    abilityId: Debuffs.STUN_FROZEN_EIS_SHENRON,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 600,
     keepCasting: false, 
