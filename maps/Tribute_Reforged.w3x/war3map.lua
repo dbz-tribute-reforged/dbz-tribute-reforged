@@ -569,6 +569,8 @@ gg_trg_Moro_Get_Max_Permanent_Mult = nil
 gg_trg_Transformations_Super_Janemba = nil
 gg_trg_Transformations_King_K_Rool = nil
 gg_trg_King_K_Rool_Get_Size = nil
+gg_trg_Transformations_Eis_Shenron = nil
+gg_trg_Eis_Shenron_Auto_Transform_on_Death = nil
 gg_trg_Transformations_Apply_SFX = nil
 gg_trg_Transformations_Generic_SSG_SSB = nil
 gg_trg_Replace_Transformation_Group_with_New_Hero = nil
@@ -599,8 +601,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Eis_Shenron = nil
-gg_trg_Eis_Shenron_Auto_Transform_on_Death = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2426,7 +2426,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H01S"), 147.2, 22385.0, 272.943, FourCC("H01S"))
     SetUnitColor(u, ConvertPlayerColor(12))
-    u = BlzCreateUnitWithSkin(p, FourCC("H09B"), 631.1, 22642.5, 263.390, FourCC("H09B"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H09B"), 631.1, 22642.5, 289.961, FourCC("H09B"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 247.9, 22404.2, 275.421, FourCC("H01T"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -5072,7 +5072,7 @@ function Trig_Absolute_Zero_Stun_Func005Func002C()
 end
 
 function Trig_Absolute_Zero_Stun_Func005C()
-    if (not (DistanceBetweenPoints(udg_TempLoc, udg_TempLoc2) < 400.00)) then
+    if (not (DistanceBetweenPoints(udg_TempLoc, udg_TempLoc2) < 450.00)) then
         return false
     end
     return true
@@ -5094,7 +5094,7 @@ function Trig_Absolute_Zero_Stun_Actions()
             CreateNUnitsAtLoc(1, FourCC("h054"), GetOwningPlayer(udg_TempUnit2), udg_TempLoc, bj_UNIT_FACING)
             udg_TempUnit2 = GetLastCreatedUnit()
             UnitApplyTimedLifeBJ(0.33, FourCC("BTLF"), udg_TempUnit2)
-            UnitAddAbilityBJ(FourCC("A0I7"), udg_TempUnit2)
+            UnitAddAbilityBJ(FourCC("A0PA"), udg_TempUnit2)
             IssueTargetOrderBJ(udg_TempUnit2, "thunderbolt", udg_TempUnit)
             UnitAddAbilityBJ(FourCC("A0P5"), udg_TempUnit2)
             IssueTargetOrderBJ(udg_TempUnit2, "slow", udg_TempUnit)

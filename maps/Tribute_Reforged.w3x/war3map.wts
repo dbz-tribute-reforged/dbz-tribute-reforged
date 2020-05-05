@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.41
+DBZ Tribute Reforged 0.41a
 }
 
 STRING 4
@@ -57402,9 +57402,9 @@ Hero's Song
 }
 
 STRING 9466
-// Buffs/Effects: B01H (), Buffubertip (Tooltip - Extended)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-This unit has been struck by Tapion's Brave Cannon. It can be hit by Brave Sword Attack.
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds.|r
 }
 
 STRING 9467
@@ -64626,7 +64626,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 4.May.20
+This map is under active development - 6.May.20
 }
 
 STRING 10653
@@ -76897,6 +76897,12 @@ STRING 12669
 [|cff00FF00W|r] Learn Ice Slash - [|cffffcc00Level %d|r]
 }
 
+STRING 12670
+// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
+}
+
 STRING 12671
 // Abilities: A0P2 (Ice Slash), Researchhotkey (Hotkey - Learn)
 {
@@ -76919,6 +76925,12 @@ STRING 12674
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 12675
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds.|r
 }
 
 STRING 12676
@@ -76973,10 +76985,52 @@ STRING 12682
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 9|r]
 }
 
+STRING 12683
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds.|r
+}
+
+STRING 12684
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds.|r
+}
+
+STRING 12685
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds.|r
+}
+
+STRING 12686
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds.|r
+}
+
+STRING 12687
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds.|r
+}
+
+STRING 12688
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds.|r
+}
+
 STRING 12689
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 12690
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds.|r
 }
 
 STRING 12691
@@ -76997,10 +77051,22 @@ STRING 12693
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 1|r]
 }
 
+STRING 12694
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
+}
+
 STRING 12695
 // Abilities: A0P3 (Absolute Zero), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Absolute Zero - [|cffffcc00Level %d|r]
+}
+
+STRING 12696
+// Abilities: A0P9 (Krown Toss Debuff), Name (Name)
+{
+Krown Toss Debuff
 }
 
 STRING 12697
@@ -77025,6 +77091,18 @@ STRING 12700
 // Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 3|r]
+}
+
+STRING 12701
+// Abilities: A0P9 (Krown Toss Debuff), Tip (Tooltip - Normal)
+{
+Krown Toss Debuff
+}
+
+STRING 12702
+// Abilities: A0PA (Dummy Stun Frozen Eis Shenron), Name (Name)
+{
+Dummy Stun Frozen Eis Shenron
 }
 
 STRING 12703
@@ -77075,10 +77153,22 @@ STRING 12710
 Eis Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Units afflicted by |cff00ccffFrostbite|r will take 50% extra damage and be stunned. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0P4,Cool1> - <A0P4,Cool10> seconds|r
 }
 
-STRING 12711
-// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+STRING 12712
+// Buffs/Effects: B01H (), Buffubertip (Tooltip - Extended)
 {
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
+This unit is affected by Hero's Song. It can be hit by Brave Sword Attack.
+}
+
+STRING 12713
+// Buffs/Effects: B02W (), Bufftip (Tooltip)
+{
+Krown Toss
+}
+
+STRING 12714
+// Buffs/Effects: B02W (), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Krown Toss. It takes extra damage from returning Krowns.
 }
 
 STRING 12715
@@ -77087,52 +77177,16 @@ STRING 12715
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 10|r]
 }
 
-STRING 12723
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+STRING 12716
+// Buffs/Effects: B02X (), Bufftip (Tooltip)
 {
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds.|r
+Frozen
 }
 
-STRING 12724
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+STRING 12717
+// Buffs/Effects: B02X (), Buffubertip (Tooltip - Extended)
 {
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds.|r
-}
-
-STRING 12725
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds.|r
-}
-
-STRING 12726
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds.|r
-}
-
-STRING 12727
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds.|r
-}
-
-STRING 12728
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds.|r
-}
-
-STRING 12729
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds.|r
-}
-
-STRING 12730
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds.|r
+This unit is frozen in ice, it cannot move.
 }
 
 STRING 12731
@@ -77147,22 +77201,10 @@ STRING 12732
 Ice Cannon
 }
 
-STRING 12733
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds.|r
-}
-
 STRING 12734
 // Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 12735
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature to freeze incoming attacks and reflect those that do manage to land. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Also provides minor damage block.|n|cff00ff00Duration: 4s|nStun Duration: 2s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
 }
 
 STRING 12736
