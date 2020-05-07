@@ -106,6 +106,15 @@ export module AbilityNames {
     export const BRAVE_SWORD_ATTACK = "Brave Sword Attack";
   }
 
+  export module Toppo {
+    export const JUSTICE_FLASH = "Justice Flash";
+    export const JUSTICE_FLASH_2 = "Justice Flash 2";
+    export const JUSTICE_PUNCH = "Justice Punch";
+    export const JUSTICE_HOLD = "Justice Hold";
+    export const JUSTICE_POSE = "Justice Pose";
+    export const GOD_OF_DESTRUCTION = "God of Destruction Toppo";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

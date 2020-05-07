@@ -15,6 +15,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     public oldAbility: number = FourCC("Avul"),
     public performSwap: boolean = false,
     public enableAbility: boolean = false,
+    public disableAbility: boolean = false,
     public addAbility: boolean = false,
     public tempPermanence: boolean = false,
     public equalizeLevels: boolean = false,
@@ -30,6 +31,11 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
         SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, true);
         if (this.performSwap) {
           SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, false);
+        }
+      } else if (this.disableAbility) {
+        SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, false);
+        if (this.performSwap) {
+          SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, true);
         }
       }
       if (this.addAbility) {
@@ -56,6 +62,11 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
         if (this.performSwap) {
           SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, true);
         }
+      } else if (this.disableAbility) {
+        SetPlayerAbilityAvailable(GetOwningPlayer(source), this.newAbility, true);
+        if (this.performSwap) {
+          SetPlayerAbilityAvailable(GetOwningPlayer(source), this.oldAbility, false);
+        }
       }
       if (this.addAbility && this.abilityWasAdded) {
         UnitRemoveAbility(source, this.newAbility);
@@ -78,6 +89,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       this.oldAbility,
       this.performSwap,
       this.enableAbility,
+      this.disableAbility,
       this.addAbility,
       this.tempPermanence,
       this.equalizeLevels,
@@ -94,6 +106,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
       oldAbility: number;
       performSwap: boolean;
       enableAbility: boolean;
+      disableAbility: boolean;
       addAbility: boolean;
       tempPermanence: boolean;
       equalizeLevels: boolean;
@@ -107,6 +120,7 @@ export class TempAbility implements AbilityComponent, Serializable<TempAbility> 
     this.oldAbility = input.oldAbility;
     this.performSwap = input.performSwap;
     this.enableAbility = input.enableAbility;
+    this.disableAbility = input.disableAbility;
     this.addAbility = input.addAbility;
     this.tempPermanence = input.tempPermanence;
     this.equalizeLevels = input.equalizeLevels;
