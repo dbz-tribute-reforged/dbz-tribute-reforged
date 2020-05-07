@@ -408,6 +408,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 39,
   },
+  // justice punch
+  {
+    name: "dash ground point justice punch",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 30,
+  },
+  // god of destruction
+  {
+    name: "dash ground forward god of destruction toppo",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
+  },
   // ----------------------------
   // cell-x
   {

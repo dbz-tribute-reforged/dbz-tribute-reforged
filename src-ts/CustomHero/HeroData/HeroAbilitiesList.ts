@@ -149,6 +149,17 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tapion.BRAVE_SWORD_ATTACK, 
     ]],
 
+    // toppo
+    [FourCC("H09C"), [
+      AbilityNames.Toppo.JUSTICE_FLASH, 
+      AbilityNames.Toppo.JUSTICE_FLASH_2, 
+      AbilityNames.Toppo.JUSTICE_PUNCH, 
+      AbilityNames.Toppo.JUSTICE_HOLD, 
+      AbilityNames.Toppo.JUSTICE_POSE, 
+      AbilityNames.Toppo.GOD_OF_DESTRUCTION, 
+    ]],
+
+
     // androids 13 14 15
     [FourCC("H01V"), [
       AbilityNames.Android13.ENERGY_BEAM, 
@@ -210,6 +221,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Videl.PUNCH,
       AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Tapion.BRAVE_SLASH, AbilityNames.Tapion.BRAVE_CANNON,
+      AbilityNames.Toppo.JUSTICE_FLASH_2,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

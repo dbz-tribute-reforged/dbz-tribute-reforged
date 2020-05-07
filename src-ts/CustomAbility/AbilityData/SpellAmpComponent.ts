@@ -92,6 +92,15 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp justice pose toppo", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.3,
+    rate: 0.0015,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp overcharge", 
     repeatInterval: 1, 
     startTick: 0,

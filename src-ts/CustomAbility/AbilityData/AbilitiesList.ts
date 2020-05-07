@@ -1693,6 +1693,172 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Toppo.JUSTICE_FLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeFlash.blp",
+      disabled: "BTNToppoJusticeFlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_FLASH,
+      body: 
+        AbilityNames.Toppo.JUSTICE_FLASH
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi justice flash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_FLASH_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeFlash.blp",
+      disabled: "BTNToppoJusticeFlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_FLASH,
+      body: 
+        AbilityNames.Toppo.JUSTICE_FLASH
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi justice flash 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticePunch.blp",
+      disabled: "BTNToppoJusticePunch.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_PUNCH,
+      body: 
+        AbilityNames.Toppo.JUSTICE_PUNCH
+    },
+    components: [
+      { name: "dash ground point justice punch" },
+      { name: "damage justice punch explosion" },
+      { name: "sfx justice punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_HOLD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeHold.blp",
+      disabled: "BTNToppoJusticeHold.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_HOLD,
+      body: 
+        AbilityNames.Toppo.JUSTICE_HOLD
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage justice hold dps" },
+      // { name: "sfx justice hold" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_POSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticePose.blp",
+      disabled: "BTNToppoJusticePose.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_POSE,
+      body: 
+        AbilityNames.Toppo.JUSTICE_POSE
+    },
+    components: [
+      { name: "spell amp justice pose toppo" },
+      { name: "temp ability disable god of destruction toppo" },
+      { name: "sfx justice pose" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.GOD_OF_DESTRUCTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 990,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoGoD.blp",
+      disabled: "BTNToppoGoD.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.GOD_OF_DESTRUCTION,
+      body: 
+        AbilityNames.Toppo.GOD_OF_DESTRUCTION
+    },
+    components: [
+      { name: "dash ground forward god of destruction toppo" },
+      { name: "temp ability hakai toppo" },
+      { name: "sfx god of destruction toppo" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
