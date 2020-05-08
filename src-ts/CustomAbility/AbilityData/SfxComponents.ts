@@ -4091,6 +4091,38 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx justice tornado", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "WindCircleFaster.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 0.8,
+        startHeight: 150,
+        endHeight: 150,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx justice pose", 
     repeatInterval: 1,
     startTick: 0,
@@ -4177,7 +4209,7 @@ export const SfxComponents = [
         extraDirectionalYaw: 0,
         extraPitch: 0,
         color: {
-          x: 215,
+          x: 225,
           y: 25,
           z: 215,
         },
@@ -4186,8 +4218,8 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "LightStrikeArray2.mdl",
-        repeatInterval: 11,
+        model: "AuraPink2.mdl",
+        repeatInterval: 1,
         group: 0,
         scale: 0.75,
         startHeight: 250,
@@ -4205,7 +4237,7 @@ export const SfxComponents = [
       },
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
-        repeatInterval: 33,
+        repeatInterval: 99,
         group: 0,
         scale: 0.6,
         startHeight: 100,
