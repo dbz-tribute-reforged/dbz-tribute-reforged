@@ -1780,7 +1780,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 99,
+    duration: 100,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1799,6 +1799,36 @@ export const AbilitiesList = [
       { name: "channel caster default" },
       { name: "damage justice hold dps" },
       // { name: "sfx justice hold" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_TORNADO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeTornado.blp",
+      disabled: "BTNToppoJusticeTornado.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_TORNADO,
+      body: 
+        AbilityNames.Toppo.JUSTICE_TORNADO
+    },
+    components: [
+      { name: "dash ground forward justice tornado" },
+      { name: "damage justice tornado dps inner" },
+      { name: "damage justice tornado dps outer" },
+      { name: "knockback justice tornado" },
+      { name: "sfx justice tornado" },
     ],
   },
   // -------------------------------------------

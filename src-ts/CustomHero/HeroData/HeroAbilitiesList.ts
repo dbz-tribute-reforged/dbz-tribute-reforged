@@ -155,6 +155,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Toppo.JUSTICE_FLASH_2, 
       AbilityNames.Toppo.JUSTICE_PUNCH, 
       AbilityNames.Toppo.JUSTICE_HOLD, 
+      AbilityNames.Toppo.JUSTICE_TORNADO, 
       AbilityNames.Toppo.JUSTICE_POSE, 
       AbilityNames.Toppo.GOD_OF_DESTRUCTION, 
     ]],

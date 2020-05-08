@@ -302,6 +302,7 @@ gg_trg_Toppo_Hakai_Channel_Interrupt = nil
 gg_trg_Toppo_Hakai_Loop = nil
 gg_trg_Toppo_Hakai_Channel_Damage = nil
 gg_trg_Toppo_Hakai_Launched_Damage = nil
+gg_trg_Toppo_Justice_Tornado_Cast = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -2444,9 +2445,9 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H09B"), 631.1, 22642.5, 289.961, FourCC("H09B"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H09C"), 490.0, 22497.6, 288.150, FourCC("H09C"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H09C"), 616.4, 22482.6, 288.150, FourCC("H09C"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H09D"), 492.6, 22418.9, 274.930, FourCC("H09D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H09D"), 498.9, 22482.6, 274.930, FourCC("H09D"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 247.9, 22404.2, 275.421, FourCC("H01T"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -4860,7 +4861,7 @@ function Trig_KKR_Kings_Throne_Loop_Func001Func004Func002C()
 end
 
 function Trig_KKR_Kings_Throne_Loop_Func001Func004C()
-    if (not (udg_TempInt > 656)) then
+    if (not (udg_TempInt > 823)) then
         return false
     end
     return true
@@ -5150,6 +5151,7 @@ end
 
 function Trig_Toppo_Hakai_Cast_Actions()
     udg_TempUnit = GetSpellAbilityUnit()
+        playGenericSpellSound(udg_TempUnit, "Audio/Voice/ToppoGoDHakai.mp3", 653)
     GroupAddUnitSimple(udg_TempUnit, udg_ToppoHakaiUnitGroup)
         udg_ID = GetHandleId(udg_TempUnit)
     SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
@@ -5158,9 +5160,9 @@ function Trig_Toppo_Hakai_Cast_Actions()
     SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
     SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
     udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-    AddSpecialEffectLocBJ(udg_TempLoc2, "CataclysmicOrb.mdl")
+    AddSpecialEffectLocBJ(udg_TempLoc2, "ToppoHakai.mdl")
     SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 4, udg_ID, udg_SummonsHashtable)
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.45)
     BlzSetSpecialEffectColor(GetLastCreatedEffectBJ(), 255, 0, 255)
         RemoveLocation(udg_TempLoc2)
         RemoveLocation(udg_TempLoc)
@@ -5246,7 +5248,14 @@ function Trig_Toppo_Hakai_Loop_Func001Func005C()
     return true
 end
 
-function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func011C()
+function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()
+    if (not (udg_TempInt == 132)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()
     if (not (udg_TempInt == 97)) then
         return false
     end
@@ -5261,6 +5270,13 @@ function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001C()
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()
+    if (not (udg_TempInt == 19)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()
     if (not (ModuloInteger(udg_TempInt, 3) == 0)) then
         return false
     end
@@ -5300,12 +5316,16 @@ function Trig_Toppo_Hakai_Loop_Func001A()
     else
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
         if (Trig_Toppo_Hakai_Loop_Func001Func006Func002C()) then
-            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.03)))
+            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.45 + (I2R(udg_TempInt) * 0.01)))
             if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()) then
+                                playGenericSpellSound(udg_TempUnit, "Audio/Effects/HakaiToppo.mp3", 3082)
+            else
+            end
+            if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()) then
                 udg_TempLoc = GetUnitLoc(udg_TempUnit)
                 BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
                 BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
-                BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, (udg_TempInt * 2), 255)
+                BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, IMinBJ(255, (udg_TempInt * 3)), 255)
                 TriggerExecute(gg_trg_Toppo_Hakai_Channel_Damage)
                                 RemoveLocation(udg_TempLoc)
             else
@@ -5319,11 +5339,17 @@ function Trig_Toppo_Hakai_Loop_Func001A()
                 BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
                 SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
                 SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
+                if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()) then
+                    AddSpecialEffectLocBJ(udg_TempLoc, "PurpleSlam.mdl")
+                    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
+                    DestroyEffectBJ(GetLastCreatedEffectBJ())
+                else
+                end
                 TriggerExecute(gg_trg_Toppo_Hakai_Launched_Damage)
                                 RemoveLocation(udg_TempLoc)
                                 RemoveLocation(udg_TempLoc2)
             else
-                if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func011C()) then
+                if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func012C()) then
                     udg_TempLoc = GetUnitLoc(udg_TempUnit)
                     udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
                     udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
@@ -5362,7 +5388,7 @@ function InitTrig_Toppo_Hakai_Loop()
 end
 
 function Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()
-    if (not (IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_TempUnit)) == true)) then
+    if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
         return false
     end
     if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
@@ -5445,6 +5471,26 @@ end
 function InitTrig_Toppo_Hakai_Launched_Damage()
     gg_trg_Toppo_Hakai_Launched_Damage = CreateTrigger()
     TriggerAddAction(gg_trg_Toppo_Hakai_Launched_Damage, Trig_Toppo_Hakai_Launched_Damage_Actions)
+end
+
+function Trig_Toppo_Justice_Tornado_Cast_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0PJ"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Justice_Tornado_Cast_Actions()
+    AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
+    TriggerSleepAction(3.00)
+    AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
+end
+
+function InitTrig_Toppo_Justice_Tornado_Cast()
+    gg_trg_Toppo_Justice_Tornado_Cast = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Justice_Tornado_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Toppo_Justice_Tornado_Cast, Condition(Trig_Toppo_Justice_Tornado_Cast_Conditions))
+    TriggerAddAction(gg_trg_Toppo_Justice_Tornado_Cast, Trig_Toppo_Justice_Tornado_Cast_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -21858,7 +21904,7 @@ function Trig_Transformations_Toppo_Func021Func002Func001C()
 end
 
 function Trig_Transformations_Toppo_Func021Func002Func006C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
         return false
     end
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0PB"), udg_StatMultUnit) == 10)) then
@@ -21912,13 +21958,13 @@ function Trig_Transformations_Toppo_Actions()
     else
     end
     if (Trig_Transformations_Toppo_Func013C()) then
-        udg_StatMultReal = 1.75
+        udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Toppo_Func014C()) then
-        udg_StatMultReal = 2.00
+        udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
@@ -23394,6 +23440,7 @@ function InitCustomTriggers()
     InitTrig_Toppo_Hakai_Loop()
     InitTrig_Toppo_Hakai_Channel_Damage()
     InitTrig_Toppo_Hakai_Launched_Damage()
+    InitTrig_Toppo_Justice_Tornado_Cast()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()

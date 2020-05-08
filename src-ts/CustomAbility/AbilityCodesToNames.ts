@@ -99,6 +99,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0PI'), AbilityNames.Toppo.JUSTICE_FLASH_2],
     [FourCC('A0PD'), AbilityNames.Toppo.JUSTICE_PUNCH],
     [FourCC('A0PE'), AbilityNames.Toppo.JUSTICE_HOLD],
+    [FourCC('A0PJ'), AbilityNames.Toppo.JUSTICE_TORNADO],
     [FourCC('A0PF'), AbilityNames.Toppo.JUSTICE_POSE],
     [FourCC('A0PC'), AbilityNames.Toppo.GOD_OF_DESTRUCTION],
 

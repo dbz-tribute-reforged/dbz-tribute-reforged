@@ -573,7 +573,8 @@ export function CustomPlayerTest() {
         BlzFrameSetVisible(chatMsg, true);
         BlzFrameSetVisible(gameMsg, true);
         BlzFrameSetPoint(gameMsg, FRAMEPOINT_BOTTOMLEFT, grandpa, FRAMEPOINT_BOTTOMLEFT, -0.1, 0.22);
-        BlzFrameSetPoint(gameMsg, FRAMEPOINT_TOPRIGHT, grandpa, FRAMEPOINT_BOTTOMLEFT, 0.6, 0.3);
+        // still too short for most hs
+        // BlzFrameSetPoint(gameMsg, FRAMEPOINT_TOPRIGHT, grandpa, FRAMEPOINT_BOTTOMLEFT, 0.6, 0.3);
 
         BlzFrameSetVisible(heroPortrait, true);
         BlzFrameClearAllPoints(heroPortrait);
@@ -1595,6 +1596,7 @@ export module Id {
   export const justiceFlash2 = FourCC("A0PI");
   export const justicePunch = FourCC("A0PD");
   export const justiceHold = FourCC("A0PE");
+  export const justiceTornado = FourCC("A0PJ");
   export const justicePose = FourCC("A0PF");
 
   export const vegeta = FourCC("E003");
@@ -2268,11 +2270,17 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       // playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePose.mp3", 1410);
       break;
 
+    case Id.justiceTornado:
+      if (unitId == Id.toppo) {
+        playSoundOnUnit(unit, "Audio/Voice/ToppoJusticeTornado.mp3", 2246);
+      }
+      break;
+
     case Id.justicePose:
       if (unitId == Id.toppo) {
         playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePose.mp3", 1410);
       }
-      if (rng < 2) {
+      if (rng < 1) {
         playSoundOnUnit(unit, "Audio/Voice/ZenoJustice.mp3", 4989);
       }
       break;

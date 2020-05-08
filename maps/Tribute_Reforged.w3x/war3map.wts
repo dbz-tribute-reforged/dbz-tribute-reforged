@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.42
+DBZ Tribute Reforged 0.42a
 }
 
 STRING 4
@@ -64591,7 +64591,7 @@ Dev:
 phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire
 
 Other:
-micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, ?
+micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN
 }
 
 STRING 10647
@@ -64626,7 +64626,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 8.May.20
+This map is under active development - 9.May.20
 }
 
 STRING 10653
@@ -77244,6 +77244,19 @@ STRING 12723
 Toppo
 }
 
+STRING 12724
+// Units: H09C (Leader of the Pride Troopers), Ubertip (Tooltip - Extended)
+{
+A strong close-range fighter with high-damage nukes and a long duration grapple attack. His end-game God of Destruction form is one of the strongest transformations in the game.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 12725
 // Units: H09C (Leader of the Pride Troopers), Tip (Tooltip - Basic)
 {
@@ -77269,9 +77282,9 @@ STRING 12729
 }
 
 STRING 12730
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur1>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool1> seconds|r
+Toppo abandons his ideals of justice and embraces the full powers of a God of Destruction. Cannot be used with [|cff00ff00F|r] Justice Pose. Unlocks [|cffDD00EEF|r] Hakai.|n|cffffff003.00x stat multiplier|n+66ms and unlocks movement speed cap.|n|r|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
 }
 
 STRING 12731
@@ -77286,22 +77299,10 @@ STRING 12732
 Ice Cannon
 }
 
-STRING 12733
-// Abilities: A0PF (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur1>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool1> - <A0PF,Cool10> seconds|r
-}
-
 STRING 12734
 // Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 R
-}
-
-STRING 12735
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur2>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool2> seconds|r
 }
 
 STRING 12736
@@ -77401,12 +77402,6 @@ STRING 12750
 Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool10> seconds|r
 }
 
-STRING 12751
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur3>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool3> seconds|r
-}
-
 STRING 12752
 // Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -77473,12 +77468,6 @@ STRING 12762
 Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool10> seconds|r
 }
 
-STRING 12763
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur4>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool4> seconds|r
-}
-
 STRING 12764
 // Abilities: A0PB (Justice Flash), Tip (Tooltip - Normal)
 {
@@ -77525,12 +77514,6 @@ STRING 12771
 // Abilities: A0PB (Justice Flash), Name (Name)
 {
 Justice Flash
-}
-
-STRING 12773
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur5>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool5> seconds|r
 }
 
 STRING 12774
@@ -77719,46 +77702,16 @@ STRING 12804
 [|cff00ff00Q|r] Justice Flash - [|cffffcc00Level 10|r]
 }
 
-STRING 12805
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur6>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool6> seconds|r
-}
-
-STRING 12806
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur7>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool7> seconds|r
-}
-
-STRING 12807
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur8>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool8> seconds|r
-}
-
 STRING 12808
 // Abilities: A0PC (God of Destruction), Name (Name)
 {
 God of Destruction
 }
 
-STRING 12809
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur9>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool9> seconds|r
-}
-
 STRING 12810
 // Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 12811
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice!|r|n|cff00ff00Duration: <A0PF,Dur10>s|nSpell Amp: +5% per second up to +30%|r|n|cff00ffffCooldown: <A0PF,Cool10> seconds|r
 }
 
 STRING 12812
@@ -78031,64 +77984,58 @@ STRING 12856
 [|cff00ff00Q|r] Justice Flash - [|cffffcc00Level 5|r]
 }
 
-STRING 12857
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 1|r]
-}
-
 STRING 12858
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 2|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool1> seconds|r
 }
 
 STRING 12859
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 3|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool1> - <A0PD,Cool10> seconds|r
 }
 
 STRING 12860
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 4|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool2> seconds|r
 }
 
 STRING 12861
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 5|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool3> seconds|r
 }
 
 STRING 12862
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 6|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool4> seconds|r
 }
 
 STRING 12863
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 7|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool5> seconds|r
 }
 
 STRING 12864
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 8|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool6> seconds|r
 }
 
 STRING 12865
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 9|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool7> seconds|r
 }
 
 STRING 12866
-// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00E|r] Justice Hold - [|cffffcc00Level 10|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool8> seconds|r
 }
 
 STRING 12867
@@ -78158,9 +78105,9 @@ STRING 12877
 }
 
 STRING 12878
-// Abilities: A0PE (Justice Hold), Researchtip (Tooltip - Learn)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00E|r] Learn Justice Hold - [|cffffcc00Level %d|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool9> seconds|r
 }
 
 STRING 12879
@@ -78176,7 +78123,7 @@ STRING 12880
 }
 
 STRING 12881
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -78194,9 +78141,9 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 12884
-// Abilities: A0PF (Justice Pose), Researchtip (Tooltip - Learn)
+// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00R|r] Learn Justice Pose - [|cffffcc00Level %d|r]
+Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lvl * ?|r|n|cff00FFFFCooldown: <A0PD,Cool10> seconds|r
 }
 
 STRING 12885
@@ -78206,7 +78153,7 @@ STRING 12885
 }
 
 STRING 12886
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PE (Justice Hold), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78215,6 +78162,54 @@ STRING 12887
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 12898
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur1> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool1> seconds|r
+}
+
+STRING 12899
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur2> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool2> seconds|r
+}
+
+STRING 12900
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur3> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool3> seconds|r
+}
+
+STRING 12901
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur4> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool4> seconds|r
+}
+
+STRING 12902
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur5> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool5> seconds|r
+}
+
+STRING 12903
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur6> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool6> seconds|r
+}
+
+STRING 12904
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur7> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool7> seconds|r
+}
+
+STRING 12905
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur8> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool8> seconds|r
 }
 
 STRING 12906
@@ -78252,13 +78247,19 @@ STRING 12911
 Type "r" to revert.
 Transformations:
 [lvl 25]  1.25x "justice"
-[lvl 50]  1.75x "justice" [upgrades Justice Flash if lvl 10]
-[lvl 80]  2.00x "justice"
+[lvl 50]  1.50x "justice" 
+[lvl 80]  1.75x "justice" [upgrades Justice Flash if lvl 10]
 [lvl 120] 2.20x "justice"
 [lvl 200] 2.50x "god" [unlocks GoD training]
 [lvl 250] 2.60x "god" [unlocks GoD form]
 
 Gains +0.02x for each pride trooper on his team.
+}
+
+STRING 12912
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur9> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool9> seconds|r
 }
 
 STRING 12913
@@ -78268,7 +78269,7 @@ STRING 12913
 }
 
 STRING 12914
-// Abilities: A0PE (Justice Hold), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -78316,16 +78317,9 @@ Toppo's God of Destruction form.
 }
 
 STRING 12922
-// Units: H09C (Leader of the Pride Troopers), Ubertip (Tooltip - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-|cffff2020Note: Unfinished hero.|r
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool1> seconds|r
 }
 
 STRING 12923
@@ -78395,141 +78389,243 @@ Toppo gathers five orange ki balls at the tips of his fingers before rapidly fir
 }
 
 STRING 12934
-// Abilities: A0PD (Justice Punch), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0PJ (Justice Tornado), Researchubertip (Tooltip - Learn - Extended)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool1> - <A0PD,Cool10> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool1> - <A0PJ,Cool10> seconds|r
+}
+
+STRING 12935
+// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur10> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool10> seconds|r
+}
+
+STRING 12936
+// Abilities: A0PE (Justice Hold), Researchubertip (Tooltip - Learn - Extended)
+{
+Toppo bear hugs his opponent, stopping them from moving so long as he stands still.|n|cff00FF00Damage: Str * Lvl * ?|nDuration: <A0PE,Dur1> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool1> - <A0PE,Cool10> seconds|r
+}
+
+STRING 12937
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 12938
+// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 1|r]
+}
+
+STRING 12939
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur1>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool1> seconds|r
+}
+
+STRING 12940
+// Abilities: A0PF (Justice Pose), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Justice Pose - [|cffffcc00Level %d|r]
+}
+
+STRING 12941
+// Abilities: A0PF (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur1>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool1> - <A0PF,Cool10> seconds|r
+}
+
+STRING 12942
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 12943
+// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 2|r]
+}
+
+STRING 12944
+// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 3|r]
 }
 
 STRING 12945
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur1> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool1> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool2> seconds|r
 }
 
 STRING 12946
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur2> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool2> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool3> seconds|r
 }
 
 STRING 12947
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur3> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool3> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool4> seconds|r
 }
 
 STRING 12948
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur4> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool4> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool5> seconds|r
 }
 
 STRING 12949
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur5> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool5> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool6> seconds|r
 }
 
 STRING 12950
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur6> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool6> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool7> seconds|r
 }
 
 STRING 12951
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur7> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool7> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool8> seconds|r
 }
 
 STRING 12952
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur8> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool8> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool9> seconds|r
 }
 
 STRING 12953
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PJ (Justice Tornado), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur9> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool9> seconds|r
+Toppo traps his opponents by spinning at extreme speeds. Deals bonus damage the closer they are to Toppo. Provides +33ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool10> seconds|r
 }
 
-STRING 12954
-// Abilities: A0PE (Justice Hold), Ubertip (Tooltip - Normal - Extended)
+STRING 12957
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur10> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool10> seconds|r
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur2>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool2> seconds|r
 }
 
-STRING 12955
-// Abilities: A0PE (Justice Hold), Researchubertip (Tooltip - Learn - Extended)
+STRING 12958
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
-Toppo bear hugs his opponent, stopping his opponent from moving at the cost of his own movement.|n|cff00FF00Damage: Str|nDuration: <A0PE,Dur1> seconds |r|n|cff00FFFFCooldown: <A0PE,Cool1> - <A0PE,Cool10> seconds|r
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur3>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool3> seconds|r
 }
 
-STRING 12956
+STRING 12961
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 1|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 4|r]
 }
 
-STRING 12959
+STRING 12962
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 2|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 5|r]
 }
 
-STRING 12960
+STRING 12969
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 3|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 6|r]
 }
 
-STRING 12963
+STRING 12970
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 4|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 7|r]
 }
 
-STRING 12964
+STRING 12971
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 5|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 8|r]
 }
 
-STRING 12965
+STRING 12972
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 6|r]
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 9|r]
 }
 
-STRING 12966
-// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+STRING 12973
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 7|r]
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur4>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool4> seconds|r
 }
 
-STRING 12967
-// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+STRING 12974
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 8|r]
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur5>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool5> seconds|r
 }
 
-STRING 12968
-// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+STRING 12976
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 9|r]
-}
-
-STRING 12975
-// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
-{
-[|cff00FF00R|r] Justice Pose - [|cffffcc00Level 10|r]
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur6>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool6> seconds|r
 }
 
 STRING 12977
 // Buffs/Effects: B02Z (), Buffubertip (Tooltip - Extended)
 {
 This unit is trapped in a Justice Hold, it cannot move or attack and will take damage over time.
+}
+
+STRING 12978
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur7>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool7> seconds|r
+}
+
+STRING 12979
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur8>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool8> seconds|r
+}
+
+STRING 12980
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur9>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool9> seconds|r
+}
+
+STRING 12981
+// Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Justice Pose - [|cffffcc00Level 10|r]
+}
+
+STRING 12982
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice!|nCannot be used with [|cffDD00EED|r] God of Destruction.|n|cff00ff00Duration: <A0PF,Dur10>s|nSpell Amp: +5% per second up to +25%|r|n|cff00ffffCooldown: <A0PF,Cool10> seconds|r
+}
+
+STRING 12983
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 12984
+// Abilities: A0PH (Hakai), Tip (Tooltip - Normal)
+{
+[|cffDD00EEF|r] Hakai
+}
+
+STRING 12985
+// Abilities: A0PJ (Justice Tornado), Name (Name)
+{
+Justice Tornado
 }
 
 STRING 12989
@@ -78562,22 +78658,10 @@ STRING 12995
 Hakai
 }
 
-STRING 12997
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
-{
-R
-}
-
 STRING 12999
-// Buffs/Effects: B030 (), EditorSuffix (Editor Suffix)
+// Abilities: A0PJ (Justice Tornado), EditorSuffix (Editor Suffix)
 {
 (toppo)
-}
-
-STRING 13001
-// Abilities: A0PH (Hakai), Tip (Tooltip - Normal)
-{
-[|cffDD00EER|r] Hakai
 }
 
 STRING 13002
@@ -78586,69 +78670,147 @@ STRING 13002
 The mastered version of ultra instinct that allows the user to instinctively attack and dodge without thinking. Try as you might, you will never be able to repeat this feat.|n|cffff2020WARNING: CAN ONLY BE USED ONCE PER GAME|r|n|cffffff002.90x stat multiplier.|n+165ms and unlocks movement speed cap.|n+1% spell power per second up to +5%.|n100% damage block up to 25 x Str.|nAutomatically moves away from enemies.|r|n|cff00ff00Duration: <A0MZ,Dur1> seconds|n|cff00ffffCooldown: Once per game.
 }
 
-STRING 13003
-// Abilities: A0PC (God of Destruction), Ubertip (Tooltip - Normal - Extended)
+STRING 13028
+// Buffs/Effects: B030 (), EditorSuffix (Editor Suffix)
 {
-Toppo abandons his ideals of justice, unleashing the full power of a God of Destruction. Cannot be used with [|cff00ff00R|r] Justice Pose. Unlocks [|cffDD00EER|r] Hakai.|n|cffffff003.00x stat multiplier|n+99ms and unlocks movement speed cap.|n|r|cff00ff00Duration: <A0PC,Dur1> seconds|n|cff00ffffCooldown: <A0PC,Cool1> seconds|n|n|cff808080"Justice and evil. I'm beyond that now. All that matters is winning and survival."
+(toppo)
 }
 
-STRING 13004
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13029
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool1> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 1|r]
 }
 
-STRING 13005
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13030
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool2> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 2|r]
 }
 
-STRING 13006
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13031
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool3> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 3|r]
 }
 
-STRING 13007
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13032
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool4> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 4|r]
 }
 
-STRING 13008
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13033
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool5> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 5|r]
 }
 
-STRING 13009
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13034
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool6> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 6|r]
 }
 
-STRING 13010
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13035
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool7> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 7|r]
 }
 
-STRING 13011
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13036
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool8> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 8|r]
 }
 
-STRING 13012
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13037
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool9> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 9|r]
 }
 
-STRING 13013
-// Abilities: A0PD (Justice Punch), Ubertip (Tooltip - Normal - Extended)
+STRING 13038
+// Abilities: A0PE (Justice Hold), Tip (Tooltip - Normal)
 {
-Toppo rushes his enemies with a powerful punch.|n|cff00FF00Damage: Str|r|n|cff00FFFFCooldown: <A0PD,Cool10> seconds|r
+[|cff00ff00R|r] Justice Hold - [|cffffcc00Level 10|r]
+}
+
+STRING 13039
+// Abilities: A0PE (Justice Hold), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Justice Hold - [|cffffcc00Level %d|r]
+}
+
+STRING 13040
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 1|r]
+}
+
+STRING 13041
+// Abilities: A0PJ (Justice Tornado), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Justice Tornado - [|cffffcc00Level %d|r]
+}
+
+STRING 13042
+// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 13043
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 2|r]
+}
+
+STRING 13044
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 3|r]
+}
+
+STRING 13045
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 4|r]
+}
+
+STRING 13046
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 5|r]
+}
+
+STRING 13047
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 6|r]
+}
+
+STRING 13048
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 7|r]
+}
+
+STRING 13049
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 8|r]
+}
+
+STRING 13050
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 9|r]
+}
+
+STRING 13051
+// Abilities: A0PJ (Justice Tornado), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Justice Tornado - [|cffffcc00Level 10|r]
 }
 
