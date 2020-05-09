@@ -185,6 +185,7 @@ udg_SagaStatsInvulUnitGroup = nil
 udg_PrideTrooperAlliesPlayerGroup = nil
 udg_PrideTrooperMult = 0.0
 udg_ToppoHakaiUnitGroup = nil
+udg_ToppoJusticePoseUnitGroup = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -303,6 +304,12 @@ gg_trg_Toppo_Hakai_Loop = nil
 gg_trg_Toppo_Hakai_Channel_Damage = nil
 gg_trg_Toppo_Hakai_Launched_Damage = nil
 gg_trg_Toppo_Justice_Tornado_Cast = nil
+gg_trg_Toppo_Justice_Pose_Cast = nil
+gg_trg_Toppo_Justice_Pose_Loop = nil
+gg_trg_Toppo_God_of_Destruction_Cast = nil
+gg_trg_Toppo_Upgrade_Spells = nil
+gg_trg_Toppo_Revert_Upgraded_Spells_Start = nil
+gg_trg_Toppo_Revert_Upgraded_Spells_End = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -887,6 +894,7 @@ function InitGlobals()
     udg_PrideTrooperAlliesPlayerGroup = CreateForce()
     udg_PrideTrooperMult = 0.0
     udg_ToppoHakaiUnitGroup = CreateGroup()
+    udg_ToppoJusticePoseUnitGroup = CreateGroup()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -5160,10 +5168,14 @@ function Trig_Toppo_Hakai_Cast_Actions()
     SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
     SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
     udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
-    AddSpecialEffectLocBJ(udg_TempLoc2, "ToppoHakai.mdl")
+    udg_TempReal = AngleBetweenPoints(udg_TempLoc2, udg_TempLoc)
+        RemoveLocation(udg_TempLoc)
+    udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, udg_TempReal)
+    AddSpecialEffectLocBJ(udg_TempLoc, "ToppoHakai.mdl")
     SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 4, udg_ID, udg_SummonsHashtable)
-    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.45)
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
     BlzSetSpecialEffectColor(GetLastCreatedEffectBJ(), 255, 0, 255)
+    BlzSetSpecialEffectHeight(GetLastCreatedEffectBJ(), (GetUnitFlyHeight(udg_TempUnit) + 100.00))
         RemoveLocation(udg_TempLoc2)
         RemoveLocation(udg_TempLoc)
         udg_TempUnitGroup = CreateGroup()
@@ -5277,7 +5289,7 @@ function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()
 end
 
 function Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()
-    if (not (ModuloInteger(udg_TempInt, 3) == 0)) then
+    if (not (ModuloInteger(udg_TempInt, 2) == 0)) then
         return false
     end
     return true
@@ -5316,17 +5328,19 @@ function Trig_Toppo_Hakai_Loop_Func001A()
     else
         SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
         if (Trig_Toppo_Hakai_Loop_Func001Func006Func002C()) then
-            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.45 + (I2R(udg_TempInt) * 0.01)))
+            BlzSetSpecialEffectScale(udg_TempSpecialEffect, (0.50 + (I2R(udg_TempInt) * 0.01)))
             if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func003C()) then
                                 playGenericSpellSound(udg_TempUnit, "Audio/Effects/HakaiToppo.mp3", 3082)
             else
             end
             if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func004C()) then
-                udg_TempLoc = GetUnitLoc(udg_TempUnit)
+                udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
+                udg_TempLoc = PolarProjectionBJ(udg_TempLoc2, 300.00, GetUnitFacing(udg_TempUnit))
                 BlzSetSpecialEffectX(udg_TempSpecialEffect, GetLocationX(udg_TempLoc))
                 BlzSetSpecialEffectY(udg_TempSpecialEffect, GetLocationY(udg_TempLoc))
                 BlzSetSpecialEffectColor(udg_TempSpecialEffect, 255, IMinBJ(255, (udg_TempInt * 3)), 255)
                 TriggerExecute(gg_trg_Toppo_Hakai_Channel_Damage)
+                                RemoveLocation(udg_TempLoc2)
                                 RemoveLocation(udg_TempLoc)
             else
             end
@@ -5341,7 +5355,7 @@ function Trig_Toppo_Hakai_Loop_Func001A()
                 SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
                 if (Trig_Toppo_Hakai_Loop_Func001Func006Func002Func001Func008C()) then
                     AddSpecialEffectLocBJ(udg_TempLoc, "PurpleSlam.mdl")
-                    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
+                    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                 else
                 end
@@ -5354,8 +5368,10 @@ function Trig_Toppo_Hakai_Loop_Func001A()
                     udg_TempLoc2 = Location(LoadRealBJ(2, udg_ID, udg_SummonsHashtable), LoadRealBJ(3, udg_ID, udg_SummonsHashtable))
                     udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
                     SaveRealBJ(udg_TempReal, 5, udg_ID, udg_SummonsHashtable)
-                    SaveRealBJ(GetLocationX(udg_TempLoc), 2, udg_ID, udg_SummonsHashtable)
-                    SaveRealBJ(GetLocationY(udg_TempLoc), 3, udg_ID, udg_SummonsHashtable)
+                                        RemoveLocation(udg_TempLoc2)
+                    udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 300.00, udg_TempReal)
+                    SaveRealBJ(GetLocationX(udg_TempLoc2), 2, udg_ID, udg_SummonsHashtable)
+                    SaveRealBJ(GetLocationY(udg_TempLoc2), 3, udg_ID, udg_SummonsHashtable)
                                         RemoveLocation(udg_TempLoc)
                                         RemoveLocation(udg_TempLoc2)
                 else
@@ -5397,6 +5413,9 @@ function Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()
     if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
         return false
     end
+    if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
+        return false
+    end
     return true
 end
 
@@ -5410,7 +5429,7 @@ function Trig_Toppo_Hakai_Channel_Damage_Func002A()
 end
 
 function Trig_Toppo_Hakai_Channel_Damage_Actions()
-    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(400.00, udg_TempLoc)
+    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
     ForGroupBJ(udg_TempUnitGroup, Trig_Toppo_Hakai_Channel_Damage_Func002A)
         DestroyGroup(udg_TempUnitGroup)
 end
@@ -5427,6 +5446,9 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()
     if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("B01U")) == false)) then
         return false
     end
+    if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("BHbn")) == false)) then
+        return false
+    end
     return true
 end
 
@@ -5438,7 +5460,10 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001C()
 end
 
 function Trig_Toppo_Hakai_Launched_Damage_Func003Func002C()
-    if (not (IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_TempUnit)) == true)) then
+    if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
+        return false
+    end
+    if (not (UnitHasBuffBJ(udg_TempUnit2, FourCC("Bvul")) == false)) then
         return false
     end
     return true
@@ -5462,7 +5487,7 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003A()
 end
 
 function Trig_Toppo_Hakai_Launched_Damage_Actions()
-    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(400.00, udg_TempLoc)
+    udg_TempUnitGroup = GetUnitsInRangeOfLocAll(450.00, udg_TempLoc)
     udg_TempUnitGroup2 = LoadGroupHandleBJ(6, udg_ID, udg_SummonsHashtable)
     ForGroupBJ(udg_TempUnitGroup, Trig_Toppo_Hakai_Launched_Damage_Func003A)
         DestroyGroup(udg_TempUnitGroup)
@@ -5473,7 +5498,24 @@ function InitTrig_Toppo_Hakai_Launched_Damage()
     TriggerAddAction(gg_trg_Toppo_Hakai_Launched_Damage, Trig_Toppo_Hakai_Launched_Damage_Actions)
 end
 
+function Trig_Toppo_Justice_Tornado_Cast_Func001C()
+    if (GetSpellAbilityId() == FourCC("A0PJ")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0PL")) then
+        return true
+    end
+    return false
+end
+
 function Trig_Toppo_Justice_Tornado_Cast_Conditions()
+    if (not Trig_Toppo_Justice_Tornado_Cast_Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Justice_Tornado_Cast_Func003C()
     if (not (GetSpellAbilityId() == FourCC("A0PJ"))) then
         return false
     end
@@ -5482,7 +5524,11 @@ end
 
 function Trig_Toppo_Justice_Tornado_Cast_Actions()
     AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
-    TriggerSleepAction(3.00)
+    if (Trig_Toppo_Justice_Tornado_Cast_Func003C()) then
+        TriggerSleepAction(3.00)
+    else
+        TriggerSleepAction(4.00)
+    end
     AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
 end
 
@@ -5491,6 +5537,312 @@ function InitTrig_Toppo_Justice_Tornado_Cast()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Justice_Tornado_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Toppo_Justice_Tornado_Cast, Condition(Trig_Toppo_Justice_Tornado_Cast_Conditions))
     TriggerAddAction(gg_trg_Toppo_Justice_Tornado_Cast, Trig_Toppo_Justice_Tornado_Cast_Actions)
+end
+
+function Trig_Toppo_Justice_Pose_Cast_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0PF"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Justice_Pose_Cast_Actions()
+    udg_TempUnit = GetTriggerUnit()
+    SetUnitAnimation(udg_TempUnit, "spell throw")
+    TriggerExecute(gg_trg_Toppo_Upgrade_Spells)
+end
+
+function InitTrig_Toppo_Justice_Pose_Cast()
+    gg_trg_Toppo_Justice_Pose_Cast = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Justice_Pose_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Toppo_Justice_Pose_Cast, Condition(Trig_Toppo_Justice_Pose_Cast_Conditions))
+    TriggerAddAction(gg_trg_Toppo_Justice_Pose_Cast, Trig_Toppo_Justice_Pose_Cast_Actions)
+end
+
+function Trig_Toppo_Justice_Pose_Loop_Func001A()
+    PauseUnitBJ(false, GetEnumUnit())
+    GroupRemoveUnitSimple(GetEnumUnit(), udg_ToppoJusticePoseUnitGroup)
+end
+
+function Trig_Toppo_Justice_Pose_Loop_Func002C()
+    if (not (CountUnitsInGroup(udg_ToppoJusticePoseUnitGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Justice_Pose_Loop_Actions()
+    ForGroupBJ(udg_ToppoJusticePoseUnitGroup, Trig_Toppo_Justice_Pose_Loop_Func001A)
+    if (Trig_Toppo_Justice_Pose_Loop_Func002C()) then
+        DisableTrigger(GetTriggeringTrigger())
+    else
+    end
+end
+
+function InitTrig_Toppo_Justice_Pose_Loop()
+    gg_trg_Toppo_Justice_Pose_Loop = CreateTrigger()
+    DisableTrigger(gg_trg_Toppo_Justice_Pose_Loop)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Toppo_Justice_Pose_Loop, 0.40)
+    TriggerAddAction(gg_trg_Toppo_Justice_Pose_Loop, Trig_Toppo_Justice_Pose_Loop_Actions)
+end
+
+function Trig_Toppo_God_of_Destruction_Cast_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0PC"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_God_of_Destruction_Cast_Actions()
+    udg_TempUnit = GetTriggerUnit()
+    TriggerExecute(gg_trg_Toppo_Upgrade_Spells)
+end
+
+function InitTrig_Toppo_God_of_Destruction_Cast()
+    gg_trg_Toppo_God_of_Destruction_Cast = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_God_of_Destruction_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Toppo_God_of_Destruction_Cast, Condition(Trig_Toppo_God_of_Destruction_Cast_Conditions))
+    TriggerAddAction(gg_trg_Toppo_God_of_Destruction_Cast, Trig_Toppo_God_of_Destruction_Cast_Actions)
+end
+
+function Trig_Toppo_Upgrade_Spells_Actions()
+    UnitAddAbilityBJ(FourCC("A0PI"), udg_TempUnit)
+    SetUnitAbilityLevelSwapped(FourCC("A0PI"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0PB"), udg_TempUnit))
+        UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0PI'))
+        udg_TempReal = BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0PB"))
+        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PI"), udg_TempReal)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0PI"), GetOwningPlayer(udg_TempUnit))
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PB"), GetOwningPlayer(udg_TempUnit))
+    UnitAddAbilityBJ(FourCC("A0PK"), udg_TempUnit)
+    SetUnitAbilityLevelSwapped(FourCC("A0PK"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0PD"), udg_TempUnit))
+        UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0PK'))
+        udg_TempReal = BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0PD"))
+        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PK"), udg_TempReal)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0PK"), GetOwningPlayer(udg_TempUnit))
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PD"), GetOwningPlayer(udg_TempUnit))
+    UnitAddAbilityBJ(FourCC("A0PL"), udg_TempUnit)
+    SetUnitAbilityLevelSwapped(FourCC("A0PL"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0PJ"), udg_TempUnit))
+        UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0PL'))
+        udg_TempReal = BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0PJ"))
+        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PL"), udg_TempReal)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0PL"), GetOwningPlayer(udg_TempUnit))
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PJ"), GetOwningPlayer(udg_TempUnit))
+    UnitAddAbilityBJ(FourCC("A0PM"), udg_TempUnit)
+    SetUnitAbilityLevelSwapped(FourCC("A0PM"), udg_TempUnit, GetUnitAbilityLevelSwapped(FourCC("A0PE"), udg_TempUnit))
+        UnitMakeAbilityPermanent(udg_TempUnit, true, FourCC('A0PM'))
+        udg_TempReal = BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, FourCC("A0PE"))
+        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PM"), udg_TempReal)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0PM"), GetOwningPlayer(udg_TempUnit))
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PE"), GetOwningPlayer(udg_TempUnit))
+end
+
+function InitTrig_Toppo_Upgrade_Spells()
+    gg_trg_Toppo_Upgrade_Spells = CreateTrigger()
+    TriggerAddAction(gg_trg_Toppo_Upgrade_Spells, Trig_Toppo_Upgrade_Spells_Actions)
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_Start_Func004C()
+    if (GetSpellAbilityId() == FourCC("A0PI")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0PM")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_Start_Conditions()
+    if (not Trig_Toppo_Revert_Upgraded_Spells_Start_Func004C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_Start_Func003Func005C()
+    if (not (GetSpellAbilityId() == FourCC("A0PI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_Start_Func003C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_Start_Actions()
+    udg_TempUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_TempUnit)
+    if (Trig_Toppo_Revert_Upgraded_Spells_Start_Func003C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PK"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PD"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PL"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PJ"), GetOwningPlayer(udg_TempUnit))
+        if (Trig_Toppo_Revert_Upgraded_Spells_Start_Func003Func005C()) then
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0PM"), GetOwningPlayer(udg_TempUnit))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0PE"), GetOwningPlayer(udg_TempUnit))
+        else
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0PI"), GetOwningPlayer(udg_TempUnit))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0PB"), GetOwningPlayer(udg_TempUnit))
+        end
+    else
+    end
+end
+
+function InitTrig_Toppo_Revert_Upgraded_Spells_Start()
+    gg_trg_Toppo_Revert_Upgraded_Spells_Start = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Revert_Upgraded_Spells_Start, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Toppo_Revert_Upgraded_Spells_Start, Condition(Trig_Toppo_Revert_Upgraded_Spells_Start_Conditions))
+    TriggerAddAction(gg_trg_Toppo_Revert_Upgraded_Spells_Start, Trig_Toppo_Revert_Upgraded_Spells_Start_Actions)
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func007C()
+    if (GetSpellAbilityId() == FourCC("A0PI")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0PK")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0PL")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0PM")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Conditions()
+    if (not Trig_Toppo_Revert_Upgraded_Spells_End_Func007C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003Func003Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0PM"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0PL"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0PK"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0PI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func003C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0PM"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0PL"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0PK"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Func006C()
+    if (not (GetSpellAbilityId() == FourCC("A0PI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Toppo_Revert_Upgraded_Spells_End_Actions()
+    udg_TempUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_TempUnit)
+    if (Trig_Toppo_Revert_Upgraded_Spells_End_Func003C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PI"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PB"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PK"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PD"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PL"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PJ"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0PM"), GetOwningPlayer(udg_TempUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0PE"), GetOwningPlayer(udg_TempUnit))
+    else
+        if (Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001C()) then
+            SetPlayerAbilityAvailableBJ(false, FourCC("A0PI"), GetOwningPlayer(udg_TempUnit))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0PB"), GetOwningPlayer(udg_TempUnit))
+        else
+            if (Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003C()) then
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0PK"), GetOwningPlayer(udg_TempUnit))
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0PD"), GetOwningPlayer(udg_TempUnit))
+            else
+                if (Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003Func003C()) then
+                    SetPlayerAbilityAvailableBJ(false, FourCC("A0PL"), GetOwningPlayer(udg_TempUnit))
+                    SetPlayerAbilityAvailableBJ(true, FourCC("A0PJ"), GetOwningPlayer(udg_TempUnit))
+                else
+                    if (Trig_Toppo_Revert_Upgraded_Spells_End_Func003Func001Func003Func003Func003C()) then
+                        SetPlayerAbilityAvailableBJ(false, FourCC("A0PM"), GetOwningPlayer(udg_TempUnit))
+                        SetPlayerAbilityAvailableBJ(true, FourCC("A0PE"), GetOwningPlayer(udg_TempUnit))
+                    else
+                    end
+                end
+            end
+        end
+    end
+        udg_TempReal = BlzGetUnitAbilityCooldownRemaining(udg_TempUnit, GetSpellAbilityId())
+    if (Trig_Toppo_Revert_Upgraded_Spells_End_Func006C()) then
+                BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PB"), udg_TempReal)
+    else
+        if (Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001C()) then
+                        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PD"), udg_TempReal)
+        else
+            if (Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001Func001C()) then
+                                BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PJ"), udg_TempReal)
+            else
+                if (Trig_Toppo_Revert_Upgraded_Spells_End_Func006Func001Func001Func001C()) then
+                                        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0PE"), udg_TempReal)
+                else
+                end
+            end
+        end
+    end
+end
+
+function InitTrig_Toppo_Revert_Upgraded_Spells_End()
+    gg_trg_Toppo_Revert_Upgraded_Spells_End = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Revert_Upgraded_Spells_End, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Toppo_Revert_Upgraded_Spells_End, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    TriggerAddCondition(gg_trg_Toppo_Revert_Upgraded_Spells_End, Condition(Trig_Toppo_Revert_Upgraded_Spells_End_Conditions))
+    TriggerAddAction(gg_trg_Toppo_Revert_Upgraded_Spells_End, Trig_Toppo_Revert_Upgraded_Spells_End_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -8410,7 +8762,7 @@ function InitTrig_Auto_Transform()
     TriggerAddAction(gg_trg_Auto_Transform, Trig_Auto_Transform_Actions)
 end
 
-function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func012C()
+function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func013C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
@@ -8434,6 +8786,9 @@ function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002C()
         return false
     end
     if (not (udg_TransformationString ~= "uncloak")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "dab")) then
         return false
     end
     if (not (udg_TransformationString ~= "blast-o")) then
@@ -8478,7 +8833,7 @@ function Trig_Auto_Transform_Player_Units_Func002A()
                 udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
                 if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002C()) then
                     TriggerExecute(gg_trg_Transformations_Parse_String)
-                    if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func012C()) then
+                    if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func013C()) then
                         udg_TempBool = false
                     else
                     end
@@ -13722,7 +14077,7 @@ function Trig_Toppo_GoD_Actions()
     udg_TempReal = 30.00
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
-    udg_StatMultReal = 3.00
+    udg_StatMultReal = 2.90
     udg_TransformationSFXString = "AuraPink2.mdx"
     udg_TransformationSFXString2 = "AuraKaox10.mdx"
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -13916,6 +14271,8 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "cloak"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "uncloak"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "dab"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "king"
     udg_TempInt = (udg_TempInt + 1)
@@ -21820,17 +22177,14 @@ function Trig_Transformations_Toppo_Func010C()
 end
 
 function Trig_Transformations_Toppo_Func011C()
-    if (not (udg_TransformationString == "r")) then
+    if (not (udg_TransformationString == "dab")) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Toppo_Func012C()
-    if (not (udg_TransformationString == "justice")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+    if (not (udg_TransformationString == "r")) then
         return false
     end
     return true
@@ -21840,7 +22194,7 @@ function Trig_Transformations_Toppo_Func013C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
         return false
     end
     return true
@@ -21850,7 +22204,7 @@ function Trig_Transformations_Toppo_Func014C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
         return false
     end
     return true
@@ -21860,24 +22214,17 @@ function Trig_Transformations_Toppo_Func015C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Toppo_Func016C()
-    if (not (udg_TransformationString == "god")) then
+    if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Toppo_Func017Func004C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0PC"), udg_StatMultUnit) == 0)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
         return false
     end
     return true
@@ -21887,13 +22234,30 @@ function Trig_Transformations_Toppo_Func017C()
     if (not (udg_TransformationString == "god")) then
         return false
     end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Toppo_Func018Func004C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0PC"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Toppo_Func018C()
+    if (not (udg_TransformationString == "god")) then
+        return false
+    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Toppo_Func021Func002Func001C()
+function Trig_Transformations_Toppo_Func022Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -21903,27 +22267,14 @@ function Trig_Transformations_Toppo_Func021Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Toppo_Func021Func002Func006C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0PB"), udg_StatMultUnit) == 10)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0PI"), udg_StatMultUnit) == 0)) then
+function Trig_Transformations_Toppo_Func022Func002C()
+    if (not Trig_Transformations_Toppo_Func022Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Toppo_Func021Func002C()
-    if (not Trig_Transformations_Toppo_Func021Func002Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Toppo_Func021C()
+function Trig_Transformations_Toppo_Func022C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -21947,45 +22298,49 @@ function Trig_Transformations_Toppo_Actions()
     else
     end
     if (Trig_Transformations_Toppo_Func011C()) then
+        SetUnitAnimation(udg_StatMultUnit, "spell throw")
+    else
+    end
+    if (Trig_Transformations_Toppo_Func012C()) then
         udg_StatMultReal = 1.00
         udg_TransformationAbility = FourCC("AUan")
     else
     end
-    if (Trig_Transformations_Toppo_Func012C()) then
+    if (Trig_Transformations_Toppo_Func013C()) then
         udg_StatMultReal = 1.25
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Toppo_Func013C()) then
+    if (Trig_Transformations_Toppo_Func014C()) then
         udg_StatMultReal = 1.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Toppo_Func014C()) then
+    if (Trig_Transformations_Toppo_Func015C()) then
         udg_StatMultReal = 1.75
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Toppo_Func015C()) then
+    if (Trig_Transformations_Toppo_Func016C()) then
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Toppo_Func016C()) then
+    if (Trig_Transformations_Toppo_Func017C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("A0PG")
         udg_TransformationSFXString = "AuraKaox10.mdx"
     else
     end
-    if (Trig_Transformations_Toppo_Func017C()) then
+    if (Trig_Transformations_Toppo_Func018C()) then
         udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("A0PG")
         udg_TransformationSFXString = "AuraPink2.mdx"
-        if (Trig_Transformations_Toppo_Func017Func004C()) then
+        if (Trig_Transformations_Toppo_Func018Func004C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0PC"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0PC'))
@@ -21995,21 +22350,12 @@ function Trig_Transformations_Toppo_Actions()
     end
     TriggerExecute(gg_trg_Toppo_Pride_Trooper_Stat_Mult_Bonus)
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Toppo_Func021C()) then
-        if (Trig_Transformations_Toppo_Func021Func002C()) then
+    if (Trig_Transformations_Toppo_Func022C()) then
+        if (Trig_Transformations_Toppo_Func022Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H09C')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            if (Trig_Transformations_Toppo_Func021Func002Func006C()) then
-                                playGenericSpellSound(udg_StatMultUnit, "Audio/Voice/ToppoJusticeFlash.mp3", 2742)
-                SetPlayerAbilityAvailableBJ(true, FourCC("A0PI"), udg_TransformationPlayer)
-                SetPlayerAbilityAvailableBJ(false, FourCC("A0PB"), udg_TransformationPlayer)
-                UnitAddAbilityBJ(FourCC("A0PI"), udg_StatMultUnit)
-                SetUnitAbilityLevelSwapped(FourCC("A0PI"), udg_StatMultUnit, 10)
-                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0PI'))
-            else
-            end
         else
         end
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -23441,6 +23787,12 @@ function InitCustomTriggers()
     InitTrig_Toppo_Hakai_Channel_Damage()
     InitTrig_Toppo_Hakai_Launched_Damage()
     InitTrig_Toppo_Justice_Tornado_Cast()
+    InitTrig_Toppo_Justice_Pose_Cast()
+    InitTrig_Toppo_Justice_Pose_Loop()
+    InitTrig_Toppo_God_of_Destruction_Cast()
+    InitTrig_Toppo_Upgrade_Spells()
+    InitTrig_Toppo_Revert_Upgraded_Spells_Start()
+    InitTrig_Toppo_Revert_Upgraded_Spells_End()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()

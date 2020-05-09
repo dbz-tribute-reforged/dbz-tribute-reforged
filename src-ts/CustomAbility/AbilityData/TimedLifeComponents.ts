@@ -34,4 +34,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 33,
   },
+  {
+    name: "timed life beam justice flash 2", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 37,
+  },
 ];

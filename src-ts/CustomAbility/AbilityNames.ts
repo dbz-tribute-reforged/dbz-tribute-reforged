@@ -110,8 +110,11 @@ export module AbilityNames {
     export const JUSTICE_FLASH = "Justice Flash";
     export const JUSTICE_FLASH_2 = "Justice Flash 2";
     export const JUSTICE_PUNCH = "Justice Punch";
+    export const JUSTICE_PUNCH_2 = "Justice Punch 2";
     export const JUSTICE_HOLD = "Justice Hold";
+    export const JUSTICE_HOLD_2 = "Justice Hold 2";
     export const JUSTICE_TORNADO = "Justice Tornado";
+    export const JUSTICE_TORNADO_2 = "Justice Tornado 2";
     export const JUSTICE_POSE = "Justice Pose";
     export const GOD_OF_DESTRUCTION = "God of Destruction Toppo";
   }

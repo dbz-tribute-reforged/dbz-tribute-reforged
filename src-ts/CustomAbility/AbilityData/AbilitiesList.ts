@@ -1698,7 +1698,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 132,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1775,30 +1775,30 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Toppo.JUSTICE_HOLD,
+    name: AbilityNames.Toppo.JUSTICE_PUNCH_2,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 100,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNToppoJusticeHold.blp",
-      disabled: "BTNToppoJusticeHold.blp",
+      enabled: "BTNToppoJusticePunch.blp",
+      disabled: "BTNToppoJusticePunch.blp",
     },
     tooltip: {
-      title: AbilityNames.Toppo.JUSTICE_HOLD,
+      title: AbilityNames.Toppo.JUSTICE_PUNCH,
       body: 
-        AbilityNames.Toppo.JUSTICE_HOLD
+        AbilityNames.Toppo.JUSTICE_PUNCH
     },
     components: [
-      { name: "channel caster default" },
-      { name: "damage justice hold dps" },
-      // { name: "sfx justice hold" },
+      { name: "dash ground point justice punch 2" },
+      { name: "damage justice punch 2 explosion" },
+      { name: "sfx justice punch" },
     ],
   },
   // -------------------------------------------
@@ -1825,10 +1825,94 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward justice tornado" },
-      { name: "damage justice tornado dps inner" },
-      { name: "damage justice tornado dps outer" },
+      { name: "damage justice tornado dps" },
       { name: "knockback justice tornado" },
       { name: "sfx justice tornado" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_TORNADO_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 133,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeTornado.blp",
+      disabled: "BTNToppoJusticeTornado.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_TORNADO,
+      body: 
+        AbilityNames.Toppo.JUSTICE_TORNADO
+    },
+    components: [
+      { name: "dash ground forward justice tornado 2" },
+      { name: "damage justice tornado 2 dps" },
+      { name: "knockback justice tornado 2" },
+      { name: "sfx justice tornado" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_HOLD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeHold.blp",
+      disabled: "BTNToppoJusticeHold.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_HOLD,
+      body: 
+        AbilityNames.Toppo.JUSTICE_HOLD
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage justice hold dps" },
+      // { name: "sfx justice hold" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Toppo.JUSTICE_HOLD_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNToppoJusticeHold.blp",
+      disabled: "BTNToppoJusticeHold.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Toppo.JUSTICE_HOLD,
+      body: 
+        AbilityNames.Toppo.JUSTICE_HOLD
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage justice hold dps" },
+      // { name: "sfx justice hold" },
     ],
   },
   // -------------------------------------------
