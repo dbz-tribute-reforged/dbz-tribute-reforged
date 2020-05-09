@@ -421,6 +421,18 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 30,
   },
+  {
+    name: "dash ground point justice punch 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
+  },
   // justice tornado
   {
     name: "dash ground forward justice tornado",
@@ -433,6 +445,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 1,
+  },
+  // justice tornado 2
+  {
+    name: "dash ground forward justice tornado 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
   },
   // god of destruction
   {

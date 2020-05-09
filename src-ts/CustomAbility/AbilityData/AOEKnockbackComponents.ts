@@ -571,4 +571,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // justice tornado 2
+  {
+    name: "knockback justice tornado 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 4.5, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

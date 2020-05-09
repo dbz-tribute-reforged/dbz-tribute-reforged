@@ -1210,7 +1210,7 @@ export const BeamComponents = [
       finish: 150,
       scaling: 1,
     },
-    isTracking: false,
+    isTracking: true,
     isFixedAngle: false,
     canClashWithHero: false,
     useLastCastPoint: true,
@@ -1222,7 +1222,7 @@ export const BeamComponents = [
     components: [
       { name: "damage justice flash 2 dps" },
       { name: "damage justice flash 2 explosion" },
-      { name: "timed life beam justice flash" },
+      { name: "timed life beam justice flash 2" },
       { name: "sfx beam justice flash" },
     ],
   },

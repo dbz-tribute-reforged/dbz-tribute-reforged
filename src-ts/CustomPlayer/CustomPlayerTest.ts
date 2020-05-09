@@ -1595,8 +1595,11 @@ export module Id {
   export const justiceFlash = FourCC("A0PB");
   export const justiceFlash2 = FourCC("A0PI");
   export const justicePunch = FourCC("A0PD");
-  export const justiceHold = FourCC("A0PE");
+  export const justicePunch2 = FourCC("A0PK");
   export const justiceTornado = FourCC("A0PJ");
+  export const justiceTornado2 = FourCC("A0PL");
+  export const justiceHold = FourCC("A0PE");
+  export const justiceHold2 = FourCC("A0PM");
   export const justicePose = FourCC("A0PF");
 
   export const vegeta = FourCC("E003");
@@ -2259,6 +2262,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
 
     case Id.justicePunch:
+    case Id.justicePunch2:
       if (unitId == Id.toppo) {
         playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePunch.mp3", 2246);
       } else {
@@ -2267,10 +2271,12 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
     
     case Id.justiceHold:
+    case Id.justiceHold2:
       // playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePose.mp3", 1410);
       break;
 
     case Id.justiceTornado:
+    case Id.justiceTornado2:
       if (unitId == Id.toppo) {
         playSoundOnUnit(unit, "Audio/Voice/ToppoJusticeTornado.mp3", 2246);
       }
