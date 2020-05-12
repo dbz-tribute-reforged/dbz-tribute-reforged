@@ -41,8 +41,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
   }
 
   setSfxCoordsToTargettedPoint(input: CustomAbilityInput) {
-    const actualTargetPoint = this.getActualTargetPoint(input);
-    this.sfxCoords = new Vector2D(actualTargetPoint.x, actualTargetPoint.y);
+    this.sfxCoords.setVector(this.getActualTargetPoint(input));
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -58,11 +57,10 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     if (this.sfxSource == SfxComponent.SOURCE_TARGET_POINT_DYNAMIC) {
       this.setSfxCoordsToTargettedPoint(input);
     } else if (this.sfxSource == SfxComponent.SOURCE_UNIT) {
-      this.sfxCoords.x = GetUnitX(source);
-      this.sfxCoords.y = GetUnitY(source);
+      this.sfxCoords.setPos(GetUnitX(source), GetUnitY(source));
     } else if (this.sfxSource == SfxComponent.SOURCE_TARGET_UNIT) {
       if (input.targetUnit) {
-        this.sfxCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+        this.sfxCoords.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
       } else {
         this.setSfxCoordsToTargettedPoint(input);
       }

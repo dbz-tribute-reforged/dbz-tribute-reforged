@@ -225,7 +225,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Videl.PUNCH,
       AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Tapion.BRAVE_SLASH, AbilityNames.Tapion.BRAVE_CANNON,
-      AbilityNames.Toppo.JUSTICE_FLASH_2,
+      AbilityNames.Toppo.JUSTICE_FLASH, AbilityNames.Toppo.JUSTICE_FLASH_2, AbilityNames.Toppo.GOD_OF_DESTRUCTION,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

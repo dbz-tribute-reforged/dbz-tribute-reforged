@@ -11,6 +11,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
       ],
+      [
+        ItemConstants.SagaDrops.POWER_POLE,
+      ],
     )],
     ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(-2500, 27000))],
     ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(-1000, 26000))],
@@ -54,6 +57,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_1,
         ItemConstants.SagaDrops.SCOUTER_1,
+        ItemConstants.SagaDrops.VEGETA_TAIL,
       ]
     )],
     
@@ -519,6 +523,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB,
         SagaAbilities.Dabura.EVIL_SPEAR,
       ],
+      [
+        ItemConstants.SagaDrops.DABURA_SWORD,
+      ],
     )],
     ["Future Babidi", new SagaUnit(FourCC("O001"), 40, 4000, 400, 12000, new Vector2D(17100, 25500),
       [
@@ -693,6 +700,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Whis.ULTRA_INSTINCT,
+      ],
+      [
+        ItemConstants.SagaDrops.WHIS_STAFF,
       ],
     )],
 

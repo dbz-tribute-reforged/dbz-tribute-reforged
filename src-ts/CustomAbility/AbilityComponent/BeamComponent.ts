@@ -26,6 +26,8 @@ export class BeamComponent implements
   public previousHp: number;
   protected hasBeamUnit: boolean;
   protected beamCoord: Vector2D;
+  protected targetCoord: Vector2D;
+  protected beamTargetPoint: Vector2D;
   // time to explode = 
   // distance from start position to cast point
   // divided by speed
@@ -68,6 +70,8 @@ export class BeamComponent implements
     this.previousHp = 0;
     this.hasBeamUnit = false;
     this.beamCoord = new Vector2D();
+    this.targetCoord = new Vector2D();
+    this.beamTargetPoint = new Vector2D();
     this.explodeTick = 0;
     this.explodeMinDistance = 0;
     this.explodePosition = new Vector2D(0, 0);
@@ -105,9 +109,9 @@ export class BeamComponent implements
       if (!this.isFixedAngle) {
         this.angle = GetUnitFacing(this.beamUnit);
       }
-      const targetCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, this.speed);
+      this.targetCoord.polarProjectCoords(this.beamCoord, this.angle, this.speed);
 
-      PathingCheck.moveFlyingUnitToCoord(this.beamUnit, targetCoord);
+      PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
 
       // if wanting to explode prematurely then
       // check if at maximal explode tick AND close enough to target
@@ -168,25 +172,23 @@ export class BeamComponent implements
   }
 
   protected setupBeamUnit(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.beamCoord.x = GetUnitX(source);
-    this.beamCoord.y = GetUnitY(source);
-    let beamTargetPoint = input.castPoint;
+    this.beamCoord.setPos(GetUnitX(source), GetUnitY(source));
     if (!this.useLastCastPoint) {
-      beamTargetPoint = input.targetPoint;
+      this.beamTargetPoint.setVector(input.targetPoint);
+    } else {
+      this.beamTargetPoint.setVector(input.castPoint);
     }
 
-    this.angle = CoordMath.angleBetweenCoords(this.beamCoord, beamTargetPoint);
+    this.angle = CoordMath.angleBetweenCoords(this.beamCoord, this.beamTargetPoint);
     if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_SOURCE) {
       // move beam slightly out of the source unit
-      this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+      this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
-      this.beamCoord.x = beamTargetPoint.x;
-      this.beamCoord.y = beamTargetPoint.y;
+      this.beamCoord.setVector(this.beamTargetPoint);
     } else {
       // caster
-      this.beamCoord.x = GetUnitX(input.caster.unit);
-      this.beamCoord.y = GetUnitY(input.caster.unit);
-      this.beamCoord = CoordMath.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+      this.beamCoord.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     }
     this.beamUnit = CreateUnit(
       input.casterPlayer, 
@@ -208,8 +210,7 @@ export class BeamComponent implements
     }
 
     if (this.explodeAtCastPoint) {
-      this.explodePosition.x = input.castPoint.x;
-      this.explodePosition.y = input.castPoint.y;
+      this.explodePosition.setPos(input.castPoint.x, input.castPoint.y);
 
       this.explodeMinDistance = this.aoe * 0.5;
 
@@ -255,7 +256,7 @@ export class BeamComponent implements
       } else if (input.targetUnit) {
         IssueTargetOrder(this.beamUnit, "attack", input.targetUnit);
       } else {
-        IssuePointOrder(this.beamUnit, "move", beamTargetPoint.x, beamTargetPoint.y);
+        IssuePointOrder(this.beamUnit, "move", this.beamTargetPoint.x, this.beamTargetPoint.y);
       }
     }
   }

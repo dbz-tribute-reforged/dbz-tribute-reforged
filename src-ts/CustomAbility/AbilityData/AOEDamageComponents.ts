@@ -1568,7 +1568,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: 2,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.40,
+      multiplier: BASE.DFIST_EXPLOSION * 0.38,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1590,7 +1590,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: 2,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.54,
+      multiplier: BASE.DFIST_EXPLOSION * 0.51,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1950,6 +1950,7 @@ export const AOEDamageComponents = [
     buffId: 0,
   },
   // energy punch
+  // has 9 lvls
   {
     name: "damage energy punch dps",
     repeatInterval: 1,
@@ -1985,7 +1986,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.8,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.7,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -2094,7 +2095,7 @@ export const AOEDamageComponents = [
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION,
-      attribute: bj_HEROSTAT_STR,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
       weaponType: 0,

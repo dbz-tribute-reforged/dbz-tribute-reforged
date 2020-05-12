@@ -111,18 +111,4 @@ export const TempAbilityComponents = [
     tempPermanence: true,
     equalizeLevels: false,
   },
-  {
-    name: "temp ability hakai toppo", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    newAbility: FourCC("A0PH"),
-    oldAbility: 0,
-    performSwap: false,
-    enableAbility: true,
-    disableAbility: false,
-    addAbility: true,
-    tempPermanence: false,
-    equalizeLevels: false,
-  },
 ];

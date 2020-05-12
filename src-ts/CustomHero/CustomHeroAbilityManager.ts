@@ -47,6 +47,9 @@ export class CustomHeroAbilityManager {
   }
 
   public cleanup() {
-    
+    for (const [name, customAbilityToRemove] of this.abilities) {
+      customAbilityToRemove.cleanup();
+    }
+    this.abilities.clear();
   }
 }

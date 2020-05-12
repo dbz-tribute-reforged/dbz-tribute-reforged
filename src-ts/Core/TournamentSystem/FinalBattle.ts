@@ -158,14 +158,18 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       const player = GetOwningPlayer(dyingUnit);
       let teamNumber = 0;
       let dyingUnitTeam: unit[] = [];
-      if (GetPlayerId(player) < Constants.maxActivePlayers / 2) {
+      let index = this.unitsTeam1.indexOf(dyingUnit);
+      if (index > -1) {
+        this.unitsTeam1.splice(index, 1);
         dyingUnitTeam = this.unitsTeam1;
         teamNumber = Constants.team1Value;
-      } else {
+      }
+      index = this.unitsTeam2.indexOf(dyingUnit);
+      if (index > -1) {
+        this.unitsTeam1.splice(index, 1);
         dyingUnitTeam = this.unitsTeam2;
         teamNumber = Constants.team2Value;
       }
-      this.removeUnitFromTeam(dyingUnit, dyingUnitTeam);
 
       Logger.LogDebug("Team " + teamNumber + " remaining: " + dyingUnitTeam.length);
       if (dyingUnitTeam.length == 0) {
@@ -173,10 +177,5 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
         this.complete();
       }
     });
-  }
-
-  removeUnitFromTeam(unit: unit, unitsTeam: unit[]) {
-    const index = unitsTeam.indexOf(unit);
-    unitsTeam.splice(index, 1);
   }
 }

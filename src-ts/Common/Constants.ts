@@ -37,8 +37,8 @@ export module Constants {
   export const reviveDelay: number = 5;
   export const team1Value: number = 1;
   export const team2Value: number = 2;
-  export const defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];
-  export const defaultTeam2: player[] = [Player(5), Player(6), Player(7), Player(8), Player(9)];
+  export let defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];
+  export let defaultTeam2: player[] = [Player(5), Player(6), Player(7), Player(8), Player(9)];
   export const creepPlayers: player[] = [
     Player(10), Player(11), Player(12), Player(13), Player(14), 
     Player(15), Player(16), Player(17), Player(18), Player(19), 

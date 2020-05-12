@@ -19,6 +19,9 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly MIN_DISTANCE_FROM_PREVIOUS = 10;
 
   protected previousCoord: Vector2D;
+  protected currentCoord: Vector2D;
+  protected dashTargetPoint: Vector2D;
+  protected targetCoord: Vector2D;
 
   constructor(
     public name: string = "Dash",
@@ -33,22 +36,26 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     public distance: number = 25,
   ) {
     this.previousCoord = new Vector2D();
+    this.currentCoord = new Vector2D();
+    this.dashTargetPoint = new Vector2D();
+    this.targetCoord = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const currentCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.currentCoord.setPos(GetUnitX(source), GetUnitY(source));
     if (
       !this.checkPreviousCoord ||
-      CoordMath.distance(this.previousCoord, currentCoord) > Dash.MIN_DISTANCE_FROM_PREVIOUS
+      CoordMath.distance(this.previousCoord, this.currentCoord) > Dash.MIN_DISTANCE_FROM_PREVIOUS
     ) {
       let direction: number = 0;
-      let dashTargetPoint = input.targetPoint;
       if (this.useLastCastPoint) {
-        dashTargetPoint = input.castPoint;
+        this.dashTargetPoint.setVector(input.castPoint);
+      } else {
+        this.dashTargetPoint.setVector(input.targetPoint);
       }
       
       if (this.targetDirection == Dash.DIRECTION_TARGET_POINT) {
-        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
         SetUnitFacing(source, direction);
 
       } else if (this.targetDirection == Dash.DIRECTION_SOURCE_FORWARD) {
@@ -56,17 +63,17 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
       } else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
         if (input.targetUnit) {
-          dashTargetPoint = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+          this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
         }
-        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
       } else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {
-        if (input.castUnit){
-          dashTargetPoint = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
+        if (input.castUnit) {
+          this.dashTargetPoint.setPos(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
         }
-        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
       } else if (this.targetDirection == Dash.DIRECTION_CASTER_POINT) {
-        dashTargetPoint = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-        direction = CoordMath.angleBetweenCoords(currentCoord, dashTargetPoint);
+        this.dashTargetPoint.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+        direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
       }
 
       direction += this.angleOffset;
@@ -90,22 +97,20 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
           );
       }
 
-      const distanceToTarget = CoordMath.distance(currentCoord, dashTargetPoint);
+      const distanceToTarget = CoordMath.distance(this.currentCoord, this.dashTargetPoint);
 
-      let targetCoord;
       if (distanceToTarget > distanceToMove) {
-        targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, distanceToMove);
+        this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToMove);
       } else {
-        targetCoord = CoordMath.polarProjectCoords(currentCoord, direction, distanceToTarget);
+        this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
       }
 
       if (this.isFlying) {
-        PathingCheck.moveFlyingUnitToCoord(source, targetCoord);
+        PathingCheck.moveFlyingUnitToCoord(source, this.targetCoord);
       } else {
-        PathingCheck.moveGroundUnitToCoord(source, targetCoord);
+        PathingCheck.moveGroundUnitToCoord(source, this.targetCoord);
       }
-      this.previousCoord.x = targetCoord.x;
-      this.previousCoord.y = targetCoord.y;
+      this.previousCoord.setVector(this.targetCoord);
     }
   }
   

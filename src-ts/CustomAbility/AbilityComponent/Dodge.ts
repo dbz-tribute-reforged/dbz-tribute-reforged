@@ -10,6 +10,10 @@ import { PathingCheck } from "Common/PathingCheck";
 export class Dodge implements AbilityComponent, Serializable<Dodge> {
   static readonly UNLIMITED_ENEMIES = -1;
 
+  protected sourceCoord: Vector2D;
+  protected dodgeCoord: Vector2D;
+  protected dodgeDirection: Vector2D;
+
   // dodge is knocking back the caster from enemy units in a given aoe
   constructor(
     public name: string = "Dodge",
@@ -24,13 +28,15 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     public addRandomAngle: boolean = false,
     public ignoreHeroes: boolean = false,
   ) {
-    
+    this.sourceCoord = new Vector2D();
+    this.dodgeCoord = new Vector2D();
+    this.dodgeDirection = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
     const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoord, 
+      this.sourceCoord, 
       this.knockbackData.aoe,
       () => {
         return UnitHelper.isUnitTargetableForPlayer(source, GetOwningPlayer(GetFilterUnit()));
@@ -38,21 +44,21 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     );
     
     let currentEnemies = 0;
-    let dodgeVector = new Vector2D(0,0);
+    this.dodgeDirection.setPos(0,0);
 
     ForGroup(affectedGroup, () => {
       if (currentEnemies < this.maxEnemies || this.maxEnemies == Dodge.UNLIMITED_ENEMIES) {
         const enemy = GetEnumUnit();
         if (!IsUnitType(enemy, UNIT_TYPE_HERO) || !this.ignoreHeroes) {
           const enemyCoord = new Vector2D(GetUnitX(enemy), GetUnitY(enemy));
-          let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, sourceCoord);
+          let dodgeAngle = CoordMath.angleBetweenCoords(enemyCoord, this.sourceCoord);
           if (this.addRandomAngle) {
             dodgeAngle += Math.random() * this.knockbackData.angle - this.knockbackData.angle / 2;
           } else {
             dodgeAngle += this.knockbackData.angle;
           }
-          const dodgeCoord = CoordMath.polarProjectCoords(sourceCoord, dodgeAngle, this.knockbackData.speed);
-          dodgeVector.add(dodgeCoord);
+          this.dodgeCoord.polarProjectCoords(this.sourceCoord, dodgeAngle, this.knockbackData.speed);
+          this.dodgeDirection.add(this.dodgeCoord);
           /*
           const newDodgeAngle = CoordMath.angleBetweenCoords(newSourceCoord, dodgeCoord);
           const newDodgeDistance = CoordMath.distance(newSourceCoord, dodgeCoord);
@@ -66,12 +72,12 @@ export class Dodge implements AbilityComponent, Serializable<Dodge> {
     DestroyGroup(affectedGroup);
 
     if (currentEnemies > 0) {
-      dodgeVector.x = dodgeVector.x / currentEnemies;
-      dodgeVector.y = dodgeVector.y / currentEnemies;
+      this.dodgeDirection.x = this.dodgeDirection.x / currentEnemies;
+      this.dodgeDirection.y = this.dodgeDirection.y / currentEnemies;
       if (this.groundOnly) {
-        PathingCheck.moveGroundUnitToCoord(source, dodgeVector);
+        PathingCheck.moveGroundUnitToCoord(source, this.dodgeDirection);
       } else {
-        PathingCheck.moveFlyingUnitToCoord(source, dodgeVector);
+        PathingCheck.moveFlyingUnitToCoord(source, this.dodgeDirection);
       }
     }
   }
