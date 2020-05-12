@@ -26,7 +26,7 @@ export module Constants {
     -7000, 20000
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    -1000, 24000
+    6000, 24000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;

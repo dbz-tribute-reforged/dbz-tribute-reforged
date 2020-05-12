@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.42c
+DBZ Tribute Reforged 0.42d
 }
 
 STRING 4
@@ -8278,7 +8278,7 @@ B
 }
 
 STRING 1315
-// Units: n042 (Moro), Name (Name)
+// Units: H08Y (Planet-Eater), Propernames (Proper Names)
 {
 Moro
 }
@@ -68529,7 +68529,7 @@ Planet-Eater
 }
 
 STRING 11296
-// Units: H08Y (Planet-Eater), Propernames (Proper Names)
+// Units: n042 (Moro), Name (Name)
 {
 Moro
 }

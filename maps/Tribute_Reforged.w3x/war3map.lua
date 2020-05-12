@@ -613,6 +613,7 @@ gg_trg_Saitama = nil
 gg_trg_Ainz = nil
 gg_trg_El_Hermano = nil
 gg_trg_Chef_Satan = nil
+gg_trg_Moro_Shop = nil
 gg_trg_Regen_Items_Use = nil
 gg_trg_Regen_Items_All_Looper = nil
 gg_trg_Regen_Items_Do_Regen = nil
@@ -631,7 +632,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Moro_Shop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
