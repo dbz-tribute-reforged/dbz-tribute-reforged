@@ -10,6 +10,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
 
   protected previousHp: number;
   protected remainingBlock: number;
+  protected currentHp: number;
 
   // may need its own sfx component to indicate when block is dead or not
   constructor(
@@ -26,6 +27,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   ) {
     this.previousHp = 0;
     this.remainingBlock = 0;
+    this.currentHp = 0;
   }
 
   calculateMaxBlock(input: CustomAbilityInput): number {
@@ -38,9 +40,9 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    let currentHp = GetUnitState(source, UNIT_STATE_LIFE);
+    this.currentHp = GetUnitState(source, UNIT_STATE_LIFE);
     if (ability.currentTick == this.startTick) {
-      this.previousHp = currentHp;
+      this.previousHp = this.currentHp;
       this.remainingBlock = this.calculateMaxBlock(input);
     }
     
@@ -68,7 +70,7 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         timeRatio,
       );
 
-      const hpDifference = this.previousHp - currentHp;
+      const hpDifference = this.previousHp - this.currentHp;
       if (hpDifference > 0) {
         let amountBlocked = 0;
         if (this.isPercentageBlock) {
@@ -103,15 +105,15 @@ export class DamageBlock implements AbilityComponent, Serializable<DamageBlock> 
         }
 
         const maxHp = GetUnitState(source, UNIT_STATE_MAX_LIFE);
-        if (currentHp + amountBlocked > maxHp) {
-          amountBlocked = maxHp - currentHp;
+        if (this.currentHp + amountBlocked > maxHp) {
+          amountBlocked = maxHp - this.currentHp;
         }
         this.remainingBlock -= amountBlocked;
-        currentHp += amountBlocked;
-        SetUnitState(source, UNIT_STATE_LIFE, currentHp);
+        this.currentHp += amountBlocked;
+        SetUnitState(source, UNIT_STATE_LIFE, this.currentHp);
       }
 
-      this.previousHp = currentHp;
+      this.previousHp = this.currentHp;
     }
 
     if (ability.isFinishedUsing(this)) {

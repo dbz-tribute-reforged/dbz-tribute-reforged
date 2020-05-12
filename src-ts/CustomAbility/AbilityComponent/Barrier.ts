@@ -15,6 +15,9 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   protected innerAOE: number;
   protected outerAOE: number;
 
+  protected targetCoords: Vector2D;
+  protected newCoords: Vector2D;
+
   constructor(
     public name: string = "Barrier",
     public repeatInterval: number = 1,
@@ -30,11 +33,12 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     this.insideUnits = CreateGroup();
     this.innerAOE = 0;
     this.outerAOE = 0;
+    this.targetCoords = new Vector2D();
+    this.newCoords = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.sourceCoords.x = GetUnitX(source);
-    this.sourceCoords.y = GetUnitY(source);
+    this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
 
     if (!this.hasStarted) {
       this.hasStarted = true;
@@ -57,22 +61,22 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     if (!this.canWalkOut) {
       ForGroup(this.insideUnits, () => {
         const target = GetEnumUnit();
-        const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
-        const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
+        this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
+        const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
         if (
           targetDistance > this.innerAOE && 
           targetDistance < this.aoe * 2.5
         ) {
-          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
-          const newCoords = CoordMath.polarProjectCoords(
+          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
+          this.newCoords.polarProjectCoords(
             this.sourceCoords, 
             targetAngle, 
             this.innerAOE
           );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
-            PathingCheck.moveFlyingUnitToCoord(target, newCoords);
+            PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
           } else {
-            PathingCheck.moveGroundUnitToCoord(target, newCoords);
+            PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
           }
         }
       });
@@ -95,22 +99,22 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
 
       ForGroup(outsideUnits, () => {
         const target = GetEnumUnit();
-        const targetCoords = new Vector2D(GetUnitX(target), GetUnitY(target));
-        const targetDistance = CoordMath.distance(this.sourceCoords, targetCoords);
+        this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
+        const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
         if (targetDistance <= this.innerAOE) {
           // it probably came / spawned from within
           GroupAddUnit(this.insideUnits, target);
         } else {
-          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targetCoords);
-          const newCoords = CoordMath.polarProjectCoords(
+          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
+          this.newCoords.polarProjectCoords(
             this.sourceCoords, 
             targetAngle, 
             this.outerAOE
           );
           if (IsUnitType(target, UNIT_TYPE_FLYING)) {
-            PathingCheck.moveFlyingUnitToCoord(target, newCoords);
+            PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
           } else {
-            PathingCheck.moveGroundUnitToCoord(target, newCoords);
+            PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
           }
         }
       });

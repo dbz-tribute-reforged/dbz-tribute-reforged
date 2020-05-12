@@ -14,6 +14,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
 
   protected sourceCoord: Vector2D;
   protected targetCoord: Vector2D;
+  protected newTargetCoord: Vector2D;
 
   constructor(
     public name: string = "AOEKnockback",
@@ -30,19 +31,17 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   ) {
     this.sourceCoord = new Vector2D();
     this.targetCoord = new Vector2D();
+    this.newTargetCoord = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (this.knockbackSource == AOEKnockback.SOURCE_UNIT) {
-      this.sourceCoord.x = GetUnitX(source);
-      this.sourceCoord.y = GetUnitY(source);
+      this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
     } else {
       if (this.useLastCastPoint) {
-        this.sourceCoord.x = input.castPoint.x;
-        this.sourceCoord.y = input.castPoint.y;
+        this.sourceCoord.setVector(input.castPoint);
       } else {
-        this.sourceCoord.x = input.targetPoint.x;
-        this.sourceCoord.y = input.targetPoint.y;
+        this.sourceCoord.setVector(input.targetPoint);
       }
     }
     const affectedGroup = UnitHelper.getNearbyValidUnits(
@@ -55,15 +54,14 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
 
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
-      this.targetCoord.x = GetUnitX(target);
-      this.targetCoord.y = GetUnitY(target);
+      this.targetCoord.setPos(GetUnitX(target), GetUnitY(target));
       const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
       if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
         SetUnitFacing(target, sourceToTargetAngle);
       }
       const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
-      const newTargetCoord = CoordMath.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
-      PathingCheck.moveGroundUnitToCoord(target, newTargetCoord);
+      this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
+      PathingCheck.moveGroundUnitToCoord(target, this.newTargetCoord);
     });
     DestroyGroup(affectedGroup);
   }

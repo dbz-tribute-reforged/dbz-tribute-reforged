@@ -748,6 +748,28 @@ export function CustomPlayerTest() {
     }
   });
 
+
+  // swap players command
+  const swapPlayersCommand = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(swapPlayersCommand, Player(0), "-swap", false);
+  TriggerAddAction(swapPlayersCommand, () => {
+    const playerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
+    if (playerId >= 0 && playerId < bj_MAX_PLAYERS) {
+      const targetPlayer = Player(playerId);
+      let index = Constants.defaultTeam1.indexOf(targetPlayer);
+      if (index > -1) {
+        Constants.defaultTeam1.splice(index, 1);
+        Constants.defaultTeam2.push(targetPlayer);
+      } else {
+        index = Constants.defaultTeam2.indexOf(targetPlayer);
+        if (index > -1) {
+          Constants.defaultTeam2.splice(index, 1);
+          Constants.defaultTeam1.push(targetPlayer);
+        }
+      }
+    }
+  });
+
   /*
   // revive heroes for free
   const revoiveSpam = CreateTrigger();
@@ -1003,7 +1025,11 @@ export function CustomPlayerTest() {
   const forceFinalBattleTrig = CreateTrigger();
   TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
   TriggerAddAction(forceFinalBattleTrig, () => {
-    TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+    TournamentManager.getInstance().addFinalBattle();
+    TimerStart(CreateTimer(), 5.0, false, () => {
+      TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+      DestroyTimer(GetExpiredTimer());
+    })
   });
 
   const memesOff = CreateTrigger();

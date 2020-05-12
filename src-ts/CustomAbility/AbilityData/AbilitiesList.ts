@@ -1967,7 +1967,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward god of destruction toppo" },
-      { name: "temp ability hakai toppo" },
       { name: "sfx god of destruction toppo" },
     ],
   },

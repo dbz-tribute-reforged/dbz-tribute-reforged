@@ -25,8 +25,7 @@ export class Deflector implements AbilityComponent, Serializable<Deflector> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.sourceCoord.x = GetUnitX(source);
-    this.sourceCoord.y = GetUnitY(source);
+    this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
     const affectedGroup = UnitHelper.getNearbyValidUnits(
       this.sourceCoord, 
       this.aoe,
@@ -39,7 +38,8 @@ export class Deflector implements AbilityComponent, Serializable<Deflector> {
       const target = GetEnumUnit();
       this.targetCoord.x = GetUnitX(target);
       this.targetCoord.y = GetUnitY(target);
-      const deflectionAngle = this.extraAngle + CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
+      const deflectionAngle = this.extraAngle + 
+        CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
       SetUnitTurnSpeed(target, 999);
       SetUnitFacing(target, deflectionAngle);
       SetUnitTurnSpeed(target, GetUnitDefaultTurnSpeed(target));

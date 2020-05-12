@@ -21,6 +21,15 @@ export module ItemConstants {
     FourCC("I03A"),
     FourCC("I03B"),
   ];
+  export const zSword = [
+    FourCC("I009"),
+  ];
+  export const powerPole = [
+    FourCC("I04J"),
+  ];
+  export const vegetaTail = [
+    FourCC("I04I"),
+  ];
   export const darknessGenerator = [
     FourCC("I035"),
   ];
@@ -56,6 +65,9 @@ export module ItemConstants {
     FourCC("I03Y"),
     FourCC("I03Z"),
   ];
+  export const daburaSword = [
+    FourCC("I04K"),
+  ];
   export const beeDogItem = [
     FourCC("I04G"),
   ];
@@ -66,6 +78,9 @@ export module ItemConstants {
     FourCC("I03I"),
     FourCC("I03J"),
   ];
+  export const whisStaff = [
+    FourCC("I04L"),
+  ];
   export const sorbetRing = [
     FourCC("I046"),
   ];
@@ -74,6 +89,9 @@ export module ItemConstants {
   ];
   export const sorrowfulScythe = [
     FourCC("I04A"),
+  ];
+  export const sandbags = [
+    FourCC("I04M"),
   ];
   export const CLEANSED_DRAGONBALL = FourCC("I02V");
 
@@ -93,6 +111,8 @@ export module ItemConstants {
     export const BATTLE_ARMOR_5 = battleArmor[4];
     export const BROLY_FUR = battleArmor[5];
 
+    export const POWER_POLE = powerPole[0];
+    export const VEGETA_TAIL = vegetaTail[0];
     export const WHEELO_RESEARCH_1 = wheeloResearch[0];
     export const DARKNESS_GENERATOR = darknessGenerator[0];
     export const SCOUTER_1 = scouter[0];
@@ -105,9 +125,11 @@ export module ItemConstants {
     export const HBTC_TRAINING_TICKET = trainingTicket[0];
     export const BIO_LAB_RESEARCH = bioLabResearch[0];
     export const DIMENSION_SWORD = dimensionSwordSaga[0];
+    export const DABURA_SWORD = daburaSword[0];
     export const BEE_DOG_ITEM = beeDogItem[0];
     export const BRAVE_SWORD = braveSword[0];
     export const BEERUS_PUDDING = Consumables.PUDDING;
+    export const WHIS_STAFF = whisStaff[0];
     export const SORBET_RING = sorbetRing[0];
     export const TIME_RING = timeRing[0];
     export const SORROWFUL_SCYTHE = sorrowfulScythe[0];

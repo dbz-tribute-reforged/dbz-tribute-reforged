@@ -79,9 +79,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
 
   setDamageSourceToTargettedPoint(input: CustomAbilityInput) {
     if (this.useLastCastPoint) {
-      this.damageCoords = new Vector2D(input.castPoint.x, input.castPoint.y);
+      this.damageCoords.setPos(input.castPoint.x, input.castPoint.y);
     } else {
-      this.damageCoords = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+      this.damageCoords.setPos(input.targetPoint.x, input.targetPoint.y);
     }
   }
 
@@ -100,16 +100,16 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     if (this.damageSource == AOEDamage.SOURCE_TARGET_POINT_DYNAMIC) {
       this.setDamageSourceToTargettedPoint(input);
     } else if (this.damageSource == AOEDamage.SOURCE_UNIT) {
-      this.damageCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+      this.damageCoords.setPos(GetUnitX(source), GetUnitY(source));
     } else if (this.damageSource == AOEDamage.SOURCE_TARGET_UNIT) {
       if (input.targetUnit) {
-        this.damageCoords = new Vector2D(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+        this.damageCoords.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
       } else {
         this.setDamageSourceToTargettedPoint(input);
       }
     } else if (this.damageSource == AOEDamage.SOURCE_LAST_CAST_UNIT) {
       if (input.castUnit) {
-        this.damageCoords = new Vector2D(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
+        this.damageCoords.setPos(GetUnitX(input.castUnit), GetUnitY(input.castUnit));
       } else {
         this.setDamageSourceToTargettedPoint(input);
       }

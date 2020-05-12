@@ -9,6 +9,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
 
   protected alreadyDebuffed: Map<number, boolean>;
   protected castDummy: unit;
+  protected sourceCoord: Vector2D;
 
   constructor(
     public name: string = "AOEDebuff",
@@ -25,18 +26,24 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
   ) {
     this.alreadyDebuffed = new Map();
     this.castDummy = GetEnumUnit();
+    this.sourceCoord = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
     if (ability.currentTick == this.startTick) {
-      this.castDummy = CreateUnit(input.casterPlayer, Constants.dummyCasterId, sourceCoord.x, sourceCoord.y, 0);
+      this.castDummy = CreateUnit(
+        input.casterPlayer, 
+        Constants.dummyCasterId, 
+        this.sourceCoord.x, this.sourceCoord.y, 
+        0
+      );
       UnitAddAbility(this.castDummy, this.abilityId);
       this.alreadyDebuffed.clear();
     }
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoord, 
+      this.sourceCoord, 
       this.aoe,
       () => {
         return (

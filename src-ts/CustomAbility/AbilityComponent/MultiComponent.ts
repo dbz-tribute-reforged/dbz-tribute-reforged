@@ -30,6 +30,9 @@ export class MultiComponent implements
   protected currentDelay: number;
   protected activeComponents: AbilityComponent[];
 
+  protected targettedPoint: Vector2D;
+  protected newCoord: Vector2D;
+
   constructor(
     public name: string = "MultiComponent",
     public repeatInterval: number = 1,
@@ -63,6 +66,8 @@ export class MultiComponent implements
     this.replacementCoords = new Map();
     this.currentDelay = 0;
     this.activeComponents = [];
+    this.targettedPoint = new Vector2D();
+    this.newCoord = new Vector2D();
   }
 
   activateComponentsWhenReady() {
@@ -109,11 +114,9 @@ export class MultiComponent implements
     const replacedCoord = this.replacementCoords.get(component)
     if (replacedCoord) {
       if (this.useLastCastPoint) {
-        input.castPoint.x = replacedCoord.x;
-        input.castPoint.y = replacedCoord.y;
+        input.castPoint.setVector(replacedCoord);
       } else {
-        input.targetPoint.x = replacedCoord.x;
-        input.targetPoint.y = replacedCoord.y;
+        input.targetPoint.setVector(replacedCoord);
       }
     } else {
       this.replacementCoords.set(component, new Vector2D(newCoord.x, newCoord.y));
@@ -123,15 +126,12 @@ export class MultiComponent implements
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.fixedSourceCoords || !this.hasStarted) {
       if (!this.useTargetUnitAsSource) {
-        this.sourceCoords.x = GetUnitX(source);
-        this.sourceCoords.y = GetUnitY(source);
+        this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
       } else {
         if (input.targetUnit) {
-          this.sourceCoords.x = GetUnitX(input.targetUnit);
-          this.sourceCoords.y = GetUnitY(input.targetUnit);
+          this.sourceCoords.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
         } else {
-          this.sourceCoords.x = GetUnitX(source);
-          this.sourceCoords.y = GetUnitY(source);
+          this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
         }
       }
     }
@@ -151,16 +151,16 @@ export class MultiComponent implements
         this.angleMin = tmp;
         this.angleDirection = -1;
       }
-      let targettedPoint = input.targetPoint;
+      this.targettedPoint.setVector(input.targetPoint);
       if (this.useLastCastPoint) {
-        targettedPoint = input.castPoint;
+        this.targettedPoint.setVector(input.castPoint);
       }
 
-      this.originalAngle = CoordMath.angleBetweenCoords(this.sourceCoords, targettedPoint);
+      this.originalAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targettedPoint);
       if (this.forceMaxDistance < 0.5) {
         this.originalDistance =
           Math.max(
-            CoordMath.distance(this.sourceCoords, targettedPoint),
+            CoordMath.distance(this.sourceCoords, this.targettedPoint),
             this.forceMinDistance
           );
       } else if (this.forceMaxDistance >= 0.5) {
@@ -168,11 +168,10 @@ export class MultiComponent implements
           this.forceMinDistance + 
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
-      this.originalTarget.x = targettedPoint.x
-      this.originalTarget.y = targettedPoint.y;
       if (this.angleRange >= 360) {
-        this.originalTarget.x = GetUnitX(input.caster.unit);
-        this.originalTarget.y = GetUnitY(input.caster.unit);
+        this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      } else {
+        this.originalTarget.setVector(this.targettedPoint);
       }
       this.currentDelay = this.delayBetweenComponents;
     }
@@ -193,22 +192,18 @@ export class MultiComponent implements
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
 
-      const newCoord = CoordMath.polarProjectCoords(
+      this.newCoord.polarProjectCoords(
         this.sourceCoords, 
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
 
       if (this.useLastCastPoint) {
-        this.oldPoint.x = input.castPoint.x;
-        this.oldPoint.y = input.castPoint.y;
-        input.castPoint.x = newCoord.x;
-        input.castPoint.y = newCoord.y;
+        this.oldPoint.setVector(input.castPoint);
+        input.castPoint.setVector(this.newCoord);
       } else {
-        this.oldPoint.x = input.targetPoint.x;
-        this.oldPoint.y = input.targetPoint.y;
-        input.targetPoint.x = newCoord.x;
-        input.targetPoint.y = newCoord.y;
+        this.oldPoint.setPos(input.targetPoint.x, input.targetPoint.y);
+        input.targetPoint.setVector(this.newCoord);
       }
       let oldSource = source;
       if (this.useTargetUnitAsSource && input.targetUnit) {
@@ -219,7 +214,7 @@ export class MultiComponent implements
       for (const component of this.activeComponents) {
         if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
           if (this.fixedReplacementCoords) {
-            this.manageFixedReplacementCoords(component, input, newCoord);
+            this.manageFixedReplacementCoords(component, input, this.newCoord);
           }
           component.performTickAction(ability, input, source);
         }
@@ -230,11 +225,9 @@ export class MultiComponent implements
       }
 
       if (this.useLastCastPoint) {
-        input.castPoint.x = this.oldPoint.x;
-        input.castPoint.y = this.oldPoint.y;
+        input.castPoint.setVector(this.oldPoint);
       } else {
-        input.targetPoint.x = this.oldPoint.x;
-        input.targetPoint.y = this.oldPoint.y;
+        input.targetPoint.setVector(this.oldPoint);
       }
 
       // if fired a beam, then adjust angle to next point

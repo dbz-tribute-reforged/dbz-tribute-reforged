@@ -99,8 +99,7 @@ export class SagaHeroAI {
 
   public cleanup(): this {
     this.abilities.clear();
-    this.sagaCustomHero.abilities.abilities.clear();
-    this.sagaCustomHero.isCasting.clear();
+    this.sagaCustomHero.cleanup();
     return this;
   }
 

@@ -63,8 +63,7 @@ export class TournamentManager {
       }
     }
     if (numActivePlayers > 1) {
-      const finalBattle = new FinalBattle();
-      this.tournaments.set(finalBattle.name, finalBattle);
+      this.addFinalBattle();
     } else {
       BJDebugMsg("|cffff2020Final battle disabled.|r");
     }
@@ -99,6 +98,11 @@ export class TournamentManager {
     );
 
     return this;
+  }
+
+  public addFinalBattle() {
+    const finalBattle = new FinalBattle();
+    this.tournaments.set(finalBattle.name, finalBattle);
   }
 
   public removeTournament(name: string): boolean {

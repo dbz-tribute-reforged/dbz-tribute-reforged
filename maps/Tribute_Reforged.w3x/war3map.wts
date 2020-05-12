@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.42b
+DBZ Tribute Reforged 0.42c
 }
 
 STRING 4
@@ -8277,28 +8277,10 @@ STRING 1314
 B
 }
 
-STRING 1315
-// Items: I009 (Z Sword), Tip (Tooltip - Basic)
-{
-Holy sword of the kais.
-}
-
 STRING 1316
 // Items: I009 (Z Sword), Name (Name)
 {
 Z Sword
-}
-
-STRING 1317
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
-{
-Holy sword of the kais.
-}
-
-STRING 1318
-// Items: I009 (Z Sword), Description (Description)
-{
-Holy sword of the kais.
 }
 
 STRING 1319
@@ -15029,9 +15011,12 @@ Focus
 }
 
 STRING 2432
-// Abilities: A066 (Mysterious Scroll), Name (Name)
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
 {
-Mysterious Scroll
+Holy sword of the kais.
+|cffffff00+0.1x Int mult.
+-0.1x Agi mult.
+Reduces max movement speed by 30.|r
 }
 
 STRING 2433
@@ -38593,18 +38578,6 @@ STRING 6345
 +10 armor.|n|cff999999"One size fits all!"!|r
 }
 
-STRING 6346
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
-{
-|cffffff00+15 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
-}
-
-STRING 6347
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
-{
-|cffffff00+15 armor.|r|n|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
-}
-
 STRING 6348
 {
 Stat Modification
@@ -51662,9 +51635,12 @@ King K Rool charges forward, dealing damage and stunning all units in his path.|
 }
 
 STRING 8515
-// Items: I04A (Sorrowful Scythe), Description (Description)
+// Items: I009 (Z Sword), Description (Description)
 {
-|cffffff0050% of melee damage cleaves to nearby enemies.|r
+Holy sword of the kais.
+|cffffff00+0.1x Int mult.
+-0.1x Agi mult.
+Reduces max movement speed by 30.|r
 }
 
 STRING 8516
@@ -51860,9 +51836,9 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 8548
-// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
 {
-|cffffff0050% of melee damage cleaves to nearby enemies.|r
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 8549
@@ -71886,18 +71862,6 @@ STRING 11855
 First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur5> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool5> seconds|r
 }
 
-STRING 11856
-// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
-{
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
-}
-
-STRING 11857
-// Items: I03R (Dimension Sword S [1/5]), Description (Description)
-{
-Adds 500 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
-}
-
 STRING 11858
 // Items: I035 (Darkness Generator), Description (Description)
 {
@@ -71908,18 +71872,6 @@ STRING 11859
 // Items: I035 (Darkness Generator), Tip (Tooltip - Basic)
 {
 Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
-}
-
-STRING 11860
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+500 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
-}
-
-STRING 11861
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+500 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 11862
@@ -75186,9 +75138,9 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12393
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.020x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 12394
@@ -75222,33 +75174,33 @@ STRING 12398
 }
 
 STRING 12399
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.025x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
 }
 
 STRING 12400
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I03R (Dimension Sword S [1/5]), Description (Description)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.030x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
 }
 
 STRING 12401
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I04A (Sorrowful Scythe), Description (Description)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.035x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
-}
-
-STRING 12402
-// Abilities: A00J (Power Level Rising), Researchubertip (Tooltip - Learn - Extended)
-{
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.010x + 0.005x * lvl|r|n|cff00FFFFCooldown: <A00J,Cool1> - <A00J,Cool7> seconds|r
+The user converts Ki into a deadly Energy Blade.
+|cffffff0050% of melee damage cleaves to nearby enemies.
++0.1x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 12403
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.040x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+The user converts Ki into a deadly Energy Blade.
+|cffffff0050% of melee damage cleaves to nearby enemies.
++0.1x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 12404
@@ -75384,9 +75336,13 @@ STRING 12425
 }
 
 STRING 12426
-// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
 {
-Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.045x|r|n|cff00FFFFCooldown: <A00J,Cool1> seconds|r
+|cffffff00+15 armor.
++0.1x Str mult.
++0.1x Agi mult.
+-0.1x Int mult.|r
+|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
 }
 
 STRING 12427
@@ -77245,9 +77201,25 @@ Toppo
 }
 
 STRING 12724
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+{
+|cffffff00+15 armor.
++0.1x Str mult.
++0.1x Agi mult.
+-0.1x Int mult.|r
+|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 12725
+// Units: H09C (Leader of the Pride Troopers), Tip (Tooltip - Basic)
+{
+[|cffffff00A|r] Choose Toppo
+}
+
+STRING 12726
 // Units: H09C (Leader of the Pride Troopers), Ubertip (Tooltip - Extended)
 {
-A strong close-range fighter with high-damage nukes and a long duration grapple attack. His end-game God of Destruction form is one of the strongest transformations in the game.
+A strong close-range fighter with high-damage nukes and a long duration grapple attack. Has a weak early-game but eventually becomes one of the strongest end-game heroes with his God of Destruction form.
 
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
 |cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
@@ -77255,12 +77227,6 @@ A strong close-range fighter with high-damage nukes and a long duration grapple 
 |cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 12725
-// Units: H09C (Leader of the Pride Troopers), Tip (Tooltip - Basic)
-{
-[|cffffff00A|r] Choose Toppo
 }
 
 STRING 12727
@@ -77408,6 +77374,12 @@ STRING 12750
 Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice, temporarily blinding them. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P1,Cool10> seconds|r
 }
 
+STRING 12751
+// Abilities: A066 (Use Item), Name (Name)
+{
+Use Item
+}
+
 STRING 12752
 // Abilities: A0P2 (Ice Slash), Ubertip (Tooltip - Normal - Extended)
 {
@@ -77474,6 +77446,12 @@ STRING 12762
 Eis Shenron swiftly slashes nearby enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0P2,Cool10> seconds|r
 }
 
+STRING 12763
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.020x|r|n|cff00FFFFCooldown: <A00J,Cool2> seconds|r
+}
+
 STRING 12764
 // Abilities: A0PB (Justice Flash), Tip (Tooltip - Normal)
 {
@@ -77520,6 +77498,18 @@ STRING 12771
 // Abilities: A0PB (Justice Flash), Name (Name)
 {
 Justice Flash
+}
+
+STRING 12772
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.025x|r|n|cff00FFFFCooldown: <A00J,Cool3> seconds|r
+}
+
+STRING 12773
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.030x|r|n|cff00FFFFCooldown: <A00J,Cool4> seconds|r
 }
 
 STRING 12774
@@ -77708,16 +77698,46 @@ STRING 12804
 [|cff00ff00Q|r] Justice Flash - [|cffffcc00Level 10|r]
 }
 
+STRING 12805
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.035x|r|n|cff00FFFFCooldown: <A00J,Cool5> seconds|r
+}
+
+STRING 12806
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.040x|r|n|cff00FFFFCooldown: <A00J,Cool6> seconds|r
+}
+
+STRING 12807
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.045x|r|n|cff00FFFFCooldown: <A00J,Cool7> seconds|r
+}
+
 STRING 12808
 // Abilities: A0PC (God of Destruction), Name (Name)
 {
 God of Destruction
 }
 
+STRING 12809
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 8|r]
+}
+
 STRING 12810
 // Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 12811
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 9|r]
 }
 
 STRING 12812
@@ -78578,10 +78598,22 @@ STRING 12938
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 1|r]
 }
 
+STRING 12939
+// Abilities: A00J (Power Level Rising), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Power Level Rising - [|cffffcc00Level 10|r]
+}
+
 STRING 12940
 // Abilities: A0PF (Justice Pose), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Justice Pose - [|cffffcc00Level %d|r]
+}
+
+STRING 12941
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.050x|r|n|cff00FFFFCooldown: <A00J,Cool8> seconds|r
 }
 
 STRING 12942
@@ -78602,6 +78634,63 @@ STRING 12944
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 3|r]
 }
 
+STRING 12945
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.055x|r|n|cff00FFFFCooldown: <A00J,Cool9> seconds|r
+}
+
+STRING 12946
+// Abilities: A00J (Power Level Rising), Ubertip (Tooltip - Normal - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: +0.060x|r|n|cff00FFFFCooldown: <A00J,Cool10> seconds|r
+}
+
+STRING 12947
+// Abilities: A0G8 (Energy Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Energy Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 12948
+// Abilities: A0G8 (Energy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Broly packs energy into his punch knocking back and stunning nearby enemies..|n|cff00FF00Damage: Lvl * Agi * ?|r|n|cff00FFFFCooldown: <A0G8,Cool10> seconds|r
+}
+
+STRING 12949
+// Items: I04I (Vegeta's Tail), Name (Name)
+{
+Vegeta's Tail
+}
+
+STRING 12950
+// Items: I04I (Vegeta's Tail), Description (Description)
+{
+Vegeta's sliced-off tail resonates immense strength.
+|cffffff00+0.1x Str mult.|r
+}
+
+STRING 12951
+// Items: I04I (Vegeta's Tail), Ubertip (Tooltip - Extended)
+{
+Vegeta's sliced-off tail resonates immense strength.
+|cffffff00+0.1x Str mult.|r
+}
+
+STRING 12952
+// Items: I04J (Power Pole), Name (Name)
+{
+Power Pole
+}
+
+STRING 12953
+// Items: I04J (Power Pole), Description (Description)
+{
+The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
+|cffffff00+0.05x Agi mult.|r
+}
+
 STRING 12954
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
@@ -78618,6 +78707,19 @@ STRING 12956
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Justice Flash 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 12957
+// Items: I04J (Power Pole), Ubertip (Tooltip - Extended)
+{
+The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
+|cffffff00+0.05x Agi mult.|r
+}
+
+STRING 12958
+// Items: I04K (Dabura's Sword), Name (Name)
+{
+Dabura's Sword
 }
 
 STRING 12959
@@ -78704,10 +78806,32 @@ STRING 12972
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 9|r]
 }
 
+STRING 12973
+// Items: I04K (Dabura's Sword), Description (Description)
+{
+The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
+|cffffff00-0.2x Str mult if not a demon.
++0.1x Agi mult.|r
+}
+
+STRING 12974
+// Items: I04K (Dabura's Sword), Ubertip (Tooltip - Extended)
+{
+The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
+|cffffff00-0.2x Str mult if not a demon.
++0.1x Agi mult.|r
+}
+
 STRING 12975
 // Abilities: A0PK (Justice Punch 2), Name (Name)
 {
 Justice Punch 2
+}
+
+STRING 12976
+// Items: I04L (Whis' Staff), Name (Name)
+{
+Whis' Staff
 }
 
 STRING 12977
@@ -78716,10 +78840,24 @@ STRING 12977
 This unit is trapped in a Justice Hold, it cannot move or attack and will take damage over time.
 }
 
+STRING 12980
+// Items: I04L (Whis' Staff), Description (Description)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.15x Int mult.|r
+}
+
 STRING 12981
 // Abilities: A0PF (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 10|r]
+}
+
+STRING 12982
+// Items: I04L (Whis' Staff), Ubertip (Tooltip - Extended)
+{
+The multi-purpose tool of Angels, used to assist Gods of Destruction.
+|cffffff00+0.15x Int mult.|r
 }
 
 STRING 12983
@@ -78926,10 +79064,26 @@ STRING 13016
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 1|r]
 }
 
+STRING 13017
+// Items: I04M (Sandbags), Name (Name)
+{
+Sandbags
+}
+
 STRING 13018
 // Abilities: A0PL (Justice Tornado 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Justice Tornado 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 13019
+// Items: I04M (Sandbags), Description (Description)
+{
+Useless.
+|cffffff00Stackable.
+-0.1x Str mult.
+-0.1x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 13020
@@ -78954,6 +79108,22 @@ STRING 13023
 // Abilities: A0PL (Justice Tornado 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 13024
+// Items: I04M (Sandbags), Ubertip (Tooltip - Extended)
+{
+Useless.
+|cffffff00Stackable.
+-0.1x Str mult.
+-0.1x Agi mult.
+-0.1x Int mult.|r
+}
+
+STRING 13025
+// Abilities: A00J (Power Level Rising), Researchubertip (Tooltip - Learn - Extended)
+{
+Broly's power level rapidly rises causing the surrounding area to crumble apart doing damage to nearby units.|n|cff00FF00Damage: lvl * str * ?|nTemporary Stat Mult: 0.010x + 0.005x * lvl|r|n|cff00FFFFCooldown: <A00J,Cool1> - <A00J,Cool10> seconds|r
 }
 
 STRING 13026

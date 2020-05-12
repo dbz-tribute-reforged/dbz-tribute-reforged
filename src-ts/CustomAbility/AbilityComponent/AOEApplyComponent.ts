@@ -12,6 +12,8 @@ export class AOEApplyComponent implements
   AddableComponent 
 {
 
+  protected sourceCoords: Vector2D;
+
   constructor(
     public name: string = "AOEApplyComponent",
     public repeatInterval: number = 1,
@@ -23,14 +25,14 @@ export class AOEApplyComponent implements
     public affectsAllies: boolean = false,
     public components: AbilityComponent[] = [],
   ) {
-
+    this.sourceCoords = new Vector2D();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoords = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
 
     const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoords, 
+      this.sourceCoords, 
       this.aoe,
       () => {
         const testUnit = GetFilterUnit();

@@ -22,6 +22,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   protected hookDirection: number;
   protected hookedUnit: unit | null;
   protected hookPause: boolean;
+  protected nextCoord: Vector2D;
 
   constructor(
     public name: string = "Hook",
@@ -51,6 +52,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.hookDirection = Hook.DIRECTION_FORWARDS;
     this.hookedUnit = null;
     this.hookPause = false;
+    this.nextCoord = new Vector2D();
   }
   
   protected calculateDamage(input: CustomAbilityInput): number {
@@ -64,9 +66,9 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   }
 
   moveHook(speed: number): this {
-    const nextCoord = CoordMath.polarProjectCoords(this.hookCoords, this.hookAngle, speed);
-    if (RectContainsCoords(GetPlayableMapRect(), nextCoord.x, nextCoord.y)) {
-      this.hookCoords = nextCoord;    
+    this.nextCoord.polarProjectCoords(this.hookCoords, this.hookAngle, speed);
+    if (RectContainsCoords(GetPlayableMapRect(), this.nextCoord.x, this.nextCoord.y)) {
+      this.hookCoords.setVector(this.nextCoord);    
       this.currentRange += speed;
     }
     return this;
