@@ -166,7 +166,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       }
       index = this.unitsTeam2.indexOf(dyingUnit);
       if (index > -1) {
-        this.unitsTeam1.splice(index, 1);
+        this.unitsTeam2.splice(index, 1);
         dyingUnitTeam = this.unitsTeam2;
         teamNumber = Constants.team2Value;
       }
