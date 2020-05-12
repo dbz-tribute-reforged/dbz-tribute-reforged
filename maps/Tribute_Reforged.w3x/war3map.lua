@@ -188,6 +188,7 @@ udg_ToppoHakaiUnitGroup = nil
 udg_ToppoJusticePoseUnitGroup = nil
 udg_TransformationItemUnitGroup = nil
 udg_TransformationItemTimer = nil
+udg_TransformationItemInt = 0
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -523,6 +524,10 @@ gg_trg_Test_LVL_command = nil
 gg_trg_Test_LVL_command_Copy = nil
 gg_trg_Transformations_Item_Stat_Mult_Boosts = nil
 gg_trg_Transformations_Item_Auto_Transform_On_Death = nil
+gg_trg_Transformations_Item_Pickup = nil
+gg_trg_Transformations_Item_Drop = nil
+gg_trg_Transformations_Item_Drop_Timer_Expire = nil
+gg_trg_Transformations_Item_Check_Manipulated_Item = nil
 gg_trg_Transformations_Init_Commands = nil
 gg_trg_Transformations_Entry_Point = nil
 gg_trg_Transformations_Parse_String = nil
@@ -626,9 +631,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Item_Pickup = nil
-gg_trg_Transformations_Item_Drop = nil
-gg_trg_Transformations_Item_Drop_Timer_Expire = nil
+gg_trg_Moro_Shop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -904,6 +907,7 @@ function InitGlobals()
     udg_ToppoJusticePoseUnitGroup = CreateGroup()
     udg_TransformationItemUnitGroup = CreateGroup()
     udg_TransformationItemTimer = CreateTimer()
+    udg_TransformationItemInt = 0
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -1140,12 +1144,11 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I04J"), 756.9, 21183.9, FourCC("I04J"))
     BlzCreateItemWithSkin(FourCC("I04K"), 818.2, 21183.9, FourCC("I04K"))
     BlzCreateItemWithSkin(FourCC("I04L"), 826.5, 21246.6, FourCC("I04L"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -5769.2, 18116.3, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -6286.8, 17931.2, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -6408.5, 17112.2, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -6036.3, 18062.1, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -6432.3, 17629.4, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -5489.1, 18083.2, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -5874.4, 17608.8, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -5876.6, 17922.5, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -6028.9, 17861.2, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -5736.9, 17804.2, FourCC("I04M"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -6039.0, 17667.5, FourCC("I04M"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -2415,6 +2418,7 @@ function CreateNeutralPassiveBuildings()
     u = BlzCreateUnitWithSkin(p, FourCC("n03V"), 24896.0, 14208.0, 270.000, FourCC("n03V"))
     gg_unit_n01H_1159 = BlzCreateUnitWithSkin(p, FourCC("n01H"), -2112.0, 30848.0, 270.000, FourCC("n01H"))
     SetUnitColor(gg_unit_n01H_1159, ConvertPlayerColor(8))
+    u = BlzCreateUnitWithSkin(p, FourCC("n042"), -5888.0, 17728.0, 270.000, FourCC("n042"))
 end
 
 function CreateNeutralPassive()
@@ -14410,7 +14414,7 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Func008C()
 end
 
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001Func001C()
-    if (not (GetItemTypeId(UnitItemInSlotBJ(udg_StatMultUnit, udg_TempInt)) == FourCC("I04M"))) then
+    if (not (GetItemTypeId(UnitItemInSlotBJ(udg_StatMultUnit, udg_TransformationItemInt)) == FourCC("I04M"))) then
         return false
     end
     return true
@@ -14467,16 +14471,17 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Actions()
     else
     end
     if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()) then
-        udg_TempInt = 1
+        udg_TransformationItemInt = 1
         while (true) do
-            if (udg_TempInt > 6) then break end
+            if (udg_TransformationItemInt > 6) then break end
             if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001Func001C()) then
                 udg_StatMultStr = (udg_StatMultStr - 0.10)
                 udg_StatMultAgi = (udg_StatMultAgi - 0.10)
                 udg_StatMultInt = (udg_StatMultInt - 0.10)
+                udg_StatMultReal = (udg_StatMultReal - 0.10)
             else
             end
-            udg_TempInt = udg_TempInt + 1
+            udg_TransformationItemInt = udg_TransformationItemInt + 1
         end
     else
     end
@@ -14545,7 +14550,89 @@ function InitTrig_Transformations_Item_Auto_Transform_On_Death()
     TriggerAddAction(gg_trg_Transformations_Item_Auto_Transform_On_Death, Trig_Transformations_Item_Auto_Transform_On_Death_Actions)
 end
 
-function Trig_Transformations_Item_Pickup_Func005C()
+function Trig_Transformations_Item_Pickup_Conditions()
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Item_Pickup_Func002C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Item_Pickup_Actions()
+    TriggerExecute(gg_trg_Transformations_Item_Check_Manipulated_Item)
+    if (Trig_Transformations_Item_Pickup_Func002C()) then
+        udg_StatMultUnit = GetTriggerUnit()
+        TriggerExecute(gg_trg_Temp_Skin_Revert)
+    else
+    end
+end
+
+function InitTrig_Transformations_Item_Pickup()
+    gg_trg_Transformations_Item_Pickup = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Transformations_Item_Pickup, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    TriggerAddCondition(gg_trg_Transformations_Item_Pickup, Condition(Trig_Transformations_Item_Pickup_Conditions))
+    TriggerAddAction(gg_trg_Transformations_Item_Pickup, Trig_Transformations_Item_Pickup_Actions)
+end
+
+function Trig_Transformations_Item_Drop_Conditions()
+    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Item_Drop_Func002C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Item_Drop_Actions()
+    TriggerExecute(gg_trg_Transformations_Item_Check_Manipulated_Item)
+    if (Trig_Transformations_Item_Drop_Func002C()) then
+        GroupAddUnitSimple(GetTriggerUnit(), udg_TransformationItemUnitGroup)
+        StartTimerBJ(udg_TransformationItemTimer, false, 0.00)
+    else
+    end
+end
+
+function InitTrig_Transformations_Item_Drop()
+    gg_trg_Transformations_Item_Drop = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Transformations_Item_Drop, EVENT_PLAYER_UNIT_DROP_ITEM)
+    TriggerAddCondition(gg_trg_Transformations_Item_Drop, Condition(Trig_Transformations_Item_Drop_Conditions))
+    TriggerAddAction(gg_trg_Transformations_Item_Drop, Trig_Transformations_Item_Drop_Actions)
+end
+
+function Trig_Transformations_Item_Drop_Timer_Expire_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+    TriggerExecute(gg_trg_Temp_Skin_Revert)
+    GroupRemoveUnitSimple(udg_StatMultUnit, udg_TransformationItemUnitGroup)
+end
+
+function Trig_Transformations_Item_Drop_Timer_Expire_Actions()
+    ForGroupBJ(udg_TransformationItemUnitGroup, Trig_Transformations_Item_Drop_Timer_Expire_Func001A)
+end
+
+function InitTrig_Transformations_Item_Drop_Timer_Expire()
+    gg_trg_Transformations_Item_Drop_Timer_Expire = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Transformations_Item_Drop_Timer_Expire, udg_TransformationItemTimer)
+    TriggerAddAction(gg_trg_Transformations_Item_Drop_Timer_Expire, Trig_Transformations_Item_Drop_Timer_Expire_Actions)
+end
+
+function Trig_Transformations_Item_Check_Manipulated_Item_Func001Func003C()
     if (GetItemTypeId(GetManipulatedItem()) == FourCC("I04I")) then
         return true
     end
@@ -14573,67 +14660,24 @@ function Trig_Transformations_Item_Pickup_Func005C()
     return false
 end
 
-function Trig_Transformations_Item_Pickup_Conditions()
-    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
-        return false
-    end
-    if (not Trig_Transformations_Item_Pickup_Func005C()) then
+function Trig_Transformations_Item_Check_Manipulated_Item_Func001C()
+    if (not Trig_Transformations_Item_Check_Manipulated_Item_Func001Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Item_Pickup_Actions()
-    udg_StatMultUnit = GetTriggerUnit()
-    TriggerExecute(gg_trg_Temp_Skin_Revert)
-end
-
-function InitTrig_Transformations_Item_Pickup()
-    gg_trg_Transformations_Item_Pickup = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Transformations_Item_Pickup, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    TriggerAddCondition(gg_trg_Transformations_Item_Pickup, Condition(Trig_Transformations_Item_Pickup_Conditions))
-    TriggerAddAction(gg_trg_Transformations_Item_Pickup, Trig_Transformations_Item_Pickup_Actions)
-end
-
-function Trig_Transformations_Item_Drop_Conditions()
-    if (not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true)) then
-        return false
+function Trig_Transformations_Item_Check_Manipulated_Item_Actions()
+    if (Trig_Transformations_Item_Check_Manipulated_Item_Func001C()) then
+        udg_TempBool = true
+    else
+        udg_TempBool = false
     end
-    if (not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_ActivePlayerGroup) == true)) then
-        return false
-    end
-    return true
 end
 
-function Trig_Transformations_Item_Drop_Actions()
-    GroupAddUnitSimple(GetTriggerUnit(), udg_TransformationItemUnitGroup)
-    StartTimerBJ(udg_TransformationItemTimer, false, 0.00)
-end
-
-function InitTrig_Transformations_Item_Drop()
-    gg_trg_Transformations_Item_Drop = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Transformations_Item_Drop, EVENT_PLAYER_UNIT_DROP_ITEM)
-    TriggerAddCondition(gg_trg_Transformations_Item_Drop, Condition(Trig_Transformations_Item_Drop_Conditions))
-    TriggerAddAction(gg_trg_Transformations_Item_Drop, Trig_Transformations_Item_Drop_Actions)
-end
-
-function Trig_Transformations_Item_Drop_Timer_Expire_Func001A()
-    udg_StatMultUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Temp_Skin_Revert)
-    GroupRemoveUnitSimple(udg_StatMultUnit, udg_TransformationItemUnitGroup)
-end
-
-function Trig_Transformations_Item_Drop_Timer_Expire_Actions()
-    ForGroupBJ(udg_TransformationItemUnitGroup, Trig_Transformations_Item_Drop_Timer_Expire_Func001A)
-end
-
-function InitTrig_Transformations_Item_Drop_Timer_Expire()
-    gg_trg_Transformations_Item_Drop_Timer_Expire = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_Transformations_Item_Drop_Timer_Expire, udg_TransformationItemTimer)
-    TriggerAddAction(gg_trg_Transformations_Item_Drop_Timer_Expire, Trig_Transformations_Item_Drop_Timer_Expire_Actions)
+function InitTrig_Transformations_Item_Check_Manipulated_Item()
+    gg_trg_Transformations_Item_Check_Manipulated_Item = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Item_Check_Manipulated_Item, Trig_Transformations_Item_Check_Manipulated_Item_Actions)
 end
 
 function Trig_Transformations_Init_Commands_Actions()
@@ -23489,6 +23533,51 @@ function InitTrig_Chef_Satan()
     TriggerAddAction(gg_trg_Chef_Satan, Trig_Chef_Satan_Actions)
 end
 
+function Trig_Moro_Shop_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("n042"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Moro_Shop_Func003C()
+    if (not (udg_TempReal < 25.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Moro_Shop_Func004C()
+    if (not (udg_TempString ~= "")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Moro_Shop_Actions()
+    udg_TempString = ""
+    udg_TempReal = GetRandomReal(0, 100.00)
+    if (Trig_Moro_Shop_Func003C()) then
+        udg_TempString = ("|cffffcc00" .. ("Gulp!" .. "|r"))
+    else
+    end
+    if (Trig_Moro_Shop_Func004C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
+        udg_TempLoc = GetUnitLoc(GetSellingUnit())
+        TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
+                RemoveLocation(udg_TempLoc)
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+end
+
+function InitTrig_Moro_Shop()
+    gg_trg_Moro_Shop = CreateTrigger()
+    TriggerRegisterPlayerUnitEventSimple(gg_trg_Moro_Shop, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM)
+    TriggerAddCondition(gg_trg_Moro_Shop, Condition(Trig_Moro_Shop_Conditions))
+    TriggerAddAction(gg_trg_Moro_Shop, Trig_Moro_Shop_Actions)
+end
+
 function Trig_Regen_Items_Use_Func002C()
     if (GetItemTypeId(GetManipulatedItem()) == FourCC("I000")) then
         return true
@@ -24406,6 +24495,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Item_Pickup()
     InitTrig_Transformations_Item_Drop()
     InitTrig_Transformations_Item_Drop_Timer_Expire()
+    InitTrig_Transformations_Item_Check_Manipulated_Item()
     InitTrig_Transformations_Init_Commands()
     InitTrig_Transformations_Entry_Point()
     InitTrig_Transformations_Parse_String()
@@ -24490,6 +24580,7 @@ function InitCustomTriggers()
     InitTrig_Ainz()
     InitTrig_El_Hermano()
     InitTrig_Chef_Satan()
+    InitTrig_Moro_Shop()
     InitTrig_Regen_Items_Use()
     InitTrig_Regen_Items_All_Looper()
     InitTrig_Regen_Items_Do_Regen()
