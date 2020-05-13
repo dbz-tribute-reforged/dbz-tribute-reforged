@@ -1144,11 +1144,11 @@ function CreateAllItems()
     BlzCreateItemWithSkin(FourCC("I04J"), 756.9, 21183.9, FourCC("I04J"))
     BlzCreateItemWithSkin(FourCC("I04K"), 818.2, 21183.9, FourCC("I04K"))
     BlzCreateItemWithSkin(FourCC("I04L"), 826.5, 21246.6, FourCC("I04L"))
+    BlzCreateItemWithSkin(FourCC("I04M"), -6039.0, 17667.5, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -5874.4, 17608.8, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -5876.6, 17922.5, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -6028.9, 17861.2, FourCC("I04M"))
     BlzCreateItemWithSkin(FourCC("I04M"), -5736.9, 17804.2, FourCC("I04M"))
-    BlzCreateItemWithSkin(FourCC("I04M"), -6039.0, 17667.5, FourCC("I04M"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -1208,7 +1208,7 @@ function CreateBuildingsForPlayer5()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 22656.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 30656.0, 12672.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 28864.0, 12480.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -2171,8 +2171,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 23993.5, 16131.0, 302.865, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29824.9, 13863.5, 142.882, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29422.7, 11836.3, 63.439, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27895.3, 12588.1, 218.986, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30777.7, 12939.8, 162.967, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27591.9, 12693.8, 33.787, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 28481.7, 5578.6, 258.824, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 27818.5, 7375.8, 247.365, FourCC("n01U"))
@@ -2216,7 +2216,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 26728.2, 9560.4, 312.988, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27064.0, 13866.7, 301.683, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28753.0, 14619.6, 301.683, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27505.9, 15910.8, 301.683, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28829.8, 16067.4, 262.096, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 27695.3, 16210.9, 334.673, FourCC("n03A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29965.7, 10704.1, 40.203, FourCC("n02F"))
@@ -2362,12 +2362,11 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29102.6, 15355.6, 307.076, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27928.5, 14516.2, 4.603, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 28941.5, 12765.5, 80.980, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30764.9, 11987.7, 152.221, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 25372.8, 12228.1, 326.336, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29091.2, 406.4, 243.034, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6170.0, 11840.9, 281.629, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3827.0, 9140.8, 281.629, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -527.3, 11510.9, 346.629, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5038.7, 7828.9, 308.396, FourCC("n015"))
@@ -2377,6 +2376,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 14018.3, 28029.5, 187.707, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7248.7, 30322.5, 8.706, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 1560.1, -1270.0, 232.760, FourCC("n01A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 2764.3, -4955.9, 220.676, FourCC("n019"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -5430,6 +5430,13 @@ function InitTrig_Toppo_Hakai_Loop()
     TriggerAddAction(gg_trg_Toppo_Hakai_Loop, Trig_Toppo_Hakai_Loop_Actions)
 end
 
+function Trig_Toppo_Hakai_Channel_Damage_Func002Func002Func004C()
+    if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()
     if (not (IsUnitEnemy(udg_TempUnit2, GetOwningPlayer(udg_TempUnit)) == true)) then
         return false
@@ -5451,6 +5458,14 @@ function Trig_Toppo_Hakai_Channel_Damage_Func002A()
     if (Trig_Toppo_Hakai_Channel_Damage_Func002Func002C()) then
         SetUnitLifeBJ(udg_TempUnit2, 1.00)
         UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+        if (Trig_Toppo_Hakai_Channel_Damage_Func002Func002Func004C()) then
+            udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
+            AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
+            BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
+            DestroyEffectBJ(GetLastCreatedEffectBJ())
+                        RemoveLocation(udg_TempLoc3)
+        else
+        end
     else
     end
 end
@@ -5479,6 +5494,13 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()
     return true
 end
 
+function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func004C()
+    if (not (GetUnitTypeId(udg_TempUnit2) == FourCC("hpea"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001C()
     if (not (IsUnitType(udg_TempUnit2, UNIT_TYPE_HERO) == false)) then
         return false
@@ -5502,10 +5524,23 @@ function Trig_Toppo_Hakai_Launched_Damage_Func003A()
         if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001C()) then
             SetUnitLifeBJ(udg_TempUnit2, 1.00)
             UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+            if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func004C()) then
+                udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
+                AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
+                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
+                DestroyEffectBJ(GetLastCreatedEffectBJ())
+                                RemoveLocation(udg_TempLoc3)
+            else
+            end
         else
             if (Trig_Toppo_Hakai_Launched_Damage_Func003Func002Func001Func001C()) then
                 GroupAddUnitSimple(udg_TempUnit2, udg_TempUnitGroup2)
                 UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit2) * 0.50), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+                udg_TempLoc3 = GetUnitLoc(udg_TempUnit2)
+                AddSpecialEffectLocBJ(udg_TempLoc3, "PurpleSlam.mdl")
+                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
+                DestroyEffectBJ(GetLastCreatedEffectBJ())
+                                RemoveLocation(udg_TempLoc3)
             else
             end
         end
@@ -6941,6 +6976,8 @@ function Trig_Setup_Quests_Actions()
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_8856", "TRIGSTR_8857", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_6348", "TRIGSTR_6349", "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
+    QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
+    CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_11860", "TRIGSTR_11861", "ReplaceableTextures\\CommandButtons\\BTNTome.blp")
     QuestSetEnabledBJ(true, GetLastCreatedQuestBJ())
     FlashQuestDialogButtonBJ()
 end
@@ -11431,7 +11468,6 @@ function Trig_Final_Battle_Detector_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10643")
     DisableTrigger(gg_trg_Force_Win_Loss)
     udg_IsLeadingToFinalBattle = true
-    StartTimerBJ(udg_FinalBattleTimer, false, 60.00)
 end
 
 function InitTrig_Final_Battle_Detector()
@@ -11439,18 +11475,6 @@ function InitTrig_Final_Battle_Detector()
     TriggerRegisterEnterRectSimple(gg_trg_Final_Battle_Detector, gg_rct_Final_Battle_Detector_Region)
     TriggerAddCondition(gg_trg_Final_Battle_Detector, Condition(Trig_Final_Battle_Detector_Conditions))
     TriggerAddAction(gg_trg_Final_Battle_Detector, Trig_Final_Battle_Detector_Actions)
-end
-
-function Trig_Final_Battle_Timer_Finish_Actions()
-    StopMusicBJ(false)
-    PlayMusicBJ(gg_snd_KachiDaze)
-    StartTimerBJ(udg_FinalBattleTimer, false, 250.00)
-end
-
-function InitTrig_Final_Battle_Timer_Finish()
-    gg_trg_Final_Battle_Timer_Finish = CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_Final_Battle_Timer_Finish, udg_FinalBattleTimer)
-    TriggerAddAction(gg_trg_Final_Battle_Timer_Finish, Trig_Final_Battle_Timer_Finish_Actions)
 end
 
 function Trig_Final_Battle_Tagger_Conditions()
@@ -13228,7 +13252,7 @@ function InitTrig_Hero_Pick_Timer_Complete()
 end
 
 function Trig_Hero_Pick_Repick_Start_Actions()
-    DisplayTextToForce(GetPlayersAll(), ("You can still repick within the next " .. (I2S(R2I(udg_HeroRepickTime)) .. " seconds.")))
+    DisplayTextToForce(GetPlayersAll(), ("|cff20ffffYou can still repick within the next " .. (I2S(R2I(udg_HeroRepickTime)) .. " seconds.|r")))
     CreateTimerDialogBJ(udg_HeroRepickTimer, "TRIGSTR_9986")
     udg_HeroRepickTimerWindow = GetLastCreatedTimerDialogBJ()
     TimerDialogDisplayBJ(true, udg_HeroRepickTimerWindow)
@@ -20405,6 +20429,9 @@ function Trig_Cooler_Give_Transform_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
     if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H042"))) then
         return false
     end
@@ -20977,7 +21004,7 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func013C()) then
-        udg_StatMultReal = 1.30
+        udg_StatMultReal = 1.40
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
@@ -20987,7 +21014,7 @@ function Trig_Transformations_Cooler_Final_Form_Actions()
     else
     end
     if (Trig_Transformations_Cooler_Final_Form_Func015C()) then
-        udg_StatMultReal = 1.90
+        udg_StatMultReal = 1.80
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
@@ -24397,7 +24424,6 @@ function InitCustomTriggers()
     InitTrig_Tournament_Trophy_Use_Trophy()
     InitTrig_Tournament_Trophy_Give_Reward()
     InitTrig_Final_Battle_Detector()
-    InitTrig_Final_Battle_Timer_Finish()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
@@ -24786,7 +24812,7 @@ function InitAllyPriorities()
     SetStartLocPrioCount(5, 3)
     SetStartLocPrio(5, 0, 4, MAP_LOC_PRIO_HIGH)
     SetStartLocPrio(5, 1, 6, MAP_LOC_PRIO_LOW)
-    SetStartLocPrio(5, 2, 8, MAP_LOC_PRIO_LOW)
+    SetStartLocPrio(5, 2, 8, MAP_LOC_PRIO_HIGH)
     SetStartLocPrioCount(6, 1)
     SetStartLocPrio(6, 0, 8, MAP_LOC_PRIO_HIGH)
     SetStartLocPrioCount(7, 1)
@@ -24829,7 +24855,7 @@ function config()
     DefineStartLocation(2, -6976.0, 6592.0)
     DefineStartLocation(3, 6016.0, -7040.0)
     DefineStartLocation(4, 30784.0, 25280.0)
-    DefineStartLocation(5, 30656.0, 12736.0)
+    DefineStartLocation(5, 28864.0, 12544.0)
     DefineStartLocation(6, 12928.0, 16000.0)
     DefineStartLocation(7, -6080.0, 14208.0)
     DefineStartLocation(8, 15232.0, 6784.0)

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.42d
+DBZ Tribute Reforged 0.42e
 }
 
 STRING 4
@@ -15026,15 +15026,6 @@ STRING 2431
 // Abilities: A056 (Focus), Name (Name)
 {
 Focus
-}
-
-STRING 2432
-// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
-{
-Holy sword of the kais.
-|cffffff00+0.1x Int mult.
--0.1x Agi mult.
-Reduces max movement speed by 30.|r
 }
 
 STRING 2433
@@ -34718,24 +34709,6 @@ STRING 5700
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool10> seconds|r
 }
 
-STRING 5701
-// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2 armor.|n|cff808080"One size fits all!"!|r
-}
-
-STRING 5702
-// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Description (Description)
-{
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+2 armor.|n|cff808080"One size fits all!"!|r
-}
-
-STRING 5703
-// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+4 armor.|n|cff999999"One size fits all!"!|r
-}
-
 STRING 5704
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -34790,12 +34763,6 @@ STRING 5712
 [|cff00FF00W|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
 }
 
-STRING 5713
-// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Description (Description)
-{
-|cff00FF00Level [2/5]|r|n|cffFFFF00Left Click to upgrade (costs 3 points)|r|n+4 armor.|n|cff999999"One size fits all!"!|r
-}
-
 STRING 5714
 // Abilities: A0C9 (Special Beam Cannon), EditorSuffix (Editor Suffix)
 {
@@ -34806,12 +34773,6 @@ STRING 5715
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 8|r]
-}
-
-STRING 5716
-// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 5717
@@ -38566,54 +38527,6 @@ STRING 6340
 Removes 150 armor from nearby enemies.
 }
 
-STRING 6341
-// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Description (Description)
-{
-|cff00FF00Level [3/5]|r|n|cffFFFF00Left Click to upgrade (costs 4 points)|r|n+6 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 6342
-// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Ubertip (Tooltip - Extended)
-{
-|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+8 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 6343
-// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Description (Description)
-{
-|cff00FF00Level [4/5]|r|n|cffFFFF00Left Click to upgrade (costs 5 points)|r|n+8 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 6344
-// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Ubertip (Tooltip - Extended)
-{
-+10 armor.|n|cff999999"One size fits all!"!|r|n|cff00FF00Max lvl Bonus:|r +0 additional armor
-}
-
-STRING 6345
-// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Description (Description)
-{
-+10 armor.|n|cff999999"One size fits all!"!|r
-}
-
-STRING 6346
-// Items: I04M (Moro's Energy Drain), Description (Description)
-{
-Willingly offer energy to the great Planet-Eater Moro.
-|cffffff00-0.1x Str mult.
--0.1x Agi mult.
--0.1x Int mult.|r
-}
-
-STRING 6347
-// Items: I04M (Moro's Energy Drain), Ubertip (Tooltip - Extended)
-{
-Willingly offer energy to the great Planet-Eater Moro.
-|cffffff00-0.1x Str mult.
--0.1x Agi mult.
--0.1x Int mult.|r
-}
-
 STRING 6348
 {
 Stat Modification
@@ -39894,24 +39807,6 @@ STRING 6560
 R
 }
 
-STRING 6561
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
-STRING 6562
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
-STRING 6563
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
 STRING 6564
 // Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39936,28 +39831,10 @@ STRING 6567
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
-STRING 6568
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
-STRING 6569
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
 STRING 6570
 // Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 4|r]
-}
-
-STRING 6571
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
 }
 
 STRING 6572
@@ -39976,12 +39853,6 @@ STRING 6574
 // Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 7|r]
-}
-
-STRING 6575
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
 }
 
 STRING 6576
@@ -41114,40 +40985,16 @@ STRING 6760
 Angry Explosion
 }
 
-STRING 6761
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
 STRING 6762
 // Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
-STRING 6763
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
-STRING 6764
-// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
-}
-
 STRING 6765
 // Abilities: A0ER (Angry Explosion), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Finger Blitz Barrage
-}
-
-STRING 6766
-// Abilities: A0LM (Hellzone Grenade), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage. |n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
 }
 
 STRING 6767
@@ -51670,15 +51517,6 @@ STRING 8514
 King K Rool charges forward, dealing damage and stunning all units in his path.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IW,Cool1>s|r
 }
 
-STRING 8515
-// Items: I009 (Z Sword), Description (Description)
-{
-Holy sword of the kais.
-|cffffff00+0.1x Int mult.
--0.1x Agi mult.
-Reduces max movement speed by 30.|r
-}
-
 STRING 8516
 // Abilities: A0IU (Hand Kannon), Name (Name)
 {
@@ -60517,7 +60355,7 @@ Pick Time:
 
 STRING 9985
 {
-Pick Time Up! You will be assigned a random hero if you have not selected one yet.
+|cffffcc00You will be assigned a random hero if you have not selected one yet.|r
 }
 
 STRING 9986
@@ -64353,15 +64191,15 @@ Transformations:
 [lvl 140] 2.20x "fp"
 [lvl 160] 2.60x "golden"
 
-To [D] Transform into Final Form Cooler, you must kill at least (1) enemy hero when above level 20.
+To [D] Transform into Final Form Cooler, kill 1 enemy player's hero with Cooler above level 20 (sagas are not included).
 }
 
 STRING 10609
 {
 Transformations:
-[lvl 20]  1.30x "fp"
+[lvl 20]  1.40x "fp"
 [lvl 50]  1.60x "fp"
-[lvl 80]  1.90x "fp"
+[lvl 80]  1.80x "fp"
 [lvl 110] 2.20x "fp"
 [lvl 140] 2.50x "fp"
 [lvl 200] 2.60x "golden"
@@ -64638,7 +64476,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 10.May.20
+This map is under active development - 15.May.20
 }
 
 STRING 10653
@@ -71922,6 +71760,20 @@ STRING 11859
 Reduces the sight radius of all other heroes for a brief period of time.|n|cffff2020Does not affect the user.|r
 }
 
+STRING 11860
+{
+Stats
+}
+
+STRING 11861
+{
+|cffff2020Strength: Increases HP by 20, increases HP regen by 0.4.|r
+
+|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.5% per 1000 AGI, whichever is lower.|r
+
+|cff00ffffIntelligence: Increases mana by 10, increases mana regen by 0.1.
+}
+
 STRING 11862
 // Items: I04D (Beerus' Pudding), Ubertip (Tooltip - Extended)
 {
@@ -75242,6 +75094,12 @@ The user converts Ki into a deadly Energy Blade.
 -0.1x Int mult.|r
 }
 
+STRING 12402
+// Units: hpea (Beam), Name (Name)
+{
+Beam
+}
+
 STRING 12403
 // Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
 {
@@ -77319,10 +77177,30 @@ STRING 12732
 Ice Cannon
 }
 
+STRING 12733
+// Items: I009 (Z Sword), Ubertip (Tooltip - Extended)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.1x Int mult.
+-0.1x Agi mult.
+Reduces max movement speed by 30.|r
+}
+
 STRING 12734
 // Abilities: A0P4 (Ice Cannon), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 12735
+// Items: I009 (Z Sword), Description (Description)
+{
+Holy sword of the kais.
+Does not drop on death.
+|cffffff00+0.1x Int mult.
+-0.1x Agi mult.
+Reduces max movement speed by 30.|r
 }
 
 STRING 12736
@@ -78888,6 +78766,18 @@ STRING 12977
 This unit is trapped in a Justice Hold, it cannot move or attack and will take damage over time.
 }
 
+STRING 12978
+// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [1/5]|r|n|cffffff00+2 armor.|nDoes not drop on death.|n|r|cff808080"One size fits all!"!|r
+}
+
+STRING 12979
+// Items: I036 (Battle Armor [|cffFFFF001/5|r]), Description (Description)
+{
+|cff00FF00Level [1/5]|r|n|cffffff00+2 armor.|nDoes not drop on death.|n|r|cff808080"One size fits all!"!|r
+}
+
 STRING 12980
 // Items: I04L (Whis' Staff), Description (Description)
 {
@@ -79112,10 +79002,22 @@ STRING 13016
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 1|r]
 }
 
+STRING 13017
+// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [2/5]|r|n|cffFFFF00+4 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
 STRING 13018
 // Abilities: A0PL (Justice Tornado 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Justice Tornado 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 13019
+// Items: I037 (Battle Armor [|cffFFFF002/5|r]), Description (Description)
+{
+|cff00FF00Level [2/5]|r|n|cffFFFF00+4 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 13020
@@ -79140,6 +79042,12 @@ STRING 13023
 // Abilities: A0PL (Justice Tornado 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 13024
+// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [3/5]|r|n|cffFFFF00+6 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
 }
 
 STRING 13025
@@ -79328,10 +79236,60 @@ STRING 13055
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 9|r]
 }
 
+STRING 13056
+// Items: I03C (Battle Armor [|cffFFFF003/5|r]), Description (Description)
+{
+|cff00FF00Level [3/5]|r|n|cffFFFF00+6 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 13057
+// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Ubertip (Tooltip - Extended)
+{
+|cff00FF00Level [4/5]|r|n|cffFFFF00+8 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 13058
+// Items: I03D (Battle Armor [|cffFFFF004/5|r]), Description (Description)
+{
+|cff00FF00Level [4/5]|r|n|cffFFFF00+8 armor.|nDoes not drop on death.|n|cff999999"One size fits all!"!|r
+}
+
+STRING 13059
+// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Ubertip (Tooltip - Extended)
+{
+|cffffff00+10 armor.|nDoes not drop on death.|r|n|cff999999"One size fits all!"|r
+}
+
+STRING 13060
+// Items: I03E (Battle Armor [|cffFFFF005/5|r]), Description (Description)
+{
+|cffffff00+10 armor.|nDoes not drop on death.|r|n|cff999999"One size fits all!"|r
+}
+
+STRING 13061
+// Items: I04M (Moro's Energy Drain), Description (Description)
+{
+Willingly offer energy to the great Planet-Eater Moro.
+Does not drop on death.
+|cffffff00-0.1x Str mult.
+-0.1x Agi mult.
+-0.1x Int mult.|r
+}
+
 STRING 13062
 // Abilities: A0PL (Justice Tornado 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Justice Tornado 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 13063
+// Items: I04M (Moro's Energy Drain), Ubertip (Tooltip - Extended)
+{
+Willingly offer energy to the great Planet-Eater Moro.
+Does not drop on death.
+|cffffff00-0.1x Str mult.
+-0.1x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 13064
@@ -79392,6 +79350,66 @@ STRING 13073
 // Abilities: A0PM (Justice Hold 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Justice Hold 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 13074
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool1>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13075
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool2>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13076
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool3>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13077
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool4>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13078
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool5>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13079
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool6>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13080
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool7>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13081
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool8>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13082
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool9>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13083
+// Abilities: A0LM (Hellzone Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool10>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
 }
 
 STRING 13084
@@ -79566,5 +79584,11 @@ STRING 13112
 // Abilities: A0PL (Justice Tornado 2), Ubertip (Tooltip - Normal - Extended)
 {
 Toppo traps his opponents by spinning at extreme speeds. Provides +66ms.|n|cff00ff00Damage: Agi * Lvl * ?|n|cff00ffffCooldown: <A0PJ,Cool10> seconds|r
+}
+
+STRING 13113
+// Abilities: A0LM (Hellzone Grenade), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool1>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
 }
 
