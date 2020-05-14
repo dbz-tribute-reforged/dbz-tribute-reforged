@@ -15028,6 +15028,20 @@ STRING 2431
 Focus
 }
 
+STRING 2432
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool1> seconds|r
+}
+
 STRING 2433
 // Abilities: A076 (Detonate), Ubertip (Tooltip - Normal - Extended)
 {
@@ -34709,6 +34723,48 @@ STRING 5700
 Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool10> seconds|r
 }
 
+STRING 5701
+// Abilities: A0PF (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool1> - <A0PF,Cool10> seconds|r
+}
+
+STRING 5702
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool2> seconds|r
+}
+
+STRING 5703
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool3> seconds|r
+}
+
 STRING 5704
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
@@ -34763,6 +34819,20 @@ STRING 5712
 [|cff00FF00W|r] Learn Special Beam Cannon - [|cffffcc00Level %d|r]
 }
 
+STRING 5713
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool4> seconds|r
+}
+
 STRING 5714
 // Abilities: A0C9 (Special Beam Cannon), EditorSuffix (Editor Suffix)
 {
@@ -34773,6 +34843,20 @@ STRING 5715
 // Abilities: A0C9 (Special Beam Cannon), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Special Beam Cannon - [|cffffcc00Level 8|r]
+}
+
+STRING 5716
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool5> seconds|r
 }
 
 STRING 5717
@@ -38525,6 +38609,76 @@ STRING 6340
 // Abilities: A0DW (Evil Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Removes 150 armor from nearby enemies.
+}
+
+STRING 6341
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool6> seconds|r
+}
+
+STRING 6342
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool7> seconds|r
+}
+
+STRING 6343
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool8> seconds|r
+}
+
+STRING 6344
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool9> seconds|r
+}
+
+STRING 6345
+// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Toppo strikes a daring pose for justice, empowering the next ability he uses.
+|cffffff00Justice Flash: +33% dmg, +range
+Justice Punch: +33% dmg, +speed
+Justice Tornado: +25% dmg, +1s duration
+Justice Hold: +1s duration|r
+Cannot be used with [|cffDD00EED|r] God of Destruction.
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0PF,Cool10> seconds|r
 }
 
 STRING 6348
@@ -77900,48 +78054,6 @@ STRING 12850
 [|cff00ff00W|r] Justice Punch - [|cffffcc00Level 9|r]
 }
 
-STRING 12851
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool1> seconds|r
-}
-
-STRING 12852
-// Abilities: A0PF (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool1> - <A0PF,Cool10> seconds|r
-}
-
-STRING 12853
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool2> seconds|r
-}
-
 STRING 12854
 // Abilities: A0PD (Justice Punch), EditorSuffix (Editor Suffix)
 {
@@ -77952,20 +78064,6 @@ STRING 12855
 // Abilities: A0PD (Justice Punch), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Punch - [|cffffcc00Level 10|r]
-}
-
-STRING 12856
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool3> seconds|r
 }
 
 STRING 12857
@@ -78040,48 +78138,6 @@ STRING 12868
 Justice Hold
 }
 
-STRING 12869
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool4> seconds|r
-}
-
-STRING 12870
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool5> seconds|r
-}
-
-STRING 12871
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool6> seconds|r
-}
-
 STRING 12872
 // Abilities: A0PI (Justice Flash 2), Name (Name)
 {
@@ -78098,34 +78154,6 @@ STRING 12874
 // Abilities: A0PB (Justice Flash), Researchubertip (Tooltip - Learn - Extended)
 {
 Toppo gathers five orange ki balls at the tips of his fingers before rapidly firing them at evildoers.|n|cffff2020Channel Duration: <A0PB,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0PB,Cool1> - <A0PB,Cool10> seconds|r|n|n|cff808080"Justice... Flash!"|r
-}
-
-STRING 12875
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool7> seconds|r
-}
-
-STRING 12876
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool8> seconds|r
 }
 
 STRING 12877
@@ -78404,34 +78432,6 @@ STRING 12921
 // Buffs/Effects: B02Y (), Buffubertip (Tooltip - Extended)
 {
 Toppo's God of Destruction form.
-}
-
-STRING 12922
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool9> seconds|r
-}
-
-STRING 12923
-// Abilities: A0PF (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Toppo strikes a daring pose for justice, empowering the next ability he uses.
-|cffffff00Justice Flash: +33% dmg, +range, homing
-Justice Punch: +33% dmg, +speed
-Justice Tornado: +25% dmg, +1s duration
-Justice Hold: +1s duration|r
-Cannot be used with [|cffDD00EED|r] God of Destruction.
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0PF,Cool10> seconds|r
 }
 
 STRING 12924

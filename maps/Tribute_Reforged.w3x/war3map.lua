@@ -1208,7 +1208,7 @@ function CreateBuildingsForPlayer5()
     local t
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n001"), 3136.0, 22656.0, 270.000, FourCC("n001"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 28864.0, 12480.0, 270.000, FourCC("n02L"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02L"), 28864.0, 12736.0, 270.000, FourCC("n02L"))
 end
 
 function CreateBuildingsForPlayer6()
@@ -1882,7 +1882,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2290.7, -2009.3, 306.843, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 998.5, -5818.0, 174.600, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4834.8, 6590.1, 152.070, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n038"), 9820.5, 17853.9, 129.754, FourCC("n038"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n038"), 9627.9, 17574.3, 83.237, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 4498.7, 17192.5, 316.994, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 14953.7, -6367.4, 71.397, FourCC("n03B"))
@@ -1906,13 +1906,13 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7863.6, 26141.0, 212.680, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7999.7, 26298.0, 352.584, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 6417.9, 31036.5, 292.038, FourCC("n03G"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 8632.7, 30895.4, 129.258, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 8133.4, 30849.3, 228.931, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6095.4, 30250.2, 128.115, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 8247.9, 25059.1, 128.974, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13565.3, 28987.6, 104.465, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13499.5, 28800.3, 336.609, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13773.8, 28800.3, 326.864, FourCC("n020"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 9156.6, 31175.1, 293.348, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 9271.7, 31070.6, 293.348, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 13211.7, 29290.5, 4.645, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14363.6, 29159.9, 7.833, FourCC("n020"))
     u = BlzCreateUnitWithSkin(p, FourCC("n020"), 14297.8, 28972.7, 22.311, FourCC("n020"))
@@ -2170,9 +2170,9 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 25104.1, 5352.1, 136.872, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 23993.5, 16131.0, 302.865, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29824.9, 13863.5, 142.882, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30360.2, 14079.1, 142.882, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30777.7, 12939.8, 162.967, FourCC("n02F"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27591.9, 12693.8, 33.787, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 30000.4, 2917.2, 33.787, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 28481.7, 5578.6, 258.824, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 27818.5, 7375.8, 247.365, FourCC("n01U"))
@@ -2297,7 +2297,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 14238.3, 25550.0, 126.127, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 13115.3, 25388.5, 126.127, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6125.0, 29599.4, 312.943, FourCC("n01E"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 8004.5, 26922.2, 328.282, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7940.1, 26822.7, 32.297, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17833.2, 27596.8, 138.235, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 2756.9, -1327.9, 191.706, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18637.6, 16588.5, 281.718, FourCC("n019"))
@@ -2367,6 +2367,7 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29091.2, 406.4, 243.034, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5810.2, -3875.6, 268.889, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -3827.0, 9140.8, 281.629, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -527.3, 11510.9, 346.629, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5038.7, 7828.9, 308.396, FourCC("n015"))
@@ -2377,6 +2378,14 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 7248.7, 30322.5, 8.706, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), 1560.1, -1270.0, 232.760, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 2764.3, -4955.9, 220.676, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6457.4, -2255.5, -1.637, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -5441.3, -2948.7, -53.994, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 7714.4, 24854.4, 42.702, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 9158.2, 26905.9, 187.861, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 8341.6, 30138.7, 208.710, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 16147.0, 29480.2, 34.913, FourCC("n01D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 16511.3, 25457.5, 62.859, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 12806.7, 28591.9, 259.516, FourCC("n019"))
 end
 
 function CreateNeutralPassiveBuildings()
@@ -7744,14 +7753,14 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func006002003()
     return GetBooleanAnd(Trig_Kill_Hero_PvP_and_Saga_Func001Func006002003001(), Trig_Kill_Hero_PvP_and_Saga_Func001Func006002003002())
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func002C()
     if (not (GetHeroLevel(GetDyingUnit()) < 30)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003Func002C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
         return true
     end
@@ -7764,42 +7773,42 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004Func002C()
     return false
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004C()
-    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004Func002C()) then
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003C()
+    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003Func002C()) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001Func001Func002C()
     if (not (GetHeroLevel(GetDyingUnit()) < 100)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001Func001C()
     if (not (GetHeroLevel(GetDyingUnit()) < 50)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001C()
     if (not (GetHeroLevel(GetDyingUnit()) < 30)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012C()
     if (not (GetHeroLevel(GetDyingUnit()) >= 10)) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014Func002C()
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func002C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01V")) then
         return true
     end
@@ -7812,8 +7821,8 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014Func002C()
     return false
 end
 
-function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014C()
-    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014Func002C()) then
+function Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()
+    if (not Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func002C()) then
         return false
     end
     return true
@@ -7821,13 +7830,14 @@ end
 
 function Trig_Kill_Hero_PvP_and_Saga_Func001Func008A()
     udg_StatMultUnit = GetEnumUnit()
-    udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) * 1.00)
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func002C()) then
+        udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) * 1.00)
         udg_StatMultReal = (udg_StatMultReal * 1.50)
     else
-        udg_StatMultReal = (udg_StatMultReal + 15.00)
+        udg_StatMultReal = (I2R(GetHeroLevel(GetDyingUnit())) * 0.90)
+        udg_StatMultReal = (udg_StatMultReal + 18.00)
     end
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func004C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func003C()) then
         udg_StatMultReal = (udg_StatMultReal * 0.50)
     else
     end
@@ -7839,14 +7849,14 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008A()
     TriggerExecute(gg_trg_FloatingText_TempString_to_TempPlayerGroup_at_TempLoc)
         RemoveLocation(udg_TempLoc)
     udg_TempInt = 25
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()) then
-        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012C()) then
+        if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001C()) then
                         udg_TempInt = 25 * (1 + GetHeroLevel(udg_StatMultUnit))
         else
-            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001C()) then
+            if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001Func001C()) then
                                 udg_TempInt = 25 * (3 + 2 * GetHeroLevel(udg_StatMultUnit))
             else
-                if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013Func001Func001Func002C()) then
+                if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func012Func001Func001Func002C()) then
                                         udg_TempInt = 25 * (6 + 3 * GetHeroLevel(udg_StatMultUnit))
                 else
                                         udg_TempInt = 25 * (10 + 4 * GetHeroLevel(udg_StatMultUnit))
@@ -7855,7 +7865,7 @@ function Trig_Kill_Hero_PvP_and_Saga_Func001Func008A()
         end
     else
     end
-    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func014C()) then
+    if (Trig_Kill_Hero_PvP_and_Saga_Func001Func008Func013C()) then
         udg_TempInt = (udg_TempInt // 3)
     else
     end
@@ -23432,8 +23442,15 @@ function Trig_Ainz_Conditions()
     return true
 end
 
-function Trig_Ainz_Func003C()
+function Trig_Ainz_Func003Func001C()
     if (not (udg_TempReal < 25.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ainz_Func003C()
+    if (not (udg_TempReal < 5.00)) then
         return false
     end
     return true
@@ -23450,8 +23467,12 @@ function Trig_Ainz_Actions()
     udg_TempString = ""
     udg_TempReal = GetRandomReal(0, 100.00)
     if (Trig_Ainz_Func003C()) then
-        udg_TempString = ("|cffffcc00" .. ("Ainz Ooal Gown does not know defeat." .. "|r"))
+        udg_TempString = ("|cffffcc00" .. ("Is that a runecraft?" .. "|r"))
     else
+        if (Trig_Ainz_Func003Func001C()) then
+            udg_TempString = ("|cffffcc00" .. ("Ainz Ooal Gown does not know defeat." .. "|r"))
+        else
+        end
     end
     if (Trig_Ainz_Func004C()) then
         udg_TempPlayerGroup = GetForceOfPlayer(GetOwningPlayer(GetBuyingUnit()))
@@ -24855,7 +24876,7 @@ function config()
     DefineStartLocation(2, -6976.0, 6592.0)
     DefineStartLocation(3, 6016.0, -7040.0)
     DefineStartLocation(4, 30784.0, 25280.0)
-    DefineStartLocation(5, 28864.0, 12544.0)
+    DefineStartLocation(5, 28864.0, 12800.0)
     DefineStartLocation(6, 12928.0, 16000.0)
     DefineStartLocation(7, -6080.0, 14208.0)
     DefineStartLocation(8, 15232.0, 6784.0)
