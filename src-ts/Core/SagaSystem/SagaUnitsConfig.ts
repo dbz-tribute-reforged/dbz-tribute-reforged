@@ -450,7 +450,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // bojack unbound
-    ["Bojack", new SagaUnit(FourCC("U00L"), 50, 6500, 400, 5500, new Vector2D(-4500, 2500),
+    ["Bojack", new SagaUnit(FourCC("U00L"), 70, 6500, 400, 5500, new Vector2D(-4500, 2500),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Broly.ENERGY_PUNCH, 
@@ -458,7 +458,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
     )],
     ["Bido", new SagaUnit(FourCC("U00M"), 9, 2500, 400, 2500, new Vector2D(-4600, 2500))],
-    ["Gokua", new SagaUnit(FourCC("U00N"), 30, 4000, 400, 3500, new Vector2D(-4700, 2100),
+    ["Gokua", new SagaUnit(FourCC("U00N"), 20, 4000, 400, 3500, new Vector2D(-4700, 2100),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
       ],
@@ -666,10 +666,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Saga.GENERIC_BOMB
       ],
     )],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 190, 23000, 400, 23000, new Vector2D(3000, 7000),
+    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Broly.ENERGY_PUNCH,
+        SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Nappa.BREAK_CANNON,
         SagaAbilities.Saga.GENERIC_BOMB
       ],

@@ -335,6 +335,7 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
       SetHeroLevel(this.broly, GetHeroLevel(this.broly) + 15, true);
       SetHeroStr(this.broly, Math.floor(GetHeroStr(this.broly, true) * 1.3 + 3000), true);
       SetHeroAgi(this.broly, Math.floor(GetHeroAgi(this.broly, true) * 1.2 + 2000), true);
+      SetHeroInt(this.broly, Math.floor(GetHeroInt(this.broly, true) * 1.1 + 1000), true);
       this.auraLSS = AddSpecialEffectTarget(
         "AuraDarkGreen.mdl",
         this.broly,

@@ -46,7 +46,8 @@ export function addAbilityAction(abilityTrigger: trigger, name: string) {
           // show custom ability name on activation, if castable
           TextTagHelper.showPlayerColorTextOnUnit(name, playerId, customHero.unit);
           if (name == AbilityNames.BasicAbility.ZANZO_DASH) {
-            playSoundOnUnit(customHero.unit, "Audio/Effects/Zanzo.mp3", 1149);
+            // can be spammed...
+            // playSoundOnUnit(customHero.unit, "Audio/Effects/Zanzo.mp3", 1149);
           } else if (name == AbilityNames.BasicAbility.MAX_POWER) {
             playSoundOnUnit(customHero.unit, "Audio/Effects/PowerUp3.mp3", 11598);
           }

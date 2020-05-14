@@ -59,7 +59,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
       this.isRunningAway = true;
       SagaHelper.showMessagesChanceOfJoke(
         [
-          "|cffffcc00Gero|r: No. 17 and No. 18 will be coming to kill you all!"
+          "|cffffcc00Gero|r: No. 17 and 18 will be coming to kill you all!"
         ],
       );
       const sagaAI = this.bossesAI.get(this.android20);

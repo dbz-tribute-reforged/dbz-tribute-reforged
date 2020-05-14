@@ -69,10 +69,12 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
 
   protected syn: unit | undefined;
   protected omega: unit | undefined;
-  
+  protected superOmega: boolean;
+
   constructor() {
     super();
     this.delay = 20;
+    this.superOmega = false;
   }
 
   spawnSagaUnits(): void {
@@ -109,6 +111,31 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
         "|cffffcc00Omega Shenron|r: By absorbing the other Dragon Balls I have become Omega Shenron!"
       );
       SagaHelper.genericTransformAndPing(this.omega, this.syn, this);
+    }
+    if (
+      this.omega &&
+      !this.superOmega && 
+      SagaHelper.checkUnitHp(this.omega, 0.5, true, false, true) && 
+      !SagaHelper.isUnitSagaHidden(this.omega)
+    ) { 
+      SagaHelper.showMessagesChanceOfJoke(
+        [
+          "|cffffcc00Omega Shenron|r: The comfort you've always felt at being called the strongest fighter in the galaxy will come to an end today",
+        ],
+      );
+      this.superOmega = true;
+      SetUnitScale(this.omega, 1.8, 1.8, 1.8);
+      SetHeroLevel(this.omega, GetHeroLevel(this.omega) + 10, true);
+      SetHeroStr(this.omega, Math.floor(GetHeroStr(this.omega, true) * 1.4 + 4000), true);
+      SetHeroAgi(this.omega, Math.floor(GetHeroAgi(this.omega, true) * 1.2 + 2000), true);
+      SetHeroInt(this.omega, Math.floor(GetHeroInt(this.omega, true) * 1.3 + 3000), true);
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+          this.omega, 
+          "origin", 
+        )
+      );
     }
   }
 

@@ -112,6 +112,13 @@ export class TournamentManager {
     return false;
   }
 
+  public isTournamentActive(name: string): boolean {
+    if (this.currentTournament != null) {
+      return this.currentTournament.name == name;
+    }
+    return false;
+  }
+
   protected setupReviveTrigger() {
     // tournament revive trigger
     // if you die in tournament, revive & move to lobby

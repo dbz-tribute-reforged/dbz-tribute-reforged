@@ -9,7 +9,7 @@ export module Constants {
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
-  export let jokeProbability = 0.03;
+  export let jokeProbability = 0.02;
   export const sagaDisplayTextDuration = mediumDisplayTextDuration;
   export const sagaDisplayTextDelay = shortDisplayTextDuration;
   export const creepUpgradeDeathDelay = 10;
@@ -26,15 +26,16 @@ export module Constants {
     -7000, 20000
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    6000, 24000
+    6550, 24000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;
   export const sagaAggroInterval: number = 500;
   export const sagaMinAcquisitionRange: number = 2500;
   export const sagaMaxAcquisitionRange: number = 99999;
-  export const senzuBean: number = FourCC("I000");
   export const reviveDelay: number = 5;
+  // dont make team values 0
+  export const invalidTeamValue: number = 0;
   export const team1Value: number = 1;
   export const team2Value: number = 2;
   export let defaultTeam1: player[] = [Player(0), Player(1), Player(2), Player(3), Player(4)];

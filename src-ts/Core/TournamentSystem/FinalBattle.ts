@@ -6,6 +6,7 @@ import { WinLossHelper } from "Common/WinLossHelper";
 import { Logger } from "Libs/TreeLib/Logger";
 import { TournamentData } from "./TournamentData";
 import { UnitHelper } from "Common/UnitHelper";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class FinalBattle extends AdvancedTournament implements Tournament {
   protected unitsTeam1: unit[];
@@ -22,7 +23,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     this.unitsTeam1 = [];
     this.unitsTeam2 = [];
     this.winTrigger = CreateTrigger();
-    this.winTeam = 0;
+    this.winTeam = Constants.invalidTeamValue;
   }
 
   start(): void {
@@ -74,8 +75,8 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     this.prepareTeam(Constants.defaultTeam1, this.unitsTeam1, TournamentData.tournamentWaitRoom1);
     this.prepareTeam(Constants.defaultTeam2, this.unitsTeam2, TournamentData.tournamentWaitRoom2);
 
-    CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom1.x, TournamentData.tournamentWaitRoom1.y - 500);
-    CreateItem(Constants.senzuBean, TournamentData.tournamentWaitRoom2.x, TournamentData.tournamentWaitRoom2.y + 500);
+    CreateItem(ItemConstants.Consumables.SENZU_BEAN, TournamentData.tournamentWaitRoom1.x, TournamentData.tournamentWaitRoom1.y - 500);
+    CreateItem(ItemConstants.Consumables.SENZU_BEAN, TournamentData.tournamentWaitRoom2.x, TournamentData.tournamentWaitRoom2.y + 500);
     
     // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
     //   FogModifierStart(CreateFogModifierRect(Player(i), FOG_OF_WAR_VISIBLE, GetPlayableMapRect(), true, false));
@@ -123,6 +124,21 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       "After this, there's no turning back."
     );
 
+    StopMusic(false);
+    ClearMapMusic();
+    PlayMusic("Audio/Music/KachiDaze.mp3");
+    ResumeMusic();
+    // TimerStart(CreateTimer(), 250, true, () => {
+    //   if (this.winTeam == 0) {
+    //     StopMusic(false);
+    //     ClearMapMusic();
+    //     PlayMusic("Audio\\Music\\KachiDaze.mp3");
+    //     ResumeMusic();
+    //   } else {
+    //     DestroyTimer(GetExpiredTimer());
+    //   }
+    // });
+
     TimerStart(this.toStartTimer, TournamentData.finalBattleLobbyWait, false, () => {
       DisplayTimedTextToForce(
         bj_FORCE_ALL_PLAYERS, TournamentData.finalBattleLobbyWait, 
@@ -156,7 +172,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     TriggerAddAction(this.winTrigger, () => {
       const dyingUnit = GetTriggerUnit();
       const player = GetOwningPlayer(dyingUnit);
-      let teamNumber = 0;
+      let teamNumber = Constants.invalidTeamValue;
       let dyingUnitTeam: unit[] = [];
       let index = this.unitsTeam1.indexOf(dyingUnit);
       if (index > -1) {
@@ -172,7 +188,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
         }
       }
       Logger.LogDebug("Team " + teamNumber + " remaining: " + dyingUnitTeam.length);
-      if (index > -1 && dyingUnitTeam.length == 0) {
+      if (teamNumber != Constants.invalidTeamValue && dyingUnitTeam.length == 0) {
         this.winTeam = teamNumber;
         this.complete();
       }

@@ -23,6 +23,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   protected hookedUnit: unit | null;
   protected hookPause: boolean;
   protected nextCoord: Vector2D;
+  protected nearbyUnitCoord: Vector2D;
 
   constructor(
     public name: string = "Hook",
@@ -53,6 +54,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.hookedUnit = null;
     this.hookPause = false;
     this.nextCoord = new Vector2D();
+    this.nearbyUnitCoord = new Vector2D();
   }
   
   protected calculateDamage(input: CustomAbilityInput): number {
@@ -79,9 +81,9 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     ForGroup(hookedGroup, () => {
       const nearbyUnit = GetEnumUnit();
       if (!this.onlyHookHeroes || IsUnitType(nearbyUnit, UNIT_TYPE_HERO)) {
+        this.nearbyUnitCoord.setPos(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit));
         const distance = CoordMath.distance(
-          this.hookCoords, 
-          new Vector2D(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit))
+          this.hookCoords, this.nearbyUnitCoord
         );
         if (distance < closestDistance) {
           closestDistance = distance;
@@ -120,12 +122,12 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     if (!this.startedHook) {
       this.startedHook = true;
       if (this.useLastCastPoint) {
-        this.hookTarget = new Vector2D(input.castPoint.x, input.castPoint.y);
+        this.hookTarget.setVector(input.castPoint);
       } else {
-        this.hookTarget = new Vector2D(input.targetPoint.x, input.targetPoint.y);
+        this.hookTarget.setVector(input.targetPoint);
       }
-      this.hookSource = new Vector2D(GetUnitX(source), GetUnitY(source));
-      this.hookCoords = this.hookSource;
+      this.hookSource.setPos(GetUnitX(source), GetUnitY(source));
+      this.hookCoords.setVector(this.hookSource);
       this.hookAngle = CoordMath.angleBetweenCoords(this.hookSource, this.hookTarget);
     }
 
@@ -182,7 +184,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
           }
 
           // support for hooked unit moving by other means
-          this.hookCoords = new Vector2D(GetUnitX(this.hookedUnit), GetUnitY(this.hookedUnit));
+          this.hookCoords.setPos(GetUnitX(this.hookedUnit), GetUnitY(this.hookedUnit));
           this.hookAngle = CoordMath.angleBetweenCoords(this.hookSource, this.hookCoords);
         } else {
           // grab units on the way back
