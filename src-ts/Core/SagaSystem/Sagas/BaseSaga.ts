@@ -31,6 +31,7 @@ export interface Saga {
   state: SagaState;
 
   name: string;
+  delay: number;
 
   canStart: () => boolean;
   canComplete: () => boolean;
@@ -39,4 +40,5 @@ export interface Saga {
   complete: () => void;
   update: (t: number) => void;
   ping: () => void;
+  getDelay: () => number;
 }

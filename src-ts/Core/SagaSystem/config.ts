@@ -76,8 +76,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
   ],
 
   sagaDependencies: {
-    // main branch
+    // starting sagas
+    DeadZoneSaga: [],
     RaditzSaga: [],
+    // main branch
     VegetaSaga: [
       [ RaditzSaga, SagaState.Completed ],
     ],
@@ -116,7 +118,6 @@ export const sagaSystemConfig: SagaSystemConfig = {
       [ BabidiSaga, SagaState.Completed ],
     ],
     // z movie branch
-    DeadZoneSaga: [],
     TurlesSaga: [
       [ DeadZoneSaga, SagaState.Completed ],
     ],

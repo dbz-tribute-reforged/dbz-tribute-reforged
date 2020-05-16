@@ -4,6 +4,7 @@ import { Entity } from "Libs/TreeLib/Entity";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { sagaSystemConfig } from "./config";
 import { Constants } from "Common/Constants";
+import { CustomMultiboardManager } from "CustomUI/CustomMultiboard";
 
 export class SagaManager extends Entity {
 
@@ -93,6 +94,7 @@ export class SagaManager extends Entity {
               && saga.canStart()) {
             // do start
             saga.start();
+            CustomMultiboardManager.getInstance().addSaga(saga.name, saga.delay);
           }
           break;
         }
@@ -102,6 +104,7 @@ export class SagaManager extends Entity {
           saga.update(t);
           if (saga.canComplete()) {
             saga.complete();
+            CustomMultiboardManager.getInstance().finishSaga(saga.name);
           }
           break;
         }

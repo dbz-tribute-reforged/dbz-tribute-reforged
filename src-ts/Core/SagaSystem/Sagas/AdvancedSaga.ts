@@ -139,4 +139,9 @@ export class AdvancedSaga {
   ping() {
     SagaHelper.pingMinimap(this.bosses);
   }
+
+  getDelay(): number
+  {
+    return this.delay;
+  }
 }
