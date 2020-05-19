@@ -3817,6 +3817,86 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ginyu.MILKY_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGinyuMilkyCannon.blp",
+      disabled: "BTNGinyuMilkyCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ginyu.MILKY_CANNON,
+      body: 
+        AbilityNames.Ginyu.MILKY_CANNON
+    },
+    components: [
+      { name: "beam milky cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ginyu.GALAXY_DYNAMITE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 110,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGinyuGalaxyDynamite.blp",
+      disabled: "BTNGinyuGalaxyDynamite.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ginyu.GALAXY_DYNAMITE,
+      body: 
+        AbilityNames.Ginyu.GALAXY_DYNAMITE
+    },
+    components: [
+      { name: "multi galaxy dynamite" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ginyu.GINYU_POSE_FIGHTING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 164,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGinyuPoseFighting.blp",
+      disabled: "BTNGinyuPoseFighting.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ginyu.GINYU_POSE_FIGHTING,
+      body: 
+        AbilityNames.Ginyu.GINYU_POSE_FIGHTING
+    },
+    components: [
+      { name: "spell amp ginyu pose fighting" },
+      { name: "dash ground forward ginyu pose fighting" },
+      { name: "sfx ginyu pose fighting" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,

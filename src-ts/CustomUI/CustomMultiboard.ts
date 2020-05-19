@@ -64,6 +64,9 @@ export class SagaMultiboardRow {
 }
 
 export class SagaMultiboard implements CustomMultiboard {
+  static readonly X_OFFSET = 0.26;
+  static readonly Y_OFFSET = -0.04;
+
   public multiboard: multiboard;
   public framehandle: framehandle;
   public listContainer: framehandle;
@@ -87,12 +90,15 @@ export class SagaMultiboard implements CustomMultiboard {
     BlzFrameSetPoint(
       this.framehandle, FRAMEPOINT_TOPLEFT, 
       BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), FRAMEPOINT_TOPLEFT,
-      0, -0.06
+      SagaMultiboard.X_OFFSET, SagaMultiboard.Y_OFFSET
     );
     BlzFrameSetVisible(this.framehandle, true);
     // set all to show values
     this.setItemStyle(0, 0, true, false);
-    this.setItemWidth(1, 0, 30);
+    this.setItemWidth(1, 0, 26);
+
+    // ff cc 00 0% transparency
+    this.setItemValueColor(1, 0, 100, 80, 0, 0);
     // for (let i = 0; i < this.rows; ++i) {
     //   this.sagaRows.set(i+1, new SagaMultiboardRow("None", 0));
     // }
@@ -106,6 +112,12 @@ export class SagaMultiboard implements CustomMultiboard {
         sagaRow.setDelay(delay - 1);
       }
     }
+    BlzFrameClearAllPoints(this.framehandle);
+    BlzFrameSetPoint(
+      this.framehandle, FRAMEPOINT_TOPLEFT, 
+      BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), FRAMEPOINT_TOPLEFT,
+      SagaMultiboard.X_OFFSET, SagaMultiboard.Y_OFFSET
+    );
     this.applySagaMultiboardRow();
   }
 
@@ -118,7 +130,7 @@ export class SagaMultiboard implements CustomMultiboard {
   }
 
   getSagaRow(row: number): SagaMultiboardRow | undefined {
-    if (row < this.sagaRows.length) {
+    if (row <= this.sagaRows.length) {
       return this.sagaRows[row-1];
     }
     return undefined;
@@ -237,6 +249,7 @@ export class CustomMultiboardManager {
   protected multiboards: Map<string, CustomMultiboard>;
   protected sagaMultiboard: SagaMultiboard;
   protected sagaTimer: timer;
+  protected updateTimer: timer;
 
   constructor(
     
@@ -246,6 +259,7 @@ export class CustomMultiboardManager {
     this.multiboards = new Map();
     this.sagaMultiboard = new SagaMultiboard("Sagas", 2, 4);
     this.sagaTimer = CreateTimer();
+    this.updateTimer = CreateTimer();
     this.initialize();
   }
 
@@ -259,7 +273,12 @@ export class CustomMultiboardManager {
 
   private initialize() {
     this.addSagaMultiboard();
-    BlzFrameSetVisible(this.initialMultiboard, true);
+    TimerStart(this.updateTimer, 0.2, true, () => {
+      BlzFrameSetVisible(this.initialMultiboard, true);
+      for (const multiboard of this.multiboards.values()) {
+        BlzFrameSetVisible(multiboard.getFramehandle(), true);
+      }
+    })
   }
 
   public addSagaMultiboard() {
@@ -271,6 +290,8 @@ export class CustomMultiboardManager {
     TimerStart(this.sagaTimer, 1, true, () => {
       this.sagaMultiboard.update();
     });
+    MultiboardDisplay(this.sagaMultiboard.getMultiboard(), false);
+    MultiboardDisplay(this.sagaMultiboard.getMultiboard(), true);
   }
 
   public add(multiboard: CustomMultiboard): this {

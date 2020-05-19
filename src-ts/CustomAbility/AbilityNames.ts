@@ -249,6 +249,12 @@ export module AbilityNames {
     export const ICE_CANNON = "Ice Cannon";
   }
 
+  export module Ginyu {
+    export const MILKY_CANNON = "Milky Cannon";
+    export const GALAXY_DYNAMITE = "Galaxy Dynamite";
+    export const GINYU_POSE_FIGHTING = "Ginyu Pose Fighting";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

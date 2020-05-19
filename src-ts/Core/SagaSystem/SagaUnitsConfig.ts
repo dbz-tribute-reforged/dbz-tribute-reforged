@@ -155,10 +155,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.BATTLE_ARMOR_2,
       ]
     )],
-    ["Ginyu", new SagaUnit(FourCC("U000"), 50, 800, 250, 800, new Vector2D(24500, 29600),
+    ["Ginyu", new SagaUnit(FourCC("H09E"), 50, 800, 250, 800, new Vector2D(24500, 29600),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB,
+        SagaAbilities.Ginyu.MILKY_CANNON,
+        SagaAbilities.Ginyu.GALAXY_DYNAMITE,
+        SagaAbilities.Ginyu.GINYU_POSE_FIGHTING,
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_3,

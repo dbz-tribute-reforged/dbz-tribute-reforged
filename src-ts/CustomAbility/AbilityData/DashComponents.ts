@@ -615,6 +615,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 35,
   },
+  // ginyu pose fighting
+  {
+    name: "dash ground forward ginyu pose fighting",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
+  },
   // ---
   // saga zanzo
   {

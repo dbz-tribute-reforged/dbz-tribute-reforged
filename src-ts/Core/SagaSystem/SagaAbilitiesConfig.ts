@@ -238,6 +238,18 @@ export module SagaAbilities {
     );
   }
 
+  export module Ginyu {
+    export const MILKY_CANNON = new SagaAbility(
+      AbilityNames.Ginyu.MILKY_CANNON, 10, 20, 10, MEDIUM_CAST_TIME
+    );
+    export const GALAXY_DYNAMITE = new SagaAbility(
+      AbilityNames.Ginyu.GALAXY_DYNAMITE, 10, 15, 10, SHORT_CAST_TIME
+    );
+    export const GINYU_POSE_FIGHTING = new SagaAbility(
+      AbilityNames.Ginyu.GINYU_POSE_FIGHTING, 10, 25, 5, MEDIUM_CAST_TIME
+    );
+  }
+
   export module Whis {
     export const ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME

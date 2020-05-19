@@ -2,7 +2,7 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { Vector2D } from "Common/Vector2D";
 
 export class CustomPlayer {
-  protected heroes: Map<unit, CustomHero>;
+  public heroes: Map<unit, CustomHero>;
   protected currentlySelectedUnit: unit;
   protected lastSelectedOwnedHero: unit;
   public mouseData: Vector2D;

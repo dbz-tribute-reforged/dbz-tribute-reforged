@@ -13,6 +13,7 @@ export module Debuffs {
   export const HEROS_SONG = FourCC("A0I6");
   export const EIS_FROSTBITE = FourCC("A0P5");
   export const KROWN_TOSS = FourCC("A0P9");
+  export const MILKY_CANNON = FourCC("A0PU");
 }
 
 export const AOEDebuffComponents = [
@@ -262,5 +263,18 @@ export const AOEDebuffComponents = [
     onlyAffectHeroes: true,
     requireBuff: true,
     buffId: FourCC("B02T"),
+  },
+  {
+    name: "debuff slow milky cannon",
+    repeatInterval: 1,
+    startTick: 30,
+    endTick: -1,
+    abilityId: Debuffs.MILKY_CANNON,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 500,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
   },
 ]
