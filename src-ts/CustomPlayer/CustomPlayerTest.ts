@@ -16,6 +16,7 @@ import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
+import { TournamentData } from "Core/TournamentSystem/TournamentData";
 
 // global?
 export const customPlayers: CustomPlayer[] = [];
@@ -1126,6 +1127,8 @@ export function CustomPlayerTest() {
 
   SetupBraveSwordAttack(customPlayers);
   SetupDragonFistSfx(customPlayers);
+  SetupGinyuChangeNow(customPlayers);
+  SetupGinyuTelekinesis(customPlayers);
   SetupSpellSoundEffects();
 }
 
@@ -1444,6 +1447,151 @@ export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
   }));
 }
 
+export function SetupGinyuChangeNow(customPlayers: CustomPlayer[]) {
+  const changeNow = FourCC("A0PN");
+
+  const trigger = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerUnitEventSimple(trigger, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  }
+  TriggerAddCondition(trigger, Condition(() => {
+    const casterPlayer = GetTriggerPlayer();
+    const casterPlayerId = GetPlayerId(casterPlayer);
+    const targetUnit = GetSpellTargetUnit();
+    let targetPlayer = GetOwningPlayer(targetUnit);
+    if (GetPlayerId(targetPlayer) == casterPlayerId) {
+      targetPlayer = GetOwningPlayer(GetTriggerUnit());
+    }
+    const targetPlayerId = GetPlayerId(targetPlayer);
+    const targetX = GetUnitX(targetUnit);
+    const targetY = GetUnitY(targetUnit);
+
+    if (
+      customPlayers[targetPlayerId].hasHero(targetUnit) && 
+      GetSpellAbilityId() == changeNow &&
+      IsUnitType(targetUnit, UNIT_TYPE_HERO) &&
+      !IsUnitType(targetUnit, UNIT_TYPE_SUMMONED) &&
+      (
+        (
+          targetX < TournamentData.budokaiArenaBottomLeft.x ||
+          targetX > TournamentData.budokaiArenaTopRight.x
+        ) &&
+        (
+          targetY < TournamentData.budokaiArenaBottomLeft.y ||
+          targetY > TournamentData.budokaiArenaTopRight.y
+        )
+      ) && 
+      !TournamentManager.getInstance().isTournamentActive(Constants.finalBattleName)
+    ) {
+      const tmp = customPlayers[casterPlayerId].heroes;
+      customPlayers[casterPlayerId].heroes = customPlayers[targetPlayerId].heroes;
+      customPlayers[targetPlayerId].heroes = tmp;
+      for (const hero of customPlayers[targetPlayerId].allHeroes) {
+        if (IsUnitType(hero.unit, UNIT_TYPE_SUMMONED) && GetOwningPlayer(hero.unit) != targetPlayer) {
+          SetUnitOwner(hero.unit, targetPlayer, true);
+        }
+      }
+      for (const hero of customPlayers[casterPlayerId].allHeroes) {
+        if (IsUnitType(hero.unit, UNIT_TYPE_SUMMONED) && GetOwningPlayer(hero.unit) != casterPlayer) {
+          SetUnitOwner(hero.unit, casterPlayer, true);
+        }
+      }
+    }
+    return false;
+  }));
+}
+
+export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
+  const ignoreItem = FourCC("wtlg");
+  const telekinesisDuration = 36;
+  const telekinesisSpeed = 42;
+  const telekinesisAOE = 400;
+  const telekinesisRect = Rect(0, 0, 800, 800);
+  const telekinesis = FourCC("A0PR");
+
+  const trigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == telekinesis) {
+      const caster = GetTriggerUnit();
+      const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+      const newPos = new Vector2D();
+      const player = GetTriggerPlayer();
+      const itemsToMove: item[] = [];
+
+      const unitsToMove = UnitHelper.getNearbyValidUnits(targetPos, telekinesisAOE, () => {
+        const testUnit = GetFilterUnit();
+        return (
+          UnitHelper.isUnitTargetableForPlayer(testUnit, player) && 
+          GetPlayerId(GetOwningPlayer(testUnit)) >= Constants.maxActivePlayers &&
+          !IsUnitType(testUnit, UNIT_TYPE_ETHEREAL) && 
+          !IsUnitType(testUnit, UNIT_TYPE_MAGIC_IMMUNE)
+        )
+      });
+
+      MoveRectTo(telekinesisRect, targetPos.x, targetPos.y);
+      EnumItemsInRectBJ(telekinesisRect, () => {
+        const item = GetEnumItem();
+        targetPos.setPos(GetItemX(item), GetItemY(item));
+        if (
+          CoordMath.distance(targetPos, targetPos) < telekinesisAOE && 
+          GetItemTypeId(item) != ignoreItem
+        ) {
+          itemsToMove.push(GetEnumItem());
+        }
+      });
+
+      let counter: number = 0;
+      TimerStart(CreateTimer(), 0.03, true, () => {
+        if (
+          counter > telekinesisDuration ||
+          UnitHelper.isUnitDead(caster)
+        ) {
+          DestroyGroup(unitsToMove);
+          itemsToMove.splice(0, itemsToMove.length);
+          DestroyTimer(GetExpiredTimer());
+        } else {
+          casterPos.setPos(GetUnitX(caster), GetUnitY(caster));
+          for (const item of itemsToMove) {
+            targetPos.setPos(GetItemX(item), GetItemY(item));
+            newPos.polarProjectCoords(
+              targetPos, 
+              CoordMath.angleBetweenCoords(targetPos, casterPos), 
+              telekinesisSpeed,
+            );
+            if (
+              CoordMath.distance(casterPos, targetPos) > telekinesisAOE &&
+              PathingCheck.isFlyingWalkable(newPos)
+            ) {
+              SetItemPosition(item, newPos.x, newPos.y);
+            }
+          }
+
+          ForGroup(unitsToMove, () => {
+            const targetUnit = GetEnumUnit();
+            targetPos.setPos(GetUnitX(targetUnit), GetUnitY(targetUnit));
+            newPos.polarProjectCoords(
+              targetPos, 
+              CoordMath.angleBetweenCoords(targetPos, casterPos), 
+              telekinesisSpeed,
+            );
+            if (CoordMath.distance(casterPos, targetPos) > telekinesisAOE) {
+              PathingCheck.moveGroundUnitToCoord(targetUnit, newPos);
+            }
+          });
+
+          ++counter;
+        }
+      })
+
+    }
+
+    return false;
+  }));
+}
+
 export function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
   udg_TempSound = CreateSound(soundFile, false, true, false, 1, 1, "SpellsEAX")
 	SetSoundDuration(udg_TempSound, duration)
@@ -1554,6 +1702,14 @@ export module Id {
   export const burningAttack = FourCC("A03I");
   export const blazingRush = FourCC("A0LE");
   export const shiningSwordAttack = FourCC("A0LF");
+
+  export const ginyu = FourCC("H09E");
+  export const milkyCannon = FourCC("A0PP");
+  export const galaxyDynamite = FourCC("A0PQ");
+  export const ginyuTelekinesis = FourCC("A0PR");
+  export const ginyuPoseUltimate = FourCC("A0PS");
+  export const ginyuPoseFighting = FourCC("A0PT");
+  export const ginyuChangeNow = FourCC("A0PO");
 
   export const goku = FourCC("H000");
   export const kamehameha = FourCC("A00R");
@@ -1997,6 +2153,64 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
     case Id.shiningSwordAttack:
       if (unitId == Id.ft) {
         playSoundOnUnit(unit, "Audio/Voice/FTGrunt2.mp3", 528);
+      }
+      break;
+
+    // ginyu
+    case Id.milkyCannon:
+      if (unitId == Id.ginyu) {
+        if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuShout1.mp3", 936);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuShout2.mp3", 912);
+        }
+      }
+      break;
+    
+    case Id.galaxyDynamite:
+      if (unitId == Id.ginyu) {
+        playSoundOnUnit(unit, "Audio/Voice/GinyuShout3.mp3", 1752);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+      break;
+    
+    case Id.ginyuTelekinesis:
+      if (unitId == Id.ginyu) {
+        if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuShout1.mp3", 936);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuShout2.mp3", 912);
+        }
+      }
+      break;
+    
+    case Id.ginyuPoseUltimate:
+      if (unitId == Id.ginyu) {
+        if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuSpecialFightingPose.mp3", 3840);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuSpecialFightingPose2.mp3", 2472);
+        }
+      }
+      break;
+    
+    case Id.ginyuPoseFighting:
+      if (unitId == Id.ginyu) {
+        if (rng < 20) {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuHasArrived.mp3", 4368);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GinyuTogetherWeAre.mp3", 2736);
+        }
+      }
+      break;
+    
+    case Id.ginyuChangeNow:
+      if (rng < 50) {
+        playSoundOnUnit(unit, "Audio/Voice/GinyuBodyChange1.mp3", 3360);
+      } else if (rng < 75) {
+        playSoundOnUnit(unit, "Audio/Voice/GinyuBodyChange2.mp3", 2808);
+      } else {
+        playSoundOnUnit(unit, "Audio/Voice/GinyuBodyChange3.mp3", 1752);
       }
       break;
 

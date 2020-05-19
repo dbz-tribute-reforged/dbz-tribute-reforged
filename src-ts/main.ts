@@ -96,10 +96,6 @@ function tsMain() {
     itemCleanupManager = ItemCleanupManager.getInstance();
     DestroyTimer(GetExpiredTimer());
   });
-
-  TimerStart(CreateTimer(), 30, false, () => {
-    DestroyTimer(GetExpiredTimer());
-  });
 }
 
 function playLobbyMusic() {

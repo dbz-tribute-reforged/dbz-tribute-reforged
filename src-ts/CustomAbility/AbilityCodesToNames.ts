@@ -216,6 +216,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0P3'), AbilityNames.EisShenron.ABSOLUTE_ZERO],
     [FourCC('A0P4'), AbilityNames.EisShenron.ICE_CANNON],
 
+    // ginyu
+    [FourCC('A0PP'), AbilityNames.Ginyu.MILKY_CANNON],
+    [FourCC('A0PQ'), AbilityNames.Ginyu.GALAXY_DYNAMITE],
+    [FourCC('A0PT'), AbilityNames.Ginyu.GINYU_POSE_FIGHTING],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

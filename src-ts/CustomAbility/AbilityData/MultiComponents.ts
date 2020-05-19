@@ -861,6 +861,31 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi galaxy dynamite", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: -4,
+    angleMax: 4,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 20,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 4,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    sfxList: true,
+    components: [
+      { name: "beam galaxy dynamite" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

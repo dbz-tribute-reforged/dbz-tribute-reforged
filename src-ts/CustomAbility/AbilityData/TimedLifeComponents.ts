@@ -41,4 +41,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 37,
   },
+  {
+    name: "timed life beam galaxy dynamite", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 33,
+  },
 ];

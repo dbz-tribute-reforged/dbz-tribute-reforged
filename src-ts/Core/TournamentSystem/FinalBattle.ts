@@ -33,7 +33,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
 
   complete(): void {
     super.complete();
-    WinLossHelper.forceTeamWin((this.winTeam) % 2 + 1);
+    WinLossHelper.forceTeamWin(this.winTeam);
     for (const unit of this.unitsTeam1) {
       SetUnitX(unit, 0);
       SetUnitY(unit, 0);
@@ -189,7 +189,7 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
       }
       Logger.LogDebug("Team " + teamNumber + " remaining: " + dyingUnitTeam.length);
       if (teamNumber != Constants.invalidTeamValue && dyingUnitTeam.length == 0) {
-        this.winTeam = teamNumber;
+        this.winTeam = teamNumber % 2 + 1;
         this.complete();
       }
     });

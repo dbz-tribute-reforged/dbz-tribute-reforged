@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.42e
+DBZ Tribute Reforged 0.43
 }
 
 STRING 4
@@ -8749,15 +8749,33 @@ Dr Wheelo's Research
 }
 
 STRING 1393
-// Items: I040 (Dead Zone Fragment), Description (Description)
+// Items: I04N (Body Change), Description (Description)
 {
-Banishes the target's physical body to the dead zone, slowing them and causing them to invulnerable and unable to attack for 2.5 seconds. The target can still use abilities.
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 50% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 25% of Current HP
+Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
+|cff00ffffCooldown: 600s (180s if you hit an invalid target)|r
+
+|cff808080"Change ... NOW!"|r
 }
 
 STRING 1394
-// Items: I040 (Dead Zone Fragment), Ubertip (Tooltip - Extended)
+// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
 {
-Banishes the target's physical body to the dead zone, slowing them and causing them to invulnerable and unable to attack for 2.5 seconds. The target can still use abilities.
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 50% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 25% of Current HP
+Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
+|cff00ffffCooldown: 600s (180s if you hit an invalid target)|r
+
+|cff808080"Change ... NOW!"|r
 }
 
 STRING 1395
@@ -10183,12 +10201,6 @@ STRING 1628
 R
 }
 
-STRING 1629
-// Items: I02W (Dimension Sword 1 Janemba), Ubertip (Tooltip - Extended)
-{
-Adds 2000 bonus damage to Janemba and causes Janemba's attacks to reduce the target's armor by 50.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
-}
-
 STRING 1630
 // Items: I02W (Dimension Sword 1 Janemba), Tip (Tooltip - Basic)
 {
@@ -10196,9 +10208,8 @@ Dimension Sword
 }
 
 STRING 1631
-// Items: I02W (Dimension Sword 1 Janemba), Description (Description)
 {
-Adds 2000 bonus damage to Janemba and causes Janemba's attacks to reduce the target's armor by 50.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
+1.000x
 }
 
 STRING 1632
@@ -10585,12 +10596,6 @@ STRING 1692
 Purchase Senzu Bean
 }
 
-STRING 1693
-// Items: I00I (Dr Wheelo's Research [1/5]), Description (Description)
-{
-The owner of this item will convert 7% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
-}
-
 STRING 1694
 // Items: I03D (Battle Armor [|cffFFFF004/5|r]), Name (Name)
 {
@@ -10922,9 +10927,9 @@ Scouter 2.0
 }
 
 STRING 1749
-// Items: I00I (Dr Wheelo's Research [1/5]), Ubertip (Tooltip - Extended)
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-The owner of this item will convert 7% of the damage they deal into life.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool1> seconds|r
 }
 
 STRING 1750
@@ -12440,9 +12445,9 @@ Turns every unit in a line into a defenseless piece of candy. Basic attacks agai
 }
 
 STRING 2002
-// Abilities: A0LK (Buu Candy Beam Slow 5%), Name (Name)
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-Buu Candy Beam Slow 5%
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool3> seconds|r
 }
 
 STRING 2003
@@ -13376,7 +13381,7 @@ STRING 2157
 }
 
 STRING 2158
-// Abilities: A0LK (Buu Candy Beam Slow 5%), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B01S (), EditorSuffix (Editor Suffix)
 {
 (recent)
 }
@@ -17596,13 +17601,13 @@ STRING 2858
 }
 
 STRING 2859
-// Abilities: A0LK (Buu Candy Beam Slow 5%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Beam Slow Recent), Tip (Tooltip - Normal)
 {
 Slow
 }
 
 STRING 2860
-// Abilities: A0LK (Buu Candy Beam Slow 5%), Tip (Tooltip - Normal)
+// Abilities: A0LK (Buu Candy Beam Slow Recent), Tip (Tooltip - Normal)
 {
 Slow
 }
@@ -38681,6 +38686,18 @@ Spell Amp: +2% per second up to +10%|r
 |cff00ffffCooldown: <A0PF,Cool10> seconds|r
 }
 
+STRING 6346
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool4> seconds|r
+}
+
+STRING 6347
+// Units: H09E (Ginyu Force Captain), Propernames (Proper Names)
+{
+Ginyu
+}
+
 STRING 6348
 {
 Stat Modification
@@ -39961,6 +39978,24 @@ STRING 6560
 R
 }
 
+STRING 6561
+// Items: I04N (Body Change), Name (Name)
+{
+Body Change
+}
+
+STRING 6562
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool5> seconds|r
+}
+
+STRING 6563
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool6> seconds|r
+}
+
 STRING 6564
 // Abilities: A0EI (Candy Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39985,10 +40020,28 @@ STRING 6567
 The user creates a straight energy beam with another coiled around it dealing damage. He charges it by putting two fingers against his forehead, then firing it by extending his arm and firing from the fingers.|n|cff00ff00(Damage: (Int * lvl * 2.5) +100)|r|n|cff00ffff(Cooldown: 18 seconds)|r
 }
 
+STRING 6568
+// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 6569
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool7> seconds|r
+}
+
 STRING 6570
 // Abilities: A0EI (Candy Beam), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 4|r]
+}
+
+STRING 6571
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool8> seconds|r
 }
 
 STRING 6572
@@ -40009,8 +40062,14 @@ STRING 6574
 [|cff00FF00Q|r] Special Beam Cannon - [|cffffcc00Level 7|r]
 }
 
+STRING 6575
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool9> seconds|r
+}
+
 STRING 6576
-// Units: E003 (Prince of all Saiyans), EditorSuffix (Name - Editor Suffix)
+// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -41139,16 +41198,40 @@ STRING 6760
 Angry Explosion
 }
 
+STRING 6761
+// Abilities: A0PN (Change Now), Name (Name)
+{
+Change Now
+}
+
 STRING 6762
 // Abilities: A0FH (Max Power), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
+STRING 6763
+// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 6764
+// Abilities: A0PP (Milky Cannon), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
 STRING 6765
 // Abilities: A0ER (Angry Explosion), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Finger Blitz Barrage
+}
+
+STRING 6766
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+{
+F
 }
 
 STRING 6767
@@ -42417,7 +42500,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43011,7 +43094,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 7075
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43221,7 +43304,7 @@ A combat style used by Hit. |n|cffffcc00Evasion|r - <A0G0,DataD1,%>% |n|cffffcc0
 }
 
 STRING 7110
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44587,7 +44670,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45408,7 +45491,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -48904,7 +48987,7 @@ Zamasu's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8055
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -49771,7 +49854,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -51671,6 +51754,20 @@ STRING 8514
 King K Rool charges forward, dealing damage and stunning all units in his path.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IW,Cool1>s|r
 }
 
+STRING 8515
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 150] 2.30x "fp"
+[lvl 200] 2.40x "fp"
+[lvl 250] 2.50x "fp"
+
+Gains +0.02x for each Ginyu Force member on their team.
+}
+
 STRING 8516
 // Abilities: A0IU (Hand Kannon), Name (Name)
 {
@@ -51864,9 +51961,9 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 8548
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+// Abilities: A0PO (Change Now), EditorSuffix (Editor Suffix)
 {
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+(ginyu item)
 }
 
 STRING 8549
@@ -52069,7 +52166,7 @@ King K Rool is a formidable fighter. He can absorb incoming punches using only h
 }
 
 STRING 8581
-// Units: H008 (Goku's Youngest Son), EditorSuffix (Name - Editor Suffix)
+// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -52243,7 +52340,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -52722,7 +52819,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53542,7 +53639,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53806,7 +53903,7 @@ STRING 8865
 }
 
 STRING 8866
-// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55642,7 +55739,7 @@ Jiren's Fighting Style
 }
 
 STRING 9172
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55666,13 +55763,13 @@ Jiren's strength is overwhelming.|n|cff00FF00Crit %:|r 15|n|cff00FF00Crit Dmg:|r
 }
 
 STRING 9176
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55894,7 +55991,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -55918,7 +56015,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -58546,13 +58643,13 @@ Q
 }
 
 STRING 9656
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9657
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59590,7 +59687,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
+// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59602,7 +59699,7 @@ Evil
 }
 
 STRING 9832
-// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
+// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59614,7 +59711,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
+// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59626,7 +59723,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59656,85 +59753,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: O005 (Fat Buu), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H03Y (Human Fighter), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59746,13 +59843,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
+// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
+// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59764,103 +59861,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: E010 (Desert Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60710,7 +60807,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -60728,7 +60825,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61487,7 +61584,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
+// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61748,13 +61845,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62114,16 +62211,9 @@ Super 13 attacks the opponent with a heavy barrage of punches before punching th
 }
 
 STRING 10249
-// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
 {
-A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool10> seconds|r
 }
 
 STRING 10250
@@ -62295,7 +62385,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62313,7 +62403,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63030,7 +63120,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63138,19 +63228,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63318,7 +63408,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64050,7 +64140,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64068,7 +64158,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64543,13 +64633,13 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 10639
-// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
+// Units: H09E (Ginyu Force Captain), Hotkey (Hotkey)
 {
 X
 }
@@ -64630,7 +64720,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 15.May.20
+This map is under active development - 19.May.20
 }
 
 STRING 10653
@@ -64714,9 +64804,9 @@ Buu Candy
 }
 
 STRING 10663
-// Buffs/Effects: B01S (), EditorSuffix (Editor Suffix)
+// Abilities: A0PP (Milky Cannon), Researchubertip (Tooltip - Learn - Extended)
 {
-(recent)
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool1> - <A0PP,Cool10> seconds|r
 }
 
 STRING 10664
@@ -65021,7 +65111,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65524,7 +65614,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66646,7 +66736,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66664,7 +66754,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66776,7 +66866,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67025,7 +67115,7 @@ The user charges energy into their right hand and rushes forward with with an en
 }
 
 STRING 11049
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67528,7 +67618,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67571,7 +67661,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67708,7 +67798,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67792,7 +67882,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 11174
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68191,7 +68281,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68209,7 +68299,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68545,7 +68635,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68971,13 +69061,13 @@ STRING 11370
 }
 
 STRING 11371
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70110,7 +70200,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -70128,7 +70218,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -71162,7 +71252,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72073,7 +72163,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72091,7 +72181,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72919,7 +73009,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -73638,7 +73728,7 @@ Gives detailed information on the location and power level of enemies. |n|cff00f
 }
 
 STRING 12146
-// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74100,7 +74190,7 @@ Upa throws his Javelin at his enemies. If this ability comes into contact with K
 }
 
 STRING 12223
-// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
+// Abilities: A07T (Sense (|cffFFFF00x|r)), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -74918,7 +75008,7 @@ A powerful medium-range brawler that excels in outmaneuvering his opponents befo
 }
 
 STRING 12347
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -75060,7 +75150,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75192,9 +75282,10 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12393
-// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
 {
-|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points)|r|n+750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool1> seconds|r
 }
 
 STRING 12394
@@ -75564,7 +75655,7 @@ Eis Shenron turns his left hand into a cannon that fires an immensely powerful b
 }
 
 STRING 12445
-// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
+// Abilities: A0BN (Toggle Revive Point), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -75648,7 +75739,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75672,7 +75763,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -75912,7 +76003,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -75930,7 +76021,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75984,7 +76075,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76002,7 +76093,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76434,7 +76525,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76698,7 +76789,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76710,7 +76801,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76722,7 +76813,7 @@ Beamers / Backline
 }
 
 STRING 12637
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76752,7 +76843,7 @@ Z
 }
 
 STRING 12642
-// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0D6 (Sample ???), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -77243,7 +77334,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77941,7 +78032,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78054,6 +78145,25 @@ STRING 12850
 [|cff00ff00W|r] Justice Punch - [|cffffcc00Level 9|r]
 }
 
+STRING 12851
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchubertip (Tooltip - Learn - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool1> - <A0PS,Cool10> seconds|r
+}
+
+STRING 12852
+// Items: I02W (Dimension Sword 1 Janemba), Ubertip (Tooltip - Extended)
+{
+Adds 2000 bonus damage to Janemba and causes Janemba's attacks to reduce the target's armor by 50.
+}
+
+STRING 12853
+// Items: I02W (Dimension Sword 1 Janemba), Description (Description)
+{
+Adds 2000 bonus damage to Janemba and causes Janemba's attacks to reduce the target's armor by 50.
+}
+
 STRING 12854
 // Abilities: A0PD (Justice Punch), EditorSuffix (Editor Suffix)
 {
@@ -78064,6 +78174,12 @@ STRING 12855
 // Abilities: A0PD (Justice Punch), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Justice Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 12856
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Ubertip (Tooltip - Extended)
+{
++750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
 }
 
 STRING 12857
@@ -78138,6 +78254,24 @@ STRING 12868
 Justice Hold
 }
 
+STRING 12869
+// Items: I03F (Brave Sword [|cffFFFF001/5|r]), Description (Description)
+{
++750 damage. Reduces the mana of nearby enemy units by 2% of current mana per second.|n|cff999999"Sharp and Shiny!"|r
+}
+
+STRING 12870
+// Items: I00I (Dr Wheelo's Research [1/5]), Description (Description)
+{
+The owner of this item will convert 7% of the damage they deal into life.
+}
+
+STRING 12871
+// Items: I00I (Dr Wheelo's Research [1/5]), Ubertip (Tooltip - Extended)
+{
+The owner of this item will convert 7% of the damage they deal into life.
+}
+
 STRING 12872
 // Abilities: A0PI (Justice Flash 2), Name (Name)
 {
@@ -78154,6 +78288,18 @@ STRING 12874
 // Abilities: A0PB (Justice Flash), Researchubertip (Tooltip - Learn - Extended)
 {
 Toppo gathers five orange ki balls at the tips of his fingers before rapidly firing them at evildoers.|n|cffff2020Channel Duration: <A0PB,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0PB,Cool1> - <A0PB,Cool10> seconds|r|n|n|cff808080"Justice... Flash!"|r
+}
+
+STRING 12875
+// Units: H09E (Ginyu Force Captain), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00X|r] Choose Ginyu
+}
+
+STRING 12876
+// Units: H09E (Ginyu Force Captain), Tip (Tooltip - Basic)
+{
+[|cffffff00X|r] Choose Ginyu
 }
 
 STRING 12877
@@ -78434,6 +78580,18 @@ STRING 12921
 Toppo's God of Destruction form.
 }
 
+STRING 12922
+// Abilities: A0DH (Revive - Tao Spawn), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 12923
+// Abilities: A0PN (Change Now), Tip (Tooltip - Normal)
+{
+Change Now
+}
+
 STRING 12924
 // Abilities: A0PM (Justice Hold 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -78513,7 +78671,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78543,7 +78701,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12942
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78799,7 +78957,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79590,5 +79748,843 @@ STRING 13113
 // Abilities: A0LM (Hellzone Grenade), Researchubertip (Tooltip - Learn - Extended)
 {
 Piccolo fires many energy balls at his opponent which are made easy to avoid on purpose. The energy balls then wait behind the opponent, making sure the opponent is surrounded. With their opponent trapped Piccolo makes the energy balls converge on their opponent causing mass damage.|n|cff00ff00Damage: Int * Lvl * ?|r|n|cff00ffffCooldown: <A0LM,Cool1>s|r|n[|cffffcc00History|r] - |cff0066CCPiccolo uses this skill in the fight vs 17 in the Android Saga.|r
+}
+
+STRING 13114
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool2> seconds|r
+}
+
+STRING 13115
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool3> seconds|r
+}
+
+STRING 13116
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool4> seconds|r
+}
+
+STRING 13117
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool5> seconds|r
+}
+
+STRING 13118
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 2|r]
+}
+
+STRING 13119
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 3|r]
+}
+
+STRING 13120
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 4|r]
+}
+
+STRING 13121
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 5|r]
+}
+
+STRING 13122
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 6|r]
+}
+
+STRING 13123
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 1|r]
+}
+
+STRING 13124
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 7|r]
+}
+
+STRING 13125
+// Abilities: A0PP (Milky Cannon), Name (Name)
+{
+Milky Cannon
+}
+
+STRING 13126
+// Abilities: A0PP (Milky Cannon), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Milky Cannon - [|cffffcc00Level %d|r]
+}
+
+STRING 13127
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 9|r]
+}
+
+STRING 13128
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 8|r]
+}
+
+STRING 13129
+// Abilities: A0PP (Milky Cannon), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Milky Cannon - [|cffffcc00Level 10|r]
+}
+
+STRING 13130
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool6> seconds|r
+}
+
+STRING 13131
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool7> seconds|r
+}
+
+STRING 13132
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool8> seconds|r
+}
+
+STRING 13133
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool9> seconds|r
+}
+
+STRING 13134
+// Abilities: A0PQ (Galaxy Dynamite), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13135
+// Abilities: A0PS (Ginyu Pose Ultimate), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes his ultimate fighting pose. Refreshes all item and ability cooldowns. This ability is automatically put on cooldown for 5s when using any other ability or item.
+|cff00ffffCooldown: <A0PS,Cool10> seconds|r
+}
+
+STRING 13136
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool1> seconds|r
+}
+
+STRING 13137
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool3> seconds|r
+}
+
+STRING 13138
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool4> seconds|r
+}
+
+STRING 13139
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool5> seconds|r
+}
+
+STRING 13140
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool6> seconds|r
+}
+
+STRING 13141
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool7> seconds|r
+}
+
+STRING 13142
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 2|r]
+}
+
+STRING 13143
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 3|r]
+}
+
+STRING 13144
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 4|r]
+}
+
+STRING 13145
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 5|r]
+}
+
+STRING 13146
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 6|r]
+}
+
+STRING 13147
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 1|r]
+}
+
+STRING 13148
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 7|r]
+}
+
+STRING 13149
+// Abilities: A0PQ (Galaxy Dynamite), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 13150
+// Abilities: A0PQ (Galaxy Dynamite), Name (Name)
+{
+Galaxy Dynamite
+}
+
+STRING 13151
+// Abilities: A0PQ (Galaxy Dynamite), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Galaxy Dynamite - [|cffffcc00Level %d|r]
+}
+
+STRING 13152
+// Abilities: A0PQ (Galaxy Dynamite), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 13153
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 9|r]
+}
+
+STRING 13154
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 8|r]
+}
+
+STRING 13155
+// Abilities: A0PQ (Galaxy Dynamite), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Galaxy Dynamite - [|cffffcc00Level 10|r]
+}
+
+STRING 13156
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool8> seconds|r
+}
+
+STRING 13157
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool9> seconds|r
+}
+
+STRING 13158
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool10> seconds|r
+}
+
+STRING 13159
+// Abilities: A0PQ (Galaxy Dynamite), Researchubertip (Tooltip - Learn - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool1> - <A0PQ,Cool10> seconds|r
+}
+
+STRING 13160
+// Abilities: A0PR (Telekinesis), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13161
+// Abilities: A0PQ (Galaxy Dynamite), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a continuous stream of energy blasts at the target location.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PQ,Cool2> seconds|r
+}
+
+STRING 13162
+// Abilities: A0PP (Milky Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu fires a powerful energy ball that slows movement and attack speed upon detonating.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0PP,Cool2> seconds|r
+}
+
+STRING 13163
+// Items: I040 (Dead Zone Fragment), Description (Description)
+{
+Banishes the target's physical body to the dead zone, slowing them and causing them to be invulnerable and unable to attack for 2.5 seconds. The target can still use abilities.
+|cff00ffffCooldown: 45 seconds|r
+}
+
+STRING 13164
+// Items: I040 (Dead Zone Fragment), Ubertip (Tooltip - Extended)
+{
+Banishes the target's physical body to the dead zone, slowing them and causing them to be invulnerable and unable to attack for 2.5 seconds. The target can still use abilities.
+|cff00ffffCooldown: 45 seconds|r
+}
+
+STRING 13168
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 2|r]
+}
+
+STRING 13169
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 3|r]
+}
+
+STRING 13170
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 4|r]
+}
+
+STRING 13171
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 5|r]
+}
+
+STRING 13172
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 6|r]
+}
+
+STRING 13173
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 1|r]
+}
+
+STRING 13174
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 7|r]
+}
+
+STRING 13175
+// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 13176
+// Abilities: A0PR (Telekinesis), Name (Name)
+{
+Telekinesis
+}
+
+STRING 13177
+// Abilities: A0PR (Telekinesis), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Telekinesis - [|cffffcc00Level %d|r]
+}
+
+STRING 13178
+// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 13179
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 9|r]
+}
+
+STRING 13180
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 8|r]
+}
+
+STRING 13181
+// Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Telekinesis - [|cffffcc00Level 10|r]
+}
+
+STRING 13186
+// Abilities: A0PS (Ginyu Pose Ultimate), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13188
+// Abilities: A0PS (Ginyu Pose Ultimate), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 13189
+// Abilities: A0PS (Ginyu Pose Ultimate), Name (Name)
+{
+Ginyu Pose Ultimate
+}
+
+STRING 13190
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 1|r]
+}
+
+STRING 13192
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Ginyu Pose: Ultimate - [|cffffcc00Level %d|r]
+}
+
+STRING 13194
+// Abilities: A0PS (Ginyu Pose Ultimate), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 13195
+// Abilities: A0PT (Ginyu Pose Fighting), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13196
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 2|r]
+}
+
+STRING 13197
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 3|r]
+}
+
+STRING 13200
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 4|r]
+}
+
+STRING 13201
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 5|r]
+}
+
+STRING 13202
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 6|r]
+}
+
+STRING 13203
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 7|r]
+}
+
+STRING 13204
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 8|r]
+}
+
+STRING 13205
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 9|r]
+}
+
+STRING 13212
+// Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 10|r]
+}
+
+STRING 13214
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 13216
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 1|r]
+}
+
+STRING 13220
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 13222
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 2|r]
+}
+
+STRING 13223
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 3|r]
+}
+
+STRING 13226
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 4|r]
+}
+
+STRING 13227
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 5|r]
+}
+
+STRING 13228
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 6|r]
+}
+
+STRING 13229
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 7|r]
+}
+
+STRING 13230
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 8|r]
+}
+
+STRING 13231
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 9|r]
+}
+
+STRING 13238
+// Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
+{
+[|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 10|r]
+}
+
+STRING 13240
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 13241
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 13246
+// Abilities: A0PT (Ginyu Pose Fighting), Name (Name)
+{
+Ginyu Pose Fighting
+}
+
+STRING 13247
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%|r
+|cff00ffffCooldown: <A0PT,Cool1> seconds|r
+}
+
+STRING 13248
+// Abilities: A0PT (Ginyu Pose Fighting), Researchubertip (Tooltip - Learn - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%|r
+|cff00ffffCooldown: <A0PT,Cool1> - <A0PT,Cool10> seconds|r
+}
+
+STRING 13249
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +25%|r
+|cff00ffffCooldown: <A0PT,Cool2> seconds|r
+}
+
+STRING 13250
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +35%|r
+|cff00ffffCooldown: <A0PT,Cool3> seconds|r
+}
+
+STRING 13251
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +45%|r
+|cff00ffffCooldown: <A0PT,Cool4> seconds|r
+}
+
+STRING 13252
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +55%|r
+|cff00ffffCooldown: <A0PT,Cool5> seconds|r
+}
+
+STRING 13253
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +65%|r
+|cff00ffffCooldown: <A0PT,Cool6> seconds|r
+}
+
+STRING 13254
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +75%|r
+|cff00ffffCooldown: <A0PT,Cool7> seconds|r
+}
+
+STRING 13255
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +85%|r
+|cff00ffffCooldown: <A0PT,Cool8> seconds|r
+}
+
+STRING 13256
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +95%|r
+|cff00ffffCooldown: <A0PT,Cool9> seconds|r
+}
+
+STRING 13257
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu strikes a powerful fighting pose. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +105%|r
+|cff00ffffCooldown: <A0PT,Cool10> seconds|r
+}
+
+STRING 13258
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool1> seconds|r
+}
+
+STRING 13259
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool3> seconds|r
+}
+
+STRING 13260
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool4> seconds|r
+}
+
+STRING 13261
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool5> seconds|r
+}
+
+STRING 13262
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool6> seconds|r
+}
+
+STRING 13263
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool7> seconds|r
+}
+
+STRING 13264
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool8> seconds|r
+}
+
+STRING 13265
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool9> seconds|r
+}
+
+STRING 13266
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool10> seconds|r
+}
+
+STRING 13267
+// Abilities: A0PR (Telekinesis), Researchubertip (Tooltip - Learn - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool1> - <A0PR,Cool10> seconds|r
+}
+
+STRING 13268
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool2> seconds|r
+}
+
+STRING 13269
+// Units: H09E (Ginyu Force Captain), Name (Name)
+{
+Ginyu Force Captain
+}
+
+STRING 13270
+// Abilities: A0LK (Buu Candy Beam Slow Recent), Name (Name)
+{
+Buu Candy Beam Slow Recent
+}
+
+STRING 13271
+// Abilities: A0LK (Buu Candy Beam Slow Recent), EditorSuffix (Editor Suffix)
+{
+(buu)
+}
+
+STRING 13272
+// Abilities: A0PU (Milky Cannon Slow), Name (Name)
+{
+Milky Cannon Slow
+}
+
+STRING 13273
+// Abilities: A0PU (Milky Cannon Slow), Tip (Tooltip - Normal)
+{
+Milky Cannon Slow
+}
+
+STRING 13274
+// Buffs/Effects: B031 (), Bufftip (Tooltip)
+{
+Milky Cannon
+}
+
+STRING 13275
+// Buffs/Effects: B031 (), Buffubertip (Tooltip - Extended)
+{
+This unit has been hit by Milky Cannon; its movement speed and attack rate are reduced.
+}
+
+STRING 13276
+// Units: H08Y (Planet-Eater), Ubertip (Tooltip - Extended)
+{
+A PVP-oriented hero that relies on draining the stat multiplier of stronger heroes. Has the unique ability to modify temporary stat multipliers. Has a powerful late-game support ability that can distribute his temporay stat multiplier to boost his allies.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 13278
+// Abilities: A0PT (Ginyu Pose Fighting), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Ginyu Pose: Fighting - [|cffffcc00Level %d|r]
+}
+
+STRING 13283
+// Units: H09E (Ginyu Force Captain), Ubertip (Tooltip - Extended)
+{
+A powerful support hero that excels at saga-sniping and becomes stronger with each active item he collects. Has the ability to swap control of his hero and cripple the enemy team's composition.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 13285
+// Abilities: A0PN (Change Now), EditorSuffix (Editor Suffix)
+{
+(ginyu actual dummy)
+}
+
+STRING 13286
+// Abilities: A0PO (Change Now), Name (Name)
+{
+Change Now
 }
 
