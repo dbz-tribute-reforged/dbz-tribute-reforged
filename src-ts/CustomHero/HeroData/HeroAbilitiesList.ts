@@ -339,6 +339,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ginyu.MILKY_CANNON,
       AbilityNames.Ginyu.GALAXY_DYNAMITE,
       AbilityNames.Ginyu.GINYU_POSE_FIGHTING,
+      AbilityNames.Ginyu.FROG_TONGUE,
     ]],
   ]
 )

@@ -517,6 +517,7 @@ export function CustomPlayerTest() {
       const inventoryCoverTexture = BlzGetFrameByName("SimpleInventoryCoverTexture", 0);
 
       const inventoryParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0));
+      const inventoryBar = BlzFrameGetParent(BlzGetFrameByName("SimpleInventoryBar", 0));
       // const inventoryFrames: framehandle[] = [];
       // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryCover",0));
       // inventoryFrames.push(BlzGetFrameByName("SimpleInventoryBar",0));
@@ -525,16 +526,21 @@ export function CustomPlayerTest() {
 
       const inventoryButtons: framehandle[] = [];
       for (let i = 0; i < 6; ++i) {
-        const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
-        inventoryButtons.push(frame);
-        // inventoryFrames.push(frame);
+        // const frame = BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i);
+        // inventoryButtons.push(frame);
+        inventoryButtons.push(BlzGetFrameByName("InventoryButton_".concat(I2S(i)), 0));
       }
 
       const commandCardParent = BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, 0));
+      const commandCardBar = BlzFrameGetParent(BlzGetFrameByName("CommandBarFrame", 0));
       const commandCardButtons: framehandle[] = [];
       for (let i = 0; i < 12; ++i) {
-        commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
+        // commandCardButtons.push(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, i));
+        commandCardButtons.push(BlzGetFrameByName("CommandButton_".concat(I2S(i)), 0));
       }
+
+      // const buffBar = BlzGetOriginFrame(ORIGIN_FRAME_UNIT_PANEL_BUFF_BAR, 0);
+      // const buffBarParent = BlzFrameGetParent(buffBar);
       
       const customStrengthLabel = BlzGetFrameByName("heroStatStrengthText", 0);
       const customAgilityLabel = BlzGetFrameByName("heroStatAgilityText", 0);
@@ -550,14 +556,14 @@ export function CustomPlayerTest() {
 
         BlzFrameSetVisible(upperBar, true);
         BlzFrameSetVisible(resourceBar, true);
-        
+
         BlzFrameClearAllPoints(abilityButtonHotbar);
         BlzFrameSetPoint(
           abilityButtonHotbar, 
           FRAMEPOINT_BOTTOMRIGHT, 
           hpBar, 
           FRAMEPOINT_TOPRIGHT, 
-          -0.008, 0.001
+          -0.002, 0.001
         );
 
         BlzFrameClearAllPoints(hpBar);
@@ -583,11 +589,31 @@ export function CustomPlayerTest() {
         BlzFrameSetPoint(heroPortrait, FRAMEPOINT_BOTTOM, hpBar, FRAMEPOINT_TOP, -0.135, 0.003);
         BlzFrameSetSize(heroPortrait, 0.08, 0.08);
 
+        // buff bar doenst seem to work...
+        // BlzFrameSetVisible(buffBarParent, true);
+        // BlzFrameSetVisible(buffBar, true);
+        // BlzFrameClearAllPoints(buffBar);
+        // BlzFrameSetAbsPoint(buffBar, FRAMEPOINT_CENTER, 0.4, 0.3);
+        // BlzFrameSetPoint(buffBar, FRAMEPOINT_BOTTOMRIGHT, mpBar, FRAMEPOINT_BOTTOMLEFT, 0, 0);
+
         BlzFrameSetVisible(unitPanelParent, true);
         BlzFrameSetVisible(unitPanel, false);
 
-        BlzFrameSetVisible(inventoryCover, false);
-        BlzFrameSetVisible(inventoryCoverTexture, false);
+        // BlzFrameSetVisible(inventoryCover, false);
+        // BlzFrameSetSize(inventoryCover, 0.001, 0.001);
+        // BlzFrameSetPoint(
+        //   inventoryCover, FRAMEPOINT_BOTTOMRIGHT,
+        //   grandpa, FRAMEPOINT_BOTTOMRIGHT,
+        //   -0.2, 0
+        // );
+
+        // BlzFrameSetVisible(inventoryCoverTexture, false);
+        // BlzFrameSetSize(inventoryCoverTexture, 0.0001, 0.0001);
+        // BlzFrameSetPoint(
+        //   inventoryCoverTexture, FRAMEPOINT_BOTTOMRIGHT,
+        //   inventoryCover, FRAMEPOINT_BOTTOMRIGHT,
+        //   0, 0
+        // );
         
         BlzFrameSetParent(inventoryParent, commandCardParent);
 
@@ -595,6 +621,19 @@ export function CustomPlayerTest() {
         BlzFrameSetVisible(inventoryParent, true);
         FrameHelper.setFramesVisibility(inventoryButtons, true);
         // FrameHelper.setFramesVisibility(inventoryFrames, true);
+        
+
+        // relocates the inventory buttons (but not the inventroy bar)
+        // for (let i = 0; i < 3; ++i) {
+        //   for (let j = 0; j < 2; ++j) {
+        //     BlzFrameClearAllPoints(inventoryButtons[i*2+j]);
+        //     BlzFrameSetAbsPoint(
+        //       inventoryButtons[i*2+j], FRAMEPOINT_TOPLEFT,
+        //       0.7+0.04*j, 0.12-0.04*i
+        //     )
+        //   }
+        // }
+
 
         // heroStatsUI.setRenderVisible(true);
         BlzFrameSetVisible(customStrengthLabel, true);
@@ -1503,9 +1542,11 @@ export function SetupGinyuChangeNow(customPlayers: CustomPlayer[]) {
 
 export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
   const ignoreItem = FourCC("wtlg");
-  const telekinesisDuration = 36;
-  const telekinesisSpeed = 42;
+  const telekinesisDuration = 30;
+  const telekinesisSpeed = 50;
+  const telekinesisPlayerSpeedModifier = 0.5;
   const telekinesisAOE = 400;
+  const telekinesisMinDistance = 300;
   const telekinesisRect = Rect(0, 0, 800, 800);
   const telekinesis = FourCC("A0PR");
 
@@ -1525,7 +1566,6 @@ export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
         const testUnit = GetFilterUnit();
         return (
           UnitHelper.isUnitTargetableForPlayer(testUnit, player) && 
-          GetPlayerId(GetOwningPlayer(testUnit)) >= Constants.maxActivePlayers &&
           !IsUnitType(testUnit, UNIT_TYPE_ETHEREAL) && 
           !IsUnitType(testUnit, UNIT_TYPE_MAGIC_IMMUNE)
         )
@@ -1562,7 +1602,7 @@ export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
               telekinesisSpeed,
             );
             if (
-              CoordMath.distance(casterPos, targetPos) > telekinesisAOE &&
+              CoordMath.distance(casterPos, targetPos) > telekinesisMinDistance &&
               PathingCheck.isFlyingWalkable(newPos)
             ) {
               SetItemPosition(item, newPos.x, newPos.y);
@@ -1572,12 +1612,22 @@ export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
           ForGroup(unitsToMove, () => {
             const targetUnit = GetEnumUnit();
             targetPos.setPos(GetUnitX(targetUnit), GetUnitY(targetUnit));
-            newPos.polarProjectCoords(
-              targetPos, 
-              CoordMath.angleBetweenCoords(targetPos, casterPos), 
-              telekinesisSpeed,
-            );
-            if (CoordMath.distance(casterPos, targetPos) > telekinesisAOE) {
+            if (
+              GetPlayerId(GetOwningPlayer(targetUnit)) < Constants.maxActivePlayers
+            ) {
+              newPos.polarProjectCoords(
+                targetPos, 
+                CoordMath.angleBetweenCoords(targetPos, casterPos), 
+                telekinesisSpeed * telekinesisPlayerSpeedModifier,
+              );
+            } else {  
+              newPos.polarProjectCoords(
+                targetPos, 
+                CoordMath.angleBetweenCoords(targetPos, casterPos), 
+                telekinesisSpeed,
+              );
+            }
+            if (CoordMath.distance(casterPos, targetPos) > telekinesisMinDistance) {
               PathingCheck.moveGroundUnitToCoord(targetUnit, newPos);
             }
           });
