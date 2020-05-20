@@ -253,6 +253,7 @@ export module AbilityNames {
     export const MILKY_CANNON = "Milky Cannon";
     export const GALAXY_DYNAMITE = "Galaxy Dynamite";
     export const GINYU_POSE_FIGHTING = "Ginyu Pose Fighting";
+    export const FROG_TONGUE = "Frog Tongue";
   }
 
   export module Saga {

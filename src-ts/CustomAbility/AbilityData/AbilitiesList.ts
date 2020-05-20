@@ -3822,7 +3822,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 33,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3848,7 +3848,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 110,
+    duration: 75,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3892,7 +3892,34 @@ export const AbilitiesList = [
     components: [
       { name: "spell amp ginyu pose fighting" },
       { name: "dash ground forward ginyu pose fighting" },
+      { name: "temp ability ginyu pose fighting armor aura" },
       { name: "sfx ginyu pose fighting" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ginyu.FROG_TONGUE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNPiccoloSlappyHand.blp",
+      disabled: "BTNPiccoloSlappyHand.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ginyu.FROG_TONGUE,
+      body: 
+        AbilityNames.Ginyu.FROG_TONGUE
+    },
+    components: [
+      { name: "hook frog tongue" },
     ],
   },
   // -------------------------------------------

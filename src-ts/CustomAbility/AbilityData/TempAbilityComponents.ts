@@ -111,4 +111,18 @@ export const TempAbilityComponents = [
     tempPermanence: true,
     equalizeLevels: false,
   },
+  {
+    name: "temp ability ginyu pose fighting armor aura", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0PX"),
+    oldAbility: FourCC("A0PT"),
+    performSwap: false,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: false,
+    tempPermanence: true,
+    equalizeLevels: true,
+  },
 ];

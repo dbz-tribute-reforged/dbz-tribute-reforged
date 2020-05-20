@@ -220,6 +220,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0PP'), AbilityNames.Ginyu.MILKY_CANNON],
     [FourCC('A0PQ'), AbilityNames.Ginyu.GALAXY_DYNAMITE],
     [FourCC('A0PT'), AbilityNames.Ginyu.GINYU_POSE_FIGHTING],
+    [FourCC('A0PW'), AbilityNames.Ginyu.FROG_TONGUE],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

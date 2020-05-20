@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.43
+DBZ Tribute Reforged 0.43a
 }
 
 STRING 4
@@ -7722,7 +7722,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 
 STRING 1228
 {
-Someone has picked up the |r|cffff00ffHBTC Training Ticket|r. If they deliver it to the HBTC at |r|cff00ff00Kami's Lookout|r, they will |cffff2020permanently|r receive |cff00ffff+2/2/2 level up stats|r (FYI that's alot).
+Someone has picked up the |r|cffff00ffHBTC Training Ticket|r. If they deliver it to the HBTC at |r|cff00ff00Kami's Lookout|r, they will |cffff2020permanently|r receive |cff00ffff+2/2/2 level up stats|r
 }
 
 STRING 1229
@@ -8749,33 +8749,23 @@ Dr Wheelo's Research
 }
 
 STRING 1393
-// Items: I04N (Body Change), Description (Description)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 50% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 25% of Current HP
-Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
-|cff00ffffCooldown: 600s (180s if you hit an invalid target)|r
-
-|cff808080"Change ... NOW!"|r
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool1> seconds|r
 }
 
 STRING 1394
-// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchubertip (Tooltip - Learn - Extended)
 {
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 50% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 25% of Current HP
-Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
-|cff00ffffCooldown: 600s (180s if you hit an invalid target)|r
-
-|cff808080"Change ... NOW!"|r
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool1> - <A0PT,Cool10> seconds|r
 }
 
 STRING 1395
@@ -10201,6 +10191,12 @@ STRING 1628
 R
 }
 
+STRING 1629
+// Units: n043 (Giant Namekian Frog), Name (Name)
+{
+Giant Namekian Frog
+}
+
 STRING 1630
 // Items: I02W (Dimension Sword 1 Janemba), Tip (Tooltip - Basic)
 {
@@ -10594,6 +10590,15 @@ STRING 1692
 // Items: I047 (Android Bomb), Tip (Tooltip - Basic)
 {
 Purchase Senzu Bean
+}
+
+STRING 1693
+// Items: I04K (Dabura's Sword), Description (Description)
+{
+The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
+|cffffff00-0.2x Str mult if not a demon.
++0.1x Agi mult.
++750 damage.|r
 }
 
 STRING 1694
@@ -43630,21 +43635,33 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 7164
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 2r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool2> seconds|r
 }
 
 STRING 7165
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 3r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool3> seconds|r
 }
 
 STRING 7166
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool4> seconds|r
 }
 
 STRING 7167
@@ -43660,15 +43677,23 @@ First, Broly opens his mouth and charges a green energy sphere. Then, he fires t
 }
 
 STRING 7169
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 1r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool5> seconds|r
 }
 
 STRING 7170
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool6> seconds|r
 }
 
 STRING 7171
@@ -45857,9 +45882,13 @@ Q
 }
 
 STRING 7534
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 6r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool7> seconds|r
 }
 
 STRING 7535
@@ -54407,27 +54436,39 @@ STRING 8949
 }
 
 STRING 8950
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 7r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool8> seconds|r
 }
 
 STRING 8951
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 8r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool9> seconds|r
 }
 
 STRING 8952
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 9r]
+Ginyu strikes a powerful fighting pose that increases his combat abilities. Provides +66ms.
+|cff00ff00Duration: 5s
+Spell Amp: +5% per second up to +15%
+Armor Aura: 0.5 * lvl|r
+|cff00ffffCooldown: <A0PT,Cool10> seconds|r
 }
 
 STRING 8953
-// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+// Abilities: A0PX (Ginyu Pose Fighting Armor Aura), Name (Name)
 {
-[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 10r]
+Ginyu Pose Fighting Armor Aura
 }
 
 STRING 8954
@@ -64720,7 +64761,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 19.May.20
+This map is under active development - 20.May.20
 }
 
 STRING 10653
@@ -78891,19 +78932,15 @@ STRING 12972
 }
 
 STRING 12973
-// Items: I04K (Dabura's Sword), Description (Description)
+// Abilities: A0PY (Book Ginyu Ginyu Pose Fighting), Name (Name)
 {
-The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
-|cffffff00-0.2x Str mult if not a demon.
-+0.1x Agi mult.|r
+Book Ginyu Ginyu Pose Fighting
 }
 
 STRING 12974
-// Items: I04K (Dabura's Sword), Ubertip (Tooltip - Extended)
+// Buffs/Effects: B032 (), Bufftip (Tooltip)
 {
-The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
-|cffffff00-0.2x Str mult if not a demon.
-+0.1x Agi mult.|r
+Ginyu Pose: Fighting
 }
 
 STRING 12975
@@ -80067,6 +80104,27 @@ Banishes the target's physical body to the dead zone, slowing them and causing t
 |cff00ffffCooldown: 45 seconds|r
 }
 
+STRING 13165
+// Items: I04K (Dabura's Sword), Ubertip (Tooltip - Extended)
+{
+The powerful sword of a Demon King that can only truly be wielded by beings of pure evil.
+|cffffff00-0.2x Str mult if not a demon.
++0.1x Agi mult.
++750 damage.|r
+}
+
+STRING 13166
+// Buffs/Effects: B032 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13167
+// Buffs/Effects: B032 (), EditorSuffix (Editor Suffix)
+{
+1
+}
+
 STRING 13168
 // Abilities: A0PR (Telekinesis), Tip (Tooltip - Normal)
 {
@@ -80151,10 +80209,40 @@ STRING 13181
 [|cff00ff00E|r] Telekinesis - [|cffffcc00Level 10|r]
 }
 
+STRING 13182
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 2|r]
+}
+
+STRING 13183
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 3|r]
+}
+
+STRING 13184
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 4|r]
+}
+
+STRING 13185
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 1|r]
+}
+
 STRING 13186
 // Abilities: A0PS (Ginyu Pose Ultimate), EditorSuffix (Editor Suffix)
 {
 (ginyu)
+}
+
+STRING 13187
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 5|r]
 }
 
 STRING 13188
@@ -80175,10 +80263,22 @@ STRING 13190
 [|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 1|r]
 }
 
+STRING 13191
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 6|r]
+}
+
 STRING 13192
 // Abilities: A0PS (Ginyu Pose Ultimate), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Ginyu Pose: Ultimate - [|cffffcc00Level %d|r]
+}
+
+STRING 13193
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 7|r]
 }
 
 STRING 13194
@@ -80203,6 +80303,18 @@ STRING 13197
 // Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 3|r]
+}
+
+STRING 13198
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 8|r]
+}
+
+STRING 13199
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 9|r]
 }
 
 STRING 13200
@@ -80241,6 +80353,18 @@ STRING 13205
 [|cff00FF00R|r] Ginyu Pose: Ultimate - [|cffffcc00Level 9|r]
 }
 
+STRING 13206
+// Abilities: A0C8 (Slappy Hand), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slappy Hand  [|cffffcc00Level 10|r]
+}
+
+STRING 13207
+// Abilities: A0C8 (Slappy Hand), EditorSuffix (Editor Suffix)
+{
+(piccolo)
+}
+
 STRING 13212
 // Abilities: A0PS (Ginyu Pose Ultimate), Tip (Tooltip - Normal)
 {
@@ -80275,6 +80399,12 @@ STRING 13223
 // Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 3|r]
+}
+
+STRING 13225
+// Abilities: A0PV (Frog of Namek), Name (Name)
+{
+Frog of Namek
 }
 
 STRING 13226
@@ -80313,10 +80443,52 @@ STRING 13231
 [|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 9|r]
 }
 
+STRING 13232
+// Abilities: A0PV (Frog of Namek), Ubertip (Tooltip - Normal - Extended)
+{
+Ribbit. Ribbit. Croak.
+}
+
+STRING 13233
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 13234
+// Abilities: A0PV (Frog of Namek), Tip (Tooltip - Normal)
+{
+[|cff77FF00D|r] Frog of Namek
+}
+
+STRING 13235
+// Abilities: A0PV (Frog of Namek), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13236
+// Abilities: A0PW (Frog Tongue), Name (Name)
+{
+Frog Tongue
+}
+
+STRING 13237
+// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
+{
+E
+}
+
 STRING 13238
 // Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Ginyu Pose: Fighting - [|cffffcc00Level 10|r]
+}
+
+STRING 13239
+// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
+{
+E
 }
 
 STRING 13240
@@ -80331,6 +80503,30 @@ STRING 13241
 Q
 }
 
+STRING 13242
+// Buffs/Effects: B033 (), Bufftip (Tooltip)
+{
+Ginyu Pose: Fighting
+}
+
+STRING 13243
+// Buffs/Effects: B033 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13244
+// Buffs/Effects: B033 (), EditorSuffix (Editor Suffix)
+{
+2
+}
+
+STRING 13245
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 2|r]
+}
+
 STRING 13246
 // Abilities: A0PT (Ginyu Pose Fighting), Name (Name)
 {
@@ -80338,168 +80534,135 @@ Ginyu Pose Fighting
 }
 
 STRING 13247
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +15%|r
-|cff00ffffCooldown: <A0PT,Cool1> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool1> seconds|r
 }
 
 STRING 13248
-// Abilities: A0PT (Ginyu Pose Fighting), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +15%|r
-|cff00ffffCooldown: <A0PT,Cool1> - <A0PT,Cool10> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool3> seconds|r
 }
 
 STRING 13249
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +25%|r
-|cff00ffffCooldown: <A0PT,Cool2> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool4> seconds|r
 }
 
 STRING 13250
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +35%|r
-|cff00ffffCooldown: <A0PT,Cool3> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool5> seconds|r
 }
 
 STRING 13251
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +45%|r
-|cff00ffffCooldown: <A0PT,Cool4> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool6> seconds|r
 }
 
 STRING 13252
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +55%|r
-|cff00ffffCooldown: <A0PT,Cool5> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool7> seconds|r
 }
 
 STRING 13253
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +65%|r
-|cff00ffffCooldown: <A0PT,Cool6> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool8> seconds|r
 }
 
 STRING 13254
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +75%|r
-|cff00ffffCooldown: <A0PT,Cool7> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool9> seconds|r
 }
 
 STRING 13255
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +85%|r
-|cff00ffffCooldown: <A0PT,Cool8> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool10> seconds|r
 }
 
 STRING 13256
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Researchubertip (Tooltip - Learn - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +95%|r
-|cff00ffffCooldown: <A0PT,Cool9> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool1> - <A0PR,Cool10> seconds|r
 }
 
 STRING 13257
-// Abilities: A0PT (Ginyu Pose Fighting), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
 {
-Ginyu strikes a powerful fighting pose. Provides +66ms.
-|cff00ff00Duration: 5s
-Spell Amp: +5% per second up to +105%|r
-|cff00ffffCooldown: <A0PT,Cool10> seconds|r
+Ginyu focuses his telekinetic powers to bring all units and items in the targetted area towards him. Has 50% effectiveness on players.|n|cff00ffffCooldown: <A0PR,Cool2> seconds|r
 }
 
 STRING 13258
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B034 (), Bufftip (Tooltip)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool1> seconds|r
+Ginyu Pose: Fighting
 }
 
 STRING 13259
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B034 (), Buffubertip (Tooltip - Extended)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool3> seconds|r
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
 }
 
 STRING 13260
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B034 (), EditorSuffix (Editor Suffix)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool4> seconds|r
+3
 }
 
 STRING 13261
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B035 (), Bufftip (Tooltip)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool5> seconds|r
+Ginyu Pose: Fighting
 }
 
 STRING 13262
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B035 (), Buffubertip (Tooltip - Extended)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool6> seconds|r
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
 }
 
 STRING 13263
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B035 (), EditorSuffix (Editor Suffix)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool7> seconds|r
+4
 }
 
 STRING 13264
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B036 (), Bufftip (Tooltip)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool8> seconds|r
+Ginyu Pose: Fighting
 }
 
 STRING 13265
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B036 (), Buffubertip (Tooltip - Extended)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool9> seconds|r
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
 }
 
 STRING 13266
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B036 (), EditorSuffix (Editor Suffix)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool10> seconds|r
+5
 }
 
 STRING 13267
-// Abilities: A0PR (Telekinesis), Researchubertip (Tooltip - Learn - Extended)
+// Buffs/Effects: B037 (), Bufftip (Tooltip)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool1> - <A0PR,Cool10> seconds|r
+Ginyu Pose: Fighting
 }
 
 STRING 13268
-// Abilities: A0PR (Telekinesis), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B037 (), Buffubertip (Tooltip - Extended)
 {
-Ginyu focuses his telekinetic powers to bring all items and non-player units in the targetted area towards him.|n|cff00ffffCooldown: <A0PR,Cool2> seconds|r
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
 }
 
 STRING 13269
@@ -80557,10 +80720,40 @@ A PVP-oriented hero that relies on draining the stat multiplier of stronger hero
 
 }
 
+STRING 13277
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 3|r]
+}
+
 STRING 13278
 // Abilities: A0PT (Ginyu Pose Fighting), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Ginyu Pose: Fighting - [|cffffcc00Level %d|r]
+}
+
+STRING 13279
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 4|r]
+}
+
+STRING 13280
+// Abilities: A0PW (Frog Tongue), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0C8,Cool1> - <A0C8,Cool10> seconds|r
+}
+
+STRING 13281
+// Abilities: A0PW (Frog Tongue), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Slappy Hand  [|cffffcc00Level %d|r]
+}
+
+STRING 13282
+// Buffs/Effects: B037 (), EditorSuffix (Editor Suffix)
+{
+6
 }
 
 STRING 13283
@@ -80576,6 +80769,12 @@ A powerful support hero that excels at saga-sniping and becomes stronger with ea
 
 }
 
+STRING 13284
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 1|r]
+}
+
 STRING 13285
 // Abilities: A0PN (Change Now), EditorSuffix (Editor Suffix)
 {
@@ -80586,5 +80785,209 @@ STRING 13286
 // Abilities: A0PO (Change Now), Name (Name)
 {
 Change Now
+}
+
+STRING 13287
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 5|r]
+}
+
+STRING 13288
+// Buffs/Effects: B038 (), Bufftip (Tooltip)
+{
+Ginyu Pose: Fighting
+}
+
+STRING 13289
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 6|r]
+}
+
+STRING 13290
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 7|r]
+}
+
+STRING 13291
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 8|r]
+}
+
+STRING 13292
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 9|r]
+}
+
+STRING 13293
+// Abilities: A0PW (Frog Tongue), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Frog Tongue - [|cffffcc00Level 10|r]
+}
+
+STRING 13294
+// Buffs/Effects: B038 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13295
+// Buffs/Effects: B038 (), EditorSuffix (Editor Suffix)
+{
+7
+}
+
+STRING 13296
+// Buffs/Effects: B039 (), Bufftip (Tooltip)
+{
+Ginyu Pose: Fighting
+}
+
+STRING 13297
+// Buffs/Effects: B039 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13298
+// Buffs/Effects: B039 (), EditorSuffix (Editor Suffix)
+{
+8
+}
+
+STRING 13299
+// Abilities: A0PW (Frog Tongue), EditorSuffix (Editor Suffix)
+{
+(ginyu)
+}
+
+STRING 13300
+// Items: I04N (Body Change), Description (Description)
+{
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 20% of Current HP
+Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
+}
+
+STRING 13301
+// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
+{
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 20% of Current HP
+Stat mult: -0.4/0.3/0.2x for lvls less than 150/300/300+|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
+}
+
+STRING 13302
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool2>s|r
+}
+
+STRING 13303
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool3>s|r
+}
+
+STRING 13304
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool4>s|r
+}
+
+STRING 13305
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool1>s|r
+}
+
+STRING 13306
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool5>s|r
+}
+
+STRING 13307
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool6>s|r
+}
+
+STRING 13308
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool7>s|r
+}
+
+STRING 13309
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool8>s|r
+}
+
+STRING 13310
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool9>s|r
+}
+
+STRING 13311
+// Abilities: A0PW (Frog Tongue), Ubertip (Tooltip - Normal - Extended)
+{
+Ginyu stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0PW,Cool10>s|r
+}
+
+STRING 13312
+// Buffs/Effects: B03A (), Bufftip (Tooltip)
+{
+Ginyu Pose: Fighting
+}
+
+STRING 13313
+// Buffs/Effects: B03A (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13314
+// Buffs/Effects: B03A (), EditorSuffix (Editor Suffix)
+{
+9
+}
+
+STRING 13315
+// Buffs/Effects: B03B (), Bufftip (Tooltip)
+{
+Ginyu Pose: Fighting
+}
+
+STRING 13316
+// Buffs/Effects: B03B (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Ginyu Pose: Fighting|r; it has increased armor.
+}
+
+STRING 13317
+// Buffs/Effects: B03B (), EditorSuffix (Editor Suffix)
+{
+10
 }
 

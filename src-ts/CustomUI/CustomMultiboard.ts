@@ -96,7 +96,15 @@ export class SagaMultiboard implements CustomMultiboard {
     // set all to show values
     this.setItemStyle(0, 0, true, false);
     this.setItemWidth(1, 0, 26);
-
+    
+    TimerStart(CreateTimer(), 0.1, true, () => {
+      BlzFrameClearAllPoints(this.framehandle);
+      BlzFrameSetPoint(
+        this.framehandle, FRAMEPOINT_TOPLEFT, 
+        BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), FRAMEPOINT_TOPLEFT,
+        SagaMultiboard.X_OFFSET, SagaMultiboard.Y_OFFSET
+      );
+    });
     // ff cc 00 0% transparency
     this.setItemValueColor(1, 0, 100, 80, 0, 0);
     // for (let i = 0; i < this.rows; ++i) {
@@ -112,12 +120,6 @@ export class SagaMultiboard implements CustomMultiboard {
         sagaRow.setDelay(delay - 1);
       }
     }
-    BlzFrameClearAllPoints(this.framehandle);
-    BlzFrameSetPoint(
-      this.framehandle, FRAMEPOINT_TOPLEFT, 
-      BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), FRAMEPOINT_TOPLEFT,
-      SagaMultiboard.X_OFFSET, SagaMultiboard.Y_OFFSET
-    );
     this.applySagaMultiboardRow();
   }
 

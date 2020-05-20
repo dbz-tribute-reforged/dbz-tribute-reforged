@@ -1568,7 +1568,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: 2,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.38,
+      multiplier: BASE.DFIST_EXPLOSION * 0.35,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1590,7 +1590,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: 2,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.51,
+      multiplier: BASE.DFIST_EXPLOSION * 0.46,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1612,7 +1612,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.2,
+      multiplier: BASE.DFIST_DPS * 0.18,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1634,7 +1634,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.26,
+      multiplier: BASE.DFIST_DPS * 0.24,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1656,7 +1656,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.28,
+      multiplier: BASE.DFIST_DPS * 0.27,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -3158,7 +3158,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.56,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3179,7 +3179,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: true,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.56,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3201,7 +3201,7 @@ export const AOEDamageComponents = [
     onlyDamageCapHeroes: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.25,
+      multiplier: BASE.KAME_DPS * 1.35,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
