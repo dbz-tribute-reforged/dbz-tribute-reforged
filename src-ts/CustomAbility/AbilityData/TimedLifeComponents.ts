@@ -48,4 +48,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 33,
   },
+  {
+    name: "timed life beam death beam barrage", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 33,
+  },
 ];

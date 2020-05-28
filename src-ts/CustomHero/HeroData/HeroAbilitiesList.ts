@@ -341,5 +341,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ginyu.GINYU_POSE_FIGHTING,
       AbilityNames.Ginyu.FROG_TONGUE,
     ]],
+
+    // frieza, code is incorrect
+    [FourCC("H09F"), [
+      AbilityNames.Frieza.DEATH_BEAM,
+      AbilityNames.Frieza.DEATH_CANNON,
+      AbilityNames.Frieza.NOVA_STRIKE,
+      AbilityNames.Frieza.SUPERNOVA, AbilityNames.Frieza.EMPERORS_THRONE,
+      AbilityNames.Frieza.DEATH_STORM, AbilityNames.Frieza.IMPALING_RUSH, 
+      AbilityNames.Frieza.DEATH_BEAM_BARRAGE, AbilityNames.Frieza.NOVA_RUSH, 
+      AbilityNames.Frieza.DEATH_BALL, AbilityNames.Frieza.SUPERNOVA_2,
+      AbilityNames.Frieza.LAST_EMPEROR, AbilityNames.Frieza.DEATH_SAUCER,
+      AbilityNames.Frieza.DEATH_BEAM_GOLDEN, 
+      AbilityNames.Frieza.DEATH_CANNON_GOLDEN,
+      AbilityNames.Frieza.NOVA_RUSH_GOLDEN,
+      AbilityNames.Frieza.EARTH_BREAKER,
+      AbilityNames.Frieza.CAGE_OF_LIGHT,
+    ]],
   ]
 )

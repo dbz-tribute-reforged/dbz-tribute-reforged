@@ -629,6 +629,8 @@ gg_trg_Transformations_Toppo = nil
 gg_trg_Pride_Trooper_Team_Stat_Mult_Bonus = nil
 gg_trg_Transformations_Ginyu = nil
 gg_trg_Ginyu_Force_Team_Stat_Mult_Bonus = nil
+gg_trg_Transformations_Frieza = nil
+gg_trg_Frieza_Transform_Spell = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -656,6 +658,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Frieza_Disable_Abilities = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -6522,6 +6525,9 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0PW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0PR"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0PX"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0PG"), udg_TempPlayer)
+    TriggerExecute(gg_trg_Frieza_Disable_Abilities)
 end
 
 function InitTrig_Ginyu_Change_Now_Ability_Resets()
@@ -7763,6 +7769,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0PY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0PX"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0M9"), udg_TempPlayer)
+    TriggerExecute(gg_trg_Frieza_Disable_Abilities)
 end
 
 function InitTrig_Disable_Abilities_for_TempPlayer()
@@ -15557,20 +15564,6 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Func008C()
     return true
 end
 
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001Func005C()
-    if (not (GetHeroLevel(udg_StatMultUnit) < 300)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001C()
-    if (not (GetHeroLevel(udg_StatMultUnit) < 150)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()
     if (not (UnitHasItemOfTypeBJ(udg_StatMultUnit, FourCC("I04N")) == true)) then
         return false
@@ -15639,24 +15632,10 @@ function Trig_Transformations_Item_Stat_Mult_Boosts_Actions()
     else
     end
     if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009C()) then
-        if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001C()) then
-            udg_StatMultStr = (udg_StatMultStr - 0.40)
-            udg_StatMultAgi = (udg_StatMultAgi - 0.40)
-            udg_StatMultInt = (udg_StatMultInt - 0.40)
-            udg_StatMultReal = (udg_StatMultReal - 0.40)
-        else
-            if (Trig_Transformations_Item_Stat_Mult_Boosts_Func009Func001Func005C()) then
-                udg_StatMultStr = (udg_StatMultStr - 0.30)
-                udg_StatMultAgi = (udg_StatMultAgi - 0.30)
-                udg_StatMultInt = (udg_StatMultInt - 0.30)
-                udg_StatMultReal = (udg_StatMultReal - 0.30)
-            else
-                udg_StatMultStr = (udg_StatMultStr - 0.20)
-                udg_StatMultAgi = (udg_StatMultAgi - 0.20)
-                udg_StatMultInt = (udg_StatMultInt - 0.20)
-                udg_StatMultReal = (udg_StatMultReal - 0.20)
-            end
-        end
+        udg_StatMultStr = (udg_StatMultStr - 0.20)
+        udg_StatMultAgi = (udg_StatMultAgi - 0.20)
+        udg_StatMultInt = (udg_StatMultInt - 0.20)
+        udg_StatMultReal = (udg_StatMultReal - 0.20)
     else
     end
     if (Trig_Transformations_Item_Stat_Mult_Boosts_Func010C()) then
@@ -24417,6 +24396,13 @@ function Trig_Transformations_Toppo_Func022Func002Func001C()
     return false
 end
 
+function Trig_Transformations_Toppo_Func022Func002Func004C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0PC"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Toppo_Func022Func002C()
     if (not Trig_Transformations_Toppo_Func022Func002Func001C()) then
         return false
@@ -24491,7 +24477,6 @@ function Trig_Transformations_Toppo_Actions()
         udg_TransformationAbility = FourCC("A0PG")
         udg_TransformationSFXString = "AuraPink2.mdx"
         if (Trig_Transformations_Toppo_Func018Func004C()) then
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0PC"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0PC'))
         else
@@ -24504,6 +24489,11 @@ function Trig_Transformations_Toppo_Actions()
         if (Trig_Transformations_Toppo_Func022Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            if (Trig_Transformations_Toppo_Func022Func002Func004C()) then
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0PC"), udg_TransformationPlayer)
+            else
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0PC"), udg_TransformationPlayer)
+            end
                         udg_TransformationID = FourCC('H09C')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
@@ -24855,6 +24845,275 @@ end
 function InitTrig_Ginyu_Force_Team_Stat_Mult_Bonus()
     gg_trg_Ginyu_Force_Team_Stat_Mult_Bonus = CreateTrigger()
     TriggerAddAction(gg_trg_Ginyu_Force_Team_Stat_Mult_Bonus, Trig_Ginyu_Force_Team_Stat_Mult_Bonus_Actions)
+end
+
+function Trig_Transformations_Frieza_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func012C()
+    if (not (udg_TransformationString == "frieza")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func013C()
+    if (not (udg_TransformationString == "frieza")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func014C()
+    if (not (udg_TransformationString == "frieza")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func015C()
+    if (not (udg_TransformationString == "frieza")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func016C()
+    if (not (udg_TransformationString == "frieza")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func017C()
+    if (not (udg_TransformationString == "golden")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func018C()
+    if (not (udg_TransformationString == "golden")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func021Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Frieza_Func021Func002C()
+    if (not Trig_Transformations_Frieza_Func021Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Func021C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frieza_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Frieza_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_950")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Frieza_Func011C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Frieza_Func012C()) then
+        udg_StatMultReal = 1.10
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func013C()) then
+        udg_StatMultReal = 1.20
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func014C()) then
+        udg_StatMultReal = 1.30
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func015C()) then
+        udg_StatMultReal = 1.70
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func016C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func017C()) then
+        udg_StatMultReal = 2.10
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+    if (Trig_Transformations_Frieza_Func018C()) then
+        udg_StatMultReal = 2.20
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraSS.mdx"
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Frieza_Func021C()) then
+        if (Trig_Transformations_Frieza_Func021Func002C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+                        udg_TransformationID = FourCC('H06X')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Frieza()
+    gg_trg_Transformations_Frieza = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Frieza, Trig_Transformations_Frieza_Actions)
+end
+
+function Trig_Frieza_Transform_Spell_Func008C()
+    if (GetSpellAbilityId() == FourCC("A0E1")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0E2")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0E3")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0E4")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0E5")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0IF")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0IG")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Frieza_Transform_Spell_Conditions()
+    if (not (GetUnitTypeId(GetTriggerUnit()) == FourCC("H06X"))) then
+        return false
+    end
+    if (not Trig_Frieza_Transform_Spell_Func008C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frieza_Transform_Spell_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    udg_TempReal = RMinBJ(GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit), (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.10)))
+    udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
+    TriggerExecute(gg_trg_Frieza_Disable_Abilities)
+    SetUnitLifeBJ(udg_StatMultUnit, udg_TempReal)
+        udg_ID = GetHandleId(udg_StatMultUnit)
+end
+
+function InitTrig_Frieza_Transform_Spell()
+    gg_trg_Frieza_Transform_Spell = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Frieza_Transform_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Frieza_Transform_Spell, Condition(Trig_Frieza_Transform_Spell_Conditions))
+    TriggerAddAction(gg_trg_Frieza_Transform_Spell, Trig_Frieza_Transform_Spell_Actions)
+end
+
+function Trig_Frieza_Disable_Abilities_Actions()
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0E5"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0IF"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0IG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q2"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q3"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q4"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q5"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q6"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q7"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Q9"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QA"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QB"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QE"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QF"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0QH"), udg_TempPlayer)
+end
+
+function InitTrig_Frieza_Disable_Abilities()
+    gg_trg_Frieza_Disable_Abilities = CreateTrigger()
+    TriggerAddAction(gg_trg_Frieza_Disable_Abilities, Trig_Frieza_Disable_Abilities_Actions)
 end
 
 function Trig_Saga_Unit_Init_Conditions()
@@ -26385,6 +26644,9 @@ function InitCustomTriggers()
     InitTrig_Pride_Trooper_Team_Stat_Mult_Bonus()
     InitTrig_Transformations_Ginyu()
     InitTrig_Ginyu_Force_Team_Stat_Mult_Bonus()
+    InitTrig_Transformations_Frieza()
+    InitTrig_Frieza_Transform_Spell()
+    InitTrig_Frieza_Disable_Abilities()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()

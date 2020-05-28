@@ -171,6 +171,30 @@ export module AbilityNames {
 
   export module Frieza {
     export const DEATH_BEAM: string = "Death Beam Frieza";
+    export const DEATH_CANNON: string = "Death Cannon";
+    export const NOVA_STRIKE: string = "Nova Strike";
+    // 1st
+    export const EMPERORS_THRONE: string = "Emperor's Throne";
+    export const SUPERNOVA: string = "Supernova Frieza";
+    // 2nd
+    export const DEATH_STORM: string = "Death Storm";
+    export const IMPALING_RUSH: string = "Impaling Rush";
+    // 3rd
+    export const DEATH_BEAM_BARRAGE: string = "Death Beam Barrage";
+    export const NOVA_RUSH: string = "Nova Rush";
+    // final
+    export const DEATH_BALL: string = "Death Ball";
+    export const SUPERNOVA_2: string = "Supernova Frieza 2";
+    export const TAIL_WHIP: string = "Tail Whip";
+    // full power
+    export const LAST_EMPEROR: string = "Last Emperor";
+    export const DEATH_SAUCER: string = "Death Saucer";
+    // golden
+    export const DEATH_BEAM_GOLDEN: string = "Golden Death Beam";
+    export const DEATH_CANNON_GOLDEN: string = "Golden Death Cannon";
+    export const NOVA_RUSH_GOLDEN: string = "Golden Nova Rush";
+    export const EARTH_BREAKER: string = "Earth Breaker";
+    export const CAGE_OF_LIGHT: string = "Cage of Light";
   }
 
   export module Cooler {

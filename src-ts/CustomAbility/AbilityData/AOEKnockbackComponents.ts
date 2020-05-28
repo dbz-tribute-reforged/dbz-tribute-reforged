@@ -587,4 +587,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // cage of light
+  {
+    name: "knockback cage of light",
+    repeatInterval: 1, 
+    startTick: 16,
+    endTick: -1,
+    knockbackData: {
+      speed: 40, 
+      angle: 0, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

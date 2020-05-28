@@ -29,4 +29,14 @@ export const BarrierComponents = [
     affectAllies: true,
     canWalkOut: false,
   },
+  {
+    name: "barrier barrier prison", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    aoe: 700,
+    repelOutsidersSpeed: 5,
+    affectAllies: true,
+    canWalkOut: false,
+  },
 ];

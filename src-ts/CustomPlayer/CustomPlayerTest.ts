@@ -599,7 +599,7 @@ export function CustomPlayerTest() {
         BlzFrameSetVisible(unitPanelParent, true);
         BlzFrameSetVisible(unitPanel, false);
 
-        // BlzFrameSetVisible(inventoryCover, false);
+        BlzFrameSetVisible(inventoryCover, false);
         // BlzFrameSetSize(inventoryCover, 0.001, 0.001);
         // BlzFrameSetPoint(
         //   inventoryCover, FRAMEPOINT_BOTTOMRIGHT,
@@ -607,7 +607,7 @@ export function CustomPlayerTest() {
         //   -0.2, 0
         // );
 
-        // BlzFrameSetVisible(inventoryCoverTexture, false);
+        BlzFrameSetVisible(inventoryCoverTexture, false);
         // BlzFrameSetSize(inventoryCoverTexture, 0.0001, 0.0001);
         // BlzFrameSetPoint(
         //   inventoryCoverTexture, FRAMEPOINT_BOTTOMRIGHT,
