@@ -159,7 +159,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0OD'), AbilityNames.Cell.CELL_X_FORM],
 
     // cooler
-    [FourCC('A06C'), AbilityNames.Frieza.DEATH_BEAM],
+    [FourCC('A06C'), AbilityNames.Cooler.DEATH_BEAM],
     [FourCC('A0C1'), AbilityNames.Cooler.SUPERNOVA_COOLER],
     [FourCC('A0KY'), AbilityNames.Cooler.NOVA_CHARIOT],
     [FourCC('A06N'), AbilityNames.Cooler.DEAFENING_WAVE],
@@ -221,6 +221,27 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0PQ'), AbilityNames.Ginyu.GALAXY_DYNAMITE],
     [FourCC('A0PT'), AbilityNames.Ginyu.GINYU_POSE_FIGHTING],
     [FourCC('A0PW'), AbilityNames.Ginyu.FROG_TONGUE],
+
+    // frieza
+    [FourCC('A0PZ'), AbilityNames.Frieza.DEATH_BEAM],
+    [FourCC('A0Q0'), AbilityNames.Frieza.DEATH_CANNON],
+    [FourCC('A0Q1'), AbilityNames.Frieza.NOVA_STRIKE],
+    [FourCC('A0Q2'), AbilityNames.Frieza.SUPERNOVA],
+    [FourCC('A0Q3'), AbilityNames.Frieza.EMPERORS_THRONE],
+    [FourCC('A0Q4'), AbilityNames.Frieza.DEATH_STORM],
+    [FourCC('A0Q5'), AbilityNames.Frieza.IMPALING_RUSH],
+    [FourCC('A0Q6'), AbilityNames.Frieza.DEATH_BEAM_BARRAGE],
+    [FourCC('A0Q7'), AbilityNames.Frieza.NOVA_RUSH],
+    [FourCC('A0Q8'), AbilityNames.Frieza.DEATH_BALL],
+    [FourCC('A0Q9'), AbilityNames.Frieza.SUPERNOVA_2],
+    [FourCC('A0QA'), AbilityNames.Frieza.TAIL_WHIP],
+    [FourCC('A0QB'), AbilityNames.Frieza.LAST_EMPEROR],
+    [FourCC('A0QC'), AbilityNames.Frieza.DEATH_SAUCER],
+    [FourCC('A0QD'), AbilityNames.Frieza.DEATH_BEAM_GOLDEN],
+    [FourCC('A0QE'), AbilityNames.Frieza.DEATH_CANNON_GOLDEN],
+    [FourCC('A0QF'), AbilityNames.Frieza.NOVA_RUSH_GOLDEN],
+    [FourCC('A0QG'), AbilityNames.Frieza.EARTH_BREAKER],
+    [FourCC('A0QH'), AbilityNames.Frieza.CAGE_OF_LIGHT],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

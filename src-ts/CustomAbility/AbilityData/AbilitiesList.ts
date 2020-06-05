@@ -1436,6 +1436,7 @@ export const AbilitiesList = [
       { name: "damage videl flying kick dps" },
       { name: "damage videl flying kick explosion" },
       { name: "knockback videl flying kick" },
+      { name: "jump videl flying kick" },
       { name: "sfx videl flying kick" },
     ],
   },
@@ -2682,7 +2683,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Frieza.DEATH_BEAM,
+    name: AbilityNames.Cooler.DEATH_BEAM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2695,16 +2696,16 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFriezaDeathBeam.blp",
-      disabled: "BTNFriezaDeathBeam.blp",
+      enabled: "BTNDeathBeam.blp",
+      disabled: "BTNDeathBeam.blp",
     },
     tooltip: {
-      title: AbilityNames.Frieza.DEATH_BEAM,
+      title: AbilityNames.Cooler.DEATH_BEAM,
       body: 
-        AbilityNames.Frieza.DEATH_BEAM
+        AbilityNames.Cooler.DEATH_BEAM
     },
     components: [
-      { name: "beam death beam frieza" },
+      { name: "beam death beam cooler" },
     ],
   },
   // -------------------------------------------
@@ -3056,6 +3057,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground unit saibaman bomb" },
       { name: "damage saibaman bomb explosion" },
+      { name: "jump saibaman bomb" },
       { name: "sfx saibaman bomb" },
       { name: "self destruct generic end" },
     ],
@@ -3924,6 +3926,525 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Frieza.DEATH_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBeam.blp",
+      disabled: "BTNFriezaDeathBeam.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_BEAM,
+      body: 
+        AbilityNames.Frieza.DEATH_BEAM
+    },
+    components: [
+      { name: "beam death beam frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathCannon.blp",
+      disabled: "BTNFriezaDeathCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_CANNON,
+      body: 
+        AbilityNames.Frieza.DEATH_CANNON
+    },
+    components: [
+      { name: "beam death cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.LAST_EMPEROR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaLastEmperor.blp",
+      disabled: "BTNFriezaLastEmperor.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.LAST_EMPEROR,
+      body: 
+        AbilityNames.Frieza.LAST_EMPEROR,
+    },
+    components: [
+      { name: "beam last emperor" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.NOVA_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaNovaStrike.blp",
+      disabled: "BTNFriezaNovaStrike.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.NOVA_STRIKE,
+      body: 
+        AbilityNames.Frieza.NOVA_STRIKE
+    },
+    components: [
+      { name: "dash ground point nova strike" },
+      { name: "damage nova strike dps" },
+      { name: "sfx nova chariot" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.SUPERNOVA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaSupernova.blp",
+      disabled: "BTNFriezaSupernova.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.SUPERNOVA,
+      body: 
+        AbilityNames.Frieza.SUPERNOVA
+    },
+    components: [
+      { name: "beam supernova frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.SUPERNOVA_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaSupernova2.blp",
+      disabled: "BTNFriezaSupernova2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.SUPERNOVA_2,
+      body: 
+        AbilityNames.Frieza.SUPERNOVA_2,
+    },
+    components: [
+      { name: "beam supernova frieza 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.EMPERORS_THRONE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaEmperorsThrone.blp",
+      disabled: "BTNFriezaEmperorsThrone.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.EMPERORS_THRONE,
+      body: 
+        AbilityNames.Frieza.EMPERORS_THRONE
+    },
+    components: [
+      { name: "dash ground forward emperors throne" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_STORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathStorm.blp",
+      disabled: "BTNFriezaDeathStorm.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_STORM,
+      body: 
+        AbilityNames.Frieza.DEATH_STORM
+    },
+    components: [
+      { name: "damage death storm explosion" },
+      { name: "knockback power level rising" },
+      { name: "sfx death storm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.IMPALING_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaImaplingRush.blp",
+      disabled: "BTNFriezaImaplingRush.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.IMPALING_RUSH,
+      body: 
+        AbilityNames.Frieza.IMPALING_RUSH
+    },
+    components: [
+      { name: "dash ground point impaling rush" },
+      { name: "damage impaling rush explosion" },
+      { name: "debuff stun impaling rush" },
+      { name: "sfx impaling rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_BEAM_BARRAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBeamBarrage.blp",
+      disabled: "BTNFriezaDeathBeamBarrage.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_BEAM_BARRAGE,
+      body: 
+        AbilityNames.Frieza.DEATH_BEAM_BARRAGE,
+    },
+    components: [
+      { name: "multi death beam barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.NOVA_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaNovaRush.blp",
+      disabled: "BTNFriezaNovaRush.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.NOVA_RUSH,
+      body: 
+        AbilityNames.Frieza.NOVA_RUSH
+    },
+    components: [
+      { name: "dash ground point nova rush" },
+      { name: "damage nova rush dps" },
+      { name: "damage nova rush explosion" },
+      { name: "debuff stun nova rush" },
+      { name: "jump nova rush" },
+      { name: "sfx nova rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBall.blp",
+      disabled: "BTNFriezaDeathBall.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_BALL,
+      body: 
+        AbilityNames.Frieza.DEATH_BALL
+    },
+    components: [
+      { name: "beam death ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.TAIL_WHIP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaTail.blp",
+      disabled: "BTNFriezaTail.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Frieza.TAIL_WHIP,
+      body: 
+        AbilityNames.Frieza.TAIL_WHIP,
+    },
+    components: [
+      { name: "damage tail whip frieza" },
+      { name: "sfx tail whip frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_SAUCER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathSaucer.blp",
+      disabled: "BTNFriezaDeathSaucer.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_SAUCER,
+      body: 
+        AbilityNames.Frieza.DEATH_SAUCER,
+    },
+    components: [
+      { name: "multi death saucer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_BEAM_GOLDEN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaGoldenDeathBeam.blp",
+      disabled: "BTNFriezaGoldenDeathBeam.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_BEAM_GOLDEN,
+      body: 
+        AbilityNames.Frieza.DEATH_BEAM_GOLDEN,
+    },
+    components: [
+      { name: "beam death beam frieza golden" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.DEATH_CANNON_GOLDEN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaGoldenDeathCannon.blp",
+      disabled: "BTNFriezaGoldenDeathCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_CANNON_GOLDEN,
+      body: 
+        AbilityNames.Frieza.DEATH_CANNON_GOLDEN
+    },
+    components: [
+      { name: "beam death cannon golden" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.NOVA_RUSH_GOLDEN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaGoldenRush.blp",
+      disabled: "BTNFriezaGoldenRush.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.NOVA_RUSH_GOLDEN,
+      body: 
+        AbilityNames.Frieza.NOVA_RUSH_GOLDEN
+    },
+    components: [
+      { name: "dash ground point nova rush golden" },
+      { name: "damage nova rush golden dps" },
+      { name: "damage nova rush golden explosion" },
+      { name: "debuff stun nova rush" },
+      { name: "jump nova rush" },
+      { name: "sfx nova rush golden" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.EARTH_BREAKER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaEarthBreaker.blp",
+      disabled: "BTNFriezaEarthBreaker.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.EARTH_BREAKER,
+      body: 
+        AbilityNames.Frieza.EARTH_BREAKER
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage earth breaker dps" },
+      { name: "damage earth breaker explosion" },
+      { name: "sfx earth breaker" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frieza.CAGE_OF_LIGHT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaCageOfLight.blp",
+      disabled: "BTNFriezaCageOfLight.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.CAGE_OF_LIGHT,
+      body: 
+        AbilityNames.Frieza.CAGE_OF_LIGHT
+    },
+    components: [
+      { name: "channel caster default" },
+      // { name: "beam cage of light barrier" },
+      { name: "multi cage of light" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,
@@ -4223,32 +4744,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam big bang kamehameha" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: "Death Beam Barrage",
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 66,
-    updateRate: 0.02,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNFriezaDeathBeam.blp",
-      disabled: "BTNFriezaDeathBeam.blp",
-    },
-    tooltip: {
-      title: "Death Beam Barrage",
-      body: 
-        "Death Beam Barrage"
-    },
-    components: [
-      { name: "multi death beam barrage" },
     ],
   },
   // -------------------------------------------

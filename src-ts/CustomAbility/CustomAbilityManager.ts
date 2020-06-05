@@ -17,8 +17,6 @@ import { DodgeComponents } from "./AbilityData/DodgeComponents";
 import { Dodge } from "./AbilityComponent/Dodge";
 import { DamageBlockComponents } from "./AbilityData/DamageBlockComponents";
 import { DamageBlock } from "./AbilityComponent/DamageBlock";
-import { AOEStunComponents } from "./AbilityData/AOEStunComponents";
-import { AOEStun } from "./AbilityComponent/AOEStun";
 import { MultiComponents } from "./AbilityData/MultiComponents";
 import { MultiComponent } from "./AbilityComponent/MultiComponent";
 import { SpellAmpComponents } from "./AbilityData/SpellAmpComponent";
@@ -49,8 +47,8 @@ import { TempAbility } from "./AbilityComponent/TempAbility";
 import { AOEDebuffComponents } from "./AbilityData/AOEDebuffComponents";
 import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
 import { Hooks } from "Libs/TreeLib/Hooks";
-import { DeflectorComponents } from "./AbilityData/DeflectorComponents";
-import { Deflector } from "./AbilityComponent/Deflector";
+import { JumpComponents } from "./AbilityData/JumpComponents";
+import { Jump } from "./AbilityComponent/Jump";
 
 export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
@@ -132,6 +130,10 @@ export class CustomAbilityManager {
       this.setComponent(new Hook().deserialize(component));
     }
 
+    for (const component of JumpComponents) {
+      this.setComponent(new Jump().deserialize(component));
+    }
+
     for (const component of SelfDestructComponents) {
       this.setComponent(new SelfDestruct().deserialize(component));
     }
@@ -140,9 +142,9 @@ export class CustomAbilityManager {
       this.setComponent(new SpellAmp().deserialize(component));
     }
 
-    for (const component of SummonComponents) {
-      this.setComponent(new Summon().deserialize(component));
-    }
+    // for (const component of SummonComponents) {
+    //   this.setComponent(new Summon().deserialize(component));
+    // }
 
     for (const component of SwordSlashComponents) {
       this.setComponent(new SwordSlash().deserialize(component));

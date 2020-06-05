@@ -65,7 +65,7 @@ export class Teleport implements AbilityComponent, Serializable<Teleport> {
         }
       }
 
-      if (canTeleport) {
+      if (canTeleport && CoordMath.isInsideMapBounds(teleportPoint)) {
         SetUnitX(source, teleportPoint.x);
         SetUnitY(source, teleportPoint.y);
         this.hasTeleported = true;

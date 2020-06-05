@@ -30,8 +30,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public scaleDamageToSourceHp: boolean = false,
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
-    public maxDamageTicks: number = 20,
     public onlyDamageCapHeroes: boolean = true,
+    public canDamageCaster: boolean = false,
+    public maxDamageTicks: number = 20,
     public damageData: DamageData = new DamageData(
       0.02,
       bj_HEROSTAT_AGI,
@@ -39,6 +40,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       DAMAGE_TYPE_NORMAL,
       WEAPON_TYPE_WHOKNOWS
     ), 
+    public maxHealthDamagePercent: number = 0,
     public requireBuff: boolean = false,
     public buffId: number = 0,
   ) {
@@ -61,16 +63,29 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   }
 
   protected performDamage(input: CustomAbilityInput, target: unit, damage: number) {
-    UnitDamageTarget(
-      input.caster.unit, 
-      target, 
-      damage,
-      true,
-      false,
-      this.damageData.attackType,
-      this.damageData.damageType,
-      this.damageData.weaponType,
-    );
+    if (this.maxHealthDamagePercent > 0) {
+      UnitDamageTarget(
+        input.caster.unit, 
+        target, 
+        damage + GetUnitState(target, UNIT_STATE_MAX_LIFE) * this.maxHealthDamagePercent,
+        true,
+        false,
+        this.damageData.attackType,
+        this.damageData.damageType,
+        this.damageData.weaponType,
+      );
+    } else {
+      UnitDamageTarget(
+        input.caster.unit, 
+        target, 
+        damage,
+        true,
+        false,
+        this.damageData.attackType,
+        this.damageData.damageType,
+        this.damageData.weaponType,
+      );
+    }
     // TextTagHelper.showTempText(
     //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
     //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
@@ -123,7 +138,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.damageCoords, 
       this.aoe,
       () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
+        return (
+          UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) ||
+          (
+            this.canDamageCaster && 
+            GetOwningPlayer(GetFilterUnit()) == input.casterPlayer &&
+            IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+          )
+        );
       }
     );
 
@@ -172,9 +194,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       this.scaleDamageToSourceHp,
       this.useLastCastPoint,
       this.aoe, 
-      this.maxDamageTicks,
       this.onlyDamageCapHeroes,
+      this.canDamageCaster,
+      this.maxDamageTicks,
       this.damageData,
+      this.maxHealthDamagePercent,
       this.requireBuff,
       this.buffId,
     );
@@ -190,8 +214,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       scaleDamageToSourceHp: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
-      maxDamageTicks: number;
       onlyDamageCapHeroes: boolean;
+      canDamageCaster: boolean;
+      maxDamageTicks: number;
       damageData: {
         multiplier: number; 
         attribute: number; 
@@ -199,6 +224,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         damageType: number; 
         weaponType: number; 
       }; 
+      maxHealthDamagePercent: number;
       requireBuff: boolean;
       buffId: number;
     }
@@ -211,9 +237,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.scaleDamageToSourceHp = input.scaleDamageToSourceHp;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
-    this.maxDamageTicks = input.maxDamageTicks;
     this.onlyDamageCapHeroes = input.onlyDamageCapHeroes;
+    this.canDamageCaster = input.canDamageCaster;
+    this.maxDamageTicks = input.maxDamageTicks;
     this.damageData = new DamageData().deserialize(input.damageData);
+    this.maxHealthDamagePercent = input.maxHealthDamagePercent;
     this.requireBuff = input.requireBuff;
     this.buffId = input.buffId;
     return this;

@@ -230,7 +230,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
       AbilityNames.Cell.CELL_X_FORM,
-      AbilityNames.Frieza.DEATH_BEAM,
+      AbilityNames.Cooler.DEATH_BEAM,
       AbilityNames.Raditz.DOUBLE_SUNDAY,
       AbilityNames.Nappa.GIANT_STORM,
       AbilityNames.Moro.ENERGY_DRAIN,
@@ -238,6 +238,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.KingKRool.BELLY_ARMOR, AbilityNames.KingKRool.KROWN_TOSS, 
       AbilityNames.EisShenron.FROST_CLAWS,
       AbilityNames.Ginyu.MILKY_CANNON,
+      AbilityNames.Frieza.DEATH_BEAM_GOLDEN,
     ]],
 
     // broly
@@ -260,17 +261,17 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
 
     // fourth form cooler
-    [FourCC("H042"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [FourCC("H042"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // final form cooler
-    [FourCC("H043"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [FourCC("H043"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // golden final form
-    [FourCC("H05L"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [FourCC("H05L"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.DEAFENING_WAVE, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
     // metal cooler
-    [FourCC("H01A"), [AbilityNames.Frieza.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
+    [FourCC("H01A"), [AbilityNames.Cooler.DEATH_BEAM, AbilityNames.Cooler.SUPERNOVA_COOLER, AbilityNames.Cooler.NOVA_CHARIOT, AbilityNames.Cooler.GETI_STAR_REPAIR, AbilityNames.Cooler.SUPERNOVA_GOLDEN]],
 
     // farmer with shotgun
     [FourCC("H08S"), [
-      AbilityNames.Frieza.DEATH_BEAM, 
+      AbilityNames.Cooler.DEATH_BEAM, 
       AbilityNames.Vegeta.FINAL_FLASH, 
       AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
       AbilityNames.Broly.GIGANTIC_ROAR, 
@@ -340,6 +341,24 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ginyu.GALAXY_DYNAMITE,
       AbilityNames.Ginyu.GINYU_POSE_FIGHTING,
       AbilityNames.Ginyu.FROG_TONGUE,
+    ]],
+
+    // frieza, code is incorrect
+    [FourCC("H06X"), [
+      AbilityNames.Frieza.DEATH_BEAM,
+      AbilityNames.Frieza.DEATH_CANNON,
+      AbilityNames.Frieza.NOVA_STRIKE,
+      AbilityNames.Frieza.SUPERNOVA, AbilityNames.Frieza.EMPERORS_THRONE,
+      AbilityNames.Frieza.DEATH_STORM, AbilityNames.Frieza.IMPALING_RUSH, 
+      AbilityNames.Frieza.DEATH_BEAM_BARRAGE, AbilityNames.Frieza.NOVA_RUSH, 
+      AbilityNames.Frieza.TAIL_WHIP, AbilityNames.Frieza.DEATH_BALL, 
+      AbilityNames.Frieza.SUPERNOVA_2,
+      AbilityNames.Frieza.LAST_EMPEROR, AbilityNames.Frieza.DEATH_SAUCER,
+      AbilityNames.Frieza.DEATH_BEAM_GOLDEN, 
+      AbilityNames.Frieza.DEATH_CANNON_GOLDEN,
+      AbilityNames.Frieza.NOVA_RUSH_GOLDEN,
+      AbilityNames.Frieza.EARTH_BREAKER,
+      AbilityNames.Frieza.CAGE_OF_LIGHT,
     ]],
   ]
 )

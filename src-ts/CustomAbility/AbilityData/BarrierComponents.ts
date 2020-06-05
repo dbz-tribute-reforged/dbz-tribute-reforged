@@ -29,4 +29,14 @@ export const BarrierComponents = [
     affectAllies: true,
     canWalkOut: false,
   },
+  {
+    name: "barrier cage of light", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    aoe: 750,
+    repelOutsidersSpeed: 15,
+    affectAllies: true,
+    canWalkOut: false,
+  },
 ];

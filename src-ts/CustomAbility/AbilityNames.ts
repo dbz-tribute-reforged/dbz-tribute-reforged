@@ -169,12 +169,8 @@ export module AbilityNames {
     export const CELL_X_FORM: string = "Cell-X";
   }
 
-  export module Frieza {
-    export const DEATH_BEAM: string = "Death Beam Frieza";
-  }
-
   export module Cooler {
-    export const DEATH_BEAM: string = Frieza.DEATH_BEAM;
+    export const DEATH_BEAM: string = "Death Beam C";
     export const SUPERNOVA_COOLER: string = "Supernova Cooler";
     export const SUPERNOVA_GOLDEN: string = "Supernova Golden";
     export const NOVA_CHARIOT: string = "Nova Chariot";
@@ -210,7 +206,7 @@ export module AbilityNames {
   }
 
   export module FarmerWithShotgun {
-    export const DEATH_BEAM: string = Frieza.DEATH_BEAM;
+    export const DEATH_BEAM: string = Cooler.DEATH_BEAM;
     export const FINAL_FLASH: string = Vegeta.FINAL_FLASH;
     export const TWIN_DRAGON_SHOT: string = Gohan.TWIN_DRAGON_SHOT;
     export const GIGANTIC_ROAR: string = Broly.GIGANTIC_ROAR;
@@ -254,6 +250,34 @@ export module AbilityNames {
     export const GALAXY_DYNAMITE = "Galaxy Dynamite";
     export const GINYU_POSE_FIGHTING = "Ginyu Pose Fighting";
     export const FROG_TONGUE = "Frog Tongue";
+  }
+
+  export module Frieza {
+    export const DEATH_BEAM: string = "Death Beam F";
+    export const DEATH_CANNON: string = "Death Cannon";
+    export const NOVA_STRIKE: string = "Nova Strike";
+    // 1st
+    export const EMPERORS_THRONE: string = "Emperor's Throne";
+    export const SUPERNOVA: string = "Supernova Frieza";
+    // 2nd
+    export const DEATH_STORM: string = "Death Storm";
+    export const IMPALING_RUSH: string = "Impaling Rush";
+    // 3rd
+    export const DEATH_BEAM_BARRAGE: string = "Death Beam Barrage";
+    export const NOVA_RUSH: string = "Nova Rush";
+    // final
+    export const DEATH_BALL: string = "Death Ball";
+    export const SUPERNOVA_2: string = "Supernova Frieza 2";
+    export const TAIL_WHIP: string = "Tail Whip";
+    // full power
+    export const LAST_EMPEROR: string = "Last Emperor";
+    export const DEATH_SAUCER: string = "Death Saucer";
+    // golden
+    export const DEATH_BEAM_GOLDEN: string = "Golden Death Beam";
+    export const DEATH_CANNON_GOLDEN: string = "Golden Death Cannon";
+    export const NOVA_RUSH_GOLDEN: string = "Golden Nova Rush";
+    export const EARTH_BREAKER: string = "Earth Breaker";
+    export const CAGE_OF_LIGHT: string = "Cage of Light";
   }
 
   export module Saga {

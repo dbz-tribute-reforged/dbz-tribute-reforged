@@ -168,36 +168,47 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // frieza
-    ["Frieza 1", new SagaUnit(FourCC("U011"), 10, 1000, 200, 900, new Vector2D(21500, 26100),
+    ["Frieza 1", new SagaUnit(FourCC("H071"), 10, 1000, 200, 900, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Frieza.DEATH_CANNON,
       ],
     )],
-    ["Frieza 2", new SagaUnit(FourCC("U012"), 15, 1200, 300, 800, new Vector2D(21500, 26100),
+    ["Frieza 2", new SagaUnit(FourCC("H070"), 15, 1200, 300, 800, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Frieza.DEATH_STORM,
+        SagaAbilities.Frieza.IMPALING_RUSH,
       ],
     )],
-    ["Frieza 3", new SagaUnit(FourCC("U013"), 20, 1300, 350, 850, new Vector2D(21500, 26100),
+    ["Frieza 3", new SagaUnit(FourCC("H06Z"), 20, 1300, 350, 850, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Frieza.NOVA_RUSH,
+        SagaAbilities.Frieza.DEATH_BEAM_BARRAGE,
       ],
     )],
-    ["Frieza 4", new SagaUnit(FourCC("U014"), 35, 1500, 400, 1400, new Vector2D(21500, 26100),
+    ["Frieza 4", new SagaUnit(FourCC("H06X"), 35, 1500, 400, 1400, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Frieza.NOVA_STRIKE,
+        SagaAbilities.Frieza.TAIL_WHIP,
+        SagaAbilities.Frieza.DEATH_BALL,
       ],
     )],
-    ["Frieza 5", new SagaUnit(FourCC("U018"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
+    ["Frieza 5", new SagaUnit(FourCC("H06Y"), 75, 2000, 500, 1800, new Vector2D(21500, 26100),
       [
         SagaAbilities.Frieza.DEATH_BEAM,
-        SagaAbilities.Cooler.SUPERNOVA_COOLER,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
+        SagaAbilities.Frieza.DEATH_CANNON,
+        SagaAbilities.Frieza.LAST_EMPEROR,
+        SagaAbilities.Frieza.NOVA_STRIKE,
+        SagaAbilities.Frieza.NOVA_RUSH,
+        SagaAbilities.Frieza.DEATH_SAUCER,
+        SagaAbilities.Frieza.SUPERNOVA,
       ],
       [
         ItemConstants.SagaDrops.BATTLE_ARMOR_4,
+        ItemConstants.SagaDrops.FRIEZA_TAIL,
       ]
     )],
 
@@ -219,7 +230,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // cooler's revenge
     ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(4400, 9300),
       [
-        SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
         SagaAbilities.Cooler.NOVA_CHARIOT,
       ],
@@ -231,7 +242,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // return of cooler
     ["Metal Cooler 1", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30000),
       [
-        SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
@@ -241,14 +252,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
       [
-        SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
     )],
     ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30100),
       [
-        SagaAbilities.Frieza.DEATH_BEAM,
+        SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
