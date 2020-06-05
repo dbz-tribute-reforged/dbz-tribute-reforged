@@ -1179,10 +1179,12 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
   const tickRate = 0.02;
   const jumpDuration = 40;
   const jumpHeight = 900;
-  const jumpMoveDistance = 26;
+  const jumpMoveDistance = 30;
+  const jumpSpeedModifier = 0.0015;
+  const jumpSpeedModifierMax = 1.33;
+  const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordMaxRange = 1100;
-  const braveSwordDamageMult = 0.4;
+  const braveSwordDamageMult = 0.25 * 1.8;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -1208,20 +1210,15 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
       
       if (CountUnitsInGroup(targetGroup) > 0) {
         let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+        const moveAngle = CoordMath.angleBetweenCoords(casterPos, targetPos);
         let time = 0;
         // PauseUnit(caster, true);
         // SetUnitInvulnerable(caster, true);
         UnitHelper.giveUnitFlying(caster);
 
         TimerStart(CreateTimer(), tickRate, true, () => {
-          casterPos.x = GetUnitX(caster);
-          casterPos.y = GetUnitY(caster);
-          const distanceToTarget = CoordMath.distance(casterPos, targetPos);
-          if (
-            distanceToTarget > braveSwordMaxRange ||
-            time > jumpDuration ||
-            BlzIsUnitInvulnerable(caster)
-          ) {
+          casterPos.setPos(GetUnitX(caster), GetUnitY(caster));
+          if (time > jumpDuration) {
             
             const castDummy = CreateUnit(
               player, 
@@ -1313,13 +1310,18 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
             );
             SetUnitFlyHeight(caster, height, 0);
 
-            const moveAngle = CoordMath.angleBetweenCoords(casterPos, targetPos);
-            let movePos;
-            if (distanceToTarget < jumpMoveDistance) {
-              movePos = CoordMath.polarProjectCoords(casterPos, moveAngle, distanceToTarget);
-            } else {
-              movePos = CoordMath.polarProjectCoords(casterPos, moveAngle, jumpMoveDistance);
-            }
+            const distanceToTarget = CoordMath.distance(casterPos, targetPos);
+
+            let movePos = CoordMath.polarProjectCoords(
+              casterPos, moveAngle, 
+              Math.max(
+                jumpSpeedModifierMin, 
+                Math.min(
+                  jumpSpeedModifierMax, 
+                  distanceToTarget * jumpSpeedModifier
+                )
+              ) * jumpMoveDistance
+            );
 
             PathingCheck.moveGroundUnitToCoord(caster, movePos);
           }
@@ -1729,8 +1731,8 @@ export module Id {
   export const metalCooler = FourCC("H01A");
   export const fourthCooler = FourCC("H042");
   export const fifthCooler = FourCC("H043");
-  export const deathBeam = FourCC("A06C");
-  export const supernova = FourCC("A0C1");
+  export const deathBeamCooler = FourCC("A06C");
+  export const supernovaCooler = FourCC("A0C1");
   export const goldenSupernova = FourCC("A0L2");
   export const novaChariot = FourCC("A0KY");
   export const deafeningWave = FourCC("A06N");
@@ -1744,6 +1746,27 @@ export module Id {
   export const iceCannon = FourCC("A0P4");
 
   export const farmerWithShotgun = FourCC("H08S");
+
+  export const frieza = FourCC("H06X");
+  export const deathBeamFrieza = FourCC("A0PZ");
+  export const deathCannon = FourCC("A0Q0");
+  export const novaStrike = FourCC("A0Q1");
+  export const supernovaFrieza = FourCC("A0Q2");
+  export const emperorsThrone = FourCC("A0Q3");
+  export const deathStorm = FourCC("A0Q4");
+  export const impalingRush = FourCC("A0Q5");
+  export const deathBeamBarrage = FourCC("A0Q6");
+  export const novaRush = FourCC("A0Q7");
+  export const deathBall = FourCC("A0Q8");
+  export const supernovaFrieza2 = FourCC("A0Q9");
+  export const tailWhip = FourCC("A0QA");
+  export const lastEmperor = FourCC("A0QB");
+  export const deathSaucer = FourCC("A0QC");
+  export const deathBeamGolden = FourCC("A0QD");
+  export const deathCannonGolden = FourCC("A0QE");
+  export const novaRushGolden = FourCC("A0QF");
+  export const earthBreaker = FourCC("A0QG");
+  export const cageOfLight = FourCC("A0QH");
 
   export const ft = FourCC("H009");
   export const ftss = FourCC("A0KT");
@@ -2103,7 +2126,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       break;
 
     // cooler 
-    case Id.deathBeam:
+    case Id.deathBeamCooler:
       if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerGrunt1.mp3", 480);
       } else if (unitId == Id.metalCooler) {
@@ -2112,7 +2135,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
       break;
 
-    case Id.supernova:
+    case Id.supernovaCooler:
     case Id.goldenSupernova:
       if (unitId == Id.fourthCooler || unitId == Id.fifthCooler) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerSupernova.mp3", 1416);
@@ -2157,6 +2180,75 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
     
     case Id.iceCannon:
       playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+    
+    // frieza
+    case Id.deathBeamFrieza:
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+      break;
+
+    case Id.deathCannon:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
+    case Id.novaStrike:
+      break;
+    
+    case Id.supernovaFrieza:
+    case Id.supernovaFrieza2:
+      break;
+
+    case Id.emperorsThrone:
+      break;
+
+    case Id.deathStorm:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+      break;
+    
+    case Id.impalingRush:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
+    case Id.deathBeamBarrage:
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeam.mp3", 2768);
+      break;
+
+    case Id.novaRush:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+      break;
+    
+    case Id.deathBall:
+      break;
+    
+    case Id.tailWhip:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
+    case Id.lastEmperor:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam3.mp3", 9822);
+      break;
+
+    case Id.deathSaucer:
+      break;
+    
+    case Id.deathBeamGolden:
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+      break;
+
+    case Id.deathCannonGolden:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
+    case Id.novaRushGolden:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      break;
+
+    case Id.earthBreaker:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam4.mp3", 4493);
+      break;
+
+    case Id.cageOfLight:
+      playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
       break;
 
     // ft 

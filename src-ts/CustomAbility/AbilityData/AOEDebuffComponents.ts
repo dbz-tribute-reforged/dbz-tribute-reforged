@@ -290,4 +290,17 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff stun nova rush",
+    repeatInterval: 1,
+    startTick: 23,
+    endTick: -1,
+    abilityId: Debuffs.STUN_ONE_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 400,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

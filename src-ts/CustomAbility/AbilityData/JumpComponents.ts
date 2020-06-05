@@ -13,7 +13,7 @@ export const JumpComponents = [
     startTick: 0,
     endTick: -1,
     duration: 22,
-    maxHeight: 200,
+    maxHeight: 300,
   },
   {
     name: "jump nova rush",
@@ -21,6 +21,6 @@ export const JumpComponents = [
     startTick: 0,
     endTick: -1,
     duration: 25,
-    maxHeight: 400,
+    maxHeight: 500,
   },
 ]

@@ -2683,7 +2683,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Frieza.DEATH_BEAM,
+    name: AbilityNames.Cooler.DEATH_BEAM,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -2696,16 +2696,16 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNFriezaDeathBeam.blp",
-      disabled: "BTNFriezaDeathBeam.blp",
+      enabled: "BTNDeathBeam.blp",
+      disabled: "BTNDeathBeam.blp",
     },
     tooltip: {
-      title: AbilityNames.Frieza.DEATH_BEAM,
+      title: AbilityNames.Cooler.DEATH_BEAM,
       body: 
-        AbilityNames.Frieza.DEATH_BEAM
+        AbilityNames.Cooler.DEATH_BEAM
     },
     components: [
-      { name: "beam death beam frieza" },
+      { name: "beam death beam cooler" },
     ],
   },
   // -------------------------------------------
@@ -3926,6 +3926,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Frieza.DEATH_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    // higher update rate than normal!!
+    updateRate: 0.02,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFriezaDeathBeam.blp",
+      disabled: "BTNFriezaDeathBeam.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frieza.DEATH_BEAM,
+      body: 
+        AbilityNames.Frieza.DEATH_BEAM
+    },
+    components: [
+      { name: "beam death beam frieza" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Frieza.DEATH_CANNON,
     currentCd: 0,
     maxCd: 1,
@@ -4191,6 +4218,7 @@ export const AbilitiesList = [
       { name: "dash ground point nova rush" },
       { name: "damage nova rush dps" },
       { name: "damage nova rush explosion" },
+      { name: "debuff stun nova rush" },
       { name: "jump nova rush" },
       { name: "sfx nova rush" },
     ],
@@ -4353,6 +4381,7 @@ export const AbilitiesList = [
       { name: "dash ground point nova rush golden" },
       { name: "damage nova rush golden dps" },
       { name: "damage nova rush golden explosion" },
+      { name: "debuff stun nova rush" },
       { name: "jump nova rush" },
       { name: "sfx nova rush golden" },
     ],
@@ -4410,7 +4439,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
-      { name: "beam cage of light barrier" },
+      // { name: "beam cage of light barrier" },
       { name: "multi cage of light" },
     ],
   },

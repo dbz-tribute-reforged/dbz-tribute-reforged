@@ -24,4 +24,13 @@ export module CoordMath {
     );
   }
 
+  export function isInsideMapBounds(position: Vector2D): boolean {
+    return (
+      position.x > -8500 &&
+      position.x < 31500 &&
+      position.y > -8500 &&
+      position.y < 31500
+    )
+  }
+
 }

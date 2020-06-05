@@ -140,7 +140,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       () => {
         return (
           UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) ||
-          (this.canDamageCaster && GetOwningPlayer(GetFilterUnit()) == input.casterPlayer)
+          (
+            this.canDamageCaster && 
+            GetOwningPlayer(GetFilterUnit()) == input.casterPlayer &&
+            IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
+          )
         );
       }
     );

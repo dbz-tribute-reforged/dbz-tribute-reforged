@@ -87,11 +87,68 @@ export module SagaAbilities {
 
   export module Frieza {
     export const DEATH_BEAM = new SagaAbility(
-      AbilityNames.Frieza.DEATH_BEAM, 10, 6, 10, SHORT_CAST_TIME
+      AbilityNames.Frieza.DEATH_BEAM, 10, 6, 20, SHORT_CAST_TIME
+    );
+    export const DEATH_CANNON = new SagaAbility(
+      AbilityNames.Frieza.DEATH_CANNON, 10, 18, 15, SHORT_CAST_TIME
+    );
+    export const NOVA_STRIKE = new SagaAbility(
+      AbilityNames.Frieza.NOVA_STRIKE, 10, 18, 10, MEDIUM_CAST_TIME
+    );
+    
+    export const SUPERNOVA = new SagaAbility(
+      AbilityNames.Frieza.SUPERNOVA, 10, 20, 10, MEDIUM_CAST_TIME
+    );
+
+    export const DEATH_STORM = new SagaAbility(
+      AbilityNames.Frieza.DEATH_STORM, 10, 12, 10, MEDIUM_CAST_TIME
+    );
+    export const IMPALING_RUSH = new SagaAbility(
+      AbilityNames.Frieza.IMPALING_RUSH, 10, 12, 10, MEDIUM_CAST_TIME
+    );
+
+    export const DEATH_BEAM_BARRAGE = new SagaAbility(
+      AbilityNames.Frieza.DEATH_BEAM_BARRAGE, 10, 24, 5, LONG_CAST_TIME
+    );
+    export const NOVA_RUSH = new SagaAbility(
+      AbilityNames.Frieza.NOVA_RUSH, 10, 12, 10, MEDIUM_CAST_TIME
+    );
+    
+    export const DEATH_BALL = new SagaAbility(
+      AbilityNames.Frieza.DEATH_BALL, 10, 20, 5, LONG_CAST_TIME
+    );
+    export const SUPERNOVA_2 = new SagaAbility(
+      AbilityNames.Frieza.SUPERNOVA_2, 10, 20, 5, LONG_CAST_TIME
+    );
+    export const TAIL_WHIP = new SagaAbility(
+      AbilityNames.Frieza.TAIL_WHIP, 10, 4, 15, SHORT_CAST_TIME
+    );
+
+    export const LAST_EMPEROR = new SagaAbility(
+      AbilityNames.Frieza.LAST_EMPEROR, 10, 45, 1, SHORT_CAST_TIME
+    );
+    export const DEATH_SAUCER = new SagaAbility(
+      AbilityNames.Frieza.DEATH_SAUCER, 10, 90, 3, MEDIUM_CAST_TIME
+    );
+
+    export const DEATH_BEAM_GOLDEN = new SagaAbility(
+      AbilityNames.Frieza.DEATH_BEAM_GOLDEN, 10, 5, 20, SHORT_CAST_TIME
+    );
+    export const DEATH_CANNON_GOLDEN = new SagaAbility(
+      AbilityNames.Frieza.DEATH_CANNON_GOLDEN, 10, 10, 15, SHORT_CAST_TIME
+    );
+    export const NOVA_RUSH_GOLDEN = new SagaAbility(
+      AbilityNames.Frieza.NOVA_RUSH_GOLDEN, 10, 15, 10, SHORT_CAST_TIME
+    );
+    export const CAGE_OF_LIGHT = new SagaAbility(
+      AbilityNames.Frieza.NOVA_RUSH_GOLDEN, 10, 90, 5, EXTRA_LONG_CAST_TIME
     );
   }
 
   export module Cooler {
+    export const DEATH_BEAM = new SagaAbility(
+      AbilityNames.Cooler.DEATH_BEAM, 10, 6, 10, SHORT_CAST_TIME
+    );
     export const SUPERNOVA_COOLER = new SagaAbility(
       AbilityNames.Cooler.SUPERNOVA_COOLER, 10, 20, 5, MEDIUM_CAST_TIME
     );

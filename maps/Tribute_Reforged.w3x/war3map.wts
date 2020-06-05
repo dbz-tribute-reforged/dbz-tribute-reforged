@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 20+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 26+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -5903,12 +5903,12 @@ Transformations:
 [lvl 15]  1.10x "frieza"
 [lvl 30]  1.20x "frieza"
 [lvl 50]  1.30x "frieza"
-[lvl 100] 1.70x "frieza"
-[lvl 150] 2.00x "frieza"
-[lvl 200] 2.10x "golden" [unlocks Golden Frieza]
-[lvl 250] 2.20x "golden" [upgrades Golden Frieza]
+[lvl 100] 1.60x "frieza"
+[lvl 150] 1.90x "frieza"
+[lvl 200] 2.00x "golden" [unlocks Golden Frieza]
+[lvl 250] 2.10x "golden" [upgrades Golden Frieza]
 
-Frieza can more closely control his power level by using [|cff00ff00D|r] Transform to access his many different forms.
+Frieza can precisely control his power level by using [|cff00ff00D|r] Transform. Gains Full Power 100% when less than 75% hp in Fourth Form. Gains Mecha Form while dead (heaven/hell).
 }
 
 STRING 951
@@ -5927,16 +5927,9 @@ Q
 }
 
 STRING 953
-// Abilities: A0E5 (Transform - 100%), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his 100% full power fourth form.
-|cff00FFFFMultiplier: +0.3x All|r
-|cffffff00Only useable while in fourth form and below 75% hp.
-Drains 1.3% of max mana per second.
-Automatically reverts when below 10% of max mana.
-Unlocks Death Ball and Death Saucer.
-Unlocks Last Emperor when below 25% hp.|r
-|cff00FF00Cooldown: 90 seconds|r
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool1> seconds|r
 }
 
 STRING 954
@@ -38933,14 +38926,9 @@ Frieza Transforms
 }
 
 STRING 6384
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.5x All|r
-|cffffff00Automatically reverts when below 20% max hp/mp.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: 90 seconds|r
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool2> seconds|r
 }
 
 STRING 6385
@@ -39490,9 +39478,9 @@ STRING 6475
 }
 
 STRING 6476
-// Abilities: A0E5 (Transform - 100%), Tip (Tooltip - Normal)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Transform - 100%
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool3> seconds|r
 }
 
 STRING 6477
@@ -46537,7 +46525,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47076,7 +47064,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47100,7 +47088,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47310,7 +47298,7 @@ Masenko
 }
 
 STRING 7768
-// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47784,7 +47772,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0KD (Meditation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47808,7 +47796,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -50181,9 +50169,9 @@ STRING 8244
 }
 
 STRING 8245
-// Abilities: A0IF (Transform - Mecha), Tip (Tooltip - Normal)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00W|r] Transform - Mecha
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool4> seconds|r
 }
 
 STRING 8246
@@ -50217,7 +50205,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 8251
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -50295,9 +50283,9 @@ STRING 8263
 }
 
 STRING 8264
-// Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00S|r] Transform - Golden
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool5> seconds|r
 }
 
 STRING 8265
@@ -50331,9 +50319,9 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 8270
-// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-S
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool6> seconds|r
 }
 
 STRING 8271
@@ -51285,7 +51273,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -52732,7 +52720,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54957,7 +54945,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -55592,7 +55580,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61394,7 +61382,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61412,7 +61400,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61424,7 +61412,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -61442,7 +61430,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61454,7 +61442,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61472,7 +61460,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -63375,7 +63363,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -64777,7 +64765,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 20.May.20
+This map is under active development - 6.June.20
 }
 
 STRING 10653
@@ -65204,7 +65192,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -65479,7 +65467,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66637,7 +66625,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66655,7 +66643,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -72628,7 +72616,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11954
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -72658,7 +72646,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11959
-// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73503,7 +73491,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -75940,7 +75928,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -77957,7 +77945,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -80565,7 +80553,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -81121,33 +81109,59 @@ Frieza transforms into his third form.
 |cff00FF00Cooldown: 90 seconds|r
 }
 
-STRING 13324
+STRING 13322
+// Abilities: A0E5 (Transform - 100%), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his 100% full power fourth form.
+|cff00FFFFMultiplier: +0.35x All|r
+|cffffff00Only useable while in fourth form and below 75% hp.
+Drains 1.3% of max mana per second.
+Automatically reverts when below 10% of max mana.
+Unlocks Death Ball and Death Saucer.
+Unlocks Last Emperor when below 25% hp.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13323
 // Abilities: A0IF (Transform - Mecha), Ubertip (Tooltip - Normal - Extended)
 {
 Frieza transforms into his mecha form.
 |cff00FFFFMultiplier: +0.3x All|r
 |cffffff00Only useable in Heaven/Hell.
-Grants 10% cooldown reduction.
-Unlocks Supernova and Scout.|r
+Grants 20% cooldown reduction.
+Unlocks Supernova.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13324
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool7> seconds|r
+}
+
+STRING 13325
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.5x All|r
+|cffffff00Drains 2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
 |cff00FF00Cooldown: 90 seconds|r
 }
 
 STRING 13326
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 3% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: 90 seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 2|r]
 }
 
 STRING 13327
-// Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-[|cff00ff00S|r] Transform - Mastered Golden
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 3|r]
 }
 
 STRING 13328
@@ -82515,87 +82529,25 @@ Frieza leaps into the air and accelerates to an extreme speed before crashing do
 }
 
 STRING 13548
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
+// Items: I04O (Frieza's Tail), Name (Name)
 {
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool1> seconds|r
-}
-
-STRING 13549
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool2> seconds|r
-}
-
-STRING 13550
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool3> seconds|r
+Frieza's Tail
 }
 
 STRING 13551
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
+// Items: I04O (Frieza's Tail), Description (Description)
 {
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool4> seconds|r
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.|r
 }
 
 STRING 13552
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
+// Items: I04O (Frieza's Tail), Ubertip (Tooltip - Extended)
 {
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool5> seconds|r
-}
-
-STRING 13553
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool6> seconds|r
-}
-
-STRING 13554
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool7> seconds|r
-}
-
-STRING 13555
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 2|r]
-}
-
-STRING 13556
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 3|r]
-}
-
-STRING 13557
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 4|r]
-}
-
-STRING 13558
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 5|r]
-}
-
-STRING 13559
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 6|r]
-}
-
-STRING 13560
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 1|r]
-}
-
-STRING 13561
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 7|r]
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.|r
 }
 
 STRING 13562
@@ -82622,94 +82574,10 @@ STRING 13565
 R
 }
 
-STRING 13566
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 9|r]
-}
-
-STRING 13567
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 8|r]
-}
-
-STRING 13568
-// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Supernova Frieza - [|cffffcc00Level 10|r]
-}
-
-STRING 13569
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool8> seconds|r
-}
-
-STRING 13570
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool9> seconds|r
-}
-
-STRING 13571
-// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool10> seconds|r
-}
-
-STRING 13572
-// Abilities: A0Q8 (Death Ball), Researchubertip (Tooltip - Learn - Extended)
-{
-Frieza gathers energy into a sphere on the tip of his index finger that has the power to destroy entire planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool1> seconds|r
-}
-
 STRING 13573
 // Abilities: A0Q8 (Death Ball), EditorSuffix (Editor Suffix)
 {
 (frieza)
-}
-
-STRING 13574
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool1> seconds|r
-}
-
-STRING 13575
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool2> seconds|r
-}
-
-STRING 13576
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool3> seconds|r
-}
-
-STRING 13577
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool4> seconds|r
-}
-
-STRING 13578
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool5> seconds|r
-}
-
-STRING 13579
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool6> seconds|r
-}
-
-STRING 13580
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool7> seconds|r
 }
 
 STRING 13581
@@ -82794,30 +82662,6 @@ STRING 13594
 // Abilities: A0Q9 (Supernova Frieza 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Supernova Frieza 2 - [|cffffcc00Level 10|r]
-}
-
-STRING 13595
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool8> seconds|r
-}
-
-STRING 13596
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool9> seconds|r
-}
-
-STRING 13597
-// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool10> seconds|r
-}
-
-STRING 13598
-// Abilities: A0Q9 (Supernova Frieza 2), Researchubertip (Tooltip - Learn - Extended)
-{
-Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q2,Cool1> seconds|r
 }
 
 STRING 13599
@@ -84091,33 +83935,21 @@ STRING 13784
 }
 
 STRING 13785
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur1> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool1> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 4|r]
 }
 
 STRING 13786
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur2> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool2> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 5|r]
 }
 
 STRING 13787
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur3> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool3> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 6|r]
 }
 
 STRING 13788
@@ -84133,13 +83965,9 @@ STRING 13789
 }
 
 STRING 13790
-// Abilities: A0QH (Cage of Light), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur1> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool1> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 1|r]
 }
 
 STRING 13791
@@ -84161,73 +83989,45 @@ STRING 13793
 }
 
 STRING 13794
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur4> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool4> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 7|r]
 }
 
 STRING 13795
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur5> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool5> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 9|r]
 }
 
 STRING 13796
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur6> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool6> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 8|r]
 }
 
 STRING 13797
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Tip (Tooltip - Normal)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur7> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool7> seconds|r
+[|cff00ff00R|r] Death Ball - [|cffffcc00Level 10|r]
 }
 
 STRING 13798
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur8> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool8> seconds|r
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool8> seconds|r
 }
 
 STRING 13799
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur9> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool9> seconds|r
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool9> seconds|r
 }
 
 STRING 13800
-// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Q8 (Death Ball), Ubertip (Tooltip - Normal - Extended)
 {
-Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
-|cffff2020Channel Duration: <A0QH,Dur10> seconds|r
-|cffffff00Costs an additional 50% of current mana.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0QH,Cool10> seconds|r
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool10> seconds|r
 }
 
 STRING 13801
@@ -84282,5 +84082,231 @@ STRING 13809
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 13810
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.6x All|r
+|cffffff00Drains 1.5% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13811
+// Abilities: A03Z (Evil Fighting Skills), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A03Z,DataD1,%>% chance to dodge an attack and a <A03Z,DataA1>% chance to deal <A03Z,DataB1> times normal damage.
+}
+
+STRING 13812
+// Abilities: A03Z (Evil Fighting Skills), Tip (Tooltip - Normal)
+{
+Evil Fighting Skills
+}
+
+STRING 13813
+// Abilities: A0E5 (Transform - 100%), Tip (Tooltip - Normal)
+{
+[|cff00ff00A|r] Transform - 100%
+}
+
+STRING 13814
+// Abilities: A0IF (Transform - Mecha), Tip (Tooltip - Normal)
+{
+[|cff00ff00S|r] Transform - Mecha
+}
+
+STRING 13815
+// Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Transform - Mastered Golden
+}
+
+STRING 13816
+// Abilities: A0IG (Transform - Golden), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Transform - Golden
+}
+
+STRING 13817
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 13818
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur1> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool1> seconds|r
+}
+
+STRING 13819
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur2> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool2> seconds|r
+}
+
+STRING 13820
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur3> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool3> seconds|r
+}
+
+STRING 13821
+// Abilities: A0QH (Cage of Light), Researchubertip (Tooltip - Learn - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur1> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool1> seconds|r
+}
+
+STRING 13822
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur4> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool4> seconds|r
+}
+
+STRING 13823
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur5> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool5> seconds|r
+}
+
+STRING 13824
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur6> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool6> seconds|r
+}
+
+STRING 13825
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur7> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool7> seconds|r
+}
+
+STRING 13826
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur8> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool8> seconds|r
+}
+
+STRING 13827
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur9> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool9> seconds|r
+}
+
+STRING 13828
+// Abilities: A0QH (Cage of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza continuously fires death beams out of his finger tips to create an inescapable cage that traps his enemies. Anything touching the edge of the cage takes damage from the death beams, but those in the centre remain unharmed
+|cffff2020Channel Duration: <A0QH,Dur10> seconds|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0QH,Cool10> seconds|r
+}
+
+STRING 13829
+// Abilities: A0Q8 (Death Ball), Researchubertip (Tooltip - Learn - Extended)
+{
+Frieza concentrates energy into a sphere at the tip of his index finger before throwing it at his enemies to annihilate them.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q8,Cool1> seconds|r
+}
+
+STRING 13830
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool1> seconds|r
+}
+
+STRING 13831
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool2> seconds|r
+}
+
+STRING 13832
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool3> seconds|r
+}
+
+STRING 13833
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool4> seconds|r
+}
+
+STRING 13834
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool5> seconds|r
+}
+
+STRING 13835
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool6> seconds|r
+}
+
+STRING 13836
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool7> seconds|r
+}
+
+STRING 13837
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool8> seconds|r
+}
+
+STRING 13838
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool9> seconds|r
+}
+
+STRING 13839
+// Abilities: A0Q9 (Supernova Frieza 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool10> seconds|r
+}
+
+STRING 13840
+// Abilities: A0Q9 (Supernova Frieza 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool1> seconds|r
 }
 

@@ -51,4 +51,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.ORIGINAL_POINT,
     maxRange: 1200,
   },
+  {
+    name: "teleport target point continuous", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    teleportTick: 0,
+    teleportOnce: false,
+    teleportTarget: Teleport.TARGET_POINT,
+    maxRange: Teleport.INFINITE_RANGE,
+  },
 ];

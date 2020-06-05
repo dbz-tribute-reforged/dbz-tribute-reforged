@@ -37,6 +37,9 @@ export module ItemConstants {
     FourCC("I00D"),
     FourCC("I03Q"),
   ]
+  export const friezaTail = [
+    FourCC("I04O"),
+  ];
   export const deadZoneFragment = [
     FourCC("I040"),
   ];
@@ -117,6 +120,7 @@ export module ItemConstants {
     export const DARKNESS_GENERATOR = darknessGenerator[0];
     export const SCOUTER_1 = scouter[0];
     export const SCOUTER_2 = scouter[1];
+    export const FRIEZA_TAIL = friezaTail[0];
     export const DEAD_ZONE_FRAGMENT = deadZoneFragment[0];
     export const GERO_BOOTS = geroBoots[0];
     export const ANDROID_BOMB = androidBomb[0];
