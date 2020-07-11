@@ -18,7 +18,7 @@ export module SagaAbilities {
       AbilityNames.Saga.POWER_BLITZ_BARRAGE_CUSTOM, 10, 45, 10, EXTRA_LONG_CAST_TIME, true
     );
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM = new SagaAbility(
-      AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM, 9, 60, 5, EXTRA_LONG_CAST_TIME, true
+      AbilityNames.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM, 9, 60, 5, EXTRA_LONG_CAST_TIME
     );
     export const SOLAR_KAMEHAMEHA_CUSTOM = new SagaAbility(
       AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM, 10, 120, 3, MEDIUM_CAST_TIME,
@@ -128,7 +128,7 @@ export module SagaAbilities {
       AbilityNames.Frieza.LAST_EMPEROR, 10, 45, 1, SHORT_CAST_TIME
     );
     export const DEATH_SAUCER = new SagaAbility(
-      AbilityNames.Frieza.DEATH_SAUCER, 10, 90, 3, MEDIUM_CAST_TIME
+      AbilityNames.Frieza.DEATH_SAUCER, 10, 90, 3, MEDIUM_CAST_TIME, true
     );
 
     export const DEATH_BEAM_GOLDEN = new SagaAbility(

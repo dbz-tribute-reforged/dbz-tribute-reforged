@@ -21,6 +21,6 @@ export const JumpComponents = [
     startTick: 0,
     endTick: -1,
     duration: 25,
-    maxHeight: 500,
+    maxHeight: 600,
   },
 ]

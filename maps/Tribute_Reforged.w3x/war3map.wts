@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.44
+DBZ Tribute Reforged 0.44a
 }
 
 STRING 4
@@ -5902,8 +5902,8 @@ Type "r" to revert.
 Transformations:
 [lvl 15]  1.10x "frieza"
 [lvl 30]  1.20x "frieza"
-[lvl 50]  1.30x "frieza"
-[lvl 100] 1.60x "frieza"
+[lvl 50]  1.25x "frieza"
+[lvl 90]  1.50x "frieza"
 [lvl 150] 1.90x "frieza"
 [lvl 200] 2.00x "golden" [unlocks Golden Frieza]
 [lvl 250] 2.10x "golden" [upgrades Golden Frieza]
@@ -20624,7 +20624,7 @@ Max Permanent Stat Mult:
 Moro can only increase his permanent stat mult by draining the stat multiplier of other heroes by using [Q] Energy Drain. Stronger enemies provide greater permanent stat mult.
 
 Each [Q] increases his permanent stat multiplier by:
-[0.4 * (enemy stat mult - 1.000x) or 0.050x if higher]
+[0.2 * (enemy stat mult - 1.000x) or 0.050x if higher]
 capped at his maximum permanent stat multiplier.
 }
 
@@ -38314,91 +38314,91 @@ Janemba
 }
 
 STRING 6289
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD2,%>% |n|cffffcc00Critical|r - <A00Q,DataA2>% |n|cffffcc00Damage|r - <A00Q,DataB2,.> times
 }
 
 STRING 6290
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD3,%>% |n|cffffcc00Critical|r - <A00Q,DataA3>% |n|cffffcc00Damage|r - <A00Q,DataB3,.> times
 }
 
 STRING 6291
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD4,%>% |n|cffffcc00Critical|r - <A00Q,DataA4>% |n|cffffcc00Damage|r - <A00Q,DataB4,.> times
 }
 
 STRING 6292
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD5,%>% |n|cffffcc00Critical|r - <A00Q,DataA5>% |n|cffffcc00Damage|r - <A00Q,DataB5,.> times
 }
 
 STRING 6293
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD6,%>% |n|cffffcc00Critical|r - <A00Q,DataA6>% |n|cffffcc00Damage|r - <A00Q,DataB6,.> times
 }
 
 STRING 6294
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD7,%>% |n|cffffcc00Critical|r - <A00Q,DataA7>% |n|cffffcc00Damage|r - <A00Q,DataB7,.> times
 }
 
 STRING 6295
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD8,%>% |n|cffffcc00Critical|r - <A00Q,DataA8>% |n|cffffcc00Damage|r - <A00Q,DataB8,.> times
 }
 
 STRING 6296
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD9,%>% |n|cffffcc00Critical|r - <A00Q,DataA9>% |n|cffffcc00Damage|r - <A00Q,DataB9,.> times
 }
 
 STRING 6297
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD10,%>% |n|cffffcc00Critical|r - <A00Q,DataA10>% |n|cffffcc00Damage|r - <A00Q,DataB10,.> times
 }
 
 STRING 6298
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD11,%>% |n|cffffcc00Critical|r - <A00Q,DataA11>% |n|cffffcc00Damage|r - <A00Q,DataB11,.> times
 }
 
 STRING 6299
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD12,%>% |n|cffffcc00Critical|r - <A00Q,DataA12>% |n|cffffcc00Damage|r - <A00Q,DataB12,.> times
 }
 
 STRING 6300
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD13,%>% |n|cffffcc00Critical|r - <A00Q,DataA13>% |n|cffffcc00Damage|r - <A00Q,DataB13,.> times
 }
 
 STRING 6301
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD14,%>% |n|cffffcc00Critical|r - <A00Q,DataA14>% |n|cffffcc00Damage|r - <A00Q,DataB14,.> times
 }
 
 STRING 6302
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A00Q,DataD15,%>% |n|cffffcc00Critical|r - <A00Q,DataA15>% |n|cffffcc00Damage|r - <A00Q,DataB15,.> times
 }
 
 STRING 6303
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 3|r]
 }
@@ -38410,79 +38410,79 @@ STRING 6304
 }
 
 STRING 6305
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 2|r]
 }
 
 STRING 6306
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 4|r]
 }
 
 STRING 6307
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 5|r]
 }
 
 STRING 6308
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 6|r]
 }
 
 STRING 6309
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 7|r]
 }
 
 STRING 6310
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 8|r]
 }
 
 STRING 6311
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 9|r]
 }
 
 STRING 6312
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 10|r]
 }
 
 STRING 6313
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 11|r]
 }
 
 STRING 6314
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 12|r]
 }
 
 STRING 6315
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 13|r]
 }
 
 STRING 6316
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Celluar Enhancement - [|cffffcc00Level 14|r]
 }
 
 STRING 6317
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Cellular Enhancement - [|cffffcc00Level 15|r]
 }
@@ -38493,20 +38493,14 @@ STRING 6318
 F
 }
 
-STRING 6319
-// Abilities: A0DU (Celluar Enhancement), Name (Name)
-{
-Celluar Enhancement
-}
-
 STRING 6320
-// Abilities: A0DU (Celluar Enhancement), Researchtip (Tooltip - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r]  Learn Cellular Enhancement - [|cffffcc00Level %d|r]
 }
 
 STRING 6321
-// Abilities: A0DU (Celluar Enhancement), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0DU (Cellular Enhancement), Researchubertip (Tooltip - Learn - Extended)
 {
 Because Cell is made up of the cells of others he has the blood of the Saiyan race flowing through his veins.
 }
@@ -42509,7 +42503,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DU (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45955,27 +45949,27 @@ Moro is able to drain the life force (stat multiplier) of enemies to make himsel
 }
 
 STRING 7544
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 1|r]
 }
 
 STRING 7545
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 2|r]
 }
 
 STRING 7546
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 3|r]
 }
 
 STRING 7547
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 4|r]
 }
 
 STRING 7548
@@ -45991,15 +45985,15 @@ Power Blitz
 }
 
 STRING 7550
-// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 5|r]
 }
 
 STRING 7551
-// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 6|r]
 }
 
 STRING 7552
@@ -47046,9 +47040,16 @@ STRING 7725
 }
 
 STRING 7726
-// Items: I049 (Time Ring), Description (Description)
+// Units: H06X (Emperor of the Universe), Ubertip (Tooltip - Extended)
 {
-|cffffff00Instantly swap positions with an allied hero by travelling through time. Both units will also receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
+A well-rounded hero who can transform into many different forms to increase his power and gain access to abilities that can handle any situation.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 7727
@@ -64765,7 +64766,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 6.June.20
+This map is under active development - 11.July.20
 }
 
 STRING 10653
@@ -70532,12 +70533,6 @@ STRING 11608
 [|cff00FF00R|r] Learn Moonlight - [|cffffcc00Level %d|r]
 }
 
-STRING 11609
-// Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
-{
-|cffffff00Instantly swap positions with an allied hero by travelling through time. Both units will also receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
-}
-
 STRING 11610
 // Abilities: A0MY (Moonlight), Tip (Tooltip - Normal)
 {
@@ -72058,7 +72053,7 @@ STRING 11861
 {
 |cffff2020Strength: Increases HP by 20, increases HP regen by 0.4.|r
 
-|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.5% per 1000 AGI, whichever is lower.|r
+|cff00ff00Agility: Increases damage for most heroes by 0.2, increases armor by +1 per 1000 AGI. Mobility skills (e.g. zanzo) have increased speed up to a cap of STR/AGI or +1.25% per 1000 AGI, whichever is lower.|r
 
 |cff00ffffIntelligence: Increases mana by 10, increases mana regen by 0.1.
 }
@@ -73114,13 +73109,13 @@ Janemba traces his finger in the air and creates a streak of green energy light 
 }
 
 STRING 12037
-// Abilities: A0DU (Celluar Enhancement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DU (Cellular Enhancement), Ubertip (Tooltip - Normal - Extended)
 {
 Gives you a chance to multiply your damage and avoid attacks. |n|cffffcc00Evasion|r - <A0DU,DataD1,%>% |n|cffffcc00Critical|r - <A0DU,DataA1>% |n|cffffcc00Damage|r - <A0DU,DataB1,.> times
 }
 
 STRING 12038
-// Abilities: A0DU (Celluar Enhancement), Tip (Tooltip - Normal)
+// Abilities: A0DU (Cellular Enhancement), Tip (Tooltip - Normal)
 {
 Cellular Enhancement - [|cffffcc00Cell Jr|r]
 }
@@ -75375,28 +75370,10 @@ STRING 12400
 Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
 }
 
-STRING 12401
-// Items: I04A (Sorrowful Scythe), Description (Description)
-{
-The user converts Ki into a deadly Energy Blade.
-|cffffff0050% of melee damage cleaves to nearby enemies.
-+0.1x Agi mult.
--0.1x Int mult.|r
-}
-
 STRING 12402
 // Units: hpea (Beam), Name (Name)
 {
 Beam
-}
-
-STRING 12403
-// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
-{
-The user converts Ki into a deadly Energy Blade.
-|cffffff0050% of melee damage cleaves to nearby enemies.
-+0.1x Agi mult.
--0.1x Int mult.|r
 }
 
 STRING 12404
@@ -78813,13 +78790,6 @@ STRING 12952
 Power Pole
 }
 
-STRING 12953
-// Items: I04J (Power Pole), Description (Description)
-{
-The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
-|cffffff00+0.05x Agi mult.|r
-}
-
 STRING 12954
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
@@ -78836,13 +78806,6 @@ STRING 12956
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Justice Flash 2 - [|cffffcc00Level 7|r]
-}
-
-STRING 12957
-// Items: I04J (Power Pole), Ubertip (Tooltip - Extended)
-{
-The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
-|cffffff00+0.05x Agi mult.|r
 }
 
 STRING 12958
@@ -80376,7 +80339,7 @@ STRING 13208
 }
 
 STRING 13209
-// Units: H06X (Emperor of the Universe), Ubertip (Tooltip - Extended)
+// Units: H071 (Emperor of the Universe), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who can transform into many different forms to increase his power and gain access to abilities that can handle any situation.
 
@@ -80418,19 +80381,6 @@ STRING 13214
 F
 }
 
-STRING 13215
-// Units: H071 (Emperor of the Universe), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who can transform into many different forms to increase his power and gain access to abilities that can handle any situation.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 13216
 // Abilities: A0PT (Ginyu Pose Fighting), Tip (Tooltip - Normal)
 {
@@ -80450,18 +80400,9 @@ STRING 13218
 }
 
 STRING 13219
-// Items: I04N (Body Change), Description (Description)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 20% of Current HP
-Stat mult: -0.2x|r
-|cff00ffffCooldown: 180s (120s if an invalid target)
-
-|cff808080"Change ... NOW!"|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 7|r]
 }
 
 STRING 13220
@@ -80471,18 +80412,9 @@ F
 }
 
 STRING 13221
-// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 50% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
-
-Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
-
-|cffff2020Channel Duration: 3s
-|cff00ff00Cost: 5% of Max + 20% of Current HP
-Stat mult: -0.2x|r
-|cff00ffffCooldown: 180s (120s if an invalid target)
-
-|cff808080"Change ... NOW!"|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 8|r]
 }
 
 STRING 13222
@@ -81083,12 +81015,9 @@ STRING 13318
 }
 
 STRING 13319
-// Abilities: A0E1 (Transform - First), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Frieza transforms into his first form.
-|cff00FFFFMultiplier: +0.3x Int, +0.1x Str|r
-|cffffff00Unlocks Supernova and Emperor's Throne.|r
-|cff00FF00Cooldown: 90 seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 9|r]
 }
 
 STRING 13320
@@ -81140,16 +81069,9 @@ Frieza concentrates energy into a sphere at the tip of his index finger before t
 }
 
 STRING 13325
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
 {
-Frieza transforms into his golden form.
-|cff00FFFFMultiplier: +0.5x All|r
-|cffffff00Drains 2% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker.|r
-|cff00FF00Cooldown: 90 seconds|r
+[|cff00FF00F|r] Tail Whip - [|cffffcc00Level 10|r]
 }
 
 STRING 13326
@@ -81901,11 +81823,9 @@ STRING 13446
 }
 
 STRING 13447
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+// Items: I049 (Time Ring), Description (Description)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool1> seconds|r
+|cffffff00Allows you to travel through time, instantly swapping positions with another hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
 }
 
 STRING 13448
@@ -81915,11 +81835,9 @@ STRING 13448
 }
 
 STRING 13449
-// Abilities: A0Q4 (Death Storm), Researchubertip (Tooltip - Learn - Extended)
+// Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool1> seconds|r
+|cffffff00Allows you to travel through time, instantly swapping positions with another hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
 }
 
 STRING 13450
@@ -81947,19 +81865,21 @@ STRING 13453
 }
 
 STRING 13454
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+// Items: I04A (Sorrowful Scythe), Description (Description)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool2> seconds|r
+The user converts Ki into a deadly Energy Blade.
+|cffffff0050% of melee damage cleaves to nearby enemies.
++0.2x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 13455
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+// Items: I04A (Sorrowful Scythe), Ubertip (Tooltip - Extended)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool3> seconds|r
+The user converts Ki into a deadly Energy Blade.
+|cffffff0050% of melee damage cleaves to nearby enemies.
++0.2x Agi mult.
+-0.1x Int mult.|r
 }
 
 STRING 13456
@@ -81999,65 +81919,23 @@ STRING 13461
 }
 
 STRING 13462
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+// Items: I04J (Power Pole), Description (Description)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool4> seconds|r
+The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
+|cffffff00+0.1x Agi mult.|r
 }
 
 STRING 13463
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+// Items: I04J (Power Pole), Ubertip (Tooltip - Extended)
 {
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool5> seconds|r
-}
-
-STRING 13464
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool6> seconds|r
-}
-
-STRING 13465
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool7> seconds|r
-}
-
-STRING 13466
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool8> seconds|r
-}
-
-STRING 13467
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool9> seconds|r
+The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout.
+|cffffff00+0.1x Agi mult.|r
 }
 
 STRING 13468
 // Abilities: A0Q4 (Death Storm), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Death Storm - [|cffffcc00Level 10|r]
-}
-
-STRING 13469
-// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza raises his hand and opens it to unleash a giant exploding wave of energy centered on himself.
-|cff00ff00Damage: Str * lvl * ?|r
-|cff00ffffCooldown: <A0Q4,Cool10> seconds|r
 }
 
 STRING 13470
@@ -82534,6 +82412,36 @@ STRING 13548
 Frieza's Tail
 }
 
+STRING 13549
+// Items: I04N (Body Change), Description (Description)
+{
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 66% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 15% of Current HP
+Stat mult: -0.2x|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
+}
+
+STRING 13550
+// Items: I04N (Body Change), Ubertip (Tooltip - Extended)
+{
+|cffffff00Fires a body changing beam that swaps your hero with an enemy player's hero if they have less than 66% hp. Ginyu receives most of the target's transformations and abilities but suffers a stat mult penalty for being in a different body.
+
+Ignores allies, beams, buidlings, magic-immune, ethereal, and invulnerable units. Swapping an invalid target will turn Ginyu into a frog temporarily. Invalid units include: enemies with more than 66% hp, summoned units, creeps, sagas, and any unit in a tournament.|r
+
+|cffff2020Channel Duration: 3s
+|cff00ff00Cost: 5% of Max + 15% of Current HP
+Stat mult: -0.2x|r
+|cff00ffffCooldown: 180s (120s if an invalid target)
+
+|cff808080"Change ... NOW!"|r
+}
+
 STRING 13551
 // Items: I04O (Frieza's Tail), Description (Description)
 {
@@ -82548,6 +82456,77 @@ STRING 13552
 The tail of Frieza, Emperor of the Universe.
 |cffffff00+0.05x Str mult.
 +0.05x Agi mult.|r
+}
+
+STRING 13553
+// Abilities: A0E1 (Transform - First), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his first form.
+|cff00FFFFMultiplier: +0.3x Int, +0.1x Str|r
+|cffffff00Unlocks Supernova, Emperor's Throne and Frieza Force Aura.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13554
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his golden form.
+|cff00FFFFMultiplier: +0.5x All|r
+|cffffff00Drains 2.2% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13555
+// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza transforms into his mastered golden form.
+|cff00FFFFMultiplier: +0.6x All|r
+|cffffff00Drains 1.7% of max mana per second.
+Automatically reverts when below 10% max hp/mp.
+Casting a spell generates 4% of max mana.
+Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
+Unlocks Earth Breaker and Cage of Light.|r
+|cff00FF00Cooldown: 90 seconds|r
+}
+
+STRING 13556
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool6> seconds|r
+}
+
+STRING 13557
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool7> seconds|r
+}
+
+STRING 13558
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool8> seconds|r
+}
+
+STRING 13559
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool9> seconds|r
+}
+
+STRING 13560
+// Abilities: A0MO (Energy Drain), Ubertip (Tooltip - Normal - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.5% of max hp per enemy hit.|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool10> seconds|r
+}
+
+STRING 13561
+// Abilities: A0MO (Energy Drain), Researchubertip (Tooltip - Learn - Extended)
+{
+Moro is able to drain the life force (stat multiplier) of enemies to make himself more powerful. Works more effectively against stronger enemies.|n|cffff2020Temporary stat mult drain cannot exceed +/- 0.2x.|r |n|cff00ff00Damage: Lvl x Int x ?|nActive: Drains 0.05x stat multiplier (temporarily)|nEnemy primary heroes only lose 50% stat mult.|nNon-primary heroes are not drained but still provide a lesser temporary stat multiplier buff. |nHeals 0.2% of max hp per enemy hit (0.5% at lvl 6)|n(Provides bonus permanent stat mult, see "hs")|nPassive: In 2000 AOE drains ((3 + lvl/3) * 0.001x)/s.|r|n|cff00ffffCooldown: <A0MO,Cool1> - <A0MO,Cool10> seconds|r
 }
 
 STRING 13562
@@ -82574,10 +82553,104 @@ STRING 13565
 R
 }
 
+STRING 13566
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool1> seconds|r
+}
+
+STRING 13567
+// Abilities: A0Q4 (Death Storm), Researchubertip (Tooltip - Learn - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool1> seconds|r
+}
+
+STRING 13568
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool2> seconds|r
+}
+
+STRING 13569
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool3> seconds|r
+}
+
+STRING 13570
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool4> seconds|r
+}
+
+STRING 13571
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool5> seconds|r
+}
+
+STRING 13572
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool6> seconds|r
+}
+
 STRING 13573
 // Abilities: A0Q8 (Death Ball), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13574
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool7> seconds|r
+}
+
+STRING 13575
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool8> seconds|r
+}
+
+STRING 13576
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool9> seconds|r
+}
+
+STRING 13577
+// Abilities: A0Q4 (Death Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza raises his hand and charges an immense amount of energy into it before unleashing a giant exploding wave centered on himself. Nearby enemies are pulled in during the charge period. After the explosion, beams are deflected and nearby enemes are knocked back.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00ffffCooldown: <A0Q4,Cool10> seconds|r
+}
+
+STRING 13578
+// Abilities: A0QI (Frieza Force), Name (Name)
+{
+Frieza Force
 }
 
 STRING 13581
@@ -82664,6 +82737,18 @@ STRING 13594
 [|cff00ff00R|r] Supernova Frieza 2 - [|cffffcc00Level 10|r]
 }
 
+STRING 13595
+// Buffs/Effects: B03C (), Bufftip (Tooltip)
+{
+|cffff00ffFrieza Force|r
+}
+
+STRING 13596
+// Buffs/Effects: B03C (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff00ffFrieza Force|r; it has increased attack damage.
+}
+
 STRING 13599
 // Abilities: A0Q9 (Supernova Frieza 2), EditorSuffix (Editor Suffix)
 {
@@ -82680,12 +82765,6 @@ STRING 13601
 // Abilities: A0QA (Tail Whip), Name (Name)
 {
 Tail Whip
-}
-
-STRING 13602
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 1|r]
 }
 
 STRING 13603
@@ -82726,18 +82805,6 @@ STRING 13607
 (frieza)
 }
 
-STRING 13608
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 2|r]
-}
-
-STRING 13609
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 3|r]
-}
-
 STRING 13610
 // Abilities: A0QA (Tail Whip), Ubertip (Tooltip - Normal - Extended)
 {
@@ -82756,42 +82823,6 @@ Frieza swiftly attacks his enemies with his nimble tail.
 |cff00ffffCooldown: <A0QA,Cool3> seconds|r
 
 |cff808080"You bit my tail!"|r
-}
-
-STRING 13612
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 4|r]
-}
-
-STRING 13613
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 5|r]
-}
-
-STRING 13614
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 6|r]
-}
-
-STRING 13615
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 7|r]
-}
-
-STRING 13616
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 8|r]
-}
-
-STRING 13617
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 9|r]
 }
 
 STRING 13618
@@ -82852,12 +82883,6 @@ Frieza swiftly attacks his enemies with his nimble tail.
 |cff00ffffCooldown: <A0QA,Cool9> seconds|r
 
 |cff808080"You bit my tail!"|r
-}
-
-STRING 13624
-// Abilities: A0QA (Tail Whip), Tip (Tooltip - Normal)
-{
-[|cff00FF00F|r] Learn Tail Whip - [|cffffcc00Level 10|r]
 }
 
 STRING 13625
@@ -84084,19 +84109,6 @@ STRING 13809
 Q
 }
 
-STRING 13810
-// Abilities: A0IG (Transform - Golden), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza transforms into his mastered golden form.
-|cff00FFFFMultiplier: +0.6x All|r
-|cffffff00Drains 1.5% of max mana per second.
-Automatically reverts when below 10% max hp/mp.
-Casting a spell generates 4% of max mana.
-Upgrades Death Beam, Death Cannon and Nova Strike into golden versions.
-Unlocks Earth Breaker and Cage of Light.|r
-|cff00FF00Cooldown: 90 seconds|r
-}
-
 STRING 13811
 // Abilities: A03Z (Evil Fighting Skills), Ubertip (Tooltip - Normal - Extended)
 {
@@ -84308,5 +84320,47 @@ STRING 13840
 // Abilities: A0Q9 (Supernova Frieza 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool1> seconds|r
+}
+
+STRING 13843
+// Abilities: A0QI (Frieza Force), Tip (Tooltip - Normal)
+{
+|cffff00ffFrieza Force|r - [|cffffcc00Level 1|r]
+}
+
+STRING 13844
+// Abilities: A0QI (Frieza Force), Tip (Tooltip - Normal)
+{
+|cffff00ffFrieza Force|r - [|cffffcc00Level 2|r]
+}
+
+STRING 13845
+// Abilities: A0QI (Frieza Force), Tip (Tooltip - Normal)
+{
+|cffff00ffFrieza Force|r - [|cffffcc00Level 3|r]
+}
+
+STRING 13848
+// Abilities: A0DU (Cellular Enhancement), Name (Name)
+{
+Cellular Enhancement
+}
+
+STRING 13849
+// Abilities: A0QI (Frieza Force), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A0QI,DataD1,%>% chance to dodge an attack and a <A0QI,DataA1>% chance to deal <A0QI,DataB1,.> times normal damage.
+}
+
+STRING 13850
+// Abilities: A0QI (Frieza Force), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A0QI,DataD2,%>% chance to dodge an attack and a <A0QI,DataA2>% chance to deal <A0QI,DataB2,.> times normal damage.
+}
+
+STRING 13851
+// Abilities: A0QI (Frieza Force), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A0QI,DataD3,%>% chance to dodge an attack and a <A0QI,DataA3>% chance to deal <A0QI,DataB3,.> times normal damage.
 }
 

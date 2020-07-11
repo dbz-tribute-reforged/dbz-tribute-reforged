@@ -1889,7 +1889,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
     
     let keepSpeaking = true;
     ForGroup(nearbyNappa, () => {
-      if (keepSpeaking && rng < 25) {
+      if (keepSpeaking && rng < 40) {
         keepSpeaking = false;
         playSoundOnUnit(GetEnumUnit(), "Audio/Effects/NappaWhereDidHeGo.mp3", 16512);
       } else {

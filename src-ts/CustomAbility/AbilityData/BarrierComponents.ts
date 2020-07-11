@@ -34,7 +34,7 @@ export const BarrierComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    aoe: 750,
+    aoe: 600,
     repelOutsidersSpeed: 15,
     affectAllies: true,
     canWalkOut: false,

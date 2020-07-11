@@ -124,14 +124,26 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
         ],
       );
       this.superOmega = true;
-      SetUnitScale(this.omega, 1.8, 1.8, 1.8);
+      SetUnitScale(this.omega, 1.9, 1.9, 1.9);
       SetHeroLevel(this.omega, GetHeroLevel(this.omega) + 10, true);
       SetHeroStr(this.omega, Math.floor(GetHeroStr(this.omega, true) * 1.4 + 4000), true);
       SetHeroAgi(this.omega, Math.floor(GetHeroAgi(this.omega, true) * 1.2 + 2000), true);
       SetHeroInt(this.omega, Math.floor(GetHeroInt(this.omega, true) * 1.3 + 3000), true);
+      SetUnitState(
+        this.omega, 
+        UNIT_STATE_LIFE, 
+        GetUnitState(this.omega, UNIT_STATE_LIFE) + GetUnitState(this.omega, UNIT_STATE_MAX_LIFE) * 0.3
+      );
       DestroyEffect(
         AddSpecialEffectTarget(
           "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+          this.omega, 
+          "origin", 
+        )
+      );
+      DestroyEffect(
+        AddSpecialEffectTarget(
+          "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
           this.omega, 
           "origin", 
         )

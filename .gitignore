@@ -2,6 +2,7 @@ src
 target
 package-lock.json
 build
+config.json
 
 # Logs
 logs

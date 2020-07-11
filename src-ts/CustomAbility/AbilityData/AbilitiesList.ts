@@ -4116,7 +4116,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4132,9 +4132,14 @@ export const AbilitiesList = [
         AbilityNames.Frieza.DEATH_STORM
     },
     components: [
+      { name: "damage death storm dps" },
       { name: "damage death storm explosion" },
-      { name: "knockback power level rising" },
-      { name: "sfx death storm" },
+      { name: "deflector death storm" },
+      { name: "knockback death storm start" },
+      { name: "knockback death storm end" },
+      { name: "sfx death storm start" },
+      { name: "sfx death storm explosion" },
+      { name: "sfx death storm end" },
     ],
   },
   // -------------------------------------------
