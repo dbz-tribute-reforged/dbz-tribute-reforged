@@ -587,16 +587,31 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
-  // cage of light
+  // death storm
   {
-    name: "knockback cage of light",
+    name: "knockback death storm start",
     repeatInterval: 1, 
-    startTick: 16,
+    startTick: 0,
+    endTick: 33,
+    knockbackData: {
+      speed: 5, 
+      angle: 180, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  {
+    name: "knockback death storm end",
+    repeatInterval: 1, 
+    startTick: 33,
     endTick: -1,
     knockbackData: {
-      speed: 15, 
-      angle: 0, 
-      aoe: 350,
+      speed: 10, 
+      angle: 180, 
+      aoe: 600,
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: true,

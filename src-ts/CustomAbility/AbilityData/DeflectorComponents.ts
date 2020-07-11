@@ -17,4 +17,13 @@ export const DeflectorComponents = [
     extraAngle: 0,
     affectAllies: false,
   },
+  {
+    name: "deflector death storm", 
+    repeatInterval: 1, 
+    startTick: 33,
+    endTick: 40,
+    aoe: 600,
+    extraAngle: 0,
+    affectAllies: false,
+  },
 ];
