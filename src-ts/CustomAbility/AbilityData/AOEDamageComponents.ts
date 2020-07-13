@@ -308,7 +308,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.2,
+      multiplier: BASE.KAME_DPS * 1.25,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -355,7 +355,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 10,
     damageData: {
-      multiplier: BASE.KAME_DPS * 2.4,
+      multiplier: BASE.KAME_DPS * 2.35,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -402,7 +402,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.87,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.86,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3536,7 +3536,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.KAME_DPS * 2.2,
+      multiplier: BASE.KAME_DPS * 2.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,

@@ -671,6 +671,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Hero_Pick_Force_Disable_Picking = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -6265,6 +6266,9 @@ function Trig_Ginyu_Body_Change_Change_Now_Func007Func010C()
     if (not (IsUnitType(udg_TempUnit3, UNIT_TYPE_HERO) == true)) then
         return false
     end
+    if (not (GetUnitLevel(udg_TempUnit) >= (GetHeroLevel(udg_TempUnit3) - 100))) then
+        return false
+    end
     if (not (GetUnitLifePercent(udg_TempUnit3) <= 66.66)) then
         return false
     end
@@ -6366,7 +6370,7 @@ function Trig_Ginyu_Body_Change_Change_Now_Actions()
             udg_TempLoc2 = GetUnitLoc(udg_TempUnit)
             CreateNUnitsAtLoc(1, FourCC("h054"), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_TempLoc2, bj_UNIT_FACING)
             udg_TempUnit2 = GetLastCreatedUnit()
-            UnitAddAbilityBJ(FourCC("A08H"), udg_TempUnit2)
+            UnitAddAbilityBJ(FourCC("A0I7"), udg_TempUnit2)
             UnitApplyTimedLifeBJ(1.00, FourCC("BTLF"), udg_TempUnit2)
             IssueTargetOrderBJ(udg_TempUnit2, "thunderbolt", udg_TempUnit)
                         RemoveLocation(udg_TempLoc2)
@@ -6800,14 +6804,14 @@ function Trig_Frieza_Emperors_Throne_Func005Func003C()
 end
 
 function Trig_Frieza_Emperors_Throne_Func005Func007Func001C()
-    if (not (udg_TempInt >= 5)) then
+    if (not (udg_TempInt2 >= 5)) then
         return false
     end
     return true
 end
 
 function Trig_Frieza_Emperors_Throne_Func005Func007C()
-    if (not (udg_TempInt == 10)) then
+    if (not (udg_TempInt2 == 10)) then
         return false
     end
     return true
@@ -7749,6 +7753,7 @@ function Trig_Final_Battle_Sim_On_Actions()
         TriggerRegisterPlayerUnitEventSimple(gg_trg_Final_Battle_Sim_Teleport, udg_TempPlayer, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
         udg_TempInt = udg_TempInt + 1
     end
+    DisableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
     EnableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     EnableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
     EnableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code)
@@ -8389,6 +8394,13 @@ function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Conditions()
     return true
 end
 
+function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func003C()
+    if (not (IsUnitType(GetKillingUnitBJ(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func004Func001C()
     if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("U01B")) then
         return true
@@ -8423,29 +8435,15 @@ function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func005C()
     return true
 end
 
-function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func006Func001C()
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("O000")) then
-        return true
-    end
-    return false
-end
-
 function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func006C()
-    if (not Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func006Func001C()) then
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("O000"))) then
         return false
     end
     return true
 end
 
-function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func007Func001C()
-    if (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H08Q")) then
-        return true
-    end
-    return false
-end
-
 function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func007C()
-    if (not Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func007Func001C()) then
+    if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H08Q"))) then
         return false
     end
     return true
@@ -8595,7 +8593,11 @@ function Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Actions()
         else
         end
     else
-        udg_StatMultReal = (0.15 * I2R(GetUnitFoodMade(GetTriggerUnit())))
+        if (Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func003C()) then
+            udg_StatMultReal = (0.25 * I2R(GetUnitFoodMade(GetTriggerUnit())))
+        else
+            udg_StatMultReal = (0.20 * I2R(GetUnitFoodMade(GetTriggerUnit())))
+        end
         if (Trig_Kill_Creep_New_New_Stats_Only_And_Non_Heroes_Func001Func004C()) then
             udg_StatMultReal = (0.30 * I2R(GetUnitFoodMade(GetTriggerUnit())))
         else
@@ -11041,7 +11043,7 @@ function Trig_Hints_Init_Actions()
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "For each 1000 agility you have, you will receive +1 base armor."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 35th minute. You will receive 2 separate warnings before it starts, so make sure to prepare beforehand."
+    udg_HintMessages[udg_NumHints] = "The Final Battle starts during the 38th minute. You will receive warnings at the 36th and 37th minute, so make sure to prepare beforehand."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "If your agility is greater than your strength, your dash abilities (e.g Zanzo Dash) will have higher speed."
     udg_NumHints = (udg_NumHints + 1)
@@ -11136,7 +11138,7 @@ end
 function Trig_Catchup_Turn_On_Actions()
     udg_IsCatchupStatsActivated = true
     udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
-    DisplayTextToForce(udg_TempPlayerGroup, ("|cff00ffff[Only red sees this] Catchup Stats Activated! |r|cffffcc00Threshold: " .. (R2S((udg_CatchupThreshold * 100.00)) .. ("%|r " .. ("|cffff00ffIncrement: " .. (R2S((udg_CatchupIncrement * 100.00)) .. "%|r"))))))
+    DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_6319")
         DestroyForce(udg_TempPlayerGroup)
     EnableTrigger(gg_trg_Catchup_Timer)
 end
@@ -11592,6 +11594,9 @@ end
 
 function Trig_Scoreboard_Init_Func005Func002C()
     if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    if (not (GetPlayerSlotState(udg_TempPlayer) ~= PLAYER_SLOT_STATE_LEFT)) then
         return false
     end
     return true
@@ -14777,12 +14782,32 @@ function InitTrig_Hero_Pick_Setup_Selected_Heroes()
     TriggerAddAction(gg_trg_Hero_Pick_Setup_Selected_Heroes, Trig_Hero_Pick_Setup_Selected_Heroes_Actions)
 end
 
+function Trig_Hero_Pick_Force_Disable_Picking_Conditions()
+    if (not (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hero_Pick_Force_Disable_Picking_Actions()
+    RemoveUnit(GetSoldUnit())
+end
+
+function InitTrig_Hero_Pick_Force_Disable_Picking()
+    gg_trg_Hero_Pick_Force_Disable_Picking = CreateTrigger()
+    DisableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Hero_Pick_Force_Disable_Picking, EVENT_PLAYER_UNIT_SELL)
+    TriggerAddCondition(gg_trg_Hero_Pick_Force_Disable_Picking, Condition(Trig_Hero_Pick_Force_Disable_Picking_Conditions))
+    TriggerAddAction(gg_trg_Hero_Pick_Force_Disable_Picking, Trig_Hero_Pick_Force_Disable_Picking_Actions)
+end
+
 function Trig_Hero_Pick_Completion_Actions()
     DisableTrigger(gg_trg_Hero_Pick_Pick_A_Hero)
     DisableTrigger(gg_trg_Hero_Pick_Disable_Spellcasting)
     DisableTrigger(gg_trg_Hero_Pick_Repick_Randomly)
     DisableTrigger(gg_trg_Hero_Pick_Show_Pickable_Heroes)
     DisableTrigger(gg_trg_Hero_Pick_Secret_Old_Krillin_Code)
+    EnableTrigger(gg_trg_Hero_Pick_Force_Disable_Picking)
     EnableTrigger(gg_trg_Force_Win_Loss)
     EnableTrigger(gg_trg_Moro_Energy_Drain_Passive)
     TriggerExecute(gg_trg_Revive_Point_Add_Revive_Locs)
@@ -15626,7 +15651,6 @@ function Trig_Goku_UI_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(1, 30, udg_ID, udg_StatMultHashtable)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), GetOwningPlayer(udg_StatMultUnit))
-    UnitRemoveAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
         udg_TransformationID = FourCC('H08G')
     TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
 end
@@ -15656,7 +15680,6 @@ function Trig_Goku_MUI_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(2, 30, udg_ID, udg_StatMultHashtable)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0MZ"), GetOwningPlayer(udg_StatMultUnit))
-    UnitRemoveAbilityBJ(FourCC("A0MZ"), udg_StatMultUnit)
         udg_TransformationID = FourCC('H08H')
     TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
 end
@@ -15792,6 +15815,7 @@ function Trig_Temp_Skin_Transformation_Loop_Func002A()
             else
             end
             if (Trig_Temp_Skin_Transformation_Loop_Func002Func006Func003Func004C()) then
+                UnitRemoveAbilityBJ(FourCC("A0KR"), udg_StatMultUnit)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0MZ"), GetOwningPlayer(udg_StatMultUnit))
                 UnitAddAbilityBJ(FourCC("A0MZ"), udg_StatMultUnit)
                                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MZ'))
@@ -24825,7 +24849,7 @@ function Trig_Transformations_Toppo_Func013C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
         return false
     end
     return true
@@ -24835,7 +24859,7 @@ function Trig_Transformations_Toppo_Func014C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
         return false
     end
     return true
@@ -24845,7 +24869,7 @@ function Trig_Transformations_Toppo_Func015C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
         return false
     end
     return true
@@ -24855,7 +24879,7 @@ function Trig_Transformations_Toppo_Func016C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
         return false
     end
     return true
@@ -24957,7 +24981,7 @@ function Trig_Transformations_Toppo_Actions()
     else
     end
     if (Trig_Transformations_Toppo_Func015C()) then
-        udg_StatMultReal = 1.75
+        udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
@@ -28126,6 +28150,7 @@ function InitCustomTriggers()
     InitTrig_Hero_Pick_Repick_Complete()
     InitTrig_Hero_Pick_Disable_Pick_Modes()
     InitTrig_Hero_Pick_Setup_Selected_Heroes()
+    InitTrig_Hero_Pick_Force_Disable_Picking()
     InitTrig_Hero_Pick_Completion()
     InitTrig_Test_StatMult_Init()
     InitTrig_Test_Stats_Get_Stats_Command()
