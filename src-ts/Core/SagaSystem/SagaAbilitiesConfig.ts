@@ -23,6 +23,9 @@ export module SagaAbilities {
     export const SOLAR_KAMEHAMEHA_CUSTOM = new SagaAbility(
       AbilityNames.Saga.SOLAR_KAMEHAMEHA_CUSTOM, 10, 120, 3, MEDIUM_CAST_TIME,
     );
+    export const NOVA_STAR_OMEGA_CUSTOM = new SagaAbility(
+      AbilityNames.Saga.NOVA_STAR_OMEGA_CUSTOM, 1, 120, 3, MEDIUM_CAST_TIME
+    );
   }
   
   export module Raditz {
@@ -304,6 +307,24 @@ export module SagaAbilities {
     );
     export const GINYU_POSE_FIGHTING = new SagaAbility(
       AbilityNames.Ginyu.GINYU_POSE_FIGHTING, 10, 25, 5, MEDIUM_CAST_TIME
+    );
+  }
+
+  export module OmegaShenron {
+    export const DRAGON_FLASH_BULLET = new SagaAbility(
+      AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET, 10, 15, 20, SHORT_CAST_TIME
+    );
+    export const NEGATIVE_ENERGY_BALL = new SagaAbility(
+      AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL, 10, 24, 10, MEDIUM_CAST_TIME
+    );
+    export const DRAGONIC_RAGE = new SagaAbility(
+      AbilityNames.OmegaShenron.DRAGONIC_RAGE, 10, 50, 5, EXTRA_LONG_CAST_TIME
+    );
+    export const ICE_CANNON = new SagaAbility(
+      AbilityNames.OmegaShenron.ICE_CANNON, 1, 90, 3, SHORT_CAST_TIME
+    );
+    export const DRAGON_THUNDER = new SagaAbility(
+      AbilityNames.OmegaShenron.DRAGON_THUNDER, 1, 90, 3, LONG_CAST_TIME
     );
   }
 

@@ -280,6 +280,17 @@ export module AbilityNames {
     export const CAGE_OF_LIGHT: string = "Cage of Light";
   }
 
+  export module OmegaShenron {
+    export const DRAGON_FLASH_BULLET = "Dragon Flash Bullet";
+    export const NEGATIVE_ENERGY_BALL = "Negative Energy Ball";
+    export const SHADOW_FIST = "Shadow Dragon Fist";
+    export const DRAGONIC_RAGE = "Dragonic Rage";
+    export const ICE_CANNON = "Omega Ice Cannon";
+    export const NOVA_STAR = "Omega Nova Star";
+    export const DRAGON_THUNDER = "Omega Dragon Thunder";
+  }
+
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";
@@ -288,6 +299,7 @@ export module AbilityNames {
     export const POWER_BLITZ_BARRAGE_CUSTOM: string = "Hell's Storm!";
     export const MANKIND_DESTRUCTION_ATTACK_CUSTOM: string = "Mankind Destruction Attack!";
     export const SOLAR_KAMEHAMEHA_CUSTOM: string = "Solar Kamehameha!";
+    export const NOVA_STAR_OMEGA_CUSTOM: string = "Omega Nova Star!";
   }
 
   export module Items {

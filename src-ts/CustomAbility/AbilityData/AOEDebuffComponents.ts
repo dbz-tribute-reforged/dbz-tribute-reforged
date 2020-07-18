@@ -14,6 +14,7 @@ export module Debuffs {
   export const EIS_FROSTBITE = FourCC("A0P5");
   export const KROWN_TOSS = FourCC("A0P9");
   export const MILKY_CANNON = FourCC("A0PU");
+  export const DRAGON_THUNDER = FourCC("A0QT");
 }
 
 export const AOEDebuffComponents = [
@@ -300,6 +301,19 @@ export const AOEDebuffComponents = [
     aoe: 400,
     keepCasting: false, 
     onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow dragon thunder omega",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.DRAGON_THUNDER,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 350,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
     requireBuff: false,
     buffId: 0,
   },

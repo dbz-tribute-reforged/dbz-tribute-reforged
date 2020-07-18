@@ -513,7 +513,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
         for (const [playerId, contestant] of activeContestants) {
           let allUnitsDead = true;
           for (const [unit, unitContestant] of contestant.units) {
-            if (UnitHelper.isUnitAlive(unit)) {
+            if (UnitHelper.isUnitAlive(unit) || UnitHelper.isImmortal(unit)) {
               allUnitsDead = false;
             }
           }
@@ -564,7 +564,7 @@ export class Budokai extends AdvancedTournament implements Tournament {
     matchLimitTimerDialog: timerdialog,
     matchHandlerTrigger: trigger,
   ) {
-    if (contestant.unitsAlive == 0) {
+    if (contestant.unitsAlive <= 0) {
 
       let winner: TournamentContestant = contestant;
       for (const possibleWinner of activeContestants.values()) {

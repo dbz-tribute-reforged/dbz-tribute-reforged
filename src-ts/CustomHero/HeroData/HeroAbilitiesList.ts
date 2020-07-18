@@ -240,6 +240,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.EisShenron.FROST_CLAWS,
       AbilityNames.Ginyu.MILKY_CANNON,
       AbilityNames.Frieza.DEATH_BEAM_GOLDEN,
+      AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET,
+      AbilityNames.OmegaShenron.ICE_CANNON,
+      AbilityNames.OmegaShenron.NOVA_STAR,
+      AbilityNames.OmegaShenron.DRAGON_THUNDER,
     ]],
 
     // broly
@@ -361,5 +365,17 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Frieza.EARTH_BREAKER,
       AbilityNames.Frieza.CAGE_OF_LIGHT,
     ]],
+
+    // omega shenron
+    [FourCC("H09F"), [
+      AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET,
+      AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL,
+      AbilityNames.OmegaShenron.SHADOW_FIST,
+      AbilityNames.OmegaShenron.DRAGONIC_RAGE,
+      AbilityNames.OmegaShenron.ICE_CANNON,
+      AbilityNames.OmegaShenron.NOVA_STAR,
+      AbilityNames.OmegaShenron.DRAGON_THUNDER,
+    ]],
+
   ]
 )

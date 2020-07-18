@@ -243,6 +243,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0QG'), AbilityNames.Frieza.EARTH_BREAKER],
     [FourCC('A0QH'), AbilityNames.Frieza.CAGE_OF_LIGHT],
 
+    // omega shenron
+    [FourCC('A0QJ'), AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET],
+    [FourCC('A0QK'), AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL],
+    [FourCC('A0QL'), AbilityNames.OmegaShenron.SHADOW_FIST],
+    [FourCC('A0QM'), AbilityNames.OmegaShenron.DRAGONIC_RAGE],
+    [FourCC('A0QP'), AbilityNames.OmegaShenron.ICE_CANNON],
+    [FourCC('A0QQ'), AbilityNames.OmegaShenron.NOVA_STAR],
+    [FourCC('A0QR'), AbilityNames.OmegaShenron.DRAGON_THUNDER],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

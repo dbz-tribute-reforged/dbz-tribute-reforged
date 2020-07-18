@@ -706,6 +706,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 66,
   },
+  // shadow fist
+  {
+    name: "dash ground point shadow fist",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 15,
+  },
+  // dragonic rage
+  {
+    name: "dash ground forward dragonic rage",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 4,
+  },
   // ---
   // saga zanzo
   {
