@@ -1,3 +1,5 @@
+// component is deprecated
+// functionality has been merged into AOEKnockback
 export const DeflectorComponents = [
   {
     name: "deflector videl punch", 

@@ -673,18 +673,19 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
 
     ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 140, 21000, 400, 21000, new Vector2D(3000, 7000),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Broly.ENERGY_PUNCH,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.OmegaShenron.DRAGON_FLASH_BULLET,
+        SagaAbilities.OmegaShenron.NEGATIVE_ENERGY_BALL,
+        SagaAbilities.OmegaShenron.DRAGONIC_RAGE,
       ],
     )],
     ["Omega Shenron", new SagaUnit(FourCC("U00R"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Broly.ENERGY_PUNCH,
-        SagaAbilities.Cooler.NOVA_CHARIOT,
-        SagaAbilities.Nappa.BREAK_CANNON,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.OmegaShenron.DRAGON_FLASH_BULLET,
+        SagaAbilities.OmegaShenron.NEGATIVE_ENERGY_BALL,
+        SagaAbilities.OmegaShenron.DRAGONIC_RAGE,
+        SagaAbilities.OmegaShenron.ICE_CANNON,
+        SagaAbilities.OmegaShenron.DRAGON_THUNDER,
+        SagaAbilities.Saga.NOVA_STAR_OMEGA_CUSTOM,
       ],
       [
         ItemConstants.CLEANSED_DRAGONBALL,

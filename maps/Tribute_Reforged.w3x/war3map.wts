@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.44b
+DBZ Tribute Reforged 0.45
 }
 
 STRING 4
@@ -12346,7 +12346,7 @@ Piccolo spilts into two-three different units. |n[|cffffcc00History|r] - |cff006
 }
 
 STRING 1984
-// Units: H09B (Three-Star Shadow Dragon), Hotkey (Hotkey)
+// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -12844,7 +12844,7 @@ E
 }
 
 STRING 2067
-// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
+// Units: H09B (Three-Star Shadow Dragon), Hotkey (Hotkey)
 {
 E
 }
@@ -12868,7 +12868,7 @@ STRING 2070
 }
 
 STRING 2071
-// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
+// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
 {
 E
 }
@@ -13396,7 +13396,7 @@ STRING 2158
 }
 
 STRING 2159
-// Items: I000 (Senzu Bean), Hotkey (Hotkey)
+// Units: H09F (One-Star Shadow Dragon), Hotkey (Hotkey)
 {
 Q
 }
@@ -13427,7 +13427,7 @@ R
 }
 
 STRING 2163
-// Items: I001 (Roast Ham), Hotkey (Hotkey)
+// Units: H09G (One-Star Shadow Dragon), Hotkey (Hotkey)
 {
 Q
 }
@@ -13781,7 +13781,7 @@ STRING 2221
 }
 
 STRING 2222
-// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -13805,7 +13805,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 2226
-// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -13889,7 +13889,7 @@ D
 }
 
 STRING 2240
-// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -14021,7 +14021,7 @@ Mas|cffffcc00e|rnko - [|cffffcc00Level 7|r]
 }
 
 STRING 2262
-// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -14045,7 +14045,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2266
-// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -14273,7 +14273,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14627,7 +14627,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 2363
-// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -14855,7 +14855,7 @@ STRING 2400
 }
 
 STRING 2401
-// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I000 (Senzu Bean), Hotkey (Hotkey)
 {
 Q
 }
@@ -14879,7 +14879,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 2405
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I001 (Roast Ham), Hotkey (Hotkey)
 {
 Q
 }
@@ -14981,7 +14981,7 @@ STRING 2421
 }
 
 STRING 2422
-// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15007,7 +15007,7 @@ A sphere thrown from Broly's hand causing wide area damage.
 }
 
 STRING 2426
-// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15243,7 +15243,7 @@ STRING 2463
 }
 
 STRING 2464
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -15267,7 +15267,7 @@ Bombards the area with 125 ki blasts from the fingertip.|n|cff00ff00(Damage: int
 }
 
 STRING 2468
-// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
+// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -15369,7 +15369,7 @@ STRING 2484
 }
 
 STRING 2485
-// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15393,7 +15393,7 @@ Babidi uses his magic to heal himself.
 }
 
 STRING 2489
-// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15591,7 +15591,7 @@ A combat style taught by Master Roshi. |n|cffffcc00Evasion|r - <A027,DataD1,%>% 
 }
 
 STRING 2522
-// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -15729,7 +15729,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2545
-// Items: I044 (Banana), Hotkey (Hotkey)
+// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -15753,7 +15753,7 @@ Broly packs energy into his punch knocking back and stunning the target opponent
 }
 
 STRING 2549
-// Items: I045 (Krabby Patty), Hotkey (Hotkey)
+// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -15915,7 +15915,7 @@ STRING 2575
 }
 
 STRING 2576
-// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15939,7 +15939,7 @@ Caster Shoots evil energy from its mouth at its enemy.
 }
 
 STRING 2580
-// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16359,7 +16359,7 @@ Buu Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2650
-// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16394,7 +16394,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2656
-// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
+// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16416,7 +16416,7 @@ You need to absorb android 17!
 }
 
 STRING 2660
-// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16686,7 +16686,7 @@ STRING 2704
 }
 
 STRING 2705
-// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16710,7 +16710,7 @@ Yakon is one of Babidi's majin minions. He is from a distant corner of the unive
 }
 
 STRING 2709
-// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
+// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -17016,7 +17016,7 @@ STRING 2759
 }
 
 STRING 2760
-// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -17562,7 +17562,7 @@ STRING 2850
 }
 
 STRING 2851
-// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
+// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17586,7 +17586,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 2855
-// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
+// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -18026,7 +18026,7 @@ STRING 2927
 }
 
 STRING 2928
-// Items: I047 (Android Bomb), Hotkey (Hotkey)
+// Items: I044 (Banana), Hotkey (Hotkey)
 {
 Q
 }
@@ -18050,7 +18050,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2932
-// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
+// Items: I045 (Krabby Patty), Hotkey (Hotkey)
 {
 Q
 }
@@ -18434,7 +18434,7 @@ Combat of Strength - [|cffffcc00Level 15|r]
 }
 
 STRING 2996
-// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -18908,7 +18908,7 @@ STRING 3074
 }
 
 STRING 3075
-// Items: I04F (Banana Generator), Hotkey (Hotkey)
+// Items: I047 (Android Bomb), Hotkey (Hotkey)
 {
 Q
 }
@@ -18932,7 +18932,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth.
 }
 
 STRING 3079
-// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
+// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
 {
 Q
 }
@@ -19303,7 +19303,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19327,7 +19327,7 @@ Buu fires energy blasts everywhere.
 }
 
 STRING 3145
-// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19369,13 +19369,13 @@ Muffin
 }
 
 STRING 3152
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3153
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
 {
 Q
 }
@@ -19585,13 +19585,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 3188
-// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 3189
-// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -19837,7 +19837,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 3230
-// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19874,7 +19874,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20090,7 +20090,7 @@ STRING 3271
 }
 
 STRING 3272
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -20114,7 +20114,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 3276
-// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -20210,7 +20210,7 @@ Tsufuru Mcffffcc00e|rdic Training
 }
 
 STRING 3292
-// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20234,7 +20234,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3296
-// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20276,7 +20276,7 @@ STRING 3302
 }
 
 STRING 3303
-// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20300,7 +20300,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 3307
-// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
+// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20522,7 +20522,7 @@ Tsufuru Elite Guacffffcc00r|rd Training
 }
 
 STRING 3344
-// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20844,7 +20844,7 @@ STRING 3395
 }
 
 STRING 3396
-// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -20868,7 +20868,7 @@ Fires a powerful energy blast from the users hands, to be used in combination wi
 }
 
 STRING 3400
-// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -20952,7 +20952,7 @@ Tsufuru Sciencffffcc00t|rist Training
 }
 
 STRING 3414
-// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -21096,7 +21096,7 @@ STRING 3437
 }
 
 STRING 3438
-// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21120,7 +21120,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21444,7 +21444,7 @@ STRING 3495
 }
 
 STRING 3496
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21468,7 +21468,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 3500
-// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21822,7 +21822,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21846,7 +21846,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21936,7 +21936,7 @@ S.S. Deadly |cffffcc00B|romb - [|cffffcc00Level 7|r]
 }
 
 STRING 3578
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21960,7 +21960,7 @@ Fires a beam of energy from the users palm.
 }
 
 STRING 3582
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22224,7 +22224,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22248,7 +22248,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 3630
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22673,7 +22673,7 @@ STRING 3699
 }
 
 STRING 3700
-// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -22697,7 +22697,7 @@ Used to turn people into candy. |n[|cffffcc00History|r] - |cff0066CCThis is Buu'
 }
 
 STRING 3704
-// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
+// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -23074,7 +23074,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23380,7 +23380,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23398,7 +23398,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23890,7 +23890,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24034,7 +24034,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -24058,7 +24058,7 @@ Dende creates a beam of healing energy connecting him and the target unit. If De
 }
 
 STRING 3931
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24479,7 +24479,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24491,7 +24491,7 @@ Gigantic Omegastorm
 }
 
 STRING 4003
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24515,7 +24515,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 4007
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -24725,7 +24725,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25103,7 +25103,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25127,7 +25127,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -25319,7 +25319,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25631,7 +25631,7 @@ STRING 4192
 }
 
 STRING 4193
-// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -25655,7 +25655,7 @@ Dende heals nearby heroes for 0.33% of their total HP per second and heals himse
 }
 
 STRING 4197
-// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -25853,7 +25853,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -26027,7 +26027,7 @@ Finger Blit|cffffcc00z|r Barrage
 }
 
 STRING 4259
-// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26051,7 +26051,7 @@ Dende, as Earth's Guardian, has the ability to revive a dead player.|n|cff66ccee
 }
 
 STRING 4263
-// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26393,7 +26393,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -26417,7 +26417,7 @@ Dodon Ray is a special attack used by Mercenary Tao and the members of the Crane
 }
 
 STRING 4324
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26801,7 +26801,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 4388
-// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27191,7 +27191,7 @@ STRING 4452
 }
 
 STRING 4453
-// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27215,7 +27215,7 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 }
 
 STRING 4457
-// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27479,7 +27479,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27599,7 +27599,7 @@ STRING 4520
 }
 
 STRING 4521
-// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27623,7 +27623,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 4525
-// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
+// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27815,7 +27815,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -28211,7 +28211,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28235,7 +28235,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28494,7 +28494,7 @@ STRING 4668
 }
 
 STRING 4669
-// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28519,7 +28519,7 @@ Turles forms a ring of energy between his palms and throws it at the target loca
 }
 
 STRING 4673
-// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28635,7 +28635,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28749,7 +28749,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29223,7 +29223,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29643,7 +29643,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -29769,7 +29769,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29793,7 +29793,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29883,7 +29883,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29907,7 +29907,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30111,7 +30111,7 @@ STRING 4937
 }
 
 STRING 4938
-// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30135,7 +30135,7 @@ Android 18 stuns the target with a quick knee to the torso.|n|cff00FF00Duration:
 }
 
 STRING 4942
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30340,7 +30340,7 @@ STRING 4975
 }
 
 STRING 4976
-// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30365,7 +30365,7 @@ Android 17 uses his inhuman agility and strength to throw his opponent around li
 }
 
 STRING 4980
-// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30569,7 +30569,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30587,7 +30587,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31439,7 +31439,7 @@ STRING 5158
 }
 
 STRING 5159
-// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31463,7 +31463,7 @@ Bebi detonates the targeted minion, causing damage in an area.. |n|cff00ff00(Dam
 }
 
 STRING 5163
-// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31559,7 +31559,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -31582,7 +31582,7 @@ You have received +0.02x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31636,7 +31636,7 @@ STRING 5191
 }
 
 STRING 5192
-// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31660,7 +31660,7 @@ Tien blinds his opponents with a Solar Flare and creates images of himself.
 }
 
 STRING 5196
-// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
+// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31858,7 +31858,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -31978,7 +31978,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32002,7 +32002,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32092,7 +32092,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32206,7 +32206,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32230,7 +32230,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5291
-// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -32320,7 +32320,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32434,7 +32434,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32755,7 +32755,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -32922,9 +32922,19 @@ STRING 5405
 }
 
 STRING 5406
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Type "r" to revert.
+Transformations:
+[lvl 25]  1.50x "syn" [Unlocks Envoy of the End]
+[lvl 55]  1.75x "syn"
+[lvl 85]  2.00x "syn"
+[lvl 125] 2.25x "syn"
+[lvl 150] 2.40x "omega"
+[lvl 200] 2.41x "omega" [Unlocks All Shadow Dragon Abilities]
+
+Gains +0.07x for each held dragon ball held.
+Shadow Dragon Abilities can also be unlocked by collecting all 7 dragon balls.
+Envoy of the End will be located inside [D] Shadow Dragon Abilities.
 }
 
 STRING 5407
@@ -33018,7 +33028,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33043,7 +33053,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33164,7 +33174,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33176,7 +33186,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33358,7 +33368,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33382,7 +33392,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33472,7 +33482,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33490,7 +33500,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33622,7 +33632,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33733,7 +33743,7 @@ STRING 5539
 }
 
 STRING 5540
-// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
+// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -33751,7 +33761,7 @@ STRING 5542
 }
 
 STRING 5543
-// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
+// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -33883,7 +33893,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33901,7 +33911,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34189,7 +34199,7 @@ STRING 5615
 }
 
 STRING 5616
-// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34207,7 +34217,7 @@ STRING 5618
 }
 
 STRING 5619
-// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34363,7 +34373,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34387,7 +34397,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 5649
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34431,13 +34441,13 @@ STRING 5655
 }
 
 STRING 5656
-// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5657
-// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34599,13 +34609,13 @@ Slappy Hand
 }
 
 STRING 5684
-// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5685
-// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34874,7 +34884,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5717
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34946,7 +34956,7 @@ Moves your revive point to the upper-left area of the map.|n|cffFF0000Warning: n
 }
 
 STRING 5729
-// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34970,7 +34980,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34994,7 +35004,7 @@ Moves your revive point to the wooded area in the south of the map.
 }
 
 STRING 5737
-// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35018,7 +35028,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35090,7 +35100,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -35386,7 +35396,7 @@ STRING 5800
 }
 
 STRING 5801
-// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35410,7 +35420,7 @@ Gotenks creates ghost clones of himself that will travel to the target location 
 }
 
 STRING 5805
-// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
+// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35704,7 +35714,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35722,7 +35732,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35776,13 +35786,13 @@ Beerus Generic Hakai 2.0
 }
 
 STRING 5866
-// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5867
-// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35998,7 +36008,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -36106,7 +36116,7 @@ STRING 5920
 }
 
 STRING 5921
-// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36130,7 +36140,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36220,7 +36230,7 @@ STRING 5939
 }
 
 STRING 5940
-// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36334,7 +36344,7 @@ STRING 5958
 }
 
 STRING 5959
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36358,7 +36368,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5963
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36448,7 +36458,7 @@ STRING 5977
 }
 
 STRING 5978
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36562,7 +36572,7 @@ STRING 5996
 }
 
 STRING 5997
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36676,7 +36686,7 @@ STRING 6015
 }
 
 STRING 6016
-// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36790,7 +36800,7 @@ STRING 6034
 }
 
 STRING 6035
-// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36904,7 +36914,7 @@ STRING 6053
 }
 
 STRING 6054
-// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36928,7 +36938,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -37018,7 +37028,7 @@ STRING 6072
 }
 
 STRING 6073
-// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
+// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37132,7 +37142,7 @@ STRING 6091
 }
 
 STRING 6092
-// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37644,7 +37654,7 @@ STRING 6176
 }
 
 STRING 6177
-// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37662,7 +37672,7 @@ STRING 6179
 }
 
 STRING 6180
-// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38074,7 +38084,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38284,7 +38294,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 6284
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38488,7 +38498,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38511,7 +38521,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -38577,7 +38587,7 @@ Removes 90 armor from nearby enemies.
 }
 
 STRING 6333
-// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -38775,7 +38785,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 6359
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38799,7 +38809,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39033,7 +39043,7 @@ STRING 6401
 }
 
 STRING 6402
-// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39057,7 +39067,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39147,7 +39157,7 @@ STRING 6420
 }
 
 STRING 6421
-// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39261,7 +39271,7 @@ STRING 6439
 }
 
 STRING 6440
-// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39285,7 +39295,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6444
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39375,7 +39385,7 @@ STRING 6458
 }
 
 STRING 6459
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39489,7 +39499,7 @@ STRING 6477
 }
 
 STRING 6478
-// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -39603,7 +39613,7 @@ STRING 6496
 }
 
 STRING 6497
-// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39753,7 +39763,7 @@ STRING 6521
 }
 
 STRING 6522
-// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39771,7 +39781,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40089,13 +40099,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41219,7 +41229,7 @@ R
 }
 
 STRING 6763
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -41237,7 +41247,7 @@ STRING 6765
 }
 
 STRING 6766
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -41363,13 +41373,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 6787
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -41578,7 +41588,7 @@ Removes 150 armor from nearby enemies.
 }
 
 STRING 6821
-// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41776,7 +41786,7 @@ STRING 6853
 }
 
 STRING 6854
-// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
+// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41800,7 +41810,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 6858
-// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41818,7 +41828,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -41950,7 +41960,7 @@ Roshi briefly charges up a ball of energy in his hands before releasing it towar
 }
 
 STRING 6883
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42052,7 +42062,7 @@ R
 }
 
 STRING 6900
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42184,7 +42194,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42232,7 +42242,7 @@ W
 }
 
 STRING 6930
-// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42268,7 +42278,7 @@ Madara traps the target unit in a time loop, causing it to be moved to its origi
 }
 
 STRING 6936
-// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42508,7 +42518,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42556,7 +42566,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42688,7 +42698,7 @@ Hit travels forward in time a fraction of a second, striking the target unit and
 }
 
 STRING 7006
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42772,7 +42782,7 @@ W
 }
 
 STRING 7020
-// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42808,7 +42818,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7026
-// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43102,7 +43112,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 7075
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43312,7 +43322,7 @@ A combat style used by Hit. |n|cffffcc00Evasion|r - <A0G0,DataD1,%>% |n|cffffcc0
 }
 
 STRING 7110
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43342,13 +43352,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43432,7 +43442,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43456,7 +43466,7 @@ Big Bang Attack
 }
 
 STRING 7134
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43474,7 +43484,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7137
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43498,7 +43508,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43522,7 +43532,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43570,7 +43580,7 @@ Dragon Fist
 }
 
 STRING 7153
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43594,7 +43604,7 @@ Energy Punch
 }
 
 STRING 7157
-// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43730,7 +43740,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 7176
-// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43778,7 +43788,7 @@ Final Flash
 }
 
 STRING 7184
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43802,7 +43812,7 @@ Galick Gun
 }
 
 STRING 7188
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43826,7 +43836,7 @@ Kamehameha
 }
 
 STRING 7192
-// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43942,7 +43952,7 @@ Fires a beam in that deals damage in a line and stuns heroes that are struck. |n
 }
 
 STRING 7210
-// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43954,7 +43964,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43978,7 +43988,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44002,7 +44012,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44134,7 +44144,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44158,7 +44168,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 7246
-// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44416,7 +44426,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44440,7 +44450,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7293
-// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44698,7 +44708,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -44782,7 +44792,7 @@ STRING 7349
 }
 
 STRING 7350
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44806,7 +44816,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44986,7 +44996,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45010,7 +45020,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7388
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -45124,13 +45134,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7407
-// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45519,7 +45529,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45855,7 +45865,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45879,7 +45889,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45978,7 +45988,7 @@ STRING 7547
 }
 
 STRING 7548
-// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46002,7 +46012,7 @@ STRING 7551
 }
 
 STRING 7552
-// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46092,7 +46102,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46116,7 +46126,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46212,7 +46222,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46230,7 +46240,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46362,7 +46372,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46386,7 +46396,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46716,7 +46726,7 @@ STRING 7670
 }
 
 STRING 7671
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46740,7 +46750,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 7675
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46830,7 +46840,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46854,7 +46864,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 7694
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46944,7 +46954,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46956,7 +46966,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47202,13 +47212,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7751
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47316,13 +47326,13 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7770
-// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47466,7 +47476,7 @@ STRING 7794
 }
 
 STRING 7795
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47490,7 +47500,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Damage: (Int * 
 }
 
 STRING 7799
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47604,7 +47614,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47622,7 +47632,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48078,7 +48088,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48096,7 +48106,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48420,7 +48430,7 @@ STRING 7953
 }
 
 STRING 7954
-// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48444,13 +48454,13 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7958
-// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48588,7 +48598,7 @@ Learn God Splitter (|cffffcc00Q|r)
 }
 
 STRING 7982
-// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48726,7 +48736,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48750,7 +48760,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49026,7 +49036,7 @@ Zamasu's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8055
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -49128,7 +49138,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49263,7 +49273,7 @@ Tapion fires a sphere of energy in the target direction. The sphere will damage 
 }
 
 STRING 8093
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49371,7 +49381,7 @@ Tapion slashes units in melee range towards the target direction for damage. If 
 }
 
 STRING 8111
-// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49497,7 +49507,7 @@ STRING 8131
 }
 
 STRING 8132
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49533,7 +49543,7 @@ Tapion slashes units in melee range towards the target direction for damage. If 
 }
 
 STRING 8138
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49893,7 +49903,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -50187,7 +50197,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50301,7 +50311,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50463,7 +50473,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50859,7 +50869,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -50883,7 +50893,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51099,7 +51109,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 8399
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51123,7 +51133,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51507,7 +51517,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51531,7 +51541,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8471
-// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51614,7 +51624,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51698,13 +51708,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51782,7 +51792,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51814,7 +51824,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51916,7 +51926,7 @@ King K Rool is a formidable fighter. He can absorb incoming punches using only h
 }
 
 STRING 8534
-// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51940,7 +51950,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52108,7 +52118,7 @@ STRING 8565
 }
 
 STRING 8566
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -52126,7 +52136,7 @@ STRING 8568
 }
 
 STRING 8569
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -52150,7 +52160,7 @@ R
 }
 
 STRING 8573
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52379,7 +52389,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -52858,7 +52868,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -52996,7 +53006,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53154,7 +53164,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53178,7 +53188,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -53244,7 +53254,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53268,7 +53278,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53678,7 +53688,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53948,7 +53958,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54320,7 +54330,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54344,7 +54354,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54494,7 +54504,7 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8956
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54813,7 +54823,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54927,7 +54937,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55112,7 +55122,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55136,7 +55146,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55148,7 +55158,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55220,7 +55230,7 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 }
 
 STRING 9077
-// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55370,7 +55380,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -55394,7 +55404,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55508,7 +55518,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55790,7 +55800,7 @@ Jiren's Fighting Style
 }
 
 STRING 9172
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -55814,19 +55824,19 @@ Jiren's strength is overwhelming.|n|cff00FF00Crit %:|r 15|n|cff00FF00Crit Dmg:|r
 }
 
 STRING 9176
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
-{
-F
-}
-
-STRING 9177
 // Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
 
+STRING 9177
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+{
+F
+}
+
 STRING 9178
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56042,7 +56052,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -56066,7 +56076,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -56186,7 +56196,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0JE (Roshi Kame Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56319,7 +56329,7 @@ Hero
 }
 
 STRING 9260
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56612,13 +56622,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -58406,301 +58416,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Roshi Kame Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9609
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9610
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9611
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9612
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9613
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9614
-// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9615
-// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9616
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9617
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9618
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9619
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9620
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9621
-// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9622
-// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9623
-// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9624
-// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9625
-// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9626
-// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9627
-// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9628
-// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9629
-// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9630
-// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9631
-// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9632
-// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9633
-// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9634
-// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
+// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9635
-// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9636
-// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9637
-// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9638
-// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9639
-// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9640
-// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9641
-// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9642
-// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9643
-// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9644
-// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9645
-// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9646
-// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9647
-// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9648
-// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9649
-// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9650
-// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
+// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9651
-// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9652
-// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9653
-// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9654
-// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9655
-// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9656
-// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9657
-// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -59660,7 +59670,7 @@ Goku
 }
 
 STRING 9817
-// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -60230,7 +60240,7 @@ STRING 9911
 }
 
 STRING 9912
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60326,7 +60336,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9928
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60350,7 +60360,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9932
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60780,39 +60790,46 @@ STRING 10005
 }
 
 STRING 10006
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+(Tavern)
 }
 
 STRING 10007
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H09F (One-Star Shadow Dragon), Name (Name)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+One-Star Shadow Dragon
 }
 
 STRING 10008
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H09G (One-Star Shadow Dragon), Propernames (Proper Names)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+Omega Shenron
 }
 
 STRING 10009
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H09F (One-Star Shadow Dragon), Awakentip (Tooltip - Awaken)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cffffff00Q|r] Choose Syn Shenron
 }
 
 STRING 10010
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H09F (One-Star Shadow Dragon), Ubertip (Tooltip - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 10011
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Units: H09F (One-Star Shadow Dragon), Tip (Tooltip - Basic)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+[|cffffff00Q|r] Choose Syn Shenron
 }
 
 STRING 10012
@@ -60858,7 +60875,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -60876,7 +60893,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -60900,27 +60917,35 @@ STRING 10025
 }
 
 STRING 10026
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool1> seconds|r
 }
 
 STRING 10027
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Researchubertip (Tooltip - Learn - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool1> - <A0QM,Cool10> seconds|r
 }
 
 STRING 10028
-// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool2> seconds|r
 }
 
 STRING 10029
-// Abilities: A0L3 (Energy Blast Volley), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: 30 seconds)|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool3> seconds|r
 }
 
 STRING 10030
@@ -61376,7 +61401,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61635,7 +61660,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61710,7 +61735,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61740,7 +61765,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61896,13 +61921,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61968,13 +61993,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62436,7 +62461,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -62454,7 +62479,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62900,7 +62925,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62918,7 +62943,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -63171,7 +63196,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63279,19 +63304,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
-{
-F
-}
-
-STRING 10418
 // Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
 
-STRING 10419
+STRING 10418
 // Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 10419
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63459,7 +63484,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64191,7 +64216,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64209,7 +64234,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -64359,25 +64384,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10598
-// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10599
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10600
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -64684,7 +64709,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64736,7 +64761,7 @@ Dev:
 phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire
 
 Other:
-micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN
+micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro
 }
 
 STRING 10647
@@ -64757,7 +64782,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64771,7 +64796,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 13.July.20
+This map is under active development - 19.July.20
 }
 
 STRING 10653
@@ -64785,7 +64810,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65083,7 +65108,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65101,7 +65126,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65162,7 +65187,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65257,7 +65282,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65665,7 +65690,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65725,7 +65750,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -66319,7 +66344,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66337,7 +66362,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66787,7 +66812,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66805,7 +66830,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -66859,7 +66884,7 @@ STRING 10994
 }
 
 STRING 10995
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66917,7 +66942,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67166,7 +67191,7 @@ The user charges energy into their right hand and rushes forward with with an en
 }
 
 STRING 11049
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67597,7 +67622,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67615,7 +67640,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67669,7 +67694,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67706,13 +67731,13 @@ STRING 11137
 }
 
 STRING 11138
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 11139
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67849,7 +67874,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67933,7 +67958,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 11174
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68176,7 +68201,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68212,7 +68237,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68332,7 +68357,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68350,7 +68375,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68560,7 +68585,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11279
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68686,7 +68711,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69112,13 +69137,13 @@ STRING 11370
 }
 
 STRING 11371
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69316,7 +69341,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69340,7 +69365,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -70095,7 +70120,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -70251,7 +70276,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -70269,7 +70294,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -71312,7 +71337,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72223,7 +72248,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -72241,7 +72266,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -72913,7 +72938,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72931,7 +72956,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72949,7 +72974,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -73069,7 +73094,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -73767,6 +73792,8 @@ Transformations:
 [lvl 90]  2.00x "fp"
 [lvl 120] 2.25x "fp"
 [lvl 150] 2.50x "fp"
+
+Gains +50% stats from competing in the tournament.
 }
 
 STRING 12143
@@ -73788,7 +73815,7 @@ Gives detailed information on the location and power level of enemies. |n|cff00f
 }
 
 STRING 12146
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74400,13 +74427,13 @@ STRING 12247
 }
 
 STRING 12248
-// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12249
-// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74514,7 +74541,7 @@ STRING 12266
 }
 
 STRING 12267
-// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74706,9 +74733,11 @@ Eis Shenron
 }
 
 STRING 12299
-// Units: H09B (Three-Star Shadow Dragon), Awakentip (Tooltip - Awaken)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffffff00F|r] Choose Eis Shenron
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool4> seconds|r
 }
 
 STRING 12300
@@ -74730,9 +74759,11 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Units: H09B (Three-Star Shadow Dragon), Tip (Tooltip - Basic)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffffff00F|r] Choose Eis Shenron
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool5> seconds|r
 }
 
 STRING 12304
@@ -75068,7 +75099,7 @@ A powerful medium-range brawler that excels in outmaneuvering his opponents befo
 }
 
 STRING 12347
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -75210,7 +75241,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -75409,6 +75440,12 @@ STRING 12402
 // Units: hpea (Beam), Name (Name)
 {
 Beam
+}
+
+STRING 12403
+// Units: H09B (Three-Star Shadow Dragon), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00E|r] Choose Eis Shenron
 }
 
 STRING 12404
@@ -75796,7 +75833,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -75820,7 +75857,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76060,7 +76097,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -76078,7 +76115,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76132,7 +76169,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76150,7 +76187,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76582,7 +76619,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76846,7 +76883,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76858,7 +76895,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76870,7 +76907,7 @@ Beamers / Backline
 }
 
 STRING 12637
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77204,7 +77241,7 @@ Eis Shenron lowers his body temperature, preparing his body to reflect incoming 
 }
 
 STRING 12691
-// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77240,7 +77277,7 @@ Krown Toss Debuff
 }
 
 STRING 12697
-// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -77391,7 +77428,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -78089,7 +78126,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78590,7 +78627,7 @@ STRING 12913
 }
 
 STRING 12914
-// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -78728,7 +78765,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -78758,7 +78795,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12942
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -78825,6 +78862,12 @@ STRING 12952
 Power Pole
 }
 
+STRING 12953
+// Units: H09B (Three-Star Shadow Dragon), Tip (Tooltip - Basic)
+{
+[|cffffff00E|r] Choose Eis Shenron
+}
+
 STRING 12954
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
@@ -78841,6 +78884,12 @@ STRING 12956
 // Abilities: A0PI (Justice Flash 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Justice Flash 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 12957
+// Units: H09G (One-Star Shadow Dragon), Name (Name)
+{
+One-Star Shadow Dragon
 }
 
 STRING 12958
@@ -78996,7 +79045,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79182,7 +79231,7 @@ Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lv
 }
 
 STRING 13014
-// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79218,7 +79267,7 @@ STRING 13019
 }
 
 STRING 13020
-// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -79350,7 +79399,7 @@ STRING 13041
 }
 
 STRING 13042
-// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80170,7 +80219,7 @@ STRING 13174
 }
 
 STRING 13175
-// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80188,7 +80237,7 @@ STRING 13177
 }
 
 STRING 13178
-// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80411,9 +80460,15 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
+}
+
+STRING 13215
+// Units: H09F (One-Star Shadow Dragon), Propernames (Proper Names)
+{
+Syn Shenron
 }
 
 STRING 13216
@@ -80441,7 +80496,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -80544,7 +80599,7 @@ Frog Tongue
 }
 
 STRING 13237
-// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80556,7 +80611,7 @@ STRING 13238
 }
 
 STRING 13239
-// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81122,13 +81177,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81428,7 +81483,7 @@ STRING 13378
 }
 
 STRING 13379
-// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81446,7 +81501,7 @@ STRING 13381
 }
 
 STRING 13382
-// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81662,7 +81717,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81702,7 +81757,7 @@ Frieza sits inside his hover pod and lets his minions do the work for him. Provi
 }
 
 STRING 13424
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81967,10 +82022,47 @@ The legendary staff of Son Goku, used to connect Korin's Tower to Kami's Lookout
 |cffffff00+0.1x Agi mult.|r
 }
 
+STRING 13464
+// Units: H09G (One-Star Shadow Dragon), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Q|r] Choose Syn Shenron
+}
+
+STRING 13465
+// Units: H09G (One-Star Shadow Dragon), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 13466
+// Units: H09G (One-Star Shadow Dragon), Tip (Tooltip - Basic)
+{
+[|cffffff00Q|r] Choose Syn Shenron
+}
+
+STRING 13467
+// Abilities: A0QK (Negative Energy Ball), Researchubertip (Tooltip - Learn - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool1> - <A0QK,Cool10> seconds|r
+}
+
 STRING 13468
 // Abilities: A0Q4 (Death Storm), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Death Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 13469
+// Units: n044 (Shadow Dragons), Name (Name)
+{
+Shadow Dragons
 }
 
 STRING 13470
@@ -82052,7 +82144,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82070,7 +82162,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82364,7 +82456,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82382,7 +82474,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82445,6 +82537,18 @@ STRING 13548
 // Items: I04O (Frieza's Tail), Name (Name)
 {
 Frieza's Tail
+}
+
+STRING 13549
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 13550
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool1> seconds)|r
 }
 
 STRING 13551
@@ -82658,6 +82762,18 @@ STRING 13578
 Frieza Force
 }
 
+STRING 13579
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool2> seconds)|r
+}
+
+STRING 13580
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool3> seconds)|r
+}
+
 STRING 13581
 // Abilities: A0Q9 (Supernova Frieza 2), Tip (Tooltip - Normal)
 {
@@ -82754,6 +82870,18 @@ STRING 13596
 This unit is under the effects of |cffff00ffFrieza Force|r; it has increased attack damage.
 }
 
+STRING 13597
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool4> seconds)|r
+}
+
+STRING 13598
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool5> seconds)|r
+}
+
 STRING 13599
 // Abilities: A0Q9 (Supernova Frieza 2), EditorSuffix (Editor Suffix)
 {
@@ -82761,7 +82889,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82770,6 +82898,12 @@ STRING 13601
 // Abilities: A0QA (Tail Whip), Name (Name)
 {
 Tail Whip
+}
+
+STRING 13602
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool6> seconds)|r
 }
 
 STRING 13603
@@ -82799,7 +82933,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82808,6 +82942,18 @@ STRING 13607
 // Abilities: A0QA (Tail Whip), EditorSuffix (Editor Suffix)
 {
 (frieza)
+}
+
+STRING 13608
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool7> seconds)|r
+}
+
+STRING 13609
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool8> seconds)|r
 }
 
 STRING 13610
@@ -82828,6 +82974,42 @@ Frieza swiftly attacks his enemies with his nimble tail.
 |cff00ffffCooldown: <A0QA,Cool3> seconds|r
 
 |cff808080"You bit my tail!"|r
+}
+
+STRING 13612
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool9> seconds)|r
+}
+
+STRING 13613
+// Abilities: A0L3 (Energy Blast Volley), Ubertip (Tooltip - Normal - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool10> seconds)|r
+}
+
+STRING 13614
+// Abilities: A0L3 (Energy Blast Volley), Researchubertip (Tooltip - Learn - Extended)
+{
+The user usually brings their arms to their sides, charges up ki, and then he throws his hands forward one after another as he rapidly fires many energy blasts. It is effective for quick, widespread, and massive amounts of damage, but it is very draining on one's own ki level.|n|cff00ff00(Damage: Int * lvl * 0.04 / tick)|r|n|cff00ffff(Cooldown: <A0L3,Cool10> - <A0L3,Cool1> seconds)|r
+}
+
+STRING 13615
+// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 13616
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool1> seconds|r
+}
+
+STRING 13617
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool2> seconds|r
 }
 
 STRING 13618
@@ -82888,6 +83070,12 @@ Frieza swiftly attacks his enemies with his nimble tail.
 |cff00ffffCooldown: <A0QA,Cool9> seconds|r
 
 |cff808080"You bit my tail!"|r
+}
+
+STRING 13624
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool3> seconds|r
 }
 
 STRING 13625
@@ -83079,7 +83267,7 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 13652
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83106,7 +83294,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83935,7 +84123,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84001,9 +84189,11 @@ STRING 13790
 }
 
 STRING 13791
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-F
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool6> seconds|r
 }
 
 STRING 13792
@@ -84112,6 +84302,12 @@ STRING 13809
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 13810
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool4> seconds|r
 }
 
 STRING 13811
@@ -84327,6 +84523,18 @@ STRING 13840
 Frieza raises his finger and gathers energy into a giant yellow sun-like energy sphere that has the power to destroy planets.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0Q9,Cool1> seconds|r
 }
 
+STRING 13841
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool5> seconds|r
+}
+
+STRING 13842
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool6> seconds|r
+}
+
 STRING 13843
 // Abilities: A0QI (Frieza Force), Tip (Tooltip - Normal)
 {
@@ -84343,6 +84551,18 @@ STRING 13845
 // Abilities: A0QI (Frieza Force), Tip (Tooltip - Normal)
 {
 |cffff00ffFrieza Force|r - [|cffffcc00Level 3|r]
+}
+
+STRING 13846
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool7> seconds|r
+}
+
+STRING 13847
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 2|r]
 }
 
 STRING 13848
@@ -84367,5 +84587,984 @@ STRING 13851
 // Abilities: A0QI (Frieza Force), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a <A0QI,DataD3,%>% chance to dodge an attack and a <A0QI,DataA3>% chance to deal <A0QI,DataB3,.> times normal damage.
+}
+
+STRING 13852
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 3|r]
+}
+
+STRING 13853
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 4|r]
+}
+
+STRING 13854
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 5|r]
+}
+
+STRING 13855
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 6|r]
+}
+
+STRING 13856
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 1|r]
+}
+
+STRING 13857
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 7|r]
+}
+
+STRING 13858
+// Abilities: A0QJ (Dragon Flash Bullet), Name (Name)
+{
+Dragon Flash Bullet
+}
+
+STRING 13859
+// Abilities: A0QJ (Dragon Flash Bullet), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Dragon Flash Bullet - [|cffffcc00Level %d|r]
+}
+
+STRING 13860
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 9|r]
+}
+
+STRING 13861
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 8|r]
+}
+
+STRING 13862
+// Abilities: A0QJ (Dragon Flash Bullet), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Dragon Flash Bullet - [|cffffcc00Level 10|r]
+}
+
+STRING 13863
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool8> seconds|r
+}
+
+STRING 13864
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool9> seconds|r
+}
+
+STRING 13865
+// Abilities: A0QJ (Dragon Flash Bullet), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool10> seconds|r
+}
+
+STRING 13866
+// Abilities: A0QJ (Dragon Flash Bullet), Researchubertip (Tooltip - Learn - Extended)
+{
+The user fires an Energy Barrage of ki blasts from their fingers on both hands.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QJ,Cool1> seconds|r
+}
+
+STRING 13867
+// Abilities: A0QJ (Dragon Flash Bullet), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13868
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool1> seconds|r
+}
+
+STRING 13869
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool2> seconds|r
+}
+
+STRING 13870
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool3> seconds|r
+}
+
+STRING 13871
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool4> seconds|r
+}
+
+STRING 13872
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool5> seconds|r
+}
+
+STRING 13873
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool6> seconds|r
+}
+
+STRING 13874
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool7> seconds|r
+}
+
+STRING 13875
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 2|r]
+}
+
+STRING 13876
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 3|r]
+}
+
+STRING 13877
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 4|r]
+}
+
+STRING 13878
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 5|r]
+}
+
+STRING 13879
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 6|r]
+}
+
+STRING 13880
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 1|r]
+}
+
+STRING 13881
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 7|r]
+}
+
+STRING 13882
+// Abilities: A0QK (Negative Energy Ball), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 13883
+// Abilities: A0QK (Negative Energy Ball), Name (Name)
+{
+Negative Energy Ball
+}
+
+STRING 13884
+// Abilities: A0QK (Negative Energy Ball), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Negative Energy Ball - [|cffffcc00Level %d|r]
+}
+
+STRING 13885
+// Abilities: A0QK (Negative Energy Ball), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 13886
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 9|r]
+}
+
+STRING 13887
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 8|r]
+}
+
+STRING 13888
+// Abilities: A0QK (Negative Energy Ball), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Negative Energy Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 13889
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool8> seconds|r
+}
+
+STRING 13890
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool9> seconds|r
+}
+
+STRING 13891
+// Abilities: A0QK (Negative Energy Ball), Ubertip (Tooltip - Normal - Extended)
+{
+An attack made up of the heavily condensed Negative Energy of the Dragon Balls and the hatred of the Shadow Dragons.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QK,Cool10> seconds|r
+}
+
+STRING 13892
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool7> seconds|r
+}
+
+STRING 13893
+// Abilities: A0QK (Negative Energy Ball), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13894
+// Abilities: A0QN (Shadow Dragon Abilities), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron can unlock special techniques by absorbing power from the dragon balls.
+
+|cffffcc00Level 25:|r Unlocks unique passive Envoy of the End
+|cffffcc00Level 200 or Collect 7 Dragon Balls|r: Unlocks Ice Cannon, Nova Star, and Dragon Thunder.
+}
+
+STRING 13895
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool1> seconds|r
+}
+
+STRING 13896
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool2> seconds|r
+}
+
+STRING 13897
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool3> seconds|r
+}
+
+STRING 13898
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool4> seconds|r
+}
+
+STRING 13899
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool5> seconds|r
+}
+
+STRING 13900
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool6> seconds|r
+}
+
+STRING 13901
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool8> seconds|r
+}
+
+STRING 13902
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool9> seconds|r
+}
+
+STRING 13903
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool10> seconds|r
+}
+
+STRING 13908
+// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 13911
+// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 13915
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool7> seconds|r
+}
+
+STRING 13916
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 2|r]
+}
+
+STRING 13917
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 3|r]
+}
+
+STRING 13918
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 4|r]
+}
+
+STRING 13919
+// Abilities: A0QL (Shadow Dragon Fist), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13920
+// Abilities: A0QM (Dragonic Rage), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 13921
+// Abilities: A0QM (Dragonic Rage), Name (Name)
+{
+Dragonic Rage
+}
+
+STRING 13922
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 1|r]
+}
+
+STRING 13923
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 13924
+// Abilities: A0QM (Dragonic Rage), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Dragonic Rage - [|cffffcc00Level %d|r]
+}
+
+STRING 13925
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 6|r]
+}
+
+STRING 13926
+// Abilities: A0QM (Dragonic Rage), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 13927
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 13928
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 2|r]
+}
+
+STRING 13929
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 3|r]
+}
+
+STRING 13930
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 7|r]
+}
+
+STRING 13931
+// Abilities: A0QL (Shadow Dragon Fist), Name (Name)
+{
+Shadow Dragon Fist
+}
+
+STRING 13932
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 4|r]
+}
+
+STRING 13933
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 5|r]
+}
+
+STRING 13934
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 6|r]
+}
+
+STRING 13935
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 7|r]
+}
+
+STRING 13936
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 8|r]
+}
+
+STRING 13937
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 9|r]
+}
+
+STRING 13938
+// Abilities: A0QL (Shadow Dragon Fist), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Shadow Dragon Fist - [|cffffcc00Level %d|r]
+}
+
+STRING 13939
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 9|r]
+}
+
+STRING 13940
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 8|r]
+}
+
+STRING 13941
+// Abilities: A0QL (Shadow Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Shadow Dragon Fist - [|cffffcc00Level 10|r]
+}
+
+STRING 13942
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool8> seconds|r
+}
+
+STRING 13943
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool9> seconds|r
+}
+
+STRING 13944
+// Abilities: A0QM (Dragonic Rage), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragonic Rage - [|cffffcc00Level 10|r]
+}
+
+STRING 13945
+// Abilities: A0QL (Shadow Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool10> seconds|r
+}
+
+STRING 13946
+// Abilities: A0QN (Shadow Dragon Abilities), Name (Name)
+{
+Shadow Dragon Abilities
+}
+
+STRING 13947
+// Abilities: A0QL (Shadow Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy's inventory if they have less than 7.|n|cff00ff00Damage: Lvl * Str * ?|n|cff00ffffCooldown: <A0QL,Cool1> seconds|r
+}
+
+STRING 13948
+// Abilities: A0QN (Shadow Dragon Abilities), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Shadow Dragon Abilities
+}
+
+STRING 13949
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 13950
+// Abilities: A0QM (Dragonic Rage), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13951
+// Abilities: A0QO (Envoy of the End), Name (Name)
+{
+Envoy of the End
+}
+
+STRING 13952
+// Abilities: A0QN (Shadow Dragon Abilities), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13954
+// Abilities: A0QO (Envoy of the End), Tip (Tooltip - Normal)
+{
+Envoy of the End - [|cffffcc00Passive|r]
+}
+
+STRING 13955
+// Abilities: A0QP (Ice Cannon), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 13956
+// Abilities: A0QP (Ice Cannon), Name (Name)
+{
+Ice Cannon
+}
+
+STRING 13957
+// Abilities: A0QP (Ice Cannon), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Ice Cannon
+}
+
+STRING 13958
+// Abilities: A0QP (Ice Cannon), Unhotkey (Hotkey - Turn Off)
+{
+W
+}
+
+STRING 13959
+// Abilities: A0QP (Ice Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron turns his left hand into a cannon that fires an immensely powerful beam of ice. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.|n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QP,Cool1> seconds|r
+}
+
+STRING 13960
+// Abilities: A0QO (Envoy of the End), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13961
+// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 13962
+// Abilities: A0QQ (Nova Star), Name (Name)
+{
+Nova Star
+}
+
+STRING 13963
+// Abilities: A0QQ (Nova Star), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Nova Star
+}
+
+STRING 13964
+// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
+{
+E
+}
+
+STRING 13965
+// Abilities: A0QQ (Nova Star), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron charges a powerful flaming energy beam in his hands before unleashing it to deal devastating damage against his enemies.|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
+}
+
+STRING 13966
+// Abilities: A0QP (Ice Cannon), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13967
+// Abilities: A0QR (Dragon Thunder), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 13968
+// Abilities: A0QR (Dragon Thunder), Name (Name)
+{
+Dragon Thunder
+}
+
+STRING 13969
+// Abilities: A0QR (Dragon Thunder), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Thunder
+}
+
+STRING 13970
+// Abilities: A0QR (Dragon Thunder), Unhotkey (Hotkey - Turn Off)
+{
+R
+}
+
+STRING 13971
+// Abilities: A0QR (Dragon Thunder), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron extends his spines behind himself before electrocuting enemies and drastically slowing their movement speed.|n|cff00ff00Damage: Lvl x Str x ?|r|n|cff00ffffCooldown: <A0QQ,Cool1> seconds|r
+}
+
+STRING 13972
+// Abilities: A0QQ (Nova Star), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13973
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 13974
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 13975
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 13992
+// Abilities: A0QR (Dragon Thunder), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 13993
+// Abilities: A0QS (Dragonic Rage), Name (Name)
+{
+Dragonic Rage
+}
+
+STRING 13994
+// Abilities: A0QS (Dragonic Rage), EditorSuffix (Editor Suffix)
+{
+crit (omega shenron)
+}
+
+STRING 13995
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 1|r]
+}
+
+STRING 13996
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 2|r]
+}
+
+STRING 13997
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 3|r]
+}
+
+STRING 13998
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 4|r]
+}
+
+STRING 13999
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 5|r]
+}
+
+STRING 14000
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 6|r]
+}
+
+STRING 14001
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 7|r]
+}
+
+STRING 14002
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 8|r]
+}
+
+STRING 14003
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 9|r]
+}
+
+STRING 14004
+// Abilities: A0QS (Dragonic Rage), Tip (Tooltip - Normal)
+{
+Dragonic Rage - [|cffffcc00Level 10|r]
+}
+
+STRING 14005
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD1,%>% |n|cffffcc00Critical|r - <A0QS,DataA1>% |n|cffffcc00Damage|r - <A0QS,DataB1,.> times
+}
+
+STRING 14006
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD2,%>% |n|cffffcc00Critical|r - <A0QS,DataA2,.>% |n|cffffcc00Damage|r - <A0QS,DataB2,.> times
+}
+
+STRING 14007
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD3,%>% |n|cffffcc00Critical|r - <A0QS,DataA3>% |n|cffffcc00Damage|r - <A0QS,DataB3,.> times
+}
+
+STRING 14008
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD4,%>% |n|cffffcc00Critical|r - <A0QS,DataA4>% |n|cffffcc00Damage|r - <A0QS,DataB4,.> times
+}
+
+STRING 14009
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD5,%>% |n|cffffcc00Critical|r - <A0QS,DataA5>% |n|cffffcc00Damage|r - <A0QS,DataB5,.> times
+}
+
+STRING 14010
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD6,%>% |n|cffffcc00Critical|r - <A0QS,DataA6>% |n|cffffcc00Damage|r - <A0QS,DataB6,.> times
+}
+
+STRING 14011
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD7,%>% |n|cffffcc00Critical|r - <A0QS,DataA7>% |n|cffffcc00Damage|r - <A0QS,DataB7,.> times
+}
+
+STRING 14012
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD8,%>% |n|cffffcc00Critical|r - <A0QS,DataA8>% |n|cffffcc00Damage|r - <A0QS,DataB8,.> times
+}
+
+STRING 14013
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD9,%>% |n|cffffcc00Critical|r - <A0QS,DataA9>% |n|cffffcc00Damage|r - <A0QS,DataB9,.> times
+}
+
+STRING 14014
+// Abilities: A0QS (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Omega Shenron's rage infused attacks deal massive damage. |n|cffffcc00Evasion|r - <A0QS,DataD10,%>% |n|cffffcc00Critical|r - <A0QS,DataA10>% |n|cffffcc00Damage|r - <A0QS,DataB10,.> times
+}
+
+STRING 14015
+// Abilities: A0QT (Dragon Thunder Slow), Name (Name)
+{
+Dragon Thunder Slow
+}
+
+STRING 14016
+// Abilities: A0QT (Dragon Thunder Slow), Tip (Tooltip - Normal)
+{
+Dragon Thunder Slow
+}
+
+STRING 14017
+// Abilities: A0QU (Envoy of the End Str), Name (Name)
+{
+Envoy of the End Str
+}
+
+STRING 14018
+// Abilities: A0QV (Envoy of the End Agi), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 14019
+// Abilities: A0QU (Envoy of the End Str), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon destined to destroy the Universe.
+|cffff0000STR:|r +7 armor
+}
+
+STRING 14020
+// Abilities: A0QU (Envoy of the End Str), Tip (Tooltip - Normal)
+{
+Envoy of the End - [|cffff0000STR|r]
+}
+
+STRING 14021
+// Abilities: A0QV (Envoy of the End Agi), Name (Name)
+{
+Envoy of the End Agi
+}
+
+STRING 14022
+// Abilities: A0QV (Envoy of the End Agi), Tip (Tooltip - Normal)
+{
+Envoy of the End - [|cff00ff00AGI|r]
+}
+
+STRING 14024
+// Abilities: A0QW (Envoy of the End Int), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 14025
+// Abilities: A0QW (Envoy of the End Int), Name (Name)
+{
+Envoy of the End Int
+}
+
+STRING 14026
+// Abilities: A0QU (Envoy of the End Str), EditorSuffix (Editor Suffix)
+{
+(omega shenron)
+}
+
+STRING 14028
+// Abilities: A0QW (Envoy of the End Int), Tip (Tooltip - Normal)
+{
+Envoy of the End - [|cff00ffffINT|r]
+}
+
+STRING 14029
+// Buffs/Effects: B03D (), Bufftip (Tooltip)
+{
+Dragon Thunder
+}
+
+STRING 14031
+// Buffs/Effects: B03E (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Envoy of the End; it has increased attack damage.
+}
+
+STRING 14032
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 14033
+// Abilities: A0QO (Envoy of the End), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon destined to destroy the Universe.
+|cffffff00Gains +1 level up stats.
+A special buff is obtained when one stat is strictly higher than the rest.|r
+|cffff0000STR:|r +7 armor
+|cff00ff00AGI:|r +<A0QV,DataA1,%>% bonus attack damage
+|cff00ffffINT:|r +15% saga and pvp stats
+}
+
+STRING 14034
+// Abilities: A0QV (Envoy of the End Agi), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon destined to destroy the Universe.
+|cff00ff00AGI:|r +<A0QV,DataA1,%>% bonus attack damage
+}
+
+STRING 14035
+// Buffs/Effects: B03E (), Bufftip (Tooltip)
+{
+Envoy of the End
+}
+
+STRING 14036
+// Buffs/Effects: B03E (), EditorSuffix (Editor Suffix)
+{
+AGI
+}
+
+STRING 14037
+// Buffs/Effects: B03F (), Bufftip (Tooltip)
+{
+Envoy of the End
+}
+
+STRING 14038
+// Buffs/Effects: B03F (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Envoy of the End; it has increased armor.
+}
+
+STRING 14039
+// Buffs/Effects: B03F (), EditorSuffix (Editor Suffix)
+{
+STR
+}
+
+STRING 14040
+// Abilities: A0QW (Envoy of the End Int), Ubertip (Tooltip - Normal - Extended)
+{
+The shadow dragon destined to destroy the Universe.
+|cff00ffffINT:|r +15% saga and pvp stats
 }
 

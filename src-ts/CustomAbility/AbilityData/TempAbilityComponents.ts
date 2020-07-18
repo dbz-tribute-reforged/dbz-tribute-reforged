@@ -125,4 +125,18 @@ export const TempAbilityComponents = [
     tempPermanence: true,
     equalizeLevels: true,
   },
+  {
+    name: "temp ability dragonic rage crit", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0QS"),
+    oldAbility: FourCC("A0QM"),
+    performSwap: true,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: true,
+    equalizeLevels: true,
+  },
 ];

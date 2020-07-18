@@ -4134,8 +4134,8 @@ export const AbilitiesList = [
     components: [
       { name: "damage death storm dps" },
       { name: "damage death storm explosion" },
-      { name: "deflector death storm" },
       { name: "knockback death storm start" },
+      { name: "knockback death storm explosion" },
       { name: "knockback death storm end" },
       { name: "sfx death storm start" },
       { name: "sfx death storm explosion" },
@@ -4450,6 +4450,198 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOmegaShenronDragonFlashBullet.blp",
+      disabled: "BTNOmegaShenronDragonFlashBullet.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET,
+      body: 
+        AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET
+    },
+    components: [
+      { name: "multi dragon flash bullet" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOmegaShenronNegativeEnergyBall.blp",
+      disabled: "BTNOmegaShenronNegativeEnergyBall.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL,
+      body: 
+        AbilityNames.OmegaShenron.NEGATIVE_ENERGY_BALL
+    },
+    components: [
+      { name: "beam negative energy ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.SHADOW_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 48,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOmegaShenronShadowFist.blp",
+      disabled: "BTNOmegaShenronShadowFist.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.SHADOW_FIST,
+      body: 
+        AbilityNames.OmegaShenron.SHADOW_FIST
+    },
+    components: [
+      { name: "dash ground point shadow fist" },
+      { name: "damage shadow fist dps" },
+      { name: "knockback dfist" },
+      { name: "sfx shadow fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.DRAGONIC_RAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOmegaShenronDragonicRage.blp",
+      disabled: "BTNOmegaShenronDragonicRage.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.DRAGONIC_RAGE,
+      body: 
+        AbilityNames.OmegaShenron.DRAGONIC_RAGE
+    },
+    components: [
+      { name: "dash ground forward dragonic rage" },
+      { name: "temp ability dragonic rage crit" },
+      { name: "sfx dragonic rage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.ICE_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNEisShenronIceCannon.blp",
+      disabled: "BTNEisShenronIceCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.ICE_CANNON,
+      body: 
+        AbilityNames.OmegaShenron.ICE_CANNON
+    },
+    components: [
+      { name: "beam ice cannon omega"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.NOVA_STAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNNuovaShenronNovaStar.blp",
+      disabled: "BTNNuovaShenronNovaStar.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.NOVA_STAR,
+      body: 
+        AbilityNames.OmegaShenron.NOVA_STAR
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi nova star omega" },
+      { name: "damage nova star omega dps charging" },
+      { name: "sfx nova star omega caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.OmegaShenron.DRAGON_THUNDER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNOmegaShenronDragonThunder.blp",
+      disabled: "BTNOmegaShenronDragonThunder.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.DRAGON_THUNDER,
+      body: 
+        AbilityNames.OmegaShenron.DRAGON_THUNDER
+    },
+    components: [
+      { name: "damage dragon thunder omega dps" },
+      { name: "debuff slow dragon thunder omega" },
+      { name: "sfx dragon thunder omega" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,
@@ -4611,6 +4803,35 @@ export const AbilitiesList = [
       { name: "multi solar kame" },
       { name: "damage solar kame dps charging" },
       { name: "sfx solar kame caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Saga.NOVA_STAR_OMEGA_CUSTOM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNNuovaShenronNovaStar.blp",
+      disabled: "BTNNuovaShenronNovaStar.blp",
+    },
+    tooltip: {
+      title: AbilityNames.OmegaShenron.NOVA_STAR,
+      body: 
+        AbilityNames.OmegaShenron.NOVA_STAR
+    },
+    components: [
+      { name: "teleport original point continuous" },
+      { name: "multi nova star omega" },
+      { name: "damage nova star omega dps charging" },
+      { name: "sfx nova star omega caster" },
     ],
   },
   // -------------------------------------------

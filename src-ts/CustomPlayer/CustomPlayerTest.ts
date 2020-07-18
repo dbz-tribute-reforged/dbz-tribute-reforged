@@ -1168,6 +1168,7 @@ export function CustomPlayerTest() {
   SetupDragonFistSfx(customPlayers);
   SetupGinyuChangeNow(customPlayers);
   SetupGinyuTelekinesis(customPlayers);
+  SetupOmegaShenronShadowFist(customPlayers);
   SetupSpellSoundEffects();
 }
 
@@ -1184,7 +1185,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.8;
+  const braveSwordDamageMult = 0.25 * 1.7;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -1353,6 +1354,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
 export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
   const dragonFistId = FourCC("A00U");
   const superDragonFistId = FourCC("A0P0");
+  const shadowFistId = FourCC("A0QL");
   const tickRate = 0.02;
   const updatesPerTick = 1;
   // const duration = 45;
@@ -1373,13 +1375,16 @@ export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
   const sfxGreen = 205;
   const sfxBlue = 25;
   const sfxSpiralModel = "DragonSegment2.mdl";
+  const sfxHeadModel = "DragonHead2.mdl";
+  const sfxAltSpiralModel = "RedDragonSegment.mdl";
+  const sfxAltHeadModel = "RedDragonHead.mdl";
   
   const trigger = CreateTrigger();
 
   TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
   TriggerAddCondition(trigger, Condition(() => {
     const spellId = GetSpellAbilityId();
-    if (spellId == dragonFistId || spellId == superDragonFistId) {
+    if (spellId == dragonFistId || spellId == superDragonFistId || spellId == shadowFistId) {
       const caster = GetTriggerUnit();
       let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
       let oldPos = new Vector2D(casterPos.x, casterPos.y);
@@ -1387,7 +1392,12 @@ export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
       // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
       const sfxList: effect[] = [];
       let sfxIndex = 0;
-      const sfxHead = AddSpecialEffect("DragonHead2.mdl", casterPos.x, casterPos.y);
+      let sfxHead = GetLastCreatedEffectBJ();
+      if (spellId == shadowFistId) {
+        sfxHead = AddSpecialEffect(sfxAltHeadModel, casterPos.x, casterPos.y);
+      } else {
+        sfxHead = AddSpecialEffect(sfxHeadModel, casterPos.x, casterPos.y);
+      }
       BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
       BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
       sfxList.push(sfxHead);  
@@ -1456,7 +1466,12 @@ export function SetupDragonFistSfx(customPlayers: CustomPlayer[]) {
 
             const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
 
-            const sfx = AddSpecialEffect(sfxSpiralModel, newPos.x, newPos.y);
+            let sfx = GetLastCreatedEffectBJ();
+            if (spellId == shadowFistId) {
+              sfx = AddSpecialEffect(sfxAltSpiralModel, newPos.x, newPos.y);
+            } else {
+              sfx = AddSpecialEffect(sfxSpiralModel, newPos.x, newPos.y);
+            }
             // sfxList.push(sfx);
             // ++sfxIndex;
             DestroyEffect(sfx);
@@ -1644,6 +1659,103 @@ export function SetupGinyuTelekinesis(customPlayers: CustomPlayer[]) {
   }));
 }
 
+export function SetupOmegaShenronShadowFist(customPlayers: CustomPlayer[]) {
+  const shadowFistId = FourCC("A0QL");
+  const shadowFistAOE = 350;
+  const shadowFistDuration = 48;
+  const tickRate = 0.03;
+  const dballItem = FourCC("I01V");
+  const maxDragonBallsToSteal = 1;
+  const maxSizedDragonBallStackToSteal = 7;
+
+  const trigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == shadowFistId) {
+      const caster = GetTriggerUnit();
+      const player = GetTriggerPlayer();
+
+      let time = 0;
+      let totalStolenDragonBalls = 0;
+      TimerStart(CreateTimer(), tickRate, true, () => {
+        if (time > shadowFistDuration || totalStolenDragonBalls >= maxDragonBallsToSteal) {
+          DestroyTimer(GetExpiredTimer());
+        } else {
+          const targetPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+          const targetGroup = UnitHelper.getNearbyValidUnits(
+            targetPos, shadowFistAOE, 
+            () => {
+              return (
+                UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player)
+              );
+            }
+          )
+          
+          let stolenDragonBalls = 0;
+
+          const casterDragonBallIndex = GetInventoryIndexOfItemTypeBJ(caster, dballItem)-1;
+          const casterInventoryCount = UnitInventoryCount(caster);
+
+          ForGroup(targetGroup, () => {
+            if (totalStolenDragonBalls < maxDragonBallsToSteal) {
+              const targetUnit = GetEnumUnit();
+              const targetDragonBallIndex = GetInventoryIndexOfItemTypeBJ(targetUnit, dballItem)-1;
+
+              if (targetDragonBallIndex >= 0) {
+                const stealItem = UnitItemInSlot(targetUnit, targetDragonBallIndex);
+                const numCharges = GetItemCharges(stealItem);
+                if (numCharges < maxSizedDragonBallStackToSteal) {    
+                  if (numCharges > 1) {
+                    SetItemCharges(stealItem, numCharges - 1);
+                  }
+                  if (casterDragonBallIndex >= 0) {
+                    // has dball to inc charges
+                    const casterItem = UnitItemInSlot(caster, casterDragonBallIndex);
+                    SetItemCharges(casterItem, GetItemCharges(casterItem) + 1);
+                    if (numCharges == 1) {
+                      RemoveItem(stealItem);
+                    }
+                  } else if (casterInventoryCount <= 5) {
+                    // no dball but has space
+                    UnitAddItemById(caster, dballItem);
+                    if (numCharges == 1) {
+                      RemoveItem(stealItem);
+                    }
+                  } else {
+                    // no dballs and no space
+                    if (numCharges == 1) {
+                      SetItemPosition(stealItem, targetPos.x, targetPos.y);
+                    } else {
+                      CreateItem(dballItem, targetPos.x, targetPos.y);
+                    }
+                  }
+                  ++stolenDragonBalls;
+                  ++totalStolenDragonBalls
+                }
+              }
+            }
+          });
+
+          if (stolenDragonBalls > 0) {
+            const auraSfx = AddSpecialEffect(
+              "AuraDBalls.mdl",
+              targetPos.x, targetPos.y
+            );
+            BlzSetSpecialEffectScale(auraSfx, 2.0);
+            DestroyEffect(auraSfx);
+          }
+
+          ++time;
+          DestroyGroup(targetGroup);
+        }
+      });
+    }
+    return false;
+  }));
+
+}
+
 export function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
   udg_TempSound = CreateSound(soundFile, false, true, false, 1, 1, "SpellsEAX")
 	SetSoundDuration(udg_TempSound, duration)
@@ -1828,6 +1940,15 @@ export module Id {
   export const blazingStorm = FourCC("A0MJ");
   export const plantSaibamen = FourCC("A0MK");
   export const breakCannon = FourCC("A0ML");
+
+  export const omegaShenron = FourCC("H09F");
+  export const dragonFlashBullet = FourCC("A0QJ");
+  export const negativeEnergyBall = FourCC("A0QK");
+  export const shadowFist = FourCC("A0QL");
+  export const dragonicRage = FourCC("A0QM");
+  export const omegaIceCannon = FourCC("A0QP");
+  export const omegaNovaStar = FourCC("A0QQ");
+  export const omegaDragonThunder = FourCC("A0QR");
 
   export const pan = FourCC("H08P");
   export const honeyBeeCostume = FourCC("A0LY");
@@ -2555,6 +2676,30 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
       break;
     
+    // omega shenron
+    case Id.dragonFlashBullet:
+      playSoundOnUnit(unit, "Audio/Effects/EnergyBlastVolley.mp3", 3134);
+      break;
+
+    case Id.negativeEnergyBall:
+      break;
+
+    case Id.shadowFist:
+      playSoundOnUnit(unit, "Audio/Effects/DragonFist.mp3", 5093);
+      break;
+
+    case Id.dragonicRage:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+      
+    case Id.omegaIceCannon:
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam2.mp3", 8097);
+      break;
+
+    case Id.omegaDragonThunder:
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+      break;
+
     // pan
     case Id.honeyBeeCostume:
       if (unitId == Id.pan) {
