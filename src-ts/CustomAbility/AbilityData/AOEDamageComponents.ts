@@ -925,7 +925,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.9,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.75,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -1494,7 +1494,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,
@@ -1875,7 +1875,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.25,
+      multiplier: BASE.DFIST_EXPLOSION * 0.21,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1887,19 +1887,43 @@ export const AOEDamageComponents = [
   },
   // justice kick
   {
-    name: "damage justice kick",
+    name: "damage justice kick explosion",
     repeatInterval: 1,
     startTick: 0,
+    endTick: 6,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 400,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.21,
+      attribute: bj_HEROSTAT_AGI,
+      attackType: 6,
+      damageType: 0,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // justice kick on hit
+  {
+    name: "damage justice kick on hit explosion",
+    repeatInterval: 1,
+    startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
     aoe: 400,
-    onlyDamageCapHeroes: true,
+    onlyDamageCapHeroes: false,
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.18,
+      multiplier: BASE.DFIST_EXPLOSION * 0.21,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -1911,19 +1935,19 @@ export const AOEDamageComponents = [
   },
   // justice kick 2
   {
-    name: "damage justice kick 2",
+    name: "damage justice kick 2 explosion",
     repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 6,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
-    aoe: 400,
-    onlyDamageCapHeroes: true,
+    aoe: 450,
+    onlyDamageCapHeroes: false,
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.54,
+      multiplier: BASE.DFIST_EXPLOSION * 0.63,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -2064,7 +2088,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 1.2,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -2087,7 +2111,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.4,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.36,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -2111,7 +2135,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 1.5,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 1.25,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -2134,7 +2158,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.5,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3363,7 +3387,7 @@ export const AOEDamageComponents = [
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 300,
-    onlyDamageCapHeroes: false,
+    onlyDamageCapHeroes: true,
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
@@ -3630,7 +3654,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.1,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.11,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -3654,7 +3678,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.58,
+      multiplier: BASE.DFIST_EXPLOSION * 0.59,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -3725,7 +3749,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.6,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.63,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3748,7 +3772,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.6,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.63,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -4528,7 +4552,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 25,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 1.1,
+      multiplier: BASE.DFIST_DPS * 1.09,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 0,

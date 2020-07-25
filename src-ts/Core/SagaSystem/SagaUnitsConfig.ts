@@ -671,14 +671,14 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
       ],
     )],
 
-    ["Syn Shenron", new SagaUnit(FourCC("U00Q"), 140, 21000, 400, 21000, new Vector2D(3000, 7000),
+    ["Syn Shenron", new SagaUnit(FourCC("H09F"), 140, 21000, 400, 21000, new Vector2D(3000, 7000),
       [
         SagaAbilities.OmegaShenron.DRAGON_FLASH_BULLET,
         SagaAbilities.OmegaShenron.NEGATIVE_ENERGY_BALL,
         SagaAbilities.OmegaShenron.DRAGONIC_RAGE,
       ],
     )],
-    ["Omega Shenron", new SagaUnit(FourCC("U00R"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
+    ["Omega Shenron", new SagaUnit(FourCC("H09G"), 180, 23000, 400, 23000, new Vector2D(3000, 7000),
       [
         SagaAbilities.OmegaShenron.DRAGON_FLASH_BULLET,
         SagaAbilities.OmegaShenron.NEGATIVE_ENERGY_BALL,

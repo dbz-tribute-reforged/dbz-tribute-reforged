@@ -7,7 +7,7 @@ export module DragonBallsConstants {
   export const summonShenronAbility: number = FourCC("A04X");
   export const radarItem: number = FourCC("I02A");
   export const radarAbility: number = FourCC("A03K");
-  export const shenronUnitDummy: number = FourCC("z001");
+  export const shenronUnitDummy: number = FourCC("z000");
   export const shenronUnit: number = FourCC("z001");
   // export const shenronUnit: number = FourCC("n03O");
   export const shenronWaitingRoom: Vector2D = new Vector2D(0, 22000);

@@ -24,11 +24,11 @@ export const JumpComponents = [
     maxHeight: 600,
   },
   {
-    name: "jump justice kick",
+    name: "jump justice kick on hit",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    duration: 16,
+    duration: 15,
     maxHeight: 400,
   },
 ]

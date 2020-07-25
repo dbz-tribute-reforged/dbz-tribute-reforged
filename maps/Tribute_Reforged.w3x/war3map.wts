@@ -463,7 +463,7 @@ STRING 75
 }
 
 STRING 76
-// Units: H009 (Saiyan from the Future), Ubertip (Tooltip - Extended)
+// Units: H08I (Saiyan from the Future), Ubertip (Tooltip - Extended)
 {
 A close-combat hero that can completely dominate the early and mid game, but transitions into a bulky saga-killer if a lead isn't secured.
 
@@ -8063,19 +8063,6 @@ STRING 1280
 Tapion plays his flute surrounding himself in a powerful magical barrier while he bolsters the strength of his allies. Applies |cffffff00Hero's Song|r to nearby enemy heroes.|n|cff00ff00Damage Block: Int * Lvl * 0.4 @ 65%|nArmor Aura: +7|n|cff00FFFFCooldown: <A0IB,Cool7>s|r
 }
 
-STRING 1281
-// Units: H08I (Saiyan from the Future), Ubertip (Tooltip - Extended)
-{
-A close-combat hero that can completely dominate the early and mid game, but transitions into a bulky saga-killer if a lead isn't secured.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 1282
 // Abilities: A0IB (Hero's Flute), Ubertip (Tooltip - Normal - Extended)
 {
@@ -12861,7 +12848,7 @@ STRING 2070
 }
 
 STRING 2071
-// Units: H09H (Blitz Captain of the Pride Troopers), Hotkey (Hotkey)
+// Units: H09H (Captain of the Pride Troopers), Hotkey (Hotkey)
 {
 E
 }
@@ -33874,13 +33861,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 5563
-// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
+// Units: z000 (Shenron Dummy), EditorSuffix (Name - Editor Suffix)
 {
 (actual)
 }
 
 STRING 5564
-// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A02N (Majin influence), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -41246,7 +41233,7 @@ F
 }
 
 STRING 6767
-// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
+// Abilities: A00R (Kamehameha), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -46975,7 +46962,7 @@ Dummy Stun
 }
 
 STRING 7715
-// Abilities: A00U (Dragon Fist), EditorSuffix (Editor Suffix)
+// Abilities: A03S (Kyodaika Revert), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -47037,19 +47024,6 @@ STRING 7725
 // Abilities: A084 (Gigantic Roar), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Gigantic Roar - [|cffffcc00Level 2|r]
-}
-
-STRING 7726
-// Units: H06X (Emperor of the Universe), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who can transform into many different forms to increase his power and gain access to abilities that can handle any situation.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 7727
@@ -51627,15 +51601,29 @@ Using advanced technology, Cooler is able to convert non-lethal damage to repair
 }
 
 STRING 8488
-// Items: I046 (Sorbet's Ring), Description (Description)
+// Units: H009 (Saiyan from the Future), Ubertip (Tooltip - Extended)
 {
-|cffffff00Fires a high powered laser at the enemy stunning them and dealing damage. If the enemy is reverted they will take massive bonus damage. Instantly kills creeps.|r|n|cff00ff00Stun: 0.5s|nDamage: 5% of Max HP (+60% if summoned)|nBonus Damage: 80% of Current HP if at 1.0x mult|r|n|cff00ffffCooldown: 50s|r
+A close-combat hero that can completely dominate the early and mid game, but transitions into a bulky saga-killer if a lead isn't secured.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 8489
-// Items: I046 (Sorbet's Ring), Ubertip (Tooltip - Extended)
+// Units: H06X (Emperor of the Universe), Ubertip (Tooltip - Extended)
 {
-|cffffff00Fires a high powered laser at the enemy stunning them and dealing damage. If the enemy is reverted they will take massive bonus damage. Instantly kills creeps.|r|n|cff00ff00Stun: 0.5s|nDamage: 5% of Max HP (+60% if summoned)|nBonus Damage: 80% of Current HP if at 1.0x mult|r|n|cff00ffffCooldown: 50s|r
+A well-rounded hero who can transform into many different forms to increase his power and gain access to abilities that can take care of almost any situation.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 8490
@@ -53860,7 +53848,7 @@ STRING 8854
 }
 
 STRING 8855
-// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+// Abilities: A00U (Dragon Fist), EditorSuffix (Editor Suffix)
 {
 (actual)
 }
@@ -53948,6 +53936,12 @@ STRING 8867
 Q
 }
 
+STRING 8868
+// Units: z000 (Shenron Dummy), Name (Name)
+{
+Shenron Dummy
+}
+
 STRING 8869
 // Abilities: A0LM (Hellzone Grenade), Tip (Tooltip - Normal)
 {
@@ -53988,6 +53982,20 @@ STRING 8875
 // Abilities: A0LM (Hellzone Grenade), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Hellzone Grenade - [|cffffcc00Level 6|r]
+}
+
+STRING 8876
+// Abilities: A04Y (Kyodaika), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 8877
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
 }
 
 STRING 8878
@@ -71766,19 +71774,6 @@ STRING 11813
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur3> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool3> seconds)|r
 }
 
-STRING 11814
-// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
-{
-A strong early-game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 11815
 // Abilities: A0G8 (Energy Punch), Tip (Tooltip - Normal)
 {
@@ -73753,7 +73748,7 @@ Transformations:
 [lvl 120] 2.25x "fp"
 [lvl 150] 2.50x "fp"
 
-Gains +50% stats from competing in the tournament.
+|cffffcc00Budokai Champion:|r +50% stats from tournaments.
 }
 
 STRING 12143
@@ -73796,6 +73791,14 @@ STRING 12149
 // Abilities: A0OG (Evil Spear), Ubertip (Tooltip - Normal - Extended)
 {
 Dabura throws a spear at his opponent, impaling them through the stomach. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OG,Cool2> seconds|r
+}
+
+STRING 12150
+// Abilities: A0QZ (Justice Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
 }
 
 STRING 12151
@@ -73954,6 +73957,46 @@ STRING 12176
 Q
 }
 
+STRING 12177
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool2> seconds|r
+}
+
+STRING 12178
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool3> seconds|r
+}
+
+STRING 12179
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool4> seconds|r
+}
+
+STRING 12180
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool5> seconds|r
+}
+
+STRING 12181
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool6> seconds|r
+}
+
 STRING 12182
 // Abilities: A0IU (Hand Kannon), Tip (Tooltip - Normal)
 {
@@ -74104,6 +74147,22 @@ STRING 12206
 [|cff00ff00Q|r] Javelin Throw - [|cffffcc00Level 10|r]
 }
 
+STRING 12207
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool7> seconds|r
+}
+
+STRING 12208
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool8> seconds|r
+}
+
 STRING 12209
 // Abilities: A073 (Punch), Tip (Tooltip - Normal)
 {
@@ -74164,6 +74223,14 @@ STRING 12218
 [|cff00FF00Q|r] Learn Punch - [|cffffcc00Level %d|r]
 }
 
+STRING 12219
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool9> seconds|r
+}
+
 STRING 12220
 // Abilities: A073 (Punch), EditorSuffix (Editor Suffix)
 {
@@ -74174,6 +74241,14 @@ STRING 12221
 // Abilities: A073 (Punch), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 12222
+// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool10> seconds|r
 }
 
 STRING 12223
@@ -74204,6 +74279,18 @@ STRING 12227
 // Abilities: A0JW (Flying Kick), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Flying Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 12228
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool1> seconds|r
 }
 
 STRING 12229
@@ -74914,19 +75001,6 @@ They fuse into Super Android 13, who specializes in using massive high DPS AoE n
 
 }
 
-STRING 12340
-// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
-{
-A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 12341
 // Buffs/Effects: B02C (), Bufftip (Tooltip)
 {
@@ -74977,19 +75051,6 @@ STRING 12345
 // Buffs/Effects: B02D (), Bufftip (Tooltip)
 {
 Upa's Rage 4
-}
-
-STRING 12346
-// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
-{
-A powerful medium-range brawler that excels in outmaneuvering his opponents before finishing them off. His final transformation turns him into a combo-oriented hero that relies heavily on timing his spell usage to work with his upgrade auto attacks.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 12347
@@ -77482,6 +77543,18 @@ STRING 12743
 // Abilities: A0P5 (Eis Frostbite Slow Debuff), Tip (Tooltip - Normal)
 {
 Eis Frostbite Slow
+}
+
+STRING 12744
+// Abilities: A0R2 (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool1> - <A0R2,Cool10> seconds|r
 }
 
 STRING 12745
@@ -80693,6 +80766,18 @@ STRING 13272
 // Abilities: A0PU (Milky Cannon Slow Debuff), Tip (Tooltip - Normal)
 {
 Milky Cannon Slow
+}
+
+STRING 13273
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool2> seconds|r
 }
 
 STRING 13274
@@ -84784,13 +84869,15 @@ STRING 13904
 {
 Type "r" to revert.
 Transformations:
-[lvl 15]  1.20x "justice"
-[lvl 30]  1.40x "justice"
+[lvl 15]  1.25x "justice"
+[lvl 35]  1.50x "justice"
+[lvl 60]  1.75x "justice"
 [lvl 90]  2.00x "justice"
 [lvl 150] 2.20x "justice"
-[lvl 200] 2.40x "super" [unlocks Super Maximum Light Speed Mode]
+[lvl 200] 2.40x "max" [unlocks Super Maximum Light Speed Mode]
 
 Gains +0.02x for each pride trooper on his team.
+|cff00ffffLightning Reflexes:|r +20% Evasion.
 }
 
 STRING 13905
@@ -84881,12 +84968,6 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 13914
-// Units: H09H (Blitz Captain of the Pride Troopers), Name (Name)
-{
-Blitz Captain of the Pride Troopers
 }
 
 STRING 13915
@@ -85118,7 +85199,7 @@ STRING 13952
 }
 
 STRING 13953
-// Units: H09H (Blitz Captain of the Pride Troopers), Propernames (Proper Names)
+// Units: H09H (Captain of the Pride Troopers), Propernames (Proper Names)
 {
 Dyspo
 }
@@ -85256,33 +85337,25 @@ Q
 }
 
 STRING 13976
-// Units: H09H (Blitz Captain of the Pride Troopers), Awakentip (Tooltip - Awaken)
+// Units: H09H (Captain of the Pride Troopers), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00E|r] Choose Dyspo
 }
 
 STRING 13977
-// Units: H09H (Blitz Captain of the Pride Troopers), Ubertip (Tooltip - Extended)
+// Items: I046 (Sorbet's Ring), Description (Description)
 {
-A high-mobility hero that is capable of dodging almost every ability thrown at him, but suffers from having almost no long range nukes. Relies heavily on balancing his mobility usage to both deal damage and protect himself.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-|cff808080"Fastest in the multiverse!"|r
+|cffffff00Fires a high powered laser at the enemy stunning them and dealing damage. If the enemy is reverted they will take massive bonus damage. Instantly kills creeps.|r|n|cff00ff00Stun: 0.5s|nDamage: 8% of Max HP (75% if summoned)|nBonus Damage: 80% of Current HP if at 1.0x mult|r|n|cff00ffffCooldown: 60s|r
 }
 
 STRING 13978
-// Units: H09H (Blitz Captain of the Pride Troopers), Tip (Tooltip - Basic)
+// Units: H09H (Captain of the Pride Troopers), Tip (Tooltip - Basic)
 {
 [|cffffff00E|r] Choose Dyspo
 }
 
 STRING 13979
-// Units: H09H (Blitz Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85501,6 +85574,18 @@ STRING 14015
 // Abilities: A0QT (Dragon Thunder Slow Debuff), Tip (Tooltip - Normal)
 {
 Dragon Thunder Slow
+}
+
+STRING 14016
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool3> seconds|r
 }
 
 STRING 14017
@@ -85745,6 +85830,78 @@ STRING 14055
 Dyspo dashes next to his opponent before firing a point-blank energy wave for maximum damage.|n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0QX,Cool2> seconds|r
 }
 
+STRING 14056
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool4> seconds|r
+}
+
+STRING 14057
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool5> seconds|r
+}
+
+STRING 14058
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool6> seconds|r
+}
+
+STRING 14059
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool7> seconds|r
+}
+
+STRING 14060
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool8> seconds|r
+}
+
+STRING 14061
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool9> seconds|r
+}
+
 STRING 14062
 // Abilities: A0QY (Light Bullet), Tip (Tooltip - Normal)
 {
@@ -85793,12 +85950,6 @@ STRING 14069
 Light Bullet
 }
 
-STRING 14070
-// Abilities: A0QY (Light Bullet), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00Q|r] Learn Death Beam - [|cffffcc00Level %d|r]
-}
-
 STRING 14071
 // Abilities: A0QY (Light Bullet), Tip (Tooltip - Normal)
 {
@@ -85817,10 +85968,54 @@ STRING 14073
 [|cff00ff00Q|r] Light Bullet - [|cffffcc00Level 10|r]
 }
 
+STRING 14074
+// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
+|cffffff00Justice Kick: +200% dmg, +knockback
+Justice Cannon: +100% dmg in melee range
+Circle Flash: +25% dmg, applies root|r
+|cff00ff00Duration: 15s
+Spell Amp: +2% per second up to +10%|r
+|cff00ffffCooldown: <A0R2,Cool10> seconds|r
+}
+
+STRING 14075
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
+}
+
+STRING 14076
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool2> seconds|r
+}
+
+STRING 14077
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool3> seconds|r
+}
+
 STRING 14078
 // Abilities: A0QY (Light Bullet), EditorSuffix (Editor Suffix)
 {
 (dyspo)
+}
+
+STRING 14079
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool4> seconds|r
 }
 
 STRING 14080
@@ -85836,7 +86031,7 @@ STRING 14081
 }
 
 STRING 14082
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0R3 (Justice Kick 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
 }
@@ -85860,9 +86055,9 @@ STRING 14085
 }
 
 STRING 14086
-// Abilities: A0QZ (Justice Kick), Researchubertip (Tooltip - Learn - Extended)
+// Items: I046 (Sorbet's Ring), Ubertip (Tooltip - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
+|cffffff00Fires a high powered laser at the enemy stunning them and dealing damage. If the enemy is reverted they will take massive bonus damage. Instantly kills creeps.|r|n|cff00ff00Stun: 0.5s|nDamage: 8% of Max HP (75% if summoned)|nBonus Damage: 80% of Current HP if at 1.0x mult|r|n|cff00ffffCooldown: 60s|r
 }
 
 STRING 14087
@@ -85896,33 +86091,66 @@ STRING 14091
 }
 
 STRING 14092
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H085 (Daughter of Hercule), Ubertip (Tooltip - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool2> seconds|r
+A close-ranged melee specialist that can deal devastating amounts of damage if she can stay next to her target. Starts with 1 extra skill point.
+
+|cffffcc00Budokai Champion:|r +50% stats from tournaments.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 14093
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H08U (Mid-Class Saiyan Warrior), Ubertip (Tooltip - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool3> seconds|r
+A strong early-game hero that relies heavily on his teammates to protect him while he spams beams. Has a unique ability to refresh the cooldowns of his beams. Starts with 1 bonus skill point.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 14094
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H099 (Karinga Tribe Warrior), Ubertip (Tooltip - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool4> seconds|r
+A powerful close-range brawler that excels in outmaneuvering his opponents before finishing them off. Upon unlocking Upa's Rage, he becomes a combo-oriented hero that relies heavily on timing his spell usage to work with his powerful auto-attacks.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 14095
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H09H (Captain of the Pride Troopers), Name (Name)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool5> seconds|r
+Captain of the Pride Troopers
 }
 
 STRING 14096
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H09H (Captain of the Pride Troopers), Ubertip (Tooltip - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool6> seconds|r
+A high-mobility hero that is capable of dodging almost any ability thrown at him, but suffers from having very few options when fighting at a distance. Relies heavily on his high mobility to both deal damage and avoid damage.
+
+|cff00ffffLightning Reflexes:|r +20% Evasion.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+|cff808080"Fastest in the multiverse!"|r
 }
 
 STRING 14097
@@ -85932,27 +86160,27 @@ STRING 14097
 }
 
 STRING 14098
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0R7 (Dyspo Passive Evasion), Name (Name)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool7> seconds|r
+Dyspo Passive Evasion
 }
 
 STRING 14099
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0R7 (Dyspo Passive Evasion), EditorSuffix (Editor Suffix)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool8> seconds|r
+(Dyspo)
 }
 
 STRING 14100
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0R8 (Book Dyspo Evasion), Name (Name)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool9> seconds|r
+Book Dyspo Evasion
 }
 
 STRING 14101
-// Abilities: A0QZ (Justice Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool10> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 14102
@@ -86075,6 +86303,14 @@ STRING 14121
 Circle Flash
 }
 
+STRING 14122
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool5> seconds|r
+}
+
 STRING 14123
 // Abilities: A0R0 (Circle Flash), Hotkey (Hotkey - Normal)
 {
@@ -86135,6 +86371,14 @@ STRING 14132
 Super Maximum Light Speed Mode
 }
 
+STRING 14133
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool6> seconds|r
+}
+
 STRING 14134
 // Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
@@ -86165,10 +86409,26 @@ STRING 14138
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 1|r]
 }
 
+STRING 14139
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool7> seconds|r
+}
+
 STRING 14140
 // Abilities: A0R2 (Justice Pose), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Justice Pose - [|cffffcc00Level %d|r]
+}
+
+STRING 14141
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool8> seconds|r
 }
 
 STRING 14142
@@ -86193,6 +86453,22 @@ STRING 14145
 // Abilities: A0R2 (Justice Pose), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Justice Pose - [|cffffcc00Level 3|r]
+}
+
+STRING 14146
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool9> seconds|r
+}
+
+STRING 14147
+// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+{
+Dypso's signature flying kick.
+|cffffff20Auto-attacks trigger a jumping version of this ability on a 1s CD.
+|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool10> seconds|r
 }
 
 STRING 14148
@@ -86328,9 +86604,9 @@ STRING 14176
 }
 
 STRING 14177
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
 }
 
 STRING 14178
@@ -86352,9 +86628,9 @@ STRING 14180
 }
 
 STRING 14181
-// Abilities: A0R3 (Justice Kick 2), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool1> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
 }
 
 STRING 14182
@@ -86388,33 +86664,33 @@ STRING 14186
 }
 
 STRING 14187
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool2> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
 }
 
 STRING 14188
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool3> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
 }
 
 STRING 14189
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool4> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
 }
 
 STRING 14190
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Researchtip (Tooltip - Learn)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool5> seconds|r
+[|cff00ff00Q|r] Learn Light Bullet - [|cffffcc00Level %d|r]
 }
 
 STRING 14191
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool6> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
 }
 
 STRING 14192
@@ -86424,27 +86700,27 @@ STRING 14192
 }
 
 STRING 14193
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool7> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
 }
 
 STRING 14194
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool8> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
 }
 
 STRING 14195
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool9> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
 }
 
 STRING 14196
-// Abilities: A0R3 (Justice Kick 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
 {
-Dypso's signature flying kick. |n|cff00ff00Damage: Lvl x Agi x ?|r|n|cff00ffffCooldown: <A0QZ,Cool10> seconds|r
+Dyspo dashes in a single direction, a thousand times faster than usual.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Lvl * Agi * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
 }
 
 STRING 14197
@@ -86812,211 +87088,13 @@ STRING 14259
 |cffffff200|r
 }
 
-STRING 14260
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
-}
-
-STRING 14261
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool3> seconds|r
-}
-
-STRING 14262
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool4> seconds|r
-}
-
-STRING 14263
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool5> seconds|r
-}
-
-STRING 14264
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool6> seconds|r
-}
-
-STRING 14265
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool7> seconds|r
-}
-
-STRING 14266
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool8> seconds|r
-}
-
-STRING 14267
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool9> seconds|r
-}
-
-STRING 14268
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool10> seconds|r
-}
-
-STRING 14269
-// Abilities: A0QY (Light Bullet), Researchubertip (Tooltip - Learn - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool1> seconds|r
-}
-
-STRING 14270
-// Abilities: A0QY (Light Bullet), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo runs thousands of times faster in a single direction.|n|cff2080ffMana Cost: 40% of Max Mana|r|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0QY,Cool2> seconds|r
-}
-
-STRING 14271
+STRING 14285
 // Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo pushes his body beyond its limits, upgrades his spells for +4 additional uses.
+Dyspo pushes his body beyond its limits, upgrades his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
 |cffffff00+0.60x Agi multiplier.
 +330ms and unlocks movement speed cap.
 Automatically dodges incoming beams.|r
 |cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
-}
-
-STRING 14272
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool1> seconds|r
-}
-
-STRING 14273
-// Abilities: A0R2 (Justice Pose), Researchubertip (Tooltip - Learn - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool1> - <A0R2,Cool10> seconds|r
-}
-
-STRING 14274
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool2> seconds|r
-}
-
-STRING 14275
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool3> seconds|r
-}
-
-STRING 14276
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool4> seconds|r
-}
-
-STRING 14277
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool5> seconds|r
-}
-
-STRING 14278
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool6> seconds|r
-}
-
-STRING 14279
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool7> seconds|r
-}
-
-STRING 14280
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool8> seconds|r
-}
-
-STRING 14281
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool9> seconds|r
-}
-
-STRING 14282
-// Abilities: A0R2 (Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Dyspo swiftly poses for Justice, upgrading his abilities for +1 use.
-|cffffff00Justice Kick: +300% dmg, +knockback
-Justice Cannon: +100% dmg in melee range
-Circle Flash: +25% dmg, applies root|r
-|cff00ff00Duration: 15s
-Spell Amp: +2% per second up to +10%|r
-|cff00ffffCooldown: <A0R2,Cool10> seconds|r
 }
 

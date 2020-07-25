@@ -2029,35 +2029,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 16,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNDyspoJusticeKick.blp",
-      disabled: "BTNDyspoJusticeKick.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Dyspo.JUSTICE_KICK,
-      body: 
-        AbilityNames.Dyspo.JUSTICE_KICK
-    },
-    components: [
-      { name: "dash ground forward justice kick" },
-      { name: "damage justice kick explosion" },
-      { name: "jump justice kick" },
-      { name: "sfx justice kick" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.Dyspo.JUSTICE_KICK_2,
     currentCd: 0,
     maxCd: 1,
@@ -2087,12 +2058,41 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeKick.blp",
+      disabled: "BTNDyspoJusticeKick.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_KICK,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_KICK
+    },
+    components: [
+      { name: "dash ground forward justice kick" },
+      { name: "damage justice kick on hit explosion" },
+      { name: "jump justice kick on hit" },
+      { name: "sfx justice kick on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Dyspo.JUSTICE_CANNON,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 20,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2118,7 +2118,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 20,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2212,8 +2212,8 @@ export const AbilitiesList = [
         AbilityNames.Dyspo.JUSTICE_POSE
     },
     components: [
-      { name: "spell amp justice pose toppo" },
-      { name: "sfx justice pose toppo" },
+      { name: "spell amp justice pose dyspo" },
+      { name: "sfx justice pose dyspo" },
     ],
   },
   // -------------------------------------------

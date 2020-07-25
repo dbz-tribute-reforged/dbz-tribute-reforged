@@ -370,8 +370,8 @@ export class DragonBallsManager {
     )
     
     TimerStart(CreateTimer(), DragonBallsConstants.shenronDelay, false, () => {
-      SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
-      SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
+      // SetUnitX(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.x);
+      // SetUnitY(this.dummyShenron, DragonBallsConstants.shenronWaitingRoom.y);
       
       SetUnitX(this.shenron, x);
       SetUnitY(this.shenron, y);
@@ -381,11 +381,11 @@ export class DragonBallsManager {
         15,
         "|cffffcc00Shenron|r: Speak your wish and I shall grant it.|r" 
       );
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS,
-        15,
-        "|cffb0b0b0(KNOWN BUG: Type -shenron to select shenron if you can't click him.|r"
-      );
+      // DisplayTimedTextToForce(
+      //   bj_FORCE_ALL_PLAYERS,
+      //   15,
+      //   "|cffb0b0b0(KNOWN BUG: Type -shenron to select shenron if you can't click him.|r"
+      // );
       // enable wish stuff
       EnableTrigger(this.wishTrigger);
       ShowUnitShow(this.shenron);

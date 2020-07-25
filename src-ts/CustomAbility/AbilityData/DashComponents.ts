@@ -380,7 +380,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 22,
   },
   // last stand
   {
@@ -483,7 +483,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 45,
   },
   // justice kick
   {
@@ -518,7 +518,7 @@ export const DashComponents = [
     endTick: -1,    
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: false,
+    checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 10,
