@@ -47,6 +47,21 @@ export const DodgeComponents = [
     ignoreHeroes: false,
   },
   {
+    name: "dodge super maximum light speed mode",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    groundOnly: true,
+    knockbackData: {
+      speed: 20, 
+      angle: 120, 
+      aoe: 450,
+    },
+    maxEnemies: 2,
+    addRandomAngle: true,
+    ignoreHeroes: true,
+  },
+  {
     name: "dodge homing beam",
     repeatInterval: 1, 
     startTick: 0,

@@ -3,8 +3,9 @@ import { Constants } from "Common/Constants";
 import { ItemConstants } from "./ItemConstants";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
-import { itemAbilityConfig } from "./ItemAbility/ItemAbilityConfig";
 import { TournamentManager } from "Core/TournamentSystem/TournamentManager";
+import { itemActiveAbilityConfig } from "./ItemActiveAbilitiesConfig";
+import { itemPassiveAbilityConfig } from "./ItemPassiveAbilitiesConfig";
 
 export class ItemAbilityManager {
   static instance: ItemAbilityManager;
@@ -14,7 +15,6 @@ export class ItemAbilityManager {
   protected itemActiveAbilityTrigger: trigger;
   protected itemPassiveAbilityTrigger: trigger;
   protected itemFinalBattleTrigger: trigger;
-
 
   constructor (
   ) {
@@ -153,9 +153,9 @@ export class ItemAbilityManager {
     TriggerAddCondition(
       this.itemActiveAbilityTrigger,
       Condition(() => {
-        const itemAbility = itemAbilityConfig.get(GetSpellAbilityId());
+        const itemAbility = itemActiveAbilityConfig.get(GetSpellAbilityId());
         if (itemAbility) {
-          itemAbility.performTriggerAction();
+          itemAbility();
         }
         return false;
       })
@@ -175,9 +175,9 @@ export class ItemAbilityManager {
     TriggerAddCondition(
       this.itemPassiveAbilityTrigger,
       Condition(() => {
-        const itemAbility = itemAbilityConfig.get(GetItemTypeId(GetManipulatedItem()));
+        const itemAbility = itemPassiveAbilityConfig.get(GetItemTypeId(GetManipulatedItem()));
         if (itemAbility) {
-          itemAbility.performTriggerAction();
+          itemAbility();
         }
         return false;
       })

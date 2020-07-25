@@ -649,4 +649,36 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // justice kick 2
+  {
+    name: "knockback justice kick 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 6,
+    knockbackData: {
+      speed: 15, 
+      angle: 0, 
+      aoe: 350,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // circle flash
+  {
+    name: "knockback circle flash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
+      angle: 180, 
+      aoe: 350,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

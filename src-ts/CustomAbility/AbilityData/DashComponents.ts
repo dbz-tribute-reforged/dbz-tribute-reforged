@@ -472,6 +472,57 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
+  // light bullet
+  {
+    name: "dash ground point light bullet",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
+  },
+  // justice kick
+  {
+    name: "dash ground forward justice kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 10,
+  },
+  {
+    name: "dash ground forward justice kick 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 15,
+  },
+  // super max
+  {
+    name: "dash ground forward super maximum light speed mode",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 10,
+  },
   // ----------------------------
   // cell-x
   {
