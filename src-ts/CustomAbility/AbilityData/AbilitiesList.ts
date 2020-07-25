@@ -1941,7 +1941,7 @@ export const AbilitiesList = [
     components: [
       { name: "spell amp justice pose toppo" },
       { name: "temp ability disable god of destruction toppo" },
-      { name: "sfx justice pose" },
+      { name: "sfx justice pose toppo" },
     ],
   },
   // -------------------------------------------
@@ -1969,6 +1969,279 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward god of destruction toppo" },
       { name: "sfx god of destruction toppo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.LIGHT_BULLET,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoLightBullet.blp",
+      disabled: "BTNDyspoLightBullet.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.LIGHT_BULLET,
+      body: 
+        AbilityNames.Dyspo.LIGHT_BULLET
+    },
+    components: [
+      { name: "dash ground point light bullet" },
+      { name: "damage light bullet explosion" },
+      { name: "sfx light bullet" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeKick.blp",
+      disabled: "BTNDyspoJusticeKick.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_KICK,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_KICK
+    },
+    components: [
+      { name: "dash ground forward justice kick" },
+      { name: "damage justice kick explosion" },
+      { name: "sfx justice kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_KICK_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeKick2.blp",
+      disabled: "BTNDyspoJusticeKick2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_KICK_2,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_KICK_2
+    },
+    components: [
+      { name: "dash ground forward justice kick 2" },
+      { name: "damage justice kick 2 explosion" },
+      { name: "knockback justice kick 2" },
+      { name: "sfx justice kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeKick.blp",
+      disabled: "BTNDyspoJusticeKick.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_KICK,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_KICK
+    },
+    components: [
+      { name: "dash ground forward justice kick" },
+      { name: "damage justice kick on hit explosion" },
+      { name: "jump justice kick on hit" },
+      { name: "sfx justice kick on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeCannon.blp",
+      disabled: "BTNDyspoJusticeCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_CANNON,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_CANNON
+    },
+    components: [
+      { name: "beam justice cannon"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_CANNON_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 20,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticeCannon2.blp",
+      disabled: "BTNDyspoJusticeCannon2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_CANNON_2,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_CANNON_2
+    },
+    components: [
+      { name: "beam justice cannon 2"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.CIRCLE_FLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 48,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoCircleFlash.blp",
+      disabled: "BTNDyspoCircleFlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.CIRCLE_FLASH,
+      body: 
+        AbilityNames.Dyspo.CIRCLE_FLASH
+    },
+    components: [
+      { name: "beam circle flash"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.CIRCLE_FLASH_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 48,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoCircleFlash2.blp",
+      disabled: "BTNDyspoCircleFlash2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.CIRCLE_FLASH_2,
+      body: 
+        AbilityNames.Dyspo.CIRCLE_FLASH_2
+    },
+    components: [
+      { name: "beam circle flash 2"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.JUSTICE_POSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 495,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoJusticePose.blp",
+      disabled: "BTNDyspoJusticePose.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.JUSTICE_POSE,
+      body: 
+        AbilityNames.Dyspo.JUSTICE_POSE
+    },
+    components: [
+      { name: "spell amp justice pose dyspo" },
+      { name: "sfx justice pose dyspo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 999,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDyspoSuperMax.blp",
+      disabled: "BTNDyspoSuperMax.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
+      body: 
+        AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE
+    },
+    components: [
+      { name: "dash ground forward super maximum light speed mode" },
+      { name: "temp ability disable light bullet" },
+      { name: "sfx super maximum light speed mode" },
     ],
   },
   // -------------------------------------------

@@ -1840,6 +1840,17 @@ export module Id {
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
 
+  export const dyspo = FourCC("H09H");
+  export const lightBullet = FourCC("A0QY");
+  export const justiceKick = FourCC("A0QZ");
+  export const justiceKick2 = FourCC("A0R3");
+  export const justiceCannon = FourCC("A0QX");
+  export const justiceCannon2 = FourCC("A0R4");
+  export const circleFlash = FourCC("A0R0");
+  export const circleFlash2 = FourCC("A0R5");
+  export const justicePoseDyspo = FourCC("A0R2");
+  export const superMaximumLightSpeedMode = FourCC("A0R1");
+
   export const metalCooler = FourCC("H01A");
   export const fourthCooler = FourCC("H042");
   export const fifthCooler = FourCC("H043");
@@ -1977,7 +1988,13 @@ export module Id {
   export const justiceTornado2 = FourCC("A0PL");
   export const justiceHold = FourCC("A0PE");
   export const justiceHold2 = FourCC("A0PM");
-  export const justicePose = FourCC("A0PF");
+  export const justicePoseToppo = FourCC("A0PF");
+
+  export const upa = FourCC("H099");
+  export const javelinThrow = FourCC("A0OH");
+  export const whirlwindTempest = FourCC("A0OI");
+  export const korinFlag = FourCC("A0OJ");
+  export const lastStand = FourCC("A0OK");
 
   export const vegeta = FourCC("E003");
   export const galickGun = FourCC("A03N");
@@ -2285,7 +2302,59 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         playSoundOnUnit(unit, "Audio/Voice/CoolerMetalTakeThis.mp3", 960);
       }
       break;
-      
+    
+    // dyspo
+    case Id.lightBullet:
+      if (unitId == Id.dyspo) {
+        if (rng < 95) {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoHyperSpeed.mp3", 835);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoYoullNeverHitMe.mp3", 2690);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/Zanzo.mp3", 1149);
+      break;
+
+    case Id.justiceKick:
+    case Id.justiceKick2:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+
+    case Id.justiceCannon:
+    case Id.justiceCannon2:
+      if (unitId == Id.dyspo) {
+        if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoWhyYou.mp3", 992);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoYoureThrough.mp3", 966);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/FinishBuster.mp3", 1593);
+      break;
+
+    case Id.circleFlash:
+    case Id.circleFlash2:
+      if (unitId == Id.dyspo) {
+        playSoundOnUnit(unit, "Audio/Voice/DyspoCircleFlash.mp3", 1671);
+      }
+      break;
+
+    case Id.justicePoseDyspo:
+      if (unitId == Id.dyspo) {
+        playSoundOnUnit(unit, "Audio/Voice/DyspoHammerOfJustice.mp3", 2377);
+      }
+      break;
+
+    case Id.superMaximumLightSpeedMode:
+      if (unitId == Id.dyspo) {
+        if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoGoEvenFaster.mp3", 2037);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/DyspoRampUpMyOwnSpeed.mp3", 3343);
+        }
+      }
+      break;
+    
     // eis shenron
     case Id.frostClaws:
       // playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);
@@ -2810,7 +2879,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       }
       break;
 
-    case Id.justicePose:
+    case Id.justicePoseToppo:
       if (unitId == Id.toppo) {
         playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePose.mp3", 1410);
       }
@@ -2819,6 +2888,18 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       }
       break;
     
+    // upa
+    case Id.javelinThrow:
+      break;
+
+    case Id.whirlwindTempest:
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+      break;
+
+    case Id.korinFlag:
+    case Id.lastStand:
+      break;
+
     // vegeta
     case Id.galickGun:
       if (unitId == Id.vegeta) {

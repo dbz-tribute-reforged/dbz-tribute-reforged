@@ -164,6 +164,21 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Toppo.GOD_OF_DESTRUCTION, 
     ]],
 
+    // dyspo
+    [FourCC("H09H"), [
+      AbilityNames.Dyspo.LIGHT_BULLET,
+      AbilityNames.Dyspo.JUSTICE_KICK,
+      AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT,
+      AbilityNames.Dyspo.JUSTICE_KICK_2,
+      AbilityNames.Dyspo.JUSTICE_CANNON,
+      AbilityNames.Dyspo.JUSTICE_CANNON_2,
+      AbilityNames.Dyspo.CIRCLE_FLASH,
+      AbilityNames.Dyspo.CIRCLE_FLASH_2,
+      AbilityNames.Dyspo.JUSTICE_POSE,
+      AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
+    ]],
+
+
 
     // androids 13 14 15
     [FourCC("H01V"), [
@@ -227,6 +242,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Tapion.BRAVE_SLASH, AbilityNames.Tapion.BRAVE_CANNON,
       AbilityNames.Toppo.JUSTICE_FLASH, AbilityNames.Toppo.JUSTICE_FLASH_2, AbilityNames.Toppo.GOD_OF_DESTRUCTION,
+      AbilityNames.Dyspo.LIGHT_BULLET, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

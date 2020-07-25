@@ -115,8 +115,21 @@ export module AbilityNames {
     export const JUSTICE_HOLD_2 = "Justice Hold 2";
     export const JUSTICE_TORNADO = "Justice Tornado";
     export const JUSTICE_TORNADO_2 = "Justice Tornado 2";
-    export const JUSTICE_POSE = "Justice Pose";
+    export const JUSTICE_POSE = "Justice Pose T";
     export const GOD_OF_DESTRUCTION = "God of Destruction Toppo";
+  }
+
+  export module Dyspo {
+    export const LIGHT_BULLET = "Light Bullet";
+    export const JUSTICE_KICK = "Justice Kick";
+    export const JUSTICE_KICK_ON_HIT = "Justice Kick!";
+    export const JUSTICE_KICK_2 = "Justice Kick 2";
+    export const JUSTICE_CANNON = "Justice Cannon";
+    export const JUSTICE_CANNON_2 = "Justice Cannon 2";
+    export const CIRCLE_FLASH = "Circle Flash";
+    export const CIRCLE_FLASH_2 = "Circle Flash 2";
+    export const JUSTICE_POSE = "Justice Pose D";
+    export const SUPER_MAXIMUM_LIGHT_SPEED_MODE = "Super Maximum Light Speed Mode";
   }
 
 

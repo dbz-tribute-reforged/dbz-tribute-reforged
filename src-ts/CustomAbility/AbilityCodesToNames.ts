@@ -106,6 +106,17 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0PF'), AbilityNames.Toppo.JUSTICE_POSE],
     [FourCC('A0PC'), AbilityNames.Toppo.GOD_OF_DESTRUCTION],
 
+    // dyspo
+    [FourCC('A0QY'), AbilityNames.Dyspo.LIGHT_BULLET],
+    [FourCC('A0QZ'), AbilityNames.Dyspo.JUSTICE_KICK],
+    [FourCC('A0QX'), AbilityNames.Dyspo.JUSTICE_CANNON],
+    [FourCC('A0R0'), AbilityNames.Dyspo.CIRCLE_FLASH],
+    [FourCC('A0R2'), AbilityNames.Dyspo.JUSTICE_POSE],
+    [FourCC('A0R1'), AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE],
+    [FourCC('A0R3'), AbilityNames.Dyspo.JUSTICE_KICK_2],
+    [FourCC('A0R4'), AbilityNames.Dyspo.JUSTICE_CANNON_2],
+    [FourCC('A0R5'), AbilityNames.Dyspo.CIRCLE_FLASH_2],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

@@ -139,4 +139,18 @@ export const TempAbilityComponents = [
     tempPermanence: true,
     equalizeLevels: true,
   },
+  {
+    name: "temp ability disable light bullet", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0QY"),
+    oldAbility: 0,
+    performSwap: false,
+    enableAbility: false,
+    disableAbility: true,
+    addAbility: false,
+    tempPermanence: true,
+    equalizeLevels: false,
+  },
 ];

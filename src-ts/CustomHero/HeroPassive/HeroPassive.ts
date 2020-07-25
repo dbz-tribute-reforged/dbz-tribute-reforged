@@ -16,6 +16,9 @@ export module HeroPassiveData {
   export const TAPION_STYLE = FourCC("A0ID");
   export const HEROS_SONG = FourCC("B01H");
   export const TAPION_MANA_BURN_PERCENT = 0.001;
+
+  export const DYSPO = FourCC("H09H");
+  export const JUSTICE_KICK_ABILITY = FourCC("A0QZ");
 }
 
 export interface HeroPassive {
@@ -57,6 +60,8 @@ export class HeroPassiveManager {
         break;
       case HeroPassiveData.TAPION:
         tapionPassive(customHero);
+      case HeroPassiveData.DYSPO:
+        dyspoPassive(customHero);
       default:
         break;
     }
@@ -189,3 +194,65 @@ export function tapionPassive(customHero: CustomHero) {
     })
   );
 }
+
+
+export function dyspoPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+  const player = GetOwningPlayer(customHero.unit);
+  const onHitTrigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  )
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == player
+      ) {
+        const justiceKickLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.JUSTICE_KICK_ABILITY);
+        // const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
+        if (justiceKickLevel > 0) {
+          const target = GetTriggerUnit();
+          const targetPos = new Vector2D(GetUnitX(target), GetUnitY(target));
+          let onHitName = AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT;
+          let onHitAbility = HeroPassiveData.JUSTICE_KICK_ABILITY;
+          // if (devilClawLevel > 0) {
+          //   onHitName = AbilityNames.SuperJanemba.DEVIL_CLAW_ON_HIT;
+          //   onHitAbility = HeroPassiveData.DEVIL_CLAW_ABILITY;
+          // }
+          const input = new CustomAbilityInput(
+            customHero, 
+            GetOwningPlayer(customHero.unit),
+            GetUnitAbilityLevel(customHero.unit, onHitAbility),
+            targetPos,
+            targetPos,
+            targetPos,
+            target,
+            target,
+          );
+          
+          if (customHero.canCastAbility(onHitName, input)) {
+            // TextTagHelper.showPlayerColorTextOnUnit(
+            //   onHitName, 
+            //   GetPlayerId(GetOwningPlayer(customHero.unit)), 
+            //   customHero.unit
+            // );
+            SetUnitAnimation(customHero.unit, "spell slam");
+            TimerStart(CreateTimer(), 0.5, false, () => {
+              ResetUnitAnimation(customHero.unit);
+            });
+            customHero.useAbility(
+              onHitName,
+              input
+            )
+          }
+        }
+      }
+      return false;
+    })
+  );
+}
+
