@@ -117,6 +117,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0R4'), AbilityNames.Dyspo.JUSTICE_CANNON_2],
     [FourCC('A0R5'), AbilityNames.Dyspo.CIRCLE_FLASH_2],
 
+    // krillin
+    [FourCC('A0R9'), AbilityNames.Krillin.SCATTERING_BULLET],
+    [FourCC('A0RA'), AbilityNames.Krillin.DESTRUCTO_DISC],
+    [FourCC('A0RB'), AbilityNames.Krillin.SENZU_THROW],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

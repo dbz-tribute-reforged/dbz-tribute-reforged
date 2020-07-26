@@ -1169,6 +1169,7 @@ export function CustomPlayerTest() {
   SetupGinyuChangeNow(customPlayers);
   SetupGinyuTelekinesis(customPlayers);
   SetupOmegaShenronShadowFist(customPlayers);
+  SetupKrillinSenzuThrow(customPlayers);
   SetupSpellSoundEffects();
 }
 
@@ -1756,6 +1757,88 @@ export function SetupOmegaShenronShadowFist(customPlayers: CustomPlayer[]) {
 
 }
 
+
+export function SetupKrillinSenzuThrow(customPlayers: CustomPlayer[]) {
+  const senzuThrowDuration = 40;
+  const senzuThrowSpeed = 49;
+  const senzuThrowStealMinDuration = 10;
+  const senzuThrowStealAOE = 300;
+  const senzuItemId = FourCC("I000");
+  const senzuThrowAbility = FourCC("A0RB");
+
+  const trigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == senzuThrowAbility) {
+      const caster = GetTriggerUnit();
+      const casterPlayer = GetTriggerPlayer();
+      // const casterPlayerId = GetPlayerId(casterPlayer);
+      const casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
+      const newPos = new Vector2D(casterPos.x, casterPos.y);
+      const senzuItem = CreateItem(senzuItemId, casterPos.x, casterPos.y);
+      const direction = CoordMath.angleBetweenCoords(casterPos, targetPos);
+
+      let counter: number = 0;
+      TimerStart(CreateTimer(), 0.03, true, () => {
+        if (
+          counter >= senzuThrowDuration
+        ) {
+          DestroyTimer(GetExpiredTimer());
+        } else {
+          if (counter < senzuThrowDuration) {
+            newPos.polarProjectCoords(
+              newPos,
+              direction,
+              senzuThrowSpeed
+            );
+
+            if (PathingCheck.isGroundWalkable(newPos)) {
+              SetItemPosition(senzuItem, newPos.x, newPos.y);
+            } else {
+              newPos.x = GetItemX(senzuItem);
+              newPos.y = GetItemY(senzuItem);
+            }
+          }
+          
+          if (counter > senzuThrowStealMinDuration) {
+            const beanStealUnits = UnitHelper.getNearbyValidUnits(newPos, senzuThrowStealAOE, () => {
+              const testUnit = GetFilterUnit();
+              const playerId = GetPlayerId(GetOwningPlayer(testUnit));
+              return (
+                IsUnitType(testUnit, UNIT_TYPE_HERO) && 
+                playerId < Constants.maxActivePlayers &&
+                !UnitHelper.isUnitDead(testUnit) &&
+                !UnitHelper.isUnitStunned(testUnit) &&
+                !IsUnitType(testUnit, UNIT_TYPE_ETHEREAL)
+              )
+            });
+  
+            ForGroup(beanStealUnits, () => {
+              const targetUnit = GetEnumUnit();
+              if (
+                counter < senzuThrowDuration && 
+                UnitInventoryCount(targetUnit) < UnitInventorySize(targetUnit)
+              ) {
+                UnitAddItem(targetUnit, senzuItem);
+                counter = senzuThrowDuration;
+              }
+            });
+            
+            DestroyGroup(beanStealUnits);
+          }
+
+          ++counter;
+        }
+      });
+    }
+
+    return false;
+  }));
+}
+
+
 export function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
   udg_TempSound = CreateSound(soundFile, false, true, false, 1, 1, "SpellsEAX")
 	SetSoundDuration(udg_TempSound, duration)
@@ -1782,6 +1865,8 @@ export function SetupSpellSoundEffects() {
 }
 
 export module Id {
+  export const summonShenron = FourCC("I01V");
+
   export const android13 = FourCC("H01V");
   export const android14 = FourCC("H01S");
   export const android15 = FourCC("H01T");
@@ -1931,6 +2016,11 @@ export module Id {
   export const hellsGate = FourCC("A0O3");
   export const lightningShowerRain = FourCC("A0O4");
 
+  export const krillin = FourCC("H03Y");
+  export const scatteringBullet = FourCC("A0R9");
+  export const destructoDisc = FourCC("A0RA");
+  export const senzuThrow = FourCC("A0RB");
+
   export const kkr = FourCC("E01D");
   export const bellyArmor = FourCC("A0OT");
   export const krownToss = FourCC("A0IV");
@@ -2040,6 +2130,13 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
 
 
   switch (spellId) {
+    case Id.summonShenron:
+      if (unitId == Id.krillin) {
+        if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinSummonIt.mp3", 1992);
+        }
+      }
+      break;
     // android 13
     case Id.android13EnergyBeam:
       if (unitId == Id.android13) {
@@ -2560,6 +2657,8 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         if (rng < 10) {
           playSoundOnUnit(unit, "Audio/Voice/CellFirstImitation.mp3", 2808);
         }
+      } else if (unitId == Id.krillin) {
+        playSoundOnUnit(unit, "Audio/Voice/KrillinTakeThis.mp3", 1272);
       }
       playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
       break;
@@ -2579,6 +2678,12 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         playSoundOnUnit(unit, "Audio/Voice/CellFirstSolarFlare.mp3", 1671);
       } else if (unitId == Id.cellSemi) {
         playSoundOnUnit(unit, "Audio/Voice/CellSemiSolarFlare.mp3", 2455);
+      } else if (unitId == Id.krillin) {
+        if (rng < 80) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinUltimateTechnique.mp3", 2304);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinSolarFlare.mp3", 4922);
+        }
       }
       break;
     
@@ -2651,6 +2756,41 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       }
       break;
     
+    // krillin
+    case Id.scatteringBullet:
+      if (unitId == Id.krillin) {
+        if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinLimitBreak.mp3", 3240);
+        } else if (rng < 8) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinUltimateTechnique.mp3", 2304);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/GenericBeam3.mp3", 9822);
+      break;
+    
+    case Id.destructoDisc:
+      if (unitId == Id.krillin) {
+        if (rng < 70) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinDestructoDisc.mp3", 1824);
+        } else if (rng < 97) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinKienzan.mp3", 1152);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinUltimateTechnique.mp3", 2304);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/DestructoDisc.mp3", 3317);
+      break;
+    
+    case Id.senzuThrow:
+      if (unitId == Id.krillin) {
+        if (rng < 60) {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinSenzuBean1.mp3", 1632);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/KrillinSenzuBean2.mp3", 1487);
+        }
+      }
+      break;
+
     // king k rool kkr
     case Id.bellyArmor:
       playSoundOnUnit(unit, "Audio/Effects/KKRBellyArmor.mp3", 552);

@@ -132,6 +132,13 @@ export module AbilityNames {
     export const SUPER_MAXIMUM_LIGHT_SPEED_MODE = "Super Maximum Light Speed Mode";
   }
 
+  export module Krillin {
+    export const KAMEHAMEHA: string = Goku.KAMEHAMEHA;
+    export const SCATTERING_BULLET: string = "Scattering Bullet";
+    export const DESTRUCTO_DISC: string = "Destructo Disc";
+    export const SENZU_THROW: string = "Senzu Bean!";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

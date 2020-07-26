@@ -54,6 +54,7 @@ export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
 
   public components: Map<string, AbilityComponent>;
+  public addableComponents: Map<string, AddableComponent>;
   public abilities: Map<string, CustomAbility>;
 
   public static getInstance() {
@@ -67,6 +68,7 @@ export class CustomAbilityManager {
   constructor() {
     this.abilities = new Map();
     this.components = new Map();
+    this.addableComponents = new Map();
 
     // load sfx components first
     for (const component of SfxComponents) {
@@ -166,31 +168,58 @@ export class CustomAbilityManager {
     // load beam components after all other singular components
     for (const beam of BeamComponents) {
       const beamComponent = new BeamComponent().deserialize(beam);
-      this.addableComponentAddComponent(beamComponent, beam.components, 1);
+      // this.setupAddableComponent(beamComponent, beam.components, 1);
       this.setComponent(beamComponent);
+      this.setAddableComponent(beamComponent.name, beamComponent);
     }
 
     // load aoe applyable components after
     for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
       const aoeApplyComponent = new AOEApplyComponent().deserialize(aoeApplyComponentConfig);
-      this.addableComponentAddComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
+      // this.initializeAddableComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
       this.setComponent(aoeApplyComponent);
+      this.setAddableComponent(aoeApplyComponent.name, aoeApplyComponent);
     } 
 
     // load multi components after all other components
     for (const multi of MultiComponents) {
       const multiComponent = new MultiComponent().deserialize(multi);
-      this.addableComponentAddComponent(multiComponent, multi.components, multiComponent.multiplyComponents);
+      // this.initializeAddableComponent(multiComponent, multi.components, multiComponent.multiplyComponents);
       this.setComponent(multiComponent);
+      this.setAddableComponent(multiComponent.name, multiComponent);
     }
 
+    
+    for (const beam of BeamComponents) {
+      const beamComponent = this.getAddableComponent(beam.name);
+      if (beamComponent) {
+        this.initializeAddableComponent(beamComponent, beam.components, 1);
+      }
+    }
+
+    for (const aoeApplyComponentConfig of AOEApplyComponentComponents) {
+      const aoeApplyComponent = this.getAddableComponent(aoeApplyComponentConfig.name);
+      if (aoeApplyComponent) {
+        this.initializeAddableComponent(aoeApplyComponent, aoeApplyComponentConfig.components, 1);
+      }
+    }
+    
+    for (const multi of MultiComponents) {
+      const multiComponent = this.getAddableComponent(multi.name);
+      if (multiComponent) {
+        this.initializeAddableComponent(multiComponent, multi.components, multi.multiplyComponents);
+      }
+    }
+    
     // load abilities after all multi components
     for (const abilityData of AbilitiesList) {
       const ability = new CustomAbility().deserialize(abilityData);
-      this.addableComponentAddComponent(ability, abilityData.components, 1);
+      this.initializeAddableComponent(ability, abilityData.components, 1);
       this.setAbility(ability);
     }
 
+    // probably dont need addable components after this
+    this.addableComponents.clear();
   }
 
   setComponent(component: AbilityComponent): this {
@@ -203,6 +232,11 @@ export class CustomAbilityManager {
     return this;
   }
 
+  setAddableComponent(name: string, component: AddableComponent): this {
+    this.addableComponents.set(name, component);
+    return this;
+  }
+
   getAbility(name: string) {
     return this.abilities.get(name);
   }
@@ -211,7 +245,11 @@ export class CustomAbilityManager {
     return this.components.get(name);
   }
 
-  addableComponentAddComponent(
+  getAddableComponent(name: string) {
+    return this.addableComponents.get(name);
+  }
+
+  initializeAddableComponent(
     addTarget: AddableComponent, 
     components: { name: string }[], 
     numRepeatComponents: number,

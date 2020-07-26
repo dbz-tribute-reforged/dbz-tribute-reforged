@@ -168,7 +168,7 @@ export class MultiComponent implements
           this.forceMinDistance + 
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
-      if (this.angleRange >= 360) {
+      if (this.angleRange > 360) {
         this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       } else {
         this.originalTarget.setVector(this.targettedPoint);
