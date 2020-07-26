@@ -13,4 +13,11 @@ export const HideUnitComponents = [
     endTick: -1,
     preventMovement: false,
   },
+  {
+    name: "hide unit scattering bullet start", 
+    repeatInterval: 1, 
+    startTick: 40,
+    endTick: -1,
+    preventMovement: false,
+  },
 ];

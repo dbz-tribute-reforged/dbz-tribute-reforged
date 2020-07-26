@@ -2223,7 +2223,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 999,
+    duration: 666,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2242,6 +2242,59 @@ export const AbilitiesList = [
       { name: "dash ground forward super maximum light speed mode" },
       { name: "temp ability disable light bullet" },
       { name: "sfx super maximum light speed mode" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Krillin.SCATTERING_BULLET,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKrillinScatteringBullet.blp",
+      disabled: "BTNKrillinScatteringBullet.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Krillin.SCATTERING_BULLET,
+      body: 
+        AbilityNames.Krillin.SCATTERING_BULLET,
+    },
+    components: [
+      { name: "multi scattering bullet start 1" },
+      { name: "multi scattering bullet start 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Krillin.DESTRUCTO_DISC,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKrillinDestructoDisc.blp",
+      disabled: "BTNKrillinDestructoDisc.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Krillin.DESTRUCTO_DISC,
+      body: 
+        AbilityNames.Krillin.DESTRUCTO_DISC,
+    },
+    components: [
+      { name: "beam destructo disc" },
     ],
   },
   // -------------------------------------------

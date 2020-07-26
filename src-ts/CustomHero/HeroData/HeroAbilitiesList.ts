@@ -178,6 +178,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
     ]],
 
+    // krillin
+    [FourCC("H03Y"), [
+      AbilityNames.Krillin.KAMEHAMEHA,
+      AbilityNames.Krillin.SCATTERING_BULLET,
+      AbilityNames.Krillin.DESTRUCTO_DISC,
+      AbilityNames.Krillin.SENZU_THROW,
+    ]],
+
 
 
     // androids 13 14 15

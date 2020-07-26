@@ -61,4 +61,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.TARGET_POINT,
     maxRange: Teleport.INFINITE_RANGE,
   },
+  {
+    name: "teleport scattering bullet start continuous", 
+    repeatInterval: 1, 
+    startTick: 40,
+    endTick: -1,
+    teleportTick: 0,
+    teleportOnce: false,
+    teleportTarget: Teleport.ORIGINAL_POINT,
+    maxRange: Teleport.INFINITE_RANGE,
+  },
 ];
