@@ -62,12 +62,19 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return damage;
   }
 
-  protected performDamage(input: CustomAbilityInput, target: unit, damage: number) {
+  protected performDamage(input: CustomAbilityInput, target: unit, damage: number, sourceHpPercent: number) {
     if (this.maxHealthDamagePercent > 0) {
+      let bonusMaxHpDamage = (
+        GetUnitState(target, UNIT_STATE_MAX_LIFE) * 
+        this.maxHealthDamagePercent
+      );
+      if (this.scaleDamageToSourceHp) {
+        bonusMaxHpDamage *= sourceHpPercent;
+      }
       UnitDamageTarget(
         input.caster.unit, 
         target, 
-        damage + GetUnitState(target, UNIT_STATE_MAX_LIFE) * this.maxHealthDamagePercent,
+        damage + bonusMaxHpDamage,
         true,
         false,
         this.damageData.attackType,
@@ -150,6 +157,10 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     );
 
     const damage = this.calculateDamage(input, source);
+    let sourceHpPercent = 0;
+    if (this.scaleDamageToSourceHp) {
+      sourceHpPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+    }
 
     ForGroup(affectedGroup, () => {
       const target = GetEnumUnit();
@@ -163,14 +174,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
           if (damageCount) {
             if (damageCount < this.maxDamageTicks) {
               this.damagedTargets.set(target, damageCount + 1);
-              this.performDamage(input, target, damage);
+              this.performDamage(input, target, damage, sourceHpPercent);
             }
           } else {
             this.damagedTargets.set(target, 1);
-            this.performDamage(input, target, damage);
+            this.performDamage(input, target, damage, sourceHpPercent);
           }
         } else {    
-          this.performDamage(input, target, damage);
+          this.performDamage(input, target, damage, sourceHpPercent);
         }
       }
     })
