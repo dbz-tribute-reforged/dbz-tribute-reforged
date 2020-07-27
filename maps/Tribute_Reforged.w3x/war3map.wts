@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.47
+DBZ Tribute Reforged 0.47a
 }
 
 STRING 4
@@ -61777,7 +61777,8 @@ STRING 10165
 Transformations:
 [lvl 25]  1.50x "paparapapa"
 [lvl 90]  2.00x "paparapapa" [unlocks Majin Influence 2]
-[lvl 150] 2.40x "paparapapa" [unlocks Majin Influence 3]
+[lvl 150] 2.25x "paparapapa" 
+[lvl 200] 2.40x "paparapapa" [unlocks Majin Influence 3]
 
 For Majin Buu type "release" at lvl 45.
 Majin Buu from Babidi gains lvl2 candy beam.
@@ -64792,7 +64793,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 27.July.20
+This map is under active development - 28.July.20
 }
 
 STRING 10653
@@ -75082,6 +75083,22 @@ STRING 12345
 // Buffs/Effects: B02D (), Bufftip (Tooltip)
 {
 Upa's Rage 4
+}
+
+STRING 12346
+// Units: H09H (Captain of the Pride Troopers), Ubertip (Tooltip - Extended)
+{
+A high-mobility hero that is capable of dodging almost any ability thrown at him, but suffers from having very few options when fighting at a distance. Relies heavily on his high mobility to both deal damage and avoid damage.
+
+|cff00ffffLightning Reflexes:|r +20% Evasion.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+|cff808080"Fastest in the multiverse!"|r
 }
 
 STRING 12347
@@ -87544,22 +87561,6 @@ A strong close-range fighter with high-damage nukes and a long duration grapple 
 
 }
 
-STRING 14322
-// Units: H09H (Captain of the Pride Troopers), Ubertip (Tooltip - Extended)
-{
-A high-mobility hero that is capable of dodging almost any ability thrown at him, but suffers from having very few options when fighting at a distance. Relies heavily on his high mobility to both deal damage and avoid damage.
-
-|cff00ffffLightning Reflexes:|r +20% Evasion.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
-|cff808080"Fastest in the multiverse!"|r
-}
-
 STRING 14323
 // Abilities: A0R9 (Scattering Bullet), Ubertip (Tooltip - Normal - Extended)
 {
@@ -87600,7 +87601,8 @@ Transformations:
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 120] 2.25x "fp"
-[lvl 150] 2.50x "fp"
+[lvl 150] 2.40x "fp"
+[lvl 200] 2.50x "fp"
 }
 
 STRING 14328

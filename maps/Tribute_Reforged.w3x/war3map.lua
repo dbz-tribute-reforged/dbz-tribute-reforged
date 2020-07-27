@@ -2460,13 +2460,13 @@ function CreateNeutralPassiveBuildings()
     local life
     u = BlzCreateUnitWithSkin(p, FourCC("n03X"), 2816.0, 22656.0, 270.000, FourCC("n03X"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n03Y"), 2048.0, 21376.0, 270.000, FourCC("n03Y"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n03Y"), 3200.0, 21440.0, 270.000, FourCC("n03Y"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n03Z"), 2816.0, 22208.0, 270.000, FourCC("n03Z"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n040"), 3584.0, 23552.0, 270.000, FourCC("n040"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n040"), 2816.0, 23424.0, 270.000, FourCC("n040"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n041"), 2112.0, 23552.0, 270.000, FourCC("n041"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n041"), 2816.0, 23040.0, 270.000, FourCC("n041"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01P"), -2560.0, 26240.0, 270.000, FourCC("n01P"))
     u = BlzCreateUnitWithSkin(p, FourCC("n00R"), -2496.0, 28416.0, 270.000, FourCC("n00R"))
@@ -2492,9 +2492,9 @@ function CreateNeutralPassiveBuildings()
     gg_unit_n01H_1159 = BlzCreateUnitWithSkin(p, FourCC("n01H"), -2112.0, 30848.0, 270.000, FourCC("n01H"))
     SetUnitColor(gg_unit_n01H_1159, ConvertPlayerColor(8))
     u = BlzCreateUnitWithSkin(p, FourCC("n042"), -5888.0, 17728.0, 270.000, FourCC("n042"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n044"), 3584.0, 21376.0, 270.000, FourCC("n044"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n044"), 2816.0, 21440.0, 270.000, FourCC("n044"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n045"), 3264.0, 21376.0, 270.000, FourCC("n045"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n045"), 2816.0, 21824.0, 270.000, FourCC("n045"))
     SetUnitColor(u, ConvertPlayerColor(0))
 end
 
@@ -2517,7 +2517,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H086"), -167.3, 22747.1, 246.892, FourCC("H086"))
     u = BlzCreateUnitWithSkin(p, FourCC("H03G"), -433.0, 22758.9, 304.939, FourCC("H03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("H04P"), 394.9, 22508.4, 268.114, FourCC("H04P"))
-    u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 593.8, 22730.6, 265.090, FourCC("E00K"))
+    u = BlzCreateUnitWithSkin(p, FourCC("E00K"), 656.9, 22798.6, 265.090, FourCC("E00K"))
     SetUnitColor(u, ConvertPlayerColor(1))
     u = BlzCreateUnitWithSkin(p, FourCC("H000"), -610.6, 22906.0, 95.869, FourCC("H000"))
     SetHeroLevel(u, 10, false)
@@ -2826,7 +2826,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H05B"), -105.2, 22280.3, 271.942, FourCC("H05B"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H090"), 758.7, 22183.4, 264.672, FourCC("H090"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H090"), 702.3, 22275.6, 264.672, FourCC("H090"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 956.8, 21928.0, 288.250, FourCC("H08G"))
@@ -3298,7 +3298,7 @@ function Trig_Babidi_Summons_Func001C()
 end
 
 function Trig_Babidi_Summons_Func002Func002C()
-    if (not (GetHeroLevel(GetSummoningUnit()) < 150)) then
+    if (not (GetHeroLevel(GetSummoningUnit()) < 200)) then
         return false
     end
     return true
@@ -21423,6 +21423,16 @@ function Trig_Transformations_Babidi_Func014C()
     return true
 end
 
+function Trig_Transformations_Babidi_Func015C()
+    if (not (udg_TransformationString == "paparapapa")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Babidi_Actions()
     udg_TransformationSFXString = ""
     udg_TransformationSFXString2 = ""
@@ -21469,6 +21479,10 @@ function Trig_Transformations_Babidi_Actions()
     else
     end
     if (Trig_Transformations_Babidi_Func014C()) then
+        udg_StatMultReal = 2.25
+    else
+    end
+    if (Trig_Transformations_Babidi_Func015C()) then
         udg_StatMultReal = 2.40
     else
     end
@@ -28190,7 +28204,17 @@ function Trig_Transformations_Krillin_Func018C()
     return true
 end
 
-function Trig_Transformations_Krillin_Func020Func002Func001C()
+function Trig_Transformations_Krillin_Func019C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Krillin_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -28200,14 +28224,14 @@ function Trig_Transformations_Krillin_Func020Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Krillin_Func020Func002C()
-    if (not Trig_Transformations_Krillin_Func020Func002Func001C()) then
+function Trig_Transformations_Krillin_Func021Func002C()
+    if (not Trig_Transformations_Krillin_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Krillin_Func020C()
+function Trig_Transformations_Krillin_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -28272,13 +28296,19 @@ function Trig_Transformations_Krillin_Actions()
     else
     end
     if (Trig_Transformations_Krillin_Func018C()) then
+        udg_StatMultReal = 2.40
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Krillin_Func019C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Krillin_Func020C()) then
-        if (Trig_Transformations_Krillin_Func020Func002C()) then
+    if (Trig_Transformations_Krillin_Func021C()) then
+        if (Trig_Transformations_Krillin_Func021Func002C()) then
                         udg_TransformationID = FourCC('H03Y')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
