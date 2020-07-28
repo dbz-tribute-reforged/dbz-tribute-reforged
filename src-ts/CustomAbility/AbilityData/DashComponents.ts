@@ -508,7 +508,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 12,
   },
   // super max
   {
@@ -521,7 +521,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 9.1,
+    distance: 8,
   },
   // scattering bullet
   {

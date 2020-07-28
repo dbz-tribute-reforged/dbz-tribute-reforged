@@ -16257,7 +16257,7 @@ function Trig_Dyspo_Super_Max_Actions()
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
     udg_StatMultReal = 1.00
     udg_StatMultStr = (udg_StatMultStr + 0.00)
-    udg_StatMultAgi = (udg_StatMultAgi + 0.60)
+    udg_StatMultAgi = (udg_StatMultAgi + 0.70)
     udg_StatMultInt = (udg_StatMultInt + 0.00)
     udg_TransformationSFXString = "AuraDyspo.mdx"
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -25290,7 +25290,7 @@ function InitTrig_Transformations_King_K_Rool()
 end
 
 function Trig_King_K_Rool_Get_Size_Actions()
-    udg_KKRSize = (100.00 + RMaxBJ(0.00, (0.22 * I2R(GetHeroLevel(udg_StatMultUnit)))))
+    udg_KKRSize = (100.00 + RMaxBJ(0.00, (0.25 * I2R(GetHeroLevel(udg_StatMultUnit)))))
 end
 
 function InitTrig_King_K_Rool_Get_Size()
@@ -25916,7 +25916,7 @@ function Trig_Transformations_Dyspo_Func015C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 60)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
         return false
     end
     return true
@@ -25926,40 +25926,30 @@ function Trig_Transformations_Dyspo_Func016C()
     if (not (udg_TransformationString == "justice")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Dyspo_Func017C()
-    if (not (udg_TransformationString == "justice")) then
-        return false
-    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Dyspo_Func018Func004C()
+function Trig_Transformations_Dyspo_Func017Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0R1"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Dyspo_Func018C()
+function Trig_Transformations_Dyspo_Func017C()
     if (not (udg_TransformationString == "max")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 225)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Dyspo_Func022Func002Func001C()
+function Trig_Transformations_Dyspo_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -25969,21 +25959,21 @@ function Trig_Transformations_Dyspo_Func022Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Dyspo_Func022Func002Func004C()
+function Trig_Transformations_Dyspo_Func021Func002Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0R1"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Dyspo_Func022Func002C()
-    if (not Trig_Transformations_Dyspo_Func022Func002Func001C()) then
+function Trig_Transformations_Dyspo_Func021Func002C()
+    if (not Trig_Transformations_Dyspo_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Dyspo_Func022C()
+function Trig_Transformations_Dyspo_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -26028,28 +26018,22 @@ function Trig_Transformations_Dyspo_Actions()
     else
     end
     if (Trig_Transformations_Dyspo_Func015C()) then
-        udg_StatMultReal = 1.75
-        udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-    if (Trig_Transformations_Dyspo_Func016C()) then
         udg_StatMultReal = 2.00
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Dyspo_Func017C()) then
+    if (Trig_Transformations_Dyspo_Func016C()) then
         udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
     else
     end
-    if (Trig_Transformations_Dyspo_Func018C()) then
-        udg_StatMultReal = 2.40
+    if (Trig_Transformations_Dyspo_Func017C()) then
+        udg_StatMultReal = 2.30
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
-        if (Trig_Transformations_Dyspo_Func018Func004C()) then
+        if (Trig_Transformations_Dyspo_Func017Func004C()) then
             UnitAddAbilityBJ(FourCC("A0R1"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0R1'))
         else
@@ -26058,11 +26042,11 @@ function Trig_Transformations_Dyspo_Actions()
     end
     TriggerExecute(gg_trg_Pride_Trooper_Team_Stat_Mult_Bonus)
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Dyspo_Func022C()) then
-        if (Trig_Transformations_Dyspo_Func022Func002C()) then
+    if (Trig_Transformations_Dyspo_Func021C()) then
+        if (Trig_Transformations_Dyspo_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            if (Trig_Transformations_Dyspo_Func022Func002Func004C()) then
+            if (Trig_Transformations_Dyspo_Func021Func002Func004C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0R1"), udg_TransformationPlayer)
             else
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0R1"), udg_TransformationPlayer)
@@ -28188,7 +28172,7 @@ function Trig_Transformations_Krillin_Func017C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     return true
@@ -28198,23 +28182,13 @@ function Trig_Transformations_Krillin_Func018C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Krillin_Func019C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Krillin_Func021Func002Func001C()
+function Trig_Transformations_Krillin_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -28224,14 +28198,14 @@ function Trig_Transformations_Krillin_Func021Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Krillin_Func021Func002C()
-    if (not Trig_Transformations_Krillin_Func021Func002Func001C()) then
+function Trig_Transformations_Krillin_Func020Func002C()
+    if (not Trig_Transformations_Krillin_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Krillin_Func021C()
+function Trig_Transformations_Krillin_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -28290,25 +28264,19 @@ function Trig_Transformations_Krillin_Actions()
     else
     end
     if (Trig_Transformations_Krillin_Func017C()) then
-        udg_StatMultReal = 2.25
-        udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-    if (Trig_Transformations_Krillin_Func018C()) then
         udg_StatMultReal = 2.40
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Krillin_Func019C()) then
+    if (Trig_Transformations_Krillin_Func018C()) then
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
-    if (Trig_Transformations_Krillin_Func021C()) then
-        if (Trig_Transformations_Krillin_Func021Func002C()) then
+    if (Trig_Transformations_Krillin_Func020C()) then
+        if (Trig_Transformations_Krillin_Func020Func002C()) then
                         udg_TransformationID = FourCC('H03Y')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
