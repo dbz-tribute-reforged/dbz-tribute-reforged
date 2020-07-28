@@ -160,6 +160,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     let sourceHpPercent = 0;
     if (this.scaleDamageToSourceHp) {
       sourceHpPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+      sourceHpPercent *= sourceHpPercent;
     }
 
     ForGroup(affectedGroup, () => {
