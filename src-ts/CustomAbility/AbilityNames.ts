@@ -139,6 +139,21 @@ export module AbilityNames {
     export const SENZU_THROW: string = "Senzu Bean!";
   }
 
+  export module YamchaR {
+    export const LIGHT_PUNCH: string = "Light Punch!";
+    export const MEDIUM_PUNCH: string = "Medium Punch!";
+    export const HEAVY_PUNCH: string = "Heavy Punch!";
+    export const DASH_LEFT: string = "Dash Left!";
+    export const DASH_FORWARD: string = "Dash Forward!";
+    export const DASH_RIGHT: string = "Dash Right!";
+    export const SUPER_SPIRIT_BALL: string = "Super Spirit Ball!";
+    export const FULL_POWER_KAMEHAMEHA: string = "Full Power Kame!";
+    export const WOLF_FANG_BLAST: string = "Wolf Fang Blast!";
+    export const SLEDGEHAMMER: string = "Sledgehammer!";
+    export const METEOR_CRASH: string = "Meteor Crash!";
+    export const UPPERCUT: string = "Uppercut!";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

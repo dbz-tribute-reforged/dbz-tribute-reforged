@@ -186,6 +186,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Krillin.SENZU_THROW,
     ]],
 
+    // yamcha r
+    [FourCC("E010"), [
+      AbilityNames.YamchaR.LIGHT_PUNCH,
+      AbilityNames.YamchaR.MEDIUM_PUNCH,
+      AbilityNames.YamchaR.HEAVY_PUNCH,
+      AbilityNames.YamchaR.DASH_LEFT,
+      AbilityNames.YamchaR.DASH_FORWARD,
+      AbilityNames.YamchaR.DASH_RIGHT,
+      AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
+      AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
+      AbilityNames.YamchaR.WOLF_FANG_BLAST,
+      AbilityNames.YamchaR.SLEDGEHAMMER,
+      AbilityNames.YamchaR.METEOR_CRASH,
+      AbilityNames.YamchaR.UPPERCUT,
+    ]],
+
 
 
     // androids 13 14 15

@@ -60,8 +60,10 @@ export class HeroPassiveManager {
         break;
       case HeroPassiveData.TAPION:
         tapionPassive(customHero);
+        break;
       case HeroPassiveData.DYSPO:
         dyspoPassive(customHero);
+        break;
       default:
         break;
     }
@@ -255,4 +257,3 @@ export function dyspoPassive(customHero: CustomHero) {
     })
   );
 }
-

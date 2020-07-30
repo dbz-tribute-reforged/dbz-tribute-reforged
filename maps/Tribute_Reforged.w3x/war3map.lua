@@ -202,6 +202,8 @@ udg_FriezaInt = 0
 udg_OmegaShenronUnitGroup = nil
 udg_MinMS = 0.0
 udg_TextTagChargesUnitGroup = nil
+udg_YamchaUnitGroup = nil
+udg_YamchaHashtable = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -688,6 +690,11 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Yamcha = nil
+gg_trg_Yamcha_Combo = nil
+gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha = nil
+gg_trg_Yamcha_Disable_Abilities = nil
+gg_trg_Yamcha_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -971,6 +978,7 @@ function InitGlobals()
     udg_OmegaShenronUnitGroup = CreateGroup()
     udg_MinMS = 400.00
     udg_TextTagChargesUnitGroup = CreateGroup()
+    udg_YamchaUnitGroup = CreateGroup()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -6628,6 +6636,10 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0QV"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0QW"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
+    TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
 end
 
 function InitTrig_Ginyu_Change_Now_Ability_Resets()
@@ -7190,6 +7202,311 @@ function InitTrig_Dyspo_Upgraded_Spells_Update_Old_CD()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, EVENT_PLAYER_UNIT_SPELL_FINISH)
     TriggerAddCondition(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, Condition(Trig_Dyspo_Upgraded_Spells_Update_Old_CD_Conditions))
     TriggerAddAction(gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD, Trig_Dyspo_Upgraded_Spells_Update_Old_CD_Actions)
+end
+
+function Trig_Yamcha_Add_StatMultUnit_To_Yamcha_Func001C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_YamchaUnitGroup) == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Add_StatMultUnit_To_Yamcha_Actions()
+    if (Trig_Yamcha_Add_StatMultUnit_To_Yamcha_Func001C()) then
+        GroupAddUnitSimple(udg_StatMultUnit, udg_YamchaUnitGroup)
+        SetUnitTimeScalePercent(udg_StatMultUnit, 200.00)
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        SaveIntegerBJ(0, 0, udg_ID, udg_YamchaHashtable)
+        CreateTextTagUnitBJ("TRIGSTR_14154", udg_StatMultUnit, 10.00, 10, 100, 100, 100, 10.00)
+        ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
+        udg_TempPlayerGroup2 = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
+        ShowTextTagForceBJ(true, GetLastCreatedTextTag(), udg_TempPlayerGroup2)
+                DestroyForce(udg_TempPlayerGroup2)
+        SetTextTagPermanentBJ(GetLastCreatedTextTag(), true)
+        SaveTextTagHandleBJ(GetLastCreatedTextTag(), 1, udg_ID, udg_YamchaHashtable)
+        EnableTrigger(gg_trg_Yamcha_Loop)
+        UnitAddAbilityBJ(FourCC("A0RF"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RG"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RH"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RI"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RJ"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RK"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RL"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RM"), udg_StatMultUnit)
+        UnitAddAbilityBJ(FourCC("A0RN"), udg_StatMultUnit)
+    else
+    end
+end
+
+function InitTrig_Yamcha_Add_StatMultUnit_To_Yamcha()
+    gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha = CreateTrigger()
+    TriggerAddAction(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha, Trig_Yamcha_Add_StatMultUnit_To_Yamcha_Actions)
+end
+
+function Trig_Yamcha_Disable_Abilities_Actions()
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RE"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RF"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RH"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RI"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RJ"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RK"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RL"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RM"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0RN"), udg_TempPlayer)
+end
+
+function InitTrig_Yamcha_Disable_Abilities()
+    gg_trg_Yamcha_Disable_Abilities = CreateTrigger()
+    TriggerAddAction(gg_trg_Yamcha_Disable_Abilities, Trig_Yamcha_Disable_Abilities_Actions)
+end
+
+function Trig_Yamcha_Combo_Func011C()
+    if (GetSpellAbilityId() == FourCC("A0RC")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RD")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RE")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RF")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RG")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RH")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RI")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RJ")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RK")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RL")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RM")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0RN")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Yamcha_Combo_Conditions()
+    if (not (IsUnitInGroup(GetTriggerUnit(), udg_YamchaUnitGroup) == true)) then
+        return false
+    end
+    if (not Trig_Yamcha_Combo_Func011C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func004Func001Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0RE"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RH"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RK"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RN"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func004Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0RD"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RG"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RJ"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RM"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func004C()
+    if (not (GetSpellAbilityId() == FourCC("A0RC"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RF"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RI"))) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0RL"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009Func001Func005Func005Func005C()
+    if (not (udg_TempInt4 >= 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009Func001Func005Func005C()
+    if (not (udg_TempInt3 >= 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009Func001Func005C()
+    if (not (udg_TempInt2 >= 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009Func001C()
+    if (not (udg_TempInt == 111)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009C()
+    if (not (((udg_TempInt2 + udg_TempInt3) + udg_TempInt4) >= 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_YamchaHashtable)
+    if (Trig_Yamcha_Combo_Func004C()) then
+        udg_TempInt = (udg_TempInt + 100)
+    else
+        if (Trig_Yamcha_Combo_Func004Func001C()) then
+            udg_TempInt = (udg_TempInt + 10)
+        else
+            if (Trig_Yamcha_Combo_Func004Func001Func001C()) then
+                udg_TempInt = (udg_TempInt + 1)
+            else
+            end
+        end
+    end
+    SaveIntegerBJ(udg_TempInt, 0, udg_ID, udg_YamchaHashtable)
+    udg_TempInt2 = ModuloInteger(udg_TempInt, 100)
+    udg_TempInt3 = ModuloInteger(udg_TempInt, 10)
+    udg_TempInt4 = ModuloInteger(udg_TempInt, 1)
+    if (Trig_Yamcha_Combo_Func009C()) then
+        if (Trig_Yamcha_Combo_Func009Func001C()) then
+            TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
+        else
+            if (Trig_Yamcha_Combo_Func009Func001Func005C()) then
+                TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0RF"), udg_TempPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0RG"), udg_TempPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0RH"), udg_TempPlayer)
+            else
+                if (Trig_Yamcha_Combo_Func009Func001Func005Func005C()) then
+                    TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+                    SetPlayerAbilityAvailableBJ(true, FourCC("A0RI"), udg_TempPlayer)
+                    SetPlayerAbilityAvailableBJ(true, FourCC("A0RJ"), udg_TempPlayer)
+                    SetPlayerAbilityAvailableBJ(true, FourCC("A0RK"), udg_TempPlayer)
+                else
+                    if (Trig_Yamcha_Combo_Func009Func001Func005Func005Func005C()) then
+                        TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+                        SetPlayerAbilityAvailableBJ(true, FourCC("A0RL"), udg_TempPlayer)
+                        SetPlayerAbilityAvailableBJ(true, FourCC("A0RM"), udg_TempPlayer)
+                        SetPlayerAbilityAvailableBJ(true, FourCC("A0RN"), udg_TempPlayer)
+                    else
+                    end
+                end
+            end
+        end
+    else
+    end
+end
+
+function InitTrig_Yamcha_Combo()
+    gg_trg_Yamcha_Combo = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Yamcha_Combo, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Yamcha_Combo, Condition(Trig_Yamcha_Combo_Conditions))
+    TriggerAddAction(gg_trg_Yamcha_Combo, Trig_Yamcha_Combo_Actions)
+end
+
+function Trig_Yamcha_Loop_Func001A()
+    udg_StatMultUnit = GetEnumUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_YamchaHashtable)
+    udg_TempInt2 = ModuloInteger(udg_TempInt, 100)
+    udg_TempInt3 = ModuloInteger(udg_TempInt, 10)
+    udg_TempInt4 = ModuloInteger(udg_TempInt, 1)
+    udg_TempString = "|cffffcc00"
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_TempInt2) then break end
+        udg_TempString = (udg_TempString .. "Q")
+        udg_TempInt = udg_TempInt + 1
+    end
+    udg_TempInt2 = 1
+    while (true) do
+        if (udg_TempInt2 > udg_TempInt2) then break end
+        udg_TempString = (udg_TempString .. "W")
+        udg_TempInt2 = udg_TempInt2 + 1
+    end
+    udg_TempInt3 = 1
+    while (true) do
+        if (udg_TempInt3 > udg_TempInt2) then break end
+        udg_TempString = (udg_TempString .. "E")
+        udg_TempInt3 = udg_TempInt3 + 1
+    end
+    udg_TempFloatingText = LoadTextTagHandleBJ(1, udg_ID, udg_YamchaHashtable)
+    SetTextTagTextBJ(udg_TempFloatingText, udg_TempString, 15.00)
+    SetTextTagPosUnitBJ(udg_TempFloatingText, udg_TempUnit, 30.00)
+end
+
+function Trig_Yamcha_Loop_Func002C()
+    if (not (CountUnitsInGroup(udg_YamchaUnitGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Loop_Actions()
+    ForGroupBJ(udg_YamchaUnitGroup, Trig_Yamcha_Loop_Func001A)
+    if (Trig_Yamcha_Loop_Func002C()) then
+        DisableTrigger(GetTriggeringTrigger())
+    else
+    end
+end
+
+function InitTrig_Yamcha_Loop()
+    gg_trg_Yamcha_Loop = CreateTrigger()
+    DisableTrigger(gg_trg_Yamcha_Loop)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Yamcha_Loop, 0.02)
+    TriggerAddAction(gg_trg_Yamcha_Loop, Trig_Yamcha_Loop_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -8385,6 +8702,10 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0QQ"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0QR"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
+    TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
 end
 
 function InitTrig_Disable_Abilities_for_TempPlayer()
@@ -8478,6 +8799,8 @@ function Trig_Map_Setup_Hashtables_Actions()
     udg_TapionSpellsHashtable = GetLastCreatedHashtableBJ()
     InitHashtableBJ()
     udg_GinyuHashtable = GetLastCreatedHashtableBJ()
+    InitHashtableBJ()
+    udg_YamchaHashtable = GetLastCreatedHashtableBJ()
 end
 
 function InitTrig_Map_Setup_Hashtables()
@@ -12354,6 +12677,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func001C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E010"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H03Y"))) then
         return false
@@ -12579,6 +12909,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                                                 if (Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                     udg_TempString = "BTNKrillin.blp"
                                                                 else
+                                                                    if (Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                        udg_TempString = "BTNYamcha.blp"
+                                                                    else
+                                                                    end
                                                                 end
                                                             end
                                                         end
@@ -14597,6 +14931,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H03Y")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("E010")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -15517,21 +15853,28 @@ function Trig_Add_Unit_To_StatMult_Func001Func026C()
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func030C()
-    if (not (udg_IsAOEFlyingVision == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Add_Unit_To_StatMult_Func001Func031Func012C()
-    if (not (udg_TempInt2 > 200)) then
+function Trig_Add_Unit_To_StatMult_Func001Func027C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func031C()
+    if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func032Func012C()
+    if (not (udg_TempInt2 > 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func032C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
         return false
     end
@@ -15617,8 +15960,12 @@ function Trig_Add_Unit_To_StatMult_Actions()
             TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
         else
         end
+        if (Trig_Add_Unit_To_StatMult_Func001Func027C()) then
+            TriggerExecute(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha)
+        else
+        end
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
-        if (Trig_Add_Unit_To_StatMult_Func001Func030C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
             udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
             udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * 0.66)))
             CreateFogModifierRadiusLocBJ(true, GetOwningPlayer(udg_StatMultUnit), FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -15626,7 +15973,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
                         RemoveLocation(udg_TempLoc)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func032C()) then
             SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
             GroupAddUnitSimple(udg_StatMultUnit, udg_FriezaTransformationUnitGroup)
             EnableTrigger(gg_trg_Frieza_Transformation_Loop)
@@ -15638,7 +15985,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
             SetPlayerAbilityAvailableBJ(true, FourCC("A0QA"), GetOwningPlayer(udg_StatMultUnit))
             UnitAddAbilityBJ(FourCC("A0Q8"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0Q8'))
-            if (Trig_Add_Unit_To_StatMult_Func001Func031Func012C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func032Func012C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUnit))
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0Q9"), GetOwningPlayer(udg_StatMultUnit))
                 UnitAddAbilityBJ(FourCC("A0Q9"), udg_StatMultUnit)
@@ -17400,6 +17747,13 @@ function Trig_Transformations_Parse_String_Func001Func004C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func005Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func005Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H03Y"))) then
         return false
@@ -17579,6 +17933,10 @@ function Trig_Transformations_Parse_String_Func001A()
         if (Trig_Transformations_Parse_String_Func001Func005Func001C()) then
             TriggerExecute(gg_trg_Transformations_Krillin)
         else
+            if (Trig_Transformations_Parse_String_Func001Func005Func001Func001C()) then
+                TriggerExecute(gg_trg_Transformations_Yamcha)
+            else
+            end
         end
     end
 end
@@ -28292,6 +28650,178 @@ function InitTrig_Transformations_Krillin()
     TriggerAddAction(gg_trg_Transformations_Krillin, Trig_Transformations_Krillin_Actions)
 end
 
+function Trig_Transformations_Yamcha_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func016C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func017C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func019Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Yamcha_Func019Func002C()
+    if (not Trig_Transformations_Yamcha_Func019Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Func019C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Yamcha_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Yamcha_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_12340")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func011C()) then
+        udg_StatMultReal = 1.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func012C()) then
+        udg_StatMultReal = 1.10
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func013C()) then
+        udg_StatMultReal = 1.25
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func014C()) then
+        udg_StatMultReal = 1.50
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func015C()) then
+        udg_StatMultReal = 2.00
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func016C()) then
+        udg_StatMultReal = 2.25
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func017C()) then
+        udg_StatMultReal = 2.50
+        udg_TransformationAbility = FourCC("AUan")
+        udg_TransformationSFXString = "AuraWhite.mdx"
+    else
+    end
+    if (Trig_Transformations_Yamcha_Func019C()) then
+        if (Trig_Transformations_Yamcha_Func019Func002C()) then
+                        udg_TransformationID = FourCC('E010')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Yamcha()
+    gg_trg_Transformations_Yamcha = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Yamcha, Trig_Transformations_Yamcha_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
     if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
@@ -29568,6 +30098,10 @@ function InitCustomTriggers()
     InitTrig_Dyspo_Upgrade_Spells()
     InitTrig_Dyspo_Upgraded_Spells_Cast()
     InitTrig_Dyspo_Upgraded_Spells_Update_Old_CD()
+    InitTrig_Yamcha_Add_StatMultUnit_To_Yamcha()
+    InitTrig_Yamcha_Disable_Abilities()
+    InitTrig_Yamcha_Combo()
+    InitTrig_Yamcha_Loop()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
@@ -29860,6 +30394,7 @@ function InitCustomTriggers()
     InitTrig_Omega_Dragon_Ball_Stat_Mult_Bonus()
     InitTrig_Omega_Shenron_Loop()
     InitTrig_Transformations_Krillin()
+    InitTrig_Transformations_Yamcha()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()

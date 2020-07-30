@@ -2299,6 +2299,246 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.YamchaR.LIGHT_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.LIGHT_PUNCH,
+      body: 
+        AbilityNames.YamchaR.LIGHT_PUNCH,
+    },
+    components: [
+      { name: "multi yamcha r light punch" },
+      { name: "dash ground forward yamcha r light punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.MEDIUM_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.MEDIUM_PUNCH,
+      body: 
+        AbilityNames.YamchaR.MEDIUM_PUNCH,
+    },
+    components: [
+      { name: "multi yamcha r medium punch" },
+      { name: "dash ground forward yamcha r medium punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.HEAVY_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.HEAVY_PUNCH,
+      body: 
+        AbilityNames.YamchaR.HEAVY_PUNCH,
+    },
+    components: [
+      { name: "multi yamcha r heavy punch" },
+      { name: "dash ground forward yamcha r heavy punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.DASH_LEFT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.DASH_LEFT,
+      body: 
+        AbilityNames.YamchaR.DASH_LEFT,
+    },
+    components: [
+      { name: "damage yamcha r dash explosion" },
+      { name: "dash ground forward yamcha r dash left" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.DASH_FORWARD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.DASH_FORWARD,
+      body: 
+        AbilityNames.YamchaR.DASH_FORWARD,
+    },
+    components: [
+      { name: "damage yamcha r dash explosion" },
+      { name: "dash ground forward yamcha r dash forward" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.DASH_RIGHT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.DASH_RIGHT,
+      body: 
+        AbilityNames.YamchaR.DASH_RIGHT,
+    },
+    components: [
+      { name: "damage yamcha r dash explosion" },
+      { name: "dash ground forward yamcha r dash right" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
+      body: 
+        AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
+    },
+    components: [
+      { name: "multi yamcha r super spirit ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
+      body: 
+        AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
+    },
+    components: [
+      { name: "multi yamcha r full power kame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_BLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.WOLF_FANG_BLAST,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_BLAST,
+    },
+    components: [
+      { name: "multi yamcha r wolf fang blast" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

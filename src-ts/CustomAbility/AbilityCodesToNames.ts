@@ -122,6 +122,20 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0RA'), AbilityNames.Krillin.DESTRUCTO_DISC],
     [FourCC('A0RB'), AbilityNames.Krillin.SENZU_THROW],
 
+    // yamcha R
+    [FourCC('A0RC'), AbilityNames.YamchaR.LIGHT_PUNCH],
+    [FourCC('A0RD'), AbilityNames.YamchaR.MEDIUM_PUNCH],
+    [FourCC('A0RE'), AbilityNames.YamchaR.HEAVY_PUNCH],
+    [FourCC('A0RF'), AbilityNames.YamchaR.DASH_LEFT],
+    [FourCC('A0RG'), AbilityNames.YamchaR.DASH_FORWARD],
+    [FourCC('A0RH'), AbilityNames.YamchaR.DASH_RIGHT],
+    [FourCC('A0RI'), AbilityNames.YamchaR.SUPER_SPIRIT_BALL],
+    [FourCC('A0RJ'), AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA],
+    [FourCC('A0RK'), AbilityNames.YamchaR.WOLF_FANG_BLAST],
+    [FourCC('A0RL'), AbilityNames.YamchaR.SLEDGEHAMMER],
+    [FourCC('A0RM'), AbilityNames.YamchaR.METEOR_CRASH],
+    [FourCC('A0RN'), AbilityNames.YamchaR.UPPERCUT],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
