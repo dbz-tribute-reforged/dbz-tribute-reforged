@@ -345,6 +345,10 @@ gg_trg_Dyspo_Super_Max_Cast = nil
 gg_trg_Dyspo_Upgrade_Spells = nil
 gg_trg_Dyspo_Upgraded_Spells_Cast = nil
 gg_trg_Dyspo_Upgraded_Spells_Update_Old_CD = nil
+gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha = nil
+gg_trg_Yamcha_Disable_Abilities = nil
+gg_trg_Yamcha_Combo = nil
+gg_trg_Yamcha_Loop = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -663,6 +667,7 @@ gg_trg_Transformations_Omega_Shenron = nil
 gg_trg_Omega_Dragon_Ball_Stat_Mult_Bonus = nil
 gg_trg_Omega_Shenron_Loop = nil
 gg_trg_Transformations_Krillin = nil
+gg_trg_Transformations_Yamcha = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -690,11 +695,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Yamcha = nil
-gg_trg_Yamcha_Combo = nil
-gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha = nil
-gg_trg_Yamcha_Disable_Abilities = nil
-gg_trg_Yamcha_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -7264,6 +7264,9 @@ function InitTrig_Yamcha_Disable_Abilities()
 end
 
 function Trig_Yamcha_Combo_Func011C()
+    if (GetSpellAbilityId() == FourCC("A0RO")) then
+        return true
+    end
     if (GetSpellAbilityId() == FourCC("A0RC")) then
         return true
     end
@@ -7361,28 +7364,35 @@ function Trig_Yamcha_Combo_Func004C()
     return true
 end
 
-function Trig_Yamcha_Combo_Func009Func001Func005Func005Func005C()
+function Trig_Yamcha_Combo_Func009Func001C()
+    if (not (GetSpellAbilityId() == FourCC("A0RO"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Combo_Func009Func002Func005Func005Func005C()
     if (not (udg_TempInt4 >= 2)) then
         return false
     end
     return true
 end
 
-function Trig_Yamcha_Combo_Func009Func001Func005Func005C()
+function Trig_Yamcha_Combo_Func009Func002Func005Func005C()
     if (not (udg_TempInt3 >= 2)) then
         return false
     end
     return true
 end
 
-function Trig_Yamcha_Combo_Func009Func001Func005C()
+function Trig_Yamcha_Combo_Func009Func002Func005C()
     if (not (udg_TempInt2 >= 2)) then
         return false
     end
     return true
 end
 
-function Trig_Yamcha_Combo_Func009Func001C()
+function Trig_Yamcha_Combo_Func009Func002C()
     if (not (udg_TempInt == 111)) then
         return false
     end
@@ -7417,25 +7427,25 @@ function Trig_Yamcha_Combo_Actions()
     udg_TempInt3 = ModuloInteger(udg_TempInt, 10)
     udg_TempInt4 = ModuloInteger(udg_TempInt, 1)
     if (Trig_Yamcha_Combo_Func009C()) then
-        if (Trig_Yamcha_Combo_Func009Func001C()) then
+        if (Trig_Yamcha_Combo_Func009Func002C()) then
             TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
         else
-            if (Trig_Yamcha_Combo_Func009Func001Func005C()) then
+            if (Trig_Yamcha_Combo_Func009Func002Func005C()) then
                 TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0RF"), udg_TempPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0RG"), udg_TempPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0RH"), udg_TempPlayer)
             else
-                if (Trig_Yamcha_Combo_Func009Func001Func005Func005C()) then
+                if (Trig_Yamcha_Combo_Func009Func002Func005Func005C()) then
                     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
                     SetPlayerAbilityAvailableBJ(true, FourCC("A0RI"), udg_TempPlayer)
                     SetPlayerAbilityAvailableBJ(true, FourCC("A0RJ"), udg_TempPlayer)
                     SetPlayerAbilityAvailableBJ(true, FourCC("A0RK"), udg_TempPlayer)
                 else
-                    if (Trig_Yamcha_Combo_Func009Func001Func005Func005Func005C()) then
+                    if (Trig_Yamcha_Combo_Func009Func002Func005Func005Func005C()) then
                         TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
                         SetPlayerAbilityAvailableBJ(true, FourCC("A0RL"), udg_TempPlayer)
                         SetPlayerAbilityAvailableBJ(true, FourCC("A0RM"), udg_TempPlayer)
@@ -7446,6 +7456,13 @@ function Trig_Yamcha_Combo_Actions()
             end
         end
     else
+        if (Trig_Yamcha_Combo_Func009Func001C()) then
+            TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RD"), udg_TempPlayer)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0RE"), udg_TempPlayer)
+        else
+        end
     end
 end
 

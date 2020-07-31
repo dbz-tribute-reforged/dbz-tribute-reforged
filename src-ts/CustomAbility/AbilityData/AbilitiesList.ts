@@ -2539,6 +2539,93 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.YamchaR.SLEDGEHAMMER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.SLEDGEHAMMER,
+      body: 
+        AbilityNames.YamchaR.SLEDGEHAMMER,
+    },
+    components: [
+      { name: "dash ground forward yamcha r sledgehammer" },
+      { name: "damage yamcha r sledgehammer" },
+      { name: "debuff stun yamcha r sledgehammer" },
+      { name: "jump yamcha r sledgehammer" },
+      { name: "sfx yamcha r sledgehammer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.METEOR_CRASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.METEOR_CRASH,
+      body: 
+        AbilityNames.YamchaR.METEOR_CRASH,
+    },
+    components: [
+      { name: "dash ground forward yamcha r meteor crash" },
+      { name: "damage yamcha r meteor crash" },
+      { name: "sfx yamcha r meteor crash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.UPPERCUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 10,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.UPPERCUT,
+      body: 
+        AbilityNames.YamchaR.UPPERCUT,
+    },
+    components: [
+      { name: "damage yamcha r uppercut" },
+      { name: "debuff stun yamcha r uppercut" },
+      { name: "dash ground forward yamcha r heavy punch" },
+      { name: "sfx yamcha r uppercut" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

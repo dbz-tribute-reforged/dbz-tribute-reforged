@@ -7506,10 +7506,36 @@ STRING 1195
 Bebi
 }
 
+STRING 1196
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool1> seconds|r
+}
+
 STRING 1197
 // Units: E01O (Desert Bandit), Propernames (Proper Names)
 {
 Yamcha
+}
+
+STRING 1198
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 1|r]
+}
+
+STRING 1199
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 2|r]
+}
+
+STRING 1200
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 3|r]
 }
 
 STRING 1201
@@ -50169,6 +50195,12 @@ STRING 8250
 Causes the user to absorb damage for a short time. If the user is attacked he gains mana based on the amount of damage taken. If the damage is enough to kill the user, the damage is not absorbed.
 }
 
+STRING 8251
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 4|r]
+}
+
 STRING 8252
 // Abilities: A0PZ (Death Beam), Tip (Tooltip - Normal)
 {
@@ -64756,7 +64788,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 31.July.20
+This map is under active development - 1.August.20
 }
 
 STRING 10653
@@ -84940,6 +84972,12 @@ STRING 13909
 [|cffffff00W|r] Choose Toppo
 }
 
+STRING 13910
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 5|r]
+}
+
 STRING 13911
 // Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
@@ -84963,6 +85001,12 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 13914
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 6|r]
 }
 
 STRING 13915
@@ -85943,6 +85987,12 @@ STRING 14069
 // Abilities: A0QY (Light Bullet), Name (Name)
 {
 Light Bullet
+}
+
+STRING 14070
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 7|r]
 }
 
 STRING 14071
@@ -87202,7 +87252,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -87217,13 +87267,6 @@ STRING 14272
 // Abilities: A0R9 (Scattering Bullet), EditorSuffix (Editor Suffix)
 {
 (krillin)
-}
-
-STRING 14273
-// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A light punch.
-|cff00ffffCooldown: <A0RC,Cool1> seconds|r
 }
 
 STRING 14274
@@ -87535,7 +87578,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -87553,7 +87596,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -87587,12 +87630,6 @@ A strong close-range fighter with high-damage nukes and a long duration grapple 
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
-}
-
-STRING 14322
-// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
-{
-[|cff22FF22Q|r] Light Punch
 }
 
 STRING 14323
@@ -87743,23 +87780,10 @@ Krillin fires two beams at once that each explode and split into 4 more beams
 |cff00ffffCooldown: <A0R9,Cool2> seconds|r
 }
 
-STRING 14342
-// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A medium punch.
-|cff00ffffCooldown: <A0RD,Cool1> seconds|r
-}
-
 STRING 14343
 // Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 14344
-// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
-{
-[|cff22FFFFW|r] Medium Punch
 }
 
 STRING 14345
@@ -87774,23 +87798,10 @@ STRING 14346
 Heavy Punch
 }
 
-STRING 14347
-// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy punch.
-|cff00ffffCooldown: <A0RE,Cool1> seconds|r
-}
-
 STRING 14348
 // Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 14349
-// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
-{
-[|cffFF2222E|r] Heavy Punch
 }
 
 STRING 14350
@@ -87805,19 +87816,6 @@ STRING 14351
 Dash Left
 }
 
-STRING 14352
-// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
-{
-Dash to the left.
-|cff00ffffCooldown: <A0RF,Cool1> seconds|r
-}
-
-STRING 14353
-// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
-{
-[|cff22FF22Q|r] Dash Left
-}
-
 STRING 14354
 // Abilities: A0RF (Dash Left), EditorSuffix (Editor Suffix)
 {
@@ -87830,23 +87828,10 @@ STRING 14355
 Dash Forward
 }
 
-STRING 14356
-// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
-{
-Dash forward.
-|cff00ffffCooldown: <A0RG,Cool1> seconds|r
-}
-
 STRING 14357
 // Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 14358
-// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
-{
-[|cff22FFFFW|r] Dash Forward
 }
 
 STRING 14359
@@ -87861,23 +87846,10 @@ STRING 14360
 Dash Right
 }
 
-STRING 14361
-// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
-{
-Dash to the right.
-|cff00ffffCooldown: <A0RH,Cool1> seconds|r
-}
-
 STRING 14362
 // Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 14363
-// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
-{
-[|cffFF2222E|r] Dash Right
 }
 
 STRING 14364
@@ -87892,19 +87864,6 @@ STRING 14365
 Super Spirit Ball
 }
 
-STRING 14366
-// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
-{
-A super spirit ball.
-|cff00ffffCooldown: <A0RI,Cool1> seconds|r
-}
-
-STRING 14367
-// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
-{
-[|cff22FF22Q|r] Super Spirit Ball
-}
-
 STRING 14368
 // Abilities: A0RI (Super Spirit Ball), EditorSuffix (Editor Suffix)
 {
@@ -87917,23 +87876,10 @@ STRING 14369
 Full Power Kamehameha
 }
 
-STRING 14370
-// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
-{
-A full power kamehameha.
-|cff00ffffCooldown: <A0RJ,Cool1> seconds|r
-}
-
 STRING 14371
 // Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 14372
-// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
-{
-[|cff22FFFFW|r] Full Power Kamehameha
 }
 
 STRING 14373
@@ -87948,23 +87894,10 @@ STRING 14374
 Wolf Fang Blast
 }
 
-STRING 14375
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha launches a ki infused wolf fang fist.
-|cff00ffffCooldown: <A0RK,Cool1> seconds|r
-}
-
 STRING 14376
 // Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 14377
-// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
-{
-[|cffFF2222E|r] Wolf Fang Blast
 }
 
 STRING 14378
@@ -87979,19 +87912,6 @@ STRING 14379
 Sledgehammer
 }
 
-STRING 14380
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
-{
-A heavy pummelling attack launched from above.
-|cff00ffffCooldown: <A0RL,Cool1> seconds|r
-}
-
-STRING 14381
-// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
-{
-[|cff22FF22Q|r] Sledgehammer
-}
-
 STRING 14382
 // Abilities: A0RL (Sledgehammer), EditorSuffix (Editor Suffix)
 {
@@ -88004,23 +87924,10 @@ STRING 14383
 Meteor Crash
 }
 
-STRING 14384
-// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
-{
-Charge at the opponent with multiple quick attacks.
-|cff00ffffCooldown: <A0RM,Cool1> seconds|r
-}
-
 STRING 14385
 // Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 14386
-// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
-{
-[|cff22FFFFW|r] Meteor Crash
 }
 
 STRING 14387
@@ -88035,23 +87942,10 @@ STRING 14388
 Uppercut
 }
 
-STRING 14389
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ffffCooldown: <A0RN,Cool1> seconds|r
-}
-
 STRING 14390
 // Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 14391
-// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
-{
-[|cffFF2222E|r] Uppercut
 }
 
 STRING 14392
@@ -88082,5 +87976,1666 @@ STRING 14396
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 14397
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 8|r]
+}
+
+STRING 14398
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 9|r]
+}
+
+STRING 14399
+// Abilities: A0RC (Light Punch), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Light Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 14400
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool2> seconds|r
+}
+
+STRING 14401
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool3> seconds|r
+}
+
+STRING 14402
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool4> seconds|r
+}
+
+STRING 14403
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool5> seconds|r
+}
+
+STRING 14404
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool6> seconds|r
+}
+
+STRING 14405
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool7> seconds|r
+}
+
+STRING 14406
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool8> seconds|r
+}
+
+STRING 14407
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool9> seconds|r
+}
+
+STRING 14408
+// Abilities: A0RC (Light Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A light punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RC,Cool10> seconds|r
+}
+
+STRING 14409
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool1> seconds|r
+}
+
+STRING 14410
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 1|r]
+}
+
+STRING 14411
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 2|r]
+}
+
+STRING 14412
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 3|r]
+}
+
+STRING 14413
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 4|r]
+}
+
+STRING 14414
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 5|r]
+}
+
+STRING 14415
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 6|r]
+}
+
+STRING 14416
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 7|r]
+}
+
+STRING 14417
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 8|r]
+}
+
+STRING 14418
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 9|r]
+}
+
+STRING 14419
+// Abilities: A0RD (Medium Punch), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Medium Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 14420
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool2> seconds|r
+}
+
+STRING 14421
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool3> seconds|r
+}
+
+STRING 14422
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool4> seconds|r
+}
+
+STRING 14423
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool5> seconds|r
+}
+
+STRING 14424
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool6> seconds|r
+}
+
+STRING 14425
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool7> seconds|r
+}
+
+STRING 14426
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool8> seconds|r
+}
+
+STRING 14427
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool9> seconds|r
+}
+
+STRING 14428
+// Abilities: A0RD (Medium Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A medium punch.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RD,Cool10> seconds|r
+}
+
+STRING 14429
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool1> seconds|r
+}
+
+STRING 14430
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 1|r]
+}
+
+STRING 14431
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 2|r]
+}
+
+STRING 14432
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 3|r]
+}
+
+STRING 14433
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 4|r]
+}
+
+STRING 14434
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 5|r]
+}
+
+STRING 14435
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 6|r]
+}
+
+STRING 14436
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 7|r]
+}
+
+STRING 14437
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 8|r]
+}
+
+STRING 14438
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 9|r]
+}
+
+STRING 14439
+// Abilities: A0RE (Heavy Punch), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Heavy Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 14440
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool2> seconds|r
+}
+
+STRING 14441
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool3> seconds|r
+}
+
+STRING 14442
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool4> seconds|r
+}
+
+STRING 14443
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool5> seconds|r
+}
+
+STRING 14444
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool6> seconds|r
+}
+
+STRING 14445
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool7> seconds|r
+}
+
+STRING 14446
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool8> seconds|r
+}
+
+STRING 14447
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool9> seconds|r
+}
+
+STRING 14448
+// Abilities: A0RE (Heavy Punch), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy punch.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RE,Cool10> seconds|r
+}
+
+STRING 14449
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool1> seconds|r
+}
+
+STRING 14450
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 1|r]
+}
+
+STRING 14451
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 2|r]
+}
+
+STRING 14452
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 3|r]
+}
+
+STRING 14453
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 4|r]
+}
+
+STRING 14454
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 5|r]
+}
+
+STRING 14455
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 6|r]
+}
+
+STRING 14456
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 7|r]
+}
+
+STRING 14457
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 8|r]
+}
+
+STRING 14458
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 9|r]
+}
+
+STRING 14459
+// Abilities: A0RF (Dash Left), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Dash Left - [|cffffcc00Level 10|r]
+}
+
+STRING 14460
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool2> seconds|r
+}
+
+STRING 14461
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool3> seconds|r
+}
+
+STRING 14462
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool4> seconds|r
+}
+
+STRING 14463
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool5> seconds|r
+}
+
+STRING 14464
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool6> seconds|r
+}
+
+STRING 14465
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool7> seconds|r
+}
+
+STRING 14466
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool8> seconds|r
+}
+
+STRING 14467
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool9> seconds|r
+}
+
+STRING 14468
+// Abilities: A0RF (Dash Left), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the left.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RF,Cool10> seconds|r
+}
+
+STRING 14469
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool1> seconds|r
+}
+
+STRING 14470
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 1|r]
+}
+
+STRING 14471
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 2|r]
+}
+
+STRING 14472
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 3|r]
+}
+
+STRING 14473
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 4|r]
+}
+
+STRING 14474
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 5|r]
+}
+
+STRING 14475
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 6|r]
+}
+
+STRING 14476
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 7|r]
+}
+
+STRING 14477
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 8|r]
+}
+
+STRING 14478
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 9|r]
+}
+
+STRING 14479
+// Abilities: A0RG (Dash Forward), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Dash Forward - [|cffffcc00Level 10|r]
+}
+
+STRING 14480
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool2> seconds|r
+}
+
+STRING 14481
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool3> seconds|r
+}
+
+STRING 14482
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool4> seconds|r
+}
+
+STRING 14483
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool5> seconds|r
+}
+
+STRING 14484
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool6> seconds|r
+}
+
+STRING 14485
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool7> seconds|r
+}
+
+STRING 14486
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool8> seconds|r
+}
+
+STRING 14487
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool9> seconds|r
+}
+
+STRING 14488
+// Abilities: A0RG (Dash Forward), Ubertip (Tooltip - Normal - Extended)
+{
+Dash forward.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RG,Cool10> seconds|r
+}
+
+STRING 14489
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool1> seconds|r
+}
+
+STRING 14490
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 1|r]
+}
+
+STRING 14491
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 2|r]
+}
+
+STRING 14492
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 3|r]
+}
+
+STRING 14493
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 4|r]
+}
+
+STRING 14494
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 5|r]
+}
+
+STRING 14495
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 6|r]
+}
+
+STRING 14496
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 7|r]
+}
+
+STRING 14497
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 8|r]
+}
+
+STRING 14498
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 9|r]
+}
+
+STRING 14499
+// Abilities: A0RH (Dash Right), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Dash Right - [|cffffcc00Level 10|r]
+}
+
+STRING 14500
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool2> seconds|r
+}
+
+STRING 14501
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool3> seconds|r
+}
+
+STRING 14502
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool4> seconds|r
+}
+
+STRING 14503
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool5> seconds|r
+}
+
+STRING 14504
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool6> seconds|r
+}
+
+STRING 14505
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool7> seconds|r
+}
+
+STRING 14506
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool8> seconds|r
+}
+
+STRING 14507
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool9> seconds|r
+}
+
+STRING 14508
+// Abilities: A0RH (Dash Right), Ubertip (Tooltip - Normal - Extended)
+{
+Dash to the right.
+|cff00ff00Damage: Agi
+|cff00ffffCooldown: <A0RH,Cool10> seconds|r
+}
+
+STRING 14509
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool1> seconds|r
+}
+
+STRING 14510
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 1|r]
+}
+
+STRING 14511
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 2|r]
+}
+
+STRING 14512
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 3|r]
+}
+
+STRING 14513
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 4|r]
+}
+
+STRING 14514
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 5|r]
+}
+
+STRING 14515
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 6|r]
+}
+
+STRING 14516
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 7|r]
+}
+
+STRING 14517
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 8|r]
+}
+
+STRING 14518
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 9|r]
+}
+
+STRING 14519
+// Abilities: A0RI (Super Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Super Spirit Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 14520
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool2> seconds|r
+}
+
+STRING 14521
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool3> seconds|r
+}
+
+STRING 14522
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool4> seconds|r
+}
+
+STRING 14523
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool5> seconds|r
+}
+
+STRING 14524
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool6> seconds|r
+}
+
+STRING 14525
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool7> seconds|r
+}
+
+STRING 14526
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool8> seconds|r
+}
+
+STRING 14527
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool9> seconds|r
+}
+
+STRING 14528
+// Abilities: A0RI (Super Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A super spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RI,Cool10> seconds|r
+}
+
+STRING 14529
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool1> seconds|r
+}
+
+STRING 14530
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 14531
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 14532
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 14533
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 14534
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 14535
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 14536
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 14537
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 14538
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 14539
+// Abilities: A0RJ (Full Power Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Full Power Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 14540
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool2> seconds|r
+}
+
+STRING 14541
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool3> seconds|r
+}
+
+STRING 14542
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool4> seconds|r
+}
+
+STRING 14543
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool5> seconds|r
+}
+
+STRING 14544
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool6> seconds|r
+}
+
+STRING 14545
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool7> seconds|r
+}
+
+STRING 14546
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool8> seconds|r
+}
+
+STRING 14547
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool9> seconds|r
+}
+
+STRING 14548
+// Abilities: A0RJ (Full Power Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A full power kamehameha.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RJ,Cool10> seconds|r
+}
+
+STRING 14549
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool1> seconds|r
+}
+
+STRING 14550
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 1|r]
+}
+
+STRING 14551
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 2|r]
+}
+
+STRING 14552
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 3|r]
+}
+
+STRING 14553
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 4|r]
+}
+
+STRING 14554
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 5|r]
+}
+
+STRING 14555
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 6|r]
+}
+
+STRING 14556
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 7|r]
+}
+
+STRING 14557
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 8|r]
+}
+
+STRING 14558
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 9|r]
+}
+
+STRING 14559
+// Abilities: A0RK (Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 14560
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool2> seconds|r
+}
+
+STRING 14561
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool3> seconds|r
+}
+
+STRING 14562
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool4> seconds|r
+}
+
+STRING 14563
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool5> seconds|r
+}
+
+STRING 14564
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool6> seconds|r
+}
+
+STRING 14565
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool7> seconds|r
+}
+
+STRING 14566
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool8> seconds|r
+}
+
+STRING 14567
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool9> seconds|r
+}
+
+STRING 14568
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool10> seconds|r
+}
+
+STRING 14569
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool1> seconds|r
+}
+
+STRING 14570
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 1|r]
+}
+
+STRING 14571
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 2|r]
+}
+
+STRING 14572
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 3|r]
+}
+
+STRING 14573
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 4|r]
+}
+
+STRING 14574
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 5|r]
+}
+
+STRING 14575
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 6|r]
+}
+
+STRING 14576
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 7|r]
+}
+
+STRING 14577
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 8|r]
+}
+
+STRING 14578
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 9|r]
+}
+
+STRING 14579
+// Abilities: A0RL (Sledgehammer), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Sledgehammer - [|cffffcc00Level 10|r]
+}
+
+STRING 14580
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool2> seconds|r
+}
+
+STRING 14581
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool3> seconds|r
+}
+
+STRING 14582
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool4> seconds|r
+}
+
+STRING 14583
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool5> seconds|r
+}
+
+STRING 14584
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool6> seconds|r
+}
+
+STRING 14585
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool7> seconds|r
+}
+
+STRING 14586
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool8> seconds|r
+}
+
+STRING 14587
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool9> seconds|r
+}
+
+STRING 14588
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool10> seconds|r
+}
+
+STRING 14589
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool1> seconds|r
+}
+
+STRING 14590
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 1|r]
+}
+
+STRING 14591
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 2|r]
+}
+
+STRING 14592
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 3|r]
+}
+
+STRING 14593
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 4|r]
+}
+
+STRING 14594
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 5|r]
+}
+
+STRING 14595
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 6|r]
+}
+
+STRING 14596
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 7|r]
+}
+
+STRING 14597
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 8|r]
+}
+
+STRING 14598
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 9|r]
+}
+
+STRING 14599
+// Abilities: A0RM (Meteor Crash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Meteor Crash - [|cffffcc00Level 10|r]
+}
+
+STRING 14600
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool2> seconds|r
+}
+
+STRING 14601
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool3> seconds|r
+}
+
+STRING 14602
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool4> seconds|r
+}
+
+STRING 14603
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool5> seconds|r
+}
+
+STRING 14604
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool6> seconds|r
+}
+
+STRING 14605
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool7> seconds|r
+}
+
+STRING 14606
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool8> seconds|r
+}
+
+STRING 14607
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool9> seconds|r
+}
+
+STRING 14608
+// Abilities: A0RM (Meteor Crash), Ubertip (Tooltip - Normal - Extended)
+{
+Charge at the opponent with multiple quick attacks.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RM,Cool10> seconds|r
+}
+
+STRING 14609
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool1> seconds|r
+}
+
+STRING 14610
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 1|r]
+}
+
+STRING 14611
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 2|r]
+}
+
+STRING 14612
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 3|r]
+}
+
+STRING 14613
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 4|r]
+}
+
+STRING 14614
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 5|r]
+}
+
+STRING 14615
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 6|r]
+}
+
+STRING 14616
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 7|r]
+}
+
+STRING 14617
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 8|r]
+}
+
+STRING 14618
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 9|r]
+}
+
+STRING 14619
+// Abilities: A0RN (Uppercut), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Uppercut - [|cffffcc00Level 10|r]
+}
+
+STRING 14620
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool2> seconds|r
+}
+
+STRING 14621
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool3> seconds|r
+}
+
+STRING 14622
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool4> seconds|r
+}
+
+STRING 14623
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool5> seconds|r
+}
+
+STRING 14624
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool6> seconds|r
+}
+
+STRING 14625
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool7> seconds|r
+}
+
+STRING 14626
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool8> seconds|r
+}
+
+STRING 14627
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool9> seconds|r
+}
+
+STRING 14628
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool10> seconds|r
+}
+
+STRING 14629
+// Abilities: A0RO (Revert), Name (Name)
+{
+Revert
+}
+
+STRING 14630
+// Abilities: A0RO (Revert), Ubertip (Tooltip - Normal - Extended)
+{
+Reverts to original base abilities.
+|cff00ffffCooldown: <A0RO,Cool1> seconds
+}
+
+STRING 14631
+// Abilities: A0RO (Revert), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 14632
+// Abilities: A0RO (Revert), Tip (Tooltip - Normal)
+{
+[|cffDD00EED|r] Revert
+}
+
+STRING 14633
+// Abilities: A0RO (Revert), EditorSuffix (Editor Suffix)
+{
+(yamcha)
 }
 

@@ -1,8 +1,10 @@
 export module Debuffs {
   export const THUNDERBOLT_ORDER_ID = 852095;
   export const STUN_MICRO = FourCC('A08K')
-  export const STUN_TWO_SECOND = FourCC('A0I7');
+  export const STUN_HALF_SECOND = FourCC('A0NR');
   export const STUN_ONE_SECOND = FourCC('A0IY');
+  export const STUN_TWO_SECOND = FourCC('A0I7');
+  export const STUN_THREE_SECOND = FourCC('A08H');
   export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
 
   export const CURSE_ORDER_ID = 852190;
@@ -328,6 +330,32 @@ export const AOEDebuffComponents = [
     abilityId: Debuffs.CIRCLE_FLASH,
     orderId: Debuffs.ENTANGLING_ROOTS_ORDER_ID,
     aoe: 300,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun yamcha r sledgehammer",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    abilityId: Debuffs.STUN_HALF_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 250,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun yamcha r uppercut",
+    repeatInterval: 1,
+    startTick: -1,
+    endTick: -1,
+    abilityId: Debuffs.STUN_HALF_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 250,
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,

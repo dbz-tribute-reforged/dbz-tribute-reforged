@@ -583,7 +583,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 5,
+    distance: 10,
   },
   // yamcha r medium punch
   {
@@ -596,7 +596,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 2.5,
+    distance: 5,
   },
   // yamcha r heavy punch
   {
@@ -609,7 +609,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 1.25,
+    distance: 2.5,
   },
   // yamcha r dash left
   {
@@ -674,6 +674,45 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 50,
+  },
+  // yamcha r sledgehammer
+  {
+    name: "dash ground forward yamcha r sledgehammer",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 20,
+  },
+  // yamcha r meteor crash
+  {
+    name: "dash ground forward yamcha r meteor crash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 20,
+  },
+  // yamcha r meteor crash
+  {
+    name: "dash ground forward yamcha r uppercut",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 10,
   },
   // ----------------------------
   // cell-x

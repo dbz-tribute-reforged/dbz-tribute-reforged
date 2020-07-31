@@ -16,6 +16,7 @@ import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
 import { TeamManager } from 'Core/TeamSystem/TeamManager';
 import { Constants } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
+import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
@@ -26,6 +27,7 @@ let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
 let dragonBallsManager: DragonBallsManager;
 let itemCleanupManager: ItemCleanupManager;
+let customAbilityManager: CustomAbilityManager;
 
 function tsMain() {
 
@@ -34,6 +36,9 @@ function tsMain() {
   Preload("DragonSegment2.mdl");
   Preload("DragonTail.mdl");
   Preload("Conflagrate.mdl");
+
+  // preload custom abilities
+  customAbilityManager = CustomAbilityManager.getInstance();
 
   // setup logger
   Logger.doLogVerbose = false;
