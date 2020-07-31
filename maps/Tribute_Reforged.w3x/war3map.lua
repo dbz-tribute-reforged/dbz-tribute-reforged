@@ -7473,6 +7473,36 @@ function InitTrig_Yamcha_Combo()
     TriggerAddAction(gg_trg_Yamcha_Combo, Trig_Yamcha_Combo_Actions)
 end
 
+function Trig_Yamcha_Loop_Func001Func008C()
+    if (not (udg_TempInt2 > 0)) then
+        return false
+    end
+    if (not (udg_TempInt2 <= 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Loop_Func001Func009C()
+    if (not (udg_TempInt3 > 0)) then
+        return false
+    end
+    if (not (udg_TempInt3 <= 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Yamcha_Loop_Func001Func010C()
+    if (not (udg_TempInt4 > 0)) then
+        return false
+    end
+    if (not (udg_TempInt4 <= 3)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Yamcha_Loop_Func001A()
     udg_StatMultUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_StatMultUnit)
@@ -7481,23 +7511,32 @@ function Trig_Yamcha_Loop_Func001A()
     udg_TempInt3 = ModuloInteger(udg_TempInt, 10)
     udg_TempInt4 = ModuloInteger(udg_TempInt, 1)
     udg_TempString = "|cffffcc00"
-    udg_TempInt = 1
-    while (true) do
-        if (udg_TempInt > udg_TempInt2) then break end
-        udg_TempString = (udg_TempString .. "Q")
-        udg_TempInt = udg_TempInt + 1
+    if (Trig_Yamcha_Loop_Func001Func008C()) then
+        udg_TempInt = 1
+        while (true) do
+            if (udg_TempInt > udg_TempInt2) then break end
+            udg_TempString = (udg_TempString .. "Q")
+            udg_TempInt = udg_TempInt + 1
+        end
+    else
     end
-    udg_TempInt2 = 1
-    while (true) do
-        if (udg_TempInt2 > udg_TempInt2) then break end
-        udg_TempString = (udg_TempString .. "W")
-        udg_TempInt2 = udg_TempInt2 + 1
+    if (Trig_Yamcha_Loop_Func001Func009C()) then
+        udg_TempInt = 1
+        while (true) do
+            if (udg_TempInt > udg_TempInt3) then break end
+            udg_TempString = (udg_TempString .. "W")
+            udg_TempInt = udg_TempInt + 1
+        end
+    else
     end
-    udg_TempInt3 = 1
-    while (true) do
-        if (udg_TempInt3 > udg_TempInt2) then break end
-        udg_TempString = (udg_TempString .. "E")
-        udg_TempInt3 = udg_TempInt3 + 1
+    if (Trig_Yamcha_Loop_Func001Func010C()) then
+        udg_TempInt = 1
+        while (true) do
+            if (udg_TempInt > udg_TempInt4) then break end
+            udg_TempString = (udg_TempString .. "E")
+            udg_TempInt = udg_TempInt + 1
+        end
+    else
     end
     udg_TempFloatingText = LoadTextTagHandleBJ(1, udg_ID, udg_YamchaHashtable)
     SetTextTagTextBJ(udg_TempFloatingText, udg_TempString, 15.00)
@@ -7522,7 +7561,7 @@ end
 function InitTrig_Yamcha_Loop()
     gg_trg_Yamcha_Loop = CreateTrigger()
     DisableTrigger(gg_trg_Yamcha_Loop)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Yamcha_Loop, 0.02)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Yamcha_Loop, 0.03)
     TriggerAddAction(gg_trg_Yamcha_Loop, Trig_Yamcha_Loop_Actions)
 end
 

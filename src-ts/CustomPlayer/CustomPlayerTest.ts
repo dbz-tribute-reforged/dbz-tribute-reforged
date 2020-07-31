@@ -1164,13 +1164,16 @@ export function CustomPlayerTest() {
 		}
   });
 
-  SetupBraveSwordAttack(customPlayers);
-  SetupDragonFistSfx(customPlayers);
-  SetupGinyuChangeNow(customPlayers);
-  SetupGinyuTelekinesis(customPlayers);
-  SetupOmegaShenronShadowFist(customPlayers);
-  SetupKrillinSenzuThrow(customPlayers);
-  SetupSpellSoundEffects();
+  TimerStart(CreateTimer(), 3, false, () => {
+    SetupBraveSwordAttack(customPlayers);
+    SetupDragonFistSfx(customPlayers);
+    SetupGinyuChangeNow(customPlayers);
+    SetupGinyuTelekinesis(customPlayers);
+    SetupOmegaShenronShadowFist(customPlayers);
+    SetupKrillinSenzuThrow(customPlayers);
+    SetupSpellSoundEffects();
+    DestroyTimer(GetExpiredTimer());
+  });
 }
 
 export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
