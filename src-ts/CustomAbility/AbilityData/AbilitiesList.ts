@@ -2301,10 +2301,10 @@ export const AbilitiesList = [
   {
     name: AbilityNames.YamchaR.LIGHT_PUNCH,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: 0.3,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2320,18 +2320,19 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.LIGHT_PUNCH,
     },
     components: [
-      { name: "multi yamcha r light punch" },
       { name: "dash ground forward yamcha r light punch" },
+      { name: "damage yamcha r light punch" },
+      { name: "sfx yamcha r light punch" },
     ],
   },
   // -------------------------------------------
   {
     name: AbilityNames.YamchaR.MEDIUM_PUNCH,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: 0.3,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2347,18 +2348,19 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.MEDIUM_PUNCH,
     },
     components: [
-      { name: "multi yamcha r medium punch" },
       { name: "dash ground forward yamcha r medium punch" },
+      { name: "damage yamcha r medium punch" },
+      { name: "sfx yamcha r light punch" },
     ],
   },
   // -------------------------------------------
   {
     name: AbilityNames.YamchaR.HEAVY_PUNCH,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: 0.3,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2374,8 +2376,9 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.HEAVY_PUNCH,
     },
     components: [
-      { name: "multi yamcha r heavy punch" },
       { name: "dash ground forward yamcha r heavy punch" },
+      { name: "damage yamcha r heavy punch" },
+      { name: "sfx yamcha r heavy punch" },
     ],
   },
   // -------------------------------------------
@@ -2509,6 +2512,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi yamcha r full power kame" },
+      { name: "dash ground forward yamcha r full power kame pushback" },
     ],
   },
   // -------------------------------------------
@@ -2534,6 +2538,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.WOLF_FANG_BLAST,
     },
     components: [
+      { name: "damage yamcha r wolf fang blast" },
       { name: "multi yamcha r wolf fang blast" },
     ],
   },
@@ -2562,7 +2567,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward yamcha r sledgehammer" },
       { name: "damage yamcha r sledgehammer" },
-      { name: "debuff stun yamcha r sledgehammer" },
+      { name: "debuff stun yamcha r half second" },
       { name: "jump yamcha r sledgehammer" },
       { name: "sfx yamcha r sledgehammer" },
     ],
@@ -2618,10 +2623,478 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.UPPERCUT,
     },
     components: [
-      { name: "damage yamcha r uppercut" },
-      { name: "debuff stun yamcha r uppercut" },
       { name: "dash ground forward yamcha r heavy punch" },
+      { name: "damage yamcha r uppercut" },
+      { name: "debuff stun yamcha r half second" },
       { name: "sfx yamcha r uppercut" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_HURRICANE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.WOLF_FANG_HURRICANE,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_HURRICANE
+    },
+    components: [
+      { name: "dash ground forward yamcha r wolf fang hurricane" },
+      { name: "damage yamcha r wolf fang hurricane dps" },
+      { name: "knockback yamcha r wolf fang hurricane" },
+      { name: "sfx yamcha r wolf fang hurricane" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_VOLLEY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.WOLF_FANG_VOLLEY,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_VOLLEY
+    },
+    components: [
+      { name: "multi yamcha r wolf fang volley" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST,
+      body: 
+        AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST,
+    },
+    components: [
+      { name: "dash ground forward yamcha r reverse wolf fang blast" },
+      { name: "damage yamcha r wolf fang blast" },
+      { name: "multi yamcha r reverse wolf fang blast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST,
+      body: 
+        AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST,
+    },
+    components: [
+      { name: "dash ground forward yamcha r wolf fang fist" },
+      { name: "damage yamcha r blinding wolf fang fist" },
+      { name: "debuff blind yamcha r blinding wolf fang fist" },
+      { name: "sfx yamcha r blinding wolf fang fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST,
+      body: 
+        AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST,
+    },
+    components: [
+      { name: "multi yamcha r neo wolf fang blast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.NEO_WOLF_FANG_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.NEO_WOLF_FANG_FIST,
+      body: 
+        AbilityNames.YamchaR.NEO_WOLF_FANG_FIST,
+    },
+    components: [
+      { name: "dash ground forward yamcha r wolf fang fist" },
+      { name: "damage yamcha r neo wolf fang fist" },
+      { name: "debuff stun yamcha r neo wolf fang fist" },
+      { name: "sfx yamcha r neo wolf fang fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.SPIRIT_BALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.SPIRIT_BALL,
+      body: 
+        AbilityNames.YamchaR.SPIRIT_BALL,
+    },
+    components: [
+      { name: "multi yamcha r spirit ball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.FLASH_KAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.FLASH_KAME,
+      body: 
+        AbilityNames.YamchaR.FLASH_KAME,
+    },
+    components: [
+      { name: "multi yamcha r flash kame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_BARRAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.WOLF_FANG_BARRAGE,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_BARRAGE
+    },
+    components: [
+      { name: "multi yamcha r wolf fang barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK,
+    },
+    components: [
+      { name: "dash ground forward yamcha r wolf fang fist" },
+      { name: "damage yamcha r wolf fang pack attack" },
+      { name: "damage yamcha r wolf fang pack attack solar flare bonus" },
+      { name: "sfx yamcha r wolf fang pack attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_FLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.WOLF_FANG_FLASH,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_FLASH,
+    },
+    components: [
+      { name: "multi yamcha r flash kame" },
+      { name: "dash ground forward yamcha r wolf fang flash" },
+      { name: "damage yamcha r wolf fang flash" },
+      { name: "damage yamcha r wolf fang flash spirit ball bonus" },
+      { name: "sfx yamcha r wolf fang flash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_FINISHER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.WOLF_FANG_FINISHER,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_FINISHER,
+    },
+    components: [
+      { name: "dash ground forward yamcha r wolf fang fist" },
+      { name: "damage yamcha r wolf fang finisher" },
+      { name: "damage yamcha r wolf fang finisher stun bonus" },
+      { name: "sfx yamcha r wolf fang finisher" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.YAMCHA_BLAST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.YAMCHA_BLAST,
+      body: 
+        AbilityNames.YamchaR.YAMCHA_BLAST,
+    },
+    components: [
+      { name: "multi yamcha r yamcha blast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.PLAY_DEAD,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 67,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.PLAY_DEAD,
+      body: 
+        AbilityNames.YamchaR.PLAY_DEAD
+    },
+    components: [
+      { name: "damage yamcha r play dead explosion" },
+      { name: "hide unit yamcha r play dead" },
+      { name: "sfx yamcha r play dead" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.HOMERUN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.HOMERUN,
+      body: 
+        AbilityNames.YamchaR.HOMERUN,
+    },
+    components: [
+      { name: "dash ground forward yamcha r homerun" },
+      { name: "sfx yamcha r homerun" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
+      body: 
+        AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
+    },
+    components: [
+      { name: "multi yamcha r wolf fang pitching fist" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.YamchaR.BATTER_UP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.BATTER_UP,
+      body: 
+        AbilityNames.YamchaR.BATTER_UP
+    },
+    components: [
+      { name: "damage yamcha r batter up" },
+      { name: "knockback yamcha r batter up deflect" },
+      { name: "sfx yamcha r batter up" },
     ],
   },
   // -------------------------------------------

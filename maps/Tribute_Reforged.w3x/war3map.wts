@@ -6569,7 +6569,7 @@ Desert Bandit
 }
 
 STRING 1055
-// Units: E010 (Baseball Pitcher), Propernames (Proper Names)
+// Units: E010 (Baseball Bandit), Propernames (Proper Names)
 {
 Yamcha
 }
@@ -12312,7 +12312,7 @@ Multi Form- Level 3
 }
 
 STRING 1980
-// Units: E010 (Baseball Pitcher), Hotkey (Hotkey)
+// Units: E010 (Baseball Bandit), Hotkey (Hotkey)
 {
 F
 }
@@ -13771,7 +13771,7 @@ STRING 2221
 }
 
 STRING 2222
-// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
+// Units: H09I (Yamcha's Best Friend), Hotkey (Hotkey)
 {
 E
 }
@@ -13795,7 +13795,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 2226
-// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
+// Items: I013 (Train Energy |cffffff00(E)|r), Hotkey (Hotkey)
 {
 E
 }
@@ -14011,7 +14011,7 @@ Mas|cffffcc00e|rnko - [|cffffcc00Level 7|r]
 }
 
 STRING 2262
-// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A070 (Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -14035,7 +14035,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2266
-// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A070 (Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -14971,7 +14971,7 @@ STRING 2421
 }
 
 STRING 2422
-// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A042 (Charge), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -14997,7 +14997,7 @@ A sphere thrown from Broly's hand causing wide area damage.
 }
 
 STRING 2426
-// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A042 (Charge), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -15359,7 +15359,7 @@ STRING 2484
 }
 
 STRING 2485
-// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A042 (Charge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15383,7 +15383,7 @@ Babidi uses his magic to heal himself.
 }
 
 STRING 2489
-// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A074 (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -15905,7 +15905,7 @@ STRING 2575
 }
 
 STRING 2576
-// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A074 (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -15929,7 +15929,7 @@ Caster Shoots evil energy from its mouth at its enemy.
 }
 
 STRING 2580
-// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A005 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16384,7 +16384,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2656
-// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
+// Abilities: A005 (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -16406,7 +16406,7 @@ You need to absorb android 17!
 }
 
 STRING 2660
-// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
+// Abilities: A016 (Destruction Sphere), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -17552,7 +17552,7 @@ STRING 2850
 }
 
 STRING 2851
-// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
+// Abilities: A016 (Destruction Sphere), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -17576,7 +17576,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 2855
-// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
+// Abilities: A007 (Babidi Wizardry), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19293,7 +19293,7 @@ STRING 3140
 }
 
 STRING 3141
-// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
+// Abilities: A007 (Babidi Wizardry), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -19317,7 +19317,7 @@ Buu fires energy blasts everywhere.
 }
 
 STRING 3145
-// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
+// Abilities: A038 (Evil Impulse), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -19827,7 +19827,7 @@ Cooler transforms into his final, most powerful form. This form allows the user 
 }
 
 STRING 3230
-// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A038 (Evil Impulse), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20200,7 +20200,7 @@ Tsufuru Mcffffcc00e|rdic Training
 }
 
 STRING 3292
-// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A029 (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20224,7 +20224,7 @@ Buu gets so angry he makes himself explode damaging every unit nearby.
 }
 
 STRING 3296
-// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20266,7 +20266,7 @@ STRING 3302
 }
 
 STRING 3303
-// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
+// Abilities: A07B (Energy Absorption), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20290,7 +20290,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 3307
-// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (Energy Absorption), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -20512,7 +20512,7 @@ Tsufuru Elite Guacffffcc00r|rd Training
 }
 
 STRING 3344
-// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Flesh Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -20942,7 +20942,7 @@ Tsufuru Sciencffffcc00t|rist Training
 }
 
 STRING 3414
-// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
+// Abilities: A01C (Flesh Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -22663,7 +22663,7 @@ STRING 3699
 }
 
 STRING 3700
-// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -22687,7 +22687,7 @@ Used to turn people into candy. |n[|cffffcc00History|r] - |cff0066CCThis is Buu'
 }
 
 STRING 3704
-// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Energy Disbursement), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24481,7 +24481,7 @@ Gigantic Omegastorm
 }
 
 STRING 4003
-// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A04G (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -24505,7 +24505,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 4007
-// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
+// Abilities: A05H (Tsufuru Medic Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -25621,7 +25621,7 @@ STRING 4192
 }
 
 STRING 4193
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A05H (Tsufuru Medic Training), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -25645,7 +25645,7 @@ Dende heals nearby heroes for 0.33% of their total HP per second and heals himse
 }
 
 STRING 4197
-// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26017,7 +26017,7 @@ Finger Blit|cffffcc00z|r Barrage
 }
 
 STRING 4259
-// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A00I (Old Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -26041,7 +26041,7 @@ Dende, as Earth's Guardian, has the ability to revive a dead player.|n|cff66ccee
 }
 
 STRING 4263
-// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
+// Abilities: A05I (Tsufuru Elite Guard Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -26791,7 +26791,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 4388
-// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A05J (Tsufuru Scientist Training), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27181,7 +27181,7 @@ STRING 4452
 }
 
 STRING 4453
-// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
+// Abilities: A02P (Buu Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27205,7 +27205,7 @@ Eis Shenron swipes his enemies from in the eyes with powerful claws made of ice,
 }
 
 STRING 4457
-// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A02P (Buu Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -27589,7 +27589,7 @@ STRING 4520
 }
 
 STRING 4521
-// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A00U (Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -27613,7 +27613,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 4525
-// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A00U (Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -28484,7 +28484,7 @@ STRING 4668
 }
 
 STRING 4669
-// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A06V (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -28509,7 +28509,7 @@ Turles forms a ring of energy between his palms and throws it at the target loca
 }
 
 STRING 4673
-// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
+// Abilities: A06V (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30101,7 +30101,7 @@ STRING 4937
 }
 
 STRING 4938
-// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
+// Abilities: A06W (Touch of Life), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30125,7 +30125,7 @@ Android 18 stuns the target with a quick knee to the torso.|n|cff00FF00Duration:
 }
 
 STRING 4942
-// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A06W (Touch of Life), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -30330,7 +30330,7 @@ STRING 4975
 }
 
 STRING 4976
-// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -30355,7 +30355,7 @@ Android 17 uses his inhuman agility and strength to throw his opponent around li
 }
 
 STRING 4980
-// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A01Y (Nuclear Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31429,7 +31429,7 @@ STRING 5158
 }
 
 STRING 5159
-// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Y (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31453,7 +31453,7 @@ Bebi detonates the targeted minion, causing damage in an area.. |n|cff00ff00(Dam
 }
 
 STRING 5163
-// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
+// Abilities: A00Z (Solar Flare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -31626,7 +31626,7 @@ STRING 5191
 }
 
 STRING 5192
-// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Z (Solar Flare), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -31650,7 +31650,7 @@ Tien blinds his opponents with a Solar Flare and creates images of himself.
 }
 
 STRING 5196
-// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A05Z (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -32220,7 +32220,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5291
-// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
+// Abilities: A05Z (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -33733,7 +33733,7 @@ STRING 5539
 }
 
 STRING 5540
-// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
+// Abilities: A08D (Kill Driver), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -33751,7 +33751,7 @@ STRING 5542
 }
 
 STRING 5543
-// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A08D (Kill Driver), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34189,7 +34189,7 @@ STRING 5615
 }
 
 STRING 5616
-// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
+// Abilities: A09R (Windbreaker), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34207,7 +34207,7 @@ STRING 5618
 }
 
 STRING 5619
-// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
+// Abilities: A09R (Windbreaker), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34431,13 +34431,13 @@ STRING 5655
 }
 
 STRING 5656
-// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Delta Combination), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5657
-// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A09T (Delta Combination), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34599,13 +34599,13 @@ Slappy Hand
 }
 
 STRING 5684
-// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0B3 (Tuffle Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 5685
-// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B3 (Tuffle Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -34946,7 +34946,7 @@ Moves your revive point to the upper-left area of the map.|n|cffFF0000Warning: n
 }
 
 STRING 5729
-// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -34994,7 +34994,7 @@ Moves your revive point to the wooded area in the south of the map.
 }
 
 STRING 5737
-// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
+// Abilities: A0B6 (Multi Form), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35386,7 +35386,7 @@ STRING 5800
 }
 
 STRING 5801
-// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -35410,7 +35410,7 @@ Gotenks creates ghost clones of himself that will travel to the target location 
 }
 
 STRING 5805
-// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
+// Abilities: A0BZ (Planet Crusher), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -35776,13 +35776,13 @@ Beerus Generic Hakai 2.0
 }
 
 STRING 5866
-// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BZ (Planet Crusher), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 5867
-// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
+// Abilities: A0C3 (BeerusBall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36106,7 +36106,7 @@ STRING 5920
 }
 
 STRING 5921
-// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C3 (BeerusBall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36220,7 +36220,7 @@ STRING 5939
 }
 
 STRING 5940
-// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36334,7 +36334,7 @@ STRING 5958
 }
 
 STRING 5959
-// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C6 (Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36358,7 +36358,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5963
-// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CD (Revive - Goten Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36448,7 +36448,7 @@ STRING 5977
 }
 
 STRING 5978
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CG (Revive - Androids Spawn), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36562,7 +36562,7 @@ STRING 5996
 }
 
 STRING 5997
-// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36676,7 +36676,7 @@ STRING 6015
 }
 
 STRING 6016
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CP (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -36790,7 +36790,7 @@ STRING 6034
 }
 
 STRING 6035
-// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -36904,7 +36904,7 @@ STRING 6053
 }
 
 STRING 6054
-// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CV (Beerus Generic Hakai 2.0), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -37018,7 +37018,7 @@ STRING 6072
 }
 
 STRING 6073
-// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CX (Sample Eggs and Sausage), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37132,7 +37132,7 @@ STRING 6091
 }
 
 STRING 6092
-// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CY (Sample ????), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37644,7 +37644,7 @@ STRING 6176
 }
 
 STRING 6177
-// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
+// Abilities: A0CZ (Sample Sushi), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -37662,7 +37662,7 @@ STRING 6179
 }
 
 STRING 6180
-// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (Sample Sushi), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -38577,7 +38577,7 @@ Removes 90 armor from nearby enemies.
 }
 
 STRING 6333
-// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (Sample Ramen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39033,7 +39033,7 @@ STRING 6401
 }
 
 STRING 6402
-// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D1 (Sample Pizza), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39147,7 +39147,7 @@ STRING 6420
 }
 
 STRING 6421
-// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D2 (Sample Purified Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39261,7 +39261,7 @@ STRING 6439
 }
 
 STRING 6440
-// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D3 (Sample Pudding), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39285,7 +39285,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6444
-// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39375,7 +39375,7 @@ STRING 6458
 }
 
 STRING 6459
-// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D5 (Sample Beer), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39489,7 +39489,7 @@ STRING 6477
 }
 
 STRING 6478
-// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D6 (Sample ???), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39603,7 +39603,7 @@ STRING 6496
 }
 
 STRING 6497
-// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
+// Abilities: A0DG (God of Destruction's Wrath), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -39753,7 +39753,7 @@ STRING 6521
 }
 
 STRING 6522
-// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DG (God of Destruction's Wrath), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -41578,7 +41578,7 @@ Removes 150 armor from nearby enemies.
 }
 
 STRING 6821
-// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DW (Evil Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41776,7 +41776,7 @@ STRING 6853
 }
 
 STRING 6854
-// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E1 (Transform - First), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -41800,7 +41800,7 @@ Hercule leaves a bomb on the ground disguised as an item. Any enemy that picks i
 }
 
 STRING 6858
-// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E2 (Transform - Second), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42232,7 +42232,7 @@ W
 }
 
 STRING 6930
-// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
+// Abilities: A0E3 (Transform - Third), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42268,7 +42268,7 @@ Madara traps the target unit in a time loop, causing it to be moved to its origi
 }
 
 STRING 6936
-// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E3 (Transform - Third), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -42772,7 +42772,7 @@ W
 }
 
 STRING 7020
-// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E4 (Transform - Fourth), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -42808,7 +42808,7 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 }
 
 STRING 7026
-// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43342,13 +43342,13 @@ Dende links up to 2 units together. Reduces Dende's damage taken by 50% and spli
 }
 
 STRING 7115
-// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7116
-// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0E7 (Travel), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43432,7 +43432,7 @@ PIC/GOH/A13/DEF
 }
 
 STRING 7130
-// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -43456,7 +43456,7 @@ Big Bang Attack
 }
 
 STRING 7134
-// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EU (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43826,7 +43826,7 @@ Kamehameha
 }
 
 STRING 7192
-// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EW (Collision Aura), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -43934,7 +43934,7 @@ Fires a beam in that deals damage in a line and stuns heroes that are struck. |n
 }
 
 STRING 7210
-// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -44408,7 +44408,7 @@ STRING 7288
 }
 
 STRING 7289
-// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
+// Abilities: A0FF (Present Bomb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44432,7 +44432,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7293
-// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (Izanami), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -44978,7 +44978,7 @@ STRING 7383
 }
 
 STRING 7384
-// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (Izanami), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -45002,7 +45002,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7388
-// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FV (Flash Fist Crush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47301,13 +47301,13 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7770
-// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
+// Abilities: A0FV (Flash Fist Crush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 7771
-// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G2 (Spirit Link), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -47589,7 +47589,7 @@ STRING 7817
 }
 
 STRING 7818
-// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0G2 (Spirit Link), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -47607,7 +47607,7 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G3 (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48063,7 +48063,7 @@ STRING 7896
 }
 
 STRING 7897
-// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0G3 (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48081,7 +48081,7 @@ STRING 7899
 }
 
 STRING 7900
-// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -48711,7 +48711,7 @@ W
 }
 
 STRING 8005
-// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GD (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -48735,7 +48735,7 @@ Holy Light Grenade
 }
 
 STRING 8009
-// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GJ (Masenko), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -49482,7 +49482,7 @@ STRING 8131
 }
 
 STRING 8132
-// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GJ (Masenko), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -49518,7 +49518,7 @@ Tapion slashes units in melee range towards the target direction for damage. If 
 }
 
 STRING 8138
-// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0GO (Big Bang Attack), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50172,7 +50172,7 @@ STRING 8246
 }
 
 STRING 8247
-// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GO (Big Bang Attack), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -50286,7 +50286,7 @@ STRING 8265
 }
 
 STRING 8266
-// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (Bansheee Blast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -50448,7 +50448,7 @@ W
 }
 
 STRING 8293
-// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HL (Bansheee Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51084,7 +51084,7 @@ Goku Black fires several arrows from his energy blade, piercing the first target
 }
 
 STRING 8399
-// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51108,7 +51108,7 @@ Divine Retribution
 }
 
 STRING 8403
-// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0HO (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51697,13 +51697,13 @@ Guardian's Devotion
 }
 
 STRING 8499
-// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I1 (Holy Light Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 8500
-// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
+// Abilities: A0I1 (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -51781,7 +51781,7 @@ Gives |cff00FF00100|r additional armor to nearby friendly units.
 }
 
 STRING 8513
-// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -51813,7 +51813,7 @@ Hand Kannon
 }
 
 STRING 8517
-// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IB (Hero's Flute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52107,7 +52107,7 @@ STRING 8565
 }
 
 STRING 8566
-// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IF (Transform - Mecha), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52125,7 +52125,7 @@ STRING 8568
 }
 
 STRING 8569
-// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -52149,7 +52149,7 @@ R
 }
 
 STRING 8573
-// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A0II (Wish for Parts), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53153,7 +53153,7 @@ STRING 8736
 }
 
 STRING 8737
-// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IN (Divine Retribution), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53177,7 +53177,7 @@ Angelic Shield
 }
 
 STRING 8741
-// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0IN (Divine Retribution), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54321,7 +54321,7 @@ STRING 8928
 }
 
 STRING 8929
-// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54345,7 +54345,7 @@ Oozaru
 }
 
 STRING 8933
-// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IS (Twin Dragon Shot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54495,7 +54495,7 @@ Piccolo stretches his arm out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 8956
-// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -54814,7 +54814,7 @@ STRING 9008
 }
 
 STRING 9009
-// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
+// Abilities: A0IT (Guardian's Devotion), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55113,7 +55113,7 @@ STRING 9058
 }
 
 STRING 9059
-// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IU (Hand Kannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55137,7 +55137,7 @@ Summoning all of the long dead Tsufuru to come back and take revenge upon the Sa
 }
 
 STRING 9063
-// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0IU (Hand Kannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -55149,7 +55149,7 @@ First Form
 }
 
 STRING 9065
-// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55221,7 +55221,7 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 }
 
 STRING 9077
-// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JH (Angelic Shield), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -56613,13 +56613,13 @@ New Trick
 }
 
 STRING 9309
-// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 9310
-// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0JU (Absorb), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -59949,7 +59949,7 @@ STRING 9864
 }
 
 STRING 9865
-// Units: E010 (Baseball Pitcher), EditorSuffix (Name - Editor Suffix)
+// Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60231,7 +60231,7 @@ STRING 9911
 }
 
 STRING 9912
-// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JW (Flying Kick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -60327,7 +60327,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9928
-// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JW (Flying Kick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -60351,7 +60351,7 @@ The user follows up their punch with an energy beam.|n|cff00ff00Damage: Lvl x Ag
 }
 
 STRING 9932
-// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JX (Recharge), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61392,7 +61392,7 @@ STRING 10104
 }
 
 STRING 10105
-// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K0 (Sample Ice Cream), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61726,7 +61726,7 @@ For Super 13 type "super" when all androids lvl greater than 35
 }
 
 STRING 10159
-// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -61756,7 +61756,7 @@ Cell uses his tail to instantly absorb creeps or Androids 17/18.|n|cff00ff00Deal
 }
 
 STRING 10163
-// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Tsufuru Spirits), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -61985,13 +61985,13 @@ STRING 10199
 }
 
 STRING 10200
-// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K6 (Glare), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 10201
-// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
+// Abilities: A0K6 (Glare), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -62917,7 +62917,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 10355
-// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -62935,7 +62935,7 @@ STRING 10357
 }
 
 STRING 10358
-// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KU (New Trick), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64774,7 +64774,7 @@ STRING 10649
 }
 
 STRING 10650
-// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
+// Abilities: A0KY (Nova Chariot), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -64788,7 +64788,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 1.August.20
+This map is under active development - 2.August.20
 }
 
 STRING 10653
@@ -64802,7 +64802,7 @@ AOE Flying vision enabled.
 }
 
 STRING 10655
-// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KY (Nova Chariot), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65100,7 +65100,7 @@ STRING 10700
 }
 
 STRING 10701
-// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A0LM (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -65118,7 +65118,7 @@ STRING 10703
 }
 
 STRING 10704
-// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LM (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -65274,7 +65274,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 10728
-// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0LQ (Rebellion Spear), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -66336,7 +66336,7 @@ STRING 10904
 }
 
 STRING 10905
-// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LQ (Rebellion Spear), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -66354,7 +66354,7 @@ STRING 10907
 }
 
 STRING 10908
-// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
+// Abilities: A0LV (Reliable Friend), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67614,7 +67614,7 @@ STRING 11120
 }
 
 STRING 11121
-// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LV (Reliable Friend), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -67632,7 +67632,7 @@ STRING 11123
 }
 
 STRING 11124
-// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
+// Abilities: A0M4 (Frozen E), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -67723,7 +67723,7 @@ STRING 11137
 }
 
 STRING 11138
-// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M4 (Frozen E), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68193,7 +68193,7 @@ STRING 11214
 }
 
 STRING 11215
-// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -68229,7 +68229,7 @@ STRING 11220
 }
 
 STRING 11221
-// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
+// Abilities: A0MG (Behind You), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68577,7 +68577,7 @@ Bardock puts his hand forward and charges a blue energy sphere which he throws a
 }
 
 STRING 11279
-// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MK (Plant Saibamen), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -68751,19 +68751,19 @@ STRING 11307
 }
 
 STRING 11308
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11309
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69231,13 +69231,13 @@ STRING 11387
 }
 
 STRING 11388
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11389
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69333,7 +69333,7 @@ STRING 11404
 }
 
 STRING 11405
-// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Plant Saibamen), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -69357,7 +69357,7 @@ Lava Burst
 }
 
 STRING 11409
-// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -69513,7 +69513,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70112,7 +70112,7 @@ STRING 11534
 }
 
 STRING 11535
-// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MQ (Lava Burst), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72916,7 +72916,7 @@ STRING 12000
 }
 
 STRING 12001
-// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
+// Abilities: A0MU (Barrier Wall), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -72934,7 +72934,7 @@ A demonic sword technique that slashes all nearby enemies.|n|cff00ff00Damage: Ag
 }
 
 STRING 12004
-// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MU (Barrier Wall), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -72952,7 +72952,7 @@ Plants saibamen seeds that spawn saibamen after a short delay.|n|cff00ff00Saibam
 }
 
 STRING 12007
-// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
+// Abilities: A0OA (Demonic Blade), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74431,13 +74431,13 @@ STRING 12247
 }
 
 STRING 12248
-// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OJ (Korin's Flag), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 12249
-// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
+// Abilities: A0OJ (Korin's Flag), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -74545,7 +74545,7 @@ STRING 12266
 }
 
 STRING 12267
-// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -75022,12 +75022,17 @@ STRING 12340
 {
 Type "r" to revert.
 Transformations:
-[lvl 10]  1.10x "fp"
-[lvl 20]  1.25x "fp"
-[lvl 30]  1.50x "fp"
-[lvl 90]  2.00x "fp"
-[lvl 150] 2.25x "fp"
-[lvl 200] 2.50x "fp"
+[lvl 30]  1.50x "fp" [Unlocks Stance: Base]
+[lvl 60]  1.75x "fp"
+[lvl 90]  2.00x "fp" [Unlocks Full Combos]
+[lvl 150] 2.20x "fp" [Unlocks Stance: Dash]
+[lvl 200] 2.40x "fp" [Unlocks Sparking!]
+
+|cff22ff22Speed Demon:|r Reduced cast point by 0.1s.
+
+Basic Combos: QQ+, WW+, EE+
+Full Combos: QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE
+After lvl 90, toggle between basic and full combos by typing -combo
 }
 
 STRING 12341
@@ -75063,17 +75068,11 @@ A powerful AOE nuker that is rewarded for having good accuracy. Can summon saiba
 }
 
 STRING 12344
-// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
 {
-A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high damage nukes that work best against sagas or enemies that cannot dodge them.
-|cffff2020Warning: One of the hardest heroes to play correctly!|r
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00IIIIII|r|cff383838|r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool1> seconds|r
 }
 
 STRING 12345
@@ -77241,7 +77240,7 @@ Eis Shenron lowers his body temperature, preparing his body to reflect incoming 
 }
 
 STRING 12691
-// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OW (Kannonblast), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -77277,7 +77276,7 @@ Krown Toss Debuff
 }
 
 STRING 12697
-// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -78626,7 +78625,7 @@ STRING 12913
 }
 
 STRING 12914
-// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
+// Abilities: A0P0 (Super Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79230,7 +79229,7 @@ Toppo punches his enemies with the power of justice!|n|cff00FF00Damage: Agi * Lv
 }
 
 STRING 13014
-// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P3 (Absolute Zero), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -79266,7 +79265,7 @@ STRING 13019
 }
 
 STRING 13020
-// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
+// Abilities: A0P3 (Absolute Zero), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -79398,7 +79397,7 @@ STRING 13041
 }
 
 STRING 13042
-// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PJ (Justice Tornado), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80218,7 +80217,7 @@ STRING 13174
 }
 
 STRING 13175
-// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PJ (Justice Tornado), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80236,7 +80235,7 @@ STRING 13177
 }
 
 STRING 13178
-// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -80598,7 +80597,7 @@ Frog Tongue
 }
 
 STRING 13237
-// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (Justice Tornado 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -80610,7 +80609,7 @@ STRING 13238
 }
 
 STRING 13239
-// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -81484,7 +81483,7 @@ STRING 13378
 }
 
 STRING 13379
-// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
+// Abilities: A0PR (Telekinesis), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -81502,7 +81501,7 @@ STRING 13381
 }
 
 STRING 13382
-// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -82989,7 +82988,7 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 13615
-// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PW (Frog Tongue), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83828,7 +83827,7 @@ STRING 13740
 }
 
 STRING 13741
-// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0Q1 (Nova Strike), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -83846,7 +83845,7 @@ STRING 13743
 }
 
 STRING 13744
-// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q1 (Nova Strike), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -84961,7 +84960,7 @@ A farmer with a shotgun.
 }
 
 STRING 13908
-// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0QF (Golden Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -84979,7 +84978,7 @@ STRING 13910
 }
 
 STRING 13911
-// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QF (Golden Nova Rush), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85286,7 +85285,7 @@ STRING 13960
 }
 
 STRING 13961
-// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -85304,7 +85303,7 @@ STRING 13963
 }
 
 STRING 13964
-// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
+// Abilities: A0QL (Shadow Dragon Fist), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85418,7 +85417,7 @@ W
 }
 
 STRING 13983
-// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QQ (Nova Star), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -85792,7 +85791,7 @@ STRING 14042
 }
 
 STRING 14043
-// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QQ (Nova Star), Unhotkey (Hotkey - Turn Off)
 {
 E
 }
@@ -85810,7 +85809,7 @@ STRING 14045
 }
 
 STRING 14046
-// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0QX (Justice Cannon), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -86552,17 +86551,17 @@ STRING 14153
 
 STRING 14154
 {
- 
+!
 }
 
 STRING 14155
-// Units: E010 (Baseball Pitcher), Name (Name)
+// Abilities: A0S8 (Blinding Wolf Fang Fist Blind), Name (Name)
 {
-Baseball Pitcher
+Blinding Wolf Fang Fist Blind
 }
 
 STRING 14156
-// Units: E010 (Baseball Pitcher), Awakentip (Tooltip - Awaken)
+// Units: E010 (Baseball Bandit), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00F|r] Choose Yamcha [|cffff2020Reforged|r]
 }
@@ -86910,7 +86909,7 @@ STRING 14213
 }
 
 STRING 14214
-// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QX (Justice Cannon), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -86928,7 +86927,7 @@ STRING 14216
 }
 
 STRING 14217
-// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -87233,20 +87232,13 @@ STRING 14267
 }
 
 STRING 14268
-// Units: E010 (Baseball Pitcher), Ubertip (Tooltip - Extended)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Name (Name)
 {
-A combo-oriented hero that relies on chaining consecutive attacks together to deal maximum damage.
-
-|cff00FF00IIIIII|r|cff383838|r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
-
+Blinding Wolf Fang Fist
 }
 
 STRING 14269
-// Units: E010 (Baseball Pitcher), Tip (Tooltip - Basic)
+// Units: E010 (Baseball Bandit), Tip (Tooltip - Basic)
 {
 [|cffffff00F|r] Choose Yamcha [|cffff2020Reforged|r]
 }
@@ -87269,8 +87261,14 @@ STRING 14272
 (krillin)
 }
 
+STRING 14273
+// Buffs/Effects: B03H (), Buffubertip (Tooltip - Extended)
+{
+This unit is temporarily blinded.
+}
+
 STRING 14274
-// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
+// Abilities: A0R4 (Justice Cannon 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87297,7 +87295,7 @@ Destructo Disc
 }
 
 STRING 14278
-// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RA (Destructo Disc), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -87632,6 +87630,14 @@ A strong close-range fighter with high-damage nukes and a long duration grapple 
 
 }
 
+STRING 14322
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool2> seconds|r
+}
+
 STRING 14323
 // Abilities: A0R9 (Scattering Bullet), Ubertip (Tooltip - Normal - Extended)
 {
@@ -87780,10 +87786,26 @@ Krillin fires two beams at once that each explode and split into 4 more beams
 |cff00ffffCooldown: <A0R9,Cool2> seconds|r
 }
 
+STRING 14342
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool3> seconds|r
+}
+
 STRING 14343
 // Abilities: A0RD (Medium Punch), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 14344
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool4> seconds|r
 }
 
 STRING 14345
@@ -87798,10 +87820,24 @@ STRING 14346
 Heavy Punch
 }
 
+STRING 14347
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool1> seconds|r
+}
+
 STRING 14348
-// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0RA (Destructo Disc), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 14349
+// Units: E010 (Baseball Bandit), Name (Name)
+{
+Baseball Bandit
 }
 
 STRING 14350
@@ -87816,6 +87852,21 @@ STRING 14351
 Dash Left
 }
 
+STRING 14352
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool1> seconds|r
+}
+
+STRING 14353
+// Abilities: A0RO (Stance: Base), Ubertip (Tooltip - Normal - Extended)
+{
+Switches to Light, Medium and Heavy punch abilities. Current combo is retained.
+|cff00ffffCooldown: <A0RO,Cool1> seconds
+}
+
 STRING 14354
 // Abilities: A0RF (Dash Left), EditorSuffix (Editor Suffix)
 {
@@ -87828,10 +87879,26 @@ STRING 14355
 Dash Forward
 }
 
+STRING 14356
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool2> seconds|r
+}
+
 STRING 14357
 // Abilities: A0RG (Dash Forward), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 14358
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool3> seconds|r
 }
 
 STRING 14359
@@ -87846,10 +87913,24 @@ STRING 14360
 Dash Right
 }
 
+STRING 14361
+// Abilities: A0RP (Wolf Fang Hurricane), Name (Name)
+{
+Wolf Fang Hurricane
+}
+
 STRING 14362
-// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
+// Abilities: A0RE (Heavy Punch), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 14363
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool1> seconds|r
 }
 
 STRING 14364
@@ -87864,8 +87945,20 @@ STRING 14365
 Super Spirit Ball
 }
 
-STRING 14368
+STRING 14366
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 1|r]
+}
+
+STRING 14367
 // Abilities: A0RI (Super Spirit Ball), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14368
+// Abilities: A0RJ (Full Power Kamehameha), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -87876,14 +87969,26 @@ STRING 14369
 Full Power Kamehameha
 }
 
+STRING 14370
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 2|r]
+}
+
 STRING 14371
 // Abilities: A0RJ (Full Power Kamehameha), Hotkey (Hotkey - Normal)
 {
 W
 }
 
+STRING 14372
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 3|r]
+}
+
 STRING 14373
-// Abilities: A0RJ (Full Power Kamehameha), EditorSuffix (Editor Suffix)
+// Abilities: A0RK (Wolf Fang Blast), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -87894,14 +87999,26 @@ STRING 14374
 Wolf Fang Blast
 }
 
+STRING 14375
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 4|r]
+}
+
 STRING 14376
-// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
+// Abilities: A0RH (Dash Right), Hotkey (Hotkey - Normal)
 {
 E
 }
 
+STRING 14377
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 5|r]
+}
+
 STRING 14378
-// Abilities: A0RK (Wolf Fang Blast), EditorSuffix (Editor Suffix)
+// Abilities: A0RL (Sledgehammer), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -87912,8 +88029,20 @@ STRING 14379
 Sledgehammer
 }
 
+STRING 14380
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 6|r]
+}
+
+STRING 14381
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 7|r]
+}
+
 STRING 14382
-// Abilities: A0RL (Sledgehammer), EditorSuffix (Editor Suffix)
+// Abilities: A0RM (Meteor Crash), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -87924,14 +88053,26 @@ STRING 14383
 Meteor Crash
 }
 
+STRING 14384
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 8|r]
+}
+
 STRING 14385
 // Abilities: A0RM (Meteor Crash), Hotkey (Hotkey - Normal)
 {
 W
 }
 
+STRING 14386
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 9|r]
+}
+
 STRING 14387
-// Abilities: A0RM (Meteor Crash), EditorSuffix (Editor Suffix)
+// Abilities: A0RN (Uppercut), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -87942,14 +88083,28 @@ STRING 14388
 Uppercut
 }
 
+STRING 14389
+// Abilities: A0RP (Wolf Fang Hurricane), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Hurricane - [|cffffcc00Level 10|r]
+}
+
 STRING 14390
-// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
+// Abilities: A0RK (Wolf Fang Blast), Hotkey (Hotkey - Normal)
 {
 E
 }
 
+STRING 14391
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool2> seconds|r
+}
+
 STRING 14392
-// Abilities: A0RN (Uppercut), EditorSuffix (Editor Suffix)
+// Abilities: A0RO (Stance: Base), EditorSuffix (Editor Suffix)
 {
 (yamcha)
 }
@@ -89049,11 +89204,9 @@ A full power kamehameha.
 }
 
 STRING 14549
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Units: H09I (Yamcha's Best Friend), Name (Name)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool1> seconds|r
+Yamcha's Best Friend
 }
 
 STRING 14550
@@ -89117,83 +89270,64 @@ STRING 14559
 }
 
 STRING 14560
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Units: H09I (Yamcha's Best Friend), Propernames (Proper Names)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool2> seconds|r
+Puar
 }
 
 STRING 14561
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Units: H09I (Yamcha's Best Friend), EditorSuffix (Name - Editor Suffix)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool3> seconds|r
+(Yamcha)
 }
 
 STRING 14562
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RN (Uppercut), Hotkey (Hotkey - Normal)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool4> seconds|r
+E
 }
 
 STRING 14563
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0S9 (Puar's Friendship), Name (Name)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool5> seconds|r
+Puar's Friendship
 }
 
 STRING 14564
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0S9 (Puar's Friendship), Tip (Tooltip - Normal)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool6> seconds|r
+Puar's Friendship
 }
 
 STRING 14565
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0S9 (Puar's Friendship), Ubertip (Tooltip - Normal - Extended)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool7> seconds|r
+Puar's friendship increases the base attack damage of nearby friendly units.
+|cffffcc00Bonus Attack Damage|r: +<A0S9,DataA1,%>%
 }
 
 STRING 14566
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B03I (), Bufftip (Tooltip)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool8> seconds|r
+Puar's Friendship
 }
 
 STRING 14567
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Buffs/Effects: B03I (), Buffubertip (Tooltip - Extended)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool9> seconds|r
+This unit is under the effects of Puar's Friendship; it has increased attack damage.
 }
 
 STRING 14568
-// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RO (Stance: Base), Name (Name)
 {
-Yamcha launches a ki infused wolf fang fist.
-|cff00ff00Damage: Agi + Int|r
-|cff00ffffCooldown: <A0RK,Cool10> seconds|r
+Stance: Base
 }
 
 STRING 14569
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RO (Stance: Base), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool1> seconds|r
+[|cffffcc00D|r] Stance: Base
 }
 
 STRING 14570
@@ -89257,75 +89391,57 @@ STRING 14579
 }
 
 STRING 14580
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool2> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 1|r]
 }
 
 STRING 14581
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool3> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 2|r]
 }
 
 STRING 14582
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool4> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 3|r]
 }
 
 STRING 14583
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool5> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 4|r]
 }
 
 STRING 14584
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool6> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 5|r]
 }
 
 STRING 14585
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool7> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 6|r]
 }
 
 STRING 14586
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool8> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 7|r]
 }
 
 STRING 14587
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool9> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 8|r]
 }
 
 STRING 14588
-// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A heavy pummelling attack launched from above.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RL,Cool10> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 9|r]
 }
 
 STRING 14589
@@ -89469,11 +89585,9 @@ Charge at the opponent with multiple quick attacks.
 }
 
 STRING 14609
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0RY (Wolf Fang Finisher), Tip (Tooltip - Normal)
 {
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool1> seconds|r
+[|cffFF2222E|r] Wolf Fang Finisher - [|cffffcc00Level 10|r]
 }
 
 STRING 14610
@@ -89537,105 +89651,3012 @@ STRING 14619
 }
 
 STRING 14620
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+// Units: E010 (Baseball Bandit), Ubertip (Tooltip - Extended)
 {
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool2> seconds|r
-}
+A true-combo hero that relies on sequencing the right attacks together to access more powerful moves. Starts off with a basic combo moveset that can be upgraded to a more complex and powerful moveset.
 
-STRING 14621
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool3> seconds|r
-}
+|cff22ff22Speed Demon:|r Reduced cast point by 0.1s.
 
-STRING 14622
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool4> seconds|r
-}
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
 
-STRING 14623
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool5> seconds|r
-}
-
-STRING 14624
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool6> seconds|r
-}
-
-STRING 14625
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool7> seconds|r
-}
-
-STRING 14626
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool8> seconds|r
-}
-
-STRING 14627
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool9> seconds|r
-}
-
-STRING 14628
-// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful uppercut.
-|cff00ff00Damage: Str|r
-|cff00ffffCooldown: <A0RN,Cool10> seconds|r
 }
 
 STRING 14629
-// Abilities: A0RO (Revert), Name (Name)
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
 {
-Revert
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool5> seconds|r
 }
 
 STRING 14630
-// Abilities: A0RO (Revert), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
 {
-Reverts to original base abilities.
-|cff00ffffCooldown: <A0RO,Cool1> seconds
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool6> seconds|r
 }
 
 STRING 14631
-// Abilities: A0RO (Revert), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 14632
-// Abilities: A0RO (Revert), Tip (Tooltip - Normal)
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffDD00EED|r] Revert
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool7> seconds|r
 }
 
 STRING 14633
-// Abilities: A0RO (Revert), EditorSuffix (Editor Suffix)
+// Abilities: A0RP (Wolf Fang Hurricane), EditorSuffix (Editor Suffix)
 {
 (yamcha)
+}
+
+STRING 14634
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool3> seconds|r
+}
+
+STRING 14635
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool4> seconds|r
+}
+
+STRING 14636
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool5> seconds|r
+}
+
+STRING 14637
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool6> seconds|r
+}
+
+STRING 14638
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool7> seconds|r
+}
+
+STRING 14639
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool8> seconds|r
+}
+
+STRING 14640
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool9> seconds|r
+}
+
+STRING 14641
+// Abilities: A0RP (Wolf Fang Hurricane), Ubertip (Tooltip - Normal - Extended)
+{
+A spinning wolf fang fist attack.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RP,Cool10> seconds|r
+}
+
+STRING 14642
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool8> seconds|r
+}
+
+STRING 14643
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool9> seconds|r
+}
+
+STRING 14644
+// Abilities: A0RQ (Wolf Fang Volley), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14645
+// Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's strongest basic Ki blast.
+|cff00ff00Damage: 0 (Literally 0 damage)|r
+|cff00ffffCooldown: <A0S3,Cool10> seconds|r
+}
+
+STRING 14646
+// Abilities: A0RQ (Wolf Fang Volley), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14648
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool1> seconds|r
+}
+
+STRING 14649
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool2> seconds|r
+}
+
+STRING 14650
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool3> seconds|r
+}
+
+STRING 14651
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool4> seconds|r
+}
+
+STRING 14652
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool5> seconds|r
+}
+
+STRING 14653
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool6> seconds|r
+}
+
+STRING 14654
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool7> seconds|r
+}
+
+STRING 14655
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool8> seconds|r
+}
+
+STRING 14656
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool9> seconds|r
+}
+
+STRING 14657
+// Abilities: A0RW (Flash Kamehameha), Ubertip (Tooltip - Normal - Extended)
+{
+A quickened version of the normal kamehameha energy wave. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RW,Cool10> seconds|r
+}
+
+STRING 14658
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool1> seconds|r
+}
+
+STRING 14659
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool2> seconds|r
+}
+
+STRING 14660
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool3> seconds|r
+}
+
+STRING 14661
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool4> seconds|r
+}
+
+STRING 14662
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool5> seconds|r
+}
+
+STRING 14663
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool6> seconds|r
+}
+
+STRING 14664
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool7> seconds|r
+}
+
+STRING 14665
+// Abilities: A0RR (Reverse Wolf Fang Blast), Name (Name)
+{
+Reverse Wolf Fang Blast
+}
+
+STRING 14666
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool4> seconds|r
+}
+
+STRING 14667
+// Abilities: A0RR (Reverse Wolf Fang Blast), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14668
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 1|r]
+}
+
+STRING 14669
+// Abilities: A0RR (Reverse Wolf Fang Blast), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14670
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 2|r]
+}
+
+STRING 14671
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 3|r]
+}
+
+STRING 14672
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 4|r]
+}
+
+STRING 14673
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 5|r]
+}
+
+STRING 14674
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 6|r]
+}
+
+STRING 14675
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 7|r]
+}
+
+STRING 14676
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 8|r]
+}
+
+STRING 14677
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 9|r]
+}
+
+STRING 14678
+// Abilities: A0RR (Reverse Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Reverse Wolf Fang Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 14679
+// Abilities: A0S1 (Stance: Dash), Name (Name)
+{
+Stance: Dash
+}
+
+STRING 14680
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool5> seconds|r
+}
+
+STRING 14681
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool2> seconds|r
+}
+
+STRING 14682
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 14683
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool3> seconds|r
+}
+
+STRING 14684
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool6> seconds|r
+}
+
+STRING 14685
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool7> seconds|r
+}
+
+STRING 14686
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool8> seconds|r
+}
+
+STRING 14687
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool9> seconds|r
+}
+
+STRING 14688
+// Buffs/Effects: B03H (), Bufftip (Tooltip)
+{
+Blinding Wolf Fang Fist
+}
+
+STRING 14689
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool1> seconds|r
+}
+
+STRING 14690
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 14691
+// Abilities: A0RS (Blinding Wolf Fang Fist), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14692
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 2|r]
+}
+
+STRING 14693
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 3|r]
+}
+
+STRING 14694
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 4|r]
+}
+
+STRING 14695
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 14696
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 6|r]
+}
+
+STRING 14697
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 7|r]
+}
+
+STRING 14698
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 8|r]
+}
+
+STRING 14699
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 9|r]
+}
+
+STRING 14700
+// Abilities: A0RS (Blinding Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Blinding Wolf Fang Fist - [|cffffcc00Level 10|r]
+}
+
+STRING 14701
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool2> seconds|r
+}
+
+STRING 14702
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool3> seconds|r
+}
+
+STRING 14703
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool4> seconds|r
+}
+
+STRING 14704
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool5> seconds|r
+}
+
+STRING 14705
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool6> seconds|r
+}
+
+STRING 14706
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool7> seconds|r
+}
+
+STRING 14707
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool8> seconds|r
+}
+
+STRING 14708
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool9> seconds|r
+}
+
+STRING 14709
+// Abilities: A0RS (Blinding Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist attack that blinds the enemy.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RS,Cool10> seconds|r
+}
+
+STRING 14710
+// Abilities: A0RT (Neo Wolf Fang Blast), Name (Name)
+{
+Neo Wolf Fang Blast
+}
+
+STRING 14711
+// Abilities: A0RY (Wolf Fang Finisher), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha's finishing wolf fang fist attack. Deals bonus damage if the enemy is stunned.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RY,Cool10> seconds|r
+}
+
+STRING 14712
+// Abilities: A0RT (Neo Wolf Fang Blast), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14713
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 1|r]
+}
+
+STRING 14714
+// Abilities: A0RT (Neo Wolf Fang Blast), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14715
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 2|r]
+}
+
+STRING 14716
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 3|r]
+}
+
+STRING 14717
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 4|r]
+}
+
+STRING 14718
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 5|r]
+}
+
+STRING 14719
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 6|r]
+}
+
+STRING 14720
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 7|r]
+}
+
+STRING 14721
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 8|r]
+}
+
+STRING 14722
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 9|r]
+}
+
+STRING 14723
+// Abilities: A0RT (Neo Wolf Fang Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Neo Wolf Fang Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 14724
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool1> seconds|r
+}
+
+STRING 14725
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool2> seconds|r
+}
+
+STRING 14726
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool3> seconds|r
+}
+
+STRING 14727
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool4> seconds|r
+}
+
+STRING 14728
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool5> seconds|r
+}
+
+STRING 14729
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool6> seconds|r
+}
+
+STRING 14730
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool7> seconds|r
+}
+
+STRING 14731
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool8> seconds|r
+}
+
+STRING 14732
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool9> seconds|r
+}
+
+STRING 14733
+// Abilities: A0RU (Neo Wolf Fang Fist), Name (Name)
+{
+Neo Wolf Fang Fist
+}
+
+STRING 14734
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool1> seconds|r
+}
+
+STRING 14735
+// Abilities: A0RU (Neo Wolf Fang Fist), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14736
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 14737
+// Abilities: A0RU (Neo Wolf Fang Fist), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14738
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 2|r]
+}
+
+STRING 14739
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 3|r]
+}
+
+STRING 14740
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 4|r]
+}
+
+STRING 14741
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 14742
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 6|r]
+}
+
+STRING 14743
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 7|r]
+}
+
+STRING 14744
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 8|r]
+}
+
+STRING 14745
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 9|r]
+}
+
+STRING 14746
+// Abilities: A0RU (Neo Wolf Fang Fist), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Neo Wolf Fang Fist - [|cffffcc00Level 10|r]
+}
+
+STRING 14747
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool2> seconds|r
+}
+
+STRING 14748
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool3> seconds|r
+}
+
+STRING 14749
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool4> seconds|r
+}
+
+STRING 14750
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool5> seconds|r
+}
+
+STRING 14751
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool6> seconds|r
+}
+
+STRING 14752
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool7> seconds|r
+}
+
+STRING 14753
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool8> seconds|r
+}
+
+STRING 14754
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool9> seconds|r
+}
+
+STRING 14755
+// Abilities: A0RZ (Wolf Fang Flash), Ubertip (Tooltip - Normal - Extended)
+{
+A quick ki-infused wolf fang fist attack followed by a flash kamehameha. Deals bonus damage if the enemy was recently hit by a spirit ball.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RZ,Cool10> seconds|r
+}
+
+STRING 14756
+// Abilities: A0RV (Spirit Ball), Name (Name)
+{
+Spirit Ball
+}
+
+STRING 14757
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool1> seconds|r
+}
+
+STRING 14758
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 1|r]
+}
+
+STRING 14759
+// Abilities: A0RV (Spirit Ball), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14760
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 2|r]
+}
+
+STRING 14761
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 3|r]
+}
+
+STRING 14762
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 4|r]
+}
+
+STRING 14763
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 5|r]
+}
+
+STRING 14764
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 6|r]
+}
+
+STRING 14765
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 7|r]
+}
+
+STRING 14766
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 8|r]
+}
+
+STRING 14767
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 9|r]
+}
+
+STRING 14768
+// Abilities: A0RV (Spirit Ball), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Spirit Ball - [|cffffcc00Level 10|r]
+}
+
+STRING 14769
+// Abilities: A0S0 (Wolf Fang Pack Attack), Ubertip (Tooltip - Normal - Extended)
+{
+A team-based wolf fang fist attack. Deals bonus damage if the enemy is affected by Solar Flare.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0S0,Cool10> seconds|r
+}
+
+STRING 14770
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool1> seconds|r
+}
+
+STRING 14771
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool2> seconds|r
+}
+
+STRING 14772
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool3> seconds|r
+}
+
+STRING 14773
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool4> seconds|r
+}
+
+STRING 14774
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool5> seconds|r
+}
+
+STRING 14775
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool6> seconds|r
+}
+
+STRING 14776
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool7> seconds|r
+}
+
+STRING 14777
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool8> seconds|r
+}
+
+STRING 14778
+// Abilities: A0RW (Flash Kamehameha), Name (Name)
+{
+Flash Kamehameha
+}
+
+STRING 14780
+// Abilities: A0RW (Flash Kamehameha), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14781
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 14782
+// Abilities: A0RW (Flash Kamehameha), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14783
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 14784
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 14785
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 14786
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 14787
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 14788
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 14789
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 14790
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 14791
+// Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 14801
+// Abilities: A0RX (Wolf Fang Barrage), Name (Name)
+{
+Wolf Fang Barrage
+}
+
+STRING 14802
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool1> seconds|r
+}
+
+STRING 14803
+// Abilities: A0RX (Wolf Fang Barrage), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14804
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 1|r]
+}
+
+STRING 14805
+// Abilities: A0RX (Wolf Fang Barrage), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14806
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 2|r]
+}
+
+STRING 14807
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 3|r]
+}
+
+STRING 14808
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 4|r]
+}
+
+STRING 14809
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 5|r]
+}
+
+STRING 14810
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 6|r]
+}
+
+STRING 14811
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 7|r]
+}
+
+STRING 14812
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 8|r]
+}
+
+STRING 14813
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 9|r]
+}
+
+STRING 14814
+// Abilities: A0RX (Wolf Fang Barrage), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Wolf Fang Barrage - [|cffffcc00Level 10|r]
+}
+
+STRING 14815
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool2> seconds|r
+}
+
+STRING 14816
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool3> seconds|r
+}
+
+STRING 14817
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool4> seconds|r
+}
+
+STRING 14818
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool5> seconds|r
+}
+
+STRING 14819
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool6> seconds|r
+}
+
+STRING 14820
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool7> seconds|r
+}
+
+STRING 14821
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool8> seconds|r
+}
+
+STRING 14822
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool9> seconds|r
+}
+
+STRING 14823
+// Abilities: A0RL (Sledgehammer), Ubertip (Tooltip - Normal - Extended)
+{
+A heavy pummelling attack launched from above that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RL,Cool10> seconds|r
+}
+
+STRING 14824
+// Abilities: A0RY (Wolf Fang Finisher), Name (Name)
+{
+Wolf Fang Finisher
+}
+
+STRING 14825
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool1> seconds|r
+}
+
+STRING 14826
+// Units: H08Z (Park Ranger), Ubertip (Tooltip - Extended)
+{
+A versatile support hero that erects powerful barriers to deflect incoming beams or trap enemies in perilous situations. Has high damage nukes that work best against sagas or enemies that cannot dodge them.
+|cffff2020Warning: One of the hardest heroes to play correctly!|r
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 14827
+// Abilities: A0RY (Wolf Fang Finisher), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14828
+// Abilities: A0S1 (Stance: Dash), Tip (Tooltip - Normal)
+{
+[|cffffcc00F|r] Stance: Dash
+}
+
+STRING 14829
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool4> seconds|r
+}
+
+STRING 14830
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool5> seconds|r
+}
+
+STRING 14831
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool6> seconds|r
+}
+
+STRING 14832
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool7> seconds|r
+}
+
+STRING 14833
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool8> seconds|r
+}
+
+STRING 14834
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool9> seconds|r
+}
+
+STRING 14835
+// Abilities: A0S4 (Play Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha pretends to meet his own untimely demise, avoiding all incoming damage for a brief period.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0S4,Cool10> seconds|r
+}
+
+STRING 14837
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool2> seconds|r
+}
+
+STRING 14838
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool3> seconds|r
+}
+
+STRING 14839
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool4> seconds|r
+}
+
+STRING 14840
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool5> seconds|r
+}
+
+STRING 14841
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool6> seconds|r
+}
+
+STRING 14842
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool7> seconds|r
+}
+
+STRING 14843
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool8> seconds|r
+}
+
+STRING 14844
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool9> seconds|r
+}
+
+STRING 14845
+// Abilities: A0RN (Uppercut), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful uppercut that briefly stuns the enemy.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0RN,Cool10> seconds|r
+}
+
+STRING 14846
+// Abilities: A0RZ (Wolf Fang Flash), Name (Name)
+{
+Wolf Fang Flash
+}
+
+STRING 14847
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool1> seconds|r
+}
+
+STRING 14848
+// Abilities: A0RZ (Wolf Fang Flash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14849
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 1|r]
+}
+
+STRING 14850
+// Abilities: A0RZ (Wolf Fang Flash), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14851
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 2|r]
+}
+
+STRING 14852
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 3|r]
+}
+
+STRING 14853
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 4|r]
+}
+
+STRING 14854
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 5|r]
+}
+
+STRING 14855
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 6|r]
+}
+
+STRING 14856
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 7|r]
+}
+
+STRING 14857
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 8|r]
+}
+
+STRING 14858
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 9|r]
+}
+
+STRING 14859
+// Abilities: A0RZ (Wolf Fang Flash), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Flash - [|cffffcc00Level 10|r]
+}
+
+STRING 14860
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool2> seconds|r
+}
+
+STRING 14861
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool3> seconds|r
+}
+
+STRING 14862
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool4> seconds|r
+}
+
+STRING 14863
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool5> seconds|r
+}
+
+STRING 14864
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool6> seconds|r
+}
+
+STRING 14865
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool7> seconds|r
+}
+
+STRING 14866
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool8> seconds|r
+}
+
+STRING 14867
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool9> seconds|r
+}
+
+STRING 14868
+// Abilities: A0RK (Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha launches a ki infused wolf fang fist. Deals bonus damage in melee range.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RK,Cool10> seconds|r
+}
+
+STRING 14869
+// Abilities: A0S0 (Wolf Fang Pack Attack), Name (Name)
+{
+Wolf Fang Pack Attack
+}
+
+STRING 14871
+// Abilities: A0RY (Wolf Fang Finisher), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14872
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool1> seconds|r
+}
+
+STRING 14873
+// Abilities: A0S0 (Wolf Fang Pack Attack), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14874
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool2> seconds|r
+}
+
+STRING 14875
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool3> seconds|r
+}
+
+STRING 14876
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool4> seconds|r
+}
+
+STRING 14877
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool5> seconds|r
+}
+
+STRING 14878
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool6> seconds|r
+}
+
+STRING 14879
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool7> seconds|r
+}
+
+STRING 14880
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool8> seconds|r
+}
+
+STRING 14881
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool9> seconds|r
+}
+
+STRING 14882
+// Abilities: A0RR (Reverse Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A reverse wolf fang blast. Deals bonus damage in melee range and increases the user's movement speed.
+|cff00ff00Damage: Agi + Int|r
+|cff00ffffCooldown: <A0RR,Cool10> seconds|r
+}
+
+STRING 14883
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 14884
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 14885
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 14886
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 14887
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 14888
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 14889
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 14890
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 14891
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 14892
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool9> seconds|r
+}
+
+STRING 14893
+// Abilities: A0S1 (Stance: Dash), Ubertip (Tooltip - Normal - Extended)
+{
+Switches to Left, Forward and Right Dash abilities. Current combo is retained.
+|cff00ffffCooldown: <A0S1,Cool1> seconds
+}
+
+STRING 14894
+// Abilities: A0RX (Wolf Fang Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+A barrage of blasts infused with the ki of the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RU,Cool10> seconds|r
+}
+
+STRING 14895
+// Abilities: A0S1 (Stance: Dash), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14896
+// Abilities: A0S2 (Summon Puar), Name (Name)
+{
+Summon Puar
+}
+
+STRING 14897
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool1> seconds|r
+}
+
+STRING 14898
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 1|r]
+}
+
+STRING 14899
+// Abilities: A0S2 (Summon Puar), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14900
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 2|r]
+}
+
+STRING 14901
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 3|r]
+}
+
+STRING 14902
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 4|r]
+}
+
+STRING 14903
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 5|r]
+}
+
+STRING 14904
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 6|r]
+}
+
+STRING 14905
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 7|r]
+}
+
+STRING 14906
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 8|r]
+}
+
+STRING 14907
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 9|r]
+}
+
+STRING 14908
+// Abilities: A0S2 (Summon Puar), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Summon Puar - [|cffffcc00Level 10|r]
+}
+
+STRING 14909
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool2> seconds|r
+}
+
+STRING 14910
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool3> seconds|r
+}
+
+STRING 14911
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool4> seconds|r
+}
+
+STRING 14912
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool5> seconds|r
+}
+
+STRING 14913
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool6> seconds|r
+}
+
+STRING 14914
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool7> seconds|r
+}
+
+STRING 14915
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool8> seconds|r
+}
+
+STRING 14916
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool9> seconds|r
+}
+
+STRING 14917
+// Abilities: A0S2 (Summon Puar), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Yamcha's best friend, Puar.
+|cff00ff00Damage: ?|r
+|cff00ffffCooldown: <A0S2,Cool10> seconds|r
+}
+
+STRING 14918
+// Abilities: A0S3 (Yamcha Blast), Name (Name)
+{
+Yamcha Blast
+}
+
+STRING 14920
+// Abilities: A0S3 (Yamcha Blast), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14921
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 1|r]
+}
+
+STRING 14922
+// Abilities: A0S3 (Yamcha Blast), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14923
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 2|r]
+}
+
+STRING 14924
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 3|r]
+}
+
+STRING 14925
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 4|r]
+}
+
+STRING 14926
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 5|r]
+}
+
+STRING 14927
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 6|r]
+}
+
+STRING 14928
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 7|r]
+}
+
+STRING 14929
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 8|r]
+}
+
+STRING 14930
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 9|r]
+}
+
+STRING 14931
+// Abilities: A0S3 (Yamcha Blast), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Yamcha Blast - [|cffffcc00Level 10|r]
+}
+
+STRING 14941
+// Abilities: A0S4 (Play Dead), Name (Name)
+{
+Play Dead
+}
+
+STRING 14942
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool1> seconds|r
+}
+
+STRING 14943
+// Abilities: A0S4 (Play Dead), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 14944
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 1|r]
+}
+
+STRING 14945
+// Abilities: A0S4 (Play Dead), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14946
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 2|r]
+}
+
+STRING 14947
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 3|r]
+}
+
+STRING 14948
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 4|r]
+}
+
+STRING 14949
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 5|r]
+}
+
+STRING 14950
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 6|r]
+}
+
+STRING 14951
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 7|r]
+}
+
+STRING 14952
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 8|r]
+}
+
+STRING 14953
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 9|r]
+}
+
+STRING 14954
+// Abilities: A0S4 (Play Dead), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Play Dead - [|cffffcc00Level 10|r]
+}
+
+STRING 14955
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool2> seconds|r
+}
+
+STRING 14956
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool3> seconds|r
+}
+
+STRING 14957
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool4> seconds|r
+}
+
+STRING 14958
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool5> seconds|r
+}
+
+STRING 14959
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool6> seconds|r
+}
+
+STRING 14960
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool7> seconds|r
+}
+
+STRING 14961
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool8> seconds|r
+}
+
+STRING 14962
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool9> seconds|r
+}
+
+STRING 14963
+// Abilities: A0RU (Neo Wolf Fang Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha rushes the enemy with the advanced Neo Wolf Fang Fist, dealing massive damage and stunning them for 1 second.
+|cff00ff00Damage: Agi|r
+|cff00ffffCooldown: <A0RU,Cool10> seconds|r
+}
+
+STRING 14964
+// Abilities: A0S5 (Homerun), Name (Name)
+{
+Homerun
+}
+
+STRING 14965
+// Abilities: A0S0 (Wolf Fang Pack Attack), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Wolf Fang Pack Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 14966
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 1|r]
+}
+
+STRING 14967
+// Abilities: A0S5 (Homerun), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14968
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 2|r]
+}
+
+STRING 14969
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 3|r]
+}
+
+STRING 14970
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 4|r]
+}
+
+STRING 14971
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 5|r]
+}
+
+STRING 14972
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 6|r]
+}
+
+STRING 14973
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 7|r]
+}
+
+STRING 14974
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 8|r]
+}
+
+STRING 14975
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 9|r]
+}
+
+STRING 14976
+// Abilities: A0S5 (Homerun), Tip (Tooltip - Normal)
+{
+[|cff22FF22Q|r] Homerun - [|cffffcc00Level 10|r]
+}
+
+STRING 14977
+// Abilities: A0SA (Spirit Ball Debuff), Name (Name)
+{
+Spirit Ball Debuff
+}
+
+STRING 14978
+// Abilities: A0SA (Spirit Ball Debuff), Tip (Tooltip - Normal)
+{
+Spirit Ball Debuff
+}
+
+STRING 14979
+// Abilities: A0SB (Sparking!), Name (Name)
+{
+Sparking!
+}
+
+STRING 14981
+// Abilities: A0SB (Sparking!), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 14982
+// Abilities: A0SB (Sparking!), Tip (Tooltip - Normal)
+{
+[|cffffcc00R|r] Sparking!
+}
+
+STRING 14983
+// Abilities: A0S6 (Wolf Fang Pitching Fist), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14984
+// Buffs/Effects: B03J (), Bufftip (Tooltip)
+{
+Spirit Ball Debuff
+}
+
+STRING 14985
+// Buffs/Effects: B03J (), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Spirit Ball. It takes extra damage from Wolf Fang Flash.
+}
+
+STRING 14986
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Name (Name)
+{
+Wolf Fang Pitching Fist
+}
+
+STRING 14987
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool1> seconds|r
+}
+
+STRING 14988
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 14989
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 14990
+// Abilities: A0S7 (Batter Up), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 14991
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 2|r]
+}
+
+STRING 14992
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 3|r]
+}
+
+STRING 14993
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 4|r]
+}
+
+STRING 14994
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 14995
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 6|r]
+}
+
+STRING 14996
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 7|r]
+}
+
+STRING 14997
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 8|r]
+}
+
+STRING 14998
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 9|r]
+}
+
+STRING 14999
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Pitching Fist - [|cffffcc00Level 10|r]
+}
+
+STRING 15000
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool2> seconds|r
+}
+
+STRING 15001
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool3> seconds|r
+}
+
+STRING 15002
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool4> seconds|r
+}
+
+STRING 15003
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool5> seconds|r
+}
+
+STRING 15004
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool6> seconds|r
+}
+
+STRING 15005
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool7> seconds|r
+}
+
+STRING 15006
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool8> seconds|r
+}
+
+STRING 15007
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool9> seconds|r
+}
+
+STRING 15008
+// Abilities: A0S6 (Wolf Fang Pitching Fist), Ubertip (Tooltip - Normal - Extended)
+{
+A wolf fang fist infused pitch!
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S6,Cool10> seconds|r
+}
+
+STRING 15009
+// Abilities: A0S7 (Batter Up), Name (Name)
+{
+Batter Up
+}
+
+STRING 15010
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool1> seconds|r
+}
+
+STRING 15011
+// Abilities: A0S7 (Batter Up), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 15012
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 1|r]
+}
+
+STRING 15013
+// Abilities: A0SB (Sparking!), EditorSuffix (Editor Suffix)
+{
+(yamcha)
+}
+
+STRING 15014
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 2|r]
+}
+
+STRING 15015
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 3|r]
+}
+
+STRING 15016
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 4|r]
+}
+
+STRING 15017
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 5|r]
+}
+
+STRING 15018
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 6|r]
+}
+
+STRING 15019
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 7|r]
+}
+
+STRING 15020
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 8|r]
+}
+
+STRING 15021
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 9|r]
+}
+
+STRING 15022
+// Abilities: A0S7 (Batter Up), Tip (Tooltip - Normal)
+{
+[|cffFF2222E|r] Batter Up - [|cffffcc00Level 10|r]
+}
+
+STRING 15023
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool2> seconds|r
+}
+
+STRING 15024
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool3> seconds|r
+}
+
+STRING 15025
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool4> seconds|r
+}
+
+STRING 15026
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool5> seconds|r
+}
+
+STRING 15027
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool6> seconds|r
+}
+
+STRING 15028
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool7> seconds|r
+}
+
+STRING 15029
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool8> seconds|r
+}
+
+STRING 15030
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool9> seconds|r
+}
+
+STRING 15031
+// Abilities: A0S7 (Batter Up), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha deflects incoming attacks with his baseball swing.
+|cff00ff00Damage: Str|r
+|cff00ffffCooldown: <A0S7,Cool10> seconds|r
+}
+
+STRING 15032
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15033
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15034
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15035
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15036
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15037
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15038
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool8> seconds|r
+}
+
+STRING 15039
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool9> seconds|r
+}
+
+STRING 15040
+{
+Basic Combos Enabled (QQ+, WW+, EE+)
+}
+
+STRING 15041
+{
+Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
+}
+
+STRING 15042
+// Abilities: A0RQ (Wolf Fang Volley), Name (Name)
+{
+Wolf Fang Volley
+}
+
+STRING 15043
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool1> seconds|r
+}
+
+STRING 15044
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 1|r]
+}
+
+STRING 15045
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 2|r]
+}
+
+STRING 15046
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 3|r]
+}
+
+STRING 15047
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 4|r]
+}
+
+STRING 15048
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 5|r]
+}
+
+STRING 15049
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 6|r]
+}
+
+STRING 15050
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 7|r]
+}
+
+STRING 15051
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 8|r]
+}
+
+STRING 15052
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 9|r]
+}
+
+STRING 15053
+// Abilities: A0RQ (Wolf Fang Volley), Tip (Tooltip - Normal)
+{
+[|cff22FFFFW|r] Wolf Fang Volley - [|cffffcc00Level 10|r]
+}
+
+STRING 15054
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool2> seconds|r
+}
+
+STRING 15055
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool3> seconds|r
+}
+
+STRING 15056
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool4> seconds|r
+}
+
+STRING 15057
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool5> seconds|r
+}
+
+STRING 15058
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool6> seconds|r
+}
+
+STRING 15059
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool7> seconds|r
+}
+
+STRING 15060
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool8> seconds|r
+}
+
+STRING 15061
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool9> seconds|r
+}
+
+STRING 15062
+// Abilities: A0RQ (Wolf Fang Volley), Ubertip (Tooltip - Normal - Extended)
+{
+Fire multiple consecutive energy blasts infused with the wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RQ,Cool10> seconds|r
+}
+
+STRING 15063
+// Abilities: A0RT (Neo Wolf Fang Blast), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful energy blast infused with the power of the neo wolf fang fist.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RT,Cool10> seconds|r
+}
+
+STRING 15064
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool2> seconds|r
+}
+
+STRING 15065
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool3> seconds|r
+}
+
+STRING 15066
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool4> seconds|r
+}
+
+STRING 15067
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool5> seconds|r
+}
+
+STRING 15068
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool6> seconds|r
+}
+
+STRING 15069
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool7> seconds|r
+}
+
+STRING 15070
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool8> seconds|r
+}
+
+STRING 15071
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool9> seconds|r
+}
+
+STRING 15072
+// Abilities: A0RV (Spirit Ball), Ubertip (Tooltip - Normal - Extended)
+{
+A spirit ball.
+|cff00ff00Damage: Int|r
+|cff00ffffCooldown: <A0RV,Cool10> seconds|r
+}
+
+STRING 15073
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool1> seconds|r
+}
+
+STRING 15074
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool2> seconds|r
+}
+
+STRING 15075
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool3> seconds|r
+}
+
+STRING 15076
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool4> seconds|r
+}
+
+STRING 15077
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool5> seconds|r
+}
+
+STRING 15078
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool6> seconds|r
+}
+
+STRING 15079
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool7> seconds|r
+}
+
+STRING 15080
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool8> seconds|r
+}
+
+STRING 15081
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool9> seconds|r
+}
+
+STRING 15082
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool10> seconds|r
+}
+
+STRING 15083
+// Abilities: A0SB (Sparking!), Ubertip (Tooltip - Normal - Extended)
+{
+All ability cooldowns are refreshed with a slight delay. Yamcha generates 1% of max mana for each spell cast.
+|cff2020ffMana Cost: 100% of max mana.|r
+|cff00ffffCooldown: <A0RO,Cool1> seconds|r
 }
 

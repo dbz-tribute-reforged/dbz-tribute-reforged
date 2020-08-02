@@ -121,13 +121,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
         "|cffffcc00Vegeta|r: Yes!",
       ], 0.5, 5,
     );
-
-    for (let i = 0; i < 5; ++i) {
-      let offsetX = Math.random() * 2000;
-      let offsetY = Math.random() * 2000;
-      const saibaman = CreateUnit(Players.NEUTRAL_HOSTILE, FourCC('n01Z'), 8100 + offsetX, 900 + offsetY, 0);
-    }
-
+    
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
 
     for (const [name, boss] of this.bosses) {

@@ -583,7 +583,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 10,
+    distance: 4,
   },
   // yamcha r medium punch
   {
@@ -596,7 +596,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 5,
+    distance: 3,
   },
   // yamcha r heavy punch
   {
@@ -609,7 +609,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 2.5,
+    distance: 2,
   },
   // yamcha r dash left
   {
@@ -619,9 +619,9 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: true,
-    angleOffset: 270,
+    angleOffset: 90,
     distance: 40,
   },
   // yamcha r dash forward
@@ -632,7 +632,7 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
     distance: 40,
@@ -645,9 +645,9 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: true,
-    angleOffset: 90,
+    angleOffset: 270,
     distance: 40,
   },
   // yamcha r super spirit ball
@@ -686,7 +686,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 20,
+    distance: 10,
   },
   // yamcha r meteor crash
   {
@@ -699,7 +699,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 20,
+    distance: 6,
   },
   // yamcha r meteor crash
   {
@@ -709,10 +709,113 @@ export const DashComponents = [
     endTick: -1,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: true,
+    checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 10,
+    distance: 3,
+  },
+  // yamcha r wolf fang hurricane
+  {
+    name: "dash ground forward yamcha r wolf fang hurricane",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
+  },
+  // yamcha r reverse wolf fang blast
+  {
+    name: "dash ground forward yamcha r reverse wolf fang blast",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 4,
+  },
+  // yamcha r wolf fang fist
+  {
+    name: "dash ground forward yamcha r wolf fang fist",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 7,
+  },
+  // yamcha r spirit ball
+  {
+    name: "dash flying forward yamcha r spirit ball",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 32,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: true,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 40,
+  },
+  {
+    name: "dash flying caster yamcha r spirit ball return",
+    repeatInterval: 1, 
+    startTick: 33,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_CASTER_POINT,
+    isFlying: true,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 50,
+  },
+  // yamcha r wolf fang flash
+  {
+    name: "dash ground forward yamcha r wolf fang flash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 5,
+  },
+  // yamcha r homerun
+  {
+    name: "dash ground forward yamcha r homerun",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
+  },
+  // yamcha r full power kame pushback
+  {
+    name: "dash ground forward yamcha r full power kame pushback",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 12,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 180,
+    distance: 30,
   },
   // ----------------------------
   // cell-x

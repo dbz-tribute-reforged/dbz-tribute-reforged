@@ -10,6 +10,7 @@ export module Debuffs {
   export const CURSE_ORDER_ID = 852190;
   export const DEMONS_MARK = FourCC("A0O7");
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
+  export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
 
   export const SLOW_ORDER_ID = 852075;
   export const HEROS_SONG = FourCC("A0I6");
@@ -17,6 +18,7 @@ export module Debuffs {
   export const KROWN_TOSS = FourCC("A0P9");
   export const MILKY_CANNON = FourCC("A0PU");
   export const DRAGON_THUNDER = FourCC("A0QT");
+  export const SPIRIT_BALL = FourCC("A0SA");
 
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -338,11 +340,11 @@ export const AOEDebuffComponents = [
   {
     name: "debuff stun yamcha r sledgehammer",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 12,
     endTick: -1,
     abilityId: Debuffs.STUN_HALF_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
-    aoe: 250,
+    aoe: 300,
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,
@@ -351,13 +353,52 @@ export const AOEDebuffComponents = [
   {
     name: "debuff stun yamcha r uppercut",
     repeatInterval: 1,
-    startTick: -1,
+    startTick: 8,
     endTick: -1,
     abilityId: Debuffs.STUN_HALF_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
-    aoe: 250,
+    aoe: 300,
     keepCasting: false, 
     onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow yamcha r spirit ball",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.SPIRIT_BALL,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 300,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun yamcha r neo wolf fang fist",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.STUN_ONE_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 300,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff blind yamcha r blinding wolf fang fist",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.BLINDING_WOLF_FANG_FIST,
+    orderId: Debuffs.CURSE_ORDER_ID,
+    aoe: 300,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
     requireBuff: false,
     buffId: 0,
   },

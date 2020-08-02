@@ -37,12 +37,13 @@ function tsMain() {
   Preload("DragonTail.mdl");
   Preload("Conflagrate.mdl");
 
-  // preload custom abilities
-  customAbilityManager = CustomAbilityManager.getInstance();
-
   // setup logger
   Logger.doLogVerbose = false;
   Logger.doLogDebug = false;
+  
+  // preload custom abilities
+  customAbilityManager = CustomAbilityManager.getInstance();
+
   TimerStart(CreateTimer(), 5.0, false, () => {
     // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());

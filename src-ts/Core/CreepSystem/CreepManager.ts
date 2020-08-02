@@ -250,7 +250,6 @@ export class CreepManager {
         if (customCreep) {
           let wait = Constants.creepRespawnReviveDelay;
           if (
-            IsUnitType(creepUnit, UNIT_TYPE_HERO) && 
             GetPlayerId(customCreep.owner) == Constants.heavenHellCreepPlayerId
           ) {
             wait = Constants.creepHeavenHellHeroRespawnDelay;
