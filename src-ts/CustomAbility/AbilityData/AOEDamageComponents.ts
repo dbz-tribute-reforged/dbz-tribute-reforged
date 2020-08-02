@@ -1850,9 +1850,9 @@ export const AOEDamageComponents = [
     aoe: 400,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    maxDamageTicks: 5,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.4,
+      multiplier: BASE.DFIST_DPS * 2.05,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 0,
@@ -3084,7 +3084,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.35 * 16,
+      multiplier: BASE.KAME_DPS * 0.36 * 16,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3131,7 +3131,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 2,
+      multiplier: BASE.KAME_EXPLOSION * 2.1,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -3150,12 +3150,12 @@ export const AOEDamageComponents = [
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: false,
     useLastCastPoint: false,
-    aoe: 230,
+    aoe: 300,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.34,
+      multiplier: BASE.KAME_DPS * 0.36,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -4009,7 +4009,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_DPS * 0.66,
+      multiplier: BASE.SPIRIT_BOMB_DPS * 0.68,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
@@ -4032,7 +4032,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.66,
+      multiplier: BASE.SPIRIT_BOMB_EXPLOSION * 0.68,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 0,
