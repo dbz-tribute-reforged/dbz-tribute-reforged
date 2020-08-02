@@ -16,6 +16,7 @@ import { ItemAbilityManager } from 'Core/ItemAbilitySystem/ItemAbilityManager';
 import { TeamManager } from 'Core/TeamSystem/TeamManager';
 import { Constants } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
+import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
@@ -26,6 +27,7 @@ let tournamentManager: TournamentManager;
 let experienceManager: ExperienceManager;
 let dragonBallsManager: DragonBallsManager;
 let itemCleanupManager: ItemCleanupManager;
+let customAbilityManager: CustomAbilityManager;
 
 function tsMain() {
 
@@ -38,6 +40,10 @@ function tsMain() {
   // setup logger
   Logger.doLogVerbose = false;
   Logger.doLogDebug = false;
+  
+  // preload custom abilities
+  customAbilityManager = CustomAbilityManager.getInstance();
+
   TimerStart(CreateTimer(), 5.0, false, () => {
     // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
     DestroyTimer(GetExpiredTimer());

@@ -186,6 +186,46 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Krillin.SENZU_THROW,
     ]],
 
+    // yamcha r
+    [FourCC("E010"), [
+      AbilityNames.YamchaR.LIGHT_PUNCH,
+      AbilityNames.YamchaR.MEDIUM_PUNCH,
+      AbilityNames.YamchaR.HEAVY_PUNCH,
+      AbilityNames.YamchaR.DASH_LEFT,
+      AbilityNames.YamchaR.DASH_FORWARD,
+      AbilityNames.YamchaR.DASH_RIGHT,
+      AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
+      AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
+      AbilityNames.YamchaR.WOLF_FANG_BLAST,
+      AbilityNames.YamchaR.SLEDGEHAMMER,
+      AbilityNames.YamchaR.METEOR_CRASH,
+      AbilityNames.YamchaR.UPPERCUT,
+
+      AbilityNames.YamchaR.WOLF_FANG_HURRICANE,
+      AbilityNames.YamchaR.WOLF_FANG_VOLLEY,
+      AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST,
+  
+      AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST,
+      AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST,
+      AbilityNames.YamchaR.NEO_WOLF_FANG_FIST,
+  
+      AbilityNames.YamchaR.SPIRIT_BALL,
+      AbilityNames.YamchaR.FLASH_KAME,
+      AbilityNames.YamchaR.WOLF_FANG_BARRAGE,
+  
+      AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK,
+      AbilityNames.YamchaR.WOLF_FANG_FLASH,
+      AbilityNames.YamchaR.WOLF_FANG_FINISHER,
+  
+      AbilityNames.YamchaR.SUMMON_PUAR,
+      AbilityNames.YamchaR.YAMCHA_BLAST,
+      AbilityNames.YamchaR.PLAY_DEAD,
+  
+      AbilityNames.YamchaR.HOMERUN,
+      AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
+      AbilityNames.YamchaR.BATTER_UP,
+    ]],
+
 
 
     // androids 13 14 15

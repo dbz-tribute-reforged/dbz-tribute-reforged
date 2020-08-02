@@ -17,6 +17,9 @@ export class MultiComponent implements
   static readonly WRAPAROUND_FIRING = 2;
   static readonly RANDOM_FIRING = 3;
 
+  static readonly TARGET_POINT_TARGET = 0;
+  static readonly TARGET_POINT_SOURCE_FORWARD = 1;
+
   protected hasStarted: boolean;
   protected angleCurrent: number;
   protected angleDirection: number;
@@ -52,6 +55,7 @@ export class MultiComponent implements
     public fixedReplacementCoords: boolean = false,
     public useTargetUnitAsSource: boolean = false,
     public useLastCastPoint: boolean = false,
+    public whichTargetPoint: number = MultiComponent.TARGET_POINT_TARGET,
     public components: AbilityComponent[] = [],
   ) {
     this.hasStarted = false;
@@ -151,9 +155,18 @@ export class MultiComponent implements
         this.angleMin = tmp;
         this.angleDirection = -1;
       }
-      this.targettedPoint.setVector(input.targetPoint);
-      if (this.useLastCastPoint) {
-        this.targettedPoint.setVector(input.castPoint);
+      if (this.whichTargetPoint == MultiComponent.TARGET_POINT_TARGET) {
+        this.targettedPoint.setVector(input.targetPoint);
+        if (this.useLastCastPoint) {
+          this.targettedPoint.setVector(input.castPoint);
+        }
+      } else if (this.whichTargetPoint == MultiComponent.TARGET_POINT_SOURCE_FORWARD) {
+        this.targettedPoint.setPos(GetUnitX(source), GetUnitY(source));
+        this.targettedPoint.polarProjectCoords(
+          this.targettedPoint,
+          GetUnitFacing(source),
+          this.forceMinDistance
+        );
       }
 
       this.originalAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targettedPoint);
@@ -197,7 +210,7 @@ export class MultiComponent implements
         this.angleCurrent + this.originalAngle,
         this.originalDistance
       );
-
+      
       if (this.useLastCastPoint) {
         this.oldPoint.setVector(input.castPoint);
         input.castPoint.setVector(this.newCoord);
@@ -205,6 +218,7 @@ export class MultiComponent implements
         this.oldPoint.setPos(input.targetPoint.x, input.targetPoint.y);
         input.targetPoint.setVector(this.newCoord);
       }
+
       let oldSource = source;
       if (this.useTargetUnitAsSource && input.targetUnit) {
         source = input.targetUnit;
@@ -280,6 +294,7 @@ export class MultiComponent implements
       this.fixedReplacementCoords,
       this.useTargetUnitAsSource,
       this.useLastCastPoint,
+      this.whichTargetPoint,
       AbilityComponentHelper.clone(this.components)
     );
   }
@@ -304,6 +319,7 @@ export class MultiComponent implements
       fixedReplacementCoords: boolean;
       useTargetUnitAsSource: boolean;
       useLastCastPoint: boolean;
+      whichTargetPoint: number;
       components: {
         name: string,
       }[];
@@ -327,6 +343,7 @@ export class MultiComponent implements
     this.fixedReplacementCoords = input.fixedReplacementCoords;
     this.useTargetUnitAsSource = input.useTargetUnitAsSource;
     this.useLastCastPoint = input.useLastCastPoint;
+    this.whichTargetPoint = input.whichTargetPoint;
     return this;
   }
 

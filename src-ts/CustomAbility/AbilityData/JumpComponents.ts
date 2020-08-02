@@ -31,4 +31,12 @@ export const JumpComponents = [
     duration: 15,
     maxHeight: 400,
   },
+  {
+    name: "jump yamcha r sledgehammer",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 13,
+    maxHeight: 400,
+  },
 ]

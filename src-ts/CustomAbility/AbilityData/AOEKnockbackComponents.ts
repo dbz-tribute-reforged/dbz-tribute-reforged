@@ -681,4 +681,52 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // yamcha r super spirit ball
+  {
+    name: "knockback yamcha r super spirit ball",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 4, 
+      angle: 180, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // yamcha r wolf fang hurricane
+  {
+    name: "knockback yamcha r wolf fang hurricane",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 3, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // yamcha r batter up
+  {
+    name: "knockback yamcha r batter up deflect",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
+      angle: 0, 
+      aoe: 350,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: true,
+  },
 ];

@@ -20,4 +20,11 @@ export const HideUnitComponents = [
     endTick: -1,
     preventMovement: false,
   },
+  {
+    name: "hide unit yamcha r play dead", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    preventMovement: true,
+  },
 ];

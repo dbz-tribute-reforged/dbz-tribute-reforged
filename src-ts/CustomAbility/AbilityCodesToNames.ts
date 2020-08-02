@@ -122,6 +122,46 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0RA'), AbilityNames.Krillin.DESTRUCTO_DISC],
     [FourCC('A0RB'), AbilityNames.Krillin.SENZU_THROW],
 
+    // yamcha R
+    [FourCC('A0RC'), AbilityNames.YamchaR.LIGHT_PUNCH],
+    [FourCC('A0RD'), AbilityNames.YamchaR.MEDIUM_PUNCH],
+    [FourCC('A0RE'), AbilityNames.YamchaR.HEAVY_PUNCH],
+    [FourCC('A0RF'), AbilityNames.YamchaR.DASH_LEFT],
+    [FourCC('A0RG'), AbilityNames.YamchaR.DASH_FORWARD],
+    [FourCC('A0RH'), AbilityNames.YamchaR.DASH_RIGHT],
+
+    [FourCC('A0RI'), AbilityNames.YamchaR.SUPER_SPIRIT_BALL],
+    [FourCC('A0RJ'), AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA],
+    [FourCC('A0RK'), AbilityNames.YamchaR.WOLF_FANG_BLAST],
+
+    [FourCC('A0RL'), AbilityNames.YamchaR.SLEDGEHAMMER],
+    [FourCC('A0RM'), AbilityNames.YamchaR.METEOR_CRASH],
+    [FourCC('A0RN'), AbilityNames.YamchaR.UPPERCUT],
+
+    [FourCC('A0RP'), AbilityNames.YamchaR.WOLF_FANG_HURRICANE],
+    [FourCC('A0RQ'), AbilityNames.YamchaR.WOLF_FANG_VOLLEY],
+    [FourCC('A0RR'), AbilityNames.YamchaR.REVERSE_WOLF_FANG_BLAST],
+
+    [FourCC('A0RS'), AbilityNames.YamchaR.BLINDING_WOLF_FANG_FIST],
+    [FourCC('A0RT'), AbilityNames.YamchaR.NEO_WOLF_FANG_BLAST],
+    [FourCC('A0RU'), AbilityNames.YamchaR.NEO_WOLF_FANG_FIST],
+
+    [FourCC('A0RV'), AbilityNames.YamchaR.SPIRIT_BALL],
+    [FourCC('A0RW'), AbilityNames.YamchaR.FLASH_KAME],
+    [FourCC('A0RX'), AbilityNames.YamchaR.WOLF_FANG_BARRAGE],
+
+    [FourCC('A0S0'), AbilityNames.YamchaR.WOLF_FANG_PACK_ATTACK],
+    [FourCC('A0RZ'), AbilityNames.YamchaR.WOLF_FANG_FLASH],
+    [FourCC('A0RY'), AbilityNames.YamchaR.WOLF_FANG_FINISHER],
+
+    [FourCC('A0S2'), AbilityNames.YamchaR.SUMMON_PUAR],
+    [FourCC('A0S3'), AbilityNames.YamchaR.YAMCHA_BLAST],
+    [FourCC('A0S4'), AbilityNames.YamchaR.PLAY_DEAD],
+
+    [FourCC('A0S5'), AbilityNames.YamchaR.HOMERUN],
+    [FourCC('A0S6'), AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST],
+    [FourCC('A0S7'), AbilityNames.YamchaR.BATTER_UP],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
