@@ -802,7 +802,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 3,
+    distance: 6,
   },
   // yamcha r full power kame pushback
   {

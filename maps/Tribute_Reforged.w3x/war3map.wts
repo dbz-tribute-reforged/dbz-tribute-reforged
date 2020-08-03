@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.48
+DBZ Tribute Reforged 0.48a
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 30+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 31+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -75025,8 +75025,8 @@ Transformations:
 [lvl 30]  1.50x "fp" [Unlocks Stance: Base]
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp" [Unlocks Full Combos]
-[lvl 150] 2.20x "fp" [Unlocks Stance: Dash]
-[lvl 200] 2.40x "fp" [Unlocks Sparking!]
+[lvl 150] 2.30x "fp" [Unlocks Stance: Dash]
+[lvl 200] 2.50x "fp" [Unlocks Sparking!]
 
 |cff22ff22Speed Demon:|r Reduced cast point by 0.1s.
 
@@ -89665,6 +89665,70 @@ A true-combo hero that relies on sequencing the right attacks together to access
 
 }
 
+STRING 14621
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool1> seconds|r
+}
+
+STRING 14622
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool2> seconds|r
+}
+
+STRING 14623
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool3> seconds|r
+}
+
+STRING 14624
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool4> seconds|r
+}
+
+STRING 14625
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool5> seconds|r
+}
+
+STRING 14626
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool6> seconds|r
+}
+
+STRING 14627
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool7> seconds|r
+}
+
+STRING 14628
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool8> seconds|r
+}
+
 STRING 14629
 // Abilities: A0S3 (Yamcha Blast), Ubertip (Tooltip - Normal - Extended)
 {
@@ -89799,6 +89863,14 @@ STRING 14646
 // Abilities: A0RQ (Wolf Fang Volley), EditorSuffix (Editor Suffix)
 {
 (yamcha)
+}
+
+STRING 14647
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool9> seconds|r
 }
 
 STRING 14648
@@ -90715,6 +90787,14 @@ STRING 14778
 // Abilities: A0RW (Flash Kamehameha), Name (Name)
 {
 Flash Kamehameha
+}
+
+STRING 14779
+// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
+{
+Yamcha makes a quick dash to the home plate. Gains +200ms and unlocks movement speed cap.
+|cff00ff00Damage: 0|r
+|cff00ffffCooldown: <A0S5,Cool10> seconds|r
 }
 
 STRING 14780
@@ -92570,86 +92650,6 @@ STRING 15072
 A spirit ball.
 |cff00ff00Damage: Int|r
 |cff00ffffCooldown: <A0RV,Cool10> seconds|r
-}
-
-STRING 15073
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool1> seconds|r
-}
-
-STRING 15074
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool2> seconds|r
-}
-
-STRING 15075
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool3> seconds|r
-}
-
-STRING 15076
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool4> seconds|r
-}
-
-STRING 15077
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool5> seconds|r
-}
-
-STRING 15078
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool6> seconds|r
-}
-
-STRING 15079
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool7> seconds|r
-}
-
-STRING 15080
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool8> seconds|r
-}
-
-STRING 15081
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool9> seconds|r
-}
-
-STRING 15082
-// Abilities: A0S5 (Homerun), Ubertip (Tooltip - Normal - Extended)
-{
-Yamcha makes a quick dash to the home plate. Gains +99ms and unlocks movement speed cap.
-|cff00ff00Damage: 0|r
-|cff00ffffCooldown: <A0S5,Cool10> seconds|r
 }
 
 STRING 15083
