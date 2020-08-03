@@ -2567,7 +2567,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward yamcha r sledgehammer" },
       { name: "damage yamcha r sledgehammer" },
-      { name: "debuff stun yamcha r half second" },
+      { name: "debuff stun yamcha r sledgehammer" },
       { name: "jump yamcha r sledgehammer" },
       { name: "sfx yamcha r sledgehammer" },
     ],
@@ -2625,7 +2625,7 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward yamcha r heavy punch" },
       { name: "damage yamcha r uppercut" },
-      { name: "debuff stun yamcha r half second" },
+      { name: "debuff stun yamcha r uppercut" },
       { name: "sfx yamcha r uppercut" },
     ],
   },

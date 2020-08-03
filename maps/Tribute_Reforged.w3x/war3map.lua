@@ -7873,7 +7873,7 @@ function Trig_Yamcha_Combo_Actions()
             end
         end
     end
-    udg_TempInt = IMinBJ(7, ((GetHeroLevel(udg_StatMultUnit) + 10) // 10))
+    udg_TempInt = IMinBJ(8, ((GetHeroLevel(udg_StatMultUnit) + 10) // 10))
     if (Trig_Yamcha_Combo_Func014C()) then
         SetUnitAbilityLevelSwapped(FourCC("A0RC"), udg_StatMultUnit, udg_TempInt)
         SetUnitAbilityLevelSwapped(FourCC("A0RD"), udg_StatMultUnit, udg_TempInt)
@@ -8102,15 +8102,15 @@ function Trig_Yamcha_Sparking_Actions()
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RF"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RG"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RH"), udg_TempReal)
+    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RL"), udg_TempReal)
+    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RN"), udg_TempReal)
     udg_TempReal = 1.50
+    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RM"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RJ"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RK"), udg_TempReal)
-    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RL"), udg_TempReal)
-    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RM"), udg_TempReal)
-    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RN"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RR"), udg_TempReal)
-    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RT"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RU"), udg_TempReal)
+    BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RT"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RW"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0S0"), udg_TempReal)
     BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0RZ"), udg_TempReal)
@@ -29486,13 +29486,13 @@ function Trig_Transformations_Yamcha_Actions()
     else
     end
     if (Trig_Transformations_Yamcha_Func016C()) then
-        udg_StatMultReal = 2.20
+        udg_StatMultReal = 2.30
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Yamcha_Func017C()) then
-        udg_StatMultReal = 2.40
+        udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
