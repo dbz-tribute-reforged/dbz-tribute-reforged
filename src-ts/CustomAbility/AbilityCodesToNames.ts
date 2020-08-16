@@ -161,6 +161,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0S5'), AbilityNames.YamchaR.HOMERUN],
     [FourCC('A0S6'), AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST],
     [FourCC('A0S7'), AbilityNames.YamchaR.BATTER_UP],
+    
+    [FourCC('A0SB'), AbilityNames.YamchaR.SPARKING],
+    
 
 
     // babidi
@@ -307,6 +310,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0QP'), AbilityNames.OmegaShenron.ICE_CANNON],
     [FourCC('A0QQ'), AbilityNames.OmegaShenron.NOVA_STAR],
     [FourCC('A0QR'), AbilityNames.OmegaShenron.DRAGON_THUNDER],
+
+    // guldo
+    [FourCC('A0SC'), AbilityNames.Guldo.PSYCHO_JAVELIN],
+    [FourCC('A0SD'), AbilityNames.Guldo.PSYCHIC_ROCK_THROW],
+    [FourCC('A0SE'), AbilityNames.Guldo.TELEKINESIS],
+    [FourCC('A0SF'), AbilityNames.Guldo.TIME_STOP],
+    [FourCC('A0SG'), AbilityNames.Guldo.GINYU_POSE_GULDO],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

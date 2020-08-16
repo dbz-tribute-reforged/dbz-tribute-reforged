@@ -3099,6 +3099,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.YamchaR.SPARKING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNYamcha.blp",
+      disabled: "BTNYamcha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.YamchaR.SPARKING,
+      body: 
+        AbilityNames.YamchaR.SPARKING
+    },
+    components: [
+      { name: "knockback yamcha r sparking" },
+      { name: "sfx yamcha r sparking" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
@@ -3239,7 +3266,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 231,
+    duration: 500,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5764,6 +5791,139 @@ export const AbilitiesList = [
       { name: "damage dragon thunder omega dps" },
       { name: "debuff slow dragon thunder omega" },
       { name: "sfx dragon thunder omega" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guldo.PSYCHO_JAVELIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuldoPsychoJavelin.blp",
+      disabled: "BTNGuldoPsychoJavelin.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Guldo.PSYCHO_JAVELIN,
+      body: 
+        AbilityNames.Guldo.PSYCHO_JAVELIN
+    },
+    components: [
+      { name: "beam psycho javelin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guldo.PSYCHIC_ROCK_THROW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 55,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuldoPsychicRockThrow.blp",
+      disabled: "BTNGuldoPsychicRockThrow.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Guldo.PSYCHIC_ROCK_THROW,
+      body: 
+        AbilityNames.Guldo.PSYCHIC_ROCK_THROW
+    },
+    components: [
+      { name: "multi psychic rock throw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guldo.TELEKINESIS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuldoTelekinesis.blp",
+      disabled: "BTNGuldoTelekinesis.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Guldo.TELEKINESIS,
+      body: 
+        AbilityNames.Guldo.TELEKINESIS
+    },
+    components: [
+      { name: "knockback guldo telekinesis" },
+      { name: "sfx guldo telekinesis" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guldo.TIME_STOP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuldoTimeStop.blp",
+      disabled: "BTNGuldoTimeStop.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Guldo.TIME_STOP,
+      body: 
+        AbilityNames.Guldo.TIME_STOP
+    },
+    components: [
+      { name: "dash ground forward guldo time stop" },
+      { name: "sfx zanzo dash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Guldo.GINYU_POSE_GULDO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 660,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGuldoPose.blp",
+      disabled: "BTNGuldoPose.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Guldo.GINYU_POSE_GULDO,
+      body: 
+        AbilityNames.Guldo.GINYU_POSE_GULDO
+    },
+    components: [
+      { name: "dash ground forward ginyu pose guldo" },
+      { name: "sfx ginyu pose guldo" },
     ],
   },
   // -------------------------------------------

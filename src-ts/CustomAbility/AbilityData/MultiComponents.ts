@@ -1365,6 +1365,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi psychic rock throw", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: -4,
+    angleMax: 4,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 11,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 2,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam psychic rock throw" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

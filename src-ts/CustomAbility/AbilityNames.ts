@@ -179,6 +179,8 @@ export module AbilityNames {
     export const HOMERUN: string = "Homerun!";
     export const WOLF_FANG_PITCHING_FIST: string = "Wolf Fang Pitching Fist!";
     export const BATTER_UP: string = "Batter Up!";
+
+    export const SPARKING: string = "Sparking!";
   }
 
 
@@ -351,6 +353,15 @@ export module AbilityNames {
     export const NOVA_STAR = "Omega Nova Star";
     export const DRAGON_THUNDER = "Omega Dragon Thunder";
   }
+
+  export module Guldo {
+    export const PSYCHO_JAVELIN = "Psycho Javelin";
+    export const PSYCHIC_ROCK_THROW = "Psychic Rock Throw";
+    export const TELEKINESIS = "Telekinesis Guldo";
+    export const TIME_STOP = "Time Stop";
+    export const GINYU_POSE_GULDO = "Guldo Pose";
+  }
+
 
 
   export module Saga {
