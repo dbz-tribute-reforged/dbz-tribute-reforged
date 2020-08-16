@@ -517,7 +517,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 25, 
       angle: 180, 
-      aoe: 250,
+      aoe: 300,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     useLastCastPoint: true,
@@ -728,5 +728,53 @@ export const AOEKnockbackComponents = [
     useLastCastPoint: true,
     reflectBeams: true,
     affectAllies: true,
+  },
+  // yamcha r sparking
+  {
+    name: "knockback yamcha r sparking",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 200, 
+      angle: 0, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: true,
+  },
+  // psycho javelin knock in
+  {
+    name: "knockback psycho javelin",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 180, 
+      aoe: 150,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // telekinesis knock in
+  {
+    name: "knockback guldo telekinesis",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 90, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
   },
 ];

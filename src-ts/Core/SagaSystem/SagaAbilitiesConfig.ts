@@ -310,6 +310,21 @@ export module SagaAbilities {
     );
   }
 
+  export module Guldo {
+    export const PSYCHO_JAVELIN = new SagaAbility(
+      AbilityNames.Guldo.PSYCHO_JAVELIN, 10, 15, 15, EXTRA_LONG_CAST_TIME
+    );
+    export const PSYCHIC_ROCK_THROW = new SagaAbility(
+      AbilityNames.Guldo.PSYCHIC_ROCK_THROW, 10, 15, 15, MEDIUM_CAST_TIME
+    );
+    export const TELEKINESIS = new SagaAbility(
+      AbilityNames.Guldo.TELEKINESIS, 10, 40, 3, LONG_CAST_TIME
+    );
+    export const GINYU_POSE_GULDO = new SagaAbility(
+      AbilityNames.Guldo.GINYU_POSE_GULDO, 10, 40, 5, SHORT_CAST_TIME
+    );
+  }
+
   export module OmegaShenron {
     export const DRAGON_FLASH_BULLET = new SagaAbility(
       AbilityNames.OmegaShenron.DRAGON_FLASH_BULLET, 10, 15, 20, SHORT_CAST_TIME

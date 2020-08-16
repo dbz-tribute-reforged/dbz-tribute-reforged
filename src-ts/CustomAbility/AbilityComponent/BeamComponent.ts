@@ -142,16 +142,18 @@ export class BeamComponent implements
     if (this.explodeTick > 0) {
       finishHeightTick = this.explodeTick;
     }
-    SetUnitFlyHeight(
-      this.beamUnit, 
-      this.heightVariation.start + (
-        (
-          this.heightVariation.finish - this.heightVariation.start
-        ) * 
-        ability.calculateTimeRatio(this.startTick, finishHeightTick)
-      ),
-      0
-    );
+    if (this.heightVariation.start >= 0) {
+      SetUnitFlyHeight(
+        this.beamUnit, 
+        this.heightVariation.start + (
+          (
+            this.heightVariation.finish - this.heightVariation.start
+          ) * 
+          ability.calculateTimeRatio(this.startTick, finishHeightTick)
+        ),
+        0
+      );
+    }
 
     return this;
   }
@@ -201,8 +203,10 @@ export class BeamComponent implements
 
     SetUnitTurnSpeed(this.beamUnit, this.turnSpeed);
 
-    UnitHelper.giveUnitFlying(this.beamUnit);
-    SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
+    if (this.heightVariation.start >= 0) {
+      UnitHelper.giveUnitFlying(this.beamUnit);
+      SetUnitFlyHeight(this.beamUnit, this.heightVariation.start, 0);
+    }
     
     let endHeightTick = this.endTick;
     if (this.endTick == -1) {

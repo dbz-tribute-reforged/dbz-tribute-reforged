@@ -135,11 +135,20 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // ginyu force
-    ["Guldo", new SagaUnit(FourCC("U00Y"), 9, 200, 200, 650, new Vector2D(25000, 30000))],
+    ["Guldo", new SagaUnit(FourCC("H09J"), 9, 200, 200, 650, new Vector2D(25000, 30000),
+      [
+        SagaAbilities.Guldo.PSYCHO_JAVELIN, 
+        SagaAbilities.Guldo.PSYCHIC_ROCK_THROW,
+        SagaAbilities.Guldo.TELEKINESIS,
+        SagaAbilities.Guldo.GINYU_POSE_GULDO,
+      ],
+      [
+        ItemConstants.SagaDrops.BATTLE_ARMOR_2,
+      ]
+    )],
     ["Recoome", new SagaUnit(FourCC("U005"), 35, 900, 200, 300, new Vector2D(24400, 30000),
       [
         SagaAbilities.Broly.ENERGY_PUNCH, 
-        SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Nappa.BREAK_CANNON
       ],
       [

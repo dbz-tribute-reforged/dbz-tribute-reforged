@@ -6,6 +6,8 @@ export const JumpComponents = [
     endTick: -1,
     duration: 33,
     maxHeight: 600,
+    useSpeedToCastPoint: false,
+    speed: -1,
   },
   {
     name: "jump saibaman bomb",
@@ -14,6 +16,18 @@ export const JumpComponents = [
     endTick: -1,
     duration: 22,
     maxHeight: 300,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
+  {
+    name: "jump beam hand kannon",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 40,
+    maxHeight: 700,
+    useSpeedToCastPoint: true,
+    speed: 40,
   },
   {
     name: "jump nova rush",
@@ -22,6 +36,8 @@ export const JumpComponents = [
     endTick: -1,
     duration: 25,
     maxHeight: 600,
+    useSpeedToCastPoint: false,
+    speed: -1,
   },
   {
     name: "jump justice kick on hit",
@@ -30,6 +46,8 @@ export const JumpComponents = [
     endTick: -1,
     duration: 15,
     maxHeight: 400,
+    useSpeedToCastPoint: false,
+    speed: -1,
   },
   {
     name: "jump yamcha r sledgehammer",
@@ -38,5 +56,7 @@ export const JumpComponents = [
     endTick: -1,
     duration: 13,
     maxHeight: 400,
+    useSpeedToCastPoint: false,
+    speed: -1,
   },
 ]

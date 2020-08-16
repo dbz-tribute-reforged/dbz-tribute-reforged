@@ -1171,6 +1171,7 @@ export function CustomPlayerTest() {
     SetupGinyuTelekinesis(customPlayers);
     SetupOmegaShenronShadowFist(customPlayers);
     SetupKrillinSenzuThrow(customPlayers);
+    SetupCustomAbilityRefresh(customPlayers);
     SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
   });
@@ -1189,7 +1190,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.7;
+  const braveSwordDamageMult = 0.25 * 1.65;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -1837,6 +1838,36 @@ export function SetupKrillinSenzuThrow(customPlayers: CustomPlayer[]) {
       });
     }
 
+    return false;
+  }));
+}
+
+export function SetupCustomAbilityRefresh(customPlayers: CustomPlayer[]) {
+  const ginyuPoseUltimate = FourCC("A0PS");
+  const yamchaSparking = FourCC("A0SB");
+
+  // reset cd of custom abilities
+  const trigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(trigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(trigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == yamchaSparking || spellId == ginyuPoseUltimate) {
+      const caster = GetTriggerUnit();
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+      for (const customHero of customPlayers[playerId].allHeroes) {
+        if (customHero.unit == caster) {
+          for (const [name, abil] of customHero.abilities.abilities) {
+            if (abil) {
+              abil.currentCd = 0;
+              if (abil.currentTick > 0) {
+                abil.currentTick = abil.duration;
+              }
+            }
+          }
+        }
+      }
+    }
     return false;
   }));
 }

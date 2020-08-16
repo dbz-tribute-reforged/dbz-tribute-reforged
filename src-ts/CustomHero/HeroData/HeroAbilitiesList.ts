@@ -224,6 +224,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.YamchaR.HOMERUN,
       AbilityNames.YamchaR.WOLF_FANG_PITCHING_FIST,
       AbilityNames.YamchaR.BATTER_UP,
+      
+      AbilityNames.YamchaR.SPARKING,
     ]],
 
 
@@ -439,6 +441,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.OmegaShenron.ICE_CANNON,
       AbilityNames.OmegaShenron.NOVA_STAR,
       AbilityNames.OmegaShenron.DRAGON_THUNDER,
+    ]],
+
+    // guldo
+    [FourCC("H09J"), [
+      AbilityNames.Guldo.PSYCHO_JAVELIN,
+      AbilityNames.Guldo.PSYCHIC_ROCK_THROW,
+      AbilityNames.Guldo.TELEKINESIS,
+      AbilityNames.Guldo.TIME_STOP,
+      AbilityNames.Guldo.GINYU_POSE_GULDO,
     ]],
 
   ]

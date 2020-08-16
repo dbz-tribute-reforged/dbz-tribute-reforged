@@ -1077,6 +1077,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 4,
   },
+  // guldo time stop
+  {
+    name: "dash ground forward guldo time stop",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 12,
+  },
+  // guldo pose
+  {
+    name: "dash ground forward ginyu pose guldo",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1,
+  },
   // ---
   // saga zanzo
   {

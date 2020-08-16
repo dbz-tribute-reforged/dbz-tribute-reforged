@@ -55,4 +55,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 33,
   },
+  {
+    name: "timed life beam psychic rock throw", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 40,
+  },
 ];

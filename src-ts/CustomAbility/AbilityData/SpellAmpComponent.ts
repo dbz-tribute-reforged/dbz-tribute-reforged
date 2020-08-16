@@ -106,7 +106,7 @@ export const SpellAmpComponents = [
     startTick: 0,
     endTick: -1,
     bonus: 0.15,
-    rate: 0.001,
+    rate: 0.009,
   },
   // --------------------------------------------
   { 
@@ -152,5 +152,14 @@ export const SpellAmpComponents = [
     endTick: -1,
     bonus: 0.1,
     rate: 0.0006,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp ginyu pose guldo", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.5,
+    rate: 0.003,
   },
 ];
