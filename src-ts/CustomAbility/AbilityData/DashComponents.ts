@@ -408,6 +408,31 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 39,
   },
+  // ultimate burning warrior
+  {
+    name: "dash ground forward ultimate burning warrior",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
+  },
+  {
+    name: "dash ground forward ultimate burning warrior 2",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 4,
+  },
   // justice punch
   {
     name: "dash ground point justice punch",
@@ -419,7 +444,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 33,
   },
   {
     name: "dash ground point justice punch 2",
@@ -431,7 +456,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 44,
   },
   // justice tornado
   {

@@ -1694,6 +1694,222 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Jiren.POWER_IMPACT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenPowerImpact.blp",
+      disabled: "BTNJirenPowerImpact.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.POWER_IMPACT,
+      body: 
+        AbilityNames.Jiren.POWER_IMPACT
+    },
+    components: [
+      { name: "beam power impact" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.POWER_IMPACT_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 60,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenPowerImpact2.blp",
+      disabled: "BTNJirenPowerImpact2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.POWER_IMPACT_2,
+      body: 
+        AbilityNames.Jiren.POWER_IMPACT_2
+    },
+    components: [
+      { name: "beam power impact 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.HEATWAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenHeatwave.blp",
+      disabled: "BTNJirenHeatwave.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Jiren.HEATWAVE,
+      body: 
+        AbilityNames.Jiren.HEATWAVE,
+    },
+    components: [
+      { name: "multi heatwave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.HEATWAVE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenHeatwave2.blp",
+      disabled: "BTNJirenHeatwave2.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Jiren.HEATWAVE,
+      body: 
+        AbilityNames.Jiren.HEATWAVE,
+    },
+    components: [
+      { name: "multi heatwave 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.MEDITATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenMeditate.blp",
+      disabled: "BTNJirenMeditate.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.MEDITATE,
+      body: 
+        AbilityNames.Jiren.MEDITATE
+    },
+    components: [
+      { name: "block jiren meditate" },
+      { name: "beam jiren meditate barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.MEDITATE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenMeditate.blp",
+      disabled: "BTNJirenMeditate.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.MEDITATE_2,
+      body: 
+        AbilityNames.Jiren.MEDITATE_2
+    },
+    components: [
+      { name: "block jiren meditate 2" },
+      { name: "beam jiren meditate 2 barrier" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenUltimateBurningWarrior.blp",
+      disabled: "BTNJirenUltimateBurningWarrior.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR,
+      body: 
+        AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR
+    },
+    components: [
+      { name: "dash ground forward ultimate burning warrior" },
+      { name: "damage ultimate burning warrior dps" },
+      { name: "block ultimate burning warrior" },
+      { name: "sfx ultimate burning warrior" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJirenUltimateBurningWarrior2.blp",
+      disabled: "BTNJirenUltimateBurningWarrior2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2,
+      body: 
+        AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2
+    },
+    components: [
+      { name: "dash ground forward ultimate burning warrior 2" },
+      { name: "damage ultimate burning warrior 2 dps" },
+      { name: "block ultimate burning warrior 2" },
+      { name: "sfx ultimate burning warrior" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Toppo.JUSTICE_FLASH,
     currentCd: 0,
     maxCd: 1,
@@ -1968,6 +2184,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward god of destruction toppo" },
+      { name: "block god of destruction toppo" },
       { name: "sfx god of destruction toppo" },
     ],
   },

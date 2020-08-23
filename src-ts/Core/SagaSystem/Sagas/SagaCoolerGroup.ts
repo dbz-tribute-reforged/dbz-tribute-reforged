@@ -110,7 +110,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     this.delay = 30;
     this.stats = 100;
     this.metalCoolers = [];
-    this.revives = 5;
+    this.revives = 4;
   }
 
   spawnSagaUnits(): void {
@@ -143,7 +143,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     super.update(t);
     for (const mc of this.metalCoolers) {
       if (UnitHelper.isUnitAlive(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.005);
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.006);
       } else if (this.revives > 0) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(
@@ -153,9 +153,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
           ], 5, 5
         );
         ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.15 + 200), true);
-        SetHeroAgi(mc, Math.floor(GetHeroAgi(mc, true) * 1.15 + 150), true);
-        SetHeroInt(mc, Math.floor(GetHeroInt(mc, true) * 1.15 + 200), true);
+        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.25 + 200), true);
+        SetHeroAgi(mc, Math.floor(GetHeroAgi(mc, true) * 1.25 + 150), true);
+        SetHeroInt(mc, Math.floor(GetHeroInt(mc, true) * 1.25 + 200), true);
       }
     }
   }

@@ -175,7 +175,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, 5000);
+      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
     this.ping();

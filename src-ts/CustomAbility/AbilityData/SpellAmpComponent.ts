@@ -101,6 +101,15 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
+    name: "spell amp justice pose dyspo", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.1,
+    rate: 0.0006,
+  },
+  // --------------------------------------------
+  { 
     name: "spell amp overcharge", 
     repeatInterval: 1, 
     startTick: 0,
@@ -143,15 +152,6 @@ export const SpellAmpComponents = [
     endTick: -1,
     bonus: 0.15,
     rate: 0.0015,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp justice pose dyspo", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.1,
-    rate: 0.0006,
   },
   // --------------------------------------------
   { 

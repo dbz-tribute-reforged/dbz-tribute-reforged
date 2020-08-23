@@ -94,6 +94,20 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0IB'), AbilityNames.Tapion.HEROS_FLUTE],
     [FourCC('A0IA'), AbilityNames.Tapion.BRAVE_SWORD_ATTACK],
 
+    // jiren
+    [FourCC('A0K9'), AbilityNames.Jiren.POWER_IMPACT],
+    [FourCC('A0K8'), AbilityNames.Jiren.MIGHTY_PUNCH],
+    [FourCC('A0K6'), AbilityNames.Jiren.GLARE],
+    [FourCC('A0K7'), AbilityNames.Jiren.HEATWAVE],
+    [FourCC('A0KD'), AbilityNames.Jiren.MEDITATE],
+    [FourCC('A0KC'), AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR],
+    [FourCC('A0SI'), AbilityNames.Jiren.POWER_IMPACT_2],
+    [FourCC('A0SJ'), AbilityNames.Jiren.MIGHTY_PUNCH_2],
+    [FourCC('A0SK'), AbilityNames.Jiren.GLARE_2],
+    [FourCC('A0SL'), AbilityNames.Jiren.HEATWAVE_2],
+    [FourCC('A0SM'), AbilityNames.Jiren.MEDITATE_2],
+    [FourCC('A0SN'), AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2],
+
     // toppo
     [FourCC('A0PB'), AbilityNames.Toppo.JUSTICE_FLASH],
     [FourCC('A0PI'), AbilityNames.Toppo.JUSTICE_FLASH_2],

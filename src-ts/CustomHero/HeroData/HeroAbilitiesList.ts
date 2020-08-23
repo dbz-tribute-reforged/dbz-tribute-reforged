@@ -150,6 +150,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tapion.BRAVE_SWORD_ATTACK, 
     ]],
 
+    // jiren
+    [FourCC("E01P"), [
+      AbilityNames.Jiren.POWER_IMPACT, 
+      AbilityNames.Jiren.POWER_IMPACT_2, 
+      AbilityNames.Jiren.MIGHTY_PUNCH, 
+      AbilityNames.Jiren.MIGHTY_PUNCH_2, 
+      AbilityNames.Jiren.GLARE, 
+      AbilityNames.Jiren.GLARE_2, 
+      AbilityNames.Jiren.HEATWAVE, 
+      AbilityNames.Jiren.HEATWAVE_2, 
+      AbilityNames.Jiren.MEDITATE, 
+      AbilityNames.Jiren.MEDITATE_2, 
+      AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR, 
+      AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2,
+    ]],
+
     // toppo
     [FourCC("H09C"), [
       AbilityNames.Toppo.JUSTICE_FLASH, 
@@ -291,6 +307,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Videl.PUNCH,
       AbilityNames.Upa.JAVELIN_THROW,
       AbilityNames.Tapion.BRAVE_SLASH, AbilityNames.Tapion.BRAVE_CANNON,
+      AbilityNames.Jiren.POWER_IMPACT, AbilityNames.Jiren.POWER_IMPACT_2, AbilityNames.Jiren.MEDITATE, AbilityNames.Jiren.MEDITATE_2,
       AbilityNames.Toppo.JUSTICE_FLASH, AbilityNames.Toppo.JUSTICE_FLASH_2, AbilityNames.Toppo.GOD_OF_DESTRUCTION,
       AbilityNames.Dyspo.LIGHT_BULLET, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
