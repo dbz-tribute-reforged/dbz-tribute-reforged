@@ -323,7 +323,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
     
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 3000);
     }
     
     this.ping()

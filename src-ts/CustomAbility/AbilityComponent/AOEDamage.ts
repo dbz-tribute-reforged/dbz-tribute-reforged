@@ -15,6 +15,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SOURCE_LAST_CAST_UNIT = 4;
 
   static readonly UNLIMITED_DAMAGE_TICKS = -1;
+  static readonly DEFAULT_MAX_DAMAGE_TICKS = 12;
 
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;

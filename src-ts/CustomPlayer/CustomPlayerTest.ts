@@ -1171,6 +1171,7 @@ export function CustomPlayerTest() {
     SetupGinyuTelekinesis(customPlayers);
     SetupOmegaShenronShadowFist(customPlayers);
     SetupKrillinSenzuThrow(customPlayers);
+    SetupJirenGlare(customPlayers);
     SetupCustomAbilityRefresh(customPlayers);
     SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
@@ -1842,6 +1843,138 @@ export function SetupKrillinSenzuThrow(customPlayers: CustomPlayer[]) {
   }));
 }
 
+export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
+  const dummyStunSpell = FourCC('A0IY');
+  const dummyStunOrder = 852095;
+  const glareDuration = 2.5;
+  const maxGlareDistance = 3000;
+  const glareDamageMult = 0.25 * 0.55;
+  const glare2DamageMult = 0.25 * 0.77;
+  const sourceLoc = new Vector2D(0,0);
+  const targetLoc = new Vector2D(0,0);
+  
+  /**
+   * 0: spellId, or 0 if not activated
+   * 1: counter sfx
+   * 2: ability level
+   */
+  const jirenGlareHashtable = InitHashtable();
+  const jirenGlareUnitGroup = CreateGroup();
+
+  const glareCastTrigger = CreateTrigger();
+  const glareActivateTrigger = CreateTrigger();
+
+  TriggerRegisterAnyUnitEventBJ(glareCastTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT);
+  TriggerAddCondition(glareCastTrigger, Condition(() => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.glare || spellId == Id.glare2) {
+      const unit = GetTriggerUnit();
+      const unitId = GetHandleId(unit);
+      SaveInteger(jirenGlareHashtable, unitId, 0, spellId);
+      
+      const effect = AddSpecialEffectTarget("AuraJirenCounter2.mdl", unit, "origin");
+      BlzSetSpecialEffectScale(effect, 1.5);
+      SaveEffectHandle(jirenGlareHashtable, unitId, 1, effect);
+      SaveInteger(jirenGlareHashtable, unitId, 2, GetUnitAbilityLevel(unit, spellId));
+      
+      if (!IsUnitInGroup(unit, jirenGlareUnitGroup)) {
+        GroupAddUnit(jirenGlareUnitGroup, unit);
+        TriggerRegisterUnitEvent(glareActivateTrigger, unit, EVENT_UNIT_DAMAGED);
+      }
+
+      TimerStart(CreateTimer(), glareDuration, false, () => {
+        DestroyTimer(GetExpiredTimer());
+        SaveInteger(jirenGlareHashtable, unitId, 0, 0);
+        DestroyEffect(LoadEffectHandle(jirenGlareHashtable, unitId, 1));
+        SaveInteger(jirenGlareHashtable, unitId, 2, 0);
+      });
+    }
+    return false;
+  }));
+  
+  TriggerAddCondition(glareActivateTrigger, Condition(() => {
+    const unit = BlzGetEventDamageTarget();
+    const unitId = GetHandleId(unit);
+    const spellId = LoadInteger(jirenGlareHashtable, unitId, 0);
+    const source = GetEventDamageSource();
+    if (UnitHelper.isUnitAlive(unit) && spellId != 0 && IsUnitType(source, UNIT_TYPE_HERO)) {
+      SaveInteger(jirenGlareHashtable, unitId, 0, 0);
+
+      const player = GetOwningPlayer(unit);
+      targetLoc.setPos(GetUnitX(unit), GetUnitY(unit));
+      sourceLoc.setPos(GetUnitX(source), GetUnitY(source));
+
+      if (CoordMath.distance(targetLoc, sourceLoc) < maxGlareDistance) {
+        SetUnitX(unit, sourceLoc.x);
+        SetUnitY(unit, sourceLoc.y);
+            
+        const castDummy = CreateUnit(
+          player, 
+          Constants.dummyCasterId, 
+          sourceLoc.x, sourceLoc.y, 
+          0
+        );
+        UnitAddAbility(castDummy, dummyStunSpell);
+
+        const customHero = customPlayers[GetPlayerId(player)].getCustomHero(unit);
+        let spellPower = 1.0;
+        if (customHero) {
+          spellPower = customHero.spellPower;
+        }
+
+        let damageMult = 1.0;
+        if (spellId == Id.glare) {
+          damageMult = glareDamageMult;
+        } else if (spellId == Id.glare2) {
+          damageMult = glare2DamageMult;
+        }
+
+        let damageBonus = 0.0;
+        if (spellId == Id.glare2) {
+          damageBonus = Math.max(0, GetHeroStr(unit, true) - GetHeroStr(source, true));
+        }
+
+        const abilityLevel = LoadInteger(jirenGlareHashtable, unitId, 2);
+        const damage = abilityLevel * spellPower * damageMult * (
+          CustomAbility.BASE_DAMAGE + 
+          GetHeroStr(unit, true) + 
+          damageBonus
+        );
+
+        UnitDamageTarget(
+          unit,
+          source,
+          damage,
+          true,
+          false,
+          ATTACK_TYPE_HERO, 
+          DAMAGE_TYPE_UNKNOWN, 
+          WEAPON_TYPE_WHOKNOWS
+        );
+
+        IssueTargetOrderById(castDummy, dummyStunOrder, source);
+        
+        DestroyEffect(
+          AddSpecialEffect(
+            "Slam.mdl",
+            sourceLoc.x, sourceLoc.y
+          )
+        );
+        
+        if (unitId == Id.jiren) {
+          if (Math.random() * 100 < 5) {
+            playSoundOnUnit(unit, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/JirenGlare2.mp3", 1018);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Zanzo.mp3", 1149);
+      }
+    }
+    return false;
+  }));
+}
+
 export function SetupCustomAbilityRefresh(customPlayers: CustomPlayer[]) {
   const ginyuPoseUltimate = FourCC("A0PS");
   const yamchaSparking = FourCC("A0SB");
@@ -2040,6 +2173,13 @@ export module Id {
   export const twinDragonShot = FourCC("A0IS");
   export const superDragonFlight = FourCC("A0L5");
 
+  export const guldo = FourCC("H09J");
+  export const psychoJavelin = FourCC("A0SC");
+  export const psychicRockThrow = FourCC("A0SD");
+  export const guldoTelekinesis = FourCC("A0SE");
+  export const guldoTimeStop = FourCC("A0SF");
+  export const ginyuPoseGuldo = FourCC("A0SG");
+
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
   export const rakshasaClaw = FourCC("A0NY");
@@ -2049,6 +2189,21 @@ export module Id {
   export const cosmicIllusion = FourCC("A0EU");
   export const hellsGate = FourCC("A0O3");
   export const lightningShowerRain = FourCC("A0O4");
+
+  export const jiren = FourCC("E01P");
+  export const powerImpact = FourCC("A0K9");
+  export const powerImpact2 = FourCC("A0SI");
+  export const mightyPunch = FourCC("A0K8");
+  export const mightyPunch2 = FourCC("A0SJ");
+  export const followUp = FourCC("A0KB");
+  export const glare = FourCC("A0K6");
+  export const glare2 = FourCC("A0SK");
+  export const heatwave = FourCC("A0K7");
+  export const heatwave2 = FourCC("A0SL");
+  export const meditate = FourCC("A0KD");
+  export const meditate2 = FourCC("A0SM");
+  export const ultimateBurningWarrior = FourCC("A0KC");
+  export const ultimateBurningWarrior2 = FourCC("A0SN");
 
   export const krillin = FourCC("H03Y");
   export const scatteringBullet = FourCC("A0R9");
@@ -2645,6 +2800,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
           playSoundOnUnit(unit, "Audio/Voice/GinyuShout2.mp3", 912);
         }
       }
+      playSoundOnUnit(unit, "Audio/Effects/Telekinesis.mp3", 1149);
       break;
     
     case Id.ginyuPoseUltimate:
@@ -2757,6 +2913,46 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
     case Id.superDragonFlight:
       playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
       break;
+    
+    case Id.psychoJavelin:
+      if (unitId == Id.guldo) {
+        playSoundOnUnit(unit, "Audio/Voice/GuldoTakeThis.mp3", 1071);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+      break;
+    
+    case Id.psychicRockThrow:
+      if (unitId == Id.guldo) {
+        playSoundOnUnit(unit, "Audio/Voice/GuldoTakeThis.mp3", 1071);
+      }
+      break;
+    
+    case Id.guldoTelekinesis:
+      if (unitId == Id.guldo) {
+        playSoundOnUnit(unit, "Audio/Voice/GuldoMyPsychicPowers.mp3", 3500);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/Telekinesis.mp3", 1149);
+      break;
+    
+    case Id.guldoTimeStop:
+      if (unitId == Id.guldo) {
+        if (rng < 66) {
+          playSoundOnUnit(unit, "Audio/Voice/GuldoZaWarudo.mp3", 1123);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GuldoHelpMe.mp3", 1358);
+        }
+      }
+      break;
+    
+    case Id.ginyuPoseGuldo:
+      if (unitId == Id.guldo) {
+        if (rng < 80) {
+          playSoundOnUnit(unit, "Audio/Voice/GuldoGinyuForceGuldo.mp3", 2115);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/GuldoGuldo.mp3", 522);
+        }
+      }
+      break;
 
     // janemba
     case Id.rakshasaClaw:
@@ -2788,6 +2984,70 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       if (unitId == Id.janemba) {
         playSoundOnUnit(unit, "Audio/Voice/JanembaSuperGrunt5.mp3", 1848);
       }
+      break;
+    
+    // jiren
+    case Id.powerImpact:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenPowerImpact.mp3", 809);
+      }
+      break;
+    case Id.powerImpact2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenPowerImpact2.mp3", 835);
+      }
+      break;
+
+    case Id.mightyPunch:
+    case Id.mightyPunch2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenPunch.mp3", 862);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
+      break;
+    
+    case Id.followUp:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenPunch2.mp3", 470);
+      }
+      break;
+    
+    case Id.glare:
+    case Id.glare2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenGlare.mp3", 992);
+      }
+      break;
+    
+    case Id.heatwave:
+    case Id.heatwave2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenHeatwave.mp3", 1854);
+      }
+      break;
+    
+    case Id.meditate:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenMeditate.mp3", 1645);
+      }
+      break;
+    case Id.meditate2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenFutile.mp3", 653);
+      }
+      break;
+    
+    case Id.ultimateBurningWarrior:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenBurning.mp3", 2011);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp2.mp3", 4702);
+      break;
+    case Id.ultimateBurningWarrior2:
+      if (unitId == Id.jiren) {
+        playSoundOnUnit(unit, "Audio/Voice/JirenBurning2.mp3", 3004);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
       break;
     
     // krillin

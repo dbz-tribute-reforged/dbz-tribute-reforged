@@ -555,6 +555,54 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // beam power impact
+  {
+    name: "knockback beam power impact",
+    repeatInterval: 1, 
+    startTick: -1,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 0, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // beam power impact
+  {
+    name: "knockback beam power impact 2",
+    repeatInterval: 1, 
+    startTick: -1,
+    endTick: -1,
+    knockbackData: {
+      speed: 75, 
+      angle: 0, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+  },
+  // beam jiren meditate 2 barrier
+  {
+    name: "knockback beam jiren meditate 2 barrier",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+  },
   // justice tornado
   {
     name: "knockback justice tornado",

@@ -106,6 +106,21 @@ export module AbilityNames {
     export const BRAVE_SWORD_ATTACK = "Brave Sword Attack";
   }
 
+  export module Jiren {
+    export const POWER_IMPACT = "Power Impact";
+    export const POWER_IMPACT_2 = "Power Impact 2";
+    export const MIGHTY_PUNCH = "Mighty Punch";
+    export const MIGHTY_PUNCH_2 = "Mighty Punch 2";
+    export const GLARE = "Glare";
+    export const GLARE_2 = "Glare 2";
+    export const HEATWAVE = "Heatwave";
+    export const HEATWAVE_2 = "Heatwave 2";
+    export const MEDITATE = "Meditate";
+    export const MEDITATE_2 = "Meditate 2";
+    export const ULTIMATE_BURNING_WARRIOR = "Ultimate Burning Warrior";
+    export const ULTIMATE_BURNING_WARRIOR_2 = "Ultimate Burning Warrior 2";
+  }
+
   export module Toppo {
     export const JUSTICE_FLASH = "Justice Flash";
     export const JUSTICE_FLASH_2 = "Justice Flash 2";
