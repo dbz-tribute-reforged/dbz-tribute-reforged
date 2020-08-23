@@ -18079,7 +18079,7 @@ function Trig_Get_Stat_Multiplier_with_Modifiers_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_StatMultStr = (LoadRealBJ(3, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(40, udg_ID, udg_StatMultHashtable) + 0.00)))
     udg_StatMultAgi = (LoadRealBJ(4, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(41, udg_ID, udg_StatMultHashtable) + 0.00)))
-    udg_StatMultAgi = (LoadRealBJ(5, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(42, udg_ID, udg_StatMultHashtable) + 0.00)))
+    udg_StatMultInt = (LoadRealBJ(5, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(19, udg_ID, udg_StatMultHashtable) + (LoadRealBJ(42, udg_ID, udg_StatMultHashtable) + 0.00)))
 end
 
 function InitTrig_Get_Stat_Multiplier_with_Modifiers()
@@ -18940,14 +18940,28 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func003C()
     return true
 end
 
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func002Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0SN"), udg_StatMultUnit) > 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func002C()
-    if (not (udg_TempInt >= 2)) then
+    if (not (udg_TransformationAbility == FourCC("A0SN"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()
+    if (not (udg_TempInt >= 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()
     if (udg_TransformationAbility == FourCC("A0KC")) then
         return true
     end
@@ -18958,7 +18972,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()
-    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()) then
+    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()) then
         return false
     end
     return true
@@ -19004,6 +19018,14 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()) then
         udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
         if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func002C()) then
+            BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0KC"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0SN")))
+        else
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func002Func001C()) then
+                BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0SN"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
+            else
+            end
+        end
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SM"), GetOwningPlayer(udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SN"), GetOwningPlayer(udg_StatMultUnit))
         else

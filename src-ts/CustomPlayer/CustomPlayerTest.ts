@@ -1848,8 +1848,8 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
   const dummyStunOrder = 852095;
   const glareDuration = 2.5;
   const maxGlareDistance = 3000;
-  const glareDamageMult = 0.25 * 0.5;
-  const glare2DamageMult = 0.25 * 0.7;
+  const glareDamageMult = 0.25 * 0.55;
+  const glare2DamageMult = 0.25 * 0.77;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
   
