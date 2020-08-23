@@ -18954,14 +18954,14 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func002C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()
     if (not (udg_TempInt >= 2)) then
         return false
     end
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func005C()
     if (udg_TransformationAbility == FourCC("A0KC")) then
         return true
     end
@@ -18972,7 +18972,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()
-    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()) then
+    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func005C()) then
         return false
     end
     return true
@@ -19025,11 +19025,10 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
             else
             end
         end
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func003C()) then
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0SM"), GetOwningPlayer(udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0KD"), GetOwningPlayer(udg_StatMultUnit))
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SN"), GetOwningPlayer(udg_StatMultUnit))
         else
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0KD"), GetOwningPlayer(udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0KC"), GetOwningPlayer(udg_StatMultUnit))
         end
     else
