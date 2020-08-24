@@ -4201,6 +4201,24 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
+        model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 225,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
         model: "Slam.mdl",
         repeatInterval: 33,
         group: 0,
