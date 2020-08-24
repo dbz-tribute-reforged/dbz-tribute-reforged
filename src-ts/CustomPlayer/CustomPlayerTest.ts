@@ -1850,6 +1850,7 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
   const maxGlareDistance = 3000;
   const glareDamageMult = 0.25 * 0.55;
   const glare2DamageMult = 0.25 * 0.77;
+  const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
   
@@ -1929,16 +1930,14 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
           damageMult = glare2DamageMult;
         }
 
-        let damageBonus = 0.0;
+        let damageBase = CustomAbility.BASE_DAMAGE + GetHeroStr(unit, true);
         if (spellId == Id.glare2) {
-          damageBonus = Math.max(0, GetHeroStr(unit, true) - GetHeroStr(source, true));
+          damageBase += Math.max(0, glare2StrDiffMult * GetHeroStr(unit, true) - GetHeroStr(source, true));
         }
 
         const abilityLevel = LoadInteger(jirenGlareHashtable, unitId, 2);
         const damage = abilityLevel * spellPower * damageMult * (
-          CustomAbility.BASE_DAMAGE + 
-          GetHeroStr(unit, true) + 
-          damageBonus
+          damageBase
         );
 
         UnitDamageTarget(

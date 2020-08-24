@@ -7291,19 +7291,17 @@ function Trig_Jiren_Mighty_Punch_Actions()
     udg_TempUnit2 = GetSpellTargetUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-    IssueImmediateOrderBJ(udg_TempUnit, "stop")
-    BlzStartUnitAbilityCooldown(udg_TempUnit, GetSpellAbilityId(), BlzGetUnitAbilityCooldown(udg_TempUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit) - 1)))
     PauseUnitBJ(true, udg_TempUnit2)
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
     udg_TempLoc2 = GetUnitLoc(udg_TempUnit2)
     udg_TempReal = AngleBetweenPoints(udg_TempLoc, udg_TempLoc2)
     AddSpecialEffectLocBJ(udg_TempLoc2, "DetroitSmash_Effect.mdx")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), ModuloReal((udg_TempReal + 720.00), 360.00))
+    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     AddSpecialEffectLocBJ(udg_TempLoc2, "dash sfx.mdx")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), ModuloReal((udg_TempReal + 720.00), 360.00))
+    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     AddSpecialEffectLocBJ(udg_TempLoc2, "Slam.mdx")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.50)
@@ -7315,18 +7313,17 @@ function Trig_Jiren_Mighty_Punch_Actions()
     SaveUnitHandleBJ(udg_TempUnit2, 2, udg_ID, udg_JirenHashtable)
     if (Trig_Jiren_Mighty_Punch_Func027C()) then
         SaveIntegerBJ(1, 3, udg_ID, udg_JirenHashtable)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0SJ"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0KB"), udg_TempPlayer)
+                SetUnitAnimationByIndex(udg_TempUnit,10)
     else
         SaveIntegerBJ(0, 3, udg_ID, udg_JirenHashtable)
     end
     SaveRealBJ(udg_TempReal, 4, udg_ID, udg_JirenHashtable)
     if (Trig_Jiren_Mighty_Punch_Func029C()) then
-        udg_TempReal2 = (1000.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)), ((2.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true))) - I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit2, true)))))
+        udg_TempReal2 = (1500.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)), ((2.10 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true))) - I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit2, true)))))
     else
-        udg_TempReal2 = (1000.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)))
+        udg_TempReal2 = (1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)))
     end
-    udg_TempReal2 = (0.55 * (0.25 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
+    udg_TempReal2 = (0.50 * (0.25 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
     SaveRealBJ(udg_TempReal2, 5, udg_ID, udg_JirenHashtable)
     UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
     SaveIntegerBJ(0, 6, udg_ID, udg_JirenHashtable)
@@ -7660,7 +7657,7 @@ function Trig_Jiren_Follow_Up_Actions()
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
     AddSpecialEffectLocBJ(udg_TempLoc, "dash sfx.mdx")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 2.00)
-    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), ModuloReal((udg_TempReal + 720.00), 360.00))
+    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad((udg_TempReal + 360.00)))
     DestroyEffectBJ(GetLastCreatedEffectBJ())
         RemoveLocation(udg_TempLoc)
 end
@@ -7901,7 +7898,7 @@ function InitTrig_Jiren_Add_And_CD_Link_Spells()
     TriggerAddAction(gg_trg_Jiren_Add_And_CD_Link_Spells, Trig_Jiren_Add_And_CD_Link_Spells_Actions)
 end
 
-function Trig_Jiren_Upgraded_Spells_Cast_Func006C()
+function Trig_Jiren_Upgraded_Spells_Cast_Func005C()
     if (GetSpellAbilityId() == FourCC("A0SI")) then
         return true
     end
@@ -7918,14 +7915,7 @@ function Trig_Jiren_Upgraded_Spells_Cast_Func006C()
 end
 
 function Trig_Jiren_Upgraded_Spells_Cast_Conditions()
-    if (not Trig_Jiren_Upgraded_Spells_Cast_Func006C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Jiren_Upgraded_Spells_Cast_Func005C()
-    if (not (GetSpellAbilityId() == FourCC("A0SJ"))) then
+    if (not Trig_Jiren_Upgraded_Spells_Cast_Func005C()) then
         return false
     end
     return true
@@ -7936,11 +7926,6 @@ function Trig_Jiren_Upgraded_Spells_Cast_Actions()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 1)), 11, udg_ID, udg_StatMultHashtable)
-    if (Trig_Jiren_Upgraded_Spells_Cast_Func005C()) then
-        SaveIntegerBJ(1, 1, udg_ID, udg_JirenHashtable)
-        TriggerExecute(gg_trg_Jiren_Upgraded_Spells_Update_Old_CD)
-    else
-    end
 end
 
 function InitTrig_Jiren_Upgraded_Spells_Cast()
@@ -7950,7 +7935,7 @@ function InitTrig_Jiren_Upgraded_Spells_Cast()
     TriggerAddAction(gg_trg_Jiren_Upgraded_Spells_Cast, Trig_Jiren_Upgraded_Spells_Cast_Actions)
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func009C()
     if (GetSpellAbilityId() == FourCC("A0SI")) then
         return true
     end
@@ -7967,20 +7952,27 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()
 end
 
 function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Conditions()
-    if (not Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()) then
+    if (not Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func009C()) then
         return false
     end
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func001C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005C()
+    if (not (GetSpellAbilityId() == FourCC("A0SJ"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func001C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0K9"), udg_TempUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func002C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func002C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0K8"), udg_TempUnit) > 0)) then
         return false
     end
@@ -7990,28 +7982,28 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func002C()
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func003C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0K6"), udg_TempUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func004C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0K7"), udg_TempUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()
     if (not (udg_TempInt <= 0)) then
         return false
     end
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()
     if (not (udg_TempInt <= 1)) then
         return false
     end
@@ -8027,7 +8019,7 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()
     if (not (udg_TempInt <= 1)) then
         return false
     end
@@ -8046,25 +8038,30 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Actions()
     udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
     if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005C()) then
-        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func001C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0SJ"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0KB"), udg_TempPlayer)
+    else
+    end
+    if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()) then
+        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func001C()) then
                         udg_TempInt2 = FourCC("A0K9")
                         udg_TempInt3 = FourCC("A0SI")
             TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
         else
         end
-        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func002C()) then
+        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func002C()) then
                         udg_TempInt2 = FourCC("A0K8")
                         udg_TempInt3 = FourCC("A0SJ")
             TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
         else
         end
-        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func003C()) then
+        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func003C()) then
                         udg_TempInt2 = FourCC("A0K6")
                         udg_TempInt3 = FourCC("A0SK")
             TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
         else
         end
-        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func005Func004C()) then
+        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006Func004C()) then
                         udg_TempInt2 = FourCC("A0K7")
                         udg_TempInt3 = FourCC("A0SL")
             TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
@@ -8072,13 +8069,13 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Actions()
         end
     else
     end
-    if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()) then
+    if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()) then
                 udg_TempInt2 = FourCC("A0KC")
                 udg_TempInt3 = FourCC("A0SN")
         TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
     else
     end
-    if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()) then
+    if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()) then
                 udg_TempInt2 = FourCC("A0KD")
                 udg_TempInt3 = FourCC("A0SM")
         TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
@@ -14530,6 +14527,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func001C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E01P"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("E001"))) then
         return false
@@ -14785,6 +14789,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                                                             if (Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                                 udg_TempString = "BTNRoshi.blp"
                                                                             else
+                                                                                if (Trig_Scoreboard_Assign_Hero_Icon_Func002Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                                    udg_TempString = "BTNJiren.blp"
+                                                                                else
+                                                                                end
                                                                             end
                                                                         end
                                                                     end
