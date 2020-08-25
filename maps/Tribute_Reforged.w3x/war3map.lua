@@ -3164,7 +3164,7 @@ end
 
 function Trig_Piccolo_Multi_Form_Actions()
     udg_TempUnit = GetTriggerUnit()
-    udg_TempReal4 = 0.50
+    udg_TempReal4 = 0.40
     udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true)) * udg_TempReal4)
     udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)) * udg_TempReal4)
     udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, udg_TempUnit, true)) * udg_TempReal4)
@@ -3205,7 +3205,7 @@ end
 function Trig_Pan_Summon_Giru_Actions()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0LW"), GetSummoningUnit())
     SetUnitAbilityLevelSwapped(FourCC("A0LZ"), GetSummonedUnit(), (udg_TempInt * 5))
-    udg_TempReal4 = (0.50 + (0.10 * I2R(udg_TempInt)))
+    udg_TempReal4 = (0.30 + (0.10 * I2R(udg_TempInt)))
     udg_TempReal = (I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal2 = (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true)) * udg_TempReal4)
     udg_TempReal3 = (I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true)) * udg_TempReal4)
@@ -3359,7 +3359,7 @@ function Trig_Babidi_Summons_Func001C()
 end
 
 function Trig_Babidi_Summons_Func002Func002C()
-    if (not (GetHeroLevel(GetSummoningUnit()) < 200)) then
+    if (not (GetHeroLevel(GetSummoningUnit()) < 250)) then
         return false
     end
     return true
@@ -3374,13 +3374,13 @@ end
 
 function Trig_Babidi_Summons_Actions()
     if (Trig_Babidi_Summons_Func001C()) then
-        udg_TempReal4 = 0.50
+        udg_TempReal4 = 0.40
     else
         if (Trig_Babidi_Summons_Func001Func001C()) then
-            udg_TempReal4 = 0.75
+            udg_TempReal4 = 0.60
         else
             if (Trig_Babidi_Summons_Func001Func001Func001C()) then
-                udg_TempReal4 = 1.00
+                udg_TempReal4 = 0.80
                 UnitAddAbilityBJ(FourCC("A0OG"), GetSummonedUnit())
                 SetUnitAbilityLevelSwapped(FourCC("A0OG"), GetSummonedUnit(), IMinBJ(10, IMaxBJ(1, ((GetHeroLevel(GetSummoningUnit()) + 20) // 50))))
             else
@@ -3753,15 +3753,15 @@ function Trig_Cell_Juniors_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempInt = LoadIntegerBJ(10, udg_ID, udg_StatMultHashtable)
     if (Trig_Cell_Juniors_Func005C()) then
-        udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true) // 3)
-        udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true) // 3)
-        udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true) // 3)
-        SetUnitVertexColorBJ(GetSummonedUnit(), 5.00, 70.00, 40.00, 0)
-        BlzSetHeroProperName(GetSummonedUnit(), "Cell-X Junior")
-    else
         udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true) // 4)
         udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true) // 4)
         udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true) // 4)
+        SetUnitVertexColorBJ(GetSummonedUnit(), 5.00, 70.00, 40.00, 0)
+        BlzSetHeroProperName(GetSummonedUnit(), "Cell-X Junior")
+    else
+        udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetSummoningUnit(), true) // 5)
+        udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetSummoningUnit(), true) // 5)
+        udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetSummoningUnit(), true) // 5)
     end
     ModifyHeroStat(bj_HEROSTAT_STR, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt)
     ModifyHeroStat(bj_HEROSTAT_AGI, GetSummonedUnit(), bj_MODIFYMETHOD_SET, udg_TempInt2)
@@ -3928,9 +3928,9 @@ end
 
 function Trig_Nappa_Plant_Saibamen_Actions()
     udg_TempLoc = GetUnitLoc(GetTriggerUnit())
-    udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 5)
-    udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 5)
-    udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 5)
+    udg_TempInt = (GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), true) // 6)
+    udg_TempInt2 = (GetHeroStatBJ(bj_HEROSTAT_AGI, GetTriggerUnit(), true) // 6)
+    udg_TempInt3 = (GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), true) // 6)
     udg_TempBool = true
     udg_TempInt4 = 1
     while (true) do
@@ -18966,6 +18966,9 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004Func004C()
     if (not (udg_TempInt >= 2)) then
         return false
     end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
+        return false
+    end
     return true
 end
 
@@ -21690,6 +21693,7 @@ function Trig_Transformations_Future_Trunks_Actions()
                                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0NL'))
                 UnitRemoveAbilityBJ(FourCC("A02L"), udg_StatMultUnit)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A02L"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0NL"), udg_TransformationPlayer)
             else
             end
         else
@@ -22748,12 +22752,12 @@ function Trig_Transformations_Android_17_DBS_Actions()
                 SetPlayerAbilityAvailableBJ(false, FourCC("A09O"), udg_TransformationPlayer)
             end
             if (Trig_Transformations_Android_17_DBS_Func019Func002Func007C()) then
-                SetPlayerAbilityAvailableBJ(true, FourCC("A0MW"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0MW"), udg_StatMultUnit)
                 SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_StatMultUnit, 10)
                                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0MW'))
                 UnitRemoveAbilityBJ(FourCC("A09O"), udg_StatMultUnit)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A09O"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0MW"), udg_TransformationPlayer)
             else
             end
         else
@@ -24020,7 +24024,7 @@ function Trig_Transformations_Babidi_Func015C()
     if (not (udg_TransformationString == "paparapapa")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
         return false
     end
     return true
@@ -24188,7 +24192,7 @@ function InitTrig_Super_Buu_to_Kid_Buu()
     TriggerAddAction(gg_trg_Super_Buu_to_Kid_Buu, Trig_Super_Buu_to_Kid_Buu_Actions)
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func009Func001C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func010Func001C()
     if (udg_TempUnitType == FourCC("H000")) then
         return true
     end
@@ -24204,28 +24208,28 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func009Func001C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func009C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func009Func001C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Kid_Buu_Bonus_Ability_Func002Func010C()
-    if (not (udg_TempUnitType == FourCC("E003"))) then
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func010Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func011C()
+    if (not (udg_TempUnitType == FourCC("E003"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func012C()
     if (not (udg_TempUnitType == FourCC("H00K"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func001C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func013Func001C()
     if (udg_TempUnitType == FourCC("H016")) then
         return true
     end
@@ -24238,7 +24242,7 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func001C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func003Func007C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func013Func003Func008C()
     if (udg_TempUnitType == FourCC("H009")) then
         return true
     end
@@ -24248,42 +24252,42 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func003Func007C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func012Func003C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func012Func003Func007C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Kid_Buu_Bonus_Ability_Func002Func012C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func012Func001C()) then
+function Trig_Kid_Buu_Bonus_Ability_Func002Func013Func003C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func013Func003Func008C()) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func013C()
-    if (not (udg_TempUnitType == FourCC("H00R"))) then
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func013Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func014C()
-    if (not (udg_TempUnitType == FourCC("H08M"))) then
+    if (not (udg_TempUnitType == FourCC("H00R"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func015C()
+    if (not (udg_TempUnitType == FourCC("H08M"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func016C()
     if (not (udg_TempUnitType == FourCC("H08P"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func016Func001C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func017Func001C()
     if (udg_TempUnitType == FourCC("H01V")) then
         return true
     end
@@ -24299,28 +24303,28 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func016Func001C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func016C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func016Func001C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Kid_Buu_Bonus_Ability_Func002Func017C()
-    if (not (udg_TempUnitType == FourCC("O001"))) then
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func017Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func018C()
+    if (not (udg_TempUnitType == FourCC("O001"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func019C()
     if (not (udg_TempUnitType == FourCC("H00M"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func019Func003C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func020Func003C()
     if (udg_TempUnitType == FourCC("N00Q")) then
         return true
     end
@@ -24339,14 +24343,14 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func019Func003C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func019C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func019Func003C()) then
+function Trig_Kid_Buu_Bonus_Ability_Func002Func020C()
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func020Func003C()) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func020Func001C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func021Func001C()
     if (udg_TempUnitType == FourCC("H08S")) then
         return true
     end
@@ -24365,140 +24369,140 @@ function Trig_Kid_Buu_Bonus_Ability_Func002Func020Func001C()
     return false
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func020Func006C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func021Func006C()
     if (not (udg_TempUnitType == FourCC("H01A"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func020Func007C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func021Func007C()
     if (not (udg_TempUnitType == FourCC("H08S"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func020C()
-    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func020Func001C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Kid_Buu_Bonus_Ability_Func002Func021C()
-    if (not (udg_TempUnitType == FourCC("H08U"))) then
+    if (not Trig_Kid_Buu_Bonus_Ability_Func002Func021Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func022C()
-    if (not (udg_TempUnitType == FourCC("H08W"))) then
+    if (not (udg_TempUnitType == FourCC("H08U"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func023C()
-    if (not (udg_TempUnitType == FourCC("H08Y"))) then
+    if (not (udg_TempUnitType == FourCC("H08W"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func024C()
-    if (not (udg_TempUnitType == FourCC("H08Z"))) then
+    if (not (udg_TempUnitType == FourCC("H08Y"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func025C()
-    if (not (udg_TempUnitType == FourCC("H062"))) then
+    if (not (udg_TempUnitType == FourCC("H08Z"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func026C()
-    if (not (udg_TempUnitType == FourCC("H085"))) then
+    if (not (udg_TempUnitType == FourCC("H062"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func027C()
-    if (not (udg_TempUnitType == FourCC("H099"))) then
+    if (not (udg_TempUnitType == FourCC("H085"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func028C()
-    if (not (udg_TempUnitType == FourCC("E01D"))) then
+    if (not (udg_TempUnitType == FourCC("H099"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func029C()
-    if (not (udg_TempUnitType == FourCC("E014"))) then
+    if (not (udg_TempUnitType == FourCC("E01D"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func030C()
-    if (not (udg_TempUnitType == FourCC("H09B"))) then
+    if (not (udg_TempUnitType == FourCC("E014"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func031C()
-    if (not (udg_TempUnitType == FourCC("H09C"))) then
+    if (not (udg_TempUnitType == FourCC("H09B"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func032C()
-    if (not (udg_TempUnitType == FourCC("H09E"))) then
+    if (not (udg_TempUnitType == FourCC("H09C"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func033C()
-    if (not (udg_TempUnitType == FourCC("H06X"))) then
+    if (not (udg_TempUnitType == FourCC("H09E"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func034C()
-    if (not (udg_TempUnitType == FourCC("H09F"))) then
+    if (not (udg_TempUnitType == FourCC("H06X"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func035C()
-    if (not (udg_TempUnitType == FourCC("H09H"))) then
+    if (not (udg_TempUnitType == FourCC("H09F"))) then
         return false
     end
     return true
 end
 
 function Trig_Kid_Buu_Bonus_Ability_Func002Func036C()
+    if (not (udg_TempUnitType == FourCC("H09H"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Kid_Buu_Bonus_Ability_Func002Func037C()
     if (not (udg_TempUnitType == FourCC("E01P"))) then
         return false
     end
     return true
 end
 
-function Trig_Kid_Buu_Bonus_Ability_Func002Func038C()
+function Trig_Kid_Buu_Bonus_Ability_Func002Func039C()
     if (not (udg_TempBool == false)) then
         return false
     end
@@ -24519,28 +24523,29 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
         udg_TempUnitType = FourCC("hpea")
                 udg_TempUnitType = udg_TempInt
         udg_TempBool = false
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func009C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func010C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0KR"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KR'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func010C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func011C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A03N"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A03N"), udg_TransformationResultUnit, 7)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A03N'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func011C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func012C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0L8"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0L8"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L8'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func012C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func013C()) then
             udg_TempBool = true
-            if (Trig_Kid_Buu_Bonus_Ability_Func002Func012Func003C()) then
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func013Func003C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0NL"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0NL"), udg_TransformationResultUnit)
                 SetUnitAbilityLevelSwapped(FourCC("A0NL"), udg_TransformationResultUnit, 10)
                                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0NL'))
@@ -24554,7 +24559,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             end
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func013C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func014C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A06F"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A06F"), udg_TransformationResultUnit, 10)
@@ -24566,7 +24571,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A04Y'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func014C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func015C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0LO"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0LO"), udg_TransformationResultUnit, 10)
@@ -24576,20 +24581,20 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LN'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func015C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func016C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0LY"), udg_TransformationPlayer)
             UnitAddAbilityBJ(FourCC("A0LY"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LY'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func016C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func017C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0LC"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0LC"), udg_TransformationResultUnit, 7)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0LC'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func017C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func018C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A02F"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A02F"), udg_TransformationResultUnit, 5)
@@ -24598,30 +24603,30 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A018'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func018C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func019C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0G8"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0G8"), udg_TransformationResultUnit, 9)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0G8'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func019C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func020C()) then
             UnitAddAbilityBJ(FourCC("A0OD"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0OD'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func020C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func021C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A06C"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A06C"), udg_TransformationResultUnit, 9)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A06C'))
-            if (Trig_Kid_Buu_Bonus_Ability_Func002Func020Func006C()) then
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func021Func006C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A00H"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A00H"), udg_TransformationResultUnit)
                                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A00H'))
             else
             end
-            if (Trig_Kid_Buu_Bonus_Ability_Func002Func020Func007C()) then
+            if (Trig_Kid_Buu_Bonus_Ability_Func002Func021Func007C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0KR"), udg_TransformationPlayer)
                 UnitAddAbilityBJ(FourCC("A0KR"), udg_TransformationResultUnit)
                                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KR'))
@@ -24629,7 +24634,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             end
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func021C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func022C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0ME"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0ME"), udg_TransformationResultUnit, 10)
@@ -24637,21 +24642,21 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             BlzSetUnitAbilityCooldown(udg_TransformationResultUnit, FourCC("A0ME"), 9, 7.00)
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func022C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func023C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0MI"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0MI"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0ME'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func023C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func024C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0MO"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0MO'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func024C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func025C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0MW"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0MW"), udg_TransformationResultUnit, 10)
@@ -24661,25 +24666,27 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0MX'))
             EnableTrigger(gg_trg_Infinite_Energy_Android_Loop)
             GroupAddUnitSimple(udg_TransformationResultUnit, udg_InfiniteEnergyAndroidUnitGroup)
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0MW"), udg_TransformationPlayer)
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func025C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func026C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0NZ"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0NZ"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0NZ'))
             UnitAddAbilityBJ(FourCC("A0O1"), udg_TransformationResultUnit)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0O1'))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0NZ"), udg_TransformationPlayer)
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func026C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func027C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A073"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A073"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A073'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func027C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func028C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0OH"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0OH"), udg_TransformationResultUnit, 10)
@@ -24688,7 +24695,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0OO'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func028C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func029C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0IV"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0IV"), udg_TransformationResultUnit, 10)
@@ -24697,21 +24704,21 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0OT'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func029C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func030C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0I9"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0I9"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0I9'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func030C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func031C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0P1"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0P1"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0P1'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func031C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func032C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0PB"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0PB"), udg_TransformationResultUnit, 10)
@@ -24720,14 +24727,14 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0PC'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func032C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func033C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0PP"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0PP"), udg_TransformationResultUnit, 10)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0PP'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func033C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func034C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0QD"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0QD"), udg_TransformationResultUnit, 10)
@@ -24736,7 +24743,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0DZ'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func034C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func035C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0QJ"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0QJ"), udg_TransformationResultUnit, 10)
@@ -24748,7 +24755,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
             SetPlayerAbilityAvailableBJ(true, FourCC("A0QQ"), udg_TransformationPlayer)
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func035C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func036C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0QY"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0QY"), udg_TransformationResultUnit, 10)
@@ -24757,7 +24764,7 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0R1'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func036C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func037C()) then
             udg_TempBool = true
             UnitAddAbilityBJ(FourCC("A0K9"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0K9"), udg_TransformationResultUnit, 10)
@@ -24766,16 +24773,18 @@ function Trig_Kid_Buu_Bonus_Ability_Actions()
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0KD'))
         else
         end
-        if (Trig_Kid_Buu_Bonus_Ability_Func002Func038C()) then
+        if (Trig_Kid_Buu_Bonus_Ability_Func002Func039C()) then
             UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
                         UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
         else
         end
     else
         UnitAddAbilityBJ(FourCC("A0L9"), udg_TransformationResultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0L9"), udg_TransformationResultUnit, 9)
                 UnitMakeAbilityPermanent(udg_TransformationResultUnit, true, FourCC('A0L9'))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0L9"), udg_TransformationPlayer)
     end
 end
 
@@ -27563,6 +27572,7 @@ function Trig_Transformations_Super_Janemba_Actions()
                                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0NZ'))
                 UnitRemoveAbilityBJ(FourCC("A0NY"), udg_StatMultUnit)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0NY"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0NZ"), udg_TransformationPlayer)
             else
             end
             if (Trig_Transformations_Super_Janemba_Func019Func001Func003C()) then
@@ -28278,7 +28288,7 @@ function Trig_Transformations_Jiren_Func013C()
     if (not (udg_TransformationString == "fp")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 25)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 30)) then
         return false
     end
     return true

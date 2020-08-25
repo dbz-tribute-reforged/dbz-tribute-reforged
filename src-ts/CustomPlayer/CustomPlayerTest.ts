@@ -1960,7 +1960,7 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
           )
         );
         
-        if (unitId == Id.jiren) {
+        if (GetUnitTypeId(unit) == Id.jiren) {
           if (Math.random() * 100 < 5) {
             playSoundOnUnit(unit, "Audio/Voice/JirenOmaeWaMouShindeiru.mp3", 3317);
           } else {
