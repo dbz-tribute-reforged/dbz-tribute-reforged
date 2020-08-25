@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.50b
+DBZ Tribute Reforged 0.50c
 }
 
 STRING 4
@@ -33771,12 +33771,6 @@ STRING 5547
 [|cff00FF00R|r] Learn Multi Form - [|cffffcc00Level %d|r]
 }
 
-STRING 5548
-// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
-{
-Piccolo splits into multiple clones. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
 STRING 5549
 // Abilities: A088 (Multi Form), Tip (Tooltip - Normal)
 {
@@ -55149,7 +55143,7 @@ STRING 9066
 {
 Type "r" to revert.
 Transformations:
-[lvl 25]  1.50x "fp"
+[lvl 30]  1.50x "fp"
 [lvl 75]  2.00x "ult" [Unlocks Ultimate Burning Warrior]
 [lvl 150] 2.40x "ult" 
 [lvl 200] 2.60x "ult" [Upgrades Meditate at 2+ charges]
@@ -55484,6 +55478,30 @@ Jiren sits with his legs crossed and begins to peacefully meditate.|n|cffFFFF00E
 |cff00FFFFCooldown: <A0SM,Cool1>s|r
 }
 
+STRING 9110
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 2. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 9111
+// Abilities: A088 (Multi Form), Researchubertip (Tooltip - Learn - Extended)
+{
+Piccolo splits into multiple clones. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 9112
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 3. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
+STRING 9113
+// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
+{
+Piccolo splits into 4. The cloned units have 40% of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
+}
+
 STRING 9114
 // Abilities: A0SI (Power Impact 2), Tip (Tooltip - Normal)
 {
@@ -55500,6 +55518,24 @@ STRING 9116
 // Abilities: A0SI (Power Impact 2), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Power Impact 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 9117
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.4/0.5/0.6x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 9118
+// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.4/0.5/0.6x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
+}
+
+STRING 9119
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.4/0.5/0.6x|n|cff00FF00Duration: <A0LW,Dur2>s|r|n|cff00FFFFCooldown: <A0LW,Cool2>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 9120
@@ -59660,24 +59696,6 @@ STRING 9812
 Saiyan Defender of the earth
 }
 
-STRING 9813
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 9814
-// Abilities: A0LW (Summon Giru), Researchubertip (Tooltip - Learn - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur1>s|r|n|cff00FFFFCooldown: <A0LW,Cool1>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
-STRING 9815
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur2>s|r|n|cff00FFFFCooldown: <A0LW,Cool2>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
-}
-
 STRING 9816
 // Buffs/Effects: B010 (), Bufftip (Tooltip)
 {
@@ -60264,12 +60282,6 @@ STRING 9913
 // Units: U01L (Pyre Keeper of Hell), Name (Name)
 {
 Pyre Keeper of Hell
-}
-
-STRING 9914
-// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
-{
-Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.6/0.7/0.8x|n|cff00FF00Duration: <A0LW,Dur3>s|r|n|cff00FFFFCooldown: <A0LW,Cool3>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 9915
@@ -61798,7 +61810,7 @@ Transformations:
 [lvl 25]  1.50x "paparapapa"
 [lvl 90]  2.00x "paparapapa" [unlocks Majin Influence 2]
 [lvl 150] 2.25x "paparapapa" 
-[lvl 200] 2.40x "paparapapa" [unlocks Majin Influence 3]
+[lvl 250] 2.40x "paparapapa" [unlocks Majin Influence 3]
 
 For Majin Buu type "release" at lvl 45.
 Majin Buu from Babidi gains lvl2 candy beam.
@@ -63702,12 +63714,6 @@ STRING 10480
 // Abilities: A0LN (Future Sight), EditorSuffix (Editor Suffix)
 {
 (Bardock)
-}
-
-STRING 10481
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 4. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 10482
@@ -67404,22 +67410,10 @@ STRING 11081
 Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode Enabled, forced win/loss conditions are disabled.
 }
 
-STRING 11082
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 2. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
-}
-
 STRING 11083
 // Abilities: A0MQ (Lava Burst), Ubertip (Tooltip - Normal - Extended)
 {
 Moro manipulates the life energy of the planet to hunt down his enemies. Creates 5 flaming energy balls that follow the targeted enemy.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Damage: int * lvl * ?|r|n|cff00FFFFCooldown: <A0MQ,Cool1>s|r
-}
-
-STRING 11084
-// Abilities: A088 (Multi Form), Ubertip (Tooltip - Normal - Extended)
-{
-Piccolo splits into 3. The cloned units have half of Piccolo's stats and can use Special Beam Cannon. Anything killed by a clone will return 20% of the stats gained to Piccolo.|n|cff00FF00(Duration: 60s)|r |n|cff00FFFF(Cooldown: 80s)|r
 }
 
 STRING 11085
@@ -90895,6 +90889,12 @@ STRING 14791
 // Abilities: A0RW (Flash Kamehameha), Tip (Tooltip - Normal)
 {
 [|cff22FFFFW|r] Flash Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 14792
+// Abilities: A0LW (Summon Giru), Ubertip (Tooltip - Normal - Extended)
+{
+Pan calls for her best friend, Giru, that helps her when needed. |n|cff00FF00Stat Mult: 0.4/0.5/0.6x|n|cff00FF00Duration: <A0LW,Dur3>s|r|n|cff00FFFFCooldown: <A0LW,Cool3>s|r|n|n|cff808080"Giru to save Pan! Giru! Giru!"|r
 }
 
 STRING 14793
