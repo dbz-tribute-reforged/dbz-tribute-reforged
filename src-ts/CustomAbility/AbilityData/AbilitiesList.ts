@@ -3343,6 +3343,166 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Roshi.KAMEHAMEHA_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiKamehameha.blp",
+      disabled: "BTNRoshiKamehameha.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.KAMEHAMEHA_CHARGE,
+      body: 
+        AbilityNames.Roshi.KAMEHAMEHA_CHARGE,
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.KAMEHAMEHA_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiKamehamehaFire.blp",
+      disabled: "BTNRoshiKamehamehaFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.KAMEHAMEHA_FIRE,
+      body: 
+        AbilityNames.Roshi.KAMEHAMEHA_FIRE,
+    },
+    components: [
+      { name: "beam kame roshi" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiKamehameha2.blp",
+      disabled: "BTNRoshiKamehameha2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE,
+      body: 
+        AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE,
+    },
+    components: [
+      { name: "dash ground forward roshi max power" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiKamehamehaFire2.blp",
+      disabled: "BTNRoshiKamehamehaFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE,
+      body: 
+        AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE
+    },
+    components: [
+      { name: "beam kame super roshi" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.LIGHTNING_SURPRISE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiLightningSurprise.blp",
+      disabled: "BTNRoshiLightningSurprise.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.LIGHTNING_SURPRISE,
+      body: 
+        AbilityNames.Roshi.LIGHTNING_SURPRISE,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "beam lightning surprise" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Roshi.MAX_POWER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoshiFullPower.blp",
+      disabled: "BTNRoshiFullPower.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Roshi.MAX_POWER,
+      body: 
+        AbilityNames.Roshi.MAX_POWER,
+    },
+    components: [
+      { name: "dash ground forward roshi max power" },
+      { name: "block roshi max power" },
+      { name: "temp ability disable new trick" },
+      { name: "sfx roshi max power" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
@@ -5060,7 +5220,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 660,
+    duration: 1000,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

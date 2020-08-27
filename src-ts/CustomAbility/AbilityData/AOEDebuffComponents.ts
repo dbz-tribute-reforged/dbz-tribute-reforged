@@ -402,4 +402,17 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff stun lightning surprise",
+    repeatInterval: 8,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.STUN_HALF_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 300,
+    keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

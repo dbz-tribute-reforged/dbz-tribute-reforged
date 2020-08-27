@@ -153,4 +153,18 @@ export const TempAbilityComponents = [
     tempPermanence: true,
     equalizeLevels: false,
   },
+  {
+    name: "temp ability disable new trick", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0KU"),
+    oldAbility: 0,
+    performSwap: false,
+    enableAbility: false,
+    disableAbility: true,
+    addAbility: false,
+    tempPermanence: true,
+    equalizeLevels: false,
+  },
 ];
