@@ -198,6 +198,18 @@ export module AbilityNames {
     export const SPARKING: string = "Sparking!";
   }
 
+  export module Roshi {
+    export const KAMEHAMEHA_CHARGE: string = "Kamehameha Roshi Charge";
+    export const KAMEHAMEHA_FIRE: string = "Kamehameha Roshi Fire";
+    export const KAMEHAMEHA_SUPER_CHARGE: string = "Kamehameha Super Roshi Charge";
+    export const KAMEHAMEHA_SUPER_FIRE: string = "Kamehameha Super Roshi Fire";
+    export const LIGHTNING_SURPRISE: string = "Lightning Surprise";
+    export const MAFUBA: string = "Mafuba";
+    export const MAX_POWER: string = "Max Power Roshi";
+    export const NEW_TRICK: string = "New Trick";
+    export const ULTIMATE_INSTINCT: string = "Ultimate Instinct";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

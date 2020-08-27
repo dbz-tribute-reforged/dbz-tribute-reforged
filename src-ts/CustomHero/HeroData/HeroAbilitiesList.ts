@@ -244,6 +244,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.YamchaR.SPARKING,
     ]],
 
+    // roshi
+    [FourCC("E001"), [
+      AbilityNames.Roshi.KAMEHAMEHA_CHARGE,
+      AbilityNames.Roshi.KAMEHAMEHA_FIRE,
+      AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE,
+      AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE,
+      AbilityNames.Roshi.LIGHTNING_SURPRISE,
+      AbilityNames.Roshi.MAFUBA,
+      AbilityNames.Roshi.MAX_POWER,
+      AbilityNames.Roshi.NEW_TRICK,
+      AbilityNames.Roshi.ULTIMATE_INSTINCT,
+    ]],
 
 
     // androids 13 14 15

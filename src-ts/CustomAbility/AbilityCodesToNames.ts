@@ -177,6 +177,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0S7'), AbilityNames.YamchaR.BATTER_UP],
     
     [FourCC('A0SB'), AbilityNames.YamchaR.SPARKING],
+
+    // roshi
+    [FourCC('A0FG'), AbilityNames.Roshi.KAMEHAMEHA_CHARGE],
+    [FourCC('A0JE'), AbilityNames.Roshi.KAMEHAMEHA_FIRE],
+    [FourCC('A0IE'), AbilityNames.Roshi.LIGHTNING_SURPRISE],
+    [FourCC('A0FH'), AbilityNames.Roshi.MAX_POWER],
+    [FourCC('A0SO'), AbilityNames.Roshi.KAMEHAMEHA_SUPER_CHARGE],
+    [FourCC('A0SP'), AbilityNames.Roshi.KAMEHAMEHA_SUPER_FIRE],
     
 
 

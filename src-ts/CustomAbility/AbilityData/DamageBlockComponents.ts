@@ -1139,6 +1139,39 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
+    name: "block roshi max power",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 10,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_STR,
+    multiplier: 3,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\FeralSpirit\\feralspiritdone.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 2.0,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // ----------------------------------------
+  {
     name: "block geti star fragment item",
     repeatInterval: 1,
     startTick: 0,

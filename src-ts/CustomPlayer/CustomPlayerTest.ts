@@ -2224,6 +2224,15 @@ export module Id {
   export const behindYou = FourCC("A0MG");
   export const doubleSundae = FourCC("A0MH");
 
+  export const roshi = FourCC("E001");
+  export const roshiKameCharge = FourCC("A0FG");
+  export const roshiKameFire = FourCC("A0JE");
+  export const roshiKameCharge2 = FourCC("A0SO");
+  export const roshiKameFire2 = FourCC("A0SP");
+  export const roshiLightningSurprise = FourCC("A0IE");
+  export const roshiNewTrick = FourCC("A0KU");
+  export const roshiMaxPower = FourCC("A0FH");
+
   export const nappa = FourCC("H08W");
   export const giantStorm = FourCC("A0MI");
   export const blazingStorm = FourCC("A0MJ");
@@ -3139,6 +3148,41 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/StrongHit2.mp3", 2644);
       break;
     
+    // roshi
+    case Id.roshiKameCharge:
+    case Id.roshiKameCharge2:
+      if (unitId == Id.roshi) {
+        playSoundOnUnit(unit, "Audio/Voice/RoshiKameCharge.mp3", 720);
+      }
+      break;
+
+    case Id.roshiKameFire:
+    case Id.roshiKameFire2:
+      if (unitId == Id.roshi) {
+        playSoundOnUnit(unit, "Audio/Voice/RoshiKameFire.mp3", 757);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
+      break;
+
+    case Id.roshiLightningSurprise:
+      if (unitId == Id.roshi) {
+        playSoundOnUnit(unit, "Audio/Voice/RoshiLightningSurprise.mp3", 3984);
+      }
+      break;
+
+    case Id.roshiNewTrick:
+      if (unitId == Id.roshi) {
+        playSoundOnUnit(unit, "Audio/Voice/RoshiUhOh.mp3", 1968);
+      }
+      break;
+
+    case Id.roshiMaxPower:
+      if (unitId == Id.roshi) {
+        playSoundOnUnit(unit, "Audio/Voice/RoshiMaxPower.mp3", 1968);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+      break;
+
     // nappa
     case Id.giantStorm:
       if (unitId == Id.nappa) {

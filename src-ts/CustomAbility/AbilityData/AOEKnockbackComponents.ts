@@ -825,4 +825,36 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // kame super roshi
+  {
+    name: "knockback kame super roshi",
+    repeatInterval: 1, 
+    startTick: 7,
+    endTick: -1,
+    knockbackData: {
+      speed: 50, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // lightning surprise
+  {
+    name: "knockback lightning surprise",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 3, 
+      angle: 180, 
+      aoe: 300,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];
