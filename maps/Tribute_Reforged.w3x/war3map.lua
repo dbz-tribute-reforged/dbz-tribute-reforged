@@ -374,6 +374,7 @@ gg_trg_Roshi_Kamehameha_Charge_Finish = nil
 gg_trg_Roshi_Kamehameha_Charge_Loop = nil
 gg_trg_Roshi_Kamehameha_Fire = nil
 gg_trg_Roshi_Kamehameha_Fire_Finish = nil
+gg_trg_Roshi_Kame_Stat_Mult_Reset = nil
 gg_trg_Roshi_New_Trick = nil
 gg_trg_Roshi_New_Trick_Loop = nil
 gg_trg_Play_Ability_Spell_Audio = nil
@@ -733,7 +734,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Roshi_Kame_Stat_Mult_Reset = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -9195,15 +9195,11 @@ function Trig_Roshi_Kamehameha_Charge_Finish_Conditions()
     return true
 end
 
-function Trig_Roshi_Kamehameha_Charge_Finish_Func003C()
-    if (not (GetSpellAbilityId() == FourCC("A0FG"))) then
-        return false
-    end
-    return true
-end
-
 function Trig_Roshi_Kamehameha_Charge_Finish_Func004C()
     if (not (GetSpellAbilityId() == FourCC("A0SO"))) then
+        return false
+    end
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
@@ -9211,18 +9207,18 @@ end
 
 function Trig_Roshi_Kamehameha_Charge_Finish_Actions()
     udg_StatMultUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
-    if (Trig_Roshi_Kamehameha_Charge_Finish_Func003C()) then
-        UnitAddAbilityBJ(FourCC("A0JE"), udg_StatMultUnit)
-        SetUnitAbilityLevelSwapped(FourCC("A0JE"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0FG"), udg_StatMultUnit))
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0FG"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0JE"), udg_TempPlayer)
-    else
-    end
     if (Trig_Roshi_Kamehameha_Charge_Finish_Func004C()) then
         SetPlayerAbilityAvailableBJ(false, FourCC("A0SO"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A0SP"), udg_TempPlayer)
     else
+        UnitAddAbilityBJ(FourCC("A0JE"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0JE"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0FG"), udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0FG"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0JE"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0SO"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0SP"), udg_TempPlayer)
     end
 end
 
@@ -9256,6 +9252,13 @@ end
 
 function Trig_Roshi_Kamehameha_Charge_Loop_Func002Func012C()
     if (not (udg_TempInt2 < 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Roshi_Kamehameha_Charge_Loop_Func002Func013Func001C()
+    if (not (HaveSavedValue(4, bj_HASHTABLE_HANDLE, udg_ID, udg_SummonsHashtable) == true)) then
         return false
     end
     return true
@@ -9315,7 +9318,10 @@ function Trig_Roshi_Kamehameha_Charge_Loop_Func002A()
     else
     end
     if (Trig_Roshi_Kamehameha_Charge_Loop_Func002Func013C()) then
-        DestroyEffectBJ(udg_TempSpecialEffect)
+        if (Trig_Roshi_Kamehameha_Charge_Loop_Func002Func013Func001C()) then
+            DestroyEffectBJ(LoadEffectHandleBJ(4, udg_ID, udg_SummonsHashtable))
+        else
+        end
         AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl")
         DestroyEffectBJ(GetLastCreatedEffectBJ())
         SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
@@ -9399,15 +9405,11 @@ function Trig_Roshi_Kamehameha_Fire_Finish_Conditions()
     return true
 end
 
-function Trig_Roshi_Kamehameha_Fire_Finish_Func003C()
-    if (not (GetSpellAbilityId() == FourCC("A0JE"))) then
-        return false
-    end
-    return true
-end
-
 function Trig_Roshi_Kamehameha_Fire_Finish_Func004C()
     if (not (GetSpellAbilityId() == FourCC("A0SP"))) then
+        return false
+    end
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
@@ -9415,16 +9417,16 @@ end
 
 function Trig_Roshi_Kamehameha_Fire_Finish_Actions()
     udg_StatMultUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
-    if (Trig_Roshi_Kamehameha_Fire_Finish_Func003C()) then
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0FG"), udg_TempPlayer)
-        SetPlayerAbilityAvailableBJ(false, FourCC("A0JE"), udg_TempPlayer)
-    else
-    end
     if (Trig_Roshi_Kamehameha_Fire_Finish_Func004C()) then
         SetPlayerAbilityAvailableBJ(true, FourCC("A0SO"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0SP"), udg_TempPlayer)
     else
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0FG"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0JE"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0SO"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0SP"), udg_TempPlayer)
     end
 end
 
@@ -9435,28 +9437,15 @@ function InitTrig_Roshi_Kamehameha_Fire_Finish()
     TriggerAddAction(gg_trg_Roshi_Kamehameha_Fire_Finish, Trig_Roshi_Kamehameha_Fire_Finish_Actions)
 end
 
-function Trig_Roshi_Kame_Stat_Mult_Reset_Func001C()
-    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Roshi_Kame_Stat_Mult_Reset_Actions()
-    if (Trig_Roshi_Kame_Stat_Mult_Reset_Func001C()) then
-        udg_TempReal = LoadRealBJ(12, udg_ID, udg_StatMultHashtable)
-        udg_StatMultStr = udg_TempReal
-        udg_StatMultAgi = udg_TempReal
-        udg_StatMultInt = udg_TempReal
-        udg_TempReal4 = GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit)
-        TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
-        TriggerExecute(gg_trg_Update_Current_Stats)
-        SetUnitManaBJ(udg_StatMultUnit, udg_TempReal4)
-    else
-        udg_TempReal4 = GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit)
-        TriggerExecute(gg_trg_Temp_Skin_Revert)
-        SetUnitManaBJ(udg_StatMultUnit, udg_TempReal4)
-    end
+    udg_TempReal = LoadRealBJ(12, udg_ID, udg_StatMultHashtable)
+    udg_StatMultStr = udg_TempReal
+    udg_StatMultAgi = udg_TempReal
+    udg_StatMultInt = udg_TempReal
+    udg_TempReal4 = GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit)
+    TriggerExecute(gg_trg_Set_Varied_Stat_Multiplier)
+    TriggerExecute(gg_trg_Update_Current_Stats)
+    SetUnitManaBJ(udg_StatMultUnit, udg_TempReal4)
 end
 
 function InitTrig_Roshi_Kame_Stat_Mult_Reset()
@@ -19996,6 +19985,13 @@ function Trig_Transformations_Item_Pickup_Conditions()
     return true
 end
 
+function Trig_Transformations_Item_Pickup_Func002Func002C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_KyodaikaGroup) == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Item_Pickup_Func002C()
     if (not (udg_TempBool == true)) then
         return false
@@ -20007,7 +20003,11 @@ function Trig_Transformations_Item_Pickup_Actions()
     TriggerExecute(gg_trg_Transformations_Item_Check_Manipulated_Item)
     if (Trig_Transformations_Item_Pickup_Func002C()) then
         udg_StatMultUnit = GetTriggerUnit()
-        TriggerExecute(gg_trg_Temp_Skin_Revert)
+        if (Trig_Transformations_Item_Pickup_Func002Func002C()) then
+            TriggerExecute(gg_trg_Transformations_Item_Stat_Mult_Boosts)
+            TriggerExecute(gg_trg_Set_Item_Stat_Multiplier)
+        else
+        end
     else
     end
 end
@@ -20052,9 +20052,20 @@ function InitTrig_Transformations_Item_Drop()
     TriggerAddAction(gg_trg_Transformations_Item_Drop, Trig_Transformations_Item_Drop_Actions)
 end
 
+function Trig_Transformations_Item_Drop_Timer_Expire_Func001Func002C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_KyodaikaGroup) == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Item_Drop_Timer_Expire_Func001A()
     udg_StatMultUnit = GetEnumUnit()
-    TriggerExecute(gg_trg_Temp_Skin_Revert)
+    if (Trig_Transformations_Item_Drop_Timer_Expire_Func001Func002C()) then
+        TriggerExecute(gg_trg_Transformations_Item_Stat_Mult_Boosts)
+        TriggerExecute(gg_trg_Set_Item_Stat_Multiplier)
+    else
+    end
     GroupRemoveUnitSimple(udg_StatMultUnit, udg_TransformationItemUnitGroup)
 end
 
