@@ -7483,6 +7483,24 @@ export const SfxComponents = [
     useLastCastPoint: false,
     sfxList: [
       {
+        model: "KameBase.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 2.2,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
         model: "SpiritBomb.mdl",
         repeatInterval: 2,
         group: 0,

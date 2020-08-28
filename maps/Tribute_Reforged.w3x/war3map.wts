@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.51
+DBZ Tribute Reforged 0.51a
 }
 
 STRING 4
@@ -56351,7 +56351,7 @@ STRING 9239
 }
 
 STRING 9240
-// Abilities: A0SO (Super Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0SO (Super Kamehameha Charge), Researchubertip (Tooltip - Learn - Extended)
 {
 Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
 |cff00FF00Damage: Lvl * Int * ?
@@ -56777,14 +56777,6 @@ STRING 9310
 E
 }
 
-STRING 9311
-// Abilities: A0SO (Super Kamehameha Charge), Researchubertip (Tooltip - Learn - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ?
-|cff00FFFFCooldown: <A0FG,Cool1> seconds
-}
-
 STRING 9312
 // Abilities: A0JE (Kamehameha Fire), EditorSuffix (Editor Suffix)
 {
@@ -56821,14 +56813,6 @@ STRING 9317
 // Abilities: A0KU (New Trick), Researchubertip (Tooltip - Learn - Extended)
 {
 Roshi skillfully avoids incoming attacks by performing a handstand on his staff.|n|cff00FF00Roshi becomes |r|cff00FF00Invulnerable|r|cff00FF00 for |r1s|n|cff00FFFFCD: |r30s
-}
-
-STRING 9318
-// Abilities: A0SP (Super Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
-|cff00FF00Damage: Lvl * Int * ?
-|cff00FFFFCooldown: <A0FG,Cool1> seconds
 }
 
 STRING 9319
@@ -94103,6 +94087,22 @@ STRING 15234
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 15235
+// Abilities: A0SO (Super Kamehameha Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ?
+|cff00FFFFCooldown: <A0SO,Cool1> seconds
+}
+
+STRING 15236
+// Abilities: A0SP (Super Kamehameha Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Roshi charges up a powerful ball of energy in his hands, gradually increasing his INT multiplier at the cost of reducing his AGI multiplier. Launch the beam by using [|cff00ff00Q|r] Kamehameha again.
+|cff00FF00Damage: Lvl * Int * ?
+|cff00FFFFCooldown: <A0SO,Cool1> seconds
 }
 
 STRING 15237
