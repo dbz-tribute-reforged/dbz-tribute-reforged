@@ -472,7 +472,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 45,
+    duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -532,7 +532,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 330,
+    duration: 495,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -549,6 +549,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp unlock potential" },
+      { name: "sfx unlock potential" },
     ],
   },
   // -------------------------------------------
@@ -558,7 +559,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 330,
+    duration: 495,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -575,6 +576,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp justice pose" },
+      { name: "sfx unlock potential" },
     ],
   },
   // -------------------------------------------
@@ -584,7 +586,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 330,
+    duration: 660,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -601,6 +603,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp potential unleashed" },
+      { name: "dash ground forward potential unleashed" },
+      { name: "sfx unlock potential" },
     ],
   },
   // -------------------------------------------

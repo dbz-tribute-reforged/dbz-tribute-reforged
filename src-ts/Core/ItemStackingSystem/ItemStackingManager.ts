@@ -223,6 +223,9 @@ export class ItemStackingManager {
       );
 
       TriggerAddCondition(cancelDelayedPickup, Condition(() => {
+        if (this.unitNearItem(pickupUnit, pickupItem)) {
+          this.stackItem(heldItem, pickupItem, callback);
+        }
         this.cleanupDelayedPickup(
           delayedPickupTimer,
           acquiredItemTrigger,

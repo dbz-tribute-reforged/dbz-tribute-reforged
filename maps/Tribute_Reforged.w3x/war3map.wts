@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.51a
+DBZ Tribute Reforged 0.51b
 }
 
 STRING 4
@@ -34659,11 +34659,11 @@ STRING 5691
 Type "r" to revert.
 Transformations:
 [lvl 30]  1.50x "ss"
-[lvl 75]  2.00x "ss2"
-[lvl 115] 2.10x "saiyaman"
-[lvl 120] 2.15x "ss"
-[lvl 135] 2.20x "ss2"
-[lvl 150] 2.50x "ult"
+[lvl 70]  2.00x "ss2"
+[lvl 110] 2.10x "saiyaman"
+[lvl 120] 2.20x "ss"
+[lvl 130] 2.30x "ss2"
+[lvl 140] 2.50x "ult"
 }
 
 STRING 5692
@@ -43863,12 +43863,6 @@ STRING 7193
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur2> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool2> seconds)|r
 }
 
-STRING 7194
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
 STRING 7195
 // Abilities: A0GD (Masenko), Name (Name)
 {
@@ -43879,12 +43873,6 @@ STRING 7196
 // Abilities: A0GJ (Masenko), Researchtip (Tooltip - Learn)
 {
 Learn Mas|cffffcc00e|rnko - [|cffffcc00Level %d|r]
-}
-
-STRING 7197
-// Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 7198
@@ -43921,42 +43909,6 @@ STRING 7203
 // Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
 {
 Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
-STRING 7204
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7205
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7206
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7207
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7208
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7209
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 7210
@@ -47224,48 +47176,6 @@ STRING 7752
 Q
 }
 
-STRING 7753
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7754
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7755
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7756
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7757
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7758
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
-STRING 7759
-// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
 STRING 7760
 // Abilities: A029 (Absorb), EditorSuffix (Editor Suffix)
 {
@@ -47318,12 +47228,6 @@ STRING 7768
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 7769
-// Abilities: A0H8 (Masenko), Researchubertip (Tooltip - Learn - Extended)
-{
-The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
 }
 
 STRING 7770
@@ -51571,12 +51475,6 @@ STRING 8473
 W
 }
 
-STRING 8474
-// Abilities: A0IS (Twin Dragon Shot), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Twin Dragon Shot
-}
-
 STRING 8475
 // Abilities: A0NS (Android Bomb), Name (Name)
 {
@@ -51598,12 +51496,6 @@ W
 STRING 8478
 {
 You need level 2 Absorb to absorb the androids!
-}
-
-STRING 8479
-// Abilities: A0IS (Twin Dragon Shot), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires two spheres of energy towards the target area, damaging the first units they come in contact with..|n|cff00FF00Dmg: int*lvl*1.5+1000|r|n|cff00FFFFCooldown: 20s|r
 }
 
 STRING 8480
@@ -54427,22 +54319,10 @@ STRING 8933
 E
 }
 
-STRING 8934
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
-{
-Unlocks the Gohan's hidden potential, boosting ability damage by 5% for the next 10 seconds.
-}
-
 STRING 8935
 // Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
 {
 King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool5>s
-}
-
-STRING 8936
-// Abilities: A0L7 (Gohan Boost Justice Pose), Ubertip (Tooltip - Normal - Extended)
-{
-Strikes a daring pose for justice. Boosts ability damage by 10% for the next 10 seconds.
 }
 
 STRING 8937
@@ -55071,7 +54951,7 @@ A large red energy ball charged with both hands that has immense destructive pow
 }
 
 STRING 9039
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -55130,7 +55010,7 @@ R
 }
 
 STRING 9049
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -56777,6 +56657,13 @@ STRING 9310
 E
 }
 
+STRING 9311
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool1> seconds|r
+}
+
 STRING 9312
 // Abilities: A0JE (Kamehameha Fire), EditorSuffix (Editor Suffix)
 {
@@ -56813,6 +56700,13 @@ STRING 9317
 // Abilities: A0KU (New Trick), Researchubertip (Tooltip - Learn - Extended)
 {
 Roshi skillfully avoids incoming attacks by performing a handstand on his staff.|n|cff00FF00Roshi becomes |r|cff00FF00Invulnerable|r|cff00FF00 for |r1s|n|cff00FFFFCD: |r30s
+}
+
+STRING 9318
+// Abilities: A0GD (Masenko), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool1> seconds|r
 }
 
 STRING 9319
@@ -57713,12 +57607,6 @@ STRING 9465
 // Buffs/Effects: B01H (), Bufftip (Tooltip)
 {
 Hero's Song
-}
-
-STRING 9466
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds.|r
 }
 
 STRING 9467
@@ -61361,43 +61249,43 @@ STRING 10072
 }
 
 STRING 10073
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10074
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10075
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10076
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10077
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10078
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10079
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -61462,12 +61350,6 @@ STRING 10089
 [|cff00ff00R|r] Learn Super Dragon Flight - [|cffffcc00Level %d|r]
 }
 
-STRING 10090
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan unleashes the true extent of his ultimate form boosting ability damage by 15% for the next 10 seconds.
-}
-
 STRING 10091
 // Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
 {
@@ -61487,25 +61369,25 @@ The user draws their hand back and charges a swirling pink or blue energy sphere
 }
 
 STRING 10094
-// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10095
-// Abilities: A0L5 (Super Dragon Flight), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10096
-// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10097
-// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -62419,19 +62301,19 @@ STRING 10244
 }
 
 STRING 10245
-// Abilities: A0LC (S.S. Deadly Hammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10246
-// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10247
-// Abilities: A0LD (S.S. Deadly Bomber), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M2 (Frozen Q), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -64689,12 +64571,13 @@ STRING 10610
 {
 Transformations:
 [lvl 250]  2.70x "golden"
+[lvl 300]  2.75x "golden"
 
 Metal Cooler gains stat multiplier from kills and deaths up to a max of 2.50x. (Allied Metal Cooler players also provide a bonus on kills and deaths but at a reduced rate)
 [kill] +0.10x (+0.03x)
 [death] +0.02x (+0.01x)
 
-Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 4 bonus stats per 0.01x traded in. Stops at lvl 250.
+Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 5 bonus stats per 0.01x traded in. Stops at lvl 250.
 }
 
 STRING 10611
@@ -64954,7 +64837,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 29.August.20
+This map is under active development - 12.September.20
 }
 
 STRING 10653
@@ -65357,7 +65240,7 @@ A
 }
 
 STRING 10715
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -65369,13 +65252,13 @@ Summon Giru
 }
 
 STRING 10717
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10718
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -65916,7 +65799,7 @@ Q
 }
 
 STRING 10807
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -65934,19 +65817,19 @@ STRING 10809
 }
 
 STRING 10810
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10811
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10812
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66234,25 +66117,25 @@ STRING 10859
 }
 
 STRING 10860
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10861
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10862
-// Abilities: A0M2 (Frozen Q), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10863
-// Abilities: A0M2 (Frozen Q), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M3 (Frozen W), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66264,43 +66147,43 @@ STRING 10864
 }
 
 STRING 10865
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10866
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10867
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10868
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10869
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10870
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10871
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66390,25 +66273,25 @@ STRING 10885
 }
 
 STRING 10886
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10887
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10888
-// Abilities: A0M3 (Frozen W), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10889
-// Abilities: A0M3 (Frozen W), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M4 (Frozen E), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66420,43 +66303,43 @@ STRING 10890
 }
 
 STRING 10891
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10892
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10893
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10894
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10895
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10896
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10897
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66546,25 +66429,25 @@ STRING 10911
 }
 
 STRING 10912
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10913
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10914
-// Abilities: A0M4 (Frozen E), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10915
-// Abilities: A0M4 (Frozen E), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M5 (Frozen R), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66576,43 +66459,43 @@ STRING 10916
 }
 
 STRING 10917
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10918
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10919
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10920
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10921
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10922
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10923
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66702,25 +66585,25 @@ STRING 10937
 }
 
 STRING 10938
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10939
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10940
-// Abilities: A0M5 (Frozen R), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10941
-// Abilities: A0M5 (Frozen R), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M6 (Frozen D), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66732,43 +66615,43 @@ STRING 10942
 }
 
 STRING 10943
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10944
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10945
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10946
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10947
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10948
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10949
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66858,25 +66741,25 @@ STRING 10963
 }
 
 STRING 10964
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10965
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10966
-// Abilities: A0M6 (Frozen D), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10967
-// Abilities: A0M6 (Frozen D), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0M7 (Frozen F), Researchubertip (Tooltip - Learn - Extended)
 {
 Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
@@ -66885,48 +66768,6 @@ STRING 10968
 // Abilities: A0M6 (Frozen D), EditorSuffix (Editor Suffix)
 {
 (frozenhelfire)
-}
-
-STRING 10969
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10970
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10971
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10972
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10973
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10974
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10975
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10976
@@ -67011,30 +66852,6 @@ STRING 10989
 // Abilities: A0M7 (Frozen F), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Super Dragon Flight - [|cffffcc00Level 10|r]
-}
-
-STRING 10990
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10991
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10992
-// Abilities: A0M7 (Frozen F), Ubertip (Tooltip - Normal - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
-}
-
-STRING 10993
-// Abilities: A0M7 (Frozen F), Researchubertip (Tooltip - Learn - Extended)
-{
-Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage. |n|cff00ff00(Damage: Agi * lvl * 0.1 / tick)|r|n|cff00ffff(Cooldown: 25 seconds)|r|n|n|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring him, much to the shock of the other Z Fighters.|r
 }
 
 STRING 10994
@@ -73745,12 +73562,6 @@ STRING 12112
 [|cffFFFF00E|r] Masenko - [|cffffcc00Level 8|r]
 }
 
-STRING 12113
-// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
-{
-Fires a beam in that deals damage in a line and stuns heroes that are struck. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 11 seconds)|r
-}
-
 STRING 12114
 // Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
 {
@@ -77254,12 +77065,6 @@ STRING 12669
 [|cff00FF00W|r] Learn Ice Slash - [|cffffcc00Level %d|r]
 }
 
-STRING 12670
-// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
-}
-
 STRING 12671
 // Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
 {
@@ -77282,12 +77087,6 @@ STRING 12674
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 3|r]
-}
-
-STRING 12675
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds.|r
 }
 
 STRING 12676
@@ -77342,52 +77141,10 @@ STRING 12682
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 9|r]
 }
 
-STRING 12683
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds.|r
-}
-
-STRING 12684
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds.|r
-}
-
-STRING 12685
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds.|r
-}
-
-STRING 12686
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds.|r
-}
-
-STRING 12687
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds.|r
-}
-
-STRING 12688
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds.|r
-}
-
 STRING 12689
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 10|r]
-}
-
-STRING 12690
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds.|r
 }
 
 STRING 12691
@@ -77406,12 +77163,6 @@ STRING 12693
 // Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 1|r]
-}
-
-STRING 12694
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.5 @ 50%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
 }
 
 STRING 12695
@@ -94354,6 +94105,13 @@ STRING 15272
 (jiren)
 }
 
+STRING 15273
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool2> seconds|r
+}
+
 STRING 15274
 // Abilities: A0SI (Power Impact 2), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -94374,6 +94132,13 @@ STRING 15276
 // Abilities: A0SO (Super Kamehameha Charge), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 15277
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool3> seconds|r
 }
 
 STRING 15278
@@ -94508,6 +94273,13 @@ STRING 15299
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 1|r]
 }
 
+STRING 15300
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool4> seconds|r
+}
+
 STRING 15301
 // Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
@@ -94556,6 +94328,46 @@ STRING 15308
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 9|r]
 }
 
+STRING 15309
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool5> seconds|r
+}
+
+STRING 15310
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool6> seconds|r
+}
+
+STRING 15311
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool7> seconds|r
+}
+
+STRING 15312
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool8> seconds|r
+}
+
+STRING 15313
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 9|r]
+}
+
+STRING 15314
+// Abilities: A0GD (Masenko), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Masenko - [|cffffcc00Level 10|r]
+}
+
 STRING 15315
 // Abilities: A0SI (Power Impact 2), EditorSuffix (Editor Suffix)
 {
@@ -94566,6 +94378,13 @@ STRING 15316
 // Abilities: A0SJ (Mighty Punch 2), Researchhotkey (Hotkey - Learn)
 {
 W
+}
+
+STRING 15317
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool9> seconds|r
 }
 
 STRING 15318
@@ -94616,10 +94435,24 @@ STRING 15325
 [|cff00FF00R|r] Heatwave 2 - [|cffffcc00Level 4|r]
 }
 
+STRING 15326
+// Abilities: A0GD (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool10> seconds|r
+}
+
 STRING 15327
 // Abilities: A0SP (Super Kamehameha Fire), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 15328
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool1> seconds|r
 }
 
 STRING 15329
@@ -94640,6 +94473,13 @@ STRING 15331
 // Abilities: A0SP (Super Kamehameha Fire), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Kamehameha - [|cffffcc00Level 10|r]
+}
+
+STRING 15332
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool2> seconds|r
 }
 
 STRING 15333
@@ -94752,6 +94592,13 @@ Roshi charges up a powerful ball of energy in his hands, gradually increasing hi
 |cff00FFFFCooldown: <A0FG,Cool10> seconds
 }
 
+STRING 15349
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool3> seconds|r
+}
+
 STRING 15350
 // Abilities: A0KU (New Trick), Tip (Tooltip - Normal)
 {
@@ -94770,16 +94617,135 @@ Roshi beefs up, increasing his power multiplier by 0.4x and causing his spells t
 |cff00FFFFCooldown: <A0FH,Cool1> seconds|r
 }
 
+STRING 15352
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool4> seconds|r
+}
+
+STRING 15353
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool5> seconds|r
+}
+
+STRING 15354
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool6> seconds|r
+}
+
+STRING 15355
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool7> seconds|r
+}
+
 STRING 15356
 // Abilities: A0SK (Glare 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Glare - [|cffffcc00Level %d|r]
 }
 
+STRING 15357
+// Abilities: A0H8 (Masenko), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool1> seconds|r
+}
+
+STRING 15358
+// Abilities: A0H8 (Masenko), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Masenko - [|cffffcc00Level 8|r]
+}
+
+STRING 15359
+// Abilities: A0H8 (Masenko), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Masenko - [|cffffcc00Level 9|r]
+}
+
+STRING 15360
+// Abilities: A0H8 (Masenko), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Masenko - [|cffffcc00Level 10|r]
+}
+
+STRING 15361
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool8> seconds|r
+}
+
+STRING 15362
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool9> seconds|r
+}
+
+STRING 15363
+// Abilities: A0H8 (Masenko), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges with one hand behind the other above the head. The hands are then brought in front of the chest to fire the attack. Nearby enemies are briefly stunned.
+|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H8,Cool10> seconds|r
+}
+
+STRING 15364
+// Abilities: A0IS (Twin Dragon Shot), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires two beams of energy that will hunt down the enemy and deal massive amounts of damage when they explode.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0IS,Cool10>s|r
+}
+
+STRING 15365
+// Abilities: A0IS (Twin Dragon Shot), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Twin Dragon Shot - [|cffffcc00Level 10|r]
+}
+
+STRING 15366
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool1> seconds|r
+
+|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
 STRING 15367
 // Abilities: A0SK (Glare 2), EditorSuffix (Editor Suffix)
 {
 (jiren)
+}
+
+STRING 15368
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool2> seconds|r
+
+|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15369
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool3> seconds|r
+
+|cff808080SS3 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
 }
 
 STRING 15370
@@ -94792,6 +94758,175 @@ STRING 15371
 // Abilities: A0SL (Heatwave 2), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Heatwave - [|cffffcc00Level %d|r]
+}
+
+STRING 15372
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool4> seconds|r
+
+|cff808080SS4 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15373
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool5> seconds|r
+
+|cff808080SS5 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15374
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool6> seconds|r
+
+|cff808080SS6 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15375
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool7> seconds|r
+
+|cff808080SS7 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15376
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool8> seconds|r
+
+|cff808080SS8 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15377
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool9> seconds|r
+
+|cff808080SS9 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15378
+// Abilities: A0L5 (Super Dragon Flight), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool10> seconds|r
+
+|cff808080SS10 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15379
+// Abilities: A0L5 (Super Dragon Flight), Researchubertip (Tooltip - Learn - Extended)
+{
+Gohan follows up with a swift uppercut to the opponent's chin, knocking them away and inflicting a high amount of damage.
+|cffffff00+10% spell amp for 5 seconds. |r
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0L5,Cool1> seconds|r
+
+|cff808080SS2 Gohan counterattacks Perfect Cell with the Soaring Dragon Strike, severely injuring Cell for the first time, much to the shock of the other Z Fighters.|r
+}
+
+STRING 15380
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks Gohan's hidden potential.
+|cffffff00+10% spell amp.
+|cff00ff00Duration: <A0L6,Dur1>s
+|cff00ffffCooldown: <A0L6,Cool1>s
+}
+
+STRING 15381
+// Abilities: A0L7 (Gohan Boost Justice Pose), Ubertip (Tooltip - Normal - Extended)
+{
+Strikes a daring pose for justice!
+|cffffff00+15% spell amp.
+|cff00ff00Duration: <A0L7,Dur1>s
+|cff00ffffCooldown: <A0L7,Cool1>s
+}
+
+STRING 15382
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Ubertip (Tooltip - Normal - Extended)
+{
+Gohan unleashes the full potential of his ultimate form.
+|cffffff00+20% spell amp.
++33ms and unlocks movement speed cap.
+|cff00ff00Duration: <A0L8,Dur1>s
+|cff00ffffCooldown: <A0L8,Cool1>s
+}
+
+STRING 15383
+{
+Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
+}
+
+STRING 15384
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds.|r
+}
+
+STRING 15385
+// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
+}
+
+STRING 15386
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds.|r
+}
+
+STRING 15387
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds.|r
+}
+
+STRING 15388
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds.|r
+}
+
+STRING 15389
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds.|r
+}
+
+STRING 15390
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds.|r
+}
+
+STRING 15391
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds.|r
 }
 
 STRING 15392
@@ -94810,6 +94945,12 @@ STRING 15394
 // Abilities: A0SM (Meditate: Enlightened), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Meditate: Enlightened
+}
+
+STRING 15395
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds.|r
 }
 
 STRING 15396
@@ -94836,6 +94977,12 @@ STRING 15399
 [|cff00FF00R|r] Heatwave 2 - [|cffffcc00Level 10|r]
 }
 
+STRING 15400
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds.|r
+}
+
 STRING 15401
 // Abilities: A0SN (Ultimate Burning Warrior 2), Name (Name)
 {
@@ -94858,6 +95005,12 @@ STRING 15404
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 15405
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
 }
 
 STRING 15416

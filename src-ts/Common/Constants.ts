@@ -32,7 +32,7 @@ export module Constants {
   export const sagaPingInterval: number = 30;
   export const sagaAggroInterval: number = 500;
   export const sagaMinAcquisitionRange: number = 2500;
-  export const sagaMaxAcquisitionRange: number = 99999;
+  export const sagaMaxAcquisitionRange: number = 35000;
   export const reviveDelay: number = 5;
   // dont make team values 0
   export const invalidTeamValue: number = 0;

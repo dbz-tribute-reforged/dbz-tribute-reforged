@@ -2,6 +2,7 @@ import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
 import { Constants } from "Common/Constants";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
   name: string = '[Movie] Broly - The Legendary Super Saiyan';
@@ -30,7 +31,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 1");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 9000);
     }
 
     this.ping();
@@ -137,7 +138,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
     this.broly = this.bosses.get("Broly DBZ 2");
 
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 9000);
     }
 
     SetPlayerAbilityAvailable(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC("A0AX"), false);
@@ -306,8 +307,12 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
     
     this.broly = this.bosses.get("Broly DBS");
 
+    if (this.broly) {
+      UnitAddItemById(this.broly, ItemConstants.SagaDrops.BROLY_FUR);
+    }
+
     for (const [name, boss] of this.bosses) {
-      SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
+      SetUnitAcquireRange(boss, 9000);
     }
 
     this.ping();

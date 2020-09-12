@@ -465,9 +465,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Broly.GIGANTIC_OMEGASTORM,
       ],
-      [
-        ItemConstants.SagaDrops.BROLY_FUR,
-      ]
     )],
 
     // bojack unbound

@@ -70,7 +70,7 @@ export const AOEKnockbackComponents = [
     name: "knockback super dragon flight",
     repeatInterval: 1, 
     startTick: 10,
-    endTick: -1,
+    endTick: 30,
     knockbackData: {
       speed: 20, 
       angle: 0, 
