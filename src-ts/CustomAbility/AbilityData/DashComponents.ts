@@ -175,13 +175,26 @@ export const DashComponents = [
     name: "dash ground point super dragon flight",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 28,    
+    endTick: 30,    
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     isFlying: false,
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 25,
+  },
+  // potential unleashed
+  {
+    name: "dash ground forward potential unleashed",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1,
   },
   {
     name: "dash ground forward super saiyan rage",
@@ -205,7 +218,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 25,
   },
   {
     name: "dash ground forward rebellion spear",
@@ -354,7 +367,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 2,
+    distance: 2.5,
   },
   // videl flying kick
   {

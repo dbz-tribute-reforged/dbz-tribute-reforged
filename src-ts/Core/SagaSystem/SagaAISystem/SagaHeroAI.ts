@@ -46,6 +46,9 @@ export class SagaHeroAI {
   protected abilityInput: CustomAbilityInput;
   protected abilityTarget: Vector2D;
 
+  protected bossPos: Vector2D;
+  protected targetPos: Vector2D;
+
   constructor (
     public readonly sagaUnit: unit,
     public isEnabled: boolean = true,
@@ -95,6 +98,10 @@ export class SagaHeroAI {
       this.abilityTarget,
     );
     this.abilityInput.castUnit = this.sagaUnit;
+
+    
+    this.bossPos = new Vector2D();
+    this.targetPos = new Vector2D();
   }
 
   public cleanup(): this {
@@ -196,9 +203,9 @@ export class SagaHeroAI {
     if (this.aggroTarget == undefined || UnitHelper.isUnitDead(this.aggroTarget)) {
       this.currentAction = SagaAIData.Action.REAGGRO;
     } else if (this.numAttacks < this.consecutiveAttacksAllowed) {
-      const bossCoord = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
-      const targetCoord = new Vector2D(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
-      const targetDistance = CoordMath.distance(bossCoord, targetCoord);
+      this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
+      this.targetPos.setPos(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
+      const targetDistance = CoordMath.distance(this.bossPos, this.targetPos);
 
       if (targetDistance > GetUnitAcquireRange(this.sagaUnit)) {
         this.currentAction = SagaAIData.Action.REAGGRO;
@@ -425,12 +432,12 @@ export class SagaHeroAI {
     const nearbyBeams = CreateGroup();
     const bossPlayer = this.owningPlayer;
     const beamSearchRange = SagaAIData.defaultDodgeAOE;
-    const bossCoord = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
+    this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
     GroupEnumUnitsInRange(
       nearbyBeams,
-      bossCoord.x,
-      bossCoord.y,
+      this.bossPos.x,
+      this.bossPos.y,
       beamSearchRange,
       Condition(() => {
         const testUnit = GetFilterUnit();
@@ -452,9 +459,9 @@ export class SagaHeroAI {
         this.maxBeamsToDodge == SagaAIData.UNLIMITED_BEAM_DODGES)
       {
         const beam = GetEnumUnit();
-        const beamCoord = new Vector2D(GetUnitX(beam), GetUnitY(beam));
-        if (CoordMath.distance(beamCoord, bossCoord) > SagaAIData.defaultDodgeDistance) {
-          let beamDodgeAngle = CoordMath.angleBetweenCoords(beamCoord, bossCoord);
+        this.targetPos.setPos(GetUnitX(beam), GetUnitY(beam));
+        if (CoordMath.distance(this.targetPos, this.bossPos) > SagaAIData.defaultDodgeDistance) {
+          let beamDodgeAngle = CoordMath.angleBetweenCoords(this.targetPos, this.bossPos);
           if (beamDodgeAngle < 0) {
             beamDodgeAngle += 360;
           }
@@ -499,7 +506,7 @@ export class SagaHeroAI {
       //   this.sagaUnit
       // );
       let dodgeCoord = CoordMath.polarProjectCoords(
-        bossCoord, 
+        this.bossPos, 
         dodgeAngle, 
         SagaAIData.defaultDodgeDistance
       );
@@ -520,7 +527,7 @@ export class SagaHeroAI {
           break;
         }
         dodgeCoord = CoordMath.polarProjectCoords(
-          bossCoord, 
+          this.bossPos, 
           dodgeAngle, 
           SagaAIData.defaultDodgeDistance + offset
         );
@@ -536,12 +543,12 @@ export class SagaHeroAI {
     const enemyGroup = CreateGroup();
     const bossPlayer = this.owningPlayer;
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
-    const bossPos = new Vector2D(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
+    this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
     GroupEnumUnitsInRange(
       enemyGroup,
-      bossPos.x,
-      bossPos.y,
+      this.bossPos.x,
+      this.bossPos.y,
       acquireRange,
       Condition(() => {
         const testUnit = GetFilterUnit();
@@ -568,8 +575,8 @@ export class SagaHeroAI {
     let closestDistance = acquireRange;
     ForGroup(enemyGroup, () => {
       const enemyUnit = GetEnumUnit();
-      const enemyPos = new Vector2D(GetUnitX(enemyUnit), GetUnitY(enemyUnit));
-      const enemyDistance = CoordMath.distance(enemyPos, bossPos);
+      this.targetPos.setPos(GetUnitX(enemyUnit), GetUnitY(enemyUnit));
+      const enemyDistance = CoordMath.distance(this.targetPos, this.bossPos);
       if (enemyDistance < closestDistance) {
         closestUnit = enemyUnit;
         closestDistance = enemyDistance;

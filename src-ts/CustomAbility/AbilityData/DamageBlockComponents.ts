@@ -873,10 +873,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 50,
+    blockPerDamage: 60,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.5,
+    multiplier: 0.6,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",

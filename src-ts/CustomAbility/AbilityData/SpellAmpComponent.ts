@@ -15,21 +15,12 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.05,
-    rate: 0.05,
+    bonus: 0.1,
+    rate: 0.1,
   },
   // --------------------------------------------
   { 
     name: "spell amp unlock potential", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    bonus: 0.05,
-    rate: 0.05,
-  },
-  // --------------------------------------------
-  { 
-    name: "spell amp justice pose", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
@@ -38,12 +29,21 @@ export const SpellAmpComponents = [
   },
   // --------------------------------------------
   { 
-    name: "spell amp potential unleashed", 
+    name: "spell amp justice pose", 
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     bonus: 0.15,
     rate: 0.15,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp potential unleashed", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.2,
+    rate: 0.2,
   },
   // --------------------------------------------
   { 
