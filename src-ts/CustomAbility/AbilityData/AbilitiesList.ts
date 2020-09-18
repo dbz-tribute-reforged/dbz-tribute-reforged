@@ -6309,6 +6309,143 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Zamasu.DIVINE_AUTHORITY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNZamasuDivineAuthority.blp",
+      disabled: "BTNZamasuDivineAuthority.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Zamasu.DIVINE_AUTHORITY,
+      body: 
+        AbilityNames.Zamasu.DIVINE_AUTHORITY
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi divine authority" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Zamasu.GOD_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNZamasuGodSlash.blp",
+      disabled: "BTNZamasuGodSlash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Zamasu.GOD_SLASH,
+      body: 
+        AbilityNames.Zamasu.GOD_SLASH,
+    },
+    components: [
+      { name: "damage god slash bonus" },
+      { name: "damage god slash" },
+      { name: "dash ground forward videl speed boost" },
+      { name: "sfx videl kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Zamasu.HOLY_LIGHT_GRENADE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNZamasuHolyLightGrenade.blp",
+      disabled: "BTNZamasuHolyLightGrenade.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Zamasu.HOLY_LIGHT_GRENADE,
+      body: 
+        AbilityNames.Zamasu.HOLY_LIGHT_GRENADE
+    },
+    components: [
+      { name: "beam holy light grenade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Zamasu.HEAVENLY_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSuperDragonFlight.blp",
+      disabled: "BTNSuperDragonFlight.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Zamasu.HEAVENLY_RUSH,
+      body: 
+        AbilityNames.Zamasu.HEAVENLY_RUSH
+    },
+    components: [
+      { name: "damage heavenly rush bonus explosion" },
+      { name: "damage heavenly rush explosion" },
+      { name: "dash ground point 45dist" },
+      { name: "sfx heavenly rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Zamasu.ENERGY_BLADES,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNZamasuEnergyBlades.blp",
+      disabled: "BTNZamasuEnergyBlades.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Zamasu.ENERGY_BLADES,
+      body: 
+        AbilityNames.Zamasu.ENERGY_BLADES,
+    },
+    components: [
+      { name: "dash ground forward zamasu energy blades" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,

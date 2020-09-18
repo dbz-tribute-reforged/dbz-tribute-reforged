@@ -857,4 +857,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // divine authority
+  {
+    name: "knockback divine authority deflect",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 3, 
+      angle: 180, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+  },
 ];

@@ -44,7 +44,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.dabura && this.babidi && this.fatBuu &&
-      SagaHelper.checkUnitHp(this.dabura, 0.1, false, false, false) &&
+      SagaHelper.checkUnitHp(this.dabura, 0.1, false, true, false) &&
       SagaHelper.isUnitSagaHidden(this.babidi)
     ) {
       SagaHelper.showMessagesChanceOfJoke(
@@ -218,7 +218,7 @@ export class FutureBabidiSaga extends AdvancedSaga implements Saga {
     super.update(t);
     if (
       this.dabura && this.babidi && this.yakon &&
-      SagaHelper.checkUnitHp(this.yakon, 0.1, false, false, false) &&
+      SagaHelper.checkUnitHp(this.yakon, 0.1, false, true, false) &&
       SagaHelper.isUnitSagaHidden(this.babidi)
     ) {
       SagaHelper.showMessagesChanceOfJoke(

@@ -389,6 +389,14 @@ export module AbilityNames {
     export const GINYU_POSE_GULDO = "Guldo Pose";
   }
 
+  export module Zamasu {
+    export const DIVINE_AUTHORITY = "Divine Authority";
+    export const GOD_SLASH = "God Slash";
+    export const HOLY_LIGHT_GRENADE = "Telekinesis Guldo";
+    export const HEAVENLY_RUSH = "Time Stop";
+    export const ENERGY_BLADES = "Guldo Pose";
+  }
+
 
 
   export module Saga {
