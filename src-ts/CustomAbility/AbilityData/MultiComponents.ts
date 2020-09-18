@@ -1443,6 +1443,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi divine authority", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: -1,
+    angleMax: 1,
+    forceMinDistance: 200,
+    forceMaxDistance: 200,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam divine authority" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

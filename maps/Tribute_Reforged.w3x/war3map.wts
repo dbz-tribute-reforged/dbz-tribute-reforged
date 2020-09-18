@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.51b
+DBZ Tribute Reforged 0.52
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 34+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 35+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -6634,28 +6634,21 @@ Zamasu
 }
 
 STRING 1066
-// Units: E012 (Supreme Kai Apprentice), Awakentip (Tooltip - Awaken)
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffffff00D|r] Choose Zamasu
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 1067
-// Units: E012 (Supreme Kai Apprentice), Ubertip (Tooltip - Extended)
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-A hero who has extremely long range spells but benefits greatly from being in melee range.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
 
 STRING 1068
-// Units: E012 (Supreme Kai Apprentice), Tip (Tooltip - Basic)
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffffff00D|r] Choose Zamasu
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
 }
 
 STRING 1069
@@ -6993,7 +6986,7 @@ STRING 1119
 }
 
 STRING 1120
-// Units: E01D (Kremling King), Hotkey (Hotkey)
+// Units: E012 (Supreme Kai Apprentice), Hotkey (Hotkey)
 {
 C
 }
@@ -7077,7 +7070,7 @@ Janemba
 }
 
 STRING 1134
-// Units: E01I (Angel), Hotkey (Hotkey)
+// Units: E01D (Kremling King), Hotkey (Hotkey)
 {
 C
 }
@@ -7126,7 +7119,7 @@ STRING 1140
 }
 
 STRING 1141
-// Units: H00C (Demon), Hotkey (Hotkey)
+// Units: E01I (Angel), Hotkey (Hotkey)
 {
 C
 }
@@ -7371,7 +7364,7 @@ STRING 1176
 }
 
 STRING 1177
-// Units: H07X (God of Destruction), Hotkey (Hotkey)
+// Units: H00C (Demon), Hotkey (Hotkey)
 {
 C
 }
@@ -15980,7 +15973,7 @@ STRING 2590
 }
 
 STRING 2591
-// Units: E01L (Angel), Hotkey (Hotkey)
+// Units: H07X (God of Destruction), Hotkey (Hotkey)
 {
 C
 }
@@ -16004,7 +15997,7 @@ Bulma created a giant satellite dish that directs concentrated energy at a targe
 }
 
 STRING 2595
-// Units: H08W (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
+// Units: E01L (Angel), Hotkey (Hotkey)
 {
 C
 }
@@ -20867,7 +20860,7 @@ Change Back
 }
 
 STRING 3404
-// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
+// Units: H08W (Mid-Class Saiyan Warrior), Hotkey (Hotkey)
 {
 C
 }
@@ -26116,7 +26109,7 @@ O
 }
 
 STRING 4278
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
 {
 Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
 }
@@ -26182,7 +26175,7 @@ STRING 4288
 }
 
 STRING 4289
-// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
+// Abilities: A048 (Calculated Ray), Researchhotkey (Hotkey - Learn)
 {
 C
 }
@@ -41500,17 +41493,19 @@ STRING 6810
 {
 Type "r" to revert.
 Transformations: (base stat multiplier excluding kills)
-[lvl 30]  1.25x "fp"
-[lvl 85]  1.5x "fp"
-[lvl 120] 1.75x "fp"
-[lvl 150] 1.9x "xeno janemba" [upgrades Q]
-[lvl 200] 2.2x "xeno janemba"
+[lvl 20]  1.20x "fp"
+[lvl 50]  1.40x "fp"
+[lvl 80]  1.60x "fp"
+[lvl 100] 1.80x "fp"
+[lvl 150] 2.00x "xeno janemba" [upgrades Q]
+[lvl 200] 2.20x "xeno janemba"
+[lvl 250] 2.40x "xeno janemba"
 
 |cffffff00On player kill:|r 
-Permanently gain +0.1x up to +0.5x (cannot exceed 2.4x). 
+Permanently gain +0.07x up to +0.5x (cannot exceed 2.4x). 
 Temporarily gain +0.2x for 60 seconds.
 
-Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to receive the real version..
+Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to receive the real version.
 }
 
 STRING 6811
@@ -43863,6 +43858,12 @@ STRING 7193
 Babidi uses his magic to disable his enemy's attacks. |n|cff00ff00Stops all attacks and abilities used by the enemy for <A0JQ,HeroDur2> seconds.|r|n|cff00ffff(Cooldown: <A0JQ,Cool2> seconds)|r
 }
 
+STRING 7194
+// Units: n048 (Meme Heroes), Name (Name)
+{
+Meme Heroes
+}
+
 STRING 7195
 // Abilities: A0GD (Masenko), Name (Name)
 {
@@ -43873,6 +43874,12 @@ STRING 7196
 // Abilities: A0GJ (Masenko), Researchtip (Tooltip - Learn)
 {
 Learn Mas|cffffcc00e|rnko - [|cffffcc00Level %d|r]
+}
+
+STRING 7197
+// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
 }
 
 STRING 7198
@@ -43909,6 +43916,43 @@ STRING 7203
 // Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
 {
 Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 7204
+// Units: E012 (Supreme Kai Apprentice), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00C|r] Choose Zamasu
+}
+
+STRING 7206
+// Units: E012 (Supreme Kai Apprentice), Tip (Tooltip - Basic)
+{
+[|cffffff00C|r] Choose Zamasu
+}
+
+STRING 7207
+// Abilities: A048 (Calculated Ray), Hotkey (Hotkey - Normal)
+{
+C
+}
+
+STRING 7208
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.40x "fp" [unlocks Energy Blades]
+[lvl 50]  1.60x "fp"
+[lvl 90]  1.80x "fp"
+[lvl 150] 2.20x "god" [unlocks Zamasu's Immortality]
+[lvl 200] 2.40x "god" 
+
+|cffff25aaZamasu's Immortality|r: +100% HP regen
+}
+
+STRING 7209
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
 }
 
 STRING 7210
@@ -45489,7 +45533,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0I3 (Zamasu's style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -47176,6 +47220,48 @@ STRING 7752
 Q
 }
 
+STRING 7753
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
+}
+
+STRING 7754
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
+}
+
+STRING 7755
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
+}
+
+STRING 7756
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 2|r]
+}
+
+STRING 7757
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 3|r]
+}
+
+STRING 7758
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 4|r]
+}
+
+STRING 7759
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 5|r]
+}
+
 STRING 7760
 // Abilities: A029 (Absorb), EditorSuffix (Editor Suffix)
 {
@@ -47228,6 +47314,12 @@ STRING 7768
 // Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
+}
+
+STRING 7769
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 6|r]
 }
 
 STRING 7770
@@ -48763,255 +48855,46 @@ Units hit by Zamasu's auto attacks take extra damage from Zamasu's spells.
 }
 
 STRING 8025
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
+// Units: E012 (Supreme Kai Apprentice), Ubertip (Tooltip - Extended)
 {
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
+A high damage close-range hero that deals bonus damage on his spells by auto-attacking beforehand. Starts with a droppable Time Ring item.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 8026
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
+// Items: I049 (Time Ring), Description (Description)
 {
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
+|cffffff00Allows you to travel through time, instantly swapping positions with another allied hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 40s|r
 }
 
 STRING 8027
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
+// Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
 {
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
+|cffffff00Allows you to travel through time, instantly swapping positions with another allied hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 40s|r
 }
 
 STRING 8028
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0I2 (Passive: Bleed Out), EditorSuffix (Editor Suffix)
 {
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
+(does not stack with other orbs)
 }
 
 STRING 8029
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
+// Units: n046 (Ginyu Force / Frieza), Name (Name)
 {
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8030
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8031
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8032
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8033
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8034
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8035
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8036
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8037
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8038
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8039
-// Abilities: A0I3 (Zamasu's style), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8040
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 1|r]
-}
-
-STRING 8041
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 2|r]
-}
-
-STRING 8042
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 3|r]
-}
-
-STRING 8043
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 4|r]
-}
-
-STRING 8044
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 5|r]
-}
-
-STRING 8045
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 6|r]
-}
-
-STRING 8046
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 7|r]
-}
-
-STRING 8047
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 8|r]
-}
-
-STRING 8048
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 9|r]
-}
-
-STRING 8049
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 10|r]
-}
-
-STRING 8050
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 11|r]
-}
-
-STRING 8051
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 12|r]
-}
-
-STRING 8052
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 13|r]
-}
-
-STRING 8053
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 14|r]
-}
-
-STRING 8054
-// Abilities: A0I3 (Zamasu's style), Tip (Tooltip - Normal)
-{
-Zamasu's Style - [|cffffcc00Level 15|r]
+Ginyu Force / Frieza
 }
 
 STRING 8055
 // Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 8056
-// Abilities: A0I3 (Zamasu's style), Name (Name)
-{
-Zamasu's style
-}
-
-STRING 8057
-// Abilities: A0I3 (Zamasu's style), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00F|r]  Learn Zamasu's Style - [|cffffcc00Level %d|r]
-}
-
-STRING 8058
-// Abilities: A0I3 (Zamasu's style), Researchubertip (Tooltip - Learn - Extended)
-{
-Zamasu's fighting style is based on landing devastating hits with his energy sword. Zamasu is "immortal" and can recover his health quickly, so he doesn't try to dodge.s..|n|cff00FF00+Critical Strike Chance (11+1*lvl%)|r|n|cff00FF00+Evasion Chance (0+1*lvl%)|r|n|cff00FF00+Critical Strike Damage (30 + 16*lvl%)|r|n|cffFFFF00Passive: |rSword slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*.5+50|r|n|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8059
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8060
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8061
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8062
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8063
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8064
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8065
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
-}
-
-STRING 8066
-// Abilities: A0I3 (Zamasu's style), Untip (Tooltip - Turn Off)
-{
-Zamasu's style is based on landing critical hits with his energy sword. Zamasu is arrogant and does not try to dodge incoming attacks.|n|cffFFFF00Passive 1: |rSword Slash - Zamasu will cut through any enemies in his path when using Zanzoken|n|cff00FF00Damage: Agi*lvl*0.5+50|r|n|cffFFFF00Passive 2:|r All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 20+crit lvl% additional damage from Zamasu's spells. |r 
 }
 
 STRING 8067
@@ -51475,6 +51358,12 @@ STRING 8473
 W
 }
 
+STRING 8474
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 1|r]
+}
+
 STRING 8475
 // Abilities: A0NS (Android Bomb), Name (Name)
 {
@@ -51496,6 +51385,12 @@ W
 STRING 8478
 {
 You need level 2 Absorb to absorb the androids!
+}
+
+STRING 8479
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 7|r]
 }
 
 STRING 8480
@@ -52134,7 +52029,7 @@ King K Rool is a formidable fighter. He can absorb incoming punches using only h
 }
 
 STRING 8581
-// Units: H009 (Saiyan from the Future), EditorSuffix (Name - Editor Suffix)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -53910,7 +53805,7 @@ STRING 8865
 }
 
 STRING 8866
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
+// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -54319,10 +54214,22 @@ STRING 8933
 E
 }
 
+STRING 8934
+// Abilities: A0SR (Divine Authority), Name (Name)
+{
+Divine Authority
+}
+
 STRING 8935
 // Abilities: A0OW (Kannonblast), Ubertip (Tooltip - Normal - Extended)
 {
 King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in a line. Unlocks [|cffffff00E|r] Hand Kannon.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0OW,Cool5>s
+}
+
+STRING 8936
+// Abilities: A0SR (Divine Authority), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Divine Authority - [|cffffcc00Level %d|r]
 }
 
 STRING 8937
@@ -59790,7 +59697,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
+// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59802,7 +59709,7 @@ Evil
 }
 
 STRING 9832
-// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
+// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59814,7 +59721,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59826,7 +59733,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59856,85 +59763,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59946,13 +59853,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
+// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -59964,103 +59871,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60832,7 +60739,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61350,6 +61257,12 @@ STRING 10089
 [|cff00ff00R|r] Learn Super Dragon Flight - [|cffffcc00Level %d|r]
 }
 
+STRING 10090
+// Abilities: A0SR (Divine Authority), EditorSuffix (Editor Suffix)
+{
+(zamasu)
+}
+
 STRING 10091
 // Abilities: A09O (Power Blitz), Tip (Tooltip - Normal)
 {
@@ -61696,7 +61609,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63522,7 +63435,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -64750,7 +64663,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65228,7 +65141,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -66770,6 +66683,42 @@ STRING 10968
 (frozenhelfire)
 }
 
+STRING 10969
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 8|r]
+}
+
+STRING 10970
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 9|r]
+}
+
+STRING 10971
+// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 10|r]
+}
+
+STRING 10972
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
+}
+
+STRING 10973
+// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
+{
+Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
+}
+
+STRING 10975
+// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
 STRING 10976
 // Abilities: A0M7 (Frozen F), Tip (Tooltip - Normal)
 {
@@ -66854,6 +66803,48 @@ STRING 10989
 [|cff00ff00R|r] Super Dragon Flight - [|cffffcc00Level 10|r]
 }
 
+STRING 10990
+// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 10991
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD1,%>
+|cffffcc00Critical|r - <A0I3,DataA1>% 
+|cffffcc00Damage|r - <A0I3,DataB1,.> times
+}
+
+STRING 10992
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD2,%>
+|cffffcc00Critical|r - <A0I3,DataA2>% 
+|cffffcc00Damage|r - <A0I3,DataB2,.> times
+}
+
+STRING 10993
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD3,%>
+|cffffcc00Critical|r - <A0I3,DataA3>% 
+|cffffcc00Damage|r - <A0I3,DataB3,.> times
+}
+
 STRING 10994
 // Abilities: A0M7 (Frozen F), EditorSuffix (Editor Suffix)
 {
@@ -66861,13 +66852,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66919,7 +66910,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67168,7 +67159,7 @@ The user charges energy into their right hand and rushes forward with with an en
 }
 
 STRING 11049
-// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67204,7 +67195,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 11055
-// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67365,7 +67356,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67377,7 +67368,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
+// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67762,13 +67753,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67935,7 +67926,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 11174
-// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68406,13 +68397,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68688,7 +68679,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68736,19 +68727,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11309
-// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69095,24 +69086,6 @@ STRING 11367
 Nappa raises his right hand with his index and middle fingers up causing a giant explosion. Units near the centre of the explosion take 2x damage. |n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0MI,Cool10> seconds|r
 }
 
-STRING 11368
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 2|r]
-}
-
-STRING 11369
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 3|r]
-}
-
-STRING 11370
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 4|r]
-}
-
 STRING 11371
 // Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
@@ -69123,12 +69096,6 @@ STRING 11372
 // Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
-}
-
-STRING 11373
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 5|r]
 }
 
 STRING 11374
@@ -69216,13 +69183,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69498,7 +69465,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -69557,7 +69524,7 @@ STRING 11444
 }
 
 STRING 11445
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69982,24 +69949,6 @@ STRING 11515
 [|cff00ff00W|r] Barrier Prison - [|cffffcc00Level 10|r]
 }
 
-STRING 11516
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 6|r]
-}
-
-STRING 11517
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 1|r]
-}
-
-STRING 11518
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 7|r]
-}
-
 STRING 11519
 // Abilities: A0MW (Power Blitz Barrage), Name (Name)
 {
@@ -70175,7 +70124,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70343,13 +70292,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70406,24 +70355,6 @@ STRING 11586
 // Abilities: A0LS (Angry Shout), EditorSuffix (Editor Suffix)
 {
 (Vegeta / Bardock / Oozaru)
-}
-
-STRING 11587
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 8|r]
-}
-
-STRING 11588
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 9|r]
-}
-
-STRING 11589
-// Abilities: A0MW (Power Blitz Barrage), Tip (Tooltip - Normal)
-{
-[|cff00ff00Q|r] Power Blitz Barrage - [|cffffcc00Level 10|r]
 }
 
 STRING 11590
@@ -70786,12 +70717,6 @@ STRING 11649
 (ham seller)
 }
 
-STRING 11650
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
-}
-
 STRING 11651
 // Items: I001 (Roast Ham), Tip (Tooltip - Basic)
 {
@@ -70967,19 +70892,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11681
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11682
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -70987,12 +70912,6 @@ Q
 STRING 11683
 {
 |cff40ff40Return to Past|r
-}
-
-STRING 11684
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur3> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool3> seconds|r
 }
 
 STRING 11685
@@ -71104,7 +71023,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71144,21 +71063,9 @@ STRING 11709
 |cff40ff40Travel to Future|r
 }
 
-STRING 11710
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur4> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool4> seconds|r
-}
-
 STRING 11711
 {
 |cff40ff40Return to Past|r
-}
-
-STRING 11712
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur5> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool5> seconds|r
 }
 
 STRING 11713
@@ -71200,36 +71107,6 @@ STRING 11720
 // Units: H01B (Yajirobe), EditorSuffix (Name - Editor Suffix)
 {
 (kami lookout)
-}
-
-STRING 11721
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur6> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool6> seconds|r
-}
-
-STRING 11722
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur7> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool7> seconds|r
-}
-
-STRING 11723
-// Abilities: A0MW (Power Blitz Barrage), Researchubertip (Tooltip - Learn - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: 15k + 25% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur1> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool1> seconds|r
-}
-
-STRING 11724
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur8> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool8> seconds|r
-}
-
-STRING 11725
-// Abilities: A0MW (Power Blitz Barrage), Ubertip (Tooltip - Normal - Extended)
-{
-Android 17 fires a rapid stream of energy blasts in a straight line, dealing massive explosive damage if left unchecked.|n|cff2080ffMana Cost: +33% of Max Mana|r|n|cffff2020Channel Duration: <A0MW,Dur9> seconds|r|n|cff00FF00Damage: Int * lvl * ?|r|n|cff00FFFFCooldown: <A0MW,Cool9> seconds|r
 }
 
 STRING 11726
@@ -71305,7 +71182,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -73562,6 +73439,18 @@ STRING 12112
 [|cffFFFF00E|r] Masenko - [|cffffcc00Level 8|r]
 }
 
+STRING 12113
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD4,%>
+|cffffcc00Critical|r - <A0I3,DataA4>% 
+|cffffcc00Damage|r - <A0I3,DataB4,.> times
+}
+
 STRING 12114
 // Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
 {
@@ -73763,7 +73652,7 @@ Gives detailed information on the location and power level of enemies. |n|cff00f
 }
 
 STRING 12146
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -75068,7 +74957,7 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 12347
-// Units: n041 (Beamers / Backline), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76580,7 +76469,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76844,7 +76733,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76856,7 +76745,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76868,7 +76757,7 @@ Beamers / Backline
 }
 
 STRING 12637
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77065,6 +76954,18 @@ STRING 12669
 [|cff00FF00W|r] Learn Ice Slash - [|cffffcc00Level %d|r]
 }
 
+STRING 12670
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD5,%>
+|cffffcc00Critical|r - <A0I3,DataA5>% 
+|cffffcc00Damage|r - <A0I3,DataB5,.> times
+}
+
 STRING 12671
 // Abilities: A0OI (Whirlwind Tempest), Researchhotkey (Hotkey - Learn)
 {
@@ -77087,6 +76988,18 @@ STRING 12674
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 12675
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD6,%>
+|cffffcc00Critical|r - <A0I3,DataA6>% 
+|cffffcc00Damage|r - <A0I3,DataB6,.> times
 }
 
 STRING 12676
@@ -77141,10 +77054,94 @@ STRING 12682
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 9|r]
 }
 
+STRING 12683
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD7,%>
+|cffffcc00Critical|r - <A0I3,DataA7>% 
+|cffffcc00Damage|r - <A0I3,DataB7,.> times
+}
+
+STRING 12684
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD8,%>
+|cffffcc00Critical|r - <A0I3,DataA8>% 
+|cffffcc00Damage|r - <A0I3,DataB8,.> times
+}
+
+STRING 12685
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD9,%>
+|cffffcc00Critical|r - <A0I3,DataA9>% 
+|cffffcc00Damage|r - <A0I3,DataB9,.> times
+}
+
+STRING 12686
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD10,%>
+|cffffcc00Critical|r - <A0I3,DataA10>% 
+|cffffcc00Damage|r - <A0I3,DataB10,.> times
+}
+
+STRING 12687
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD11,%>
+|cffffcc00Critical|r - <A0I3,DataA11>% 
+|cffffcc00Damage|r - <A0I3,DataB11,.> times
+}
+
+STRING 12688
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD12,%>
+|cffffcc00Critical|r - <A0I3,DataA12>% 
+|cffffcc00Damage|r - <A0I3,DataB12,.> times
+}
+
 STRING 12689
 // Abilities: A0P2 (Ice Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Ice Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 12690
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD13,%>
+|cffffcc00Critical|r - <A0I3,DataA13>% 
+|cffffcc00Damage|r - <A0I3,DataB13,.> times
 }
 
 STRING 12691
@@ -77163,6 +77160,18 @@ STRING 12693
 // Abilities: A0P3 (Absolute Zero), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Absolute Zero - [|cffffcc00Level 1|r]
+}
+
+STRING 12694
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD14,%>
+|cffffcc00Critical|r - <A0I3,DataA14>% 
+|cffffcc00Damage|r - <A0I3,DataB14,.> times
 }
 
 STRING 12695
@@ -77329,7 +77338,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79882,7 +79891,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -79891,12 +79900,6 @@ STRING 13134
 // Abilities: A0PQ (Galaxy Dynamite), EditorSuffix (Editor Suffix)
 {
 (ginyu)
-}
-
-STRING 13135
-// Units: n046 (Ginyu Force), Name (Name)
-{
-Ginyu Force
 }
 
 STRING 13136
@@ -81834,22 +81837,10 @@ STRING 13446
 [|cff00FF00R|r] Death Storm - [|cffffcc00Level 1|r]
 }
 
-STRING 13447
-// Items: I049 (Time Ring), Description (Description)
-{
-|cffffff00Allows you to travel through time, instantly swapping positions with another hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
-}
-
 STRING 13448
 // Abilities: A0Q4 (Death Storm), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Death Storm - [|cffffcc00Level %d|r]
-}
-
-STRING 13449
-// Items: I049 (Time Ring), Ubertip (Tooltip - Extended)
-{
-|cffffff00Allows you to travel through time, instantly swapping positions with another hero. Both units will receive minor healing.|r|n|cff00ff00Heal: 5% Max HP|n|cff00ffffCooldown: 30s|r
 }
 
 STRING 13450
@@ -82455,7 +82446,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85315,7 +85306,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85327,7 +85318,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: n046 (Ginyu Force), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -95013,6 +95004,72 @@ STRING 15405
 Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.6 @ 60%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds.|r
 }
 
+STRING 15406
+// Abilities: A0I3 (Zamasu's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD15,%>
+|cffffcc00Critical|r - <A0I3,DataA15>% 
+|cffffcc00Damage|r - <A0I3,DataB15,.> times
+}
+
+STRING 15407
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 1|r]
+}
+
+STRING 15408
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 2|r]
+}
+
+STRING 15409
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 3|r]
+}
+
+STRING 15410
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 4|r]
+}
+
+STRING 15411
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 5|r]
+}
+
+STRING 15412
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 6|r]
+}
+
+STRING 15413
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 7|r]
+}
+
+STRING 15414
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 8|r]
+}
+
+STRING 15415
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 9|r]
+}
+
 STRING 15416
 // Abilities: A0KC (Ultimate Burning Warrior), Ubertip (Tooltip - Normal - Extended)
 {
@@ -95026,6 +95083,72 @@ Cannot be used with [|cff00ff00D|r] Meditate.
 |cff00ffffCooldown: <A0KC,Cool1> seconds
 
 |cff808080"I cannot lose... I WILL NOT!"
+}
+
+STRING 15417
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 10|r]
+}
+
+STRING 15418
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 11|r]
+}
+
+STRING 15419
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 12|r]
+}
+
+STRING 15420
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 13|r]
+}
+
+STRING 15421
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 14|r]
+}
+
+STRING 15422
+// Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
+{
+Zamasu's Fighting Style - [|cffffcc00Level 15|r]
+}
+
+STRING 15423
+// Abilities: A0I3 (Zamasu's Fighting Style), Name (Name)
+{
+Zamasu's Fighting Style
+}
+
+STRING 15424
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Zamasu's Fighting Style - [|cffffcc00Level %d|r]
+}
+
+STRING 15425
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu's fighting style is based on landing devastating hits with his energy blades. Zamasu's "immortality" allows him to recover health quickly, removing the neccessity of avoiding enemy attacks.
+
+|cffFFFF00Passive: All enemies hit by Zamasu's auto attack will receive the "bleeding" debuff for 5 seconds, causing them to take 30% additional damage from Zamasu's spells. |r 
+
+|cffffcc00Evasion|r - <A0I3,DataD1,%> - <A0I3,DataD15,%>% 
+|cffffcc00Critical|r - <A0I3,DataA1> - <A0I3,DataA15>% 
+|cffffcc00Damage|r - <A0I3,DataB1,.> - <A0I3,DataB15,.> times
+}
+
+STRING 15426
+// Abilities: A0SQ (Book Zamasu Passives), Name (Name)
+{
+Book Zamasu Passives
 }
 
 STRING 15427
@@ -95558,5 +95681,763 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 |cff00FFFFCooldown: <A0K6,Cool10>s
 |cffFFFF00Duration:|r 2.5s
 |cffFFFF00Empowered:|r +40% damage and deals additional bonus damage based on the difference between Jiren and the enemy's STR
+}
+
+STRING 15483
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur1> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool1> seconds|r
+}
+
+STRING 15484
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur2> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool2> seconds|r
+}
+
+STRING 15485
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur3> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool3> seconds|r
+}
+
+STRING 15486
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur4> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool4> seconds|r
+}
+
+STRING 15487
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur5> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool5> seconds|r
+}
+
+STRING 15488
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur6> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool6> seconds|r
+}
+
+STRING 15489
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur7> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool7> seconds|r
+}
+
+STRING 15490
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 2|r]
+}
+
+STRING 15491
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 3|r]
+}
+
+STRING 15492
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 4|r]
+}
+
+STRING 15493
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 5|r]
+}
+
+STRING 15494
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 6|r]
+}
+
+STRING 15495
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 1|r]
+}
+
+STRING 15496
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 7|r]
+}
+
+STRING 15497
+// Abilities: A0SR (Divine Authority), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur1> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool1> seconds|r
+}
+
+STRING 15498
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 8|r]
+}
+
+STRING 15499
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 9|r]
+}
+
+STRING 15500
+// Abilities: A0SR (Divine Authority), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Divine Authority - [|cffffcc00Level 10|r]
+}
+
+STRING 15501
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur8> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool8> seconds|r
+}
+
+STRING 15502
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur9> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool9> seconds|r
+}
+
+STRING 15503
+// Abilities: A0SR (Divine Authority), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu channels his godly energy to deflect the attacks of lesser beings and punish them for their impudence.
+|cffff2020Channel Duration: <A0SR,Dur10> seconds|r
+|cff00FF00Damage: Int * lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0SR,Cool10> seconds|r
+}
+
+STRING 15504
+// Abilities: A0SS (God Slash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 15505
+// Abilities: A0SS (God Slash), Name (Name)
+{
+God Slash
+}
+
+STRING 15506
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 1|r]
+}
+
+STRING 15507
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool1> seconds|r
+}
+
+STRING 15508
+// Abilities: A0SS (God Slash), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn God Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 15509
+// Abilities: A0SS (God Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool1> seconds|r
+}
+
+STRING 15510
+// Abilities: A0SS (God Slash), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 15511
+// Abilities: A0SS (God Slash), EditorSuffix (Editor Suffix)
+{
+(zamasu)
+}
+
+STRING 15512
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 2|r]
+}
+
+STRING 15513
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 3|r]
+}
+
+STRING 15514
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool2> seconds|r
+}
+
+STRING 15515
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool3> seconds|r
+}
+
+STRING 15516
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 4|r]
+}
+
+STRING 15517
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 5|r]
+}
+
+STRING 15518
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 6|r]
+}
+
+STRING 15519
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 7|r]
+}
+
+STRING 15520
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 8|r]
+}
+
+STRING 15521
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 9|r]
+}
+
+STRING 15522
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool4> seconds|r
+}
+
+STRING 15523
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool5> seconds|r
+}
+
+STRING 15524
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool6> seconds|r
+}
+
+STRING 15525
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool7> seconds|r
+}
+
+STRING 15526
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool8> seconds|r
+}
+
+STRING 15527
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool9> seconds|r
+}
+
+STRING 15528
+// Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] God Slash - [|cffffcc00Level 10|r]
+}
+
+STRING 15529
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: <A0SS,Cool10> seconds|r
+}
+
+STRING 15530
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool1> seconds|r
+}
+
+STRING 15531
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool2> seconds|r
+}
+
+STRING 15532
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool3> seconds|r
+}
+
+STRING 15533
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool4> seconds|r
+}
+
+STRING 15534
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool5> seconds|r
+}
+
+STRING 15535
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool6> seconds|r
+}
+
+STRING 15536
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool7> seconds|r
+}
+
+STRING 15537
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 2|r]
+}
+
+STRING 15538
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 3|r]
+}
+
+STRING 15539
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 4|r]
+}
+
+STRING 15540
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 5|r]
+}
+
+STRING 15541
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 6|r]
+}
+
+STRING 15542
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 1|r]
+}
+
+STRING 15543
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 7|r]
+}
+
+STRING 15544
+// Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 15545
+// Abilities: A0ST (Holy Light Grenade), Name (Name)
+{
+Holy Light Grenade
+}
+
+STRING 15546
+// Abilities: A0ST (Holy Light Grenade), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Holy Light Grenade - [|cffffcc00Level %d|r]
+}
+
+STRING 15547
+// Abilities: A0ST (Holy Light Grenade), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 15548
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 9|r]
+}
+
+STRING 15549
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 8|r]
+}
+
+STRING 15550
+// Abilities: A0ST (Holy Light Grenade), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Holy Light Grenade - [|cffffcc00Level 10|r]
+}
+
+STRING 15551
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool8> seconds|r
+}
+
+STRING 15552
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool9> seconds|r
+}
+
+STRING 15553
+// Abilities: A0ST (Holy Light Grenade), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool10> seconds|r
+}
+
+STRING 15554
+// Abilities: A0ST (Holy Light Grenade), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu unleashes a powerful energy ball that imediately detonates at the target point.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0ST,Cool1> seconds|r
+}
+
+STRING 15555
+// Abilities: A0ST (Holy Light Grenade), EditorSuffix (Editor Suffix)
+{
+(actual)
+}
+
+STRING 15556
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool1> seconds|r
+}
+
+STRING 15557
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool2> seconds|r
+}
+
+STRING 15558
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool3> seconds|r
+}
+
+STRING 15559
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool4> seconds|r
+}
+
+STRING 15560
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool5> seconds|r
+}
+
+STRING 15561
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool6> seconds|r
+}
+
+STRING 15562
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool7> seconds|r
+}
+
+STRING 15563
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 2|r]
+}
+
+STRING 15564
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 3|r]
+}
+
+STRING 15565
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 4|r]
+}
+
+STRING 15566
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 5|r]
+}
+
+STRING 15567
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 6|r]
+}
+
+STRING 15568
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 1|r]
+}
+
+STRING 15569
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 7|r]
+}
+
+STRING 15570
+// Abilities: A0SU (Heavenly Rush), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 15571
+// Abilities: A0SU (Heavenly Rush), Name (Name)
+{
+Heavenly Rush
+}
+
+STRING 15572
+// Abilities: A0SU (Heavenly Rush), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Heavenly Rush - [|cffffcc00Level %d|r]
+}
+
+STRING 15573
+// Abilities: A0SU (Heavenly Rush), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 15574
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 9|r]
+}
+
+STRING 15575
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 8|r]
+}
+
+STRING 15576
+// Abilities: A0SU (Heavenly Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Heavenly Rush - [|cffffcc00Level 10|r]
+}
+
+STRING 15577
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool8> seconds|r
+}
+
+STRING 15578
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool9> seconds|r
+}
+
+STRING 15579
+// Abilities: A0SU (Heavenly Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool10> seconds|r
+}
+
+STRING 15580
+// Abilities: A0SU (Heavenly Rush), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu charges towards the targetted location dealing damage to any enemy he comes into contact with.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0SU,Cool1> seconds|r
+}
+
+STRING 15581
+// Abilities: A0SU (Heavenly Rush), EditorSuffix (Editor Suffix)
+{
+(zamasu)
+}
+
+STRING 15582
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 15583
+// Abilities: A0SV (Energy Blades), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Energy Blades
+}
+
+STRING 15584
+// Abilities: A0SV (Energy Blades), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu infuses his hand with godly ki.
+|cffffff00+0.5x agi mult
+-0.5x int mult
++33ms and unlocks movement speed cap
+|cff00FF00Duration: <A0SV,Dur1> seconds|r
+|cff00FFFFCooldown: <A0SV,Cool1> seconds|r
+}
+
+STRING 15585
+// Abilities: A0SV (Energy Blades), Name (Name)
+{
+Energy Blades
+}
+
+STRING 15586
+// Abilities: A0SV (Energy Blades), EditorSuffix (Editor Suffix)
+{
+(zamasu)
+}
+
+STRING 15587
+// Abilities: A0SW (Zamasu's Immortality), EditorSuffix (Editor Suffix)
+{
+(Zamasu)
+}
+
+STRING 15588
+// Abilities: A0SW (Zamasu's Immortality), Name (Name)
+{
+Zamasu's Immortality
+}
+
+STRING 15589
+// Abilities: A0SW (Zamasu's Immortality), Tip (Tooltip - Normal)
+{
+Zamasu's Immortality
+}
+
+STRING 15590
+// Buffs/Effects: B03L (), Bufftip (Tooltip)
+{
+Zamasu's Immortality
+}
+
+STRING 15591
+// Buffs/Effects: B03L (), Buffubertip (Tooltip - Extended)
+{
+Zamasu's immortality grants exception health regeneration.
 }
 

@@ -339,6 +339,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.OmegaShenron.ICE_CANNON,
       AbilityNames.OmegaShenron.NOVA_STAR,
       AbilityNames.OmegaShenron.DRAGON_THUNDER,
+      AbilityNames.Guldo.PSYCHO_JAVELIN,
+      AbilityNames.Zamasu.DIVINE_AUTHORITY,
+      AbilityNames.Zamasu.ENERGY_BLADES,
     ]],
 
     // broly
@@ -479,6 +482,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Guldo.TELEKINESIS,
       AbilityNames.Guldo.TIME_STOP,
       AbilityNames.Guldo.GINYU_POSE_GULDO,
+    ]],
+
+    // zamasu
+    [FourCC("E012"), [
+      AbilityNames.Zamasu.DIVINE_AUTHORITY,
+      AbilityNames.Zamasu.GOD_SLASH,
+      AbilityNames.Zamasu.HOLY_LIGHT_GRENADE,
+      AbilityNames.Zamasu.HEAVENLY_RUSH,
+      AbilityNames.Zamasu.ENERGY_BLADES,
     ]],
 
   ]

@@ -340,6 +340,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0SF'), AbilityNames.Guldo.TIME_STOP],
     [FourCC('A0SG'), AbilityNames.Guldo.GINYU_POSE_GULDO],
 
+    // zamasu
+    [FourCC('A0SR'), AbilityNames.Zamasu.DIVINE_AUTHORITY],
+    [FourCC('A0SS'), AbilityNames.Zamasu.GOD_SLASH],
+    [FourCC('A0ST'), AbilityNames.Zamasu.HOLY_LIGHT_GRENADE],
+    [FourCC('A0SU'), AbilityNames.Zamasu.HEAVENLY_RUSH],
+    [FourCC('A0SV'), AbilityNames.Zamasu.ENERGY_BLADES],
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

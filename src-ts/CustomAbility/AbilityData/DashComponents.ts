@@ -1154,6 +1154,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1,
   },
+  // zamasu energy blades
+  {
+    name: "dash ground forward zamasu energy blades",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1,
+  },
   // ---
   // saga zanzo
   {
