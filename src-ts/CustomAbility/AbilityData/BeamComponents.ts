@@ -4377,7 +4377,7 @@ export const BeamComponents = [
     useLastCastPoint: true,
     explodeOnDeath: true,
     explodeAtCastPoint: false,
-    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_TARGET,
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [

@@ -1154,6 +1154,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1,
   },
+  // zamasu god slash
+  {
+    name: "dash ground forward zamasu god slash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2.5,
+  },
   // zamasu energy blades
   {
     name: "dash ground forward zamasu energy blades",
@@ -1165,7 +1178,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 1,
+    distance: 2,
   },
   // ---
   // saga zanzo

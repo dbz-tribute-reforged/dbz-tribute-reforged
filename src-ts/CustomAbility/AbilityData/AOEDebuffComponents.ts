@@ -19,6 +19,7 @@ export module Debuffs {
   export const MILKY_CANNON = FourCC("A0PU");
   export const DRAGON_THUNDER = FourCC("A0QT");
   export const SPIRIT_BALL = FourCC("A0SA");
+  export const BLEED_ZAMASU = FourCC("A0I4");
 
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -411,6 +412,19 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 300,
     keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff bleed zamasu",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 1,
+    abilityId: Debuffs.BLEED_ZAMASU,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 425,
+    keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,
     buffId: 0,
