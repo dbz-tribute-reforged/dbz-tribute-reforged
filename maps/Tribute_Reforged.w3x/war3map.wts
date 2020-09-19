@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.52
+DBZ Tribute Reforged 0.52a
 }
 
 STRING 4
@@ -43924,6 +43924,15 @@ STRING 7204
 [|cffffff00C|r] Choose Zamasu
 }
 
+STRING 7205
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool1> seconds|r
+}
+
 STRING 7206
 // Units: E012 (Supreme Kai Apprentice), Tip (Tooltip - Basic)
 {
@@ -43940,13 +43949,15 @@ STRING 7208
 {
 Type "r" to revert.
 Transformations:
-[lvl 30]  1.40x "fp" [unlocks Energy Blades]
-[lvl 50]  1.60x "fp"
-[lvl 90]  1.80x "fp"
+[lvl 15]  1.25x "fp"
+[lvl 30]  1.50x "fp" [unlocks Energy Blades]
+[lvl 50]  1.75x "fp"
+[lvl 90]  2.00x "fp"
 [lvl 150] 2.20x "god" [unlocks Zamasu's Immortality]
 [lvl 200] 2.40x "god" 
+[lvl 250] 2.50x "god"
 
-|cffff25aaZamasu's Immortality|r: +100% HP regen
+|cffff25aaZamasu's Immortality|r: +150% HP regen
 }
 
 STRING 7209
@@ -48889,6 +48900,96 @@ STRING 8029
 // Units: n046 (Ginyu Force / Frieza), Name (Name)
 {
 Ginyu Force / Frieza
+}
+
+STRING 8030
+// Abilities: A0SS (God Slash), Researchubertip (Tooltip - Learn - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool1> seconds|r
+}
+
+STRING 8031
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool2> seconds|r
+}
+
+STRING 8032
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool3> seconds|r
+}
+
+STRING 8033
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool4> seconds|r
+}
+
+STRING 8034
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool5> seconds|r
+}
+
+STRING 8035
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool6> seconds|r
+}
+
+STRING 8036
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool7> seconds|r
+}
+
+STRING 8037
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool8> seconds|r
+}
+
+STRING 8038
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool9> seconds|r
+}
+
+STRING 8039
+// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Zamasu swiftly slashes nearby enemies.
+|cffffff00Inflicts bleed, causing subsequent spells to deal +30% damage.
+|cff00ff00Damage: Agi x Lvl x ?|r
+|cff00ffffCooldown: <A0SS,Cool10> seconds|r
 }
 
 STRING 8055
@@ -55024,7 +55125,7 @@ Type "r" to revert.
 Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 75]  2.00x "ult" [Unlocks Ultimate Burning Warrior]
-[lvl 150] 2.40x "ult" 
+[lvl 150] 2.30x "ult" 
 [lvl 200] 2.60x "ult" [Upgrades Meditate at 2+ charges]
 [lvl 250] 2.70x "ult" 
 [lvl 300] 2.75x "ult" [Upgrades UBW at 2+ charges]
@@ -64750,7 +64851,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 12.September.20
+This map is under active development - 20.September.20
 }
 
 STRING 10653
@@ -95860,26 +95961,10 @@ STRING 15506
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 1|r]
 }
 
-STRING 15507
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool1> seconds|r
-}
-
 STRING 15508
 // Abilities: A0SS (God Slash), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn God Slash - [|cffffcc00Level %d|r]
-}
-
-STRING 15509
-// Abilities: A0SS (God Slash), Researchubertip (Tooltip - Learn - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool1> seconds|r
 }
 
 STRING 15510
@@ -95904,22 +95989,6 @@ STRING 15513
 // Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 3|r]
-}
-
-STRING 15514
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool2> seconds|r
-}
-
-STRING 15515
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool3> seconds|r
 }
 
 STRING 15516
@@ -95958,66 +96027,10 @@ STRING 15521
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 9|r]
 }
 
-STRING 15522
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool4> seconds|r
-}
-
-STRING 15523
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool5> seconds|r
-}
-
-STRING 15524
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool6> seconds|r
-}
-
-STRING 15525
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool7> seconds|r
-}
-
-STRING 15526
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool8> seconds|r
-}
-
-STRING 15527
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool9> seconds|r
-}
-
 STRING 15528
 // Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 10|r]
-}
-
-STRING 15529
-// Abilities: A0SS (God Slash), Ubertip (Tooltip - Normal - Extended)
-{
-Zamasu swiftly slashes nearby enemies.
-|cff00ff00Damage: Lvl x Agi x ?|r
-|cff00ffffCooldown: <A0SS,Cool10> seconds|r
 }
 
 STRING 15530
