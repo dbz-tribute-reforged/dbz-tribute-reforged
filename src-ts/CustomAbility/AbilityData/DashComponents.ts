@@ -944,7 +944,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 32,
   },
   // california smash
   {
@@ -957,7 +957,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 35,
+    distance: 32,
   },
   // new hampshire smash
   {
@@ -970,7 +970,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 40,
+    distance: 35,
   },
   // ----------------------------
   // cell-x

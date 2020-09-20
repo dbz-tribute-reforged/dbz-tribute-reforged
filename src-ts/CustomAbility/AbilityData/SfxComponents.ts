@@ -7703,8 +7703,8 @@ export const SfxComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
-    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -14352,7 +14352,7 @@ export const SfxComponents = [
       },
       {
         model: "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
-        repeatInterval: 20,
+        repeatInterval: 50,
         group: 0,
         scale: 0.75,
         startHeight: 100,
@@ -14370,7 +14370,7 @@ export const SfxComponents = [
       },
       {
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
-        repeatInterval: 33,
+        repeatInterval: 50,
         group: 0,
         scale: 0.75,
         startHeight: 0,

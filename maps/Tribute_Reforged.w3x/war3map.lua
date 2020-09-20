@@ -27133,6 +27133,9 @@ function Trig_Metal_Cooler_Stat_Mult_On_Kill_Conditions()
     if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
         return false
     end
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
     if (not (GetUnitTypeId(GetKillingUnitBJ()) == FourCC("H01A"))) then
         return false
     end
@@ -27795,7 +27798,7 @@ function Trig_Transformations_Metal_Cooler_Actions()
     if (Trig_Transformations_Metal_Cooler_Func011C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_TempReal = (udg_StatMultInt - 2.00)
-        udg_StatMultReal = (udg_TempReal * 500.00)
+        udg_StatMultReal = (udg_TempReal * 400.00)
         TriggerExecute(gg_trg_Add_To_Base_Stats)
         TriggerExecute(gg_trg_Add_To_PvP_Stats_Data)
         udg_StatMultReal = (2.00 + (udg_TempReal * 0.50))
@@ -33439,13 +33442,6 @@ function Trig_Transformations_All_Might_Func015Func001C()
     return true
 end
 
-function Trig_Transformations_All_Might_Func015Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0T0"), udg_StatMultUnit) == 0)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_All_Might_Func015C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
         return false
@@ -33461,7 +33457,7 @@ function Trig_Transformations_All_Might_Func016Func001C()
 end
 
 function Trig_Transformations_All_Might_Func016C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 100)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 90)) then
         return false
     end
     return true
@@ -33469,6 +33465,13 @@ end
 
 function Trig_Transformations_All_Might_Func017Func001C()
     if (not (udg_TransformationString == "might")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_All_Might_Func017Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0T0"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
@@ -33574,11 +33577,8 @@ function Trig_Transformations_All_Might_Actions()
             udg_TransformationSFXString = "AuraWhite.mdx"
         else
         end
-        if (Trig_Transformations_All_Might_Func015Func002C()) then
-            UnitAddAbilityBJ(FourCC("A0T0"), udg_StatMultUnit)
-                        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0T0'))
-        else
-        end
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0T5"), udg_TransformationPlayer)
+        SetUnitAbilityLevelSwapped(FourCC("A0T5"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0SY"), udg_StatMultUnit))
     else
     end
     if (Trig_Transformations_All_Might_Func016C()) then
@@ -33588,8 +33588,8 @@ function Trig_Transformations_All_Might_Actions()
             udg_TransformationSFXString = "AuraWhite.mdx"
         else
         end
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0T5"), udg_TransformationPlayer)
-        SetUnitAbilityLevelSwapped(FourCC("A0T5"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0SY"), udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0T6"), udg_TransformationPlayer)
+        SetUnitAbilityLevelSwapped(FourCC("A0T6"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0SZ"), udg_StatMultUnit))
     else
     end
     if (Trig_Transformations_All_Might_Func017C()) then
@@ -33599,8 +33599,11 @@ function Trig_Transformations_All_Might_Actions()
             udg_TransformationSFXString = "AuraWhite.mdx"
         else
         end
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0T6"), udg_TransformationPlayer)
-        SetUnitAbilityLevelSwapped(FourCC("A0T6"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0SZ"), udg_StatMultUnit))
+        if (Trig_Transformations_All_Might_Func017Func002C()) then
+            UnitAddAbilityBJ(FourCC("A0T0"), udg_StatMultUnit)
+                        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0T0'))
+        else
+        end
     else
     end
     if (Trig_Transformations_All_Might_Func018C()) then
