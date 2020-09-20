@@ -64769,7 +64769,7 @@ Metal Cooler gains stat multiplier from kills and deaths up to a max of 2.50x. (
 [kill] +0.10x (+0.03x)
 [death] +0.02x (+0.01x)
 
-Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 5 bonus stats per 0.01x traded in. Stops at lvl 250.
+Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 4 bonus stats per 0.01x traded in. Stops at lvl 250.
 }
 
 STRING 10611
