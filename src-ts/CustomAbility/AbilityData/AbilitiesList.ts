@@ -3507,6 +3507,277 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.AllMight.DETROIT_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightDetroitSmash.blp",
+      disabled: "BTNAllMightDetroitSmash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.AllMight.DETROIT_SMASH,
+      body: 
+        AbilityNames.AllMight.DETROIT_SMASH,
+    },
+    components: [
+      { name: "multi detroit smash" },
+      { name: "beam detroit smash" },
+      { name: "dash ground forward all might right smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.LEFT_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightLeftSmash.blp",
+      disabled: "BTNAllMightLeftSmash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.AllMight.LEFT_SMASH,
+      body: 
+        AbilityNames.AllMight.LEFT_SMASH,
+    },
+    components: [
+      { name: "multi all might left smash" },
+      { name: "dash ground forward all might left smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.RIGHT_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightRightSmash.blp",
+      disabled: "BTNAllMightRightSmash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.AllMight.RIGHT_SMASH,
+      body: 
+        AbilityNames.AllMight.RIGHT_SMASH,
+    },
+    components: [
+      { name: "multi all might right smash" },
+      { name: "dash ground forward all might right smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.UNITED_STATES_OF_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightUnitedStatesOfSmash.blp",
+      disabled: "BTNAllMightUnitedStatesOfSmash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.UNITED_STATES_OF_SMASH,
+      body: 
+        AbilityNames.AllMight.UNITED_STATES_OF_SMASH,
+    },
+    components: [
+      { name: "dash ground point united states of smash" },
+      { name: "damage united states of smash dps" },
+      { name: "damage united states of smash explosion inner" },
+      { name: "damage united states of smash explosion outer" },
+      { name: "debuff stun united states of smash" },
+      { name: "beam united states of smash" },
+      { name: "knockback united states of smash" },
+      { name: "sfx united states of smash" },
+      { name: "sfx united states of smash explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.ONE_FOR_ALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightOneForAll.blp",
+      disabled: "BTNAllMightOneForAll.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.ONE_FOR_ALL,
+      body: 
+        AbilityNames.AllMight.ONE_FOR_ALL
+    },
+    components: [
+      { name: "dash ground forward one for all" },
+      { name: "block one for all" },
+      { name: "multi one for all 1" },
+      { name: "multi one for all 2" },
+      { name: "multi one for all 3" },
+      { name: "multi one for all 4" },
+      { name: "multi one for all 5" },
+      { name: "sfx one for all" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.OKLAHOMA_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 85,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightOklahomaSmash.blp",
+      disabled: "BTNAllMightOklahomaSmash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.OKLAHOMA_SMASH,
+      body: 
+        AbilityNames.AllMight.OKLAHOMA_SMASH
+    },
+    components: [
+      { name: "dash ground forward oklahoma smash" },
+      { name: "damage oklahoma smash dps" },
+      { name: "damage oklahoma smash release dps" },
+      { name: "knockback oklahoma smash" },
+      { name: "knockback oklahoma smash release" },
+      { name: "sfx oklahoma smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.CAROLINA_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightCarolinaSmash.blp",
+      disabled: "BTNAllMightCarolinaSmash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.CAROLINA_SMASH,
+      body: 
+        AbilityNames.AllMight.CAROLINA_SMASH
+    },
+    components: [
+      { name: "dash ground point carolina smash" },
+      { name: "damage carolina smash explosion" },
+      { name: "debuff stun carolina smash" },
+      { name: "sfx carolina smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.CALIFORNIA_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightCaliforniaSmash.blp",
+      disabled: "BTNAllMightCaliforniaSmash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.CALIFORNIA_SMASH,
+      body: 
+        AbilityNames.AllMight.CALIFORNIA_SMASH
+    },
+    components: [
+      { name: "dash ground point california smash" },
+      { name: "damage california smash dps" },
+      { name: "damage california smash explosion" },
+      { name: "debuff stun california smash" },
+      { name: "jump california smash" },
+      { name: "sfx california smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAllMightNewHampshireSmash.blp",
+      disabled: "BTNAllMightNewHampshireSmash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH,
+      body: 
+        AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH
+    },
+    components: [
+      { name: "dash ground point new hampshire smash pushback" },
+      { name: "damage new hampshire smash explosion" },
+      { name: "knockback new hampshire smash" },
+      { name: "debuff stun new hampshire smash" },
+      { name: "jump new hamphsire smash" },
+      { name: "sfx new hampshire smash" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

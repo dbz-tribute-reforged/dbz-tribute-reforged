@@ -210,6 +210,18 @@ export module AbilityNames {
     export const ULTIMATE_INSTINCT: string = "Ultimate Instinct";
   }
 
+  export module AllMight {
+    export const DETROIT_SMASH: string = "Detroit Smash";
+    export const LEFT_SMASH: string = "Left Smash";
+    export const RIGHT_SMASH: string = "Right Smash";
+    export const UNITED_STATES_OF_SMASH: string = "United States of Smash";
+    export const ONE_FOR_ALL: string = "One For All";
+    export const OKLAHOMA_SMASH: string = "Oklahoma Smash";
+    export const CAROLINA_SMASH: string = "Carolina Smash";
+    export const CALIFORNIA_SMASH: string = "California Smash";
+    export const NEW_HAMPSHIRE_SMASH: string = "New Hampshire Smash";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

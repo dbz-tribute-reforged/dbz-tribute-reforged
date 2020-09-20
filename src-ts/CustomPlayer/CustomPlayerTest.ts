@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants } from "Common/Constants";
+import { Constants, Id } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -176,24 +176,24 @@ export function CustomPlayerTest() {
 
   
 
-  // update mouse positions for now
-  // might be a bit laggy?
-  const updatePlayerMouseData = CreateTrigger();
-	for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-    TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
-	}
-	TriggerAddAction(updatePlayerMouseData, () => {
-    const player = GetTriggerPlayer();
-    const playerId = GetPlayerId(player);
-    if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
-      const x = BlzGetTriggerPlayerMouseX();
-      const y = BlzGetTriggerPlayerMouseY();
-      if (x != 0 && y != 0) {
-        customPlayers[playerId].mouseData.x = x;
-        customPlayers[playerId].mouseData.y = y;
-      }
-    }
-  });
+  // // update mouse positions for now
+  // // might be a bit laggy?
+  // const updatePlayerMouseData = CreateTrigger();
+	// for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  //   TriggerRegisterPlayerMouseEventBJ(updatePlayerMouseData, Player(i), bj_MOUSEEVENTTYPE_MOVE);
+	// }
+	// TriggerAddAction(updatePlayerMouseData, () => {
+  //   const player = GetTriggerPlayer();
+  //   const playerId = GetPlayerId(player);
+  //   if (GetPlayerSlotState(player) == PLAYER_SLOT_STATE_PLAYING) {
+  //     const x = BlzGetTriggerPlayerMouseX();
+  //     const y = BlzGetTriggerPlayerMouseY();
+  //     if (x != 0 && y != 0) {
+  //       customPlayers[playerId].mouseData.x = x;
+  //       customPlayers[playerId].mouseData.y = y;
+  //     }
+  //   }
+  // });
 
 
   const updatePlayerOrderPoint = CreateTrigger();
@@ -2030,273 +2030,6 @@ export function SetupSpellSoundEffects() {
   }));
 }
 
-export module Id {
-  export const summonShenron = FourCC("I01V");
-
-  export const android13 = FourCC("H01V");
-  export const android14 = FourCC("H01S");
-  export const android15 = FourCC("H01T");
-  export const superAndroid13 = FourCC("H01U");
-  export const android13EnergyBeam = FourCC("A00N");
-  export const ssDeadlyBomber = FourCC("A0LD");
-  export const ssDeadlyHammer = FourCC("A0LC");
-  export const android13Nuke = FourCC("A01Y");
-  export const android13Overcharge = FourCC("A0K2");
-
-  export const android17dbs = FourCC("H08Z");
-  export const powerBlitz = FourCC("A09O");
-  export const powerBlitzBarrage = FourCC("A0MW");
-  export const androidBarrier = FourCC("A0LB");
-  export const superElectricStrike = FourCC("A0MV");
-
-  export const babidi = FourCC("O001");
-  export const haretsu = FourCC("A02E");
-  export const babidiBarrier = FourCC("A0LG");
-  export const babidiMagic = FourCC("A0JQ");
-  export const babidiDabura = FourCC("A03E");
-
-  export const bardock = FourCC("H08M");
-  export const tyrantBreaker = FourCC("A0OX");
-  export const tyrantLancer = FourCC("A0LO");
-  export const riotJavelin = FourCC("A0LP");
-  export const rebellionSpear = FourCC("A0LQ");
-  export const saiyanSpirit = FourCC("A0LR");
-
-  export const broly = FourCC("H00M");
-  export const energyPunch = FourCC("A0G8");
-  export const powerLevelRising = FourCC("A00J");
-  export const planetCrusher = FourCC("A0BZ");
-  export const giganticRoar = FourCC("A084");
-  export const giganticOmegastorm = FourCC("A0H6");
-
-  export const fatBuu = FourCC("O005");
-  export const superBuu = FourCC("O006");
-  export const kidBuu = FourCC("O00C");
-  export const candyBeam = FourCC("A0EI");
-  export const fleshAttack = FourCC("A01C");
-  export const innocenceBreath = FourCC("A0LH");
-  export const angryExplosion = FourCC("A0ER")
-  export const vanishingBall = FourCC("A0C0");
-  export const mankindDestructionAttack = FourCC("A01D");
-
-  export const cellFirst = FourCC("H00E");
-  export const cellSemi = FourCC("H00F");
-  export const cellPerfect = FourCC("H00G");
-  export const cellSBC = FourCC("A0C9");
-  export const cellMasenko = FourCC("A0GD");
-  export const cellAbsorb1 = FourCC("A029");
-  export const cellAbsorb2 = FourCC("A0JU");
-  export const cellAbsorb3 = FourCC("A0LA");
-  export const cellJuniors = FourCC("A01Z");
-  export const cellSolarKame = FourCC("A0O9");
-  export const cellXForm = FourCC("A00D");
-
-  export const dyspo = FourCC("H09H");
-  export const lightBullet = FourCC("A0QY");
-  export const justiceKick = FourCC("A0QZ");
-  export const justiceKick2 = FourCC("A0R3");
-  export const justiceCannon = FourCC("A0QX");
-  export const justiceCannon2 = FourCC("A0R4");
-  export const circleFlash = FourCC("A0R0");
-  export const circleFlash2 = FourCC("A0R5");
-  export const justicePoseDyspo = FourCC("A0R2");
-  export const superMaximumLightSpeedMode = FourCC("A0R1");
-
-  export const metalCooler = FourCC("H01A");
-  export const fourthCooler = FourCC("H042");
-  export const fifthCooler = FourCC("H043");
-  export const deathBeamCooler = FourCC("A06C");
-  export const supernovaCooler = FourCC("A0C1");
-  export const goldenSupernova = FourCC("A0L2");
-  export const novaChariot = FourCC("A0KY");
-  export const deafeningWave = FourCC("A06N");
-  export const getiStarRepair = FourCC("A063");
-
-  // eis shenron
-  export const eisShenron = FourCC("H09B");
-  export const frostClaws = FourCC("A0P1");
-  export const iceSlash = FourCC("A0P2");
-  export const absoluteZero = FourCC("A0P3");
-  export const iceCannon = FourCC("A0P4");
-
-  export const farmerWithShotgun = FourCC("H08S");
-
-  export const frieza = FourCC("H06X");
-  export const deathBeamFrieza = FourCC("A0PZ");
-  export const deathCannon = FourCC("A0Q0");
-  export const novaStrike = FourCC("A0Q1");
-  export const supernovaFrieza = FourCC("A0Q2");
-  export const emperorsThrone = FourCC("A0Q3");
-  export const deathStorm = FourCC("A0Q4");
-  export const impalingRush = FourCC("A0Q5");
-  export const deathBeamBarrage = FourCC("A0Q6");
-  export const novaRush = FourCC("A0Q7");
-  export const deathBall = FourCC("A0Q8");
-  export const supernovaFrieza2 = FourCC("A0Q9");
-  export const tailWhip = FourCC("A0QA");
-  export const lastEmperor = FourCC("A0QB");
-  export const deathSaucer = FourCC("A0QC");
-  export const deathBeamGolden = FourCC("A0QD");
-  export const deathCannonGolden = FourCC("A0QE");
-  export const novaRushGolden = FourCC("A0QF");
-  export const earthBreaker = FourCC("A0QG");
-  export const cageOfLight = FourCC("A0QH");
-
-  export const ft = FourCC("H009");
-  export const ftss = FourCC("A0KT");
-  export const finishBuster = FourCC("A02L");
-  export const heatDomeAttack = FourCC("A0NL");
-  export const burningAttack = FourCC("A03I");
-  export const blazingRush = FourCC("A0LE");
-  export const shiningSwordAttack = FourCC("A0LF");
-
-  export const ginyu = FourCC("H09E");
-  export const milkyCannon = FourCC("A0PP");
-  export const galaxyDynamite = FourCC("A0PQ");
-  export const ginyuTelekinesis = FourCC("A0PR");
-  export const ginyuPoseUltimate = FourCC("A0PS");
-  export const ginyuPoseFighting = FourCC("A0PT");
-  export const ginyuChangeNow = FourCC("A0PO");
-
-  export const goku = FourCC("H000");
-  export const kamehameha = FourCC("A00R");
-  export const dragonFist = FourCC("A00U");
-  export const superDragonFist = FourCC("A0P0");
-  export const solarFlare = FourCC("A0KO");
-
-  export const gohan = FourCC("H00K");
-  export const unlockPotential = FourCC("A0L6");
-  export const greatSaiyamanHasArrived = FourCC("A0L7");
-  export const potentialUnleashed = FourCC("A0L8");
-  export const masenko = FourCC("A0H8");
-  export const twinDragonShot = FourCC("A0IS");
-  export const superDragonFlight = FourCC("A0L5");
-
-  export const guldo = FourCC("H09J");
-  export const psychoJavelin = FourCC("A0SC");
-  export const psychicRockThrow = FourCC("A0SD");
-  export const guldoTelekinesis = FourCC("A0SE");
-  export const guldoTimeStop = FourCC("A0SF");
-  export const ginyuPoseGuldo = FourCC("A0SG");
-
-  export const janemba = FourCC("H062");
-  export const demonRush = FourCC("A0O1");
-  export const rakshasaClaw = FourCC("A0NY");
-  export const devilClaw = FourCC("A0NZ");
-  export const bunkaiTeleport = FourCC("A0O2");
-  export const demonicBlade = FourCC("A0OA");
-  export const cosmicIllusion = FourCC("A0EU");
-  export const hellsGate = FourCC("A0O3");
-  export const lightningShowerRain = FourCC("A0O4");
-
-  export const jiren = FourCC("E01P");
-  export const powerImpact = FourCC("A0K9");
-  export const powerImpact2 = FourCC("A0SI");
-  export const mightyPunch = FourCC("A0K8");
-  export const mightyPunch2 = FourCC("A0SJ");
-  export const followUp = FourCC("A0KB");
-  export const glare = FourCC("A0K6");
-  export const glare2 = FourCC("A0SK");
-  export const heatwave = FourCC("A0K7");
-  export const heatwave2 = FourCC("A0SL");
-  export const meditate = FourCC("A0KD");
-  export const meditate2 = FourCC("A0SM");
-  export const ultimateBurningWarrior = FourCC("A0KC");
-  export const ultimateBurningWarrior2 = FourCC("A0SN");
-
-  export const krillin = FourCC("H03Y");
-  export const scatteringBullet = FourCC("A0R9");
-  export const destructoDisc = FourCC("A0RA");
-  export const senzuThrow = FourCC("A0RB");
-
-  export const kkr = FourCC("E01D");
-  export const bellyArmor = FourCC("A0OT");
-  export const krownToss = FourCC("A0IV");
-  export const kharge = FourCC("A0IW");
-  export const kannonblast = FourCC("A0OW");
-  export const monkeySmasher = FourCC("A0IX");
-  export const blasto = FourCC("A0OU");
-  export const kingsThrone = FourCC("A0OV");
-
-  export const raditz = FourCC("H08U");
-  export const doubleSunday = FourCC("A0ME");
-  export const saturdayCrash = FourCC("A0MF");
-  export const behindYou = FourCC("A0MG");
-  export const doubleSundae = FourCC("A0MH");
-
-  export const roshi = FourCC("E001");
-  export const roshiKameCharge = FourCC("A0FG");
-  export const roshiKameFire = FourCC("A0JE");
-  export const roshiKameCharge2 = FourCC("A0SO");
-  export const roshiKameFire2 = FourCC("A0SP");
-  export const roshiLightningSurprise = FourCC("A0IE");
-  export const roshiNewTrick = FourCC("A0KU");
-  export const roshiMaxPower = FourCC("A0FH");
-
-  export const nappa = FourCC("H08W");
-  export const giantStorm = FourCC("A0MI");
-  export const blazingStorm = FourCC("A0MJ");
-  export const plantSaibamen = FourCC("A0MK");
-  export const breakCannon = FourCC("A0ML");
-
-  export const omegaShenron = FourCC("H09F");
-  export const dragonFlashBullet = FourCC("A0QJ");
-  export const negativeEnergyBall = FourCC("A0QK");
-  export const shadowFist = FourCC("A0QL");
-  export const dragonicRage = FourCC("A0QM");
-  export const omegaIceCannon = FourCC("A0QP");
-  export const omegaNovaStar = FourCC("A0QQ");
-  export const omegaDragonThunder = FourCC("A0QR");
-
-  export const pan = FourCC("H08P");
-  export const honeyBeeCostume = FourCC("A0LY");
-  export const panKame = FourCC("A0LX");
-  export const maidenBlast = FourCC("A0LU");
-  export const reliableFriend = FourCC("A0LV");
-  export const summonGiru = FourCC("A0LW");
-
-  export const piccolo = FourCC("H00R");
-  export const kyodaika = FourCC("A04Y");
-  export const piccoloSBC = FourCC("A06F");
-  export const piccoloCloneSBC = FourCC("A0ES");
-  export const slappyHand = FourCC("A0C8");
-  export const hellzoneGrenade = FourCC("A0LM");
-
-  export const tapion = FourCC("E014");
-  export const shiningSword = FourCC("A0IC");
-  export const herosFlute = FourCC("A0IB");
-
-  export const toppo = FourCC("H09C");
-  export const justiceFlash = FourCC("A0PB");
-  export const justiceFlash2 = FourCC("A0PI");
-  export const justicePunch = FourCC("A0PD");
-  export const justicePunch2 = FourCC("A0PK");
-  export const justiceTornado = FourCC("A0PJ");
-  export const justiceTornado2 = FourCC("A0PL");
-  export const justiceHold = FourCC("A0PE");
-  export const justiceHold2 = FourCC("A0PM");
-  export const justicePoseToppo = FourCC("A0PF");
-
-  export const upa = FourCC("H099");
-  export const javelinThrow = FourCC("A0OH");
-  export const whirlwindTempest = FourCC("A0OI");
-  export const korinFlag = FourCC("A0OJ");
-  export const lastStand = FourCC("A0OK");
-
-  export const vegeta = FourCC("E003");
-  export const galickGun = FourCC("A03N");
-  export const bigBangAttack = FourCC("A0GO");
-  export const finalFlash = FourCC("A01B");
-  export const finalFlash2 = FourCC("A0L4");
-  export const energyBlastVolley = FourCC("A0L3");
-  export const angryShout = FourCC("A0LS");
-
-  export const videl = FourCC("H085");
-  export const punch = FourCC("A073");
-  export const kick = FourCC("A071");
-  export const flyingKick = FourCC("A0JW");
-}
-
 export function playUnitSpellSound(unit: unit, spellId: number) {
   const unitId = GetUnitTypeId(unit);
   let rng = Math.random() * 100;
@@ -2334,6 +2067,74 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
         }
       }
       break;
+    
+    // all might
+    case Id.detroitSmash:
+      if (unitId == Id.allMight) {
+        if (rng < 85) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/DetroitSmash.mp3", 4205);
+        } else if (rng < 95) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/TimeToDie.mp3", 1802);
+        } else if (rng < 100) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/PlusUltra.mp3", 7758);
+        }
+      }
+      break;
+
+    case Id.leftSmash:
+    case Id.rightSmash:
+      if (unitId == Id.allMight) {
+        if (rng < 15) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/Smash.mp3", 1854);
+        } else if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/Grunt.mp3", 2011);
+        }
+      }
+      break;
+    
+    case Id.unitedStatesOfSmash:
+      if (unitId == Id.allMight) {
+        playSoundOnUnit(unit, "Audio/Voice/AllMight/UnitedStatesOfSmash.mp3", 6791);
+      }
+      break;
+    
+    case Id.oneForAll:
+      if (unitId == Id.allMight) {
+        if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/IAmHere.mp3", 3526);
+        } else if (rng < 10) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/IAmHere2.mp3", 5224);
+        } else if (rng < 25) {
+          playSoundOnUnit(unit, "Audio/Voice/AllMight/PlusUltra.mp3", 7758);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/OneForAll.mp3", 5302);
+      break;
+    
+    case Id.oklahomaSmash:
+      if (unitId == Id.allMight) {
+        playSoundOnUnit(unit, "Audio/Voice/AllMight/OklahomaSmash.mp3", 4466);
+      }
+      break;
+    
+    case Id.carolinaSmash:
+      if (unitId == Id.allMight) {
+        playSoundOnUnit(unit, "Audio/Voice/AllMight/CarolinaSmash.mp3", 3604);
+      }
+      break;
+    
+    case Id.californiaSmash:
+      if (unitId == Id.allMight) {
+        playSoundOnUnit(unit, "Audio/Voice/AllMight/CaliforniaSmash.mp3", 5172);
+      }
+      break;
+    
+    case Id.newHampshireSmash:
+      if (unitId == Id.allMight) {
+        playSoundOnUnit(unit, "Audio/Voice/AllMight/NewHampshireSmash.mp3", 3970);
+      }
+      break;
+
     // android 13
     case Id.android13EnergyBeam:
       if (unitId == Id.android13) {

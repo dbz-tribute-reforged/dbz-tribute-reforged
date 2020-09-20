@@ -21,7 +21,11 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    if (this.currentBonus < this.bonus) {
+    if (
+      (this.currentBonus > 0 && this.currentBonus < this.bonus)
+      ||
+      (this.currentBonus < 0 && this.currentBonus > this.bonus)
+    ) {
       let addedSpellPower = this.rate;
       if (this.currentBonus + addedSpellPower > this.bonus) {
         addedSpellPower = this.bonus - this.currentBonus;
