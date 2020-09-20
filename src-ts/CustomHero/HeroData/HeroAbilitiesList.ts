@@ -257,6 +257,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Roshi.ULTIMATE_INSTINCT,
     ]],
 
+    // all might
+    [FourCC("H09K"), [
+      AbilityNames.AllMight.DETROIT_SMASH,
+      AbilityNames.AllMight.LEFT_SMASH,
+      AbilityNames.AllMight.RIGHT_SMASH,
+      AbilityNames.AllMight.UNITED_STATES_OF_SMASH,
+      AbilityNames.AllMight.ONE_FOR_ALL,
+      AbilityNames.AllMight.OKLAHOMA_SMASH,
+      AbilityNames.AllMight.CAROLINA_SMASH,
+      AbilityNames.AllMight.CALIFORNIA_SMASH,
+      AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH,
+    ]],
 
     // androids 13 14 15
     [FourCC("H01V"), [
@@ -322,6 +334,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jiren.POWER_IMPACT, AbilityNames.Jiren.POWER_IMPACT_2, AbilityNames.Jiren.MEDITATE, AbilityNames.Jiren.MEDITATE_2,
       AbilityNames.Toppo.JUSTICE_FLASH, AbilityNames.Toppo.JUSTICE_FLASH_2, AbilityNames.Toppo.GOD_OF_DESTRUCTION,
       AbilityNames.Dyspo.LIGHT_BULLET, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
+      AbilityNames.AllMight.DETROIT_SMASH, AbilityNames.AllMight.ONE_FOR_ALL,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

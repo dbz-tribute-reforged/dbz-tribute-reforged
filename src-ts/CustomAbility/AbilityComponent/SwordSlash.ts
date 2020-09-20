@@ -38,7 +38,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   }
 
   private getMouseCoordWithinRange(input: CustomAbilityInput) {
-    let targetCoord = input.mouseData;
+    let targetCoord = input.targetPoint;
     const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
     const casterDistance = CoordMath.distance(casterCoord, targetCoord);
 
