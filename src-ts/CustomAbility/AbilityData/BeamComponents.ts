@@ -2290,8 +2290,8 @@ export const BeamComponents = [
     durationIncPerDelay: 12,
     turnSpeed: 3,
     heightVariation: {
-      start: -1,
-      finish: 0,
+      start: 50,
+      finish: 50,
       scaling: 0,
     },
     isTracking: false,

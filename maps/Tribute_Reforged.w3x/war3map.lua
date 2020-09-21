@@ -211,6 +211,7 @@ udg_RoshiKameUnitGroup = nil
 udg_RoshiNewTrickUnitGroup = nil
 udg_AllMightUnitedStatesOfSmash = nil
 udg_AllMightLeftRightSmash = nil
+udg_HostPlayer = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -500,6 +501,8 @@ gg_trg_Final_Battle_Tagger = nil
 gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
 gg_trg_Team_System_Init = nil
 gg_trg_Update_Alliances_for_PlayerGroups = nil
+gg_trg_Update_Host = nil
+gg_trg_Is_Player_New_Host = nil
 gg_trg_Swap_Command = nil
 gg_trg_Swap_Teams_for_SwapPlayer = nil
 gg_trg_Enable_TK_Copy = nil
@@ -746,6 +749,8 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Omega_Shenron_Spellbook_CD = nil
+gg_trg_All_Might_Spellbook_CD = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1036,6 +1041,7 @@ function InitGlobals()
     udg_RoshiNewTrickUnitGroup = CreateGroup()
     udg_AllMightUnitedStatesOfSmash = CreateGroup()
     udg_AllMightLeftRightSmash = CreateGroup()
+    udg_HostPlayer = Player(0)
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -7057,6 +7063,70 @@ function InitTrig_Frieza_Emperors_Throne()
     TriggerAddAction(gg_trg_Frieza_Emperors_Throne, Trig_Frieza_Emperors_Throne_Actions)
 end
 
+function Trig_Omega_Shenron_Spellbook_CD_Func005C()
+    if (GetSpellAbilityId() == FourCC("A0QQ")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0QP")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0QR")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Omega_Shenron_Spellbook_CD_Conditions()
+    if (not Trig_Omega_Shenron_Spellbook_CD_Func005C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Omega_Shenron_Spellbook_CD_Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0QP"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Omega_Shenron_Spellbook_CD_Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0QQ"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Omega_Shenron_Spellbook_CD_Func004C()
+    if (not (GetSpellAbilityId() == FourCC("A0QR"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Omega_Shenron_Spellbook_CD_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    if (Trig_Omega_Shenron_Spellbook_CD_Func002C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0QP"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+    if (Trig_Omega_Shenron_Spellbook_CD_Func003C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0QQ"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+    if (Trig_Omega_Shenron_Spellbook_CD_Func004C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0QR"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+end
+
+function InitTrig_Omega_Shenron_Spellbook_CD()
+    gg_trg_Omega_Shenron_Spellbook_CD = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Omega_Shenron_Spellbook_CD, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Omega_Shenron_Spellbook_CD, Condition(Trig_Omega_Shenron_Spellbook_CD_Conditions))
+    TriggerAddAction(gg_trg_Omega_Shenron_Spellbook_CD, Trig_Omega_Shenron_Spellbook_CD_Actions)
+end
+
 function Trig_Dyspo_Light_Bullet_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0QY"))) then
         return false
@@ -9764,6 +9834,84 @@ function InitTrig_All_Might_Left_Right_Smash_Loop()
     TriggerAddAction(gg_trg_All_Might_Left_Right_Smash_Loop, Trig_All_Might_Left_Right_Smash_Loop_Actions)
 end
 
+function Trig_All_Might_Spellbook_CD_Func006C()
+    if (GetSpellAbilityId() == FourCC("A0T3")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0T4")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0T5")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0T6")) then
+        return true
+    end
+    return false
+end
+
+function Trig_All_Might_Spellbook_CD_Conditions()
+    if (not Trig_All_Might_Spellbook_CD_Func006C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_All_Might_Spellbook_CD_Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0T3"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_All_Might_Spellbook_CD_Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0T4"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_All_Might_Spellbook_CD_Func004C()
+    if (not (GetSpellAbilityId() == FourCC("A0T5"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_All_Might_Spellbook_CD_Func005C()
+    if (not (GetSpellAbilityId() == FourCC("A0T6"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_All_Might_Spellbook_CD_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    if (Trig_All_Might_Spellbook_CD_Func002C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0T3"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+    if (Trig_All_Might_Spellbook_CD_Func003C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0T4"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+    if (Trig_All_Might_Spellbook_CD_Func004C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0T5"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+    if (Trig_All_Might_Spellbook_CD_Func005C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0T6"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
+    end
+end
+
+function InitTrig_All_Might_Spellbook_CD()
+    gg_trg_All_Might_Spellbook_CD = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_All_Might_Spellbook_CD, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_All_Might_Spellbook_CD, Condition(Trig_All_Might_Spellbook_CD_Conditions))
+    TriggerAddAction(gg_trg_All_Might_Spellbook_CD, Trig_All_Might_Spellbook_CD_Actions)
+end
+
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
     if (GetSpellAbilityId() == FourCC("A00U")) then
         return true
@@ -10347,35 +10495,51 @@ function InitTrig_Play_Ability_Spell_Audio_2()
     TriggerAddAction(gg_trg_Play_Ability_Spell_Audio_2, Trig_Play_Ability_Spell_Audio_2_Actions)
 end
 
-function Trig_Freemode_Func003C()
+function Trig_Freemode_Func001Func004C()
     if (not (udg_IsFreeMode == true)) then
         return false
     end
     return true
 end
 
+function Trig_Freemode_Func001C()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Freemode_Actions()
-    udg_TeamAboutToLose[0] = false
-    udg_TeamAboutToLose[1] = false
-    if (Trig_Freemode_Func003C()) then
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10998")
-        udg_IsFreeMode = false
-        EnableTrigger(gg_trg_Force_Win_Loss)
+    if (Trig_Freemode_Func001C()) then
+        udg_TeamAboutToLose[0] = false
+        udg_TeamAboutToLose[1] = false
+        if (Trig_Freemode_Func001Func004C()) then
+            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_8053")
+            udg_IsFreeMode = false
+            EnableTrigger(gg_trg_Force_Win_Loss)
+        else
+            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9466")
+            udg_IsFreeMode = true
+            DisableTrigger(gg_trg_Force_Win_Loss)
+        end
     else
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_9973")
-        udg_IsFreeMode = true
-        DisableTrigger(gg_trg_Force_Win_Loss)
     end
 end
 
 function InitTrig_Freemode()
     gg_trg_Freemode = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Freemode, Player(0), "-freemode", true)
     TriggerAddAction(gg_trg_Freemode, Trig_Freemode_Actions)
 end
 
-function Trig_Lights_toggle_Func001C()
+function Trig_Lights_toggle_Func001Func002C()
     if (not (udg_IsAOEFlyingVision == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Lights_toggle_Func001C()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
         return false
     end
     return true
@@ -10383,17 +10547,19 @@ end
 
 function Trig_Lights_toggle_Actions()
     if (Trig_Lights_toggle_Func001C()) then
-        udg_IsAOEFlyingVision = false
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10653")
+        if (Trig_Lights_toggle_Func001Func002C()) then
+            udg_IsAOEFlyingVision = false
+            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10653")
+        else
+            udg_IsAOEFlyingVision = true
+            DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10654")
+        end
     else
-        udg_IsAOEFlyingVision = true
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10654")
     end
 end
 
 function InitTrig_Lights_toggle()
     gg_trg_Lights_toggle = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, Player(0), "-lights", true)
     TriggerAddAction(gg_trg_Lights_toggle, Trig_Lights_toggle_Actions)
 end
 
@@ -14545,8 +14711,6 @@ function Trig_Hints_Init_Actions()
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "If your agility is greater than your strength, your dash abilities (e.g Zanzo Dash) will have higher speed."
     udg_NumHints = (udg_NumHints + 1)
-    udg_HintMessages[udg_NumHints] = "You can revert an enemy player who has gone Oozaru by cutting off their tail. The tail can only be damaged from behind."
-    udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Press 'X' to Guard, greatly reducing incoming damage! Use it when you can't dodge an attack."
     udg_NumHints = (udg_NumHints + 1)
     udg_HintMessages[udg_NumHints] = "Press 'C' to temporarily increase the damage of your spells!"
@@ -14592,50 +14756,59 @@ function InitTrig_Generic_Hint_Show()
     TriggerAddAction(gg_trg_Generic_Hint_Show, Trig_Generic_Hint_Show_Actions)
 end
 
-function Trig_Catchup_Input_Func002C()
+function Trig_Catchup_Input_Func001Func002C()
     if (not (StringLength(GetEventPlayerChatString()) > 14)) then
         return false
     end
     return true
 end
 
-function Trig_Catchup_Input_Func003C()
+function Trig_Catchup_Input_Func001Func003C()
     if (not (udg_IsCatchupStatsActivated == false)) then
         return false
     end
     return true
 end
 
-function Trig_Catchup_Input_Actions()
-    if (Trig_Catchup_Input_Func002C()) then
-        udg_TempReal = (I2R(S2I(SubStringBJ(GetEventPlayerChatString(), 10, 12))) * 0.01)
-        udg_TempReal = RMinBJ(1.50, RMaxBJ(0.01, udg_TempReal))
-        udg_CatchupThreshold = udg_TempReal
-        udg_TempReal = (I2R(S2I(SubStringBJ(GetEventPlayerChatString(), 14, 16))) * 0.01)
-        udg_TempReal = RMinBJ(1.50, RMaxBJ(0.01, udg_TempReal))
-        udg_CatchupIncrement = udg_TempReal
-        udg_IsCatchupSettingsAutomatic = false
-    else
-        udg_CatchupThreshold = 0.70
-        udg_CatchupIncrement = 0.50
-        udg_IsCatchupSettingsAutomatic = false
+function Trig_Catchup_Input_Func001C()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
+        return false
     end
-    if (Trig_Catchup_Input_Func003C()) then
-        TriggerExecute(gg_trg_Catchup_Turn_On)
+    return true
+end
+
+function Trig_Catchup_Input_Actions()
+    if (Trig_Catchup_Input_Func001C()) then
+        if (Trig_Catchup_Input_Func001Func002C()) then
+            udg_TempReal = (I2R(S2I(SubStringBJ(GetEventPlayerChatString(), 10, 12))) * 0.01)
+            udg_TempReal = RMinBJ(1.50, RMaxBJ(0.01, udg_TempReal))
+            udg_CatchupThreshold = udg_TempReal
+            udg_TempReal = (I2R(S2I(SubStringBJ(GetEventPlayerChatString(), 14, 16))) * 0.01)
+            udg_TempReal = RMinBJ(1.50, RMaxBJ(0.01, udg_TempReal))
+            udg_CatchupIncrement = udg_TempReal
+            udg_IsCatchupSettingsAutomatic = false
+        else
+            udg_CatchupThreshold = 0.70
+            udg_CatchupIncrement = 0.50
+            udg_IsCatchupSettingsAutomatic = false
+        end
+        if (Trig_Catchup_Input_Func001Func003C()) then
+            TriggerExecute(gg_trg_Catchup_Turn_On)
+        else
+            TriggerExecute(gg_trg_Catchup_Turn_Off)
+        end
     else
-        TriggerExecute(gg_trg_Catchup_Turn_Off)
     end
 end
 
 function InitTrig_Catchup_Input()
     gg_trg_Catchup_Input = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Catchup_Input, Player(0), "-catchup", false)
     TriggerAddAction(gg_trg_Catchup_Input, Trig_Catchup_Input_Actions)
 end
 
 function Trig_Catchup_Turn_On_Actions()
     udg_IsCatchupStatsActivated = true
-    udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
+    udg_TempPlayerGroup = GetForceOfPlayer(udg_HostPlayer)
     DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_6319")
         DestroyForce(udg_TempPlayerGroup)
     EnableTrigger(gg_trg_Catchup_Timer)
@@ -14648,7 +14821,7 @@ end
 
 function Trig_Catchup_Turn_Off_Actions()
     udg_IsCatchupStatsActivated = false
-    udg_TempPlayerGroup = GetForceOfPlayer(Player(0))
+    udg_TempPlayerGroup = GetForceOfPlayer(udg_HostPlayer)
     DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_11184")
         DestroyForce(udg_TempPlayerGroup)
     DisableTrigger(gg_trg_Catchup_Timer)
@@ -16497,8 +16670,18 @@ function Trig_Team_System_Init_Actions()
         ForceAddPlayerSimple(ConvertedPlayer(udg_TempInt), udg_TeamsPlayerGroup[1])
         udg_TempInt = udg_TempInt + 1
     end
+    udg_TempInt = 1
+    while (true) do
+        if (udg_TempInt > udg_MaxNumPlayers) then break end
+        TriggerRegisterPlayerChatEvent(gg_trg_Swap_Command, ConvertedPlayer(udg_TempInt), "-swap", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_Freemode, ConvertedPlayer(udg_TempInt), "-freemode", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_Lights_toggle, ConvertedPlayer(udg_TempInt), "-lights", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_Catchup_Input, ConvertedPlayer(udg_TempInt), "-catchup", false)
+        udg_TempInt = udg_TempInt + 1
+    end
     udg_TeamAboutToLose[0] = false
     udg_TeamAboutToLose[1] = false
+    TriggerExecute(gg_trg_Update_Host)
     TriggerExecute(gg_trg_Update_Alliances_for_PlayerGroups)
 end
 
@@ -16538,52 +16721,247 @@ function InitTrig_Update_Alliances_for_PlayerGroups()
     TriggerAddAction(gg_trg_Update_Alliances_for_PlayerGroups, Trig_Update_Alliances_for_PlayerGroups_Actions)
 end
 
-function Trig_Swap_Command_Func005Func001C()
+function Trig_Update_Host_Conditions()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func013C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func014C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func015C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func016C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func017C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func018C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func019C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func020C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func021C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func022C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Func023C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Actions()
+    udg_TempBool = false
+    if (Trig_Update_Host_Func013C()) then
+        udg_TempInt = 1
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func014C()) then
+        udg_TempInt = 6
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func015C()) then
+        udg_TempInt = 2
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func016C()) then
+        udg_TempInt = 7
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func017C()) then
+        udg_TempInt = 3
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func018C()) then
+        udg_TempInt = 8
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func019C()) then
+        udg_TempInt = 4
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func020C()) then
+        udg_TempInt = 9
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func021C()) then
+        udg_TempInt = 5
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func022C()) then
+        udg_TempInt = 10
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Func023C()) then
+        udg_HostPlayer = udg_TempPlayer
+        DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (udg_OriginalPlayerNames[udg_TempInt] .. "|r|cffff6020 is now the new host.")))
+    else
+    end
+end
+
+function InitTrig_Update_Host()
+    gg_trg_Update_Host = CreateTrigger()
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(0))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(1))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(2))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(3))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(4))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(5))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(6))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(7))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(8))
+    TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(9))
+    TriggerAddCondition(gg_trg_Update_Host, Condition(Trig_Update_Host_Conditions))
+    TriggerAddAction(gg_trg_Update_Host, Trig_Update_Host_Actions)
+end
+
+function Trig_Is_Player_New_Host_Func003C()
+    if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
+        return false
+    end
+    if (not (GetPlayerSlotState(udg_TempPlayer) == PLAYER_SLOT_STATE_PLAYING)) then
+        return false
+    end
+    if (not (udg_HostPlayer ~= udg_TempPlayer)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Is_Player_New_Host_Actions()
+    udg_TempBool = false
+    udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+    if (Trig_Is_Player_New_Host_Func003C()) then
+        udg_TempBool = true
+    else
+    end
+end
+
+function InitTrig_Is_Player_New_Host()
+    gg_trg_Is_Player_New_Host = CreateTrigger()
+    TriggerAddAction(gg_trg_Is_Player_New_Host, Trig_Is_Player_New_Host_Actions)
+end
+
+function Trig_Swap_Command_Func001Func006Func001C()
     if (not (IsPlayerInForce(udg_SwapPlayer, udg_TeamsPlayerGroup[1]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Swap_Command_Func005C()
+function Trig_Swap_Command_Func001Func006C()
     if (not (IsPlayerInForce(udg_SwapPlayer, udg_TeamsPlayerGroup[0]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Swap_Command_Func006C()
+function Trig_Swap_Command_Func001Func007C()
     if (not ((udg_TempInt + udg_TempInt2) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Swap_Command_Actions()
-    udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
-    udg_SwapPlayer = ConvertedPlayer(udg_TempInt)
-    udg_TempInt = 0
-    udg_TempInt2 = 0
-    if (Trig_Swap_Command_Func005C()) then
-        udg_TempInt = 0
-        udg_TempInt2 = 1
-    else
-        if (Trig_Swap_Command_Func005Func001C()) then
-            udg_TempInt = 1
-            udg_TempInt2 = 0
-        else
-        end
+function Trig_Swap_Command_Func001C()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
+        return false
     end
-    if (Trig_Swap_Command_Func006C()) then
-        TriggerExecute(gg_trg_Swap_Teams_for_SwapPlayer)
+    return true
+end
+
+function Trig_Swap_Command_Actions()
+    if (Trig_Swap_Command_Func001C()) then
+        udg_TempInt = S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
+        udg_SwapPlayer = ConvertedPlayer(udg_TempInt)
+        udg_TempInt = 0
+        udg_TempInt2 = 0
+        if (Trig_Swap_Command_Func001Func006C()) then
+            udg_TempInt = 0
+            udg_TempInt2 = 1
+        else
+            if (Trig_Swap_Command_Func001Func006Func001C()) then
+                udg_TempInt = 1
+                udg_TempInt2 = 0
+            else
+            end
+        end
+        if (Trig_Swap_Command_Func001Func007C()) then
+            TriggerExecute(gg_trg_Swap_Teams_for_SwapPlayer)
+        else
+            DisplayTextToForce(GetPlayersAll(), ("Cannot swap invalid player: " .. GetPlayerName(udg_SwapPlayer)))
+        end
     else
-        DisplayTextToForce(GetPlayersAll(), ("Cannot swap invalid player: " .. GetPlayerName(udg_SwapPlayer)))
     end
 end
 
 function InitTrig_Swap_Command()
     gg_trg_Swap_Command = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Swap_Command, Player(0), "-swap", false)
     TriggerAddAction(gg_trg_Swap_Command, Trig_Swap_Command_Actions)
 end
 
@@ -19773,10 +20151,10 @@ function Trig_All_Might_One_For_All_Actions()
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_StatMultReal = (udg_StatMultStr + 0.50)
-    udg_StatMultStr = (udg_StatMultStr + 0.50)
-    udg_StatMultAgi = (udg_StatMultAgi + 0.50)
-    udg_StatMultInt = (udg_StatMultInt + 0.50)
+    udg_StatMultReal = (udg_StatMultStr + 0.40)
+    udg_StatMultStr = (udg_StatMultStr + 0.40)
+    udg_StatMultAgi = (udg_StatMultAgi + 0.40)
+    udg_StatMultInt = (udg_StatMultInt + 0.40)
     udg_TransformationSFXString = "AuraUI3.mdx"
     TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
     if (Trig_All_Might_One_For_All_Func014C()) then
@@ -34904,6 +35282,7 @@ function InitCustomTriggers()
     InitTrig_Frieza_Earth_Breaker()
     InitTrig_Frieza_Last_Emperor()
     InitTrig_Frieza_Emperors_Throne()
+    InitTrig_Omega_Shenron_Spellbook_CD()
     InitTrig_Dyspo_Light_Bullet()
     InitTrig_Dyspo_Justice_Pose_Cast()
     InitTrig_Dyspo_Super_Max_Cast()
@@ -34942,6 +35321,7 @@ function InitCustomTriggers()
     InitTrig_All_Might_United_States_of_Smash_Loop()
     InitTrig_All_Might_Left_Right_Smash_CD()
     InitTrig_All_Might_Left_Right_Smash_Loop()
+    InitTrig_All_Might_Spellbook_CD()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
@@ -35043,6 +35423,8 @@ function InitCustomTriggers()
     InitTrig_Final_Battle_Tagger()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
+    InitTrig_Update_Host()
+    InitTrig_Is_Player_New_Host()
     InitTrig_Swap_Command()
     InitTrig_Swap_Teams_for_SwapPlayer()
     InitTrig_Enable_TK_Copy()
