@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.53a
+DBZ Tribute Reforged 0.53b
 }
 
 STRING 4
@@ -38484,7 +38484,7 @@ F
 
 STRING 6319
 {
-|cff00ffff[Only red sees this] Catchup Stats Activated|r
+|cff00ffff[Only host sees this] Catchup Stats Activated|r
 }
 
 STRING 6320
@@ -49091,17 +49091,9 @@ STRING 8052
 (Tavern All MightCape)
 }
 
-STRING 8054
-// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+STRING 8053
 {
-All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
-|cffffff00+0.5x stat mult.
-+33ms and unlocks movement speed cap.
-15% damage block up to 3x STR.
-Heals 10% of max HP.
-Deals constant AOE damage around All Might.
-|cff00FF00Duration: <A0T0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+Freemode Disabled, forced win/loss conditions are enabled.
 }
 
 STRING 8055
@@ -57795,6 +57787,11 @@ STRING 9465
 Hero's Song
 }
 
+STRING 9466
+{
+Freemode Enabled, forced win/loss conditions are disabled.
+}
+
 STRING 9467
 // Buffs/Effects: B01I (), Bufftip (Tooltip)
 {
@@ -60827,11 +60824,6 @@ STRING 9972
 // Abilities: A0L2 (Supernova Golden), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
-}
-
-STRING 9973
-{
-Freemode Enabled, forced win/loss conditions are disabled.
 }
 
 STRING 9974
@@ -67153,11 +67145,6 @@ STRING 10997
 Single player detected. Automatic Freemode Enabled, forced win/loss conditions are disabled.
 }
 
-STRING 10998
-{
-Freemode Disabled, forced win/loss conditions are enabled.
-}
-
 STRING 10999
 // Items: I01H (|cffffcc00Budokai Tournament Trophy|r), Name (Name)
 {
@@ -68272,7 +68259,7 @@ STRING 11183
 
 STRING 11184
 {
-|cff00ffff[Only red sees this] Catchup Stats Deactivated|r
+|cff00ffff[Only host sees this] Catchup Stats Deactivated|r
 }
 
 STRING 11185
@@ -69377,6 +69364,19 @@ STRING 11368
 [|cff00FF00Q|r] Detroit Smash - [|cffffcc00Level 10|r]
 }
 
+STRING 11369
+// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
+|cffffff00+0.4x stat mult.
++33ms and unlocks movement speed cap.
+15% damage block up to 3x STR.
+Heals 10% of max HP.
+Deals constant AOE damage around All Might.
+|cff00FF00Duration: <A0T0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+}
+
 STRING 11370
 // Abilities: A0MN (Saibaman Acid), Hotkey (Hotkey - Normal)
 {
@@ -70258,6 +70258,14 @@ STRING 11516
 [|cff00FF00W|r] Left Smash - [|cffffcc00Level 1|r]
 }
 
+STRING 11517
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool1>s|r
+}
+
 STRING 11518
 // Abilities: A0SY (Left Smash), Researchtip (Tooltip - Learn)
 {
@@ -70670,6 +70678,14 @@ STRING 11586
 // Abilities: A0LS (Angry Shout), EditorSuffix (Editor Suffix)
 {
 (Vegeta / Bardock / Oozaru)
+}
+
+STRING 11587
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 20% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool2>s|r
 }
 
 STRING 11588
@@ -71402,9 +71418,25 @@ STRING 11709
 |cff40ff40Travel to Future|r
 }
 
+STRING 11710
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 30% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool3>s|r
+}
+
 STRING 11711
 {
 |cff40ff40Return to Past|r
+}
+
+STRING 11712
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 40% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool4>s|r
 }
 
 STRING 11713
@@ -82212,10 +82244,26 @@ STRING 13446
 [|cff00FF00R|r] Death Storm - [|cffffcc00Level 1|r]
 }
 
+STRING 13447
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 50% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool5>s|r
+}
+
 STRING 13448
 // Abilities: A0Q4 (Death Storm), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00R|r] Learn Death Storm - [|cffffcc00Level %d|r]
+}
+
+STRING 13449
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 60% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool6>s|r
 }
 
 STRING 13450
@@ -95445,6 +95493,14 @@ STRING 15415
 Zamasu's Fighting Style - [|cffffcc00Level 9|r]
 }
 
+STRING 15416
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 70% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool7>s|r
+}
+
 STRING 15417
 // Abilities: A0I3 (Zamasu's Fighting Style), Tip (Tooltip - Normal)
 {
@@ -95509,6 +95565,14 @@ STRING 15426
 // Abilities: A0SQ (Book Zamasu Passives), Name (Name)
 {
 Book Zamasu Passives
+}
+
+STRING 15427
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 80% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool8>s|r
 }
 
 STRING 15428
@@ -96205,10 +96269,26 @@ STRING 15506
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 1|r]
 }
 
+STRING 15507
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 90% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool9>s|r
+}
+
 STRING 15508
 // Abilities: A0SS (God Slash), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn God Slash - [|cffffcc00Level %d|r]
+}
+
+STRING 15509
+// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Briefly stuns enemies.
+|cff00ff00Damage: Str * Lvl * ? + 100% Max HP|r
+|cff00FFFFCooldown: <A0T6,Cool10>s|r
 }
 
 STRING 15510
@@ -96277,14 +96357,6 @@ STRING 15522
 [|cff00FF00W|r] Left Smash - [|cffffcc00Level 10|r]
 }
 
-STRING 15523
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool1>s|r
-}
-
 STRING 15524
 // Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
@@ -96301,14 +96373,6 @@ STRING 15526
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 1|r]
-}
-
-STRING 15527
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool2>s|r
 }
 
 STRING 15528
@@ -96746,14 +96810,6 @@ STRING 15591
 Zamasu's immortality grants exception health regeneration.
 }
 
-STRING 15592
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool3>s|r
-}
-
 STRING 15593
 // Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
 {
@@ -96776,22 +96832,6 @@ STRING 15596
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 3|r]
-}
-
-STRING 15597
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool4>s|r
-}
-
-STRING 15598
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool5>s|r
 }
 
 STRING 15599
@@ -96828,46 +96868,6 @@ STRING 15604
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 9|r]
-}
-
-STRING 15605
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool6>s|r
-}
-
-STRING 15606
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool7>s|r
-}
-
-STRING 15607
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool8>s|r
-}
-
-STRING 15608
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool9>s|r
-}
-
-STRING 15609
-// Abilities: A0T6 (New Hampshire Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might punches the air behind him while in the air to propel himself backwards towards his enemy, crushing them with his body. Stuns enemies.
-|cff00ff00Damage: Str * Lvl * ? + 10% Max HP|r
-|cff00FFFFCooldown: <A0T6,Cool10>s|r
 }
 
 STRING 15611

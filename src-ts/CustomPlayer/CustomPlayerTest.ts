@@ -20,6 +20,7 @@ import { TournamentData } from "Core/TournamentSystem/TournamentData";
 
 // global?
 export const customPlayers: CustomPlayer[] = [];
+export let hostPlayer: player = Player(0);
 
 export function addAbilityAction(abilityTrigger: trigger, name: string) {
   TriggerAddAction(abilityTrigger, () => {
@@ -790,22 +791,47 @@ export function CustomPlayerTest() {
   });
 
 
+  const hostPlayerTransfer = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerEvent(hostPlayerTransfer, Player(i), EVENT_PLAYER_LEAVE);
+  }
+  TriggerAddAction(hostPlayerTransfer, () => {
+    if (GetTriggerPlayer() == hostPlayer) {
+      for (let i = 0; i < Constants.hostPlayerOrder.length; ++i) {
+        if (
+          IsPlayerSlotState(Player(i), PLAYER_SLOT_STATE_PLAYING) && 
+          GetPlayerController(Player(i)) == MAP_CONTROL_USER && 
+          Player(i) != hostPlayer
+        ) {
+          hostPlayer = Player(i);
+          break;
+        }
+      }
+    }
+  });
+
+
+
   // swap players command
   const swapPlayersCommand = CreateTrigger();
-  TriggerRegisterPlayerChatEvent(swapPlayersCommand, Player(0), "-swap", false);
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(swapPlayersCommand, Player(i), "-swap", false);
+  }
   TriggerAddAction(swapPlayersCommand, () => {
-    const playerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
-    if (playerId >= 0 && playerId < bj_MAX_PLAYERS) {
-      const targetPlayer = Player(playerId);
-      let index = Constants.defaultTeam1.indexOf(targetPlayer);
-      if (index > -1) {
-        Constants.defaultTeam1.splice(index, 1);
-        Constants.defaultTeam2.push(targetPlayer);
-      } else {
-        index = Constants.defaultTeam2.indexOf(targetPlayer);
+    if (GetTriggerPlayer() == hostPlayer) {
+      const playerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
+      if (playerId >= 0 && playerId < bj_MAX_PLAYERS) {
+        const targetPlayer = Player(playerId);
+        let index = Constants.defaultTeam1.indexOf(targetPlayer);
         if (index > -1) {
-          Constants.defaultTeam2.splice(index, 1);
-          Constants.defaultTeam1.push(targetPlayer);
+          Constants.defaultTeam1.splice(index, 1);
+          Constants.defaultTeam2.push(targetPlayer);
+        } else {
+          index = Constants.defaultTeam2.indexOf(targetPlayer);
+          if (index > -1) {
+            Constants.defaultTeam2.splice(index, 1);
+            Constants.defaultTeam1.push(targetPlayer);
+          }
         }
       }
     }
@@ -1056,10 +1082,14 @@ export function CustomPlayerTest() {
   // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
   //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
   // }
-  TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-freemode", true);
-  TriggerRegisterPlayerChatEvent(freeModeTrig, Player(0), "-fbsimtest", true);
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerChatEvent(freeModeTrig, Player(i), "-freemode", true);
+    TriggerRegisterPlayerChatEvent(freeModeTrig, Player(i), "-fbsimtest", true);
+  }
   TriggerAddAction(freeModeTrig, () => {
-    WinLossHelper.freeMode = true;
+    if (GetTriggerPlayer() == hostPlayer) {
+      WinLossHelper.freeMode = true;
+    }
   });
 
   // force final battle

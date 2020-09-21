@@ -5,6 +5,7 @@ import { Constants } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 import { CreepManager } from "Core/CreepSystem/CreepManager";
 import { SagaUpgradeNames } from "Core/CreepSystem/CreepUpgradeConfig";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
 
 export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   name: string = '[Movie] Cooler\'s Revenge';
@@ -110,7 +111,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     this.delay = 30;
     this.stats = 100;
     this.metalCoolers = [];
-    this.revives = 4;
+    this.revives = 3;
   }
 
   spawnSagaUnits(): void {
@@ -130,6 +131,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
     if (mc1 && mc2 && mc3) {
       this.metalCoolers.push(mc1, mc2, mc3);
+      UnitAddItemById(mc1, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
+      UnitAddItemById(mc2, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
+      UnitAddItemById(mc3, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
       SetUnitAcquireRange(mc1, 4000);
       SetUnitAcquireRange(mc2, 4000);
       SetUnitAcquireRange(mc3, 4000);
@@ -140,11 +144,11 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   }
 
   update(t: number): void {
-    super.update(t);
     for (const mc of this.metalCoolers) {
-      if (UnitHelper.isUnitAlive(mc)) {
-        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.006);
-      } else if (this.revives > 0) {
+      if (
+        this.revives > 0 && 
+        SagaHelper.checkUnitHp(mc, 0.4, true, false, false)
+      ) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(
           [],
@@ -152,12 +156,19 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
             "|cffffcc00Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!",
           ], 5, 5
         );
-        ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), true);
-        SetHeroStr(mc, Math.floor(GetHeroStr(mc, true) * 1.25 + 200), true);
-        SetHeroAgi(mc, Math.floor(GetHeroAgi(mc, true) * 1.25 + 150), true);
-        SetHeroInt(mc, Math.floor(GetHeroInt(mc, true) * 1.25 + 200), true);
+        DestroyEffect(
+          AddSpecialEffectTarget("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", mc, "origin")
+        );
+        SetUnitState(mc, UNIT_STATE_LIFE, GetUnitState(mc, UNIT_STATE_MAX_LIFE));
+        SetHeroStr(mc, Math.floor(Math.floor(GetHeroStr(mc, true) * 1.2) + 200), true);
+        SetHeroAgi(mc, Math.floor(Math.floor(GetHeroAgi(mc, true) * 1.2) + 150), true);
+        SetHeroInt(mc, Math.floor(Math.floor(GetHeroInt(mc, true) * 1.2) + 200), true);
+      } 
+      else if (UnitHelper.isUnitAlive(mc)) {
+        SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.006);
       }
     }
+    super.update(t);
   }
 
   canStart(): boolean {

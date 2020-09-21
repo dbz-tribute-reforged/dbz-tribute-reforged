@@ -58,6 +58,7 @@ export module Constants {
   export const beamSpawnOffset: number = 40;
   export const gameStartIndicatorUnit: number = FourCC("hkni");
   export const silenceBuff: number = FourCC("BNsi");
+  export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 }
   
 export module Id {
