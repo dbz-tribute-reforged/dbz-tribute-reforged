@@ -347,6 +347,7 @@ gg_trg_Ginyu_Pose_Ultimate_CD = nil
 gg_trg_Frieza_Earth_Breaker = nil
 gg_trg_Frieza_Last_Emperor = nil
 gg_trg_Frieza_Emperors_Throne = nil
+gg_trg_Omega_Shenron_Spellbook_CD = nil
 gg_trg_Dyspo_Light_Bullet = nil
 gg_trg_Dyspo_Justice_Pose_Cast = nil
 gg_trg_Dyspo_Super_Max_Cast = nil
@@ -385,6 +386,7 @@ gg_trg_All_Might_United_States_of_Smash = nil
 gg_trg_All_Might_United_States_of_Smash_Loop = nil
 gg_trg_All_Might_Left_Right_Smash_CD = nil
 gg_trg_All_Might_Left_Right_Smash_Loop = nil
+gg_trg_All_Might_Spellbook_CD = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -749,8 +751,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Omega_Shenron_Spellbook_CD = nil
-gg_trg_All_Might_Spellbook_CD = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2435,7 +2435,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7940.1, 26822.7, 32.297, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17833.2, 27596.8, 138.235, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 2756.9, -1327.9, 191.706, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18637.6, 16588.5, 281.718, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18566.1, 16361.8, 281.718, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 24190.0, -4339.6, 36.399, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 30716.4, -5718.7, 317.985, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 30853.1, -5601.6, 224.249, FourCC("n01E"))
@@ -16721,145 +16721,151 @@ function InitTrig_Update_Alliances_for_PlayerGroups()
     TriggerAddAction(gg_trg_Update_Alliances_for_PlayerGroups, Trig_Update_Alliances_for_PlayerGroups_Actions)
 end
 
-function Trig_Update_Host_Conditions()
-    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func013C()
+function Trig_Update_Host_Func001Func002C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func014C()
+function Trig_Update_Host_Func001Func003C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func015C()
+function Trig_Update_Host_Func001Func004C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func016C()
+function Trig_Update_Host_Func001Func005C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func017C()
+function Trig_Update_Host_Func001Func006C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func018C()
+function Trig_Update_Host_Func001Func007C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func019C()
+function Trig_Update_Host_Func001Func008C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func020C()
+function Trig_Update_Host_Func001Func009C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func021C()
+function Trig_Update_Host_Func001Func010C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func022C()
+function Trig_Update_Host_Func001Func011C()
     if (not (udg_TempBool == false)) then
         return false
     end
     return true
 end
 
-function Trig_Update_Host_Func023C()
+function Trig_Update_Host_Func001Func012C()
     if (not (udg_TempBool == true)) then
         return false
     end
     return true
 end
 
+function Trig_Update_Host_Func001C()
+    if (not (GetTriggerPlayer() == udg_HostPlayer)) then
+        return false
+    end
+    if (not (GetPlayerController(GetTriggerPlayer()) == MAP_CONTROL_USER)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Update_Host_Actions()
-    udg_TempBool = false
-    if (Trig_Update_Host_Func013C()) then
-        udg_TempInt = 1
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func014C()) then
-        udg_TempInt = 6
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func015C()) then
-        udg_TempInt = 2
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func016C()) then
-        udg_TempInt = 7
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func017C()) then
-        udg_TempInt = 3
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func018C()) then
-        udg_TempInt = 8
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func019C()) then
-        udg_TempInt = 4
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func020C()) then
-        udg_TempInt = 9
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func021C()) then
-        udg_TempInt = 5
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func022C()) then
-        udg_TempInt = 10
-        TriggerExecute(gg_trg_Is_Player_New_Host)
-    else
-    end
-    if (Trig_Update_Host_Func023C()) then
-        udg_HostPlayer = udg_TempPlayer
-        DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (udg_OriginalPlayerNames[udg_TempInt] .. "|r|cffff6020 is now the new host.")))
+    if (Trig_Update_Host_Func001C()) then
+        udg_TempBool = false
+        if (Trig_Update_Host_Func001Func002C()) then
+            udg_TempInt = 1
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func003C()) then
+            udg_TempInt = 6
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func004C()) then
+            udg_TempInt = 2
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func005C()) then
+            udg_TempInt = 7
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func006C()) then
+            udg_TempInt = 3
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func007C()) then
+            udg_TempInt = 8
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func008C()) then
+            udg_TempInt = 4
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func009C()) then
+            udg_TempInt = 9
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func010C()) then
+            udg_TempInt = 5
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func011C()) then
+            udg_TempInt = 10
+            TriggerExecute(gg_trg_Is_Player_New_Host)
+        else
+        end
+        if (Trig_Update_Host_Func001Func012C()) then
+            udg_HostPlayer = udg_TempPlayer
+            DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (udg_OriginalPlayerNames[udg_TempInt] .. "|r|cffff6020 is now the new host.")))
+        else
+        end
     else
     end
 end
@@ -16876,7 +16882,6 @@ function InitTrig_Update_Host()
     TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(7))
     TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(8))
     TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(9))
-    TriggerAddCondition(gg_trg_Update_Host, Condition(Trig_Update_Host_Conditions))
     TriggerAddAction(gg_trg_Update_Host, Trig_Update_Host_Actions)
 end
 
@@ -17042,7 +17047,7 @@ function InitTrig_Update_MS()
     TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func001C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func001C()
     if (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I009")) == true) then
         return true
     end
@@ -17052,22 +17057,29 @@ function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func001C()
     return false
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func002Func001C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func002Func001C()
     if (not (UnitHasBuffBJ(udg_TempUnit, FourCC("B02T")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func002C()
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func002C()
     if (not (UnitHasBuffBJ(udg_TempUnit, FourCC("B031")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002C()
-    if (not Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func001C()) then
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001C()
+    if (not Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001C()
+    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04H")) == true)) then
         return false
     end
     return true
@@ -17086,15 +17098,19 @@ function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
     if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003C()) then
         udg_TempReal2 = 50.00
     else
-        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002C()) then
-            udg_TempReal2 = 30.00
+        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001C()) then
+            udg_TempReal2 = 40.00
         else
-            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func002C()) then
-                udg_TempReal2 = 25.00
+            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001C()) then
+                udg_TempReal2 = 30.00
             else
-                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func002Func002Func001C()) then
-                    udg_TempReal2 = 20.00
+                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func002C()) then
+                    udg_TempReal2 = 25.00
                 else
+                    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func003Func001Func001Func002Func001C()) then
+                        udg_TempReal2 = 20.00
+                    else
+                    end
                 end
             end
         end
@@ -17486,7 +17502,7 @@ function Trig_Hero_Respawn_To_Earth_Actions()
         SaveIntegerBJ(1, 1, udg_ID, udg_HeroRespawnHashtable)
         udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_HeroRespawnUnit))
                 SetUnitPosition(udg_HeroRespawnUnit, GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
-        udg_TempReal = RMinBJ(140.00, (30.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.60)))
+        udg_TempReal = RMinBJ(140.00, (35.00 + (I2R(GetHeroLevel(udg_HeroRespawnUnit)) * 0.50)))
         SaveRealBJ(udg_TempReal, 0, udg_ID, udg_HeroRespawnHashtable)
         SaveIntegerBJ(0, 3, udg_ID, udg_HeroRespawnHashtable)
                 udg_TempLoc = Location(GetUnitX(udg_RevivePointUnit[udg_TempInt]), GetUnitY(udg_RevivePointUnit[udg_TempInt]))
@@ -32283,7 +32299,7 @@ function Trig_Frieza_Transformation_Loop_Func001A()
     if (Trig_Frieza_Transformation_Loop_Func001Func008C()) then
         BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QD")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.03) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.03))) + 1000))
         BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QE")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.06) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.06))) + 1000))
-        BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QF")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.08) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.10))) + 1000))
+        BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QF")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.08) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.08))) + 1000))
         if (Trig_Frieza_Transformation_Loop_Func001Func008Func004C()) then
             SetUnitManaBJ(udg_StatMultUnit, RMaxBJ(1.00, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) - 20.00) - (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * (0.22 * 0.01)))))
             if (Trig_Frieza_Transformation_Loop_Func001Func008Func004Func005C()) then
@@ -32293,7 +32309,7 @@ function Trig_Frieza_Transformation_Loop_Func001A()
             end
         else
             SetUnitManaBJ(udg_StatMultUnit, RMaxBJ(1.00, ((GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) - 10.00) - (GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * (0.17 * 0.01)))))
-            BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QH")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.20) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.25))) + 1000))
+            BlzSetAbilityIntegerLevelFieldBJ(BlzGetUnitAbility(udg_StatMultUnit, FourCC("A0QH")), ABILITY_ILF_MANA_COST, 9, (R2I(((GetUnitStateSwap(UNIT_STATE_MAX_MANA, udg_StatMultUnit) * 0.17) + (GetUnitStateSwap(UNIT_STATE_MANA, udg_StatMultUnit) * 0.20))) + 1000))
             if (Trig_Frieza_Transformation_Loop_Func001Func008Func004Func003C()) then
                 SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
                 TriggerExecute(gg_trg_Frieza_Transform_Add_Abilities)
