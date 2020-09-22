@@ -22,6 +22,35 @@ import { TournamentData } from "Core/TournamentSystem/TournamentData";
 export const customPlayers: CustomPlayer[] = [];
 export let hostPlayer: player = Player(0);
 
+export function setupHostPlayerTransfer() {
+  const hostPlayerTransfer = CreateTrigger();
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
+    TriggerRegisterPlayerEventLeave(hostPlayerTransfer, Player(i));
+  }
+  TriggerAddAction(hostPlayerTransfer, () => {
+    if (
+      GetTriggerPlayer() == hostPlayer && 
+      GetPlayerController(GetTriggerPlayer()) == MAP_CONTROL_USER
+    ) {
+      for (let i = 0; i < Constants.hostPlayerOrder.length; ++i) {
+        if (
+          IsPlayerSlotState(Player(i), PLAYER_SLOT_STATE_PLAYING) && 
+          GetPlayerController(Player(i)) == MAP_CONTROL_USER && 
+          Player(i) != hostPlayer
+        ) {
+          hostPlayer = Player(i);
+          DisplayTimedTextToForce(
+            bj_FORCE_ALL_PLAYERS, 
+            15, 
+            "Player " + (i+1).toString() + " is now the host"
+          );
+          break;
+        }
+      }
+    }
+  });
+}
+
 export function addAbilityAction(abilityTrigger: trigger, name: string) {
   TriggerAddAction(abilityTrigger, () => {
     const player = GetTriggerPlayer();
@@ -789,27 +818,6 @@ export function CustomPlayerTest() {
       ClearTextMessages();
     }
   });
-
-
-  const hostPlayerTransfer = CreateTrigger();
-  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
-    TriggerRegisterPlayerEvent(hostPlayerTransfer, Player(i), EVENT_PLAYER_LEAVE);
-  }
-  TriggerAddAction(hostPlayerTransfer, () => {
-    if (GetTriggerPlayer() == hostPlayer) {
-      for (let i = 0; i < Constants.hostPlayerOrder.length; ++i) {
-        if (
-          IsPlayerSlotState(Player(i), PLAYER_SLOT_STATE_PLAYING) && 
-          GetPlayerController(Player(i)) == MAP_CONTROL_USER && 
-          Player(i) != hostPlayer
-        ) {
-          hostPlayer = Player(i);
-          break;
-        }
-      }
-    }
-  });
-
 
 
   // swap players command

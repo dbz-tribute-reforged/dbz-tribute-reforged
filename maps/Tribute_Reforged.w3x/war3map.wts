@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.53b
+DBZ Tribute Reforged 0.53c
 }
 
 STRING 4
@@ -49096,6 +49096,14 @@ STRING 8053
 Freemode Disabled, forced win/loss conditions are enabled.
 }
 
+STRING 8054
+// Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
+{
+|cffffff00Take this ticket to the Hyberbolic Time Chamber to receive +2/2/2 level up stats for the rest of the game.|r
+
+|cffff2020Holding this item reduces movement speed by 40.
+}
+
 STRING 8055
 // Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
@@ -53150,16 +53158,6 @@ STRING 8718
 // Abilities: A0IE (Lightning Surprise), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Lightning Surprise - [|cffffcc00Level %d|r]
-}
-
-STRING 8719
-// Abilities: A0IE (Lightning Surprise), Researchubertip (Tooltip - Learn - Extended)
-{
-Roshi kicks nearby units into the air, disabling them and dealing damage.
-|cffff2020Channel Duration: <A0IE,Dur1>s|r
-|cff00FF00Base DMG:|r Lvl * Int * ?
-|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
-|cff00FFFFCD:|r <A0IE,Cool1>s
 }
 
 STRING 8720
@@ -60826,10 +60824,14 @@ STRING 9972
 [|cff00ff00W|r] Golden Supernova - [|cffffcc00Level 4|r]
 }
 
-STRING 9974
-// Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
+STRING 9973
+// Abilities: A0IE (Lightning Surprise), Researchubertip (Tooltip - Learn - Extended)
 {
-|cffffff00Take this ticket to the Hyberbolic Time Chamber to receive +2/2/2 level up stats for the rest of the game.|r
+Roshi kicks nearby units into the air, disabling them and dealing damage.
+|cffff2020Channel Duration: <A0IE,Dur1>s|r
+|cff00FF00Base DMG:|r Lvl * Int * ?
+|cffFFFF00Pure DMG:|r Not Yet Implemented [burns 10% (20% max power form) of target's mana]
+|cff00FFFFCD:|r <A0IE,Cool1> - <A0IE,Cool10>s
 }
 
 STRING 9975
