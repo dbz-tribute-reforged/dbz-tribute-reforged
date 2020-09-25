@@ -137,6 +137,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        animSpeed: number;
         color: {
           x: number,
           y: number,
@@ -155,6 +156,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        animSpeed: number;
         color: {
           x: number,
           y: number,

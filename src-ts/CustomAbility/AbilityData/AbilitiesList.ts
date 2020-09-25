@@ -6684,9 +6684,9 @@ export const AbilitiesList = [
         AbilityNames.Zamasu.HEAVENLY_RUSH
     },
     components: [
+      { name: "dash ground point 45dist" },
       { name: "damage heavenly rush bonus explosion" },
       { name: "damage heavenly rush explosion" },
-      { name: "dash ground point 45dist" },
       { name: "sfx heavenly rush" },
     ],
   },
@@ -6714,6 +6714,199 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward zamasu energy blades" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.OCTOSLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 80,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothQ.blp",
+      disabled: "BTNSephirothQ.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Sephiroth.OCTOSLASH,
+      body: 
+        AbilityNames.Sephiroth.OCTOSLASH,
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi octoslash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.HELLS_GATE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothW.blp",
+      disabled: "BTNSephirothW.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.HELLS_GATE,
+      body: 
+        AbilityNames.Sephiroth.HELLS_GATE
+    },
+    components: [
+      { name: "dash ground point 20dist" },
+      { name: "damage hells gate sephiroth explosion inner" },
+      { name: "damage hells gate sephiroth explosion outer" },
+      { name: "jump hells gate sephiroth" },
+      { name: "sfx hells gate sephiroth" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.FERVENT_BLOW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothE.blp",
+      disabled: "BTNSephirothE.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.FERVENT_BLOW,
+      body: 
+        AbilityNames.Sephiroth.FERVENT_BLOW
+    },
+    components: [
+      { name: "beam fervent blow"},
+      { name: "temp ability fervent rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.FERVENT_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothE2.blp",
+      disabled: "BTNSephirothE2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.FERVENT_RUSH,
+      body: 
+        AbilityNames.Sephiroth.FERVENT_RUSH
+    },
+    components: [
+      { name: "dash ground point 30dist" },
+      { name: "damage fervent rush explosion" },
+      { name: "damage fervent rush bonus explosion" },
+      { name: "sfx fervent rush" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.BLACK_MATERIA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 130,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothR.blp",
+      disabled: "BTNSephirothR.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.BLACK_MATERIA,
+      body: 
+        AbilityNames.Sephiroth.BLACK_MATERIA
+    },
+    components: [
+      { name: "beam black materia"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 825,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothD.blp",
+      disabled: "BTNSephirothD.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
+      body: 
+        AbilityNames.Sephiroth.ONE_WINGED_ANGEL
+    },
+    components: [
+      { name: "dash ground forward one winged angel" },
+      { name: "spell amp one winged angel" },
+      { name: "sfx one winged angel" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Sephiroth.PARRY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNSephirothF.blp",
+      disabled: "BTNSephirothF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Sephiroth.PARRY,
+      body: 
+        AbilityNames.Sephiroth.PARRY
+    },
+    components: [
+      { name: "block sephiroth parry" },
     ],
   },
   // -------------------------------------------

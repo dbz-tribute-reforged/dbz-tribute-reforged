@@ -409,6 +409,15 @@ export module AbilityNames {
     export const ENERGY_BLADES = "Guldo Pose";
   }
 
+  export module Sephiroth {
+    export const OCTOSLASH = "Octoslash";
+    export const HELLS_GATE = "Hell's Gate Sephiroth";
+    export const FERVENT_BLOW = "Fervent Blow";
+    export const FERVENT_RUSH = "Fervent Rush";
+    export const BLACK_MATERIA = "Black Materia";
+    export const ONE_WINGED_ANGEL = "One Winged Angel";
+    export const PARRY = "Parry Sephiroth";
+  }
 
 
   export module Saga {

@@ -1284,6 +1284,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
+  // one winged angel
+  {
+    name: "dash ground forward one winged angel",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
+  },
   // ---
   // saga zanzo
   {

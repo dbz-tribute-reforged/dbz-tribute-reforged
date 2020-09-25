@@ -17,6 +17,7 @@ export class SfxData implements Serializable<SfxData> {
     public endHeight: number = 0.0,
     public extraDirectionalYaw: number = 0.0,
     public extraPitch: number = 0.0,
+    public animSpeed: number = 1.0, 
     public color: Vector3D = new Vector3D(255, 255, 255),
     public updateCoordsOnly: boolean = false,
     public persistent: boolean = false,
@@ -40,6 +41,7 @@ export class SfxData implements Serializable<SfxData> {
       this.startHeight, this.endHeight,
       this.extraDirectionalYaw,
       this.extraPitch,
+      this.animSpeed,
       this.color,
       this.updateCoordsOnly,
       this.persistent,
@@ -57,6 +59,7 @@ export class SfxData implements Serializable<SfxData> {
       endHeight: number;
       extraDirectionalYaw: number;
       extraPitch: number;
+      animSpeed: number;
       color: {
         x: number,
         y: number,
@@ -75,6 +78,7 @@ export class SfxData implements Serializable<SfxData> {
     this.endHeight = input.endHeight;
     this.extraDirectionalYaw = input.extraDirectionalYaw;
     this.extraPitch = input.extraPitch;
+    this.animSpeed = input.animSpeed;
     this.color = new Vector3D().deserialize(input.color);
     this.updateCoordsOnly = input.updateCoordsOnly;
     this.persistent = input.persistent;

@@ -175,6 +175,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        animSpeed: number;
         color: {
           x: number,
           y: number,
@@ -193,6 +194,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        animSpeed: number;
         color: {
           x: number,
           y: number,

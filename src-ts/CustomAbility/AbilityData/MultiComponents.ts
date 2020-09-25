@@ -1680,6 +1680,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi octoslash", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 5,
+    angleMin: -5,
+    angleMax: 5,
+    forceMinDistance: 200,
+    forceMaxDistance: 200,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 2,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    useTargetUnitAsSource: false,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "damage octoslash" },
+      { name: "sfx octoslash" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi power blitz barrage saga", 
     repeatInterval: 1, 
     startTick: 0,

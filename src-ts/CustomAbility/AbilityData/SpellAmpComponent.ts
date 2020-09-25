@@ -162,4 +162,13 @@ export const SpellAmpComponents = [
     bonus: 0.5,
     rate: 0.003,
   },
+  // --------------------------------------------
+  { 
+    name: "spell amp one winged angel", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.003,
+    rate: 0.20,
+  },
 ];

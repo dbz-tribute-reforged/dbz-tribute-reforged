@@ -789,8 +789,11 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
     ["Zamasu", new SagaUnit(FourCC("E012"), 110, 14000, 400, 17000, new Vector2D(12000, 28000),
       [
-        SagaAbilities.Saga.GENERIC_BEAM,
-        SagaAbilities.Saga.GENERIC_BOMB
+        SagaAbilities.Zamasu.DIVINE_AUTHORITY,
+        SagaAbilities.Zamasu.HOLY_LIGHT_GRENADE,
+        SagaAbilities.Zamasu.HEAVENLY_RUSH,
+        SagaAbilities.Zamasu.ENERGY_BLADES,
+        SagaAbilities.Zamasu.GOD_SLASH,
       ],
       [
         ItemConstants.SagaDrops.TIME_RING,

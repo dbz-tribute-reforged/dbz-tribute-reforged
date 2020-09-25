@@ -506,5 +506,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Zamasu.ENERGY_BLADES,
     ]],
 
+    // zamasu
+    [FourCC("H09M"), [
+      AbilityNames.Sephiroth.OCTOSLASH,
+      AbilityNames.Sephiroth.HELLS_GATE,
+      AbilityNames.Sephiroth.FERVENT_BLOW,
+      AbilityNames.Sephiroth.FERVENT_RUSH,
+      AbilityNames.Sephiroth.BLACK_MATERIA,
+      AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
+      AbilityNames.Sephiroth.PARRY,
+    ]],
+
   ]
 )

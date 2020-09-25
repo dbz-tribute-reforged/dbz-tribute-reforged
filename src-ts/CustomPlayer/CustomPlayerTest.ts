@@ -3157,6 +3157,51 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       }
       break;
 
+    // sephiroth
+    case Id.sephirothOctoslash:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/Octoslash.mp3", 653);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);
+      break;
+    
+    case Id.hellsGate:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/HellsGate.mp3", 1959);
+      }
+      break;
+    
+    case Id.sephirothFerventBlow:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/FerventBlow.mp3", 1044);
+      }
+      break;
+    
+    case Id.sephirothFerventRush:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/Kill2.mp3", 1332);
+      }
+      break;
+    
+    case Id.sephirothBlackMateria:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/BlackMateria.mp3", 2194);
+      }
+      break;
+    
+    case Id.sephirothOneWingedAngel:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/OneWingedAngel.mp3", 2821);
+      }
+      playSoundOnUnit(unit, "Audio/Effects/PowerUp1.mp3", 11441);
+      break;
+    
+    case Id.sephirothParry:
+      if (unitId == Id.sephiroth) {
+        playSoundOnUnit(unit, "Audio/Voice/Sephiroth/ParryWait.mp3", 731);
+      }
+      break;
+    
     // tapion
     case Id.shiningSword:
       playSoundOnUnit(unit, "Audio/Effects/ShiningSword.mp3", 1488);

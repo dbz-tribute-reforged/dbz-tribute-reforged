@@ -166,5 +166,18 @@ export const TempAbilityComponents = [
     addAbility: false,
     tempPermanence: true,
     equalizeLevels: false,
+  },  {
+    name: "temp ability fervent rush", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("A0TA"),
+    oldAbility: FourCC("A0T9"),
+    performSwap: true,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: false,
+    equalizeLevels: true,
   },
 ];
