@@ -367,4 +367,14 @@ export module Id {
   export const yamchaRSuperSpiritBall = FourCC("A0RI");
   export const yamchaRFullPowerKame = FourCC("A0RJ");
   export const yamchaRWolfFangBlast = FourCC("A0RK");
+  
+
+  export const sephiroth = FourCC("H09M");
+  export const sephirothOctoslash = FourCC("A0T7");
+  export const sephirothHellsGate = FourCC("A0T8");
+  export const sephirothFerventBlow = FourCC("A0T9");
+  export const sephirothFerventRush = FourCC("A0TA");
+  export const sephirothBlackMateria = FourCC("A0TB");
+  export const sephirothOneWingedAngel = FourCC("A0TC");
+  export const sephirothParry = FourCC("A0TD");
 }

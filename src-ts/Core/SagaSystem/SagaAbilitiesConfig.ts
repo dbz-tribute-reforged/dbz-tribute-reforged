@@ -343,6 +343,24 @@ export module SagaAbilities {
     );
   }
 
+  export module Zamasu {
+    export const DIVINE_AUTHORITY = new SagaAbility(
+      AbilityNames.Zamasu.DIVINE_AUTHORITY, 10, 15, 20, MEDIUM_CAST_TIME
+    );
+    export const HOLY_LIGHT_GRENADE = new SagaAbility(
+      AbilityNames.Zamasu.HOLY_LIGHT_GRENADE, 10, 30, 5, EXTRA_LONG_CAST_TIME
+    );
+    export const HEAVENLY_RUSH = new SagaAbility(
+      AbilityNames.Zamasu.HEAVENLY_RUSH, 10, 40, 5, LONG_CAST_TIME
+    );
+    export const GOD_SLASH = new SagaAbility(
+      AbilityNames.Zamasu.GOD_SLASH, 10, 3, 10, SHORT_CAST_TIME
+    );
+    export const ENERGY_BLADES = new SagaAbility(
+      AbilityNames.Zamasu.ENERGY_BLADES, 1, 60, 2, SHORT_CAST_TIME
+    );
+  }
+
   export module Whis {
     export const ULTRA_INSTINCT = new SagaAbility(
       AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME

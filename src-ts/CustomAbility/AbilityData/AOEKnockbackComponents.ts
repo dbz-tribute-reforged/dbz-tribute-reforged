@@ -997,4 +997,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // black materia
+  {
+    name: "knockback black materia",
+    repeatInterval: 1, 
+    startTick: 100,
+    endTick: -1,
+    knockbackData: {
+      speed: 6, 
+      angle: 180, 
+      aoe: 600,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

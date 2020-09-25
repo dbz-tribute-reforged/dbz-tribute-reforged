@@ -59,6 +59,9 @@ export module AbilitySfxHelper {
     if (sfxData.color.x + sfxData.color.y + sfxData.color.z < 255 * 3) {
       BlzSetSpecialEffectColor(createdSfx, sfxData.color.r, sfxData.color.g, sfxData.color.b);
     }
+    if (sfxData.animSpeed != 1.0) {
+      BlzSetSpecialEffectTimeScale(createdSfx, sfxData.animSpeed);
+    }
 
     manageSfxPersistence(sfxData, createdSfx);
   }

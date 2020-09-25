@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.53c
+DBZ Tribute Reforged 0.54
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 35+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 37+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -125,7 +125,7 @@ STRING 21
 
 STRING 22
 {
-You have received +0.03x multiplier from another Metal Cooler gathering combat data.
+You receive +0.03x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 23
@@ -774,7 +774,7 @@ STRING 121
 }
 
 STRING 122
-// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
+// Units: H07Z (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
 {
 A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
 
@@ -3905,7 +3905,7 @@ Quickly constructs 10 Metal Cooler Copies. Because they are put together so quic
 
 STRING 637
 {
-You have received +0.1x multiplier from gathering combat data.
+You receive +0.08x multiplier from gathering combat data.
 }
 
 STRING 638
@@ -7167,7 +7167,7 @@ STRING 1148
 }
 
 STRING 1149
-// Units: H07Z (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
+// Units: H091 (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
 {
 A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
 
@@ -7524,7 +7524,7 @@ STRING 1200
 }
 
 STRING 1201
-// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
+// Units: H09M (SOLDIER 1st Class), Hotkey (Hotkey)
 {
 S
 }
@@ -10238,19 +10238,6 @@ STRING 1641
 // Items: I02Y (lil' Geti Star), Ubertip (Tooltip - Extended)
 {
 Creates a Geti Star.
-}
-
-STRING 1642
-// Units: H091 (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
-{
-A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 1643
@@ -13845,7 +13832,7 @@ STRING 2237
 }
 
 STRING 2238
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Units: H09N (SOLDIER 1st Class), Hotkey (Hotkey)
 {
 S
 }
@@ -31546,7 +31533,7 @@ STRING 5181
 
 STRING 5182
 {
-You have received +0.02x multiplier from gathering combat data.
+You receive +0.04x multiplier from gathering combat data.
 }
 
 STRING 5183
@@ -32868,7 +32855,7 @@ Janemba transforms into his ultimate form.|n|cff00FF00Consumes all souls. Requir
 
 STRING 5402
 {
-You have received +0.01x multiplier from another Metal Cooler gathering combat data.
+You receive +0.01x multiplier from another Metal Cooler gathering combat data.
 }
 
 STRING 5403
@@ -36575,7 +36562,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6001
-// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+// Units: H09O (SOLDIER 1st Class), Hotkey (Hotkey)
 {
 S
 }
@@ -48999,7 +48986,7 @@ All Might
 }
 
 STRING 8041
-// Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
+// Units: H09L (Symbol of Peace), Ubertip (Tooltip - Extended)
 {
 A strong close-quarters fighter.
 
@@ -49049,17 +49036,9 @@ STRING 8047
 }
 
 STRING 8048
-// Units: H09L (Symbol of Peace), Ubertip (Tooltip - Extended)
+// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
 {
-A strong close-quarters fighter.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-Proudly bankrolled by |cff00ffffCestroq|r.
+Have Shenron increase your hero's power. Increases your level by 10 and adds +200 base stats.
 }
 
 STRING 8049
@@ -49522,15 +49501,28 @@ Mr. Popo has perfected the Hyperbolic Time Chamber.
 }
 
 STRING 8123
-// Items: I043 (|cffffcc00Wish for Power|r), Description (Description)
+// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
 {
-Have Shenron increase your hero's power. Increases your level by 5 and adds +200 base stats.
+A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
+
+|cff00ff00Unstoppable|r: Casting a spell briefly provides 15% damage block.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 8124
-// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
 {
-Have Shenron increase your hero's power. Increases your level by 5 and adds +200 base stats.
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool1> seconds|r
 }
 
 STRING 8125
@@ -53158,6 +53150,20 @@ STRING 8718
 // Abilities: A0IE (Lightning Surprise), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Lightning Surprise - [|cffffcc00Level %d|r]
+}
+
+STRING 8719
+// Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
+{
+A strong close-quarters fighter that is extremely resilient and can apply strong lockdown for his team.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
 }
 
 STRING 8720
@@ -60834,6 +60840,12 @@ Roshi kicks nearby units into the air, disabling them and dealing damage.
 |cff00FFFFCD:|r <A0IE,Cool1> - <A0IE,Cool10>s
 }
 
+STRING 9974
+// Units: H09M (SOLDIER 1st Class), Name (Name)
+{
+SOLDIER 1st Class
+}
+
 STRING 9975
 // Abilities: A06F (Special Beam Cannon), Ubertip (Tooltip - Normal - Extended)
 {
@@ -61979,6 +61991,8 @@ Transformations:
 [lvl 100] 2.00x "lss"
 [lvl 150] 2.40x "uss"
 [lvl 200] 2.50x "luss"
+
+|cff00ff00Unstoppable|r: Casting a spell briefly provides 15% damage block.
 }
 
 STRING 10162
@@ -64738,6 +64752,8 @@ Transformations:
 [lvl 160] 2.60x "golden"
 
 To [D] Transform into Final Form Cooler, kill 1 enemy player's hero with Cooler above level 20 (sagas are not included).
+
+Metal Cooler is available at lvl 75 for Final Form Cooler.
 }
 
 STRING 10609
@@ -64750,7 +64766,7 @@ Transformations:
 [lvl 140] 2.50x "fp"
 [lvl 200] 2.60x "golden"
 
-To become Metal Cooler type "metal" as Final Form Cooler while dead. Note: MC is not necessarily stronger than Final Form Cooler.
+To become Metal Cooler type "metal" as Final Form Cooler while dead and above level 75. Note: MC is not necessarily stronger than Final Form Cooler.
 }
 
 STRING 10610
@@ -64759,9 +64775,9 @@ Transformations:
 [lvl 250]  2.70x "golden"
 [lvl 300]  2.75x "golden"
 
-Metal Cooler gains stat multiplier from kills and deaths up to a max of 2.50x. (Allied Metal Cooler players also provide a bonus on kills and deaths but at a reduced rate)
+Metal Cooler gains stat multiplier from kills (player and saga) and deaths up to a max of 2.50x. (Allied Metal Cooler players also provide a bonus on kills and deaths but at a reduced rate)
 [kill] +0.10x (+0.03x)
-[death] +0.02x (+0.01x)
+[death] +0.04x (+0.01x)
 
 Can type "upg" to convert half your stat multiplier above 2.00x into bonus base stats. Gains 4 bonus stats per 0.01x traded in. Stops at lvl 250.
 }
@@ -65023,7 +65039,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 21.September.20
+This map is under active development - 27.September.20
 }
 
 STRING 10653
@@ -67145,6 +67161,12 @@ Q
 STRING 10997
 {
 Single player detected. Automatic Freemode Enabled, forced win/loss conditions are disabled.
+}
+
+STRING 10998
+// Units: H09M (SOLDIER 1st Class), Propernames (Proper Names)
+{
+Sephiroth
 }
 
 STRING 10999
@@ -73538,7 +73560,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74231,7 +74253,7 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -82068,26 +82090,10 @@ STRING 13420
 [|cff00FF00F|r] Emperor's Throne - [|cffffcc00Level 1|r]
 }
 
-STRING 13421
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0Q3,Cool1> seconds|r
-}
-
 STRING 13422
 // Abilities: A0Q3 (Emperor's Throne), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Emperor's Throne - [|cffffcc00Level %d|r]
-}
-
-STRING 13423
-// Abilities: A0Q3 (Emperor's Throne), Researchubertip (Tooltip - Learn - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0Q3,Cool1> - <A0Q3,Cool10> seconds|r
 }
 
 STRING 13424
@@ -82112,22 +82118,6 @@ STRING 13427
 // Abilities: A0Q3 (Emperor's Throne), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Emperor's Throne - [|cffffcc00Level 3|r]
-}
-
-STRING 13428
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 20s|r
-|cff00ffffCooldown: <A0Q3,Cool2> seconds|r
-}
-
-STRING 13429
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 30s|r
-|cff00ffffCooldown: <A0Q3,Cool3> seconds|r
 }
 
 STRING 13430
@@ -82166,66 +82156,10 @@ STRING 13435
 [|cff00FF00F|r] Emperor's Throne - [|cffffcc00Level 9|r]
 }
 
-STRING 13436
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 40s|r
-|cff00ffffCooldown: <A0Q3,Cool4> seconds|r
-}
-
-STRING 13437
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 50s|r
-|cff00ffffCooldown: <A0Q3,Cool5> seconds|r
-}
-
-STRING 13438
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 60s|r
-|cff00ffffCooldown: <A0Q3,Cool6> seconds|r
-}
-
-STRING 13439
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 70s|r
-|cff00ffffCooldown: <A0Q3,Cool7> seconds|r
-}
-
-STRING 13440
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 80s|r
-|cff00ffffCooldown: <A0Q3,Cool8> seconds|r
-}
-
-STRING 13441
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 90s|r
-|cff00ffffCooldown: <A0Q3,Cool9> seconds|r
-}
-
 STRING 13442
 // Abilities: A0Q3 (Emperor's Throne), Tip (Tooltip - Normal)
 {
 [|cff00FF00F|r] Emperor's Throne - [|cffffcc00Level 10|r]
-}
-
-STRING 13443
-// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
-{
-Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
-|cff00ff00Duration: 100s|r
-|cff00ffffCooldown: <A0Q3,Cool10> seconds|r
 }
 
 STRING 13444
@@ -86535,12 +86469,6 @@ STRING 14097
 [|cff00ff00W|r] Justice Kick - [|cffffcc00Level 7|r]
 }
 
-STRING 14098
-// Abilities: A0R7 (Dyspo Passive Evasion), Name (Name)
-{
-Dyspo Passive Evasion
-}
-
 STRING 14099
 // Abilities: A0R6 (Circle Flash Root Debuff), EditorSuffix (Editor Suffix)
 {
@@ -87487,7 +87415,7 @@ Circle Flash Root Debuff
 }
 
 STRING 14254
-// Abilities: A0R7 (Dyspo Passive Evasion), EditorSuffix (Editor Suffix)
+// Abilities: A0R7 (Dyspo Evasion Passive), EditorSuffix (Editor Suffix)
 {
 (Dyspo)
 }
@@ -96317,6 +96245,22 @@ STRING 15513
 [|cff00FF00W|r] God Slash - [|cffffcc00Level 3|r]
 }
 
+STRING 15514
+// Units: H09M (SOLDIER 1st Class), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
+STRING 15515
+// Abilities: A0Q3 (Emperor's Throne), Researchubertip (Tooltip - Learn - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool1> - <A0Q3,Cool10> seconds|r
+}
+
 STRING 15516
 // Abilities: A0SS (God Slash), Tip (Tooltip - Normal)
 {
@@ -96359,6 +96303,12 @@ STRING 15522
 [|cff00FF00W|r] Left Smash - [|cffffcc00Level 10|r]
 }
 
+STRING 15523
+// Units: H09M (SOLDIER 1st Class), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
 STRING 15524
 // Abilities: A0ST (Holy Light Grenade), Researchhotkey (Hotkey - Learn)
 {
@@ -96375,6 +96325,12 @@ STRING 15526
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 1|r]
+}
+
+STRING 15527
+// Units: H09M (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern Skin 1)
 }
 
 STRING 15528
@@ -96812,6 +96768,12 @@ STRING 15591
 Zamasu's immortality grants exception health regeneration.
 }
 
+STRING 15592
+// Units: H09N (SOLDIER 1st Class), Name (Name)
+{
+SOLDIER 1st Class
+}
+
 STRING 15593
 // Abilities: A0SZ (Right Smash), Researchhotkey (Hotkey - Learn)
 {
@@ -96834,6 +96796,18 @@ STRING 15596
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 3|r]
+}
+
+STRING 15597
+// Units: H09N (SOLDIER 1st Class), Propernames (Proper Names)
+{
+Sephiroth
+}
+
+STRING 15598
+// Units: H09N (SOLDIER 1st Class), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Sephiroth
 }
 
 STRING 15599
@@ -96872,10 +96846,60 @@ STRING 15604
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 9|r]
 }
 
+STRING 15605
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool2> seconds|r
+}
+
+STRING 15606
+// Units: H09N (SOLDIER 1st Class), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
+STRING 15607
+// Units: H09N (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
+{
+(Skin 2)
+}
+
+STRING 15608
+// Units: H09O (SOLDIER 1st Class), Name (Name)
+{
+SOLDIER 1st Class
+}
+
+STRING 15609
+// Units: H09O (SOLDIER 1st Class), Propernames (Proper Names)
+{
+Sephiroth
+}
+
+STRING 15610
+// Units: H09O (SOLDIER 1st Class), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
 STRING 15611
 // Abilities: A0SZ (Right Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Right Smash - [|cffffcc00Level 10|r]
+}
+
+STRING 15612
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool3> seconds|r
 }
 
 STRING 15613
@@ -96888,6 +96912,12 @@ STRING 15614
 // Abilities: A0T0 (One For All), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] One For All
+}
+
+STRING 15615
+// Units: H09O (SOLDIER 1st Class), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Sephiroth
 }
 
 STRING 15616
@@ -97141,6 +97171,76 @@ All Might fires a swift left-handed smash.
 |cffffff00Increases the level of Oklahoma and California Smash.|r
 |cff00ff00Damage: Agi x Lvl x ?|r
 |cff00ffffCooldown: <A0SY,Cool1,.> seconds|r
+}
+
+STRING 15653
+// Units: H09O (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
+{
+(Skin 3)
+}
+
+STRING 15654
+// Units: H09P (SOLDIER 1st Class), Name (Name)
+{
+SOLDIER 1st Class
+}
+
+STRING 15655
+// Units: H09P (SOLDIER 1st Class), Propernames (Proper Names)
+{
+Sephiroth
+}
+
+STRING 15656
+// Units: H09P (SOLDIER 1st Class), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
+STRING 15657
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool4> seconds|r
+}
+
+STRING 15658
+// Units: H09P (SOLDIER 1st Class), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Sephiroth
+}
+
+STRING 15659
+// Units: H09P (SOLDIER 1st Class), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 15660
+// Units: H09P (SOLDIER 1st Class), EditorSuffix (Name - Editor Suffix)
+{
+(Skin 4)
+}
+
+STRING 15661
+// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 15662
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 15663
+// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+{
+S
 }
 
 STRING 15664
@@ -97994,6 +98094,30 @@ All Might performs a frontal somersault to build up momentum before releasing a 
 |cff00FFFFCooldown: <A0T5,Cool10>s|r
 }
 
+STRING 15781
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 2|r]
+}
+
+STRING 15782
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 3|r]
+}
+
+STRING 15783
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 4|r]
+}
+
+STRING 15784
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 5|r]
+}
+
 STRING 15785
 // Abilities: A0T6 (New Hampshire Smash), Tip (Tooltip - Normal)
 {
@@ -98086,6 +98210,12 @@ STRING 15799
 [|cff00FF00R|r] New Hampshire Smash - [|cffffcc00Level 10|r]
 }
 
+STRING 15800
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 6|r]
+}
+
 STRING 15801
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
@@ -98108,5 +98238,1399 @@ STRING 15804
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 15805
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 1|r]
+}
+
+STRING 15806
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 7|r]
+}
+
+STRING 15807
+// Abilities: A0T7 (Octoslash), Name (Name)
+{
+Octoslash
+}
+
+STRING 15808
+// Abilities: A0T7 (Octoslash), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Octoslash - [|cffffcc00Level %d|r]
+}
+
+STRING 15810
+// Abilities: A0T7 (Octoslash), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15811
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 8|r]
+}
+
+STRING 15812
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 9|r]
+}
+
+STRING 15813
+// Abilities: A0T7 (Octoslash), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Octoslash - [|cffffcc00Level 10|r]
+}
+
+STRING 15817
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool1> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15818
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool2> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15819
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool3> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15820
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool4> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15821
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool5> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15822
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool6> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15823
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool7> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15824
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 2|r]
+}
+
+STRING 15825
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 3|r]
+}
+
+STRING 15826
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 4|r]
+}
+
+STRING 15827
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 5|r]
+}
+
+STRING 15828
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 6|r]
+}
+
+STRING 15829
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 1|r]
+}
+
+STRING 15830
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 7|r]
+}
+
+STRING 15831
+// Abilities: A0T8 (Hell's Gate), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 15832
+// Abilities: A0T8 (Hell's Gate), Name (Name)
+{
+Hell's Gate
+}
+
+STRING 15833
+// Abilities: A0T8 (Hell's Gate), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Hell's Gate - [|cffffcc00Level %d|r]
+}
+
+STRING 15834
+// Abilities: A0T8 (Hell's Gate), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool1> - <A0T8,Cool10> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15835
+// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 15836
+// Abilities: A0T8 (Hell's Gate), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15837
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 8|r]
+}
+
+STRING 15838
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 9|r]
+}
+
+STRING 15839
+// Abilities: A0T8 (Hell's Gate), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hell's Gate - [|cffffcc00Level 10|r]
+}
+
+STRING 15840
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool8> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15841
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool9> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15842
+// Abilities: A0T8 (Hell's Gate), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth leaps into the air before slamming into the ground, dealing massive AOE damage. Units near the centre of the drop zone take bonus damage.
+|cff00FF00Damage: Agi * lvl * ? + 15% Max HP
+|cff00FFFFCooldown: <A0T8,Cool10> seconds|r
+
+|cff808080"The 'Promised Land waits for me over the snowy fields."|r
+}
+
+STRING 15843
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool1> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15844
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool2> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15845
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool3> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15846
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool4> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15847
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool5> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15848
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool6> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15849
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool7> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15850
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 2|r]
+}
+
+STRING 15851
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 3|r]
+}
+
+STRING 15852
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 4|r]
+}
+
+STRING 15853
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 5|r]
+}
+
+STRING 15854
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 6|r]
+}
+
+STRING 15855
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 1|r]
+}
+
+STRING 15856
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 7|r]
+}
+
+STRING 15857
+// Abilities: A0T9 (Fervent Blow), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 15858
+// Abilities: A0T9 (Fervent Blow), Name (Name)
+{
+Fervent Blow
+}
+
+STRING 15859
+// Abilities: A0T9 (Fervent Blow), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Fervent Blow - [|cffffcc00Level %d|r]
+}
+
+STRING 15860
+// Abilities: A0T9 (Fervent Blow), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool1> - <A0T9,Cool10> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15861
+// Abilities: A0T9 (Fervent Blow), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 15862
+// Abilities: A0T9 (Fervent Blow), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15863
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 8|r]
+}
+
+STRING 15864
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 9|r]
+}
+
+STRING 15865
+// Abilities: A0T9 (Fervent Blow), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 10|r]
+}
+
+STRING 15866
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool8> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15867
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool9> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15868
+// Abilities: A0T9 (Fervent Blow), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Affected enemies are slowed and take bonus damage from Fervent Rush. Unlocks [|cff00ff00E|r] Fervent Rush for 5 seconds.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool10> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15869
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool1> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15870
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool2> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15871
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool3> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15872
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool4> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15873
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool5> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15874
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool6> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15875
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool7> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15876
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 2|r]
+}
+
+STRING 15877
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 3|r]
+}
+
+STRING 15878
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 4|r]
+}
+
+STRING 15879
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 5|r]
+}
+
+STRING 15880
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 6|r]
+}
+
+STRING 15881
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 1|r]
+}
+
+STRING 15882
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 7|r]
+}
+
+STRING 15883
+// Abilities: A0TA (Fervent Rush), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 15884
+// Abilities: A0TA (Fervent Rush), Name (Name)
+{
+Fervent Rush
+}
+
+STRING 15885
+// Abilities: A0TA (Fervent Rush), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Fervent Rush - [|cffffcc00Level %d|r]
+}
+
+STRING 15886
+// Abilities: A0TA (Fervent Rush), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth's slashes send shockwaves through the air, knocking enemies away from him. Unlocks [|cff00ff00E|r] Fervent Rush.
+|cff00FF00Damage: Int * lvl * ?
+|cff00FFFFCooldown: <A0T9,Cool1> - <A0T9,Cool10> seconds|r
+
+|cff808080"You will rot."|r
+}
+
+STRING 15887
+// Abilities: A0TA (Fervent Rush), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 15888
+// Abilities: A0TA (Fervent Rush), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15889
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 8|r]
+}
+
+STRING 15890
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 9|r]
+}
+
+STRING 15891
+// Abilities: A0TA (Fervent Rush), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Fervent Blow - [|cffffcc00Level 10|r]
+}
+
+STRING 15892
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool8> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15893
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool9> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15894
+// Abilities: A0TA (Fervent Rush), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth's charges towards his target, striking nearby enemies with his massive sword. Deals bonus damage to enemies affected by Fervent Blow.
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0TA,Cool10> seconds|r
+
+|cff808080"I will...never be a memory..."|r
+}
+
+STRING 15895
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool5> seconds|r
+}
+
+STRING 15896
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool6> seconds|r
+}
+
+STRING 15897
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool7> seconds|r
+}
+
+STRING 15898
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool8> seconds|r
+}
+
+STRING 15899
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool9> seconds|r
+}
+
+STRING 15900
+// Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
+{
+Frieza sits inside his hover pod and lets his minions do the work for him. Provides +99ms. Summons some generic fodder minions.
+|cffffff00Level 1: Dodoria
+Level 10: Zarbon
+|cff00ff00Duration: 10s (speed boost) 45+2*lvl (summon time)|r
+|cff00ffffCooldown: <A0Q3,Cool10> seconds|r
+}
+
+STRING 15901
+// Abilities: A0R7 (Dyspo Evasion Passive), Name (Name)
+{
+Dyspo Evasion Passive
+}
+
+STRING 15902
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 2|r]
+}
+
+STRING 15903
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 3|r]
+}
+
+STRING 15904
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 4|r]
+}
+
+STRING 15905
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 5|r]
+}
+
+STRING 15906
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 6|r]
+}
+
+STRING 15907
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 1|r]
+}
+
+STRING 15908
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 7|r]
+}
+
+STRING 15909
+// Abilities: A0TB (Black Materia), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 15910
+// Abilities: A0TB (Black Materia), Name (Name)
+{
+Black Materia
+}
+
+STRING 15911
+// Abilities: A0TB (Black Materia), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Black Materia - [|cffffcc00Level %d|r]
+}
+
+STRING 15912
+// Abilities: A0TB (Black Materia), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 15913
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 9|r]
+}
+
+STRING 15914
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 8|r]
+}
+
+STRING 15915
+// Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Black Materia - [|cffffcc00Level 10|r]
+}
+
+STRING 15916
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur1,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool1> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15917
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur2,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool2> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15918
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur3,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool3> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15919
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur4,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool4> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15920
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur5,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool5> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15921
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 15922
+// Abilities: A0TC (One Winged Angel), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] One Winged Angel
+}
+
+STRING 15923
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur6,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool6> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15924
+// Abilities: A0TC (One Winged Angel), Name (Name)
+{
+One Winged Angel
+}
+
+STRING 15925
+// Abilities: A0TB (Black Materia), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15926
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 15927
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 1|r]
+}
+
+STRING 15928
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur7,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool7> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15929
+// Abilities: A0TD (Parry), Name (Name)
+{
+Parry
+}
+
+STRING 15930
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 15931
+// Abilities: A0TD (Parry), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Parry - [|cffffcc00Level %d|r]
+}
+
+STRING 15932
+// Abilities: A0T7 (Octoslash), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur1,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool1> - <A0T7,Cool10> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15933
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 2|r]
+}
+
+STRING 15934
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 3|r]
+}
+
+STRING 15935
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 4|r]
+}
+
+STRING 15936
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 5|r]
+}
+
+STRING 15937
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 6|r]
+}
+
+STRING 15938
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur8,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool8> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15939
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur9,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool9> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15940
+// Abilities: A0T7 (Octoslash), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth delivers a swift sequence of sword slashes.
+|cffff2020Channel Duration: <A0T7,Dur10,.> seconds|r
+|cff00FF00Damage: Agi * lvl * ?
+|cff00FFFFCooldown: <A0T7,Cool10> seconds|r
+
+|cff808080"Traitor... you will pay!"|r
+}
+
+STRING 15941
+// Abilities: A0TF (Book Sephiroth Crit), Name (Name)
+{
+Book Sephiroth Crit
+}
+
+STRING 15942
+// Abilities: A0TG (Sephiroth Crit Passive), Name (Name)
+{
+Sephiroth Crit Passive
+}
+
+STRING 15943
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 7|r]
+}
+
+STRING 15944
+// Abilities: A0TG (Sephiroth Crit Passive), EditorSuffix (Editor Suffix)
+{
+(Dyspo)
+}
+
+STRING 15948
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 8|r]
+}
+
+STRING 15949
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 9|r]
+}
+
+STRING 15950
+// Abilities: A0TD (Parry), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Parry - [|cffffcc00Level 10|r]
+}
+
+STRING 15951
+// Abilities: A0TC (One Winged Angel), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15952
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15953
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 15954
+// Items: I043 (|cffffcc00Wish for Power|r), Ubertip (Tooltip - Extended)
+{
+Have Shenron increase your hero's power. Increases your level by 10 and adds +200 base stats.
+}
+
+STRING 15955
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool1> seconds|r
+}
+
+STRING 15956
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool2> seconds|r
+}
+
+STRING 15957
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool3> seconds|r
+}
+
+STRING 15958
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool4> seconds|r
+}
+
+STRING 15959
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool5> seconds|r
+}
+
+STRING 15960
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool6> seconds|r
+}
+
+STRING 15961
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool7> seconds|r
+}
+
+STRING 15962
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool8> seconds|r
+}
+
+STRING 15963
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool9> seconds|r
+}
+
+STRING 15964
+// Abilities: A0TB (Black Materia), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool10> seconds|r
+}
+
+STRING 15965
+// Abilities: A0TB (Black Materia), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive Magic: Meteor, which has the power to destroy the entire planet. Has global cast range.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TB,Cool1> - <A0TB,Cool10> seconds|r
+}
+
+STRING 15966
+// Abilities: A0TC (One Winged Angel), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth absorbs mako from the lifestream of the planet, powering himself up to new heights, increasing his speed and power.
+|cffffff00+0.2x stat mult.
++99ms and unlocks movement speed cap.
++2% spell amp per second up to +20%.
+|cff00FF00Duration: <A0TC,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TC,Cool1> seconds|r
+
+Proudly bankrolled by |cff00ffffCestroq
+
+|cff808080"Veni, veni, venias, Gloriosa"|r.
+}
+
+STRING 15967
+// Abilities: A0TD (Parry), EditorSuffix (Editor Suffix)
+{
+(sephiroth)
+}
+
+STRING 15968
+// Abilities: A0TE (Fervent Wound), Name (Name)
+{
+Fervent Wound
+}
+
+STRING 15969
+// Abilities: A0TE (Fervent Wound), Tip (Tooltip - Normal)
+{
+Fervent Wound
+}
+
+STRING 15970
+// Buffs/Effects: B03M (), Bufftip (Tooltip)
+{
+Fervent Wound
+}
+
+STRING 15971
+// Buffs/Effects: B03M (), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Fervent Blow. It takes extra damage from Fervent Rush.
+}
+
+STRING 15972
+{
+Type "r" to revert.
+Transformations:
+[lvl 30]  1.50x "fp"
+[lvl 90]  2.00x "fp"
+[lvl 125] 2.20x "fp"
+[lvl 150] 2.40x "fp" [unlocks One Winged Angel]
+[lvl 250] 2.60x "fp"
+
+|cffff25aaMasamune|r: 25% chance for 2x Crit.
+
+Type "-skin" to cycle through up to 4 different skins.
+}
+
+STRING 15973
+// Units: H09M (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+{
+A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 15974
+// Units: H09N (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+{
+A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 15975
+// Units: H09O (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+{
+A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 15976
+// Units: H09P (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+{
+A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 15977
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA1>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool1> seconds|r
+}
+
+STRING 15978
+// Abilities: A0TD (Parry), Researchubertip (Tooltip - Learn - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA1>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool1> - <A0TD,Cool10> seconds|r
+}
+
+STRING 15979
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA2>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool2> seconds|r
+}
+
+STRING 15980
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA3>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool3> seconds|r
+}
+
+STRING 15981
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA4>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool4> seconds|r
+}
+
+STRING 15982
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA5>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool5> seconds|r
+}
+
+STRING 15983
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA6>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool6> seconds|r
+}
+
+STRING 15984
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA7>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool7> seconds|r
+}
+
+STRING 15985
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA8>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool8> seconds|r
+}
+
+STRING 15986
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA9>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool9> seconds|r
+}
+
+STRING 15987
+// Abilities: A0TD (Parry), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth holds a defensive stance, preparing himself for any threat that approaches. After a brief delay; any enemy hero within his range of attack is dealt massive damage. Destroyable enemy beams are instantly destroyed.
+|cffffff00Deals bonus damage based on the difference between Sephiroth and the enemy's AGI.
+|cff00ff00Duration: <A0TD,DataA10>s|r
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ff00Damage Block: 75% up to Agi * Lvl * 3
+|cff00FFFFCooldown: <A0TD,Cool10> seconds|r
 }
 

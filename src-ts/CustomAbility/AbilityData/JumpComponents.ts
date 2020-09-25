@@ -70,6 +70,16 @@ export const JumpComponents = [
     speed: -1,
   },
   {
+    name: "jump hells gate sephiroth",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 25,
+    maxHeight: 800,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
+  {
     name: "jump new hampshire smash",
     repeatInterval: 1, 
     startTick: 0,

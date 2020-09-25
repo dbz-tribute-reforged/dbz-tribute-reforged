@@ -28,6 +28,7 @@ export const HookComponents = [
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -46,6 +47,7 @@ export const HookComponents = [
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -64,6 +66,7 @@ export const HookComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 205,
           y: 255,
@@ -102,6 +105,7 @@ export const HookComponents = [
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 195,
@@ -120,6 +124,7 @@ export const HookComponents = [
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 195,
@@ -138,6 +143,7 @@ export const HookComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,

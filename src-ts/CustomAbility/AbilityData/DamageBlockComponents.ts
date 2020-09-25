@@ -21,6 +21,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -41,6 +42,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -73,6 +75,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 155,
@@ -93,6 +96,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 155,
           y: 155,
@@ -124,6 +128,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 155,
@@ -144,6 +149,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 155,
           y: 155,
@@ -175,6 +181,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 155,
@@ -208,6 +215,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 155,
@@ -228,6 +236,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 155,
           y: 155,
@@ -259,6 +268,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -279,6 +289,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -310,6 +321,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -330,6 +342,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -361,6 +374,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -381,6 +395,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -412,6 +427,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -432,6 +448,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 255,
@@ -463,6 +480,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -483,6 +501,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -514,6 +533,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -534,6 +554,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -565,6 +586,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -585,6 +607,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -616,6 +639,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -636,6 +660,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -683,6 +708,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -703,6 +729,7 @@ export const DamageBlockComponents = [
         endHeight: 100,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -734,6 +761,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -754,6 +782,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 105,
           y: 255,
@@ -785,6 +814,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -805,6 +835,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -836,6 +867,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -856,6 +888,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -887,6 +920,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -907,6 +941,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -938,6 +973,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -989,6 +1025,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1040,6 +1077,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1073,6 +1111,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1106,6 +1145,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1126,6 +1166,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1157,6 +1198,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1190,6 +1232,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1201,6 +1244,59 @@ export const DamageBlockComponents = [
       },
     ],
     attachedSfxList: [
+    ],
+  },
+  // ----------------------------------------
+  {
+    name: "block parry sephiroth",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    blockPerDamage: 75,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_AGI,
+    multiplier: 0.3,
+    sfxList: [
+      {
+        model: "PurpleSlam.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "WhisShield.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 1.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 85,
+          z: 195,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
     ],
   },
   // ----------------------------------------
@@ -1223,6 +1319,7 @@ export const DamageBlockComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,
@@ -1243,6 +1340,7 @@ export const DamageBlockComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 255,

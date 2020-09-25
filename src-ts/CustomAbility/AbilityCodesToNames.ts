@@ -359,6 +359,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [FourCC('A0SU'), AbilityNames.Zamasu.HEAVENLY_RUSH],
     [FourCC('A0SV'), AbilityNames.Zamasu.ENERGY_BLADES],
 
+
+    [Id.sephirothOctoslash, AbilityNames.Sephiroth.OCTOSLASH],
+    [Id.sephirothHellsGate, AbilityNames.Sephiroth.HELLS_GATE],
+    [Id.sephirothFerventBlow, AbilityNames.Sephiroth.FERVENT_BLOW],
+    [Id.sephirothFerventRush, AbilityNames.Sephiroth.FERVENT_RUSH],
+    [Id.sephirothBlackMateria, AbilityNames.Sephiroth.BLACK_MATERIA],
+    [Id.sephirothOneWingedAngel, AbilityNames.Sephiroth.ONE_WINGED_ANGEL],
+    [Id.sephirothParry, AbilityNames.Sephiroth.PARRY],
+
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

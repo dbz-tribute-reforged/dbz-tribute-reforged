@@ -72,6 +72,7 @@ export const SwordSlashComponents = [
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 155,
@@ -92,6 +93,7 @@ export const SwordSlashComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 155,
@@ -130,6 +132,7 @@ export const SwordSlashComponents = [
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 255,
           y: 105,
@@ -150,6 +153,7 @@ export const SwordSlashComponents = [
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        animSpeed: 1.0,
         color: {
           x: 55,
           y: 0,
