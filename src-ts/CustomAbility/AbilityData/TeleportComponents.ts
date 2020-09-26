@@ -71,4 +71,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.ORIGINAL_POINT,
     maxRange: Teleport.INFINITE_RANGE,
   },
+  {
+    name: "teleport time skip", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    teleportTick: 0,
+    teleportOnce: true,
+    teleportTarget: Teleport.TARGET_UNIT,
+    maxRange: 1200,
+  },
 ];

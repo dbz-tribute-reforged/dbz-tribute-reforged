@@ -19,6 +19,7 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_CASTER = 0;
   static readonly BEAM_UNIT_SPAWN_SOURCE = 1;
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
+  static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
 
   public beamUnit: unit;
   public delayTicks: number;
@@ -187,7 +188,14 @@ export class BeamComponent implements
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
     } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET) {
       this.beamCoord.setVector(this.beamTargetPoint);
-    } else {
+    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_TARGET_UNIT) {
+      if (input.targetUnit) {
+        this.beamCoord.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+      } else {
+        this.beamCoord.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+        this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);
+      }
+    } else if (this.beamUnitSpawn == BeamComponent.BEAM_UNIT_SPAWN_CASTER) {
       // caster
       this.beamCoord.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
       this.beamCoord.polarProjectCoords(this.beamCoord, this.angle, Constants.beamSpawnOffset);

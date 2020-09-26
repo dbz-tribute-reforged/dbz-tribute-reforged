@@ -419,6 +419,13 @@ export module AbilityNames {
     export const PARRY = "Parry Sephiroth";
   }
 
+  export module Hit {
+    export const TIME_SKIP = "Time Skip";
+    export const POCKET_DIMENSION = "Pocket Dimension";
+    export const FLASH_FIST = "Flash Fist";
+    export const TIME_CAGE = "Time Cage";
+    export const PURE_PROGRESS = "Pure Progress";
+  }
 
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";

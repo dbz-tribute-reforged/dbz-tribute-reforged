@@ -230,7 +230,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 17.5,
   },
   {
     name: "dash ground point saiyan spirit",
@@ -380,7 +380,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 40,
+    distance: 45,
   },
   // whirlwind tempest
   {
