@@ -353,8 +353,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.OmegaShenron.NOVA_STAR,
       AbilityNames.OmegaShenron.DRAGON_THUNDER,
       AbilityNames.Guldo.PSYCHO_JAVELIN,
-      AbilityNames.Zamasu.DIVINE_AUTHORITY,
-      AbilityNames.Zamasu.ENERGY_BLADES,
+      AbilityNames.Zamasu.DIVINE_AUTHORITY, AbilityNames.Zamasu.ENERGY_BLADES,
+      AbilityNames.Sephiroth.OCTOSLASH, AbilityNames.Sephiroth.ONE_WINGED_ANGEL
     ]],
 
     // broly
@@ -515,6 +515,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Sephiroth.BLACK_MATERIA,
       AbilityNames.Sephiroth.ONE_WINGED_ANGEL,
       AbilityNames.Sephiroth.PARRY,
+    ]],
+
+    // hit
+    [FourCC("E00K"), [
+      AbilityNames.Hit.TIME_SKIP,
+      AbilityNames.Hit.POCKET_DIMENSION,
+      AbilityNames.Hit.FLASH_FIST,
+      AbilityNames.Hit.TIME_CAGE,
+      AbilityNames.Hit.PURE_PROGRESS,
     ]],
 
   ]

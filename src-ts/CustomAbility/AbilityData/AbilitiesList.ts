@@ -6911,6 +6911,138 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Hit.TIME_SKIP,
+    currentCd: 0,
+    maxCd: 0.1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitTimeSkip.blp",
+      disabled: "BTNHitTimeSkip.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.TIME_SKIP,
+      body: 
+        AbilityNames.Hit.TIME_SKIP
+    },
+    components: [
+      { name: "damage target time skip explosion" },
+      { name: "teleport time skip" },
+      { name: "sfx time skip" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hit.POCKET_DIMENSION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitPocketDimension.blp",
+      disabled: "BTNHitPocketDimension.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.POCKET_DIMENSION,
+      body: 
+        AbilityNames.Hit.POCKET_DIMENSION
+    },
+    components: [
+      { name: "sfx pocket dimension" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hit.FLASH_FIST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 22,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitFlashFist.blp",
+      disabled: "BTNHitFlashFist.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.FLASH_FIST,
+      body: 
+        AbilityNames.Hit.FLASH_FIST
+    },
+    components: [
+      { name: "beam flash fist"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hit.TIME_CAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitTimeCage.blp",
+      disabled: "BTNHitTimeCage.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.TIME_CAGE,
+      body: 
+        AbilityNames.Hit.TIME_CAGE
+    },
+    components: [
+      { name: "beam time cage"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Hit.PURE_PROGRESS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 660,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNHitPureProgress.blp",
+      disabled: "BTNHitPureProgress.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Hit.PURE_PROGRESS,
+      body: 
+        AbilityNames.Hit.PURE_PROGRESS
+    },
+    components: [
+      { name: "spell amp pure progress" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Saga.GENERIC_BEAM,
     currentCd: 0,
     maxCd: 1,

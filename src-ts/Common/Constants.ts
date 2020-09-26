@@ -233,6 +233,13 @@ export module Id {
   export const guldoTimeStop = FourCC("A0SF");
   export const ginyuPoseGuldo = FourCC("A0SG");
 
+  export const hit = FourCC("E00K");
+  export const timeSkip = FourCC("A0FT");
+  export const pocketDimension = FourCC("A0FU");
+  export const flashFist = FourCC("A0FV");
+  export const timeCage = FourCC("A0FW");
+  export const pureProgress = FourCC("A0TH");
+
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
   export const rakshasaClaw = FourCC("A0NY");
@@ -317,6 +324,15 @@ export module Id {
   export const hellzoneGrenade = FourCC("A0LM");
   export const multiForm = FourCC('A088');
 
+  export const sephiroth = FourCC("H09M");
+  export const sephirothOctoslash = FourCC("A0T7");
+  export const sephirothHellsGate = FourCC("A0T8");
+  export const sephirothFerventBlow = FourCC("A0T9");
+  export const sephirothFerventRush = FourCC("A0TA");
+  export const sephirothBlackMateria = FourCC("A0TB");
+  export const sephirothOneWingedAngel = FourCC("A0TC");
+  export const sephirothParry = FourCC("A0TD");
+
   export const tapion = FourCC("E014");
   export const braveSlash = FourCC('A0I9');
   export const braveCannon = FourCC('A0I8');
@@ -368,13 +384,4 @@ export module Id {
   export const yamchaRFullPowerKame = FourCC("A0RJ");
   export const yamchaRWolfFangBlast = FourCC("A0RK");
   
-
-  export const sephiroth = FourCC("H09M");
-  export const sephirothOctoslash = FourCC("A0T7");
-  export const sephirothHellsGate = FourCC("A0T8");
-  export const sephirothFerventBlow = FourCC("A0T9");
-  export const sephirothFerventRush = FourCC("A0TA");
-  export const sephirothBlackMateria = FourCC("A0TB");
-  export const sephirothOneWingedAngel = FourCC("A0TC");
-  export const sephirothParry = FourCC("A0TD");
 }

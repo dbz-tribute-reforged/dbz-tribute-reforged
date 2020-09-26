@@ -369,6 +369,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.sephirothParry, AbilityNames.Sephiroth.PARRY],
 
 
+    [Id.timeSkip, AbilityNames.Hit.TIME_SKIP],
+    [Id.pocketDimension, AbilityNames.Hit.POCKET_DIMENSION],
+    [Id.flashFist, AbilityNames.Hit.FLASH_FIST],
+    [Id.timeCage, AbilityNames.Hit.TIME_CAGE],
+    [Id.pureProgress, AbilityNames.Hit.PURE_PROGRESS],
+
+
+
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],
     [FourCC('A0NT'), AbilityNames.Items.GETI_STAR_FRAGMENT],

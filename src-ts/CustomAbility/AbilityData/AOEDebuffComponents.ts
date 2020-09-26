@@ -3,6 +3,7 @@ export module Debuffs {
   export const STUN_MICRO = FourCC('A08K')
   export const STUN_HALF_SECOND = FourCC('A0NR');
   export const STUN_ONE_SECOND = FourCC('A0IY');
+  export const STUN_ONE_AND_A_HALF_SECOND = FourCC('A0FY');
   export const STUN_TWO_SECOND = FourCC('A0I7');
   export const STUN_THREE_SECOND = FourCC('A08H');
   export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
@@ -492,6 +493,19 @@ export const AOEDebuffComponents = [
     aoe: 300,
     keepCasting: false, 
     onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun time cage",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.STUN_ONE_AND_A_HALF_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 50,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
     requireBuff: false,
     buffId: 0,
   },
