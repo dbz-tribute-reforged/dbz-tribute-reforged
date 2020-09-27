@@ -398,6 +398,7 @@ gg_trg_Sephiroth_Parry_Cast = nil
 gg_trg_Sephiroth_Parry_Loop = nil
 gg_trg_Hit_Pocket_Dimension_Cast = nil
 gg_trg_Hit_Pocket_Dimension_Loop = nil
+gg_trg_Hit_Begin_Cast_Spell = nil
 gg_trg_Hit_Cast_Spell_Actual = nil
 gg_trg_Hit_Charges_Add_Unit = nil
 gg_trg_Hit_Charges_Remove_Unit = nil
@@ -772,7 +773,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Hit_Begin_Cast_Spell = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -10369,7 +10369,7 @@ function InitTrig_Hit_Begin_Cast_Spell()
     TriggerAddAction(gg_trg_Hit_Begin_Cast_Spell, Trig_Hit_Begin_Cast_Spell_Actions)
 end
 
-function Trig_Hit_Cast_Spell_Actual_Func012C()
+function Trig_Hit_Cast_Spell_Actual_Func013C()
     if (GetSpellAbilityId() == FourCC("A0FT")) then
         return true
     end
@@ -10386,7 +10386,7 @@ function Trig_Hit_Cast_Spell_Actual_Func012C()
 end
 
 function Trig_Hit_Cast_Spell_Actual_Conditions()
-    if (not Trig_Hit_Cast_Spell_Actual_Func012C()) then
+    if (not Trig_Hit_Cast_Spell_Actual_Func013C()) then
         return false
     end
     return true
@@ -10399,7 +10399,7 @@ function Trig_Hit_Cast_Spell_Actual_Func004C()
     return true
 end
 
-function Trig_Hit_Cast_Spell_Actual_Func011C()
+function Trig_Hit_Cast_Spell_Actual_Func012C()
     if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
         return false
     end
@@ -10411,17 +10411,18 @@ function Trig_Hit_Cast_Spell_Actual_Actions()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     if (Trig_Hit_Cast_Spell_Actual_Func004C()) then
-        SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 2)), 11, udg_ID, udg_StatMultHashtable)
+        udg_TempInt = IMaxBJ(0, (udg_TempInt - 2))
     else
-        SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 1)), 11, udg_ID, udg_StatMultHashtable)
+        udg_TempInt = IMaxBJ(0, (udg_TempInt - 1))
     end
+    SaveIntegerBJ(udg_TempInt, 11, udg_ID, udg_StatMultHashtable)
     udg_TempInt2 = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
-    udg_TempInt4 = IMaxBJ(((0 - 1) * udg_TempInt3), (udg_TempInt2 - udg_TempInt3))
+    udg_TempInt4 = IMaxBJ(((0 - 2) * (udg_TempInt3 // (udg_TempInt + 1))), (udg_TempInt2 - udg_TempInt3))
     SaveIntegerBJ(udg_TempInt4, 0, udg_ID, udg_HitHashtable)
     udg_StatMultUnit = udg_TempUnit
     TriggerExecute(gg_trg_Hit_Set_Charges_String)
-    if (Trig_Hit_Cast_Spell_Actual_Func011C()) then
+    if (Trig_Hit_Cast_Spell_Actual_Func012C()) then
         TriggerExecute(gg_trg_Hit_Pocket_Dimension_Cast)
     else
     end
@@ -10530,7 +10531,7 @@ function Trig_Hit_Charges_Loop_Func002A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
-    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 6) + 10) + 0))
+    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 4) + 5) + 0))
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
     udg_TempInt4 = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     if (Trig_Hit_Charges_Loop_Func002Func007C()) then
@@ -20190,7 +20191,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func023C()) then
-            SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.40), 34, udg_ID, udg_StatMultHashtable)
+            SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.35), 34, udg_ID, udg_StatMultHashtable)
             TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
         else
         end
@@ -21358,7 +21359,7 @@ end
 
 function Trig_Hit_Pure_Progress_Actions()
     udg_StatMultUnit = GetSpellAbilityUnit()
-    udg_TempReal = 20.00
+    udg_TempReal = 25.00
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     if (Trig_Hit_Pure_Progress_Func005C()) then
@@ -21370,6 +21371,8 @@ function Trig_Hit_Pure_Progress_Actions()
         SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 2000), 2, udg_ID, udg_HitHashtable)
         udg_TransformationSFXString = "AuraPink2.mdx"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        SaveIntegerBJ(IMaxBJ(LoadIntegerBJ(3, udg_ID, udg_HitHashtable), (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) + 1)), 11, udg_ID, udg_StatMultHashtable)
+        TriggerExecute(gg_trg_Hit_Set_Charges_String)
     else
     end
         udg_TransformationID = FourCC('E00K')
@@ -35689,16 +35692,6 @@ function Trig_Transformations_Hit_Func017C()
 end
 
 function Trig_Transformations_Hit_Func018C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Hit_Func019C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
@@ -35708,7 +35701,7 @@ function Trig_Transformations_Hit_Func019C()
     return true
 end
 
-function Trig_Transformations_Hit_Func022Func002Func001C()
+function Trig_Transformations_Hit_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -35718,14 +35711,14 @@ function Trig_Transformations_Hit_Func022Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Hit_Func022Func002C()
-    if (not Trig_Transformations_Hit_Func022Func002Func001C()) then
+function Trig_Transformations_Hit_Func021Func002C()
+    if (not Trig_Transformations_Hit_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Hit_Func022C()
+function Trig_Transformations_Hit_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -35790,19 +35783,13 @@ function Trig_Transformations_Hit_Actions()
     else
     end
     if (Trig_Transformations_Hit_Func018C()) then
-        udg_StatMultReal = 2.60
-        udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-    if (Trig_Transformations_Hit_Func019C()) then
         UnitAddAbilityBJ(FourCC("A0TH"), udg_StatMultUnit)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0TH'))
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Hit_Func022C()) then
-        if (Trig_Transformations_Hit_Func022Func002C()) then
+    if (Trig_Transformations_Hit_Func021C()) then
+        if (Trig_Transformations_Hit_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('E00K')

@@ -24,7 +24,7 @@ export class SpellAmp implements AbilityComponent, Serializable<SpellAmp> {
     if (
       (this.currentBonus >= 0 && this.currentBonus < this.bonus)
       ||
-      (this.currentBonus < 0 && this.currentBonus > this.bonus)
+      (this.currentBonus <= 0 && this.currentBonus > this.bonus)
     ) {
       let addedSpellPower = this.rate;
       if (this.currentBonus + addedSpellPower > this.bonus) {
