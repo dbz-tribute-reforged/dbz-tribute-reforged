@@ -400,7 +400,7 @@ gg_trg_Hit_Pocket_Dimension_Cast = nil
 gg_trg_Hit_Pocket_Dimension_Loop = nil
 gg_trg_Hit_Begin_Cast_Spell = nil
 gg_trg_Hit_Cast_Spell_Actual = nil
-gg_trg_Add_Unit_To_Hit_Charges = nil
+gg_trg_Hit_Charges_Add_Unit = nil
 gg_trg_Hit_Charges_Loop = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
@@ -771,6 +771,8 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Hit_Set_Charges_String = nil
+gg_trg_Hit_Charges_Remove_Unit = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1716,7 +1718,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 3425.1, 8907.3, 155.329, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 2305.5, 7234.4, 191.410, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 4716.1, 6722.0, 186.499, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 17991.5, 16374.3, 81.290, FourCC("n01E"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 18075.0, 16162.4, 81.290, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 6550.4, 8679.9, 277.369, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 5736.5, 8321.1, 41.837, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n031"), 3558.5, 9492.0, 270.217, FourCC("n031"))
@@ -2001,7 +2003,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n03G"), 438.9, -2907.9, 267.585, FourCC("n03G"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 196.2, -3017.6, 276.402, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 465.3, -3073.1, 254.826, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n031"), 20147.4, 16242.3, 224.002, FourCC("n031"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n031"), 20080.5, 15989.3, 224.002, FourCC("n031"))
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 19409.9, 1695.2, 15.595, FourCC("n014"))
     SetUnitColor(u, ConvertPlayerColor(8))
@@ -2364,11 +2366,11 @@ function CreateNeutralHostile()
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22592.5, 15937.4, 91.003, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22769.1, 16775.9, 258.527, FourCC("n01U"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22988.1, 16466.0, 258.527, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 23436.9, 17003.6, 253.869, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22491.5, 16582.0, 191.552, FourCC("n01U"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 22710.5, 16272.1, 191.552, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29515.4, 2314.5, 112.921, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
@@ -2459,7 +2461,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 7940.1, 26822.7, 32.297, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17833.2, 27596.8, 138.235, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 2756.9, -1327.9, 191.706, FourCC("n01D"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18566.1, 16361.8, 281.718, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 18669.5, 15972.2, 281.718, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 24190.0, -4339.6, 36.399, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 30716.4, -5718.7, 317.985, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 30853.1, -5601.6, 224.249, FourCC("n01E"))
@@ -10331,8 +10333,28 @@ function Trig_Hit_Begin_Cast_Spell_Conditions()
     return true
 end
 
+function Trig_Hit_Begin_Cast_Spell_Func004Func002Func002C()
+    if (not (udg_TempInt < 2)) then
+        return false
+    end
+    if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Begin_Cast_Spell_Func004Func002C()
+    if (udg_TempInt < 1) then
+        return true
+    end
+    if (Trig_Hit_Begin_Cast_Spell_Func004Func002Func002C()) then
+        return true
+    end
+    return false
+end
+
 function Trig_Hit_Begin_Cast_Spell_Func004C()
-    if (not (udg_TempInt == 0)) then
+    if (not Trig_Hit_Begin_Cast_Spell_Func004Func002C()) then
         return false
     end
     return true
@@ -10378,15 +10400,28 @@ function Trig_Hit_Cast_Spell_Actual_Conditions()
     return true
 end
 
+function Trig_Hit_Cast_Spell_Actual_Func006C()
+    if (not (GetSpellAbilityId() == FourCC("A0FU"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Hit_Cast_Spell_Actual_Actions()
     udg_TempUnit = GetTriggerUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
-    SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 1)), 11, udg_ID, udg_StatMultHashtable)
+    if (Trig_Hit_Cast_Spell_Actual_Func006C()) then
+        SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 2)), 11, udg_ID, udg_StatMultHashtable)
+    else
+        SaveIntegerBJ(IMaxBJ(0, (udg_TempInt - 1)), 11, udg_ID, udg_StatMultHashtable)
+    end
     udg_TempInt2 = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
     udg_TempInt4 = IMaxBJ(((0 - 1) * udg_TempInt3), (udg_TempInt2 - udg_TempInt3))
     SaveIntegerBJ(udg_TempInt4, 0, udg_ID, udg_HitHashtable)
+    udg_StatMultUnit = udg_TempUnit
+    TriggerExecute(gg_trg_Hit_Set_Charges_String)
 end
 
 function InitTrig_Hit_Cast_Spell_Actual()
@@ -10396,20 +10431,20 @@ function InitTrig_Hit_Cast_Spell_Actual()
     TriggerAddAction(gg_trg_Hit_Cast_Spell_Actual, Trig_Hit_Cast_Spell_Actual_Actions)
 end
 
-function Trig_Add_Unit_To_Hit_Charges_Func004C()
+function Trig_Hit_Charges_Add_Unit_Func004C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E00K"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_Hit_Charges_Actions()
+function Trig_Hit_Charges_Add_Unit_Actions()
     GroupAddUnitSimple(udg_StatMultUnit, udg_HitChargesUnitGroup)
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(0, 0, udg_ID, udg_HitHashtable)
-    if (Trig_Add_Unit_To_Hit_Charges_Func004C()) then
-        SaveIntegerBJ(150, 1, udg_ID, udg_HitHashtable)
-        SaveIntegerBJ(12500, 2, udg_ID, udg_HitHashtable)
+    if (Trig_Hit_Charges_Add_Unit_Func004C()) then
+        SaveIntegerBJ(100, 1, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ(10000, 2, udg_ID, udg_HitHashtable)
         SaveIntegerBJ(5, 3, udg_ID, udg_HitHashtable)
         SaveIntegerBJ(5, 11, udg_ID, udg_StatMultHashtable)
     else
@@ -10420,11 +10455,51 @@ function Trig_Add_Unit_To_Hit_Charges_Actions()
     end
     TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
     EnableTrigger(gg_trg_Hit_Charges_Loop)
+    SaveStringBJ("|cff00ff00IIIII", 46, udg_ID, udg_StatMultHashtable)
 end
 
-function InitTrig_Add_Unit_To_Hit_Charges()
-    gg_trg_Add_Unit_To_Hit_Charges = CreateTrigger()
-    TriggerAddAction(gg_trg_Add_Unit_To_Hit_Charges, Trig_Add_Unit_To_Hit_Charges_Actions)
+function InitTrig_Hit_Charges_Add_Unit()
+    gg_trg_Hit_Charges_Add_Unit = CreateTrigger()
+    TriggerAddAction(gg_trg_Hit_Charges_Add_Unit, Trig_Hit_Charges_Add_Unit_Actions)
+end
+
+function Trig_Hit_Charges_Remove_Unit_Func001Func004C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitChargesUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Charges_Remove_Unit_Func001C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitChargesUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Charges_Remove_Unit_Actions()
+    if (Trig_Hit_Charges_Remove_Unit_Func001C()) then
+        GroupRemoveUnitSimple(udg_StatMultUnit, udg_HitChargesUnitGroup)
+        GroupRemoveUnitSimple(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup)
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        if (Trig_Hit_Charges_Remove_Unit_Func001Func004C()) then
+            FlushChildHashtableBJ(udg_ID, udg_HitHashtable)
+        else
+        end
+    else
+    end
+end
+
+function InitTrig_Hit_Charges_Remove_Unit()
+    gg_trg_Hit_Charges_Remove_Unit = CreateTrigger()
+    TriggerAddAction(gg_trg_Hit_Charges_Remove_Unit, Trig_Hit_Charges_Remove_Unit_Actions)
+end
+
+function Trig_Hit_Charges_Loop_Func002Func007Func001C()
+    if (not (udg_TempInt < udg_TempInt3)) then
+        return false
+    end
+    return true
 end
 
 function Trig_Hit_Charges_Loop_Func002Func007Func002Func003C()
@@ -10452,15 +10527,18 @@ function Trig_Hit_Charges_Loop_Func002A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
-    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 3) + 5) + 0))
+    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 5) + 5) + 0))
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
     udg_TempInt4 = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     if (Trig_Hit_Charges_Loop_Func002Func007C()) then
         if (Trig_Hit_Charges_Loop_Func002Func007Func002C()) then
             udg_TempInt2 = LoadIntegerBJ(3, udg_ID, udg_HitHashtable)
             if (Trig_Hit_Charges_Loop_Func002Func007Func002Func003C()) then
-                SaveIntegerBJ((udg_TempInt4 + 1), 11, udg_ID, udg_StatMultHashtable)
+                udg_TempInt4 = (udg_TempInt4 + 1)
+                SaveIntegerBJ(udg_TempInt4, 11, udg_ID, udg_StatMultHashtable)
                 SaveIntegerBJ(0, 0, udg_ID, udg_HitHashtable)
+                udg_StatMultUnit = udg_TempUnit
+                TriggerExecute(gg_trg_Hit_Set_Charges_String)
             else
                 SaveIntegerBJ(udg_TempInt3, 0, udg_ID, udg_HitHashtable)
             end
@@ -10468,7 +10546,10 @@ function Trig_Hit_Charges_Loop_Func002A()
             SaveIntegerBJ((udg_TempInt + udg_TempInt2), 0, udg_ID, udg_HitHashtable)
         end
     else
-        SaveIntegerBJ(udg_TempInt3, 0, udg_ID, udg_HitHashtable)
+        if (Trig_Hit_Charges_Loop_Func002Func007Func001C()) then
+            SaveIntegerBJ((udg_TempInt + udg_TempInt2), 0, udg_ID, udg_HitHashtable)
+        else
+        end
     end
 end
 
@@ -10492,6 +10573,42 @@ function InitTrig_Hit_Charges_Loop()
     DisableTrigger(gg_trg_Hit_Charges_Loop)
     TriggerRegisterTimerEventPeriodic(gg_trg_Hit_Charges_Loop, 0.03)
     TriggerAddAction(gg_trg_Hit_Charges_Loop, Trig_Hit_Charges_Loop_Actions)
+end
+
+function Trig_Hit_Set_Charges_String_Func006C()
+    if (not (udg_TempInt4 < udg_TempInt3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Hit_Set_Charges_String_Actions()
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempInt3 = LoadIntegerBJ(3, udg_ID, udg_HitHashtable)
+    udg_TempInt4 = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
+    udg_TempString = "|cff00ff00"
+    udg_TempInt2 = 1
+    while (true) do
+        if (udg_TempInt2 > udg_TempInt4) then break end
+        udg_TempString = (udg_TempString .. "I")
+        udg_TempInt2 = udg_TempInt2 + 1
+    end
+    if (Trig_Hit_Set_Charges_String_Func006C()) then
+        udg_TempString = (udg_TempString .. "|cffcccccc")
+        udg_TempInt2 = udg_TempInt4
+        while (true) do
+            if (udg_TempInt2 > (udg_TempInt3 - 1)) then break end
+            udg_TempString = (udg_TempString .. "I")
+            udg_TempInt2 = udg_TempInt2 + 1
+        end
+    else
+    end
+    SaveStringBJ(udg_TempString, 46, udg_ID, udg_StatMultHashtable)
+end
+
+function InitTrig_Hit_Set_Charges_String()
+    gg_trg_Hit_Set_Charges_String = CreateTrigger()
+    TriggerAddAction(gg_trg_Hit_Set_Charges_String, Trig_Hit_Set_Charges_String_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -14985,7 +15102,7 @@ function Trig_Base_Armor_Set_Actions()
     else
     end
     if (Trig_Base_Armor_Set_Func008C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 9999999.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
     else
     end
     if (Trig_Base_Armor_Set_Func009C()) then
@@ -20070,8 +20187,8 @@ function Trig_Add_Unit_To_StatMult_Actions()
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func023C()) then
-            SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.50), 34, udg_ID, udg_StatMultHashtable)
-            TriggerExecute(gg_trg_Add_Unit_To_Hit_Charges)
+            SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.40), 34, udg_ID, udg_StatMultHashtable)
+            TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func024C()) then
@@ -20082,7 +20199,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
             else
             end
             if (Trig_Add_Unit_To_StatMult_Func001Func024Func004C()) then
-                TriggerExecute(gg_trg_Add_Unit_To_Hit_Charges)
+                TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
             else
             end
         else
@@ -20534,10 +20651,21 @@ function InitTrig_Add_Unit_To_Text_Tag_Charges()
     TriggerAddAction(gg_trg_Add_Unit_To_Text_Tag_Charges, Trig_Add_Unit_To_Text_Tag_Charges_Actions)
 end
 
+function Trig_Text_Tag_Charges_Update_Loop_Func001Func003C()
+    if (not (LoadStringBJ(46, udg_ID, udg_StatMultHashtable) == "")) then
+        return false
+    end
+    return true
+end
+
 function Trig_Text_Tag_Charges_Update_Loop_Func001A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
-    SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), ("|cffffff20" .. (I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)) .. "|r")), 10)
+    if (Trig_Text_Tag_Charges_Update_Loop_Func001Func003C()) then
+        SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), ("|cffffff20" .. (I2S(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)) .. "|r")), 11.00)
+    else
+        SetTextTagTextBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), LoadStringBJ(46, udg_ID, udg_StatMultHashtable), 11.00)
+    end
     SetTextTagPosUnitBJ(LoadTextTagHandleBJ(20, udg_ID, udg_StatMultHashtable), udg_TempUnit, 25.00)
 end
 
@@ -21218,7 +21346,7 @@ function Trig_Hit_Pure_Progress_Conditions()
     return true
 end
 
-function Trig_Hit_Pure_Progress_Func006C()
+function Trig_Hit_Pure_Progress_Func005C()
     if (not (udg_TempBool == true)) then
         return false
     end
@@ -21227,17 +21355,16 @@ end
 
 function Trig_Hit_Pure_Progress_Actions()
     udg_StatMultUnit = GetSpellAbilityUnit()
-    SetUnitLifeBJ(udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) + (0.10 * GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit))))
-    udg_TempReal = 30.00
+    udg_TempReal = 20.00
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
-    if (Trig_Hit_Pure_Progress_Func006C()) then
+    if (Trig_Hit_Pure_Progress_Func005C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         udg_StatMultReal = (udg_StatMultInt + 0.20)
         udg_StatMultStr = (udg_StatMultStr + 0.20)
         udg_StatMultAgi = (udg_StatMultAgi + 0.20)
         udg_StatMultInt = (udg_StatMultInt + 0.20)
-        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 2500), 2, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 2000), 2, udg_ID, udg_HitHashtable)
         udg_TransformationSFXString = "AuraPink2.mdx"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
     else
@@ -21708,7 +21835,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()) then
-        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) + 2500), 2, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) + 2000), 2, udg_ID, udg_HitHashtable)
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()) then
@@ -35632,21 +35759,21 @@ function Trig_Transformations_Hit_Actions()
     else
     end
     if (Trig_Transformations_Hit_Func015C()) then
-        udg_StatMultReal = 2.40
+        udg_StatMultReal = 2.30
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Hit_Func016C()) then
-        udg_StatMultReal = 2.50
+        udg_StatMultReal = 2.40
         udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraPink2.mdx"
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Hit_Func017C()) then
-        udg_StatMultReal = 2.60
+        udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraPink2.mdx"
+        udg_TransformationSFXString = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Hit_Func018C()) then
@@ -36991,8 +37118,10 @@ function InitCustomTriggers()
     InitTrig_Hit_Pocket_Dimension_Loop()
     InitTrig_Hit_Begin_Cast_Spell()
     InitTrig_Hit_Cast_Spell_Actual()
-    InitTrig_Add_Unit_To_Hit_Charges()
+    InitTrig_Hit_Charges_Add_Unit()
+    InitTrig_Hit_Charges_Remove_Unit()
     InitTrig_Hit_Charges_Loop()
+    InitTrig_Hit_Set_Charges_String()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
