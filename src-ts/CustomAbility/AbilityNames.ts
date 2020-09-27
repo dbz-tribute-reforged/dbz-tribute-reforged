@@ -405,8 +405,8 @@ export module AbilityNames {
     export const DIVINE_AUTHORITY = "Divine Authority";
     export const GOD_SLASH = "God Slash";
     export const HOLY_LIGHT_GRENADE = "Holy Light Grenade";
-    export const HEAVENLY_RUSH = "Time Stop";
-    export const ENERGY_BLADES = "Guldo Pose";
+    export const HEAVENLY_RUSH = "Heavenly Rush";
+    export const ENERGY_BLADES = "Energy Blades";
   }
 
   export module Sephiroth {

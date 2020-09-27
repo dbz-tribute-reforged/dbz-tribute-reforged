@@ -920,6 +920,20 @@ export function CustomPlayerTest() {
       });
       DestroyGroup(group);
     });
+
+    const armrTrig = CreateTrigger();
+    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+      TriggerRegisterPlayerChatEvent(armrTrig, Player(i), "-armr", false);
+    }
+    TriggerAddAction(armrTrig, () => {
+      const value = S2I(SubString(GetEventPlayerChatString(), 6, 12));
+      const group = GetUnitsSelectedAll(GetTriggerPlayer());
+      ForGroup(group, () => {
+        const target = GetEnumUnit();
+        BlzSetUnitArmor(target, value);
+      });
+      DestroyGroup(group);
+    });
   
     const lvlTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
