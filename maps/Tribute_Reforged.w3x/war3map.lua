@@ -21371,7 +21371,7 @@ function Trig_Hit_Pure_Progress_Actions()
         SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 2000), 2, udg_ID, udg_HitHashtable)
         udg_TransformationSFXString = "AuraPink2.mdx"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
-        SaveIntegerBJ(IMaxBJ(LoadIntegerBJ(3, udg_ID, udg_HitHashtable), (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) + 1)), 11, udg_ID, udg_StatMultHashtable)
+        SaveIntegerBJ(IMinBJ(LoadIntegerBJ(3, udg_ID, udg_HitHashtable), (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) + 1)), 11, udg_ID, udg_StatMultHashtable)
         TriggerExecute(gg_trg_Hit_Set_Charges_String)
     else
     end
