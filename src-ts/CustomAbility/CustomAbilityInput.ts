@@ -23,7 +23,8 @@ export class CustomAbilityInput {
       new Vector2D(this.targetPoint.x, this.targetPoint.y),
       new Vector2D(this.mouseData.x, this.mouseData.y),
       new Vector2D(this.castPoint.x, this.castPoint.y),
-      this.targetUnit
+      this.targetUnit,
+      this.castUnit
     );
   }
 }

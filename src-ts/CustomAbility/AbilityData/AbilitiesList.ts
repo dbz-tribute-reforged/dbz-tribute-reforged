@@ -6575,6 +6575,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward ginyu pose guldo" },
+      { name: "spell amp ginyu pose guldo" },
       { name: "sfx ginyu pose guldo" },
     ],
   },
@@ -6913,7 +6914,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Hit.TIME_SKIP,
     currentCd: 0,
-    maxCd: 0.1,
+    maxCd: 0.03,
     costType: "MP",
     costAmount: 0,
     duration: 1,
@@ -6932,8 +6933,8 @@ export const AbilitiesList = [
         AbilityNames.Hit.TIME_SKIP
     },
     components: [
-      { name: "damage target time skip explosion" },
       { name: "teleport time skip" },
+      { name: "damage target time skip explosion" },
       { name: "sfx time skip" },
     ],
   },
@@ -6967,7 +6968,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Hit.FLASH_FIST,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: 0.66,
     costType: "MP",
     costAmount: 0,
     duration: 22,

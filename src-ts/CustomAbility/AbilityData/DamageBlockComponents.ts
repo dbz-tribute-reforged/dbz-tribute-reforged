@@ -201,10 +201,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 50,
+    blockPerDamage: 75,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 1.5,
+    multiplier: 2,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -906,10 +906,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 60,
+    blockPerDamage: 65,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.6,
+    multiplier: 0.65,
     sfxList: [
       {
         model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
