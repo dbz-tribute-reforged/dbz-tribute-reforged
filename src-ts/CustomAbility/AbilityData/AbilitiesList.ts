@@ -6575,6 +6575,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground forward ginyu pose guldo" },
+      { name: "spell amp ginyu pose guldo" },
       { name: "sfx ginyu pose guldo" },
     ],
   },
