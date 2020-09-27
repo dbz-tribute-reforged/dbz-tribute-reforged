@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.55
+DBZ Tribute Reforged 0.55a
 }
 
 STRING 4
@@ -6392,6 +6392,14 @@ STRING 1028
 A combat style taught by Master Roshi. 
 
 |cffffcc00Evasion|r - <A027,DataD1,%>% |n|cffffcc00Critical|r - <A027,DataA1>% |n|cffffcc00Damage|r - <A027,DataB1,.> times
+}
+
+STRING 1029
+// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
+{
+Hit enters an alternate dimension, causing him to pass through units and be immune to non-lethal damage for 3 seconds.
+|cffffff00Costs 2 time skip charges.|r
+|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
 }
 
 STRING 1030
@@ -15358,6 +15366,160 @@ STRING 2490
 125
 }
 
+STRING 2491
+// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit enters an alternate dimension, causing him to pass through units and be immune to non-lethal damage for 3 seconds.
+|cffffff00Costs 2 time skip charges.|r
+|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
+}
+
+STRING 2492
+// Units: E00K (Legendary Assassin), Ubertip (Tooltip - Extended)
+{
+A hero who specializes in small skirmishes, dealing heavy single-target damage.
+
+|cffffcc00Legendary Assassin|r: +40% stats from Player Kills.
+|cffC03232Consumes |r|cff00FF00Time Skip|r|cffC03232 charges instead of |r|cff00FFFFmana|r.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 2493
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> times
+}
+
+STRING 2494
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
+|cffffcc00Critical|r - <A0G0,DataA2>% 
+|cffffcc00Damage|r - <A0G0,DataB2,.> times
+}
+
+STRING 2495
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
+|cffffcc00Critical|r - <A0G0,DataA3>% 
+|cffffcc00Damage|r - <A0G0,DataB3,.> times
+}
+
+STRING 2496
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
+|cffffcc00Critical|r - <A0G0,DataA4>% 
+|cffffcc00Damage|r - <A0G0,DataB4,.> times
+}
+
+STRING 2497
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
+|cffffcc00Critical|r - <A0G0,DataA5>% 
+|cffffcc00Damage|r - <A0G0,DataB5,.> times
+}
+
+STRING 2498
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
+|cffffcc00Critical|r - <A0G0,DataA6>% 
+|cffffcc00Damage|r - <A0G0,DataB6,.> times
+}
+
+STRING 2499
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
+|cffffcc00Critical|r - <A0G0,DataA7>% 
+|cffffcc00Damage|r - <A0G0,DataB7,.> times
+}
+
+STRING 2500
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
+|cffffcc00Critical|r - <A0G0,DataA8>% 
+|cffffcc00Damage|r - <A0G0,DataB8,.> times
+}
+
+STRING 2501
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
+|cffffcc00Critical|r - <A0G0,DataA9>% 
+|cffffcc00Damage|r - <A0G0,DataB9,.> times
+}
+
+STRING 2502
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
+|cffffcc00Critical|r - <A0G0,DataA10>% 
+|cffffcc00Damage|r - <A0G0,DataB10,.> times
+}
+
+STRING 2503
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
+|cffffcc00Critical|r - <A0G0,DataA11>% 
+|cffffcc00Damage|r - <A0G0,DataB11,.> times
+}
+
+STRING 2504
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
+|cffffcc00Critical|r - <A0G0,DataA12>% 
+|cffffcc00Damage|r - <A0G0,DataB12,.> times
+}
+
+STRING 2505
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
+|cffffcc00Critical|r - <A0G0,DataA13>% 
+|cffffcc00Damage|r - <A0G0,DataB13,.> times
+}
+
 STRING 2506
 // Abilities: A027 (Master Roshi's Teachings), Tip (Tooltip - Normal)
 {
@@ -15446,6 +15608,16 @@ STRING 2520
 // Abilities: A027 (Master Roshi's Teachings), Tip (Tooltip - Normal)
 {
 Master Roshi's Teachings - [|cffffcc00Level 15|r]
+}
+
+STRING 2521
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
+|cffffcc00Critical|r - <A0G0,DataA14>% 
+|cffffcc00Damage|r - <A0G0,DataB14,.> times
 }
 
 STRING 2522
@@ -42656,6 +42828,26 @@ A combat style taught to Goku by Master Roshi. When Goku and Krillin were young 
 |cffffcc00Evasion|r - <A027,DataD1,%> - <A027,DataD15,%>% 
 |cffffcc00Critical|r - <A027,DataA1> - <A027,DataA15>% 
 |cffffcc00Damage|r - <A027,DataB1,.> - <A027,DataB15,.> times
+}
+
+STRING 7011
+// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB15,.> times
+}
+
+STRING 7012
+// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
+{
+Hit's assassination techniques cause massive damage in hand-to-hand combat.
+|cff00ff00+5% restore rate of time skip charges per level.
+|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
+|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
+|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
 }
 
 STRING 7013
@@ -99676,22 +99868,6 @@ STRING 16038
 [|cff00FF00D|r] Pure Progress
 }
 
-STRING 16039
-// Units: E00K (Legendary Assassin), Ubertip (Tooltip - Extended)
-{
-A hero who specializes in small skirmishes, dealing heavy single-target damage.
-
-|cffffcc00Legendary Assassin|r: +50% stats from Player Kills.
-|cffC03232Consumes |r|cff00FF00Time Skip|r|cffC03232 charges instead of |r|cff00FFFFmana|r.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 16040
 // Abilities: A0TH (Pure Progress), Name (Name)
 {
@@ -99711,11 +99887,11 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.40x "fp" 
-[lvl 200] 2.50x "fp" [unlocks Pure Progress]
-[lvl 250] 2.60x "fp"
+[lvl 150] 2.30x "fp" 
+[lvl 200] 2.40x "fp" [unlocks Pure Progress]
+[lvl 250] 2.50x "fp"
 
-|cffffcc00Legendary Assassin|r: +50% stats from Player Kills.
+|cffffcc00Legendary Assassin|r: +40% stats from Player Kills.
 }
 
 STRING 16043
@@ -99740,20 +99916,6 @@ STRING 16048
 // Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 16062
-// Abilities: A0FU (Pocket Dimension), Ubertip (Tooltip - Normal - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to non-lethal damage for 3 seconds.
-|cff00FFFFCooldown: <A0FU,Cool1,.>s|r
-}
-
-STRING 16063
-// Abilities: A0FU (Pocket Dimension), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit enters an alternate dimension, causing him to pass through units and be immune to non-lethal damage for 3 seconds.
-|cff00FFFFCooldown: <A0FU,Cool1,.> - <A0FU,Cool10,.>s|r
 }
 
 STRING 16064
@@ -99965,166 +100127,6 @@ STRING 16104
 Hit traps an opponent in a time cage, stunning them for 1.5 seconds.
 |cff00ff00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A0FW,Cool10,.>s|r
-}
-
-STRING 16105
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD1,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> times
-}
-
-STRING 16106
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD2,%>% 
-|cffffcc00Critical|r - <A0G0,DataA2>% 
-|cffffcc00Damage|r - <A0G0,DataB2,.> times
-}
-
-STRING 16107
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD3,%>% 
-|cffffcc00Critical|r - <A0G0,DataA3>% 
-|cffffcc00Damage|r - <A0G0,DataB3,.> times
-}
-
-STRING 16108
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD4,%>% 
-|cffffcc00Critical|r - <A0G0,DataA4>% 
-|cffffcc00Damage|r - <A0G0,DataB4,.> times
-}
-
-STRING 16109
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD5,%>% 
-|cffffcc00Critical|r - <A0G0,DataA5>% 
-|cffffcc00Damage|r - <A0G0,DataB5,.> times
-}
-
-STRING 16110
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD6,%>% 
-|cffffcc00Critical|r - <A0G0,DataA6>% 
-|cffffcc00Damage|r - <A0G0,DataB6,.> times
-}
-
-STRING 16111
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD7,%>% 
-|cffffcc00Critical|r - <A0G0,DataA7>% 
-|cffffcc00Damage|r - <A0G0,DataB7,.> times
-}
-
-STRING 16112
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD8,%>% 
-|cffffcc00Critical|r - <A0G0,DataA8>% 
-|cffffcc00Damage|r - <A0G0,DataB8,.> times
-}
-
-STRING 16113
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD9,%>% 
-|cffffcc00Critical|r - <A0G0,DataA9>% 
-|cffffcc00Damage|r - <A0G0,DataB9,.> times
-}
-
-STRING 16114
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD10,%>% 
-|cffffcc00Critical|r - <A0G0,DataA10>% 
-|cffffcc00Damage|r - <A0G0,DataB10,.> times
-}
-
-STRING 16115
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD11,%>% 
-|cffffcc00Critical|r - <A0G0,DataA11>% 
-|cffffcc00Damage|r - <A0G0,DataB11,.> times
-}
-
-STRING 16116
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD12,%>% 
-|cffffcc00Critical|r - <A0G0,DataA12>% 
-|cffffcc00Damage|r - <A0G0,DataB12,.> times
-}
-
-STRING 16117
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD13,%>% 
-|cffffcc00Critical|r - <A0G0,DataA13>% 
-|cffffcc00Damage|r - <A0G0,DataB13,.> times
-}
-
-STRING 16118
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD14,%>% 
-|cffffcc00Critical|r - <A0G0,DataA14>% 
-|cffffcc00Damage|r - <A0G0,DataB14,.> times
-}
-
-STRING 16119
-// Abilities: A0G0 (Hit's fighting style), Ubertip (Tooltip - Normal - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB15,.> times
-}
-
-STRING 16120
-// Abilities: A0G0 (Hit's fighting style), Researchubertip (Tooltip - Learn - Extended)
-{
-Hit's assassination techniques cause massive damage in hand-to-hand combat.
-|cff00ff00Each level in this passive increases restore rate of time skip charges.
-|cffffcc00Evasion|r - <A0G0,DataD1,%> - <A0G0,DataD15,%>% 
-|cffffcc00Critical|r - <A0G0,DataA1> - <A0G0,DataA15>% 
-|cffffcc00Damage|r - <A0G0,DataB1,.> - <A0G0,DataB15,.> times
 }
 
 STRING 16121
