@@ -180,7 +180,7 @@ export function tapionPassive(customHero: CustomHero) {
           true, 
           false, 
           ATTACK_TYPE_HERO, 
-          DAMAGE_TYPE_UNKNOWN, 
+          DAMAGE_TYPE_NORMAL, 
           WEAPON_TYPE_WHOKNOWS
         );
 
