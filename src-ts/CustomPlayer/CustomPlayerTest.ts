@@ -1327,7 +1327,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
                 true, 
                 false, 
                 ATTACK_TYPE_HERO, 
-                DAMAGE_TYPE_UNKNOWN, 
+                DAMAGE_TYPE_NORMAL, 
                 WEAPON_TYPE_WHOKNOWS
               );
 
@@ -1999,7 +1999,7 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
           true,
           false,
           ATTACK_TYPE_HERO, 
-          DAMAGE_TYPE_UNKNOWN, 
+          DAMAGE_TYPE_NORMAL, 
           WEAPON_TYPE_WHOKNOWS
         );
 
@@ -2811,6 +2811,54 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
           playSoundOnUnit(unit, "Audio/Voice/GuldoGinyuForceGuldo.mp3", 2115);
         } else {
           playSoundOnUnit(unit, "Audio/Voice/GuldoGuldo.mp3", 522);
+        }
+      }
+      break;
+    
+    // hit
+    case Id.timeSkip:
+      if (unitId == Id.hit) {
+        if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/Donuts.mp3", 2768);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Voice/Hit/HitQSound.mp3", 552);
+      break;
+    
+    case Id.pocketDimension:
+      if (unitId == Id.hit) {
+        if (rng < 70) {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/PocketDimension2.mp3", 888);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/PocketDimension1.mp3", 1056);
+        }
+      }
+      break;
+    
+    case Id.flashFist:
+      if (unitId == Id.hit) {
+        playSoundOnUnit(unit, "Audio/Voice/Hit/FlashFist.mp3", 840);
+      }
+      break;
+
+    case Id.timeCage:
+      if (unitId == Id.hit) {
+        if (rng < 50) {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/TimeCage1.mp3", 600);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/TimeCage2.mp3", 552);
+        }
+      }
+      break;
+    
+    case Id.pureProgress:
+      if (unitId == Id.hit) {
+        if (rng < 10) {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/Donuts.mp3", 2768);
+        } else if (rng < 80) {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/PureProgress2.mp3", 2064);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Hit/PureProgress1.mp3", 1464);
         }
       }
       break;

@@ -6860,7 +6860,7 @@ end
 function Trig_Frieza_Earth_Breaker_Func005A()
     udg_TempUnit2 = GetEnumUnit()
     if (Trig_Frieza_Earth_Breaker_Func005Func002C()) then
-        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     else
     end
 end
@@ -7465,7 +7465,7 @@ function Trig_Jiren_Mighty_Punch_Actions()
     end
     udg_TempReal2 = (0.45 * (0.25 * (udg_TempReal2 * I2R(GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_TempUnit)))))
     SaveRealBJ(udg_TempReal2, 5, udg_ID, udg_JirenHashtable)
-    UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+    UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     SaveIntegerBJ(0, 6, udg_ID, udg_JirenHashtable)
     EnableTrigger(gg_trg_Jiren_Mighty_Punch_Loop)
 end
@@ -7584,7 +7584,7 @@ function Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013A()
     udg_TempUnit4 = GetEnumUnit()
     if (Trig_Jiren_Mighty_Punch_Loop_Func001Func007Func003Func005Func013Func002C()) then
         IssueTargetOrderBJ(udg_TempUnit3, "thunderbolt", udg_TempUnit4)
-        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit4, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit4, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     else
     end
 end
@@ -10102,7 +10102,7 @@ function Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func008A()
     udg_TempUnit2 = GetEnumUnit()
     if (Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func008Func002C()) then
         SetUnitLifeBJ(udg_TempUnit2, 1.00)
-        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     else
         if (Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func008Func002Func001C()) then
             udg_TempReal2 = (1500.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)), ((2.10 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))) - I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit2, true)))))
@@ -10110,7 +10110,7 @@ function Trig_Sephiroth_Parry_Loop_Func001Func004Func004Func008A()
             udg_TempReal2 = (1500.00 + RMaxBJ(I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true)), 100.00))
         end
         udg_TempReal2 = (1.00 * (0.25 * (udg_TempReal2 * I2R(udg_TempInt2))))
-        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal2, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     end
     udg_TempLoc2 = GetUnitLoc(udg_TempUnit2)
     AddSpecialEffectLocBJ(udg_TempLoc2, "animeslashfinal.mdx")
@@ -10418,7 +10418,7 @@ function Trig_Hit_Cast_Spell_Actual_Actions()
     SaveIntegerBJ(udg_TempInt, 11, udg_ID, udg_StatMultHashtable)
     udg_TempInt2 = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
-    udg_TempInt4 = IMaxBJ(((0 - 2) * (udg_TempInt3 // (udg_TempInt + 1))), (udg_TempInt2 - udg_TempInt3))
+    udg_TempInt4 = IMaxBJ(((0 - 4) * (udg_TempInt3 // (udg_TempInt + 1))), (udg_TempInt2 - udg_TempInt3))
     SaveIntegerBJ(udg_TempInt4, 0, udg_ID, udg_HitHashtable)
     udg_StatMultUnit = udg_TempUnit
     TriggerExecute(gg_trg_Hit_Set_Charges_String)
@@ -10447,7 +10447,7 @@ function Trig_Hit_Charges_Add_Unit_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     SaveIntegerBJ(0, 0, udg_ID, udg_HitHashtable)
     if (Trig_Hit_Charges_Add_Unit_Func004C()) then
-        SaveIntegerBJ(100, 1, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ(75, 1, udg_ID, udg_HitHashtable)
         SaveIntegerBJ(10000, 2, udg_ID, udg_HitHashtable)
         SaveIntegerBJ(5, 3, udg_ID, udg_HitHashtable)
         SaveIntegerBJ(5, 11, udg_ID, udg_StatMultHashtable)
@@ -10531,7 +10531,7 @@ function Trig_Hit_Charges_Loop_Func002A()
     udg_TempUnit = GetEnumUnit()
         udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(0, udg_ID, udg_HitHashtable)
-    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 4) + 5) + 0))
+    udg_TempInt2 = (LoadIntegerBJ(1, udg_ID, udg_HitHashtable) + (((GetUnitAbilityLevelSwapped(FourCC("A0G0"), udg_TempUnit) * 3) + 0) + 0))
     udg_TempInt3 = LoadIntegerBJ(2, udg_ID, udg_HitHashtable)
     udg_TempInt4 = LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)
     if (Trig_Hit_Charges_Loop_Func002Func007C()) then
@@ -11458,7 +11458,7 @@ function Trig_Unstuck_Units_Func001A()
     PauseUnitBJ(false, GetEnumUnit())
     SetUnitInvulnerable(GetEnumUnit(), false)
     SetUnitLifeBJ(GetEnumUnit(), 1.00)
-    UnitDamageTargetBJ(GetEnumUnit(), GetEnumUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+    UnitDamageTargetBJ(GetEnumUnit(), GetEnumUnit(), 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     udg_HeroRespawnUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Move_and_Revive_Hero_To_Dead_Zone)
 end
@@ -21368,7 +21368,7 @@ function Trig_Hit_Pure_Progress_Actions()
         udg_StatMultStr = (udg_StatMultStr + 0.20)
         udg_StatMultAgi = (udg_StatMultAgi + 0.20)
         udg_StatMultInt = (udg_StatMultInt + 0.20)
-        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 2000), 2, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) - 1500), 2, udg_ID, udg_HitHashtable)
         udg_TransformationSFXString = "AuraPink2.mdx"
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         SaveIntegerBJ(IMinBJ(LoadIntegerBJ(3, udg_ID, udg_HitHashtable), (LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable) + 1)), 11, udg_ID, udg_StatMultHashtable)
@@ -21841,7 +21841,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func007C()) then
-        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) + 2000), 2, udg_ID, udg_HitHashtable)
+        SaveIntegerBJ((LoadIntegerBJ(2, udg_ID, udg_HitHashtable) + 1500), 2, udg_ID, udg_HitHashtable)
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func008C()) then
@@ -30043,7 +30043,7 @@ function Trig_Moro_Energy_Drain_Active_Func004A()
             end
         else
         end
-        UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (70.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_MoroDrainSourceUnit, udg_MoroDrainTargetUnit, (70.00 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0MO"), udg_MoroDrainSourceUnit))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         if (Trig_Moro_Energy_Drain_Active_Func004Func002Func003C()) then
             SetUnitLifePercentBJ(udg_MoroDrainSourceUnit, RMinBJ(100.00, (GetUnitLifePercent(udg_MoroDrainSourceUnit) + 0.50)))
         else
@@ -35681,16 +35681,6 @@ function Trig_Transformations_Hit_Func016C()
     return true
 end
 
-function Trig_Transformations_Hit_Func017C()
-    if (not (udg_TransformationString == "fp")) then
-        return false
-    end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 250)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_Hit_Func018C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
@@ -35772,12 +35762,6 @@ function Trig_Transformations_Hit_Actions()
     end
     if (Trig_Transformations_Hit_Func016C()) then
         udg_StatMultReal = 2.40
-        udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraWhite.mdx"
-    else
-    end
-    if (Trig_Transformations_Hit_Func017C()) then
-        udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraWhite.mdx"
     else
@@ -36819,20 +36803,20 @@ function Trig_Sorbets_Ring_Actions()
     if (Trig_Sorbets_Ring_Func017C()) then
         TriggerExecute(gg_trg_Get_Stat_Multiplier)
         if (Trig_Sorbets_Ring_Func017Func003C()) then
-            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) * 0.80), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_LIFE, udg_StatMultUnit) * 0.80), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         else
         end
     else
     end
     if (Trig_Sorbets_Ring_Func018C()) then
         if (Trig_Sorbets_Ring_Func018Func001C()) then
-            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.08), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.08), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         else
-            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.75), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+            UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_StatMultUnit) * 0.75), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
         end
     else
         SetUnitLifeBJ(udg_StatMultUnit, 1.00)
-        UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNKNOWN)
+        UnitDamageTargetBJ(udg_TempUnit, udg_StatMultUnit, 1000.00, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     end
 end
 
