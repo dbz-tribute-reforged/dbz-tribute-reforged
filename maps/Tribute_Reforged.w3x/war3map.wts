@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.55d
+DBZ Tribute Reforged 0.55e
 }
 
 STRING 4
@@ -6392,6 +6392,21 @@ STRING 1028
 A combat style taught by Master Roshi. 
 
 |cffffcc00Evasion|r - <A027,DataD1,%>% |n|cffffcc00Critical|r - <A027,DataA1>% |n|cffffcc00Damage|r - <A027,DataB1,.> times
+}
+
+STRING 1029
+// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
+{
+A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
+
+|cff00ff00Unstoppable|r: Briefly gains 12% damage block after casting a spell.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 1030
@@ -15356,6 +15371,12 @@ STRING 2490
 // Abilities: A017 (125), Name (Name)
 {
 125
+}
+
+STRING 2491
+// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
+{
+Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 10.|n|cff00FF00Level [1/5]|r
 }
 
 STRING 2492
@@ -42780,6 +42801,25 @@ STRING 7013
 W
 }
 
+STRING 7014
+// Items: I03R (Dimension Sword S [1/5]), Description (Description)
+{
+Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 10.|n|cff00FF00Level [1/5]|r
+}
+
+STRING 7015
+// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
+|cffffff00+0.4x stat mult.
++33ms and unlocks movement speed cap.
+10% damage block up to 2x STR.
+Heals 10% of max HP.
+Deals constant AOE damage around All Might.
+|cff00FF00Duration: <A0T0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
+}
+
 STRING 7016
 // Abilities: A0FU (Pocket Dimension), Name (Name)
 {
@@ -49521,21 +49561,6 @@ STRING 8122
 {
 |cff00ffff[Hyperbolic Time Chamber]|r
 Mr. Popo has perfected the Hyperbolic Time Chamber.
-}
-
-STRING 8123
-// Units: H00M (Legendary Super Saiyan), Ubertip (Tooltip - Extended)
-{
-A bulky, short-ranged hero who excels at sticking on his opponents with constant slows and knockbacks, but struggles if he cannot get in range of his opponent.
-
-|cff00ff00Unstoppable|r: Casting a spell briefly provides 15% damage block.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 8124
@@ -61997,7 +62022,7 @@ Transformations:
 [lvl 150] 2.40x "uss"
 [lvl 200] 2.50x "luss"
 
-|cff00ff00Unstoppable|r: Casting a spell briefly provides 15% damage block.
+|cff00ff00Unstoppable|r: Briefly gains 12% damage block after casting a spell.
 }
 
 STRING 10162
@@ -69381,19 +69406,6 @@ STRING 11368
 [|cff00FF00Q|r] Detroit Smash - [|cffffcc00Level 10|r]
 }
 
-STRING 11369
-// Abilities: A0T0 (One For All), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's unique quirk One For All stockpiles enormous amounts of power to enhance his strength, speed, agility and durability to unbelievable levels.
-|cffffff00+0.4x stat mult.
-+33ms and unlocks movement speed cap.
-15% damage block up to 3x STR.
-Heals 10% of max HP.
-Deals constant AOE damage around All Might.
-|cff00FF00Duration: <A0T0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0T0,Cool1> seconds|r
-}
-
 STRING 11370
 // Abilities: A0MJ (Blazing Storm), Hotkey (Hotkey - Normal)
 {
@@ -75684,18 +75696,6 @@ STRING 12398
 // Abilities: A0IW (Kharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Kharge - [|cffffcc00Level 10|r]
-}
-
-STRING 12399
-// Items: I03R (Dimension Sword S [1/5]), Ubertip (Tooltip - Extended)
-{
-Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
-}
-
-STRING 12400
-// Items: I03R (Dimension Sword S [1/5]), Description (Description)
-{
-Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 5.|n|cff00FF00Level [1/5]|r|n|cffFFFF00Left Click to upgrade (costs 2 points|r)
 }
 
 STRING 12401

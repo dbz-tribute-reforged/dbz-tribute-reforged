@@ -307,7 +307,7 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 15,
+    blockPerDamage: 12,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
     multiplier: 0.12,
@@ -1218,10 +1218,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 15,
+    blockPerDamage: 10,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_STR,
-    multiplier: 3,
+    multiplier: 2,
     sfxList: [
       {
         model: "Slam.mdl",

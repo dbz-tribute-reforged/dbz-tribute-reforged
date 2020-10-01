@@ -660,7 +660,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 90,
-    distance: 40,
+    distance: 35,
   },
   // yamcha r dash forward
   {
@@ -673,7 +673,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 40,
+    distance: 35,
   },
   // yamcha r dash right
   {
@@ -686,7 +686,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 270,
-    distance: 40,
+    distance: 35,
   },
   // yamcha r super spirit ball
   {
@@ -776,7 +776,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 4,
+    distance: 8,
   },
   // yamcha r wolf fang fist
   {
@@ -789,7 +789,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 7,
+    distance: 6,
   },
   // yamcha r spirit ball
   {

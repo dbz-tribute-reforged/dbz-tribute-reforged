@@ -2609,7 +2609,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2636,7 +2636,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2663,7 +2663,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 10,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2706,7 +2706,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.SUPER_SPIRIT_BALL,
     },
     components: [
-      { name: "multi yamcha r super spirit ball" },
+      { name: "beam yamcha r super spirit ball" },
     ],
   },
   // -------------------------------------------
@@ -2732,7 +2732,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.FULL_POWER_KAMEHAMEHA,
     },
     components: [
-      { name: "multi yamcha r full power kame" },
+      { name: "beam yamcha r full power kame" },
       { name: "dash ground forward yamcha r full power kame pushback" },
     ],
   },
@@ -2760,7 +2760,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "damage yamcha r wolf fang blast" },
-      { name: "multi yamcha r wolf fang blast" },
+      { name: "beam yamcha r wolf fang blast" },
+      { name: "sfx yamcha r wolf fang blast" },
     ],
   },
   // -------------------------------------------
@@ -2940,7 +2941,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -2995,7 +2996,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3040,7 +3041,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.SPIRIT_BALL,
     },
     components: [
-      { name: "multi yamcha r spirit ball" },
+      { name: "beam yamcha r spirit ball" },
     ],
   },
   // -------------------------------------------
@@ -3066,7 +3067,7 @@ export const AbilitiesList = [
         AbilityNames.YamchaR.FLASH_KAME,
     },
     components: [
-      { name: "multi yamcha r flash kame" },
+      { name: "beam yamcha r flash kame" },
     ],
   },
   // -------------------------------------------
@@ -3102,7 +3103,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -3161,7 +3162,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 33,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
