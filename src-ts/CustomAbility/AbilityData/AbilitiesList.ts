@@ -1441,6 +1441,7 @@ export const AbilitiesList = [
       { name: "damage videl flying kick explosion" },
       { name: "knockback videl flying kick" },
       { name: "jump videl flying kick" },
+      { name: "spell amp videl boost" },
       { name: "sfx videl flying kick" },
     ],
   },
@@ -5429,7 +5430,7 @@ export const AbilitiesList = [
         AbilityNames.KingKRool.HAND_KANNON
     },
     components: [
-      { name: "beam hand kannon" },
+      { name: "beam kannonblast" },
       { name: "sfx hand kannon gun" },
     ],
   },
@@ -6250,7 +6251,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
-      // { name: "beam cage of light barrier" },
+      { name: "beam cage of light barrier" },
       { name: "multi cage of light" },
     ],
   },

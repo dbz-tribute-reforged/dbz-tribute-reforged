@@ -1900,8 +1900,8 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
   const dummyStunOrder = 852095;
   const glareDuration = 2.5;
   const maxGlareDistance = 2500;
-  const glareDamageMult = 0.25 * 0.5;
-  const glare2DamageMult = 0.25 * 0.7;
+  const glareDamageMult = 0.25 * 0.53;
+  const glare2DamageMult = 0.25 * 0.75;
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
@@ -2064,7 +2064,7 @@ export function playSoundOnUnit(target: unit, soundFile: string, duration: numbe
 	SetSoundVolume(udg_TempSound, 127)
 	SetSoundPitch(udg_TempSound, 1.0)
 	SetSoundDistances(udg_TempSound, 600.0, 15000.0)
-	SetSoundDistanceCutoff(udg_TempSound, 5500.0)
+	SetSoundDistanceCutoff(udg_TempSound, 5000.0)
 	SetSoundConeAngles(udg_TempSound, 0.0, 0.0, 127)
 	SetSoundConeOrientation(udg_TempSound, 0.0, 0.0, 0.0)
 	PlaySoundOnUnitBJ(udg_TempSound, 100, target)

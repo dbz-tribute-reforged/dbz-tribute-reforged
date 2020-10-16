@@ -944,7 +944,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 32,
+    distance: 35,
   },
   // california smash
   {
@@ -970,7 +970,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 35,
+    distance: 33,
   },
   // ----------------------------
   // cell-x
@@ -1062,7 +1062,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 50,
+    distance: 55,
   },
   // belly armor
   {
@@ -1088,7 +1088,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 45,
   },
   {
     name: "dash flying caster krown toss return",
@@ -1100,7 +1100,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 63,
+    distance: 67,
   },
   // kharge
   {

@@ -21,6 +21,14 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
 
+  static readonly BEAM_SPEED_VERY_SLOW = 30;
+  static readonly BEAM_SPEED_SLOW = 35;
+  static readonly BEAM_SPEED_MEDIUM_SLOW = 40;
+  static readonly BEAM_SPEED_MEDIUM = 45;
+  static readonly BEAM_SPEED_MEDIUM_FAST = 50;
+  static readonly BEAM_SPEED_FAST = 55;
+  static readonly BEAM_SPEED_VERY_FAST = 60;
+
   public beamUnit: unit;
   public delayTicks: number;
   public angle: number;

@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.55e
+DBZ Tribute Reforged 0.56
 }
 
 STRING 4
@@ -99,16 +99,9 @@ Q
 }
 
 STRING 19
-// Units: H042 (Changling), Ubertip (Tooltip - Extended)
+// Units: H09Q (Plumber), Name (Name)
 {
-A fast and versatile teamfight hero. Can transform into Metal Cooler if he dies in his Fourth Form Transformation.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Plumber
 }
 
 STRING 20
@@ -7709,7 +7702,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 
 STRING 1228
 {
-Someone has picked up the |r|cffff00ffHBTC Training Ticket|r. If they deliver it to the HBTC at |r|cff00ff00Kami's Lookout|r, they will |cffff2020permanently|r receive |cff00ffff+2/2/2 level up stats|r
+Someone has picked up the |r|cffff00ffHBTC Training Ticket|r. If they deliver it to the HBTC at |r|cff00ff00Kami's Lookout|r, they will |cffff2020permanently|r receive |cff00ffff+1/1/1 level up stats|r
 }
 
 STRING 1229
@@ -15380,15 +15373,9 @@ Adds 750 bonus damage to the carrier and attacks reduce the target's armor by 10
 }
 
 STRING 2492
-// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+// Units: H09Q (Plumber), Propernames (Proper Names)
 {
-Hit develops improved skills and techniques by fighting stronger enemies.
-|cffffff00+0.2x stat mult
-+1% spell amp per second up to +10%
-+15% restore rate of time skip charges (temporary)
-+1 time skip charge (cannot exceed max)|r
-|cff00FF00Duration: <A0TH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
+Mario
 }
 
 STRING 2493
@@ -22765,9 +22752,9 @@ STRING 3718
 }
 
 STRING 3719
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Units: H09Q (Plumber), Awakentip (Tooltip - Awaken)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+[|cffffff00Z|r] Choose Mario
 }
 
 STRING 3720
@@ -42826,6 +42813,32 @@ STRING 7016
 Pocket Dimension
 }
 
+STRING 7017
+// Units: H042 (Changling), Ubertip (Tooltip - Extended)
+{
+A fast and versatile hero with minor utility. Can transform into Metal Cooler if he dies in his Fourth Form Transformation.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 7018
+// Units: H09F (One-Star Shadow Dragon), Ubertip (Tooltip - Extended)
+{
+A weak early-game hero with powerful close-range offensive capabilities. Can gain early-access to his unique abilities by gathering all 7 dragon balls.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 7019
 // Abilities: A0GA (Final Flash), Hotkey (Hotkey - Normal)
 {
@@ -42838,10 +42851,89 @@ STRING 7020
 E
 }
 
+STRING 7021
+// Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
+{
+A strong close-quarters fighter that is extremely resilient and has access to strong lockdown and mobility options.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 7022
+// Units: H09M (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+{
+A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
+
+|cffff25aaMasamune|r: 40% chance for 2x Crit.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ffffCestroq|r.
+}
+
+STRING 7023
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+{
+|cffffff00+14 armor.
++0.1x Str mult.
++0.1x Agi mult.
+-0.1x Int mult.|r
+|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 7024
+// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+{
+|cffffff00+14 armor.
++0.1x Str mult.
++0.1x Agi mult.
+-0.1x Int mult.|r
+|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+}
+
+STRING 7025
+// Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
+{
+|cffffff00Take this ticket to the Hyberbolic Time Chamber to receive +1/1/1 level up stats for the rest of the game.|r
+
+|cffff2020Holding this item reduces movement speed by 30.
+}
+
 STRING 7026
 // Abilities: A0E5 (Transform - 100%), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 7027
+// Abilities: A0KC (Ultimate Burning Warrior), Ubertip (Tooltip - Normal - Extended)
+{
+Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
+Cannot be used with [|cff00ff00D|r] Meditate.
+|cffffff00+0.15x stat multiplier.
++66ms and unlocks movement speed cap.
++15% Damage Block up to 3x Str
++4 upgraded spell charges.|r
+|cff00ff00Duration: <A0KC,Dur1> seconds
+|cff00ffffCooldown: <A0KC,Cool1> seconds
+
+|cff808080"I cannot lose... I WILL NOT!"
+}
+
+STRING 7028
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
 }
 
 STRING 7029
@@ -43967,9 +44059,16 @@ STRING 7202
 }
 
 STRING 7203
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Units: H09Q (Plumber), Ubertip (Tooltip - Extended)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+It's a me! Letsa go!
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 7204
@@ -44645,9 +44744,9 @@ Masenko
 }
 
 STRING 7314
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+// Units: H09Q (Plumber), Tip (Tooltip - Basic)
 {
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+[|cffffff00Z|r] Choose Mario
 }
 
 STRING 7315
@@ -48057,6 +48156,24 @@ A hero who specializes in small skirmishes, dealing heavy single-target damage.
 
 }
 
+STRING 7879
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool2> seconds|r
+}
+
+STRING 7880
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool3> seconds|r
+}
+
+STRING 7881
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool4> seconds|r
+}
+
 STRING 7882
 // Abilities: A0HN (Wolf Fang Fist), Untip (Tooltip - Turn Off)
 {
@@ -49139,11 +49256,9 @@ Freemode Disabled, forced win/loss conditions are enabled.
 }
 
 STRING 8054
-// Items: I04H (HBTC Training Ticket), Ubertip (Tooltip - Extended)
+// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
 {
-|cffffff00Take this ticket to the Hyberbolic Time Chamber to receive +2/2/2 level up stats for the rest of the game.|r
-
-|cffff2020Holding this item reduces movement speed by 40.
+(Tavern)
 }
 
 STRING 8055
@@ -49563,6 +49678,12 @@ STRING 8122
 Mr. Popo has perfected the Hyperbolic Time Chamber.
 }
 
+STRING 8123
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool5> seconds|r
+}
+
 STRING 8124
 // Abilities: A0Q3 (Emperor's Throne), Ubertip (Tooltip - Normal - Extended)
 {
@@ -49574,9 +49695,9 @@ Level 10: Zarbon
 }
 
 STRING 8125
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H09R (Plumber), Name (Name)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
+Plumber
 }
 
 STRING 8126
@@ -49622,9 +49743,9 @@ E
 }
 
 STRING 8133
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H09R (Plumber), Propernames (Proper Names)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
+Mario Fire
 }
 
 STRING 8134
@@ -49640,9 +49761,9 @@ Hero's Flute
 }
 
 STRING 8136
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H09R (Plumber), Awakentip (Tooltip - Awaken)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
+[|cffffff00Z|r] Choose Mario
 }
 
 STRING 8137
@@ -49670,15 +49791,22 @@ Tapion slashes units in melee range towards the target direction for damage. If 
 }
 
 STRING 8141
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H09R (Plumber), Ubertip (Tooltip - Extended)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
+It's a me! Letsa go!
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 8142
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H09R (Plumber), Tip (Tooltip - Basic)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
+[|cffffff00Z|r] Choose Mario
 }
 
 STRING 8143
@@ -49688,9 +49816,9 @@ W
 }
 
 STRING 8144
-// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
+// Units: H09R (Plumber), EditorSuffix (Name - Editor Suffix)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+(Fire)
 }
 
 STRING 8145
@@ -49706,9 +49834,9 @@ Shining Sword
 }
 
 STRING 8147
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H08Y (Planet-Eater), Hotkey (Hotkey)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
+Z
 }
 
 STRING 8148
@@ -49718,9 +49846,9 @@ Tapion dances across the battlefield, bouncing and damaging up to 15 times betwe
 }
 
 STRING 8149
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Units: H098 (Demon), Hotkey (Hotkey)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
+Z
 }
 
 STRING 8150
@@ -52330,9 +52458,9 @@ A strong PvP fighters due to his extremely high mobility, burst damage, and inna
 }
 
 STRING 8578
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 1|r]
 }
 
 STRING 8579
@@ -52348,7 +52476,7 @@ King K Rool is a formidable fighter. He can absorb incoming punches using only h
 }
 
 STRING 8581
-// Units: O001 (Evil Wizard), EditorSuffix (Name - Editor Suffix)
+// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -52737,9 +52865,9 @@ Item
 }
 
 STRING 8645
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Name (Name)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
+Jump
 }
 
 STRING 8646
@@ -53201,17 +53329,9 @@ STRING 8718
 }
 
 STRING 8719
-// Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
+// Abilities: A0TJ (Jump), Researchtip (Tooltip - Learn)
 {
-A strong close-quarters fighter that is extremely resilient and can apply strong lockdown for his team.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-Proudly bankrolled by |cff00ffffCestroq|r.
+[|cff00ff00Q|r] Learn Jump - [|cffffcc00Level %d|r]
 }
 
 STRING 8720
@@ -54009,9 +54129,12 @@ Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff
 }
 
 STRING 8848
-// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Researchubertip (Tooltip - Learn - Extended)
 {
-King K Rool pulls in nearby units in front of him. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> - <A0TJ,Cool10,.> seconds|r
 }
 
 STRING 8849
@@ -54128,7 +54251,7 @@ STRING 8865
 }
 
 STRING 8866
-// Units: N00Q (Cell  "Unformed"), EditorSuffix (Name - Editor Suffix)
+// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -55348,7 +55471,7 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 75]  2.00x "ult" [Unlocks Ultimate Burning Warrior]
 [lvl 150] 2.30x "ult" 
-[lvl 200] 2.60x "ult" [Upgrades Meditate at 2+ charges]
+[lvl 200] 2.60x "ult" [Upgrades Meditate at 1+ charges]
 [lvl 250] 2.70x "ult" 
 [lvl 300] 2.75x "ult" [Upgrades UBW at 2+ charges]
 
@@ -57803,6 +57926,12 @@ STRING 9459
 Pocket Dimension
 }
 
+STRING 9460
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool6> seconds|r
+}
+
 STRING 9461
 // Buffs/Effects: B01F (), Buffubertip (Tooltip - Extended)
 {
@@ -59914,6 +60043,18 @@ STRING 9812
 Saiyan Defender of the earth
 }
 
+STRING 9813
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool7> seconds|r
+}
+
+STRING 9814
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool8> seconds|r
+}
+
 STRING 9815
 // Abilities: A0SP (Super Kamehameha Fire), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -60007,7 +60148,7 @@ Z Fighters
 }
 
 STRING 9830
-// Units: H00D (Tsufuru-jin King Parasite), EditorSuffix (Name - Editor Suffix)
+// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60019,7 +60160,7 @@ Evil
 }
 
 STRING 9832
-// Units: H00K (Half Human / Half Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60031,7 +60172,7 @@ Extra Heroes
 }
 
 STRING 9834
-// Units: H00M (Legendary Super Saiyan), EditorSuffix (Name - Editor Suffix)
+// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60043,7 +60184,7 @@ Extra Heroes 2
 }
 
 STRING 9836
-// Units: H00R (Namekian), EditorSuffix (Name - Editor Suffix)
+// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60073,85 +60214,85 @@ With both hands in front of him, Babidi shouts the word "barrier" to make a circ
 }
 
 STRING 9841
-// Units: H01V (Android), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9842
 // Units: H03Y (Martial Artist), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9843
+STRING 9842
 // Units: H042 (Changling), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9844
+STRING 9843
 // Units: H04D (Namekian), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9845
+STRING 9844
 // Units: n01C (Z Fighters), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9846
+STRING 9845
 // Units: n01V (Evil), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9847
+STRING 9846
 // Units: H04F (Random Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9848
+STRING 9847
 // Units: H04I (Mercenary), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9849
+STRING 9848
 // Units: H04P (World Champion), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9850
+STRING 9849
 // Units: H04T (Scientist / Android 20), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9851
+STRING 9850
 // Units: H04Z (Saiyan Space-Pirate), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9852
+STRING 9851
 // Units: H055 (Three-Eyed Baldy), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9853
+STRING 9852
 // Units: H05C (Future Android), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9854
+STRING 9853
 // Units: H061 (Demon), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9854
+// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60163,13 +60304,13 @@ STRING 9855
 }
 
 STRING 9856
-// Units: H06M (God of Destruction), EditorSuffix (Name - Editor Suffix)
+// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
 STRING 9857
-// Units: n03D (Extra Heroes), EditorSuffix (Name - Editor Suffix)
+// Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -60181,103 +60322,103 @@ STRING 9858
 }
 
 STRING 9859
-// Units: E001 (Master Roshi), EditorSuffix (Name - Editor Suffix)
-{
-(Tavern)
-}
-
-STRING 9860
 // Units: E00H (Legend), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9861
+STRING 9860
 // Units: E00K (Legendary Assassin), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9862
+STRING 9861
 // Units: E00T (Fused Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9863
+STRING 9862
 // Units: E010 (Baseball Bandit), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9864
+STRING 9863
 // Units: E012 (Supreme Kai Apprentice), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9865
+STRING 9864
 // Units: E014 (Legendary Hero), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9866
+STRING 9865
 // Units: E019 (Stolen Body), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9867
+STRING 9866
 // Units: E01D (Kremling King), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9868
+STRING 9867
 // Units: E01I (Angel), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9869
+STRING 9868
 // Units: E01P (Pride Trooper), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9870
+STRING 9869
 // Units: n016 (Extra Heroes 2), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9871
+STRING 9870
 // Units: H085 (Daughter of Hercule), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9872
+STRING 9871
 // Units: H08M (Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9873
+STRING 9872
 // Units: H08O (Android of Birds), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9874
+STRING 9873
 // Units: H08P (Spoiled Brat), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
-STRING 9875
+STRING 9874
 // Units: H08S (Slayer of Raditz), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 9875
+// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61054,7 +61195,7 @@ STRING 10005
 }
 
 STRING 10006
-// Units: H08T (Frozeny helfirey), EditorSuffix (Name - Editor Suffix)
+// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -61924,7 +62065,7 @@ STRING 10147
 }
 
 STRING 10148
-// Units: H08U (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63752,7 +63893,7 @@ King K Rool fires a Kannonball from his Blunderbuss dealing damage to enemies in
 }
 
 STRING 10447
-// Units: H08W (Mid-Class Saiyan Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -63941,6 +64082,12 @@ STRING 10478
 // Abilities: A0LN (Future Sight), Ubertip (Tooltip - Normal - Extended)
 {
 Bardock's ability to see into the future allows him to dodge most incoming attacks while reducing the damage of those that do manage to hit.|n|cff00ff00Duration: 1.5s|nDamage Block: Int x 1.2 @ 50%|n|n|cff808080Toolo passes to Bardock the ability to see into the future as a form of retribution for the misdeeds of Bardock and the Saiyans in general.|r
+}
+
+STRING 10479
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool9> seconds|r
 }
 
 STRING 10480
@@ -64976,7 +65123,7 @@ STRING 10637
 }
 
 STRING 10638
-// Units: H08Y (Planet-Eater), EditorSuffix (Name - Editor Suffix)
+// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65454,7 +65601,7 @@ STRING 10712
 }
 
 STRING 10713
-// Units: H092 (Shaggy Rogers), EditorSuffix (Name - Editor Suffix)
+// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -65974,6 +66121,12 @@ STRING 10798
 // Abilities: A0LZ (Best Friends Forever), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00F|r] Learn Master Roshi's Teachings - [|cffffcc00Level %d|r]
+}
+
+STRING 10799
+// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool10> seconds|r
 }
 
 STRING 10800
@@ -67224,7 +67377,7 @@ STRING 11004
 }
 
 STRING 11005
-// Units: H099 (Karinga Tribe Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -67473,7 +67626,7 @@ The user charges energy into their right hand and rushes forward with with an en
 }
 
 STRING 11049
-// Units: n03X (Brawlers / Frontline), EditorSuffix (Name - Editor Suffix)
+// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68240,7 +68393,7 @@ Goku charges at the opponent calling upon the power of the Eternal Dragon to del
 }
 
 STRING 11174
-// Units: n03Y (Summoners / Micro-Intensive), EditorSuffix (Name - Editor Suffix)
+// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -68993,7 +69146,7 @@ Vegeta charges with his arms spread out and palms facing the opponent. Then his 
 }
 
 STRING 11300
-// Units: n03Z (Carries / Late-game), EditorSuffix (Name - Editor Suffix)
+// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -69404,6 +69557,12 @@ STRING 11368
 // Abilities: A0SX (Detroit Smash), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Detroit Smash - [|cffffcc00Level 10|r]
+}
+
+STRING 11369
+// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+{
+First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
 }
 
 STRING 11370
@@ -71612,7 +71771,7 @@ STRING 11737
 }
 
 STRING 11738
-// Units: n040 (Supports / Utility), EditorSuffix (Name - Editor Suffix)
+// Units: n041 (Beamers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -72785,9 +72944,9 @@ Demon's Mark Curse 30%
 }
 
 STRING 11932
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +5% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 2|r]
 }
 
 STRING 11933
@@ -74082,7 +74241,7 @@ Gives detailed information on the location and power level of enemies. |n|cff00f
 }
 
 STRING 12146
-// Units: n041 (Beamers), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -74264,7 +74423,7 @@ Q
 }
 
 STRING 12176
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74990,13 +75149,13 @@ STRING 12292
 }
 
 STRING 12293
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12294
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -75387,7 +75546,7 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 12347
-// Units: H09B (Three-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -75547,39 +75706,45 @@ STRING 12373
 }
 
 STRING 12374
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 3|r]
 }
 
 STRING 12375
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool2> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 4|r]
 }
 
 STRING 12376
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool3> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 5|r]
 }
 
 STRING 12377
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool4> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 6|r]
 }
 
 STRING 12378
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool5> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool2,.> seconds|r
 }
 
 STRING 12379
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool6> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool3,.> seconds|r
 }
 
 STRING 12380
@@ -75589,9 +75754,12 @@ STRING 12380
 }
 
 STRING 12381
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool7> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool4,.> seconds|r
 }
 
 STRING 12382
@@ -75601,9 +75769,12 @@ STRING 12382
 }
 
 STRING 12383
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool8> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool5,.> seconds|r
 }
 
 STRING 12384
@@ -75613,9 +75784,12 @@ STRING 12384
 }
 
 STRING 12385
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool9> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool6,.> seconds|r
 }
 
 STRING 12386
@@ -75643,15 +75817,18 @@ STRING 12389
 }
 
 STRING 12390
-// Abilities: A0H6 (Gigantic Omegastorm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool10> seconds|r
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 7|r]
 }
 
 STRING 12391
-// Abilities: A0H6 (Gigantic Omegastorm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-First, Broly charges a green ball of ki in front of him. He then fires the attack by pushing his hands foreward, unleashing a powerful green energy wave.  |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0H6,Cool1> seconds|r
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool7,.> seconds|r
 }
 
 STRING 12392
@@ -75696,6 +75873,18 @@ STRING 12398
 // Abilities: A0IW (Kharge), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Kharge - [|cffffcc00Level 10|r]
+}
+
+STRING 12399
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 12400
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
 }
 
 STRING 12401
@@ -75849,13 +76038,12 @@ STRING 12425
 }
 
 STRING 12426
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Ubertip (Tooltip - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+15 armor.
-+0.1x Str mult.
-+0.1x Agi mult.
--0.1x Int mult.|r
-|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool8,.> seconds|r
 }
 
 STRING 12427
@@ -76683,7 +76871,7 @@ STRING 12555
 }
 
 STRING 12556
-// Units: H08Y (Planet-Eater), Hotkey (Hotkey)
+// Units: H09Q (Plumber), Hotkey (Hotkey)
 {
 Z
 }
@@ -76887,7 +77075,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77151,7 +77339,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77163,13 +77351,19 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
 
+STRING 12636
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
 STRING 12637
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77187,7 +77381,7 @@ C
 }
 
 STRING 12640
-// Units: H098 (Demon), Hotkey (Hotkey)
+// Units: H09R (Plumber), Hotkey (Hotkey)
 {
 Z
 }
@@ -77205,7 +77399,7 @@ X
 }
 
 STRING 12643
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -77750,7 +77944,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77768,13 +77962,12 @@ Toppo
 }
 
 STRING 12724
-// Items: I04B (Broly's Fur Pelt [|cffFFFF006/5|r]), Description (Description)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-|cffffff00+15 armor.
-+0.1x Str mult.
-+0.1x Agi mult.
--0.1x Int mult.|r
-|cffff2020Warning: Drops on death!|n|cff808080Made from the fur of an old friend.|r|n
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool9,.> seconds|r
 }
 
 STRING 12725
@@ -80367,7 +80560,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -82232,17 +82425,12 @@ STRING 13435
 }
 
 STRING 13436
-// Units: H09M (SOLDIER 1st Class), Ubertip (Tooltip - Extended)
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
 {
-A high mobility melee hero who specialises in punishing slower moving foes. Gains access to the legendary Black Materia that can be cast globally.
-
-|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-Proudly bankrolled by |cff00ffffCestroq|r.
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool10,.> seconds|r
 }
 
 STRING 13437
@@ -82932,7 +83120,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85389,16 +85577,9 @@ STRING 13912
 }
 
 STRING 13913
-// Units: H09F (One-Star Shadow Dragon), Ubertip (Tooltip - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 8|r]
 }
 
 STRING 13914
@@ -85792,7 +85973,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -85804,7 +85985,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -95358,6 +95539,12 @@ STRING 15383
 Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
 }
 
+STRING 15384
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+}
+
 STRING 15385
 // Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
@@ -95398,6 +95585,24 @@ Hit releases an invisible wave of energy that deals pure damage to units struck.
 |cff00FFFFCooldown: <A0FV,Cool10,.>s|r
 }
 
+STRING 15390
+// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+{
+Hit develops improved skills and techniques by fighting stronger enemies.
+|cffffff00+0.2x stat mult
++5% spell amp per second up to +15%
++15% restore rate of time skip charges (temporary)
++1 time skip charge (cannot exceed max)|r
+|cff00FF00Duration: <A0TH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
+}
+
+STRING 15391
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur2>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool2>s|r
+}
+
 STRING 15392
 // Abilities: A0SL (Heatwave 2), EditorSuffix (Editor Suffix)
 {
@@ -95414,6 +95619,12 @@ STRING 15394
 // Abilities: A0SM (Meditate: Enlightened), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Meditate: Enlightened
+}
+
+STRING 15395
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur3>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool3>s|r
 }
 
 STRING 15396
@@ -95440,6 +95651,12 @@ STRING 15399
 [|cff00FF00R|r] Heatwave 2 - [|cffffcc00Level 10|r]
 }
 
+STRING 15400
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur4>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool4>s|r
+}
+
 STRING 15401
 // Abilities: A0SN (Ultimate Burning Warrior 2), Name (Name)
 {
@@ -95462,6 +95679,12 @@ STRING 15404
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 15405
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur5>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool5>s|r
 }
 
 STRING 15406
@@ -97351,18 +97574,9 @@ S
 }
 
 STRING 15664
-// Abilities: A0KC (Ultimate Burning Warrior), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
 {
-Jiren transforms into his Ultimate Burning Warrior Form. Passively burns nearby enemies for Int-based damage.
-Cannot be used with [|cff00ff00D|r] Meditate.
-|cffffff00+0.15x stat multiplier.
-+66ms and unlocks movement speed cap.
-+15% Damage Block up to 3x Str
-+3 upgraded spell charges.|r
-|cff00ff00Duration: <A0KC,Dur1> seconds
-|cff00ffffCooldown: <A0KC,Cool1> seconds
-
-|cff808080"I cannot lose... I WILL NOT!"
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 9|r]
 }
 
 STRING 15665
@@ -99203,6 +99417,12 @@ STRING 15911
 [|cff00ff00R|r] Learn Black Materia - [|cffffcc00Level %d|r]
 }
 
+STRING 15912
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur6>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool6>s|r
+}
+
 STRING 15913
 // Abilities: A0TB (Black Materia), Tip (Tooltip - Normal)
 {
@@ -99655,7 +99875,7 @@ Transformations:
 [lvl 150] 2.40x "fp" [unlocks One Winged Angel]
 [lvl 250] 2.60x "fp"
 
-|cffff25aaMasamune|r: 25% chance for 2x Crit.
+|cffff25aaMasamune|r: 40% chance for 2x Crit.
 
 Type "-skin" to cycle through up to 4 different skins.
 }
@@ -99842,16 +100062,34 @@ STRING 15989
 [|cff00FF00W|r] Pocket Dimension - [|cffffcc00Level 1|r]
 }
 
+STRING 15990
+// Abilities: A0IU (Hand Kannon), Researchubertip (Tooltip - Learn - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+}
+
 STRING 15991
 // Abilities: A0FU (Pocket Dimension), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Pocket Dimension - [|cffffcc00Level %d|r]
 }
 
+STRING 15992
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur8>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool8>s|r
+}
+
 STRING 15993
 // Abilities: A0FV (Flash Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Flash Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 15994
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur7>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool7>s|r
 }
 
 STRING 15995
@@ -99864,6 +100102,12 @@ STRING 15996
 // Abilities: A0FV (Flash Fist), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Flash Fist  - [|cffffcc00Level %d|r]
+}
+
+STRING 15997
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur9>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool9>s|r
 }
 
 STRING 15998
@@ -99888,6 +100132,65 @@ STRING 16001
 // Abilities: A0FV (Flash Fist), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Flash Fist - [|cffffcc00Level 5|r]
+}
+
+STRING 16002
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur10>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool10>s|r
+}
+
+STRING 16003
+// Abilities: A0IU (Hand Kannon), Ubertip (Tooltip - Normal - Extended)
+{
+King K Rool pulls in nearby units in front of him and briefly stuns them. Unlocks [|cffffff00E|r] Kannonblast.|n|cffff2020Channel Duration: <A0IU,Dur1>s|r|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00FFFFCooldown: <A0IU,Cool1>s|r
+}
+
+STRING 16004
+// Abilities: A0TJ (Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Jump - [|cffffcc00Level 10|r]
+}
+
+STRING 16005
+// Abilities: A0TJ (Jump), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16006
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> seconds|r
+}
+
+STRING 16007
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16008
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16009
+// Abilities: A0TK (Ground Pound), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool1,.> - <A0TK,Cool10,.> seconds|r
+}
+
+STRING 16010
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool2,.> seconds|r
 }
 
 STRING 16011
@@ -99924,6 +100227,20 @@ STRING 16016
 // Abilities: A0FW (Time Cage), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Time Cage - [|cffffcc00Level 1|r]
+}
+
+STRING 16017
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool3,.> seconds|r
+}
+
+STRING 16018
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool4,.> seconds|r
 }
 
 STRING 16019
@@ -99980,6 +100297,67 @@ STRING 16027
 [|cff00FF00R|r] Time Cage - [|cffffcc00Level 10|r]
 }
 
+STRING 16028
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool5,.> seconds|r
+}
+
+STRING 16029
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool6,.> seconds|r
+}
+
+STRING 16030
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool7,.> seconds|r
+}
+
+STRING 16031
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool8,.> seconds|r
+}
+
+STRING 16032
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool9,.> seconds|r
+}
+
+STRING 16033
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool10,.> seconds|r
+}
+
+STRING 16034
+// Abilities: A0TK (Ground Pound), Ubertip (Tooltip - Normal - Extended)
+{
+Mario performs a forward roll in the air before slamming towards the ground, flattening his enemies beneath him. Consecutive jumps increases damage dealt by +10%.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TK,Cool1,.> seconds|r
+}
+
+STRING 16035
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 1|r]
+}
+
+STRING 16036
+// Abilities: A0TK (Ground Pound), Name (Name)
+{
+Ground Pound
+}
+
 STRING 16037
 // Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
@@ -99990,6 +100368,12 @@ STRING 16038
 // Abilities: A0TH (Pure Progress), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Pure Progress
+}
+
+STRING 16039
+// Abilities: A0TK (Ground Pound), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Ground Pound - [|cffffcc00Level %d|r]
 }
 
 STRING 16040
@@ -100023,16 +100407,179 @@ STRING 16043
 Dummy Stun 1.5s
 }
 
+STRING 16044
+// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16045
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 2|r]
+}
+
 STRING 16046
 // Buffs/Effects: B01E (Pocket Dimension), Buffubertip (Tooltip - Extended)
 {
 This unit is in a pocket dimension and is immune to damage.
 }
 
+STRING 16047
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 3|r]
+}
+
 STRING 16048
-// Abilities: A0T8 (Hell's Gate), Hotkey (Hotkey - Normal)
+// Abilities: A0TL (Hammer Time), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 16049
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 4|r]
+}
+
+STRING 16050
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 5|r]
+}
+
+STRING 16051
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 6|r]
+}
+
+STRING 16052
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 1|r]
+}
+
+STRING 16053
+// Abilities: A0TL (Hammer Time), Name (Name)
+{
+Hammer Time
+}
+
+STRING 16054
+// Abilities: A0TL (Hammer Time), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 16055
+// Abilities: A0TL (Hammer Time), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Hammer Time - [|cffffcc00Level %d|r]
+}
+
+STRING 16056
+// Abilities: A0TL (Hammer Time), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> - <A0TL,Cool10,.> seconds|r
+}
+
+STRING 16057
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 7|r]
+}
+
+STRING 16058
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 2|r]
+}
+
+STRING 16059
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 3|r]
+}
+
+STRING 16060
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 4|r]
+}
+
+STRING 16061
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 5|r]
+}
+
+STRING 16062
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 8|r]
+}
+
+STRING 16063
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 9|r]
+}
+
+STRING 16064
+// Abilities: A0TK (Ground Pound), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Ground Pound - [|cffffcc00Level 10|r]
+}
+
+STRING 16065
+// Abilities: A0TK (Ground Pound), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16066
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 6|r]
+}
+
+STRING 16067
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16068
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16069
+// Abilities: A0TN (Super Cape), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 16070
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 1|r]
+}
+
+STRING 16071
+// Abilities: A0TN (Super Cape), Name (Name)
+{
+Super Cape
+}
+
+STRING 16072
+// Abilities: A0TN (Super Cape), Researchhotkey (Hotkey - Learn)
+{
+E
 }
 
 STRING 16073
@@ -100087,6 +100634,77 @@ STRING 16081
 // Abilities: A0FU (Pocket Dimension), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Pocket Dimension - [|cffffcc00Level 10|r]
+}
+
+STRING 16082
+// Abilities: A0TN (Super Cape), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level %d|r]
+}
+
+STRING 16083
+// Abilities: A0TN (Super Cape), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool1,.> - <A0TN,Cool10,.> seconds|r
+}
+
+STRING 16084
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 2|r]
+}
+
+STRING 16085
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 3|r]
+}
+
+STRING 16086
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 4|r]
+}
+
+STRING 16087
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 5|r]
+}
+
+STRING 16088
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 6|r]
+}
+
+STRING 16089
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool2,.> seconds|r
+}
+
+STRING 16090
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool3,.> seconds|r
+}
+
+STRING 16091
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool4,.> seconds|r
+}
+
+STRING 16092
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool5,.> seconds|r
 }
 
 STRING 16093
@@ -100181,5 +100799,511 @@ STRING 16104
 Hit traps an opponent in a time cage, stunning them for 1.5 seconds.
 |cff00ff00Damage: Int * Lvl * ?|r
 |cff00FFFFCooldown: <A0FW,Cool10,.>s|r
+}
+
+STRING 16105
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool6,.> seconds|r
+}
+
+STRING 16106
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 7|r]
+}
+
+STRING 16107
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool7,.> seconds|r
+}
+
+STRING 16108
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool8,.> seconds|r
+}
+
+STRING 16109
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool9,.> seconds|r
+}
+
+STRING 16110
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool10,.> seconds|r
+}
+
+STRING 16111
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 8|r]
+}
+
+STRING 16112
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool2,.> seconds|r
+}
+
+STRING 16113
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool3,.> seconds|r
+}
+
+STRING 16114
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool4,.> seconds|r
+}
+
+STRING 16115
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool5,.> seconds|r
+}
+
+STRING 16116
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool6,.> seconds|r
+}
+
+STRING 16117
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 7|r]
+}
+
+STRING 16118
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool7,.> seconds|r
+}
+
+STRING 16119
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool8,.> seconds|r
+}
+
+STRING 16120
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool9,.> seconds|r
+}
+
+STRING 16121
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool10,.> seconds|r
+}
+
+STRING 16122
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 8|r]
+}
+
+STRING 16123
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 9|r]
+}
+
+STRING 16124
+// Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hammer Time - [|cffffcc00Level 10|r]
+}
+
+STRING 16125
+// Abilities: A0TL (Hammer Time), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16126
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
+{
+Mario smashes his enemies with a giant hammer.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> seconds|r
+}
+
+STRING 16127
+// Abilities: A0TM (Spin Jump), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16128
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 1|r]
+}
+
+STRING 16129
+// Abilities: A0TM (Spin Jump), Name (Name)
+{
+Spin Jump
+}
+
+STRING 16130
+// Abilities: A0TM (Spin Jump), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 16131
+// Abilities: A0TM (Spin Jump), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Spin Jump - [|cffffcc00Level %d|r]
+}
+
+STRING 16132
+// Abilities: A0TM (Spin Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool1,.> - <A0TM,Cool10,.> seconds|r
+}
+
+STRING 16133
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 2|r]
+}
+
+STRING 16134
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 3|r]
+}
+
+STRING 16135
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 4|r]
+}
+
+STRING 16136
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 5|r]
+}
+
+STRING 16137
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 6|r]
+}
+
+STRING 16138
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool2,.> seconds|r
+}
+
+STRING 16139
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool3,.> seconds|r
+}
+
+STRING 16140
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool4,.> seconds|r
+}
+
+STRING 16141
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool5,.> seconds|r
+}
+
+STRING 16142
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool6,.> seconds|r
+}
+
+STRING 16143
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 7|r]
+}
+
+STRING 16144
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool7,.> seconds|r
+}
+
+STRING 16145
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool8,.> seconds|r
+}
+
+STRING 16146
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool9,.> seconds|r
+}
+
+STRING 16147
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool10,.> seconds|r
+}
+
+STRING 16148
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 8|r]
+}
+
+STRING 16149
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 9|r]
+}
+
+STRING 16150
+// Abilities: A0TM (Spin Jump), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Spin Jump - [|cffffcc00Level 10|r]
+}
+
+STRING 16151
+// Abilities: A0TM (Spin Jump), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16152
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool1,.> seconds|r
+}
+
+STRING 16153
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 9|r]
+}
+
+STRING 16154
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 10|r]
+}
+
+STRING 16155
+// Abilities: A0TN (Super Cape), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16156
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool1,.> seconds|r
+}
+
+STRING 16157
+// Abilities: A0TO (Power Up Block), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 16158
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 1|r]
+}
+
+STRING 16159
+// Abilities: A0TO (Power Up Block), Name (Name)
+{
+Power Up Block
+}
+
+STRING 16160
+// Abilities: A0TO (Power Up Block), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 16161
+// Abilities: A0TO (Power Up Block), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Power Up Block - [|cffffcc00Level %d|r]
+}
+
+STRING 16162
+// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16163
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 2|r]
+}
+
+STRING 16164
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 3|r]
+}
+
+STRING 16165
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 4|r]
+}
+
+STRING 16166
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 5|r]
+}
+
+STRING 16167
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 6|r]
+}
+
+STRING 16168
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+}
+
+STRING 16169
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+}
+
+STRING 16170
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+}
+
+STRING 16171
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
+}
+
+STRING 16172
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+}
+
+STRING 16173
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 7|r]
+}
+
+STRING 16174
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+}
+
+STRING 16175
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+}
+
+STRING 16176
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+}
+
+STRING 16177
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16178
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 8|r]
+}
+
+STRING 16179
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 9|r]
+}
+
+STRING 16180
+// Abilities: A0TO (Power Up Block), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Power Up Block - [|cffffcc00Level 10|r]
+}
+
+STRING 16181
+// Abilities: A0TO (Power Up Block), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16182
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
 }
 

@@ -20,7 +20,7 @@ export const JumpComponents = [
     speed: -1,
   },
   {
-    name: "jump beam hand kannon",
+    name: "jump beam kannonblast",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,

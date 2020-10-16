@@ -13219,7 +13219,7 @@ export const SfxComponents = [
     ],
   },
   { 
-    name: "sfx beam hand kannon", 
+    name: "sfx beam kannonblast", 
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
