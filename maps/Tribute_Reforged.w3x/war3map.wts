@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.56
+DBZ Tribute Reforged 0.56a
 }
 
 STRING 4
@@ -41502,8 +41502,6 @@ Transformations: (base stat multiplier excluding kills)
 |cffffff00On player kill:|r 
 Permanently gain +0.07x up to +0.5x (cannot exceed 2.4x). 
 Temporarily gain +0.2x for 60 seconds.
-
-Type "-swordon" for a comsetic Dimension Sword. Kill the Super Janemba saga to receive the real version.
 }
 
 STRING 6811
@@ -65204,7 +65202,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 18.October.20
+This map is under active development - 19.October.20
 }
 
 STRING 10653

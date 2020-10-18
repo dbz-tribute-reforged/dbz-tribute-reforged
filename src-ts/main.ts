@@ -54,7 +54,7 @@ function tsMain() {
   SetCreepCampFilterState(false);
 
   // delay init
-  TimerStart(CreateTimer(), 3, false, () => {
+  TimerStart(CreateTimer(), 2, false, () => {
     // initialize some systems
     PathingCheck.Init();
     

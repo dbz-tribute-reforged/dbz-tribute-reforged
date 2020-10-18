@@ -230,7 +230,7 @@ export class MultiComponent implements
       }
 
       let oldSource = source;
-      if (this.targetSource && input.targetUnit) {
+      if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT && input.targetUnit) {
         source = input.targetUnit;
       }
 
@@ -244,7 +244,7 @@ export class MultiComponent implements
         }
       }
 
-      if (this.targetSource) {
+      if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT && input.targetUnit) {
         source = oldSource;
       }
 
