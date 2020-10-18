@@ -1013,4 +1013,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // mario cape
+  {
+    name: "knockback super cape",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 20, 
+      angle: 0, 
+      aoe: 350,
+    },
+    knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+  },
 ];

@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 38+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 39+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -44059,7 +44059,7 @@ STRING 7202
 }
 
 STRING 7203
-// Units: H09Q (Plumber), Ubertip (Tooltip - Extended)
+// Units: H09R (Plumber), Ubertip (Tooltip - Extended)
 {
 It's a me! Letsa go!
 
@@ -49791,16 +49791,10 @@ Tapion slashes units in melee range towards the target direction for damage. If 
 }
 
 STRING 8141
-// Units: H09R (Plumber), Ubertip (Tooltip - Extended)
+// Abilities: A0TL (Hammer Time), Researchubertip (Tooltip - Learn - Extended)
 {
-It's a me! Letsa go!
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> - <A0TL,Cool10,.> seconds|r
 }
 
 STRING 8142
@@ -65210,7 +65204,7 @@ STRING 10652
 {
 DBZ Tribute community @ discord.gg/vayXJSZ
 
-This map is under active development - 29.September.20
+This map is under active development - 18.October.20
 }
 
 STRING 10653
@@ -100480,10 +100474,19 @@ STRING 16055
 }
 
 STRING 16056
-// Abilities: A0TL (Hammer Time), Researchubertip (Tooltip - Learn - Extended)
+// Units: H09Q (Plumber), Ubertip (Tooltip - Extended)
 {
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> - <A0TL,Cool10,.> seconds|r
+A close range fighter that relies on landing consecutive jumps ontop of his enemies to deal massive damage.
+
+|cff00ffffDash|r: +25ms.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+|cff808080It's a me! Letsa go!|r
 }
 
 STRING 16057
@@ -100564,12 +100567,6 @@ STRING 16069
 E
 }
 
-STRING 16070
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 1|r]
-}
-
 STRING 16071
 // Abilities: A0TN (Super Cape), Name (Name)
 {
@@ -100640,71 +100637,6 @@ STRING 16082
 // Abilities: A0TN (Super Cape), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level %d|r]
-}
-
-STRING 16083
-// Abilities: A0TN (Super Cape), Researchubertip (Tooltip - Learn - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool1,.> - <A0TN,Cool10,.> seconds|r
-}
-
-STRING 16084
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 2|r]
-}
-
-STRING 16085
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 3|r]
-}
-
-STRING 16086
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 4|r]
-}
-
-STRING 16087
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 5|r]
-}
-
-STRING 16088
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 6|r]
-}
-
-STRING 16089
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool2,.> seconds|r
-}
-
-STRING 16090
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool3,.> seconds|r
-}
-
-STRING 16091
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool4,.> seconds|r
-}
-
-STRING 16092
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool5,.> seconds|r
 }
 
 STRING 16093
@@ -100801,120 +100733,10 @@ Hit traps an opponent in a time cage, stunning them for 1.5 seconds.
 |cff00FFFFCooldown: <A0FW,Cool10,.>s|r
 }
 
-STRING 16105
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool6,.> seconds|r
-}
-
-STRING 16106
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 7|r]
-}
-
-STRING 16107
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool7,.> seconds|r
-}
-
-STRING 16108
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool8,.> seconds|r
-}
-
-STRING 16109
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool9,.> seconds|r
-}
-
-STRING 16110
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool10,.> seconds|r
-}
-
-STRING 16111
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 8|r]
-}
-
-STRING 16112
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool2,.> seconds|r
-}
-
-STRING 16113
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool3,.> seconds|r
-}
-
-STRING 16114
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool4,.> seconds|r
-}
-
-STRING 16115
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool5,.> seconds|r
-}
-
-STRING 16116
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool6,.> seconds|r
-}
-
 STRING 16117
 // Abilities: A0TL (Hammer Time), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hammer Time - [|cffffcc00Level 7|r]
-}
-
-STRING 16118
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool7,.> seconds|r
-}
-
-STRING 16119
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool8,.> seconds|r
-}
-
-STRING 16120
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool9,.> seconds|r
-}
-
-STRING 16121
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool10,.> seconds|r
 }
 
 STRING 16122
@@ -100939,13 +100761,6 @@ STRING 16125
 // Abilities: A0TL (Hammer Time), EditorSuffix (Editor Suffix)
 {
 (mario)
-}
-
-STRING 16126
-// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
-{
-Mario smashes his enemies with a giant hammer.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> seconds|r
 }
 
 STRING 16127
@@ -100979,10 +100794,10 @@ STRING 16131
 }
 
 STRING 16132
-// Abilities: A0TM (Spin Jump), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool1,.> - <A0TM,Cool10,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool2,.> seconds|r
 }
 
 STRING 16133
@@ -101016,38 +100831,38 @@ STRING 16137
 }
 
 STRING 16138
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool2,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool3,.> seconds|r
 }
 
 STRING 16139
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool3,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool4,.> seconds|r
 }
 
 STRING 16140
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool4,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool5,.> seconds|r
 }
 
 STRING 16141
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool5,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool6,.> seconds|r
 }
 
 STRING 16142
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool6,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool7,.> seconds|r
 }
 
 STRING 16143
@@ -101057,31 +100872,31 @@ STRING 16143
 }
 
 STRING 16144
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool7,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool8,.> seconds|r
 }
 
 STRING 16145
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool8,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool9,.> seconds|r
 }
 
 STRING 16146
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool9,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool10,.> seconds|r
 }
 
 STRING 16147
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TL (Hammer Time), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool10,.> seconds|r
+Mario flattens his enemies with a giant hammer, slowing their movement speed.
+|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TL,Cool1,.> seconds|r
 }
 
 STRING 16148
@@ -101109,35 +100924,15 @@ STRING 16151
 }
 
 STRING 16152
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
-{
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TM,Cool1,.> seconds|r
-}
-
-STRING 16153
 // Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 9|r]
-}
-
-STRING 16154
-// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Learn Super Cape - [|cffffcc00Level 10|r]
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 1|r]
 }
 
 STRING 16155
 // Abilities: A0TN (Super Cape), EditorSuffix (Editor Suffix)
 {
 (mario)
-}
-
-STRING 16156
-// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
-{
-Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
-|cff00ff00Damage: Str * Lvl * ?|r|n|cff00ffffCooldown: <A0TN,Cool1,.> seconds|r
 }
 
 STRING 16157
@@ -101171,10 +100966,10 @@ STRING 16161
 }
 
 STRING 16162
-// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0TN (Super Cape), Researchubertip (Tooltip - Learn - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool1,.> - <A0TN,Cool10,.> seconds|r
 }
 
 STRING 16163
@@ -101208,38 +101003,33 @@ STRING 16167
 }
 
 STRING 16168
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 2|r]
 }
 
 STRING 16169
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 3|r]
 }
 
 STRING 16170
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 4|r]
 }
 
 STRING 16171
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 5|r]
 }
 
 STRING 16172
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 6|r]
 }
 
 STRING 16173
@@ -101249,31 +101039,31 @@ STRING 16173
 }
 
 STRING 16174
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool2,.> seconds|r
 }
 
 STRING 16175
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool3,.> seconds|r
 }
 
 STRING 16176
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool4,.> seconds|r
 }
 
 STRING 16177
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool5,.> seconds|r
 }
 
 STRING 16178
@@ -101301,9 +101091,481 @@ STRING 16181
 }
 
 STRING 16182
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool6,.> seconds|r
+}
+
+STRING 16183
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool1,.> seconds|r
+}
+
+STRING 16184
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 7|r]
+}
+
+STRING 16185
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool7,.> seconds|r
+}
+
+STRING 16186
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool8,.> seconds|r
+}
+
+STRING 16187
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool9,.> seconds|r
+}
+
+STRING 16188
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool10,.> seconds|r
+}
+
+STRING 16189
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 2|r]
+}
+
+STRING 16190
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 3|r]
+}
+
+STRING 16191
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 4|r]
+}
+
+STRING 16192
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 5|r]
+}
+
+STRING 16193
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 6|r]
+}
+
+STRING 16194
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 1|r]
+}
+
+STRING 16195
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 7|r]
+}
+
+STRING 16196
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 16197
+// Abilities: A0TP (Fireball), Name (Name)
+{
+Fireball
+}
+
+STRING 16198
+// Abilities: A0TP (Fireball), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Fireball - [|cffffcc00Level %d|r]
+}
+
+STRING 16199
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 16200
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 9|r]
+}
+
+STRING 16201
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 8|r]
+}
+
+STRING 16202
+// Abilities: A0TP (Fireball), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Fireball - [|cffffcc00Level 10|r]
+}
+
+STRING 16203
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 8|r]
+}
+
+STRING 16204
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 9|r]
+}
+
+STRING 16205
+// Abilities: A0TN (Super Cape), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Super Cape - [|cffffcc00Level 10|r]
+}
+
+STRING 16206
+// Abilities: A0TP (Fireball), Researchubertip (Tooltip - Learn - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool1> - <A0TP,Cool10> seconds|r
+}
+
+STRING 16207
+// Abilities: A0TP (Fireball), EditorSuffix (Editor Suffix)
+{
+(mario)
+}
+
+STRING 16208
+// Abilities: A0TN (Super Cape), Ubertip (Tooltip - Normal - Extended)
+{
+Mario pulls out a cape and swings it in front of him to reflect incoming projectiles and push enemies away.
+|cff00ffffCooldown: <A0TN,Cool1,.> seconds|r
+}
+
+STRING 16209
+// Abilities: A0TQ (Ground Pound Flatten), Name (Name)
+{
+Ground Pound Flatten
+}
+
+STRING 16210
+// Abilities: A0TQ (Ground Pound Flatten), Tip (Tooltip - Normal)
+{
+Ground Pound Flatten
+}
+
+STRING 16211
+// Buffs/Effects: B03N (), Bufftip (Tooltip)
+{
+Flattened
+}
+
+STRING 16212
+// Buffs/Effects: B03N (), Buffubertip (Tooltip - Extended)
+{
+This unit is affected has been Flattened; its movement and attack rate are reduced.
+}
+
+STRING 16219
+{
+Type "r" to revert.
+Transformations:
+[lvl 15]  1.25x "mario"
+[lvl 30]  1.50x "mario"
+[lvl 90]  2.00x "mario"
+[lvl 120] 2.25x "mario"
+[lvl 150] 2.50x "mario"
+
+|cff00ffffDash|r: +25ms.
+}
+
+STRING 16221
+// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16222
 // Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
 {
 Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+}
+
+STRING 16223
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+}
+
+STRING 16224
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+}
+
+STRING 16225
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
+}
+
+STRING 16226
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+}
+
+STRING 16227
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+}
+
+STRING 16228
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+}
+
+STRING 16229
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+}
+
+STRING 16230
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16231
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.3x Str/Agi Mult
+Fire Flower: +0.6x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
 |cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
+}
+
+STRING 16232
+// Abilities: A0TM (Spin Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool1,.> - <A0TM,Cool10,.> seconds|r
+}
+
+STRING 16233
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool2,.> seconds|r
+}
+
+STRING 16234
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool3,.> seconds|r
+}
+
+STRING 16235
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool4,.> seconds|r
+}
+
+STRING 16236
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool5,.> seconds|r
+}
+
+STRING 16237
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool6,.> seconds|r
+}
+
+STRING 16238
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool7,.> seconds|r
+}
+
+STRING 16239
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool8,.> seconds|r
+}
+
+STRING 16240
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool9,.> seconds|r
+}
+
+STRING 16241
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool10,.> seconds|r
+}
+
+STRING 16242
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool1,.> seconds|r
+}
+
+STRING 16243
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool3,.> seconds|r
+}
+
+STRING 16244
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool4,.> seconds|r
+}
+
+STRING 16245
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool5,.> seconds|r
+}
+
+STRING 16246
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool6,.> seconds|r
+}
+
+STRING 16247
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool7,.> seconds|r
+}
+
+STRING 16248
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool8,.> seconds|r
+}
+
+STRING 16249
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool9,.> seconds|r
+}
+
+STRING 16250
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool10,.> seconds|r
+}
+
+STRING 16251
+// Abilities: A0TP (Fireball), Ubertip (Tooltip - Normal - Extended)
+{
+Fireball.
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0TP,Cool2,.> seconds|r
 }
 

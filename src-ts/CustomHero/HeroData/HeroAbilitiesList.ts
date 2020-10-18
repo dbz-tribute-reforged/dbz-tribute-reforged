@@ -1,3 +1,4 @@
+import { Id } from "Common/Constants";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 
 export const HeroAbilitiesList: Map<number, string[]> = new Map(
@@ -270,6 +271,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH,
     ]],
 
+    // all might
+    [Id.mario, [
+      AbilityNames.Mario.JUMP,
+      AbilityNames.Mario.GROUND_POUND,
+      AbilityNames.Mario.HAMMER_TIME,
+      AbilityNames.Mario.SPIN_JUMP,
+      AbilityNames.Mario.SUPER_CAPE,
+      AbilityNames.Mario.POWER_UP_BLOCK,
+      AbilityNames.Mario.FIREBALL,
+    ]],
+
+
+
+
+
+
     // androids 13 14 15
     [FourCC("H01V"), [
       AbilityNames.Android13.ENERGY_BEAM, 
@@ -335,6 +352,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Toppo.JUSTICE_FLASH, AbilityNames.Toppo.JUSTICE_FLASH_2, AbilityNames.Toppo.GOD_OF_DESTRUCTION,
       AbilityNames.Dyspo.LIGHT_BULLET, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
       AbilityNames.AllMight.DETROIT_SMASH, AbilityNames.AllMight.ONE_FOR_ALL,
+      AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

@@ -294,6 +294,15 @@ export module Id {
   export const roshiNewTrick = FourCC("A0KU");
   export const roshiMaxPower = FourCC("A0FH");
 
+  export const mario = FourCC("H09Q");
+  export const jump = FourCC("A0TJ");
+  export const groundPound = FourCC("A0TK");
+  export const hammerTime = FourCC("A0TL");
+  export const spinJump = FourCC("A0TM");
+  export const superCape = FourCC("A0TN");
+  export const powerUpBlock = FourCC("A0TO");
+  export const fireball = FourCC("A0TP");
+
   export const nappa = FourCC("H08W");
   export const giantStorm = FourCC("A0MI");
   export const blazingStorm = FourCC("A0MJ");

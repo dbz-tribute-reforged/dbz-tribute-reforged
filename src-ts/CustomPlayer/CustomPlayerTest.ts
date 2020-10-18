@@ -3034,6 +3034,12 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       playSoundOnUnit(unit, "Audio/Effects/KKRBlasto.mp3", 4896);
       break;
     
+    // mario
+    case Id.fireball:
+      playSoundOnUnit(unit, "Audio/Effects/Mario/Fireball.mp3", 252);
+      break;
+    
+
     // raditz
     case Id.doubleSunday:
       if (unitId == Id.raditz) {

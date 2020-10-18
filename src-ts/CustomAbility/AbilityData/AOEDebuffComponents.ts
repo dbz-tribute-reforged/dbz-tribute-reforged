@@ -22,6 +22,7 @@ export module Debuffs {
   export const SPIRIT_BALL = FourCC("A0SA");
   export const BLEED_ZAMASU = FourCC("A0I4");
   export const FERVENT_WOUND = FourCC("A0TE");
+  export const FLATTEN = FourCC("A0TQ");
 
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -517,6 +518,19 @@ export const AOEDebuffComponents = [
     abilityId: Debuffs.STUN_ONE_AND_A_HALF_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 50,
+    keepCasting: false, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow flatten",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.FLATTEN,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 550,
     keepCasting: false, 
     onlyAffectHeroes: false,
     requireBuff: false,

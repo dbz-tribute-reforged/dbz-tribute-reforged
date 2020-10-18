@@ -3780,6 +3780,163 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Mario.JUMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioQ.blp",
+      disabled: "BTNMarioQ.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.JUMP,
+      body: 
+        AbilityNames.Mario.JUMP,
+    },
+    components: [
+      { name: "dash ground forward mario jump" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Mario.HAMMER_TIME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioW.blp",
+      disabled: "BTNMarioW.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.HAMMER_TIME,
+      body: 
+        AbilityNames.Mario.HAMMER_TIME,
+    },
+    components: [
+      { name: "multi hammer time" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Mario.SPIN_JUMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 3,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioQ.blp",
+      disabled: "BTNMarioQ.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.SPIN_JUMP,
+      body: 
+        AbilityNames.Mario.SPIN_JUMP,
+    },
+    components: [
+      { name: "dash ground forward spin jump" },
+      { name: "damage spin jump dps" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Mario.SUPER_CAPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioQ.blp",
+      disabled: "BTNMarioQ.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.SUPER_CAPE,
+      body: 
+        AbilityNames.Mario.SUPER_CAPE,
+    },
+    components: [
+      { name: "multi super cape" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Mario.POWER_UP_BLOCK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 250,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioQ.blp",
+      disabled: "BTNMarioQ.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.POWER_UP_BLOCK,
+      body: 
+        AbilityNames.Mario.POWER_UP_BLOCK,
+    },
+    components: [
+      { name: "dash ground forward power up block" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Mario.FIREBALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 44,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarioF.blp",
+      disabled: "BTNMarioF.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Mario.FIREBALL,
+      body: 
+        AbilityNames.Mario.FIREBALL
+    },
+    components: [
+      { name: "beam mario fireball"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
