@@ -222,6 +222,17 @@ export module AbilityNames {
     export const NEW_HAMPSHIRE_SMASH: string = "New Hampshire Smash";
   }
 
+  export module Mario {
+    export const JUMP: string = "Mario Jump";
+    export const GROUND_POUND: string = "Ground Pound";
+    export const HAMMER_TIME: string = "Hammer Time";
+    export const SPIN_JUMP: string = "Spin Jump";
+    export const SUPER_CAPE: string = "Super Cape";
+    export const POWER_UP_BLOCK: string = "Power Up Block";
+    export const FIREBALL: string = "Fireball";
+  }
+
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

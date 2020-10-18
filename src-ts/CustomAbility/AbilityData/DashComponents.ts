@@ -931,7 +931,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 1,
+    distance: 2,
   },
   // carolina smash
   {
@@ -944,7 +944,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 32,
+    distance: 35,
   },
   // california smash
   {
@@ -957,7 +957,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 32,
+    distance: 30,
   },
   // new hampshire smash
   {
@@ -970,7 +970,46 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 35,
+    distance: 30,
+  },
+  // mario jump
+  {
+    name: "dash ground forward mario jump",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 2,
+  },
+  // mario spin jump
+  {
+    name: "dash ground forward spin jump",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 2,
+  },
+  // mario power up block
+  {
+    name: "dash ground forward power up block",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 1,
   },
   // ----------------------------
   // cell-x
@@ -1062,7 +1101,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 50,
+    distance: 55,
   },
   // belly armor
   {
@@ -1088,7 +1127,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 40,
+    distance: 45,
   },
   {
     name: "dash flying caster krown toss return",
@@ -1100,7 +1139,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 63,
+    distance: 67,
   },
   // kharge
   {

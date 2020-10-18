@@ -20,6 +20,10 @@ export class MultiComponent implements
   static readonly TARGET_POINT_TARGET = 0;
   static readonly TARGET_POINT_SOURCE_FORWARD = 1;
 
+  static readonly SOURCE_CASTER = 0;
+  static readonly SOURCE_TARGET_UNIT = 1;
+  static readonly SOURCE_TARGET_POINT = 2;
+
   protected hasStarted: boolean;
   protected angleCurrent: number;
   protected angleDirection: number;
@@ -53,7 +57,7 @@ export class MultiComponent implements
     public alwaysUpdateAngle: boolean = false,
     public fixedSourceCoords: boolean = false,
     public fixedReplacementCoords: boolean = false,
-    public useTargetUnitAsSource: boolean = false,
+    public targetSource: number = MultiComponent.SOURCE_CASTER,
     public useLastCastPoint: boolean = false,
     public whichTargetPoint: number = MultiComponent.TARGET_POINT_TARGET,
     public components: AbilityComponent[] = [],
@@ -129,13 +133,19 @@ export class MultiComponent implements
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.fixedSourceCoords || !this.hasStarted) {
-      if (!this.useTargetUnitAsSource) {
+      if (this.targetSource == MultiComponent.SOURCE_CASTER) {
         this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
-      } else {
+      } else if (this.targetSource == MultiComponent.SOURCE_TARGET_UNIT) {
         if (input.targetUnit) {
           this.sourceCoords.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
         } else {
           this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
+        }
+      } else if (this.targetSource == MultiComponent.SOURCE_TARGET_POINT) {
+        if (this.useLastCastPoint) {
+          this.sourceCoords.setVector(input.castPoint);
+        } else {
+          this.sourceCoords.setVector(input.targetPoint);
         }
       }
     }
@@ -220,7 +230,7 @@ export class MultiComponent implements
       }
 
       let oldSource = source;
-      if (this.useTargetUnitAsSource && input.targetUnit) {
+      if (this.targetSource && input.targetUnit) {
         source = input.targetUnit;
       }
 
@@ -234,7 +244,7 @@ export class MultiComponent implements
         }
       }
 
-      if (this.useTargetUnitAsSource) {
+      if (this.targetSource) {
         source = oldSource;
       }
 
@@ -292,7 +302,7 @@ export class MultiComponent implements
       this.alwaysUpdateAngle,
       this.fixedSourceCoords,
       this.fixedReplacementCoords,
-      this.useTargetUnitAsSource,
+      this.targetSource,
       this.useLastCastPoint,
       this.whichTargetPoint,
       AbilityComponentHelper.clone(this.components)
@@ -317,7 +327,7 @@ export class MultiComponent implements
       alwaysUpdateAngle: boolean;
       fixedSourceCoords: boolean;
       fixedReplacementCoords: boolean;
-      useTargetUnitAsSource: boolean;
+      targetSource: number;
       useLastCastPoint: boolean;
       whichTargetPoint: number;
       components: {
@@ -341,7 +351,7 @@ export class MultiComponent implements
     this.alwaysUpdateAngle = input.alwaysUpdateAngle;
     this.fixedSourceCoords = input.fixedSourceCoords;
     this.fixedReplacementCoords = input.fixedReplacementCoords;
-    this.useTargetUnitAsSource = input.useTargetUnitAsSource;
+    this.targetSource = input.targetSource;
     this.useLastCastPoint = input.useLastCastPoint;
     this.whichTargetPoint = input.whichTargetPoint;
     return this;
