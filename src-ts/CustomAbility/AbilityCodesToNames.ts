@@ -207,6 +207,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.powerUpBlock, AbilityNames.Mario.POWER_UP_BLOCK],
     [Id.fireball, AbilityNames.Mario.FIREBALL],
 
+    // tien
+    [Id.dodonRay, AbilityNames.Tien.DODON_RAY],
+    [Id.triBeam, AbilityNames.Tien.TRI_BEAM_FIRE],
+    [Id.tienKiai, AbilityNames.Tien.KIAI],
+    [Id.multiFormSolarFlare, AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE],
+    [Id.tienFourArms, AbilityNames.Tien.FOUR_ARMS],
+
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

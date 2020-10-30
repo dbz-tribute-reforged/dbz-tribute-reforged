@@ -300,11 +300,14 @@ export class BeamComponent implements
         if (this.speed > 0) {
           this.moveBeamUnit(ability, input);
         }
+        const oldBeamClash = input.isBeamClash;
+        input.isBeamClash = this.delayTicks > 0 ? true : false;
         for (const component of this.components) {
           if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
             component.performTickAction(ability, input, this.beamUnit);
           }
         }
+        input.isBeamClash = oldBeamClash;
       }
     }
     if (ability.isFinishedUsing(this)) {

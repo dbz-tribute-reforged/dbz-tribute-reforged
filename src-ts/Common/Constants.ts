@@ -349,6 +349,13 @@ export module Id {
   export const herosFlute = FourCC("A0IB");
   export const braveSwordAttack = FourCC('A0IA');
 
+  export const tien = FourCC("H055");
+  export const dodonRay = FourCC("A06X");
+  export const triBeam = FourCC("A08J");
+  export const tienKiai = FourCC("A0TR");
+  export const multiFormSolarFlare = FourCC("A0B6");
+  export const tienFourArms = FourCC("A0TS");
+
   export const toppo = FourCC("H09C");
   export const justiceFlash = FourCC("A0PB");
   export const justiceFlash2 = FourCC("A0PI");

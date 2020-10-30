@@ -271,7 +271,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.AllMight.NEW_HAMPSHIRE_SMASH,
     ]],
 
-    // all might
+    // mario
     [Id.mario, [
       AbilityNames.Mario.JUMP,
       AbilityNames.Mario.GROUND_POUND,
@@ -282,6 +282,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Mario.FIREBALL,
     ]],
 
+    // tien
+    [Id.tien, [
+      AbilityNames.Tien.DODON_RAY,
+      AbilityNames.Tien.TRI_BEAM_FIRE,
+      AbilityNames.Tien.TRI_BEAM_CHARGE,
+      AbilityNames.Tien.KIAI,
+      AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE,
+      AbilityNames.Tien.FOUR_ARMS,
+    ]],
 
 
 
@@ -337,6 +346,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Buu.VANISHING_BALL
     ]],
     [FourCC("O00C"), [
+      AbilityNames.Tien.DODON_RAY,
       AbilityNames.Buu.FLESH_ATTACK, AbilityNames.Buu.MANKIND_DESTRUCTION_ATTACK, AbilityNames.Buu.ANGRY_EXPLOSION, AbilityNames.Buu.VANISHING_BALL,
       AbilityNames.Goku.GOD_KAMEHAMEHA, AbilityNames.Goku.ULTRA_INSTINCT, AbilityNames.Goku.MASTERED_ULTRA_INSTINCT, 
       AbilityNames.Vegeta.GALICK_GUN, 

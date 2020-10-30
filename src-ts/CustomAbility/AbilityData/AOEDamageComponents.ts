@@ -1704,9 +1704,9 @@ export const AOEDamageComponents = [
     aoe: 300,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: 80,
+    maxDamageTicks: 60,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.22,
+      multiplier: BASE.KAME_DPS * 0.26,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -1728,9 +1728,9 @@ export const AOEDamageComponents = [
     aoe: 300,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: 80,
+    maxDamageTicks: 60,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.36,
+      multiplier: BASE.KAME_DPS * 0.38,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
