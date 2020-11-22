@@ -45,6 +45,7 @@ export class BeamComponent implements
   protected explodePosition: Vector2D;
   protected forcedExplode: boolean;
   protected hasExploded: boolean;
+  protected oldIsBeamClash: boolean | undefined;
 
   constructor(
     public name: string = "BeamComponent",
@@ -99,12 +100,18 @@ export class BeamComponent implements
         }
       );;
       const numEnemyHeroes = UnitHelper.countEnemyHeroes(nearbyEnemies, input.casterPlayer);
+      
+      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(nearbyEnemies) > 0);
 
       if (
-        (currentHp < this.previousHp && CountUnitsInGroup(nearbyEnemies) > 0) || 
+        (beamClashTest) || 
         (this.canClashWithHero && numEnemyHeroes > 0)
       ) {
         this.delayTicks = Math.min(this.maxDelayTicks, (this.delayTicks + this.clashingDelayTicks));
+
+        if (beamClashTest) {
+          input.isBeamClash = true;
+        }
       }
       this.previousHp = currentHp;
       DestroyGroup(nearbyEnemies);
@@ -296,18 +303,17 @@ export class BeamComponent implements
       } else if (!isBeamDead) {
         this.beamCoord.x = GetUnitX(this.beamUnit);
         this.beamCoord.y = GetUnitY(this.beamUnit);
+        this.oldIsBeamClash = input.isBeamClash;
         this.checkForBeamClash(input);
         if (this.speed > 0) {
           this.moveBeamUnit(ability, input);
         }
-        const oldBeamClash = input.isBeamClash;
-        input.isBeamClash = this.delayTicks > 0 ? true : false;
         for (const component of this.components) {
           if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
             component.performTickAction(ability, input, this.beamUnit);
           }
         }
-        input.isBeamClash = oldBeamClash;
+        input.isBeamClash = this.oldIsBeamClash;
       }
     }
     if (ability.isFinishedUsing(this)) {

@@ -3937,6 +3937,114 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Tien.DODON_RAY,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTienDodonRay.blp",
+      disabled: "BTNTienDodonRay.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Tien.DODON_RAY,
+      body: 
+        AbilityNames.Tien.DODON_RAY
+    },
+    components: [
+      { name: "beam dodon ray" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tien.TRI_BEAM_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTienTriBeamCharge.blp",
+      disabled: "BTNTienTriBeamCharge.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Tien.TRI_BEAM_CHARGE,
+      body: 
+        AbilityNames.Tien.TRI_BEAM_CHARGE,
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tien.TRI_BEAM_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTienTriBeamFire.blp",
+      disabled: "BTNTienTriBeamFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Tien.TRI_BEAM_FIRE,
+      body: 
+        AbilityNames.Tien.TRI_BEAM_FIRE
+    },
+    components: [
+      { name: "beam tri beam fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Tien.KIAI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNTienKiai.blp",
+      disabled: "BTNTienKiai.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Tien.KIAI,
+      body: 
+        AbilityNames.Tien.KIAI
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage tien kiai dps" },
+      { name: "block tien kiai" },
+      { name: "knockback tien kiai" },
+      { name: "sfx tien kiai" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

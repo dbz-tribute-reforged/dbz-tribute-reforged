@@ -1029,4 +1029,36 @@ export const AOEKnockbackComponents = [
     reflectBeams: true,
     affectAllies: false,
   },
+  // tri beam
+  {
+    name: "knockback beam tri beam fire",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 7, 
+      angle: 180, 
+      aoe: 400,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // tien kiai
+  {
+    name: "knockback tien kiai",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 25, 
+      angle: 0, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: true,
+    reflectBeams: true,
+    affectAllies: false,
+  },
 ];

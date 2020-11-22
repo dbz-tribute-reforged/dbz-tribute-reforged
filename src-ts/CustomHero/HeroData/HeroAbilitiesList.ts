@@ -90,12 +90,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Piccolo.MULTI_FORM, 
       AbilityNames.Piccolo.KYODAIKA
     ]],
+    // piccolo clone
     [FourCC("H04X"), [
       AbilityNames.Piccolo.SPECIAL_BEAM_CANNON, 
-      AbilityNames.Piccolo.SLAPPY_HAND, 
-      AbilityNames.Piccolo.HELLZONE_GRENADE, 
-      AbilityNames.Piccolo.MULTI_FORM, 
-      AbilityNames.Piccolo.KYODAIKA
     ]],
 
     // bardock
@@ -285,11 +282,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // tien
     [Id.tien, [
       AbilityNames.Tien.DODON_RAY,
-      AbilityNames.Tien.TRI_BEAM_FIRE,
       AbilityNames.Tien.TRI_BEAM_CHARGE,
+      AbilityNames.Tien.TRI_BEAM_FIRE,
       AbilityNames.Tien.KIAI,
       AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE,
       AbilityNames.Tien.FOUR_ARMS,
+    ]],
+
+    [Id.tienClone, [
+      AbilityNames.Tien.DODON_RAY,
     ]],
 
 
@@ -363,6 +364,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Dyspo.LIGHT_BULLET, AbilityNames.Dyspo.SUPER_MAXIMUM_LIGHT_SPEED_MODE,
       AbilityNames.AllMight.DETROIT_SMASH, AbilityNames.AllMight.ONE_FOR_ALL,
       AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
+      AbilityNames.Tien.DODON_RAY,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
@@ -418,7 +420,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Cooler.DEATH_BEAM, 
       AbilityNames.Vegeta.FINAL_FLASH, 
       AbilityNames.Gohan.TWIN_DRAGON_SHOT, 
-      AbilityNames.Broly.GIGANTIC_ROAR, 
+      // AbilityNames.Broly.GIGANTIC_ROAR, 
+      AbilityNames.SuperJanemba.HELLS_GATE, 
       AbilityNames.Vegeta.ENERGY_BLAST_VOLLEY,
       AbilityNames.Goku.ULTRA_INSTINCT,
       AbilityNames.Goku.MASTERED_ULTRA_INSTINCT,

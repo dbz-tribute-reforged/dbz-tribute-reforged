@@ -350,7 +350,9 @@ export module Id {
   export const braveSwordAttack = FourCC('A0IA');
 
   export const tien = FourCC("H055");
+  export const tienClone = FourCC("H05Y");
   export const dodonRay = FourCC("A06X");
+  export const triBeamCharge = FourCC("A0TT");
   export const triBeam = FourCC("A08J");
   export const tienKiai = FourCC("A0TR");
   export const multiFormSolarFlare = FourCC("A0B6");

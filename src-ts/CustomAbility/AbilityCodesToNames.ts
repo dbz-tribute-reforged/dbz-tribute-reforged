@@ -209,6 +209,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // tien
     [Id.dodonRay, AbilityNames.Tien.DODON_RAY],
+    [Id.triBeamCharge, AbilityNames.Tien.TRI_BEAM_CHARGE],
     [Id.triBeam, AbilityNames.Tien.TRI_BEAM_FIRE],
     [Id.tienKiai, AbilityNames.Tien.KIAI],
     [Id.multiFormSolarFlare, AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE],
