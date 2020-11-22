@@ -1111,7 +1111,7 @@ export const DashComponents = [
     endTick: 8,
     targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
     isFlying: false,
-    checkPreviousCoord: false,
+    checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 20,

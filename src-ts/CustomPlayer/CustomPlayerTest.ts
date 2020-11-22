@@ -1243,7 +1243,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.65;
+  const braveSwordDamageMult = 0.25 * 1.6;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -3196,7 +3196,7 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
     case Id.piccoloCloneSBC:
     case Id.cellSBC:
       if (unitId == Id.piccolo) {
-        if (rng < 3) {
+        if (rng < 5) {
           playSoundOnUnit(unit, "Audio/Voice/PiccoloSBCMeme.mp3", 6138);
         } else {
           playSoundOnUnit(unit, "Audio/Voice/PiccoloSBC.mp3", 1776);
@@ -3279,6 +3279,60 @@ export function playUnitSpellSound(unit: unit, spellId: number) {
       // playSoundOnUnit(unit, "Audio/Effects/HerosFlute.mp3", 11755);
       break;
     
+    // tien
+    case Id.dodonRay:
+      if (unitId == Id.tien) {
+        if (rng < 75) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/TakeThat.mp3", 1584);
+        } else if (rng < 90) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/Grunt2.mp3", 1056);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/HereIGo.mp3", 1296);
+        }
+      }
+      playSoundOnUnit(unit, "Audio/Effects/DeathBeamFast.mp3", 1724);
+      break;
+    
+    case Id.triBeamCharge:
+      if (unitId == Id.tien) {
+        if (rng < 5) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/FuckYou.mp3", 17424);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/TriBeamCharge.mp3", 1436);
+        }
+      }
+      break;
+    
+    case Id.triBeam:
+      if (unitId == Id.tien) {
+        playSoundOnUnit(unit, "Audio/Voice/Tien/TriBeamFire.mp3", 2429);
+      }
+      break;
+    
+    case Id.tienKiai:
+      if (unitId == Id.tien) {
+        if (rng < 35) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/Grunt1.mp3", 1248);
+        } else if (rng < 75) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/Grunt3.mp3", 1488);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/ReadYourMind.mp3", 2400);
+        }
+      }
+      break;
+
+    case Id.tienFourArms:
+      if (unitId == Id.tien) {
+        if (rng < 10) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/IAmAWarrior.mp3", 14304);
+        } else if (rng < 30) {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/EscapeThirdEye.mp3", 4464);
+        } else {
+          playSoundOnUnit(unit, "Audio/Voice/Tien/ResultsOfMyTraining.mp3", 4176);
+        }
+      }
+      break;
+
     // toppo
     case Id.justiceFlash:
     case Id.justiceFlash2:

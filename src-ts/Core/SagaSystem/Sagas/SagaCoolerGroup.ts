@@ -147,7 +147,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
     for (const mc of this.metalCoolers) {
       if (
         this.revives > 0 && 
-        SagaHelper.checkUnitHp(mc, 0.4, true, false, false)
+        SagaHelper.checkUnitHp(mc, 0.4, false, false, false)
       ) {
         --this.revives;
         SagaHelper.showMessagesChanceOfJoke(
@@ -156,6 +156,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
             "|cffffcc00Cooler|r: But how could this be? The Big Gete Star allowed me to cheat death!",
           ], 5, 5
         );
+        if (UnitHelper.isUnitDead(mc)) {
+          ReviveHero(mc, GetUnitX(mc), GetUnitY(mc), false);
+        }
         DestroyEffect(
           AddSpecialEffectTarget("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", mc, "origin")
         );
@@ -164,7 +167,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
         SetHeroAgi(mc, Math.floor(Math.floor(GetHeroAgi(mc, true) * 1.2) + 150), true);
         SetHeroInt(mc, Math.floor(Math.floor(GetHeroInt(mc, true) * 1.2) + 200), true);
       } 
-      else if (UnitHelper.isUnitAlive(mc)) {
+      else if (UnitHelper.isUnitAlive(mc) && GetUnitLifePercent(mc) > 0.05) {
         SetUnitLifePercentBJ(mc, GetUnitLifePercent(mc) + 0.006);
       }
     }
@@ -177,7 +180,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
   canComplete(): boolean {
     if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses) && this.revives <= 0;
+      return SagaHelper.areAllBossesDead(this.bosses);
     }
     return false;
   }

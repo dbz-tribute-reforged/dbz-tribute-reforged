@@ -232,6 +232,15 @@ export module AbilityNames {
     export const FIREBALL: string = "Fireball";
   }
 
+  export module Tien {
+    export const DODON_RAY: string = "Dodon Ray";
+    export const TRI_BEAM_FIRE: string = "Tri Beam Fire";
+    export const TRI_BEAM_CHARGE: string = "Tri Beam Charge";
+    export const KIAI: string = "Tien Kiai";
+    export const MULTI_FORM_SOLAR_FLARE: string = "Multi Form Solar Flare";
+    export const FOUR_ARMS: string = "Four Arms";
+  }
+
 
 
   export module Babidi {
