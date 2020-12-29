@@ -27,6 +27,7 @@ export module AbilityNames {
 
   export module Gohan {
     export const MASENKO: string = "Masenko";
+    export const SUPER_MASENKO: string = "Super Masenko";
     export const TWIN_DRAGON_SHOT: string = "Twin Dragon Shot";
     export const SUPER_DRAGON_FLIGHT: string = "Super Dragon Flight";
     export const FATHER_SON_KAMEHAMEHA: string = "Father-Son Kamehameha";

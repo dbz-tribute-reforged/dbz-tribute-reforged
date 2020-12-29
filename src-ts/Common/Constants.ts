@@ -219,6 +219,7 @@ export module Id {
   export const greatSaiyamanHasArrived = FourCC("A0L7");
   export const potentialUnleashed = FourCC("A0L8");
   export const masenko = FourCC("A0H8");
+  export const superMasenko = FourCC("A0TU");
   export const twinDragonShot = FourCC("A0IS");
   export const superDragonFlight = FourCC("A0L5");
   export const fatherSonKame = FourCC("A0OY");

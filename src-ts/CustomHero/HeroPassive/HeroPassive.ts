@@ -15,7 +15,7 @@ export module HeroPassiveData {
   export const BRAVE_SLASH = FourCC("A0I9");
   export const TAPION_STYLE = FourCC("A0ID");
   export const HEROS_SONG = FourCC("B01H");
-  export const TAPION_MANA_BURN_PERCENT = 0.001;
+  export const TAPION_MANA_BURN_PERCENT = 0.003;
 
   export const DYSPO = FourCC("H09H");
   export const JUSTICE_KICK_ABILITY = FourCC("A0QZ");
@@ -154,7 +154,8 @@ export function tapionPassive(customHero: CustomHero) {
         GetOwningPlayer(attacker) == player &&
         GetUnitAbilityLevel(attacked, HeroPassiveData.HEROS_SONG) > 0
       ) {
-        const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA)
+        const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA);
+        const attackedMaxMana = GetUnitState(attacked, UNIT_STATE_MAX_MANA);
         let manaBurn = 25; 
         
         if (heroId == HeroPassiveData.TAPION) {
@@ -165,6 +166,10 @@ export function tapionPassive(customHero: CustomHero) {
             );
         } else {
           manaBurn += attackedMana * 15 * HeroPassiveData.TAPION_MANA_BURN_PERCENT;
+        }
+
+        if ((attackedMana / Math.max(1, attackedMaxMana)) < 0.5) {
+          manaBurn *= 1.5;
         }
 
         SetUnitState(

@@ -26,6 +26,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.greatSaiyamanHasArrived, AbilityNames.Gohan.THE_GREAT_SAIYAMAN_HAS_ARRIVED],
     [Id.potentialUnleashed, AbilityNames.Gohan.POTENTIAL_UNLEASHED],
     [Id.masenko, AbilityNames.Gohan.MASENKO],
+    [Id.superMasenko, AbilityNames.Gohan.SUPER_MASENKO],
     [Id.twinDragonShot, AbilityNames.Gohan.TWIN_DRAGON_SHOT],
     [Id.superDragonFlight, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
     [Id.fatherSonKame, AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA],

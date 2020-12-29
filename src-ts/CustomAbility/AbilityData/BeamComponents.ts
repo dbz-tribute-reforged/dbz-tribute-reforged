@@ -1236,9 +1236,9 @@ export const BeamComponents = [
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 27,
     aoe: 250,
-    clashingDelayTicks: 2,
-    maxDelayTicks: 14,
-    durationIncPerDelay: 4,
+    clashingDelayTicks: 0,
+    maxDelayTicks: 0,
+    durationIncPerDelay: 0,
     turnSpeed: 3,
     heightVariation: {
       start: 75,
@@ -1269,9 +1269,9 @@ export const BeamComponents = [
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: 32.5,
     aoe: 250,
-    clashingDelayTicks: 2,
-    maxDelayTicks: 14,
-    durationIncPerDelay: 4,
+    clashingDelayTicks: 0,
+    maxDelayTicks: 0,
+    durationIncPerDelay: 0,
     turnSpeed: 3,
     heightVariation: {
       start: 75,
@@ -1322,7 +1322,7 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "teleport caster point continuous" },
-      { name: "barrier barrier prison" },
+      { name: "barrier barrier wall" },
       { name: "sfx beam jiren meditate barrier" },
     ],
   },
@@ -1357,7 +1357,7 @@ export const BeamComponents = [
     components: [
       { name: "teleport caster point continuous" },
       { name: "knockback beam jiren meditate 2 barrier" },
-      { name: "barrier barrier prison" },
+      { name: "barrier barrier wall" },
       { name: "sfx beam jiren meditate barrier" },
     ],
   },
@@ -2589,7 +2589,7 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage dodon ray dps" },
-      { name: "damage kame explosion" },
+      { name: "damage dodon ray explosion" },
       { name: "knockback kame" },
       { name: "sfx beam dodon ray" },
     ],
@@ -4895,9 +4895,9 @@ export const BeamComponents = [
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_FAST,
     aoe: 250,
-    clashingDelayTicks: 1,
-    maxDelayTicks: 3,
-    durationIncPerDelay: 1,
+    clashingDelayTicks: 0,
+    maxDelayTicks: 0,
+    durationIncPerDelay: 0,
     turnSpeed: 3,
     heightVariation: {
       start: 120,
@@ -4915,6 +4915,7 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage beam flash fist dps" },
+      { name: "damage beam flash fist bonus dps" },
       { name: "sfx beam flash fist" },
     ],
   },

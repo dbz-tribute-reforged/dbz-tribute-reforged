@@ -12,6 +12,7 @@ export module Debuffs {
   export const DEMONS_MARK = FourCC("A0O7");
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
   export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
+  export const BRAVE_SLASH = FourCC("A0TV");
 
   export const SLOW_ORDER_ID = 852075;
   export const HEROS_SONG = FourCC("A0I6");
@@ -97,8 +98,8 @@ export const AOEDebuffComponents = [
   {
     name: "stun energy punch",
     repeatInterval: 1,
-    startTick: 17,
-    endTick: 23,
+    startTick: 16,
+    endTick: 24,
     abilityId: Debuffs.STUN_ONE_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
@@ -112,9 +113,22 @@ export const AOEDebuffComponents = [
     repeatInterval: 1,
     startTick: 5,
     endTick: 15,
-    abilityId: Debuffs.STUN_ONE_SECOND,
+    abilityId: Debuffs.STUN_ONE_AND_A_HALF_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 400,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff brave slash feedback",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.BRAVE_SLASH,
+    orderId: Debuffs.CURSE_ORDER_ID,
+    aoe: 300,
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,

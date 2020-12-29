@@ -1243,7 +1243,7 @@ export function SetupBraveSwordAttack(customPlayers: CustomPlayer[]) {
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.6;
+  const braveSwordDamageMult = 0.25 * 1.45;
   const braveSwordManaBurnMult = 0.01;
 
   const trigger = CreateTrigger();
@@ -1905,6 +1905,7 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
+  const glarePunishDamageMult = 0.15;
   
   /**
    * 0: spellId, or 0 if not activated
@@ -1975,6 +1976,8 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
           spellPower = customHero.spellPower;
         }
 
+        const punishDamage = GetEventDamage() * glarePunishDamageMult;
+
         let damageMult = 1.0;
         if (spellId == Id.glare) {
           damageMult = glareDamageMult;
@@ -1988,8 +1991,9 @@ export function SetupJirenGlare(customPlayers: CustomPlayer[]) {
         }
 
         const abilityLevel = LoadInteger(jirenGlareHashtable, unitId, 2);
-        const damage = abilityLevel * spellPower * damageMult * (
-          damageBase
+        const damage = (
+          (abilityLevel * spellPower * damageMult * damageBase) +
+          punishDamage
         );
 
         UnitDamageTarget(

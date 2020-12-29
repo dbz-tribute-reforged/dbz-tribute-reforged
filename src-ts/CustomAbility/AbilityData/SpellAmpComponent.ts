@@ -52,7 +52,7 @@ export const SpellAmpComponents = [
     startTick: 0,
     endTick: -1,
     bonus: 0.10,
-    rate: 0.0006,
+    rate: 0.10,
   },
   // --------------------------------------------
   { 
@@ -69,8 +69,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.15,
-    rate: 0.00033,
+    bonus: 0.5,
+    rate: 0.00152,
   },
   // --------------------------------------------
   { 
@@ -179,5 +179,14 @@ export const SpellAmpComponents = [
     endTick: -1,
     bonus: 0.15,
     rate: 0.0015,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp left right smash", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.05,
+    rate: 0.05,
   },
 ];
