@@ -416,7 +416,7 @@ export const DamageBlockComponents = [
     blockPerDamage: 70,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_INT,
-    multiplier: 0.4,
+    multiplier: 0.45,
     sfxList: [
       {
         model: "IceNova.mdl",

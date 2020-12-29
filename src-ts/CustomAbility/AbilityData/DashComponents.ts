@@ -1049,7 +1049,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 180,
-    distance: 30,
+    distance: 35,
   },
   // saibaman bomb
   {

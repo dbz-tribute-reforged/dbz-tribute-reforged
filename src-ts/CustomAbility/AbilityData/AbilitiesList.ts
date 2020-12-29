@@ -467,6 +467,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Gohan.SUPER_MASENKO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMasenko.blp",
+      disabled: "BTNMasenko.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gohan.SUPER_MASENKO,
+      body: 
+        AbilityNames.Gohan.SUPER_MASENKO
+    },
+    components: [
+      { name: "multi super masenko" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Gohan.SUPER_DRAGON_FLIGHT,
     currentCd: 0,
     maxCd: 1,
@@ -3559,6 +3585,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi all might left smash" },
+      { name: "spell amp left right smash" },
       { name: "dash ground forward all might left smash" },
     ],
   },
@@ -3586,6 +3613,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "multi all might right smash" },
+      { name: "spell amp left right smash" },
       { name: "dash ground forward all might right smash" },
     ],
   },
@@ -4020,7 +4048,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
