@@ -21977,7 +21977,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0QA'))
         else
         end
-        AddSpecialEffectTargetUnitBJ("overhead", udg_StatMultUnit, "SantaHat.mdx")
+        AddSpecialEffectTargetUnitBJ("head", udg_StatMultUnit, "SantaHat.mdx")
         SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 8, udg_ID, udg_StatMultHashtable)
     else
     end
