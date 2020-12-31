@@ -172,6 +172,10 @@ export function tapionPassive(customHero: CustomHero) {
           manaBurn *= 1.5;
         }
 
+        if (attackedMana < manaBurn) {
+          manaBurn = attackedMana;
+        }
+
         SetUnitState(
           attacked, 
           UNIT_STATE_MANA, 
