@@ -204,16 +204,6 @@ export module Id {
   export const ginyuPoseFighting = FourCC("A0PT");
   export const ginyuChangeNow = FourCC("A0PO");
 
-  export const goku = FourCC("H000");
-  export const kamehameha = FourCC("A00R");
-  export const kamehamehaGod = FourCC('A0L9');
-  export const spiritBomb = FourCC('A0JP');
-  export const dragonFist = FourCC("A00U");
-  export const superDragonFist = FourCC("A0P0");
-  export const solarFlare = FourCC("A0KO");
-  export const ultraInstinct = FourCC('A0KR');
-  export const masteredUltraInstinct = FourCC('A0MZ');
-
   export const gohan = FourCC("H00K");
   export const unlockPotential = FourCC("A0L6");
   export const greatSaiyamanHasArrived = FourCC("A0L7");
@@ -224,8 +214,31 @@ export module Id {
   export const superDragonFlight = FourCC("A0L5");
   export const fatherSonKame = FourCC("A0OY");
 
-  // export const galacticDonuts = FourCC("A0CQ");
-  // export const superGhostKamikaze = FourCC("A0CP");
+  export const goku = FourCC("H000");
+  export const kamehameha = FourCC("A00R");
+  export const kamehamehaGod = FourCC('A0L9');
+  export const spiritBomb = FourCC('A0JP');
+  export const dragonFist = FourCC("A00U");
+  export const superDragonFist = FourCC("A0P0");
+  export const solarFlare = FourCC("A0KO");
+  export const ultraInstinct = FourCC('A0KR');
+  export const masteredUltraInstinct = FourCC('A0MZ');
+
+  export const goten = FourCC("H008");
+  export const gotenRockThrow = FourCC("A0TX");
+  export const superGotenStrike = FourCC("A0TW");
+
+  export const kidTrunks = FourCC("H016");
+  export const kidTrunksFinalCannon = FourCC("A0TY");
+  export const kidTrunksSwordOfHope = FourCC("A0TZ");
+
+  export const gotenks = FourCC("H00A");
+  export const dieDieMissileBarrage = FourCC("A0U1");
+  export const galacticDonut = FourCC("A0U2");
+  export const ultraVolleyball = FourCC("A0U3");
+  export const superGhostKamikazeAttack = FourCC("A0U4");
+  export const superGhostKamikazeAttack2 = FourCC("A0U5");
+  export const gotenksSS3 = FourCC("A0U0");
 
   export const guldo = FourCC("H09J");
   export const psychoJavelin = FourCC("A0SC");

@@ -157,7 +157,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 17,
   },
   {
     name: "dash ground point super dragon fist",
@@ -169,7 +169,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 22,
   },
   {
     name: "dash ground point super dragon flight",
@@ -1335,6 +1335,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 3,
+  },
+  // god of destruction
+  {
+    name: "dash ground forward gotenks ss3",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    isFlying: false,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
   },
   // ---
   // saga zanzo

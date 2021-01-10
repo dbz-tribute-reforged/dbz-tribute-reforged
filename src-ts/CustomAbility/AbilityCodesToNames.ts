@@ -31,12 +31,24 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.superDragonFlight, AbilityNames.Gohan.SUPER_DRAGON_FLIGHT],
     [Id.fatherSonKame, AbilityNames.Gohan.FATHER_SON_KAMEHAMEHA],
 
-    // kid trunks / ft
+    // future trunks
     [Id.finishBuster, AbilityNames.FutureTrunks.FINISH_BUSTER],
 
+    // goten
+    [Id.gotenRockThrow, AbilityNames.Goten.ROCK_THROW],
+    [Id.superGotenStrike, AbilityNames.Goten.SUPER_GOTEN_STRIKE],
+
+    // kid trunks
+    [Id.kidTrunksFinalCannon, AbilityNames.KidTrunks.FINAL_CANNON],
+    [Id.kidTrunksSwordOfHope, AbilityNames.KidTrunks.SWORD_OF_HOPE],
+
     // gotenks
-    // [Id.galacticDonuts, AbilityNames.Gotenks.GALACTIC_DONUTS],
-    // [Id.superGhostKamikaze, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK],
+    [Id.dieDieMissileBarrage, AbilityNames.Gotenks.DIE_DIE_MISSILE_BARRAGE],
+    [Id.galacticDonut, AbilityNames.Gotenks.GALACTIC_DONUT],
+    [Id.ultraVolleyball, AbilityNames.Gotenks.ULTRA_VOLLEYBALL],
+    [Id.superGhostKamikazeAttack, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK],
+    [Id.superGhostKamikazeAttack2, AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2],
+    [Id.gotenksSS3, AbilityNames.Gotenks.GOTENKS_SS3],
 
     // future trunks
     [Id.heatDomeAttack, AbilityNames.FutureTrunks.HEAT_DOME_ATTACK],

@@ -69,8 +69,8 @@ export const SpellAmpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    bonus: 0.5,
-    rate: 0.00152,
+    bonus: 0.3,
+    rate: 0.3,
   },
   // --------------------------------------------
   { 
@@ -188,5 +188,23 @@ export const SpellAmpComponents = [
     endTick: -1,
     bonus: 0.05,
     rate: 0.05,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp kid trunks sword of hope", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.1,
+    rate: 0.1,
+  },
+  // --------------------------------------------
+  { 
+    name: "spell amp gotenks ss3", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.15,
+    rate: 0.0015,
   },
 ];
