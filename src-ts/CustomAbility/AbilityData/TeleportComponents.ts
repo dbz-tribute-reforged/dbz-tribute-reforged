@@ -81,4 +81,14 @@ export const TeleportComponents = [
     teleportTarget: Teleport.TARGET_UNIT,
     maxRange: 1200,
   },
+  {
+    name: "teleport galactic donut continuous", 
+    repeatInterval: 1, 
+    startTick: 24,
+    endTick: -1,
+    teleportTick: 0,
+    teleportOnce: false,
+    teleportTarget: Teleport.ORIGINAL_POINT,
+    maxRange: Teleport.INFINITE_RANGE,
+  },
 ];

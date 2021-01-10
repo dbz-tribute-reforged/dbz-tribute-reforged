@@ -36,13 +36,6 @@ export module AbilityNames {
     export const POTENTIAL_UNLEASHED: string = "Potential Unleashed";
   }
 
-  export module Gotenks {
-    export const KAMEHAMEHA: string = Goku.KAMEHAMEHA;
-    export const FINISH_BUSTER: string = "Finish Buster";
-    export const GALACTIC_DONUTS: string = "Galactic Donuts";
-    export const SUPER_GHOST_KAMIKAZE_ATTACK: string = "Super Ghost Kamikaze Attack";
-  }
-
   export module FutureTrunks {
     export const FINISH_BUSTER: string = "Finish Buster";
     export const HEAT_DOME_ATTACK: string = "Heat Dome Attack";
@@ -50,6 +43,25 @@ export module AbilityNames {
     export const BLAZING_RUSH: string = "Blazing Rush";
     export const SHINING_SWORD_ATTACK: string = "Shining Sword Attack";
     export const SUPER_SAIYAN_RAGE: string = "Super Saiyan Rage";
+  }
+
+  export module Goten {
+    export const ROCK_THROW: string = "Goten Rock Throw";
+    export const SUPER_GOTEN_STRIKE: string = "Super Goten Strike";
+  }
+
+  export module KidTrunks {
+    export const FINAL_CANNON: string = "Trunks Final Cannon";
+    export const SWORD_OF_HOPE: string = "Trunks Sword Of Hope";
+  }
+
+  export module Gotenks {
+    export const DIE_DIE_MISSILE_BARRAGE: string = "Die Die MIssile Barrage";
+    export const GALACTIC_DONUT: string = "Galactic Donut";
+    export const ULTRA_VOLLEYBALL: string = "Ultra Volleyball";
+    export const SUPER_GHOST_KAMIKAZE_ATTACK: string = "Super Ghost Kamikaze Attack";
+    export const SUPER_GHOST_KAMIKAZE_ATTACK_2: string = "Super Ghost Kamikaze Attack x10";
+    export const GOTENKS_SS3: string = "Gotenks SS3";
   }
 
   export module Piccolo {

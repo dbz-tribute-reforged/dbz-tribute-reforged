@@ -635,6 +635,274 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Goten.ROCK_THROW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenRockThrow.blp",
+      disabled: "BTNGotenRockThrow.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Goten.ROCK_THROW,
+      body: 
+        AbilityNames.Goten.ROCK_THROW
+    },
+    components: [
+      { name: "multi goten rock throw" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Goten.SUPER_GOTEN_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenStrike.blp",
+      disabled: "BTNGotenStrike.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Goten.SUPER_GOTEN_STRIKE,
+      body: 
+        AbilityNames.Goten.SUPER_GOTEN_STRIKE
+    },
+    components: [
+      { name: "damage super goten strike dps" },
+      { name: "dash ground point 20dist" },
+      { name: "debuff stun super goten strike" },
+      { name: "sfx super dragon flight" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KidTrunks.FINAL_CANNON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKidTrunksFinalCannon.blp",
+      disabled: "BTNKidTrunksFinalCannon.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KidTrunks.FINAL_CANNON,
+      body: 
+        AbilityNames.KidTrunks.FINAL_CANNON,
+    },
+    components: [
+      { name: "beam kid trunks final cannon" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.KidTrunks.SWORD_OF_HOPE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 334,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKidTrunksSwordOfHope.blp",
+      disabled: "BTNKidTrunksSwordOfHope.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KidTrunks.SWORD_OF_HOPE,
+      body: 
+        AbilityNames.KidTrunks.SWORD_OF_HOPE
+    },
+    components: [
+      { name: "debuff heros song heros flute start" },
+      { name: "spell amp kid trunks sword of hope" },
+      { name: "temp ability kid trunks sword of hope aura" },
+      { name: "sfx kid trunks sword of hope" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.DIE_DIE_MISSILE_BARRAGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksDieDieMissileBarrage.blp",
+      disabled: "BTNGotenksDieDieMissileBarrage.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.DIE_DIE_MISSILE_BARRAGE,
+      body: 
+        AbilityNames.Gotenks.DIE_DIE_MISSILE_BARRAGE
+    },
+    components: [
+      { name: "multi die die missile barrage" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.GALACTIC_DONUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 90,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksGalacticDonut.blp",
+      disabled: "BTNGotenksGalacticDonut.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.GALACTIC_DONUT,
+      body: 
+        AbilityNames.Gotenks.GALACTIC_DONUT
+    },
+    components: [
+      { name: "beam galactic donut" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.ULTRA_VOLLEYBALL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 90,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksUltraVolleyball.blp",
+      disabled: "BTNGotenksUltraVolleyball.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.ULTRA_VOLLEYBALL,
+      body: 
+        AbilityNames.Gotenks.ULTRA_VOLLEYBALL
+    },
+    components: [
+      { name: "beam ultra volleyball" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 200,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksGhostKamikaze.blp",
+      disabled: "BTNGotenksGhostKamikaze.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK,
+      body: 
+        AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK
+    },
+    components: [
+      { name: "multi super ghost kamikaze attack" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 300,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksGhostKamikaze2.blp",
+      disabled: "BTNGotenksGhostKamikaze2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2,
+      body: 
+        AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2
+    },
+    components: [
+      { name: "multi super ghost kamikaze attack 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Gotenks.GOTENKS_SS3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNGotenksSS3.blp",
+      disabled: "BTNGotenksSS3.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Gotenks.GOTENKS_SS3,
+      body: 
+        AbilityNames.Gotenks.GOTENKS_SS3
+    },
+    components: [
+      { name: "dash ground forward gotenks ss3" },
+      { name: "spell amp gotenks ss3" },
+      { name: "sfx gotenks super saiyan 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.FutureTrunks.FINISH_BUSTER,
     currentCd: 0,
     maxCd: 1,

@@ -62,4 +62,18 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 40,
   },
+  {
+    name: "timed life beam goten rock throw", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 35,
+  },
+  {
+    name: "timed life beam die die missile barrage", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 40,
+  },
 ];

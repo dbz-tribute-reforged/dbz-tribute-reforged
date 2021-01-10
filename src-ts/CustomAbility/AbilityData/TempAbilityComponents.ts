@@ -180,4 +180,18 @@ export const TempAbilityComponents = [
     tempPermanence: false,
     equalizeLevels: true,
   },
+  {
+    name: "temp ability kid trunks sword of hope aura", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: FourCC("S002"),
+    oldAbility: 0,
+    performSwap: false,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: false,
+    tempPermanence: false,
+    equalizeLevels: false,
+  },
 ];

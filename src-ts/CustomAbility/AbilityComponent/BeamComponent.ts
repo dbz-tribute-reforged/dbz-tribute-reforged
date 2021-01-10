@@ -69,6 +69,7 @@ export class BeamComponent implements
     public useLastCastPoint: boolean = true,
     public explodeAtCastPoint: boolean = false,
     public explodeOnDeath: boolean = false,
+    public explodeOnContact: boolean = false,
     public beamUnitSpawn: number = BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
     public beamUnitType: number = FourCC('hpea'),
     public beamUnitSkin: number = FourCC('hpea'),
@@ -102,6 +103,13 @@ export class BeamComponent implements
       const numEnemyHeroes = UnitHelper.countEnemyHeroes(nearbyEnemies, input.casterPlayer);
       
       const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(nearbyEnemies) > 0);
+      
+      if (
+        this.explodeOnContact && 
+        numEnemyHeroes > 0
+      ) {
+        this.forcedExplode = true;
+      }
 
       if (
         (beamClashTest) || 
@@ -349,6 +357,7 @@ export class BeamComponent implements
       this.isFixedAngle, this.canClashWithHero, 
       this.useLastCastPoint, this.explodeAtCastPoint,
       this.explodeOnDeath,
+      this.explodeOnContact,
       this.beamUnitSpawn,
       this.beamUnitType, this.beamUnitSkin,
       AbilityComponentHelper.clone(this.components),
@@ -380,6 +389,7 @@ export class BeamComponent implements
       useLastCastPoint: boolean;
       explodeAtCastPoint: boolean;
       explodeOnDeath: boolean;
+      explodeOnContact: boolean;
       beamUnitSpawn: number;
       beamUnitType: string;
       beamUnitSkin: number;
@@ -407,6 +417,7 @@ export class BeamComponent implements
     this.useLastCastPoint = input.useLastCastPoint;
     this.explodeAtCastPoint = input.explodeAtCastPoint;
     this.explodeOnDeath = input.explodeOnDeath;
+    this.explodeOnContact = input.explodeOnContact;
     this.beamUnitSpawn = input.beamUnitSpawn;
     this.beamUnitType = FourCC(input.beamUnitType);
     this.beamUnitSkin = input.beamUnitSkin;

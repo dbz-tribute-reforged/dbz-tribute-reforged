@@ -50,17 +50,25 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     
     // goten
     [FourCC("H008"), [
-      AbilityNames.Goku.KAMEHAMEHA
+      AbilityNames.Goku.KAMEHAMEHA,
+      AbilityNames.Goten.ROCK_THROW,
+      AbilityNames.Goten.SUPER_GOTEN_STRIKE,
     ]],
     // kid trunks
     [FourCC("H016"), [
-      AbilityNames.FutureTrunks.FINISH_BUSTER
+      AbilityNames.FutureTrunks.FINISH_BUSTER,
+      AbilityNames.KidTrunks.FINAL_CANNON,
+      AbilityNames.KidTrunks.SWORD_OF_HOPE,
     ]],
     // gotenks
     [FourCC("H00A"), [
-      AbilityNames.Goku.KAMEHAMEHA, 
-      AbilityNames.Gotenks.GALACTIC_DONUTS, 
-      AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK
+      AbilityNames.Goku.KAMEHAMEHA,
+      AbilityNames.Gotenks.DIE_DIE_MISSILE_BARRAGE,
+      AbilityNames.Gotenks.GALACTIC_DONUT,
+      AbilityNames.Gotenks.ULTRA_VOLLEYBALL,
+      AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK,
+      AbilityNames.Gotenks.SUPER_GHOST_KAMIKAZE_ATTACK_2,
+      AbilityNames.Gotenks.GOTENKS_SS3,
     ]],
 
     // future trunks
@@ -439,7 +447,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Raditz.DOUBLE_SUNDAE
     ]],
     // nappa
-    [FourCC("H08W"), [AbilityNames.Nappa.GIANT_STORM, AbilityNames.Nappa.BLAZING_STORM, AbilityNames.Nappa.PLANT_SAIBAMEN, AbilityNames.Vegeta.MOONLIGHT, AbilityNames.Vegeta.ANGRY_SHOUT, AbilityNames.Nappa.BREAK_CANNON]],
+    [FourCC("H08W"), [
+      AbilityNames.Nappa.GIANT_STORM, 
+      AbilityNames.Nappa.BLAZING_STORM, 
+      AbilityNames.Nappa.PLANT_SAIBAMEN, 
+      AbilityNames.Vegeta.MOONLIGHT, 
+      AbilityNames.Vegeta.ANGRY_SHOUT, 
+      AbilityNames.Nappa.BREAK_CANNON
+    ]],
     // saibaman
     [FourCC("H08X"), [AbilityNames.Saibaman.BOMB, AbilityNames.Saibaman.ACID]],
 
