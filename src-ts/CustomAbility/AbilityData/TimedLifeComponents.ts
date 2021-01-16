@@ -76,4 +76,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 40,
   },
+  {
+    name: "timed life beam super ghost kamikaze attack", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 66,
+  },
 ];

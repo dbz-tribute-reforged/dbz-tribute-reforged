@@ -128,6 +128,18 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     this.currentTick = Math.max(2, this.currentTick - amount);
   }
 
+  getCurrentCd(): number {
+    return this.currentCd;
+  }
+
+  setCd(amount: number) {
+    this.currentCd = amount;
+  }
+
+  getDuration(): number {
+    return this.duration;
+  }
+
   isReadyToUse(repeatInterval: number, startTick: number, endTick: number): boolean {
     return (
       (

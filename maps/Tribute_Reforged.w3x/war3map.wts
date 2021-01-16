@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.58
+DBZ Tribute Reforged 0.58a
 }
 
 STRING 4
@@ -21882,6 +21882,24 @@ STRING 3567
 Fires a beam of energy from the users palm. |n|cff00ff00(Damage: (Int * lvl * 1) +25)|r|n|cff00ffff(Cooldown: 10 seconds)|r
 }
 
+STRING 3568
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool1> seconds|r
+}
+
+STRING 3569
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool2> seconds|r
+}
+
 STRING 3570
 // Abilities: A00N (Energy Beam), Ubertip (Tooltip - Normal - Extended)
 {
@@ -21918,6 +21936,24 @@ STRING 3575
 [|cff00FF00Q|r] Energy Beam - [|cffffcc00Level 5|r]
 }
 
+STRING 3576
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool3> seconds|r
+}
+
+STRING 3577
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool4> seconds|r
+}
+
 STRING 3578
 // Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
@@ -21934,6 +21970,15 @@ STRING 3580
 // Abilities: A00N (Energy Beam), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Energy Beam - [|cffffcc00Level %d|r]
+}
+
+STRING 3581
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool5> seconds|r
 }
 
 STRING 3582
@@ -52579,24 +52624,6 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 |cff00ffffCooldown: <A0U1,Cool1> - <A0U1,Cool10> seconds|r
 }
 
-STRING 8545
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool1> seconds|r
-}
-
-STRING 8546
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool2> seconds|r
-}
-
 STRING 8547
 // Abilities: A0OM (Summon Blast-o-Matic), Ubertip (Tooltip - Normal - Extended)
 {
@@ -52800,15 +52827,6 @@ STRING 8579
 // Abilities: A0IY (Dummy Stun 1s), Name (Name)
 {
 Dummy Stun 1s
-}
-
-STRING 8580
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool3> seconds|r
 }
 
 STRING 8581
@@ -84339,6 +84357,24 @@ STRING 13671
 Fires a beam of energy from the users palm. |n|cff00ff00(Damage: (Int * lvl * 1) +25)|r|n|cff00ffff(Cooldown: 10 seconds)|r
 }
 
+STRING 13672
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool6> seconds|r
+}
+
+STRING 13673
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool7> seconds|r
+}
+
 STRING 13674
 // Abilities: A0QC (Death Saucer), Tip (Tooltip - Normal)
 {
@@ -88184,6 +88220,15 @@ STRING 14275
 [|cff00ff00E|r] Destructo Disc - [|cffffcc00Level 1|r]
 }
 
+STRING 14276
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool8> seconds|r
+}
+
 STRING 14277
 // Abilities: A0RA (Destructo Disc), Name (Name)
 {
@@ -88200,6 +88245,15 @@ STRING 14279
 // Abilities: A0RA (Destructo Disc), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Destructo Disc - [|cffffcc00Level %d|r]
+}
+
+STRING 14280
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool9> seconds|r
 }
 
 STRING 14281
@@ -88242,10 +88296,67 @@ STRING 14286
 [|cff00ff00E|r] Destructo Disc - [|cffffcc00Level 6|r]
 }
 
+STRING 14287
+// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+|cffffff00Target a unit to enable beam tracking.|r
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U4,Cool10> seconds|r
+}
+
+STRING 14288
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 2|r]
+}
+
+STRING 14289
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 3|r]
+}
+
+STRING 14290
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 4|r]
+}
+
+STRING 14291
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 5|r]
+}
+
 STRING 14292
 // Abilities: A0RA (Destructo Disc), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Destructo Disc - [|cffffcc00Level 7|r]
+}
+
+STRING 14293
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 6|r]
+}
+
+STRING 14294
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 7|r]
+}
+
+STRING 14295
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 9|r]
+}
+
+STRING 14296
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 8|r]
 }
 
 STRING 14297
@@ -97766,22 +97877,19 @@ STRING 15666
 (kid trunks)
 }
 
-STRING 15667
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+STRING 15669
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
 {
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool4> seconds|r
+[|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 10|r]
 }
 
-STRING 15668
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
+STRING 15670
+// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
+An enhanced version of Gotenks's signature move. Gotenks expels 10 Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
 |cffffff00Target a unit to enable beam tracking.|r
 |cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool5> seconds|r
+|cff00ffffCooldown: <A0U4,Cool10> seconds|r
 }
 
 STRING 15680
@@ -103522,15 +103630,6 @@ STRING 16463
 Die Die Missile Barrage
 }
 
-STRING 16464
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool6> seconds|r
-}
-
 STRING 16465
 // Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
 {
@@ -103846,15 +103945,6 @@ STRING 16512
 [|cff00ff00E|r] Ultra Volleyball - [|cffffcc00Level 7|r]
 }
 
-STRING 16513
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool7> seconds|r
-}
-
 STRING 16514
 // Abilities: A0U3 (Ultra Volleyball), Name (Name)
 {
@@ -103865,15 +103955,6 @@ STRING 16515
 // Abilities: A0U3 (Ultra Volleyball), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Ultra Volleyball - [|cffffcc00Level %d|r]
-}
-
-STRING 16516
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool8> seconds|r
 }
 
 STRING 16517
@@ -104035,46 +104116,10 @@ STRING 16551
 (gotenks)
 }
 
-STRING 16559
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x20 - [|cffffcc00Level 2|r]
-}
-
-STRING 16560
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x30 - [|cffffcc00Level 3|r]
-}
-
-STRING 16561
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x40 - [|cffffcc00Level 4|r]
-}
-
-STRING 16562
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x50 - [|cffffcc00Level 5|r]
-}
-
-STRING 16563
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x60 - [|cffffcc00Level 6|r]
-}
-
 STRING 16564
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 1|r]
-}
-
-STRING 16565
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x70 - [|cffffcc00Level 7|r]
 }
 
 STRING 16566
@@ -104093,33 +104138,6 @@ STRING 16568
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Super Ghost Kamikaze Attack x10 - [|cffffcc00Level %d|r]
-}
-
-STRING 16569
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool9> seconds|r
-}
-
-STRING 16570
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x90 - [|cffffcc00Level 9|r]
-}
-
-STRING 16571
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x80 - [|cffffcc00Level 8|r]
-}
-
-STRING 16572
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
-{
-[|cff00ff00R|r] Super Ghost Kamikaze Attack x100 - [|cffffcc00Level 10|r]
 }
 
 STRING 16576
@@ -104597,15 +104615,6 @@ STRING 16629
 W
 }
 
-STRING 16630
-// Abilities: A0U4 (Super Ghost Kamikaze Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool10> seconds|r
-}
-
 STRING 16631
 // Abilities: A0U4 (Super Ghost Kamikaze Attack), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -104694,15 +104703,6 @@ An enhanced version of Gotenks's signature move. Gotenks expels Kamikaze ghosts 
 |cffffff00Target a unit to enable beam tracking.|r
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0U4,Cool9> seconds|r
-}
-
-STRING 16641
-// Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Ubertip (Tooltip - Normal - Extended)
-{
-An enhanced version of Gotenks's signature move. Gotenks expels Kamikaze ghosts from his mouth to seek out and destroy his enemies. The ghosts explode on contact for massive damage.
-|cffffff00Target a unit to enable beam tracking.|r
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U4,Cool10> seconds|r
 }
 
 STRING 16644

@@ -22,11 +22,14 @@ export const AbilitiesList = [
     tooltip: {
       title: "(Z) Zanzo Dash",
       body: 
-        "Dashes towards your next right click." + 
-        "|nCost: 25 MP |nCD: 19",
+        "Dashes towards your next right click. Cooldown is based on distance travelled. " + 
+        "Can be used to cross cliffs unlike many other dashes. " + 
+        "Y is also a valid hotkey if using a QWERTZ keyboard." + 
+        "|nCost: 25 MP |nCD: 19 (varies)",
     },
     components: [
-      { name: "dash ground point 40dist" },
+      { name: "dash zanzo" },
+      { name: "jump zanzo dash" },
       { name: "sfx zanzo dash" },
     ],
   },
@@ -7682,6 +7685,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point zanzo saga" },
+      { name: "jump zanzo dash" },
       { name: "sfx zanzo dash" },
     ],
   },

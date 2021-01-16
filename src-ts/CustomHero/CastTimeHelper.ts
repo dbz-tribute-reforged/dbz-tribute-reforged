@@ -6,6 +6,7 @@ import { CoordMath } from "Common/CoordMath";
 import { CustomHero } from "./CustomHero";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { AbilityNames } from "CustomAbility/AbilityNames";
+import { SoundHelper } from "Common/SoundHelper";
 
 export module CastTimeHelper {
   export function addEventRightClick(trigger: trigger, input: CustomAbilityInput) {
@@ -100,7 +101,7 @@ export module CastTimeHelper {
         // actually activate the ability
         ability.activate(input);
         if (ability.name == AbilityNames.BasicAbility.ZANZO_DASH) {
-          playSoundOnUnit(hero.unit, "Audio/Effects/Zanzo.mp3", 1149);
+          SoundHelper.playSoundOnUnit(hero.unit, "Audio/Effects/Zanzo.mp3", 1149);
         }
         cleanupCastTime(hero, ability, castTimeTimer, readyTrigger, stopCastingTrigger);
       }
@@ -141,18 +142,4 @@ export module CastTimeHelper {
     }
 
   }
-}
-
-function playSoundOnUnit(target: unit, soundFile: string, duration: number) {
-  udg_TempSound = CreateSound(soundFile, false, true, false, 1, 1, "SpellsEAX")
-	SetSoundDuration(udg_TempSound, duration)
-	SetSoundChannel(udg_TempSound, 0)
-	SetSoundVolume(udg_TempSound, 127)
-	SetSoundPitch(udg_TempSound, 1.0)
-	SetSoundDistances(udg_TempSound, 600.0, 15000.0)
-	SetSoundDistanceCutoff(udg_TempSound, 5500.0)
-	SetSoundConeAngles(udg_TempSound, 0.0, 0.0, 127)
-	SetSoundConeOrientation(udg_TempSound, 0.0, 0.0, 0.0)
-	PlaySoundOnUnitBJ(udg_TempSound, 100, target)
-	KillSoundWhenDone(udg_TempSound)
 }
