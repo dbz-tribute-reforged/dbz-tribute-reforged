@@ -1,5 +1,15 @@
 export const JumpComponents = [
   {
+    name: "jump zanzo dash",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 24,
+    maxHeight: 400,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
+  {
     name: "jump videl flying kick",
     repeatInterval: 1, 
     startTick: 0,

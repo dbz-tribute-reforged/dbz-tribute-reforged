@@ -143,15 +143,32 @@ export function tapionPassive(customHero: CustomHero) {
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
-  )
+  );
+  
+  // possibly laggy...
+  // TODO: make global damage registering system instead
+  // TriggerRegisterAnyUnitEventBJ(
+  //   onHitTrigger,
+  //   EVENT_PLAYER_UNIT_DAMAGED
+  // );
+
+  // TriggerRegisterUnitEvent(
+  //   onHitTrigger,
+  //   customHero.unit,
+  //   EVENT_UNIT_DAMAGING
+  // );
+
   TriggerAddCondition(
     onHitTrigger,
     Condition(() => {
       const attacker = GetAttacker();
       const attacked = GetAttackedUnitBJ();
+      // const attacker = GetEventDamageSource();
+      // const attacked = BlzGetEventDamageTarget();
       if (
         GetUnitTypeId(attacker) == heroId && 
         GetOwningPlayer(attacker) == player &&
+        IsUnitType(attacked, UNIT_TYPE_HERO) &&
         GetUnitAbilityLevel(attacked, HeroPassiveData.HEROS_SONG) > 0
       ) {
         const attackedMana = GetUnitState(attacked, UNIT_STATE_MANA);

@@ -18,10 +18,18 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
   static readonly MIN_DISTANCE_FROM_PREVIOUS = 10;
 
+  static readonly DASH_TYPE_GROUND = 0;
+  static readonly DASH_TYPE_FLYING = 1;
+  static readonly DASH_TYPE_ZANZO = 2;
+
+  static readonly ZANZO_DYNAMIC_CD = 16;
+  static readonly ZANZO_STATIC_CD = 3;
+
   protected previousCoord: Vector2D;
   protected currentCoord: Vector2D;
   protected dashTargetPoint: Vector2D;
   protected targetCoord: Vector2D;
+  protected distanceTravelled: number;
 
   constructor(
     public name: string = "Dash",
@@ -29,7 +37,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     public startTick: number = 0,
     public endTick: number = -1,
     public targetDirection: number = Dash.DIRECTION_TARGET_POINT,
-    public isFlying: boolean = false,
+    public dashType: number = Dash.DASH_TYPE_GROUND,
     public checkPreviousCoord: boolean = false,
     public useLastCastPoint: boolean = false,
     public angleOffset: number = 0,
@@ -39,9 +47,11 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.currentCoord = new Vector2D();
     this.dashTargetPoint = new Vector2D();
     this.targetCoord = new Vector2D();
+    this.distanceTravelled = 0;
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
+
     this.currentCoord.setPos(GetUnitX(source), GetUnitY(source));
     if (
       !this.checkPreviousCoord ||
@@ -105,12 +115,32 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
         this.targetCoord.polarProjectCoords(this.currentCoord, direction, distanceToTarget);
       }
 
-      if (this.isFlying) {
-        PathingCheck.moveFlyingUnitToCoord(source, this.targetCoord);
-      } else {
+      if (this.dashType == Dash.DASH_TYPE_ZANZO) {
+        PathingCheck.moveFlyingUnitToCoordExcludingDeepWater(source, this.targetCoord);
+      } else if (this.dashType == Dash.DASH_TYPE_GROUND) {
         PathingCheck.moveGroundUnitToCoord(source, this.targetCoord);
+      } else {
+        PathingCheck.moveFlyingUnitToCoord(source, this.targetCoord);
       }
+      // target coord = destination
+      this.targetCoord.setPos(GetUnitX(source), GetUnitY(source));
+      // distance = start to destination
+      this.distanceTravelled += CoordMath.distance(this.currentCoord, this.targetCoord);
       this.previousCoord.setVector(this.targetCoord);
+    }
+
+    if (ability.isFinishedUsing(this)) {
+      if (this.dashType == Dash.DASH_TYPE_ZANZO) {
+          // change cooldown based on distance travelled of zanzo dash
+          const duration = ability.getDuration();
+          const distanceRatio = Math.min(1.1, this.distanceTravelled / (this.distance * duration));
+          const newCd = distanceRatio * Dash.ZANZO_DYNAMIC_CD + Dash.ZANZO_STATIC_CD;
+          ability.setCd(newCd);
+
+          // readjust unit loc based on closest non-cliff area..
+          PathingCheck.unstuckGroundUnitFromCliff(source, this.targetCoord);
+      }
+      this.distanceTravelled = 0;
     }
   }
   
@@ -121,7 +151,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
   clone(): AbilityComponent {
     return new Dash(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
-      this.targetDirection, this.isFlying, this.checkPreviousCoord,
+      this.targetDirection, this.dashType, this.checkPreviousCoord,
       this.useLastCastPoint, 
       this.angleOffset, this.distance,
     );
@@ -134,7 +164,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
       startTick: number;
       endTick: number;
       targetDirection: number;
-      isFlying: boolean;
+      dashType: number;
       checkPreviousCoord: boolean;
       useLastCastPoint: boolean;
       angleOffset: number;
@@ -146,7 +176,7 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.targetDirection = input.targetDirection;
-    this.isFlying = input.isFlying;
+    this.dashType = input.dashType;
     this.checkPreviousCoord = input.checkPreviousCoord;
     this.useLastCastPoint = input.useLastCastPoint;
     this.angleOffset = input.angleOffset;

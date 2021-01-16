@@ -549,7 +549,7 @@ export const BeamComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    beamHpMult: BASE.KAME_DPS * 1.0,
+    beamHpMult: BASE.KAME_DPS * 0.6,
     beamHpAttribute: bj_HEROSTAT_INT,
     speed: BeamComponent.BEAM_SPEED_MEDIUM_FAST,
     aoe: 250,
@@ -575,6 +575,7 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage super ghost kamikaze attack explosion" },
+      { name: "timed life beam super ghost kamikaze attack" },
       { name: "sfx beam super ghost kamikaze attack" },
     ],
   },
