@@ -114,6 +114,14 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     }
   }
 
+  getName(): string {
+    return this.name;
+  }
+
+  isInUse(): boolean {
+    return (this.currentTick > 0);
+  }
+
   updateCd() {
     if (this.currentCd <= 0 && this.currentTick > this.duration) {
       this.currentCd = 0;

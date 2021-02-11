@@ -104,6 +104,10 @@ export class CustomHero {
     return this.abilities.hasAbility(name);
   }
 
+  public getAbility(name: string): CustomAbility | undefined {
+    return this.abilities.getCustomAbilityByName(name);
+  }
+
   public addAbility(name: string, ability: CustomAbility): this {
     this.abilities.add(name, ability);
     return this;

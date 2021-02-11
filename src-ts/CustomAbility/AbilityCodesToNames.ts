@@ -228,6 +228,13 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.multiFormSolarFlare, AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE],
     [Id.tienFourArms, AbilityNames.Tien.FOUR_ARMS],
 
+    [Id.getsugaTensho, AbilityNames.Ichigo.GETSUGA_TENSHO],
+    [Id.getsugaJujisho, AbilityNames.Ichigo.GETSUGA_JUJISHO],
+    [Id.ceroCharge, AbilityNames.Ichigo.CERO_CHARGE],
+    [Id.ceroFire, AbilityNames.Ichigo.CERO_FIRE],
+    [Id.mugetsuUnleash, AbilityNames.Ichigo.MUGETSU_UNLEASH],
+    [Id.mugetsuAbsorb, AbilityNames.Ichigo.MUGETSU_ABSORB],
+    [Id.shunpo, AbilityNames.Ichigo.SHUNPO],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

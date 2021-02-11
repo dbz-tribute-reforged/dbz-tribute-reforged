@@ -254,6 +254,18 @@ export module Id {
   export const timeCage = FourCC("A0FW");
   export const pureProgress = FourCC("A0TH");
 
+  export const ichigo = FourCC("H09S");
+  export const getsugaTensho = FourCC("A0U7");
+  export const getsugaJujisho = FourCC("A0UH");
+  export const bankai = FourCC("A0U8");
+  export const bankaiFinal = FourCC("A0U9");
+  export const ceroCharge = FourCC("A0UA");
+  export const ceroFire = FourCC("A0UB");
+  export const mugetsuBook = FourCC("A0UC");
+  export const mugetsuUnleash = FourCC("A0UD");
+  export const mugetsuAbsorb = FourCC("A0UE");
+  export const shunpo = FourCC("A0UF");
+
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
   export const rakshasaClaw = FourCC("A0NY");
