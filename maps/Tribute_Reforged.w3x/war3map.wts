@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.58a
+DBZ Tribute Reforged 0.59
 }
 
 STRING 4
@@ -27,7 +27,7 @@ STRING 4
 
 STRING 5
 {
-A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 41+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
+A fast-paced action-packed hero arena based on the Dragon Ball series. Includes every saga from DBZ to GT and even some of DB Super. Features 42+ unique heroes, beam clashes, advanced Saga AI and a custom UI.
 
 discord.gg/vayXJSZ
 }
@@ -5065,9 +5065,8 @@ STRING 820
 Type "r" to revert.
 Transformations:
 [lvl 1]     2.00x "r"
-[lvl 100]  2.20x "ss"
-[lvl 150]  2.25x "ss2" [unlocks SS3 form]
-[lvl 200]  2.40x "ss2"
+[lvl 100]  2.25x "ss"
+[lvl 150]  2.50x "ss3" [Unlocks SS3 form]
 
 |cff00ff00Pick ONE of the following:|r
 [lvl 200] "|cffffcc00ultra volleyball|r"
@@ -6249,7 +6248,7 @@ Extra character. Not selected by default.
 }
 
 STRING 1003
-// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
+// Units: H09S (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -7285,7 +7284,7 @@ STRING 1160
 }
 
 STRING 1161
-// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
+// Units: H09T (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -12010,7 +12009,7 @@ STRING 1927
 }
 
 STRING 1928
-// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
+// Units: H09U (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -12034,7 +12033,7 @@ Fires a powerful energy blast from the user's hands, to be used in combination w
 }
 
 STRING 1932
-// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
+// Units: H09V (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -12130,7 +12129,7 @@ Learn Dabura's Spit - |cffffcc00D|r
 }
 
 STRING 1948
-// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Units: H09W (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -12154,7 +12153,7 @@ Weakens enemy and disables it from releasing energy.
 }
 
 STRING 1952
-// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
+// Units: H09X (Shinigami), Hotkey (Hotkey)
 {
 D
 }
@@ -12574,7 +12573,7 @@ STRING 2021
 }
 
 STRING 2022
-// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12592,7 +12591,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 2025
-// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12712,7 +12711,7 @@ STRING 2044
 }
 
 STRING 2045
-// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12736,7 +12735,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2049
-// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13096,7 +13095,7 @@ STRING 2108
 }
 
 STRING 2109
-// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13120,7 +13119,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 2113
-// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13517,7 +13516,7 @@ STRING 2177
 }
 
 STRING 2178
-// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13541,7 +13540,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2182
-// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13883,7 +13882,7 @@ S
 }
 
 STRING 2239
-// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13907,7 +13906,7 @@ STRING 2242
 }
 
 STRING 2243
-// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13931,7 +13930,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 2247
-// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14063,7 +14062,7 @@ STRING 2268
 }
 
 STRING 2269
-// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14087,7 +14086,7 @@ Piccolo fires alot of energy blasts hitting any nearby creatures.
 }
 
 STRING 2273
-// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14741,7 +14740,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14765,7 +14764,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15141,7 +15140,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15153,7 +15152,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15799,7 +15798,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16741,7 +16740,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16765,7 +16764,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17455,7 +17454,7 @@ STRING 2831
 }
 
 STRING 2832
-// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
+// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17479,7 +17478,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2836
-// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17685,7 +17684,7 @@ STRING 2869
 }
 
 STRING 2870
-// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17697,7 +17696,7 @@ STRING 2871
 }
 
 STRING 2872
-// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
+// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19784,7 +19783,7 @@ STRING 3219
 }
 
 STRING 3220
-// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
+// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19808,7 +19807,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 3224
-// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
+// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19983,7 +19982,7 @@ Power Level |cffffcc00R|rising - [|cffffcc00Level 5|r]
 }
 
 STRING 3253
-// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
+// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -20007,7 +20006,7 @@ The Geti Star scans for high power levels.|n|n|cff00ff00Shows the location of al
 }
 
 STRING 3257
-// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -21145,7 +21144,7 @@ Galick gun mastery - [|cffffcc00Level 1|r]
 }
 
 STRING 3445
-// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -22671,7 +22670,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 3696
-// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -23701,7 +23700,7 @@ STRING 3867
 }
 
 STRING 3868
-// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -23725,7 +23724,7 @@ Creates Android 19 using spare parts from Gero's other projects.
 }
 
 STRING 3872
-// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26518,9 +26517,9 @@ Transformations:
 [lvl 10]  1.25x "fp"
 [lvl 35]  1.50x "fp"
 [lvl 65]  1.75x "fp"
-[lvl 90]  2.00x "fp"
-[lvl 150] 2.20x "fp"
-[lvl 200] 2.30x "fp" [Unlocks Four Fist Technique]
+[lvl 95]  2.00x "fp"
+[lvl 150] 2.40x "fp"
+[lvl 200] 2.50x "fp" [Unlocks Four Fist Technique]
 }
 
 STRING 4324
@@ -26661,7 +26660,7 @@ STRING 4346
 }
 
 STRING 4347
-// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26685,7 +26684,7 @@ Buu punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cool
 }
 
 STRING 4351
-// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -27219,7 +27218,7 @@ STRING 4439
 }
 
 STRING 4440
-// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27243,7 +27242,7 @@ After Guru unlocked his potential, Dende gained the ability to heal others.
 }
 
 STRING 4444
-// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28012,7 +28011,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -28036,7 +28035,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 4567
-// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28205,7 +28204,7 @@ STRING 4594
 }
 
 STRING 4595
-// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -28217,7 +28216,7 @@ Detonate
 }
 
 STRING 4597
-// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -29216,15 +29215,14 @@ E
 }
 
 STRING 4762
-// Abilities: A0TS (Four Fist Technique), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Tien temporarily grows two extra arms from his back, allowing him to attack with twice the intensity that he would normally be capable of.
-|cffffff00+0.4x stat mult
-+10 armor
-+5% multi form clone stats
-Reduced Tri Beam charge time|r
-|cff00FF00Duration: <A0TS,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TS,Cool1> seconds|r
+A powered up version of Super Saiyan 2 achieved through intense rage.
+|cffffff00+0.6x str mult
++0.1x agi/int mult
++165ms and unlocks movement speed cap
++10% spell power
+25% damage block up to 3 x Str.|n200 AOE ministun aura.|r|n|cff00ff00Duration: <A0KT,Dur1> seconds|n|cff00ffffCooldown: <A0KT,Cool1> seconds
 }
 
 STRING 4763
@@ -29288,7 +29286,6 @@ Type "r" to revert.
 Transformations:
 [lvl 25]  1.50x "ss"
 [lvl 75]  2.00x "ss2"
-[lvl 125] 2.25x "ss2"
 
 |cffffcc00Grim Reaper of Justice|r: +5% stats from creeps
 
@@ -29540,7 +29537,7 @@ STRING 4808
 }
 
 STRING 4809
-// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -29564,7 +29561,7 @@ Buu swings his arms so fast they appear to be windmills on his shoulder and pumm
 }
 
 STRING 4813
-// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31174,7 +31171,7 @@ STRING 5080
 }
 
 STRING 5081
-// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -31198,7 +31195,7 @@ Cooler transforms into his final, most powerful form.
 }
 
 STRING 5085
-// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31420,7 +31417,7 @@ STRING 5121
 }
 
 STRING 5122
-// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -31444,7 +31441,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 5126
-// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -32853,9 +32850,9 @@ Hit's assassination techniques cause massive damage in hand-to-hand combat.
 }
 
 STRING 5358
-// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
+// Units: H09S (Shinigami), Name (Name)
 {
-Undergo a dark transformation...|n|cffffff00+0.3x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
+Shinigami
 }
 
 STRING 5359
@@ -33145,14 +33142,15 @@ STRING 5406
 {
 Type "r" to revert.
 Transformations:
-[lvl 25]  1.50x "syn" [Unlocks Envoy of the End]
+[lvl 30]  1.50x "syn" [Unlocks Envoy of the End]
 [lvl 55]  1.75x "syn"
 [lvl 85]  1.90x "syn"
 [lvl 125] 2.25x "syn"
 [lvl 150] 2.40x "omega" [Unlocks All Shadow Dragon Abilities]
-[lvl 200] 2.51x "omega"
+[lvl 200] 2.50x "omega"
+[lvl 250] 2.60x "omega"
 
-Gains +0.07x for each dragon ball held.
+Gains +0.05x for each dragon ball held.
 Shadow Dragon Abilities can also be unlocked by collecting all 7 dragon balls.
 Envoy of the End will be located inside [D] Shadow Dragon Abilities.
 }
@@ -33973,7 +33971,7 @@ STRING 5541
 Type "r" to revert.
 Transformations:
 [lvl 15]  1.25x "fp"
-[lvl 30]  1.50x "fp"
+[lvl 35]  1.50x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 125] 2.40x "fp"
 
@@ -34136,7 +34134,7 @@ Candy Cane
 }
 
 STRING 5567
-// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -34148,19 +34146,19 @@ Q
 }
 
 STRING 5569
-// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 5570
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 5571
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -34943,6 +34941,7 @@ Transformations:
 [lvl 100] 2.00x  "ss2"
 [lvl 150] 2.40x  "ss2"
 [lvl 200] 2.50x  "ss2" [unlocks ss rage]
+[lvl 250] 2.60x  "ss2"
 }
 
 STRING 5696
@@ -37059,7 +37058,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6039
-// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
+// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37425,13 +37424,13 @@ STRING 6099
 }
 
 STRING 6100
-// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
+// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6101
-// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38063,7 +38062,7 @@ Super Goten Strike
 }
 
 STRING 6206
-// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -38087,7 +38086,7 @@ Buu creates ghost clones of Gotenks that will travel to the target location and 
 }
 
 STRING 6210
-// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -38979,27 +38978,40 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 6351
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A072,Cool2>s|r
+Type "r" to revert.
+Transformations:
+[lvl 1]   1.25x "shikai"
+[lvl 75]  2.00x "true shikai" [Unlocks Shunpo, +50% AS]
+[lvl 125] 2.40x "hollow" [Unlocks Cero, +5 Armor]
+[lvl 200] 2.70x "final shikai" [+100% Cleave]
+
+|cff00ffffShikai|r: +10ms
 }
 
 STRING 6352
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Units: H09T (Shinigami), Name (Name)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool3>s|r
+Shinigami
 }
 
 STRING 6353
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UC (Mugetsu), Ubertip (Tooltip - Normal - Extended)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A074,Cool4>s|r
+Ichigo transforms into Getsuga itself, constantly emitting smoky black Reiatsu. Grants access to immensely powerful abilities with costly drawbacks.
+
+|cffff2020Unleash|r: a powerful nuke that permanently disables Mugetsu after usage.
+|cff00ffffAbsorb|r: For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
+
+|cff808080Ichigo must use Bankai 3 times to unlock Mugetsu.
 }
 
 STRING 6354
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UD (Mugetsu: Unleash), Ubertip (Tooltip - Normal - Extended)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A075,Cool5>s|r
+Fires an incredibly poweful ball of concentrated Reiatsu that obliterates any enemy upon detonating. |cffff2020Permanently disables Mugetsu after usage.|r
+|cff00ff00Damage: Lvl x Str x ?|r
+|cff00ffffCooldown: Once per game|r
 }
 
 STRING 6355
@@ -39009,15 +39021,15 @@ STRING 6355
 }
 
 STRING 6356
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A076,Cool6>s|r
+D
 }
 
 STRING 6357
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UF (Shunpo), Name (Name)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A077,Cool7>s|r
+Shunpo
 }
 
 STRING 6358
@@ -39063,21 +39075,22 @@ Hercule kicks the target. |n|cff00ff00(Damage: Agi * 11 + 100)|r|n|cff00FFFF(Coo
 }
 
 STRING 6365
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UD (Mugetsu: Unleash), Tip (Tooltip - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A078,Cool8>s|r
+[|cff00FF00Q|r] Mugetsu: |cffff2020Unleash|r
 }
 
 STRING 6366
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A079,Cool9>s|r
+D
 }
 
 STRING 6367
-// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UF (Shunpo), Ubertip (Tooltip - Normal - Extended)
 {
-A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A0710,Cool10>s|r
+Ichigo instantly dashes to the target unit with godlike speed.
+|cff00ffffCooldown: <A0UF,Cool1>s|r
 }
 
 STRING 6368
@@ -39189,7 +39202,7 @@ STRING 6385
 }
 
 STRING 6386
-// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39873,7 +39886,7 @@ STRING 6499
 }
 
 STRING 6500
-// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40437,7 +40450,7 @@ STRING 6593
 }
 
 STRING 6594
-// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40455,7 +40468,7 @@ STRING 6596
 }
 
 STRING 6597
-// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40598,13 +40611,13 @@ Deactivate Distortion Field
 }
 
 STRING 6620
-// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
 
 STRING 6621
-// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40628,7 +40641,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 6625
-// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40718,7 +40731,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40742,7 +40755,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40808,7 +40821,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40832,7 +40845,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 6659
-// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40922,7 +40935,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40946,7 +40959,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41036,7 +41049,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41060,7 +41073,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 6697
-// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41174,7 +41187,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41198,7 +41211,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41294,7 +41307,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41318,7 +41331,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44735,7 +44748,7 @@ STRING 7265
 }
 
 STRING 7266
-// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44759,7 +44772,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 7270
-// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45011,7 +45024,7 @@ STRING 7311
 }
 
 STRING 7312
-// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45035,7 +45048,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7316
-// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45677,7 +45690,7 @@ STRING 7422
 }
 
 STRING 7423
-// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45701,7 +45714,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7427
-// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45923,7 +45936,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45947,7 +45960,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46036,7 +46049,7 @@ STRING 7482
 }
 
 STRING 7483
-// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46060,7 +46073,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7487
-// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46174,7 +46187,7 @@ S.S. Deadly Bomber
 }
 
 STRING 7506
-// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46198,7 +46211,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7510
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46957,7 +46970,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46981,7 +46994,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -47520,7 +47533,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47544,7 +47557,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47754,7 +47767,7 @@ Masenko
 }
 
 STRING 7768
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48228,7 +48241,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48252,7 +48265,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -51869,7 +51882,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -52624,6 +52637,30 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 |cff00ffffCooldown: <A0U1,Cool1> - <A0U1,Cool10> seconds|r
 }
 
+STRING 8545
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
+{
+Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
+|cffffff00+0.20x Agi multiplier.
++240ms and unlocks movement speed cap.|r
+|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
+}
+
+STRING 8546
+// Abilities: A0TC (One Winged Angel), Ubertip (Tooltip - Normal - Extended)
+{
+Sephiroth absorbs mako from the lifestream of the planet, powering himself up to new heights, increasing his speed and power.
+|cffffff00+0.1x stat mult.
++66ms and unlocks movement speed cap.
++2% spell amp per second up to +20%.
+|cff00FF00Duration: <A0TC,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TC,Cool1> seconds|r
+
+Proudly bankrolled by |cff00ffffCestroq
+
+|cff808080"Veni, veni, venias, Gloriosa"|r.
+}
+
 STRING 8547
 // Abilities: A0OM (Summon Blast-o-Matic), Ubertip (Tooltip - Normal - Extended)
 {
@@ -52827,6 +52864,18 @@ STRING 8579
 // Abilities: A0IY (Dummy Stun 1s), Name (Name)
 {
 Dummy Stun 1s
+}
+
+STRING 8580
+// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+{
+Hit develops improved skills and techniques by fighting stronger enemies.
+|cffffff00+0.1x stat mult
++5% spell amp per second up to +15%
++12% restore rate of time skip charges (temporary)
++1 time skip charge (cannot exceed max)|r
+|cff00FF00Duration: <A0TH,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
 }
 
 STRING 8581
@@ -53351,7 +53400,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -54488,12 +54537,9 @@ Giru charges your target and deals a small amount of damage.|nAura dmg: |cff00ff
 }
 
 STRING 8848
-// Abilities: A0TJ (Jump), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0OD (Cell-X), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> - <A0TJ,Cool10,.> seconds|r
+Undergo a dark transformation...|n|cffffff00+0.4x stat multiplier.|n"Reduces" movement speed by 132ms.|n+1% spell power per second up to +20%.|n50% damage block up to 5 x Str.|nUpgrades Cell Jrs (25% stats) into Cell-X Jrs (33%).|n|cff00ff00Duration: <A0OD,Dur1> seconds|n|cff00ffffCooldown: <A0OD,Cool1> seconds
 }
 
 STRING 8849
@@ -55621,7 +55667,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -56205,15 +56251,11 @@ STRING 9116
 }
 
 STRING 9117
-// Abilities: A0TH (Pure Progress), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Hit develops improved skills and techniques by fighting stronger enemies.
-|cffffff00+0.2x stat mult
-+5% spell amp per second up to +15%
-+12% restore rate of time skip charges (temporary)
-+1 time skip charge (cannot exceed max)|r
-|cff00FF00Duration: <A0TH,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TH,Cool1> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool1> seconds|r
 }
 
 STRING 9118
@@ -56343,7 +56385,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -61716,35 +61758,30 @@ STRING 10025
 }
 
 STRING 10026
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Units: H09S (Shinigami), Propernames (Proper Names)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool1> seconds|r
+Ichigo
 }
 
 STRING 10027
-// Abilities: A0QM (Dragonic Rage), Researchubertip (Tooltip - Learn - Extended)
+// Units: H09S (Shinigami), Awakentip (Tooltip - Awaken)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool1> - <A0QM,Cool10> seconds|r
+[|cffffff00D|r] Choose Ichigo
 }
 
 STRING 10028
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool2> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
 }
 
 STRING 10029
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Units: H09S (Shinigami), Tip (Tooltip - Basic)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool3> seconds|r
+[|cffffff00D|r] Choose Ichigo
 }
 
 STRING 10030
@@ -62212,7 +62249,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62230,7 +62267,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62242,7 +62279,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62260,7 +62297,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62272,7 +62309,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62290,7 +62327,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -64199,7 +64236,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66035,7 +66072,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -66313,7 +66350,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -67481,7 +67518,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -67499,7 +67536,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73513,7 +73550,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11954
-// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73543,7 +73580,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11959
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -74388,7 +74425,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -75624,11 +75661,9 @@ Eis Shenron
 }
 
 STRING 12299
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool4> seconds|r
+(Tavern)
 }
 
 STRING 12300
@@ -75650,11 +75685,9 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool5> seconds|r
+D
 }
 
 STRING 12304
@@ -75980,7 +76013,7 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 12347
-// Units: H09C (Leader of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -76164,21 +76197,19 @@ STRING 12377
 }
 
 STRING 12378
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Researchubertip (Tooltip - Learn - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool2,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool1> - <A0QM,Cool10> seconds|r
 }
 
 STRING 12379
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool3,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool2> seconds|r
 }
 
 STRING 12380
@@ -76188,12 +76219,11 @@ STRING 12380
 }
 
 STRING 12381
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool4,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool3> seconds|r
 }
 
 STRING 12382
@@ -76203,12 +76233,11 @@ STRING 12382
 }
 
 STRING 12383
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool5,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool4> seconds|r
 }
 
 STRING 12384
@@ -76218,12 +76247,11 @@ STRING 12384
 }
 
 STRING 12385
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool6,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool5> seconds|r
 }
 
 STRING 12386
@@ -76257,12 +76285,11 @@ STRING 12390
 }
 
 STRING 12391
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool7,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool6> seconds|r
 }
 
 STRING 12392
@@ -76472,12 +76499,11 @@ STRING 12425
 }
 
 STRING 12426
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool8,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool7> seconds|r
 }
 
 STRING 12427
@@ -76875,7 +76901,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -77517,7 +77543,7 @@ STRING 12588
 }
 
 STRING 12589
-// Units: H09E (Ginyu Force Captain), EditorSuffix (Name - Editor Suffix)
+// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77781,7 +77807,7 @@ STRING 12632
 }
 
 STRING 12633
-// Units: H09F (One-Star Shadow Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77793,7 +77819,7 @@ Supports / Utility
 }
 
 STRING 12635
-// Units: n044 (Shadow Dragons), EditorSuffix (Name - Editor Suffix)
+// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77805,7 +77831,7 @@ Raditz takes some time out to eat a delicious Double Sundae that refreshes the c
 }
 
 STRING 12637
-// Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -77861,7 +77887,7 @@ Z
 }
 
 STRING 12646
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78388,7 +78414,7 @@ STRING 12720
 }
 
 STRING 12721
-// Units: n045 (Pride Troopers), EditorSuffix (Name - Editor Suffix)
+// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -78406,12 +78432,11 @@ Toppo
 }
 
 STRING 12724
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool9,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool8> seconds|r
 }
 
 STRING 12725
@@ -78566,13 +78591,13 @@ Frostbite
 }
 
 STRING 12746
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12747
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -78954,7 +78979,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -79432,7 +79457,7 @@ R
 }
 
 STRING 12887
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
@@ -79552,13 +79577,13 @@ Justice Pose
 }
 
 STRING 12907
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12908
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -80947,7 +80972,7 @@ STRING 13132
 }
 
 STRING 13133
-// Units: H09J (Ginyu Force Member), EditorSuffix (Name - Editor Suffix)
+// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -81560,7 +81585,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -81824,12 +81849,11 @@ This unit has been hit by Milky Cannon; its movement speed and attack rate are r
 }
 
 STRING 13276
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Dyspo pushes his body beyond its limits, upgrading his spells for +4 additional uses. Disables [|cff00ff00Q|r] Light Bullet for the duration.
-|cffffff00+0.70x Agi multiplier.
-+240ms and unlocks movement speed cap.|r
-|cff00ff00Duration: <A0R1,Dur1> seconds|n|cff00ffffCooldown: <A0R1,Cool1> seconds
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool9> seconds|r
 }
 
 STRING 13277
@@ -82812,12 +82836,11 @@ STRING 13435
 }
 
 STRING 13436
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool10,.> seconds|r
+The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +99ms and a powerful Critical Strike that scales with ability level.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0QM,Cool10> seconds|r
 }
 
 STRING 13437
@@ -83507,7 +83530,7 @@ Frieza's Tail
 }
 
 STRING 13549
-// Units: n046 (Ginyu Force / Frieza), EditorSuffix (Name - Editor Suffix)
+// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -84267,16 +84290,9 @@ STRING 13657
 }
 
 STRING 13658
-// Abilities: A0U0 (Super Saiyan 3), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks' most powerful transformation.
-|cffffff00+0.3x stat mult
-+5% spell amp per second up to +15%
-+33ms and unlocks movement speed cap|r
-|cff00FF00Duration: <A0U0,Dur1> seconds|r
-|cff00FFFFCooldown: <A0U0,Cool1> seconds|r
-
-|cff808080"The Mack Daddy of Justice"|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool2>s|r
 }
 
 STRING 13659
@@ -85133,11 +85149,9 @@ STRING 13790
 }
 
 STRING 13791
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool6> seconds|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool3>s|r
 }
 
 STRING 13792
@@ -85291,7 +85305,7 @@ STRING 13816
 }
 
 STRING 13817
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -85774,11 +85788,9 @@ An attack made up of the heavily condensed Negative Energy of the Dragon Balls a
 }
 
 STRING 13892
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool7> seconds|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool4>s|r
 }
 
 STRING 13893
@@ -85830,27 +85842,21 @@ Syn Shenron throws a high impact punch that pulls a dragon ball out of an enemy'
 }
 
 STRING 13901
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool8> seconds|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool5>s|r
 }
 
 STRING 13902
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool9> seconds|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool6>s|r
 }
 
 STRING 13903
-// Abilities: A0QM (Dragonic Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
-The shadow dragon enters a fierce rage and begins fighting at incredible speeds and extreme power. Temporarily provides +132ms and a powerful Critical Strike that scales with ability level.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0QM,Cool10> seconds|r
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool7>s|r
 }
 
 STRING 13904
@@ -85860,8 +85866,9 @@ Transformations:
 [lvl 15]  1.25x "justice"
 [lvl 35]  1.50x "justice"
 [lvl 85]  2.00x "justice"
-[lvl 150] 2.20x "justice"
-[lvl 225] 2.30x "max" [unlocks Super Maximum Light Speed Mode]
+[lvl 100] 2.25x "justice"
+[lvl 150] 2.50x "justice"
+[lvl 225] 2.60x "max" [unlocks Super Maximum Light Speed Mode]
 
 Gains +0.02x for each pride trooper on his team.
 |cff00ffffLightning Reflexes:|r +20% Evasion.
@@ -86154,7 +86161,7 @@ STRING 13948
 }
 
 STRING 13949
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -86334,7 +86341,7 @@ STRING 13978
 }
 
 STRING 13979
-// Units: n048 (Meme Heroes), EditorSuffix (Name - Editor Suffix)
+// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -86346,7 +86353,7 @@ Pride Troopers
 }
 
 STRING 13981
-// Units: H09Q (Plumber), EditorSuffix (Name - Editor Suffix)
+// Units: H09S (Shinigami), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -90663,7 +90670,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -95934,7 +95941,7 @@ STRING 15392
 }
 
 STRING 15393
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97310,7 +97317,7 @@ STRING 15581
 }
 
 STRING 15582
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97509,7 +97516,7 @@ Level 10: Zarbon
 }
 
 STRING 15613
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97877,6 +97884,21 @@ STRING 15666
 (kid trunks)
 }
 
+STRING 15667
+// Abilities: A0TJ (Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> - <A0TJ,Cool10,.> seconds|r
+}
+
+STRING 15668
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool8>s|r
+}
+
 STRING 15669
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
 {
@@ -97892,8 +97914,80 @@ An enhanced version of Gotenks's signature move. Gotenks expels 10 Kamikaze ghos
 |cff00ffffCooldown: <A0U4,Cool10> seconds|r
 }
 
+STRING 15671
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool9>s|r
+}
+
+STRING 15672
+// Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
+{
+A sweeping kick that damages enemies near the user and knocks away any incoming beams. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00FFFFCooldown: <A071,Cool10>s|r
+}
+
+STRING 15673
+// Abilities: A0U7 (Getsuga Tensho), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
+}
+
+STRING 15674
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool3> seconds|r
+}
+
+STRING 15675
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool4> seconds|r
+}
+
+STRING 15676
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool5> seconds|r
+}
+
+STRING 15677
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool6> seconds|r
+}
+
+STRING 15678
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool7> seconds|r
+}
+
+STRING 15679
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 2|r]
+}
+
 STRING 15680
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97902,6 +97996,18 @@ STRING 15681
 // Abilities: A0U0 (Super Saiyan 3), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] |cffffaa00Super Saiyan 3|r
+}
+
+STRING 15682
+// Abilities: A0TS (Four Fist Technique), Ubertip (Tooltip - Normal - Extended)
+{
+Tien temporarily grows two extra arms from his back, allowing him to attack with twice the intensity that he would normally be capable of.
+|cffffff00+0.1x stat mult
++10 armor
++5% multi form clone stats
+Reduced Tri Beam charge time|r
+|cff00FF00Duration: <A0TS,Dur1> seconds|r
+|cff00FFFFCooldown: <A0TS,Cool1> seconds|r
 }
 
 STRING 15683
@@ -97914,6 +98020,29 @@ STRING 15684
 // Abilities: A0U0 (Super Saiyan 3), EditorSuffix (Editor Suffix)
 {
 (gotenks)
+}
+
+STRING 15685
+// Abilities: A0U0 (Super Saiyan 3), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks' most powerful transformation.
+|cffffff00+0.1x stat mult
+Spawns 3 Super Ghost Kamikazes around Gotenks.
++5% spell amp per second up to +15%
++33ms and unlocks movement speed cap|r
+|cff00FF00Duration: <A0U0,Dur1> seconds|r
+|cff00FFFFCooldown: <A0U0,Cool1> seconds|r
+
+|cff808080"The Mack Daddy of Justice"|r
+}
+
+STRING 15686
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool1> seconds|r
 }
 
 STRING 15687
@@ -99630,7 +99759,7 @@ Sephiroth delivers a swift sequence of sword slashes.
 }
 
 STRING 15921
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99954,18 +100083,9 @@ Sephiroth uses the legendary Black Materia to to summon the Ultimate Destructive
 }
 
 STRING 15966
-// Abilities: A0TC (One Winged Angel), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Sephiroth absorbs mako from the lifestream of the planet, powering himself up to new heights, increasing his speed and power.
-|cffffff00+0.2x stat mult.
-+99ms and unlocks movement speed cap.
-+2% spell amp per second up to +20%.
-|cff00FF00Duration: <A0TC,Dur1> seconds|r
-|cff00FFFFCooldown: <A0TC,Cool1> seconds|r
-
-Proudly bankrolled by |cff00ffffCestroq
-
-|cff808080"Veni, veni, venias, Gloriosa"|r.
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 3|r]
 }
 
 STRING 15967
@@ -100292,12 +100412,9 @@ STRING 16005
 }
 
 STRING 16006
-// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +10%.
-Unlocks [|cff00ff00Q|r] Ground Pound.
-Unlocks [|cff00ff00W|r] Spin Jump.
-|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 4|r]
 }
 
 STRING 16007
@@ -100492,7 +100609,7 @@ Ground Pound
 }
 
 STRING 16037
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -100528,8 +100645,9 @@ Transformations:
 [lvl 30]  1.50x "fp"
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.30x "fp" 
-[lvl 200] 2.40x "fp" [unlocks Pure Progress]
+[lvl 150] 2.40x "fp" 
+[lvl 200] 2.50x "fp" [unlocks Pure Progress]
+[lvl 250] 2.60x "fp"
 
 |cffffcc00Legendary Assassin|r: +35% stats from Player Kills.
 }
@@ -101738,6 +101856,7 @@ Transformations:
 [lvl 90]  2.00x "mario"
 [lvl 120] 2.25x "mario"
 [lvl 150] 2.50x "mario"
+[lvl 250] 2.60x "mario" [+1 Empty Jumps]
 
 |cff00ff00Dash|r: +50ms.
 }
@@ -101749,201 +101868,185 @@ STRING 16220
 }
 
 STRING 16221
-// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 5|r]
 }
 
 STRING 16222
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 6|r]
 }
 
 STRING 16223
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 1|r]
 }
 
 STRING 16224
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 7|r]
 }
 
 STRING 16225
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Name (Name)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
+Getsuga Tensho
 }
 
 STRING 16226
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Researchtip (Tooltip - Learn)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+[|cff00ff00Q|r] Learn Getsuga Tensho - [|cffffcc00Level %d|r]
 }
 
 STRING 16227
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 9|r]
 }
 
 STRING 16228
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 8|r]
 }
 
 STRING 16229
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Tip (Tooltip - Normal)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 10|r]
 }
 
 STRING 16230
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool8> seconds|r
 }
 
 STRING 16231
-// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
 {
-Mario jumps into a block to spawn a mystery power up!
-|cffffff00Big Mushroom: +0.3x Str/Agi Mult
-Fire Flower: +0.6x Int Mult and unlocks Fireball
-Super Star: Temporary Invulnerability
-|cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
 STRING 16232
-// Abilities: A0TM (Spin Jump), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool1,.> - <A0TM,Cool10,.> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool10> seconds|r
 }
 
 STRING 16233
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool2,.> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
 }
 
 STRING 16234
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), EditorSuffix (Editor Suffix)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool3,.> seconds|r
+(ichigo)
 }
 
 STRING 16235
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool4,.> seconds|r
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool2> seconds|r
 }
 
 STRING 16236
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool5,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff001-3: Bankai, +50% damage
+|cff00ff00Duration: <A0U8,Dur1>s
+|cff00FFFFCooldown: <A0U8,Cool1>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16237
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool6,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff001-3: Bankai
+|cff00ff00Duration: <A0U8,Dur2>s
+|cff00FFFFCooldown: <A0U8,Cool2>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16238
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool7,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff001-3: Bankai
+|cff00ff00Duration: <A0U8,Dur3>s
+|cff00FFFFCooldown: <A0U8,Cool3>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16239
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool8,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, regenerates 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur4>s
+|cff00FFFFCooldown: <A0U8,Cool4>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16240
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool9,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, regenerates 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur5>s
+|cff00FFFFCooldown: <A0U8,Cool5>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16241
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool10,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, regenerates 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur6>s
+|cff00FFFFCooldown: <A0U8,Cool6>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16242
-// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +20%.
-|cff00ff00Damage: Agi * Lvl * ?|r
-|cff00ffffCooldown: <A0TM,Cool1,.> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, 5 * Agi damage block
+|cff00ff00Duration: <A0U8,Dur7>s
+|cff00FFFFCooldown: <A0U8,Cool7>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16243
@@ -102760,7 +102863,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 16351
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -102997,6 +103100,60 @@ When activated, the next hero to damage Jiren will be countered, unleashing a fl
 |cffFFFF00Empowered:|r +40% damage and deals additional bonus damage based on the difference between Jiren and the enemy's STR
 }
 
+STRING 16377
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool3> seconds|r
+}
+
+STRING 16378
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool4> seconds|r
+}
+
+STRING 16379
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool5> seconds|r
+}
+
+STRING 16380
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool6> seconds|r
+}
+
+STRING 16381
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool7> seconds|r
+}
+
+STRING 16382
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool8> seconds|r
+}
+
 STRING 16383
 // Abilities: A0LZ (Best Friends Forever), Ubertip (Tooltip - Normal - Extended)
 {
@@ -103118,14 +103275,9 @@ Grants True Strike.
 }
 
 STRING 16398
-// Abilities: A0KT (Super Saiyan Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-A powered up version of Super Saiyan 2 achieved through intense rage.
-|cffffff00+0.5x str mult
-+0.3x agi/int mult
-+165ms and unlocks movement speed cap
-+10% spell power
-25% damage block up to 3 x Str.|n200 AOE ministun aura.|r|n|cff00ff00Duration: <A0KT,Dur1> seconds|n|cff00ffffCooldown: <A0KT,Cool1> seconds
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 2|r]
 }
 
 STRING 16399
@@ -103576,6 +103728,51 @@ The user charges with one hand behind the other above the head. The hands are th
 |cff00ff00Damage: Int * lvl * ?|r|n|cff00ffffCooldown: <A0GD,Cool15> seconds|r
 }
 
+STRING 16450
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool9> seconds|r
+}
+
+STRING 16451
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool10> seconds|r
+}
+
+STRING 16452
+// Abilities: A0U2 (Galactic Donut), Researchubertip (Tooltip - Learn - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool1> - <A0U2,Cool10> seconds|r
+}
+
+STRING 16453
+// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemies inside an energy ring, disabling all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U2,Cool2> seconds|r
+}
+
+STRING 16454
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool1> seconds|r
+}
+
 STRING 16455
 // Abilities: A0U1 (Die Die Missile Barrage), Tip (Tooltip - Normal)
 {
@@ -103630,6 +103827,15 @@ STRING 16463
 Die Die Missile Barrage
 }
 
+STRING 16464
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool3> seconds|r
+}
+
 STRING 16465
 // Abilities: A0TY (Final Cannon), Researchhotkey (Hotkey - Learn)
 {
@@ -103654,6 +103860,42 @@ STRING 16468
 [|cff00ff00W|r] Die Die Missile Barrage - [|cffffcc00Level 10|r]
 }
 
+STRING 16469
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool4> seconds|r
+}
+
+STRING 16470
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool5> seconds|r
+}
+
+STRING 16471
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool6> seconds|r
+}
+
+STRING 16472
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool7> seconds|r
+}
+
 STRING 16473
 // Abilities: A0U1 (Die Die Missile Barrage), EditorSuffix (Editor Suffix)
 {
@@ -103661,57 +103903,39 @@ STRING 16473
 }
 
 STRING 16474
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool1> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 3|r]
 }
 
 STRING 16475
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool3> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 4|r]
 }
 
 STRING 16476
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool4> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 5|r]
 }
 
 STRING 16477
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool5> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 6|r]
 }
 
 STRING 16478
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool6> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 1|r]
 }
 
 STRING 16479
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool7> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 7|r]
 }
 
 STRING 16480
@@ -103799,39 +104023,32 @@ STRING 16493
 }
 
 STRING 16494
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool8> seconds|r
+W
 }
 
 STRING 16495
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Name (Name)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool9> seconds|r
+Bankai: Tensa Zangetsu
 }
 
 STRING 16496
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchtip (Tooltip - Learn)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool10> seconds|r
+[|cff00FF00W|r] Learn Bankai: Tensa Zangetsu - [|cffffcc00Level %d|r]
 }
 
 STRING 16497
-// Abilities: A0U2 (Galactic Donut), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool1> - <A0U2,Cool10> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff001-3: Bankai, +50% damage
+|cff00ff00Duration: <A0U8,Dur2>s
+|cff00FFFFCooldown: <A0U8,Cool2>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16498
@@ -103841,66 +104058,55 @@ STRING 16498
 }
 
 STRING 16499
-// Abilities: A0U2 (Galactic Donut), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
 {
-Gotenks traps his enemies inside an energy ring, disabling all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U2,Cool2> seconds|r
+W
 }
 
 STRING 16500
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool1> seconds|r
+(ichigo)
 }
 
 STRING 16501
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool3> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 8|r]
 }
 
 STRING 16502
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool4> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 9|r]
 }
 
 STRING 16503
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool5> seconds|r
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 10|r]
 }
 
 STRING 16504
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool6> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, 5 * Agi damage block
+|cff00ff00Duration: <A0U8,Dur8>s
+|cff00FFFFCooldown: <A0U8,Cool8>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16505
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool7> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, 5 * Agi damage block
+|cff00ff00Duration: <A0U8,Dur9>s
+|cff00FFFFCooldown: <A0U8,Cool9>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16506
@@ -103945,6 +104151,15 @@ STRING 16512
 [|cff00ff00E|r] Ultra Volleyball - [|cffffcc00Level 7|r]
 }
 
+STRING 16513
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool8> seconds|r
+}
+
 STRING 16514
 // Abilities: A0U3 (Ultra Volleyball), Name (Name)
 {
@@ -103955,6 +104170,15 @@ STRING 16515
 // Abilities: A0U3 (Ultra Volleyball), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Ultra Volleyball - [|cffffcc00Level %d|r]
+}
+
+STRING 16516
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool9> seconds|r
 }
 
 STRING 16517
@@ -103976,30 +104200,36 @@ STRING 16519
 }
 
 STRING 16520
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool8> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed and provides unique buffs based on the level of the spell.
+|cffffff0010: Final Bankai, dashes towards auto-attacked enemies
+|cff00ff00Duration: <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16521
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool9> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff001-3: Bankai, +50% damage
+|cff00ff00Duration: <A0U8,Dur3>s
+|cff00FFFFCooldown: <A0U8,Cool3>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16522
-// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
-|cff00ff00Damage: Int * lvl * ?|r
-|cff00ffffCooldown: <A0U3,Cool10> seconds|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur4>s
+|cff00FFFFCooldown: <A0U8,Cool4>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16523
@@ -104018,12 +104248,82 @@ STRING 16524
 }
 
 STRING 16525
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur5>s
+|cff00FFFFCooldown: <A0U8,Cool5>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16526
 // Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
 {
 Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
-|cff00ff00Duration: 2s
+|cff00ff00Duration: 1.5s
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: <A0U3,Cool10> seconds|r
+}
+
+STRING 16527
+// Abilities: A0U3 (Ultra Volleyball), Ubertip (Tooltip - Normal - Extended)
+{
+Gotenks traps his enemy inside multiple Galactic Donuts, dealing damage and restricting all movement.
+|cff00ff00Duration: 1.5s
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0U3,Cool2> seconds|r
+}
+
+STRING 16528
+// Abilities: A0TO (Power Up Block), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool1,.> - <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16529
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool2,.> seconds|r
+}
+
+STRING 16530
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool3,.> seconds|r
+}
+
+STRING 16531
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool4,.> seconds|r
+}
+
+STRING 16532
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool5,.> seconds|r
 }
 
 STRING 16533
@@ -104110,16 +104410,174 @@ STRING 16546
 [|cff00ff00R|r] Super Ghost Kamikaze Attack - [|cffffcc00Level 10|r]
 }
 
+STRING 16547
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool6,.> seconds|r
+}
+
+STRING 16548
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool7,.> seconds|r
+}
+
+STRING 16549
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool8,.> seconds|r
+}
+
+STRING 16550
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool9,.> seconds|r
+}
+
 STRING 16551
 // Abilities: A0U4 (Super Ghost Kamikaze Attack), EditorSuffix (Editor Suffix)
 {
 (gotenks)
 }
 
+STRING 16552
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool10,.> seconds|r
+}
+
+STRING 16553
+// Abilities: A0TO (Power Up Block), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into a block to spawn a mystery power up!
+|cffffff00Big Mushroom: +0.2x Str/Agi Mult
+Fire Flower: +0.4x Int Mult and unlocks Fireball
+Super Star: Temporary Invulnerability
+|cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
+}
+
+STRING 16554
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool2,.> seconds|r
+}
+
+STRING 16555
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool3,.> seconds|r
+}
+
+STRING 16556
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool4,.> seconds|r
+}
+
+STRING 16557
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool5,.> seconds|r
+}
+
+STRING 16558
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool6,.> seconds|r
+}
+
+STRING 16559
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool7,.> seconds|r
+}
+
+STRING 16560
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool8,.> seconds|r
+}
+
+STRING 16561
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool9,.> seconds|r
+}
+
+STRING 16562
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool10,.> seconds|r
+}
+
+STRING 16563
+// Abilities: A0TJ (Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario jumps into the air, bouncing off enemies he lands on. Consecutive jumps increase damage dealt by +15% up to +150%.
+Unlocks [|cff00ff00Q|r] Ground Pound.
+Unlocks [|cff00ff00W|r] Spin Jump.
+|cff00ff00Damage: Agi * Lvl * ?|r|n|cff00ffffCooldown: <A0TJ,Cool1,.> seconds|r
+}
+
 STRING 16564
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Super Ghost Kamikaze Attack x10 - [|cffffcc00Level 1|r]
+}
+
+STRING 16565
+// Abilities: A0TM (Spin Jump), Researchubertip (Tooltip - Learn - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool1,.> - <A0TM,Cool10,.> seconds|r
 }
 
 STRING 16566
@@ -104138,6 +104596,62 @@ STRING 16568
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Super Ghost Kamikaze Attack x10 - [|cffffcc00Level %d|r]
+}
+
+STRING 16569
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool2,.> seconds|r
+}
+
+STRING 16570
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool3,.> seconds|r
+}
+
+STRING 16571
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool4,.> seconds|r
+}
+
+STRING 16572
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool5,.> seconds|r
+}
+
+STRING 16573
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool6,.> seconds|r
+}
+
+STRING 16574
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool7,.> seconds|r
+}
+
+STRING 16575
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool8,.> seconds|r
 }
 
 STRING 16576
@@ -104592,13 +105106,13 @@ STRING 16625
 }
 
 STRING 16626
-// Abilities: A0TY (Final Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 16627
-// Abilities: A0U1 (Die Die Missile Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104610,9 +105124,17 @@ STRING 16628
 }
 
 STRING 16629
-// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 16630
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool9,.> seconds|r
 }
 
 STRING 16631
@@ -104705,6 +105227,33 @@ An enhanced version of Gotenks's signature move. Gotenks expels Kamikaze ghosts 
 |cff00ffffCooldown: <A0U4,Cool9> seconds|r
 }
 
+STRING 16641
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool10,.> seconds|r
+}
+
+STRING 16642
+// Abilities: A0TM (Spin Jump), Ubertip (Tooltip - Normal - Extended)
+{
+Mario spins in the air, briefly gaining immunity to damage and increasing jump damage by +30%.
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0TM,Cool1,.> seconds|r
+}
+
+STRING 16643
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff004-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+|cff00ff00Duration: <A0U8,Dur6>s
+|cff00FFFFCooldown: <A0U8,Cool6>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
 STRING 16644
 // Abilities: A0LY (Pan Costume Honey Bee), Ubertip (Tooltip - Normal - Extended)
 {
@@ -104717,5 +105266,1500 @@ STRING 16645
 {
 Pan puts on her honey bee costume, increasing ability damage over the next 15 seconds by +30%.
 |cff00ffffCooldown: <A0LY,Cool1> seconds
+}
+
+STRING 16646
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+|cff00ff00Duration: <A0U8,Dur7>s
+|cff00FFFFCooldown: <A0U8,Cool7>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16647
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff001-3: Bankai, +50% damage
+4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+10: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: <A0U8,Dur1> - <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16648
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+|cff00ff00Duration: <A0U8,Dur8>s
+|cff00FFFFCooldown: <A0U8,Cool8>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16649
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 2|r]
+}
+
+STRING 16650
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 3|r]
+}
+
+STRING 16651
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 4|r]
+}
+
+STRING 16652
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 5|r]
+}
+
+STRING 16653
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 6|r]
+}
+
+STRING 16654
+// Units: H09T (Shinigami), Propernames (Proper Names)
+{
+Ichigo
+}
+
+STRING 16655
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 7|r]
+}
+
+STRING 16656
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 16657
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Name (Name)
+{
+Final Bankai: Tensa Zangetsu
+}
+
+STRING 16658
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Bankai: Tensa Zangetsu - [|cffffcc00Level %d|r]
+}
+
+STRING 16659
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+|cff00ff00Duration: <A0U8,Dur9>s
+|cff00FFFFCooldown: <A0U8,Cool9>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16660
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16661
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16662
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 8|r]
+}
+
+STRING 16663
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 9|r]
+}
+
+STRING 16664
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Bankai: Tensa Zangetsu - [|cffffcc00Level 10|r]
+}
+
+STRING 16665
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff0010: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16666
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff0010: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16667
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reducing base attack time, and providing unique buffs based on the level of the spell.
+|cffffff0010: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 16668
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1>s|r
+}
+
+STRING 16669
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur2>s
+|cff00FFFFCooldown: <A0UA,Cool2>s|r
+}
+
+STRING 16670
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur3>s
+|cff00FFFFCooldown: <A0UA,Cool3>s|r
+}
+
+STRING 16671
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur4>s
+|cff00FFFFCooldown: <A0UA,Cool4>s|r
+}
+
+STRING 16672
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur5>s
+|cff00FFFFCooldown: <A0UA,Cool5>s|r
+}
+
+STRING 16673
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur6>s
+|cff00FFFFCooldown: <A0UA,Cool6>s|r
+}
+
+STRING 16674
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur7>s
+|cff00FFFFCooldown: <A0UA,Cool7>s|r
+}
+
+STRING 16675
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 2|r]
+}
+
+STRING 16676
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 3|r]
+}
+
+STRING 16677
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 4|r]
+}
+
+STRING 16678
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 5|r]
+}
+
+STRING 16679
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 6|r]
+}
+
+STRING 16680
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 1|r]
+}
+
+STRING 16681
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 7|r]
+}
+
+STRING 16682
+// Abilities: A0UA (Cero: Charge), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 16683
+// Abilities: A0UA (Cero: Charge), Name (Name)
+{
+Cero: Charge
+}
+
+STRING 16684
+// Abilities: A0UA (Cero: Charge), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
+}
+
+STRING 16685
+// Abilities: A0UA (Cero: Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
+}
+
+STRING 16686
+// Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 16687
+// Abilities: A0UA (Cero: Charge), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16688
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 8|r]
+}
+
+STRING 16689
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 9|r]
+}
+
+STRING 16690
+// Abilities: A0UA (Cero: Charge), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero - [|cffffcc00Level 10|r]
+}
+
+STRING 16691
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur8>s
+|cff00FFFFCooldown: <A0UA,Cool8>s|r
+}
+
+STRING 16692
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur9>s
+|cff00FFFFCooldown: <A0UA,Cool9>s|r
+}
+
+STRING 16693
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur10>s
+|cff00FFFFCooldown: <A0UA,Cool10>s|r
+}
+
+STRING 16694
+// Units: H09X (Shinigami), EditorSuffix (Name - Editor Suffix)
+{
+Mugetsu
+}
+
+STRING 16695
+// Abilities: A0UC (Mugetsu), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 16696
+// Abilities: A0UC (Mugetsu), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16697
+// Abilities: A0UC (Mugetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Mugetsu
+}
+
+STRING 16698
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool3> seconds|r
+}
+
+STRING 16699
+// Abilities: A0UD (Mugetsu: Unleash), Name (Name)
+{
+Mugetsu: Unleash
+}
+
+STRING 16700
+// Units: H09T (Shinigami), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16701
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool4> seconds|r
+}
+
+STRING 16702
+// Abilities: A0UD (Mugetsu: Unleash), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16703
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1>s|r
+}
+
+STRING 16704
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur2>s
+|cff00FFFFCooldown: <A0UA,Cool2>s|r
+}
+
+STRING 16705
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur3>s
+|cff00FFFFCooldown: <A0UA,Cool3>s|r
+}
+
+STRING 16706
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur4>s
+|cff00FFFFCooldown: <A0UA,Cool4>s|r
+}
+
+STRING 16707
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur5>s
+|cff00FFFFCooldown: <A0UA,Cool5>s|r
+}
+
+STRING 16708
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur6>s
+|cff00FFFFCooldown: <A0UA,Cool6>s|r
+}
+
+STRING 16709
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur7>s
+|cff00FFFFCooldown: <A0UA,Cool7>s|r
+}
+
+STRING 16710
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 2|r]
+}
+
+STRING 16711
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 3|r]
+}
+
+STRING 16712
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 4|r]
+}
+
+STRING 16713
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 5|r]
+}
+
+STRING 16714
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 6|r]
+}
+
+STRING 16715
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 16716
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 7|r]
+}
+
+STRING 16717
+// Abilities: A0UB (Cero: Fire), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 16718
+// Abilities: A0UB (Cero: Fire), Name (Name)
+{
+Cero: Fire
+}
+
+STRING 16719
+// Abilities: A0UB (Cero: Fire), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
+}
+
+STRING 16720
+// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
+}
+
+STRING 16721
+// Abilities: A0UB (Cero: Fire), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 16722
+// Abilities: A0UB (Cero: Fire), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16723
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 8|r]
+}
+
+STRING 16724
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 9|r]
+}
+
+STRING 16725
+// Abilities: A0UB (Cero: Fire), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero: Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 16726
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur8>s
+|cff00FFFFCooldown: <A0UA,Cool8>s|r
+}
+
+STRING 16727
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur9>s
+|cff00FFFFCooldown: <A0UA,Cool9>s|r
+}
+
+STRING 16728
+// Abilities: A0UB (Cero: Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blast of concentrated Reiatsu.
+|cff00ff00Damage: Lvl * Str * ?
+Duration: <A0UA,Dur10>s
+|cff00FFFFCooldown: <A0UA,Cool10>s|r
+}
+
+STRING 16729
+// Abilities: A0UE (Mugetsu: Absorb), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16730
+// Abilities: A0UE (Mugetsu: Absorb), Name (Name)
+{
+Mugetsu: Absorb
+}
+
+STRING 16731
+// Abilities: A0UE (Mugetsu: Absorb), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Mugetsu: |cff00ffffAbsorb|r
+}
+
+STRING 16732
+// Abilities: A0UE (Mugetsu: Absorb), Unhotkey (Hotkey - Turn Off)
+{
+W
+}
+
+STRING 16733
+// Abilities: A0UE (Mugetsu: Absorb), Ubertip (Tooltip - Normal - Extended)
+{
+For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
+|cff00ffffCooldown: <A0UE,Cool1>s|r
+}
+
+STRING 16734
+// Abilities: A0UE (Mugetsu: Absorb), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16735
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16736
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16737
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16738
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16739
+// Abilities: A0UF (Shunpo), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16740
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD1,%>% 
+|cffffcc00Critical|r - <A0UG,DataA1>% 
+|cffffcc00Damage|r - <A0UG,DataB1,.> times
+}
+
+STRING 16741
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD2,%>% 
+|cffffcc00Critical|r - <A0UG,DataA2>% 
+|cffffcc00Damage|r - <A0UG,DataB2,.> times
+}
+
+STRING 16742
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD3,%>% 
+|cffffcc00Critical|r - <A0UG,DataA3>% 
+|cffffcc00Damage|r - <A0UG,DataB3,.> times
+}
+
+STRING 16743
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD4,%>% 
+|cffffcc00Critical|r - <A0UG,DataA4>% 
+|cffffcc00Damage|r - <A0UG,DataB4,.> times
+}
+
+STRING 16744
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD5,%>% 
+|cffffcc00Critical|r - <A0UG,DataA5>% 
+|cffffcc00Damage|r - <A0UG,DataB5,.> times
+}
+
+STRING 16745
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD6,%>% 
+|cffffcc00Critical|r - <A0UG,DataA6>% 
+|cffffcc00Damage|r - <A0UG,DataB6,.> times
+}
+
+STRING 16746
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD7,%>% 
+|cffffcc00Critical|r - <A0UG,DataA7>% 
+|cffffcc00Damage|r - <A0UG,DataB7,.> times
+}
+
+STRING 16747
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD8,%>% 
+|cffffcc00Critical|r - <A0UG,DataA8>% 
+|cffffcc00Damage|r - <A0UG,DataB8,.> times
+}
+
+STRING 16748
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD9,%>% 
+|cffffcc00Critical|r - <A0UG,DataA9>% 
+|cffffcc00Damage|r - <A0UG,DataB9,.> times
+}
+
+STRING 16749
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD10,%>% 
+|cffffcc00Critical|r - <A0UG,DataA10>% 
+|cffffcc00Damage|r - <A0UG,DataB10,.> times
+}
+
+STRING 16750
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD11,%>% 
+|cffffcc00Critical|r - <A0UG,DataA11>% 
+|cffffcc00Damage|r - <A0UG,DataB11,.> times
+}
+
+STRING 16751
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD12,%>% 
+|cffffcc00Critical|r - <A0UG,DataA12>% 
+|cffffcc00Damage|r - <A0UG,DataB12,.> times
+}
+
+STRING 16752
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD13,%>% 
+|cffffcc00Critical|r - <A0UG,DataA13>% 
+|cffffcc00Damage|r - <A0UG,DataB13,.> times
+}
+
+STRING 16753
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD14,%>% 
+|cffffcc00Critical|r - <A0UG,DataA14>% 
+|cffffcc00Damage|r - <A0UG,DataB14,.> times
+}
+
+STRING 16754
+// Abilities: A0UG (Ichigo's Fighting Style), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD15,%>% 
+|cffffcc00Critical|r - <A0UG,DataA15>% 
+|cffffcc00Damage|r - <A0UG,DataB15,.> times
+}
+
+STRING 16755
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 3|r]
+}
+
+STRING 16756
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 1|r]
+}
+
+STRING 16757
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 2|r]
+}
+
+STRING 16758
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 4|r]
+}
+
+STRING 16759
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 5|r]
+}
+
+STRING 16760
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 6|r]
+}
+
+STRING 16761
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 7|r]
+}
+
+STRING 16762
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 8|r]
+}
+
+STRING 16763
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 9|r]
+}
+
+STRING 16764
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 10|r]
+}
+
+STRING 16765
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 11|r]
+}
+
+STRING 16766
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 12|r]
+}
+
+STRING 16767
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 13|r]
+}
+
+STRING 16768
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 14|r]
+}
+
+STRING 16769
+// Abilities: A0UG (Ichigo's Fighting Style), Tip (Tooltip - Normal)
+{
+Ichigo's Fighting Style - [|cffffcc00Level 15|r]
+}
+
+STRING 16770
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 16771
+// Abilities: A0UG (Ichigo's Fighting Style), Name (Name)
+{
+Ichigo's Fighting Style
+}
+
+STRING 16772
+// Abilities: A0UG (Ichigo's Fighting Style), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Ichigo's Fighting Style - [|cffffcc00Level %d|r]
+}
+
+STRING 16773
+// Abilities: A0UG (Ichigo's Fighting Style), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo's fighting style allows him to reflexively dodge incoming attacks and strike with incredible precision at his enemy's weakpoints.
+
+|cffffcc00Evasion|r - <A0UG,DataD1,%> - <A0UG,DataD15,%>% 
+|cffffcc00Critical|r - <A0UG,DataA1> - <A0UG,DataA15>% 
+|cffffcc00Damage|r - <A0UG,DataB1,.> - <A0UG,DataB15,.> times
+}
+
+STRING 16774
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool5> seconds|r
+}
+
+STRING 16775
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool6> seconds|r
+}
+
+STRING 16776
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool7> seconds|r
+}
+
+STRING 16777
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 2|r]
+}
+
+STRING 16778
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 3|r]
+}
+
+STRING 16779
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 4|r]
+}
+
+STRING 16780
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 5|r]
+}
+
+STRING 16781
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 6|r]
+}
+
+STRING 16782
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 1|r]
+}
+
+STRING 16783
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 7|r]
+}
+
+STRING 16784
+// Abilities: A0UH (Getsuga Jujisho), Name (Name)
+{
+Getsuga Jujisho
+}
+
+STRING 16785
+// Abilities: A0UH (Getsuga Jujisho), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Getsuga Tensho - [|cffffcc00Level %d|r]
+}
+
+STRING 16786
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 9|r]
+}
+
+STRING 16787
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 8|r]
+}
+
+STRING 16788
+// Abilities: A0UH (Getsuga Jujisho), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Jujisho - [|cffffcc00Level 10|r]
+}
+
+STRING 16789
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool8> seconds|r
+}
+
+STRING 16790
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool9> seconds|r
+}
+
+STRING 16792
+// Abilities: A0UH (Getsuga Jujisho), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
+}
+
+STRING 16793
+// Abilities: A0UH (Getsuga Jujisho), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16794
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool2> seconds|r
+}
+
+STRING 16795
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16796
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 16797
+// Abilities: A0UF (Shunpo), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Shunpo
+}
+
+STRING 16798
+// Units: H09T (Shinigami), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16799
+// Abilities: A0UI (Book Ichigo Passives), Name (Name)
+{
+Book Ichigo Passives
+}
+
+STRING 16800
+// Abilities: A0UJ (Bankai Attack Speed), Name (Name)
+{
+Bankai Attack Speed
+}
+
+STRING 16801
+// Abilities: A0UJ (Bankai Attack Speed), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16802
+// Abilities: A0UK (Bankai Attack Damage), Name (Name)
+{
+Bankai Attack Damage
+}
+
+STRING 16803
+// Abilities: A0UK (Bankai Attack Damage), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16804
+// Abilities: A0UL (Final Shikai Cleave), Name (Name)
+{
+Final Shikai Cleave
+}
+
+STRING 16805
+// Abilities: A0UL (Final Shikai Cleave), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16806
+// Abilities: A0UM (Shikai Attack Speed), Name (Name)
+{
+Shikai Attack Speed
+}
+
+STRING 16807
+// Abilities: A0UM (Shikai Attack Speed), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 16808
+// Buffs/Effects: B03R (), Bufftip (Tooltip)
+{
+Bankai: Tensa Zangetsu
+}
+
+STRING 16809
+// Buffs/Effects: B03R (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Bankai: Tensa Zangetsu; it has increased attack damage.
+}
+
+STRING 16810
+// Units: H09U (Shinigami), Name (Name)
+{
+Shinigami
+}
+
+STRING 16811
+// Units: H09U (Shinigami), Propernames (Proper Names)
+{
+Ichigo
+}
+
+STRING 16812
+// Units: H09T (Shinigami), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16813
+// Units: H09U (Shinigami), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16814
+// Units: H09U (Shinigami), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16815
+// Units: H09T (Shinigami), EditorSuffix (Name - Editor Suffix)
+{
+True Shikai
+}
+
+STRING 16816
+// Units: H09V (Shinigami), Name (Name)
+{
+Shinigami
+}
+
+STRING 16817
+// Units: H09V (Shinigami), Propernames (Proper Names)
+{
+Ichigo
+}
+
+STRING 16818
+// Units: H09U (Shinigami), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16819
+// Units: H09V (Shinigami), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16820
+// Units: H09V (Shinigami), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16821
+// Units: H09U (Shinigami), EditorSuffix (Name - Editor Suffix)
+{
+Hollow Mastery
+}
+
+STRING 16822
+// Units: H09W (Shinigami), Name (Name)
+{
+Shinigami
+}
+
+STRING 16823
+// Units: H09W (Shinigami), Propernames (Proper Names)
+{
+Ichigo
+}
+
+STRING 16824
+// Units: H09V (Shinigami), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16825
+// Units: H09W (Shinigami), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16826
+// Units: H09W (Shinigami), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16827
+// Units: H09V (Shinigami), EditorSuffix (Name - Editor Suffix)
+{
+Final Shikai
+}
+
+STRING 16828
+// Units: H09X (Shinigami), Name (Name)
+{
+Shinigami
+}
+
+STRING 16829
+// Units: H09X (Shinigami), Propernames (Proper Names)
+{
+Ichigo
+}
+
+STRING 16830
+// Units: H09W (Shinigami), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16831
+// Units: H09X (Shinigami), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16832
+// Units: H09X (Shinigami), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16833
+// Units: H09W (Shinigami), EditorSuffix (Name - Editor Suffix)
+{
+Dangai
+}
+
+STRING 16834
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 16835
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 16836
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Final Bankai: Tensa Zangetsu - [|cffffcc00Level 10|r]
+}
+
+STRING 16837
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 16838
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 16839
+// Abilities: A0UN (IchigoHollowMask), Name (Name)
+{
+IchigoHollowMask
+}
+
+STRING 16840
+// Abilities: A0UO (IchigoTensaZangetsu), Name (Name)
+{
+IchigoTensaZangetsu
+}
+
+STRING 16841
+// Abilities: A0UP (IchigoShirogetsu), Name (Name)
+{
+IchigoShirogetsu
+}
+
+STRING 16843
+// Buffs/Effects: B03S (), Bufftip (Tooltip)
+{
+Hollow Mask
+}
+
+STRING 16845
+// Units: H09X (Shinigami), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Ichigo
+}
+
+STRING 16846
+// Abilities: A0UC (Mugetsu), Name (Name)
+{
+Mugetsu
+}
+
+STRING 16847
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
+STRING 16848
+// Buffs/Effects: B03T (), Buffubertip (Tooltip - Extended)
+{
+Ichigo's Shirogetsu.
+}
+
+STRING 16849
+// Buffs/Effects: B03T (), Bufftip (Tooltip)
+{
+Shirogetsu
+}
+
+STRING 16850
+// Buffs/Effects: B03U (), Buffubertip (Tooltip - Extended)
+{
+Ichigo's Tensa Zangetsu.
+}
+
+STRING 16851
+// Buffs/Effects: B03U (), Bufftip (Tooltip)
+{
+Tensa Zangetsu
+}
+
+STRING 16865
+// Units: H09S (Shinigami), Ubertip (Tooltip - Extended)
+{
+A very weak early-game hero that can struggle to survive until later in the game. Becomes exceptionally powerful after unlocking his Final Bankai and Mugetsu abilities, allowing him to deal unparalleled damage with his auto attacks.
+
+|cff00ffffShikai|r: +10ms
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 16866
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful golden crescent shaped wave of Reiatsu from his Zangetsu.
+
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool10> seconds|r
+}
+
+STRING 16867
+// Buffs/Effects: B03S (), Buffubertip (Tooltip - Extended)
+{
+The unit is wearing Ichigo's Hollow Mask; it has increased armor.
 }
 

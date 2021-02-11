@@ -123,10 +123,12 @@ export module PathingCheck {
 
   export function unstuckGroundUnitFromCliff(unit: unit, dest: Vector2D) {
     // test 3x3 box around the unit for a free spot
-    const unstuckSearchRange = [32, 64, 128, 256];
+    const unstuckSearchRange = [16, 32, 64, 128, 256];
 
     for (const unstuckDistance of unstuckSearchRange) {
       for (const offset of unstuckOffsets) {
+        if (offset[0] == 0 && offset[1] == 0) continue;
+
         const newX = dest.x + offset[0] * unstuckDistance;
         const newY = dest.y + offset[1] * unstuckDistance;
         unstuckPos.setPos(newX, newY);

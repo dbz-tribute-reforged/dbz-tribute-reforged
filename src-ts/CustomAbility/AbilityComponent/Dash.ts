@@ -4,6 +4,7 @@ import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Vector2D } from "Common/Vector2D";
 import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
+import { UnitHelper } from "Common/UnitHelper";
 
 export class Dash implements AbilityComponent, Serializable<Dash> {
   static readonly DIRECTION_TARGET_POINT = 0;
@@ -73,7 +74,11 @@ export class Dash implements AbilityComponent, Serializable<Dash> {
 
       } else if (this.targetDirection == Dash.DIRECTION_UNIT_TARGET) {
         if (input.targetUnit) {
-          this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+          if (UnitHelper.isUnitAlive(input.targetUnit)) {
+            this.dashTargetPoint.setPos(GetUnitX(input.targetUnit), GetUnitY(input.targetUnit));
+          } else {
+            this.dashTargetPoint.setVector(this.currentCoord);
+          }
         }
         direction = CoordMath.angleBetweenCoords(this.currentCoord, this.dashTargetPoint);
       } else if (this.targetDirection == Dash.DIRECTION_LAST_CAST_UNIT_TARGET) {

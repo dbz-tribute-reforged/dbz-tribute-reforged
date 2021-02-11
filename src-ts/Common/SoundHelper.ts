@@ -654,6 +654,8 @@ export module SoundHelper {
           }
         } else if (unitId == Id.krillin) {
           playSoundOnUnit(unit, "Audio/Voice/KrillinTakeThis.mp3", 1272);
+        } else if (unitId == Id.gotenks) {
+          playSoundOnUnit(unit, "Audio/Voice/Gotenks/TakeThat.mp3", 1584);
         }
         playSoundOnUnit(unit, "Audio/Effects/Kamehameha.mp3", 3160);
         break;
@@ -760,7 +762,57 @@ export module SoundHelper {
         break;
       
       // gotenks
+      case Id.superGotenStrike:
+        playSoundOnUnit(unit, "Audio/Effects/StrongHit1.mp3", 2716);
+        break;
       
+      case Id.kidTrunksFinalCannon:    
+        playSoundOnUnit(unit, "Audio/Effects/FinalFlash.mp3", 4257);  
+        break;
+      
+      case Id.dieDieMissileBarrage:
+        if (unitId == Id.gotenks) {
+          playSoundOnUnit(unit, "Audio/Voice/Gotenks/DieDieMissile.mp3", 1728);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/DeathBeam.mp3", 2768);
+        break;
+      
+      case Id.galacticDonut:
+      case Id.ultraVolleyball:
+        if (unitId == Id.gotenks) {
+          if (rng < 20) {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/TooSlow.mp3", 2496);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/IGotcha.mp3", 2304);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Gotenks/GalacticDonuts.mp3", 2351);
+        break;
+
+      case Id.superGhostKamikazeAttack:
+      case Id.superGhostKamikazeAttack2:
+        if (unitId == Id.gotenks) {
+          if (rng < 75) {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/HereIGo.mp3", 1296);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/PrepareYourself.mp3", 2256);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Gotenks/SuperGhostKamikaze.mp3", 2481);
+        break;
+      
+      case Id.gotenksSS3:
+        if (unitId == Id.gotenks) {
+          if (rng < 40) {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/GrimReaperOfJustice.mp3", 5280);
+          } else if (rng < 60) {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/BringerOfJustice.mp3", 3936);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Gotenks/UltimateForm.mp3", 5376);
+          }
+        }
+        playSoundOnUnit(unit, "Audio/Effects/PowerUp3.mp3", 11598);
+        break;
 
       // hit
       case Id.timeSkip:
@@ -808,6 +860,54 @@ export module SoundHelper {
             playSoundOnUnit(unit, "Audio/Voice/Hit/PureProgress1.mp3", 1464);
           }
         }
+        break;
+      
+      // ichigo
+      case Id.getsugaTensho:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho.mp3", 1933);
+        }
+        break;
+
+      case Id.getsugaJujisho:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaJujisho.mp3", 1880);
+        }
+        break;
+
+      case Id.bankai:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Bankai.mp3", 1018);
+        }
+        break;
+
+      case Id.bankaiFinal:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Bankai2.mp3", 2768);
+        }
+        break;
+      
+      case Id.mugetsuAbsorb:
+        if (unitId == Id.ichigo) {
+          if (rng < 95) {
+            playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho2.mp3", 3500);
+          } else {
+            playSoundOnUnit(unit, "Audio/Voice/Ichigo/OwariDa.mp3", 2821);
+          }
+        }
+        break;
+      
+      case Id.mugetsuUnleash:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Mugetsu.mp3", 783);
+        }
+        break;
+
+      case Id.shunpo:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Shunpo.mp3", 391);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Zanzo.mp3", 1149);
         break;
 
       // janemba

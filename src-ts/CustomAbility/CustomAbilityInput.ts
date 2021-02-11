@@ -11,6 +11,7 @@ export class CustomAbilityInput {
     public castPoint: Vector2D,
     public targetUnit?: unit,
     public castUnit?: unit,
+    public damageMult?: number,
     public isBeamClash?: boolean,
   ) {
 
@@ -26,6 +27,7 @@ export class CustomAbilityInput {
       new Vector2D(this.castPoint.x, this.castPoint.y),
       this.targetUnit,
       this.castUnit,
+      this.damageMult,
       this.isBeamClash,
     );
   }

@@ -1,3 +1,5 @@
+import { Id } from "Common/Constants";
+
 export const TempAbilityComponents = [
   {
     name: "temp ability tyrant lancer", 
@@ -193,5 +195,19 @@ export const TempAbilityComponents = [
     addAbility: false,
     tempPermanence: false,
     equalizeLevels: false,
+  },
+  {
+    name: "temp ability cero fire", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: Id.ceroFire,
+    oldAbility: Id.ceroCharge,
+    performSwap: true,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: true,
+    tempPermanence: false,
+    equalizeLevels: true,
   },
 ];

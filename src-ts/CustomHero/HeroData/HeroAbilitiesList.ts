@@ -303,6 +303,27 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tien.DODON_RAY,
     ]],
 
+    // ichigo
+    [Id.ichigo, [
+      AbilityNames.Ichigo.GETSUGA_TENSHO,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
+      AbilityNames.Ichigo.BANKAI,
+      AbilityNames.Ichigo.BANKAI_HOLLOW,
+      AbilityNames.Ichigo.BANKAI_BLUT_VENE,
+      AbilityNames.Ichigo.BANKAI_FINAL,
+      AbilityNames.Ichigo.CERO_CHARGE,
+      AbilityNames.Ichigo.CERO_FIRE,
+      AbilityNames.Ichigo.MUGETSU_UNLEASH,
+      AbilityNames.Ichigo.MUGETSU_ABSORB,
+      AbilityNames.Ichigo.SHUNPO,
+      AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+      AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+    ]],
+
 
 
 

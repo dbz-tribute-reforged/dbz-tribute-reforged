@@ -254,6 +254,25 @@ export module AbilityNames {
     export const FOUR_ARMS: string = "Four Arms";
   }
 
+  export module Ichigo {
+    export const GETSUGA_TENSHO: string = "Getsuga Tensho";
+    export const GETSUGA_JUJISHO: string = "Getsuga Jujisho";
+    export const GETSUGA_JUJISHO_ON_HIT_1: string = "Getsuga Jujisho 1";
+    export const GETSUGA_JUJISHO_ON_HIT_2: string = "Getsuga Jujisho 2";
+    export const GETSUGA_JUJISHO_ON_HIT_3: string = "Getsuga Jujisho 3";
+    export const GETSUGA_JUJISHO_ON_HIT_4: string = "Getsuga Jujisho 4";
+    export const BANKAI: string = "Bankai";
+    export const BANKAI_HOLLOW: string = "Bankai Hollow";
+    export const BANKAI_BLUT_VENE: string = "Bankai Blut Vene";
+    export const BANKAI_FINAL: string = "Bankai Final";
+    export const CERO_CHARGE: string = "Cero Charge";
+    export const CERO_FIRE: string = "Cero Fire";
+    export const MUGETSU_UNLEASH: string = "Mugetsu Unleash";
+    export const MUGETSU_ABSORB: string = "Mugetsu Absorb";
+    export const SHUNPO: string = "Shunpo";
+    export const DASH_BANKAI_FINAL_1: string = "Bankai Final Dash 1";
+    export const DASH_BANKAI_FINAL_2: string = "Bankai Final Dash 2";
+  }
 
 
   export module Babidi {

@@ -29,7 +29,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash zanzo" },
-      { name: "jump zanzo dash" },
       { name: "sfx zanzo dash" },
     ],
   },
@@ -779,7 +778,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 90,
+    duration: 80,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -805,7 +804,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 90,
+    duration: 80,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -901,6 +900,9 @@ export const AbilitiesList = [
     components: [
       { name: "dash ground forward gotenks ss3" },
       { name: "spell amp gotenks ss3" },
+      { name: "multi super saiyan 3 ghosts 1" },
+      { name: "multi super saiyan 3 ghosts 2" },
+      { name: "multi super saiyan 3 ghosts 3" },
       { name: "sfx gotenks super saiyan 3" },
     ],
   },
@@ -2233,7 +2235,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_FLASH
     },
     components: [
-      { name: "channel caster default" },
+      // { name: "channel caster default" },
       { name: "multi justice flash" },
     ],
   },
@@ -2260,7 +2262,7 @@ export const AbilitiesList = [
         AbilityNames.Toppo.JUSTICE_FLASH
     },
     components: [
-      { name: "channel caster default" },
+      // { name: "channel caster default" },
       { name: "multi justice flash 2" },
     ],
   },
@@ -4340,6 +4342,426 @@ export const AbilitiesList = [
       { name: "block tien kiai" },
       { name: "knockback tien kiai" },
       { name: "sfx tien kiai" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_TENSHO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou.blp",
+      disabled: "BTNIchigoGetsugaTenshou.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_TENSHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga tensho" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga jujisho" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga jujisho on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga jujisho on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga jujisho on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaTenshou2.blp",
+      disabled: "BTNIchigoGetsugaTenshou2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_JUJISHO,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga jujisho on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.BANKAI_HOLLOW,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoBankai.blp",
+      disabled: "BTNIchigoBankai.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.BANKAI_HOLLOW,
+      body: 
+        AbilityNames.Ichigo.BANKAI_HOLLOW
+    },
+    components: [
+      { name: "heal caster bankai hollow" },
+      { name: "sfx bankai hollow" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.BANKAI_BLUT_VENE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 900,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoBankai.blp",
+      disabled: "BTNIchigoBankai.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.BANKAI_BLUT_VENE,
+      body: 
+        AbilityNames.Ichigo.BANKAI_BLUT_VENE
+    },
+    components: [
+      { name: "block bankai blut vene" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.BANKAI_FINAL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoBankai2.blp",
+      disabled: "BTNIchigoBankai2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.BANKAI_FINAL,
+      body: 
+        AbilityNames.Ichigo.BANKAI_FINAL
+    },
+    components: [
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.CERO_CHARGE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 170,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoCero.blp",
+      disabled: "BTNIchigoCero.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.CERO_CHARGE,
+      body: 
+        AbilityNames.Ichigo.CERO_CHARGE
+    },
+    components: [
+      { name: "channel caster cero fire" },
+      { name: "temp ability cero fire" },
+      { name: "sfx cero charge caster" },
+      { name: "sfx cero charge ready" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.CERO_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoCeroFire.blp",
+      disabled: "BTNIchigoCeroFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.CERO_FIRE,
+      body: 
+        AbilityNames.Ichigo.CERO_FIRE
+    },
+    components: [
+      { name: "beam cero fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.MUGETSU_UNLEASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoMugetsu2.blp",
+      disabled: "BTNIchigoMugetsu2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.MUGETSU_UNLEASH,
+      body: 
+        AbilityNames.Ichigo.MUGETSU_UNLEASH
+    },
+    components: [
+      { name: "beam mugetsu unleash" },
+      { name: "sfx mugetsu" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.MUGETSU_ABSORB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoMugetsu3.blp",
+      disabled: "BTNIchigoMugetsu3.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.MUGETSU_ABSORB,
+      body: 
+        AbilityNames.Ichigo.MUGETSU_ABSORB
+    },
+    components: [
+      { name: "sfx mugetsu" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.SHUNPO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoShunpo.blp",
+      disabled: "BTNIchigoShunpo.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.SHUNPO,
+      body: 
+        AbilityNames.Ichigo.SHUNPO
+    },
+    components: [
+      { name: "dash shunpo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoShunpo.blp",
+      disabled: "BTNIchigoShunpo.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.SHUNPO,
+      body: 
+        AbilityNames.Ichigo.SHUNPO
+    },
+    components: [
+      { name: "dash bankai final on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoShunpo.blp",
+      disabled: "BTNIchigoShunpo.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.SHUNPO,
+      body: 
+        AbilityNames.Ichigo.SHUNPO
+    },
+    components: [
+      { name: "dash bankai final on hit" },
     ],
   },
   // -------------------------------------------
@@ -7390,7 +7812,7 @@ export const AbilitiesList = [
         AbilityNames.Sephiroth.FERVENT_RUSH
     },
     components: [
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage fervent rush explosion" },
       { name: "damage fervent rush bonus explosion" },
       { name: "sfx fervent rush" },
@@ -7685,7 +8107,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point zanzo saga" },
-      { name: "jump zanzo dash" },
       { name: "sfx zanzo dash" },
     ],
   },

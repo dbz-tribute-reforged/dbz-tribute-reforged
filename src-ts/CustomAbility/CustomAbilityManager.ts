@@ -49,6 +49,8 @@ import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { JumpComponents } from "./AbilityData/JumpComponents";
 import { Jump } from "./AbilityComponent/Jump";
+import { AOEHeal } from "./AbilityComponent/AOEHeal";
+import { AOEHealComponents } from "./AbilityData/AOEHealComponents";
 
 export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
@@ -83,6 +85,10 @@ export class CustomAbilityManager {
 
     for (const component of AOEDebuffComponents) {
       this.setComponent(new AOEDebuff().deserialize(component));
+    }
+
+    for (const component of AOEHealComponents) {
+      this.setComponent(new AOEHeal().deserialize(component));
     }
 
     for (const component of AOEKnockbackComponents) {
@@ -120,9 +126,9 @@ export class CustomAbilityManager {
       this.setComponent(new Dodge().deserialize(component));
     }
 
-    for (const component of GroundVortexComponents) {
-      this.setComponent(new GroundVortex().deserialize(component));
-    }
+    // for (const component of GroundVortexComponents) {
+    //   this.setComponent(new GroundVortex().deserialize(component));
+    // }
 
     for (const component of HideUnitComponents) {
       this.setComponent(new HideUnit().deserialize(component));

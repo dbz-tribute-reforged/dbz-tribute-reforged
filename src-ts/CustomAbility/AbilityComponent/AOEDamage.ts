@@ -58,12 +58,20 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
       );
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "level " + input.level);
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "spellPower " + input.caster.spellPower);
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "mult " + this.damageData.multiplier);
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "stat " + GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true));
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "damage " + damage);
     if (this.scaleDamageToSourceHp) {
       const percentHP = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
       damage *= percentHP * percentHP;
     }
     if (input.isBeamClash && input.isBeamClash == true) {
       damage *= AOEDamage.BEAM_CLASH_DAMAGE_MULTIPLIER;
+    }
+    if (input.damageMult) {
+      damage *= input.damageMult;
     }
     return damage;
   }
@@ -99,10 +107,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
         this.damageData.weaponType,
       );
     }
-    // TextTagHelper.showTempText(
-    //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage), 
-    //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
-    // );
+    // if (input.damageMult) {
+    //   TextTagHelper.showTempText(
+    //     Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage) + " --- " + R2S(input.damageMult), 
+    //     GetUnitX(target), GetUnitY(target), 1.0, 0.8
+    //   );
+    // }
   }
 
   setDamageSourceToTargettedPoint(input: CustomAbilityInput) {

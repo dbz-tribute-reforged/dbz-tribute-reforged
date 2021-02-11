@@ -1024,6 +1024,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1,
   },
+  // ichigo shunpo
+  {
+    name: "dash shunpo",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_UNIT_TARGET,
+    dashType: Dash.DASH_TYPE_ZANZO,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 1100,
+  },
+  // dash bankai final on hit
+  {
+    name: "dash bankai final on hit",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_UNIT_TARGET,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 31,
+  },
   // ----------------------------
   // cell-x
   {
@@ -1282,7 +1308,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 4,
+    distance: 3,
   },
   // guldo time stop
   {
@@ -1347,9 +1373,9 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 3,
+    distance: 2,
   },
-  // god of destruction
+  // ss3
   {
     name: "dash ground forward gotenks ss3",
     repeatInterval: 1, 
