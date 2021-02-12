@@ -437,6 +437,7 @@ gg_trg_Ichigo_Skill_Upg = nil
 gg_trg_Ichigo_Bankai = nil
 gg_trg_Ichigo_Mugetsu = nil
 gg_trg_Ichigo_Mugetsu_Loop = nil
+gg_trg_Ichigo_Getsuga_Auto_Level = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -6943,8 +6944,8 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0TT"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A08J"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("S002"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(true, FourCC("A0U8"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0U9"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0UA"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0UB"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -11107,62 +11108,62 @@ function InitTrig_Mario_Spells_Cast()
     TriggerAddAction(gg_trg_Mario_Spells_Cast, Trig_Mario_Spells_Cast_Actions)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func002Func001C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func002Func001C()
     if (not (udg_TempInt == ((udg_TempInt3 - udg__MarioGroundPoundDelay) + 1))) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func002C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func002C()
     if (not (udg_TempInt > udg_TempInt3)) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003001()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003001()
     return (IsUnitEnemy(GetFilterUnit(), udg_TempPlayer) == true)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002001()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002001()
     return (IsUnitDeadBJ(GetFilterUnit()) == false)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002001()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002001()
     return (IsUnitHiddenBJ(GetFilterUnit()) == false)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002001()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002001()
     return (UnitHasBuffBJ(GetFilterUnit(), FourCC("BHbn")) == false)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002002()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002002()
     return (true == true)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002()
-    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002001(), Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002002())
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002()
+    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002001(), Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002()
-    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002001(), Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002002())
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002()
+    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002001(), Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002()
-    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002001(), Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002002())
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002()
+    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002001(), Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003()
-    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003001(), Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003002())
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003()
+    return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003001(), Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004Func012A()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func018A()
     udg_TempUnit2 = GetEnumUnit()
     UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal4, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004Func013C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func019C()
     if (CountUnitsInGroup(udg_TempUnitGroup) > 0) then
         return true
     end
@@ -11172,21 +11173,21 @@ function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004Func013C()
     return false
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004C()
-    if (not Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004Func013C()) then
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004C()
+    if (not Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func019C()) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func005C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func005C()
     if (not (CountUnitsInGroup(udg_TempUnitGroup) <= 0)) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func008C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012C()
     if (not (udg_TempReal < udg__MarioJumpMinBounceHeight)) then
         return false
     end
@@ -11196,28 +11197,28 @@ function Trig_Mario_Jump_Loop_Func001Func011Func002Func008C()
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func015Func005Func002C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func015Func005Func002C()
     if (not (HaveSavedValue(9, bj_HASHTABLE_HANDLE, udg_ID, udg_SummonsHashtable) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func015Func005C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func015Func005C()
     if (not (udg_TempInt > udg_TempInt4)) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002Func015C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func015C()
     if (not (udg_TempInt4 > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func002C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003C()
     if (not (udg_TempInt3 == 0)) then
         return false
     end
@@ -11384,30 +11385,37 @@ function Trig_Mario_Jump_Loop_Func001A()
         udg_TempInt4 = LoadIntegerBJ(7, udg_ID, udg_SummonsHashtable)
         BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0TJ"), BlzGetUnitAbilityCooldown(udg_TempUnit, FourCC("A0TJ"), (udg_TempInt4 - 1)))
     else
-        if (Trig_Mario_Jump_Loop_Func001Func011Func002C()) then
+        SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
+        if (Trig_Mario_Jump_Loop_Func001Func011Func003C()) then
                         SetUnitAnimationByIndex(udg_TempUnit,7)
             udg_TempReal = RMaxBJ(0.00, (udg_TempReal + udg_TempReal2))
             udg_TempReal2 = RMaxBJ(udg__MarioJumpTerminalVelocity, (udg_TempReal2 + udg_TempReal3))
-            if (Trig_Mario_Jump_Loop_Func001Func011Func002Func008C()) then
+            SetUnitFlyHeightBJ(udg_TempUnit, udg_TempReal, 0.00)
+            SaveRealBJ(udg_TempReal, 1, udg_ID, udg_SummonsHashtable)
+            SaveRealBJ(udg_TempReal2, 2, udg_ID, udg_SummonsHashtable)
+            if (Trig_Mario_Jump_Loop_Func001Func011Func003Func012C()) then
                 udg_TempLoc = GetUnitLoc(udg_TempUnit)
                 udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
-                udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(350.00, udg_TempLoc, Condition(Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func003002003))
-                if (Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004C()) then
+                udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(350.00, udg_TempLoc, Condition(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003))
+                if (Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004C()) then
                     udg_TempReal3 = udg__MarioJumpAccel
                     udg_TempReal2 = udg__MarioJumpSpeed
                     udg_TempReal = RMaxBJ(0.00, (udg_TempReal + udg_TempReal2))
                     udg_TempInt2 = (udg_TempInt2 + 1)
                     SaveIntegerBJ(udg_TempInt2, 5, udg_ID, udg_SummonsHashtable)
+                    SetUnitFlyHeightBJ(udg_TempUnit, udg_TempReal, 0.00)
+                    SaveRealBJ(udg_TempReal, 1, udg_ID, udg_SummonsHashtable)
+                    SaveRealBJ(udg_TempReal2, 2, udg_ID, udg_SummonsHashtable)
                                         playGenericSpellSound(udg_TempUnit,"Audio/Effects/Mario/JumpDamage.mp3", 396)
                     AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
                     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
                     BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     udg_TempReal4 = (0.26 * (0.25 * ((1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))) * (I2R(udg_TempInt4) * RMinBJ(2.50, (1 + (0.15 * I2R(udg_TempInt2))))))))
-                    ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func004Func012A)
+                    ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func018A)
                 else
                 end
-                if (Trig_Mario_Jump_Loop_Func001Func011Func002Func008Func005C()) then
+                if (Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func005C()) then
                     SaveIntegerBJ((LoadIntegerBJ(13, udg_ID, udg_SummonsHashtable) - 1), 13, udg_ID, udg_SummonsHashtable)
                 else
                 end
@@ -11415,18 +11423,15 @@ function Trig_Mario_Jump_Loop_Func001A()
                                 DestroyGroup(udg_TempUnitGroup)
             else
             end
-            SetUnitFlyHeightBJ(udg_TempUnit, udg_TempReal, 0.00)
-            SaveRealBJ(udg_TempReal, 1, udg_ID, udg_SummonsHashtable)
-            SaveRealBJ(udg_TempReal2, 2, udg_ID, udg_SummonsHashtable)
             udg_TempInt4 = LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable)
-            if (Trig_Mario_Jump_Loop_Func001Func011Func002Func015C()) then
+            if (Trig_Mario_Jump_Loop_Func001Func011Func003Func015C()) then
                 udg_TempReal4 = (ModuloReal((I2R(udg_TempInt) * 30.00), 360.00) * (3.14 / 180.00))
                                 SetUnitFacing(udg_TempUnit, udg_TempReal4)
                 ResetUnitAnimation(udg_TempUnit)
                                 SetUnitAnimationByIndex(udg_TempUnit,10)
-                if (Trig_Mario_Jump_Loop_Func001Func011Func002Func015Func005C()) then
+                if (Trig_Mario_Jump_Loop_Func001Func011Func003Func015Func005C()) then
                     SaveIntegerBJ(0, 8, udg_ID, udg_SummonsHashtable)
-                    if (Trig_Mario_Jump_Loop_Func001Func011Func002Func015Func005Func002C()) then
+                    if (Trig_Mario_Jump_Loop_Func001Func011Func003Func015Func005Func002C()) then
                         udg_TempSpecialEffect = LoadEffectHandleBJ(9, udg_ID, udg_SummonsHashtable)
                         BlzSetSpecialEffectScale(udg_TempSpecialEffect, 0.01)
                         DestroyEffectBJ(udg_TempSpecialEffect)
@@ -11439,7 +11444,7 @@ function Trig_Mario_Jump_Loop_Func001A()
             else
             end
         else
-            if (Trig_Mario_Jump_Loop_Func001Func011Func002Func002C()) then
+            if (Trig_Mario_Jump_Loop_Func001Func011Func003Func002C()) then
                 udg_TempReal = RMaxBJ(0.00, (udg_TempReal + udg_TempReal2))
                 udg_TempReal2 = RMaxBJ(udg__MarioJumpTerminalVelocity, (udg_TempReal2 + udg_TempReal3))
                 SetUnitFlyHeightBJ(udg_TempUnit, udg_TempReal, 0.00)
@@ -11447,14 +11452,13 @@ function Trig_Mario_Jump_Loop_Func001A()
                 SaveRealBJ(udg_TempReal2, 2, udg_ID, udg_SummonsHashtable)
                 SaveIntegerBJ(0, 13, udg_ID, udg_SummonsHashtable)
             else
-                if (Trig_Mario_Jump_Loop_Func001Func011Func002Func002Func001C()) then
+                if (Trig_Mario_Jump_Loop_Func001Func011Func003Func002Func001C()) then
                     ResetUnitAnimation(udg_TempUnit)
                                         SetUnitAnimationByIndex(udg_TempUnit,8)
                 else
                 end
             end
         end
-        SaveIntegerBJ((udg_TempInt + 1), 0, udg_ID, udg_SummonsHashtable)
     end
 end
 
@@ -12236,7 +12240,7 @@ function InitTrig_Ichigo_Mugetsu()
 end
 
 function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func001C()
-    if (not (udg_TempInt > 100)) then
+    if (not (udg_TempInt > 109)) then
         return false
     end
     return true
@@ -12311,6 +12315,153 @@ function InitTrig_Ichigo_Mugetsu_Loop()
     DisableTrigger(gg_trg_Ichigo_Mugetsu_Loop)
     TriggerRegisterTimerEventPeriodic(gg_trg_Ichigo_Mugetsu_Loop, 0.03)
     TriggerAddAction(gg_trg_Ichigo_Mugetsu_Loop, Trig_Ichigo_Mugetsu_Loop_Actions)
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002Func002Func004C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002Func002C()
+    if (not (udg_TempInt2 < 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002C()
+    if (not (udg_TempInt2 < 100)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002C()
+    if (not (udg_TempInt2 < 60)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002C()
+    if (not (udg_TempInt2 < 40)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002C()
+    if (not (udg_TempInt2 < 30)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002C()
+    if (not (udg_TempInt2 < 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003C()
+    if (not (udg_TempInt2 < 15)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004C()
+    if (not (udg_TempInt2 < 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001Func003C()
+    if (not (udg_TempInt2 < 5)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit) < 10)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit) >= 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Getsuga_Auto_Level_Actions()
+    if (Trig_Ichigo_Getsuga_Auto_Level_Func001C()) then
+        udg_TempInt = 1
+        udg_TempInt2 = GetHeroLevel(udg_StatMultUnit)
+        if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+        else
+            udg_TempInt = (udg_TempInt + 1)
+            if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+            else
+                udg_TempInt = (udg_TempInt + 1)
+                if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003C()) then
+                    SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                else
+                    udg_TempInt = (udg_TempInt + 1)
+                    if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002C()) then
+                        SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                    else
+                        udg_TempInt = (udg_TempInt + 1)
+                        if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002C()) then
+                            SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                        else
+                            udg_TempInt = (udg_TempInt + 1)
+                            if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002C()) then
+                                SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                            else
+                                udg_TempInt = (udg_TempInt + 1)
+                                if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002C()) then
+                                    SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                                else
+                                    udg_TempInt = (udg_TempInt + 1)
+                                    if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002C()) then
+                                        SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                                    else
+                                        udg_TempInt = (udg_TempInt + 1)
+                                        if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002Func002C()) then
+                                            SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                                        else
+                                            udg_TempInt = (udg_TempInt + 1)
+                                            SetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit, udg_TempInt)
+                                            if (Trig_Ichigo_Getsuga_Auto_Level_Func001Func003Func004Func003Func002Func002Func002Func002Func002Func002Func004C()) then
+                                                UnitAddAbilityBJ(FourCC("A0UH"), udg_StatMultUnit)
+                                                SetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit, 10)
+                                                                                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0UH'))
+                                            else
+                                            end
+                                            SetPlayerAbilityAvailableBJ(true, FourCC("A0UH"), GetOwningPlayer(udg_StatMultUnit))
+                                            SetPlayerAbilityAvailableBJ(false, FourCC("A0U7"), GetOwningPlayer(udg_StatMultUnit))
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    else
+    end
+end
+
+function InitTrig_Ichigo_Getsuga_Auto_Level()
+    gg_trg_Ichigo_Getsuga_Auto_Level = CreateTrigger()
+    TriggerAddAction(gg_trg_Ichigo_Getsuga_Auto_Level, Trig_Ichigo_Getsuga_Auto_Level_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -16490,6 +16641,7 @@ function Trig_Hero_Level_up_New_New_Actions()
             udg_LvlUpInt = udg_LvlUpInt + 1
         end
         SaveIntegerBJ(GetHeroLevel(udg_StatMultUnit), 17, udg_ID, udg_StatMultHashtable)
+        TriggerExecute(gg_trg_Ichigo_Getsuga_Auto_Level)
     else
     end
 end
@@ -21700,6 +21852,10 @@ function Trig_Hero_Pick_Reset_Abilities_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0JE"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SP"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0TJ"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0TK"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0TL"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0TM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0U2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0U3"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0U4"), udg_TempPlayer)
@@ -24271,28 +24427,28 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func003C()
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func010C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func011C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UJ"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func007Func009C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func007Func009C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func007C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func007C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 7)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func008C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func008C()
     if (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 10) then
         return true
     end
@@ -24302,49 +24458,49 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func008C()
     return false
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func012Func002C()
-    if (not Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func008C()) then
+function Trig_Ichigo_Bankai_Temp_Skin_Func013Func002C()
+    if (not Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func008C()) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func012C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func013C()
     if (not (udg_TempBool == true)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func014C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func015C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func015Func003C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func016Func003C()
     if (not (GetSpellAbilityId() == FourCC("A0U9"))) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func015Func004Func003C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func016Func004Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func015Func004C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func016Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 7)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func015Func005C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func016Func005C()
     if (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 10) then
         return true
     end
@@ -24354,8 +24510,8 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func015Func005C()
     return false
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func015C()
-    if (not Trig_Ichigo_Bankai_Temp_Skin_Func015Func005C()) then
+function Trig_Ichigo_Bankai_Temp_Skin_Func016C()
+    if (not Trig_Ichigo_Bankai_Temp_Skin_Func016Func005C()) then
         return false
     end
     return true
@@ -24368,18 +24524,19 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
         udg_TempReal = 30.00
     else
     end
+    udg_TempReal = 15.00
         udg_TempInt = GetSpellAbilityId()
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UP"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UN"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0UJ"), GetOwningPlayer(udg_StatMultUnit))
-    if (Trig_Ichigo_Bankai_Temp_Skin_Func010C()) then
+    if (Trig_Ichigo_Bankai_Temp_Skin_Func011C()) then
         UnitAddAbilityBJ(FourCC("A0UJ"), udg_StatMultUnit)
     else
     end
-    if (Trig_Ichigo_Bankai_Temp_Skin_Func012C()) then
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func012Func002C()) then
+    if (Trig_Ichigo_Bankai_Temp_Skin_Func013C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func013Func002C()) then
                         udg_TransformationID = FourCC('H09V')
             TriggerExecute(gg_trg_Get_Stat_Multiplier)
             udg_StatMultReal = udg_StatMultAgi
@@ -24387,7 +24544,7 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
             udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
             TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         else
-            if (Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func007C()) then
+            if (Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func007C()) then
                 AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
                                 udg_TransformationID = FourCC('H09W')
                                 udg_TransformationID = FourCC('H09S')
@@ -24397,7 +24554,7 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
                 udg_TransformationPlayer = GetOwningPlayer(udg_StatMultUnit)
                 TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
             else
-                if (Trig_Ichigo_Bankai_Temp_Skin_Func012Func002Func007Func009C()) then
+                if (Trig_Ichigo_Bankai_Temp_Skin_Func013Func002Func007Func009C()) then
                                         udg_TransformationID = FourCC('H09W')
                 else
                     AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
@@ -24409,14 +24566,14 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
     else
     end
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
-    if (Trig_Ichigo_Bankai_Temp_Skin_Func014C()) then
+    if (Trig_Ichigo_Bankai_Temp_Skin_Func015C()) then
         SetPlayerAbilityAvailableBJ(true, FourCC("A0UN"), udg_TempPlayer)
     else
     end
-    if (Trig_Ichigo_Bankai_Temp_Skin_Func015C()) then
+    if (Trig_Ichigo_Bankai_Temp_Skin_Func016C()) then
         SetPlayerAbilityAvailableBJ(true, FourCC("A0UO"), udg_TempPlayer)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.10, (0 + 0))
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func015Func003C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func003C()) then
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0U9"), udg_TempPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0U8"), udg_TempPlayer)
@@ -24425,11 +24582,11 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U9"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U8"), 9))
         end
     else
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func015Func004C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func004C()) then
             BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.40, (0 + 0))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UK"), udg_TempPlayer)
-            if (Trig_Ichigo_Bankai_Temp_Skin_Func015Func004Func003C()) then
+            if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func004Func003C()) then
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.60, (0 + 0))
             else
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.70, (0 + 0))
@@ -40050,14 +40207,35 @@ function Trig_Transformations_Ichigo_Func017Func002Func005C()
     return false
 end
 
+function Trig_Transformations_Ichigo_Func017Func002Func007Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0U9"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Ichigo_Func017Func002Func007C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit) == 10)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) == 10)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Ichigo_Func017Func002Func008Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Ichigo_Func017Func002Func008C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0U7"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Ichigo_Func017Func002Func009Func001C()
     if (udg_TransformationString == "true shikai") then
         return true
     end
@@ -40067,49 +40245,49 @@ function Trig_Transformations_Ichigo_Func017Func002Func008Func001C()
     return false
 end
 
-function Trig_Transformations_Ichigo_Func017Func002Func008C()
-    if (not Trig_Transformations_Ichigo_Func017Func002Func008Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Ichigo_Func017Func002Func009Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UF"), udg_StatMultUnit) == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Ichigo_Func017Func002Func009Func003C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UM"), udg_StatMultUnit) == 0)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_Ichigo_Func017Func002Func009C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+    if (not Trig_Transformations_Ichigo_Func017Func002Func009Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Ichigo_Func017Func002Func010Func002C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UA"), udg_StatMultUnit) == 0)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UF"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Ichigo_Func017Func002Func010Func003C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UM"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Ichigo_Func017Func002Func010C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 75)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Ichigo_Func017Func002Func011Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0UA"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
 function Trig_Transformations_Ichigo_Func017Func002Func011C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Ichigo_Func017Func002Func012C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
@@ -40167,7 +40345,6 @@ function Trig_Transformations_Ichigo_Actions()
     if (Trig_Transformations_Ichigo_Func014C()) then
         udg_StatMultReal = 2.40
         udg_TransformationAbility = FourCC("AUan")
-        udg_TransformationSFXString = "AuraWhite.mdx"
                 udg_TransformationID = FourCC('H09U')
     else
     end
@@ -40185,33 +40362,51 @@ function Trig_Transformations_Ichigo_Actions()
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
             if (Trig_Transformations_Ichigo_Func017Func002Func007C()) then
+                if (Trig_Transformations_Ichigo_Func017Func002Func007Func001C()) then
+                    UnitAddAbilityBJ(FourCC("A0U9"), udg_StatMultUnit)
+                                        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0U9'))
+                else
+                end
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0U8"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0U9"), udg_TransformationPlayer)
+            else
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0U8"), udg_TransformationPlayer)
+                SetPlayerAbilityAvailableBJ(false, FourCC("A0U9"), udg_TransformationPlayer)
+            end
+            if (Trig_Transformations_Ichigo_Func017Func002Func008C()) then
+                if (Trig_Transformations_Ichigo_Func017Func002Func008Func001C()) then
+                    UnitAddAbilityBJ(FourCC("A0UH"), udg_StatMultUnit)
+                    SetUnitAbilityLevelSwapped(FourCC("A0UH"), udg_StatMultUnit, 10)
+                                        UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0UH'))
+                else
+                end
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0UH"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0U7"), udg_TransformationPlayer)
             else
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0UH"), udg_TransformationPlayer)
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0U7"), udg_TransformationPlayer)
             end
-            if (Trig_Transformations_Ichigo_Func017Func002Func008C()) then
+            if (Trig_Transformations_Ichigo_Func017Func002Func009C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0UP"), udg_TransformationPlayer)
             else
             end
-            if (Trig_Transformations_Ichigo_Func017Func002Func009C()) then
+            if (Trig_Transformations_Ichigo_Func017Func002Func010C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0UF"), udg_TransformationPlayer)
-                if (Trig_Transformations_Ichigo_Func017Func002Func009Func002C()) then
+                if (Trig_Transformations_Ichigo_Func017Func002Func010Func002C()) then
                     UnitAddAbilityBJ(FourCC("A0UF"), udg_StatMultUnit)
                                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0UF'))
                 else
                 end
-                if (Trig_Transformations_Ichigo_Func017Func002Func009Func003C()) then
+                if (Trig_Transformations_Ichigo_Func017Func002Func010Func003C()) then
                     UnitAddAbilityBJ(FourCC("A0UM"), udg_StatMultUnit)
                                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0UM'))
                 else
                 end
             else
             end
-            if (Trig_Transformations_Ichigo_Func017Func002Func010C()) then
+            if (Trig_Transformations_Ichigo_Func017Func002Func011C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0UN"), udg_TransformationPlayer)
-                if (Trig_Transformations_Ichigo_Func017Func002Func010Func002C()) then
+                if (Trig_Transformations_Ichigo_Func017Func002Func011Func002C()) then
                     SetPlayerAbilityAvailableBJ(true, FourCC("A0UA"), udg_TransformationPlayer)
                     UnitAddAbilityBJ(FourCC("A0UA"), udg_StatMultUnit)
                                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0UA'))
@@ -40219,7 +40414,7 @@ function Trig_Transformations_Ichigo_Actions()
                 end
             else
             end
-            if (Trig_Transformations_Ichigo_Func017Func002Func011C()) then
+            if (Trig_Transformations_Ichigo_Func017Func002Func012C()) then
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0UL"), udg_TransformationPlayer)
             else
             end
@@ -41604,6 +41799,7 @@ function InitCustomTriggers()
     InitTrig_Ichigo_Bankai()
     InitTrig_Ichigo_Mugetsu()
     InitTrig_Ichigo_Mugetsu_Loop()
+    InitTrig_Ichigo_Getsuga_Auto_Level()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
