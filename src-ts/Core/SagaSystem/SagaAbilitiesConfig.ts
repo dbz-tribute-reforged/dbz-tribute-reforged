@@ -42,7 +42,7 @@ export module SagaAbilities {
       AbilityNames.Nappa.BLAZING_STORM, 10, 14, 10, MEDIUM_CAST_TIME
     );
     export const GIANT_STORM = new SagaAbility(
-      AbilityNames.Nappa.GIANT_STORM, 10, 20, 5, LONG_CAST_TIME
+      AbilityNames.Nappa.GIANT_STORM, 10, 18, 5, LONG_CAST_TIME
     );
     export const BREAK_CANNON = new SagaAbility(
       AbilityNames.Nappa.BREAK_CANNON, 10, 35, 3, EXTRA_LONG_CAST_TIME

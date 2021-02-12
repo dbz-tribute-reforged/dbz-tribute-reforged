@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.59
+DBZ Tribute Reforged 0.59a
 }
 
 STRING 4
@@ -39004,14 +39004,6 @@ Ichigo transforms into Getsuga itself, constantly emitting smoky black Reiatsu. 
 |cff00ffffAbsorb|r: For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
 
 |cff808080Ichigo must use Bankai 3 times to unlock Mugetsu.
-}
-
-STRING 6354
-// Abilities: A0UD (Mugetsu: Unleash), Ubertip (Tooltip - Normal - Extended)
-{
-Fires an incredibly poweful ball of concentrated Reiatsu that obliterates any enemy upon detonating. |cffff2020Permanently disables Mugetsu after usage.|r
-|cff00ff00Damage: Lvl x Str x ?|r
-|cff00ffffCooldown: Once per game|r
 }
 
 STRING 6355
@@ -97927,7 +97919,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 15673
-// Abilities: A0U7 (Getsuga Tensho), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
@@ -101949,7 +101941,7 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16233
-// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UH (Getsuga Jujisho), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
@@ -106328,11 +106320,20 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
+STRING 16791
+// Abilities: A0UD (Mugetsu: Unleash), Ubertip (Tooltip - Normal - Extended)
+{
+Fires an incredibly poweful ball of concentrated Reiatsu that obliterates any enemy upon detonating. |cffff2020Permanently disables Mugetsu after usage.|r
+|cff00ff00Damage: Lvl x Agi x ?|r
+|cff00ffffCooldown: Once per game|r
+}
+
 STRING 16792
-// Abilities: A0UH (Getsuga Jujisho), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0U7 (Getsuga Tensho), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
-|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cffffff00Automatically levels alongside Ichigo. (1/5/10/15/20/30/40/60/100/150)
+Upgrades to Getsuga Jujisho at max level.
 |cff00ff00Damage: Agi * lvl * ?|r
 |cff00ffffCooldown: <A0U7,Cool1> seconds|r
 }
@@ -106684,6 +106685,15 @@ STRING 16841
 IchigoShirogetsu
 }
 
+STRING 16842
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful golden crescent shaped wave of Reiatsu from his Zangetsu.
+
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0UH,Cool10> seconds|r
+}
+
 STRING 16843
 // Buffs/Effects: B03S (), Bufftip (Tooltip)
 {
@@ -106746,15 +106756,6 @@ A very weak early-game hero that can struggle to survive until later in the game
 |cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
 
 Proudly bankrolled by |cff00ff00Xestus|r.
-}
-
-STRING 16866
-// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo fires a powerful golden crescent shaped wave of Reiatsu from his Zangetsu.
-
-|cff00ff00Damage: Agi * lvl * ?|r
-|cff00ffffCooldown: <A0U7,Cool10> seconds|r
 }
 
 STRING 16867

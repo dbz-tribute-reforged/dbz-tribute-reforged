@@ -576,9 +576,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Buu.ANGRY_EXPLOSION,
         SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
-      [
-        ItemConstants.SagaDrops.BEE_DOG_ITEM,
-      ]
     )],
     ["Kid Buu", new SagaUnit(FourCC("O00C"), 120, 16000, 400, 15000, new Vector2D(21000, -4700),
       [
@@ -587,6 +584,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Buu.ANGRY_EXPLOSION,
         SagaAbilities.Saga.MANKIND_DESTRUCTION_ATTACK_CUSTOM,
       ],
+      [
+        ItemConstants.SagaDrops.BEE_DOG_ITEM,
+      ]
     )],
 
     // wrath of the dragon
