@@ -186,22 +186,23 @@ export class DragonBallsManager {
           GroupEnumUnitsInRect(
             carryingDb,
             GetPlayableMapRect(),
-            Condition(() => {
-              if (IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)) {
-                const index = GetInventoryIndexOfItemTypeBJ(GetFilterUnit(), DragonBallsConstants.dragonBallItem)
-                if (index > 0) {
-                  const testUnit = GetFilterUnit();
-                  numDragonBalls += this.radarPingDragonball(
-                    UnitItemInSlotBJ(testUnit, index), 
-                    player, 
-                    GetUnitX(testUnit),
-                    GetUnitY(testUnit)
-                  );
-                }
-              }
-              return false;
-            })
+            null
           );
+
+          ForGroup(carryingDb, () => {
+            const dbUnit = GetEnumUnit();
+            if (IsUnitType(dbUnit, UNIT_TYPE_HERO)) {
+              const index = GetInventoryIndexOfItemTypeBJ(dbUnit, DragonBallsConstants.dragonBallItem)
+              if (index > 0) {
+                numDragonBalls += this.radarPingDragonball(
+                  UnitItemInSlotBJ(dbUnit, index), 
+                  player, 
+                  GetUnitX(dbUnit),
+                  GetUnitY(dbUnit)
+                );
+              }
+            }
+          });
           DestroyGroup(carryingDb);
 
           if (numDragonBalls == 0) {

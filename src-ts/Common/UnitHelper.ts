@@ -25,18 +25,19 @@ export module UnitHelper {
     )
   }
 
-  // remember to destroy returned group after you finish using it
-  export function getNearbyValidUnits(target: Vector2D, aoe: number, isBasicValidTarget: () => boolean): group {
-    const affectedGroup = CreateGroup();
-    GroupEnumUnitsInRange(
-      affectedGroup, 
-      target.x, 
-      target.y, 
-      aoe, 
-      Condition(isBasicValidTarget),
-    );
-    return affectedGroup;
-  }
+  // leaks Condition object
+  // // remember to destroy returned group after you finish using it
+  // export function getNearbyValidUnits(target: Vector2D, aoe: number, isBasicValidTarget: () => boolean): group {
+  //   const affectedGroup = CreateGroup();
+  //   GroupEnumUnitsInRange(
+  //     affectedGroup, 
+  //     target.x, 
+  //     target.y, 
+  //     aoe, 
+  //     Condition(isBasicValidTarget),
+  //   );
+  //   return affectedGroup;
+  // }
 
   export function giveUnitFlying(unit: unit) {
     const flyingAbility = FourCC('Arav');
@@ -52,7 +53,8 @@ export module UnitHelper {
       if (
         IsUnitType(unit, UNIT_TYPE_HERO) &&
         IsUnitEnemy(unit, player) &&
-        !isUnitDead(unit)
+        !isUnitDead(unit) && 
+        isUnitTargetableForPlayer(unit, player)
       ) {
         ++numEnemies;
       }

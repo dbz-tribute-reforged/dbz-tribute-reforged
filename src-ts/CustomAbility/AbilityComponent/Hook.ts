@@ -25,6 +25,8 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   protected nextCoord: Vector2D;
   protected nearbyUnitCoord: Vector2D;
 
+  protected hookedGroup: group;
+
   constructor(
     public name: string = "Hook",
     public repeatInterval: number = 1,
@@ -55,6 +57,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.hookPause = false;
     this.nextCoord = new Vector2D();
     this.nearbyUnitCoord = new Vector2D();
+    this.hookedGroup = CreateGroup();
   }
   
   protected calculateDamage(input: CustomAbilityInput): number {
@@ -76,40 +79,38 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     return this;
   }
   
-  hookClosestUnit(hookedGroup: group): this { 
+  hookClosestUnit(hookedGroup: group, casterPlayer: player): this { 
     let closestDistance = this.aoe + 1;
     ForGroup(hookedGroup, () => {
       const nearbyUnit = GetEnumUnit();
-      if (!this.onlyHookHeroes || IsUnitType(nearbyUnit, UNIT_TYPE_HERO)) {
-        this.nearbyUnitCoord.setPos(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit));
-        const distance = CoordMath.distance(
-          this.hookCoords, this.nearbyUnitCoord
-        );
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          this.hookedUnit = nearbyUnit;
+      // change hook condition, if want to hook allies
+      if (UnitHelper.isUnitTargetableForPlayer(nearbyUnit, casterPlayer)) {
+        if (!this.onlyHookHeroes || IsUnitType(nearbyUnit, UNIT_TYPE_HERO)) {
+          this.nearbyUnitCoord.setPos(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit));
+          const distance = CoordMath.distance(
+            this.hookCoords, this.nearbyUnitCoord
+          );
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            this.hookedUnit = nearbyUnit;
+          }
         }
       }
     });
-
-    DestroyGroup(hookedGroup);
     return this;
   }
 
-  isUnitHookableForPlayer(casterPlayer: player): boolean {
-    // extensible for friendlies
-    return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), casterPlayer);
-  }
-
   hookNearbyUnits(aoe: number, casterPlayer: player): this {
-    const hookedGroup = UnitHelper.getNearbyValidUnits(
-      this.hookCoords, 
+    GroupEnumUnitsInRange(
+      this.hookedGroup, 
+      this.hookCoords.x, 
+      this.hookCoords.y, 
       aoe,
-      () => {
-        return this.isUnitHookableForPlayer(casterPlayer);
-      }
+      null
     );
-    this.hookClosestUnit(hookedGroup);
+    this.hookClosestUnit(this.hookedGroup, casterPlayer);
+
+    GroupClear(this.hookedGroup);
     return this;
   }
 
@@ -196,23 +197,25 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.currentRange = 0;
-      this.startedHook = false;
-      if (this.hookedUnit) {
-        PauseUnit(this.hookedUnit, false);
-      }
-      this.hookDirection = Hook.DIRECTION_FORWARDS;
-      this.hookedUnit = null;
-      this.hookPause = false;
-      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
+    this.currentRange = 0;
+    this.startedHook = false;
     if (this.hookedUnit) {
       PauseUnit(this.hookedUnit, false);
     }
+    this.hookDirection = Hook.DIRECTION_FORWARDS;
+    this.hookedUnit = null;
+    this.hookPause = false;
     AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
+  }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.hookedGroup);
   }
   
 

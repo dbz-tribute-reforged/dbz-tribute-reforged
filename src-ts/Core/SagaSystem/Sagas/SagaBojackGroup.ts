@@ -21,7 +21,7 @@ export class BojackSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Bojack", "Bido", "Gokua", "Pujin", "Zangya"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 4000);
     }
 
@@ -38,10 +38,7 @@ export class BojackSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

@@ -14,6 +14,9 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   protected alreadyStunned: Map<number, boolean>;
   protected stunDummy: unit;
 
+  protected sourceCoord: Vector2D;
+  protected affectedGroup: group;
+
   constructor(
     public name: string = "AOEStun",
     public repeatInterval: number = 1,
@@ -25,17 +28,19 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
   ) {
     this.alreadyStunned = new Map();
     this.stunDummy = GetEnumUnit();
+    this.sourceCoord = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
+    this.sourceCoord = new Vector2D(GetUnitX(source), GetUnitY(source));
     if (ability.currentTick == this.startTick) {
 
       // just for testing
       // this.stunDummy = CreateUnit(input.casterPlayer, FourCC('Hmkg'), sourceCoord.x, sourceCoord.y, 0);
       // UnitAddAbility(this.stunDummy, FourCC('AHtb'));
 
-      this.stunDummy = CreateUnit(input.casterPlayer, Constants.dummyCasterId, sourceCoord.x, sourceCoord.y, 0);
+      this.stunDummy = CreateUnit(input.casterPlayer, Constants.dummyCasterId, this.sourceCoord.x, this.sourceCoord.y, 0);
 
       if (this.duration == AOEStun.MICRO) {
         UnitAddAbility(this.stunDummy, FourCC('A08K'));
@@ -48,40 +53,47 @@ export class AOEStun implements AbilityComponent, Serializable<AOEStun> {
       this.alreadyStunned.clear();
     }
 
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      sourceCoord, 
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.sourceCoord.x, 
+      this.sourceCoord.y, 
       this.aoe,
-      () => {
-        return (
-          UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) &&
-          IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-        );
-      }
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      const targetId = GetHandleId(target);
-      if (!this.alreadyStunned.get(targetId) || this.keepStunning) {
-        this.alreadyStunned.set(targetId, true);
-        IssueTargetOrder(this.stunDummy, "thunderbolt", target);
+      if (
+        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) &&
+        IsUnitType(target, UNIT_TYPE_HERO)
+      ) {
+        const targetId = GetHandleId(target);
+        if (!this.alreadyStunned.get(targetId) || this.keepStunning) {
+          this.alreadyStunned.set(targetId, true);
+          IssueTargetOrder(this.stunDummy, "thunderbolt", target);
+        }
       }
     });
 
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
 
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick
     if (ability.isFinishedUsing(this)) {
-      this.cleanup();
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     if (GetUnitTypeId(this.stunDummy) != 0) {
       RemoveUnit(this.stunDummy);
     }
     this.alreadyStunned.clear();
+  }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.affectedGroup);
   }
   
 

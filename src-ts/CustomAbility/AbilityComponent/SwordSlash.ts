@@ -11,8 +11,12 @@ import { Vector3D } from "Common/Vector3D";
 
 export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
 
+  protected targetCoord: Vector2D;
+  protected currentCoord: Vector2D;
   protected previousCoord: Vector2D;
   protected nextDamageTick: number;
+
+  protected affectedGroup: group;
 
   constructor(
     public name: string = "SwordSlash",
@@ -33,35 +37,39 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
   ) {
+    this.targetCoord = new Vector2D(0, 0);
+    this.currentCoord = new Vector2D(0, 0);
     this.previousCoord = new Vector2D(0, 0);
     this.nextDamageTick = 0;
+    this.affectedGroup = CreateGroup();
   }
 
-  private getMouseCoordWithinRange(input: CustomAbilityInput) {
-    let targetCoord = input.targetPoint;
+  private getMouseCoordWithinRange(input: CustomAbilityInput, target: Vector2D) {
+    target.setVector(input.targetPoint);
     const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-    const casterDistance = CoordMath.distance(casterCoord, targetCoord);
+    const casterDistance = CoordMath.distance(casterCoord, target);
 
     if (casterDistance > this.maxDistance) {
-      const casterDirection = CoordMath.angleBetweenCoords(casterCoord, targetCoord);
-      targetCoord = CoordMath.polarProjectCoords(casterCoord, casterDirection, this.maxDistance);
+      const casterDirection = CoordMath.angleBetweenCoords(casterCoord, target);
+      target.polarProjectCoords(casterCoord, casterDirection, this.maxDistance);
     }
-    return new Vector2D(targetCoord.x, targetCoord.y);
   }
 
-  private dealDamageToGroup(source: unit, affectedGroup: group, damage: number): this {
-    ForGroup(affectedGroup, () => {
+  private dealDamageToGroup(input: CustomAbilityInput, source: unit, damage: number): this {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      UnitDamageTarget(
-        source, 
-        target,
-        damage,
-        true,
-        false,
-        this.damageData.attackType,
-        this.damageData.damageType,
-        this.damageData.weaponType
-      );
+      if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer)) {
+        UnitDamageTarget(
+          source, 
+          target,
+          damage,
+          true,
+          false,
+          this.damageData.attackType,
+          this.damageData.damageType,
+          this.damageData.weaponType
+        );
+      }
     });
     return this;
   }
@@ -84,33 +92,33 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       timeRatio,
     );
 
-    const currentCoord = this.previousCoord;
-    const targetCoord = this.getMouseCoordWithinRange(input);
-    const slashDistance = CoordMath.distance(currentCoord, targetCoord);
+    this.currentCoord = this.previousCoord;
+    this.getMouseCoordWithinRange(input, this.targetCoord);
+    const slashDistance = CoordMath.distance(this.currentCoord, this.targetCoord);
 
     if (slashDistance > this.minDistance && ability.currentTick > this.nextDamageTick) {
-      const slashDirection = CoordMath.angleBetweenCoords(currentCoord, targetCoord);
-      const middleCoord = CoordMath.polarProjectCoords(currentCoord, slashDirection, slashDistance/2);
+      const slashDirection = CoordMath.angleBetweenCoords(this.currentCoord , this.targetCoord);
+      this.currentCoord.polarProjectCoords(this.currentCoord, slashDirection, slashDistance/2);
       
       const casterCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-      const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, middleCoord) * CoordMath.degreesToRadians;
+      const sfxAngle = CoordMath.angleBetweenCoords(casterCoord, this.currentCoord) * CoordMath.degreesToRadians;
 
       AbilitySfxHelper.displaySfxListAtCoord(
         ability,
         this.sfxList, 
-        middleCoord, 
+        this.currentCoord, 
         SfxData.SHOW_ALL_GROUPS,
         sfxAngle,
         BlzGetUnitZ(source),
         timeRatio,
       );
 
-      const affectedGroup = UnitHelper.getNearbyValidUnits(
-        middleCoord, 
+      GroupEnumUnitsInRange(
+        this.affectedGroup, 
+        this.currentCoord.x, 
+        this.currentCoord.y, 
         this.aoe,
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
-        }
+        null
       );
       
       const damageThisTick = 
@@ -121,22 +129,25 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
         )
       );
 
-      this.dealDamageToGroup(input.caster.unit, affectedGroup, damageThisTick);
-      DestroyGroup(affectedGroup);
+      this.dealDamageToGroup(input, source, damageThisTick);
+      GroupClear(this.affectedGroup);
       
-      this.previousCoord = new Vector2D(targetCoord.x, targetCoord.y);
+      this.previousCoord.setVector(this.currentCoord);
       this.nextDamageTick = ability.currentTick + this.delayBetweenDamageTicks;
     }
     
     if (ability.isFinishedUsing(this)) {
-      AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
-      AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
     AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
+  }
+
+  cleanup() {
+    this.reset();
   }
 
 

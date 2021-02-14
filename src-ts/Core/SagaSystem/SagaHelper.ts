@@ -9,9 +9,9 @@ import { AbilityNames } from "CustomAbility/AbilityNames";
 import { SagaAbility } from "./SagaAbility";
 
 export module SagaHelper {
-  export function areAllBossesDead(bosses: Map<string, unit>): boolean {
-    for (const [name, boss] of bosses) {
-      if (UnitAlive(boss)) {
+  export function areAllBossesDead(bosses: unit[]): boolean {
+    for (const boss of bosses) {
+      if (UnitHelper.isUnitAlive(boss)) {
         return false;
       }
     }
@@ -43,7 +43,7 @@ export module SagaHelper {
       // -> gui automatic stats setting
       // SagaHelper.setAllStats(sagaUnit, sagaUnitConfig.str, sagaUnitConfig.agi, sagaUnitConfig.int);
       if (mustKill) {
-        saga.bosses.set(name, sagaUnit);
+        saga.bosses.push(sagaUnit);
       }
       if (GetUnitAbilityLevel(sagaUnit, Constants.evilFightingSkills) == 0) {
         UnitAddAbility(sagaUnit, Constants.evilFightingSkills);
@@ -60,6 +60,13 @@ export module SagaHelper {
         )
       )
       */
+      // saga.bossesAI.push(
+      //   new SagaHeroAI(
+      //     sagaUnit
+      //   ).addAbilities(
+      //     sagaUnitConfig.abilities
+      //   )
+      // )
       saga.bossesAI.set(
         sagaUnit,
         new SagaHeroAI(
@@ -68,6 +75,7 @@ export module SagaHelper {
           sagaUnitConfig.abilities
         )
       );
+
       if (sagaUnitConfig.itemDrops.length > 0) {
         saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
       }
@@ -80,8 +88,8 @@ export module SagaHelper {
     SetHeroInt(hero, int, true);
   }
 
-  export function pingMinimap(bosses: Map<string, unit>) {
-    for (const [name, boss] of bosses) {
+  export function pingMinimap(bosses: unit[]) {
+    for (const boss of bosses) {
       if (UnitHelper.isUnitAlive(boss) && !IsUnitHidden(boss)) {
         PingMinimapForForceEx(
           bj_FORCE_ALL_PLAYERS, 

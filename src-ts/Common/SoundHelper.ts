@@ -36,18 +36,19 @@ export module SoundHelper {
         nearbyNappa,
         GetUnitX(unit), GetUnitY(unit), 
         2000,
-        Condition(() => {
-          return GetUnitTypeId(GetFilterUnit()) == Id.nappa;
-        })
+        null,
       )
       
       let keepSpeaking = true;
       ForGroup(nearbyNappa, () => {
-        if (keepSpeaking && rng < 40) {
-          keepSpeaking = false;
-          playSoundOnUnit(GetEnumUnit(), "Audio/Effects/NappaWhereDidHeGo.mp3", 16512);
-        } else {
-          rng = Math.random() * 100;
+        const unit = GetEnumUnit();
+        if (GetUnitTypeId(unit) == Id.nappa) {
+          if (keepSpeaking && rng < 40) {
+            keepSpeaking = false;
+            playSoundOnUnit(unit, "Audio/Effects/NappaWhereDidHeGo.mp3", 16512);
+          } else {
+            rng = Math.random() * 100;
+          }
         }
       });
 

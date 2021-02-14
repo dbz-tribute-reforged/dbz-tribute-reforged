@@ -26,8 +26,8 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Janemba", "Super Janemba"], true);
     
-    this.janemba = this.bosses.get("Janemba");
-    this.superJanemba = this.bosses.get("Super Janemba");
+    this.janemba = this.bosses[0];
+    this.superJanemba = this.bosses[1];
 
     if (this.superJanemba) {
       UnitAddItemById(this.superJanemba, ItemConstants.SagaDrops.DIMENSION_SWORD);
@@ -35,7 +35,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
 
     SagaHelper.sagaHideUnit(this.superJanemba);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 9000);
     }
 
@@ -71,10 +71,7 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

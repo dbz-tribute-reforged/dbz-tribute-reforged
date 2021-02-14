@@ -40,9 +40,9 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
     }
 
     this.addHeroListToSaga(["Lord Slug"], true);
-    this.slug = this.bosses.get("Lord Slug");
+    this.slug = this.bosses[0];
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -76,10 +76,7 @@ export class LordSlugSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

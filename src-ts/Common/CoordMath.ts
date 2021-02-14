@@ -15,10 +15,9 @@ export module CoordMath {
     return Math.sqrt(xDifference * xDifference + yDifference * yDifference);
   }
 
-  // x=rcos y=rsin
-  // angle given in degrees
-  export function polarProjectCoords(source: Vector2D, angle: number, distance: number): Vector2D {
-    return new Vector2D(
+  // legacy function
+  export function polarProjectCoords(source: Vector2D, target: Vector2D, angle: number, distance: number) {
+    target.setPos(
       source.x + distance * Math.cos(angle * degreesToRadians),
       source.y + distance * Math.sin(angle * degreesToRadians)
     );

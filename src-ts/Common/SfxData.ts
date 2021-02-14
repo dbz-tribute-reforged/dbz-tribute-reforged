@@ -2,10 +2,8 @@ import { Vector3D } from "Common/Vector3D";
 
 // maybe move to Commmon, not sure, should only used for CustomAbility right now
 export class SfxData implements Serializable<SfxData> {
-  public static MAX_ID = 0;
   public static readonly SHOW_ALL_GROUPS = -1;
   
-  protected id: number;
   public effects: effect[];
 
   constructor(
@@ -23,7 +21,6 @@ export class SfxData implements Serializable<SfxData> {
     public persistent: boolean = false,
     public attachmentPoint: string = "origin",
   ) {
-    this.id = SfxData.MAX_ID++;
     this.effects = [];
   }
 

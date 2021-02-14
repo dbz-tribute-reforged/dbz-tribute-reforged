@@ -121,12 +121,17 @@ export class ItemStackingManager {
     return this.stackableItemTypes.set(itemType, callback);
   }
 
-  unitNearItem(pickupUnit: unit, pickupItem: item) {
-    const unitPos = new Vector2D(GetUnitX(pickupUnit), GetUnitY(pickupUnit));
-    const itemPos = new Vector2D(GetItemX(pickupItem), GetItemY(pickupItem));
-    return (
-      CoordMath.distance(unitPos, itemPos) < ItemStackingConstants.itemPickupRange
-    );
+  unitNearItem(pickupUnit: unit, pickupItem: item): boolean {
+    // const unitPos = new Vector2D(GetUnitX(pickupUnit), GetUnitY(pickupUnit));
+    // const itemPos = new Vector2D(GetItemX(pickupItem), GetItemY(pickupItem));
+    const unitLoc = Location(GetUnitX(pickupUnit), GetUnitY(pickupUnit));
+    const itemLoc = Location(GetItemX(pickupItem), GetItemY(pickupItem));
+
+    const result: boolean = DistanceBetweenPoints(unitLoc, itemLoc) < ItemStackingConstants.itemPickupRange;
+
+    RemoveLocation(unitLoc);
+    RemoveLocation(itemLoc);
+    return result;
   }
 
   stackItem(

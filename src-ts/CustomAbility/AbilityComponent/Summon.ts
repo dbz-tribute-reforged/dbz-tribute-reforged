@@ -35,11 +35,12 @@ export class Summon implements AbilityComponent, Serializable<Summon> {
       this.setupSummonUnit(GetSummonedUnit(), stats);
     } else {
       let summonGroup = CreateGroup();
-      GroupEnumUnitsOfPlayer(summonGroup, input.casterPlayer, Condition(() => {
-        return GetUnitTypeId(GetFilterUnit()) == this.target;
-      }));
+      GroupEnumUnitsOfPlayer(summonGroup, input.casterPlayer, null);
       ForGroup(summonGroup, () => {
-        this.setupSummonUnit(GetEnumUnit(), stats);
+        const target = GetEnumUnit();
+        if (GetUnitTypeId(target) == this.target) {
+          this.setupSummonUnit(target, stats);
+        }
       })
       DestroyGroup(summonGroup);
     }

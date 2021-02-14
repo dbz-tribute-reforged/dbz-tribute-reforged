@@ -18,22 +18,25 @@ function performBraveSword() {
 
   TimerStart(CreateTimer(), 1.0, true, () => {
     if (UnitHasItem(unit, braveSword)) {
-      position.x = GetUnitX(unit);
-      position.y = GetUnitY(unit);
-      const damagedGroup = UnitHelper.getNearbyValidUnits(
-        position, 
+      position.setUnit(unit);
+
+      const damagedGroup = CreateGroup();
+      GroupEnumUnitsInRange(
+        damagedGroup, 
+        position.x, 
+        position.y, 
         ItemConstants.BIO_LAB_AOE, 
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player);
-        }
-      )
+        null
+      );
 
       ForGroup(damagedGroup, () => {
         const target = GetEnumUnit();
-        const mana = GetUnitState(target, UNIT_STATE_MANA)
-        const newMana = mana - mana * ItemConstants.BRAVE_SWORD_MANA_LOSS;
-        if (newMana > 1) {
-          SetUnitState(target, UNIT_STATE_MANA, newMana);
+        if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+          const mana = GetUnitState(target, UNIT_STATE_MANA)
+          const newMana = mana - mana * ItemConstants.BRAVE_SWORD_MANA_LOSS;
+          if (newMana > 1) {
+            SetUnitState(target, UNIT_STATE_MANA, newMana);
+          }
         }
       })
       
@@ -52,30 +55,33 @@ function performBioLab() {
 
   TimerStart(CreateTimer(), 1.0, true, () => {
     if (UnitHasItem(unit, bioLab)) {
-      position.x = GetUnitX(unit);
-      position.y = GetUnitY(unit);
-      const damagedGroup = UnitHelper.getNearbyValidUnits(
-        position, 
+      position.setUnit(unit);
+
+      const damagedGroup = CreateGroup();
+      GroupEnumUnitsInRange(
+        damagedGroup, 
+        position.x, 
+        position.y, 
         ItemConstants.BIO_LAB_AOE, 
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player);
-        }
-      )
+        null
+      );
 
       ForGroup(damagedGroup, () => {
         const target = GetEnumUnit();
-        const damage = GetUnitState(target, UNIT_STATE_LIFE) * ItemConstants.BIO_LAB_DAMAGE;
-        if (damage > 0) {
-          UnitDamageTarget(
-            unit, 
-            target, 
-            damage,
-            true,
-            false,
-            ATTACK_TYPE_HERO,
-            DAMAGE_TYPE_NORMAL,
-            WEAPON_TYPE_WHOKNOWS,
-          )
+        if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+          const damage = GetUnitState(target, UNIT_STATE_LIFE) * ItemConstants.BIO_LAB_DAMAGE;
+          if (damage > 0) {
+            UnitDamageTarget(
+              unit, 
+              target, 
+              damage,
+              true,
+              false,
+              ATTACK_TYPE_HERO,
+              DAMAGE_TYPE_NORMAL,
+              WEAPON_TYPE_WHOKNOWS,
+            )
+          }
         }
       })
       

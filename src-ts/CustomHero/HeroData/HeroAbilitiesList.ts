@@ -396,6 +396,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.AllMight.DETROIT_SMASH, AbilityNames.AllMight.ONE_FOR_ALL,
       AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
       AbilityNames.Tien.DODON_RAY,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

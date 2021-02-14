@@ -9,6 +9,11 @@ import { PathingCheck } from "Common/PathingCheck";
 
 export class GroundVortex implements AbilityComponent, Serializable<GroundVortex> {
 
+  protected currentCoord: Vector2D;
+  protected targetCoord: Vector2D;
+  protected tmpPos: Vector2D;
+  protected affectedGroup: group;
+  
   constructor(
     public name: string = "GroundVortex",
     public repeatInterval: number = 1,
@@ -29,7 +34,10 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
     public closenessDamageMult: number = 1.0,
     public durationDamageMult: number = 1.0,
   ) {
-
+    this.currentCoord = new Vector2D();
+    this.targetCoord = new Vector2D();
+    this.tmpPos = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
 
   private dealDamageToUnit(ability: CustomAbility, input: CustomAbilityInput, target: unit, closenessRatio: number): this {
@@ -57,48 +65,51 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      new Vector2D(GetUnitX(source), GetUnitY(source)), 
-      this.aoe, 
-      () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
-      }
+    this.currentCoord.setUnit(source);
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.currentCoord.x, 
+      this.currentCoord.y, 
+      this.aoe,
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    // this.currentCoord.setUnit(input.caster.unit);
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      
-      const currentCoord = new Vector2D(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-      const targetCurrentCoord = new Vector2D(GetUnitX(target), GetUnitY(target));
-      const targetDistance = CoordMath.distance(currentCoord, targetCurrentCoord);
+      if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer)) {
 
-      // closenessRatio = 1 at 0 distance, 0 at max distance
-      const closenessRatio = 1 - (targetDistance / Math.max(1, this.aoe));
-
-      const projectionAngle = 
-        this.angle + 
-        (this.closenessAngle - this.angle) * closenessRatio + 
-        CoordMath.angleBetweenCoords(targetCurrentCoord, currentCoord);
-      
-      const projectionDistance = 
-        this.distance + 
-        (this.closenessDistanceMult * this.distance) * closenessRatio;
-      
-      const targetNewCoord = CoordMath.polarProjectCoords(
-        targetCurrentCoord, 
-        projectionAngle,
-        projectionDistance
-      );
-
-      PathingCheck.moveGroundUnitToCoord(target, targetNewCoord);
-      this.dealDamageToUnit(ability, input, target, closenessRatio);
+        this.targetCoord.setUnit(target);
+        const targetDistance = CoordMath.distance(this.currentCoord, this.targetCoord);
+  
+        // closenessRatio = 1 at 0 distance, 0 at max distance
+        const closenessRatio = 1 - (targetDistance / Math.max(1, this.aoe));
+  
+        const projectionAngle = 
+          this.angle + 
+          (this.closenessAngle - this.angle) * closenessRatio + 
+          CoordMath.angleBetweenCoords(this.targetCoord, this.tmpPos);
+        
+        const projectionDistance = 
+          this.distance + 
+          (this.closenessDistanceMult * this.distance) * closenessRatio;
+        
+        this.tmpPos.polarProjectCoords(
+          this.targetCoord, 
+          projectionAngle,
+          projectionDistance
+        );
+  
+        PathingCheck.moveGroundUnitToCoord(target, this.tmpPos);
+        this.dealDamageToUnit(ability, input, target, closenessRatio);
+      }
     });
 
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
   }
 
   cleanup() {
-
+    DestroyGroup(this.affectedGroup);
   }
 
   clone(): AbilityComponent {
