@@ -213,7 +213,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
 
-    for (let i = 0; i < this.bosses.length; ++i) {
+    for (let i = 1; i < this.bosses.length; ++i) {
       const frieza = this.bosses[i];
       SagaHelper.sagaHideUnit(frieza);
     }

@@ -3475,7 +3475,7 @@ export const BeamComponents = [
     beamUnitType: "hpea",
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
-      // { name: "damage mankind destruction attack dps" },
+      { name: "damage mankind destruction attack dps" },
       { name: "timed life beam mankind destruction attack" },
       { name: "sfx beam mankind destruction attack" },
     ],
