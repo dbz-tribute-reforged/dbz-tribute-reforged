@@ -22272,6 +22272,9 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func019Func003Func001C()
     if (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 12) == "Local Player") then
         return true
     end
+    if (SubStringBJ(GetPlayerName(GetOwningPlayer(udg_TempUnit)), 1, 9) == "janemba50") then
+        return true
+    end
     return false
 end
 
@@ -22369,13 +22372,10 @@ function Trig_Hero_Pick_Setup_Selected_Heroes_Func001A()
     if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func019C()) then
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func019Func002C()) then
             BlzSetHeroProperName(udg_TempUnit, "King Krum Rool")
-            BlzSetAbilityStringFieldBJ(BlzGetUnitAbility(udg_TempUnit, FourCC("A0IX")), ABILITY_SF_NAME, "Chimp Smasher!")
         else
         end
         if (Trig_Hero_Pick_Setup_Selected_Heroes_Func001Func019Func003C()) then
             BlzSetHeroProperName(udg_TempUnit, "Koing K Rool")
-            BlzSetAbilityStringFieldBJ(BlzGetUnitAbility(udg_TempUnit, FourCC("A0IV")), ABILITY_SF_NAME, "Koing's Krown Toss")
-            BlzSetAbilityStringFieldBJ(BlzGetUnitAbility(udg_TempUnit, FourCC("A0IX")), ABILITY_SF_NAME, "Chimp Smasher!")
         else
         end
     else

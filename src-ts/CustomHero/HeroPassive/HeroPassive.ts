@@ -87,6 +87,7 @@ export function kidBuuPassive(customHero: CustomHero) {
 export function superJanembaPassive(customHero: CustomHero) {
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
+  const targetPos = new Vector2D();
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
@@ -102,7 +103,7 @@ export function superJanembaPassive(customHero: CustomHero) {
         const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
         if (rakshasaClawLevel + devilClawLevel > 0) {
           const target = GetTriggerUnit();
-          const targetPos = new Vector2D(GetUnitX(target), GetUnitY(target));
+          targetPos.setUnit(target);
           let onHitName = AbilityNames.SuperJanemba.RAKSHASA_CLAW_ON_HIT;
           let onHitAbility = HeroPassiveData.RAKSHASA_CLAW_ABILITY;
           if (devilClawLevel > 0) {
@@ -226,6 +227,7 @@ export function tapionPassive(customHero: CustomHero) {
 
 
 export function dyspoPassive(customHero: CustomHero) {
+  const targetPos = new Vector2D();
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(
@@ -243,7 +245,7 @@ export function dyspoPassive(customHero: CustomHero) {
         // const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
         if (justiceKickLevel > 0) {
           const target = GetTriggerUnit();
-          const targetPos = new Vector2D(GetUnitX(target), GetUnitY(target));
+          targetPos.setUnit(target);
           let onHitName = AbilityNames.Dyspo.JUSTICE_KICK_ON_HIT;
           let onHitAbility = HeroPassiveData.JUSTICE_KICK_ABILITY;
           // if (devilClawLevel > 0) {

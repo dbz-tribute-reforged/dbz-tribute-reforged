@@ -7,7 +7,7 @@ export class DeadZoneSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 5;
+    this.delay = 30;
     this.stats = 10;
   }
 
