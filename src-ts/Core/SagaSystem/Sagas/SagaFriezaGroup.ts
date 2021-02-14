@@ -37,12 +37,12 @@ export class NamekSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Dodoria", "Zarbon", "Zarbon 2"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
     
-    this.zarbon = this.bosses.get("Zarbon");
-    this.zarbon2 = this.bosses.get("Zarbon 2");
+    this.zarbon = this.bosses[1];
+    this.zarbon2 = this.bosses[2];
     SagaHelper.sagaHideUnit(this.zarbon2);
     
     this.ping()
@@ -71,10 +71,7 @@ export class NamekSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -142,7 +139,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Guldo", "Recoome", "Burter", "Jeice", "Ginyu"], true);
     
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
     }
 
@@ -159,10 +156,7 @@ export class GinyuSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -219,12 +213,12 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Frieza 1", "Frieza 2", "Frieza 3", "Frieza 4", "Frieza 5"], true);
 
-    for (let i = 2; i <= 5; ++i) {
-      const frieza = this.bosses.get("Frieza " + i);
+    for (let i = 0; i < this.bosses.length; ++i) {
+      const frieza = this.bosses[i];
       SagaHelper.sagaHideUnit(frieza);
     }
     
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
     }
     
@@ -235,9 +229,9 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   update(t: number): void {
     super.update(t);
     // if frieza dead, replace with strong frieza
-    for (let i = 1; i < 5; ++i) {
-      const frieza = this.bosses.get("Frieza " + i);
-      const nextFrieza = this.bosses.get("Frieza " + (i+1));
+    for (let i = 0; i < this.bosses.length - 1; ++i) {
+      const frieza = this.bosses[i];
+      const nextFrieza = this.bosses[i+1];
       if (
         frieza && 
         nextFrieza &&
@@ -263,10 +257,7 @@ export class FriezaSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -322,7 +313,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Mecha Frieza", "King Cold"], true);
     
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
     
@@ -339,10 +330,7 @@ export class TrunksSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -406,13 +394,13 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Resurrection Frieza 1", "Resurrection Frieza Final", "Resurrection Frieza Golden"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
 
-    this.frieza1 = this.bosses.get("Resurrection Frieza 1");
-    this.friezaFinal = this.bosses.get("Resurrection Frieza Final");
-    this.friezaGolden = this.bosses.get("Resurrection Frieza Golden");
+    this.frieza1 = this.bosses[0];
+    this.friezaFinal = this.bosses[1];
+    this.friezaGolden = this.bosses[2];
 
     SagaHelper.sagaHideUnit(this.friezaFinal);
     SagaHelper.sagaHideUnit(this.friezaGolden);
@@ -460,10 +448,7 @@ export class GoldenFriezaSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

@@ -11,6 +11,8 @@ export class Deflector implements AbilityComponent, Serializable<Deflector> {
   protected sourceCoord: Vector2D;
   protected targetCoord: Vector2D;
 
+  protected affectedGroup: group;
+
   constructor(
     public name: string = "Deflector",
     public repeatInterval: number = 1,
@@ -22,33 +24,36 @@ export class Deflector implements AbilityComponent, Serializable<Deflector> {
   ) {
     this.sourceCoord = new Vector2D();
     this.targetCoord = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.sourceCoord, 
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.sourceCoord.x, 
+      this.sourceCoord.y, 
       this.aoe,
-      () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies);
-      }
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      this.targetCoord.x = GetUnitX(target);
-      this.targetCoord.y = GetUnitY(target);
-      const deflectionAngle = this.extraAngle + 
-        CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
-      SetUnitTurnSpeed(target, 999);
-      SetUnitFacing(target, deflectionAngle);
-      SetUnitTurnSpeed(target, GetUnitDefaultTurnSpeed(target));
+      if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
+        this.targetCoord.x = GetUnitX(target);
+        this.targetCoord.y = GetUnitY(target);
+        const deflectionAngle = this.extraAngle + 
+          CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
+        SetUnitTurnSpeed(target, 999);
+        SetUnitFacing(target, deflectionAngle);
+        SetUnitTurnSpeed(target, GetUnitDefaultTurnSpeed(target));
+      }
     });
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
   }
 
   cleanup() {
-    
+    DestroyGroup(this.affectedGroup);
   }
   
 

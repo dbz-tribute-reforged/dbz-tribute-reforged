@@ -20,7 +20,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Haze Shenron", "Rage Shenron", "Oceanus Shenron", "Naturon Shenron", "Nuova Shenron", "Eis Shenron"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -37,10 +37,7 @@ export class ShadowDragonSaga1 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -86,12 +83,12 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Syn Shenron", "Omega Shenron"], true);
     
-    this.syn = this.bosses.get("Syn Shenron");
-    this.omega = this.bosses.get("Omega Shenron");
+    this.syn = this.bosses[0];
+    this.omega = this.bosses[1];
 
     SagaHelper.sagaHideUnit(this.omega);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -156,10 +153,7 @@ export class ShadowDragonSaga2 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

@@ -60,18 +60,16 @@ export module WinLossHelper {
         TimerStart(CreateTimer(), 10, false, () => {
           for (let i = 0; i < Constants.maxActivePlayers; ++i) {
             const teleportGroup = CreateGroup();
-            GroupEnumUnitsOfPlayer(teleportGroup, Player(i), Condition(() => {
-              return (
-                IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-              )
-            }));
+            GroupEnumUnitsOfPlayer(teleportGroup, Player(i), null);
   
             ForGroup(teleportGroup, () => {
               const teleportUnit = GetEnumUnit();
-              SetUnitInvulnerable(teleportUnit, false);
-              PauseUnit(teleportUnit, false);
-              SetUnitX(teleportUnit, 0);
-              SetUnitY(teleportUnit, 0);
+              if (IsUnitType(teleportUnit, UNIT_TYPE_HERO)) {
+                SetUnitInvulnerable(teleportUnit, false);
+                PauseUnit(teleportUnit, false);
+                SetUnitX(teleportUnit, 0);
+                SetUnitY(teleportUnit, 0);
+              }
             })
             DestroyGroup(teleportGroup);
           }

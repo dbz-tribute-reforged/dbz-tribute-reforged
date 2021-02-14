@@ -10,14 +10,14 @@ export abstract class Entity {
     private static entityLoop: Function;
 
     private _internalTimer: number = 0;
-    protected _timerDelay: number = 0.01;
+    protected _timerDelay: number = 0.03;
 
     protected constructor() {
         if (Entity.entityLoop == null) {
             Entity.entityLoop = () => {
                 Entity.entities.forEach((entity) =>
                     xpcall(() => {
-                        entity._internalTimer += 0.01;
+                        entity._internalTimer += 0.03;
                         if (entity._internalTimer >= entity._timerDelay) {
                             entity.step(entity._timerDelay);
                             entity._internalTimer = 0;

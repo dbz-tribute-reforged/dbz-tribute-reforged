@@ -40,14 +40,19 @@ export class SagaHeroAI {
 
   protected isAggroLost: boolean;
 
-  protected abilities: Map<string, SagaAbility>;
+  protected abilitiesNames: string[];
+  protected sagaAbilities: SagaAbility[];
   protected maxAbilityChance: number;
 
   protected abilityInput: CustomAbilityInput;
-  protected abilityTarget: Vector2D;
+  protected aggroPos: Vector2D;
 
   protected bossPos: Vector2D;
-  protected targetPos: Vector2D;
+  protected tmpPos: Vector2D;
+  protected abilityTargetPos: Vector2D;
+
+  protected nearbyBeams: group;
+  protected nearbyEnemies: group;
 
   constructor (
     public readonly sagaUnit: unit,
@@ -85,28 +90,35 @@ export class SagaHeroAI {
 
     this.isAggroLost = false;
 
-    this.abilities = new Map();
+    this.abilitiesNames = [];
+    this.sagaAbilities = [];
     this.maxAbilityChance = 0;
 
-    this.abilityTarget = new Vector2D();
+    this.aggroPos = new Vector2D();
     this.abilityInput = new CustomAbilityInput(
       this.sagaCustomHero, 
       this.owningPlayer,
       1,
-      this.abilityTarget,
-      this.abilityTarget,
-      this.abilityTarget,
+      this.aggroPos,
+      this.aggroPos,
+      this.aggroPos,
     );
     this.abilityInput.castUnit = this.sagaUnit;
-
     
     this.bossPos = new Vector2D();
-    this.targetPos = new Vector2D();
+    this.tmpPos = new Vector2D();
+    this.abilityTargetPos = new Vector2D();
+
+    this.nearbyBeams = CreateGroup();
+    this.nearbyEnemies = CreateGroup();
   }
 
   public cleanup(): this {
-    this.abilities.clear();
+    this.abilitiesNames.splice(0, this.abilitiesNames.length);
+    this.sagaAbilities.splice(0, this.sagaAbilities.length);
     this.sagaCustomHero.cleanup();
+    DestroyGroup(this.nearbyBeams);
+    DestroyGroup(this.nearbyEnemies);
     return this;
   }
 
@@ -134,7 +146,10 @@ export class SagaHeroAI {
     for (const ability of abilitiesToAdd) {
       const addedAbility = ability.clone();
       addedAbility.maxCd *= 100 / Math.max(1, this.actionInterval);
-      this.abilities.set(addedAbility.name, addedAbility);
+
+      this.abilitiesNames.push(addedAbility.name);
+      this.sagaAbilities.push(addedAbility);
+
       this.sagaCustomHero.addAbilityFromAll(ability.name);
       if (!this.sagaCustomHero.hasAbility(addedAbility.name)) {
         this.sagaCustomHero.addAbilityFromAll(addedAbility.name);
@@ -142,10 +157,6 @@ export class SagaHeroAI {
       this.maxAbilityChance += ability.castChance;
     }
     return this;
-  }
-
-  public getNumAbilities(): number {
-    return this.abilities.size;
   }
 
   public performTickActions() {
@@ -158,18 +169,17 @@ export class SagaHeroAI {
         this.postUpdate();
       } else {
         // increment tick based on speed of Saga's Update rate
-        this.currentTick += 2;
+        this.currentTick += 3;
       }
     }
   }
 
   public preUpdate() {
     if (this.aggroTarget) {
-      this.abilityTarget.x = GetUnitX(this.aggroTarget);
-      this.abilityTarget.y = GetUnitY(this.aggroTarget);
+      this.aggroPos.setUnit(this.aggroTarget);
       this.abilityInput.targetUnit = this.aggroTarget;
     }
-    for (const ability of this.abilities.values()) {
+    for (const ability of this.sagaAbilities) {
       ability.updateCd();
     }
   }
@@ -204,15 +214,15 @@ export class SagaHeroAI {
       this.currentAction = SagaAIData.Action.REAGGRO;
     } else if (this.numAttacks < this.consecutiveAttacksAllowed) {
       this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
-      this.targetPos.setPos(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
-      const targetDistance = CoordMath.distance(this.bossPos, this.targetPos);
+      this.tmpPos.setPos(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
+      const targetDistance = CoordMath.distance(this.bossPos, this.tmpPos);
 
       if (targetDistance > GetUnitAcquireRange(this.sagaUnit)) {
         this.currentAction = SagaAIData.Action.REAGGRO;
       } else if (
         this.numAttacks > 0 && 
         targetDistance < this.beamRange && 
-        this.getNumAbilities() > 0
+        this.sagaAbilities.length > 0
       ) {
         this.currentAction = SagaAIData.Action.BEAM;
       }
@@ -315,7 +325,7 @@ export class SagaHeroAI {
     if (this.aggroTarget) {
       const rng = Math.random() * this.maxAbilityChance;
       let currentChance = 0;
-      for (const ability of this.abilities.values()) {
+      for (const ability of this.sagaAbilities) {
         currentChance += ability.castChance;
         if (currentChance >= rng && ability.readyToUse()) {
           ability.applyCd();
@@ -329,14 +339,20 @@ export class SagaHeroAI {
           
           let abilityInput = this.abilityInput;
           if (!ability.isTracking) {
-            const targetCoord = new Vector2D(GetUnitX(this.aggroTarget), GetUnitY(this.aggroTarget));
+            this.abilityTargetPos.setUnit(this.aggroTarget);
+            // abilityInput.level = this.getBeamLevel(ability.maxLevel);
+            // abilityInput.targetPoint = this.abilityTargetPos;
+            // abilityInput.mouseData = this.abilityTargetPos;
+            // abilityInput.castPoint = this.abilityTargetPos;
+            // abilityInput.targetUnit = this.aggroTarget;
+            // abilityInput.castUnit = this.sagaUnit;
             abilityInput = new CustomAbilityInput(
               this.sagaCustomHero,
               this.owningPlayer,
               this.getBeamLevel(ability.maxLevel),
-              targetCoord,
-              targetCoord,
-              targetCoord,
+              this.abilityTargetPos,
+              this.abilityTargetPos,
+              this.abilityTargetPos,
               this.aggroTarget,
               this.sagaUnit
             )
@@ -400,6 +416,10 @@ export class SagaHeroAI {
   ) {
     if (UnitHelper.isUnitAlive(this.sagaUnit)) {
       this.abilityInput.level = abilityLevel;
+      this.abilityInput.targetPoint = this.aggroPos;
+      this.abilityInput.mouseData = this.aggroPos;
+      this.abilityInput.castPoint = this.aggroPos;
+      this.abilityInput.targetUnit = this.aggroTarget;
       this.useCustomAbilityWithInput(abilityName, this.abilityInput, showText);
     }
   }
@@ -411,6 +431,7 @@ export class SagaHeroAI {
   ) {
     if (
       this.sagaCustomHero.canCastAbility(abilityName, abilityInput) && 
+      !UnitHelper.isUnitStunned(this.sagaUnit) && 
       !UnitHasBuffBJ(this.sagaUnit, Constants.silenceBuff)
     ) {
       if (showText) {
@@ -429,66 +450,64 @@ export class SagaHeroAI {
     let dodgeResult = SagaAIData.PERFORMED_NO_DODGE;
     if (this.maxBeamsToDodge <= 0) return dodgeResult;
 
-    const nearbyBeams = CreateGroup();
     const bossPlayer = this.owningPlayer;
     const beamSearchRange = SagaAIData.defaultDodgeAOE;
     this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
     GroupEnumUnitsInRange(
-      nearbyBeams,
+      this.nearbyBeams,
       this.bossPos.x,
       this.bossPos.y,
       beamSearchRange,
-      Condition(() => {
-        const testUnit = GetFilterUnit();
-        return (
-          GetUnitTypeId(testUnit) == Constants.dummyBeamUnitId &&
-          IsUnitEnemy(testUnit, bossPlayer) &&
-          !UnitHelper.isUnitDead(testUnit)
-        );
-      })
+      null
     );
 
     let beamsAccountedFor = 0;
     let beamsTooClose = 0;
     let dodgeAngle = SagaAIData.NO_DODGE_ANGLE;
     
-    ForGroup(nearbyBeams, () => {
+    ForGroup(this.nearbyBeams, () => {
+      const beam = GetEnumUnit();
       if (
-        beamsAccountedFor < this.maxBeamsToDodge || 
-        this.maxBeamsToDodge == SagaAIData.UNLIMITED_BEAM_DODGES)
-      {
-        const beam = GetEnumUnit();
-        this.targetPos.setPos(GetUnitX(beam), GetUnitY(beam));
-        if (CoordMath.distance(this.targetPos, this.bossPos) > SagaAIData.defaultDodgeDistance) {
-          let beamDodgeAngle = CoordMath.angleBetweenCoords(this.targetPos, this.bossPos);
-          if (beamDodgeAngle < 0) {
-            beamDodgeAngle += 360;
-          }
-          let beamDodgeDirection = beamDodgeAngle - GetUnitFacing(beam);
-
-          if (beamDodgeDirection > 0) {
-            beamDodgeDirection = 1;
+        GetUnitTypeId(beam) == Constants.dummyBeamUnitId &&
+        IsUnitEnemy(beam, bossPlayer) &&
+        !UnitHelper.isUnitDead(beam)
+      ) {
+        if (
+          beamsAccountedFor < this.maxBeamsToDodge || 
+          this.maxBeamsToDodge == SagaAIData.UNLIMITED_BEAM_DODGES)
+        {
+          this.tmpPos.setPos(GetUnitX(beam), GetUnitY(beam));
+          if (CoordMath.distance(this.tmpPos, this.bossPos) > SagaAIData.defaultDodgeDistance) {
+            let beamDodgeAngle = CoordMath.angleBetweenCoords(this.tmpPos, this.bossPos);
+            if (beamDodgeAngle < 0) {
+              beamDodgeAngle += 360;
+            }
+            let beamDodgeDirection = beamDodgeAngle - GetUnitFacing(beam);
+  
+            if (beamDodgeDirection > 0) {
+              beamDodgeDirection = 1;
+            } else {
+              beamDodgeDirection = -1;
+            }
+  
+            beamDodgeAngle = beamDodgeAngle + 
+              beamDodgeDirection * (30 + Math.random() * 90);
+            
+            if (dodgeAngle == SagaAIData.NO_DODGE_ANGLE) {
+              dodgeAngle = beamDodgeAngle;
+            } else {
+              dodgeAngle = (dodgeAngle + beamDodgeAngle) * 0.5;
+            }
+  
+            ++beamsAccountedFor;
           } else {
-            beamDodgeDirection = -1;
+            ++beamsTooClose;
           }
-
-          beamDodgeAngle = beamDodgeAngle + 
-            beamDodgeDirection * (30 + Math.random() * 90);
-          
-          if (dodgeAngle == SagaAIData.NO_DODGE_ANGLE) {
-            dodgeAngle = beamDodgeAngle;
-          } else {
-            dodgeAngle = (dodgeAngle + beamDodgeAngle) * 0.5;
-          }
-
-          ++beamsAccountedFor;
-        } else {
-          ++beamsTooClose;
         }
       }
     });
-    DestroyGroup(nearbyBeams);
+    GroupClear(this.nearbyBeams);
 
     const currentLife = GetUnitLifePercent(this.sagaUnit);
     if (
@@ -505,20 +524,21 @@ export class SagaHeroAI {
       //   GetPlayerId(this.owningPlayer), 
       //   this.sagaUnit
       // );
-      let dodgeCoord = CoordMath.polarProjectCoords(
-        this.bossPos, 
-        dodgeAngle, 
+
+      this.tmpPos.polarProjectCoords(
+        this.bossPos,
+        dodgeAngle,
         SagaAIData.defaultDodgeDistance
       );
+
       for (let offset = 0; offset < 1000; offset += 60) {
-        if (PathingCheck.isGroundWalkable(dodgeCoord)) {
-          IssuePointOrder(this.sagaUnit, SagaAIData.Order.DODGE, dodgeCoord.x, dodgeCoord.y);
+        if (PathingCheck.isGroundWalkable(this.tmpPos)) {
+          IssuePointOrder(this.sagaUnit, SagaAIData.Order.DODGE, this.tmpPos.x, this.tmpPos.y);
           if (
             currentLife <= this.aggressiveZanzoThreshold && 
             this.previousLifePercent - currentLife > this.guardLifePercentThreshold
           ) {
-            this.abilityTarget.x = dodgeCoord.x;
-            this.abilityTarget.y = dodgeCoord.y;
+            this.aggroPos.setVector(this.tmpPos);
             this.useCustomAbility(
               AbilityNames.Saga.ZANZO_DASH, 
               true,
@@ -526,7 +546,8 @@ export class SagaHeroAI {
           }
           break;
         }
-        dodgeCoord = CoordMath.polarProjectCoords(
+        
+        this.tmpPos.polarProjectCoords(
           this.bossPos, 
           dodgeAngle, 
           SagaAIData.defaultDodgeDistance + offset
@@ -540,49 +561,47 @@ export class SagaHeroAI {
 
   public findNewAggroTarget(): unit | undefined {
     let result = undefined;
-    const enemyGroup = CreateGroup();
     const bossPlayer = this.owningPlayer;
     const acquireRange = GetUnitAcquireRange(this.sagaUnit);
     this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
 
     GroupEnumUnitsInRange(
-      enemyGroup,
+      this.nearbyEnemies,
       this.bossPos.x,
       this.bossPos.y,
       acquireRange,
-      Condition(() => {
-        const testUnit = GetFilterUnit();
-        const x = GetUnitX(testUnit);
-        const y = GetUnitY(testUnit);
-        return (
-          IsUnitEnemy(testUnit, bossPlayer) &&
-          IsUnitType(testUnit, UNIT_TYPE_HERO) && 
-          !IsUnitType(testUnit, UNIT_TYPE_SUMMONED) && 
-          !UnitHelper.isUnitDead(testUnit) &&
-          !BlzIsUnitInvulnerable(testUnit) && 
-          !IsUnitHidden(testUnit) && 
-          !(
-            x > Constants.heavenHellBottomLeft.x &&
-            y > Constants.heavenHellBottomLeft.y &&
-            x < Constants.heavenHellTopRight.x &&
-            y < Constants.heavenHellTopRight.y
-          )
-        )
-      })
+      null
     );
 
     let closestUnit = undefined;
     let closestDistance = acquireRange;
-    ForGroup(enemyGroup, () => {
+    ForGroup(this.nearbyEnemies, () => {
       const enemyUnit = GetEnumUnit();
-      this.targetPos.setPos(GetUnitX(enemyUnit), GetUnitY(enemyUnit));
-      const enemyDistance = CoordMath.distance(this.targetPos, this.bossPos);
-      if (enemyDistance < closestDistance) {
-        closestUnit = enemyUnit;
-        closestDistance = enemyDistance;
+      const x = GetUnitX(enemyUnit);
+      const y = GetUnitY(enemyUnit);
+      if (
+        IsUnitEnemy(enemyUnit, bossPlayer) &&
+        IsUnitType(enemyUnit, UNIT_TYPE_HERO) && 
+        !IsUnitType(enemyUnit, UNIT_TYPE_SUMMONED) && 
+        !UnitHelper.isUnitDead(enemyUnit) &&
+        !BlzIsUnitInvulnerable(enemyUnit) && 
+        !IsUnitHidden(enemyUnit) && 
+        !(
+          x > Constants.heavenHellBottomLeft.x &&
+          y > Constants.heavenHellBottomLeft.y &&
+          x < Constants.heavenHellTopRight.x &&
+          y < Constants.heavenHellTopRight.y
+        )
+      ) {
+        this.tmpPos.setPos(x, y);
+        const enemyDistance = CoordMath.distance(this.tmpPos, this.bossPos);
+        if (enemyDistance < closestDistance) {
+          closestUnit = enemyUnit;
+          closestDistance = enemyDistance;
+        }
       }
     });
-    DestroyGroup(enemyGroup);
+    GroupClear(this.nearbyEnemies);
 
     if (closestUnit != undefined) {
       result = closestUnit;

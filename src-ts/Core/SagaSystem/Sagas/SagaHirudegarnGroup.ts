@@ -24,12 +24,12 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Hirudegarn", "Mature Hirudegarn"], true);
     
-    this.hirudegarn = this.bosses.get("Hirudegarn");
-    this.matureHirudegarn = this.bosses.get("Mature Hirudegarn");
+    this.hirudegarn = this.bosses[0];
+    this.matureHirudegarn = this.bosses[1];
 
     SagaHelper.sagaHideUnit(this.matureHirudegarn);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
     }
 
@@ -58,10 +58,7 @@ export class HirudegarnSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

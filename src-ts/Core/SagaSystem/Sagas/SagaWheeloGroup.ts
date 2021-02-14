@@ -30,8 +30,8 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
     );
     this.addHeroListToSaga(["Wheelo", "Kishime", "Misokatsun", "Ebifurya", "Dr. Kochin"], true);
     
-    this.kochin = this.bosses.get("Dr. Kochin");
-    this.wheelo = this.bosses.get("Wheelo");
+    this.kochin = this.bosses[4];
+    this.wheelo = this.bosses[0];
 
     SagaHelper.sagaHideUnit(this.wheelo);
 
@@ -65,10 +65,7 @@ export class WheeloSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

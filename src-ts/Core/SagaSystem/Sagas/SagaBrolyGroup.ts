@@ -28,9 +28,9 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Broly DBZ 1"], true);
 
-    this.broly = this.bosses.get("Broly DBZ 1");
+    this.broly = this.bosses[0];
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 9000);
     }
 
@@ -78,10 +78,7 @@ export class BrolyDBZMovieSaga1 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -135,9 +132,9 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Broly DBZ 2"], true);
     
-    this.broly = this.bosses.get("Broly DBZ 2");
+    this.broly = this.bosses[1];
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 9000);
     }
 
@@ -187,10 +184,7 @@ export class BrolyDBZMovieSaga2 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -235,7 +229,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Broly Bio"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 4000);
     }
 
@@ -252,10 +246,7 @@ export class BioBrolySaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -305,13 +296,13 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Broly DBS"], true);
     
-    this.broly = this.bosses.get("Broly DBS");
+    this.broly = this.bosses[0];
 
     if (this.broly) {
       UnitAddItemById(this.broly, ItemConstants.SagaDrops.BROLY_FUR);
     }
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 9000);
     }
 
@@ -361,10 +352,7 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

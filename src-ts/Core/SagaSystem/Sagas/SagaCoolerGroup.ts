@@ -29,9 +29,9 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
     );
 
     this.addHeroListToSaga(["Cooler"], true);
-    this.cooler = this.bosses.get("Cooler");
+    this.cooler = this.bosses[0];
     
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -72,10 +72,7 @@ export class CoolerRevengeSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -125,9 +122,9 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Metal Cooler 1", "Metal Cooler 2", "Metal Cooler 3"], true);
 
-    const mc1 = this.bosses.get("Metal Cooler 1");
-    const mc2 = this.bosses.get("Metal Cooler 2");
-    const mc3 = this.bosses.get("Metal Cooler 3");
+    const mc1 = this.bosses[0];
+    const mc2 = this.bosses[1];
+    const mc3 = this.bosses[2];
 
     if (mc1 && mc2 && mc3) {
       this.metalCoolers.push(mc1, mc2, mc3);
@@ -179,10 +176,7 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

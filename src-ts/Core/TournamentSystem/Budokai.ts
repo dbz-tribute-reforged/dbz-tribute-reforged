@@ -278,25 +278,24 @@ export class Budokai extends AdvancedTournament implements Tournament {
             // if so chuck em to the pos of first unit contestant
             for (const unitContestant of contestant.units.values()) {
               const extraUnitsGroup = CreateGroup();
-              GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), Condition(() => {
-                const filterUnit = GetFilterUnit();
-                const y = GetUnitY(filterUnit)
-                const x = GetUnitX(filterUnit);
-                return (
-                  UnitHelper.isUnitAlive(filterUnit) && 
+              GroupEnumUnitsOfPlayer(extraUnitsGroup, Player(contestant.id), null);
+
+              ForGroup(extraUnitsGroup, () => {
+                const unit = GetEnumUnit();
+                const y = GetUnitY(unit)
+                const x = GetUnitX(unit);
+                if (
+                  UnitHelper.isUnitAlive(unit) && 
                   x > TournamentData.budokaiArenaBottomLeft.x &&
                   y > TournamentData.budokaiArenaBottomLeft.y && 
                   x < TournamentData.budokaiArenaTopRight.x &&
                   y < TournamentData.budokaiArenaTopRight.y
-                );
-              }));
-
-              ForGroup(extraUnitsGroup, () => {
-                const unit = GetEnumUnit();
-                SetUnitX(unit, unitContestant.oldPosition.x);
-                SetUnitY(unit, unitContestant.oldPosition.y);
-                PauseUnit(unit, false);
-                SetUnitInvulnerable(unit, false);
+                ) {
+                  SetUnitX(unit, unitContestant.oldPosition.x);
+                  SetUnitY(unit, unitContestant.oldPosition.y);
+                  PauseUnit(unit, false);
+                  SetUnitInvulnerable(unit, false);
+                }       
               });
               DestroyGroup(extraUnitsGroup);
 

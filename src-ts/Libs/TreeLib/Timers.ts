@@ -22,9 +22,10 @@ export class Timers {
 
     private constructor() {
         this.fastTimer = CreateTrigger();
+        // slowed down even more from 0.02s to 0.03s due to potentail memory leaks..
         // fast timer has been slowed down to 0.02s from 0.01s because
         // 0.01s can cause desyncs on reforged
-        TriggerRegisterTimerEvent(this.fastTimer, 0.02, true);
+        TriggerRegisterTimerEvent(this.fastTimer, 0.03, true);
         TriggerAddAction(this.fastTimer, () => {
             this.fastTimerCallbacks.forEach((callback) => {
                 callback();

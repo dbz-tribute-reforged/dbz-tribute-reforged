@@ -46,10 +46,10 @@ function tsMain() {
 
   setupHostPlayerTransfer();
 
-  TimerStart(CreateTimer(), 5.0, false, () => {
-    // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
-    DestroyTimer(GetExpiredTimer());
-  })
+  // TimerStart(CreateTimer(), 5.0, false, () => {
+  //   // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))
+  //   DestroyTimer(GetExpiredTimer());
+  // })
 
   SetCreepCampFilterState(false);
 

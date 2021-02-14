@@ -249,6 +249,7 @@ export class CustomMultiboardManager {
   protected initialMultiboard: framehandle;
   protected initialMultiboardContainer: framehandle;
   protected multiboards: Map<string, CustomMultiboard>;
+  protected customMultiboardsArray: CustomMultiboard[];
   protected sagaMultiboard: SagaMultiboard;
   protected sagaTimer: timer;
   protected updateTimer: timer;
@@ -259,6 +260,7 @@ export class CustomMultiboardManager {
     this.initialMultiboard = BlzGetFrameByName("Multiboard", 0);
     this.initialMultiboardContainer = BlzGetFrameByName("MultiboardListContainer", 0);
     this.multiboards = new Map();
+    this.customMultiboardsArray = [];
     this.sagaMultiboard = new SagaMultiboard("Sagas", 2, 4);
     this.sagaTimer = CreateTimer();
     this.updateTimer = CreateTimer();
@@ -277,7 +279,7 @@ export class CustomMultiboardManager {
     this.addSagaMultiboard();
     TimerStart(this.updateTimer, 0.2, true, () => {
       BlzFrameSetVisible(this.initialMultiboard, true);
-      for (const multiboard of this.multiboards.values()) {
+      for (const multiboard of this.customMultiboardsArray) {
         BlzFrameSetVisible(multiboard.getFramehandle(), true);
       }
     })
@@ -298,6 +300,7 @@ export class CustomMultiboardManager {
 
   public add(multiboard: CustomMultiboard): this {
     this.multiboards.set(multiboard.getTitle(), multiboard);
+    this.customMultiboardsArray.push(multiboard);
     return this;
   }
 

@@ -11158,12 +11158,12 @@ function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003()
     return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003001(), Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func003002003002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func018A()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func020A()
     udg_TempUnit2 = GetEnumUnit()
     UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal4, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func019C()
+function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func021C()
     if (CountUnitsInGroup(udg_TempUnitGroup) > 0) then
         return true
     end
@@ -11174,7 +11174,7 @@ function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func019C()
 end
 
 function Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004C()
-    if (not Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func019C()) then
+    if (not Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func021C()) then
         return false
     end
     return true
@@ -11261,7 +11261,7 @@ function Trig_Mario_Jump_Loop_Func001Func011Func006Func010002003()
     return GetBooleanAnd(Trig_Mario_Jump_Loop_Func001Func011Func006Func010002003001(), Trig_Mario_Jump_Loop_Func001Func011Func006Func010002003002())
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func006Func012A()
+function Trig_Mario_Jump_Loop_Func001Func011Func006Func013A()
     udg_TempUnit2 = GetEnumUnit()
     UnitDamageTargetBJ(udg_TempUnit, udg_TempUnit2, udg_TempReal4, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
     IssueTargetOrderBJ(udg_TempUnit3, "slow", udg_TempUnit2)
@@ -11295,24 +11295,27 @@ function Trig_Mario_Jump_Loop_Func001Func011Func018C()
     return true
 end
 
-function Trig_Mario_Jump_Loop_Func001Func011Func021Func002C()
-    if (not (LoadIntegerBJ(13, udg_ID, udg_SummonsHashtable) <= 0)) then
-        return false
-    end
+function Trig_Mario_Jump_Loop_Func001Func011Func021Func003C()
     if (not (udg_TempReal <= 0.00)) then
         return false
     end
     if (not (udg_TempReal2 <= 0.00)) then
         return false
     end
+    if (not (LoadIntegerBJ(13, udg_ID, udg_SummonsHashtable) <= 0)) then
+        return false
+    end
     return true
 end
 
 function Trig_Mario_Jump_Loop_Func001Func011Func021C()
+    if (udg_TempInt2 > 8) then
+        return true
+    end
     if (udg_TempBool == true) then
         return true
     end
-    if (Trig_Mario_Jump_Loop_Func001Func011Func021Func002C()) then
+    if (Trig_Mario_Jump_Loop_Func001Func011Func021Func003C()) then
         return true
     end
     return false
@@ -11348,9 +11351,9 @@ function Trig_Mario_Jump_Loop_Func001A()
             UnitAddAbilityBJ(FourCC("A0TQ"), udg_TempUnit3)
             UnitApplyTimedLifeBJ(0.25, FourCC("BTLF"), udg_TempUnit3)
             udg_TempUnitGroup = GetUnitsInRangeOfLocMatching(350.00, udg_TempLoc, Condition(Trig_Mario_Jump_Loop_Func001Func011Func006Func010002003))
-            udg_TempReal4 = (0.75 * (0.25 * ((1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true))) * (I2R(udg_TempInt4) * RMinBJ(2.50, (1 + (0.15 * I2R(udg_TempInt2))))))))
-            ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func006Func012A)
                         RemoveLocation(udg_TempLoc)
+            udg_TempReal4 = (0.75 * (0.25 * ((1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_STR, udg_TempUnit, true))) * (I2R(udg_TempInt4) * RMinBJ(2.50, (1 + (0.15 * I2R(udg_TempInt2))))))))
+            ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func006Func013A)
                         DestroyGroup(udg_TempUnitGroup)
         else
             BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0TK"), 3.00)
@@ -11408,18 +11411,19 @@ function Trig_Mario_Jump_Loop_Func001A()
                     SaveRealBJ(udg_TempReal2, 2, udg_ID, udg_SummonsHashtable)
                                         playGenericSpellSound(udg_TempUnit,"Audio/Effects/Mario/JumpDamage.mp3", 396)
                     AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl")
+                                        RemoveLocation(udg_TempLoc)
                     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 0.50)
                     BlzSetSpecialEffectTimeScale(GetLastCreatedEffectBJ(), 2.00)
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     udg_TempReal4 = (0.26 * (0.25 * ((1500.00 + I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))) * (I2R(udg_TempInt4) * RMinBJ(2.50, (1 + (0.15 * I2R(udg_TempInt2))))))))
-                    ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func018A)
+                    ForGroupBJ(udg_TempUnitGroup, Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func004Func020A)
                 else
+                                        RemoveLocation(udg_TempLoc)
                 end
                 if (Trig_Mario_Jump_Loop_Func001Func011Func003Func012Func005C()) then
                     SaveIntegerBJ((LoadIntegerBJ(13, udg_ID, udg_SummonsHashtable) - 1), 13, udg_ID, udg_SummonsHashtable)
                 else
                 end
-                                RemoveLocation(udg_TempLoc)
                                 DestroyGroup(udg_TempUnitGroup)
             else
             end
@@ -40457,14 +40461,7 @@ function InitTrig_Saga_Unit_Init()
     TriggerAddAction(gg_trg_Saga_Unit_Init, Trig_Saga_Unit_Init_Actions)
 end
 
-function Trig_Saga_Unit_Loop_Func001C()
-    if (not (CountUnitsInGroup(udg_SagaStatsUnitGroup) == 0)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func001Func004C()
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func001Func004C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
         return true
     end
@@ -40474,14 +40471,14 @@ function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func001Fu
     return false
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func001C()
-    if (not Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func001Func004C()) then
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func001C()
+    if (not Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func001Func004C()) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func005C()
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func005C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H01V")) then
         return true
     end
@@ -40494,23 +40491,23 @@ function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func005C(
     return false
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004C()
-    if (not Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func005C()) then
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004C()
+    if (not Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func005C()) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004A()
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004A()
     udg_TempInt3 = (udg_TempInt3 + 1)
     udg_StatMultUnit = GetEnumUnit()
     TriggerExecute(gg_trg_Get_Base_Stats)
-    if (Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004C()) then
+    if (Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004C()) then
         udg_StatMultStr = (udg_StatMultStr * 3.00)
         udg_StatMultAgi = (udg_StatMultAgi * 3.00)
         udg_StatMultInt = (udg_StatMultInt * 3.00)
     else
-        if (Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004Func004Func001C()) then
+        if (Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004Func004Func001C()) then
             udg_StatMultStr = (udg_StatMultStr * 2.00)
             udg_StatMultAgi = (udg_StatMultAgi * 2.00)
             udg_StatMultInt = (udg_StatMultInt * 2.00)
@@ -40522,7 +40519,7 @@ function Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004A()
     udg_TempReal3 = (udg_TempReal3 + udg_StatMultInt)
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func014Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func010Func002C()
     if (not (GetPlayerController(udg_TempPlayer) == MAP_CONTROL_USER)) then
         return false
     end
@@ -40532,56 +40529,56 @@ function Trig_Saga_Unit_Loop_Func002Func002Func014Func002C()
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func001C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func001C()
     if (not (udg_TempReal < 100.00)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func002C()
     if (not (udg_TempReal < 160.00)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003Func002Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003Func002Func002C()
     if (not (GetHeroLevel(udg_TempUnit) >= 150)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003Func002C()
     if (not (GetHeroLevel(udg_TempUnit) >= 100)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003C()
     if (not (GetHeroLevel(udg_TempUnit) >= 50)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021Func005C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017Func005C()
     if (not (GetHeroLevel(udg_TempUnit) >= 30)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002Func021C()
+function Trig_Saga_Unit_Loop_Func001Func002Func017C()
     if (not (GetHeroLevel(udg_TempUnit) >= 10)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002Func002C()
+function Trig_Saga_Unit_Loop_Func001Func002C()
     if (not (IsUnitHiddenBJ(udg_TempUnit) == false)) then
         return false
     end
@@ -40591,12 +40588,9 @@ function Trig_Saga_Unit_Loop_Func002Func002C()
     return true
 end
 
-function Trig_Saga_Unit_Loop_Func002A()
+function Trig_Saga_Unit_Loop_Func001A()
     udg_TempUnit = GetEnumUnit()
-    if (Trig_Saga_Unit_Loop_Func002Func002C()) then
-        GroupRemoveUnitSimple(udg_TempUnit, udg_SagaStatsUnitGroup)
-        GroupAddUnitSimple(udg_TempUnit, udg_SagaStatsInvulUnitGroup)
-        EnableTrigger(gg_trg_Saga_Unit_Spawn_Protection)
+    if (Trig_Saga_Unit_Loop_Func001Func002C()) then
         udg_TempReal = 30.00
         udg_TempReal2 = 30.00
         udg_TempReal3 = 30.00
@@ -40606,9 +40600,9 @@ function Trig_Saga_Unit_Loop_Func002A()
         while (true) do
             if (udg_TempInt > udg_MaxNumPlayers) then break end
             udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-            if (Trig_Saga_Unit_Loop_Func002Func002Func014Func002C()) then
+            if (Trig_Saga_Unit_Loop_Func001Func002Func010Func002C()) then
                 udg_TempInt2 = (udg_TempInt2 + 1)
-                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func002Func002Func014Func002Func004A)
+                ForGroupBJ(udg_StatMultPlayerUnits[udg_TempInt], Trig_Saga_Unit_Loop_Func001Func002Func010Func002Func004A)
             else
             end
             udg_TempInt = udg_TempInt + 1
@@ -40618,21 +40612,21 @@ function Trig_Saga_Unit_Loop_Func002A()
         udg_TempReal = (udg_TempReal / I2R(udg_TempInt3))
         udg_TempReal2 = (udg_TempReal2 / I2R(udg_TempInt3))
         udg_TempReal3 = (udg_TempReal3 / I2R(udg_TempInt3))
-        if (Trig_Saga_Unit_Loop_Func002Func002Func021C()) then
-            if (Trig_Saga_Unit_Loop_Func002Func002Func021Func002C()) then
+        if (Trig_Saga_Unit_Loop_Func001Func002Func017C()) then
+            if (Trig_Saga_Unit_Loop_Func001Func002Func017Func002C()) then
                 udg_TempReal = 160.00
                 udg_TempReal2 = 160.00
                 udg_TempReal3 = 160.00
             else
             end
             udg_TempReal4 = (((0.65 + (0.09 * I2R(udg_TempInt2))) + (I2R(GetHeroLevel(udg_TempUnit)) * 0.01)) * 1)
-            if (Trig_Saga_Unit_Loop_Func002Func002Func021Func005C()) then
+            if (Trig_Saga_Unit_Loop_Func001Func002Func017Func005C()) then
                 udg_TempReal4 = (udg_TempReal4 + 0.10)
-                if (Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003C()) then
+                if (Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003C()) then
                     udg_TempReal4 = (udg_TempReal4 + 0.20)
-                    if (Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003Func002C()) then
+                    if (Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003Func002C()) then
                         udg_TempReal4 = (udg_TempReal4 + 0.20)
-                        if (Trig_Saga_Unit_Loop_Func002Func002Func021Func005Func003Func002Func002C()) then
+                        if (Trig_Saga_Unit_Loop_Func001Func002Func017Func005Func003Func002Func002C()) then
                             udg_TempReal4 = (udg_TempReal4 + 0.30)
                         else
                         end
@@ -40643,7 +40637,7 @@ function Trig_Saga_Unit_Loop_Func002A()
             else
             end
         else
-            if (Trig_Saga_Unit_Loop_Func002Func002Func021Func001C()) then
+            if (Trig_Saga_Unit_Loop_Func001Func002Func017Func001C()) then
                 udg_TempReal = 120.00
                 udg_TempReal2 = 120.00
                 udg_TempReal3 = 120.00
@@ -40660,16 +40654,26 @@ function Trig_Saga_Unit_Loop_Func002A()
         udg_StatMultUnit = udg_TempUnit
         TriggerExecute(gg_trg_Base_Armor_Set)
         BlzSetUnitArmor(udg_StatMultUnit, (BlzGetUnitArmor(udg_StatMultUnit) + (1.00 * I2R(udg_TempInt2))))
+        GroupRemoveUnitSimple(udg_StatMultUnit, udg_SagaStatsUnitGroup)
+        GroupAddUnitSimple(udg_StatMultUnit, udg_SagaStatsInvulUnitGroup)
+        EnableTrigger(gg_trg_Saga_Unit_Spawn_Protection)
     else
     end
 end
 
+function Trig_Saga_Unit_Loop_Func002C()
+    if (not (CountUnitsInGroup(udg_SagaStatsUnitGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Saga_Unit_Loop_Actions()
-    if (Trig_Saga_Unit_Loop_Func001C()) then
+    ForGroupBJ(udg_SagaStatsUnitGroup, Trig_Saga_Unit_Loop_Func001A)
+    if (Trig_Saga_Unit_Loop_Func002C()) then
         DisableTrigger(GetTriggeringTrigger())
     else
     end
-    ForGroupBJ(udg_SagaStatsUnitGroup, Trig_Saga_Unit_Loop_Func002A)
 end
 
 function InitTrig_Saga_Unit_Loop()
@@ -40679,25 +40683,25 @@ function InitTrig_Saga_Unit_Loop()
     TriggerAddAction(gg_trg_Saga_Unit_Loop, Trig_Saga_Unit_Loop_Actions)
 end
 
-function Trig_Saga_Unit_Spawn_Protection_Func001C()
+function Trig_Saga_Unit_Spawn_Protection_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    SetUnitInvulnerable(udg_TempUnit, false)
+    GroupRemoveUnitSimple(udg_TempUnit, udg_SagaStatsInvulUnitGroup)
+end
+
+function Trig_Saga_Unit_Spawn_Protection_Func002C()
     if (not (CountUnitsInGroup(udg_SagaStatsInvulUnitGroup) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Saga_Unit_Spawn_Protection_Func002A()
-    udg_TempUnit = GetEnumUnit()
-    SetUnitInvulnerable(udg_TempUnit, false)
-    GroupRemoveUnitSimple(udg_TempUnit, udg_SagaStatsInvulUnitGroup)
-end
-
 function Trig_Saga_Unit_Spawn_Protection_Actions()
-    if (Trig_Saga_Unit_Spawn_Protection_Func001C()) then
+    ForGroupBJ(udg_SagaStatsInvulUnitGroup, Trig_Saga_Unit_Spawn_Protection_Func001A)
+    if (Trig_Saga_Unit_Spawn_Protection_Func002C()) then
         DisableTrigger(GetTriggeringTrigger())
     else
     end
-    ForGroupBJ(udg_SagaStatsInvulUnitGroup, Trig_Saga_Unit_Spawn_Protection_Func002A)
 end
 
 function InitTrig_Saga_Unit_Spawn_Protection()

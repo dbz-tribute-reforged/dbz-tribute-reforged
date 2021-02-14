@@ -14,12 +14,16 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   protected android19: unit | undefined;
   protected android20: unit | undefined;
   protected isRunningAway: boolean;
+  protected runCoord: Vector2D;
+  protected sagaCoord: Vector2D;
 
   constructor() {
     super();
     this.delay = 45;
     this.stats = 100;
     this.isRunningAway = false;
+    this.runCoord = new Vector2D(14000, 7500);
+    this.sagaCoord = new Vector2D(0, 0);
   }
 
   spawnSagaUnits(): void {
@@ -38,10 +42,10 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
     );
 
     this.addHeroListToSaga(["Android 19", "Android 20"], true);
-    this.android19 = this.bosses.get("Android 19");
-    this.android20 = this.bosses.get("Android 20");
+    this.android19 = this.bosses[0];
+    this.android20 = this.bosses[1];
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
 
@@ -66,14 +70,13 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
       if (sagaAI) {
         sagaAI.isEnabled = false;
       }
-      const targetCoord = new Vector2D(14000, 7500);
-      IssuePointOrder(this.android20, "move", targetCoord.x, targetCoord.y);
+      IssuePointOrder(this.android20, "move", this.runCoord.x, this.runCoord.y);
       SetUnitMoveSpeed(this.android20, 500);
 
       TimerStart(CreateTimer(), 5, true, () => {
         if (this.android20) {
-          const sagaCoord = new Vector2D(GetUnitX(this.android20), GetUnitY(this.android20));
-          const distance = CoordMath.distance(sagaCoord, targetCoord);
+          this.sagaCoord.setUnit(this.android20);
+          const distance = CoordMath.distance(this.sagaCoord, this.runCoord);
 
           if (distance < 500 || UnitHelper.isUnitDead(this.android20)) {
             if (sagaAI) {
@@ -91,10 +94,7 @@ export class AndroidsSaga1 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -174,7 +174,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Android 16", "Android 17", "Android 18"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 4500);
     }
 
@@ -191,10 +191,7 @@ export class AndroidsSaga2 extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -246,14 +243,14 @@ export class Super13Saga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Android 13", "Android 14", "Android 15", "Super Android 13"], true);
 
-    this.android13 = this.bosses.get("Android 13");
-    this.android14 = this.bosses.get("Android 14");
-    this.android15 = this.bosses.get("Android 15");
-    this.super13 = this.bosses.get("Super Android 13");
+    this.android13 = this.bosses[0];
+    this.android14 = this.bosses[1];
+    this.android15 = this.bosses[2];
+    this.super13 = this.bosses[3];
 
     SagaHelper.sagaHideUnit(this.super13);
     
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3500);
     }
 
@@ -318,10 +315,7 @@ export class Super13Saga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -359,7 +353,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Future Android 17", "Future Android 18"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3500);
     }
 
@@ -376,10 +370,7 @@ export class FutureAndroidsSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

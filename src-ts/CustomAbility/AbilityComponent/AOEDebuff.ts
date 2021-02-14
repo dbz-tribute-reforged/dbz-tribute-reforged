@@ -11,6 +11,8 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
   protected castDummy: unit;
   protected sourceCoord: Vector2D;
 
+  protected affectedGroup: group;
+
   constructor(
     public name: string = "AOEDebuff",
     public repeatInterval: number = 1,
@@ -27,6 +29,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     this.alreadyDebuffed = new Map();
     this.castDummy = GetEnumUnit();
     this.sourceCoord = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -42,47 +45,54 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
       this.alreadyDebuffed.clear();
     }
 
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.sourceCoord, 
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.sourceCoord.x, 
+      this.sourceCoord.y, 
       this.aoe,
-      () => {
-        return (
-          UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) &&
-          (
-            !this.onlyAffectHeroes ||
-            IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-          )
-        );
-      }
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      const targetId = GetHandleId(target);
-      if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
-        if (this.keepCasting) {
-          IssueTargetOrderById(this.castDummy, this.orderId, target);
-        } else if (!this.alreadyDebuffed.get(targetId)) {
-          this.alreadyDebuffed.set(targetId, true);
-          IssueTargetOrderById(this.castDummy, this.orderId, target);
+      if (
+        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) &&
+        (
+          !this.onlyAffectHeroes ||
+          IsUnitType(target, UNIT_TYPE_HERO)
+        )
+      ) {
+        const targetId = GetHandleId(target);
+        if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+          if (this.keepCasting) {
+            IssueTargetOrderById(this.castDummy, this.orderId, target);
+          } else if (!this.alreadyDebuffed.get(targetId)) {
+            this.alreadyDebuffed.set(targetId, true);
+            IssueTargetOrderById(this.castDummy, this.orderId, target);
+          }
         }
       }
     });
 
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
 
     // Note: there is an underlying assumption
     // that the repeatInterval will allow this ability to be called at its end tick
     if (ability.isFinishedUsing(this)) {
-      this.cleanup();
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     if (GetUnitTypeId(this.castDummy) != 0) {
       RemoveUnit(this.castDummy);
     }
     this.alreadyDebuffed.clear();
+  }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.affectedGroup);
   }
   
 

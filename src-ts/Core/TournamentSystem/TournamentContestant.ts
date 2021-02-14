@@ -53,29 +53,31 @@ export class TournamentContestant {
   setupUnitsOfPlayer(playerId: number) {
     this.units.clear();
     const playerUnits = CreateGroup();
-    GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), Filter(() => {
-      return (
-        IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) && 
-        !UnitHelper.isUnitDead(GetFilterUnit()) && 
-        !BlzIsUnitInvulnerable(GetFilterUnit()) &&
-        !IsUnitType(GetFilterUnit(), UNIT_TYPE_SUMMONED)
-      );
-    }));
+    GroupEnumUnitsOfPlayer(playerUnits, Player(playerId), null);
 
     ForGroup(playerUnits, () => {
       const unit = GetEnumUnit();
-      this.units.set(
-        unit,
-        new UnitContestant(unit, 
-          new Vector2D(GetUnitX(unit), GetUnitY(unit))
-        ),
-      );
-      UnitResetCooldown(unit);
+      if (
+        IsUnitType(unit, UNIT_TYPE_HERO) && 
+        !UnitHelper.isUnitDead(unit) && 
+        !BlzIsUnitInvulnerable(unit) &&
+        !IsUnitType(unit, UNIT_TYPE_SUMMONED)
+      ) {
+        this.units.set(
+          unit,
+          new UnitContestant(unit, 
+            new Vector2D(GetUnitX(unit), GetUnitY(unit))
+          ),
+        );
+        UnitResetCooldown(unit);
+      }
     })
 
     DestroyGroup(playerUnits);
   }
 
+  // this leaks, as keys creates a non-dereference-able array or something
+  // but isnt called very often, so should be fine
   getUnits(): IterableIterator<unit> {
     return this.units.keys();
   }

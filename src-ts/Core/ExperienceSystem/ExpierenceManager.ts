@@ -13,6 +13,9 @@ export class ExperienceManager {
 
   protected unitXPModifier: Map<number, number>;
   protected rewardXPTrigger: trigger;
+  protected dyingPos: Vector2D;
+
+  protected rewardedGroup: group;
 
   constructor (
   ) {
@@ -21,6 +24,8 @@ export class ExperienceManager {
     this.heroXP = [];
     this.unitXPModifier = new Map();
     this.rewardXPTrigger = CreateTrigger();
+    this.dyingPos = new Vector2D();
+    this.rewardedGroup = CreateGroup();
     this.initialize();
   }
 
@@ -126,8 +131,7 @@ export class ExperienceManager {
 
       // count number of nearby allies
       if (IsPlayerEnemy(dyingPlayer, killingPlayer)) {
-        const rewardedGroup = CreateGroup();
-        const dyingPos = new Vector2D(GetUnitX(dyingUnit), GetUnitY(dyingUnit));
+        this.dyingPos.setUnit(dyingUnit);
 
         let rewardXP: number = 0;
         if (IsUnitType(dyingUnit, UNIT_TYPE_HERO)) {
@@ -148,21 +152,39 @@ export class ExperienceManager {
           //   ExperienceConstants.expRange,
           //   dyingPlayer,
           // );
-          this.getNearbyAlliedXPHeroes(
-            rewardedGroup, 
-            dyingPos, 
-            ExperienceConstants.expRange, 
-            killingPlayer,
+          GroupEnumUnitsInRange(
+            this.rewardedGroup, 
+            this.dyingPos.x, 
+            this.dyingPos.y, 
+            ExperienceConstants.expRange,
+            null
           );
         } else {
           // share exp with allies only
-          this.getNearbyAlliedXPHeroes(
-            rewardedGroup, 
-            dyingPos, 
-            ExperienceConstants.expRange, 
-            killingPlayer,
+          GroupEnumUnitsInRange(
+            this.rewardedGroup, 
+            this.dyingPos.x, 
+            this.dyingPos.y, 
+            ExperienceConstants.expRange,
+            null
           );
         }
+
+        ForGroup(this.rewardedGroup, () => {
+          const testUnit = GetEnumUnit();
+          if (
+            IsUnitType(testUnit, UNIT_TYPE_HERO) &&
+            IsUnitAlly(testUnit, killingPlayer) &&
+            !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
+            !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
+            !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
+          ) {
+            // leave in group
+          } else {
+            // remove that unit from group
+            GroupRemoveUnit(this.rewardedGroup, testUnit);
+          }
+        })
 
         // count num different players nearby
         let numUniquePlayers = 0;
@@ -170,7 +192,7 @@ export class ExperienceManager {
         for (let i = 0; i < Constants.maxActivePlayers; ++i) {
           numPlayerUnits[i] = 0;
         }
-        ForGroup(rewardedGroup, () => {
+        ForGroup(this.rewardedGroup, () => {
           const playerId = GetPlayerId(GetOwningPlayer(GetEnumUnit()));
           if (playerId >= 0 && playerId < Constants.maxActivePlayers) {
             if (numPlayerUnits[playerId] == 0) {
@@ -198,7 +220,7 @@ export class ExperienceManager {
           rewardXP * rewardMult * ExperienceConstants.globalXPRateModifier
         );
 
-        ForGroup(rewardedGroup, () => {
+        ForGroup(this.rewardedGroup, () => {
           const rewardedUnit = GetEnumUnit();
 
           const heroLevel = GetHeroLevel(rewardedUnit);
@@ -261,59 +283,10 @@ export class ExperienceManager {
           */
         });
 
-        DestroyGroup(rewardedGroup);
+        GroupClear(this.rewardedGroup);
       }
 
     });
 
-  }
-
-  // probs refactor these 2
-  getNearbyXPHeroes(
-    heroGroup: group, 
-    position: Vector2D, 
-    aoe: number,
-    enemiedPlayer: player,
-  ) {
-    GroupEnumUnitsInRange(
-      heroGroup, 
-      position.x, 
-      position.y, 
-      aoe,
-      Condition(() => {
-        const testUnit = GetFilterUnit();
-        return (
-          IsUnitType(testUnit, UNIT_TYPE_HERO) &&
-          IsUnitEnemy(testUnit, enemiedPlayer) &&
-          !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
-          !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
-          !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
-        )
-      })
-    );
-  }
-
-  getNearbyAlliedXPHeroes(
-    heroGroup: group, 
-    position: Vector2D, 
-    aoe: number,
-    allyPlayer: player,
-  ) {
-    GroupEnumUnitsInRange(
-      heroGroup, 
-      position.x, 
-      position.y, 
-      aoe,
-      Condition(() => {
-        const testUnit = GetFilterUnit();
-        return (
-          IsUnitType(testUnit, UNIT_TYPE_HERO) &&
-          IsUnitAlly(testUnit, allyPlayer) &&
-          !IsUnitOwnedByPlayer(testUnit, Player(PLAYER_NEUTRAL_PASSIVE)) && 
-          !IsUnitType(testUnit, UNIT_TYPE_DEAD) &&
-          !IsUnitType(testUnit, UNIT_TYPE_SUMMONED)
-        )
-      })
-    );
   }
 }

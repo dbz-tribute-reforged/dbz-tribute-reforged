@@ -29,7 +29,7 @@ export class BeamComponent implements
   static readonly BEAM_SPEED_FAST = 55;
   static readonly BEAM_SPEED_VERY_FAST = 60;
 
-  public beamUnit: unit;
+  public beamUnit: unit | null;
   public delayTicks: number;
   public angle: number;
   public previousHp: number;
@@ -45,6 +45,9 @@ export class BeamComponent implements
   protected explodePosition: Vector2D;
   protected forcedExplode: boolean;
   protected hasExploded: boolean;
+  protected beamClashGroup: group;
+
+
   protected oldIsBeamClash: boolean | undefined;
 
   constructor(
@@ -75,7 +78,7 @@ export class BeamComponent implements
     public beamUnitSkin: number = FourCC('hpea'),
     public components: AbilityComponent[] = [],
   ) {
-    this.beamUnit = GetEnumUnit();
+    this.beamUnit = null;
     this.delayTicks = 0;
     this.angle = 0;
     this.previousHp = 0;
@@ -88,21 +91,26 @@ export class BeamComponent implements
     this.explodePosition = new Vector2D(0, 0);
     this.forcedExplode = false;
     this.hasExploded = false;
+    this.beamClashGroup = CreateGroup();
   }
 
   protected checkForBeamClash(input: CustomAbilityInput): this {
+    if (!this.beamUnit) return this;
+
     if (this.clashingDelayTicks > 0) {
       const currentHp = GetUnitState(this.beamUnit, UNIT_STATE_LIFE);
-      const nearbyEnemies = UnitHelper.getNearbyValidUnits(
-        this.beamCoord, 
+
+      GroupEnumUnitsInRange(
+        this.beamClashGroup, 
+        this.beamCoord.x, 
+        this.beamCoord.y, 
         this.aoe,
-        () => {
-          return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer);
-        }
-      );;
-      const numEnemyHeroes = UnitHelper.countEnemyHeroes(nearbyEnemies, input.casterPlayer);
+        null
+      );
       
-      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(nearbyEnemies) > 0);
+      const numEnemyHeroes = UnitHelper.countEnemyHeroes(this.beamClashGroup, input.casterPlayer);
+      
+      const beamClashTest = (currentHp < this.previousHp && CountUnitsInGroup(this.beamClashGroup) > 0);
       
       if (
         this.explodeOnContact && 
@@ -122,19 +130,19 @@ export class BeamComponent implements
         }
       }
       this.previousHp = currentHp;
-      DestroyGroup(nearbyEnemies);
+      GroupClear(this.beamClashGroup);
     }
     return this;
   }
 
   protected moveBeamUnit(ability: CustomAbility, input: CustomAbilityInput): this {
-    
+    if (!this.beamUnit) return this;
+
     if (this.delayTicks <= 0) {
       if (!this.isFixedAngle) {
         this.angle = GetUnitFacing(this.beamUnit);
       }
       this.targetCoord.polarProjectCoords(this.beamCoord, this.angle, this.speed);
-
       PathingCheck.moveFlyingUnitToCoord(this.beamUnit, this.targetCoord);
 
       // if wanting to explode prematurely then
@@ -183,6 +191,8 @@ export class BeamComponent implements
   }
 
   protected fakeExplode(ability: CustomAbility, input: CustomAbilityInput) {
+    if (!this.beamUnit) return;
+
     const oldCurrentTick = ability.currentTick;
     if (this.endTick == -1) {
       ability.currentTick = ability.duration;
@@ -302,15 +312,14 @@ export class BeamComponent implements
       this.hasBeamUnit = true;
     }
     
-    if (this.hasBeamUnit && !this.hasExploded) {
+    if (this.hasBeamUnit && !this.hasExploded && this.beamUnit) {
       const isBeamDead = UnitHelper.isUnitDead(this.beamUnit);
       if ((isBeamDead && this.explodeOnDeath) || this.forcedExplode) {
         this.hasExploded = true;
         this.fakeExplode(ability, input);
-        RemoveUnit(this.beamUnit);
+        this.removeBeamUnit();
       } else if (!isBeamDead) {
-        this.beamCoord.x = GetUnitX(this.beamUnit);
-        this.beamCoord.y = GetUnitY(this.beamUnit);
+        this.beamCoord.setUnit(this.beamUnit);
         this.oldIsBeamClash = input.isBeamClash;
         this.checkForBeamClash(input);
         if (this.speed > 0) {
@@ -329,7 +338,7 @@ export class BeamComponent implements
         if (this.explodeOnDeath) {
           this.fakeExplode(ability, input);
         }
-        RemoveUnit(this.beamUnit);
+        this.removeBeamUnit();
       }
       this.hasBeamUnit = false;
       this.forcedExplode = false;
@@ -337,14 +346,22 @@ export class BeamComponent implements
     }
   }
 
-  cleanup() {
-    if (GetUnitTypeId(this.beamUnit) != 0) {
-      RemoveUnit(this.beamUnit);
+  removeBeamUnit() {
+    if (this.beamUnit) {
+      if (GetUnitTypeId(this.beamUnit) != 0) {
+        RemoveUnit(this.beamUnit);
+      }
+      this.beamUnit = null;
     }
+  }
+
+  cleanup() {
+    this.removeBeamUnit();
     for (const component of this.components) {
       component.cleanup();
     }
     this.components.splice(0, this.components.length);
+    DestroyGroup(this.beamClashGroup);
   }
 
   clone(): AbilityComponent {

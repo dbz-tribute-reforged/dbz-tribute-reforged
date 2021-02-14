@@ -1,26 +1,29 @@
 import { SagaSystemConfig } from "./SagaSystemConfig";
 import { Saga, BaseSaga, SagaState } from "./Sagas/BaseSaga";
-import { Entity } from "Libs/TreeLib/Entity";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { sagaSystemConfig } from "./config";
 import { Constants } from "Common/Constants";
 import { CustomMultiboardManager } from "CustomUI/CustomMultiboard";
 
-export class SagaManager extends Entity {
+export class SagaManager {
 
   private static instance: SagaManager;
 
-  public maxNumberConcurrentSagas: number = 6;
+  public static maxNumberConcurrentSagas: number = 6;
+
+  protected inProgressSagas: number;
 
   config: SagaSystemConfig;
   sagas: Saga[] = [];
 
+  protected sagaUpdateTimer: timer;
   protected sagaPingTimer: timer;
 
   constructor(sagaSystemConfig: SagaSystemConfig) {
-    super();
+    this.inProgressSagas = 0;
 
     this.config = sagaSystemConfig;
+    this.sagaUpdateTimer = CreateTimer();
     this.sagaPingTimer = CreateTimer();
 
     this.initialize();
@@ -37,7 +40,7 @@ export class SagaManager extends Entity {
   private initialize(): void {
     // setup the sagas
     for (let i = 0; i < this.config.sagas.length; i++) {
-      let sagaType = this.config.sagas[i];
+      const sagaType = this.config.sagas[i];
       this.sagas.push(new sagaType() as Saga);
     }
     TimerStart(this.sagaPingTimer, Constants.sagaPingInterval, true, () => {
@@ -55,6 +58,10 @@ export class SagaManager extends Entity {
     TriggerAddAction(updateMaxNumberOfConcurrentSagas, () => {
       this.calculateMaxNumberOfConcurrentSagas();
     })
+
+    TimerStart(this.sagaUpdateTimer, 0.03, true, () => {
+      this.step();
+    });
   }
 
   protected calculateMaxNumberOfConcurrentSagas() {
@@ -68,30 +75,29 @@ export class SagaManager extends Entity {
         ++numActivePlayers;
       }
     }
-    this.maxNumberConcurrentSagas = 2 + Math.ceil(numActivePlayers / 5);
+    SagaManager.maxNumberConcurrentSagas = 2 + Math.ceil(numActivePlayers / 5);
   }
 
-  public step(t: number): void {
+  public step(): void {
     // iterate over all sagas and check the conditions to see if it should be progressed
-    this.progressSagas(t);
-
-    // TODO: progress side sagas (?)
-  }
-
-  private progressSagas(t: number): void {
     // iterate over each main saga and do some work
-    for (let saga of this.sagas) {
+    this.inProgressSagas = this.countInProgressSagas();
+
+    for (const saga of this.sagas) {
       switch (saga.state) {
 
         // if this saga hasn't started yet, run some logic to check if we should start it
         case SagaState.NotStarted: {
-          // if we are already at max concurrent sagas, then skip this
-          if (this.inProgressSagas >= this.maxNumberConcurrentSagas)
+          // // if we are already at max concurrent sagas, then skip this
+          if (this.inProgressSagas >= SagaManager.maxNumberConcurrentSagas)
             continue;
 
           // check the dependencies set up in config
-          if (saga.state === SagaState.NotStarted && this.sagaDependencyHasBeenMet(saga) 
-              && saga.canStart()) {
+          if (
+            saga.state === SagaState.NotStarted 
+            && this.sagaDependencyHasBeenMet(saga) 
+            && saga.canStart()
+          ) {
             // do start
             saga.start();
             CustomMultiboardManager.getInstance().addSaga(saga.name, saga.delay);
@@ -101,7 +107,7 @@ export class SagaManager extends Entity {
 
         // if saga is in progress, run its update function then check if it can be completed
         case SagaState.InProgress: {
-          saga.update(t);
+          saga.update(0);
           if (saga.canComplete()) {
             saga.complete();
             CustomMultiboardManager.getInstance().finishSaga(saga.name);
@@ -121,22 +127,29 @@ export class SagaManager extends Entity {
   }
 
   private sagaDependencyHasBeenMet(saga: BaseSaga): boolean {
-    let dependenciesOfSaga = this.config.sagaDependencies[saga.constructor.name];
+    const dependenciesOfSaga = this.config.sagaDependencies[saga.constructor.name];
     
-    for (let sagaDependencyKey of dependenciesOfSaga) {
+    for (const sagaDependencyKey of dependenciesOfSaga) {
       // get the current saga dependency from the list of initialized sagas so that we can check the state
-      let currSagaArr = this.sagas.filter(s => s.constructor.name === sagaDependencyKey[0].name);
-      if (currSagaArr.length === 0 || currSagaArr[0].state !== sagaDependencyKey[1]) {
-        // don't think we can just return true here...
-        return false;
+      for (const saga of this.sagas) {
+        if (
+          saga.constructor.name == sagaDependencyKey[0].name && 
+          saga.state != sagaDependencyKey[1]
+        ) {
+          return false;
+        }
       }
     }
     return true;
   }
 
-  //#region getters
-  get inProgressSagas(): number {
-    return this.sagas.filter(s => s.state === SagaState.InProgress).length;
+  protected countInProgressSagas(): number {
+    let result = 0;
+    for (const saga of this.sagas) {
+      if (saga.state == SagaState.InProgress) {
+        result += 1;
+      }
+    }
+    return result;
   }
-  //#endregion
 }

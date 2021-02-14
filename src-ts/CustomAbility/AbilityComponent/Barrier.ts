@@ -12,6 +12,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
   protected hasStarted: boolean;
   protected sourceCoords: Vector2D;
   protected insideUnits: group;
+  protected outsideUnits: group;
   protected innerAOE: number;
   protected outerAOE: number;
 
@@ -31,6 +32,7 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
     this.hasStarted = false;
     this.sourceCoords = new Vector2D();
     this.insideUnits = CreateGroup();
+    this.outsideUnits = CreateGroup();
     this.innerAOE = 0;
     this.outerAOE = 0;
     this.targetCoords = new Vector2D();
@@ -50,87 +52,92 @@ export class Barrier implements AbilityComponent, Serializable<Barrier> {
         this.sourceCoords.x,
         this.sourceCoords.y,
         this.innerAOE,
-        Condition(() => {
-          return (
-            UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies)
-          )
-        })
+        null
       );
     }
 
     if (!this.canWalkOut) {
       ForGroup(this.insideUnits, () => {
         const target = GetEnumUnit();
-        this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
-        const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
-        if (
-          targetDistance > this.innerAOE && 
-          targetDistance < this.aoe * 2.5
-        ) {
-          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
-          this.newCoords.polarProjectCoords(
-            this.sourceCoords, 
-            targetAngle, 
-            this.innerAOE
-          );
-          if (IsUnitType(target, UNIT_TYPE_FLYING)) {
-            PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
-          } else {
-            PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
+        if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
+          this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
+          const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
+          if (
+            targetDistance > this.innerAOE && 
+            targetDistance < this.aoe * 2.5
+          ) {
+            const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
+            this.newCoords.polarProjectCoords(
+              this.sourceCoords, 
+              targetAngle, 
+              this.innerAOE
+            );
+            if (IsUnitType(target, UNIT_TYPE_FLYING)) {
+              PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
+            } else {
+              PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
+            }
           }
         }
       });
     }
 
     if (this.repelOutsidersSpeed > 0) {
-      const outsideUnits = CreateGroup();
       GroupEnumUnitsInRange(
-        outsideUnits,
+        this.outsideUnits,
         this.sourceCoords.x,
         this.sourceCoords.y,
         this.outerAOE,
-        Condition(() => {
-          return (
-            UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies) &&
-            !IsUnitInGroup(GetFilterUnit(), this.insideUnits)
-          )
-        })
+        null
       );
 
-      ForGroup(outsideUnits, () => {
+      ForGroup(this.outsideUnits, () => {
         const target = GetEnumUnit();
-        this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
-        const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
-        if (targetDistance <= this.innerAOE) {
-          // it probably came / spawned from within
-          GroupAddUnit(this.insideUnits, target);
-        } else {
-          const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
-          this.newCoords.polarProjectCoords(
-            this.sourceCoords, 
-            targetAngle, 
-            this.outerAOE
-          );
-          if (IsUnitType(target, UNIT_TYPE_FLYING)) {
-            PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
+        if (
+          UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies) &&
+          !IsUnitInGroup(target, this.insideUnits)
+        ) {
+          this.targetCoords.setPos(GetUnitX(target), GetUnitY(target));
+          const targetDistance = CoordMath.distance(this.sourceCoords, this.targetCoords);
+          if (targetDistance <= this.innerAOE) {
+            // it probably came / spawned from within
+            GroupAddUnit(this.insideUnits, target);
           } else {
-            PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
+            const targetAngle = CoordMath.angleBetweenCoords(this.sourceCoords, this.targetCoords);
+            this.newCoords.polarProjectCoords(
+              this.sourceCoords, 
+              targetAngle, 
+              this.outerAOE
+            );
+            if (IsUnitType(target, UNIT_TYPE_FLYING)) {
+              PathingCheck.moveFlyingUnitToCoord(target, this.newCoords);
+            } else {
+              PathingCheck.moveGroundUnitToCoord(target, this.newCoords);
+            }
           }
         }
       });
 
-      DestroyGroup(outsideUnits);
+      GroupClear(this.outsideUnits);
     }
 
     if (ability.isFinishedUsing(this)) {
-      this.cleanup();
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     this.hasStarted = false;
     GroupClear(this.insideUnits);
+    GroupClear(this.outsideUnits);
   }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.insideUnits);
+    DestroyGroup(this.outsideUnits);
+  }
+  
   
 
   clone(): AbilityComponent {

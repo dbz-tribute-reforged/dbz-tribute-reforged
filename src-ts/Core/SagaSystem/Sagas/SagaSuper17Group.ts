@@ -24,13 +24,13 @@ export class Super17Saga extends AdvancedSaga implements Saga {
     );
 
     this.addHeroListToSaga(["Super 17"], true);
-    this.super17 = this.bosses.get("Super 17");
+    this.super17 = this.bosses[0];
     if (this.super17) {
       this.oldHp = GetUnitState(this.super17, UNIT_STATE_LIFE);
       SetUnitState(this.super17, UNIT_STATE_MANA, 0);
     }
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -89,10 +89,7 @@ export class Super17Saga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

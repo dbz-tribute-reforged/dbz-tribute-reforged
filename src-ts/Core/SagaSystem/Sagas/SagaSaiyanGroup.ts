@@ -14,7 +14,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 20;
     this.stats = 15;
   }
 
@@ -35,11 +35,11 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Raditz"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 4000);
     }
     
-    this.raditz = this.bosses.get("Raditz");
+    this.raditz = this.bosses[0];
     
     this.ping()
     this.setupBossDeathActions(this);
@@ -54,10 +54,7 @@ export class RaditzSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -124,12 +121,12 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
     
     this.addHeroListToSaga(["Nappa", "Vegeta"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
-    this.vegeta = this.bosses.get("Vegeta");
-    this.nappa = this.bosses.get("Nappa");
+    this.nappa = this.bosses[0];
+    this.vegeta = this.bosses[1];
     
     this.ping()
     this.setupBossDeathActions(this);
@@ -172,10 +169,7 @@ export class VegetaSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

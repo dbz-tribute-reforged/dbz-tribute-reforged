@@ -12,30 +12,35 @@ export module ForceHelper {
   }
 
   export function addNearbyEnemyAlliedPlayers(
-    force: force, x: number, y: number, aoe: number,
+    force: force, pos: Vector2D, aoe: number,
     playerId: number
   ) {
-    const nearbyEnemies = UnitHelper.getNearbyValidUnits(
-      new Vector2D(x, y),
-      aoe,
-      () => {
-        const enemy = GetOwningPlayer(GetFilterUnit());
-        const enemyId = GetPlayerId(enemy);
-        if (
-          enemyId >= 0 && enemyId < Constants.maxActivePlayers && 
-          IsPlayerEnemy(Player(playerId), enemy) && 
-          !IsPlayerInForce(enemy, force)
-        ) {
-          ForceAddPlayer(force, enemy);
-          const enemyAllies = GetPlayersAllies(enemy);
-          ForForce(enemyAllies, () => {
-            ForceAddPlayer(force, GetEnumPlayer());
-          })
-          DestroyForce(enemyAllies);
-        }
-        return false;
-      }
+    const player = Player(playerId);
+    const nearbyEnemies = CreateGroup();
+    GroupEnumUnitsInRange(
+      nearbyEnemies, 
+      pos.x, 
+      pos.y, 
+      aoe, 
+      null
     );
+
+    ForGroup(nearbyEnemies, () => {
+      const enemy = GetOwningPlayer(GetEnumUnit());
+      const enemyId = GetPlayerId(enemy);
+      if (
+        enemyId >= 0 && enemyId < Constants.maxActivePlayers && 
+        IsPlayerEnemy(player, enemy) && 
+        !IsPlayerInForce(enemy, force)
+      ) {
+        ForceAddPlayer(force, enemy);
+        const enemyAllies = GetPlayersAllies(enemy);
+        ForForce(enemyAllies, () => {
+          ForceAddPlayer(force, GetEnumPlayer());
+        })
+        DestroyForce(enemyAllies);
+      }
+    });
 
     DestroyGroup(nearbyEnemies);
   }

@@ -23,6 +23,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   protected damageStarted: boolean;
 
   protected damagedTargets: Map<unit, number>;
+  protected damagedGroup: group;
 
   constructor(
     public name: string = "AOEDamage",
@@ -50,6 +51,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.damageCoords = new Vector2D(0, 0);
     this.damageStarted = false;
     this.damagedTargets = new Map();
+    this.damagedGroup = CreateGroup();
   }
 
   protected calculateDamage(input: CustomAbilityInput, source: unit): number {
@@ -157,19 +159,12 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     //   this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
     // );
 
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.damageCoords, 
+    GroupEnumUnitsInRange(
+      this.damagedGroup, 
+      this.damageCoords.x, 
+      this.damageCoords.y, 
       this.aoe,
-      () => {
-        return (
-          UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer) ||
-          (
-            this.canDamageCaster && 
-            GetOwningPlayer(GetFilterUnit()) == input.casterPlayer &&
-            IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
-          )
-        );
-      }
+      null
     );
 
     const damage = this.calculateDamage(input, source);
@@ -179,40 +174,53 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       sourceHpPercent *= sourceHpPercent;
     }
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.damagedGroup, () => {
       const target = GetEnumUnit();
-
-      if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
-        if (
-          this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
-          (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
-        ) {
-          const damageCount = this.damagedTargets.get(target);
-          if (damageCount) {
-            if (damageCount < this.maxDamageTicks) {
-              this.damagedTargets.set(target, damageCount + 1);
+      if (
+        UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer) ||
+        (
+          this.canDamageCaster && 
+          GetOwningPlayer(target) == input.casterPlayer &&
+          IsUnitType(target, UNIT_TYPE_HERO)
+        )
+      ) {
+        if (!this.requireBuff || GetUnitAbilityLevel(target, this.buffId) > 0) {
+          if (
+            this.maxDamageTicks != AOEDamage.UNLIMITED_DAMAGE_TICKS && 
+            (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyDamageCapHeroes)
+          ) {
+            const damageCount = this.damagedTargets.get(target);
+            if (damageCount) {
+              if (damageCount < this.maxDamageTicks) {
+                this.damagedTargets.set(target, damageCount + 1);
+                this.performDamage(input, target, damage, sourceHpPercent);
+              }
+            } else {
+              this.damagedTargets.set(target, 1);
               this.performDamage(input, target, damage, sourceHpPercent);
             }
-          } else {
-            this.damagedTargets.set(target, 1);
+          } else {    
             this.performDamage(input, target, damage, sourceHpPercent);
           }
-        } else {    
-          this.performDamage(input, target, damage, sourceHpPercent);
         }
       }
-    })
+    });
 
-    DestroyGroup(affectedGroup);
+    GroupClear(this.damagedGroup);
     
     if (ability.isFinishedUsing(this)) {
-      this.cleanup();
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     this.damageStarted = false;
     this.damagedTargets.clear();
+  }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.damagedGroup);
   }
 
   clone(): AbilityComponent {

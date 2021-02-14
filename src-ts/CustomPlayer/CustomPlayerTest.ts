@@ -912,16 +912,14 @@ export function CustomPlayerTest() {
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
     TriggerAddAction(megaLvl, () => {
-      const group = GetUnitsOfPlayerMatching(
-        GetTriggerPlayer(), 
-        Condition(() => {
-          return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO);
-        })
-      )
+      const group = GetUnitsOfPlayerAll(GetTriggerPlayer());
 
       ForGroup(group, () => {
-        SetHeroLevel(GetEnumUnit(), 900, false);
-        ModifyHeroSkillPoints(GetEnumUnit(), bj_MODIFYMETHOD_ADD, 500);
+        const megaUnit = GetEnumUnit();
+        if (IsUnitType(megaUnit, UNIT_TYPE_HERO)) {
+          SetHeroLevel(megaUnit, 900, false);
+          ModifyHeroSkillPoints(megaUnit, bj_MODIFYMETHOD_ADD, 500);
+        }
       });
 
       DestroyGroup(group);
@@ -1240,6 +1238,92 @@ export function CustomPlayerTest() {
 		}
   });
 
+
+  // // costs about 2-3mb per run
+  // const crazyUnit = FourCC("hpea");
+  // const crazyTest = CreateTrigger();
+  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
+	// TriggerAddAction(crazyTest, () => {
+	// 	const player = GetTriggerPlayer();
+  //   BJDebugMsg("doing crazy test");
+    
+  //   const crazyArr: group = CreateGroup();
+  //   for (let i = 0; i < 1000; ++i) {
+  //     const unit = CreateUnit(
+  //       player,
+  //       crazyUnit,
+  //       0, 0, 0
+  //     );
+  //     GroupAddUnit(crazyArr, unit);
+  //   }
+
+  //   TimerStart(CreateTimer(), 1, false, () => {
+  //     ForGroup(crazyArr, () => {
+  //       RemoveUnit(GetEnumUnit());
+  //     });
+  //     DestroyGroup(crazyArr);
+  //     DestroyTimer(GetExpiredTimer());
+  //     BJDebugMsg("done crazy test");
+  //   });
+  // });
+  
+  // uses a lot of memory but doesnt use any more after the fact ...
+  // const crazyUnit = FourCC("hpea");
+  // const crazyTest = CreateTrigger();
+  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
+	// TriggerAddAction(crazyTest, () => {
+	// 	const player = GetTriggerPlayer();
+  //   BJDebugMsg("doing crazy test");
+    
+  //   const crazyArr: unit[] = [];
+  //   for (let i = 0; i < 2000; ++i) {
+  //     const unit = CreateUnit(
+  //       player,
+  //       crazyUnit,
+  //       0, 0, 0
+  //     );
+  //     crazyArr.push(unit);
+  //   }
+
+  //   TimerStart(CreateTimer(), 1, false, () => {
+  //     for (const unit of crazyArr) {
+  //       RemoveUnit(unit);
+  //     }
+  //     crazyArr.slice(0, crazyArr.length);
+  //     DestroyTimer(GetExpiredTimer());
+  //     BJDebugMsg("done crazy test");
+  //   });
+  // });
+
+  // not actual leak
+  // const crazyArr: unit[] = [];
+  // const crazyUnit = FourCC("hpea");
+  // const crazyTest = CreateTrigger();
+  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
+	// TriggerAddAction(crazyTest, () => {
+	// 	const player = GetTriggerPlayer();
+  //   BJDebugMsg("doing crazy test");
+    
+  //   for (let i = 0; i < 2000; ++i) {
+  //     const unit = CreateUnit(
+  //       player,
+  //       crazyUnit,
+  //       0, 0, 0
+  //     );
+  //     crazyArr.push(unit);
+  //   }
+
+  //   TimerStart(CreateTimer(), 1, false, () => {
+  //     for (const unit of crazyArr) {
+  //       RemoveUnit(unit);
+  //     }
+  //     crazyArr.slice(0, crazyArr.length);
+  //     DestroyTimer(GetExpiredTimer());
+  //     BJDebugMsg("done crazy test");
+  //   });
+  // });
+
+
   // to save number of events and triggers
   const independentSpellTrigger = CreateTrigger();
   const independentSpellHashtable = InitHashtable();
@@ -1266,6 +1350,10 @@ export function SetupBraveSwordAttack(
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
 ) {
+  // 0 : target x
+  // 1 : target y
+  const casterPos: Vector2D = new Vector2D(0, 0);
+  const tmpPos: Vector2D = new Vector2D(0, 0);
   const herosSongDebuff = FourCC("B01H");
   const dummyStunSpell = FourCC('A0IY');
   const dummyStunOrder = 852095;
@@ -1284,30 +1372,45 @@ export function SetupBraveSwordAttack(
     const spellId = GetSpellAbilityId();
     if (spellId == Id.braveSwordAttack) {
       const caster = GetTriggerUnit();
+      const casterId = GetHandleId(caster);
       const abilityLevel = GetUnitAbilityLevel(caster, spellId);
-      const targetPos = new Vector2D(GetSpellTargetX(), GetSpellTargetY());
       const player = GetTriggerPlayer();
 
-      const targetGroup = UnitHelper.getNearbyValidUnits(
-        targetPos, braveSwordAOE, 
-        () => {
-          return (
-            UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player) && 
-            GetUnitAbilityLevel(GetFilterUnit(), herosSongDebuff) > 0
-          );
-        }
-      )
+      tmpPos.setUnit(caster);
+      SaveReal(spellHashtable, casterId, 0, tmpPos.x);
+      SaveReal(spellHashtable, casterId, 1, tmpPos.y);
+
+      const targetGroup = CreateGroup();
+
+      GroupEnumUnitsInRange(
+        targetGroup, 
+        tmpPos.x, 
+        tmpPos.y, 
+        braveSwordAOE,
+        null
+      );
       
-      if (CountUnitsInGroup(targetGroup) > 0) {
-        let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-        const moveAngle = CoordMath.angleBetweenCoords(casterPos, targetPos);
+      let checkCount = 0;
+      ForGroup(targetGroup, () => {
+        const checkUnit = GetEnumUnit();
+        if (
+          UnitHelper.isUnitTargetableForPlayer(checkUnit, player) && 
+          GetUnitAbilityLevel(checkUnit, herosSongDebuff) > 0
+        ) {
+          ++checkCount;
+        }
+      });
+      
+      if (checkCount > 0) {
+        casterPos.setUnit(caster);
+        const moveAngle = CoordMath.angleBetweenCoords(casterPos, tmpPos);
         let time = 0;
         // PauseUnit(caster, true);
         // SetUnitInvulnerable(caster, true);
         UnitHelper.giveUnitFlying(caster);
 
         TimerStart(CreateTimer(), tickRate, true, () => {
-          casterPos.setPos(GetUnitX(caster), GetUnitY(caster));
+          casterPos.setUnit(caster);
           if (time > jumpDuration) {
             
             const castDummy = CreateUnit(
@@ -1320,13 +1423,15 @@ export function SetupBraveSwordAttack(
 
             // PauseUnit(caster, false);
             // SetUnitInvulnerable(caster, false);
-            const damageGroup = UnitHelper.getNearbyValidUnits(
-              casterPos, braveSwordAOE, 
-              () => {
-                return (
-                  UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player)
-                );
-              }
+
+            const damageGroup = CreateGroup();
+
+            GroupEnumUnitsInRange(
+              damageGroup, 
+              casterPos.x, 
+              casterPos.y, 
+              braveSwordAOE,
+              null
             );
 
             let spellPower = 1.0;
@@ -1342,28 +1447,30 @@ export function SetupBraveSwordAttack(
 
             ForGroup(damageGroup, () => {
               const damagedUnit = GetEnumUnit();
-              SetUnitState(
-                damagedUnit, 
-                UNIT_STATE_MANA, 
-                Math.max(
-                  0, 
-                  GetUnitState(damagedUnit, UNIT_STATE_MANA) - manaBurn
-                )
-              );
-
-              UnitDamageTarget(
-                caster, 
-                damagedUnit, 
-                damage, 
-                true, 
-                false, 
-                ATTACK_TYPE_HERO, 
-                DAMAGE_TYPE_NORMAL, 
-                WEAPON_TYPE_WHOKNOWS
-              );
-
-              if (IsUnitType(damagedUnit, UNIT_TYPE_HERO)) {
-                IssueTargetOrderById(castDummy, dummyStunOrder, damagedUnit);
+              if (UnitHelper.isUnitTargetableForPlayer(damagedUnit, player)) {
+                SetUnitState(
+                  damagedUnit, 
+                  UNIT_STATE_MANA, 
+                  Math.max(
+                    0, 
+                    GetUnitState(damagedUnit, UNIT_STATE_MANA) - manaBurn
+                  )
+                );
+  
+                UnitDamageTarget(
+                  caster, 
+                  damagedUnit, 
+                  damage, 
+                  true, 
+                  false, 
+                  ATTACK_TYPE_HERO, 
+                  DAMAGE_TYPE_NORMAL, 
+                  WEAPON_TYPE_WHOKNOWS
+                );
+  
+                if (IsUnitType(damagedUnit, UNIT_TYPE_HERO)) {
+                  IssueTargetOrderById(castDummy, dummyStunOrder, damagedUnit);
+                }
               }
             });
 
@@ -1392,6 +1499,7 @@ export function SetupBraveSwordAttack(
             DestroyEffect(feedbackSfx);
 
             SetUnitFlyHeight(caster, 0, 0);
+
             DestroyTimer(GetExpiredTimer());
           } else {
             const timeJumpRatio = -1 + 2 * time / jumpDuration;
@@ -1399,10 +1507,14 @@ export function SetupBraveSwordAttack(
               1 - timeJumpRatio * timeJumpRatio
             );
             SetUnitFlyHeight(caster, height, 0);
+            
+            tmpPos.setPos(
+              LoadReal(spellHashtable, casterId, 0),
+              LoadReal(spellHashtable, casterId, 1),
+            )
+            const distanceToTarget = CoordMath.distance(casterPos, tmpPos);
 
-            const distanceToTarget = CoordMath.distance(casterPos, targetPos);
-
-            let movePos = CoordMath.polarProjectCoords(
+            tmpPos.polarProjectCoords(
               casterPos, moveAngle, 
               Math.max(
                 jumpSpeedModifierMin, 
@@ -1413,7 +1525,7 @@ export function SetupBraveSwordAttack(
               ) * jumpMoveDistance
             );
 
-            PathingCheck.moveGroundUnitToCoord(caster, movePos);
+            PathingCheck.moveGroundUnitToCoord(caster, tmpPos);
           }
           ++time;
         });
@@ -1474,6 +1586,8 @@ export function SetupDragonFistSfx(
       const caster = GetTriggerUnit();
       let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
       let oldPos = new Vector2D(casterPos.x, casterPos.y);
+      let currentPos = new Vector2D(0, 0);
+      let newPos = new Vector2D(0, 0);
 
       // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
       const sfxList: effect[] = [];
@@ -1493,10 +1607,8 @@ export function SetupDragonFistSfx(
 
       let time = 0; 
       TimerStart(CreateTimer(), tickRate, true, () => {
-        oldPos.x = casterPos.x;
-        oldPos.y = casterPos.y;
-        casterPos.x = GetUnitX(caster);
-        casterPos.y = GetUnitY(caster);
+        oldPos.setVector(casterPos);
+        casterPos.setUnit(caster);
         const distanceTravelled = CoordMath.distance(casterPos, oldPos);
         let facingAngle = GetUnitFacing(caster);
         // if (distanceTravelled < 1) {
@@ -1529,12 +1641,12 @@ export function SetupDragonFistSfx(
               heightOffset + y
             );
 
-            const currentPos = CoordMath.polarProjectCoords(
+            currentPos.polarProjectCoords(
               oldPos, 
               facingAngle, 
               (i+1) * distanceTravelled / updatesThisTick
             );
-            const newPos = CoordMath.polarProjectCoords(
+            newPos.polarProjectCoords(
               currentPos, 
               facingAngle - 90, 
               x
@@ -1668,14 +1780,14 @@ export function SetupGinyuTelekinesis(
       const player = GetTriggerPlayer();
       const itemsToMove: item[] = [];
 
-      const unitsToMove = UnitHelper.getNearbyValidUnits(targetPos, telekinesisAOE, () => {
-        const testUnit = GetFilterUnit();
-        return (
-          UnitHelper.isUnitTargetableForPlayer(testUnit, player) && 
-          !IsUnitType(testUnit, UNIT_TYPE_ETHEREAL) && 
-          !IsUnitType(testUnit, UNIT_TYPE_MAGIC_IMMUNE)
-        )
-      });
+      const unitsToMove = CreateGroup();
+      GroupEnumUnitsInRange(
+        unitsToMove, 
+        targetPos.x, 
+        targetPos.y, 
+        telekinesisAOE,
+        null
+      );
 
       MoveRectTo(telekinesisRect, targetPos.x, targetPos.y);
       EnumItemsInRectBJ(telekinesisRect, () => {
@@ -1717,24 +1829,30 @@ export function SetupGinyuTelekinesis(
 
           ForGroup(unitsToMove, () => {
             const targetUnit = GetEnumUnit();
-            targetPos.setPos(GetUnitX(targetUnit), GetUnitY(targetUnit));
             if (
-              GetPlayerId(GetOwningPlayer(targetUnit)) < Constants.maxActivePlayers
+              UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
+              !IsUnitType(targetUnit, UNIT_TYPE_ETHEREAL) && 
+              !IsUnitType(targetUnit, UNIT_TYPE_MAGIC_IMMUNE)
             ) {
-              newPos.polarProjectCoords(
-                targetPos, 
-                CoordMath.angleBetweenCoords(targetPos, casterPos), 
-                telekinesisSpeed * telekinesisPlayerSpeedModifier,
-              );
-            } else {  
-              newPos.polarProjectCoords(
-                targetPos, 
-                CoordMath.angleBetweenCoords(targetPos, casterPos), 
-                telekinesisSpeed,
-              );
-            }
-            if (CoordMath.distance(casterPos, targetPos) > telekinesisMinDistance) {
-              PathingCheck.moveGroundUnitToCoord(targetUnit, newPos);
+              targetPos.setPos(GetUnitX(targetUnit), GetUnitY(targetUnit));
+              if (
+                GetPlayerId(GetOwningPlayer(targetUnit)) < Constants.maxActivePlayers
+              ) {
+                newPos.polarProjectCoords(
+                  targetPos, 
+                  CoordMath.angleBetweenCoords(targetPos, casterPos), 
+                  telekinesisSpeed * telekinesisPlayerSpeedModifier,
+                );
+              } else {  
+                newPos.polarProjectCoords(
+                  targetPos, 
+                  CoordMath.angleBetweenCoords(targetPos, casterPos), 
+                  telekinesisSpeed,
+                );
+              }
+              if (CoordMath.distance(casterPos, targetPos) > telekinesisMinDistance) {
+                PathingCheck.moveGroundUnitToCoord(targetUnit, newPos);
+              }
             }
           });
 
@@ -1760,6 +1878,7 @@ export function SetupOmegaShenronShadowFist(
   const dballItem = FourCC("I01V");
   const maxDragonBallsToSteal = 1;
   const maxSizedDragonBallStackToSteal = 7;
+  const targetGroup = CreateGroup();
 
   TriggerAddAction(spellTrigger, () => {
     const spellId = GetSpellAbilityId();
@@ -1774,14 +1893,14 @@ export function SetupOmegaShenronShadowFist(
           DestroyTimer(GetExpiredTimer());
         } else {
           const targetPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-          const targetGroup = UnitHelper.getNearbyValidUnits(
-            targetPos, shadowFistAOE, 
-            () => {
-              return (
-                UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), player)
-              );
-            }
-          )
+
+          GroupEnumUnitsInRange(
+            targetGroup, 
+            targetPos.x, 
+            targetPos.y, 
+            shadowFistAOE,
+            null
+          );
           
           let stolenDragonBalls = 0;
 
@@ -1789,10 +1908,12 @@ export function SetupOmegaShenronShadowFist(
           const casterInventoryCount = UnitInventoryCount(caster);
 
           ForGroup(targetGroup, () => {
-            if (totalStolenDragonBalls < maxDragonBallsToSteal) {
-              const targetUnit = GetEnumUnit();
+            const targetUnit = GetEnumUnit();
+            if (
+              UnitHelper.isUnitTargetableForPlayer(targetUnit, player) && 
+              totalStolenDragonBalls < maxDragonBallsToSteal
+            ) {
               const targetDragonBallIndex = GetInventoryIndexOfItemTypeBJ(targetUnit, dballItem)-1;
-
               if (targetDragonBallIndex >= 0) {
                 const stealItem = UnitItemInSlot(targetUnit, targetDragonBallIndex);
                 const numCharges = GetItemCharges(stealItem);
@@ -1838,7 +1959,7 @@ export function SetupOmegaShenronShadowFist(
           }
 
           ++time;
-          DestroyGroup(targetGroup);
+          GroupClear(targetGroup);
         }
       });
     }
@@ -1856,6 +1977,7 @@ export function SetupKrillinSenzuThrow(
   const senzuThrowStealMinDuration = 10;
   const senzuThrowStealAOE = 300;
   const senzuItemId = FourCC("I000");
+  const beanStealUnits = CreateGroup();
   
   TriggerAddAction(spellTrigger, () => {
     const spellId = GetSpellAbilityId();
@@ -1892,30 +2014,35 @@ export function SetupKrillinSenzuThrow(
           }
           
           if (counter > senzuThrowStealMinDuration) {
-            const beanStealUnits = UnitHelper.getNearbyValidUnits(newPos, senzuThrowStealAOE, () => {
-              const testUnit = GetFilterUnit();
-              const playerId = GetPlayerId(GetOwningPlayer(testUnit));
-              return (
-                IsUnitType(testUnit, UNIT_TYPE_HERO) && 
-                playerId < Constants.maxActivePlayers &&
-                !UnitHelper.isUnitDead(testUnit) &&
-                !UnitHelper.isUnitStunned(testUnit) &&
-                !IsUnitType(testUnit, UNIT_TYPE_ETHEREAL)
-              )
-            });
+            GroupEnumUnitsInRange(
+              beanStealUnits, 
+              newPos.x, 
+              newPos.y, 
+              senzuThrowStealAOE,
+              null
+            );
   
             ForGroup(beanStealUnits, () => {
               const targetUnit = GetEnumUnit();
+              const playerId = GetPlayerId(GetOwningPlayer(targetUnit));
               if (
-                counter < senzuThrowDuration && 
-                UnitInventoryCount(targetUnit) < UnitInventorySize(targetUnit)
+                IsUnitType(targetUnit, UNIT_TYPE_HERO) && 
+                playerId < Constants.maxActivePlayers &&
+                !UnitHelper.isUnitDead(targetUnit) &&
+                !UnitHelper.isUnitStunned(targetUnit) &&
+                !IsUnitType(targetUnit, UNIT_TYPE_ETHEREAL)
               ) {
-                UnitAddItem(targetUnit, senzuItem);
-                counter = senzuThrowDuration;
+                if (
+                  counter < senzuThrowDuration && 
+                  UnitInventoryCount(targetUnit) < UnitInventorySize(targetUnit)
+                ) {
+                  UnitAddItem(targetUnit, senzuItem);
+                  counter = senzuThrowDuration;
+                }
               }
             });
             
-            DestroyGroup(beanStealUnits);
+            GroupClear(beanStealUnits);
           }
 
           ++counter;

@@ -28,7 +28,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
     );
 
     this.addHeroListToSaga(["Turles"], true);
-    this.turles = this.bosses.get("Turles");
+    this.turles = this.bosses[0];
 
     this.ping()
     this.setupBossDeathActions(this);
@@ -65,10 +65,7 @@ export class TurlesSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

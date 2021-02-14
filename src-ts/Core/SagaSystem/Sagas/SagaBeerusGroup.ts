@@ -22,7 +22,7 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Beerus"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
@@ -39,10 +39,7 @@ export class BeerusSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -84,7 +81,7 @@ export class WhisTrainingSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Whis"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 3000);
     }
 
@@ -101,10 +98,7 @@ export class WhisTrainingSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

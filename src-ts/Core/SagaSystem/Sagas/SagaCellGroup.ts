@@ -29,13 +29,13 @@ export class CellSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Imperfect Cell", "Semiperfect Cell", "Perfect Cell 1"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
-    this.imperfectCell = this.bosses.get("Imperfect Cell");
-    this.semiperfectCell = this.bosses.get("Semiperfect Cell");
-    this.perfectCell = this.bosses.get("Perfect Cell 1");
+    this.imperfectCell = this.bosses[0];
+    this.semiperfectCell = this.bosses[1];
+    this.perfectCell = this.bosses[2];
 
     SagaHelper.sagaHideUnit(this.semiperfectCell);
     SagaHelper.sagaHideUnit(this.perfectCell);
@@ -91,10 +91,7 @@ export class CellSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -141,8 +138,8 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Perfect Cell Games", "Super Perfect Cell"], true);
 
-    this.perfectCell = this.bosses.get("Perfect Cell Games");
-    this.superPerfectCell = this.bosses.get("Super Perfect Cell");
+    this.perfectCell = this.bosses[0];
+    this.superPerfectCell = this.bosses[1];
 
     SagaHelper.sagaHideUnit(this.superPerfectCell);
 
@@ -189,10 +186,7 @@ export class CellGamesSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -242,7 +236,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Future Imperfect Cell"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 5000);
     }
 
@@ -259,10 +253,7 @@ export class FutureCellSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {

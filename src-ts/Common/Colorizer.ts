@@ -20,7 +20,7 @@ export module Colorizer {
 
   // seems buggy?
   export function colorize(inputString: string, color: Color): string {
-    return color + string + "|r";
+    return color + inputString + "|r";
   }
 
   export function getPlayerColorText(playerId: number): Color {

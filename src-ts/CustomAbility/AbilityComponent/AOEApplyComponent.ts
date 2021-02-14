@@ -13,6 +13,7 @@ export class AOEApplyComponent implements
 {
 
   protected sourceCoords: Vector2D;
+  protected affectedGroup: group;
 
   constructor(
     public name: string = "AOEApplyComponent",
@@ -26,36 +27,38 @@ export class AOEApplyComponent implements
     public components: AbilityComponent[] = [],
   ) {
     this.sourceCoords = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.sourceCoords.setPos(GetUnitX(source), GetUnitY(source));
+    this.sourceCoords.setUnit(source);
 
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.sourceCoords, 
-      this.aoe,
-      () => {
-        const testUnit = GetFilterUnit();
-        return (
-          UnitHelper.isUnitAlive(testUnit) &&
-          IsUnitAlly(testUnit, input.casterPlayer) && 
-          (IsUnitType(testUnit, UNIT_TYPE_HERO) || this.affectsNonHeroes) && 
-          (IsUnitType(testUnit, UNIT_TYPE_SUMMONED) || this.affectsNonSummons) &&
-          (IsUnitOwnedByPlayer(testUnit, input.casterPlayer) || this.affectsAllies)
-        );
-      }
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.sourceCoords.x, 
+      this.sourceCoords.y, 
+      this.aoe, 
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      for (const component of this.components) {
-        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-          component.performTickAction(ability, input, target);
+      if (
+        UnitHelper.isUnitAlive(target) &&
+        IsUnitAlly(target, input.casterPlayer) && 
+        (IsUnitType(target, UNIT_TYPE_HERO) || this.affectsNonHeroes) && 
+        (IsUnitType(target, UNIT_TYPE_SUMMONED) || this.affectsNonSummons) &&
+        (IsUnitOwnedByPlayer(target, input.casterPlayer) || this.affectsAllies)
+      ) {
+        for (const component of this.components) {
+          if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+            component.performTickAction(ability, input, target);
+          }
         }
       }
     })
-
-    DestroyGroup(affectedGroup);
+    
+    GroupClear(this.affectedGroup);
   }
 
   cleanup() {
@@ -63,6 +66,7 @@ export class AOEApplyComponent implements
       component.cleanup();
     }
     this.components.splice(0, this.components.length);
+    DestroyGroup(this.affectedGroup);
   }
   
 

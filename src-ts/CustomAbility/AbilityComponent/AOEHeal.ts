@@ -25,6 +25,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
 
   protected healTargets: Map<unit, number>;
 
+  protected affectedGroup: group;
+
   constructor(
     public name: string = "AOEHeal",
     public repeatInterval: number = 1,
@@ -48,6 +50,7 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     this.healCoords = new Vector2D(0, 0);
     this.healStarted = false;
     this.healTargets = new Map();
+    this.affectedGroup = CreateGroup();
   }
 
   protected calculateHeal(input: CustomAbilityInput, source: unit): number {
@@ -131,25 +134,20 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     //   this.healCoords.x, this.healCoords.y, 5.0, 4.0
     // );
 
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.healCoords, 
-      this.aoe,
-      () => {
-        return (
-          !this.onlyHealCaster && 
-          IsUnitAlly(GetFilterUnit(), input.casterPlayer) &&
-          (
-            GetOwningPlayer(GetFilterUnit()) != input.casterPlayer || 
-            this.canHealCaster
-          )
-        );
-      }
-    );
 
     if (this.onlyHealCaster) {
-      GroupClear(affectedGroup);
-      GroupAddUnit(affectedGroup, input.caster.unit);
+      GroupClear(this.affectedGroup);
+      GroupAddUnit(this.affectedGroup, input.caster.unit);
+    } else {
+      GroupEnumUnitsInRange(
+        this.affectedGroup, 
+        this.healCoords.x, 
+        this.healCoords.y, 
+        this.aoe,
+        null
+      );
     }
+
 
     const heal = this.calculateHeal(input, source);
     let sourceHpPercent = 0;
@@ -158,51 +156,65 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
       sourceHpPercent *= sourceHpPercent;
     }
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      // can heal more targets and buff is in place
       if (
+        IsUnitAlly(target, input.casterPlayer) &&
         (
-          this.maxHealTargets == AOEHeal.UNLIMITED_HEAL_TARGETS ||
-          this.healTargets.size < this.maxHealTargets ||
-          this.healTargets.get(target) != undefined
-        )
-        &&
-        (
-          !this.requireBuff || 
-          GetUnitAbilityLevel(target, this.buffId) > 0
+          GetOwningPlayer(target) != input.casterPlayer || 
+          this.canHealCaster
         )
       ) {
+
+        // can heal more targets and buff is in place
         if (
-          this.maxHealTicks != AOEHeal.UNLIMITED_HEAL_TICKS && 
-          (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyHealHeroes)
+          (
+            this.maxHealTargets == AOEHeal.UNLIMITED_HEAL_TARGETS ||
+            this.healTargets.size < this.maxHealTargets ||
+            this.healTargets.get(target) != undefined
+          )
+          &&
+          (
+            !this.requireBuff || 
+            GetUnitAbilityLevel(target, this.buffId) > 0
+          )
         ) {
-          const healCount = this.healTargets.get(target);
-          if (healCount) {
-            if (healCount < this.maxHealTicks) {
-              this.healTargets.set(target, healCount + 1);
+          if (
+            this.maxHealTicks != AOEHeal.UNLIMITED_HEAL_TICKS && 
+            (IsUnitType(target, UNIT_TYPE_HERO) || !this.onlyHealHeroes)
+          ) {
+            const healCount = this.healTargets.get(target);
+            if (healCount) {
+              if (healCount < this.maxHealTicks) {
+                this.healTargets.set(target, healCount + 1);
+                this.performHeal(input, target, heal, sourceHpPercent);
+              }
+            } else {
+              this.healTargets.set(target, 1);
               this.performHeal(input, target, heal, sourceHpPercent);
             }
-          } else {
-            this.healTargets.set(target, 1);
+          } else {    
             this.performHeal(input, target, heal, sourceHpPercent);
           }
-        } else {    
-          this.performHeal(input, target, heal, sourceHpPercent);
         }
       }
     })
 
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
     
     if (ability.isFinishedUsing(this)) {
-      this.cleanup();
+      this.reset();
     }
   }
 
-  cleanup() {
+  reset() {
     this.healStarted = false;
     this.healTargets.clear();
+  }
+
+  cleanup() {
+    this.reset();
+    DestroyGroup(this.affectedGroup);
   }
 
   clone(): AbilityComponent {

@@ -1,6 +1,6 @@
 export class Tooltip implements Serializable<Tooltip> {
-  static readonly defaultTitle = "Tooltip Title";
-  static readonly defaultBody = "Tooltip Body";
+  static readonly defaultTitle = "?";
+  static readonly defaultBody = "?";
   
   constructor(
     public title: string = Tooltip.defaultTitle, 

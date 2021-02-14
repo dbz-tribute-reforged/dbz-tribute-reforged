@@ -16,6 +16,8 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
   protected targetCoord: Vector2D;
   protected newTargetCoord: Vector2D;
 
+  protected affectedGroup: group;
+
   constructor(
     public name: string = "AOEKnockback",
     public repeatInterval: number = 1,
@@ -32,6 +34,7 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
     this.sourceCoord = new Vector2D();
     this.targetCoord = new Vector2D();
     this.newTargetCoord = new Vector2D();
+    this.affectedGroup = CreateGroup();
   }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
@@ -44,30 +47,33 @@ export class AOEKnockback implements AbilityComponent, Serializable<AOEKnockback
         this.sourceCoord.setVector(input.targetPoint);
       }
     }
-    const affectedGroup = UnitHelper.getNearbyValidUnits(
-      this.sourceCoord, 
+
+    GroupEnumUnitsInRange(
+      this.affectedGroup, 
+      this.sourceCoord.x, 
+      this.sourceCoord.y, 
       this.knockbackData.aoe,
-      () => {
-        return UnitHelper.isUnitTargetableForPlayer(GetFilterUnit(), input.casterPlayer, this.affectAllies);
-      }
+      null
     );
 
-    ForGroup(affectedGroup, () => {
+    ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
-      this.targetCoord.setPos(GetUnitX(target), GetUnitY(target));
-      const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
-      if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
-        SetUnitFacing(target, sourceToTargetAngle);
+      if (UnitHelper.isUnitTargetableForPlayer(target, input.casterPlayer, this.affectAllies)) {
+        this.targetCoord.setUnit(target);
+        const sourceToTargetAngle = CoordMath.angleBetweenCoords(this.sourceCoord, this.targetCoord);
+        if (this.reflectBeams && GetUnitTypeId(target) == Constants.dummyBeamUnitId) {
+          SetUnitFacing(target, sourceToTargetAngle);
+        }
+        const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
+        this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
+        PathingCheck.moveGroundUnitToCoord(target, this.newTargetCoord);
       }
-      const knockbackAngle = this.knockbackData.angle + sourceToTargetAngle;
-      this.newTargetCoord.polarProjectCoords(this.targetCoord, knockbackAngle, this.knockbackData.speed);
-      PathingCheck.moveGroundUnitToCoord(target, this.newTargetCoord);
     });
-    DestroyGroup(affectedGroup);
+    GroupClear(this.affectedGroup);
   }
 
   cleanup() {
-    
+    DestroyGroup(this.affectedGroup);
   }
 
   clone(): AbilityComponent {

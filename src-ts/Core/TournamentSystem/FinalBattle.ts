@@ -90,29 +90,27 @@ export class FinalBattle extends AdvancedTournament implements Tournament {
     // get all units put in wait rooms
     for (const player of players) {
       const playerUnits = CreateGroup();
-      GroupEnumUnitsOfPlayer(playerUnits, player, Filter(() => {
-        return (
-          UnitHelper.isUnitTournamentViable(GetFilterUnit())
-        );
-      }));
+      GroupEnumUnitsOfPlayer(playerUnits, player, null);
 
       ForGroup(playerUnits, () => {
         const unit = GetEnumUnit();
-        unitsTeam.push(unit);
-        UnitResetCooldown(unit);
-        if (UnitHelper.isUnitDead(unit)) {
-          ReviveHero(unit, waitRoom.x, waitRoom.y, true);
+        if (UnitHelper.isUnitTournamentViable(unit)) {
+          unitsTeam.push(unit);
+          UnitResetCooldown(unit);
+          if (UnitHelper.isUnitDead(unit)) {
+            ReviveHero(unit, waitRoom.x, waitRoom.y, true);
+          }
+          SetUnitLifePercentBJ(unit, 100);
+          SetUnitManaPercentBJ(unit, 100);
+          SetUnitX(unit, waitRoom.x);
+          SetUnitY(unit, waitRoom.y);
+          SetUnitInvulnerable(unit, true);
         }
-        SetUnitLifePercentBJ(unit, 100);
-        SetUnitManaPercentBJ(unit, 100);
-        SetUnitX(unit, waitRoom.x);
-        SetUnitY(unit, waitRoom.y);
-        SetUnitInvulnerable(unit, true);
       })
+      DestroyGroup(playerUnits);
 
       PanCameraToTimedForPlayer(player, waitRoom.x, waitRoom.y, 0);
 
-      DestroyGroup(playerUnits);
     }
   }
 

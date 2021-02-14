@@ -13,7 +13,7 @@ export class AdvancedSaga {
   public name: string = '';
   public state: SagaState;
   
-  public bosses: Map<string, unit>;
+  public bosses: unit[];
   public bossesAI: Map<unit, SagaHeroAI>;
   public bossDrops: Map<unit, number[]>;
 
@@ -31,7 +31,7 @@ export class AdvancedSaga {
   constructor() {
     this.state = SagaState.NotStarted;
     this.name = '';
-    this.bosses = new Map();
+    this.bosses = [];
     this.bossesAI = new Map();
     this.bossDrops = new Map();
     this.bossDeathTrigger = CreateTrigger();
@@ -47,11 +47,18 @@ export class AdvancedSaga {
     this.state = SagaState.InProgress;
   }
 
+  canComplete(): boolean {
+    if (this.bosses.length > 0) {
+      return SagaHelper.areAllBossesDead(this.bosses);
+    }
+    return false;
+  }
+
   complete(): void {
     // Logger.LogDebug(this.name + " Completed");
     this.state = SagaState.Completed;
     PlaySoundBJ(this.completeSound);
-    this.bosses.clear();
+    this.bosses.splice(0, this.bosses.length);
     for (const [boss, bossAI] of this.bossesAI) {
       bossAI.cleanup();
     }
@@ -62,14 +69,25 @@ export class AdvancedSaga {
   update(t: number): void {
     // saga boss ai is done on a per unit level
     // independent of each other
-    for (const [boss, bossAI] of this.bossesAI) {
+    for (const boss of this.bosses) {
       if (
         !UnitHelper.isUnitDead(boss) &&
         !SagaHelper.isUnitSagaHidden(boss)
       ) {
-        bossAI.performTickActions();
+        const bossAI = this.bossesAI.get(boss);
+        if (bossAI) {
+          bossAI.performTickActions();
+        }
       }
     }
+    // for (const [boss, bossAI] of this.bossesAI) {
+    //   if (
+    //     !UnitHelper.isUnitDead(boss) &&
+    //     !SagaHelper.isUnitSagaHidden(boss)
+    //   ) {
+    //     bossAI.performTickActions();
+    //   }
+    // }
   }
 
   getColoredName(): string {
@@ -96,14 +114,14 @@ export class AdvancedSaga {
     for (const name of names) {
       SagaHelper.addHeroToAdvancedSaga(this, name, mustKill);
     }
-    for (const [name, sagaUnit] of this.bosses) {
+    for (const boss of this.bosses) {
       TriggerRegisterUnitEvent(
         this.bossDeathTrigger,
-        sagaUnit, 
+        boss, 
         EVENT_UNIT_DEATH,
       )
-      if (GetUnitAcquireRange(sagaUnit) < Constants.sagaMinAcquisitionRange) {
-        SetUnitAcquireRange(sagaUnit, Constants.sagaMinAcquisitionRange);
+      if (GetUnitAcquireRange(boss) < Constants.sagaMinAcquisitionRange) {
+        SetUnitAcquireRange(boss, Constants.sagaMinAcquisitionRange);
       }
     }
   }

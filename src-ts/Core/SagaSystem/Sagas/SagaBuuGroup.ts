@@ -25,13 +25,13 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Pui Pui", "Yakon", "Dabura", "Babidi", "Fat Buu"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
-    this.dabura = this.bosses.get("Dabura");
-    this.babidi = this.bosses.get("Babidi");
-    this.fatBuu = this.bosses.get("Fat Buu");
+    this.dabura = this.bosses[2];
+    this.babidi = this.bosses[3];
+    this.fatBuu = this.bosses[4];
 
     SagaHelper.sagaHideUnit(this.babidi);
     SagaHelper.sagaHideUnit(this.fatBuu);
@@ -63,10 +63,7 @@ export class BabidiSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -114,12 +111,12 @@ export class BuuSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Super Buu", "Kid Buu"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, Constants.sagaMaxAcquisitionRange);
     }
 
-    this.superBuu = this.bosses.get("Super Buu");
-    this.kidBuu = this.bosses.get("Kid Buu");
+    this.superBuu = this.bosses[0];
+    this.kidBuu = this.bosses[1];
 
     SagaHelper.sagaHideUnit(this.kidBuu);
 
@@ -149,10 +146,7 @@ export class BuuSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
@@ -199,13 +193,13 @@ export class FutureBabidiSaga extends AdvancedSaga implements Saga {
 
     this.addHeroListToSaga(["Future Pui Pui", "Future Yakon", "Future Dabura", "Future Babidi"], true);
 
-    for (const [name, boss] of this.bosses) {
+    for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 4000);
     }
 
-    this.yakon = this.bosses.get("Future Yakon");
-    this.dabura = this.bosses.get("Future Dabura");
-    this.babidi = this.bosses.get("Future Babidi");
+    this.yakon = this.bosses[1];
+    this.dabura = this.bosses[2];
+    this.babidi = this.bosses[3];
 
     SagaHelper.sagaHideUnit(this.dabura);
     SagaHelper.sagaHideUnit(this.babidi);
@@ -239,10 +233,7 @@ export class FutureBabidiSaga extends AdvancedSaga implements Saga {
   }
 
   canComplete(): boolean {
-    if (this.bosses.size > 0) {
-      return SagaHelper.areAllBossesDead(this.bosses);
-    }
-    return false;
+    return super.canComplete();
   }
 
   start(): void {
