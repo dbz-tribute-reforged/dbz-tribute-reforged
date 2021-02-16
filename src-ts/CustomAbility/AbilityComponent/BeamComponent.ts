@@ -21,6 +21,8 @@ export class BeamComponent implements
   static readonly BEAM_UNIT_SPAWN_TARGET = 2;
   static readonly BEAM_UNIT_SPAWN_TARGET_UNIT = 3;
 
+  static readonly BEAM_HP_MODIFIER = 0.75;
+
   static readonly BEAM_SPEED_VERY_SLOW = 30;
   static readonly BEAM_SPEED_SLOW = 35;
   static readonly BEAM_SPEED_MEDIUM_SLOW = 40;
@@ -282,7 +284,12 @@ export class BeamComponent implements
     maxHp = Math.max(
       50, 
       50 * 
-      Math.floor(input.level * this.beamHpMult * GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true))
+      Math.floor(
+        BeamComponent.BEAM_HP_MODIFIER * 
+        input.level * 
+        this.beamHpMult * 
+        GetHeroStatBJ(this.beamHpAttribute, input.caster.unit, true)
+      )
     );
 
     BlzSetUnitMaxHP(this.beamUnit, maxHp);

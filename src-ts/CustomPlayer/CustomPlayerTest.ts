@@ -22,6 +22,7 @@ import { SoundHelper } from "Common/SoundHelper";
 // global?
 export const customPlayers: CustomPlayer[] = [];
 export let hostPlayer: player = Player(0);
+export let isfbsimtest: boolean = false;
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -982,26 +983,6 @@ export function CustomPlayerTest() {
       SetPlayerHandicapXP(GetTriggerPlayer(), value * 0.01);
       BJDebugMsg("XP Rate: " + GetPlayerHandicapXPBJ(GetTriggerPlayer()));
     });
-  
-    // reset cd of custom ability
-    const cdTrig = CreateTrigger();
-    for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
-      TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
-    }
-    TriggerAddAction(cdTrig, () => {
-      const player = GetTriggerPlayer();
-      const playerId = GetPlayerId(player);
-      for (const customHero of customPlayers[playerId].allHeroes) {
-        if (customHero) {
-          UnitResetCooldown(customHero.unit);
-          for (const [name, abil] of customHero.abilities.abilities) {
-            if (abil) {
-              abil.currentCd = 0;
-            }
-          }
-        }
-      }
-    });
 
     const tpTrig = CreateTrigger();
     for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
@@ -1122,6 +1103,7 @@ export function CustomPlayerTest() {
   });
 
   // freemode
+  isfbsimtest = false;
   const freeModeTrig = CreateTrigger();
   // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
   //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
@@ -1133,6 +1115,8 @@ export function CustomPlayerTest() {
   TriggerAddAction(freeModeTrig, () => {
     if (GetTriggerPlayer() == hostPlayer) {
       WinLossHelper.freeMode = true;
+      isfbsimtest =  true;
+      createCdTrigger();
     }
   });
 
@@ -1237,92 +1221,6 @@ export function CustomPlayerTest() {
       BlzFrameSetSize(frame, x, y);
 		}
   });
-
-
-  // // costs about 2-3mb per run
-  // const crazyUnit = FourCC("hpea");
-  // const crazyTest = CreateTrigger();
-  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
-	// TriggerAddAction(crazyTest, () => {
-	// 	const player = GetTriggerPlayer();
-  //   BJDebugMsg("doing crazy test");
-    
-  //   const crazyArr: group = CreateGroup();
-  //   for (let i = 0; i < 1000; ++i) {
-  //     const unit = CreateUnit(
-  //       player,
-  //       crazyUnit,
-  //       0, 0, 0
-  //     );
-  //     GroupAddUnit(crazyArr, unit);
-  //   }
-
-  //   TimerStart(CreateTimer(), 1, false, () => {
-  //     ForGroup(crazyArr, () => {
-  //       RemoveUnit(GetEnumUnit());
-  //     });
-  //     DestroyGroup(crazyArr);
-  //     DestroyTimer(GetExpiredTimer());
-  //     BJDebugMsg("done crazy test");
-  //   });
-  // });
-  
-  // uses a lot of memory but doesnt use any more after the fact ...
-  // const crazyUnit = FourCC("hpea");
-  // const crazyTest = CreateTrigger();
-  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
-	// TriggerAddAction(crazyTest, () => {
-	// 	const player = GetTriggerPlayer();
-  //   BJDebugMsg("doing crazy test");
-    
-  //   const crazyArr: unit[] = [];
-  //   for (let i = 0; i < 2000; ++i) {
-  //     const unit = CreateUnit(
-  //       player,
-  //       crazyUnit,
-  //       0, 0, 0
-  //     );
-  //     crazyArr.push(unit);
-  //   }
-
-  //   TimerStart(CreateTimer(), 1, false, () => {
-  //     for (const unit of crazyArr) {
-  //       RemoveUnit(unit);
-  //     }
-  //     crazyArr.slice(0, crazyArr.length);
-  //     DestroyTimer(GetExpiredTimer());
-  //     BJDebugMsg("done crazy test");
-  //   });
-  // });
-
-  // not actual leak
-  // const crazyArr: unit[] = [];
-  // const crazyUnit = FourCC("hpea");
-  // const crazyTest = CreateTrigger();
-  // TriggerRegisterPlayerChatEvent(crazyTest, Player(0), "-crazytest", false);
-	// TriggerAddAction(crazyTest, () => {
-	// 	const player = GetTriggerPlayer();
-  //   BJDebugMsg("doing crazy test");
-    
-  //   for (let i = 0; i < 2000; ++i) {
-  //     const unit = CreateUnit(
-  //       player,
-  //       crazyUnit,
-  //       0, 0, 0
-  //     );
-  //     crazyArr.push(unit);
-  //   }
-
-  //   TimerStart(CreateTimer(), 1, false, () => {
-  //     for (const unit of crazyArr) {
-  //       RemoveUnit(unit);
-  //     }
-  //     crazyArr.slice(0, crazyArr.length);
-  //     DestroyTimer(GetExpiredTimer());
-  //     BJDebugMsg("done crazy test");
-  //   });
-  // });
-
 
   // to save number of events and triggers
   const independentSpellTrigger = CreateTrigger();
@@ -2369,6 +2267,30 @@ export function SetupCustomAbilityRefresh(
               if (abil.currentTick > 0) {
                 abil.currentTick = abil.duration;
               }
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+export function createCdTrigger() {
+  // reset cd of custom ability
+  const cdTrig = CreateTrigger();
+  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+    TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
+  }
+  TriggerAddAction(cdTrig, () => {
+    const player = GetTriggerPlayer();
+    const playerId = GetPlayerId(player);
+    if (isfbsimtest) {
+      for (const customHero of customPlayers[playerId].allHeroes) {
+        if (customHero) {
+          UnitResetCooldown(customHero.unit);
+          for (const [name, abil] of customHero.abilities.abilities) {
+            if (abil) {
+              abil.currentCd = 0;
             }
           }
         }
