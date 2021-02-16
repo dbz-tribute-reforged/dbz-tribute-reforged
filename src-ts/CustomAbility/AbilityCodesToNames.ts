@@ -228,6 +228,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.multiFormSolarFlare, AbilityNames.Tien.MULTI_FORM_SOLAR_FLARE],
     [Id.tienFourArms, AbilityNames.Tien.FOUR_ARMS],
 
+    // ichigo
     [Id.getsugaTensho, AbilityNames.Ichigo.GETSUGA_TENSHO],
     [Id.getsugaJujisho, AbilityNames.Ichigo.GETSUGA_JUJISHO],
     [Id.ceroCharge, AbilityNames.Ichigo.CERO_CHARGE],
@@ -235,6 +236,21 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.mugetsuUnleash, AbilityNames.Ichigo.MUGETSU_UNLEASH],
     [Id.mugetsuAbsorb, AbilityNames.Ichigo.MUGETSU_ABSORB],
     [Id.shunpo, AbilityNames.Ichigo.SHUNPO],
+
+    // dart feld
+    [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
+    [Id.burningSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
+    [Id.madnessSlash, AbilityNames.DartFeld.MADNESS_SLASH],
+    [Id.crushDance, AbilityNames.DartFeld.CRUSH_DANCE],
+    [Id.heartOfFire, AbilityNames.DartFeld.HEART_OF_FIRE],
+    [Id.madnessHero, AbilityNames.DartFeld.MADNESS_HERO],
+    [Id.dragoonTransformation, AbilityNames.DartFeld.DRAGOON_TRANSFORMATION],
+    [Id.blazingDynamo, AbilityNames.DartFeld.BLAZING_DYNAMO],
+    [Id.dragoonFlourish, AbilityNames.DartFeld.DRAGOON_FLOURISH],
+    [Id.flameShot, AbilityNames.DartFeld.FLAME_SHOT],
+    [Id.paragonOfFlame, AbilityNames.DartFeld.PARAGON_OF_FLAME],
+    [Id.finalBurst, AbilityNames.DartFeld.FINAL_BURST],
+    [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGOON],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

@@ -10,6 +10,6 @@ export const ChannellingComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    ticksFromEnd: 10,
+    ticksFromEnd: 12,
   },
 ];

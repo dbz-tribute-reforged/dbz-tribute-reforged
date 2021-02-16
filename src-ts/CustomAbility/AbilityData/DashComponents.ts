@@ -970,7 +970,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 30,
+    distance: 25,
   },
   // new hampshire smash
   {
@@ -1035,7 +1035,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 1100,
+    distance: 1400,
   },
   // dash bankai final on hit
   {
@@ -1049,6 +1049,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 31,
+  },
+  // crush dance
+  {
+    name: "dash ground point crush dance",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
   },
   // ----------------------------
   // cell-x

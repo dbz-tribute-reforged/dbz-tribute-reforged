@@ -274,6 +274,22 @@ export module AbilityNames {
     export const DASH_BANKAI_FINAL_2: string = "Bankai Final Dash 2";
   }
 
+  export module DartFeld {
+    export const DOUBLE_SLASH: string = "Double Slash";
+    export const BURNING_SLASH: string = "Burning Slash";
+    export const MADNESS_SLASH: string = "Madness Slash";
+    export const CRUSH_DANCE: string = "Crush Dance";
+    export const HEART_OF_FIRE: string = "Heart of Fire";
+    export const MADNESS_HERO: string = "Madness Hero";
+    export const DRAGOON_TRANSFORMATION: string = "Dragoon Transformation";
+    export const BLAZING_DYNAMO: string = "Blazing Dynamo";
+    export const DRAGOON_FLOURISH: string = "Dragoon Flourish";
+    export const FLAME_SHOT: string = "Flame Shot";
+    export const PARAGON_OF_FLAME: string = "Paragon of Flame";
+    export const FINAL_BURST: string = "Final Burst";
+    export const RED_EYED_DRAGOON: string = "Red Eyed Dragon Summoning";
+  }
+
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

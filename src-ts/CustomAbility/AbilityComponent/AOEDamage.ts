@@ -17,7 +17,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly UNLIMITED_DAMAGE_TICKS = -1;
   static readonly DEFAULT_MAX_DAMAGE_TICKS = 12;
 
-  static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.75;
+  static readonly BEAM_CLASH_DAMAGE_MULTIPLIER = 0.85;
 
   protected damageCoords: Vector2D;
   protected damageStarted: boolean;
@@ -67,7 +67,8 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "damage " + damage);
     if (this.scaleDamageToSourceHp) {
       const percentHP = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-      damage *= percentHP * percentHP;
+      // damage *= percentHP * percentHP;
+      damage *= percentHP;
     }
     if (input.isBeamClash && input.isBeamClash == true) {
       damage *= AOEDamage.BEAM_CLASH_DAMAGE_MULTIPLIER;

@@ -136,6 +136,21 @@ export module Id {
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
 
+  export const dartFeld = FourCC("H09T");
+  export const doubleSlash = FourCC("A0UQ");
+  export const burningSlash = FourCC("A0UR");
+  export const madnessSlash = FourCC("A0UW");
+  export const crushDance = FourCC("A0US");
+  export const heartOfFire = FourCC("A0UT");
+  export const madnessHero = FourCC("A0UU");
+  export const dragoonTransformation = FourCC("A0V1");
+  export const blazingDynamo = FourCC("A0UV");
+  export const dragoonFlourish = FourCC("A0UX");
+  export const flameShot = FourCC("A0UY");
+  export const paragonOfFlame = FourCC("A0UZ");
+  export const finalBurst = FourCC("A0V0");
+  export const redEyedDragonSummoning = FourCC("A0V3");
+
   export const dyspo = FourCC("H09H");
   export const lightBullet = FourCC("A0QY");
   export const justiceKick = FourCC("A0QZ");

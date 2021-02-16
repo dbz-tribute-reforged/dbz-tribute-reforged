@@ -4766,6 +4766,91 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.DartFeld.DOUBLE_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.DOUBLE_SLASH,
+      body: 
+        AbilityNames.DartFeld.DOUBLE_SLASH,
+    },
+    components: [
+      { name: "multi double slash" },
+      { name: "dash ground forward videl speed boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.CRUSH_DANCE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.CRUSH_DANCE,
+      body: 
+        AbilityNames.DartFeld.CRUSH_DANCE,
+    },
+    components: [
+      { name: "dash ground point crush dance" },
+      { name: "damage crush dance explosion" },
+      { name: "sfx crush dance" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.BLAZING_DYNAMO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.BLAZING_DYNAMO,
+      body: 
+        AbilityNames.DartFeld.BLAZING_DYNAMO
+    },
+    components: [
+      { name: "dash ground point blazing dynamo" },
+      { name: "dash ground point blazing dynamo reverse" },
+      { name: "damage blazing dynamo dps" },
+      { name: "stun blazing dynamo" },
+      { name: "sfx blazing dynamo" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
