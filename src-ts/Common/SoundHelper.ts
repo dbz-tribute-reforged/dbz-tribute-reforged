@@ -869,6 +869,12 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho.mp3", 1933);
         }
         break;
+      
+      case Id.getsugaKuroi:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaKuroi.mp3", 2000);
+        }
+        break;
 
       case Id.getsugaJujisho:
         if (unitId == Id.ichigo) {

@@ -306,6 +306,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // ichigo
     [Id.ichigo, [
       AbilityNames.Ichigo.GETSUGA_TENSHO,
+      AbilityNames.Ichigo.GETSUGA_KUROI,
       AbilityNames.Ichigo.GETSUGA_JUJISHO,
       AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
       AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,

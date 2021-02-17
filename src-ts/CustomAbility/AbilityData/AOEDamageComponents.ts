@@ -4185,6 +4185,30 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  //getsuga kuroi
+  {
+    name: "damage getsuga kuroi dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 550,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 6,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 6,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
   // getsuga jujisho
   {
     name: "damage getsuga jujisho dps",
@@ -4248,7 +4272,7 @@ export const AOEDamageComponents = [
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
       multiplier: BASE.KAME_DPS * 15,
-      attribute: bj_HEROSTAT_STR,
+      attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
       weaponType: 0,

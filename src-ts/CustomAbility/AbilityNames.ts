@@ -256,6 +256,7 @@ export module AbilityNames {
 
   export module Ichigo {
     export const GETSUGA_TENSHO: string = "Getsuga Tensho";
+    export const GETSUGA_KUROI: string = "Getsuga Kuroi";
     export const GETSUGA_JUJISHO: string = "Getsuga Jujisho";
     export const GETSUGA_JUJISHO_ON_HIT_1: string = "Getsuga Jujisho 1";
     export const GETSUGA_JUJISHO_ON_HIT_2: string = "Getsuga Jujisho 2";

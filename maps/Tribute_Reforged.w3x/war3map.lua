@@ -1290,11 +1290,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2005)
+    SetSoundDuration(gg_snd_Hint, 2845)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2548)
+    SetSoundDuration(gg_snd_GoodJob, 2954)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -24495,35 +24495,49 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func013C()
     return true
 end
 
+function Trig_Ichigo_Bankai_Temp_Skin_Func015Func005C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0V4"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Ichigo_Bankai_Temp_Skin_Func015C()
+    if (not (GetSpellAbilityId() == FourCC("A0U8"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Ichigo_Bankai_Temp_Skin_Func016C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func016Func003C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func003C()
     if (not (GetSpellAbilityId() == FourCC("A0U9"))) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func016Func004Func003C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func004Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func016Func004C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func004C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 7)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func016Func005C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func005C()
     if (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 10) then
         return true
     end
@@ -24533,8 +24547,8 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func016Func005C()
     return false
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func016C()
-    if (not Trig_Ichigo_Bankai_Temp_Skin_Func016Func005C()) then
+function Trig_Ichigo_Bankai_Temp_Skin_Func017C()
+    if (not Trig_Ichigo_Bankai_Temp_Skin_Func017Func005C()) then
         return false
     end
     return true
@@ -24590,13 +24604,24 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
     end
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
     if (Trig_Ichigo_Bankai_Temp_Skin_Func015C()) then
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0UN"), udg_TempPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0U7"), GetOwningPlayer(udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0UH"), GetOwningPlayer(udg_StatMultUnit))
+        UnitAddAbilityBJ(FourCC("A0V4"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0V4"), udg_TempPlayer)
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func015Func005C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0V4"), udg_StatMultUnit, 10)
+        else
+        end
     else
     end
     if (Trig_Ichigo_Bankai_Temp_Skin_Func016C()) then
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0UN"), udg_TempPlayer)
+    else
+    end
+    if (Trig_Ichigo_Bankai_Temp_Skin_Func017C()) then
         SetPlayerAbilityAvailableBJ(true, FourCC("A0UO"), udg_TempPlayer)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.10, (0 + 0))
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func003C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func003C()) then
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0U9"), udg_TempPlayer)
             SetPlayerAbilityAvailableBJ(false, FourCC("A0U8"), udg_TempPlayer)
@@ -24605,11 +24630,11 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U9"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U8"), 9))
         end
     else
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func004C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func004C()) then
             BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.40, (0 + 0))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UK"), udg_TempPlayer)
-            if (Trig_Ichigo_Bankai_Temp_Skin_Func016Func004Func003C()) then
+            if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func004Func003C()) then
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.60, (0 + 0))
             else
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.70, (0 + 0))
@@ -24869,20 +24894,27 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func010C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()
-    if (not (udg_TransformationAbility == FourCC("A0TO"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func001C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+    if (not (udg_TransformationAbility == FourCC("A0U8"))) then
         return false
     end
     return true
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()
+    if (not (udg_TransformationAbility == FourCC("A0TO"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func013C()
     if (not (udg_TransformationAbility == FourCC("A0PV"))) then
         return false
     end
@@ -24974,14 +25006,21 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
     else
     end
     if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func011C()) then
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0V4"), GetOwningPlayer(udg_StatMultUnit))
+        UnitRemoveAbilityBJ(FourCC("A0V4"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0U7"), GetOwningPlayer(udg_StatMultUnit))
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0UH"), GetOwningPlayer(udg_StatMultUnit))
+    else
+    end
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()) then
         SetUnitScalePercent(udg_StatMultUnit, 160.00, 160.00, 160.00)
                 playGenericSpellSound(udg_StatMultUnit,"Audio/Effects/Mario/PowerDown.mp3", 900)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0TP"), GetOwningPlayer(udg_StatMultUnit))
         MultiboardSetItemIconBJ(udg_Scoreboard, 2, udg_ScoreboardPlayerRowIndex[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))], "BTNMario.blp")
     else
     end
-    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012C()) then
-        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func012Func001C()) then
+    if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013C()) then
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func013Func001C()) then
             AddUnitAnimationPropertiesBJ(false, "gold", udg_StatMultUnit)
             SetUnitScalePercent(udg_StatMultUnit, 105.00, 105.00, 105.00)
             SetPlayerAbilityAvailableBJ(true, FourCC("A0PR"), GetOwningPlayer(udg_StatMultUnit))

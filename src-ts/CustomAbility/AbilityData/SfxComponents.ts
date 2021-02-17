@@ -10054,6 +10054,58 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx beam getsuga kuroi", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "BladeBeamFinal.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 3.0,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 0.5,
+        color: {
+          x: 86,
+          y: 42,
+          z: 0,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBombShine.mdl",
+        repeatInterval: 8,
+        group: 0,
+        scale: 0.6,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 2,
+          y: 2,
+          z: 2,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
     name: "sfx beam getsuga jujisho", 
     repeatInterval: 1,
     startTick: 0,

@@ -38946,6 +38946,15 @@ STRING 6352
 Shinigami
 }
 
+STRING 6353
+// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
+}
+
 STRING 6354
 // Units: H08J (Saiyan Defender of the earth), Name (Name)
 {
@@ -61678,7 +61687,7 @@ STRING 10027
 }
 
 STRING 10028
-// Abilities: A0U7 (Getsuga Tensho), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
@@ -86150,13 +86159,13 @@ Q
 }
 
 STRING 13974
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13975
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -97741,7 +97750,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 15673
-// Abilities: A0UH (Getsuga Jujisho), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UH (Getsuga Jujisho), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
@@ -101763,7 +101772,7 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16233
-// Abilities: A0UH (Getsuga Jujisho), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
 {
 Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
@@ -109095,5 +109104,185 @@ Transformations:
 [lvl 80]  2.2/1.8/1.6x  "dragoon"
 [lvl 150] 2.5/2.1/1.9x  "dragoon"
 [lvl 200] 2.8/2.4/2.2x  "dragoon"
+}
+
+STRING 17177
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool3> seconds|r
+}
+
+STRING 17178
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool4> seconds|r
+}
+
+STRING 17179
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool5> seconds|r
+}
+
+STRING 17180
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool6> seconds|r
+}
+
+STRING 17181
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool7> seconds|r
+}
+
+STRING 17182
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 2|r]
+}
+
+STRING 17183
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 3|r]
+}
+
+STRING 17184
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 4|r]
+}
+
+STRING 17185
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 5|r]
+}
+
+STRING 17186
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 6|r]
+}
+
+STRING 17187
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 1|r]
+}
+
+STRING 17188
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 7|r]
+}
+
+STRING 17189
+// Abilities: A0V4 (Getsuga Kuroi), Name (Name)
+{
+Getsuga Kuroi
+}
+
+STRING 17190
+// Abilities: A0V4 (Getsuga Kuroi), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Getsuga Tensho - [|cffffcc00Level %d|r]
+}
+
+STRING 17191
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 9|r]
+}
+
+STRING 17192
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 8|r]
+}
+
+STRING 17193
+// Abilities: A0V4 (Getsuga Kuroi), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Kuroi - [|cffffcc00Level 10|r]
+}
+
+STRING 17194
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool8> seconds|r
+}
+
+STRING 17195
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool9> seconds|r
+}
+
+STRING 17196
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful golden crescent shaped wave of Reiatsu from his Zangetsu.
+
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0UH,Cool10> seconds|r
+}
+
+STRING 17197
+// Abilities: A0V4 (Getsuga Kuroi), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
+}
+
+STRING 17198
+// Abilities: A0V4 (Getsuga Kuroi), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17199
+// Abilities: A0V4 (Getsuga Kuroi), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool2> seconds|r
+}
+
+STRING 17200
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17201
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
