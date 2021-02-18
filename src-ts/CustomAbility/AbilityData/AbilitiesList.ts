@@ -4771,7 +4771,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 15,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4842,11 +4842,127 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.BLAZING_DYNAMO
     },
     components: [
-      { name: "dash ground point blazing dynamo" },
-      { name: "dash ground point blazing dynamo reverse" },
+      { name: "dash ground point blazing dynamo 1" },
+      { name: "dash ground point blazing dynamo 2" },
+      { name: "dash ground point blazing dynamo 3" },
       { name: "damage blazing dynamo dps" },
-      { name: "stun blazing dynamo" },
+      { name: "damage blazing dynamo explosion" },
       { name: "sfx blazing dynamo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DRAGOON_FLOURISH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DRAGOON_FLOURISH,
+      body: 
+        AbilityNames.DartFeld.DRAGOON_FLOURISH
+    },
+    components: [
+      { name: "dash ground point dragoon flourish" },
+      { name: "damage dragoon flourish explosion" },
+      { name: "block dart on cast" },
+      { name: "jump dragoon flourish" },
+      { name: "sfx dragoon flourish" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.FLAME_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.FLAME_SHOT,
+      body: 
+        AbilityNames.DartFeld.FLAME_SHOT
+    },
+    components: [
+      { name: "beam flame shot" },
+      { name: "block dart on cast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.FINAL_BURST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.FINAL_BURST,
+      body: 
+        AbilityNames.DartFeld.FINAL_BURST,
+    },
+    components: [
+      { name: "dash ground point final burst" },
+      { name: "damage final burst dps" },
+      { name: "damage final burst explosion" },
+      { name: "block dart on cast" },
+      { name: "sfx final burst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
+      body: 
+        AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON
+    },
+    components: [
+      { name: "beam red eyed dragon summon" },
+      { name: "block dart on cast" },
+      { name: "spell amp red eyed dragon summon" },
     ],
   },
   // -------------------------------------------

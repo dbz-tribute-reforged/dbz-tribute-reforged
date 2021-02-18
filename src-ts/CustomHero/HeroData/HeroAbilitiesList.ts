@@ -324,6 +324,22 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
     ]],
 
+    [Id.dartFeld, [
+      AbilityNames.DartFeld.DOUBLE_SLASH,
+      AbilityNames.DartFeld.BURNING_SLASH,
+      AbilityNames.DartFeld.MADNESS_SLASH,
+      AbilityNames.DartFeld.CRUSH_DANCE,
+      AbilityNames.DartFeld.HEART_OF_FIRE,
+      AbilityNames.DartFeld.MADNESS_HERO,
+      AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+      AbilityNames.DartFeld.BLAZING_DYNAMO,
+      AbilityNames.DartFeld.DRAGOON_FLOURISH,
+      AbilityNames.DartFeld.FLAME_SHOT,
+      AbilityNames.DartFeld.PARAGON_OF_FLAME,
+      AbilityNames.DartFeld.FINAL_BURST,
+      AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
+    ]],
+
 
 
 

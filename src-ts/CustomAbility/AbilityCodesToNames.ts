@@ -250,7 +250,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.flameShot, AbilityNames.DartFeld.FLAME_SHOT],
     [Id.paragonOfFlame, AbilityNames.DartFeld.PARAGON_OF_FLAME],
     [Id.finalBurst, AbilityNames.DartFeld.FINAL_BURST],
-    [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGOON],
+    [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

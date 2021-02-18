@@ -287,7 +287,7 @@ export module AbilityNames {
     export const FLAME_SHOT: string = "Flame Shot";
     export const PARAGON_OF_FLAME: string = "Paragon of Flame";
     export const FINAL_BURST: string = "Final Burst";
-    export const RED_EYED_DRAGOON: string = "Red Eyed Dragon Summoning";
+    export const RED_EYED_DRAGON_SUMMON: string = "Red Eyed Dragon Summoning";
   }
 
 
