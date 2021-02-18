@@ -40439,7 +40439,7 @@ function Trig_Transformations_Ichigo_Actions()
     else
     end
     if (Trig_Transformations_Ichigo_Func015C()) then
-        udg_StatMultReal = 2.70
+        udg_StatMultReal = 2.60
         udg_TransformationAbility = FourCC("AUan")
                 udg_TransformationID = FourCC('H09V')
     else
