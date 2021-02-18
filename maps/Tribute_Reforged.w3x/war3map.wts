@@ -105253,6 +105253,12 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
+STRING 16668
+// Abilities: A0V6 (Bankai Spell Immunity), Name (Name)
+{
+Bankai Spell Immunity
+}
+
 STRING 16669
 // Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
 {
@@ -109462,14 +109468,8 @@ Ichigo fires a Gran Rey Cero combined with the Getsuga Tensho
 |cff00ffffCooldown: 60 seconds|r
 }
 
-STRING 17230
-// Abilities: A0V6 (Bankai Avatar), Name (Name)
-{
-Bankai Avatar
-}
-
 STRING 17231
-// Abilities: A0V6 (Bankai Avatar), EditorSuffix (Editor Suffix)
+// Abilities: A0V6 (Bankai Spell Immunity), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }

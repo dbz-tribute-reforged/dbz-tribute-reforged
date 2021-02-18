@@ -13772,6 +13772,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KB"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("S002"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UK"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0V6"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UL"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UN"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UP"), udg_TempPlayer)
@@ -21888,6 +21889,7 @@ function Trig_Hero_Pick_Reset_Abilities_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0U5"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0U8"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0U9"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0V6"), GetOwningPlayer(udg_StatMultUnit))
     SetPlayerAbilityAvailableBJ(true, FourCC("A0U7"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UH"), udg_TempPlayer)
 end
@@ -24522,21 +24524,21 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func016C()
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func017Func014Func003C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func015Func003C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 4)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func017Func014C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func015C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 7)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Bankai_Temp_Skin_Func017Func015C()
+function Trig_Ichigo_Bankai_Temp_Skin_Func017Func016C()
     if (GetUnitAbilityLevelSwapped(FourCC("A0U8"), udg_StatMultUnit) >= 10) then
         return true
     end
@@ -24547,7 +24549,7 @@ function Trig_Ichigo_Bankai_Temp_Skin_Func017Func015C()
 end
 
 function Trig_Ichigo_Bankai_Temp_Skin_Func017C()
-    if (not Trig_Ichigo_Bankai_Temp_Skin_Func017Func015C()) then
+    if (not Trig_Ichigo_Bankai_Temp_Skin_Func017Func016C()) then
         return false
     end
     return true
@@ -24618,8 +24620,8 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
     else
     end
     if (Trig_Ichigo_Bankai_Temp_Skin_Func017C()) then
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0V6"), GetOwningPlayer(udg_StatMultUnit))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0U7"), GetOwningPlayer(udg_StatMultUnit))
-        SetPlayerAbilityAvailableBJ(true, FourCC("A0V6"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(true, FourCC("A0UO"), udg_TempPlayer)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.10, (0 + 0))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UH"), udg_TempPlayer)
@@ -24632,11 +24634,11 @@ function Trig_Ichigo_Bankai_Temp_Skin_Actions()
         UnitAddAbilityBJ(FourCC("A0U9"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0U9"), udg_StatMultUnit, 10)
         BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U9"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0U8"), 9))
-        if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func014C()) then
+        if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func015C()) then
             BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.40, (0 + 0))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UK"), udg_TempPlayer)
-            if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func014Func003C()) then
+            if (Trig_Ichigo_Bankai_Temp_Skin_Func017Func015Func003C()) then
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.60, (0 + 0))
             else
                 BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.70, (0 + 0))
