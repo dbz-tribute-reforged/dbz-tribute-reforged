@@ -38937,7 +38937,7 @@ Transformations:
 [lvl 125] 2.40x "hollow" [Unlocks Cero, +5 Armor]
 [lvl 200] 2.70x "final shikai" [+100% Cleave]
 
-|cff00ffffShikai|r: +10ms
+|cff00ffffShikai|r: +20ms
 }
 
 STRING 6352
@@ -86514,7 +86514,7 @@ This unit is under the effects of Envoy of the End; it has increased attack dama
 }
 
 STRING 14032
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -87399,7 +87399,7 @@ Justice Pose
 }
 
 STRING 14163
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -105253,15 +105253,6 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
-STRING 16668
-// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
-|cff00ff00Damage: Lvl * Str * ?
-Duration: <A0UA,Dur1>s
-|cff00FFFFCooldown: <A0UA,Cool1>s|r
-}
-
 STRING 16669
 // Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
 {
@@ -105377,7 +105368,7 @@ STRING 16684
 }
 
 STRING 16685
-// Abilities: A0UA (Cero: Charge), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
 |cff00ff00Damage: Lvl * Str * ?
@@ -105623,15 +105614,6 @@ STRING 16719
 // Abilities: A0UB (Cero: Fire), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
-}
-
-STRING 16720
-// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
-|cff00ff00Damage: Lvl * Str * ?
-Duration: <A0UA,Dur1>s
-|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
 }
 
 STRING 16721
@@ -106653,22 +106635,6 @@ STRING 16864
 // Abilities: A0UQ (Double Slash), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Double Slash - [|cffffcc00Level 6|r]
-}
-
-STRING 16865
-// Units: H09S (Shinigami), Ubertip (Tooltip - Extended)
-{
-A very weak early-game hero that can struggle to survive until later in the game. Becomes exceptionally powerful after unlocking his Final Bankai and Mugetsu abilities, allowing him to deal unparalleled damage with his auto attacks.
-
-|cff00ffffShikai|r: +10ms
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
-
-Proudly bankrolled by |cff00ff00Xestus|r.
 }
 
 STRING 16866
@@ -109284,5 +109250,251 @@ STRING 17201
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 17202
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool1> seconds|r
+}
+
+STRING 17203
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool3> seconds|r
+}
+
+STRING 17204
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool4> seconds|r
+}
+
+STRING 17205
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool5> seconds|r
+}
+
+STRING 17206
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool6> seconds|r
+}
+
+STRING 17207
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool7> seconds|r
+}
+
+STRING 17208
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 2|r]
+}
+
+STRING 17209
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 3|r]
+}
+
+STRING 17210
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 4|r]
+}
+
+STRING 17211
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 5|r]
+}
+
+STRING 17212
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 6|r]
+}
+
+STRING 17213
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 1|r]
+}
+
+STRING 17214
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 7|r]
+}
+
+STRING 17215
+// Abilities: A0V5 (Gran Rey Getsuga), Name (Name)
+{
+Gran Rey Getsuga
+}
+
+STRING 17216
+// Abilities: A0V5 (Gran Rey Getsuga), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Getsuga Tensho - [|cffffcc00Level %d|r]
+}
+
+STRING 17217
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 9|r]
+}
+
+STRING 17218
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Getsuga Tensho - [|cffffcc00Level 8|r]
+}
+
+STRING 17219
+// Abilities: A0V5 (Gran Rey Getsuga), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Gran Rey Getsuga - [|cffffcc00Level 10|r]
+}
+
+STRING 17220
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool8> seconds|r
+}
+
+STRING 17221
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool9> seconds|r
+}
+
+STRING 17222
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a Gran Rey Getsuga
+
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: 60 seconds|r
+}
+
+STRING 17223
+// Units: H09S (Shinigami), Ubertip (Tooltip - Extended)
+{
+A very weak early-game hero that can struggle to survive until later in the game. Becomes exceptionally powerful after unlocking his Final Bankai and Mugetsu abilities, allowing him to deal unparalleled damage with his auto attacks.
+
+|cff00ffffShikai|r: +20ms
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Difficulty|r
+
+Proudly bankrolled by |cff00ff00Xestus|r.
+}
+
+STRING 17224
+// Abilities: A0V5 (Gran Rey Getsuga), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17225
+// Abilities: A0V5 (Gran Rey Getsuga), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
+|cffffff00Upgrades to Getsuga Jujisho at max level.
+|cff00ff00Damage: Agi * lvl * ?|r
+|cff00ffffCooldown: <A0U7,Cool2> seconds|r
+}
+
+STRING 17226
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17227
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17228
+// Buffs/Effects: B03V (Getsuga Gran Rey), EditorName (Name (Editor Only))
+{
+Getsuga Gran Rey
+}
+
+STRING 17229
+// Abilities: A0V5 (Gran Rey Getsuga), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo fires a Gran Rey Cero combined with the Getsuga Tensho
+|cff00ff00Damage: Int * lvl * ?|r
+|cff00ffffCooldown: 60 seconds|r
+}
+
+STRING 17230
+// Abilities: A0V6 (Bankai Avatar), Name (Name)
+{
+Bankai Avatar
+}
+
+STRING 17231
+// Abilities: A0V6 (Bankai Avatar), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17234
+// Abilities: A0UA (Cero: Charge), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Int * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1>s|r
+}
+
+STRING 17235
+// Abilities: A0UA (Cero: Charge), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Int * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
+}
+
+STRING 17236
+// Abilities: A0V7 (Gran Rey Slow 30% 2s), Name (Name)
+{
+Gran Rey Slow 30% 2s
 }
 
