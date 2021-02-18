@@ -105373,15 +105373,6 @@ STRING 16684
 [|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
 }
 
-STRING 16685
-// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
-|cff00ff00Damage: Lvl * Str * ?
-Duration: <A0UA,Dur1>s
-|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
-}
-
 STRING 16686
 // Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
 {
@@ -105620,6 +105611,15 @@ STRING 16719
 // Abilities: A0UB (Cero: Fire), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
+}
+
+STRING 16720
+// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
+|cff00ff00Damage: Lvl * Int * ?
+Duration: <A0UA,Dur1>s
+|cff00FFFFCooldown: <A0UA,Cool1> - <A0UA,Cool10>s|r
 }
 
 STRING 16721
