@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.59d
+DBZ Tribute Reforged 0.60
 }
 
 STRING 4
@@ -65527,7 +65527,7 @@ Dev:
 phone, Xephyrix / Xestus, randomkilla, ttay24, Frozenhelfire
 
 Other:
-micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro
+micohelt, Yeran, Shine, dbsw, Spoon, Xenoform, Janemba50, Viet, ParasVallu, Krummbein, Khelben, WorstGamer, kana, mym, PAN, Zaro, Mango
 }
 
 STRING 10647
@@ -105614,7 +105614,7 @@ STRING 16719
 }
 
 STRING 16720
-// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UA (Cero: Charge), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
 |cff00ff00Damage: Lvl * Int * ?
@@ -109484,7 +109484,7 @@ Duration: <A0UA,Dur1>s
 }
 
 STRING 17235
-// Abilities: A0UA (Cero: Charge), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UB (Cero: Fire), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo charges a powerful blast of concentrated Reiatsu before unleashing it as a red energy wave to destroy his opponents. Deals no damage if not charged for at least 2 seconds.
 |cff00ff00Damage: Lvl * Int * ?
