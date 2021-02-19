@@ -4352,30 +4352,6 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
-  // double slash
-  {
-    name: "damage double slash",
-    repeatInterval: 1,
-    startTick: 0,
-    endTick: -1,
-    damageSource: AOEDamage.SOURCE_TARGET_POINT_DYNAMIC,
-    scaleDamageToSourceHp: false,
-    useLastCastPoint: true,
-    aoe: 300,
-    onlyDamageCapHeroes: true,
-    canDamageCaster: false,
-    maxDamageTicks: 2,
-    damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.11,
-      attribute: bj_HEROSTAT_STR,
-      attackType: 6,
-      damageType: 4,
-      weaponType: 0,
-    },
-    maxHealthDamagePercent: 0,
-    requireBuff: false,
-    buffId: 0,
-  },
   // crush dance
   {
     name: "damage crush dance explosion",

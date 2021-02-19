@@ -25,6 +25,7 @@ export module Debuffs {
   export const FERVENT_WOUND = FourCC("A0TE");
   export const FLATTEN = FourCC("A0TQ");
   export const GRAN_REY_SLOW = FourCC("A0V7");
+  export const MADNESS_SLOW = FourCC("A0V8");
 
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -612,6 +613,32 @@ export const AOEDebuffComponents = [
     abilityId: Debuffs.GRAN_REY_SLOW,
     orderId: Debuffs.SLOW_ORDER_ID,
     aoe: 650,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun burning rush",
+    repeatInterval: 1,
+    startTick: 20,
+    endTick: -1,
+    abilityId: Debuffs.STUN_HALF_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 400,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow madness slash",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Debuffs.MADNESS_SLOW,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 250,
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,

@@ -307,9 +307,6 @@ export function ichigoPassive(customHero: CustomHero) {
   ) return;
   const getsugas: CustomAbility[] = [getsuga1, getsuga2, getsuga3, getsuga4];
 
-  const casterPos: Vector2D = new Vector2D(0, 0);
-  const targetPos: Vector2D = new Vector2D(0, 0);
-
   const onHitTrigger = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
@@ -326,6 +323,9 @@ export function ichigoPassive(customHero: CustomHero) {
         const doGetsugaSpam: boolean = (mugetsuAbsorb.isInUse());
         
         if (doBankaiFinal || doGetsugaSpam) {
+          const casterPos: Vector2D = new Vector2D(0, 0);
+          const targetPos: Vector2D = new Vector2D(0, 0);
+
           const target = GetTriggerUnit();
           targetPos.setPos(GetUnitX(target), GetUnitY(target));
 

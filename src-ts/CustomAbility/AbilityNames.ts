@@ -278,7 +278,7 @@ export module AbilityNames {
 
   export module DartFeld {
     export const DOUBLE_SLASH: string = "Double Slash";
-    export const BURNING_SLASH: string = "Burning Slash";
+    export const BURNING_RUSH: string = "Dart Burning Rush";
     export const MADNESS_SLASH: string = "Madness Slash";
     export const CRUSH_DANCE: string = "Crush Dance";
     export const HEART_OF_FIRE: string = "Heart of Fire";

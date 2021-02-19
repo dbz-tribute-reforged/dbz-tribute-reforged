@@ -328,7 +328,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
 
     [Id.dartFeld, [
       AbilityNames.DartFeld.DOUBLE_SLASH,
-      AbilityNames.DartFeld.BURNING_SLASH,
+      AbilityNames.DartFeld.BURNING_RUSH,
       AbilityNames.DartFeld.MADNESS_SLASH,
       AbilityNames.DartFeld.CRUSH_DANCE,
       AbilityNames.DartFeld.HEART_OF_FIRE,

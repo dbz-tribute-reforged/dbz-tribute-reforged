@@ -81494,7 +81494,7 @@ E
 }
 
 STRING 13240
-// Abilities: A0UR (Burning Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -85099,7 +85099,7 @@ STRING 13805
 }
 
 STRING 13806
-// Abilities: A0UR (Burning Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -105373,6 +105373,12 @@ STRING 16684
 [|cff00FF00E|r] Learn Cero - [|cffffcc00Level %d|r]
 }
 
+STRING 16685
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 1|r]
+}
+
 STRING 16686
 // Abilities: A0UA (Cero: Charge), Hotkey (Hotkey - Normal)
 {
@@ -106643,6 +106649,12 @@ STRING 16864
 [|cff00FF00Q|r] Double Slash - [|cffffcc00Level 6|r]
 }
 
+STRING 16865
+// Abilities: A0UR (Burning Rush), Name (Name)
+{
+Burning Rush
+}
+
 STRING 16866
 // Abilities: A0UQ (Double Slash), Tip (Tooltip - Normal)
 {
@@ -106780,7 +106792,7 @@ Dart dashes a short distance and slashes his enemies twice in quick succession.
 }
 
 STRING 16882
-// Abilities: A0UR (Burning Slash), EditorSuffix (Editor Suffix)
+// Abilities: A0UR (Burning Rush), EditorSuffix (Editor Suffix)
 {
 (dart)
 }
@@ -107308,14 +107320,8 @@ STRING 16929
 F
 }
 
-STRING 16930
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 1|r]
-}
-
 STRING 16931
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107323,50 +107329,8 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 |cff00FFFFCooldown: <A0UR,Cool1,.>s|r
 }
 
-STRING 16932
-// Abilities: A0UR (Burning Slash), Name (Name)
-{
-Burning Slash
-}
-
-STRING 16933
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 2|r]
-}
-
-STRING 16934
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 3|r]
-}
-
-STRING 16935
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 4|r]
-}
-
-STRING 16936
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 5|r]
-}
-
-STRING 16937
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 6|r]
-}
-
-STRING 16938
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 7|r]
-}
-
 STRING 16939
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107375,7 +107339,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16940
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107384,7 +107348,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16941
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107393,7 +107357,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16942
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107402,7 +107366,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16943
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107411,7 +107375,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16944
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107420,7 +107384,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16945
-// Abilities: A0UR (Burning Slash), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UR (Burning Rush), Researchubertip (Tooltip - Learn - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107428,26 +107392,8 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 |cff00FFFFCooldown: <A0UR,Cool1,.>s|r
 }
 
-STRING 16946
-// Abilities: A0UR (Burning Slash), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00Q|r] Learn Burning Slash - [|cffffcc00Level %d|r]
-}
-
-STRING 16947
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 8|r]
-}
-
-STRING 16948
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 9|r]
-}
-
 STRING 16949
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107456,7 +107402,7 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 }
 
 STRING 16950
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107464,14 +107410,8 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 |cff00FFFFCooldown: <A0UR,Cool9,.>s|r
 }
 
-STRING 16951
-// Abilities: A0UR (Burning Slash), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Burning Slash - [|cffffcc00Level 10|r]
-}
-
 STRING 16952
-// Abilities: A0UR (Burning Slash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
 Dart dashes a short distance and slashes his enemies three times in quick succession. Enemies are briefly stunned on the 3rd hit. Grants +33ms.
 |cffffff00+1 Spirit Power.
@@ -107991,15 +107931,6 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cff00FFFFCooldown: <A0UU,Cool7,.>s|r
 }
 
-STRING 17022
-// Abilities: A0UU (Madness Hero), Researchubertip (Tooltip - Learn - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 20% of their max hp.
-|cffffff00+3 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool1,.>s|r
-}
-
 STRING 17023
 // Abilities: A0UU (Madness Hero), Researchtip (Tooltip - Learn)
 {
@@ -108492,15 +108423,6 @@ STRING 17093
 [|cff00FF00E|r] Paragon of Flame - [|cffffcc00Level 1|r]
 }
 
-STRING 17094
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool1> seconds|r
-}
-
 STRING 17095
 // Abilities: A0UZ (Paragon of Flame), Name (Name)
 {
@@ -108517,24 +108439,6 @@ STRING 17097
 // Abilities: A0UZ (Paragon of Flame), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 17098
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool2> seconds|r
-}
-
-STRING 17099
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool3> seconds|r
 }
 
 STRING 17100
@@ -108589,69 +108493,6 @@ STRING 17108
 // Abilities: A0UZ (Paragon of Flame), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Paragon of Flame - [|cffffcc00Level 10|r]
-}
-
-STRING 17109
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool4> seconds|r
-}
-
-STRING 17110
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool5> seconds|r
-}
-
-STRING 17111
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool6> seconds|r
-}
-
-STRING 17112
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool7> seconds|r
-}
-
-STRING 17113
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool8> seconds|r
-}
-
-STRING 17114
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool9> seconds|r
-}
-
-STRING 17115
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes towards auto-attacked enemies and deals bonus fire damage.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool10> seconds|r
 }
 
 STRING 17116
@@ -109468,10 +109309,28 @@ Ichigo fires a Gran Rey Cero combined with the Getsuga Tensho
 |cff00ffffCooldown: 60 seconds|r
 }
 
+STRING 17230
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 2|r]
+}
+
 STRING 17231
 // Abilities: A0V6 (Bankai Spell Immunity), EditorSuffix (Editor Suffix)
 {
 (ichigo)
+}
+
+STRING 17232
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 3|r]
+}
+
+STRING 17233
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 4|r]
 }
 
 STRING 17234
@@ -109496,5 +109355,404 @@ STRING 17236
 // Abilities: A0V7 (Gran Rey Slow 30% 2s), Name (Name)
 {
 Gran Rey Slow 30% 2s
+}
+
+STRING 17237
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 5|r]
+}
+
+STRING 17238
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 6|r]
+}
+
+STRING 17239
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 7|r]
+}
+
+STRING 17240
+// Abilities: A0UR (Burning Rush), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Burning Rush - [|cffffcc00Level %d|r]
+}
+
+STRING 17241
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 8|r]
+}
+
+STRING 17242
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 9|r]
+}
+
+STRING 17243
+// Abilities: A0UR (Burning Rush), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Burning Rush - [|cffffcc00Level 10|r]
+}
+
+STRING 17244
+// Abilities: A0UU (Madness Hero), Researchubertip (Tooltip - Learn - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r slow debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 20% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool1,.>s|r
+}
+
+STRING 17245
+// Abilities: A0V8 (Madness Slow Debuff), Name (Name)
+{
+Madness Slow Debuff
+}
+
+STRING 17246
+// Abilities: A0V8 (Madness Slow Debuff), Tip (Tooltip - Normal)
+{
+Madness Slow Debuff
+}
+
+STRING 17247
+// Abilities: A0V8 (Madness Slow Debuff), EditorSuffix (Editor Suffix)
+{
+(dart)
+}
+
+STRING 17248
+// Abilities: A0V9 (Madness Curse 15%), Name (Name)
+{
+Madness Curse 15%
+}
+
+STRING 17249
+// Buffs/Effects: B03W (), Bufftip (Tooltip)
+{
+Madness
+}
+
+STRING 17250
+// Buffs/Effects: B03X (), Bufftip (Tooltip)
+{
+Madness II
+}
+
+STRING 17251
+// Buffs/Effects: B03X (), Buffubertip (Tooltip - Extended)
+{
+This unit has been recently stunned by madness and cannot be stunned again by madness. Chance to miss attacks while immune.
+}
+
+STRING 17252
+// Abilities: A0VA (Heart of Fire Armor), Name (Name)
+{
+Heart of Fire Armor
+}
+
+STRING 17253
+// Abilities: A0VA (Heart of Fire Armor), EditorSuffix (Editor Suffix)
+{
+(dart)
+}
+
+STRING 17254
+// Abilities: A0VB (Book Dart Passives), Name (Name)
+{
+Book Dart Passives
+}
+
+STRING 17255
+// Buffs/Effects: B03Y (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17256
+// Buffs/Effects: B03Y (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17257
+// Buffs/Effects: B03Y (), EditorSuffix (Editor Suffix)
+{
+1
+}
+
+STRING 17258
+// Buffs/Effects: B03Z (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17259
+// Buffs/Effects: B03Z (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17260
+// Buffs/Effects: B03Z (), EditorSuffix (Editor Suffix)
+{
+2
+}
+
+STRING 17261
+// Buffs/Effects: B040 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17262
+// Buffs/Effects: B040 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17263
+// Buffs/Effects: B040 (), EditorSuffix (Editor Suffix)
+{
+3
+}
+
+STRING 17264
+// Buffs/Effects: B041 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17265
+// Buffs/Effects: B041 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17266
+// Buffs/Effects: B041 (), EditorSuffix (Editor Suffix)
+{
+4
+}
+
+STRING 17267
+// Buffs/Effects: B042 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17268
+// Buffs/Effects: B042 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17269
+// Buffs/Effects: B042 (), EditorSuffix (Editor Suffix)
+{
+5
+}
+
+STRING 17270
+// Buffs/Effects: B043 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17271
+// Buffs/Effects: B043 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17272
+// Buffs/Effects: B043 (), EditorSuffix (Editor Suffix)
+{
+6
+}
+
+STRING 17273
+// Buffs/Effects: B044 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17274
+// Buffs/Effects: B044 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17275
+// Buffs/Effects: B044 (), EditorSuffix (Editor Suffix)
+{
+7
+}
+
+STRING 17276
+// Buffs/Effects: B045 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17277
+// Buffs/Effects: B045 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17278
+// Buffs/Effects: B045 (), EditorSuffix (Editor Suffix)
+{
+8
+}
+
+STRING 17279
+// Buffs/Effects: B046 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17280
+// Buffs/Effects: B046 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17281
+// Buffs/Effects: B046 (), EditorSuffix (Editor Suffix)
+{
+9
+}
+
+STRING 17282
+// Buffs/Effects: B047 (), Bufftip (Tooltip)
+{
+Heart of Fire
+}
+
+STRING 17283
+// Buffs/Effects: B047 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffff2020Heart of Fire|r; it has increased armor.
+}
+
+STRING 17284
+// Buffs/Effects: B047 (), EditorSuffix (Editor Suffix)
+{
+10
+}
+
+STRING 17285
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool1> seconds|r
+}
+
+STRING 17286
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool2> seconds|r
+}
+
+STRING 17287
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool3> seconds|r
+}
+
+STRING 17288
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool4> seconds|r
+}
+
+STRING 17289
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool5> seconds|r
+}
+
+STRING 17290
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool6> seconds|r
+}
+
+STRING 17291
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool7> seconds|r
+}
+
+STRING 17292
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool8> seconds|r
+}
+
+STRING 17293
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool9> seconds|r
+}
+
+STRING 17294
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 10s
+|cff00FFFFCooldown: <A0UZ,Cool10> seconds|r
+}
+
+STRING 17295
+// Abilities: A0VC (DartParagonOfFlame), Name (Name)
+{
+DartParagonOfFlame
+}
+
+STRING 17296
+// Buffs/Effects: B048 (), Buffubertip (Tooltip - Extended)
+{
+Dart deals bonus damage based on his |cff00ffffInt|r.
+}
+
+STRING 17297
+// Buffs/Effects: B048 (), Bufftip (Tooltip)
+{
+Paragon Of Flame
 }
 

@@ -4839,7 +4839,62 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.DOUBLE_SLASH,
     },
     components: [
-      { name: "multi double slash" },
+      { name: "slash double slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.BURNING_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.BURNING_RUSH,
+      body: 
+        "",
+    },
+    components: [
+      { name: "slash burning rush" },
+      { name: "debuff stun burning rush" },
+      { name: "dash ground forward videl speed boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 24,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.BURNING_RUSH,
+      body: 
+        "",
+    },
+    components: [
+      { name: "slash madness slash" },
+      { name: "multi madness slash debuff" },
       { name: "dash ground forward videl speed boost" },
     ],
   },
