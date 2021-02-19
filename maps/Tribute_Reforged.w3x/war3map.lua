@@ -20327,61 +20327,6 @@ function InitTrig_Update_MS()
     TriggerAddAction(gg_trg_Update_MS, Trig_Update_MS_Actions)
 end
 
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func001C()
-    if (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I009")) == true) then
-        return true
-    end
-    if (UnitHasBuffBJ(udg_TempUnit, FourCC("B03K")) == true) then
-        return true
-    end
-    return false
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002Func001C()
-    if (UnitHasBuffBJ(udg_TempUnit, FourCC("B031")) == true) then
-        return true
-    end
-    return false
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002Func002C()
-    if (not (UnitHasBuffBJ(udg_TempUnit, FourCC("B02T")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002C()
-    if (not Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001C()
-    if (not Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func001C()) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001C()
-    if (not (UnitHasItemOfTypeBJ(udg_TempUnit, FourCC("I04H")) == true)) then
-        return false
-    end
-    if (not (UnitHasBuffBJ(udg_TempUnit, FourCC("B03N")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Set_HP_scaled_MS_for_TempUnit_Func004C()
-    if (not (UnitHasBuffBJ(udg_TempUnit, FourCC("B03D")) == true)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Set_HP_scaled_MS_for_TempUnit_Func005Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H09S"))) then
         return false
@@ -20399,26 +20344,6 @@ end
 function Trig_Set_HP_scaled_MS_for_TempUnit_Actions()
     udg_TempReal = (RMaxBJ(udg_MinMS, RMinBJ(522.00, (RMinBJ(522.00, (400.00 + (0.20 * I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_TempUnit, true))))) * RMinBJ(1.00, (0.75 + (0.30 * (GetUnitStateSwap(UNIT_STATE_LIFE, udg_TempUnit) / GetUnitStateSwap(UNIT_STATE_MAX_LIFE, udg_TempUnit)))))))) + 0.00)
     udg_TempReal2 = 0.00
-    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func004C()) then
-        udg_TempReal2 = 50.00
-    else
-        if (Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001C()) then
-            udg_TempReal2 = 30.00
-        else
-            if (Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001C()) then
-                udg_TempReal2 = 30.00
-            else
-                if (Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002C()) then
-                    udg_TempReal2 = 25.00
-                else
-                    if (Trig_Set_HP_scaled_MS_for_TempUnit_Func004Func001Func001Func002Func002C()) then
-                        udg_TempReal2 = 20.00
-                    else
-                    end
-                end
-            end
-        end
-    end
     if (Trig_Set_HP_scaled_MS_for_TempUnit_Func005C()) then
         udg_TempReal2 = (udg_TempReal2 - 50.00)
     else
