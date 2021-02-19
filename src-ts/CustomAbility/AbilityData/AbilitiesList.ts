@@ -4372,6 +4372,58 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ichigo.GETSUGA_KUROI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaKuroi.blp",
+      disabled: "BTNIchigoGetsugaKuroi.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_KUROI,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga kuroi" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_GRAN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaGran.blp",
+      disabled: "BTNIchigoGetsugaGran.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_GRAN,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga gran" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ichigo.GETSUGA_JUJISHO,
     currentCd: 0,
     maxCd: 1,

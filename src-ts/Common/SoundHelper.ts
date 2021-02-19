@@ -869,10 +869,28 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho.mp3", 1933);
         }
         break;
+      
+      case Id.getsugaKuroi:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaKuroi.mp3", 1933);
+        }
+      break;
+      
+      case Id.getsugaGran:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaGran.mp3", 2000);
+        }
+        break;
 
       case Id.getsugaJujisho:
         if (unitId == Id.ichigo) {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaJujisho.mp3", 1880);
+        }
+        break;
+      
+      case Id.ceroFire:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Cero.mp3", 1880);
         }
         break;
 

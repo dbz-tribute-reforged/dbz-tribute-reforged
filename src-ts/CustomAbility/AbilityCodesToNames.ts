@@ -230,6 +230,8 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // ichigo
     [Id.getsugaTensho, AbilityNames.Ichigo.GETSUGA_TENSHO],
+    [Id.getsugaKuroi, AbilityNames.Ichigo.GETSUGA_KUROI],
+    [Id.getsugaGran, AbilityNames.Ichigo.GETSUGA_GRAN],
     [Id.getsugaJujisho, AbilityNames.Ichigo.GETSUGA_JUJISHO],
     [Id.ceroCharge, AbilityNames.Ichigo.CERO_CHARGE],
     [Id.ceroFire, AbilityNames.Ichigo.CERO_FIRE],

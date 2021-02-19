@@ -271,6 +271,8 @@ export module Id {
 
   export const ichigo = FourCC("H09S");
   export const getsugaTensho = FourCC("A0U7");
+  export const getsugaKuroi = FourCC("A0V4");
+  export const getsugaGran = FourCC("A0V5");
   export const getsugaJujisho = FourCC("A0UH");
   export const bankai = FourCC("A0U8");
   export const bankaiFinal = FourCC("A0U9");
