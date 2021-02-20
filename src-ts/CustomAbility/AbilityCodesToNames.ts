@@ -241,7 +241,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // dart feld
     [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
-    [Id.burningSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
+    [Id.burningSlash, AbilityNames.DartFeld.BURNING_RUSH],
     [Id.madnessSlash, AbilityNames.DartFeld.MADNESS_SLASH],
     [Id.crushDance, AbilityNames.DartFeld.CRUSH_DANCE],
     [Id.heartOfFire, AbilityNames.DartFeld.HEART_OF_FIRE],

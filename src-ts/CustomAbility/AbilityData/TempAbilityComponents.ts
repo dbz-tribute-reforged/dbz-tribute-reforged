@@ -210,4 +210,18 @@ export const TempAbilityComponents = [
     tempPermanence: false,
     equalizeLevels: true,
   },
+  {
+    name: "temp ability heart of fire", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    newAbility: Id.heartOfFirePassive,
+    oldAbility: Id.heartOfFire,
+    performSwap: false,
+    enableAbility: true,
+    disableAbility: false,
+    addAbility: false,
+    tempPermanence: true,
+    equalizeLevels: true,
+  },
 ];

@@ -10914,7 +10914,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Slam.mdl",
+        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
         repeatInterval: 25,
         group: 0,
         scale: 2.25,
@@ -11059,7 +11059,7 @@ export const SfxComponents = [
         model: "Conflagrate.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 1.5,
+        scale: 2.5,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
@@ -11076,6 +11076,39 @@ export const SfxComponents = [
       },
     ],
     attachedSfxList: [],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx paragon of flame on hit", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    sfxList: [
+      {
+        model: "SpiritBombShine.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 2.0,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 25,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
   },
   // --------------------------------------------
   { 
@@ -11129,7 +11162,7 @@ export const SfxComponents = [
         model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 5.0,
+        scale: 6.0,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,

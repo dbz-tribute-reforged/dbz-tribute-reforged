@@ -4271,7 +4271,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.KAME_DPS * 3.2,
+      multiplier: BASE.KAME_DPS * 3.0,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -4494,6 +4494,30 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // paragon of flame on hit
+  {
+    name: "damage paragon of flame on hit",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_TARGET_POINT_FIXED,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 50,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 1,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.2,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
   // final burst
   {
     name: "damage final burst dps",
@@ -4519,7 +4543,7 @@ export const AOEDamageComponents = [
     buffId: 0,
   },
   {
-    name: "damage dragon fist explosion",
+    name: "damage final burst explosion",
     repeatInterval: 1,
     startTick: 25,
     endTick: 25,
@@ -4568,15 +4592,15 @@ export const AOEDamageComponents = [
   {
     name: "damage beam dragon summon explosion",
     repeatInterval: 1,
-    startTick: 40,
-    endTick: 40,
+    startTick: -1,
+    endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: true,
     useLastCastPoint: false,
     aoe: 400,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    maxDamageTicks: 1,
     damageData: {
       multiplier: BASE.KAME_EXPLOSION * 1.5,
       attribute: bj_HEROSTAT_INT,

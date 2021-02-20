@@ -119,7 +119,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   }
 
   isInUse(): boolean {
-    return (this.currentTick > 0);
+    return (this.currentTick > 0 && this.currentTick <= this.duration);
   }
 
   updateCd() {

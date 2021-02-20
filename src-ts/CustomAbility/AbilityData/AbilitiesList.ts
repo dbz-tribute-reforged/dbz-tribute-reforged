@@ -4823,7 +4823,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 16,
+    duration: 17,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4849,7 +4849,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 24,
+    duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4865,8 +4865,8 @@ export const AbilitiesList = [
         "",
     },
     components: [
+      { name: "multi burning rush" },
       { name: "slash burning rush" },
-      { name: "debuff stun burning rush" },
       { name: "dash ground forward videl speed boost" },
     ],
   },
@@ -4877,7 +4877,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 24,
+    duration: 30,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4893,8 +4893,8 @@ export const AbilitiesList = [
         "",
     },
     components: [
+      { name: "debuff slow madness slash" },
       { name: "slash madness slash" },
-      { name: "multi madness slash debuff" },
       { name: "dash ground forward videl speed boost" },
     ],
   },
@@ -4928,6 +4928,84 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.DartFeld.HEART_OF_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.HEART_OF_FIRE,
+      body: 
+        AbilityNames.DartFeld.HEART_OF_FIRE,
+    },
+    components: [
+      { name: "temp ability heart of fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_HERO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.MADNESS_HERO,
+      body: 
+        AbilityNames.DartFeld.MADNESS_HERO,
+    },
+    components: [
+      //
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+    currentCd: 0,
+    maxCd: 0.06,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+      body: 
+        AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+    },
+    components: [
+      { name: "beam madness on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.DartFeld.BLAZING_DYNAMO,
     currentCd: 0,
     maxCd: 1,
@@ -4955,6 +5033,32 @@ export const AbilitiesList = [
       { name: "damage blazing dynamo dps" },
       { name: "damage blazing dynamo explosion" },
       { name: "sfx blazing dynamo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+      body: 
+        AbilityNames.DartFeld.DRAGOON_TRANSFORMATION
+    },
+    components: [
+      // 
     ],
   },
   // -------------------------------------------
@@ -5016,6 +5120,111 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.DartFeld.PARAGON_OF_FLAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.PARAGON_OF_FLAME,
+      body: 
+        AbilityNames.DartFeld.PARAGON_OF_FLAME
+    },
+    components: [
+      // 
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+    currentCd: 0,
+    maxCd: 0.06,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+      body: 
+        AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT
+    },
+    components: [
+      { name: "damage paragon of flame on hit" },
+      { name: "sfx paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+      body: 
+        AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1
+    },
+    components: [
+      { name: "dash paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+      body: 
+        AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2
+    },
+    components: [
+      { name: "dash paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.DartFeld.FINAL_BURST,
     currentCd: 0,
     maxCd: 1,
@@ -5051,7 +5260,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 333,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5069,7 +5278,6 @@ export const AbilitiesList = [
     components: [
       { name: "beam red eyed dragon summon" },
       { name: "block dart on cast" },
-      { name: "spell amp red eyed dragon summon" },
     ],
   },
   // -------------------------------------------

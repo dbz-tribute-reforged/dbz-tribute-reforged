@@ -112,16 +112,16 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 16,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.11,
+      multiplier: BASE.DFIST_EXPLOSION * 0.2,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
     },
-    maxDistance: 400,
+    maxDistance: 300,
     // -1 means triggers all the time
     minDistance: -1,
-    aoe: 250,
+    aoe: 300,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {
@@ -152,18 +152,17 @@ export const SwordSlashComponents = [
     name: "slash burning rush",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 24,
+    endTick: 30,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.11,
+      multiplier: BASE.DFIST_EXPLOSION * 0.2,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
     },
-    maxDistance: 400,
-    // -1 means triggers all the time
+    maxDistance: 300,
     minDistance: -1,
-    aoe: 250,
+    aoe: 300,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {
@@ -194,18 +193,17 @@ export const SwordSlashComponents = [
     name: "slash madness slash",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 24,
+    endTick: 30,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.11,
+      multiplier: BASE.DFIST_EXPLOSION * 0.2,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
       weaponType: 0, 
     },
-    maxDistance: 400,
-    // -1 means triggers all the time
+    maxDistance: 300,
     minDistance: -1,
-    aoe: 250,
+    aoe: 300,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {

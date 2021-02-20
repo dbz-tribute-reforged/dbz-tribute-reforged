@@ -1864,15 +1864,15 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
-    name: "multi madness slash debuff", 
+    name: "multi burning rush", 
     repeatInterval: 1, 
-    startTick: 0,
+    startTick: 20,
     endTick: -1,
     angleDifference: 1,
     angleMin: 0,
     angleMax: 1,
-    forceMinDistance: 250,
-    forceMaxDistance: 250,
+    forceMinDistance: 300,
+    forceMaxDistance: 300,
     delayBetweenComponents: 0,
     firingMode: MultiComponent.SPREAD_FIRING,
     multiplyComponents: 1,
@@ -1885,7 +1885,7 @@ export const MultiComponents = [
     whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
     sfxList: true,
     components: [
-      { name: "debuff slow madness slash" },
+      { name: "beam burning rush" },
     ],
   },
   // -------------------------------------------

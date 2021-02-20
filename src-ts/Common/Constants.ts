@@ -142,7 +142,10 @@ export module Id {
   export const madnessSlash = FourCC("A0UW");
   export const crushDance = FourCC("A0US");
   export const heartOfFire = FourCC("A0UT");
+  export const heartOfFirePassive = FourCC("A0VA");
   export const madnessHero = FourCC("A0UU");
+  export const madnessDebuffSlow = FourCC("A0V8");
+  export const madnessDebuffCurse = FourCC("A0V9");
   export const dragoonTransformation = FourCC("A0V1");
   export const blazingDynamo = FourCC("A0UV");
   export const dragoonFlourish = FourCC("A0UX");

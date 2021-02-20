@@ -910,6 +910,8 @@ export function CustomPlayerTest() {
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
+    isfbsimtest = true;
+
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
     TriggerAddAction(megaLvl, () => {
@@ -1103,7 +1105,6 @@ export function CustomPlayerTest() {
   });
 
   // freemode
-  isfbsimtest = false;
   const freeModeTrig = CreateTrigger();
   // for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
   //   TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
@@ -1115,10 +1116,12 @@ export function CustomPlayerTest() {
   TriggerAddAction(freeModeTrig, () => {
     if (GetTriggerPlayer() == hostPlayer) {
       WinLossHelper.freeMode = true;
-      isfbsimtest =  true;
-      createCdTrigger();
+      if (SubString(GetEventPlayerChatString(), 0, 9) == "-fbsimtest") {
+        isfbsimtest =  true;
+      }
     }
   });
+  createCdTrigger();
 
   // force final battle
   const forceFinalBattleTrig = CreateTrigger();
@@ -1235,8 +1238,13 @@ export function CustomPlayerTest() {
     SetupOmegaShenronShadowFist(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupKrillinSenzuThrow(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupJirenGlare(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
     SetupCero(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupBankai(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
+    SetupRedEyedDragonSummonSpellAmp(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SoundHelper.SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
@@ -1373,6 +1381,7 @@ export function SetupBraveSwordAttack(
             });
 
             DestroyGroup(damageGroup);
+            RemoveUnit(castDummy);
 
             const clapSfx = AddSpecialEffect(
               "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -2065,6 +2074,7 @@ export function SetupJirenGlare(
         );
 
         IssueTargetOrderById(castDummy, dummyStunOrder, source);
+        RemoveUnit(castDummy);
         
         DestroyEffect(
           AddSpecialEffect(
@@ -2239,6 +2249,107 @@ export function SetupBankai(
           spellTargetUnit
         );
         customHero.useAbility(spellName, abilityInput);
+      }
+    }
+  });
+}
+
+export function SetupRedEyedDragonSummonSpellAmp(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const dragoonTransformationBuff = FourCC("B049");
+  const spellAmpBonus = 0.25;
+  const duration = 10.0;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.redEyedDragonSummoning) {
+      const caster = GetTriggerUnit();
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+      const customHero = customPlayers[playerId].getCustomHero(caster);
+      if (customHero) {
+        let elapsedTime = 0;
+
+        customHero.addSpellPower(spellAmpBonus);
+        BJDebugMsg("spell power: " + R2S(customHero.spellPower));
+        TimerStart(CreateTimer(), 0.03, true, () => {
+          elapsedTime += 0.03;
+          if (
+            elapsedTime >= duration || 
+            GetUnitAbilityLevel(caster, dragoonTransformationBuff) == 0
+          ) {
+            customHero.removeSpellPower(spellAmpBonus);
+            BJDebugMsg("spell power: " + R2S(customHero.spellPower));
+            DestroyTimer(GetExpiredTimer());
+          }
+        });
+      }
+    }
+  });
+
+}
+
+export function SetupMadnessDebuff(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  // 0: stacks
+  const madnessHashtable = InitHashtable();
+  const maxMadnessStacks = 7;
+  const pos = new Vector2D();
+  const madnessStunAbility = FourCC('A0I7');
+  const madnessStunOrder = 852095;
+  const madnessStunDamage = 0.20;
+  const madnessCurseBuff = FourCC("B03X");
+  const madnessCurseOrder = 852190;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.madnessDebuffSlow) {
+      const target = GetSpellTargetUnit();
+      const targetId = GetHandleId(target);
+      if (GetUnitAbilityLevel(target, madnessCurseBuff) == 0) {
+        const stacks = 1+LoadInteger(madnessHashtable, targetId, 0);
+
+        TextTagHelper.showPlayerColorTextOnUnit(
+          I2S(stacks), 3, target, stacks + 8     
+        );
+
+        if (stacks >= maxMadnessStacks) {
+          FlushChildHashtable(madnessHashtable, targetId);
+          // stun.. n debuff 
+          const caster = GetTriggerUnit();
+          const casterPlayer = GetOwningPlayer(caster);
+          pos.setUnit(caster);
+
+          const castDummy = CreateUnit(
+            casterPlayer, 
+            Constants.dummyCasterId, 
+            pos.x, pos.y, 
+            0
+          );
+          UnitAddAbility(castDummy, Id.madnessDebuffCurse);
+          UnitAddAbility(castDummy, madnessStunAbility);
+
+          if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer)) {
+            IssueTargetOrderById(castDummy, madnessCurseOrder, target);
+            IssueTargetOrderById(castDummy, madnessStunOrder, target);
+            SetUnitState(
+              target, 
+              UNIT_STATE_LIFE, 
+              Math.max(50, (1-madnessStunDamage) * GetUnitState(target, UNIT_STATE_MAX_LIFE))
+            );
+          }
+
+          RemoveUnit(castDummy);
+
+        } else {
+          SaveInteger(madnessHashtable, targetId, 0, stacks);
+        }
       }
     }
   });

@@ -133,7 +133,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
       GroupClear(this.affectedGroup);
       
       this.previousCoord.setVector(this.currentCoord);
-      this.nextDamageTick = ability.currentTick + this.delayBetweenDamageTicks;
+      this.nextDamageTick += this.delayBetweenDamageTicks;
     }
     
     if (ability.isFinishedUsing(this)) {
@@ -142,6 +142,7 @@ export class SwordSlash implements AbilityComponent, Serializable<SwordSlash> {
   }
 
   reset() {
+    this.nextDamageTick = 0;
     AbilitySfxHelper.cleanupPersistentSfx(this.sfxList);
     AbilitySfxHelper.cleanupPersistentSfx(this.attachedSfxList);
   }

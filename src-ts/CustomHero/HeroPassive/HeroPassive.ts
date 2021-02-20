@@ -69,6 +69,10 @@ export class HeroPassiveManager {
         break;
       case Id.ichigo:
         ichigoPassive(customHero);
+        break;
+      case Id.dartFeld:
+        dartFeldPassive(customHero);
+        break;
       default:
         break;
     }
@@ -97,7 +101,8 @@ export function superJanembaPassive(customHero: CustomHero) {
     Condition(() => {
       const attacker = GetAttacker();
       if (
-        GetUnitTypeId(attacker) == heroId
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.RAKSHASA_CLAW_ABILITY);
         const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
@@ -169,7 +174,8 @@ export function tapionPassive(customHero: CustomHero) {
       // const attacker = GetEventDamageSource();
       // const attacked = BlzGetEventDamageTarget();
       if (
-        GetUnitTypeId(attacker) == heroId && 
+        GetUnitTypeId(attacker) == heroId &&
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
         IsUnitType(attacked, UNIT_TYPE_HERO) &&
         GetUnitAbilityLevel(attacked, HeroPassiveData.HEROS_SONG) > 0
       ) {
@@ -239,7 +245,8 @@ export function dyspoPassive(customHero: CustomHero) {
     Condition(() => {
       const attacker = GetAttacker();
       if (
-        GetUnitTypeId(attacker) == heroId
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const justiceKickLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.JUSTICE_KICK_ABILITY);
         // const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
@@ -307,6 +314,9 @@ export function ichigoPassive(customHero: CustomHero) {
   ) return;
   const getsugas: CustomAbility[] = [getsuga1, getsuga2, getsuga3, getsuga4];
 
+  const casterPos: Vector2D = new Vector2D(0, 0);
+  const targetPos: Vector2D = new Vector2D(0, 0);
+
   const onHitTrigger = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
@@ -317,14 +327,13 @@ export function ichigoPassive(customHero: CustomHero) {
     Condition(() => {
       const attacker = GetAttacker();
       if (
-        GetUnitTypeId(attacker) == heroId
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
       ) {
         const doBankaiFinal: boolean = (bankaiFinal.isInUse());
         const doGetsugaSpam: boolean = (mugetsuAbsorb.isInUse());
         
         if (doBankaiFinal || doGetsugaSpam) {
-          const casterPos: Vector2D = new Vector2D(0, 0);
-          const targetPos: Vector2D = new Vector2D(0, 0);
 
           const target = GetTriggerUnit();
           targetPos.setPos(GetUnitX(target), GetUnitY(target));
@@ -429,4 +438,128 @@ export function ichigoPassive(customHero: CustomHero) {
   //     return false;
   //   })
   // );
+}
+
+export function dartFeldPassive(customHero: CustomHero) {
+  const heroId = GetUnitTypeId(customHero.unit);
+  const paragaonOfFlameBuff = FourCC("B048");
+  const dragoonTransformationBuff = FourCC("B049");
+
+  const madnessHero = customHero.getAbility(AbilityNames.DartFeld.MADNESS_HERO);
+  const madnessOnHit = customHero.getAbility(AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT);
+  const paragonOfFlame = customHero.getAbility(AbilityNames.DartFeld.PARAGON_OF_FLAME);
+  const paragonOnHit = customHero.getAbility(AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT);
+
+  const dash1 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1);
+  const dash2 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2);
+
+  if (
+    !madnessHero || !madnessOnHit || 
+    !paragonOfFlame || 
+    !paragonOnHit ||
+    !dash1 || !dash2
+  ) return;
+
+  const casterPos: Vector2D = new Vector2D(0, 0);
+  const targetPos: Vector2D = new Vector2D(0, 0);
+
+  const onHitTrigger = CreateTrigger();
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  );
+
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+      const attacker = GetAttacker();
+      if (
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
+      ) {
+        const doMadness = (
+          madnessHero.isInUse() && 
+          GetUnitAbilityLevel(attacker, dragoonTransformationBuff) == 0 && 
+          !madnessOnHit.isInUse()
+        );
+        const doParagonOnHit = GetUnitAbilityLevel(customHero.unit, paragaonOfFlameBuff) > 0;
+        const doParagonDash = paragonOfFlame.isInUse() && doParagonOnHit;
+        
+        if (doMadness || doParagonDash || doParagonOnHit) {
+          const target = GetTriggerUnit();
+          targetPos.setPos(GetUnitX(target), GetUnitY(target));
+          casterPos.setPos(GetUnitX(attacker), GetUnitY(attacker));
+
+          if (doParagonOnHit) {
+            customHero.useAbility(
+              AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+              new CustomAbilityInput(
+                customHero, 
+                GetOwningPlayer(customHero.unit),
+                GetUnitAbilityLevel(customHero.unit, Id.paragonOfFlame),
+                targetPos,
+                targetPos,
+                targetPos,
+                target,
+                target,
+              )
+            )
+          }
+
+          if (doParagonDash) {
+            if (CoordMath.distance(casterPos, targetPos) <= 550) {
+                
+              if (!dash1.isInUse()) {
+                customHero.useAbility(
+                  AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+                  new CustomAbilityInput(
+                    customHero, 
+                    GetOwningPlayer(customHero.unit),
+                    10,
+                    targetPos,
+                    targetPos,
+                    targetPos,
+                    target,
+                    target,
+                  )
+                );
+              } else if (!dash2.isInUse()) {
+                customHero.useAbility(
+                  AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+                  new CustomAbilityInput(
+                    customHero, 
+                    GetOwningPlayer(customHero.unit),
+                    10,
+                    targetPos,
+                    targetPos,
+                    targetPos,
+                    target,
+                    target,
+                  )
+                );
+              }
+            }
+          }
+
+          if (doMadness) {
+            customHero.useAbility(
+              AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+              new CustomAbilityInput(
+                customHero, 
+                GetOwningPlayer(customHero.unit),
+                1,
+                targetPos,
+                targetPos,
+                targetPos,
+                target,
+                target,
+              )
+            );
+          }
+        }
+      }
+      return false;
+    })
+  );
+
 }

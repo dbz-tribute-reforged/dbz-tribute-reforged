@@ -1061,7 +1061,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 12,
   },
   // blazing dynamo
   {
@@ -1112,6 +1112,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 15,
+  },
+  // dash paragon of flame on hit
+  {
+    name: "dash paragon of flame on hit",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_UNIT_TARGET,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 31,
   },
   // final burst
   {

@@ -283,11 +283,15 @@ export module AbilityNames {
     export const CRUSH_DANCE: string = "Crush Dance";
     export const HEART_OF_FIRE: string = "Heart of Fire";
     export const MADNESS_HERO: string = "Madness Hero";
+    export const MADNESS_DEBUFF_ON_HIT: string = "Madness Debuff On Hit";
     export const DRAGOON_TRANSFORMATION: string = "Dragoon Transformation";
     export const BLAZING_DYNAMO: string = "Blazing Dynamo";
     export const DRAGOON_FLOURISH: string = "Dragoon Flourish";
     export const FLAME_SHOT: string = "Flame Shot";
     export const PARAGON_OF_FLAME: string = "Paragon of Flame";
+    export const PARAGON_OF_FLAME_ON_HIT: string = "Paragon of Flame On Hit";
+    export const DASH_PARAGON_OF_FLAME_1: string = "Paragon of Flame Dash 1";
+    export const DASH_PARAGON_OF_FLAME_2: string = "Paragon of Flame Dash 2";
     export const FINAL_BURST: string = "Final Burst";
     export const RED_EYED_DRAGON_SUMMON: string = "Red Eyed Dragon Summoning";
   }

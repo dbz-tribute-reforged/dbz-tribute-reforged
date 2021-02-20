@@ -1,3 +1,5 @@
+import { Id } from "Common/Constants";
+
 export module Debuffs {
   export const THUNDERBOLT_ORDER_ID = 852095;
   export const STUN_MICRO = FourCC('A08K')
@@ -25,7 +27,6 @@ export module Debuffs {
   export const FERVENT_WOUND = FourCC("A0TE");
   export const FLATTEN = FourCC("A0TQ");
   export const GRAN_REY_SLOW = FourCC("A0V7");
-  export const MADNESS_SLOW = FourCC("A0V8");
 
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
@@ -636,9 +637,35 @@ export const AOEDebuffComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    abilityId: Debuffs.MADNESS_SLOW,
+    abilityId: Id.madnessDebuffSlow,
     orderId: Debuffs.SLOW_ORDER_ID,
-    aoe: 250,
+    aoe: 300,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff slow madness on hit",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    abilityId: Id.madnessDebuffSlow,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 50,
+    keepCasting: false, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff stun burning rush",
+    repeatInterval: 1,
+    startTick: 20,
+    endTick: -1,
+    abilityId: Debuffs.STUN_ONE_SECOND,
+    orderId: Debuffs.THUNDERBOLT_ORDER_ID,
+    aoe: 300,
     keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,
