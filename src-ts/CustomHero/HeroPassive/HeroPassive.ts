@@ -89,6 +89,7 @@ export function kidBuuPassive(customHero: CustomHero) {
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
+  const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   const targetPos = new Vector2D();
@@ -102,7 +103,7 @@ export function superJanembaPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
+        GetOwningPlayer(attacker) == player
       ) {
         const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.RAKSHASA_CLAW_ABILITY);
         const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
@@ -146,6 +147,7 @@ export function superJanembaPassive(customHero: CustomHero) {
 }
 
 export function tapionPassive(customHero: CustomHero) {
+  const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
   TriggerRegisterAnyUnitEventBJ(
@@ -175,7 +177,7 @@ export function tapionPassive(customHero: CustomHero) {
       // const attacked = BlzGetEventDamageTarget();
       if (
         GetUnitTypeId(attacker) == heroId &&
-        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit) && 
+        GetOwningPlayer(attacker) == player && 
         IsUnitType(attacked, UNIT_TYPE_HERO) &&
         GetUnitAbilityLevel(attacked, HeroPassiveData.HEROS_SONG) > 0
       ) {
@@ -233,6 +235,7 @@ export function tapionPassive(customHero: CustomHero) {
 
 
 export function dyspoPassive(customHero: CustomHero) {
+  const player = GetOwningPlayer(customHero.unit);
   const targetPos = new Vector2D();
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
@@ -246,7 +249,7 @@ export function dyspoPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
+        GetOwningPlayer(attacker) == player
       ) {
         const justiceKickLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.JUSTICE_KICK_ABILITY);
         // const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
@@ -294,6 +297,7 @@ export function dyspoPassive(customHero: CustomHero) {
 
 
 export function ichigoPassive(customHero: CustomHero) {
+  const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
 
   const bankaiFinal = customHero.getAbility(AbilityNames.Ichigo.BANKAI_FINAL);
@@ -328,7 +332,7 @@ export function ichigoPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
+        GetOwningPlayer(attacker) == player
       ) {
         const doBankaiFinal: boolean = (bankaiFinal.isInUse());
         const doGetsugaSpam: boolean = (mugetsuAbsorb.isInUse());
@@ -441,6 +445,7 @@ export function ichigoPassive(customHero: CustomHero) {
 }
 
 export function dartFeldPassive(customHero: CustomHero) {
+  const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const paragaonOfFlameBuff = FourCC("B048");
   const dragoonTransformationBuff = FourCC("B049");
@@ -475,7 +480,7 @@ export function dartFeldPassive(customHero: CustomHero) {
       const attacker = GetAttacker();
       if (
         GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == GetOwningPlayer(customHero.unit)
+        GetOwningPlayer(attacker) == player
       ) {
         const doMadness = (
           madnessHero.isInUse() && 

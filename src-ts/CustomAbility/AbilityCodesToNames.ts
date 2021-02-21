@@ -241,7 +241,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // dart feld
     [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
-    [Id.burningSlash, AbilityNames.DartFeld.BURNING_RUSH],
+    [Id.burningRush, AbilityNames.DartFeld.BURNING_RUSH],
     [Id.madnessSlash, AbilityNames.DartFeld.MADNESS_SLASH],
     [Id.crushDance, AbilityNames.DartFeld.CRUSH_DANCE],
     [Id.heartOfFire, AbilityNames.DartFeld.HEART_OF_FIRE],
@@ -430,6 +430,10 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.pureProgress, AbilityNames.Hit.PURE_PROGRESS],
 
 
+    [Id.tyrannoFlame, AbilityNames.RustTyranno.TYRANNO_FLAME],
+    [Id.rustChomp, AbilityNames.RustTyranno.RUST_CHOMP],
+    [Id.rustGobble, AbilityNames.RustTyranno.RUST_GOBBLE],
+    [Id.tyrannoRoar, AbilityNames.RustTyranno.TYRANNO_ROAR],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

@@ -2,6 +2,7 @@ import { SagaUnit } from "./SagaUnit";
 import { Vector2D } from "Common/Vector2D";
 import { SagaAbilities } from "./SagaAbilitiesConfig";
 import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { Id } from "Common/Constants";
 
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
@@ -808,5 +809,18 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // universe survival
     // training
     // tournament of power
+
+    // rust tyranno
+    ["Rust Tyranno", new SagaUnit(Id.rustTyranno, 200, 400, 400, 400, new Vector2D(-4500, 2500),
+      [
+        SagaAbilities.RustTyranno.TYRANNO_FLAME,
+        SagaAbilities.RustTyranno.TYRANNO_FLAME_2,
+        SagaAbilities.RustTyranno.RUST_CHOMP,
+        SagaAbilities.RustTyranno.TYRANNO_ROAR,
+      ],
+      [
+        ItemConstants.SagaDrops.RAINBOW_SHELL,
+      ]
+    )],
   ],
 );

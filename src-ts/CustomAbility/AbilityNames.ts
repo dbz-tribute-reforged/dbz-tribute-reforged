@@ -501,6 +501,13 @@ export module AbilityNames {
     export const PURE_PROGRESS = "Pure Progress";
   }
 
+  export module RustTyranno {
+    export const TYRANNO_FLAME: string = "Tyranno Flame";
+    export const RUST_CHOMP: string = "Rust Chomp";
+    export const RUST_GOBBLE: string = "Rust Gobble";
+    export const TYRANNO_ROAR: string = "Tyranno Roar";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

@@ -4849,7 +4849,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 30,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4865,9 +4865,9 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "multi burning rush" },
       { name: "slash burning rush" },
-      { name: "dash ground forward videl speed boost" },
+      { name: "multi burning rush" },
+      { name: "dash ground forward dart speed boost" },
     ],
   },
   // -------------------------------------------
@@ -4877,7 +4877,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 30,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4893,9 +4893,9 @@ export const AbilitiesList = [
         "",
     },
     components: [
-      { name: "debuff slow madness slash" },
       { name: "slash madness slash" },
-      { name: "dash ground forward videl speed boost" },
+      { name: "multi madness slash" },
+      { name: "dash ground forward dart speed boost" },
     ],
   },
   // -------------------------------------------
@@ -5032,6 +5032,7 @@ export const AbilitiesList = [
       { name: "dash ground point blazing dynamo 3" },
       { name: "damage blazing dynamo dps" },
       { name: "damage blazing dynamo explosion" },
+      { name: "block blazing dynamo" },
       { name: "sfx blazing dynamo" },
     ],
   },
@@ -5141,14 +5142,14 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.PARAGON_OF_FLAME
     },
     components: [
-      // 
+      { name: "block dart on cast" },
     ],
   },
   // -------------------------------------------
   {
     name: AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
     currentCd: 0,
-    maxCd: 0.06,
+    maxCd: 0.24,
     costType: "MP",
     costAmount: 0,
     duration: 1,
@@ -5247,6 +5248,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "dash ground point final burst" },
+      { name: "debuff slow final burst" },
       { name: "damage final burst dps" },
       { name: "damage final burst explosion" },
       { name: "block dart on cast" },
@@ -8544,6 +8546,116 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp pure progress" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.TYRANNO_FLAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.TYRANNO_FLAME,
+      body: 
+        AbilityNames.RustTyranno.TYRANNO_FLAME
+    },
+    components: [
+      { name: "beam tyranno flame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.RUST_CHOMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.RUST_CHOMP,
+      body: 
+        AbilityNames.RustTyranno.RUST_CHOMP
+    },
+    components: [
+      { name: "hook rust chomp" },
+      { name: "temp ability rust gobble" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.RUST_GOBBLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.RUST_GOBBLE,
+      body: 
+        AbilityNames.RustTyranno.RUST_GOBBLE
+    },
+    components: [
+      { name: "damage target rust gobble explosion" },
+      { name: "heal caster rust gobble" },
+      { name: "sfx rust gobble" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.TYRANNO_ROAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.TYRANNO_ROAR,
+      body: 
+        AbilityNames.RustTyranno.TYRANNO_ROAR
+    },
+    components: [
+      { name: "damage tyranno roar" },
+      { name: "block tyranno roar" },
+      { name: "knockback tyranno roar" },
+      { name: "sfx angry shout" },
     ],
   },
   // -------------------------------------------

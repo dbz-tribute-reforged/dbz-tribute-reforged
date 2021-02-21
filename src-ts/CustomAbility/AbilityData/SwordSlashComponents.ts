@@ -112,7 +112,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 16,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.2,
+      multiplier: BASE.DFIST_EXPLOSION * 0.14,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
@@ -152,9 +152,9 @@ export const SwordSlashComponents = [
     name: "slash burning rush",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 30,
+    endTick: 24,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.2,
+      multiplier: BASE.DFIST_EXPLOSION * 0.14,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
@@ -193,9 +193,9 @@ export const SwordSlashComponents = [
     name: "slash madness slash",
     repeatInterval: 1, 
     startTick: 0,
-    endTick: 30,
+    endTick: 24,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.2,
+      multiplier: BASE.DFIST_EXPLOSION * 0.14,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 

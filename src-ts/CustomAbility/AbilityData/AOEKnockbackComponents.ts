@@ -1061,4 +1061,20 @@ export const AOEKnockbackComponents = [
     reflectBeams: true,
     affectAllies: false,
   },
+  // tyranno roar knockback / deflect
+  {
+    name: "knockback tyranno roar",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 10, 
+      angle: 0, 
+      aoe: 700,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: false,
+  },
 ];

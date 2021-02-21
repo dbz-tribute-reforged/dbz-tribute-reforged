@@ -1050,6 +1050,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 31,
   },
+  // dart speed boost
+  {
+    name: "dash ground forward dart speed boost",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 1.5,
+  },
   // crush dance
   {
     name: "dash ground point crush dance",
@@ -1061,7 +1074,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 12,
+    distance: 5,
   },
   // blazing dynamo
   {
@@ -1111,7 +1124,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 5,
   },
   // dash paragon of flame on hit
   {
@@ -1137,7 +1150,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 20,
   },
   // ----------------------------
   // cell-x

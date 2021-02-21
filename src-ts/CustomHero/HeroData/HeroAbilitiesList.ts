@@ -419,6 +419,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
       AbilityNames.Tien.DODON_RAY,
       AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO,
+      AbilityNames.DartFeld.BURNING_RUSH, AbilityNames.DartFeld.DRAGOON_TRANSFORMATION, AbilityNames.DartFeld.DRAGOON_FLOURISH,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
@@ -616,6 +617,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hit.FLASH_FIST,
       AbilityNames.Hit.TIME_CAGE,
       AbilityNames.Hit.PURE_PROGRESS,
+    ]],
+
+    // androids 13 14 15
+    [Id.rustTyranno, [
+      AbilityNames.RustTyranno.TYRANNO_FLAME,
+      AbilityNames.RustTyranno.RUST_CHOMP,
+      AbilityNames.RustTyranno.RUST_GOBBLE,
+      AbilityNames.RustTyranno.TYRANNO_ROAR,
     ]],
 
   ]

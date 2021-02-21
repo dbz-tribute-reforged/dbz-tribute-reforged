@@ -4185,7 +4185,7 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
-  //getsuga kuroi
+  // getsuga kuroi
   {
     name: "damage getsuga kuroi dps",
     repeatInterval: 1,
@@ -4197,7 +4197,7 @@ export const AOEDamageComponents = [
     aoe: 550,
     onlyDamageCapHeroes: false,
     canDamageCaster: false,
-    maxDamageTicks: 6,
+    maxDamageTicks: 3,
     damageData: {
       multiplier: BASE.KAME_DPS * 6.0,
       attribute: bj_HEROSTAT_INT,
@@ -4209,7 +4209,7 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
-  //getsuga gran
+  // getsuga gran
   {
     name: "damage getsuga gran dps",
     repeatInterval: 1,
@@ -4221,7 +4221,7 @@ export const AOEDamageComponents = [
     aoe: 600,
     onlyDamageCapHeroes: false,
     canDamageCaster: false,
-    maxDamageTicks: 6,
+    maxDamageTicks: 3,
     damageData: {
       multiplier: BASE.KAME_DPS * 9.0,
       attribute: bj_HEROSTAT_INT,
@@ -4366,7 +4366,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 3,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.14,
+      multiplier: BASE.DFIST_EXPLOSION * 0.1,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -4390,7 +4390,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.14,
+      multiplier: BASE.DFIST_DPS * 0.3,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -4413,7 +4413,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.75,
+      multiplier: BASE.DFIST_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -4427,7 +4427,7 @@ export const AOEDamageComponents = [
   {
     name: "damage dragoon flourish explosion",
     repeatInterval: 1,
-    startTick: 0,
+    startTick: -1,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleDamageToSourceHp: false,
@@ -4437,8 +4437,8 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.35,
-      attribute: bj_HEROSTAT_AGI,
+      multiplier: BASE.DFIST_EXPLOSION * 0.3,
+      attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
       weaponType: 0,
@@ -4461,7 +4461,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 0.85,
+      multiplier: BASE.KAME_DPS * 0.8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -4484,7 +4484,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.85,
+      multiplier: BASE.KAME_EXPLOSION * 0.8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -4532,7 +4532,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.DFIST_DPS * 0.3,
+      multiplier: BASE.DFIST_DPS * 0.18,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -4555,7 +4555,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.3,
+      multiplier: BASE.DFIST_EXPLOSION * 0.4,
       attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
@@ -4579,7 +4579,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_DPS * 1.5,
+      multiplier: BASE.KAME_DPS * 1.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -4600,9 +4600,9 @@ export const AOEDamageComponents = [
     aoe: 400,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: 1,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 1.5,
+      multiplier: BASE.KAME_EXPLOSION * 1.3,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -7688,6 +7688,78 @@ export const AOEDamageComponents = [
     damageData: {
       multiplier: BASE.DFIST_EXPLOSION * 0.07,
       attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // tyranno flame
+  {
+    name: "damage beam tyranno flame dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 300,
+    onlyDamageCapHeroes: false,
+    canDamageCaster: false,
+    maxDamageTicks: 6,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 3.75,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0.01,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // rust gobble
+  {
+    name: "damage target rust gobble explosion",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    damageSource: AOEDamage.SOURCE_LAST_CAST_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: true,
+    aoe: 50,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.DFIST_EXPLOSION * 0.5,
+      attribute: bj_HEROSTAT_STR,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // tyranno roar
+  {
+    name: "damage tyranno roar",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: false,
+    useLastCastPoint: false,
+    aoe: 800,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: 50,
+    damageData: {
+      multiplier: BASE.DFIST_DPS * 0.33,
+      attribute: bj_HEROSTAT_STR,
       attackType: 6,
       damageType: 4,
       weaponType: 0,

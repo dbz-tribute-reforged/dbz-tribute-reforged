@@ -135,15 +135,17 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     const timeRatio = ability.calculateTimeRatio(this.startTick, this.endTick);
     const yaw = (this.hookAngle + 360) * CoordMath.degreesToRadians;
 
-    AbilitySfxHelper.displaySfxListAtCoord(
-      ability,
-      this.sfxList, 
-      this.hookCoords, 
-      SfxData.SHOW_ALL_GROUPS,
-      yaw, 
-      BlzGetUnitZ(source),
-      timeRatio,
-    );
+    if (this.currentRange > 0 || this.hookDirection == Hook.DIRECTION_FORWARDS) {
+      AbilitySfxHelper.displaySfxListAtCoord(
+        ability,
+        this.sfxList, 
+        this.hookCoords, 
+        SfxData.SHOW_ALL_GROUPS,
+        yaw, 
+        BlzGetUnitZ(source),
+        timeRatio,
+      );
+    }
 
     if (this.startedHook) {
       if (

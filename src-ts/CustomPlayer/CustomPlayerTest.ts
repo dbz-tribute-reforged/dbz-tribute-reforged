@@ -2135,6 +2135,7 @@ export function SetupCero(
             playerId, 
             caster
           );
+          SoundHelper.playSoundOnUnit(caster, "Audio/Voice/Ichigo/Cero.mp3", 1880);
           doCeroFire(caster, player, spellHashtable, customPlayers);
           DestroyTimer(GetExpiredTimer());
           SaveReal(spellHashtable, casterId, 0, 0);
@@ -2274,7 +2275,6 @@ export function SetupRedEyedDragonSummonSpellAmp(
         let elapsedTime = 0;
 
         customHero.addSpellPower(spellAmpBonus);
-        BJDebugMsg("spell power: " + R2S(customHero.spellPower));
         TimerStart(CreateTimer(), 0.03, true, () => {
           elapsedTime += 0.03;
           if (
@@ -2282,7 +2282,6 @@ export function SetupRedEyedDragonSummonSpellAmp(
             GetUnitAbilityLevel(caster, dragoonTransformationBuff) == 0
           ) {
             customHero.removeSpellPower(spellAmpBonus);
-            BJDebugMsg("spell power: " + R2S(customHero.spellPower));
             DestroyTimer(GetExpiredTimer());
           }
         });
@@ -2303,7 +2302,7 @@ export function SetupMadnessDebuff(
   const pos = new Vector2D();
   const madnessStunAbility = FourCC('A0I7');
   const madnessStunOrder = 852095;
-  const madnessStunDamage = 0.20;
+  const madnessStunDamage = 0.1;
   const madnessCurseBuff = FourCC("B03X");
   const madnessCurseOrder = 852190;
 
@@ -2338,10 +2337,14 @@ export function SetupMadnessDebuff(
           if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer)) {
             IssueTargetOrderById(castDummy, madnessCurseOrder, target);
             IssueTargetOrderById(castDummy, madnessStunOrder, target);
+            const newHP = (
+              GetUnitState(target, UNIT_STATE_LIFE) - 
+              (madnessStunDamage * GetUnitState(target, UNIT_STATE_MAX_LIFE))
+            );
             SetUnitState(
               target, 
               UNIT_STATE_LIFE, 
-              Math.max(50, (1-madnessStunDamage) * GetUnitState(target, UNIT_STATE_MAX_LIFE))
+              Math.max(50, newHP)
             );
           }
 

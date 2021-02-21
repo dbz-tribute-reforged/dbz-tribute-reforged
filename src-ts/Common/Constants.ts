@@ -138,7 +138,7 @@ export module Id {
 
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");
-  export const burningSlash = FourCC("A0UR");
+  export const burningRush = FourCC("A0UR");
   export const madnessSlash = FourCC("A0UW");
   export const crushDance = FourCC("A0US");
   export const heartOfFire = FourCC("A0UT");
@@ -378,6 +378,12 @@ export module Id {
   export const slappyHand = FourCC("A0C8");
   export const hellzoneGrenade = FourCC("A0LM");
   export const multiForm = FourCC('A088');
+  
+  export const rustTyranno = FourCC("H09Z");
+  export const tyrannoFlame = FourCC("A0VI");
+  export const rustChomp = FourCC("A0VG");
+  export const rustGobble = FourCC("A0VH");
+  export const tyrannoRoar = FourCC("A0VJ");
 
   export const sephiroth = FourCC("H09M");
   export const sephirothOctoslash = FourCC("A0T7");
