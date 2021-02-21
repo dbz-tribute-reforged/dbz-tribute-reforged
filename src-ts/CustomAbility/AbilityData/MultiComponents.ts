@@ -1881,7 +1881,7 @@ export const MultiComponents = [
     fixedSourceCoords: true,
     fixedReplacementCoords: false,
     targetSource: MultiComponent.SOURCE_CASTER,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
     sfxList: true,
     components: [
@@ -1907,7 +1907,7 @@ export const MultiComponents = [
     fixedSourceCoords: true,
     fixedReplacementCoords: false,
     targetSource: MultiComponent.SOURCE_CASTER,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
     sfxList: true,
     components: [
