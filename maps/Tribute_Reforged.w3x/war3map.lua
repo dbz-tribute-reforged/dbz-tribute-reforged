@@ -6971,7 +6971,6 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0V4"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0V6"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VH"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
@@ -13970,7 +13969,6 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VC"), udg_TempPlayer)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -25184,49 +25182,49 @@ function Trig_Dart_Feld_Dragoon_Transformation_Conditions()
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func009C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func010C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UQ"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func010C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func011C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0V2"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func013Func006C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func014Func007C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0US"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func013Func007C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func014Func008C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UT"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func013Func008C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func014Func009C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UU"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func013Func009C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func014Func010C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0UV"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Dart_Feld_Dragoon_Transformation_Func013C()
+function Trig_Dart_Feld_Dragoon_Transformation_Func014C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Y"))) then
         return false
     end
@@ -25234,13 +25232,14 @@ function Trig_Dart_Feld_Dragoon_Transformation_Func013C()
 end
 
 function Trig_Dart_Feld_Dragoon_Transformation_Actions()
+    udg_StatMultUnit = GetSpellAbilityUnit()
         udg_ID = GetHandleId(udg_StatMultUnit)
     udg_TempReal = (10.00 + I2R(LoadIntegerBJ(11, udg_ID, udg_StatMultHashtable)))
     SaveIntegerBJ(0, 11, udg_ID, udg_StatMultHashtable)
         udg_TempInt = FourCC("A0V1")
     TriggerExecute(gg_trg_Temp_Skin_Change_Init)
     udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
-    if (Trig_Dart_Feld_Dragoon_Transformation_Func009C()) then
+    if (Trig_Dart_Feld_Dragoon_Transformation_Func010C()) then
         UnitAddAbilityBJ(FourCC("A0UX"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0UX"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0UQ"), udg_StatMultUnit))
         SetPlayerAbilityAvailableBJ(true, FourCC("A0UX"), udg_TempPlayer)
@@ -25251,19 +25250,20 @@ function Trig_Dart_Feld_Dragoon_Transformation_Actions()
         BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0UX"), udg_TempReal)
     else
     end
-    if (Trig_Dart_Feld_Dragoon_Transformation_Func010C()) then
+    if (Trig_Dart_Feld_Dragoon_Transformation_Func011C()) then
     else
         UnitAddAbilityBJ(FourCC("A0V2"), udg_StatMultUnit)
     end
     SetPlayerAbilityAvailableBJ(true, FourCC("A0V2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0V1"), udg_TempPlayer)
-    if (Trig_Dart_Feld_Dragoon_Transformation_Func013C()) then
+    if (Trig_Dart_Feld_Dragoon_Transformation_Func014C()) then
+        UnitRemoveAbilityBJ(FourCC("A0VD"), udg_StatMultUnit)
         BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.80, (0 + 0))
         SetPlayerAbilityAvailableBJ(false, FourCC("A0US"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UT"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UU"), udg_TempPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0UV"), udg_TempPlayer)
-        if (Trig_Dart_Feld_Dragoon_Transformation_Func013Func006C()) then
+        if (Trig_Dart_Feld_Dragoon_Transformation_Func014Func007C()) then
             UnitAddAbilityBJ(FourCC("A0UY"), udg_StatMultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0UY"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0US"), udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UY"), udg_TempPlayer)
@@ -25274,7 +25274,7 @@ function Trig_Dart_Feld_Dragoon_Transformation_Actions()
             BlzSetUnitAbilityManaCost(udg_StatMultUnit, FourCC("A0UY"), (GetUnitAbilityLevelSwapped(FourCC("A0UY"), udg_StatMultUnit) - 1), (IMaxBJ(1000, udg_TempInt3) + 1000))
         else
         end
-        if (Trig_Dart_Feld_Dragoon_Transformation_Func013Func007C()) then
+        if (Trig_Dart_Feld_Dragoon_Transformation_Func014Func008C()) then
             UnitAddAbilityBJ(FourCC("A0UZ"), udg_StatMultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0UZ"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0UT"), udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0UZ"), udg_TempPlayer)
@@ -25283,7 +25283,7 @@ function Trig_Dart_Feld_Dragoon_Transformation_Actions()
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0UZ"), udg_TempReal)
         else
         end
-        if (Trig_Dart_Feld_Dragoon_Transformation_Func013Func008C()) then
+        if (Trig_Dart_Feld_Dragoon_Transformation_Func014Func009C()) then
             UnitAddAbilityBJ(FourCC("A0V0"), udg_StatMultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0V0"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0UU"), udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0V0"), udg_TempPlayer)
@@ -25294,7 +25294,7 @@ function Trig_Dart_Feld_Dragoon_Transformation_Actions()
             BlzSetUnitAbilityManaCost(udg_StatMultUnit, FourCC("A0V0"), (GetUnitAbilityLevelSwapped(FourCC("A0V0"), udg_StatMultUnit) - 1), (IMaxBJ(1000, udg_TempInt3) + 2000))
         else
         end
-        if (Trig_Dart_Feld_Dragoon_Transformation_Func013Func009C()) then
+        if (Trig_Dart_Feld_Dragoon_Transformation_Func014Func010C()) then
             UnitAddAbilityBJ(FourCC("A0V3"), udg_StatMultUnit)
             SetUnitAbilityLevelSwapped(FourCC("A0V3"), udg_StatMultUnit, GetUnitAbilityLevelSwapped(FourCC("A0UV"), udg_StatMultUnit))
             SetPlayerAbilityAvailableBJ(true, FourCC("A0V3"), udg_TempPlayer)

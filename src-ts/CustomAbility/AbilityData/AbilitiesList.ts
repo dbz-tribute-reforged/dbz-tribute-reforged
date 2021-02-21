@@ -5033,6 +5033,7 @@ export const AbilitiesList = [
       { name: "damage blazing dynamo dps" },
       { name: "damage blazing dynamo explosion" },
       { name: "block blazing dynamo" },
+      { name: "temp ability blazing dynamo spell immunity" },
       { name: "sfx blazing dynamo" },
     ],
   },
