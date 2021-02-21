@@ -366,5 +366,20 @@ export module SagaAbilities {
       AbilityNames.Goku.ULTRA_INSTINCT, 1, 180, 1, EXTRA_LONG_CAST_TIME
     );
   }
+
+  export module RustTyranno {
+    export const TYRANNO_FLAME = new SagaAbility(
+      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 30, SHORT_CAST_TIME
+    );
+    export const TYRANNO_FLAME_2 = new SagaAbility(
+      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 25, SHORT_CAST_TIME
+    );
+    export const RUST_CHOMP = new SagaAbility(
+      AbilityNames.RustTyranno.RUST_CHOMP, 12, 10, 25, SHORT_CAST_TIME
+    );
+    export const TYRANNO_ROAR = new SagaAbility(
+      AbilityNames.RustTyranno.TYRANNO_ROAR, 12, 25, 20, LONG_CAST_TIME
+    );
+  }
   
 }

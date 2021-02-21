@@ -83,4 +83,18 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 66,
   },
+  {
+    name: "timed life beam flame shot", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 35,
+  },
+  {
+    name: "timed life beam dragon summon", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 45,
+  },
 ];

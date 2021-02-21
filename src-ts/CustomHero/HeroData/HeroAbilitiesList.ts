@@ -306,6 +306,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     // ichigo
     [Id.ichigo, [
       AbilityNames.Ichigo.GETSUGA_TENSHO,
+      AbilityNames.Ichigo.GETSUGA_KUROI,
+      AbilityNames.Ichigo.GETSUGA_GRAN,
       AbilityNames.Ichigo.GETSUGA_JUJISHO,
       AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
       AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
@@ -322,6 +324,26 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.SHUNPO,
       AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
       AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+    ]],
+
+    [Id.dartFeld, [
+      AbilityNames.DartFeld.DOUBLE_SLASH,
+      AbilityNames.DartFeld.BURNING_RUSH,
+      AbilityNames.DartFeld.MADNESS_SLASH,
+      AbilityNames.DartFeld.CRUSH_DANCE,
+      AbilityNames.DartFeld.HEART_OF_FIRE,
+      AbilityNames.DartFeld.MADNESS_HERO,
+      AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+      AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+      AbilityNames.DartFeld.BLAZING_DYNAMO,
+      AbilityNames.DartFeld.DRAGOON_FLOURISH,
+      AbilityNames.DartFeld.FLAME_SHOT,
+      AbilityNames.DartFeld.PARAGON_OF_FLAME,
+      AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+      AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+      AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+      AbilityNames.DartFeld.FINAL_BURST,
+      AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
     ]],
 
 
@@ -397,6 +419,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
       AbilityNames.Tien.DODON_RAY,
       AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO,
+      AbilityNames.DartFeld.BURNING_RUSH, AbilityNames.DartFeld.DRAGOON_TRANSFORMATION, AbilityNames.DartFeld.DRAGOON_FLOURISH,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
@@ -594,6 +617,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Hit.FLASH_FIST,
       AbilityNames.Hit.TIME_CAGE,
       AbilityNames.Hit.PURE_PROGRESS,
+    ]],
+
+    // androids 13 14 15
+    [Id.rustTyranno, [
+      AbilityNames.RustTyranno.TYRANNO_FLAME,
+      AbilityNames.RustTyranno.RUST_CHOMP,
+      AbilityNames.RustTyranno.RUST_GOBBLE,
+      AbilityNames.RustTyranno.TYRANNO_ROAR,
     ]],
 
   ]

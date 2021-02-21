@@ -230,6 +230,8 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // ichigo
     [Id.getsugaTensho, AbilityNames.Ichigo.GETSUGA_TENSHO],
+    [Id.getsugaKuroi, AbilityNames.Ichigo.GETSUGA_KUROI],
+    [Id.getsugaGran, AbilityNames.Ichigo.GETSUGA_GRAN],
     [Id.getsugaJujisho, AbilityNames.Ichigo.GETSUGA_JUJISHO],
     [Id.ceroCharge, AbilityNames.Ichigo.CERO_CHARGE],
     [Id.ceroFire, AbilityNames.Ichigo.CERO_FIRE],
@@ -239,7 +241,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // dart feld
     [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
-    [Id.burningSlash, AbilityNames.DartFeld.DOUBLE_SLASH],
+    [Id.burningRush, AbilityNames.DartFeld.BURNING_RUSH],
     [Id.madnessSlash, AbilityNames.DartFeld.MADNESS_SLASH],
     [Id.crushDance, AbilityNames.DartFeld.CRUSH_DANCE],
     [Id.heartOfFire, AbilityNames.DartFeld.HEART_OF_FIRE],
@@ -250,7 +252,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.flameShot, AbilityNames.DartFeld.FLAME_SHOT],
     [Id.paragonOfFlame, AbilityNames.DartFeld.PARAGON_OF_FLAME],
     [Id.finalBurst, AbilityNames.DartFeld.FINAL_BURST],
-    [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGOON],
+    [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
@@ -428,6 +430,10 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.pureProgress, AbilityNames.Hit.PURE_PROGRESS],
 
 
+    [Id.tyrannoFlame, AbilityNames.RustTyranno.TYRANNO_FLAME],
+    [Id.rustChomp, AbilityNames.RustTyranno.RUST_CHOMP],
+    [Id.rustGobble, AbilityNames.RustTyranno.RUST_GOBBLE],
+    [Id.tyrannoRoar, AbilityNames.RustTyranno.TYRANNO_ROAR],
 
     // items
     [FourCC('A0NS'), AbilityNames.Items.ANDROID_BOMB],

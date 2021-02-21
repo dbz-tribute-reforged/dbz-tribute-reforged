@@ -190,7 +190,7 @@ export module SoundHelper {
       // babidi
       case Id.haretsu:
         if (unitId == Id.babidi) {
-          if (rng < 2) {
+          if (rng < 4) {
             playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
           } else if (rng < 25) {
             playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapa.mp3", 1968);
@@ -202,7 +202,7 @@ export module SoundHelper {
 
       case Id.babidiBarrier:
         if (unitId == Id.babidi) {
-          if (rng < 2) {
+          if (rng < 4) {
             playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
           } else if (rng < 25) {
             playSoundOnUnit(unit, "Audio/Voice/BabidiDontWantToDie.mp3", 5808);
@@ -214,7 +214,7 @@ export module SoundHelper {
 
       case Id.babidiMagic:
         if (unitId == Id.babidi) {
-          if (rng < 2) {
+          if (rng < 4) {
             playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapaMeme.mp3", 2304);
           } else {
             playSoundOnUnit(unit, "Audio/Voice/BabidiPaparapapa.mp3", 1968);
@@ -395,6 +395,75 @@ export module SoundHelper {
         }
         break;
       
+      // dart feld
+      case Id.doubleSlash:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/DoubleSlash.mp3", 1280);
+        }
+        break;
+
+      case Id.burningRush:
+      case Id.madnessSlash:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/BurningRush.mp3", 1253);
+        }
+        break;
+
+      case Id.crushDance:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/CrushDance.mp3", 992);
+        }
+        break;
+
+      case Id.heartOfFire:
+      case Id.paragonOfFlame:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/ParagonOfFlame.mp3", 3683);
+        }
+        break;
+
+      case Id.madnessHero:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/MadnessHero.mp3", 5120);
+        }
+        break;
+
+      case Id.blazingDynamo:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/BlazingDynamo.mp3", 2377);
+        }
+        break;
+
+      case Id.dragoonTransformation:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/DragoonTransform.mp3", 1541);
+        }
+        break;
+
+      case Id.dragoonFlourish:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/DragoonFlourish.mp3", 1358);
+        }
+        break;
+
+      case Id.flameShot:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/FlameShot.mp3", 1671);
+        }
+        break;
+
+      case Id.finalBurst:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/FinalBurst.mp3", 2481);
+        }
+        break;
+
+      case Id.redEyedDragonSummoning:
+        if (unitId == Id.dartFeld) {
+          playSoundOnUnit(unit, "Audio/Voice/DartFeld/DragonSummon.mp3", 3631);
+        }
+        break;
+
       // dyspo
       case Id.lightBullet:
         if (unitId == Id.dyspo) {
@@ -869,10 +938,28 @@ export module SoundHelper {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho.mp3", 1933);
         }
         break;
+      
+      case Id.getsugaKuroi:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaKuroi.mp3", 1462);
+        }
+      break;
+      
+      case Id.getsugaGran:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaGran.mp3", 4127);
+        }
+        break;
 
       case Id.getsugaJujisho:
         if (unitId == Id.ichigo) {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaJujisho.mp3", 1880);
+        }
+        break;
+      
+      case Id.ceroFire:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Cero.mp3", 1880);
         }
         break;
 
@@ -1012,7 +1099,7 @@ export module SoundHelper {
         if (unitId == Id.krillin) {
           if (rng < 5) {
             playSoundOnUnit(unit, "Audio/Voice/KrillinLimitBreak.mp3", 3240);
-          } else if (rng < 8) {
+          } else if (rng < 10) {
             playSoundOnUnit(unit, "Audio/Voice/KrillinUltimateTechnique.mp3", 2304);
           }
         }
@@ -1414,7 +1501,7 @@ export module SoundHelper {
         if (unitId == Id.toppo) {
           playSoundOnUnit(unit, "Audio/Voice/ToppoJusticePose.mp3", 1410);
         }
-        if (rng < 1) {
+        if (rng < 5) {
           playSoundOnUnit(unit, "Audio/Voice/ZenoJustice.mp3", 4989);
         }
         break;

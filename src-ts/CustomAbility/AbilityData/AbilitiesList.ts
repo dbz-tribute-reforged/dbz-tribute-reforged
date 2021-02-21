@@ -4372,6 +4372,58 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ichigo.GETSUGA_KUROI,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaKuroi.blp",
+      disabled: "BTNIchigoGetsugaKuroi.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_KUROI,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga kuroi" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ichigo.GETSUGA_GRAN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoGetsugaGran.blp",
+      disabled: "BTNIchigoGetsugaGran.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.GETSUGA_GRAN,
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam getsuga gran" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ichigo.GETSUGA_JUJISHO,
     currentCd: 0,
     maxCd: 1,
@@ -4771,7 +4823,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 15,
+    duration: 17,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4787,8 +4839,63 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.DOUBLE_SLASH,
     },
     components: [
-      { name: "multi double slash" },
-      { name: "dash ground forward videl speed boost" },
+      { name: "slash double slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.BURNING_RUSH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.BURNING_RUSH,
+      body: 
+        "",
+    },
+    components: [
+      { name: "slash burning rush" },
+      { name: "multi burning rush" },
+      { name: "dash ground forward dart speed boost" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.BURNING_RUSH,
+      body: 
+        "",
+    },
+    components: [
+      { name: "slash madness slash" },
+      { name: "multi madness slash" },
+      { name: "dash ground forward dart speed boost" },
     ],
   },
   // -------------------------------------------
@@ -4821,6 +4928,84 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.DartFeld.HEART_OF_FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 330,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.HEART_OF_FIRE,
+      body: 
+        AbilityNames.DartFeld.HEART_OF_FIRE,
+    },
+    components: [
+      { name: "temp ability heart of fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_HERO,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.MADNESS_HERO,
+      body: 
+        AbilityNames.DartFeld.MADNESS_HERO,
+    },
+    components: [
+      //
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+    currentCd: 0,
+    maxCd: 0.06,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+      body: 
+        AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT,
+    },
+    components: [
+      { name: "beam madness on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.DartFeld.BLAZING_DYNAMO,
     currentCd: 0,
     maxCd: 1,
@@ -4842,11 +5027,259 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.BLAZING_DYNAMO
     },
     components: [
-      { name: "dash ground point blazing dynamo" },
-      { name: "dash ground point blazing dynamo reverse" },
+      { name: "dash ground point blazing dynamo 1" },
+      { name: "dash ground point blazing dynamo 2" },
+      { name: "dash ground point blazing dynamo 3" },
       { name: "damage blazing dynamo dps" },
-      { name: "stun blazing dynamo" },
+      { name: "damage blazing dynamo explosion" },
+      { name: "block blazing dynamo" },
       { name: "sfx blazing dynamo" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DRAGOON_TRANSFORMATION,
+      body: 
+        AbilityNames.DartFeld.DRAGOON_TRANSFORMATION
+    },
+    components: [
+      // 
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DRAGOON_FLOURISH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DRAGOON_FLOURISH,
+      body: 
+        AbilityNames.DartFeld.DRAGOON_FLOURISH
+    },
+    components: [
+      { name: "dash ground point dragoon flourish" },
+      { name: "damage dragoon flourish explosion" },
+      { name: "block dart on cast" },
+      { name: "jump dragoon flourish" },
+      { name: "sfx dragoon flourish" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.FLAME_SHOT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.FLAME_SHOT,
+      body: 
+        AbilityNames.DartFeld.FLAME_SHOT
+    },
+    components: [
+      { name: "beam flame shot" },
+      { name: "block dart on cast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.PARAGON_OF_FLAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 333,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.PARAGON_OF_FLAME,
+      body: 
+        AbilityNames.DartFeld.PARAGON_OF_FLAME
+    },
+    components: [
+      { name: "block dart on cast" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+    currentCd: 0,
+    maxCd: 0.24,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT,
+      body: 
+        AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT
+    },
+    components: [
+      { name: "damage paragon of flame on hit" },
+      { name: "sfx paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+      body: 
+        AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1
+    },
+    components: [
+      { name: "dash paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+    currentCd: 0,
+    maxCd: 0.5,
+    costType: "MP",
+    costAmount: 0,
+    duration: 15,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+      body: 
+        AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2
+    },
+    components: [
+      { name: "dash paragon of flame on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.FINAL_BURST,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.DartFeld.FINAL_BURST,
+      body: 
+        AbilityNames.DartFeld.FINAL_BURST,
+    },
+    components: [
+      { name: "dash ground point final burst" },
+      { name: "debuff slow final burst" },
+      { name: "damage final burst dps" },
+      { name: "damage final burst explosion" },
+      { name: "block dart on cast" },
+      { name: "sfx final burst" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNDartFeld.blp",
+      disabled: "BTNDartFeld.blp",
+    },
+    tooltip: {
+      title: AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
+      body: 
+        AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON
+    },
+    components: [
+      { name: "beam red eyed dragon summon" },
+      { name: "block dart on cast" },
     ],
   },
   // -------------------------------------------
@@ -8113,6 +8546,116 @@ export const AbilitiesList = [
     },
     components: [
       { name: "spell amp pure progress" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.TYRANNO_FLAME,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.TYRANNO_FLAME,
+      body: 
+        AbilityNames.RustTyranno.TYRANNO_FLAME
+    },
+    components: [
+      { name: "beam tyranno flame" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.RUST_CHOMP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.RUST_CHOMP,
+      body: 
+        AbilityNames.RustTyranno.RUST_CHOMP
+    },
+    components: [
+      { name: "hook rust chomp" },
+      { name: "temp ability rust gobble" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.RUST_GOBBLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.RUST_GOBBLE,
+      body: 
+        AbilityNames.RustTyranno.RUST_GOBBLE
+    },
+    components: [
+      { name: "damage target rust gobble explosion" },
+      { name: "heal caster rust gobble" },
+      { name: "sfx rust gobble" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.RustTyranno.TYRANNO_ROAR,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRustTyranno.blp",
+      disabled: "BTNRustTyranno.blp",
+    },
+    tooltip: {
+      title: AbilityNames.RustTyranno.TYRANNO_ROAR,
+      body: 
+        AbilityNames.RustTyranno.TYRANNO_ROAR
+    },
+    components: [
+      { name: "damage tyranno roar" },
+      { name: "block tyranno roar" },
+      { name: "knockback tyranno roar" },
+      { name: "sfx angry shout" },
     ],
   },
   // -------------------------------------------

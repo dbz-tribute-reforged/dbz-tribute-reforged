@@ -11,12 +11,13 @@ export module TextTagHelper {
     text: string, 
     x: number, 
     y: number, 
+    size: number = 10.0,
     duration: number = 5.0, 
     fading: number = 4.0,
     force: force = bj_FORCE_ALL_PLAYERS,
   ) {
     const tagLoc = Location(x, y);
-    let tag = CreateTextTagLocBJ(text, tagLoc, 0, 10, 100, 100, 100, 0);
+    let tag = CreateTextTagLocBJ(text, tagLoc, 0, size, 100, 100, 100, 0);
     RemoveLocation(tagLoc);
     ShowTextTagForceBJ(false, tag, bj_FORCE_ALL_PLAYERS);
     ShowTextTagForceBJ(true, tag, force);
@@ -26,7 +27,12 @@ export module TextTagHelper {
     SetTextTagFadepointBJ(tag, fading);
   }
 
-  export function showPlayerColorTextOnUnit(colorText: string, playerId: number, unit: unit) {
+  export function showPlayerColorTextOnUnit(
+    colorText: string, 
+    playerId: number, 
+    unit: unit,
+    size: number = 10,
+  ) {
     const showForce = CreateForce();
     tmpPos.setUnit(unit);
 
@@ -42,6 +48,7 @@ export module TextTagHelper {
       Colorizer.getPlayerColorText(playerId) + colorText + "|r", 
       tmpPos.x, 
       tmpPos.y,
+      size,
       5,
       4,
       showForce
@@ -56,7 +63,7 @@ export module TextTagHelper {
     offsetX: number = 0,
     offsetY: number = 0,
     offsetZ: number = 0,
-    force: force = GetPlayersAll(),
+    force: force = bj_FORCE_ALL_PLAYERS,
     size: number = 10,
     red: number = 255,
     green: number = 255,

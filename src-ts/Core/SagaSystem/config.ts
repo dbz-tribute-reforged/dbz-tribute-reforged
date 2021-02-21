@@ -21,6 +21,7 @@ import { ShadowDragonSaga1, ShadowDragonSaga2 } from "./Sagas/SagaShadowDragonGr
 import { BeerusSaga, WhisTrainingSaga } from "./Sagas/SagaBeerusGroup";
 import { Universe6Saga } from "./Sagas/SagaUniverse6Group";
 import { FTSuperSaga1, FTSuperSaga2 } from "./Sagas/SagaFTSuperGroup";
+import { RustTyrannoSaga } from "./Sagas/SagaCronoGroup";
 
 // the actual saga configuration
 export const sagaSystemConfig: SagaSystemConfig = {
@@ -73,6 +74,8 @@ export const sagaSystemConfig: SagaSystemConfig = {
     FutureBabidiSaga,
     FTSuperSaga1,
     FTSuperSaga2,
+    // secret
+    RustTyrannoSaga,
   ],
 
   sagaDependencies: {
@@ -205,6 +208,13 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     ShadowDragonSaga2: [
       [ ShadowDragonSaga1, SagaState.Completed ],
+    ],
+    // secret
+    RustTyrannoSaga: [
+      [ HirudegarnSaga, SagaState.Completed ],
+      [ BrolyDBSSaga, SagaState.Completed ],
+      [ FTSuperSaga2, SagaState.Completed ],
+      [ ShadowDragonSaga2, SagaState.Completed ],
     ],
   }
 };

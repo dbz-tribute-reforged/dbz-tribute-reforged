@@ -139,4 +139,14 @@ export const JumpComponents = [
     useSpeedToCastPoint: false,
     speed: -1,
   },
+  {
+    name: "jump dragoon flourish",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: 25,
+    duration: 25,
+    maxHeight: 500,
+    useSpeedToCastPoint: false,
+    speed: -1,
+  },
 ]
