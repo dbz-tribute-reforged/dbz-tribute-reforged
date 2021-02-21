@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.60
+DBZ Tribute Reforged 0.60a
 }
 
 STRING 4
@@ -109539,7 +109539,7 @@ Madness Slow Debuff
 }
 
 STRING 17247
-// Abilities: A0VD (Blazing Dynamo Spell Immunity), EditorSuffix (Editor Suffix)
+// Abilities: A0VE (Final Burst Slow Debuff), EditorSuffix (Editor Suffix)
 {
 (dart)
 }
@@ -109572,12 +109572,6 @@ STRING 17252
 // Abilities: A0VA (Heart of Fire Armor), Name (Name)
 {
 Heart of Fire Armor
-}
-
-STRING 17253
-// Abilities: A0VE (Final Burst Slow Debuff), EditorSuffix (Editor Suffix)
-{
-(dart)
 }
 
 STRING 17254
