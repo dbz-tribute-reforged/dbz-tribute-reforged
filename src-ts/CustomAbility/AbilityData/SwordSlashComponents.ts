@@ -121,7 +121,7 @@ export const SwordSlashComponents = [
     maxDistance: 300,
     // -1 means triggers all the time
     minDistance: -1,
-    aoe: 300,
+    aoe: 350,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {
@@ -162,7 +162,7 @@ export const SwordSlashComponents = [
     },
     maxDistance: 300,
     minDistance: -1,
-    aoe: 300,
+    aoe: 350,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {
@@ -203,7 +203,7 @@ export const SwordSlashComponents = [
     },
     maxDistance: 300,
     minDistance: -1,
-    aoe: 300,
+    aoe: 350,
     delayBetweenDamageTicks: 8,
     sfxList: [
       {

@@ -1,6 +1,7 @@
 import { SagaAbility } from "./SagaAbility";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 
+const EXTRA_SHORT_CAST_TIME = 0.5;
 const SHORT_CAST_TIME = 0.75;
 const MEDIUM_CAST_TIME = 1.0;
 const LONG_CAST_TIME = 1.25;
@@ -369,10 +370,10 @@ export module SagaAbilities {
 
   export module RustTyranno {
     export const TYRANNO_FLAME = new SagaAbility(
-      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 30, SHORT_CAST_TIME
+      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 35, SHORT_CAST_TIME
     );
     export const TYRANNO_FLAME_2 = new SagaAbility(
-      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 25, SHORT_CAST_TIME
+      AbilityNames.RustTyranno.TYRANNO_FLAME, 12, 6, 20, EXTRA_SHORT_CAST_TIME
     );
     export const RUST_CHOMP = new SagaAbility(
       AbilityNames.RustTyranno.RUST_CHOMP, 12, 10, 25, SHORT_CAST_TIME

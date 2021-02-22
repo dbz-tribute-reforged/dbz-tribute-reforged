@@ -228,6 +228,7 @@ udg__MarioSpinJumpDelay = 0
 udg_MarioPowerUpGroup = nil
 udg_TienTriBeamUnitGroup = nil
 udg_IchigoMugetsuUnitGroup = nil
+udg_IsFBSimTest = false
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1136,6 +1137,7 @@ function InitGlobals()
     udg_MarioPowerUpGroup = CreateGroup()
     udg_TienTriBeamUnitGroup = CreateGroup()
     udg_IchigoMugetsuUnitGroup = CreateGroup()
+    udg_IsFBSimTest = false
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -6971,6 +6973,7 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0V4"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0V6"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VH"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
@@ -12208,7 +12211,7 @@ function InitTrig_Ichigo_Bankai()
     TriggerAddAction(gg_trg_Ichigo_Bankai, Trig_Ichigo_Bankai_Actions)
 end
 
-function Trig_Ichigo_Mugetsu_Func013C()
+function Trig_Ichigo_Mugetsu_Func014C()
     if (GetSpellAbilityId() == FourCC("A0UD")) then
         return true
     end
@@ -12219,20 +12222,20 @@ function Trig_Ichigo_Mugetsu_Func013C()
 end
 
 function Trig_Ichigo_Mugetsu_Conditions()
-    if (not Trig_Ichigo_Mugetsu_Func013C()) then
+    if (not Trig_Ichigo_Mugetsu_Func014C()) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Func004C()
+function Trig_Ichigo_Mugetsu_Func006C()
     if (not (GetSpellAbilityId() == FourCC("A0UD"))) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Func005C()
+function Trig_Ichigo_Mugetsu_Func007C()
     if (not (GetSpellAbilityId() == FourCC("A0UE"))) then
         return false
     end
@@ -12241,15 +12244,17 @@ end
 
 function Trig_Ichigo_Mugetsu_Actions()
     udg_TempUnit = GetTriggerUnit()
+    udg_StatMultUnit = GetTriggerUnit()
+    GroupAddUnitSimple(udg_StatMultUnit, udg_IchigoMugetsuUnitGroup)
         udg_ID = GetHandleId(udg_TempUnit)
     SaveIntegerBJ(1, 2, udg_ID, udg_SummonsHashtable)
-    if (Trig_Ichigo_Mugetsu_Func004C()) then
+    if (Trig_Ichigo_Mugetsu_Func006C()) then
         SaveIntegerBJ(1, 1, udg_ID, udg_SummonsHashtable)
         SaveIntegerBJ(1, 3, udg_ID, udg_SummonsHashtable)
     else
         BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0UD"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
     end
-    if (Trig_Ichigo_Mugetsu_Func005C()) then
+    if (Trig_Ichigo_Mugetsu_Func007C()) then
         SaveIntegerBJ(2, 3, udg_ID, udg_SummonsHashtable)
     else
         BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0UE"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), 0))
@@ -12257,7 +12262,6 @@ function Trig_Ichigo_Mugetsu_Actions()
     SaveIntegerBJ(BlzGetUnitSkin(udg_TempUnit), 4, udg_ID, udg_SummonsHashtable)
         udg_TransformationID = FourCC('H09X')
     BlzSetUnitSkin(udg_TempUnit, udg_TransformationID)
-    GroupAddUnitSimple(udg_TempUnit, udg_IchigoMugetsuUnitGroup)
     EnableTrigger(gg_trg_Ichigo_Mugetsu_Loop)
 end
 
@@ -12275,14 +12279,14 @@ function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func001C()
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()
+function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002Func002C()
     if (not (udg_TempInt == 332)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func003C()
+function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()
     if (not (udg_TempInt >= 333)) then
         return false
     end
@@ -12297,28 +12301,30 @@ function Trig_Ichigo_Mugetsu_Loop_Func001Func007C()
 end
 
 function Trig_Ichigo_Mugetsu_Loop_Func001A()
-    udg_StatMultUnit = GetEnumUnit()
-    udg_TempPlayer = GetOwningPlayer(udg_StatMultUnit)
-        udg_ID = GetHandleId(udg_StatMultUnit)
+    udg_TempUnit = GetEnumUnit()
+    udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
+        udg_ID = GetHandleId(udg_TempUnit)
     udg_TempInt = LoadIntegerBJ(2, udg_ID, udg_SummonsHashtable)
     udg_TempInt2 = LoadIntegerBJ(3, udg_ID, udg_SummonsHashtable)
     SaveIntegerBJ((udg_TempInt + 1), 2, udg_ID, udg_SummonsHashtable)
     if (Trig_Ichigo_Mugetsu_Loop_Func001Func007C()) then
         if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()) then
-            SaveRealBJ(0.00, 9, udg_ID, udg_StatMultHashtable)
-            TriggerExecute(gg_trg_Temp_Skin_Transformation_Loop)
-        else
-        end
-        if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func003C()) then
-            GroupRemoveUnitSimple(udg_StatMultUnit, udg_IchigoMugetsuUnitGroup)
+            GroupRemoveUnitSimple(udg_TempUnit, udg_IchigoMugetsuUnitGroup)
+            udg_StatMultUnit = udg_TempUnit
             TriggerExecute(gg_trg_Ichigo_Mugetsu_Absorb_Revert)
         else
+            if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002Func002C()) then
+                SaveRealBJ(0.00, 9, udg_ID, udg_StatMultHashtable)
+                udg_StatMultUnit = udg_TempUnit
+                TriggerExecute(gg_trg_Temp_Skin_Transformation_Loop)
+            else
+            end
         end
     else
         if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func001C()) then
-            GroupRemoveUnitSimple(udg_StatMultUnit, udg_IchigoMugetsuUnitGroup)
             udg_TempInt3 = LoadIntegerBJ(4, udg_ID, udg_SummonsHashtable)
-            BlzSetUnitSkin(udg_StatMultUnit, udg_TempInt3)
+            BlzSetUnitSkin(udg_TempUnit, udg_TempInt3)
+            GroupRemoveUnitSimple(udg_TempUnit, udg_IchigoMugetsuUnitGroup)
         else
         end
     end
@@ -13528,6 +13534,7 @@ function Trig_Final_Battle_Sim_On_Actions()
     udg_TeamAboutToLose[1] = false
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_11081")
     udg_IsFreeMode = true
+    udg_IsFBSimTest = true
     DisableTrigger(gg_trg_Force_Win_Loss)
     EnableTrigger(gg_trg_Spawn_Test_Dummy)
     udg_TempInt = 1
@@ -13969,6 +13976,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -17154,6 +17162,7 @@ function Trig_Auto_Free_Mode_SP_Actions()
         udg_TeamAboutToLose[1] = false
         DisplayTextToForce(GetPlayersAll(), "TRIGSTR_10997")
         udg_IsFreeMode = true
+        udg_IsFBSimTest = true
         DisableTrigger(gg_trg_Force_Win_Loss)
         EnableTrigger(gg_trg_Spawn_Test_Dummy)
     else
@@ -17504,6 +17513,19 @@ function Trig_Base_Armor_Set_Func006C()
     return true
 end
 
+function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Y"))) then
+        return false
+    end
+    if (not (BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0UT")) <= 0.00)) then
+        return false
+    end
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B049")) == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03Y")) == true)) then
         return false
@@ -17575,68 +17597,55 @@ function Trig_Base_Armor_Set_Func007C()
 end
 
 function Trig_Base_Armor_Set_Func008C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Y"))) then
-        return false
-    end
-    if (not (BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0UT")) <= 0.00)) then
-        return false
-    end
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B049")) == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func009C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03F")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func010C()
+function Trig_Base_Armor_Set_Func009C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func011Func003C()
+function Trig_Base_Armor_Set_Func010Func003C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func011C()
+function Trig_Base_Armor_Set_Func010C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func012C()
+function Trig_Base_Armor_Set_Func011C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func013Func003C()
+function Trig_Base_Armor_Set_Func012Func003C()
     if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func013C()
+function Trig_Base_Armor_Set_Func012C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func014C()
+function Trig_Base_Armor_Set_Func013C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
         return false
     end
@@ -17797,6 +17806,10 @@ function Trig_Base_Armor_Set_Actions()
                                             udg_BaseArmorReal = (udg_BaseArmorReal + udg_TempReal)
                                         else
                                             udg_TempReal = 0.00
+                                            if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()) then
+                                                udg_BaseArmorReal = (udg_BaseArmorReal + I2R(GetUnitAbilityLevelSwapped(FourCC("A0UT"), udg_StatMultUnit)))
+                                            else
+                                            end
                                         end
                                     end
                                 end
@@ -17808,42 +17821,38 @@ function Trig_Base_Armor_Set_Actions()
         end
     end
     if (Trig_Base_Armor_Set_Func008C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + I2R(GetUnitAbilityLevelSwapped(FourCC("A0UT"), udg_StatMultUnit)))
-    else
-    end
-    if (Trig_Base_Armor_Set_Func009C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 7.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func010C()) then
+    if (Trig_Base_Armor_Set_Func009C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func011C()) then
+    if (Trig_Base_Armor_Set_Func010C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func011Func003C()) then
+        if (Trig_Base_Armor_Set_Func010Func003C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
         else
         end
                 udg_ID = old
     else
     end
-    if (Trig_Base_Armor_Set_Func012C()) then
+    if (Trig_Base_Armor_Set_Func011C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func013C()) then
+    if (Trig_Base_Armor_Set_Func012C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func013Func003C()) then
+        if (Trig_Base_Armor_Set_Func012Func003C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
         else
         end
                 udg_ID = old
     else
     end
-    if (Trig_Base_Armor_Set_Func014C()) then
+    if (Trig_Base_Armor_Set_Func013C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal * 0.40)
     else
     end
@@ -25100,20 +25109,30 @@ function InitTrig_Ichigo_Bankai_Temp_Skin()
     TriggerAddAction(gg_trg_Ichigo_Bankai_Temp_Skin, Trig_Ichigo_Bankai_Temp_Skin_Actions)
 end
 
+function Trig_Ichigo_Mugetsu_Absorb_Revert_Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09S"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Ichigo_Mugetsu_Absorb_Revert_Actions()
-    udg_TempReal = 60.00
-        udg_TempInt = FourCC('A0UE')
-    TriggerExecute(gg_trg_Temp_Skin_Change_Init)
-    TriggerExecute(gg_trg_Get_Stat_Multiplier)
-    udg_TempReal4 = 0.90
-    udg_StatMultReal = udg_TempReal4
-    udg_StatMultStr = udg_TempReal4
-    udg_StatMultAgi = udg_TempReal4
-    udg_StatMultInt = udg_TempReal4
-    TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
-    SetPlayerAbilityAvailableBJ(false, FourCC("A0UN"), GetOwningPlayer(udg_StatMultUnit))
-        udg_TransformationID = FourCC('H09S')
-    TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+    if (Trig_Ichigo_Mugetsu_Absorb_Revert_Func001C()) then
+        udg_TempReal = 60.00
+                udg_TempInt = FourCC('A0UE')
+        TriggerExecute(gg_trg_Temp_Skin_Change_Init)
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_TempReal4 = 0.90
+        udg_StatMultReal = udg_TempReal4
+        udg_StatMultStr = udg_TempReal4
+        udg_StatMultAgi = udg_TempReal4
+        udg_StatMultInt = udg_TempReal4
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0UN"), GetOwningPlayer(udg_StatMultUnit))
+                udg_TransformationID = FourCC('H09S')
+        TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+    else
+    end
 end
 
 function InitTrig_Ichigo_Mugetsu_Absorb_Revert()
@@ -42904,13 +42923,25 @@ function Trig_Rainbow_Shell_Activate_Conditions()
     return true
 end
 
+function Trig_Rainbow_Shell_Activate_Func003C()
+    if (not (udg_IsFBSimTest == false)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Rainbow_Shell_Activate_Actions()
     udg_TempPlayer = GetOwningPlayer(GetManipulatingUnit())
-    PlaySoundBJ(gg_snd_SecretFound)
-    TriggerExecute(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
-    udg_TempString2 = ("[|cff666666SECRET|r] You have unlocked |cffff4411Rust Tyranno|r use the code |cff00ffff" .. (udg_TempString .. "|r next game!"))
     udg_TempPlayerGroup = GetForceOfPlayer(udg_TempPlayer)
-    DisplayTimedTextToForce(udg_TempPlayerGroup, 30, udg_TempString2)
+    if (Trig_Rainbow_Shell_Activate_Func003C()) then
+        TriggerExecute(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
+        udg_TempString2 = ("[|cff666666SECRET|r] You have unlocked |cffff4411Rust Tyranno|r use the code |cff00ffff" .. (udg_TempString .. "|r next game!"))
+        DisplayTimedTextToForce(udg_TempPlayerGroup, 30, udg_TempString2)
+        PlaySoundBJ(gg_snd_GoodJob)
+    else
+        DisplayTimedTextToForce(udg_TempPlayerGroup, 30, "TRIGSTR_16497")
+        PlaySoundBJ(gg_snd_QuestFailed)
+    end
         DestroyForce(udg_TempPlayerGroup)
     RemoveItem(GetManipulatedItem())
     DisableTrigger(GetTriggeringTrigger())

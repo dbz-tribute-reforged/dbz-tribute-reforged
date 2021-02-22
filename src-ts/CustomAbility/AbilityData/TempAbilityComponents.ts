@@ -232,7 +232,7 @@ export const TempAbilityComponents = [
     newAbility: FourCC("A0VD"),
     oldAbility: 0,
     performSwap: false,
-    enableAbility: true,
+    enableAbility: false,
     disableAbility: false,
     addAbility: true,
     tempPermanence: false,
