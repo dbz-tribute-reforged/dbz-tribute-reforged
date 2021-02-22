@@ -1,11 +1,10 @@
-import { Constants } from "./Constants";
+import { Constants, Globals } from "./Constants";
 import { Colorizer } from "./Colorizer";
 
 export module WinLossHelper {
   export const winDelay: number = 30;
   export const winTimer: timer = CreateTimer();
   export let winningTeam: number = 0;
-  export let freeMode: boolean = false;
 
   export function forceTeamWin(winTeam: number) {
     if (
@@ -26,7 +25,7 @@ export module WinLossHelper {
         winningPlayerNames += Colorizer.getColoredPlayerName(player) + " ";
       }
 
-      if (!freeMode) {
+      if (!Globals.isFreemode) {
         DisplayTimedTextToForce(
           bj_FORCE_ALL_PLAYERS, WinLossHelper.winDelay, 
           "Team " + winTeam + " have won! The game will end in " + WinLossHelper.winDelay + " seconds. " +

@@ -163,7 +163,7 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.7,
+      multiplier: BASE.DFIST_EXPLOSION * 0.75,
       attribute: bj_HEROSTAT_STR, 
       attackType: 6,
       damageType: 4, 

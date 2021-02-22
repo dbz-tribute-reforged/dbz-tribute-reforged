@@ -1,7 +1,7 @@
 import { AdvancedSaga } from "./AdvancedSaga";
 import { Saga } from "./BaseSaga";
 import { SagaHelper } from "../SagaHelper";
-import { Constants } from "Common/Constants";
+import { Constants, Globals } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 
 export class RustTyrannoSaga extends AdvancedSaga implements Saga {
@@ -10,12 +10,16 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
   protected rustTyranno: unit | undefined;
   protected superRustTyranno: boolean;
   protected ultraRustTyranno: boolean;
+  protected statGainCounter: number;
+  protected statGainInterval: number;
 
   constructor() {
     super();
     this.delay = 60;
     this.superRustTyranno = false;
     this.ultraRustTyranno = false;
+    this.statGainCounter = 0;
+    this.statGainInterval = 1000;
   }
 
   spawnSagaUnits(): void {
@@ -124,14 +128,39 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
       this.rustTyranno && 
       this.ultraRustTyranno && 
       UnitHelper.isUnitAlive(this.rustTyranno) && 
-      GetUnitLifePercent(this.rustTyranno) > 0.05
+      GetUnitLifePercent(this.rustTyranno) > 0.05 &&
+      GetUnitLifePercent(this.rustTyranno) < 0.75
     ) {
-      SetUnitLifePercentBJ(this.rustTyranno, GetUnitLifePercent(this.rustTyranno) + 0.003);
+      const newHP = (
+        GetUnitState(this.rustTyranno, UNIT_STATE_LIFE) +
+        0.0015 * GetUnitState(this.rustTyranno, UNIT_STATE_MAX_LIFE)
+      );
+      SetUnitState(
+        this.rustTyranno,
+        UNIT_STATE_LIFE,
+        newHP
+      );
+    }
+
+    if (
+      this.rustTyranno &&
+      UnitHelper.isUnitAlive(this.rustTyranno)
+    ) {
+      ++this.statGainCounter;
+      if (this.statGainCounter > this.statGainInterval) {
+        this.statGainCounter = 0;
+        this.statGainInterval += 1000;
+        SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.04), true);
+        SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.02), true);
+        SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.03), true);
+        BlzSetUnitArmor(this.rustTyranno, (GetHeroAgi(this.rustTyranno, true) / 1000) + 10);
+      }
     }
   }
 
   canStart(): boolean {
-    return true;
+    // return !Globals.isFBSimTest;
+    return Globals.isFBSimTest;
   }
 
   canComplete(): boolean {

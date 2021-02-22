@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id } from "Common/Constants";
+import { Constants, Id, Globals } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -22,7 +22,6 @@ import { SoundHelper } from "Common/SoundHelper";
 // global?
 export const customPlayers: CustomPlayer[] = [];
 export let hostPlayer: player = Player(0);
-export let isfbsimtest: boolean = false;
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -910,7 +909,8 @@ export function CustomPlayerTest() {
 
     BJDebugMsg("Special Single Player Commands -level -mega -cd");
 
-    isfbsimtest = true;
+    Globals.isFBSimTest = true;
+    Globals.isFreemode = true;
 
     const megaLvl = CreateTrigger();
     TriggerRegisterPlayerChatEvent(megaLvl, Player(0), "-mega", true);
@@ -1115,9 +1115,9 @@ export function CustomPlayerTest() {
   }
   TriggerAddAction(freeModeTrig, () => {
     if (GetTriggerPlayer() == hostPlayer) {
-      WinLossHelper.freeMode = true;
+      Globals.isFreemode = true;
       if (SubString(GetEventPlayerChatString(), 0, 9) == "-fbsimtest") {
-        isfbsimtest =  true;
+        Globals.isFBSimTest =  true;
       }
     }
   });
@@ -2398,7 +2398,7 @@ export function createCdTrigger() {
   TriggerAddAction(cdTrig, () => {
     const player = GetTriggerPlayer();
     const playerId = GetPlayerId(player);
-    if (isfbsimtest) {
+    if (Globals.isFBSimTest) {
       for (const customHero of customPlayers[playerId].allHeroes) {
         if (customHero) {
           UnitResetCooldown(customHero.unit);

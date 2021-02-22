@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.60a
+DBZ Tribute Reforged 0.60b
 }
 
 STRING 4
@@ -103886,6 +103886,11 @@ STRING 16496
 [|cff00FF00W|r] Learn Bankai: Tensa Zangetsu - [|cffffcc00Level %d|r]
 }
 
+STRING 16497
+{
+This secret cannot be completed in this mode.
+}
+
 STRING 16498
 // Abilities: A0U2 (Galactic Donut), EditorSuffix (Editor Suffix)
 {
@@ -107155,6 +107160,15 @@ A weak early-game hero with powerful close-range offensive capabilities. Can gai
 
 }
 
+STRING 16911
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool1> seconds|r
+}
+
 STRING 16912
 // Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
 {
@@ -109371,6 +109385,15 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
+STRING 17222
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool2> seconds|r
+}
+
 STRING 17223
 // Units: H09S (Shinigami), Ubertip (Tooltip - Extended)
 {
@@ -109574,6 +109597,15 @@ STRING 17252
 Heart of Fire Armor
 }
 
+STRING 17253
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool3> seconds|r
+}
+
 STRING 17254
 // Abilities: A0VB (Book Dart Passives), Name (Name)
 {
@@ -109758,96 +109790,6 @@ STRING 17284
 // Buffs/Effects: B047 (), EditorSuffix (Editor Suffix)
 {
 10
-}
-
-STRING 17285
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool1> seconds|r
-}
-
-STRING 17286
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool2> seconds|r
-}
-
-STRING 17287
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool3> seconds|r
-}
-
-STRING 17288
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool4> seconds|r
-}
-
-STRING 17289
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool5> seconds|r
-}
-
-STRING 17290
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool6> seconds|r
-}
-
-STRING 17291
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool7> seconds|r
-}
-
-STRING 17292
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool8> seconds|r
-}
-
-STRING 17293
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool9> seconds|r
-}
-
-STRING 17294
-// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
-{
-Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
-|cff00ff00Damage: Int * Lvl * ?
-Duration: 10s
-|cff00FFFFCooldown: <A0UZ,Cool10> seconds|r
 }
 
 STRING 17295
@@ -110647,9 +110589,72 @@ STRING 17403
 (rust tyranno)
 }
 
+STRING 17404
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool4> seconds|r
+}
+
 STRING 17405
 // Units: H09Z (|cffff4411Fossil Monster|r), Name (Name)
 {
 |cffff4411Fossil Monster|r
+}
+
+STRING 17406
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool5> seconds|r
+}
+
+STRING 17407
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool6> seconds|r
+}
+
+STRING 17408
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool7> seconds|r
+}
+
+STRING 17409
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool8> seconds|r
+}
+
+STRING 17410
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool9> seconds|r
+}
+
+STRING 17411
+// Abilities: A0UZ (Paragon of Flame), Ubertip (Tooltip - Normal - Extended)
+{
+Dart passively deals bonus fire damage to enemies based on his |cff00ffffInt|r. Activate to have Dart dash towards auto-attacked enemies.
+|cff00ff00Damage: Int * Lvl * ?
+Duration: 3s
+|cff00FFFFCooldown: <A0UZ,Cool10> seconds|r
 }
 

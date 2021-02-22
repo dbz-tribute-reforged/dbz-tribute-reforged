@@ -1061,7 +1061,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 1.5,
+    distance: 2.5,
   },
   // crush dance
   {
@@ -1074,7 +1074,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 30,
   },
   // blazing dynamo
   {
@@ -1124,7 +1124,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 5,
+    distance: 10,
   },
   // dash paragon of flame on hit
   {

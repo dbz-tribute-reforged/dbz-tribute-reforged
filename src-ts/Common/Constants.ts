@@ -1,5 +1,10 @@
 import { Vector2D } from "./Vector2D";
 
+export module Globals {
+  export let isFBSimTest: boolean = false;
+  export let isFreemode: boolean = false;
+}
+
 export module Constants {
   export const maxSubAbilities = 3;
   export const maxActivePlayers = 10;

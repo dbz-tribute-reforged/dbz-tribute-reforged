@@ -4109,6 +4109,7 @@ export const BeamComponents = [
     components: [
       { name: "damage double sunday dps" },
       { name: "damage double sunday explosion" },
+      { name: "debuff slow dragon thunder omega" },
       { name: "knockback kame" },
       { name: "sfx beam double sunday" },
     ],
