@@ -12279,14 +12279,14 @@ function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func001C()
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()
+function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002Func002C()
     if (not (udg_TempInt == 332)) then
         return false
     end
     return true
 end
 
-function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func003C()
+function Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()
     if (not (udg_TempInt >= 333)) then
         return false
     end
@@ -12309,16 +12309,16 @@ function Trig_Ichigo_Mugetsu_Loop_Func001A()
     SaveIntegerBJ((udg_TempInt + 1), 2, udg_ID, udg_SummonsHashtable)
     if (Trig_Ichigo_Mugetsu_Loop_Func001Func007C()) then
         if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002C()) then
-            SaveRealBJ(0.00, 9, udg_ID, udg_StatMultHashtable)
-            udg_StatMultUnit = udg_TempUnit
-            TriggerExecute(gg_trg_Temp_Skin_Transformation_Loop)
-        else
-        end
-        if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func003C()) then
             GroupRemoveUnitSimple(udg_TempUnit, udg_IchigoMugetsuUnitGroup)
             udg_StatMultUnit = udg_TempUnit
             TriggerExecute(gg_trg_Ichigo_Mugetsu_Absorb_Revert)
         else
+            if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func002Func002C()) then
+                SaveRealBJ(0.00, 9, udg_ID, udg_StatMultHashtable)
+                udg_StatMultUnit = udg_TempUnit
+                TriggerExecute(gg_trg_Temp_Skin_Transformation_Loop)
+            else
+            end
         end
     else
         if (Trig_Ichigo_Mugetsu_Loop_Func001Func007Func001C()) then
