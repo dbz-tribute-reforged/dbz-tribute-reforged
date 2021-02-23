@@ -6,6 +6,7 @@ import { Hooks } from "Libs/TreeLib/Hooks";
 import { Id } from "Common/Constants";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
+import { TextTagHelper } from "Common/TextTagHelper";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -89,6 +90,7 @@ export function kidBuuPassive(customHero: CustomHero) {
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
+  const cosmicIllusionBuff = FourCC("B025");
   const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
@@ -105,11 +107,11 @@ export function superJanembaPassive(customHero: CustomHero) {
         GetUnitTypeId(attacker) == heroId && 
         GetOwningPlayer(attacker) == player
       ) {
+        const target = GetTriggerUnit();
+        targetPos.setUnit(target);
         const rakshasaClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.RAKSHASA_CLAW_ABILITY);
         const devilClawLevel = GetUnitAbilityLevel(customHero.unit, HeroPassiveData.DEVIL_CLAW_ABILITY);
         if (rakshasaClawLevel + devilClawLevel > 0) {
-          const target = GetTriggerUnit();
-          targetPos.setUnit(target);
           let onHitName = AbilityNames.SuperJanemba.RAKSHASA_CLAW_ON_HIT;
           let onHitAbility = HeroPassiveData.RAKSHASA_CLAW_ABILITY;
           if (devilClawLevel > 0) {
@@ -140,6 +142,35 @@ export function superJanembaPassive(customHero: CustomHero) {
             )
           }
         }
+        
+        if (
+          GetHandleId(attacker) == GetHandleId(customHero.unit) && 
+          GetUnitAbilityLevel(customHero.unit, cosmicIllusionBuff) > 0
+        ) {
+          const input = new CustomAbilityInput(
+            customHero, 
+            GetOwningPlayer(customHero.unit),
+            GetUnitAbilityLevel(customHero.unit, Id.cosmicIllusion),
+            targetPos,
+            targetPos,
+            targetPos,
+            target,
+            target,
+          );
+
+          if (customHero.canCastAbility(AbilityNames.SuperJanemba.COSMIC_SLASH, input)) {
+            TextTagHelper.showPlayerColorTextOnUnit(
+              AbilityNames.SuperJanemba.COSMIC_SLASH, 
+              GetPlayerId(GetOwningPlayer(customHero.unit)), 
+              customHero.unit
+            );
+            customHero.useAbility(
+              AbilityNames.SuperJanemba.COSMIC_SLASH,
+              input
+            );
+          }
+        }
+
       }
       return false;
     })
@@ -452,17 +483,19 @@ export function dartFeldPassive(customHero: CustomHero) {
 
   const madnessHero = customHero.getAbility(AbilityNames.DartFeld.MADNESS_HERO);
   const madnessOnHit = customHero.getAbility(AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT);
-  const paragonOfFlame = customHero.getAbility(AbilityNames.DartFeld.PARAGON_OF_FLAME);
+  // const paragonOfFlame = customHero.getAbility(AbilityNames.DartFeld.PARAGON_OF_FLAME);
   const paragonOnHit = customHero.getAbility(AbilityNames.DartFeld.PARAGON_OF_FLAME_ON_HIT);
 
-  const dash1 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1);
-  const dash2 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2);
+  // const dash1 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1);
+  // const dash2 = customHero.getAbility(AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2);
 
   if (
-    !madnessHero || !madnessOnHit || 
-    !paragonOfFlame || 
-    !paragonOnHit ||
-    !dash1 || !dash2
+    !madnessHero || !madnessOnHit
+    ||
+    // !paragonOfFlame || 
+    !paragonOnHit
+    // ||
+    // !dash1 || !dash2
   ) return;
 
   const casterPos: Vector2D = new Vector2D(0, 0);
@@ -488,9 +521,10 @@ export function dartFeldPassive(customHero: CustomHero) {
           !madnessOnHit.isInUse()
         );
         const doParagonOnHit = GetUnitAbilityLevel(customHero.unit, paragaonOfFlameBuff) > 0;
-        const doParagonDash = paragonOfFlame.isInUse() && doParagonOnHit;
+        // const doParagonDash = paragonOfFlame.isInUse() && doParagonOnHit;
         
-        if (doMadness || doParagonDash || doParagonOnHit) {
+        // if (doMadness || doParagonDash || doParagonOnHit) {
+        if (doMadness || doParagonOnHit) {
           const target = GetTriggerUnit();
           targetPos.setPos(GetUnitX(target), GetUnitY(target));
           casterPos.setPos(GetUnitX(attacker), GetUnitY(attacker));
@@ -508,43 +542,43 @@ export function dartFeldPassive(customHero: CustomHero) {
                 target,
                 target,
               )
-            )
+            );
           }
 
-          if (doParagonDash) {
-            if (CoordMath.distance(casterPos, targetPos) <= 550) {
+          // if (doParagonDash) {
+          //   if (CoordMath.distance(casterPos, targetPos) <= 550) {
                 
-              if (!dash1.isInUse()) {
-                customHero.useAbility(
-                  AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
-                  new CustomAbilityInput(
-                    customHero, 
-                    GetOwningPlayer(customHero.unit),
-                    10,
-                    targetPos,
-                    targetPos,
-                    targetPos,
-                    target,
-                    target,
-                  )
-                );
-              } else if (!dash2.isInUse()) {
-                customHero.useAbility(
-                  AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
-                  new CustomAbilityInput(
-                    customHero, 
-                    GetOwningPlayer(customHero.unit),
-                    10,
-                    targetPos,
-                    targetPos,
-                    targetPos,
-                    target,
-                    target,
-                  )
-                );
-              }
-            }
-          }
+          //     if (!dash1.isInUse()) {
+          //       customHero.useAbility(
+          //         AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_1,
+          //         new CustomAbilityInput(
+          //           customHero, 
+          //           GetOwningPlayer(customHero.unit),
+          //           10,
+          //           targetPos,
+          //           targetPos,
+          //           targetPos,
+          //           target,
+          //           target,
+          //         )
+          //       );
+          //     } else if (!dash2.isInUse()) {
+          //       customHero.useAbility(
+          //         AbilityNames.DartFeld.DASH_PARAGON_OF_FLAME_2,
+          //         new CustomAbilityInput(
+          //           customHero, 
+          //           GetOwningPlayer(customHero.unit),
+          //           10,
+          //           targetPos,
+          //           targetPos,
+          //           targetPos,
+          //           target,
+          //           target,
+          //         )
+          //       );
+          //     }
+          //   }
+          // }
 
           if (doMadness) {
             customHero.useAbility(

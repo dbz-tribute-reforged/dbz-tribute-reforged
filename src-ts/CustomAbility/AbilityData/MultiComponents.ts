@@ -1262,6 +1262,33 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi dragoon flourish", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: 0,
+    angleMax: 1,
+    forceMinDistance: 225,
+    forceMaxDistance: 225,
+    delayBetweenComponents: 0,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 1,
+    componentsAddedPerRound: 2,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: true,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "damage dragoon flourish explosion" },
+      { name: "sfx dragoon flourish" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi dragon flash bullet", 
     repeatInterval: 1, 
     startTick: 0,

@@ -5070,7 +5070,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5086,11 +5086,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.DRAGOON_FLOURISH
     },
     components: [
-      { name: "dash ground point dragoon flourish" },
-      { name: "damage dragoon flourish explosion" },
-      { name: "block dart on cast" },
-      { name: "jump dragoon flourish" },
-      { name: "sfx dragoon flourish" },
+      { name: "multi dragoon flourish" },
     ],
   },
   // -------------------------------------------
@@ -5117,7 +5113,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam flame shot" },
-      { name: "block dart on cast" },
     ],
   },
   // -------------------------------------------
@@ -5127,7 +5122,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 100,
+    duration: 150,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5143,7 +5138,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.PARAGON_OF_FLAME
     },
     components: [
-      { name: "block dart on cast" },
+      { name: "damage block paragon of flame" },
     ],
   },
   // -------------------------------------------
@@ -5252,7 +5247,6 @@ export const AbilitiesList = [
       { name: "debuff slow final burst" },
       { name: "damage final burst dps" },
       { name: "damage final burst explosion" },
-      { name: "block dart on cast" },
       { name: "sfx final burst" },
     ],
   },
@@ -5280,7 +5274,6 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam red eyed dragon summon" },
-      { name: "block dart on cast" },
     ],
   },
   // -------------------------------------------
@@ -6745,6 +6738,32 @@ export const AbilitiesList = [
     components: [
       { name: "damage demonic blade" },
       { name: "sfx demonic blade" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.SuperJanemba.COSMIC_SLASH,
+    currentCd: 0,
+    maxCd: 6,
+    costType: "MP",
+    costAmount: 25,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNJanembaSuperRakshasaClaw.blp",
+      disabled: "BTNJanembaSuperRakshasaClaw.blp",
+    },
+    tooltip: {
+      title: AbilityNames.SuperJanemba.RAKSHASA_CLAW,
+      body: 
+        "."
+    },
+    components: [
+      { name: "beam cosmic slash" },
     ],
   },
   // -------------------------------------------
