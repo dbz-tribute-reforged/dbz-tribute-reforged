@@ -1113,19 +1113,6 @@ export const DashComponents = [
     angleOffset: 270,
     distance: 20,
   },
-  // dragoon flourish
-  {
-    name: "dash ground point dragoon flourish",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,    
-    targetDirection: Dash.DIRECTION_TARGET_POINT,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 10,
-  },
   // dash paragon of flame on hit
   {
     name: "dash paragon of flame on hit",
@@ -1150,7 +1137,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 20,
+    distance: 35,
   },
   // ----------------------------
   // cell-x

@@ -15,7 +15,7 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 60;
+    this.delay = 5;
     this.superRustTyranno = false;
     this.ultraRustTyranno = false;
     this.statGainCounter = 0;
@@ -127,29 +127,37 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
     if (
       this.rustTyranno && 
       this.ultraRustTyranno && 
-      UnitHelper.isUnitAlive(this.rustTyranno) && 
-      GetUnitLifePercent(this.rustTyranno) > 0.05 &&
-      GetUnitLifePercent(this.rustTyranno) < 0.75
-    ) {
-      const newHP = (
-        GetUnitState(this.rustTyranno, UNIT_STATE_LIFE) +
-        0.0015 * GetUnitState(this.rustTyranno, UNIT_STATE_MAX_LIFE)
-      );
-      SetUnitState(
-        this.rustTyranno,
-        UNIT_STATE_LIFE,
-        newHP
-      );
-    }
-
-    if (
-      this.rustTyranno &&
       UnitHelper.isUnitAlive(this.rustTyranno)
     ) {
+      const rustHP = GetUnitState(this.rustTyranno, UNIT_STATE_LIFE);
+      const rustMaxHP = GetUnitState(this.rustTyranno, UNIT_STATE_MAX_LIFE);
+      
+      if (rustHP > 0.05 * rustMaxHP) {
+        let newHP = rustHP;
+        if (rustHP > 0.75 * rustMaxHP) {
+          newHP = rustHP + 0.00002 * rustMaxHP;
+        } else if (rustHP > 0.5 * rustMaxHP) {
+          newHP = rustHP + 0.00004 * rustMaxHP;
+        } else if (rustHP > 0.25 * rustMaxHP) {
+          newHP = rustHP + 0.00006 * rustMaxHP;
+        } else {
+          newHP = rustHP + 0.00008 * rustMaxHP;
+        }
+        SetUnitState(
+          this.rustTyranno,
+          UNIT_STATE_LIFE,
+          newHP
+        );
+      }
+
       ++this.statGainCounter;
       if (this.statGainCounter > this.statGainInterval) {
         this.statGainCounter = 0;
-        this.statGainInterval += 1000;
+        if (rustHP < 0.5 * rustMaxHP) {
+          this.statGainInterval += 500;
+        } else {
+          this.statGainInterval += 1000;
+        }
         SetHeroStr(this.rustTyranno, Math.floor(GetHeroStr(this.rustTyranno, true) * 1.04), true);
         SetHeroAgi(this.rustTyranno, Math.floor(GetHeroAgi(this.rustTyranno, true) * 1.02), true);
         SetHeroInt(this.rustTyranno, Math.floor(GetHeroInt(this.rustTyranno, true) * 1.03), true);
@@ -159,8 +167,8 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
   }
 
   canStart(): boolean {
+    return true;
     // return !Globals.isFBSimTest;
-    return Globals.isFBSimTest;
   }
 
   canComplete(): boolean {

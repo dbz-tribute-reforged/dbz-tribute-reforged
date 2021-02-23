@@ -401,6 +401,7 @@ export module AbilityNames {
     export const DEMONIC_BLADE = "Demonic Blade";
     export const HELLS_GATE = "Hell's Gate";
     export const COSMIC_ILLUSION = "Cosmic Illusion";
+    export const COSMIC_SLASH = "Cosmic Slash";
     export const LIGHTNING_SHOWER_RAIN = "Lightning Shower Rain";
   }
 

@@ -1461,15 +1461,14 @@ export const DamageBlockComponents = [
   },
   // ----------------------------------------
   {
-    name: "block dart on cast",
+    name: "block paragon of flame",
     repeatInterval: 1,
     startTick: 0,
-    endTick: 66,
+    endTick: -1,
     blockPerDamage: 25,
     isPercentageBlock: true,
-    attribute: bj_HEROSTAT_STR,
-    // pretty much 100% dmg block
-    multiplier: 5.0,
+    attribute: bj_HEROSTAT_INT,
+    multiplier: 0.5,
     sfxList: [
       {
         model: "Firaga.mdl",
@@ -1493,10 +1492,10 @@ export const DamageBlockComponents = [
     ],
     attachedSfxList: [
       {
-        model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
+        model: "JirenShield.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 2.5,
+        scale: 3.0,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
