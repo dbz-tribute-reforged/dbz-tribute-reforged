@@ -15,7 +15,7 @@ export class RustTyrannoSaga extends AdvancedSaga implements Saga {
 
   constructor() {
     super();
-    this.delay = 5;
+    this.delay = 60;
     this.superRustTyranno = false;
     this.ultraRustTyranno = false;
     this.statGainCounter = 0;

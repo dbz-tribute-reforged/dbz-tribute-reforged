@@ -211,10 +211,10 @@ export const sagaSystemConfig: SagaSystemConfig = {
     ],
     // secret
     RustTyrannoSaga: [
-      // [ HirudegarnSaga, SagaState.Completed ],
-      // [ BrolyDBSSaga, SagaState.Completed ],
-      // [ FTSuperSaga2, SagaState.Completed ],
-      // [ ShadowDragonSaga2, SagaState.Completed ],
+      [ HirudegarnSaga, SagaState.Completed ],
+      [ BrolyDBSSaga, SagaState.Completed ],
+      [ FTSuperSaga2, SagaState.Completed ],
+      [ ShadowDragonSaga2, SagaState.Completed ],
     ],
   }
 };
