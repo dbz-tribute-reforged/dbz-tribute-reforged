@@ -4715,6 +4715,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ichigo.CERO_GIGANTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoCeroGigante.blp",
+      disabled: "BTNIchigoCeroGigante.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.CERO_GIGANTE,
+      body: 
+        AbilityNames.Ichigo.CERO_GIGANTE
+    },
+    components: [
+      { name: "beam cero gigante"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ichigo.MUGETSU_UNLEASH,
     currentCd: 0,
     maxCd: 1,

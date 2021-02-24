@@ -292,6 +292,7 @@ export module Id {
   export const shunpo = FourCC("A0UF");
   export const hirenkyaku = FourCC("A0VL");
   export const blutVene = FourCC("A0VM");
+  export const ceroGigante = FourCC("A0VO");
 
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");

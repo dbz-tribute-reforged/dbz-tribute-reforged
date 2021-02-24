@@ -111038,3 +111038,39 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
+STRING 17466
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 17467
+// Abilities: A0VO (Cero Gigante), Name (Name)
+{
+Cero Gigante
+}
+
+STRING 17469
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+{
+E
+}
+
+STRING 17470
+// Abilities: A0VO (Cero Gigante), Ubertip (Tooltip - Normal - Extended)
+{
+Big boy Cero.|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0V0,Cool1> seconds|r
+}
+
+STRING 17471
+// Abilities: A0VO (Cero Gigante), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17472
+// Abilities: A0VO (Cero Gigante), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero Gigante
+}
+

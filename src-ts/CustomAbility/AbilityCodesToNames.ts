@@ -241,6 +241,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.shunpo, AbilityNames.Ichigo.SHUNPO],
     [Id.hirenkyaku, AbilityNames.Ichigo.HIRENKYAKU],
     [Id.blutVene, AbilityNames.Ichigo.BLUTVENE],
+    [Id.ceroGigante, AbilityNames.Ichigo.CERO_GIGANTE],
 
     // dart feld
     [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],

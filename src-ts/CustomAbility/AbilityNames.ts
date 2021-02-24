@@ -277,6 +277,7 @@ export module AbilityNames {
     export const BLUTVENE: string = "Blut Vene";
     export const DASH_BANKAI_FINAL_1: string = "Bankai Final Dash 1";
     export const DASH_BANKAI_FINAL_2: string = "Bankai Final Dash 2";
+    export const CERO_GIGANTE: string = "Cero Gigante";
   }
 
   export module DartFeld {

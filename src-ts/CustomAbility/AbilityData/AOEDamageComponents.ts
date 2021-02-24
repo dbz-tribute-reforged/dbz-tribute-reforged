@@ -354,7 +354,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 10,
     damageData: {
-      multiplier: BASE.KAME_DPS * 2.5,
+      multiplier: BASE.KAME_DPS * 2.7,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -4284,6 +4284,30 @@ export const AOEDamageComponents = [
   // cero fire
   {
     name: "damage cero fire dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleDamageToSourceHp: true,
+    useLastCastPoint: false,
+    aoe: 450,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE.KAME_DPS * 15,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
+  // cero gigante
+  {
+    name: "damage cero gigante dps",
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
