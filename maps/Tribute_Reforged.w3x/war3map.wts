@@ -66057,6 +66057,10 @@ Transformations:
 [lvl 90]  2.00x "ss2"
 [lvl 140] 2.50x "ssg"
 [lvl 200] 2.60x "ssb"
+
+|cff00ff00Type to unlock:|r
+[lvl 150] "|cff00afffgod kame|r"
+
 }
 
 STRING 10725
@@ -108766,7 +108770,7 @@ STRING 17148
 }
 
 STRING 17149
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
 {
 Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
 |cffffff0010: Final Bankai, dashes towards attacked enemies
@@ -109274,17 +109278,6 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cffffff00Upgrades to Getsuga Jujisho at max level.
 |cff00ff00Damage: Agi * lvl * ?|r
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
-}
-
-STRING 17222
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: 20s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 17223
@@ -111032,5 +111025,16 @@ STRING 17464
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 17465
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai: Replaces Shunpo with Hirenkyaku. Grants Getsgua Gran Rey. Grants Blut Vene. Increases movement speed.
+|cff00ff00Duration: 20s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
