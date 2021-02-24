@@ -975,23 +975,20 @@ export module SoundHelper {
         }
         break;
       
-      case Id.mugetsuAbsorb:
-        if (unitId == Id.ichigo) {
-          if (rng < 95) {
-            playSoundOnUnit(unit, "Audio/Voice/Ichigo/GetsugaTensho2.mp3", 3500);
-          } else {
-            playSoundOnUnit(unit, "Audio/Voice/Ichigo/OwariDa.mp3", 2821);
-          }
-        }
-        break;
-      
-      case Id.mugetsuUnleash:
+      case Id.mugetsuSlash:
         if (unitId == Id.ichigo) {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/Mugetsu.mp3", 783);
         }
         break;
 
       case Id.shunpo:
+        if (unitId == Id.ichigo) {
+          playSoundOnUnit(unit, "Audio/Voice/Ichigo/Shunpo.mp3", 391);
+        }
+        playSoundOnUnit(unit, "Audio/Effects/Zanzo.mp3", 1149);
+        break;
+      
+      case Id.hirenkyaku:
         if (unitId == Id.ichigo) {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/Shunpo.mp3", 391);
         }

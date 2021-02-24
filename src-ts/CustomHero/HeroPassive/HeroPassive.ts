@@ -332,7 +332,7 @@ export function ichigoPassive(customHero: CustomHero) {
   const heroId = GetUnitTypeId(customHero.unit);
 
   const bankaiFinal = customHero.getAbility(AbilityNames.Ichigo.BANKAI_FINAL);
-  const mugetsuAbsorb = customHero.getAbility(AbilityNames.Ichigo.MUGETSU_ABSORB);
+  const mugetsuAbsorb = customHero.getAbility(AbilityNames.Ichigo.MUGETSU_SLASH);
   const getsuga1 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1);
   const getsuga2 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2);
   const getsuga3 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3);
@@ -366,7 +366,7 @@ export function ichigoPassive(customHero: CustomHero) {
         GetOwningPlayer(attacker) == player
       ) {
         const doBankaiFinal: boolean = (bankaiFinal.isInUse());
-        const doGetsugaSpam: boolean = (mugetsuAbsorb.isInUse());
+        const doGetsugaSpam: boolean = false;
         
         if (doBankaiFinal || doGetsugaSpam) {
 
