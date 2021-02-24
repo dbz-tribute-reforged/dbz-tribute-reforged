@@ -625,7 +625,7 @@ export const AOEDebuffComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    abilityId: Debuffs.STUN_TWO_SECOND,
+    abilityId: Debuffs.STUN_THREE_SECOND,
     orderId: Debuffs.THUNDERBOLT_ORDER_ID,
     aoe: 850,
     keepCasting: false, 

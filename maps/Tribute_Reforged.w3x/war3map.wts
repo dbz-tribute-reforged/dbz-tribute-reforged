@@ -85766,6 +85766,12 @@ An offense-oriented hero who struggles heavily in the early and mid game but bec
 
 }
 
+STRING 13906
+// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+The user punches in front of them, dealing damage to enemies and deflecting beams.|n|cffff2020Warning: Actual range is shorter than cast range!|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: <A073,Cool1,.>s|r
+}
+
 STRING 13907
 // Abilities: A0UQ (Double Slash), EditorSuffix (Editor Suffix)
 {
@@ -110561,12 +110567,6 @@ STRING 17405
 // Units: H09Z (|cffff4411Fossil Monster|r), Name (Name)
 {
 |cffff4411Fossil Monster|r
-}
-
-STRING 17406
-// Abilities: A073 (Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-The user punches in front of them, dealing damage to enemies and deflecting beams.|n|cffff2020Warning: Actual range is shorter than cast range!|n|cff00ff00Damage: Str * Lvl * ?|r|n|cff00FFFFCooldown: 2.5s|r
 }
 
 STRING 17407

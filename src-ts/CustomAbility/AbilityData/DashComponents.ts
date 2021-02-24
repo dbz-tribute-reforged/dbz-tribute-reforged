@@ -1061,7 +1061,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: true,
     angleOffset: 0,
-    distance: 1400,
+    distance: 1100,
   },
   // dash bankai final on hit
   {
