@@ -144,6 +144,10 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
     this.currentCd = amount;
   }
 
+  setCurrentTick(amount: number) {
+    this.currentTick = amount;
+  }
+
   getDuration(): number {
     return this.duration;
   }

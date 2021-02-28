@@ -118,7 +118,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
     
     // pan
-    [FourCC("H08P"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.GOD_KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
+    [Id.pan, [
+      AbilityNames.Pan.KAMEHAMEHA, 
+      AbilityNames.Pan.GOD_KAMEHAMEHA, 
+      AbilityNames.Pan.MAIDEN_BLAST, 
+      AbilityNames.Pan.RELIABLE_FRIEND, 
+      AbilityNames.Pan.SUMMON_GIRU, 
+      AbilityNames.Pan.HONEY_BEE_COSTUME
+    ]],
     [FourCC("H08R"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.GOD_KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
     // giru
     [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", AbilityNames.Pan.RELIABLE_FRIEND, "Dragon Radar"]],
@@ -309,10 +316,10 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.GETSUGA_KUROI,
       AbilityNames.Ichigo.GETSUGA_GRAN,
       AbilityNames.Ichigo.GETSUGA_JUJISHO,
-      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
-      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
-      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
-      AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
+      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1,
+      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2,
+      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3,
+      // AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4,
       AbilityNames.Ichigo.BANKAI,
       AbilityNames.Ichigo.BANKAI_HOLLOW,
       AbilityNames.Ichigo.BANKAI_BLUT_VENE,
@@ -324,8 +331,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.SHUNPO,
       AbilityNames.Ichigo.HIRENKYAKU,
       AbilityNames.Ichigo.BLUTVENE,
-      AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
-      AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+      // AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+      // AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
       AbilityNames.Ichigo.CERO_GIGANTE,
     ]],
 

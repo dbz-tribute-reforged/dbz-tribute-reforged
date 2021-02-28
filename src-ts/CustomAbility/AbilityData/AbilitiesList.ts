@@ -4639,7 +4639,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 500,
+    duration: 666,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4816,7 +4816,9 @@ export const AbilitiesList = [
         AbilityNames.Ichigo.SHUNPO
     },
     components: [
+      { name: "sfx shunpo start" },
       { name: "dash shunpo" },
+      { name: "sfx shunpo end" },
     ],
   },
   // -------------------------------------------
@@ -4842,7 +4844,9 @@ export const AbilitiesList = [
         AbilityNames.Ichigo.HIRENKYAKU
     },
     components: [
+      { name: "sfx shunpo start" },
       { name: "dash hirenkyaku" },
+      { name: "sfx shunpo end" },
     ],
   },
   // -------------------------------------------
@@ -5118,7 +5122,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5151,7 +5155,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 333,
+    duration: 833,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5167,7 +5171,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.DRAGOON_TRANSFORMATION
     },
     components: [
-      // 
+      { name: "dash ground forward dragoon transformation" },
     ],
   },
   // -------------------------------------------

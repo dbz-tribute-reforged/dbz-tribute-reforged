@@ -975,6 +975,7 @@ export module SoundHelper {
         }
         break;
       
+      case Id.mugetsuUnleash:
       case Id.mugetsuSlash:
         if (unitId == Id.ichigo) {
           playSoundOnUnit(unit, "Audio/Voice/Ichigo/Mugetsu.mp3", 783);

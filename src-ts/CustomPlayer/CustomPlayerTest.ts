@@ -1242,7 +1242,7 @@ export function CustomPlayerTest() {
     SetupCero(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupBankai(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
-    SetupRedEyedDragonSummonSpellAmp(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupDartSpells(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
@@ -2255,7 +2255,7 @@ export function SetupBankai(
   });
 }
 
-export function SetupRedEyedDragonSummonSpellAmp(
+export function SetupDartSpells(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
@@ -2285,6 +2285,28 @@ export function SetupRedEyedDragonSummonSpellAmp(
             DestroyTimer(GetExpiredTimer());
           }
         });
+      }
+    } else if (spellId == Id.dragoonTransformation) {
+      const caster = GetTriggerUnit();
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+      const customHero = customPlayers[playerId].getCustomHero(caster);
+      if (customHero) {
+        let elapsedTime = 0;
+        const abil = customHero.getAbility(AbilityNames.DartFeld.DRAGOON_TRANSFORMATION);
+        if (abil) {
+          TimerStart(CreateTimer(), 2.0, true, () => {
+            elapsedTime += 2.0;
+            if (
+              elapsedTime >= duration || 
+              GetUnitAbilityLevel(caster, dragoonTransformationBuff) == 0
+            ) {
+              abil.setCd(0);
+              abil.setCurrentTick(abil.getDuration());
+              DestroyTimer(GetExpiredTimer());
+            }
+          });
+        }
       }
     }
   });
