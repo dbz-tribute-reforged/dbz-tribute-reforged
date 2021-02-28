@@ -288,8 +288,11 @@ export module Id {
   export const ceroFire = FourCC("A0UB");
   export const mugetsuBook = FourCC("A0UC");
   export const mugetsuUnleash = FourCC("A0UD");
-  export const mugetsuAbsorb = FourCC("A0UE");
+  export const mugetsuSlash = FourCC("A0UE");
   export const shunpo = FourCC("A0UF");
+  export const hirenkyaku = FourCC("A0VL");
+  export const blutVene = FourCC("A0VM");
+  export const ceroGigante = FourCC("A0VO");
 
   export const janemba = FourCC("H062");
   export const demonRush = FourCC("A0O1");
@@ -372,6 +375,7 @@ export module Id {
   export const pan = FourCC("H08P");
   export const honeyBeeCostume = FourCC("A0LY");
   export const panKame = FourCC("A0LX");
+  export const panGodKame = FourCC("A0VN");
   export const maidenBlast = FourCC("A0LU");
   export const reliableFriend = FourCC("A0LV");
   export const summonGiru = FourCC("A0LW");

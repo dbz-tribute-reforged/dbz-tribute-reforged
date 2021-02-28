@@ -39045,17 +39045,6 @@ Ichigo instantly dashes to the target unit with godlike speed.
 |cff00ffffCooldown: <A0UF,Cool1>s|r
 }
 
-STRING 6368
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff001-3: Bankai, +50% damage
-|cff00ff00Duration: <A0U8,Dur1>s
-|cff00FFFFCooldown: <A0U8,Cool1>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
 STRING 6369
 // Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
@@ -39118,20 +39107,6 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 |cffffff007-9: Blut Vene Bankai, damage block 15 * agi @ 75%
 |cff00ff00Duration: <A0U8,Dur7>s
 |cff00FFFFCooldown: <A0U8,Cool7>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
-}
-
-STRING 6375
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff001-3: Bankai, +50% damage
-4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
-7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-10: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur1> - <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
 
 |cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
@@ -66082,6 +66057,10 @@ Transformations:
 [lvl 90]  2.00x "ss2"
 [lvl 140] 2.50x "ssg"
 [lvl 200] 2.60x "ssb"
+
+|cff00ff00Type to unlock:|r
+[lvl 150] "|cff00afffgod kame|r"
+
 }
 
 STRING 10725
@@ -73567,6 +73546,12 @@ STRING 11962
 [|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 1|r]
 }
 
+STRING 11963
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
+{
+D
+}
+
 STRING 11964
 // Abilities: A0EU (Cosmic Illusion), Researchtip (Tooltip - Learn)
 {
@@ -74045,6 +74030,67 @@ STRING 12043
 // Abilities: A0EU (Cosmic Illusion), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 10|r]
+}
+
+STRING 12044
+// Abilities: A0VL (Hirenkyaku), Name (Name)
+{
+Hirenkyaku
+}
+
+STRING 12045
+// Abilities: A0VL (Hirenkyaku), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Hirenkyaku
+}
+
+STRING 12046
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
+{
+D
+}
+
+STRING 12047
+// Abilities: A0VL (Hirenkyaku), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo instantly dashes to the target unit with godlike speed.
+|cff00ffffCooldown: <A0UF,Cool1>s|r
+}
+
+STRING 12048
+// Abilities: A0VL (Hirenkyaku), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 12049
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo activates his Blut Vene|n|cff00ff00Damage Blocked: lvl * Agi * 5 @ 90%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+}
+
+STRING 12050
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool2> seconds|r
+}
+
+STRING 12051
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool3> seconds|r
+}
+
+STRING 12052
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool4> seconds|r
+}
+
+STRING 12053
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool5> seconds|r
 }
 
 STRING 12054
@@ -88254,6 +88300,12 @@ STRING 14305
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 1|r]
 }
 
+STRING 14306
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool6> seconds|r
+}
+
 STRING 14307
 // Abilities: A0RB (Senzu Throw), Tip (Tooltip - Normal)
 {
@@ -88836,13 +88888,13 @@ Q
 }
 
 STRING 14395
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14396
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -96015,6 +96067,12 @@ STRING 15437
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 7|r]
 }
 
+STRING 15438
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool7> seconds|r
+}
+
 STRING 15439
 // Abilities: A0K7 (Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
@@ -96310,6 +96368,36 @@ Jiren unleashes a mighty punch on the target unit, causing it to be knocked back
 |cff00FF00Damage: Str * Lvl * ?
 |cff00FFFFCooldown: <A0K8,Cool10>s
 |cffFFFF00Empowered:|r Deals bonus damage based on the difference between Jiren and the enemy's STR and allows you to press |cffFFFF00W|r while the target is knocked back to charge towards the unit's position.
+}
+
+STRING 15472
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 15473
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 15474
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 15475
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 15476
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 6|r]
 }
 
 STRING 15477
@@ -97619,6 +97707,12 @@ STRING 15666
 // Abilities: A0TZ (Sword of Hope), EditorSuffix (Editor Suffix)
 {
 (kid trunks)
+}
+
+STRING 15667
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Blut Vene - [|cffffcc00Level 1|r]
 }
 
 STRING 15668
@@ -104173,6 +104267,66 @@ Super Star: Temporary Invulnerability
 |cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
 }
 
+STRING 16554
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 16555
+// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 16556
+// Abilities: A0VM (Blut Vene), Name (Name)
+{
+Blut Vene
+}
+
+STRING 16557
+// Abilities: A0VM (Blut Vene), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
+}
+
+STRING 16558
+// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16559
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 16560
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 16561
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 16562
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool8> seconds|r
+}
+
+STRING 16563
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool9> seconds|r
+}
+
 STRING 16564
 // Abilities: A0U5 (Super Ghost Kamikaze Attack x10), Tip (Tooltip - Normal)
 {
@@ -105464,38 +105618,19 @@ Duration: <A0UA,Dur10>s
 }
 
 STRING 16729
-// Abilities: A0UE (Mugetsu: Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 16730
-// Abilities: A0UE (Mugetsu: Absorb), Name (Name)
-{
-Mugetsu: Absorb
-}
-
-STRING 16731
-// Abilities: A0UE (Mugetsu: Absorb), Tip (Tooltip - Normal)
-{
-[|cff00FF00W|r] Mugetsu: |cff00ffffAbsorb|r
 }
 
 STRING 16732
-// Abilities: A0UE (Mugetsu: Absorb), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
 
-STRING 16733
-// Abilities: A0UE (Mugetsu: Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
-|cff00ffffCooldown: <A0UE,Cool1>s|r
-}
-
 STRING 16734
-// Abilities: A0UE (Mugetsu: Absorb), EditorSuffix (Editor Suffix)
+// Abilities: A0UE (Mugetsu: Slash), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -106355,6 +106490,12 @@ STRING 16853
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 9|r]
 }
 
+STRING 16854
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool10> seconds|r
+}
+
 STRING 16855
 // Units: H09Y (Red-Eyed Dragoon), EditorSuffix (Name - Editor Suffix)
 {
@@ -106931,6 +107072,12 @@ A weak early-game hero with powerful close-range offensive capabilities. Can gai
 
 }
 
+STRING 16911
+// Abilities: A0VM (Blut Vene), Researchubertip (Tooltip - Learn - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+}
+
 STRING 16912
 // Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
 {
@@ -106987,17 +107134,6 @@ STRING 16916
 // Units: H09Y (Red-Eyed Dragoon), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00F|r] Choose Dart Feld
-}
-
-STRING 16917
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16918
@@ -107091,17 +107227,6 @@ STRING 16932
 // Abilities: A0US (Crush Dance), EditorSuffix (Editor Suffix)
 {
 (dart)
-}
-
-STRING 16933
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
-{
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16934
@@ -108047,10 +108172,35 @@ STRING 17058
 Q
 }
 
+STRING 17059
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff001-3: Bankai, +50% damage
+|cff00ff00Duration: <A0U8,Dur1>s|r
+|cff00FFFFCooldown: <A0U8,Cool1>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
 STRING 17060
 // Abilities: A0UX (Dragoon Flourish), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 10|r]
+}
+
+STRING 17061
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff001-3: Bankai, +50% damage
+4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+10: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: 20s
+|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 17062
@@ -108623,6 +108773,17 @@ STRING 17148
 // Abilities: A0V2 (Red-Eyed Dragoon), Tip (Tooltip - Normal)
 {
 |cffff2020Red-Eyed Dragoon|r
+}
+
+STRING 17149
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: 20s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 17150
@@ -109328,6 +109489,12 @@ STRING 17252
 Heart of Fire Armor
 }
 
+STRING 17253
+// Abilities: A0UE (Mugetsu: Slash), Name (Name)
+{
+Mugetsu: Slash
+}
+
 STRING 17254
 // Abilities: A0VB (Book Dart Passives), Name (Name)
 {
@@ -109618,6 +109785,12 @@ STRING 17298
 Rust Tyranno uses his tongue to pull an enemy into his mouth. Unocks [|cff00ff00W|r] Gobble.
 |cff00ff00Damage: Str * lvl * ?|r
 |cff00ffffCooldown: <A0VG,Cool5> seconds|r
+}
+
+STRING 17299
+// Abilities: A0UE (Mugetsu: Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Mugetsu: |cff00ffffSlash|r
 }
 
 STRING 17300
@@ -110382,10 +110555,48 @@ STRING 17403
 (rust tyranno)
 }
 
+STRING 17404
+// Abilities: A0UE (Mugetsu: Slash), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo fires a final getsuga. |cffff2020Permanently disables Mugetsu after usage.|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: Once per game|r
+}
+
 STRING 17405
 // Units: H09Z (|cffff4411Fossil Monster|r), Name (Name)
 {
 |cffff4411Fossil Monster|r
+}
+
+STRING 17407
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+}
+
+STRING 17408
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+}
+
+STRING 17409
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+}
+
+STRING 17410
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+}
+
+STRING 17411
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
 }
 
 STRING 17412
@@ -110700,5 +110911,166 @@ Janemba turns invisible and creates a clone of himself that can attack nearby en
 |cff00ff00Damage: Agi * Lvl * ?
 Duration: <A0EU,Dur10>
 |cff00FFFFCooldown: <A0EU,Cool10> seconds|r
+}
+
+STRING 17446
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+}
+
+STRING 17447
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+}
+
+STRING 17448
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+}
+
+STRING 17449
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
+STRING 17450
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 17451
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 17452
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 17453
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 17454
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 17455
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 17456
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 17457
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 17458
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 17459
+// Abilities: A0VN (Kamehameha God), Name (Name)
+{
+Kamehameha God
+}
+
+STRING 17460
+// Abilities: A0VN (Kamehameha God), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn God Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 17461
+// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
+STRING 17462
+// Abilities: A0VN (Kamehameha God), EditorSuffix (Editor Suffix)
+{
+(actual pan)
+}
+
+STRING 17463
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17464
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17465
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai: Replaces Shunpo with Hirenkyaku. Grants Getsgua Gran Rey. Grants Blut Vene. Increases movement speed.
+|cff00ff00Duration: 20s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
+STRING 17466
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 17467
+// Abilities: A0VO (Cero Gigante), Name (Name)
+{
+Cero Gigante
+}
+
+STRING 17469
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+{
+E
+}
+
+STRING 17470
+// Abilities: A0VO (Cero Gigante), Ubertip (Tooltip - Normal - Extended)
+{
+Big boy Cero.|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0V0,Cool1> seconds|r
+}
+
+STRING 17471
+// Abilities: A0VO (Cero Gigante), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17472
+// Abilities: A0VO (Cero Gigante), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero Gigante
 }
 

@@ -118,8 +118,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     ]],
     
     // pan
-    [FourCC("H08P"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
-    [FourCC("H08R"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
+    [FourCC("H08P"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.GOD_KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
+    [FourCC("H08R"), [AbilityNames.Pan.KAMEHAMEHA, AbilityNames.Pan.GOD_KAMEHAMEHA, AbilityNames.Pan.MAIDEN_BLAST, AbilityNames.Pan.RELIABLE_FRIEND, AbilityNames.Pan.SUMMON_GIRU, AbilityNames.Pan.HONEY_BEE_COSTUME]],
     // giru
     [FourCC("H08Q"), ["Machine Gun", "Grappling Claw", "Gill Missile", AbilityNames.Pan.RELIABLE_FRIEND, "Dragon Radar"]],
 
@@ -320,10 +320,13 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Ichigo.CERO_CHARGE,
       AbilityNames.Ichigo.CERO_FIRE,
       AbilityNames.Ichigo.MUGETSU_UNLEASH,
-      AbilityNames.Ichigo.MUGETSU_ABSORB,
+      AbilityNames.Ichigo.MUGETSU_SLASH,
       AbilityNames.Ichigo.SHUNPO,
+      AbilityNames.Ichigo.HIRENKYAKU,
+      AbilityNames.Ichigo.BLUTVENE,
       AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
       AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+      AbilityNames.Ichigo.CERO_GIGANTE,
     ]],
 
     [Id.dartFeld, [
@@ -418,7 +421,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.AllMight.DETROIT_SMASH, AbilityNames.AllMight.ONE_FOR_ALL,
       AbilityNames.Mario.JUMP, AbilityNames.Mario.GROUND_POUND,
       AbilityNames.Tien.DODON_RAY,
-      AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO,
+      AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO, AbilityNames.Ichigo.HIRENKYAKU,
       AbilityNames.DartFeld.BURNING_RUSH, AbilityNames.DartFeld.DRAGOON_TRANSFORMATION, AbilityNames.DartFeld.DRAGOON_FLOURISH,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,

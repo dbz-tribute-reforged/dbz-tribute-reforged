@@ -148,6 +148,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
+  // bankai
+  {
+    name: "dash ground forward bankai",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 2,
+  },
   {
     name: "dash ground forward mastered ultra instinct",
     repeatInterval: 1, 
@@ -1036,6 +1049,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 1400,
+  },
+  // ichigo hirenkyaku
+  {
+    name: "dash hirenkyaku",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 1100,
   },
   // dash bankai final on hit
   {
