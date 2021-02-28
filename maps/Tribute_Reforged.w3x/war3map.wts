@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.60c
+DBZ Tribute Reforged 0.60d
 }
 
 STRING 4
@@ -4607,16 +4607,14 @@ STRING 748
 }
 
 STRING 749
-// Abilities: A0UC (Mugetsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo transforms into Getsuga itself, constantly emitting smoky black Reiatsu. Grants access to immensely powerful abilities with costly drawbacks.
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai: Replaces Shunpo with Hirenkyaku. Grants Getsgua Gran Rey, Blut Vene and Cero Gigante. Increases movement speed.
+|cff00ff00Duration: <A0U9,Dur1>s
+|cff00FFFFCooldown: <A0U9,Cool1>s|r
 
-|cffff2020Unleash|r: a powerful nuke that permanently disables Mugetsu after usage.
-|cff00ffffAbsorb|r: For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
-
-|cff00ffffCooldown: <A0UC,Cool1>s
-
-|cff808080Ichigo must use Bankai 3 times to unlock Mugetsu.
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 750
@@ -39046,14 +39044,12 @@ Ichigo instantly dashes to the target unit with godlike speed.
 }
 
 STRING 6368
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+// Items: I04O (Frieza's Tail), Description (Description)
 {
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff001-3: Bankai, +50% damage
-|cff00ff00Duration: <A0U8,Dur1>s
-|cff00FFFFCooldown: <A0U8,Cool1>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.
++10ms on Low HP.|r
 }
 
 STRING 6369
@@ -39123,17 +39119,12 @@ Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and 
 }
 
 STRING 6375
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+// Items: I04O (Frieza's Tail), Ubertip (Tooltip - Extended)
 {
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff001-3: Bankai, +50% damage
-4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
-7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
-10: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur1> - <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+The tail of Frieza, Emperor of the Universe.
+|cffffff00+0.05x Str mult.
++0.05x Agi mult.
++10ms on Low HP.|r
 }
 
 STRING 6376
@@ -47536,14 +47527,10 @@ D
 }
 
 STRING 7734
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
+|cff00ff00Damage Blocked: Lvl * Agi * 10 @ 90%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
 }
 
 STRING 7735
@@ -66080,8 +66067,12 @@ Transformations:
 [lvl 30]  1.50x "ss"
 [lvl 60[  1.75x "ss"
 [lvl 90]  2.00x "ss2"
-[lvl 140] 2.50x "ssg"
-[lvl 200] 2.60x "ssb"
+[lvl 140] 2.40x "ssg"
+[lvl 200] 2.70x "ssb"
+
+|cff00ff00Type to unlock:|r
+[lvl 150] "|cff00afffgod kame|r"
+
 }
 
 STRING 10725
@@ -73567,6 +73558,12 @@ STRING 11962
 [|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 1|r]
 }
 
+STRING 11963
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+{
+D
+}
+
 STRING 11964
 // Abilities: A0EU (Cosmic Illusion), Researchtip (Tooltip - Learn)
 {
@@ -74047,6 +74044,54 @@ STRING 12043
 [|cff00ff00E|r] Cosmic Illusion - [|cffffcc00Level 10|r]
 }
 
+STRING 12044
+// Abilities: A0VL (Hirenkyaku), Name (Name)
+{
+Hirenkyaku
+}
+
+STRING 12045
+// Abilities: A0VL (Hirenkyaku), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Hirenkyaku
+}
+
+STRING 12046
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 12048
+// Abilities: A0U7 (Getsuga Tensho), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 12050
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool2> seconds|r
+}
+
+STRING 12051
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool3> seconds|r
+}
+
+STRING 12052
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool4> seconds|r
+}
+
+STRING 12053
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool5> seconds|r
+}
+
 STRING 12054
 // Items: I04F (Banana Generator), Description (Description)
 {
@@ -74323,7 +74368,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -75583,7 +75628,7 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -76752,7 +76797,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -78823,7 +78868,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -81422,7 +81467,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -83372,19 +83417,21 @@ The user usually brings their arms to their sides, charges up ki, and then he th
 }
 
 STRING 13551
-// Items: I04O (Frieza's Tail), Description (Description)
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
 {
-The tail of Frieza, Emperor of the Universe.
-|cffffff00+0.05x Str mult.
-+0.05x Agi mult.|r
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool1,.>s|r
 }
 
 STRING 13552
-// Items: I04O (Frieza's Tail), Ubertip (Tooltip - Extended)
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
 {
-The tail of Frieza, Emperor of the Universe.
-|cffffff00+0.05x Str mult.
-+0.05x Agi mult.|r
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool2,.>s|r
 }
 
 STRING 13553
@@ -85138,7 +85185,7 @@ STRING 13816
 }
 
 STRING 13817
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -85979,7 +86026,7 @@ STRING 13948
 }
 
 STRING 13949
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -88254,6 +88301,12 @@ STRING 14305
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 1|r]
 }
 
+STRING 14306
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool6> seconds|r
+}
+
 STRING 14307
 // Abilities: A0RB (Senzu Throw), Tip (Tooltip - Normal)
 {
@@ -88836,13 +88889,13 @@ Q
 }
 
 STRING 14395
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14396
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -90451,7 +90504,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -95714,7 +95767,7 @@ STRING 15392
 }
 
 STRING 15393
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -96015,6 +96068,12 @@ STRING 15437
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 7|r]
 }
 
+STRING 15438
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool7> seconds|r
+}
+
 STRING 15439
 // Abilities: A0K7 (Heatwave), Ubertip (Tooltip - Normal - Extended)
 {
@@ -96310,6 +96369,36 @@ Jiren unleashes a mighty punch on the target unit, causing it to be knocked back
 |cff00FF00Damage: Str * Lvl * ?
 |cff00FFFFCooldown: <A0K8,Cool10>s
 |cffFFFF00Empowered:|r Deals bonus damage based on the difference between Jiren and the enemy's STR and allows you to press |cffFFFF00W|r while the target is knocked back to charge towards the unit's position.
+}
+
+STRING 15472
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 15473
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 15474
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 15475
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 15476
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 6|r]
 }
 
 STRING 15477
@@ -97054,7 +97143,7 @@ STRING 15581
 }
 
 STRING 15582
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97253,7 +97342,7 @@ Level 10: Zarbon
 }
 
 STRING 15613
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97621,6 +97710,12 @@ STRING 15666
 (kid trunks)
 }
 
+STRING 15667
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Blut Vene - [|cffffcc00Level 1|r]
+}
+
 STRING 15668
 // Abilities: A071 (Kick), Ubertip (Tooltip - Normal - Extended)
 {
@@ -97715,7 +97810,7 @@ STRING 15679
 }
 
 STRING 15680
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99487,7 +99582,7 @@ Sephiroth delivers a swift sequence of sword slashes.
 }
 
 STRING 15921
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -100337,7 +100432,7 @@ Ground Pound
 }
 
 STRING 16037
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -101686,7 +101781,7 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16234
-// Abilities: A0U7 (Getsuga Tensho), EditorSuffix (Editor Suffix)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -102586,7 +102681,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 16351
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -103773,7 +103868,7 @@ W
 }
 
 STRING 16500
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -104171,6 +104266,66 @@ Mario jumps into a block to spawn a mystery power up!
 Fire Flower: +0.4x Int Mult and unlocks Fireball
 Super Star: Temporary Invulnerability
 |cff00ffffCooldown: <A0TO,Cool1,.> seconds|r
+}
+
+STRING 16554
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 16555
+// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 16556
+// Abilities: A0VM (Blut Vene), Name (Name)
+{
+Blut Vene
+}
+
+STRING 16557
+// Abilities: A0VM (Blut Vene), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Babidi Barrier - [|cffffcc00Level %d|r]
+}
+
+STRING 16558
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 16559
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 16560
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 16561
+// Abilities: A0VM (Blut Vene), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Babidi Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 16562
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool8> seconds|r
+}
+
+STRING 16563
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool9> seconds|r
 }
 
 STRING 16564
@@ -104713,13 +104868,13 @@ STRING 16625
 }
 
 STRING 16626
-// Abilities: A0U1 (Die Die Missile Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 16627
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -104731,7 +104886,7 @@ STRING 16628
 }
 
 STRING 16629
-// Abilities: A0U8 (Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104938,7 +105093,7 @@ STRING 16655
 }
 
 STRING 16656
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UE (Mugetsu: Slash), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -104972,13 +105127,13 @@ A high-mobility hero that is capable of dodging almost any ability thrown at him
 }
 
 STRING 16660
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Mugetsu: Slash), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
 
 STRING 16661
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), EditorSuffix (Editor Suffix)
+// Abilities: A0UA (Cero: Charge), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105008,33 +105163,6 @@ Ichigo fires a Gran Rey Getsuga.
 
 |cff00ff00Damage: Int * lvl * ?|r
 |cff00ffffCooldown: <A0V5,Cool10> seconds|r
-}
-
-STRING 16666
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool1,.>s|r
-}
-
-STRING 16667
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool2,.>s|r
-}
-
-STRING 16668
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool3,.>s|r
 }
 
 STRING 16669
@@ -105164,7 +105292,7 @@ E
 }
 
 STRING 16687
-// Abilities: A0UA (Cero: Charge), EditorSuffix (Editor Suffix)
+// Abilities: A0UC (Mugetsu), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105227,7 +105355,7 @@ R
 }
 
 STRING 16696
-// Abilities: A0UC (Mugetsu), EditorSuffix (Editor Suffix)
+// Abilities: A0UD (Mugetsu: Unleash), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105269,7 +105397,7 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 16702
-// Abilities: A0UD (Mugetsu: Unleash), EditorSuffix (Editor Suffix)
+// Abilities: A0UB (Cero: Fire), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105413,7 +105541,7 @@ E
 }
 
 STRING 16722
-// Abilities: A0UB (Cero: Fire), EditorSuffix (Editor Suffix)
+// Abilities: A0UE (Mugetsu: Slash), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105464,38 +105592,44 @@ Duration: <A0UA,Dur10>s
 }
 
 STRING 16729
-// Abilities: A0UE (Mugetsu: Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 16730
-// Abilities: A0UE (Mugetsu: Absorb), Name (Name)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
 {
-Mugetsu: Absorb
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff001-3: Bankai, +50% damage
+4-6: Hollow Bankai, +50% damage, regen 20% max hp over 5s
+7-9: Blut Vene Bankai, damage block 15 * agi @ 75%
+10: Final Bankai, upgrades abilities, bonus ms
+|cff00ff00Duration: <A0U8,Dur1>s
+|cff00FFFFCooldown: <A0U8,Cool1> - <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16731
-// Abilities: A0UE (Mugetsu: Absorb), Tip (Tooltip - Normal)
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Mugetsu: |cff00ffffAbsorb|r
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai, upgrades abilities, bonus ms
+|cff00ff00Duration: <A0U8,Dur10>s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 16732
-// Abilities: A0UE (Mugetsu: Absorb), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
-STRING 16733
-// Abilities: A0UE (Mugetsu: Absorb), Ubertip (Tooltip - Normal - Extended)
-{
-For 10 seconds, Ichigo's auto attacks fire weakened |cff00ff00Getsuga Jujishos|r. Afterwards, Ichigo temporarily loses his powers, receiving a 0.9x stat mult for 60 seconds.
-|cff00ffffCooldown: <A0UE,Cool1>s|r
-}
-
 STRING 16734
-// Abilities: A0UE (Mugetsu: Absorb), EditorSuffix (Editor Suffix)
+// Abilities: A0UF (Shunpo), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105525,7 +105659,7 @@ Q
 }
 
 STRING 16739
-// Abilities: A0UF (Shunpo), EditorSuffix (Editor Suffix)
+// Abilities: A0UH (Getsuga Jujisho), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105934,7 +106068,7 @@ Upgrades to Getsuga Jujisho at max level.
 }
 
 STRING 16793
-// Abilities: A0UH (Getsuga Jujisho), EditorSuffix (Editor Suffix)
+// Abilities: A0UJ (Bankai Attack Speed), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -105995,7 +106129,7 @@ Bankai Attack Speed
 }
 
 STRING 16801
-// Abilities: A0UJ (Bankai Attack Speed), EditorSuffix (Editor Suffix)
+// Abilities: A0UK (Bankai Attack Damage), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -106007,7 +106141,7 @@ Bankai Attack Damage
 }
 
 STRING 16803
-// Abilities: A0UK (Bankai Attack Damage), EditorSuffix (Editor Suffix)
+// Abilities: A0UL (Final Shikai Cleave), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -106019,7 +106153,7 @@ Final Shikai Cleave
 }
 
 STRING 16805
-// Abilities: A0UL (Final Shikai Cleave), EditorSuffix (Editor Suffix)
+// Abilities: A0UM (Shikai Attack Speed), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -106031,7 +106165,7 @@ Shikai Attack Speed
 }
 
 STRING 16807
-// Abilities: A0UM (Shikai Attack Speed), EditorSuffix (Editor Suffix)
+// Abilities: A0V4 (Getsuga Kuroi), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -106233,13 +106367,13 @@ Dangai
 }
 
 STRING 16834
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 16835
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -106251,13 +106385,13 @@ STRING 16836
 }
 
 STRING 16837
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
 
 STRING 16838
-// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -106314,7 +106448,7 @@ Mugetsu
 }
 
 STRING 16847
-// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -106353,6 +106487,12 @@ STRING 16853
 // Abilities: A0UX (Dragoon Flourish), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 9|r]
+}
+
+STRING 16854
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool10> seconds|r
 }
 
 STRING 16855
@@ -106931,6 +107071,12 @@ A weak early-game hero with powerful close-range offensive capabilities. Can gai
 
 }
 
+STRING 16911
+// Abilities: A0VM (Blut Vene), Researchubertip (Tooltip - Learn - Extended)
+{
+With both hands in front of him, Babidi shouts the word "barrier" to make a circular barrier appear and surround his body.|n|cff00ff00Damage Blocked: lvl * Int * 1 @ 100%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+}
+
 STRING 16912
 // Units: H09K (Symbol of Peace), Ubertip (Tooltip - Extended)
 {
@@ -106990,14 +107136,16 @@ STRING 16916
 }
 
 STRING 16917
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UC (Mugetsu), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
+Ichigo transforms into Getsuga itself, constantly emitting smoky black Reiatsu. Grants access to immensely powerful abilities with costly drawbacks. |cffff2020Permanently disables Mugetsu after usage.|r
 
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+|cffff2020Unleash|r: a powerful ball of condensed Reiatsu.
+|cff00ffffSlash|r: Ichigo fires a final getsuga. 
+
+|cff00ffffCooldown: <A0UC,Cool1>s
+
+|cff808080Ichigo must use Bankai 3 times to unlock Mugetsu.
 }
 
 STRING 16918
@@ -107094,56 +107242,18 @@ STRING 16932
 }
 
 STRING 16933
-// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0UE (Mugetsu: Slash), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
-|cffffff0010: Final Bankai, dashes towards attacked enemies
-|cff00ff00Duration: <A0U8,Dur10>s
-|cff00FFFFCooldown: <A0U8,Cool10>s|r
-
-|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+Ichigo fires a final getsuga. 
+|cffff2020Permanently disables Mugetsu after usage.|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: Once per game|r
 }
 
 STRING 16934
 // Abilities: A0V6 (Bankai True Strike), Name (Name)
 {
 Bankai True Strike
-}
-
-STRING 16935
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool4,.>s|r
-}
-
-STRING 16936
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool5,.>s|r
-}
-
-STRING 16937
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool6,.>s|r
-}
-
-STRING 16938
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool7,.>s|r
 }
 
 STRING 16939
@@ -107218,24 +107328,6 @@ Dart dashes back and forth slashing his opponents before slamming the area for m
 |cff00FFFFCooldown: <A0UV,Cool1,.> - <A0UV,Cool10,.> s|r
 }
 
-STRING 16947
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool8,.>s|r
-}
-
-STRING 16948
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool9,.>s|r
-}
-
 STRING 16949
 // Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
@@ -107254,15 +107346,6 @@ Dart dashes a short distance and slashes his enemies three times in quick succes
 |cff00FFFFCooldown: <A0UR,Cool9,.>s|r
 }
 
-STRING 16951
-// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
-{
-Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
-|cffffff00+3 Spirit Power.
-|cff00FF00Damage: Str * lvl * ?|r
-|cff00FFFFCooldown: <A0UV,Cool10,.>s|r
-}
-
 STRING 16952
 // Abilities: A0UR (Burning Rush), Ubertip (Tooltip - Normal - Extended)
 {
@@ -107279,7 +107362,7 @@ STRING 16953
 }
 
 STRING 16954
-// Abilities: A0US (Crush Dance), Hotkey (Hotkey - Normal)
+// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -107408,7 +107491,7 @@ STRING 16971
 }
 
 STRING 16972
-// Abilities: A0US (Crush Dance), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -107726,69 +107809,6 @@ STRING 17015
 [|cff00FF00R|r] Madness Hero - [|cffffcc00Level 7|r]
 }
 
-STRING 17016
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool1,.>s|r
-}
-
-STRING 17017
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool2,.>s|r
-}
-
-STRING 17018
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool3,.>s|r
-}
-
-STRING 17019
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool4,.>s|r
-}
-
-STRING 17020
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool5,.>s|r
-}
-
-STRING 17021
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool6,.>s|r
-}
-
-STRING 17022
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool7,.>s|r
-}
-
 STRING 17023
 // Abilities: A0UU (Madness Hero), Researchtip (Tooltip - Learn)
 {
@@ -107822,28 +107842,10 @@ Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a st
 |cff00FFFFCooldown: <A0UU,Cool1> - <A0UU,Cool10>s|r
 }
 
-STRING 17028
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool8,.>s|r
-}
-
 STRING 17029
 // Abilities: A0UU (Madness Hero), Tip (Tooltip - Normal)
 {
 [|cff00FF00R|r] Madness Hero - [|cffffcc00Level 10|r]
-}
-
-STRING 17030
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool9,.>s|r
 }
 
 STRING 17031
@@ -108047,10 +108049,30 @@ STRING 17058
 Q
 }
 
+STRING 17059
+// Abilities: A0U8 (Bankai: Tensa Zangetsu), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff001-3: Bankai, +50% damage
+|cff00ff00Duration: <A0U8,Dur1>s|r
+|cff00FFFFCooldown: <A0U8,Cool1>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
+}
+
 STRING 17060
 // Abilities: A0UX (Dragoon Flourish), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Dragoon Flourish - [|cffffcc00Level 10|r]
+}
+
+STRING 17061
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool3,.>s|r
 }
 
 STRING 17062
@@ -108060,7 +108082,7 @@ STRING 17062
 }
 
 STRING 17063
-// Abilities: A0UY (Flame Shot), Hotkey (Hotkey - Normal)
+// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -108176,7 +108198,7 @@ STRING 17079
 }
 
 STRING 17080
-// Abilities: A0UY (Flame Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108263,15 +108285,6 @@ STRING 17093
 // Abilities: A0UZ (Paragon of Flame), Tip (Tooltip - Normal)
 {
 [|cff00FF00E|r] Paragon of Flame - [|cffffcc00Level 1|r]
-}
-
-STRING 17094
-// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
-{
-Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
-|cffffff00+2 Spirit Power.
-|cff00FF00Duration: 10s
-|cff00FFFFCooldown: <A0UU,Cool10,.>s|r
 }
 
 STRING 17095
@@ -108377,13 +108390,13 @@ Chomp
 }
 
 STRING 17112
-// Abilities: A0VG (Chomp), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 17113
-// Abilities: A0VG (Chomp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -108582,7 +108595,7 @@ STRING 17141
 }
 
 STRING 17142
-// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -108623,6 +108636,17 @@ STRING 17148
 // Abilities: A0V2 (Red-Eyed Dragoon), Tip (Tooltip - Normal)
 {
 |cffff2020Red-Eyed Dragoon|r
+}
+
+STRING 17149
+// Abilities: A0U9 (Final Bankai: Tensa Zangetsu), Researchubertip (Tooltip - Learn - Extended)
+{
+Ichigo is able to activate his Bankai - Tensa Zangetsu - to empower himself and destroy his enemies. Increases attack speed, reduces base attack time, grants true strike, and provides unique buffs depending on the level of Bankai.
+|cffffff0010: Final Bankai, dashes towards attacked enemies
+|cff00ff00Duration: 20s
+|cff00FFFFCooldown: <A0U8,Cool10>s|r
+
+|cff808080Ichigo and Urahara are the only known individuals to have attained Bankai in 3 days rather than the normal 10 years.
 }
 
 STRING 17150
@@ -108955,7 +108979,7 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 }
 
 STRING 17198
-// Abilities: A0V4 (Getsuga Kuroi), EditorSuffix (Editor Suffix)
+// Abilities: A0V5 (Gran Rey Getsuga), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -109125,6 +109149,12 @@ Ichigo fires a powerful blue crescent shaped wave of Reiatsu from his Zangetsu.
 |cff00ffffCooldown: <A0U7,Cool9> seconds|r
 }
 
+STRING 17222
+// Abilities: A0V2 (Red-Eyed Dragoon), Ubertip (Tooltip - Normal - Extended)
+{
+While in his Dragoon form, Dart is able to move faster gaining +50ms.
+}
+
 STRING 17223
 // Units: H09S (Shinigami), Ubertip (Tooltip - Extended)
 {
@@ -109142,7 +109172,7 @@ Proudly bankrolled by |cff00ff00Xestus|r.
 }
 
 STRING 17224
-// Abilities: A0V5 (Gran Rey Getsuga), EditorSuffix (Editor Suffix)
+// Abilities: A0VL (Hirenkyaku), EditorSuffix (Editor Suffix)
 {
 (ichigo)
 }
@@ -109326,6 +109356,12 @@ STRING 17252
 // Abilities: A0VA (Heart of Fire Armor), Name (Name)
 {
 Heart of Fire Armor
+}
+
+STRING 17253
+// Abilities: A0UE (Mugetsu: Slash), Name (Name)
+{
+Mugetsu: Slash
 }
 
 STRING 17254
@@ -109620,6 +109656,12 @@ Rust Tyranno uses his tongue to pull an enemy into his mouth. Unocks [|cff00ff00
 |cff00ffffCooldown: <A0VG,Cool5> seconds|r
 }
 
+STRING 17299
+// Abilities: A0UE (Mugetsu: Slash), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Mugetsu: |cff00ffffSlash|r
+}
+
 STRING 17300
 // Buffs/Effects: B049 (), Bufftip (Tooltip)
 {
@@ -109721,13 +109763,13 @@ Gobble
 }
 
 STRING 17315
-// Abilities: A0VH (Gobble), Hotkey (Hotkey - Normal)
+// Abilities: A0VM (Blut Vene), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 17316
-// Abilities: A0VH (Gobble), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VM (Blut Vene), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -110382,10 +110424,58 @@ STRING 17403
 (rust tyranno)
 }
 
+STRING 17404
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool4,.>s|r
+}
+
 STRING 17405
 // Units: H09Z (|cffff4411Fossil Monster|r), Name (Name)
 {
 |cffff4411Fossil Monster|r
+}
+
+STRING 17406
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool5,.>s|r
+}
+
+STRING 17407
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool3> seconds)|r
+}
+
+STRING 17408
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool2> seconds)|r
+}
+
+STRING 17409
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool5> seconds)|r
+}
+
+STRING 17410
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool4> seconds)|r
+}
+
+STRING 17411
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool6> seconds)|r
 }
 
 STRING 17412
@@ -110488,9 +110578,12 @@ Dart transforms into his Red-Eyed Dragoon form and consumes all stacks of spirit
 }
 
 STRING 17423
-// Abilities: A0V2 (Red-Eyed Dragoon), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
 {
-While in his Dragoon form, Dart is able to move faster even while damaged; gaining +50ms when on low HP.
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool6,.>s|r
 }
 
 STRING 17424
@@ -110700,5 +110793,289 @@ Janemba turns invisible and creates a clone of himself that can attack nearby en
 |cff00ff00Damage: Agi * Lvl * ?
 Duration: <A0EU,Dur10>
 |cff00FFFFCooldown: <A0EU,Cool10> seconds|r
+}
+
+STRING 17446
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool7> seconds)|r
+}
+
+STRING 17447
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool8> seconds)|r
+}
+
+STRING 17448
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool9> seconds)|r
+}
+
+STRING 17449
+// Abilities: A0VN (Kamehameha God), Ubertip (Tooltip - Normal - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
+STRING 17450
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 17451
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 17452
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 17453
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 17454
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 17455
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 17456
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 17457
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 17458
+// Abilities: A0VN (Kamehameha God), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] God Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 17459
+// Abilities: A0VN (Kamehameha God), Name (Name)
+{
+Kamehameha God
+}
+
+STRING 17460
+// Abilities: A0VN (Kamehameha God), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn God Kamehameha - [|cffffcc00Level %d|r]
+}
+
+STRING 17461
+// Abilities: A0VN (Kamehameha God), Researchubertip (Tooltip - Learn - Extended)
+{
+A more powerful version of the kamehameha that taps into godly energy. At first the user cups both of his hands to concentrate the energy, then he charges up, and put his hands at the side of his body and finally he unleashes a powerful Kamehameha wave dealing damage in a line. |n|cff00ff00Damage: Int * lvl * ?|r|n|cff00ffff(Cooldown: <A0L9,Cool1> seconds)|r
+}
+
+STRING 17462
+// Abilities: A0VN (Kamehameha God), EditorSuffix (Editor Suffix)
+{
+(actual pan)
+}
+
+STRING 17463
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17464
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17465
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool7,.>s|r
+}
+
+STRING 17466
+// Abilities: A0VO (Cero Gigante), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 17467
+// Abilities: A0VO (Cero Gigante), Name (Name)
+{
+Cero Gigante
+}
+
+STRING 17468
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool8,.>s|r
+}
+
+STRING 17469
+// Abilities: A0VO (Cero Gigante), Unhotkey (Hotkey - Turn Off)
+{
+E
+}
+
+STRING 17471
+// Abilities: A0VO (Cero Gigante), EditorSuffix (Editor Suffix)
+{
+(ichigo)
+}
+
+STRING 17473
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool9,.>s|r
+}
+
+STRING 17474
+// Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
+{
+Dart unleashes a deadly combo. Reduces base attack time. Auto attacks apply a stacking |cffff00ffMadness|r debuff. An enemy afflicted with 7 stacks of |cffff00ffMadness|r is stunned and takes damage equal to 10% of their max hp.
+|cffffff00+3 Spirit Power.
+|cff00FF00Duration: 10s
+|cff00FFFFCooldown: <A0UU,Cool10,.>s|r
+}
+
+STRING 17475
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool1,.>s|r
+}
+
+STRING 17476
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool2,.>s|r
+}
+
+STRING 17477
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool3,.>s|r
+}
+
+STRING 17478
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool4,.>s|r
+}
+
+STRING 17479
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool5,.>s|r
+}
+
+STRING 17480
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool6,.>s|r
+}
+
+STRING 17481
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool7,.>s|r
+}
+
+STRING 17482
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool8,.>s|r
+}
+
+STRING 17483
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool9,.>s|r
+}
+
+STRING 17484
+// Abilities: A0UV (Blazing Dynamo), Ubertip (Tooltip - Normal - Extended)
+{
+Dart dashes back and forth slashing his opponents before slamming the area for massive damage. Gains immunity to debuffs and takes 15% reduced damage for the duration.
+|cffffff00+4 Spirit Power.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0UV,Cool10,.>s|r
+}
+
+STRING 17485
+// Abilities: A0VO (Cero Gigante), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Cero Gigante [|cffffcc00Level 1|r]
+}
+
+STRING 17486
+// Abilities: A0VO (Cero Gigante), Ubertip (Tooltip - Normal - Extended)
+{
+An empowered version of Cero that requires no charging to fire.
+|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0V0,Cool1> seconds|r
+}
+
+STRING 17487
+// Abilities: A0VL (Hirenkyaku), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo uses his Quincy powers to accumulate reishi underneath his feet and flies to the target location immediately.
+|cff00ffffCooldown: <A0VL,Cool1>s|r
 }
 

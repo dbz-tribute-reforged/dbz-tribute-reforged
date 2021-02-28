@@ -77,6 +77,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     // pan & giru
     [Id.panKame, AbilityNames.Pan.KAMEHAMEHA],
+    [Id.panGodKame, AbilityNames.Pan.GOD_KAMEHAMEHA],
     [Id.maidenBlast, AbilityNames.Pan.MAIDEN_BLAST],
     [Id.reliableFriend, AbilityNames.Pan.RELIABLE_FRIEND],
     [Id.honeyBeeCostume, AbilityNames.Pan.HONEY_BEE_COSTUME],
@@ -236,8 +237,11 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.ceroCharge, AbilityNames.Ichigo.CERO_CHARGE],
     [Id.ceroFire, AbilityNames.Ichigo.CERO_FIRE],
     [Id.mugetsuUnleash, AbilityNames.Ichigo.MUGETSU_UNLEASH],
-    [Id.mugetsuAbsorb, AbilityNames.Ichigo.MUGETSU_ABSORB],
+    [Id.mugetsuSlash, AbilityNames.Ichigo.MUGETSU_SLASH],
     [Id.shunpo, AbilityNames.Ichigo.SHUNPO],
+    [Id.hirenkyaku, AbilityNames.Ichigo.HIRENKYAKU],
+    [Id.blutVene, AbilityNames.Ichigo.BLUTVENE],
+    [Id.ceroGigante, AbilityNames.Ichigo.CERO_GIGANTE],
 
     // dart feld
     [Id.doubleSlash, AbilityNames.DartFeld.DOUBLE_SLASH],

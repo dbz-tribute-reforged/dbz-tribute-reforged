@@ -83,6 +83,7 @@ export module AbilityNames {
 
   export module Pan {
     export const KAMEHAMEHA: string = "Pan Kamehameha";
+    export const GOD_KAMEHAMEHA: string = "Pan God Kamehameha";
     export const MAIDEN_BLAST: string = "Maiden Blast";
     export const RELIABLE_FRIEND: string = "Reliable Friend";
     export const HONEY_BEE_COSTUME: string = "Honey Bee Costume";
@@ -270,10 +271,13 @@ export module AbilityNames {
     export const CERO_CHARGE: string = "Cero Charge";
     export const CERO_FIRE: string = "Cero Fire";
     export const MUGETSU_UNLEASH: string = "Mugetsu Unleash";
-    export const MUGETSU_ABSORB: string = "Mugetsu Absorb";
+    export const MUGETSU_SLASH: string = "Mugetsu Slash";
     export const SHUNPO: string = "Shunpo";
+    export const HIRENKYAKU: string = "Hirenkyaku";
+    export const BLUTVENE: string = "Blut Vene";
     export const DASH_BANKAI_FINAL_1: string = "Bankai Final Dash 1";
     export const DASH_BANKAI_FINAL_2: string = "Bankai Final Dash 2";
+    export const CERO_GIGANTE: string = "Cero Gigante";
   }
 
   export module DartFeld {

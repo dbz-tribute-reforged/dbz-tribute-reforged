@@ -396,7 +396,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 70,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -1407,6 +1407,33 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam pan kamehameha" },
+      { name: "aoe apply pan immolation" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Pan.GOD_KAMEHAMEHA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKameGod.blp",
+      disabled: "BTNKameGod.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Pan.GOD_KAMEHAMEHA,
+      body: 
+        AbilityNames.Pan.GOD_KAMEHAMEHA
+    },
+    components: [
+      { name: "beam pan god kamehameha" },
       { name: "aoe apply pan immolation" },
     ],
   },
@@ -4612,7 +4639,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 500,
+    duration: 666,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4628,6 +4655,7 @@ export const AbilitiesList = [
         AbilityNames.Ichigo.BANKAI_FINAL
     },
     components: [
+      { name: "dash ground forward bankai" },
     ],
   },
   // -------------------------------------------
@@ -4687,6 +4715,32 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ichigo.CERO_GIGANTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 45,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNIchigoCeroGigante.blp",
+      disabled: "BTNIchigoCeroGigante.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Ichigo.CERO_GIGANTE,
+      body: 
+        AbilityNames.Ichigo.CERO_GIGANTE
+    },
+    components: [
+      { name: "beam cero gigante"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Ichigo.MUGETSU_UNLEASH,
     currentCd: 0,
     maxCd: 1,
@@ -4714,12 +4768,12 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Ichigo.MUGETSU_ABSORB,
+    name: AbilityNames.Ichigo.MUGETSU_SLASH,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 333,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -4730,11 +4784,12 @@ export const AbilitiesList = [
       disabled: "BTNIchigoMugetsu3.blp",
     },
     tooltip: {
-      title: AbilityNames.Ichigo.MUGETSU_ABSORB,
+      title: AbilityNames.Ichigo.MUGETSU_SLASH,
       body: 
-        AbilityNames.Ichigo.MUGETSU_ABSORB
+        AbilityNames.Ichigo.MUGETSU_SLASH
     },
     components: [
+      { name: "beam mugetsu slash" },
       { name: "sfx mugetsu" },
     ],
   },
@@ -4761,61 +4816,117 @@ export const AbilitiesList = [
         AbilityNames.Ichigo.SHUNPO
     },
     components: [
+      { name: "sfx shunpo start" },
       { name: "dash shunpo" },
+      { name: "sfx shunpo end" },
     ],
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+    name: AbilityNames.Ichigo.HIRENKYAKU,
     currentCd: 0,
-    maxCd: 0.5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 15,
+    duration: 1,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNIchigoShunpo.blp",
-      disabled: "BTNIchigoShunpo.blp",
+      enabled: "BTNIchigoHirenkyaku.blp",
+      disabled: "BTNIchigoHirenkyaku.blp",
     },
     tooltip: {
-      title: AbilityNames.Ichigo.SHUNPO,
+      title: AbilityNames.Ichigo.HIRENKYAKU,
       body: 
-        AbilityNames.Ichigo.SHUNPO
+        AbilityNames.Ichigo.HIRENKYAKU
     },
     components: [
-      { name: "dash bankai final on hit" },
+      { name: "sfx shunpo start" },
+      { name: "dash hirenkyaku" },
+      { name: "sfx shunpo end" },
     ],
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+    name: AbilityNames.Ichigo.BLUTVENE,
     currentCd: 0,
-    maxCd: 0.5,
+    maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 15,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNIchigoShunpo.blp",
-      disabled: "BTNIchigoShunpo.blp",
+      enabled: "BTNIchigoBlutVene.blp",
+      disabled: "BTNIchigoBlutVene.blp",
     },
     tooltip: {
-      title: AbilityNames.Ichigo.SHUNPO,
+      title: AbilityNames.Ichigo.BLUTVENE,
       body: 
-        AbilityNames.Ichigo.SHUNPO
+        AbilityNames.Ichigo.BLUTVENE
     },
     components: [
-      { name: "dash bankai final on hit" },
+      { name: "block blut vene" },
     ],
   },
+  // -------------------------------------------
+  // {
+  //   name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+  //   currentCd: 0,
+  //   maxCd: 0.5,
+  //   costType: "MP",
+  //   costAmount: 0,
+  //   duration: 15,
+  //   updateRate: 0.03,
+  //   castTime: 0.0,
+  //   canMultiCast: true,
+  //   waitsForNextClick: false,
+  //   animation: "spell",
+  //   icon: {
+  //     enabled: "BTNIchigoShunpo.blp",
+  //     disabled: "BTNIchigoShunpo.blp",
+  //   },
+  //   tooltip: {
+  //     title: AbilityNames.Ichigo.SHUNPO,
+  //     body: 
+  //       AbilityNames.Ichigo.SHUNPO
+  //   },
+  //   components: [
+  //     { name: "dash bankai final on hit" },
+  //   ],
+  // },
+  // // -------------------------------------------
+  // {
+  //   name: AbilityNames.Ichigo.DASH_BANKAI_FINAL_2,
+  //   currentCd: 0,
+  //   maxCd: 0.5,
+  //   costType: "MP",
+  //   costAmount: 0,
+  //   duration: 15,
+  //   updateRate: 0.03,
+  //   castTime: 0.0,
+  //   canMultiCast: true,
+  //   waitsForNextClick: false,
+  //   animation: "spell",
+  //   icon: {
+  //     enabled: "BTNIchigoShunpo.blp",
+  //     disabled: "BTNIchigoShunpo.blp",
+  //   },
+  //   tooltip: {
+  //     title: AbilityNames.Ichigo.SHUNPO,
+  //     body: 
+  //       AbilityNames.Ichigo.SHUNPO
+  //   },
+  //   components: [
+  //     { name: "dash bankai final on hit" },
+  //   ],
+  // },
   // -------------------------------------------
   {
     name: AbilityNames.DartFeld.DOUBLE_SLASH,
@@ -5011,7 +5122,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 50,
+    duration: 25,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5044,7 +5155,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 333,
+    duration: 833,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5060,7 +5171,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.DRAGOON_TRANSFORMATION
     },
     components: [
-      // 
+      { name: "dash ground forward dragoon transformation" },
     ],
   },
   // -------------------------------------------
@@ -5138,7 +5249,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.PARAGON_OF_FLAME
     },
     components: [
-      { name: "damage block paragon of flame" },
+      { name: "block paragon of flame" },
     ],
   },
   // -------------------------------------------
@@ -7786,7 +7897,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 70,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

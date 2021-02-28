@@ -328,112 +328,112 @@ export function dyspoPassive(customHero: CustomHero) {
 
 
 export function ichigoPassive(customHero: CustomHero) {
-  const player = GetOwningPlayer(customHero.unit);
-  const heroId = GetUnitTypeId(customHero.unit);
+  // const player = GetOwningPlayer(customHero.unit);
+  // const heroId = GetUnitTypeId(customHero.unit);
 
-  const bankaiFinal = customHero.getAbility(AbilityNames.Ichigo.BANKAI_FINAL);
-  const mugetsuAbsorb = customHero.getAbility(AbilityNames.Ichigo.MUGETSU_ABSORB);
-  const getsuga1 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1);
-  const getsuga2 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2);
-  const getsuga3 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3);
-  const getsuga4 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4);
+  // const bankaiFinal = customHero.getAbility(AbilityNames.Ichigo.BANKAI_FINAL);
+  // const mugetsuAbsorb = customHero.getAbility(AbilityNames.Ichigo.MUGETSU_SLASH);
+  // const getsuga1 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_1);
+  // const getsuga2 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_2);
+  // const getsuga3 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_3);
+  // const getsuga4 = customHero.getAbility(AbilityNames.Ichigo.GETSUGA_JUJISHO_ON_HIT_4);
 
-  const dash1 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_1);
-  const dash2 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_2);
+  // const dash1 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_1);
+  // const dash2 = customHero.getAbility(AbilityNames.Ichigo.DASH_BANKAI_FINAL_2);
 
-  if (
-    !bankaiFinal || 
-    !getsuga1 || !getsuga2 || !getsuga3 || !getsuga4 || 
-    !mugetsuAbsorb ||
-    !dash1 || !dash2
-  ) return;
-  const getsugas: CustomAbility[] = [getsuga1, getsuga2, getsuga3, getsuga4];
+  // if (
+  //   !bankaiFinal || 
+  //   !getsuga1 || !getsuga2 || !getsuga3 || !getsuga4 || 
+  //   !mugetsuAbsorb ||
+  //   !dash1 || !dash2
+  // ) return;
+  // const getsugas: CustomAbility[] = [getsuga1, getsuga2, getsuga3, getsuga4];
 
-  const casterPos: Vector2D = new Vector2D(0, 0);
-  const targetPos: Vector2D = new Vector2D(0, 0);
+  // const casterPos: Vector2D = new Vector2D(0, 0);
+  // const targetPos: Vector2D = new Vector2D(0, 0);
 
-  const onHitTrigger = CreateTrigger();
-  TriggerRegisterAnyUnitEventBJ(
-    onHitTrigger,
-    EVENT_PLAYER_UNIT_ATTACKED,
-  );
-  TriggerAddCondition(
-    onHitTrigger,
-    Condition(() => {
-      const attacker = GetAttacker();
-      if (
-        GetUnitTypeId(attacker) == heroId && 
-        GetOwningPlayer(attacker) == player
-      ) {
-        const doBankaiFinal: boolean = (bankaiFinal.isInUse());
-        const doGetsugaSpam: boolean = (mugetsuAbsorb.isInUse());
+  // const onHitTrigger = CreateTrigger();
+  // TriggerRegisterAnyUnitEventBJ(
+  //   onHitTrigger,
+  //   EVENT_PLAYER_UNIT_ATTACKED,
+  // );
+  // TriggerAddCondition(
+  //   onHitTrigger,
+  //   Condition(() => {
+  //     const attacker = GetAttacker();
+  //     if (
+  //       GetUnitTypeId(attacker) == heroId && 
+  //       GetOwningPlayer(attacker) == player
+  //     ) {
+  //       const doBankaiFinal: boolean = (bankaiFinal.isInUse());
+  //       const doGetsugaSpam: boolean = false;
         
-        if (doBankaiFinal || doGetsugaSpam) {
+  //       if (doBankaiFinal || doGetsugaSpam) {
 
-          const target = GetTriggerUnit();
-          targetPos.setPos(GetUnitX(target), GetUnitY(target));
+  //         const target = GetTriggerUnit();
+  //         targetPos.setPos(GetUnitX(target), GetUnitY(target));
 
-          if (doBankaiFinal) {
-            casterPos.setPos(GetUnitX(attacker), GetUnitY(attacker));
-            if (CoordMath.distance(casterPos, targetPos) <= 550) {
+  //         if (doBankaiFinal) {
+  //           casterPos.setPos(GetUnitX(attacker), GetUnitY(attacker));
+  //           if (CoordMath.distance(casterPos, targetPos) <= 550) {
               
-              if (!dash1.isInUse()) {
-                customHero.useAbility(
-                  AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
-                  new CustomAbilityInput(
-                    customHero, 
-                    GetOwningPlayer(customHero.unit),
-                    10,
-                    targetPos,
-                    targetPos,
-                    targetPos,
-                    target,
-                    target,
-                  )
-                );
-              } else if (!dash2.isInUse()) {
-                customHero.useAbility(
-                  AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
-                  new CustomAbilityInput(
-                    customHero, 
-                    GetOwningPlayer(customHero.unit),
-                    10,
-                    targetPos,
-                    targetPos,
-                    targetPos,
-                    target,
-                    target,
-                  )
-                );
-              }
-            }
-          }
+  //             if (!dash1.isInUse()) {
+  //               customHero.useAbility(
+  //                 AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+  //                 new CustomAbilityInput(
+  //                   customHero, 
+  //                   GetOwningPlayer(customHero.unit),
+  //                   10,
+  //                   targetPos,
+  //                   targetPos,
+  //                   targetPos,
+  //                   target,
+  //                   target,
+  //                 )
+  //               );
+  //             } else if (!dash2.isInUse()) {
+  //               customHero.useAbility(
+  //                 AbilityNames.Ichigo.DASH_BANKAI_FINAL_1,
+  //                 new CustomAbilityInput(
+  //                   customHero, 
+  //                   GetOwningPlayer(customHero.unit),
+  //                   10,
+  //                   targetPos,
+  //                   targetPos,
+  //                   targetPos,
+  //                   target,
+  //                   target,
+  //                 )
+  //               );
+  //             }
+  //           }
+  //         }
           
-          if (doGetsugaSpam) {
-            for (const getsuga of getsugas) {
-              if (!getsuga.isInUse()) {
-                customHero.useAbility(
-                  getsuga.getName(),
-                  new CustomAbilityInput(
-                    customHero, 
-                    GetOwningPlayer(customHero.unit),
-                    10,
-                    targetPos,
-                    targetPos,
-                    targetPos,
-                    target,
-                    target,
-                  )
-                );
-                break;
-              }
-            }
-          }
-        }
-      }
-      return false;
-    })
-  );
+  //         if (doGetsugaSpam) {
+  //           for (const getsuga of getsugas) {
+  //             if (!getsuga.isInUse()) {
+  //               customHero.useAbility(
+  //                 getsuga.getName(),
+  //                 new CustomAbilityInput(
+  //                   customHero, 
+  //                   GetOwningPlayer(customHero.unit),
+  //                   10,
+  //                   targetPos,
+  //                   targetPos,
+  //                   targetPos,
+  //                   target,
+  //                   target,
+  //                 )
+  //               );
+  //               break;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     return false;
+  //   })
+  // );
 
   // const onOrderTrigger = CreateTrigger();
   // TriggerRegisterAnyUnitEventBJ(

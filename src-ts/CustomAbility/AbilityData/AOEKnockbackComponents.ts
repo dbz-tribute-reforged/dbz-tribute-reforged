@@ -901,7 +901,7 @@ export const AOEKnockbackComponents = [
     },
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
-    reflectBeams: true,
+    reflectBeams: false,
     affectAllies: false,
   },
   // united states of smash

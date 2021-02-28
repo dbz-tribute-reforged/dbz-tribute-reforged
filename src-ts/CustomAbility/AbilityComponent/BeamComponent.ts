@@ -23,6 +23,8 @@ export class BeamComponent implements
 
   static readonly BEAM_HP_MODIFIER = 0.75;
 
+  static readonly BEAM_SPEED_ULTRA_SLOW = 20;
+  static readonly BEAM_SPEED_SUPER_SLOW = 25;
   static readonly BEAM_SPEED_VERY_SLOW = 30;
   static readonly BEAM_SPEED_SLOW = 35;
   static readonly BEAM_SPEED_MEDIUM_SLOW = 40;
