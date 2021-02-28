@@ -5138,7 +5138,7 @@ export const AbilitiesList = [
         AbilityNames.DartFeld.PARAGON_OF_FLAME
     },
     components: [
-      { name: "damage block paragon of flame" },
+      { name: "block paragon of flame" },
     ],
   },
   // -------------------------------------------
