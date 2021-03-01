@@ -141,6 +141,14 @@ export module Id {
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
 
+  export const crono = FourCC("H0A0");
+  export const cronoCyclone = FourCC("A0VP");
+  export const cronoSlash = FourCC("A0VQ");
+  export const cronoLightning = FourCC("A0VR");
+  export const cronoLightning2 = FourCC("A0VS");
+  export const cronoCleave = FourCC("A0VT");
+  export const cronoLuminaire = FourCC("A0VU");
+
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");
   export const burningRush = FourCC("A0UR");

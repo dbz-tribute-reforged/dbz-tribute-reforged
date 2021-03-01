@@ -300,6 +300,14 @@ export module AbilityNames {
     export const RED_EYED_DRAGON_SUMMON: string = "Red Eyed Dragon Summoning";
   }
 
+  export module Crono {
+    export const CYCLONE: string = "Crono Cyclone";
+    export const SLASH: string = "Crono Slash";
+    export const LIGHTNING: string = "Crono Lightning";
+    export const LIGHTNING_2: string = "Crono Lightning 2";
+    export const CLEAVE: string = "Crono Cleave";
+    export const LUMINAIRE: string = "Crono Luminaire";
+  }
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
