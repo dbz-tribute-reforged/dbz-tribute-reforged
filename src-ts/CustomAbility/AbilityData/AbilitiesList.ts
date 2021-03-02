@@ -5526,6 +5526,34 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Crono.LUMINAIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLuminaire.blp",
+      disabled: "BTNCronoLuminaire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LUMINAIRE,
+      body: 
+        AbilityNames.Crono.LUMINAIRE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage crono lumi explosion" },
+      { name: "sfx crono lumi" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

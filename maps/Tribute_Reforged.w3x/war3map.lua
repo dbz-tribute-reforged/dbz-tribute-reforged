@@ -804,6 +804,9 @@ gg_trg_Transformations_Tien = nil
 gg_trg_Transformations_Ichigo = nil
 gg_trg_Transformations_Dart_Feld = nil
 gg_trg_Transformations_Rust_Tyranno = nil
+gg_trg_Transformations_Crono = nil
+gg_trg_Transformations_Frog = nil
+gg_trg_Transformations_Robo = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -832,9 +835,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Crono = nil
-gg_trg_Transformations_Frog = nil
-gg_trg_Transformations_Robo = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -22319,6 +22319,8 @@ function Trig_Hero_Pick_Reset_Abilities_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC("A0UQ"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UR"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0V1"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0VR"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0VS"), udg_TempPlayer)
 end
 
 function InitTrig_Hero_Pick_Reset_Abilities()
@@ -41839,17 +41841,7 @@ function Trig_Transformations_Crono_Func016C()
     return true
 end
 
-function Trig_Transformations_Crono_Func019Func002Func001C()
-    if (udg_TransformationAbility ~= FourCC("ANcl")) then
-        return true
-    end
-    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
-        return true
-    end
-    return false
-end
-
-function Trig_Transformations_Crono_Func019Func002Func004C()
+function Trig_Transformations_Crono_Func017C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
@@ -41859,14 +41851,37 @@ function Trig_Transformations_Crono_Func019Func002Func004C()
     return true
 end
 
-function Trig_Transformations_Crono_Func019Func002C()
-    if (not Trig_Transformations_Crono_Func019Func002Func001C()) then
+function Trig_Transformations_Crono_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VR"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VS"), udg_StatMultUnit) == 0)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Crono_Func019C()
+function Trig_Transformations_Crono_Func021Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Crono_Func021Func002C()
+    if (not Trig_Transformations_Crono_Func021Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Crono_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -41919,15 +41934,23 @@ function Trig_Transformations_Crono_Actions()
         udg_TransformationAbility = FourCC("AUan")
     else
     end
+    if (Trig_Transformations_Crono_Func017C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit, 2)
+    else
+    end
+    if (Trig_Transformations_Crono_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0VS"), udg_StatMultUnit)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0VS'))
+        UnitRemoveAbilityBJ(FourCC("A0VR"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0VS"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0VR"), udg_TransformationPlayer)
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Crono_Func019C()) then
-        if (Trig_Transformations_Crono_Func019Func002C()) then
+    if (Trig_Transformations_Crono_Func021C()) then
+        if (Trig_Transformations_Crono_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            if (Trig_Transformations_Crono_Func019Func002Func004C()) then
-                SetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit, 2)
-            else
-            end
                         udg_TransformationID = FourCC('H0A0')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
