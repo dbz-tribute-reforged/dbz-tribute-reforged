@@ -5389,6 +5389,143 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Crono.CYCLONE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCyclone.blp",
+      disabled: "BTNCronoCyclone.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.CYCLONE,
+      body: 
+        AbilityNames.Crono.CYCLONE,
+    },
+    components: [
+      { name: "damage crono cyclone dps" },
+      { name: "dash ground forward crono cyclone" },
+      { name: "sfx crono cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 30,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoSlash.blp",
+      disabled: "BTNCronoSlash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.SLASH,
+      body: 
+        AbilityNames.Crono.SLASH,
+    },
+    components: [
+      { name: "beam crono slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LIGHTNING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 2,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage target crono lightning explosion" },
+      { name: "sfx crono lightning" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LIGHTNING_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 2,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage crono lightning 2 explosion" },
+      { name: "multi crono lightning 2 inner" },
+      { name: "multi crono lightning 2 outer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.CLEAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCleave.blp",
+      disabled: "BTNCronoCleave.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.CLEAVE,
+      body: 
+        AbilityNames.Crono.CLEAVE
+    },
+    components: [
+      { name: "damage crono cleave explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

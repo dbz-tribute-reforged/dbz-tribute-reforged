@@ -356,6 +356,15 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
     ]],
 
+    [Id.crono, [
+      AbilityNames.Crono.CYCLONE,
+      AbilityNames.Crono.SLASH,
+      AbilityNames.Crono.LIGHTNING,
+      AbilityNames.Crono.LIGHTNING_2,
+      AbilityNames.Crono.CLEAVE,
+      AbilityNames.Crono.LUMINAIRE,
+    ]],
+
 
 
 
