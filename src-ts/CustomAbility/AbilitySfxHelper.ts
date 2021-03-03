@@ -28,7 +28,7 @@ export module AbilitySfxHelper {
           BlzSetSpecialEffectYaw(effect, newYaw);
         }
         
-        if (height + sfxData.startHeight > 0) {
+        if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
           BlzSetSpecialEffectHeight(effect, 
             height + sfxData.startHeight + 
             (sfxData.endHeight - sfxData.startHeight) * timeRatio
@@ -50,7 +50,7 @@ export module AbilitySfxHelper {
       BlzSetSpecialEffectPitch(createdSfx, sfxData.extraPitch);
     }
 
-    if (height + sfxData.startHeight > 0) {
+    if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
       BlzSetSpecialEffectHeight(createdSfx, 
         height + sfxData.startHeight + 
         (sfxData.endHeight - sfxData.startHeight) * timeRatio

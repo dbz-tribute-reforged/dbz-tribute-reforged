@@ -26,6 +26,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     public sfxSource: number = SfxComponent.SOURCE_UNIT,
     public sfxYawType: number = SfxComponent.YAW_SOURCE_FACING,
     public useLastCastPoint: boolean = true,
+    public useHeight: boolean = true,
     public sfxList: SfxData[] = [],
     public attachedSfxList: SfxData[] = [],
   ) {
@@ -76,7 +77,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         + 360
       ) * CoordMath.degreesToRadians;
     }
-    const height = GetUnitFlyHeight(source) + BlzGetUnitZ(source);
+    const height = (this.useHeight) ? GetUnitFlyHeight(source) + BlzGetUnitZ(source) : 0;
 
     AbilitySfxHelper.displaySfxListAtCoord(
       ability,
@@ -114,6 +115,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     return new SfxComponent(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.sfxSource, this.sfxYawType, this.useLastCastPoint,
+      this.useHeight,
       AbilitySfxHelper.duplicateSfxList(this.sfxList),
       AbilitySfxHelper.duplicateSfxList(this.attachedSfxList),
     );
@@ -128,6 +130,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
       sfxSource: number;
       sfxYawType: number;
       useLastCastPoint: boolean;
+      useHeight: boolean;
       sfxList: {
         model: string;
         repeatInterval: number;
@@ -175,6 +178,7 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
     this.sfxSource = input.sfxSource;
     this.sfxYawType = input.sfxYawType;
     this.useLastCastPoint = input.useLastCastPoint;
+    this.useHeight = input.useHeight;
     this.sfxList = [];
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));

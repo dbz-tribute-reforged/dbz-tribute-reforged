@@ -3489,7 +3489,7 @@ export const BeamComponents = [
     endTick: -1,
     beamHpMult: BASE.KAME_DPS * 0.75,
     beamHpAttribute: bj_HEROSTAT_AGI,
-    speed: BeamComponent.BEAM_SPEED_MEDIUM_FAST,
+    speed: BeamComponent.BEAM_SPEED_VERY_FAST,
     aoe: 300,
     clashingDelayTicks: 1,
     maxDelayTicks: 6,
@@ -3513,6 +3513,7 @@ export const BeamComponents = [
     components: [
       { name: "damage crono slash explosion" },
       { name: "damage crono slash explosion bonus" },
+      { name: "timed life beam crono slash" },
       { name: "sfx beam crono slash" },
     ],
   },

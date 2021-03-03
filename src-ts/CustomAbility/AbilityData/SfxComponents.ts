@@ -10,6 +10,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -64,6 +65,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DustWave.mdl",
@@ -97,6 +99,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -244,6 +247,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -410,6 +414,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -576,6 +581,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -815,6 +821,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -959,6 +966,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -1068,6 +1076,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl",
@@ -1177,6 +1186,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KiMissile.mdl",
@@ -1210,6 +1220,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Des.mdl",
@@ -1319,6 +1330,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -1409,6 +1421,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Goku_Headless2.mdl",
@@ -1498,6 +1511,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DustWave.mdl",
@@ -1550,6 +1564,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Doodads\\Terrain\\RockChunks\\RockChunks1.mdl",
@@ -1621,6 +1636,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Music_effect01.mdl",
@@ -1673,6 +1689,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\GreenDragonMissile\\GreenDragonMissile.mdl",
@@ -1744,6 +1761,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DivineRing10.mdl",
@@ -1777,6 +1795,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "StarDustG.mdl",
@@ -1848,6 +1867,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Gotenks KamiKaze Ghost_squished.mdl",
@@ -1900,6 +1920,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -1990,6 +2011,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\PriestMissile\\PriestMissile.mdl",
@@ -2096,6 +2118,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Firaga.mdl",
@@ -2129,6 +2152,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\PriestMissile\\PriestMissile.mdl",
@@ -2236,6 +2260,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -2326,6 +2351,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -2473,6 +2499,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -2563,6 +2590,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BeamCannonHead.mdl",
@@ -2651,6 +2679,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -2721,6 +2750,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BlackBlink.mdl",
@@ -2773,6 +2803,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -2844,6 +2875,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -2915,6 +2947,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -2986,6 +3019,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -3076,6 +3110,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -3185,6 +3220,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -3275,6 +3311,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl",
@@ -3365,6 +3402,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl",
@@ -3436,6 +3474,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -3583,6 +3622,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -3691,6 +3731,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraKaox10.mdl",
@@ -3724,6 +3765,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -3776,6 +3818,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
@@ -3809,6 +3852,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
@@ -3842,6 +3886,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AntiMagicShell\\AntiMagicShell.mdl",
@@ -3875,6 +3920,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\FarseerMissile\\FarseerMissile.mdl",
@@ -3946,6 +3992,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -3998,6 +4045,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -4050,6 +4098,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -4121,6 +4170,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\Banditmissile\\Banditmissile.mdl",
@@ -4154,6 +4204,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -4206,6 +4257,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Objects\\InventoryItems\\BattleStandard\\BattleStandard.mdl",
@@ -4295,6 +4347,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -4347,6 +4400,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -4399,6 +4453,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -4451,6 +4506,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -4541,6 +4597,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Music_effect01.mdl",
@@ -4593,6 +4650,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
     ],
     attachedSfxList: [
@@ -4626,6 +4684,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -4716,6 +4775,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -4806,6 +4866,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl",
@@ -4858,6 +4919,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "JirenShield.mdl",
@@ -4891,6 +4953,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
@@ -4962,6 +5025,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5033,6 +5097,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -5085,6 +5150,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -5118,6 +5184,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5170,6 +5237,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5260,6 +5328,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -5350,6 +5419,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -5421,6 +5491,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -5492,6 +5563,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5562,6 +5634,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Slam.mdl",
@@ -5594,6 +5667,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DyspoRingModel.mdl",
@@ -5702,6 +5776,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5754,6 +5829,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraDyspo.mdl",
@@ -5806,6 +5882,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5895,6 +5972,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -5965,6 +6043,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Des.mdl",
@@ -6017,6 +6096,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -6069,6 +6149,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -6121,6 +6202,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -6173,6 +6255,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -6282,6 +6365,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -6334,6 +6418,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -6442,6 +6527,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -6513,6 +6599,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -6565,6 +6652,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -6617,6 +6705,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WolfFangFist.mdl",
@@ -6669,6 +6758,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WolfFangFist.mdl",
@@ -6740,6 +6830,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
@@ -6848,6 +6939,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -6975,6 +7067,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -7083,6 +7176,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -7192,6 +7286,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -7320,6 +7415,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -7428,6 +7524,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -7517,6 +7614,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -7625,6 +7723,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KiMissile.mdl",
@@ -7715,6 +7814,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Saibamen.mdl",
@@ -7805,6 +7905,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -7857,6 +7958,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -7947,6 +8049,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -7980,6 +8083,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -8108,6 +8212,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -8236,6 +8341,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "LaxusSpark.mdl",
@@ -8288,6 +8394,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DustWave.mdl",
@@ -8321,6 +8428,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -8487,6 +8595,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -8577,6 +8686,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -8648,6 +8758,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -8700,6 +8811,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "DetroitSmash_Effect.mdl",
@@ -8752,6 +8864,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -8823,6 +8936,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BlueBigExplosion.mdl",
@@ -8913,6 +9027,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -8984,6 +9099,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
@@ -9036,6 +9152,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "StarSFX.mdl",
@@ -9107,6 +9224,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "StarSFX.mdl",
@@ -9178,6 +9296,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "StarSFX.mdl",
@@ -9249,6 +9368,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "StarSFX.mdl",
@@ -9320,6 +9440,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "StarSFX.mdl",
@@ -9391,6 +9512,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -9443,6 +9565,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -9514,6 +9637,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -9585,6 +9709,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -9656,6 +9781,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -9689,6 +9815,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -9741,6 +9868,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -9830,6 +9958,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "TriBeam1.mdl",
@@ -9938,6 +10067,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -10009,6 +10139,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -10061,6 +10192,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -10132,6 +10264,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -10203,6 +10336,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -10255,6 +10389,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
@@ -10288,6 +10423,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -10378,6 +10514,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Slam.mdl",
@@ -10411,6 +10548,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -10519,6 +10657,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -10608,6 +10747,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraBlack.mdl",
@@ -10679,6 +10819,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraBlack.mdl",
@@ -10769,6 +10910,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -10878,6 +11020,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BlackBlink.mdl",
@@ -10911,6 +11054,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BlackBlink.mdl",
@@ -10944,6 +11088,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -10996,6 +11141,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -11086,6 +11232,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -11176,6 +11323,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -11247,6 +11395,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -11280,6 +11429,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -11369,6 +11519,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomBShine.mdl",
@@ -11421,6 +11572,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "units\\creeps\\RedDragon\\RedDragon.mdl",
@@ -11530,6 +11682,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -11557,8 +11710,8 @@ export const SfxComponents = [
         scale: 2.5,
         startHeight: 50,
         endHeight: 50,
-        extraDirectionalYaw: 0,
-        extraPitch: 30,
+        extraDirectionalYaw: 180,
+        extraPitch: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -11601,6 +11754,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -11653,17 +11807,37 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
-        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        model: "SpiritBombShine.mdl",
         repeatInterval: 0,
         group: 0,
-        scale: 4,
-        startHeight: 25,
-        endHeight: 25,
+        scale: 1.5,
+        startHeight: 0,
+        endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
         animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 155,
+          z: 225,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 3.0,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 0.15,
         color: {
           x: 255,
           y: 255,
@@ -11671,8 +11845,27 @@ export const SfxComponents = [
         },
         updateCoordsOnly: false,
         persistent: true,
-        attachmentPoint: "",
+        attachmentPoint: "origin",
       },
+      // {
+      //   model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+      //   repeatInterval: 0,
+      //   group: 0,
+      //   scale: 1,
+      //   startHeight: 25,
+      //   endHeight: 25,
+      //   extraDirectionalYaw: 0,
+      //   extraPitch: 0,
+      //   animSpeed: 1.0,
+      //   color: {
+      //     x: 255,
+      //     y: 255,
+      //     z: 255,
+      //   },
+      //   updateCoordsOnly: false,
+      //   persistent: false,
+      //   attachmentPoint: "",
+      // },
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
         repeatInterval: 0,
@@ -11705,12 +11898,13 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 2.5,
+        scale: 0.75,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
@@ -11726,7 +11920,7 @@ export const SfxComponents = [
         attachmentPoint: "",
       },
       {
-        model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
         repeatInterval: -1,
         group: 0,
         scale: 1.2,
@@ -11757,12 +11951,70 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 3.0,
+        scale: 8.0,
+        startHeight: -800,
+        endHeight: 400,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 125,
+          y: 255,
+          z: 215,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBomb.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 10.0,
+        startHeight: -800,
+        endHeight: 400,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 55,
+          y: 255,
+          z: 155,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+      {
+        model: "SpiritBombShine.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 10.0,
+        startHeight: 125,
+        endHeight: 125,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 75,
+          y: 255,
+          z: 155,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
+        model: "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl",
+        repeatInterval: 16,
+        group: 0,
+        scale: 1.5,
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
@@ -11773,34 +12025,68 @@ export const SfxComponents = [
           y: 255,
           z: 255,
         },
-        updateCoordsOnly: true,
+        updateCoordsOnly: false,
         persistent: true,
         attachmentPoint: "",
       },
+    ],
+    attachedSfxList: [
+    ],
+  },
+  // --------------------------------------------
+  { 
+    name: "sfx crono lumi explode", 
+    repeatInterval: 1,
+    startTick: 66,
+    endTick: 66,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
       {
-        model: "PlanetCrusherGeneric.mdl",
+        model: "SpiritBombShine.mdl",
         repeatInterval: 1,
         group: 0,
-        scale: 5.0,
-        startHeight: 0,
-        endHeight: 0,
+        scale: 15.0,
+        startHeight: 50,
+        endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
         animSpeed: 1.0,
         color: {
-          x: 125,
+          x: 75,
           y: 255,
-          z: 175,
+          z: 155,
         },
         updateCoordsOnly: true,
         persistent: true,
         attachmentPoint: "",
       },
+      // {
+      //   model: "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+      //   repeatInterval: 1,
+      //   group: 0,
+      //   scale: 20.0,
+      //   startHeight: 125,
+      //   endHeight: 125,
+      //   extraDirectionalYaw: 0,
+      //   extraPitch: 0,
+      //   animSpeed: 1.0,
+      //   color: {
+      //     x: 75,
+      //     y: 255,
+      //     z: 155,
+      //   },
+      //   updateCoordsOnly: false,
+      //   persistent: false,
+      //   attachmentPoint: "",
+      // },
       {
         model: "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
-        repeatInterval: 16,
+        repeatInterval: 1,
         group: 0,
-        scale: 1.8,
+        scale: 8.0,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
@@ -11828,6 +12114,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\Cripple\\CrippleTarget.mdl",
@@ -11886,25 +12173,6 @@ export const SfxComponents = [
         persistent: false,
         attachmentPoint: "",
       },
-      {
-        model: "Doodads\\Cinematic\\Lightningbolt\\Lightningbolt.mdl",
-        repeatInterval: 12,
-        group: 0,
-        scale: 1.2,
-        startHeight: 100,
-        endHeight: 100,
-        extraDirectionalYaw: 0,
-        extraPitch: 0,
-        animSpeed: 1.0,
-        color: {
-          x: 255,
-          y: 255,
-          z: 255,
-        },
-        updateCoordsOnly: false,
-        persistent: false,
-        attachmentPoint: "origin",
-      },
     ],
     attachedSfxList: [
     ],
@@ -11918,6 +12186,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "NuclearExplosion.mdl",
@@ -11951,6 +12220,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -12003,6 +12273,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12131,6 +12402,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12202,6 +12474,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl",
@@ -12235,6 +12508,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WhisShield.mdl",
@@ -12268,6 +12542,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\Banditmissile\\Banditmissile.mdl",
@@ -12301,6 +12576,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BuuBreath3.mdl",
@@ -12391,6 +12667,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12443,6 +12720,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\EarthQuake\\EarthQuakeTarget.mdl",
@@ -12495,6 +12773,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12604,6 +12883,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "MankindMissile.mdl",
@@ -12673,6 +12953,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12782,6 +13063,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -12853,6 +13135,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "PlanetCrusher.mdl",
@@ -13058,6 +13341,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -13243,6 +13527,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -13410,6 +13695,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -13481,6 +13767,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -13514,6 +13801,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -13661,6 +13949,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -13713,6 +14002,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBaseRed.mdl",
@@ -13803,6 +14093,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBaseRed.mdl",
@@ -13874,6 +14165,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14040,6 +14332,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14111,6 +14404,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -14163,6 +14457,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14310,6 +14605,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14416,6 +14712,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14505,6 +14802,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
@@ -14537,6 +14835,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
@@ -14608,6 +14907,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14660,6 +14960,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14749,6 +15050,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14801,6 +15103,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14871,6 +15174,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -14923,6 +15227,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Drain\\DrainCaster.mdl",
@@ -14975,6 +15280,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "MoroLavaBall.mdl",
@@ -15084,6 +15390,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_DYNAMIC,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl",
@@ -15136,6 +15443,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BunkeroniLong.mdl",
@@ -15169,6 +15477,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -15202,6 +15511,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -15235,6 +15545,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -15268,6 +15579,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BunkeroniLong.mdl",
@@ -15301,6 +15613,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BunkeroniLong.mdl",
@@ -15334,6 +15647,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -15386,6 +15700,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -15533,6 +15848,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -15604,6 +15920,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraGlass.mdl",
@@ -15637,6 +15954,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -15708,6 +16026,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Defend\\DefendCaster.mdl",
@@ -15741,6 +16060,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KingKRoolCrownMissile.mdl",
@@ -15774,6 +16094,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -15807,6 +16128,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
     ],
     attachedSfxList: [
@@ -15839,6 +16161,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DustWindFasterExact.mdl",
@@ -15871,6 +16194,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KannonBall.mdl",
@@ -15923,6 +16247,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\Mortar\\MortarMissile.mdl",
@@ -16013,6 +16338,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16084,6 +16410,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBase.mdl",
@@ -16117,6 +16444,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16264,6 +16592,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "BladeBeamFinal.mdl",
@@ -16316,6 +16645,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -16368,6 +16698,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\FrostArmor\\FrostArmorTarget.mdl",
@@ -16439,6 +16770,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16547,6 +16879,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16618,6 +16951,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "MankindMissile.mdl",
@@ -16707,6 +17041,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16759,6 +17094,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -16886,6 +17222,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17013,6 +17350,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17084,6 +17422,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17155,6 +17494,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17207,6 +17547,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17259,6 +17600,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17311,6 +17653,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17382,6 +17725,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17491,6 +17835,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -17524,6 +17869,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DesPink.mdl",
@@ -17576,6 +17922,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17685,6 +18032,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -17775,6 +18123,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KiMissileRed2.mdl",
@@ -17846,6 +18195,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "MinusBall.mdl",
@@ -17955,6 +18305,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraKaox10.mdl",
@@ -17988,6 +18339,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraSS.mdl",
@@ -18078,6 +18430,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -18168,6 +18521,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "KameBaseRed.mdl",
@@ -18201,6 +18555,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -18367,6 +18722,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\LightningShield\\LightningShieldTarget.mdl",
@@ -18457,6 +18813,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "GuldoSpear.mdl",
@@ -18490,6 +18847,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Doodads\\Terrain\\RockChunks\\RockChunks1.mdl",
@@ -18561,6 +18919,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_FIXED,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Drain\\DrainTarget.mdl",
@@ -18632,6 +18991,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -18684,6 +19044,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "PlanetCrusherGeneric.mdl",
@@ -18755,6 +19116,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -18864,6 +19226,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",
@@ -18934,6 +19297,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_POINT_DYNAMIC,
     sfxYawType: SfxComponent.YAW_SOURCE_TO_TARGET,
     useLastCastPoint: true,
+    useHeight: true,
     sfxList: [
       {
         model: "animeslashfinal.mdl",
@@ -18967,6 +19331,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -19038,6 +19403,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Other\\Tornado\\TornadoElemental.mdl",
@@ -19166,6 +19532,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -19217,6 +19584,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "DTBlueNoRingWhite.mdl",
@@ -19307,6 +19675,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\NightElf\\Tranquility\\Tranquility.mdl",
@@ -19397,6 +19766,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_TARGET_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl",
@@ -19430,6 +19800,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "AuraBlue.mdl",
@@ -19482,6 +19853,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Undead\\AbsorbMana\\AbsorbManaBirthMissile.mdl",
@@ -19534,6 +19906,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl",
@@ -19643,6 +20016,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
@@ -19695,6 +20069,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "WindCircleFaster.mdl",
@@ -19744,6 +20119,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "BlackBlink.mdl",
@@ -19815,6 +20191,7 @@ export const SfxComponents = [
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
+    useHeight: true,
     sfxList: [
       {
         model: "SpiritBomb.mdl",

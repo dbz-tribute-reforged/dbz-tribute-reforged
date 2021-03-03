@@ -5422,7 +5422,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 30,
+    duration: 50,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5438,7 +5438,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.SLASH,
     },
     components: [
-      { name: "beam crono slash" },
+      { name: "multi crono slash" },
     ],
   },
   // -------------------------------------------
@@ -5448,7 +5448,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5475,7 +5475,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 2,
+    duration: 16,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5519,6 +5519,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.CLEAVE
     },
     components: [
+      { name: "dash ground target crono cleave" },
       { name: "damage crono cleave explosion" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
@@ -5550,6 +5551,7 @@ export const AbilitiesList = [
       { name: "channel caster default" },
       { name: "damage crono lumi explosion" },
       { name: "sfx crono lumi" },
+      { name: "sfx crono lumi explode" },
     ],
   },
   // -------------------------------------------

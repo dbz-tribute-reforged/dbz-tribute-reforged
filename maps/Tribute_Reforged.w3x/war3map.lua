@@ -41940,6 +41940,7 @@ function Trig_Transformations_Crono_Actions()
     end
     if (Trig_Transformations_Crono_Func018C()) then
         UnitAddAbilityBJ(FourCC("A0VS"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0VS"), udg_StatMultUnit, 10)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0VS'))
         UnitRemoveAbilityBJ(FourCC("A0VR"), udg_StatMultUnit)
         SetPlayerAbilityAvailableBJ(true, FourCC("A0VS"), udg_TransformationPlayer)
