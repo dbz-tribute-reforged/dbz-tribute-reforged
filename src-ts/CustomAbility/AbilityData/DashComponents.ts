@@ -1200,9 +1200,9 @@ export const DashComponents = [
     targetDirection: Dash.DIRECTION_TARGET_POINT,
     dashType: Dash.DASH_TYPE_GROUND,
     checkPreviousCoord: false,
-    useLastCastPoint: true,
+    useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 30,
   },
   // ----------------------------
   // cell-x

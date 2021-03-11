@@ -835,6 +835,9 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Crono_Slash = nil
+gg_trg_CronoCleave = nil
+gg_trg_CronoCyclone = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1308,11 +1311,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2005)
+    SetSoundDuration(gg_snd_Hint, 2845)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2548)
+    SetSoundDuration(gg_snd_GoodJob, 2954)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -4251,35 +4254,35 @@ function Trig_Saibamen_Loop_Func002Func004C()
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Vegeta Jr.")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Other Cabbagehead")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func013Func001Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func014Func001Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Cabbagehead")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func013Func001C()
+function Trig_Saibamen_Loop_Func002Func005Func014Func001C()
     if (not (GetHeroProperName(udg_TempUnit) == "Fufu")) then
         return false
     end
     return true
 end
 
-function Trig_Saibamen_Loop_Func002Func005Func013C()
+function Trig_Saibamen_Loop_Func002Func005Func014C()
     if (not (GetHeroProperName(udg_TempUnit) == "Snuggles")) then
         return false
     end
@@ -4313,22 +4316,23 @@ function Trig_Saibamen_Loop_Func002A()
         SetUnitInvulnerable(udg_TempUnit, false)
         ShowUnitShow(udg_TempUnit)
         PauseUnitBJ(false, udg_TempUnit)
-        UnitApplyTimedLifeBJ(35.00, FourCC("BTLF"), udg_TempUnit)
+        UnitApplyTimedLifeBJ(45.00, FourCC("BTLF"), udg_TempUnit)
+        SelectUnitAddForPlayer(udg_TempUnit, GetOwningPlayer(udg_TempUnit))
         GroupRemoveUnitSimple(udg_TempUnit, udg_SaibamenGroup)
         FlushChildHashtableBJ(udg_ID, udg_SummonsHashtable)
-        if (Trig_Saibamen_Loop_Func002Func005Func013C()) then
+        if (Trig_Saibamen_Loop_Func002Func005Func014C()) then
                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenSnuggles.mp3", 2352)
         else
-            if (Trig_Saibamen_Loop_Func002Func005Func013Func001C()) then
+            if (Trig_Saibamen_Loop_Func002Func005Func014Func001C()) then
                                 playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenFufu.mp3", 2544)
             else
-                if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001C()) then
+                if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001C()) then
                                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead1.mp3", 2256)
                 else
-                    if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001C()) then
+                    if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001C()) then
                                                 playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenCabbagehead2.mp3", 3360)
                     else
-                        if (Trig_Saibamen_Loop_Func002Func005Func013Func001Func001Func001Func001C()) then
+                        if (Trig_Saibamen_Loop_Func002Func005Func014Func001Func001Func001Func001C()) then
                                                         playGenericSpellSound(udg_TempUnit, "Audio/Voice/NappaSaibamenVegetaJr.mp3", 3936)
                         else
                         end
@@ -12675,6 +12679,69 @@ function InitTrig_Dart_Feld_Spell_Charges()
     TriggerAddAction(gg_trg_Dart_Feld_Spell_Charges, Trig_Dart_Feld_Spell_Charges_Actions)
 end
 
+function Trig_CronoCyclone_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0VP"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_CronoCyclone_Actions()
+    AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
+    TriggerSleepAction(3.00)
+    AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
+end
+
+function InitTrig_CronoCyclone()
+    gg_trg_CronoCyclone = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_CronoCyclone, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_CronoCyclone, Condition(Trig_CronoCyclone_Conditions))
+    TriggerAddAction(gg_trg_CronoCyclone, Trig_CronoCyclone_Actions)
+end
+
+function Trig_CronoCleave_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0VT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_CronoCleave_Actions()
+    udg_TempLoc = GetSpellTargetLoc()
+    IssuePointOrderLocBJ(GetTriggerUnit(), "move", udg_TempLoc)
+    SetUnitAnimation(GetTriggerUnit(), "spell throw")
+        RemoveLocation(udg_TempLoc)
+end
+
+function InitTrig_CronoCleave()
+    gg_trg_CronoCleave = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_CronoCleave, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_CronoCleave, Condition(Trig_CronoCleave_Conditions))
+    TriggerAddAction(gg_trg_CronoCleave, Trig_CronoCleave_Actions)
+end
+
+function Trig_Crono_Slash_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0VQ"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crono_Slash_Actions()
+    SetUnitAnimation(GetTriggerUnit(), "attack")
+    TriggerSleepAction(0.24)
+    SetUnitAnimation(GetTriggerUnit(), "attack")
+    TriggerSleepAction(0.24)
+    SetUnitAnimation(GetTriggerUnit(), "attack")
+end
+
+function InitTrig_Crono_Slash()
+    gg_trg_Crono_Slash = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Crono_Slash, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Crono_Slash, Condition(Trig_Crono_Slash_Conditions))
+    TriggerAddAction(gg_trg_Crono_Slash, Trig_Crono_Slash_Actions)
+end
+
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
     if (GetSpellAbilityId() == FourCC("A00U")) then
         return true
@@ -13911,6 +13978,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UI"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VB"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VV"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0VX"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T4"), udg_TempPlayer)
@@ -29197,7 +29265,7 @@ end
 
 function Trig_Kyodaika_Init_Actions()
     udg_StatMultUnit = GetSpellAbilityUnit()
-    SetUnitScalePercent(udg_StatMultUnit, 250.00, 250.00, 250.00)
+    SetUnitScalePercent(udg_StatMultUnit, 300.00, 300.00, 300.00)
     SetPlayerAbilityAvailableBJ(false, FourCC("A04Y"), GetOwningPlayer(udg_StatMultUnit))
     SetPlayerAbilityAvailableBJ(true, FourCC("A03S"), GetOwningPlayer(udg_StatMultUnit))
     GroupAddUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
@@ -29341,7 +29409,7 @@ function InitTrig_Kyodaika_Revert_Init()
 end
 
 function Trig_Kyodaika_Revert_Actual_Actions()
-    SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
+    SetUnitScalePercent(udg_StatMultUnit, 200.00, 200.00, 200.00)
     SetPlayerAbilityAvailableBJ(true, FourCC("A04Y"), GetOwningPlayer(udg_StatMultUnit))
     SetPlayerAbilityAvailableBJ(false, FourCC("A03S"), GetOwningPlayer(udg_StatMultUnit))
     GroupRemoveUnitSimple(udg_StatMultUnit, udg_KyodaikaGroup)
@@ -29458,7 +29526,7 @@ function Trig_Transformations_Piccolo_Actions()
     else
     end
     if (Trig_Transformations_Piccolo_Func019C()) then
-        SetUnitScalePercent(udg_StatMultUnit, 165.00, 165.00, 165.00)
+        SetUnitScalePercent(udg_StatMultUnit, 200.00, 200.00, 200.00)
                 udg_TransformationID = FourCC('H00R')
         BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
@@ -42051,6 +42119,46 @@ function Trig_Transformations_Frog_Func020Func002Func001C()
     return false
 end
 
+function Trig_Transformations_Frog_Func020Func002Func004C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 3)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frog_Func020Func002Func005C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frog_Func020Func002Func006C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit) == 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frog_Func020Func002Func007C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 2)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Frog_Func020Func002C()
     if (not Trig_Transformations_Frog_Func020Func002Func001C()) then
         return false
@@ -42124,6 +42232,23 @@ function Trig_Transformations_Frog_Actions()
         if (Trig_Transformations_Frog_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+            if (Trig_Transformations_Frog_Func020Func002Func004C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 4)
+            else
+            end
+            if (Trig_Transformations_Frog_Func020Func002Func005C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 2)
+                SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
+            else
+            end
+            if (Trig_Transformations_Frog_Func020Func002Func006C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 3)
+            else
+            end
+            if (Trig_Transformations_Frog_Func020Func002Func007C()) then
+                SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
+            else
+            end
                         udg_TransformationID = FourCC('H0A1')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
@@ -43702,6 +43827,9 @@ function InitCustomTriggers()
     InitTrig_Ichigo_Getsuga_Auto_Level()
     InitTrig_Dart_Feld_Skill_Upg()
     InitTrig_Dart_Feld_Spell_Charges()
+    InitTrig_CronoCyclone()
+    InitTrig_CronoCleave()
+    InitTrig_Crono_Slash()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()

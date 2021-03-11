@@ -2003,7 +2003,7 @@ export const MultiComponents = [
     angleMin: 0,
     angleMax: 360,
     forceMinDistance: 500,
-    forceMaxDistance: 900,
+    forceMaxDistance: 1000,
     delayBetweenComponents: 0,
     firingMode: MultiComponent.RANDOM_FIRING,
     multiplyComponents: 12,

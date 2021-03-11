@@ -99761,6 +99761,12 @@ STRING 15943
 [|cff00ff00F|r] Parry - [|cffffcc00Level 7|r]
 }
 
+STRING 15944
+// Abilities: A0VX (Book Frog Passives), Name (Name)
+{
+Book Frog Passives
+}
+
 STRING 15945
 // Abilities: A0FT (Time Skip), Researchtip (Tooltip - Learn)
 {
@@ -105171,6 +105177,12 @@ Ichigo fires a Gran Rey Getsuga.
 |cff00ffffCooldown: <A0V5,Cool10> seconds|r
 }
 
+STRING 16666
+// Abilities: A0VY (Frog Crit Passive), Name (Name)
+{
+Frog Crit Passive
+}
+
 STRING 16667
 // Units: H000 (Saiyan Defender of the earth), Ubertip (Tooltip - Extended)
 {
@@ -105182,6 +105194,12 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 |cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 16668
+// Abilities: A0VY (Frog Crit Passive), EditorSuffix (Editor Suffix)
+{
+(frog)
 }
 
 STRING 16669
@@ -107285,6 +107303,12 @@ STRING 16935
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 16936
+// Abilities: A0VZ (Frog Attack Passive), Name (Name)
+{
+Frog Attack Passive
 }
 
 STRING 16937
