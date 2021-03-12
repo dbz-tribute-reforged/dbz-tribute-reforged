@@ -112481,3 +112481,171 @@ STRING 17665
 fail
 }
 
+STRING 17666
+// Abilities: A0W3 (Dark Bomb), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 17667
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 17668
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
+}
+
+STRING 17669
+// Abilities: A0W3 (Dark Bomb), Name (Name)
+{
+Dark Bomb
+}
+
+STRING 17670
+// Abilities: A0W3 (Dark Bomb), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 17671
+// Abilities: A0W3 (Dark Bomb), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn Dark Bomb - [|cffffcc00Level %d|r]
+}
+
+STRING 17672
+// Abilities: A0W3 (Dark Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
+}
+
+STRING 17673
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 17674
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 3|r]
+}
+
+STRING 17675
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 17676
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 5|r]
+}
+
+STRING 17677
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 17678
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool2>s|r
+}
+
+STRING 17679
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool3>s|r
+}
+
+STRING 17680
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool4>s|r
+}
+
+STRING 17681
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool5>s|r
+}
+
+STRING 17682
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool6>s|r
+}
+
+STRING 17683
+// Abilities: A0W3 (Dark Bomb), EditorSuffix (Editor Suffix)
+{
+Magus
+}
+
+STRING 17684
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 7|r]
+}
+
+STRING 17685
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool7>s|r
+}
+
+STRING 17686
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 8|r]
+}
+
+STRING 17687
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool8>s|r
+}
+
+STRING 17688
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool9>s|r
+}
+
+STRING 17689
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool10>s|r
+}
+
+STRING 17690
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
+}
+
+STRING 17691
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 9|r]
+}
+
+STRING 17692
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 10|r]
+}
+
+STRING 17693
+// Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+

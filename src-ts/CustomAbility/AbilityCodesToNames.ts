@@ -258,12 +258,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.finalBurst, AbilityNames.DartFeld.FINAL_BURST],
     [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON],
 
+    //crono
     [Id.cronoCyclone, AbilityNames.Crono.CYCLONE],
     [Id.cronoSlash, AbilityNames.Crono.SLASH],
     [Id.cronoLightning, AbilityNames.Crono.LIGHTNING],
     [Id.cronoLightning2, AbilityNames.Crono.LIGHTNING_2],
     [Id.cronoCleave, AbilityNames.Crono.CLEAVE],
     [Id.cronoLuminaire, AbilityNames.Crono.LUMINAIRE],
+
+    //magus
+    [Id.darkBomb, AbilityNames.Magus.DARK_BOMB]
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

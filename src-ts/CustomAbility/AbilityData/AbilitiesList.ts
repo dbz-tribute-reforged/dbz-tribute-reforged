@@ -5554,6 +5554,32 @@ export const AbilitiesList = [
       { name: "sfx crono lumi explode" },
     ],
   },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.DARK_BOMB,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 120,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNMagusDarkBomb.blp",
+        disabled: "BTNMagusDarkBomb.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Magus.DARK_BOMB,
+        body: 
+          "spirit bomb stuff"
+      },
+      components: [
+        { name: "beam spirit bomb" },
+      ],
+    },
   // -------------------------------------------
   {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam

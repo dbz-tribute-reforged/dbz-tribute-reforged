@@ -309,6 +309,10 @@ export module AbilityNames {
     export const LUMINAIRE: string = "Crono Luminaire";
   }
 
+  export module Magus {
+    export const DARK_BOMB: string = "Magus Dark Bomb"
+  }
+
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
     export const BABIDI_BARRIER: string = "Babidi Barrier";

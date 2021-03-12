@@ -42702,10 +42702,7 @@ function Trig_Doom_Scythe_Trigger_Func002Func001Func001C()
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), GetEnumUnit()) >= 2)) then
         return false
     end
-    if (not (IsPlayerAlly(ConvertedPlayer(GetForLoopIndexA()), GetTriggerPlayer()) == true)) then
-        return false
-    end
-    if (not (ConvertedPlayer(GetForLoopIndexA()) ~= GetTriggerPlayer())) then
+    if (not (GetEnumPlayer() ~= GetTriggerPlayer())) then
         return false
     end
     return true

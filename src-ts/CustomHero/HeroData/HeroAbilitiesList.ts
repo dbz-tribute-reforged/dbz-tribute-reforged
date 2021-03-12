@@ -364,7 +364,9 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Crono.CLEAVE,
       AbilityNames.Crono.LUMINAIRE,
     ]],
-
+    [Id.magus, [
+      AbilityNames.Magus.DARK_BOMB,
+    ]],
 
 
 
