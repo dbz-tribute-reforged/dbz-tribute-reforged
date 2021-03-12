@@ -231,7 +231,6 @@ udg_IchigoMugetsuUnitGroup = nil
 udg_IsFBSimTest = false
 udg_TempReal5 = 0.0
 udg_BaseArmorTempReal = 0.0
-udg_MagusScytheTimer = {}
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -1154,12 +1153,6 @@ function InitGlobals()
     udg_IsFBSimTest = false
     udg_TempReal5 = 0.0
     udg_BaseArmorTempReal = 0.0
-    i = 0
-    while (true) do
-        if ((i > 10)) then break end
-        udg_MagusScytheTimer[i] = CreateTimer()
-        i = i + 1
-    end
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -42702,7 +42695,7 @@ function Trig_Doom_Scythe_Trigger_Conditions()
     return true
 end
 
-function Trig_Doom_Scythe_Trigger_Func001Func001Func001C()
+function Trig_Doom_Scythe_Trigger_Func002Func001Func001C()
     if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H0A3"))) then
         return false
     end
@@ -42718,22 +42711,22 @@ function Trig_Doom_Scythe_Trigger_Func001Func001Func001C()
     return true
 end
 
-function Trig_Doom_Scythe_Trigger_Func001Func001A()
-    if (Trig_Doom_Scythe_Trigger_Func001Func001Func001C()) then
+function Trig_Doom_Scythe_Trigger_Func002Func001A()
+    if (Trig_Doom_Scythe_Trigger_Func002Func001Func001C()) then
         udg_TempUnit = GetEnumUnit()
         TriggerExecute(gg_trg_Doom_Scythe_Buff)
     else
     end
 end
 
+function Trig_Doom_Scythe_Trigger_Func002A()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Doom_Scythe_Trigger_Func002Func001A)
+end
+
 function Trig_Doom_Scythe_Trigger_Actions()
-    bj_forLoopAIndex = 1
-    bj_forLoopAIndexEnd = 10
-    while (true) do
-        if (bj_forLoopAIndex > bj_forLoopAIndexEnd) then break end
-        ForGroupBJ(udg_StatMultPlayerUnits[GetForLoopIndexA()], Trig_Doom_Scythe_Trigger_Func001Func001A)
-        bj_forLoopAIndex = bj_forLoopAIndex + 1
-    end
+    udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
+    ForForce(udg_TempPlayerGroup, Trig_Doom_Scythe_Trigger_Func002A)
+        DestroyForce(udg_TempPlayerGroup)
 end
 
 function InitTrig_Doom_Scythe_Trigger()
@@ -42775,36 +42768,6 @@ end
 function InitTrig_Doom_Scythe_Buff()
     gg_trg_Doom_Scythe_Buff = CreateTrigger()
     TriggerAddAction(gg_trg_Doom_Scythe_Buff, Trig_Doom_Scythe_Buff_Actions)
-end
-
-function Trig_Doom_Scythe_Test_Func001Func001C()
-    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H0A3"))) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), GetEnumUnit()) >= 2)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Doom_Scythe_Test_Func001A()
-    if (Trig_Doom_Scythe_Test_Func001Func001C()) then
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_17664")
-        udg_TempUnit = GetEnumUnit()
-        TriggerExecute(gg_trg_Doom_Scythe_Buff)
-    else
-        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_17665")
-    end
-end
-
-function Trig_Doom_Scythe_Test_Actions()
-    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetTriggerPlayer())], Trig_Doom_Scythe_Test_Func001A)
-end
-
-function InitTrig_Doom_Scythe_Test()
-    gg_trg_Doom_Scythe_Test = CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Doom_Scythe_Test, Player(0), "doom", true)
-    TriggerAddAction(gg_trg_Doom_Scythe_Test, Trig_Doom_Scythe_Test_Actions)
 end
 
 function Trig_Saga_Unit_Init_Conditions()
@@ -44561,7 +44524,6 @@ function InitCustomTriggers()
     InitTrig_Transformations_Magus()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Buff()
-    InitTrig_Doom_Scythe_Test()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()
