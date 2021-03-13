@@ -93300,19 +93300,19 @@ Q
 }
 
 STRING 15035
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15036
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15037
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -112647,5 +112647,517 @@ STRING 17693
 // Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+
+STRING 17694
+// Abilities: A0W4 (Elemental Magic), Name (Name)
+{
+Elemental Magic
+}
+
+STRING 17695
+// Abilities: A0W4 (Elemental Magic), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00Q|r] Learn Elemental Magic - [|cffffcc00Level %d|r]
+}
+
+STRING 17696
+// Abilities: A0W4 (Elemental Magic), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17697
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17698
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17699
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17700
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17701
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17702
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17703
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17704
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17705
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17706
+// Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
+{
+Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17717
+// Abilities: A0W4 (Elemental Magic), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 17718
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 1|r]
+}
+
+STRING 17719
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17720
+// Abilities: A0W5 (Lightning 2), Name (Name)
+{
+Lightning 2
+}
+
+STRING 17721
+// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 17722
+// Abilities: A0W5 (Lightning 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Lightning 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 17723
+// Abilities: A0W5 (Lightning 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Crono calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17724
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 2|r]
+}
+
+STRING 17725
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 17726
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 17727
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 17728
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 6|r]
+}
+
+STRING 17729
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17730
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17731
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17732
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17733
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17734
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 17735
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17736
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17737
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17738
+// Abilities: A0W5 (Lightning 2), Ubertip (Tooltip - Normal - Extended)
+{
+Magus calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 17739
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 8|r]
+}
+
+STRING 17740
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 9|r]
+}
+
+STRING 17741
+// Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 17742
+// Abilities: A0W5 (Lightning 2), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 17743
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17744
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17745
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17746
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 1|r]
+}
+
+STRING 17747
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 2|r]
+}
+
+STRING 17748
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 3|r]
+}
+
+STRING 17749
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 4|r]
+}
+
+STRING 17750
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 5|r]
+}
+
+STRING 17751
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 6|r]
+}
+
+STRING 17752
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 7|r]
+}
+
+STRING 17753
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 8|r]
+}
+
+STRING 17754
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 9|r]
+}
+
+STRING 17755
+// Abilities: A0W4 (Elemental Magic), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r] Elemental Magic - [|cffffcc00Level 10|r]
+}
+
+STRING 17756
+// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 17757
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter- [|cffffcc00Level 1|r]
+}
+
+STRING 17758
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17759
+// Abilities: A0W6 (Dark Matter), Name (Name)
+{
+Dark Matter
+}
+
+STRING 17760
+// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 17761
+// Abilities: A0W6 (Dark Matter), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Dark Matter - [|cffffcc00Level %d|r]
+}
+
+STRING 17762
+// Abilities: A0W6 (Dark Matter), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17763
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 2|r]
+}
+
+STRING 17764
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 3|r]
+}
+
+STRING 17765
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 4|r]
+}
+
+STRING 17766
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 5|r]
+}
+
+STRING 17767
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 6|r]
+}
+
+STRING 17768
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17769
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17770
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17771
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17772
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17773
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 7|r]
+}
+
+STRING 17774
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17775
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17776
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17777
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17778
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 8|r]
+}
+
+STRING 17779
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 9|r]
+}
+
+STRING 17780
+// Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Dark Matter - [|cffffcc00Level 10|r]
+}
+
+STRING 17781
+// Abilities: A0W6 (Dark Matter), EditorSuffix (Editor Suffix)
+{
+(magus)
 }
 

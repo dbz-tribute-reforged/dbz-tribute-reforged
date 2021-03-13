@@ -5577,7 +5577,64 @@ export const AbilitiesList = [
           "spirit bomb stuff"
       },
       components: [
-        { name: "beam spirit bomb" },
+        { name: "beam dark bomb" },
+      ],
+    },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.MLIGHTNING_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage crono lightning 2 explosion" },
+      { name: "multi crono lightning 2 inner" },
+      { name: "multi crono lightning 2 outer" },
+    ],
+  },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.DARK_MATTER,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 70,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNMagusDarkMatter.blp",
+        disabled: "BTNMagusDarkMatter.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Magus.DARK_MATTER,
+        body: 
+          AbilityNames.Magus.DARK_MATTER
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "damage crono lumi explosion" },
+        { name: "sfx magus matter" },
+        { name: "sfx magus matter explode" },
       ],
     },
   // -------------------------------------------

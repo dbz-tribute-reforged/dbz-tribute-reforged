@@ -150,7 +150,9 @@ export module Id {
   export const cronoLuminaire = FourCC("A0VU");
 
   export const magus = FourCC("H0A3");
-  export const darkBomb = FourCC('A0W3');
+  export const darkBomb = FourCC("A0W3");
+  export const magusLightning2 = FourCC("A0W5");
+  export const magusDarkMatter = FourCC("A0W6");
 
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");

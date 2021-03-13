@@ -603,6 +603,8 @@ gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Generate = nil
 gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick = nil
 gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate = nil
 gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick = nil
+gg_trg_Hero_Pick_Secret_Magus_Generate = nil
+gg_trg_Hero_Pick_Secret_Magus_Pick = nil
 gg_trg_Hero_Pick_Force_Pick_Unit_Type = nil
 gg_trg_Hero_Pick_Modes_Show = nil
 gg_trg_Hero_Pick_Mode_Default = nil
@@ -810,6 +812,10 @@ gg_trg_Transformations_Rust_Tyranno = nil
 gg_trg_Transformations_Crono = nil
 gg_trg_Transformations_Frog = nil
 gg_trg_Transformations_Robo = nil
+gg_trg_Transformations_Magus = nil
+gg_trg_Doom_Scythe_Trigger = nil
+gg_trg_Doom_Scythe_Buff = nil
+gg_trg_Doom_Scythe_Test = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -838,12 +844,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Hero_Pick_Secret_Magus_Generate = nil
-gg_trg_Hero_Pick_Secret_Magus_Pick = nil
-gg_trg_Transformations_Magus = nil
-gg_trg_Doom_Scythe_Trigger = nil
-gg_trg_Doom_Scythe_Buff = nil
-gg_trg_Doom_Scythe_Test = nil
+gg_trg_Magus_Spell_Book = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -42767,6 +42768,24 @@ function InitTrig_Doom_Scythe_Buff()
     TriggerAddAction(gg_trg_Doom_Scythe_Buff, Trig_Doom_Scythe_Buff_Actions)
 end
 
+function Trig_Magus_Spell_Book_Conditions()
+    if (not (GetLearnedSkillBJ() == FourCC("A0W4"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spell_Book_Actions()
+    SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit()))
+end
+
+function InitTrig_Magus_Spell_Book()
+    gg_trg_Magus_Spell_Book = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Magus_Spell_Book, EVENT_PLAYER_HERO_SKILL)
+    TriggerAddCondition(gg_trg_Magus_Spell_Book, Condition(Trig_Magus_Spell_Book_Conditions))
+    TriggerAddAction(gg_trg_Magus_Spell_Book, Trig_Magus_Spell_Book_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
     if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
@@ -44521,6 +44540,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Magus()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Buff()
+    InitTrig_Magus_Spell_Book()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()

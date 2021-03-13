@@ -267,7 +267,9 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.cronoLuminaire, AbilityNames.Crono.LUMINAIRE],
 
     //magus
-    [Id.darkBomb, AbilityNames.Magus.DARK_BOMB]
+    [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
+    [Id.magusLightning2, AbilityNames.Magus.MLIGHTNING_2],
+    [Id.magusDarkMatter, AbilityNames.Magus.DARK_MATTER],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
