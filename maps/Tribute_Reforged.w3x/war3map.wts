@@ -112995,14 +112995,6 @@ STRING 17757
 [|cff00ff00D|r] Dark Matter- [|cffffcc00Level 1|r]
 }
 
-STRING 17758
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
 STRING 17759
 // Abilities: A0W6 (Dark Matter), Name (Name)
 {
@@ -113019,14 +113011,6 @@ STRING 17761
 // Abilities: A0W6 (Dark Matter), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Dark Matter - [|cffffcc00Level %d|r]
-}
-
-STRING 17762
-// Abilities: A0W6 (Dark Matter), Researchubertip (Tooltip - Learn - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
 }
 
 STRING 17763
@@ -113059,82 +113043,10 @@ STRING 17767
 [|cff00ff00D|r] Dark Matter - [|cffffcc00Level 6|r]
 }
 
-STRING 17768
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17769
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17770
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17771
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17772
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
 STRING 17773
 // Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Dark Matter - [|cffffcc00Level 7|r]
-}
-
-STRING 17774
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17775
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17776
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
-}
-
-STRING 17777
-// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
-{
-Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darknesst engulfs the area around Magus, dealing heavy damage to all nearby units.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0VU,Cool1>s|r
 }
 
 STRING 17778
@@ -113159,5 +113071,93 @@ STRING 17781
 // Abilities: A0W6 (Dark Matter), EditorSuffix (Editor Suffix)
 {
 (magus)
+}
+
+STRING 17782
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17783
+// Abilities: A0W6 (Dark Matter), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17784
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17785
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17786
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17787
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17788
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17789
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17790
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17791
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17792
+// Abilities: A0W6 (Dark Matter), Ubertip (Tooltip - Normal - Extended)
+{
+Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VU,Cool1>s|r
 }
 
