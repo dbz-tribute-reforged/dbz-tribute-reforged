@@ -815,6 +815,7 @@ gg_trg_Transformations_Robo = nil
 gg_trg_Transformations_Magus = nil
 gg_trg_Doom_Scythe_Trigger = nil
 gg_trg_Doom_Scythe_Buff = nil
+gg_trg_Magus_Spell_Book = nil
 gg_trg_Doom_Scythe_Test = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
@@ -844,7 +845,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Magus_Spell_Book = nil
+gg_trg_Crisis_Arm = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -13985,6 +13986,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0UI"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VB"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VV"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0W8"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VX"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0W2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
@@ -16999,7 +17001,7 @@ function InitTrig_Auto_Transform()
     TriggerAddAction(gg_trg_Auto_Transform, Trig_Auto_Transform_Actions)
 end
 
-function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func023C()
+function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func025C()
     if (not (udg_StatMultReal > 0.00)) then
         return false
     end
@@ -17070,6 +17072,12 @@ function Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002C()
     if (not (udg_TransformationString ~= "dreamreaper")) then
         return false
     end
+    if (not (udg_TransformationString ~= "teraton arm")) then
+        return false
+    end
+    if (not (udg_TransformationString ~= "crisis arm")) then
+        return false
+    end
     return true
 end
 
@@ -17100,7 +17108,7 @@ function Trig_Auto_Transform_Player_Units_Func002A()
                 udg_TransformationString = udg_TransformationCommands[((udg_MaxTransformationStrings - 1) - udg_LvlUpInt)]
                 if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002C()) then
                     TriggerExecute(gg_trg_Transformations_Parse_String)
-                    if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func023C()) then
+                    if (Trig_Auto_Transform_Player_Units_Func002Func003Func003Func001Func002Func025C()) then
                         udg_TempBool = false
                     else
                     end
@@ -17444,161 +17452,175 @@ function Trig_Base_Armor_Set_Func002C()
     return true
 end
 
+function Trig_Base_Armor_Set_Func003Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit) > 1)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Base_Armor_Set_Func003C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B026")) == true)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit) == 1)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func004C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("BIcb")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02J")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02K")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02L")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02M")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02N")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02O")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02P")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02Q")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func005Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02R")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B026")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func005C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02S")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("BIcb")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B032")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02J")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B033")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02K")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B034")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02L")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B035")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02M")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B036")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02N")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B037")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02O")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B038")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02P")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B039")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02Q")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006Func001C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03A")) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02R")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func006C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B02S")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B032")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B033")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B034")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B035")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B036")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B037")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B038")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B039")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007Func001C()
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03A")) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func007C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03B")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09Y"))) then
         return false
     end
@@ -17611,126 +17633,126 @@ function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Fu
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03Y")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03Z")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B040")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B041")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B042")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B043")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B044")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002Func002C()
+function Trig_Base_Armor_Set_Func008Func002Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B045")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007Func002C()
+function Trig_Base_Armor_Set_Func008Func002C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B046")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func007C()
+function Trig_Base_Armor_Set_Func008C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B047")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func008C()
+function Trig_Base_Armor_Set_Func009C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03F")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func009C()
+function Trig_Base_Armor_Set_Func010C()
     if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func010Func003C()
+function Trig_Base_Armor_Set_Func011Func003C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func010C()
+function Trig_Base_Armor_Set_Func011C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func011C()
+function Trig_Base_Armor_Set_Func012C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func012Func003C()
+function Trig_Base_Armor_Set_Func013Func003C()
     if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func012C()
+function Trig_Base_Armor_Set_Func013C()
     if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
         return false
     end
     return true
 end
 
-function Trig_Base_Armor_Set_Func013C()
+function Trig_Base_Armor_Set_Func014C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
         return false
     end
@@ -17764,41 +17786,49 @@ function Trig_Base_Armor_Set_Actions()
         end
     end
     if (Trig_Base_Armor_Set_Func003C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 3.00)
     else
+        if (Trig_Base_Armor_Set_Func003Func001C()) then
+            udg_BaseArmorReal = (udg_BaseArmorReal + (3.00 + I2R(GetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit))))
+        else
+        end
     end
     if (Trig_Base_Armor_Set_Func004C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
     else
     end
     if (Trig_Base_Armor_Set_Func005C()) then
+        udg_BaseArmorReal = (udg_BaseArmorReal - 5.00)
+    else
+    end
+    if (Trig_Base_Armor_Set_Func006C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
     else
-        if (Trig_Base_Armor_Set_Func005Func001C()) then
+        if (Trig_Base_Armor_Set_Func006Func001C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 9.00)
         else
-            if (Trig_Base_Armor_Set_Func005Func001Func001C()) then
+            if (Trig_Base_Armor_Set_Func006Func001Func001C()) then
                 udg_BaseArmorReal = (udg_BaseArmorReal + 8.00)
             else
-                if (Trig_Base_Armor_Set_Func005Func001Func001Func001C()) then
+                if (Trig_Base_Armor_Set_Func006Func001Func001Func001C()) then
                     udg_BaseArmorReal = (udg_BaseArmorReal + 7.00)
                 else
-                    if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001C()) then
+                    if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001C()) then
                         udg_BaseArmorReal = (udg_BaseArmorReal + 6.00)
                     else
-                        if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001C()) then
+                        if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001C()) then
                             udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
                         else
-                            if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001C()) then
+                            if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001C()) then
                                 udg_BaseArmorReal = (udg_BaseArmorReal + 4.00)
                             else
-                                if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001C()) then
+                                if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001C()) then
                                     udg_BaseArmorReal = (udg_BaseArmorReal + 3.00)
                                 else
-                                    if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                    if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                         udg_BaseArmorReal = (udg_BaseArmorReal + 2.00)
                                     else
-                                        if (Trig_Base_Armor_Set_Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                        if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                             udg_BaseArmorReal = (udg_BaseArmorReal + 1.00)
                                         else
                                         end
@@ -17811,34 +17841,34 @@ function Trig_Base_Armor_Set_Actions()
             end
         end
     end
-    if (Trig_Base_Armor_Set_Func006C()) then
+    if (Trig_Base_Armor_Set_Func007C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
     else
-        if (Trig_Base_Armor_Set_Func006Func001C()) then
+        if (Trig_Base_Armor_Set_Func007Func001C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 4.50)
         else
-            if (Trig_Base_Armor_Set_Func006Func001Func001C()) then
+            if (Trig_Base_Armor_Set_Func007Func001Func001C()) then
                 udg_BaseArmorReal = (udg_BaseArmorReal + 4.00)
             else
-                if (Trig_Base_Armor_Set_Func006Func001Func001Func001C()) then
+                if (Trig_Base_Armor_Set_Func007Func001Func001Func001C()) then
                     udg_BaseArmorReal = (udg_BaseArmorReal + 3.50)
                 else
-                    if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001C()) then
+                    if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001C()) then
                         udg_BaseArmorReal = (udg_BaseArmorReal + 3.00)
                     else
-                        if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001C()) then
+                        if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001C()) then
                             udg_BaseArmorReal = (udg_BaseArmorReal + 2.50)
                         else
-                            if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001C()) then
+                            if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001C()) then
                                 udg_BaseArmorReal = (udg_BaseArmorReal + 2.00)
                             else
-                                if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001C()) then
+                                if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001C()) then
                                     udg_BaseArmorReal = (udg_BaseArmorReal + 1.50)
                                 else
-                                    if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                    if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                         udg_BaseArmorReal = (udg_BaseArmorReal + 1.00)
                                     else
-                                        if (Trig_Base_Armor_Set_Func006Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                        if (Trig_Base_Armor_Set_Func007Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                             udg_BaseArmorReal = (udg_BaseArmorReal + 0.50)
                                         else
                                         end
@@ -17851,47 +17881,47 @@ function Trig_Base_Armor_Set_Actions()
             end
         end
     end
-    if (Trig_Base_Armor_Set_Func007C()) then
+    if (Trig_Base_Armor_Set_Func008C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 20.00)
     else
         udg_BaseArmorTempReal = 18.00
-        if (Trig_Base_Armor_Set_Func007Func002C()) then
+        if (Trig_Base_Armor_Set_Func008Func002C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
         else
             udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-            if (Trig_Base_Armor_Set_Func007Func002Func002C()) then
+            if (Trig_Base_Armor_Set_Func008Func002Func002C()) then
                 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
             else
                 udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                if (Trig_Base_Armor_Set_Func007Func002Func002Func002C()) then
+                if (Trig_Base_Armor_Set_Func008Func002Func002Func002C()) then
                     udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                 else
                     udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                    if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002C()) then
+                    if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002C()) then
                         udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                     else
                         udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                        if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002C()) then
+                        if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002C()) then
                             udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                         else
                             udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                            if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002C()) then
+                            if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002C()) then
                                 udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                             else
                                 udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                                if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002C()) then
+                                if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002C()) then
                                     udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                                 else
                                     udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                                    if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002C()) then
+                                    if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002C()) then
                                         udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                                     else
                                         udg_BaseArmorTempReal = (udg_BaseArmorTempReal - 2.00)
-                                        if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002C()) then
+                                        if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002Func002C()) then
                                             udg_BaseArmorReal = (udg_BaseArmorReal + udg_BaseArmorTempReal)
                                         else
                                             udg_BaseArmorTempReal = 0.00
-                                            if (Trig_Base_Armor_Set_Func007Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()) then
+                                            if (Trig_Base_Armor_Set_Func008Func002Func002Func002Func002Func002Func002Func002Func002Func002Func002C()) then
                                                 udg_BaseArmorReal = (udg_BaseArmorReal + I2R(GetUnitAbilityLevelSwapped(FourCC("A0UT"), udg_StatMultUnit)))
                                             else
                                             end
@@ -17905,39 +17935,39 @@ function Trig_Base_Armor_Set_Actions()
             end
         end
     end
-    if (Trig_Base_Armor_Set_Func008C()) then
+    if (Trig_Base_Armor_Set_Func009C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 7.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func009C()) then
+    if (Trig_Base_Armor_Set_Func010C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func010C()) then
+    if (Trig_Base_Armor_Set_Func011C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func010Func003C()) then
+        if (Trig_Base_Armor_Set_Func011Func003C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
         else
         end
                 udg_ID = old
     else
     end
-    if (Trig_Base_Armor_Set_Func011C()) then
+    if (Trig_Base_Armor_Set_Func012C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
     else
     end
-    if (Trig_Base_Armor_Set_Func012C()) then
+    if (Trig_Base_Armor_Set_Func013C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func012Func003C()) then
+        if (Trig_Base_Armor_Set_Func013Func003C()) then
             udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
         else
         end
                 udg_ID = old
     else
     end
-    if (Trig_Base_Armor_Set_Func013C()) then
+    if (Trig_Base_Armor_Set_Func014C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal * 0.40)
     else
     end
@@ -26480,6 +26510,10 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "dreamreaper"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "doom scythe"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "teraton arm"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "crisis arm"
     udg_TempInt = (udg_TempInt + 1)
     udg_MaxTransformationStrings = udg_TempInt
     udg_TempInt2 = 1
@@ -42392,7 +42426,43 @@ function Trig_Transformations_Robo_Func016C()
     return true
 end
 
-function Trig_Transformations_Robo_Func019Func002Func001C()
+function Trig_Transformations_Robo_Func017C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Robo_Func018C()
+    if (not (udg_TransformationString == "teraton arm")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Robo_Func019C()
+    if (not (udg_TransformationString == "crisis arm")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Robo_Func022Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -42402,14 +42472,14 @@ function Trig_Transformations_Robo_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Robo_Func019Func002C()
-    if (not Trig_Transformations_Robo_Func019Func002Func001C()) then
+function Trig_Transformations_Robo_Func022Func002C()
+    if (not Trig_Transformations_Robo_Func022Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Robo_Func019C()
+function Trig_Transformations_Robo_Func022C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -42439,33 +42509,54 @@ function Trig_Transformations_Robo_Actions()
     end
     if (Trig_Transformations_Robo_Func012C()) then
         udg_StatMultReal = 1.25
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 2)
         udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Robo_Func013C()) then
         udg_StatMultReal = 1.50
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 3)
         udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Robo_Func014C()) then
         udg_StatMultReal = 2.00
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 4)
         udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Robo_Func015C()) then
         udg_StatMultReal = 2.25
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 5)
         udg_TransformationAbility = FourCC("AUan")
     else
     end
     if (Trig_Transformations_Robo_Func016C()) then
         udg_TransformationSFXString = "AuraGray.mdx"
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 6)
         udg_StatMultReal = 2.50
         udg_TransformationAbility = FourCC("AUan")
     else
     end
-        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Robo_Func017C()) then
+        udg_TransformationSFXString = "AuraGray.mdx"
+        SetUnitAbilityLevelSwapped(FourCC("A0W7"), udg_StatMultUnit, 7)
+        udg_StatMultReal = 2.60
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Robo_Func018C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 2)
+    else
+    end
     if (Trig_Transformations_Robo_Func019C()) then
-        if (Trig_Transformations_Robo_Func019Func002C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 3)
+        TriggerRegisterUnitEvent(gg_trg_Crisis_Arm, udg_StatMultUnit, EVENT_UNIT_DAMAGED)
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Robo_Func022C()) then
+        if (Trig_Transformations_Robo_Func022Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A2')
@@ -42481,6 +42572,26 @@ end
 function InitTrig_Transformations_Robo()
     gg_trg_Transformations_Robo = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Robo, Trig_Transformations_Robo_Actions)
+end
+
+function Trig_Crisis_Arm_Func001C()
+    if (not (GetUnitLifePercent(GetTriggerUnit()) >= 50.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Crisis_Arm_Actions()
+    if (Trig_Crisis_Arm_Func001C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 3)
+    else
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 4)
+    end
+end
+
+function InitTrig_Crisis_Arm()
+    gg_trg_Crisis_Arm = CreateTrigger()
+    TriggerAddAction(gg_trg_Crisis_Arm, Trig_Crisis_Arm_Actions)
 end
 
 function Trig_Transformations_Magus_Func010C()
@@ -44537,6 +44648,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Crono()
     InitTrig_Transformations_Frog()
     InitTrig_Transformations_Robo()
+    InitTrig_Crisis_Arm()
     InitTrig_Transformations_Magus()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Buff()

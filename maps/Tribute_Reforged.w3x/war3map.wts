@@ -107416,7 +107416,7 @@ Transformations:
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] [Unlocks Atropos Quest]
+[lvl 200] [Unlocks Atropos Quest] - Reward: Weapon choice "Teraton Arm" or "Crisis Arm"
 }
 
 STRING 16948
@@ -112725,6 +112725,30 @@ STRING 17706
 // Abilities: A0W4 (Elemental Magic), Ubertip (Tooltip - Normal - Extended)
 {
 Magus is a powerful magic user, capable of learning any elemental magic.|n|cff00FF00Gives access to lightning 2, ice 2, fire 2, and water 2|r|n|cff00FFFFCooldown: varies
+}
+
+STRING 17707
+// Abilities: A0W7 (Robo Armor), Name (Name)
+{
+Robo Armor
+}
+
+STRING 17708
+// Abilities: A0W7 (Robo Armor), EditorSuffix (Editor Suffix)
+{
+(robo)
+}
+
+STRING 17709
+// Abilities: A0W8 (Book Robo Passives), Name (Name)
+{
+Book Robo Passives
+}
+
+STRING 17710
+// Abilities: A0W9 (Robo Attack Passive), Name (Name)
+{
+Robo Attack Passive
 }
 
 STRING 17717
