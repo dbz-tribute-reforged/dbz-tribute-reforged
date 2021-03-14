@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id, Globals } from "Common/Constants";
+import { Constants, Id, Globals, BASE_DMG } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -18,6 +18,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { SoundHelper } from "Common/SoundHelper";
+import { DamageData } from "Common/DamageData";
 
 // global?
 export const customPlayers: CustomPlayer[] = [];
@@ -1245,6 +1246,8 @@ export function CustomPlayerTest() {
     SetupDartSpells(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
+    SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SoundHelper.SetupSpellSoundEffects();
     DestroyTimer(GetExpiredTimer());
@@ -2380,6 +2383,175 @@ export function SetupMadnessDebuff(
   });
 }
 
+export function SetupMagusDarkMatter(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const darkMatterDamage: DamageData = new DamageData(
+    BASE_DMG.SPIRIT_BOMB_DPS * 0.1,
+    bj_HEROSTAT_INT,
+    ATTACK_TYPE_HERO,
+    DAMAGE_TYPE_NORMAL, 
+    WEAPON_TYPE_WHOKNOWS
+  );
+  const closenessDamageMult = 1.0;
+  const durationDamageMult = 1.0;
+  const aoe = 750;
+  const angle = 75;
+  const closenessAngle = 90 + 12;
+  const distance = 40;
+  const closenessDistanceMult = -0.25;
+  const maxDuration = 66;
+  const targetPos = new Vector2D();
+  const tmpGroup = CreateGroup();
+  
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.magusDarkMatter) {
+      const caster = GetTriggerUnit();
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const abilityLevel = GetUnitAbilityLevel(caster, spellId);
+      const currentPos = new Vector2D();
+
+      if (customHero) {
+        currentPos.setUnit(caster);
+        let currentTick = 0;
+        TimerStart(CreateTimer(), 0.03, true, () => {
+          if (currentTick >= maxDuration) {
+            DestroyTimer(GetExpiredTimer());
+          } else {
+            const durationRatio = currentTick / Math.max(1, maxDuration);
+            performGroundVortex(
+              customHero,
+              player,
+              abilityLevel,
+              darkMatterDamage,
+              closenessDamageMult,
+              durationDamageMult,
+              aoe,
+              angle,
+              closenessAngle,
+              distance,
+              closenessDistanceMult,
+              durationRatio,
+              currentPos,
+              targetPos,
+              tmpGroup
+            );
+            ++currentTick;
+          }
+        });
+      }
+    }
+  });
+}
+
+export function groundVortexDamageTarget(
+  target: unit,
+  caster: CustomHero,
+  level: number,
+  damage: DamageData,
+  closenessDamageMult: number,
+  closenessRatio: number,
+  durationDamageMult: number,
+  durationRatio: number,
+) {
+  let damageThisTick = level * caster.spellPower * damage.multiplier * 
+    (
+      CustomAbility.BASE_DAMAGE + 
+      GetHeroStatBJ(damage.attribute, caster.unit, true)
+    ) *
+    (
+      (1 + closenessDamageMult * closenessRatio) * 
+      (1 + durationDamageMult * durationRatio)
+    )
+  ;
+
+  UnitDamageTarget(
+    caster.unit, 
+    target,
+    damageThisTick,
+    true,
+    false,
+    damage.attackType,
+    damage.damageType,
+    damage.weaponType
+  );
+}
+
+export function performGroundVortex(
+  caster: CustomHero,
+  casterPlayer: player,
+  level: number,
+  damage: DamageData,
+  closenessDamageMult: number,
+  durationDamageMult: number,
+  aoe: number,
+  angle: number,
+  closenessAngle: number,
+  distance: number,
+  closenessDistanceMult: number,
+  durationRatio: number,
+  currentPos: Vector2D,
+  targetPos: Vector2D,
+  tmpGroup: group
+) {
+  GroupClear(tmpGroup);
+  GroupEnumUnitsInRange(
+    tmpGroup, 
+    currentPos.x, 
+    currentPos.y, 
+    aoe,
+    null
+  );
+
+  // this.currentCoord.setUnit(input.caster.unit);
+  ForGroup(tmpGroup, () => {
+    const target = GetEnumUnit();
+    if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer)) {
+
+      targetPos.setUnit(target);
+      const targetDistance = CoordMath.distance(currentPos, targetPos);
+
+      // closenessRatio = 1 at 0 distance, 0 at max distance
+      const closenessRatio = 1 - (targetDistance / Math.max(1, aoe));
+
+      const projectionAngle = 
+        angle + 
+        (closenessAngle - angle) * closenessRatio + 
+        CoordMath.angleBetweenCoords(currentPos, targetPos);
+      
+      const projectionDistance = 
+        distance + 
+        (closenessDistanceMult * distance) * closenessRatio;
+      
+      targetPos.polarProjectCoords(
+        targetPos, 
+        projectionAngle,
+        projectionDistance
+      );
+
+      PathingCheck.moveGroundUnitToCoord(target, targetPos);
+      groundVortexDamageTarget(
+        target,
+        caster,
+        level,
+        damage,
+        closenessDamageMult,
+        durationDamageMult,
+        closenessRatio,
+        durationRatio
+      );
+    }
+  });
+
+  GroupClear(tmpGroup);
+}
+
+
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
@@ -2434,3 +2606,4 @@ export function createCdTrigger() {
     }
   });
 }
+

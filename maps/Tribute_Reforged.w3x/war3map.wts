@@ -6405,7 +6405,7 @@ Transformations:
 [lvl 50]  1.75x "fp"
 [lvl 75]  2.00x "fp"
 [lvl 125] 2.40x "fp"
-[lvl 300] 2.50x "fp" [Unlocks Spell Immunity]
+[lvl 300] 2.50x "fp"
 }
 
 STRING 1030
@@ -112454,9 +112454,9 @@ Magus Crit Passive
 }
 
 STRING 17661
-// Abilities: A0W0 (Magus Crit Passive), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B04B (), Buffubertip (Tooltip - Extended)
 {
-(frog)
+Magus gains increased attack damage based on his weapon.
 }
 
 STRING 17662
@@ -112584,9 +112584,9 @@ Magus throws a Dark Bomb at the target area, causing it to explode and deal dama
 }
 
 STRING 17683
-// Abilities: A0W3 (Dark Bomb), EditorSuffix (Editor Suffix)
+// Buffs/Effects: B04B (), Bufftip (Tooltip)
 {
-Magus
+Magus' Weapon
 }
 
 STRING 17684
@@ -112749,6 +112749,30 @@ STRING 17710
 // Abilities: A0W9 (Robo Attack Passive), Name (Name)
 {
 Robo Attack Passive
+}
+
+STRING 17711
+// Abilities: A0W0 (Magus Crit Passive), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 17712
+// Abilities: A0W1 (Magus Attack Passive), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 17713
+// Buffs/Effects: B04C (), Buffubertip (Tooltip - Extended)
+{
+Robo gains increased attack damage based on his arm weapon.
+}
+
+STRING 17714
+// Abilities: A0W3 (Dark Bomb), EditorSuffix (Editor Suffix)
+{
+(magus)
 }
 
 STRING 17717
@@ -113037,6 +113061,12 @@ STRING 17761
 [|cff00ff00D|r] Learn Dark Matter - [|cffffcc00Level %d|r]
 }
 
+STRING 17762
+// Buffs/Effects: B04C (), Bufftip (Tooltip)
+{
+Robo Arm
+}
+
 STRING 17763
 // Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
 {
@@ -113065,6 +113095,12 @@ STRING 17767
 // Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Dark Matter - [|cffffcc00Level 6|r]
+}
+
+STRING 17768
+// Abilities: A0W9 (Robo Attack Passive), EditorSuffix (Editor Suffix)
+{
+(robo)
 }
 
 STRING 17773

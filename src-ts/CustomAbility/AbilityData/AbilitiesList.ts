@@ -5410,6 +5410,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.CYCLONE,
     },
     components: [
+      { name: "anim crono cyclone" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
       { name: "sfx crono cyclone" },
@@ -5438,6 +5439,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.SLASH,
     },
     components: [
+      { name: "anim crono slash" },
       { name: "multi crono slash" },
     ],
   },
@@ -5519,6 +5521,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.CLEAVE
     },
     components: [
+      { name: "anim crono cleave" },
       { name: "dash ground target crono cleave" },
       { name: "damage crono cleave explosion" },
       { name: "jump crono cleave" },
@@ -5554,32 +5557,32 @@ export const AbilitiesList = [
       { name: "sfx crono lumi explode" },
     ],
   },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Magus.DARK_BOMB,
-      currentCd: 0,
-      maxCd: 1,
-      costType: "MP",
-      costAmount: 0,
-      duration: 120,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "BTNMagusDarkBomb.blp",
-        disabled: "BTNMagusDarkBomb.blp",
-      },
-      tooltip: {
-        title: AbilityNames.Magus.DARK_BOMB,
-        body: 
-          "spirit bomb stuff"
-      },
-      components: [
-        { name: "beam dark bomb" },
-      ],
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.DARK_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusDarkBomb.blp",
+      disabled: "BTNMagusDarkBomb.blp",
     },
+    tooltip: {
+      title: AbilityNames.Magus.DARK_BOMB,
+      body: 
+        "spirit bomb stuff"
+    },
+    components: [
+      { name: "beam dark bomb" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Magus.MLIGHTNING_2,
@@ -5608,35 +5611,35 @@ export const AbilitiesList = [
       { name: "multi crono lightning 2 outer" },
     ],
   },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Magus.DARK_MATTER,
-      currentCd: 0,
-      maxCd: 1,
-      costType: "MP",
-      costAmount: 0,
-      duration: 70,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "BTNMagusDarkMatter.blp",
-        disabled: "BTNMagusDarkMatter.blp",
-      },
-      tooltip: {
-        title: AbilityNames.Magus.DARK_MATTER,
-        body: 
-          AbilityNames.Magus.DARK_MATTER
-      },
-      components: [
-        { name: "channel caster default" },
-        { name: "damage crono lumi explosion" },
-        { name: "sfx magus matter" },
-        { name: "sfx magus matter explode" },
-      ],
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.DARK_MATTER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusDarkMatter.blp",
+      disabled: "BTNMagusDarkMatter.blp",
     },
+    tooltip: {
+      title: AbilityNames.Magus.DARK_MATTER,
+      body: 
+        AbilityNames.Magus.DARK_MATTER
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage magus dark matter explosion" },
+      { name: "sfx magus dark matter" },
+      { name: "sfx magus dark matter explode" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam

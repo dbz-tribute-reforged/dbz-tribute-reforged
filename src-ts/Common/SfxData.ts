@@ -11,10 +11,12 @@ export class SfxData implements Serializable<SfxData> {
     public repeatInterval: number = 1,
     public group: number = 0,
     public scale: number = 1.0,
+    public endScale: number = -1,
     public startHeight: number = 0.0,
     public endHeight: number = 0.0,
     public extraDirectionalYaw: number = 0.0,
     public extraPitch: number = 0.0,
+    public extraRoll: number = 0.0,
     public animSpeed: number = 1.0, 
     public color: Vector3D = new Vector3D(255, 255, 255),
     public updateCoordsOnly: boolean = false,
@@ -35,9 +37,11 @@ export class SfxData implements Serializable<SfxData> {
     return new SfxData(
       this.model, this.repeatInterval, this.group,
       this.scale, 
+      this.endScale,
       this.startHeight, this.endHeight,
       this.extraDirectionalYaw,
       this.extraPitch,
+      this.extraRoll,
       this.animSpeed,
       this.color,
       this.updateCoordsOnly,
@@ -52,10 +56,12 @@ export class SfxData implements Serializable<SfxData> {
       repeatInterval: number;
       group: number;
       scale: number;
+      endScale: number;
       startHeight: number;
       endHeight: number;
       extraDirectionalYaw: number;
       extraPitch: number;
+      extraRoll: number;
       animSpeed: number;
       color: {
         x: number,
@@ -71,10 +77,12 @@ export class SfxData implements Serializable<SfxData> {
     this.repeatInterval = input.repeatInterval;
     this.group = input.group;
     this.scale = input.scale;
+    this.endScale = input.endScale;
     this.startHeight = input.startHeight;
     this.endHeight = input.endHeight;
     this.extraDirectionalYaw = input.extraDirectionalYaw;
     this.extraPitch = input.extraPitch;
+    this.extraRoll = input.extraRoll;
     this.animSpeed = input.animSpeed;
     this.color = new Vector3D().deserialize(input.color);
     this.updateCoordsOnly = input.updateCoordsOnly;

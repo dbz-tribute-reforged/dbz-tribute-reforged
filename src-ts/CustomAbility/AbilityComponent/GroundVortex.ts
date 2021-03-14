@@ -41,15 +41,21 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
   }
 
   private dealDamageToUnit(ability: CustomAbility, input: CustomAbilityInput, target: unit, closenessRatio: number): this {
-    const damageThisTick = 
+    let damageThisTick = 
       input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
+        GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true)
+      ) *
+      (
         (1 + this.closenessDamageMult * closenessRatio) * 
-        (1 + this.durationDamageMult * ability.currentTick / ability.duration) * 
-        GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true
+        (1 + this.durationDamageMult * ability.currentTick / Math.max(1, ability.duration))
       )
-    );
+    ;
+
+    if (input.damageMult) {
+      damageThisTick *= input.damageMult;
+    }
 
     UnitDamageTarget(
       input.caster.unit, 
@@ -66,6 +72,8 @@ export class GroundVortex implements AbilityComponent, Serializable<GroundVortex
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     this.currentCoord.setUnit(source);
+    
+    GroupClear(this.affectedGroup);
     GroupEnumUnitsInRange(
       this.affectedGroup, 
       this.currentCoord.x, 

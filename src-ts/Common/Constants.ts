@@ -66,6 +66,15 @@ export module Constants {
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 }
   
+export module BASE_DMG {
+  export const KAME_DPS = 0.0115;
+  export const KAME_EXPLOSION = 0.053;
+  export const SPIRIT_BOMB_DPS = 0.0075;
+  export const SPIRIT_BOMB_EXPLOSION = 0.25;
+  export const DFIST_DPS = 0.013;
+  export const DFIST_EXPLOSION = 0.25;
+}
+
 export module Id {
   export const summonShenron = FourCC("I01V");
 

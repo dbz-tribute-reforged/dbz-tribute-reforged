@@ -231,6 +231,7 @@ udg_IchigoMugetsuUnitGroup = nil
 udg_IsFBSimTest = false
 udg_TempReal5 = 0.0
 udg_BaseArmorTempReal = 0.0
+udg_MagusDoomScytheUnitGroup = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -446,6 +447,11 @@ gg_trg_Dart_Feld_Spell_Charges = nil
 gg_trg_CronoCyclone = nil
 gg_trg_CronoCleave = nil
 gg_trg_Crono_Slash = nil
+gg_trg_Doom_Scythe_Trigger = nil
+gg_trg_Doom_Scythe_Loop = nil
+gg_trg_Magus_Spell_Book = nil
+gg_trg_Doom_Scythe_Buff = nil
+gg_trg_Doom_Scythe_Test = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
 gg_trg_Cam_Dist = nil
@@ -812,11 +818,8 @@ gg_trg_Transformations_Rust_Tyranno = nil
 gg_trg_Transformations_Crono = nil
 gg_trg_Transformations_Frog = nil
 gg_trg_Transformations_Robo = nil
+gg_trg_Crisis_Arm = nil
 gg_trg_Transformations_Magus = nil
-gg_trg_Doom_Scythe_Trigger = nil
-gg_trg_Doom_Scythe_Buff = nil
-gg_trg_Magus_Spell_Book = nil
-gg_trg_Doom_Scythe_Test = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -845,7 +848,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Crisis_Arm = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1155,6 +1157,7 @@ function InitGlobals()
     udg_IsFBSimTest = false
     udg_TempReal5 = 0.0
     udg_BaseArmorTempReal = 0.0
+    udg_MagusDoomScytheUnitGroup = CreateGroup()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -1319,11 +1322,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2845)
+    SetSoundDuration(gg_snd_Hint, 2005)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2954)
+    SetSoundDuration(gg_snd_GoodJob, 2548)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -3187,6 +3190,8 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H0A1"), 1041.8, 21185.5, 269.901, FourCC("H0A1"))
     u = BlzCreateUnitWithSkin(p, FourCC("H0A2"), 959.7, 21294.7, 276.919, FourCC("H0A2"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H0A3"), -227.5, 21512.6, 275.847, FourCC("H0A3"))
+    SetUnitState(u, UNIT_STATE_MANA, 650)
 end
 
 function CreatePlayerBuildings()
@@ -12687,67 +12692,173 @@ function InitTrig_Dart_Feld_Spell_Charges()
     TriggerAddAction(gg_trg_Dart_Feld_Spell_Charges, Trig_Dart_Feld_Spell_Charges_Actions)
 end
 
-function Trig_CronoCyclone_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0VP"))) then
+function Trig_Doom_Scythe_Trigger_Conditions()
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
+        return false
+    end
+    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
+        return false
+    end
+    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_HeavenZone, GetDyingUnit()) == false)) then
+        return false
+    end
+    if (not (RectContainsUnit(gg_rct_HellZone, GetDyingUnit()) == false)) then
+        return false
+    end
+    if (not (IsUnitInGroup(GetDyingUnit(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit()))]) == true)) then
         return false
     end
     return true
 end
 
-function Trig_CronoCyclone_Actions()
-    AddUnitAnimationPropertiesBJ(true, "alternate", GetTriggerUnit())
-    TriggerSleepAction(3.00)
-    AddUnitAnimationPropertiesBJ(false, "alternate", GetTriggerUnit())
-end
-
-function InitTrig_CronoCyclone()
-    gg_trg_CronoCyclone = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_CronoCyclone, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_CronoCyclone, Condition(Trig_CronoCyclone_Conditions))
-    TriggerAddAction(gg_trg_CronoCyclone, Trig_CronoCyclone_Actions)
-end
-
-function Trig_CronoCleave_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0VT"))) then
+function Trig_Doom_Scythe_Trigger_Func002Func001Func001Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) == 2)) then
         return false
     end
     return true
 end
 
-function Trig_CronoCleave_Actions()
-    udg_TempLoc = GetSpellTargetLoc()
-    IssuePointOrderLocBJ(GetTriggerUnit(), "move", udg_TempLoc)
-    SetUnitAnimation(GetTriggerUnit(), "spell throw")
-        RemoveLocation(udg_TempLoc)
-end
-
-function InitTrig_CronoCleave()
-    gg_trg_CronoCleave = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_CronoCleave, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_CronoCleave, Condition(Trig_CronoCleave_Conditions))
-    TriggerAddAction(gg_trg_CronoCleave, Trig_CronoCleave_Actions)
-end
-
-function Trig_Crono_Slash_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0VQ"))) then
+function Trig_Doom_Scythe_Trigger_Func002Func001Func001Func003C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) < 6)) then
         return false
     end
     return true
 end
 
-function Trig_Crono_Slash_Actions()
-    SetUnitAnimation(GetTriggerUnit(), "attack")
-    TriggerSleepAction(0.24)
-    SetUnitAnimation(GetTriggerUnit(), "attack")
-    TriggerSleepAction(0.24)
-    SetUnitAnimation(GetTriggerUnit(), "attack")
+function Trig_Doom_Scythe_Trigger_Func002Func001Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H0A3"))) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), GetEnumUnit()) >= 2)) then
+        return false
+    end
+    if (not (GetEnumPlayer() ~= GetTriggerPlayer())) then
+        return false
+    end
+    return true
 end
 
-function InitTrig_Crono_Slash()
-    gg_trg_Crono_Slash = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Crono_Slash, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Crono_Slash, Condition(Trig_Crono_Slash_Conditions))
-    TriggerAddAction(gg_trg_Crono_Slash, Trig_Crono_Slash_Actions)
+function Trig_Doom_Scythe_Trigger_Func002Func001A()
+    if (Trig_Doom_Scythe_Trigger_Func002Func001Func001C()) then
+        udg_TempUnit = GetEnumUnit()
+        if (Trig_Doom_Scythe_Trigger_Func002Func001Func001Func002C()) then
+                        udg_ID = GetHandleId(udg_TempUnit)
+            SaveIntegerBJ(udg_TempInt, 0, udg_ID, udg_SummonsHashtable)
+            AddSpecialEffectTargetUnitBJ("origin", udg_TempUnit, "AuraKaox10.mdx")
+            SaveEffectHandleBJ(GetLastCreatedEffectBJ(), 1, udg_ID, udg_SummonsHashtable)
+        else
+        end
+        if (Trig_Doom_Scythe_Trigger_Func002Func001Func001Func003C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit, (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) + 1))
+        else
+        end
+        GroupAddUnitSimple(udg_TempUnit, udg_MagusDoomScytheUnitGroup)
+        EnableTrigger(gg_trg_Doom_Scythe_Loop)
+    else
+    end
+end
+
+function Trig_Doom_Scythe_Trigger_Func002A()
+    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Doom_Scythe_Trigger_Func002Func001A)
+end
+
+function Trig_Doom_Scythe_Trigger_Actions()
+    udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
+    ForForce(udg_TempPlayerGroup, Trig_Doom_Scythe_Trigger_Func002A)
+        DestroyForce(udg_TempPlayerGroup)
+end
+
+function InitTrig_Doom_Scythe_Trigger()
+    gg_trg_Doom_Scythe_Trigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Doom_Scythe_Trigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddCondition(gg_trg_Doom_Scythe_Trigger, Condition(Trig_Doom_Scythe_Trigger_Conditions))
+    TriggerAddAction(gg_trg_Doom_Scythe_Trigger, Trig_Doom_Scythe_Trigger_Actions)
+end
+
+function Trig_Doom_Scythe_Loop_Func001Func005Func003C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) > 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Doom_Scythe_Loop_Func001Func005Func004C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) == 2)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Doom_Scythe_Loop_Func001Func005C()
+    if (not (udg_TempInt > 333)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Doom_Scythe_Loop_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
+        udg_ID = GetHandleId(udg_TempUnit)
+    udg_TempInt = (LoadIntegerBJ(0, udg_ID, udg_SummonsHashtable) + 1)
+    if (Trig_Doom_Scythe_Loop_Func001Func005C()) then
+        udg_TempInt = 0
+        if (Trig_Doom_Scythe_Loop_Func001Func005Func003C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit, (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) - 1))
+        else
+        end
+        if (Trig_Doom_Scythe_Loop_Func001Func005Func004C()) then
+            udg_TempSpecialEffect = LoadEffectHandleBJ(1, udg_ID, udg_SummonsHashtable)
+            DestroyEffectBJ(udg_TempSpecialEffect)
+            GroupRemoveUnitSimple(udg_TempUnit, udg_MagusDoomScytheUnitGroup)
+        else
+        end
+    else
+    end
+    SaveIntegerBJ(udg_TempInt, 0, udg_ID, udg_SummonsHashtable)
+end
+
+function Trig_Doom_Scythe_Loop_Func002C()
+    if (not (CountUnitsInGroup(udg_MagusDoomScytheUnitGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Doom_Scythe_Loop_Actions()
+    ForGroupBJ(udg_IchigoMugetsuUnitGroup, Trig_Doom_Scythe_Loop_Func001A)
+    if (Trig_Doom_Scythe_Loop_Func002C()) then
+        DisableTrigger(GetTriggeringTrigger())
+    else
+    end
+end
+
+function InitTrig_Doom_Scythe_Loop()
+    gg_trg_Doom_Scythe_Loop = CreateTrigger()
+    DisableTrigger(gg_trg_Doom_Scythe_Loop)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Doom_Scythe_Loop, 0.03)
+    TriggerAddAction(gg_trg_Doom_Scythe_Loop, Trig_Doom_Scythe_Loop_Actions)
+end
+
+function Trig_Magus_Spell_Book_Conditions()
+    if (not (GetLearnedSkillBJ() == FourCC("A0W4"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spell_Book_Actions()
+    SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit()))
+end
+
+function InitTrig_Magus_Spell_Book()
+    gg_trg_Magus_Spell_Book = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Magus_Spell_Book, EVENT_PLAYER_HERO_SKILL)
+    TriggerAddCondition(gg_trg_Magus_Spell_Book, Condition(Trig_Magus_Spell_Book_Conditions))
+    TriggerAddAction(gg_trg_Magus_Spell_Book, Trig_Magus_Spell_Book_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -19422,6 +19533,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A3"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A2"))) then
         return false
@@ -19671,6 +19789,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                 if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001C()) then
                                     udg_TempString = "BTNRobo.blp"
                                 else
+                                    if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                        udg_TempString = "BTNMagus.blp"
+                                    else
+                                    end
                                 end
                             end
                         end
@@ -21611,6 +21733,8 @@ function Trig_Hero_Pick_Secret_Heroes_Actions()
         TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Old_Krillin_Code_Pick, udg_TempPlayer, udg_TempString, true)
         TriggerExecute(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Generate)
         TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Rust_Tyranno_Pick, udg_TempPlayer, udg_TempString, true)
+        TriggerExecute(gg_trg_Hero_Pick_Secret_Magus_Generate)
+        TriggerRegisterPlayerChatEvent(gg_trg_Hero_Pick_Secret_Magus_Pick, udg_TempPlayer, udg_TempString, true)
         udg_TempInt = udg_TempInt + 1
     end
 end
@@ -22190,6 +22314,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H09Z")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
+    udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H0A3")
+    udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
     udg_NumAvailableHeroes = 0
     udg_TempInt = 0
     while (true) do
@@ -22522,18 +22648,21 @@ function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func004C()
     return true
 end
 
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func002C()
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func001C()
     if (not (udg_RandomHeroSkipNum <= 0)) then
         return false
     end
     return true
 end
 
-function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()
+function Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008C()
+    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+        return false
+    end
     if (not (udg_HeroPickUnitType ~= FourCC("H09Z"))) then
         return false
     end
-    if (not (LoadIntegerBJ(0, udg_HeroAvailabilityKey, udg_HeroAvailabilityHashtable[udg_TempInt]) > 0)) then
+    if (not (udg_HeroPickUnitType ~= FourCC("H0A3"))) then
         return false
     end
     return true
@@ -22585,8 +22714,8 @@ function Trig_Hero_Pick_Give_Random_Hero_to_Player_Actions()
                         while (udg_RandomHeroCounter < udg_RandomHeroMaxCounter) do
             udg_HeroPickUnitType = udg_AvailableHeroTypesArray[ModuloInteger((udg_RandomHeroIndex + udg_RandomHeroCounter), udg_NumAvailableHeroes)]
                         udg_HeroAvailabilityKey = udg_HeroPickUnitType
-            if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007C()) then
-                if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func007Func002C()) then
+            if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008C()) then
+                if (Trig_Hero_Pick_Give_Random_Hero_to_Player_Func009Func001Func008Func001C()) then
                     CreateNUnitsAtLoc(1, udg_HeroPickUnitType, ConvertedPlayer(udg_TempInt), udg_TempLoc, bj_UNIT_FACING)
                     udg_RandomHeroCounter = udg_RandomHeroMaxCounter
                     udg_TempBool = true
@@ -26373,6 +26502,14 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "-hs"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "super"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "release"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "metal"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "upg"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "god kame"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "super dfist"
@@ -26400,6 +26537,18 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "ultra volleyball"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "super ghost x10"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "majin strength"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "majin hatred"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "dreamreaper"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "doom scythe"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "teraton arm"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommands[udg_TempInt] = "crisis arm"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "r"
     udg_TempInt = (udg_TempInt + 1)
@@ -26469,10 +26618,6 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "rage"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "majin strength"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "majin hatred"
-    udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "ssg"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "omega"
@@ -26498,22 +26643,6 @@ function Trig_Transformations_Init_Commands_Actions()
     udg_TransformationCommands[udg_TempInt] = "cell-x"
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommands[udg_TempInt] = "final shikai"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "super"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "release"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "metal"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "upg"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "dreamreaper"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "doom scythe"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "teraton arm"
-    udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommands[udg_TempInt] = "crisis arm"
     udg_TempInt = (udg_TempInt + 1)
     udg_MaxTransformationStrings = udg_TempInt
     udg_TempInt2 = 1
@@ -41845,16 +41974,6 @@ function Trig_Transformations_Rust_Tyranno_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Rust_Tyranno_Func019Func002Func004C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VK"), udg_StatMultUnit) == 0)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Transformations_Rust_Tyranno_Func019Func002C()
     if (not Trig_Transformations_Rust_Tyranno_Func019Func002Func001C()) then
         return false
@@ -41920,11 +42039,6 @@ function Trig_Transformations_Rust_Tyranno_Actions()
         if (Trig_Transformations_Rust_Tyranno_Func019Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            if (Trig_Transformations_Rust_Tyranno_Func019Func002Func004C()) then
-                UnitAddAbilityBJ(FourCC("A0VK"), udg_StatMultUnit)
-                                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0VK'))
-            else
-            end
                         udg_TransformationID = FourCC('H09Z')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
         else
@@ -42005,16 +42119,6 @@ function Trig_Transformations_Crono_Func016C()
 end
 
 function Trig_Transformations_Crono_Func017C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit) == 1)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Crono_Func018C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
         return false
     end
@@ -42022,6 +42126,16 @@ function Trig_Transformations_Crono_Func018C()
         return false
     end
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0VS"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Crono_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit) == 1)) then
         return false
     end
     return true
@@ -42099,16 +42213,16 @@ function Trig_Transformations_Crono_Actions()
     else
     end
     if (Trig_Transformations_Crono_Func017C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit, 2)
-    else
-    end
-    if (Trig_Transformations_Crono_Func018C()) then
         UnitAddAbilityBJ(FourCC("A0VS"), udg_StatMultUnit)
         SetUnitAbilityLevelSwapped(FourCC("A0VS"), udg_StatMultUnit, 10)
                 UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0VS'))
         UnitRemoveAbilityBJ(FourCC("A0VR"), udg_StatMultUnit)
         SetPlayerAbilityAvailableBJ(true, FourCC("A0VS"), udg_TransformationPlayer)
         SetPlayerAbilityAvailableBJ(false, FourCC("A0VR"), udg_TransformationPlayer)
+    else
+    end
+    if (Trig_Transformations_Crono_Func018C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0VW"), udg_StatMultUnit, 2)
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
@@ -42215,41 +42329,29 @@ function Trig_Transformations_Frog_Func020Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Frog_Func020Func002Func004C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 3)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Frog_Func020Func002Func005C()
+function Trig_Transformations_Frog_Func020Func002Func004Func001Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 1)) then
-        return false
-    end
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002Func006C()
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit) == 2)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Transformations_Frog_Func020Func002Func007C()
+function Trig_Transformations_Frog_Func020Func002Func004Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit) == 2)) then
+    return true
+end
+
+function Trig_Transformations_Frog_Func020Func002Func004Func001C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frog_Func020Func002Func004C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
@@ -42332,20 +42434,23 @@ function Trig_Transformations_Frog_Actions()
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
             if (Trig_Transformations_Frog_Func020Func002Func004C()) then
                 SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 4)
-            else
-            end
-            if (Trig_Transformations_Frog_Func020Func002Func005C()) then
-                SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 2)
-                SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
-            else
-            end
-            if (Trig_Transformations_Frog_Func020Func002Func006C()) then
                 SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 3)
             else
-            end
-            if (Trig_Transformations_Frog_Func020Func002Func007C()) then
-                SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
-            else
+                if (Trig_Transformations_Frog_Func020Func002Func004Func001C()) then
+                    SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
+                    SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 3)
+                else
+                    if (Trig_Transformations_Frog_Func020Func002Func004Func001Func001C()) then
+                        SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
+                        SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
+                    else
+                        if (Trig_Transformations_Frog_Func020Func002Func004Func001Func001Func001C()) then
+                            SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 2)
+                            SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
+                        else
+                        end
+                    end
+                end
             end
                         udg_TransformationID = FourCC('H0A1')
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
@@ -42436,23 +42541,34 @@ function Trig_Transformations_Robo_Func017C()
     return true
 end
 
-function Trig_Transformations_Robo_Func018C()
+function Trig_Transformations_Robo_Func018Func001C()
     if (not (udg_TransformationString == "teraton arm")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit) == 1)) then
-        return false
-    end
     return true
 end
 
-function Trig_Transformations_Robo_Func019C()
+function Trig_Transformations_Robo_Func018Func002C()
     if (not (udg_TransformationString == "crisis arm")) then
         return false
     end
+    return true
+end
+
+function Trig_Transformations_Robo_Func018Func003C()
+    if (udg_TransformationString == "teraton arm") then
+        return true
+    end
+    if (udg_TransformationString == "crisis arm") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Robo_Func018C()
+    if (not Trig_Transformations_Robo_Func018Func003C()) then
+        return false
+    end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
@@ -42462,7 +42578,7 @@ function Trig_Transformations_Robo_Func019C()
     return true
 end
 
-function Trig_Transformations_Robo_Func022Func002Func001C()
+function Trig_Transformations_Robo_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -42472,14 +42588,14 @@ function Trig_Transformations_Robo_Func022Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Robo_Func022Func002C()
-    if (not Trig_Transformations_Robo_Func022Func002Func001C()) then
+function Trig_Transformations_Robo_Func021Func002C()
+    if (not Trig_Transformations_Robo_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Robo_Func022C()
+function Trig_Transformations_Robo_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -42546,17 +42662,20 @@ function Trig_Transformations_Robo_Actions()
     else
     end
     if (Trig_Transformations_Robo_Func018C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 2)
-    else
-    end
-    if (Trig_Transformations_Robo_Func019C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 3)
-        TriggerRegisterUnitEvent(gg_trg_Crisis_Arm, udg_StatMultUnit, EVENT_UNIT_DAMAGED)
+        if (Trig_Transformations_Robo_Func018Func001C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 2)
+        else
+        end
+        if (Trig_Transformations_Robo_Func018Func002C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 3)
+            TriggerRegisterUnitEvent(gg_trg_Crisis_Arm, udg_StatMultUnit, EVENT_UNIT_DAMAGED)
+        else
+        end
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Robo_Func022C()) then
-        if (Trig_Transformations_Robo_Func022Func002C()) then
+    if (Trig_Transformations_Robo_Func021C()) then
+        if (Trig_Transformations_Robo_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A2')
@@ -42574,18 +42693,19 @@ function InitTrig_Transformations_Robo()
     TriggerAddAction(gg_trg_Transformations_Robo, Trig_Transformations_Robo_Actions)
 end
 
-function Trig_Crisis_Arm_Func001C()
-    if (not (GetUnitLifePercent(GetTriggerUnit()) >= 50.00)) then
+function Trig_Crisis_Arm_Func002C()
+    if (not (GetUnitLifePercent(udg_TempUnit) >= 50.00)) then
         return false
     end
     return true
 end
 
 function Trig_Crisis_Arm_Actions()
-    if (Trig_Crisis_Arm_Func001C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 3)
+    udg_TempUnit = GetTriggerUnit()
+    if (Trig_Crisis_Arm_Func002C()) then
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_TempUnit, 3)
     else
-        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_StatMultUnit, 4)
+        SetUnitAbilityLevelSwapped(FourCC("A0W9"), udg_TempUnit, 4)
     end
 end
 
@@ -42658,39 +42778,47 @@ function Trig_Transformations_Magus_Func016C()
     return true
 end
 
-function Trig_Transformations_Magus_Func017C()
+function Trig_Transformations_Magus_Func017Func001C()
     if (not (udg_TransformationString == "doom scythe")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W0"), udg_StatMultUnit) == 1)) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_StatMultUnit) == 1)) then
-        return false
-    end
     return true
 end
 
-function Trig_Transformations_Magus_Func018C()
+function Trig_Transformations_Magus_Func017Func002C()
     if (not (udg_TransformationString == "dreamreaper")) then
         return false
     end
-    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+    return true
+end
+
+function Trig_Transformations_Magus_Func017Func003C()
+    if (udg_TransformationString == "doom scythe") then
+        return true
+    end
+    if (udg_TransformationString == "dreamreaper") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Magus_Func017C()
+    if (not Trig_Transformations_Magus_Func017Func003C()) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_StatMultUnit) == 1)) then
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
         return false
     end
     if (not (GetUnitAbilityLevelSwapped(FourCC("A0W0"), udg_StatMultUnit) == 1)) then
         return false
     end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_StatMultUnit) == 1)) then
+        return false
+    end
     return true
 end
 
-function Trig_Transformations_Magus_Func021Func002Func001C()
+function Trig_Transformations_Magus_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -42700,14 +42828,14 @@ function Trig_Transformations_Magus_Func021Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Magus_Func021Func002C()
-    if (not Trig_Transformations_Magus_Func021Func002Func001C()) then
+function Trig_Transformations_Magus_Func020Func002C()
+    if (not Trig_Transformations_Magus_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Magus_Func021C()
+function Trig_Transformations_Magus_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -42762,18 +42890,21 @@ function Trig_Transformations_Magus_Actions()
     else
     end
     if (Trig_Transformations_Magus_Func017C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_StatMultUnit, 2)
-        AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
-    else
-    end
-    if (Trig_Transformations_Magus_Func018C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W0"), udg_StatMultUnit, 2)
-        AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
+        if (Trig_Transformations_Magus_Func017Func001C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_StatMultUnit, 2)
+            AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
+        else
+        end
+        if (Trig_Transformations_Magus_Func017Func002C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0W0"), udg_StatMultUnit, 2)
+            AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
+        else
+        end
     else
     end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Magus_Func021C()) then
-        if (Trig_Transformations_Magus_Func021Func002C()) then
+    if (Trig_Transformations_Magus_Func020C()) then
+        if (Trig_Transformations_Magus_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A3')
@@ -42789,112 +42920,6 @@ end
 function InitTrig_Transformations_Magus()
     gg_trg_Transformations_Magus = CreateTrigger()
     TriggerAddAction(gg_trg_Transformations_Magus, Trig_Transformations_Magus_Actions)
-end
-
-function Trig_Doom_Scythe_Trigger_Conditions()
-    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true)) then
-        return false
-    end
-    if (not (IsPlayerInForce(GetOwningPlayer(GetDyingUnit()), udg_ActivePlayerGroup) == true)) then
-        return false
-    end
-    if (not (IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == false)) then
-        return false
-    end
-    if (not (IsUnitInGroup(GetDyingUnit(), udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(GetDyingUnit()))]) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Doom_Scythe_Trigger_Func002Func001Func001C()
-    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("H0A3"))) then
-        return false
-    end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), GetEnumUnit()) >= 2)) then
-        return false
-    end
-    if (not (GetEnumPlayer() ~= GetTriggerPlayer())) then
-        return false
-    end
-    return true
-end
-
-function Trig_Doom_Scythe_Trigger_Func002Func001A()
-    if (Trig_Doom_Scythe_Trigger_Func002Func001Func001C()) then
-        udg_TempUnit = GetEnumUnit()
-        TriggerExecute(gg_trg_Doom_Scythe_Buff)
-    else
-    end
-end
-
-function Trig_Doom_Scythe_Trigger_Func002A()
-    ForGroupBJ(udg_StatMultPlayerUnits[GetConvertedPlayerId(GetEnumPlayer())], Trig_Doom_Scythe_Trigger_Func002Func001A)
-end
-
-function Trig_Doom_Scythe_Trigger_Actions()
-    udg_TempPlayerGroup = GetPlayersAllies(GetTriggerPlayer())
-    ForForce(udg_TempPlayerGroup, Trig_Doom_Scythe_Trigger_Func002A)
-        DestroyForce(udg_TempPlayerGroup)
-end
-
-function InitTrig_Doom_Scythe_Trigger()
-    gg_trg_Doom_Scythe_Trigger = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Doom_Scythe_Trigger, EVENT_PLAYER_UNIT_DEATH)
-    TriggerAddCondition(gg_trg_Doom_Scythe_Trigger, Condition(Trig_Doom_Scythe_Trigger_Conditions))
-    TriggerAddAction(gg_trg_Doom_Scythe_Trigger, Trig_Doom_Scythe_Trigger_Actions)
-end
-
-function Trig_Doom_Scythe_Buff_Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) < 6)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Doom_Scythe_Buff_Func005C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) > 2)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Doom_Scythe_Buff_Actions()
-    if (Trig_Doom_Scythe_Buff_Func001C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit, (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) + 1))
-    else
-    end
-        local u = udg_TempUnit
-    TriggerSleepAction(10.00)
-        udg_TempUnit = u
-    if (Trig_Doom_Scythe_Buff_Func005C()) then
-        SetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit, (GetUnitAbilityLevelSwapped(FourCC("A0W1"), udg_TempUnit) - 1))
-    else
-    end
-        u = null
-end
-
-function InitTrig_Doom_Scythe_Buff()
-    gg_trg_Doom_Scythe_Buff = CreateTrigger()
-    TriggerAddAction(gg_trg_Doom_Scythe_Buff, Trig_Doom_Scythe_Buff_Actions)
-end
-
-function Trig_Magus_Spell_Book_Conditions()
-    if (not (GetLearnedSkillBJ() == FourCC("A0W4"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Magus_Spell_Book_Actions()
-    SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit()))
-end
-
-function InitTrig_Magus_Spell_Book()
-    gg_trg_Magus_Spell_Book = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Magus_Spell_Book, EVENT_PLAYER_HERO_SKILL)
-    TriggerAddCondition(gg_trg_Magus_Spell_Book, Condition(Trig_Magus_Spell_Book_Conditions))
-    TriggerAddAction(gg_trg_Magus_Spell_Book, Trig_Magus_Spell_Book_Actions)
 end
 
 function Trig_Saga_Unit_Init_Conditions()
@@ -44306,9 +44331,9 @@ function InitCustomTriggers()
     InitTrig_Ichigo_Getsuga_Auto_Level()
     InitTrig_Dart_Feld_Skill_Upg()
     InitTrig_Dart_Feld_Spell_Charges()
-    InitTrig_CronoCyclone()
-    InitTrig_CronoCleave()
-    InitTrig_Crono_Slash()
+    InitTrig_Doom_Scythe_Trigger()
+    InitTrig_Doom_Scythe_Loop()
+    InitTrig_Magus_Spell_Book()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()
@@ -44650,9 +44675,6 @@ function InitCustomTriggers()
     InitTrig_Transformations_Robo()
     InitTrig_Crisis_Arm()
     InitTrig_Transformations_Magus()
-    InitTrig_Doom_Scythe_Trigger()
-    InitTrig_Doom_Scythe_Buff()
-    InitTrig_Magus_Spell_Book()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()

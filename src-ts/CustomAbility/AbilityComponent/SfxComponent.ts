@@ -136,10 +136,12 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         repeatInterval: number;
         group: number;
         scale: number;
+        endScale: number;
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        extraRoll: number;
         animSpeed: number;
         color: {
           x: number,
@@ -155,10 +157,12 @@ export class SfxComponent implements AbilityComponent, Serializable<SfxComponent
         repeatInterval: number;
         group: number;
         scale: number;
+        endScale: number;
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        extraRoll: number;
         animSpeed: number;
         color: {
           x: number,

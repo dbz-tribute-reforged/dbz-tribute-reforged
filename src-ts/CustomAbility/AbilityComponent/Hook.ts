@@ -253,10 +253,12 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
         repeatInterval: number;
         group: number;
         scale: number;
+        endScale: number;
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        extraRoll: number;
         animSpeed: number;
         color: {
           x: number,

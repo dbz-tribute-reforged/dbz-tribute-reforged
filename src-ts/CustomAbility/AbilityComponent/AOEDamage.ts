@@ -160,6 +160,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     //   this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
     // );
 
+    GroupClear(this.damagedGroup);
     GroupEnumUnitsInRange(
       this.damagedGroup, 
       this.damageCoords.x, 

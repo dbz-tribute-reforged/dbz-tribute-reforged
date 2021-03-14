@@ -1,4 +1,4 @@
-import { BASE } from "./AOEDamageComponents";
+import { BASE_DMG } from "Common/Constants";
 
 export const HookComponents = [
   {
@@ -7,7 +7,7 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 1.0,  
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 1.0,  
       attribute: bj_HEROSTAT_STR, 
       attackType: 6,
       damageType: 4, 
@@ -24,10 +24,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 3.5,
+        endScale: -1,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -43,10 +45,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 3.7,
+        endScale: -1,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -62,10 +66,12 @@ export const HookComponents = [
         repeatInterval: 3,
         group: 0,
         scale: 1,
+        endScale: -1,
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 205,
@@ -85,7 +91,7 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.45,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_AGI, 
       attackType: 6,
       damageType: 4, 
@@ -102,10 +108,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 3.5,
+        endScale: -1,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -121,10 +129,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 3.7,
+        endScale: -1,
         startHeight: 75,
         endHeight: 75,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -140,10 +150,12 @@ export const HookComponents = [
         repeatInterval: 2,
         group: 0,
         scale: 0.75,
+        endScale: -1,
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -163,7 +175,7 @@ export const HookComponents = [
     startTick: 0, 
     endTick: -1,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.75,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.75,
       attribute: bj_HEROSTAT_STR, 
       attackType: 6,
       damageType: 4, 
@@ -180,10 +192,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 2.0,
+        endScale: -1,
         startHeight: 300,
         endHeight: 300,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -199,10 +213,12 @@ export const HookComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.0,
+        endScale: -1,
         startHeight: 300,
         endHeight: 300,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
