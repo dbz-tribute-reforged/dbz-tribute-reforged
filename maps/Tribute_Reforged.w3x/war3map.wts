@@ -112775,6 +112775,18 @@ STRING 17714
 (magus)
 }
 
+STRING 17715
+// Doodads: D01U (ToPSkybox), Name (Name)
+{
+ToPSkybox
+}
+
+STRING 17716
+// Doodads: D01V (Lookout Tiles), Name (Name)
+{
+Lookout Tiles
+}
+
 STRING 17717
 // Abilities: A0W4 (Elemental Magic), EditorSuffix (Editor Suffix)
 {
@@ -113041,6 +113053,12 @@ STRING 17757
 // Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Dark Matter- [|cffffcc00Level 1|r]
+}
+
+STRING 17758
+// Doodads: D01W (ToPSkybox), Name (Name)
+{
+ToPSkybox
 }
 
 STRING 17759
