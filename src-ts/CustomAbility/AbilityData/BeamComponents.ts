@@ -3574,7 +3574,7 @@ export const BeamComponents = [
       },
       isTracking: false,
       isFixedAngle: false,
-      canClashWithHero: true,
+      canClashWithHero: false,
       useLastCastPoint: true,
       explodeOnDeath: true,
       explodeAtCastPoint: true,

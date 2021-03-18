@@ -15562,7 +15562,7 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
-        model: "KameBase.mdl",
+        model: "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl",
         repeatInterval: 1,
         group: 0,
         scale: 2.2,
@@ -15572,7 +15572,7 @@ export const SfxComponents = [
         extraDirectionalYaw: 0,
         extraPitch: 0,
         extraRoll: 0,
-        animSpeed: 1.0,
+        animSpeed: 2.0,
         color: {
           x: 255,
           y: 255,

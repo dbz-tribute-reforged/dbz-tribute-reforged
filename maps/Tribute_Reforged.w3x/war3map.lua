@@ -232,6 +232,12 @@ udg_IsFBSimTest = false
 udg_TempReal5 = 0.0
 udg_BaseArmorTempReal = 0.0
 udg_MagusDoomScytheUnitGroup = nil
+udg_FrogSquashPoint = {}
+udg_FrogSquashDMG = __jarray(0.0)
+udg_FrogSquashSFX = {}
+udg_FrogSquashTimer = nil
+udg_FrogSquashTick = __jarray(0)
+udg_FrogSquashCasters = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -848,6 +854,10 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Slurp = nil
+gg_trg_Slurp_Loop = nil
+gg_trg_Frog_Squash = nil
+gg_trg_Frog_Squash_Loop = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1158,6 +1168,20 @@ function InitGlobals()
     udg_TempReal5 = 0.0
     udg_BaseArmorTempReal = 0.0
     udg_MagusDoomScytheUnitGroup = CreateGroup()
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_FrogSquashDMG[i] = 0.0
+        i = i + 1
+    end
+    udg_FrogSquashTimer = CreateTimer()
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_FrogSquashTick[i] = 0
+        i = i + 1
+    end
+    udg_FrogSquashCasters = CreateGroup()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -12690,6 +12714,190 @@ function InitTrig_Dart_Feld_Spell_Charges()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dart_Feld_Spell_Charges, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Dart_Feld_Spell_Charges, Condition(Trig_Dart_Feld_Spell_Charges_Conditions))
     TriggerAddAction(gg_trg_Dart_Feld_Spell_Charges, Trig_Dart_Feld_Spell_Charges_Actions)
+end
+
+function Trig_Slurp_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0WB"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Slurp_Actions()
+    SetUnitLifeBJ(GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * 0.10)))
+end
+
+function InitTrig_Slurp()
+    gg_trg_Slurp = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Slurp, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Slurp, Condition(Trig_Slurp_Conditions))
+    TriggerAddAction(gg_trg_Slurp, Trig_Slurp_Actions)
+end
+
+function Trig_Slurp_Loop_Actions()
+end
+
+function InitTrig_Slurp_Loop()
+    gg_trg_Slurp_Loop = CreateTrigger()
+    TriggerAddAction(gg_trg_Slurp_Loop, Trig_Slurp_Loop_Actions)
+end
+
+function Trig_Frog_Squash_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0WF"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Actions()
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    udg_FrogSquashPoint[GetConvertedPlayerId(GetTriggerPlayer())] = GetSpellTargetLoc()
+    AddSpecialEffectLocBJ(udg_FrogSquashPoint[GetConvertedPlayerId(GetTriggerPlayer())], "FrogSquash.mdx")
+    BlzSetSpecialEffectYaw(GetLastCreatedEffectBJ(), Deg2Rad(AngleBetweenPoints(udg_TempLoc, udg_FrogSquashPoint[GetConvertedPlayerId(GetTriggerPlayer())])))
+        RemoveLocation(udg_TempLoc)
+    udg_FrogSquashSFX[GetConvertedPlayerId(GetTriggerPlayer())] = GetLastCreatedEffectBJ()
+    udg_FrogSquashDMG[GetConvertedPlayerId(GetTriggerPlayer())] = (I2R((GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), false) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 0.25)
+    udg_FrogSquashDMG[GetConvertedPlayerId(GetTriggerPlayer())] = (udg_FrogSquashDMG[GetConvertedPlayerId(GetTriggerPlayer())] * (1.00 + (1.00 - (GetUnitLifePercent(GetTriggerUnit()) / 100.00))))
+    udg_FrogSquashTick[GetConvertedPlayerId(GetTriggerPlayer())] = 0
+    GroupAddUnitSimple(GetTriggerUnit(), udg_FrogSquashCasters)
+    StartTimerBJ(udg_FrogSquashTimer, true, 0.03)
+end
+
+function InitTrig_Frog_Squash()
+    gg_trg_Frog_Squash = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Frog_Squash, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Frog_Squash, Condition(Trig_Frog_Squash_Conditions))
+    TriggerAddAction(gg_trg_Frog_Squash, Trig_Frog_Squash_Actions)
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func004Func004C()
+    if (not (CountUnitsInGroup(udg_FrogSquashCasters) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func004C()
+    if (not (udg_FrogSquashTick[udg_TempInt] == 99)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006Func001C()
+    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(udg_TempUnit)) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006A()
+    if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006Func001C()) then
+        UnitDamageTargetBJ(udg_TempUnit, GetEnumUnit(), udg_FrogSquashDMG[udg_TempInt], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func004C()
+    if (not (udg_FrogSquashTick[udg_TempInt] == 83)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func006Func001C()
+    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(udg_TempUnit)) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004Func006A()
+    if (Trig_Frog_Squash_Loop_Func001Func004Func004Func006Func001C()) then
+        UnitDamageTargetBJ(udg_TempUnit, GetEnumUnit(), udg_FrogSquashDMG[udg_TempInt], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func004C()
+    if (not (udg_FrogSquashTick[udg_TempInt] == 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func006Func001C()
+    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(udg_TempUnit)) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004Func006A()
+    if (Trig_Frog_Squash_Loop_Func001Func004Func006Func001C()) then
+        UnitDamageTargetBJ(udg_TempUnit, GetEnumUnit(), udg_FrogSquashDMG[udg_TempInt], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+end
+
+function Trig_Frog_Squash_Loop_Func001Func004C()
+    if (not (udg_FrogSquashTick[udg_TempInt] == 16)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Frog_Squash_Loop_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
+    udg_FrogSquashTick[udg_TempInt] = (udg_FrogSquashTick[udg_TempInt] + 1)
+    if (Trig_Frog_Squash_Loop_Func001Func004C()) then
+        AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
+        BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
+        DestroyEffectBJ(GetLastCreatedEffectBJ())
+        udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+        ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func006A)
+        GroupClear(udg_TempGroup)
+    else
+        if (Trig_Frog_Squash_Loop_Func001Func004Func004C()) then
+            AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
+            BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
+            DestroyEffectBJ(GetLastCreatedEffectBJ())
+            udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+            ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func006A)
+            GroupClear(udg_TempGroup)
+        else
+            if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004C()) then
+                AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
+                BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
+                DestroyEffectBJ(GetLastCreatedEffectBJ())
+                udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+                ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006A)
+                GroupClear(udg_TempGroup)
+            else
+                if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func004C()) then
+                    DestroyEffectBJ(udg_FrogSquashSFX[udg_TempInt])
+                    GroupRemoveUnitSimple(udg_TempUnit, udg_FrogSquashCasters)
+                                        RemoveLocation(udg_FrogSquashPoint[udg_TempInt])
+                    if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func004Func004C()) then
+                        PauseTimerBJ(true, udg_FrogSquashTimer)
+                    else
+                    end
+                else
+                end
+            end
+        end
+    end
+end
+
+function Trig_Frog_Squash_Loop_Actions()
+    ForGroupBJ(udg_FrogSquashCasters, Trig_Frog_Squash_Loop_Func001A)
+end
+
+function InitTrig_Frog_Squash_Loop()
+    gg_trg_Frog_Squash_Loop = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Frog_Squash_Loop, udg_FrogSquashTimer)
+    TriggerAddAction(gg_trg_Frog_Squash_Loop, Trig_Frog_Squash_Loop_Actions)
 end
 
 function Trig_Doom_Scythe_Trigger_Conditions()
@@ -44353,6 +44561,10 @@ function InitCustomTriggers()
     InitTrig_Ichigo_Getsuga_Auto_Level()
     InitTrig_Dart_Feld_Skill_Upg()
     InitTrig_Dart_Feld_Spell_Charges()
+    InitTrig_Slurp()
+    InitTrig_Slurp_Loop()
+    InitTrig_Frog_Squash()
+    InitTrig_Frog_Squash_Loop()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()
