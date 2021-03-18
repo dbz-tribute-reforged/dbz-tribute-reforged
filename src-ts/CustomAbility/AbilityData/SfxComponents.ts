@@ -15554,8 +15554,8 @@ export const SfxComponents = [
   { 
     name: "sfx beam water 2 release", 
     repeatInterval: 1,
-    startTick: 99,
-    endTick: 99,
+    startTick: 33,
+    endTick: 33,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,

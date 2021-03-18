@@ -4116,7 +4116,7 @@ export const BeamComponents = [
       components: [
         { name: "damage water 2 dps" },
         { name: "damage water 2 explosion" },
-        { name: "knockback solar kame" },
+        { name: "knockback water 2" },
         { name: "sfx beam water 2" },
         { name: "sfx beam water 2 release" },
       ],
