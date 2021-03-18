@@ -166,6 +166,13 @@ export module Id {
   export const frogAerialStrike = FourCC("A0WE");
   export const frogSquash = FourCC("A0WF");
 
+  export const robo = FourCC("H0A2");
+  export const roboTackle = FourCC("A0WG");
+  export const roboLaserSpin = FourCC("A0WH");
+  export const roboHealBeam = FourCC("A0WI");
+  export const roboUzziPunch = FourCC("A0WJ");
+  export const roboElectrocute = FourCC("A0WK");
+
   export const magus = FourCC("H0A3");
   export const darkBomb = FourCC("A0W3");
   export const magusLightning2 = FourCC("A0W5");

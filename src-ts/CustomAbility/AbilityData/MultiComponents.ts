@@ -630,6 +630,32 @@ export const MultiComponents = [
   },
   // -------------------------------------------
   {
+    name: "multi uzzi punch", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    angleDifference: 1,
+    angleMin: -2,
+    angleMax: 2,
+    forceMinDistance: 0,
+    forceMaxDistance: 0,
+    delayBetweenComponents: 4,
+    firingMode: MultiComponent.SPREAD_FIRING,
+    multiplyComponents: 80,
+    componentsAddedPerRound: 1,
+    alwaysUpdateAngle: false,
+    fixedSourceCoords: false,
+    fixedReplacementCoords: false,
+    targetSource: MultiComponent.SOURCE_CASTER,
+    useLastCastPoint: true,
+    whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+    sfxList: true,
+    components: [
+      { name: "beam uzzi punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: "multi videl punch", 
     repeatInterval: 1, 
     startTick: 0,

@@ -274,6 +274,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.frogAerialStrike, AbilityNames.Frog.AERIAL_STRIKE],
     [Id.frogSquash, AbilityNames.Frog.FROG_SQUASH],
 
+    //robo
+    [Id.roboTackle, AbilityNames.Robo.ROBO_TACKLE],
+    [Id.roboLaserSpin, AbilityNames.Robo.LASER_SPIN],
+    [Id.roboHealBeam, AbilityNames.Robo.HEAL_BEAM],
+    [Id.roboUzziPunch, AbilityNames.Robo.UZZI_PUNCH],
+    [Id.roboElectrocute, AbilityNames.Robo.ELECTROCUTE],
+
+
     //magus
     [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
     [Id.magusLightning2, AbilityNames.Magus.MLIGHTNING_2],

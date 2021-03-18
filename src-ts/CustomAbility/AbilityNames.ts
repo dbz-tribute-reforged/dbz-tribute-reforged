@@ -536,6 +536,14 @@ export module AbilityNames {
     export const FROG_SQUASH: string = "Frog Squash";
   }
 
+  export module Robo {
+    export const ROBO_TACKLE: string = "Robo Tackle";
+    export const LASER_SPIN: string = "Laser Spin";
+    export const HEAL_BEAM: string = "Heal Beam";
+    export const UZZI_PUNCH: string = "Uzzi Punch";
+    export const ELECTROCUTE: string = "Electrocute";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

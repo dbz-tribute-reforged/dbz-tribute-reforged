@@ -113401,6 +113401,24 @@ STRING 17811
 W
 }
 
+STRING 17812
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17813
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17814
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
 STRING 17815
 // Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
@@ -113419,10 +113437,22 @@ STRING 17817
 [|cff00FF00W|r] Slurp  [|cffffcc00Level 4|r]
 }
 
+STRING 17818
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
 STRING 17819
 // Abilities: A0WB (Slurp), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00W|r] Learn Slurp  [|cffffcc00Level %d|r]
+}
+
+STRING 17820
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
 }
 
 STRING 17821
@@ -113435,6 +113465,12 @@ STRING 17822
 // Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Slurp  [|cffffcc00Level 5|r]
+}
+
+STRING 17823
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
 }
 
 STRING 17824
@@ -113465,6 +113501,36 @@ STRING 17828
 // Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Slurp  [|cffffcc00Level 10|r]
+}
+
+STRING 17829
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17830
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 2|r]
+}
+
+STRING 17831
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 3|r]
+}
+
+STRING 17832
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 4|r]
+}
+
+STRING 17833
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 5|r]
 }
 
 STRING 17834
@@ -113641,6 +113707,92 @@ STRING 17862
 [|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
 }
 
+STRING 17863
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 6|r]
+}
+
+STRING 17864
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 1|r]
+}
+
+STRING 17865
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 7|r]
+}
+
+STRING 17866
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 9|r]
+}
+
+STRING 17867
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 8|r]
+}
+
+STRING 17868
+// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Uzzi Punch - [|cffffcc00Level 10|r]
+}
+
+STRING 17869
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17870
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17871
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17872
+// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 17873
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 17874
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 1|r]
+}
+
+STRING 17875
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17876
+// Abilities: A0WK (Electrocute), Name (Name)
+{
+Electrocute
+}
+
 STRING 17877
 // Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
 {
@@ -113665,10 +113817,48 @@ STRING 17880
 E
 }
 
+STRING 17881
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 17882
+// Abilities: A0WK (Electrocute), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level %d|r]
+}
+
 STRING 17883
 // Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00E|r] Water 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 17884
+// Abilities: A0WK (Electrocute), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17885
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 2|r]
+}
+
+STRING 17886
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 3|r]
+}
+
+STRING 17887
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 4|r]
 }
 
 STRING 17888
@@ -113867,6 +114057,12 @@ STRING 17916
 [|cff00FF00D|r] Frog Squash - [|cffffcc00Level 1|r]
 }
 
+STRING 17917
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 5|r]
+}
+
 STRING 17918
 // Abilities: A0WF (Frog Squash), Name (Name)
 {
@@ -113909,6 +114105,58 @@ STRING 17924
 [|cff00FF00D|r] Frog Squash - [|cffffcc00Level 7|r]
 }
 
+STRING 17925
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 6|r]
+}
+
+STRING 17926
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17927
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17928
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17929
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17930
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17931
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 7|r]
+}
+
 STRING 17932
 // Abilities: A0WF (Frog Squash), Researchtip (Tooltip - Learn)
 {
@@ -113933,10 +114181,34 @@ STRING 17935
 [|cff00FF00D|r] Frog Squash - [|cffffcc00Level 9|r]
 }
 
+STRING 17936
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 17937
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
 STRING 17938
 // Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
 {
 [|cff00FF00D|r] Frog Squash - [|cffffcc00Level 10|r]
+}
+
+STRING 17939
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
 }
 
 STRING 17940
@@ -114687,90 +114959,6 @@ STRING 18060
 (robo)
 }
 
-STRING 18061
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18062
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18063
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18064
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18065
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18066
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18067
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18068
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 2|r]
-}
-
-STRING 18069
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 3|r]
-}
-
-STRING 18070
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 4|r]
-}
-
-STRING 18071
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 5|r]
-}
-
-STRING 18072
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 6|r]
-}
-
-STRING 18073
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 1|r]
-}
-
-STRING 18074
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 7|r]
-}
-
 STRING 18075
 // Abilities: A0WJ (Uzzi Punch), Researchhotkey (Hotkey - Learn)
 {
@@ -114795,48 +114983,6 @@ STRING 18078
 R
 }
 
-STRING 18079
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 9|r]
-}
-
-STRING 18080
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 8|r]
-}
-
-STRING 18081
-// Abilities: A0WJ (Uzzi Punch), Tip (Tooltip - Normal)
-{
-[|cff00ff00W|r] Laser Spin - [|cffffcc00Level 10|r]
-}
-
-STRING 18082
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18083
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18084
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18085
-// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
 STRING 18086
 // Abilities: A0WJ (Uzzi Punch), EditorSuffix (Editor Suffix)
 {
@@ -114853,5 +114999,37 @@ STRING 18088
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 18089
+// Abilities: A0WK (Electrocute), Ubertip (Tooltip - Normal - Extended)
+{
+Robo shocks all enemies in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0WK,Cool1>s|r
+}
+
+STRING 18090
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 8|r]
+}
+
+STRING 18091
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 9|r]
+}
+
+STRING 18092
+// Abilities: A0WK (Electrocute), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Electrocute - [|cffffcc00Level 10|r]
+}
+
+STRING 18093
+// Abilities: A0WK (Electrocute), EditorSuffix (Editor Suffix)
+{
+(robo)
 }
 

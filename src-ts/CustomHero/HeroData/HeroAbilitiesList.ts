@@ -373,6 +373,14 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Frog.AERIAL_STRIKE,
       AbilityNames.Frog.FROG_SQUASH,
     ]],
+
+    [Id.robo, [
+      AbilityNames.Robo.ROBO_TACKLE,
+      AbilityNames.Robo.LASER_SPIN,
+      AbilityNames.Robo.HEAL_BEAM,
+      AbilityNames.Robo.UZZI_PUNCH,
+      AbilityNames.Robo.ELECTROCUTE,
+    ]],
     
     [Id.magus, [
       AbilityNames.Magus.DARK_BOMB,

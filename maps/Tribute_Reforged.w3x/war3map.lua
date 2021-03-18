@@ -238,6 +238,15 @@ udg_FrogSquashSFX = {}
 udg_FrogSquashTimer = nil
 udg_FrogSquashTick = __jarray(0)
 udg_FrogSquashCasters = nil
+udg_RoboLaserGroup = nil
+udg_RoboSpinTimer = nil
+udg_TempLoc4 = nil
+udg_TempLoc5 = nil
+udg_RoboLaserAng = __jarray(0.0)
+udg_RoboLightning1 = {}
+udg_RoboLightning2 = {}
+udg_RoboLaserTicks = __jarray(0)
+udg_LaserSpinDMG = __jarray(0.0)
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -453,6 +462,9 @@ gg_trg_Dart_Feld_Spell_Charges = nil
 gg_trg_CronoCyclone = nil
 gg_trg_CronoCleave = nil
 gg_trg_Crono_Slash = nil
+gg_trg_Slurp = nil
+gg_trg_Frog_Squash = nil
+gg_trg_Frog_Squash_Loop = nil
 gg_trg_Doom_Scythe_Trigger = nil
 gg_trg_Doom_Scythe_Loop = nil
 gg_trg_Magus_Spell_Book = nil
@@ -854,10 +866,10 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Slurp = nil
-gg_trg_Slurp_Loop = nil
-gg_trg_Frog_Squash = nil
-gg_trg_Frog_Squash_Loop = nil
+gg_trg_Heal_Beam = nil
+gg_trg_Laser_Spin = nil
+gg_trg_Laser_Spin_Loop = nil
+gg_trg_Laser_Spin_Copy = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1182,6 +1194,26 @@ function InitGlobals()
         i = i + 1
     end
     udg_FrogSquashCasters = CreateGroup()
+    udg_RoboLaserGroup = CreateGroup()
+    udg_RoboSpinTimer = CreateTimer()
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_RoboLaserAng[i] = 0.0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_RoboLaserTicks[i] = 0
+        i = i + 1
+    end
+    i = 0
+    while (true) do
+        if ((i > 10)) then break end
+        udg_LaserSpinDMG[i] = 0.0
+        i = i + 1
+    end
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -12734,14 +12766,6 @@ function InitTrig_Slurp()
     TriggerAddAction(gg_trg_Slurp, Trig_Slurp_Actions)
 end
 
-function Trig_Slurp_Loop_Actions()
-end
-
-function InitTrig_Slurp_Loop()
-    gg_trg_Slurp_Loop = CreateTrigger()
-    TriggerAddAction(gg_trg_Slurp_Loop, Trig_Slurp_Loop_Actions)
-end
-
 function Trig_Frog_Squash_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0WF"))) then
         return false
@@ -12858,6 +12882,7 @@ function Trig_Frog_Squash_Loop_Func001A()
         udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
         ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func006A)
         GroupClear(udg_TempGroup)
+                DestroyGroup(udg_TempGroup)
     else
         if (Trig_Frog_Squash_Loop_Func001Func004Func004C()) then
             AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
@@ -12866,6 +12891,7 @@ function Trig_Frog_Squash_Loop_Func001A()
             udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
             ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func006A)
             GroupClear(udg_TempGroup)
+                        DestroyGroup(udg_TempGroup)
         else
             if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004C()) then
                 AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
@@ -12874,6 +12900,7 @@ function Trig_Frog_Squash_Loop_Func001A()
                 udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
                 ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006A)
                 GroupClear(udg_TempGroup)
+                                DestroyGroup(udg_TempGroup)
             else
                 if (Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func004C()) then
                     DestroyEffectBJ(udg_FrogSquashSFX[udg_TempInt])
@@ -12898,6 +12925,168 @@ function InitTrig_Frog_Squash_Loop()
     gg_trg_Frog_Squash_Loop = CreateTrigger()
     TriggerRegisterTimerExpireEventBJ(gg_trg_Frog_Squash_Loop, udg_FrogSquashTimer)
     TriggerAddAction(gg_trg_Frog_Squash_Loop, Trig_Frog_Squash_Loop_Actions)
+end
+
+function Trig_Heal_Beam_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0WI"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Heal_Beam_Func006Func001C()
+    if (not (IsPlayerAlly(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetTriggerUnit())) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Heal_Beam_Func006A()
+    if (Trig_Heal_Beam_Func006Func001C()) then
+        SetUnitLifeBJ(GetEnumUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetEnumUnit()) * 0.10)))
+    else
+    end
+end
+
+function Trig_Heal_Beam_Actions()
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    udg_TempGroup = GetUnitsInRangeOfLocAll(600.00, udg_TempLoc)
+    AddSpecialEffectLocBJ(udg_TempLoc, "Abilities\\Spells\\Items\\AIim\\AIimTarget.mdl")
+    BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 8.00)
+    DestroyEffectBJ(GetLastCreatedEffectBJ())
+    ForGroupBJ(udg_TempGroup, Trig_Heal_Beam_Func006A)
+        DestroyGroup(udg_TempGroup)
+end
+
+function InitTrig_Heal_Beam()
+    gg_trg_Heal_Beam = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Heal_Beam, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Heal_Beam, Condition(Trig_Heal_Beam_Conditions))
+    TriggerAddAction(gg_trg_Heal_Beam, Trig_Heal_Beam_Actions)
+end
+
+function Trig_Laser_Spin_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0WH"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Laser_Spin_Actions()
+    GroupAddUnitSimple(GetTriggerUnit(), udg_RoboLaserGroup)
+    udg_RoboLaserAng[GetConvertedPlayerId(GetTriggerPlayer())] = GetUnitFacing(GetTriggerUnit())
+    udg_TempLoc = GetUnitLoc(GetTriggerUnit())
+    udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 500.00, (GetUnitFacing(GetTriggerUnit()) + 0.00))
+    udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, 500.00, (GetUnitFacing(GetTriggerUnit()) + 90.00))
+    udg_TempLoc4 = PolarProjectionBJ(udg_TempLoc, 500.00, (GetUnitFacing(GetTriggerUnit()) + 180.00))
+    udg_TempLoc5 = PolarProjectionBJ(udg_TempLoc, 500.00, (GetUnitFacing(GetTriggerUnit()) + 270.00))
+    AddLightningLoc("DRAM", udg_TempLoc2, udg_TempLoc4)
+    udg_RoboLightning1[GetConvertedPlayerId(GetTriggerPlayer())] = GetLastCreatedLightningBJ()
+    AddLightningLoc("DRAM", udg_TempLoc3, udg_TempLoc5)
+    udg_RoboLightning2[GetConvertedPlayerId(GetTriggerPlayer())] = GetLastCreatedLightningBJ()
+    udg_LaserSpinDMG[GetConvertedPlayerId(GetTriggerPlayer())] = (I2R((GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), false) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 0.06)
+        RemoveLocation(udg_TempLoc)
+        RemoveLocation(udg_TempLoc2)
+        RemoveLocation(udg_TempLoc3)
+        RemoveLocation(udg_TempLoc4)
+        RemoveLocation(udg_TempLoc5)
+    StartTimerBJ(udg_RoboSpinTimer, true, 0.03)
+end
+
+function InitTrig_Laser_Spin()
+    gg_trg_Laser_Spin = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Laser_Spin, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    TriggerAddCondition(gg_trg_Laser_Spin, Condition(Trig_Laser_Spin_Conditions))
+    TriggerAddAction(gg_trg_Laser_Spin, Trig_Laser_Spin_Actions)
+end
+
+function Trig_Laser_Spin_Loop_Func001Func013Func001Func001C()
+    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(udg_TempUnit)) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Laser_Spin_Loop_Func001Func013Func001A()
+    if (Trig_Laser_Spin_Loop_Func001Func013Func001Func001C()) then
+        UnitDamageTargetBJ(udg_TempUnit, GetEnumUnit(), udg_LaserSpinDMG[udg_TempInt], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    else
+    end
+end
+
+function Trig_Laser_Spin_Loop_Func001Func013C()
+    if (not (ModuloInteger(udg_RoboLaserTicks[udg_TempInt], 16) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Laser_Spin_Loop_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    udg_TempInt = GetConvertedPlayerId(GetOwningPlayer(udg_TempUnit))
+    udg_TempReal = (I2R(udg_RoboLaserTicks[udg_TempInt]) * 5.00)
+    udg_TempReal2 = (I2R(udg_RoboLaserTicks[udg_TempInt]) * -5.00)
+    udg_RoboLaserTicks[udg_TempInt] = (udg_RoboLaserTicks[udg_TempInt] + 1)
+    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 1000.00, (GetUnitFacing(GetTriggerUnit()) + (0.00 + udg_TempReal)))
+    udg_TempLoc3 = PolarProjectionBJ(udg_TempLoc, 1000.00, (GetUnitFacing(GetTriggerUnit()) + (90.00 + udg_TempReal2)))
+    udg_TempLoc4 = PolarProjectionBJ(udg_TempLoc, 1000.00, (GetUnitFacing(GetTriggerUnit()) + (180.00 + udg_TempReal)))
+    udg_TempLoc5 = PolarProjectionBJ(udg_TempLoc, 1000.00, (GetUnitFacing(GetTriggerUnit()) + (270.00 + udg_TempReal2)))
+    MoveLightningLoc(udg_RoboLightning1[udg_TempInt], udg_TempLoc2, udg_TempLoc4)
+    MoveLightningLoc(udg_RoboLightning2[udg_TempInt], udg_TempLoc3, udg_TempLoc5)
+    if (Trig_Laser_Spin_Loop_Func001Func013C()) then
+        udg_TempGroup = GetUnitsInRangeOfLocAll(1000.00, udg_TempLoc)
+    else
+        ForGroupBJ(udg_TempGroup, Trig_Laser_Spin_Loop_Func001Func013Func001A)
+        GroupClear(udg_TempGroup)
+                DestroyGroup(udg_TempGroup)
+    end
+        RemoveLocation(udg_TempLoc)
+        RemoveLocation(udg_TempLoc2)
+        RemoveLocation(udg_TempLoc3)
+        RemoveLocation(udg_TempLoc4)
+        RemoveLocation(udg_TempLoc5)
+end
+
+function Trig_Laser_Spin_Loop_Actions()
+    ForGroupBJ(udg_RoboLaserGroup, Trig_Laser_Spin_Loop_Func001A)
+end
+
+function InitTrig_Laser_Spin_Loop()
+    gg_trg_Laser_Spin_Loop = CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_Laser_Spin_Loop, udg_RoboSpinTimer)
+    TriggerAddAction(gg_trg_Laser_Spin_Loop, Trig_Laser_Spin_Loop_Actions)
+end
+
+function Trig_Laser_Spin_Copy_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0WH"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Laser_Spin_Copy_Func004C()
+    if (not (CountUnitsInGroup(udg_RoboLaserGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Laser_Spin_Copy_Actions()
+    GroupRemoveUnitSimple(GetTriggerUnit(), udg_RoboLaserGroup)
+    DestroyLightningBJ(udg_RoboLightning1[GetConvertedPlayerId(GetTriggerPlayer())])
+    DestroyLightningBJ(udg_RoboLightning2[GetConvertedPlayerId(GetTriggerPlayer())])
+    if (Trig_Laser_Spin_Copy_Func004C()) then
+        PauseTimerBJ(true, udg_RoboSpinTimer)
+    else
+    end
+end
+
+function InitTrig_Laser_Spin_Copy()
+    gg_trg_Laser_Spin_Copy = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Laser_Spin_Copy, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    TriggerAddCondition(gg_trg_Laser_Spin_Copy, Condition(Trig_Laser_Spin_Copy_Conditions))
+    TriggerAddAction(gg_trg_Laser_Spin_Copy, Trig_Laser_Spin_Copy_Actions)
 end
 
 function Trig_Doom_Scythe_Trigger_Conditions()
@@ -44562,9 +44751,12 @@ function InitCustomTriggers()
     InitTrig_Dart_Feld_Skill_Upg()
     InitTrig_Dart_Feld_Spell_Charges()
     InitTrig_Slurp()
-    InitTrig_Slurp_Loop()
     InitTrig_Frog_Squash()
     InitTrig_Frog_Squash_Loop()
+    InitTrig_Heal_Beam()
+    InitTrig_Laser_Spin()
+    InitTrig_Laser_Spin_Loop()
+    InitTrig_Laser_Spin_Copy()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()

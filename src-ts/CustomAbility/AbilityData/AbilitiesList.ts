@@ -1603,6 +1603,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Robo.UZZI_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 265,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboUzziPunch.blp",
+      disabled: "BTNRoboUzziPunch.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.UZZI_PUNCH,
+      body: 
+        AbilityNames.Robo.UZZI_PUNCH
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi uzzi punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android17DBS.BARRIER_PRISON,
     currentCd: 0,
     maxCd: 1,
@@ -1962,6 +1989,34 @@ export const AbilitiesList = [
       { name: "damage shining sword explosion" },
       { name: "damage shining sword bonus buff explosion" },
       { name: "sfx shining sword" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ROBO_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboTackle.blp",
+      disabled: "BTNRoboTackle.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Robo.ROBO_TACKLE,
+      body: 
+        AbilityNames.Robo.ROBO_TACKLE,
+    },
+    components: [
+      { name: "dash ground point shining sword" },
+      { name: "damage robo tackle" },
+      { name: "sfx robo tackle" },
     ],
   },
   // -------------------------------------------
@@ -5498,6 +5553,35 @@ export const AbilitiesList = [
       { name: "multi crono lightning 2 outer" },
     ],
   },
+// -------------------------------------------
+  {
+    name: AbilityNames.Robo.ELECTROCUTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboShock.blp",
+      disabled: "BTNRoboShock.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.ELECTROCUTE,
+      body: 
+        AbilityNames.Robo.ELECTROCUTE
+    },
+    components: [
+      { name: "damage robo electrocute explosion" },
+      { name: "multi crono lightning 2 inner" },
+      { name: "multi crono lightning 2 outer" },
+      { name: "sfx robo electrocute"}
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Crono.CLEAVE,
@@ -5582,7 +5666,7 @@ export const AbilitiesList = [
     components: [
       { name: "anim frog cleave" },
       { name: "dash ground target crono cleave" },
-      { name: "damage crono cleave explosion" },
+      { name: "damage frog aerial explosion" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
     ],
