@@ -94419,13 +94419,13 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15198
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -113121,10 +113121,58 @@ STRING 17768
 (robo)
 }
 
+STRING 17769
+// Abilities: A0WA (Slurp Cut), Name (Name)
+{
+Slurp Cut
+}
+
+STRING 17770
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool2>s|r
+}
+
+STRING 17771
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool3>s|r
+}
+
+STRING 17772
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool4>s|r
+}
+
 STRING 17773
 // Abilities: A0W6 (Dark Matter), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Dark Matter - [|cffffcc00Level 7|r]
+}
+
+STRING 17774
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 2|r]
+}
+
+STRING 17775
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 3|r]
+}
+
+STRING 17776
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 4|r]
+}
+
+STRING 17777
+// Abilities: A0WA (Slurp Cut), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool1> seconds|r
 }
 
 STRING 17778
@@ -113237,5 +113285,949 @@ STRING 17792
 Magus channels a spell for 2 seconds. After the cast time, a gigantic ball of darkness engulfs the area around Magus, dealing heavy damage to all nearby units.
 |cff00ff00Damage: Int * Lvl * ?
 |cff00FFFFCooldown: <A0VU,Cool1>s|r
+}
+
+STRING 17793
+// Abilities: A0WA (Slurp Cut), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Slurp Cut  [|cffffcc00Level %d|r]
+}
+
+STRING 17794
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool1>s|r
+}
+
+STRING 17795
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 1|r]
+}
+
+STRING 17796
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 5|r]
+}
+
+STRING 17797
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool5>s|r
+}
+
+STRING 17798
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 6|r]
+}
+
+STRING 17799
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 7|r]
+}
+
+STRING 17800
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 8|r]
+}
+
+STRING 17801
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 9|r]
+}
+
+STRING 17802
+// Abilities: A0WA (Slurp Cut), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Slurp Cut  [|cffffcc00Level 10|r]
+}
+
+STRING 17803
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool6>s|r
+}
+
+STRING 17804
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool7>s|r
+}
+
+STRING 17805
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool8>s|r
+}
+
+STRING 17806
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool9>s|r
+}
+
+STRING 17807
+// Abilities: A0WA (Slurp Cut), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and grabs the first enemy hero he hits, dealing damage and pulling it towards him. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WA,Cool10>s|r
+}
+
+STRING 17808
+// Abilities: A0WA (Slurp Cut), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17809
+// Abilities: A0WB (Slurp), Name (Name)
+{
+Slurp
+}
+
+STRING 17810
+// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 17811
+// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 17812
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool2> seconds|r
+}
+
+STRING 17813
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool3> seconds|r
+}
+
+STRING 17814
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool4> seconds|r
+}
+
+STRING 17815
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 2|r]
+}
+
+STRING 17816
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 3|r]
+}
+
+STRING 17817
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 4|r]
+}
+
+STRING 17818
+// Abilities: A0WB (Slurp), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool1>-<A0WB,Cool10> seconds|r
+}
+
+STRING 17819
+// Abilities: A0WB (Slurp), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Slurp  [|cffffcc00Level %d|r]
+}
+
+STRING 17820
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 17821
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 1|r]
+}
+
+STRING 17822
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 5|r]
+}
+
+STRING 17823
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool5> seconds|r
+}
+
+STRING 17824
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 6|r]
+}
+
+STRING 17825
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 7|r]
+}
+
+STRING 17826
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 8|r]
+}
+
+STRING 17827
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 9|r]
+}
+
+STRING 17828
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp  [|cffffcc00Level 10|r]
+}
+
+STRING 17829
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool6> seconds|r
+}
+
+STRING 17830
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool7> seconds|r
+}
+
+STRING 17831
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool8> seconds|r
+}
+
+STRING 17832
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool9> seconds|r
+}
+
+STRING 17833
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the first ally he hits, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool10> seconds|r
+}
+
+STRING 17834
+// Abilities: A0WB (Slurp), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17835
+// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 17836
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 1|r]
+}
+
+STRING 17837
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17838
+// Abilities: A0WC (Water), Name (Name)
+{
+Water
+}
+
+STRING 17839
+// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 17840
+// Abilities: A0WC (Water), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00E|r] Learn Water - [|cffffcc00Level %d|r]
+}
+
+STRING 17841
+// Abilities: A0WC (Water), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17842
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 2|r]
+}
+
+STRING 17843
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 3|r]
+}
+
+STRING 17844
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 4|r]
+}
+
+STRING 17845
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 5|r]
+}
+
+STRING 17846
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 6|r]
+}
+
+STRING 17847
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17848
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17849
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17850
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17851
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17852
+// Abilities: A0WC (Water), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17853
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 7|r]
+}
+
+STRING 17854
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17855
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 8|r]
+}
+
+STRING 17856
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17857
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17858
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+}
+
+STRING 17859
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
+}
+
+STRING 17860
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 9|r]
+}
+
+STRING 17861
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Water - [|cffffcc00Level 10|r]
+}
+
+STRING 17862
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+
+STRING 17863
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool1> seconds|r
+}
+
+STRING 17864
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur2> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool2> seconds|r
+}
+
+STRING 17865
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur3> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool3> seconds|r
+}
+
+STRING 17866
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur4> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool4> seconds|r
+}
+
+STRING 17867
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur5> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool5> seconds|r
+}
+
+STRING 17868
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur6> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool6> seconds|r
+}
+
+STRING 17869
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur7> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool7> seconds|r
+}
+
+STRING 17870
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 2|r]
+}
+
+STRING 17871
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 3|r]
+}
+
+STRING 17872
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 4|r]
+}
+
+STRING 17873
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 5|r]
+}
+
+STRING 17874
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 6|r]
+}
+
+STRING 17875
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 1|r]
+}
+
+STRING 17876
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 7|r]
+}
+
+STRING 17877
+// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 17878
+// Abilities: A0WD (Water 2), Name (Name)
+{
+Water 2
+}
+
+STRING 17879
+// Abilities: A0WD (Water 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Water 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 17880
+// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 17881
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 9|r]
+}
+
+STRING 17882
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Solar Kamehameha - [|cffffcc00Level 8|r]
+}
+
+STRING 17883
+// Abilities: A0WD (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Water 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 17884
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur8> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool8> seconds|r
+}
+
+STRING 17885
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+First, Cell stores up an immense amount of energy as he prepares a Super Kamehameha. He then brings his hands forward and fires a blast that Cell claims has enough power to wipe out the entirety of Earth's Solar System. |n|cffff2020Channel Duration: <A0O9,Dur9> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0O9,Cool9> seconds|r
+}
+
+STRING 17886
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+Frog shoots some water broh. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 17887
+// Abilities: A0WD (Water 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog shoots some water broh. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool1> - <A0WD,Cool10> seconds|r
+}
+
+STRING 17888
+// Abilities: A0WD (Water 2), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17889
+// Abilities: A0WE (Aerial Strike), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 17890
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 1|r]
+}
+
+STRING 17891
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool1,.>s|r
+}
+
+STRING 17892
+// Abilities: A0WE (Aerial Strike), Name (Name)
+{
+Aerial Strike
+}
+
+STRING 17893
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 2|r]
+}
+
+STRING 17894
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 3|r]
+}
+
+STRING 17895
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 4|r]
+}
+
+STRING 17896
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 5|r]
+}
+
+STRING 17897
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 6|r]
+}
+
+STRING 17898
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 7|r]
+}
+
+STRING 17899
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool2,.>s|r
+}
+
+STRING 17900
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool3,.>s|r
+}
+
+STRING 17901
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool4,.>s|r
+}
+
+STRING 17902
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool5,.>s|r
+}
+
+STRING 17903
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool6,.>s|r
+}
+
+STRING 17904
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool7,.>s|r
+}
+
+STRING 17905
+// Abilities: A0WE (Aerial Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool1,.>s|r
+}
+
+STRING 17906
+// Abilities: A0WE (Aerial Strike), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Aerial Strike - [|cffffcc00Level %d|r]
+}
+
+STRING 17907
+// Abilities: A0WE (Aerial Strike), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 17908
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 8|r]
+}
+
+STRING 17909
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 9|r]
+}
+
+STRING 17910
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool8,.>s|r
+}
+
+STRING 17911
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool9,.>s|r
+}
+
+STRING 17912
+// Abilities: A0WE (Aerial Strike), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Aerial Strike - [|cffffcc00Level 10|r]
+}
+
+STRING 17913
+// Abilities: A0WE (Aerial Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Frog performs a jump-slash to the target area, damaging nearby enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W5,Cool10,.>s|r
+}
+
+STRING 17914
+// Abilities: A0WE (Aerial Strike), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17915
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 17916
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 1|r]
+}
+
+STRING 17917
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17918
+// Abilities: A0WF (Frog Squash), Name (Name)
+{
+Frog Squash
+}
+
+STRING 17919
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 2|r]
+}
+
+STRING 17920
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 3|r]
+}
+
+STRING 17921
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 4|r]
+}
+
+STRING 17922
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 5|r]
+}
+
+STRING 17923
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 6|r]
+}
+
+STRING 17924
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 7|r]
+}
+
+STRING 17925
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17926
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17927
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17928
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17929
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17930
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17931
+// Abilities: A0WF (Frog Squash), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17932
+// Abilities: A0WF (Frog Squash), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00D|r] Learn Frog Squash - [|cffffcc00Level %d|r]
+}
+
+STRING 17933
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 17934
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 8|r]
+}
+
+STRING 17935
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 9|r]
+}
+
+STRING 17936
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17937
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17938
+// Abilities: A0WF (Frog Squash), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Frog Squash - [|cffffcc00Level 10|r]
+}
+
+STRING 17939
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies.
+|cff00FF00Damage: Agi * lvl * ?|r
+|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+}
+
+STRING 17940
+// Abilities: A0WF (Frog Squash), EditorSuffix (Editor Suffix)
+{
+(frog)
+}
+
+STRING 17941
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 17942
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
