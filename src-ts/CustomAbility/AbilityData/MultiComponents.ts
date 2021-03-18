@@ -1025,6 +1025,32 @@ export const MultiComponents = [
       { name: "beam solar kame" },
     ],
   },
+    // -------------------------------------------
+    {
+      name: "multi water 2", 
+      repeatInterval: 1, 
+      startTick: 0,
+      endTick: -1,
+      angleDifference: 1,
+      angleMin: 0,
+      angleMax: 1,
+      forceMinDistance: 500,
+      forceMaxDistance: 0,
+      delayBetweenComponents: 1,
+      firingMode: MultiComponent.SPREAD_FIRING,
+      multiplyComponents: 1,
+      componentsAddedPerRound: 1,
+      alwaysUpdateAngle: false,
+      fixedSourceCoords: true,
+      fixedReplacementCoords: false,
+      targetSource: MultiComponent.SOURCE_CASTER,
+      useLastCastPoint: true,
+      whichTargetPoint: MultiComponent.TARGET_POINT_TARGET,
+      sfxList: true,
+      components: [
+        { name: "beam water 2" },
+      ],
+    },
   // -------------------------------------------
   {
     name: "multi devil claw", 

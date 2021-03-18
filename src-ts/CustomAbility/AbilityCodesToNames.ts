@@ -266,6 +266,14 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.cronoCleave, AbilityNames.Crono.CLEAVE],
     [Id.cronoLuminaire, AbilityNames.Crono.LUMINAIRE],
 
+    //frog
+    [Id.frogSlurpCut, AbilityNames.Frog.SLURP_CUT],
+    [Id.frogSlurp, AbilityNames.Frog.SLURP],
+    [Id.frogWater, AbilityNames.Frog.WATER],
+    [Id.frogWater2, AbilityNames.Frog.WATER2],
+    [Id.frogAerialStrike, AbilityNames.Frog.AERIAL_STRIKE],
+    [Id.frogSquash, AbilityNames.Frog.FROG_SQUASH],
+
     //magus
     [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
     [Id.magusLightning2, AbilityNames.Magus.MLIGHTNING_2],

@@ -5528,6 +5528,65 @@ export const AbilitiesList = [
       { name: "sfx crono cleave" },
     ],
   },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Frog.WATER2,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 132,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNFrogWater2.blp",
+        disabled: "BTNFrogWater2.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Frog.WATER2,
+        body: 
+          AbilityNames.Frog.WATER2
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "multi water 2" },
+        { name: "damage water 2 dps charging" },
+        { name: "sfx water 2 caster" },
+      ],
+    },
+// -------------------------------------------
+  {
+    name: AbilityNames.Frog.AERIAL_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogLeapSlash.blp",
+      disabled: "BTNCFrogLeapSlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.AERIAL_STRIKE,
+      body: 
+        AbilityNames.Frog.AERIAL_STRIKE
+    },
+    components: [
+      { name: "anim frog cleave" },
+      { name: "dash ground target crono cleave" },
+      { name: "damage crono cleave explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Crono.LUMINAIRE,
@@ -5555,6 +5614,58 @@ export const AbilitiesList = [
       { name: "damage crono lumi explosion" },
       { name: "sfx crono lumi" },
       { name: "sfx crono lumi explode" },
+    ],
+  },
+  //---------------------------------------
+ {
+  name: AbilityNames.Frog.SLURP_CUT,
+  currentCd: 0,
+  maxCd: 1,
+  costType: "MP",
+  costAmount: 0,
+  duration: 100,
+  updateRate: 0.03,
+  castTime: 0.0,
+  canMultiCast: true,
+  waitsForNextClick: false,
+  animation: "spell slam",
+  icon: {
+    enabled: "BTNFrogSlurpCut.blp",
+    disabled: "BTNFrogSlurpCut.blp",
+  },
+  tooltip: {
+    title: AbilityNames.Frog.SLURP_CUT,
+    body: 
+      AbilityNames.Frog.SLURP_CUT
+  },
+  components: [
+    { name: "hook slurp cut" },
+  ],
+},
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.WATER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogWater.blp",
+      disabled: "BTNFrogWater.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.WATER,
+      body: 
+        "spirit bomb stuff"
+    },
+    components: [
+      { name: "beam frog water" },
     ],
   },
   // -------------------------------------------

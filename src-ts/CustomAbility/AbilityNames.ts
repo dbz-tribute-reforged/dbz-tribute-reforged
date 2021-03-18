@@ -527,6 +527,15 @@ export module AbilityNames {
     export const TYRANNO_ROAR: string = "Tyranno Roar";
   }
 
+  export module Frog {
+    export const SLURP_CUT: string = "Slurp Cut";
+    export const SLURP: string = "Slurp";
+    export const WATER: string = "Water";
+    export const WATER2: string = "Water2";
+    export const AERIAL_STRIKE: string = "Aerial Strike";
+    export const FROG_SQUASH: string = "Frog Squash";
+  }
+
   export module Saga {
     export const GENERIC_BEAM: string = "Take this!";
     export const GENERIC_BOMB: string = "Die!";

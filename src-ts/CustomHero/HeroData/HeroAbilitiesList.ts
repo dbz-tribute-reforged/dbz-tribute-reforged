@@ -364,6 +364,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Crono.CLEAVE,
       AbilityNames.Crono.LUMINAIRE,
     ]],
+
+    [Id.frog, [
+      AbilityNames.Frog.SLURP_CUT,
+      AbilityNames.Frog.SLURP,
+      AbilityNames.Frog.WATER,
+      AbilityNames.Frog.WATER2,
+      AbilityNames.Frog.AERIAL_STRIKE,
+      AbilityNames.Frog.FROG_SQUASH,
+    ]],
+    
     [Id.magus, [
       AbilityNames.Magus.DARK_BOMB,
       AbilityNames.Magus.MLIGHTNING_2,

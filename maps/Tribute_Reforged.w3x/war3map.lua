@@ -42319,7 +42319,20 @@ function Trig_Transformations_Frog_Func017C()
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002Func001C()
+function Trig_Transformations_Frog_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0WC"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0WD"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Frog_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -42329,42 +42342,42 @@ function Trig_Transformations_Frog_Func020Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Frog_Func020Func002Func004Func001Func001Func001C()
+function Trig_Transformations_Frog_Func021Func002Func004Func001Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002Func004Func001Func001C()
+function Trig_Transformations_Frog_Func021Func002Func004Func001Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002Func004Func001C()
+function Trig_Transformations_Frog_Func021Func002Func004Func001C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002Func004C()
+function Trig_Transformations_Frog_Func021Func002Func004C()
     if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Frog_Func020Func002C()
-    if (not Trig_Transformations_Frog_Func020Func002Func001C()) then
+function Trig_Transformations_Frog_Func021Func002C()
+    if (not Trig_Transformations_Frog_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Frog_Func020C()
+function Trig_Transformations_Frog_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -42427,24 +42440,33 @@ function Trig_Transformations_Frog_Actions()
         AddUnitAnimationPropertiesBJ(true, "alternate", udg_StatMultUnit)
     else
     end
+    if (Trig_Transformations_Frog_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0WD"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0WD"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0WD'))
+        UnitRemoveAbilityBJ(FourCC("A0WC"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0WD"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0WC"), udg_TransformationPlayer)
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Frog_Func020C()) then
-        if (Trig_Transformations_Frog_Func020Func002C()) then
+    if (Trig_Transformations_Frog_Func021C()) then
+        if (Trig_Transformations_Frog_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
-            if (Trig_Transformations_Frog_Func020Func002Func004C()) then
+            if (Trig_Transformations_Frog_Func021Func002Func004C()) then
                 SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 4)
                 SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 3)
             else
-                if (Trig_Transformations_Frog_Func020Func002Func004Func001C()) then
+                if (Trig_Transformations_Frog_Func021Func002Func004Func001C()) then
                     SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
                     SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 3)
                 else
-                    if (Trig_Transformations_Frog_Func020Func002Func004Func001Func001C()) then
+                    if (Trig_Transformations_Frog_Func021Func002Func004Func001Func001C()) then
                         SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 3)
                         SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
                     else
-                        if (Trig_Transformations_Frog_Func020Func002Func004Func001Func001Func001C()) then
+                        if (Trig_Transformations_Frog_Func021Func002Func004Func001Func001Func001C()) then
                             SetUnitAbilityLevelSwapped(FourCC("A0VZ"), udg_StatMultUnit, 2)
                             SetUnitAbilityLevelSwapped(FourCC("A0VY"), udg_StatMultUnit, 2)
                         else

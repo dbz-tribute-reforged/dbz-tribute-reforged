@@ -158,6 +158,14 @@ export module Id {
   export const cronoCleave = FourCC("A0VT");
   export const cronoLuminaire = FourCC("A0VU");
 
+  export const frog = FourCC("H0A1");
+  export const frogSlurpCut = FourCC("A0WA");
+  export const frogSlurp = FourCC("A0WB");
+  export const frogWater = FourCC("A0WC");
+  export const frogWater2 = FourCC("A0WD");
+  export const frogAerialStrike = FourCC("A0WE");
+  export const frogSquash = FourCC("A0WF");
+
   export const magus = FourCC("H0A3");
   export const darkBomb = FourCC("A0W3");
   export const magusLightning2 = FourCC("A0W5");

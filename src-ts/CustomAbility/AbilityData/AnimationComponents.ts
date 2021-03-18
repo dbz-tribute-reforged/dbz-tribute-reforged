@@ -36,4 +36,17 @@ export const AnimationComponents = [
     onlyApplyAtStart: false,
     resetAnimation: true,
   },
+  {
+    name: "anim frog cleave",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 10,
+    //didn't set animation index btw
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
 ];
