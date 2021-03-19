@@ -114320,72 +114320,6 @@ Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus dama
 |cff00FFFFCooldown: <A0W6,Cool1,.>s|r
 }
 
-STRING 17954
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool2> seconds|r
-}
-
-STRING 17955
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool3> seconds|r
-}
-
-STRING 17956
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool4> seconds|r
-}
-
-STRING 17957
-// Abilities: A0WB (Slurp), Researchubertip (Tooltip - Learn - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool1>-<A0WB,Cool10> seconds|r
-}
-
-STRING 17958
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
-}
-
-STRING 17959
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool5> seconds|r
-}
-
-STRING 17960
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool6> seconds|r
-}
-
-STRING 17961
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool7> seconds|r
-}
-
-STRING 17962
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool8> seconds|r
-}
-
-STRING 17963
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool9> seconds|r
-}
-
-STRING 17964
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
-{
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0WB,Cool10> seconds|r
-}
-
 STRING 17965
 // Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -114969,9 +114903,75 @@ Robo Crit Passive
 }
 
 STRING 18062
-// Abilities: A0WL (Robo Crit Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0WJ (Uzzi Punch), EditorSuffix (Editor Suffix)
 {
 (robo)
+}
+
+STRING 18063
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18064
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18065
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18066
+// Abilities: A0WB (Slurp), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18067
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18068
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18069
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18070
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18071
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18072
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+}
+
+STRING 18073
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+{
+Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
 }
 
 STRING 18075
@@ -114999,7 +114999,7 @@ R
 }
 
 STRING 18086
-// Abilities: A0WJ (Uzzi Punch), EditorSuffix (Editor Suffix)
+// Abilities: A0WK (Electrocute), EditorSuffix (Editor Suffix)
 {
 (robo)
 }
@@ -115043,7 +115043,7 @@ STRING 18092
 }
 
 STRING 18093
-// Abilities: A0WK (Electrocute), EditorSuffix (Editor Suffix)
+// Abilities: A0WL (Robo Crit Passive), EditorSuffix (Editor Suffix)
 {
 (robo)
 }

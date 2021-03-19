@@ -12755,8 +12755,19 @@ function Trig_Slurp_Conditions()
     return true
 end
 
+function Trig_Slurp_Func001C()
+    if (not (GetTriggerUnit() == GetSpellTargetUnit())) then
+        return false
+    end
+    return true
+end
+
 function Trig_Slurp_Actions()
-    SetUnitLifeBJ(GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * 0.10)))
+    if (Trig_Slurp_Func001C()) then
+        SetUnitLifeBJ(GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * 0.05)))
+    else
+        SetUnitLifeBJ(GetSpellTargetUnit(), (GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) + (GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetSpellTargetUnit()) * 0.07)))
+    end
 end
 
 function InitTrig_Slurp()
@@ -12879,7 +12890,7 @@ function Trig_Frog_Squash_Loop_Func001A()
         AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
         BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
         DestroyEffectBJ(GetLastCreatedEffectBJ())
-        udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+        udg_TempGroup = GetUnitsInRangeOfLocAll(800.00, udg_FrogSquashPoint[udg_TempInt])
         ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func006A)
         GroupClear(udg_TempGroup)
                 DestroyGroup(udg_TempGroup)
@@ -12888,7 +12899,7 @@ function Trig_Frog_Squash_Loop_Func001A()
             AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
             BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
             DestroyEffectBJ(GetLastCreatedEffectBJ())
-            udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+            udg_TempGroup = GetUnitsInRangeOfLocAll(800.00, udg_FrogSquashPoint[udg_TempInt])
             ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func006A)
             GroupClear(udg_TempGroup)
                         DestroyGroup(udg_TempGroup)
@@ -12897,7 +12908,7 @@ function Trig_Frog_Squash_Loop_Func001A()
                 AddSpecialEffectLocBJ(udg_FrogSquashPoint[udg_TempInt], "Abilities\\Spells\\Human\\ThunderClap\\ThunderClapCaster.mdl")
                 BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 3.00)
                 DestroyEffectBJ(GetLastCreatedEffectBJ())
-                udg_TempGroup = GetUnitsInRangeOfLocAll(900.00, udg_FrogSquashPoint[udg_TempInt])
+                udg_TempGroup = GetUnitsInRangeOfLocAll(800.00, udg_FrogSquashPoint[udg_TempInt])
                 ForGroupBJ(udg_TempGroup, Trig_Frog_Squash_Loop_Func001Func004Func004Func004Func006A)
                 GroupClear(udg_TempGroup)
                                 DestroyGroup(udg_TempGroup)
