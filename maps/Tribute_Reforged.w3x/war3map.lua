@@ -465,6 +465,10 @@ gg_trg_Crono_Slash = nil
 gg_trg_Slurp = nil
 gg_trg_Frog_Squash = nil
 gg_trg_Frog_Squash_Loop = nil
+gg_trg_Heal_Beam = nil
+gg_trg_Laser_Spin = nil
+gg_trg_Laser_Spin_Loop = nil
+gg_trg_Laser_Spin_Copy = nil
 gg_trg_Doom_Scythe_Trigger = nil
 gg_trg_Doom_Scythe_Loop = nil
 gg_trg_Magus_Spell_Book = nil
@@ -866,10 +870,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Heal_Beam = nil
-gg_trg_Laser_Spin = nil
-gg_trg_Laser_Spin_Loop = nil
-gg_trg_Laser_Spin_Copy = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -12984,7 +12984,7 @@ function Trig_Laser_Spin_Actions()
     udg_RoboLightning1[GetConvertedPlayerId(GetTriggerPlayer())] = GetLastCreatedLightningBJ()
     AddLightningLoc("DRAM", udg_TempLoc3, udg_TempLoc5)
     udg_RoboLightning2[GetConvertedPlayerId(GetTriggerPlayer())] = GetLastCreatedLightningBJ()
-    udg_LaserSpinDMG[GetConvertedPlayerId(GetTriggerPlayer())] = (I2R((GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), false) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 0.06)
+    udg_LaserSpinDMG[GetConvertedPlayerId(GetTriggerPlayer())] = (I2R(((GetHeroStatBJ(bj_HEROSTAT_INT, GetTriggerUnit(), false) + 1000) * GetUnitAbilityLevelSwapped(GetSpellAbilityId(), GetTriggerUnit()))) * 0.08)
         RemoveLocation(udg_TempLoc)
         RemoveLocation(udg_TempLoc2)
         RemoveLocation(udg_TempLoc3)

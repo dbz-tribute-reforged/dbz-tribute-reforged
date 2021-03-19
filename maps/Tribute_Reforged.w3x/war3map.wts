@@ -107320,7 +107320,8 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Lightning 2]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] [Unlocks Rust Tyranno Quest]
+[lvl 200] Upgrades sword to "Rainbow" - 70% crit rate
+[lvl 200] [Unlocks Rust Tyranno Quest] - NYI
 }
 
 STRING 16938
@@ -107332,7 +107333,8 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Glenn!]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] [Unlocks Cyrus Quest]
+[lvl 200] 2.7x STR + upgraded Masamune
+[lvl 200] [Unlocks Cyrus Quest] - NYI
 }
 
 STRING 16939
@@ -107416,7 +107418,8 @@ Transformations:
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] [Unlocks Atropos Quest] - Reward: Weapon choice "Teraton Arm" or "Crisis Arm"
+[lvl 200] [Weapon Choice]  "teraton arm" (Auto Attack increase)" or "crisis arm" (-50% dmg above 50% hp, +240% dmg below 50% hp)
+[lvl 200] [Unlocks Atropos Quest] - NYI
 }
 
 STRING 16948
@@ -113768,7 +113771,7 @@ Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2
 }
 
 STRING 17873
-// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -113818,7 +113821,7 @@ E
 }
 
 STRING 17881
-// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -114046,7 +114049,7 @@ STRING 17914
 }
 
 STRING 17915
-// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -114164,7 +114167,7 @@ STRING 17932
 }
 
 STRING 17933
-// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -114955,6 +114958,18 @@ Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 
 
 STRING 18060
 // Abilities: A0WI (Heal Beam), EditorSuffix (Editor Suffix)
+{
+(robo)
+}
+
+STRING 18061
+// Abilities: A0WL (Robo Crit Passive), Name (Name)
+{
+Robo Crit Passive
+}
+
+STRING 18062
+// Abilities: A0WL (Robo Crit Passive), EditorSuffix (Editor Suffix)
 {
 (robo)
 }

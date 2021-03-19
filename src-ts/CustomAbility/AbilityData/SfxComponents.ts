@@ -4165,7 +4165,7 @@ export const SfxComponents = [
         model: "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl",
         repeatInterval: -1,
         group: 0,
-        scale: 1.8,
+        scale: 1.3,
         endScale: -1,
         startHeight: 100,
         endHeight: 100,
