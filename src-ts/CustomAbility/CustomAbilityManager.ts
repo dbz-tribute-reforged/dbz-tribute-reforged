@@ -75,9 +75,9 @@ export class CustomAbilityManager {
       this.setComponent(new SfxComponent().deserialize(component));
     }
 
-   // for (const component of AnimationComponents) {
-   //   this.setComponent(new AnimationComponent().deserialize(component));
-  //  }
+    for (const component of AnimationComponents) {
+      this.setComponent(new AnimationComponent().deserialize(component));
+    }
 
     // create components then
     // save components into the components map

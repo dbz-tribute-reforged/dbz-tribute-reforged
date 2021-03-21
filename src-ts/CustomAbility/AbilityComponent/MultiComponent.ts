@@ -130,6 +130,20 @@ export class MultiComponent implements
       this.replacementCoords.set(component, new Vector2D(newCoord.x, newCoord.y));
     }
   }
+
+  triggerComponent(
+    component: AbilityComponent,
+    ability: CustomAbility,
+    input: CustomAbilityInput,
+    source: unit
+  ) {
+    if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+      if (this.fixedReplacementCoords) {
+        this.manageFixedReplacementCoords(component, input, this.newCoord);
+      }
+      component.performTickAction(ability, input, source);
+    }
+  }
   
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
     if (!this.fixedSourceCoords || !this.hasStarted) {
@@ -206,7 +220,7 @@ export class MultiComponent implements
 
       if (this.components.length > 0) {
         // add components to active components when ready
-        this.activateComponentsWhenReady();  
+        this.activateComponentsWhenReady();
       }
       
       if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
@@ -235,12 +249,13 @@ export class MultiComponent implements
       }
 
       // keep showing active components
-      for (const component of this.activeComponents) {
-        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-          if (this.fixedReplacementCoords) {
-            this.manageFixedReplacementCoords(component, input, this.newCoord);
-          }
-          component.performTickAction(ability, input, source);
+      if (this.components.length > 0 && this.activeComponents.length > 0 && this.delayBetweenComponents == 0) {
+        const component = this.activeComponents[this.activeComponents.length-1];
+        this.triggerComponent(component, ability, input, source);
+
+      } else {
+        for (const component of this.activeComponents) {
+          this.triggerComponent(component, ability, input, source);
         }
       }
 

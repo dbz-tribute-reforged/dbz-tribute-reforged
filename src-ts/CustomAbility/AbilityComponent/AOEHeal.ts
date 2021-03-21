@@ -33,7 +33,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     public startTick: number = 0,
     public endTick: number = -1,
     public healSource: number = AOEHeal.SOURCE_UNIT,
-    public scaleHealToSourceHP: boolean = false,
+    public sourceHPHealScale: number = 0,
+    public useInverseHealScale: boolean = false,
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
     public maxHealTargets: number = AOEHeal.UNLIMITED_HEAL_TARGETS,
@@ -53,15 +54,22 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     this.affectedGroup = CreateGroup();
   }
 
-  protected calculateHeal(input: CustomAbilityInput, source: unit): number {
+  protected scaleHealToSourceHP(heal: number, sourceHPPercent: number): number {
+    let percentHP = sourceHPPercent;
+    if (this.useInverseHealScale) {
+      percentHP = 1 - percentHP;
+    }
+    return heal * (1 + this.sourceHPHealScale * percentHP);
+  }
+
+  protected calculateHeal(input: CustomAbilityInput, source: unit, sourceHPPercent: number): number {
     let heal = input.level * input.caster.spellPower * this.healMult * 
       (
         CustomAbility.BASE_DAMAGE + 
         GetHeroStatBJ(this.healAttribute, input.caster.unit, true)
       );
-    if (this.scaleHealToSourceHP) {
-      const percentHP = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-      heal *= percentHP * percentHP;
+    if (this.sourceHPHealScale != 0) {
+      heal = this.scaleHealToSourceHP(heal, sourceHPPercent);
     }
     if (input.isBeamClash && input.isBeamClash == true) {
       heal *= AOEHeal.BEAM_CLASH_HEAL_MULTIPLIER;
@@ -72,22 +80,29 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     return heal;
   }
 
-  protected performHeal(input: CustomAbilityInput, target: unit, heal: number, sourceHpPercent: number) {
+  protected performHeal(input: CustomAbilityInput, target: unit, heal: number, sourceHPPercent: number) {
     let bonusMaxHPHeal = 0;
     if (this.maxHealthHealPercent > 0) {
       bonusMaxHPHeal = (
         GetUnitState(target, UNIT_STATE_MAX_LIFE) * 
         this.maxHealthHealPercent
       );
-      if (this.scaleHealToSourceHP) {
-        bonusMaxHPHeal *= sourceHpPercent;
+      if (this.sourceHPHealScale != 0) {
+        bonusMaxHPHeal = this.scaleHealToSourceHP(bonusMaxHPHeal, sourceHPPercent);
       }
     }
-    SetUnitState(target, UNIT_STATE_LIFE, GetUnitState(target, UNIT_STATE_LIFE) + heal + bonusMaxHPHeal);
+    const healAmount = heal + bonusMaxHPHeal;
+    if (healAmount > 0) {
+      SetUnitState(target, UNIT_STATE_LIFE, GetUnitState(target, UNIT_STATE_LIFE) + healAmount);
+      // TextTagHelper.showTempText(
+      //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(heal) + " --- " + R2S(bonusMaxHPHeal), 
+      //   GetUnitX(target), GetUnitY(target), 6.0, 1.0
+      // );
+    }
     // if (input.damageMult) {
     // TextTagHelper.showTempText(
     //   Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(heal) + " --- " + R2S(bonusMaxHPHeal), 
-    //   GetUnitX(target), GetUnitY(target), 1.0, 0.8
+    //   GetUnitX(target), GetUnitY(target), 6.0, 1.0
     // );
     // }
   }
@@ -149,12 +164,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     }
 
 
-    const heal = this.calculateHeal(input, source);
-    let sourceHpPercent = 0;
-    if (this.scaleHealToSourceHP) {
-      sourceHpPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-      sourceHpPercent *= sourceHpPercent;
-    }
+    const sourceHPPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+    const heal = this.calculateHeal(input, source, sourceHPPercent);
 
     ForGroup(this.affectedGroup, () => {
       const target = GetEnumUnit();
@@ -187,14 +198,14 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
             if (healCount) {
               if (healCount < this.maxHealTicks) {
                 this.healTargets.set(target, healCount + 1);
-                this.performHeal(input, target, heal, sourceHpPercent);
+                this.performHeal(input, target, heal, sourceHPPercent);
               }
             } else {
               this.healTargets.set(target, 1);
-              this.performHeal(input, target, heal, sourceHpPercent);
+              this.performHeal(input, target, heal, sourceHPPercent);
             }
           } else {    
-            this.performHeal(input, target, heal, sourceHpPercent);
+            this.performHeal(input, target, heal, sourceHPPercent);
           }
         }
       }
@@ -221,7 +232,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     return new AOEHeal(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.healSource,
-      this.scaleHealToSourceHP,
+      this.sourceHPHealScale,
+      this.useInverseHealScale,
       this.useLastCastPoint,
       this.aoe, 
       this.maxHealTargets,
@@ -244,7 +256,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
       startTick: number;
       endTick: number;
       healSource: number;
-      scaleHealToSourceHP: boolean;
+      sourceHPHealScale: number;
+      useInverseHealScale: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
       maxHealTargets: number;
@@ -264,7 +277,8 @@ export class AOEHeal implements AbilityComponent, Serializable<AOEHeal> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.healSource = input.healSource;
-    this.scaleHealToSourceHP = input.scaleHealToSourceHP;
+    this.sourceHPHealScale = input.sourceHPHealScale;
+    this.useInverseHealScale = input.useInverseHealScale;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
     this.maxHealTargets = input.maxHealTargets;

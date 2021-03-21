@@ -17,6 +17,7 @@ export const HookComponents = [
     speed: 50,
     aoe: 200,
     onlyHookHeroes: true,
+    enablePierce: true,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -84,6 +85,7 @@ export const HookComponents = [
       },
     ],
   },
+  // slurp cut
   {
     name: "hook slurp cut", 
     repeatInterval: 1, 
@@ -100,6 +102,7 @@ export const HookComponents = [
     speed: 50,
     aoe: 200,
     onlyHookHeroes: false,
+    enablePierce: true,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -168,7 +171,6 @@ export const HookComponents = [
     ],
   },
   // frog tongue
-  // frog tongue
   {
     name: "hook frog tongue", 
     repeatInterval: 1, 
@@ -185,6 +187,7 @@ export const HookComponents = [
     speed: 50,
     aoe: 200,
     onlyHookHeroes: false,
+    enablePierce: true,
     useLastCastPoint: true,
     sfxList: [
       {
@@ -269,6 +272,7 @@ export const HookComponents = [
     speed: 50,
     aoe: 250,
     onlyHookHeroes: true,
+    enablePierce: true,
     useLastCastPoint: true,
     sfxList: [
       {

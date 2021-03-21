@@ -28,13 +28,6 @@ export const TimedLifeComponents = [
     duration: 99,
   },
   {
-    name: "timed life uzzi punch", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    duration: 10,
-  },
-  {
     name: "timed life beam justice flash", 
     repeatInterval: 1, 
     startTick: 0,
@@ -110,5 +103,12 @@ export const TimedLifeComponents = [
     startTick: 0,
     endTick: -1,
     duration: 30,
+  },
+  {
+    name: "timed life beam robo laser spin", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 25,
   },
 ];

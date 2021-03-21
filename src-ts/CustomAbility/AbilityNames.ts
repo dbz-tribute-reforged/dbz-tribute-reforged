@@ -305,13 +305,31 @@ export module AbilityNames {
     export const SLASH: string = "Crono Slash";
     export const LIGHTNING: string = "Crono Lightning";
     export const LIGHTNING_2: string = "Crono Lightning 2";
+    export const LIGHTNING_3: string = "Crono Lightning 3";
     export const CLEAVE: string = "Crono Cleave";
     export const LUMINAIRE: string = "Crono Luminaire";
   }
 
+  export module Frog {
+    export const SLURP_CUT: string = "Frog Slurp Cut";
+    export const SLURP: string = "Frog Slurp";
+    export const WATER: string = "Frog Water";
+    export const WATER2: string = "Frog Water 2";
+    export const AERIAL_STRIKE: string = "Frog Aerial Strike";
+    export const FROG_SQUASH: string = "Frog Squash";
+  }
+
+  export module Robo {
+    export const ROBO_TACKLE: string = "Robo Tackle";
+    export const LASER_SPIN: string = "Robo Laser Spin";
+    export const HEAL_BEAM: string = "Robo Heal Beam";
+    export const UZZI_PUNCH: string = "Robo Uzzi Punch";
+    export const ELECTROCUTE: string = "Robo Electrocute";
+  }
+
   export module Magus {
     export const DARK_BOMB: string = "Magus Dark Bomb";
-    export const MLIGHTNING_2: string = "Magus Lightning 2";
+    export const LIGHTNING_2: string = "Magus Lightning 2";
     export const DARK_MATTER: string = "Magus Dark Matter";
   }
 
@@ -525,23 +543,6 @@ export module AbilityNames {
     export const RUST_CHOMP: string = "Rust Chomp";
     export const RUST_GOBBLE: string = "Rust Gobble";
     export const TYRANNO_ROAR: string = "Tyranno Roar";
-  }
-
-  export module Frog {
-    export const SLURP_CUT: string = "Slurp Cut";
-    export const SLURP: string = "Slurp";
-    export const WATER: string = "Water";
-    export const WATER2: string = "Water2";
-    export const AERIAL_STRIKE: string = "Aerial Strike";
-    export const FROG_SQUASH: string = "Frog Squash";
-  }
-
-  export module Robo {
-    export const ROBO_TACKLE: string = "Robo Tackle";
-    export const LASER_SPIN: string = "Laser Spin";
-    export const HEAL_BEAM: string = "Heal Beam";
-    export const UZZI_PUNCH: string = "Uzzi Punch";
-    export const ELECTROCUTE: string = "Electrocute";
   }
 
   export module Saga {

@@ -263,6 +263,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.cronoSlash, AbilityNames.Crono.SLASH],
     [Id.cronoLightning, AbilityNames.Crono.LIGHTNING],
     [Id.cronoLightning2, AbilityNames.Crono.LIGHTNING_2],
+    [Id.cronoLightning3, AbilityNames.Crono.LIGHTNING_3],
     [Id.cronoCleave, AbilityNames.Crono.CLEAVE],
     [Id.cronoLuminaire, AbilityNames.Crono.LUMINAIRE],
 
@@ -284,7 +285,7 @@ export const abilityCodesToNames = new Map<number, string>(
 
     //magus
     [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
-    [Id.magusLightning2, AbilityNames.Magus.MLIGHTNING_2],
+    [Id.magusLightning2, AbilityNames.Magus.LIGHTNING_2],
     [Id.magusDarkMatter, AbilityNames.Magus.DARK_MATTER],
 
     // babidi

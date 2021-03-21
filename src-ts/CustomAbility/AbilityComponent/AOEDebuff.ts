@@ -6,6 +6,9 @@ import { Constants } from "Common/Constants";
 import { UnitHelper } from "Common/UnitHelper";
 
 export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
+  static readonly SOURCE_UNIT = 0;
+  static readonly SOURCE_TARGET_POINT_LAST_CAST = 1;
+  static readonly SOURCE_TARGET_POINT_DYNAMIC = 2;
 
   protected alreadyDebuffed: Map<number, boolean>;
   protected castDummy: unit;
@@ -18,6 +21,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     public repeatInterval: number = 1,
     public startTick: number = 0,
     public endTick: number = -1,
+    public debuffSource: number = AOEDebuff.SOURCE_UNIT,
     public abilityId: number = 0,
     public orderId: number = 0,
     public aoe: number = 500,
@@ -32,8 +36,20 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     this.affectedGroup = CreateGroup();
   }
   
+
+  setDebuffSourceToTargettedPoint(input: CustomAbilityInput, source: unit) {
+    if (this.debuffSource == AOEDebuff.SOURCE_UNIT) {
+      this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
+    } else if (this.debuffSource == AOEDebuff.SOURCE_TARGET_POINT_LAST_CAST) {
+      this.sourceCoord.setPos(input.castPoint.x, input.castPoint.y);
+    } else {
+      this.sourceCoord.setPos(input.targetPoint.x, input.targetPoint.y);
+    }
+  }
+
   performTickAction(ability: CustomAbility, input: CustomAbilityInput, source: unit) {
-    this.sourceCoord.setPos(GetUnitX(source), GetUnitY(source));
+    this.setDebuffSourceToTargettedPoint(input, source);
+
     if (ability.currentTick == this.startTick) {
       this.castDummy = CreateUnit(
         input.casterPlayer, 
@@ -99,6 +115,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
   clone(): AbilityComponent {
     return new AOEDebuff(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
+      this.debuffSource,
       this.abilityId, this.orderId, this.aoe, this.keepCasting,
       this.onlyAffectHeroes,
       this.requireBuff, this.buffId,
@@ -111,6 +128,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
       repeatInterval: number; 
       startTick: number;
       endTick: number;
+      debuffSource: number;
       abilityId: number;
       orderId: number; 
       aoe: number; 
@@ -124,6 +142,7 @@ export class AOEDebuff implements AbilityComponent, Serializable<AOEDebuff> {
     this.repeatInterval = input.repeatInterval;
     this.startTick = input.startTick;
     this.endTick = input.endTick;
+    this.debuffSource = input.debuffSource;
     this.abilityId = input.abilityId;
     this.orderId = input.orderId;
     this.aoe = input.aoe;

@@ -10,6 +10,7 @@ import { Logger } from "Libs/TreeLib/Logger";
 import { AllianceHelper } from "Common/AllianceHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
+import { Globals } from "Common/Constants";
 
 export class Budokai extends AdvancedTournament implements Tournament {
   protected registerTrigger: trigger;
@@ -91,10 +92,12 @@ export class Budokai extends AdvancedTournament implements Tournament {
     const debugEnter = CreateTrigger();
     TriggerRegisterPlayerChatEvent(debugEnter, Player(0), "-forceenter", false);
     TriggerAddAction(debugEnter, () => {
-      const playerId = S2I(SubString(GetEventPlayerChatString(), 12, 13));
-      const player = Player(playerId);
-      Logger.LogDebug("Forcing " + playerId + " to join the tournament.");
-      this.addPlayerContestant(player);
+      if (Globals.isFBSimTest && Globals.isFreemode) {
+        const playerId = S2I(SubString(GetEventPlayerChatString(), 12, 13));
+        const player = Player(playerId);
+        Logger.LogDebug("Forcing " + playerId + " to join the tournament.");
+        this.addPlayerContestant(player);
+      }
     });
 
     DisableTrigger(this.registerTrigger);

@@ -18,14 +18,7 @@ export const HideUnitComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    preventMovement: false,
-  },
-  {
-    name: "hide unit monkey smasher", 
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    preventMovement: false,
+    preventMovement: true,
   },
   {
     name: "hide unit scattering bullet start", 

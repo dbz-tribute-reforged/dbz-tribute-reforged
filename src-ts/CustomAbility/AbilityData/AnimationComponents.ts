@@ -49,4 +49,16 @@ export const AnimationComponents = [
     onlyApplyAtStart: false,
     resetAnimation: true,
   },
+  {
+    name: "anim robo tackle",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    animationSpeed: 0,
+    animationIndex: 6,
+    animationString: "",
+    addAnimationProperty: "",
+    onlyApplyAtStart: false,
+    resetAnimation: true,
+  },
 ];

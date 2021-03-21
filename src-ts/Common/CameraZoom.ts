@@ -26,7 +26,7 @@ export module CameraZoom {
         public performZoom() {
             if (GetLocalPlayer() == this.p) {
                 SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, this.zoom, 0.0);
-                SetCameraField(CAMERA_FIELD_FARZ, 1.5 * this.zoom, 0.0);
+                SetCameraField(CAMERA_FIELD_FARZ, 1.7 * this.zoom, 0.0);
                 SetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK, this.angle, 0.0);
                 SetCameraField(CAMERA_FIELD_FIELD_OF_VIEW, FOV_DEFAULT, 0.0);
                 SetCameraField(CAMERA_FIELD_ZOFFSET, 0.0, 0.0);

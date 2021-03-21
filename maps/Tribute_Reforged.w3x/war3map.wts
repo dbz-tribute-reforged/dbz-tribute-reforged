@@ -62474,6 +62474,8 @@ Transformations:
 [lvl 130] 2.25x "ss3"
 [lvl 160] 2.50x "ssg"
 [lvl 210] 2.60x "ssb"
+
+|cffffcc00Revenge:|r Spells deal up to +25% bonus damage when on low HP.
 }
 
 STRING 10151
@@ -107010,16 +107012,12 @@ A versatile hero that can modify his abilities depending on the situation.
 }
 
 STRING 16903
-// Units: H08M (Saiyan Warrior), Ubertip (Tooltip - Extended)
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
 {
-A strong PvP fighter due to his extremely high mobility, burst damage, and innate dodge ability. However, his abilities are primarily suited for close-range combat with punishing cooldowns, that make it difficult for him to take medium to long-range encounters.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool1> seconds|r
 }
 
 STRING 16904
@@ -107333,7 +107331,7 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Glenn!]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] 2.7x STR + upgraded Masamune
+[lvl 200] 2.7x STR [upgrades Masamune]
 [lvl 200] [Unlocks Cyrus Quest] - NYI
 }
 
@@ -107418,7 +107416,9 @@ Transformations:
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] [Weapon Choice]  "teraton arm" (Auto Attack increase)" or "crisis arm" (-50% dmg above 50% hp, +240% dmg below 50% hp)
+[lvl 200] [|cff00ffffWeapon Choice|r]
+"|cff808080teraton arm|r" (+50% attack dmg)
+"|cffff2020crisis arm|r" (-50% attack damage on high HP, +250% attack damage on low HP)
 [lvl 200] [Unlocks Atropos Quest] - NYI
 }
 
@@ -109947,33 +109947,6 @@ STRING 17316
 W
 }
 
-STRING 17317
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool2> seconds|r
-}
-
-STRING 17318
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool3> seconds|r
-}
-
-STRING 17319
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool4> seconds|r
-}
-
 STRING 17320
 // Abilities: A0VH (Gobble), Tip (Tooltip - Normal)
 {
@@ -110096,15 +110069,6 @@ STRING 17334
 [|cff00FF00W|r] Learn Chomp  [|cffffcc00Level %d|r]
 }
 
-STRING 17335
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool1> seconds|r
-}
-
 STRING 17336
 // Abilities: A0VH (Gobble), Tip (Tooltip - Normal)
 {
@@ -110115,15 +110079,6 @@ STRING 17337
 // Abilities: A0VH (Gobble), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Gobble - [|cffffcc00Level 5|r]
-}
-
-STRING 17338
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool5> seconds|r
 }
 
 STRING 17339
@@ -110156,49 +110111,13 @@ STRING 17343
 [|cff00FF00W|r] Gobble - [|cffffcc00Level 10|r]
 }
 
-STRING 17344
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool6> seconds|r
-}
-
-STRING 17345
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool7> seconds|r
-}
-
-STRING 17346
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool8> seconds|r
-}
-
-STRING 17347
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
-{
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool9> seconds|r
-}
-
 STRING 17348
-// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WH (Laser Spin), Researchubertip (Tooltip - Learn - Extended)
 {
-Rust Tyranno bite a nearby enemy and heals himself.
-|cff00ff00Damage: Str * lvl * ?
-Heal: 10% Max HP
-|cff00ffffCooldown: <A0VH,Cool10> seconds|r
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool1> - <A0WH,Cool1> seconds|r
 }
 
 STRING 17349
@@ -112395,10 +112314,10 @@ Transformations:
 [lvl 35]  1.50x "fp"
 [lvl 85]  2.00x "fp"
 [lvl 125] 2.25x "fp"
-[lvl 150] 2.50x "fp" [Unlocks weapon choice]
-[lvl 150] "Doom Scythe" - Increases auto attack damage 100% when a nearby ally dies (stacking)
-[lvl 150] "Dreamreaper" - 40% change for 4x critical strike damage
-
+[lvl 150] 2.50x "fp"
+[lvl 150] [|cff00ffffWeapon Choice|r]
+"|cffff00ffdoom scythe|r" - Increases auto attack damage by 100% when an ally dies (stacking)
+"|cffff2020dreamreaper|r" - 40% chance for 4x crit
 }
 
 STRING 17653
@@ -112496,12 +112415,6 @@ STRING 17667
 [|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 1|r]
 }
 
-STRING 17668
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
-}
-
 STRING 17669
 // Abilities: A0W3 (Dark Bomb), Name (Name)
 {
@@ -112518,12 +112431,6 @@ STRING 17671
 // Abilities: A0W3 (Dark Bomb), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00W|r] Learn Dark Bomb - [|cffffcc00Level %d|r]
-}
-
-STRING 17672
-// Abilities: A0W3 (Dark Bomb), Researchubertip (Tooltip - Learn - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
 }
 
 STRING 17673
@@ -112556,36 +112463,6 @@ STRING 17677
 [|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 6|r]
 }
 
-STRING 17678
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool2>s|r
-}
-
-STRING 17679
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool3>s|r
-}
-
-STRING 17680
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool4>s|r
-}
-
-STRING 17681
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool5>s|r
-}
-
-STRING 17682
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool6>s|r
-}
-
 STRING 17683
 // Buffs/Effects: B04B (), Bufftip (Tooltip)
 {
@@ -112598,34 +112475,10 @@ STRING 17684
 [|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 7|r]
 }
 
-STRING 17685
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool7>s|r
-}
-
 STRING 17686
 // Abilities: A0W3 (Dark Bomb), Tip (Tooltip - Normal)
 {
 [|cffFFFF00W|r] Dark Bomb - [|cffffcc00Level 8|r]
-}
-
-STRING 17687
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool8>s|r
-}
-
-STRING 17688
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool9>s|r
-}
-
-STRING 17689
-// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
-{
-Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool10>s|r
 }
 
 STRING 17690
@@ -113058,12 +112911,6 @@ STRING 17757
 [|cff00ff00D|r] Dark Matter- [|cffffcc00Level 1|r]
 }
 
-STRING 17758
-// Doodads: D01W (ToPSkybox), Name (Name)
-{
-ToPSkybox
-}
-
 STRING 17759
 // Abilities: A0W6 (Dark Matter), Name (Name)
 {
@@ -113381,7 +113228,7 @@ Frog stretches his tongue out and grabs the first enemy hero he hits, dealing da
 }
 
 STRING 17808
-// Abilities: A0WA (Slurp Cut), EditorSuffix (Editor Suffix)
+// Abilities: A0VZ (Frog Attack Passive), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
@@ -113405,111 +113252,123 @@ W
 }
 
 STRING 17812
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Destructibles: B00V (TourneyArena), Name (Name)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+TourneyArena
 }
 
 STRING 17813
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Destructibles: B00W (TopArenaFinal), Name (Name)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+TopArenaFinal
 }
 
 STRING 17814
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Doodads: D01W (BlackBarSkybox), Name (Name)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+BlackBarSkybox
 }
 
 STRING 17815
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 2|r]
+[|cffffcc00Upgrade|r] Water 2
+Frog's Water has been upgraded to Water 2, a powerful charged nuke.
 }
 
 STRING 17816
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 3|r]
+[|cffffcc00Secret Upgrade|r] Lightning 3
+After cultivating his single target lightning powers, Crono has unlocked an enhanced version of his original lightning.
 }
 
 STRING 17817
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 4|r]
+[|cffffcc00Upgrade|r] Lightning 2
+Crono has mastered his Lightning skills to target multiple enemies at once.
 }
 
 STRING 17818
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Doodads: D01X (ToPArena Doodad), Name (Name)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+ToPArena Doodad
 }
 
 STRING 17819
-// Abilities: A0WB (Slurp), Researchtip (Tooltip - Learn)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Learn Slurp  [|cffffcc00Level %d|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool2> seconds|r
 }
 
 STRING 17820
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool1>s|r
 }
 
 STRING 17821
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 1|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool3> seconds|r
 }
 
 STRING 17822
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 5|r]
+[|cffffcc00Talent|r] Teratorn Arm
++50% attack damage at all times.
 }
 
 STRING 17823
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Researchubertip (Tooltip - Learn - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool1>s|r
 }
 
 STRING 17824
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 6|r]
+[|cffffcc00Talent|r] Crisis Arm
+When above 50% HP suffer -50% attack damage.
+When below 50% HP gain +250% attack damage.
 }
 
 STRING 17825
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 7|r]
+[|cffffcc00Talent|r] Doom Scythe
+Whenever an ally dies, gain a stacking +100% attack damage for the next 10 seconds.
 }
 
 STRING 17826
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 8|r]
+[|cffffcc00Talent|r] Dreamreaper
+Gain a 40% chance on auto attacks to deal a 4x critical strike.
+
 }
 
 STRING 17827
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+// Buffs/Effects: B04D (), Buffubertip (Tooltip - Extended)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 9|r]
+Frog's legendary sword skills grant him increased attack damage and a chance to critically strike enemies.
 }
 
 STRING 17828
-// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+// Buffs/Effects: B04D (), Bufftip (Tooltip)
 {
-[|cff00FF00W|r] Slurp  [|cffffcc00Level 10|r]
+Frog's Sword
 }
 
 STRING 17829
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool2>s|r
 }
 
 STRING 17830
@@ -113537,7 +113396,7 @@ STRING 17833
 }
 
 STRING 17834
-// Abilities: A0WB (Slurp), EditorSuffix (Editor Suffix)
+// Abilities: A0WA (Slurp Cut), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
@@ -113549,15 +113408,11 @@ E
 }
 
 STRING 17836
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 1|r]
-}
-
-STRING 17837
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool4> seconds|r
 }
 
 STRING 17838
@@ -113573,117 +113428,73 @@ E
 }
 
 STRING 17840
-// Abilities: A0WC (Water), Researchtip (Tooltip - Learn)
+// Abilities: A0WB (Slurp), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cffFFFF00E|r] Learn Water - [|cffffcc00Level %d|r]
-}
-
-STRING 17841
-// Abilities: A0WC (Water), Researchubertip (Tooltip - Learn - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool1> - <A0WB,Cool10> seconds|r
 }
 
 STRING 17842
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 2|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool1> seconds|r
 }
 
 STRING 17843
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 3|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool5> seconds|r
 }
 
 STRING 17844
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 4|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool6> seconds|r
 }
 
 STRING 17845
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 5|r]
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool7> seconds|r
 }
 
 STRING 17846
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 6|r]
-}
-
-STRING 17847
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17848
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17849
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17850
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17851
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool8> seconds|r
 }
 
 STRING 17852
-// Abilities: A0WC (Water), EditorSuffix (Editor Suffix)
+// Abilities: A0WB (Slurp), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
 
 STRING 17853
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 7|r]
-}
-
-STRING 17854
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool9> seconds|r
 }
 
 STRING 17855
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 8|r]
-}
-
-STRING 17856
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17857
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
-}
-
-STRING 17858
-// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
-{
-Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0W3,Cool1>s|r
+Frog stretches his tongue out and licks himself and nearby allies to heal them. The first ally hit is healed bonus %HP.
+|cff00ff00Healing: Int * Lvl * ? (+4% on first ally)|r
+|cff00ffffCooldown: <A0WB,Cool10> seconds|r
 }
 
 STRING 17859
@@ -113693,15 +113504,19 @@ Goku throws a Spirit Bomb at the target area, causing it to explode and deal dam
 }
 
 STRING 17860
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 9|r]
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool1>s|r
 }
 
 STRING 17861
-// Abilities: A0WC (Water), Tip (Tooltip - Normal)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-[|cffFFFF00E|r] Water - [|cffffcc00Level 10|r]
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool2>s|r
 }
 
 STRING 17862
@@ -113747,27 +113562,35 @@ STRING 17868
 }
 
 STRING 17869
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool3>s|r
 }
 
 STRING 17870
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool4>s|r
 }
 
 STRING 17871
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool5>s|r
 }
 
 STRING 17872
-// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo fires a series of blasts from his fist in front of him. Channeled.|n|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool6>s|r
 }
 
 STRING 17873
@@ -113865,7 +113688,7 @@ STRING 17887
 }
 
 STRING 17888
-// Abilities: A0WD (Water 2), EditorSuffix (Editor Suffix)
+// Abilities: A0WC (Water), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
@@ -114043,7 +113866,7 @@ Frog performs a jump-slash to the target area, damaging nearby enemies.
 }
 
 STRING 17914
-// Abilities: A0WE (Aerial Strike), EditorSuffix (Editor Suffix)
+// Abilities: A0WD (Water 2), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
@@ -114215,7 +114038,7 @@ Robo shocks all enemies in range.
 }
 
 STRING 17940
-// Abilities: A0WF (Frog Squash), EditorSuffix (Editor Suffix)
+// Abilities: A0WE (Aerial Strike), EditorSuffix (Editor Suffix)
 {
 (frog)
 }
@@ -114233,133 +114056,139 @@ Q
 }
 
 STRING 17943
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Upgrade|r] One Winged Angel
+Sephiroth has unlocked his ultimate combat form.
 }
 
 STRING 17944
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Upgrade|r] One For All
+All Might can now tap into the full potential of One For All, greatly increasing his power for a short period of time.
 }
 
 STRING 17945
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Upgrade|r] Energy Blades
+Zamasu can now convert his Ki into deadly energy blades, exchanging -0.5x Int for +0.5x Agi.
 }
 
 STRING 17946
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] Blast-o-Matic
+King K Rool has finished constructing the deadly Blast-o-Matic.
 }
 
 STRING 17947
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] King's Throne
+King K Rool has finally found a throne large enough for him to sit on.
 }
 
 STRING 17948
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] God Kamehameha
+Goku can now infuse his kamehameha's with godly energy, allowing them to deal even greater damage.
 }
 
 STRING 17949
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] Super Dragon Fist
+Goku's dragon fist now deals more damage while travelling faster and further.
 }
 
 STRING 17950
-// Abilities: A0WF (Frog Squash), Researchubertip (Tooltip - Learn - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] Ultra Volleyball
+Gotenks can now trap his opponents inside multiple layers of galactic donuts.
 }
 
 STRING 17951
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cffffcc00Talent|r] Super Ghost Kamikaze x10
+Gotenks can now spawn twice the number of Kamikaze Ghosts.
 }
 
 STRING 17952
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 1|r]
 }
 
 STRING 17953
-// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Researchtip (Tooltip - Learn)
 {
-Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
-|cff00FF00Damage: Stri * lvl * ?|r
-|cff00FFFFCooldown: <A0W6,Cool1,.>s|r
+[|cff00ff00E|r] Learn Water - [|cffffcc00Level %d|r]
 }
 
-STRING 17965
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17954
+// Abilities: A0WF (Frog Squash), EditorSuffix (Editor Suffix)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+(frog)
 }
 
-STRING 17966
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17955
+// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+E
 }
 
-STRING 17967
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17956
+// Abilities: A0WM (Lightning 3), Name (Name)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+Lightning 3
 }
 
-STRING 17968
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17957
+// Abilities: A0WM (Lightning 3), Researchubertip (Tooltip - Learn - Extended)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+Crono calls down a bolt of lightning at the target area, dealing instant damage to units in range.
+|cff00FF00Damage: Int * lvl * ?|r
+|cff00FFFFCooldown: <A0VR,Cool1,.>s|r
 }
 
-STRING 17969
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17958
+// Abilities: A0WM (Lightning 3), Researchtip (Tooltip - Learn)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+[|cff00FF00E|r] Learn Lightning - [|cffffcc00Level %d|r]
 }
 
-STRING 17970
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17959
+// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+E
 }
 
-STRING 17971
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+STRING 17960
+// Abilities: A0WM (Lightning 3), Tip (Tooltip - Normal)
 {
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+[|cff00FF00E|r] |cffffff00Lightning 3|r - [|cffffcc00Level 10|r]
+}
+
+STRING 17961
+// Abilities: A0WM (Lightning 3), Ubertip (Tooltip - Normal - Extended)
+{
+Crono calls down a powerful bolt of |cffffff00lightning|r at the target area, dealing instant damage to units in range and slowing them.
+|cff00FF00Damage: Int * lvl * ?|r
+|cff00FFFFCooldown: <A0WM,Cool10,.>s|r
+}
+
+STRING 17962
+// Abilities: A0WM (Lightning 3), EditorSuffix (Editor Suffix)
+{
+(crono)
+}
+
+STRING 17963
+// Abilities: A0WN (Lightning 3 Slow Debuff), Name (Name)
+{
+Lightning 3 Slow Debuff
+}
+
+STRING 17964
+// Abilities: A0WN (Lightning 3 Slow Debuff), Tip (Tooltip - Normal)
+{
+Lightning 3 Slow Debuff
 }
 
 STRING 17972
@@ -114416,40 +114245,10 @@ STRING 17980
 [|cff00ff00E|r] Water 2 - [|cffffcc00Level 8|r]
 }
 
-STRING 17981
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 17982
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 17983
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
-{
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 17984
-// Abilities: A0WD (Water 2), Researchubertip (Tooltip - Learn - Extended)
-{
-The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area. |n|cffff2020Channel Duration: <A0WD,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
 STRING 17985
 // Abilities: A0WG (Robo Tackle), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Robo Tackle - [|cffffcc00Level 1|r]
-}
-
-STRING 17986
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
 }
 
 STRING 17987
@@ -114462,12 +114261,6 @@ STRING 17988
 // Abilities: A0WG (Robo Tackle), Researchtip (Tooltip - Learn)
 {
 [|cff00FF00Q|r] Learn Robo Tackle - [|cffffcc00Level %d|r]
-}
-
-STRING 17989
-// Abilities: A0WG (Robo Tackle), Researchubertip (Tooltip - Learn - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
 }
 
 STRING 17990
@@ -114524,106 +114317,10 @@ STRING 17998
 [|cff00FF00Q|r] Robo Tackle - [|cffffcc00Level 10|r]
 }
 
-STRING 17999
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18000
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18001
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18002
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18003
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18004
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18005
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18006
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
-STRING 18007
-// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
-{
-Robo dashes forward, dealing damage to enemies in his path.|n|cffFF0000Damage:|r Str * lvl * ??|n|cff00FFFFCooldown: <A0WG,Cool1>s
-}
-
 STRING 18008
 // Abilities: A0WG (Robo Tackle), EditorSuffix (Editor Suffix)
 {
 (robo)
-}
-
-STRING 18009
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18010
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18011
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18012
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18013
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18014
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18015
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
 }
 
 STRING 18016
@@ -114710,30 +114407,6 @@ STRING 18029
 [|cff00ff00W|r] Laser Spin - [|cffffcc00Level 10|r]
 }
 
-STRING 18030
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18031
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18032
-// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
-STRING 18033
-// Abilities: A0WH (Laser Spin), Researchubertip (Tooltip - Learn - Extended)
-{
-Robo spins in a circle and fires lasers, damaging units in range.|n|cffff2020Channel Duration: <A0WH,Dur1> seconds|r|n|cff00ff00Damage: Lvl x Int x ?|r|n|cff00ffffCooldown: <A0WD,Cool10> seconds|r
-}
-
 STRING 18034
 // Abilities: A0WH (Laser Spin), EditorSuffix (Editor Suffix)
 {
@@ -114741,33 +114414,43 @@ STRING 18034
 }
 
 STRING 18035
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool1>s|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool7>s|r
 }
 
 STRING 18036
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool2>s|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool8>s|r
 }
 
 STRING 18037
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool3>s|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool9>s|r
 }
 
 STRING 18038
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0W3 (Dark Bomb), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool4>s|r
+Magus throws a Dark Bomb at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0W3,Cool10>s|r
 }
 
 STRING 18039
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool5>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool1>s|r
 }
 
 STRING 18040
@@ -114777,9 +114460,11 @@ STRING 18040
 }
 
 STRING 18041
-// Abilities: A0WI (Heal Beam), Tip (Tooltip - Normal)
+// Abilities: A0WC (Water), Researchubertip (Tooltip - Learn - Extended)
 {
-[|cff00ff00E|r] Heal Beam - [|cffffcc00Level21|r]
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool1>s|r
 }
 
 STRING 18042
@@ -114801,7 +114486,7 @@ STRING 18044
 }
 
 STRING 18045
-// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114819,13 +114504,15 @@ STRING 18047
 }
 
 STRING 18048
-// Abilities: A0WI (Heal Beam), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool1>-<A0WI,Cool10>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool2>s|r
 }
 
 STRING 18049
-// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114843,15 +114530,19 @@ STRING 18051
 }
 
 STRING 18052
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool6>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool3>s|r
 }
 
 STRING 18053
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool7>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool4>s|r
 }
 
 STRING 18054
@@ -114873,21 +114564,27 @@ STRING 18056
 }
 
 STRING 18057
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool8>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool5>s|r
 }
 
 STRING 18058
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool9>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool6>s|r
 }
 
 STRING 18059
-// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
 {
-Robo heals allies in an area around him for a small amount.|n|cff00FF00Healing: 10%|r|n|cff00FFFFCooldown: <A0WI,Cool10>s|r
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool7>s|r
 }
 
 STRING 18060
@@ -114909,69 +114606,81 @@ STRING 18062
 }
 
 STRING 18063
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 2|r]
 }
 
 STRING 18064
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 3|r]
 }
 
 STRING 18065
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 4|r]
 }
 
 STRING 18066
-// Abilities: A0WB (Slurp), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 5|r]
 }
 
 STRING 18067
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 6|r]
 }
 
 STRING 18068
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 7|r]
 }
 
 STRING 18069
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 8|r]
 }
 
 STRING 18070
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 9|r]
 }
 
 STRING 18071
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WC (Water), Tip (Tooltip - Normal)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+[|cff00FF00E|r] Water - [|cffffcc00Level 10|r]
 }
 
 STRING 18072
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool3>s|r
 }
 
 STRING 18073
-// Abilities: A0WB (Slurp), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
 {
-Frog stretches his tongue out and licks the targeted ally, healing them. |n|cff00ff00Healing: 7% (Ally) / 5% (Self)|r|n|cff00ffffCooldown: <A0WB,Cool1> seconds|r
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool4>s|r
+}
+
+STRING 18074
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool5>s|r
 }
 
 STRING 18075
@@ -114996,6 +114705,54 @@ STRING 18078
 // Abilities: A0WJ (Uzzi Punch), Hotkey (Hotkey - Normal)
 {
 R
+}
+
+STRING 18079
+// Abilities: A0WI (Heal Beam), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Heal Beam - [|cffffcc00Level 2|r]
+}
+
+STRING 18080
+// Buffs/Effects: B04E (), Bufftip (Tooltip)
+{
+Lightning 3
+}
+
+STRING 18081
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool8>s|r
+}
+
+STRING 18082
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool9>s|r
+}
+
+STRING 18083
+// Abilities: A0WC (Water), Ubertip (Tooltip - Normal - Extended)
+{
+Frog throws a ball of water at the target area that explodes at its destination, damaging enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0WC,Cool10>s|r
+}
+
+STRING 18084
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 2|r]
+}
+
+STRING 18085
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 3|r]
 }
 
 STRING 18086
@@ -115046,5 +114803,679 @@ STRING 18093
 // Abilities: A0WL (Robo Crit Passive), EditorSuffix (Editor Suffix)
 {
 (robo)
+}
+
+STRING 18094
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 4|r]
+}
+
+STRING 18095
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool1> seconds|r
+}
+
+STRING 18096
+// Abilities: A0WB (Slurp), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00W|r] Learn Slurp [|cffffcc00Level %d|r]
+}
+
+STRING 18097
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur2> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool2> seconds|r
+}
+
+STRING 18098
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 1|r]
+}
+
+STRING 18099
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 5|r]
+}
+
+STRING 18100
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur3> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool3> seconds|r
+}
+
+STRING 18101
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 6|r]
+}
+
+STRING 18102
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 7|r]
+}
+
+STRING 18103
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 8|r]
+}
+
+STRING 18104
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 9|r]
+}
+
+STRING 18105
+// Abilities: A0WB (Slurp), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Slurp [|cffffcc00Level 10|r]
+}
+
+STRING 18106
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur4> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool4> seconds|r
+}
+
+STRING 18107
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur5> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool5> seconds|r
+}
+
+STRING 18108
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur6> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool6> seconds|r
+}
+
+STRING 18109
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur7> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool7> seconds|r
+}
+
+STRING 18110
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur8> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool8> seconds|r
+}
+
+STRING 18111
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool1,.>s|r
+}
+
+STRING 18112
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool2,.>s|r
+}
+
+STRING 18113
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool3,.>s|r
+}
+
+STRING 18114
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool4,.>s|r
+}
+
+STRING 18115
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool5,.>s|r
+}
+
+STRING 18116
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool6,.>s|r
+}
+
+STRING 18117
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool7,.>s|r
+}
+
+STRING 18118
+// Abilities: A0WF (Frog Squash), Researchubertip (Tooltip - Learn - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool1,.> - <A0WF,Cool10,.>s|r
+}
+
+STRING 18119
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool8,.>s|r
+}
+
+STRING 18120
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool9,.>s|r
+}
+
+STRING 18121
+// Abilities: A0WF (Frog Squash), Ubertip (Tooltip - Normal - Extended)
+{
+Frog summons a giant frog that jumps on his enemies. Deals up to 100% bonus damage based on the amount of HP Frog is missing.
+|cff00FF00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WF,Cool10,.>s|r
+}
+
+STRING 18122
+// Abilities: A0WI (Heal Beam), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool1> - <A0WI,Cool10>s|r
+}
+
+STRING 18123
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool6>s|r
+}
+
+STRING 18124
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool7>s|r
+}
+
+STRING 18125
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool8>s|r
+}
+
+STRING 18126
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool9>s|r
+}
+
+STRING 18127
+// Abilities: A0WI (Heal Beam), Ubertip (Tooltip - Normal - Extended)
+{
+Robo heals all nearby allies within a short range.
+|cff00FF00Healing: Int * Lvl * ? (+2% max HP)|r
+|cff00FFFFCooldown: <A0WI,Cool10>s|r
+}
+
+STRING 18128
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool2> seconds|r
+}
+
+STRING 18129
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool3> seconds|r
+}
+
+STRING 18130
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool4> seconds|r
+}
+
+STRING 18131
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool1> seconds|r
+}
+
+STRING 18132
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool5> seconds|r
+}
+
+STRING 18133
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool6> seconds|r
+}
+
+STRING 18134
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool7> seconds|r
+}
+
+STRING 18135
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool8> seconds|r
+}
+
+STRING 18136
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool9> seconds|r
+}
+
+STRING 18137
+// Abilities: A0VH (Gobble), Ubertip (Tooltip - Normal - Extended)
+{
+Rust Tyranno bite a nearby enemy and heals himself.
+|cff00ff00Damage: Str * lvl * ?
+Heal: 8% Max HP
+|cff00ffffCooldown: <A0VH,Cool10> seconds|r
+}
+
+STRING 18138
+// Units: H08M (Saiyan Warrior), Ubertip (Tooltip - Extended)
+{
+A strong PvP fighter due to his extremely high mobility, burst damage, and innate dodge ability. However, his abilities are primarily suited for close-range combat with punishing cooldowns, that make it difficult for him to take medium to long-range encounters.
+
+|cffffcc00Revenge:|r Spells deal up to +25% bonus damage when on low HP.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18139
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool1> seconds|r
+}
+
+STRING 18140
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur2> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool2> seconds|r
+}
+
+STRING 18141
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur3> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool3> seconds|r
+}
+
+STRING 18142
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur4> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool4> seconds|r
+}
+
+STRING 18143
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur5> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool5> seconds|r
+}
+
+STRING 18144
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur6> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool6> seconds|r
+}
+
+STRING 18145
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur7> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool7> seconds|r
+}
+
+STRING 18146
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur8> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool8> seconds|r
+}
+
+STRING 18147
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur9> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool9> seconds|r
+}
+
+STRING 18148
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur10> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 18149
+// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
+|cff00ff00Damage: Str x Int x ?|r
+|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 18150
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur9> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool9> seconds|r
+}
+
+STRING 18151
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur10> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 18152
+// Abilities: A0WD (Water 2), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 18153
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool1>s
+}
+
+STRING 18154
+// Abilities: A0WG (Robo Tackle), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool1>s
+}
+
+STRING 18155
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool2>s
+}
+
+STRING 18156
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool3>s
+}
+
+STRING 18157
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool4>s
+}
+
+STRING 18158
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool5>s
+}
+
+STRING 18159
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool6>s
+}
+
+STRING 18160
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool7>s
+}
+
+STRING 18161
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool8>s
+}
+
+STRING 18162
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool9>s
+}
+
+STRING 18163
+// Abilities: A0WG (Robo Tackle), Ubertip (Tooltip - Normal - Extended)
+{
+Robo charges forward, dealing damage to enemies in his path.
+|cff00ff00Damage: Str * lvl * ?|r
+|cff00FFFFCooldown: <A0WG,Cool10>s
+}
+
+STRING 18164
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur2> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool2> seconds|r
+}
+
+STRING 18165
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur3> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool3> seconds|r
+}
+
+STRING 18166
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur4> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool4> seconds|r
+}
+
+STRING 18167
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur5> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool5> seconds|r
+}
+
+STRING 18168
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur6> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool6> seconds|r
+}
+
+STRING 18169
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur7> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool7> seconds|r
+}
+
+STRING 18170
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur8> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool8> seconds|r
+}
+
+STRING 18171
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur9> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool9> seconds|r
+}
+
+STRING 18172
+// Abilities: A0WH (Laser Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Robo rapidly spins on the spot, firing lasers all around him.
+|cffff2020Channel Duration: <A0WH,Dur10> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WH,Cool10> seconds|r
+}
+
+STRING 18173
+// Doodads: D01Y (ToP Arena Doodad (Pathing Fix)), Name (Name)
+{
+ToP Arena Doodad (Pathing Fix)
+}
+
+STRING 18174
+// Doodads: D01Z (ToP Arena Skybox (Pathing Fix)), Name (Name)
+{
+ToP Arena Skybox (Pathing Fix)
 }
 

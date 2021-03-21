@@ -1007,13 +1007,6 @@ export function CustomPlayerTest() {
     }
     */
     // SetPlayerAllianceStateBJ(Constants.sagaPlayer, udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
-  
-    // force budokai
-    const forceBudokaiTrig = CreateTrigger();
-    TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
-    TriggerAddAction(forceBudokaiTrig, () => {
-      TournamentManager.getInstance().startTournament(Constants.budokaiName);
-    });
 
     // force set unit skin
     const setUnitSkin = CreateTrigger();
@@ -1128,11 +1121,22 @@ export function CustomPlayerTest() {
   const forceFinalBattleTrig = CreateTrigger();
   TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
   TriggerAddAction(forceFinalBattleTrig, () => {
-    TournamentManager.getInstance().addFinalBattle();
-    TimerStart(CreateTimer(), 5.0, false, () => {
-      TournamentManager.getInstance().startTournament(Constants.finalBattleName);
-      DestroyTimer(GetExpiredTimer());
-    })
+    if (Globals.isFBSimTest && Globals.isFreemode) {
+      TournamentManager.getInstance().addFinalBattle();
+      TimerStart(CreateTimer(), 5.0, false, () => {
+        TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  });
+
+  // force budokai
+  const forceBudokaiTrig = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
+  TriggerAddAction(forceBudokaiTrig, () => {
+    if (Globals.isFBSimTest && Globals.isFreemode) {
+      TournamentManager.getInstance().startTournament(Constants.budokaiName);
+    }
   });
 
   const memesOff = CreateTrigger();
@@ -1274,7 +1278,7 @@ export function SetupBraveSwordAttack(
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.45;
+  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.45;
   const braveSwordManaBurnMult = 0.01;
 
   TriggerAddAction(spellTrigger, () => {
@@ -1978,8 +1982,8 @@ export function SetupJirenGlare(
   const dummyStunOrder = 852095;
   const glareDuration = 2.5;
   const maxGlareDistance = 2500;
-  const glareDamageMult = 0.25 * 0.53;
-  const glare2DamageMult = 0.25 * 0.75;
+  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.53;
+  const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.75;
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
@@ -2586,7 +2590,7 @@ export function SetupCustomAbilityRefresh(
 export function createCdTrigger() {
   // reset cd of custom ability
   const cdTrig = CreateTrigger();
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
     TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
   }
   TriggerAddAction(cdTrig, () => {

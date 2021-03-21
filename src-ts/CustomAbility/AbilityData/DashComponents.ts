@@ -1204,6 +1204,32 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 30,
   },
+  // frog squash
+  {
+    name: "dash ground forward beam frog squash pushback",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 180,
+    distance: 4,
+  },
+  // robo tackle
+  {
+    name: "dash ground point robo tackle",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 35,
+  },
   // ----------------------------
   // cell-x
   {

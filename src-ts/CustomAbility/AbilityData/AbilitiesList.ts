@@ -1603,33 +1603,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Robo.UZZI_PUNCH,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 265,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNRoboUzziPunch.blp",
-      disabled: "BTNRoboUzziPunch.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Robo.UZZI_PUNCH,
-      body: 
-        AbilityNames.Robo.UZZI_PUNCH
-    },
-    components: [
-      { name: "channel caster default" },
-      { name: "multi uzzi punch" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.Android17DBS.BARRIER_PRISON,
     currentCd: 0,
     maxCd: 1,
@@ -1989,34 +1962,6 @@ export const AbilitiesList = [
       { name: "damage shining sword explosion" },
       { name: "damage shining sword bonus buff explosion" },
       { name: "sfx shining sword" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Robo.ROBO_TACKLE,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 25,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNRoboTackle.blp",
-      disabled: "BTNRoboTackle.blp",
-    },
-    tooltip: {
-      title:  AbilityNames.Robo.ROBO_TACKLE,
-      body: 
-        AbilityNames.Robo.ROBO_TACKLE,
-    },
-    components: [
-      { name: "dash ground point shining sword" },
-      { name: "damage robo tackle" },
-      { name: "sfx robo tackle" },
     ],
   },
   // -------------------------------------------
@@ -5553,9 +5498,9 @@ export const AbilitiesList = [
       { name: "multi crono lightning 2 outer" },
     ],
   },
-// -------------------------------------------
+  // -------------------------------------------
   {
-    name: AbilityNames.Robo.ELECTROCUTE,
+    name: AbilityNames.Crono.LIGHTNING_3,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
@@ -5567,19 +5512,18 @@ export const AbilitiesList = [
     waitsForNextClick: false,
     animation: "spell",
     icon: {
-      enabled: "BTNRoboShock.blp",
-      disabled: "BTNRoboShock.blp",
+      enabled: "BTNCronoLightning3.blp",
+      disabled: "BTNCronoLightning3.blp",
     },
     tooltip: {
-      title: AbilityNames.Robo.ELECTROCUTE,
+      title: AbilityNames.Crono.LIGHTNING_3,
       body: 
-        AbilityNames.Robo.ELECTROCUTE
+        AbilityNames.Crono.LIGHTNING_3
     },
     components: [
-      { name: "damage robo electrocute explosion" },
-      { name: "multi crono lightning 2 inner" },
-      { name: "multi crono lightning 2 outer" },
-      { name: "sfx robo electrocute"}
+      { name: "damage target crono lightning 3 explosion" },
+      { name: "debuff slow target crono lightning 3" },
+      { name: "sfx crono lightning 3" },
     ],
   },
   // -------------------------------------------
@@ -5608,65 +5552,6 @@ export const AbilitiesList = [
       { name: "anim crono cleave" },
       { name: "dash ground target crono cleave" },
       { name: "damage crono cleave explosion" },
-      { name: "jump crono cleave" },
-      { name: "sfx crono cleave" },
-    ],
-  },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Frog.WATER2,
-      currentCd: 0,
-      maxCd: 1,
-      costType: "MP",
-      costAmount: 0,
-      duration: 132,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "BTNFrogWater2.blp",
-        disabled: "BTNFrogWater2.blp",
-      },
-      tooltip: {
-        title: AbilityNames.Frog.WATER2,
-        body: 
-          AbilityNames.Frog.WATER2
-      },
-      components: [
-        { name: "channel caster default" },
-        { name: "multi water 2" },
-        { name: "damage water 2 dps charging" },
-        { name: "sfx water 2 caster" },
-      ],
-    },
-// -------------------------------------------
-  {
-    name: AbilityNames.Frog.AERIAL_STRIKE,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 25,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNFrogLeapSlash.blp",
-      disabled: "BTNCFrogLeapSlash.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Frog.AERIAL_STRIKE,
-      body: 
-        AbilityNames.Frog.AERIAL_STRIKE
-    },
-    components: [
-      { name: "anim frog cleave" },
-      { name: "dash ground target crono cleave" },
-      { name: "damage frog aerial explosion" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
     ],
@@ -5701,31 +5586,57 @@ export const AbilitiesList = [
     ],
   },
   //---------------------------------------
- {
-  name: AbilityNames.Frog.SLURP_CUT,
-  currentCd: 0,
-  maxCd: 1,
-  costType: "MP",
-  costAmount: 0,
-  duration: 100,
-  updateRate: 0.03,
-  castTime: 0.0,
-  canMultiCast: true,
-  waitsForNextClick: false,
-  animation: "spell slam",
-  icon: {
-    enabled: "BTNFrogSlurpCut.blp",
-    disabled: "BTNFrogSlurpCut.blp",
+  {
+    name: AbilityNames.Frog.SLURP_CUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNFrogSlurpCut.blp",
+      disabled: "BTNFrogSlurpCut.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.SLURP_CUT,
+      body: 
+        AbilityNames.Frog.SLURP_CUT
+    },
+    components: [
+      { name: "hook slurp cut" },
+    ],
   },
-  tooltip: {
-    title: AbilityNames.Frog.SLURP_CUT,
-    body: 
-      AbilityNames.Frog.SLURP_CUT
+  //---------------------------------------
+  {
+    name: AbilityNames.Frog.SLURP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNFrogSlurp.blp",
+      disabled: "BTNFrogSlurp.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.SLURP,
+      body: 
+        AbilityNames.Frog.SLURP
+    },
+    components: [
+      { name: "beam frog slurp" },
+    ],
   },
-  components: [
-    { name: "hook slurp cut" },
-  ],
-},
   // -------------------------------------------
   {
     name: AbilityNames.Frog.WATER,
@@ -5746,10 +5657,236 @@ export const AbilitiesList = [
     tooltip: {
       title: AbilityNames.Frog.WATER,
       body: 
-        "spirit bomb stuff"
+        AbilityNames.Frog.WATER,
     },
     components: [
       { name: "beam frog water" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.WATER2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogWater2.blp",
+      disabled: "BTNFrogWater2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.WATER2,
+      body: 
+        AbilityNames.Frog.WATER2
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi water 2" },
+      { name: "damage water 2 dps charging" },
+      { name: "sfx water 2 caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.FROG_SQUASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogSquash.blp",
+      disabled: "BTNFrogSquash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.FROG_SQUASH,
+      body: 
+        AbilityNames.Frog.FROG_SQUASH
+    },
+    components: [
+      { name: "beam frog squash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.AERIAL_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogLeapSlash.blp",
+      disabled: "BTNCFrogLeapSlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.AERIAL_STRIKE,
+      body: 
+        AbilityNames.Frog.AERIAL_STRIKE
+    },
+    components: [
+      { name: "anim frog cleave" },
+      { name: "dash ground target crono cleave" },
+      { name: "damage frog aerial explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ROBO_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboTackle.blp",
+      disabled: "BTNRoboTackle.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Robo.ROBO_TACKLE,
+      body: 
+        AbilityNames.Robo.ROBO_TACKLE,
+    },
+    components: [
+      { name: "anim robo tackle" },
+      { name: "dash ground point robo tackle" },
+      { name: "damage robo tackle" },
+      { name: "sfx robo tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.LASER_SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboLaserSpin.blp",
+      disabled: "BTNRoboLaserSpin.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.LASER_SPIN,
+      body: 
+        AbilityNames.Robo.LASER_SPIN
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi robo laser spin" },
+      { name: "sfx robo laser spin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.HEAL_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboHealBeam.blp",
+      disabled: "BTNRoboHealBeam.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.HEAL_BEAM,
+      body: 
+        AbilityNames.Robo.HEAL_BEAM
+    },
+    components: [
+      { name: "heal robo heal beam" },
+      { name: "sfx robo heal beam"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.UZZI_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboUzziPunch.blp",
+      disabled: "BTNRoboUzziPunch.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.UZZI_PUNCH,
+      body: 
+        AbilityNames.Robo.UZZI_PUNCH
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage uzzi punch explosion" },
+      { name: "sfx uzzi punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ELECTROCUTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboShock.blp",
+      disabled: "BTNRoboShock.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.ELECTROCUTE,
+      body: 
+        AbilityNames.Robo.ELECTROCUTE
+    },
+    components: [
+      { name: "damage robo electrocute explosion" },
+      { name: "multi robo electrocute inner" },
+      { name: "multi robo electrocute outer" },
+      { name: "sfx robo electrocute caster"}
     ],
   },
   // -------------------------------------------
@@ -5780,7 +5917,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Magus.MLIGHTNING_2,
+    name: AbilityNames.Magus.LIGHTNING_2,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",

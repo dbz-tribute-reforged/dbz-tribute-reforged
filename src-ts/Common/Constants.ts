@@ -28,10 +28,10 @@ export module Constants {
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 10;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
-    -7000, 20000
+    -8200, 20000
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    6550, 24000
+    9200, 24000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;
@@ -155,6 +155,7 @@ export module Id {
   export const cronoSlash = FourCC("A0VQ");
   export const cronoLightning = FourCC("A0VR");
   export const cronoLightning2 = FourCC("A0VS");
+  export const cronoLightning3 = FourCC("A0WM");
   export const cronoCleave = FourCC("A0VT");
   export const cronoLuminaire = FourCC("A0VU");
 
