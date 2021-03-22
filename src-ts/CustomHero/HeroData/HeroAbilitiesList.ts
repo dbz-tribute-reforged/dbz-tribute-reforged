@@ -386,6 +386,8 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
     [Id.magus, [
       AbilityNames.Magus.DARK_BOMB,
       AbilityNames.Magus.LIGHTNING_2,
+      AbilityNames.Magus.FIRE_2,
+      AbilityNames.Magus.ICE_2,
       AbilityNames.Magus.DARK_MATTER,
     ]],
 

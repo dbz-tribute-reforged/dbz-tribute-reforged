@@ -177,6 +177,8 @@ export module Id {
   export const magus = FourCC("H0A3");
   export const darkBomb = FourCC("A0W3");
   export const magusLightning2 = FourCC("A0W5");
+  export const magusFire2 = FourCC("A0WO");
+  export const magusIce2 = FourCC("A0WP");
   export const magusDarkMatter = FourCC("A0W6");
 
   export const dartFeld = FourCC("H09Y");

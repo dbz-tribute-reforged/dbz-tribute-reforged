@@ -765,4 +765,18 @@ export const AOEDebuffComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  {
+    name: "debuff slow magus ice 2",
+    repeatInterval: 33,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: Debuffs.EIS_FROSTBITE,
+    orderId: Debuffs.SLOW_ORDER_ID,
+    aoe: 450,
+    keepCasting: true, 
+    onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
 ]

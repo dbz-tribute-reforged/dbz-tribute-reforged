@@ -5801,7 +5801,8 @@ export const AbilitiesList = [
     },
     components: [
       { name: "channel caster default" },
-      { name: "multi robo laser spin" },
+      { name: "multi robo laser spin 1" },
+      { name: "multi robo laser spin 2" },
       { name: "sfx robo laser spin" },
     ],
   },
@@ -5941,6 +5942,59 @@ export const AbilitiesList = [
       { name: "damage crono lightning 2 explosion" },
       { name: "multi crono lightning 2 inner" },
       { name: "multi crono lightning 2 outer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.FIRE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusFire2.blp",
+      disabled: "BTNMagusFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.FIRE_2,
+      body: 
+        AbilityNames.Magus.FIRE_2
+    },
+    components: [
+      { name: "beam magus fire 2" },
+      { name: "sfx magus fire 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.ICE_2,
+      body: 
+        AbilityNames.Magus.ICE_2
+    },
+    components: [
+      { name: "beam magus ice 2" },
     ],
   },
   // -------------------------------------------

@@ -289,6 +289,7 @@ gg_rct_HeroPickRegion = nil
 gg_rct_HBTC_Entrance = nil
 gg_rct_Lookout_Vision_2 = nil
 gg_rct_HBTC_2_Exit = nil
+gg_rct_FinalBattleArena2 = nil
 gg_cam_Hero_Pick_Camera = nil
 gg_cam_Editor_Camera = nil
 gg_cam_1 = nil
@@ -872,7 +873,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_rct_FinalBattleArena2 = nil
+gg_trg_Magus_Spellbook_CD_Link = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -2522,7 +2523,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 24864.7, 16064.7, 241.515, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 26216.1, 16045.3, 263.871, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
-    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 24761.0, 15272.1, -49.512, FourCC("n01U"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 24761.0, 15272.1, 310.488, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
     u = BlzCreateUnitWithSkin(p, FourCC("n01U"), 29515.4, 2314.5, 112.921, FourCC("n01U"))
     SetUnitColor(u, ConvertPlayerColor(0))
@@ -12910,7 +12911,10 @@ function Trig_Magus_Spell_Book_Conditions()
 end
 
 function Trig_Magus_Spell_Book_Actions()
-    SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit()))
+    udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), udg_TempInt)
+    SetUnitAbilityLevelSwapped(FourCC("A0WO"), GetTriggerUnit(), udg_TempInt)
+    SetUnitAbilityLevelSwapped(FourCC("A0WP"), GetTriggerUnit(), udg_TempInt)
 end
 
 function InitTrig_Magus_Spell_Book()
@@ -12918,6 +12922,70 @@ function InitTrig_Magus_Spell_Book()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Magus_Spell_Book, EVENT_PLAYER_HERO_SKILL)
     TriggerAddCondition(gg_trg_Magus_Spell_Book, Condition(Trig_Magus_Spell_Book_Conditions))
     TriggerAddAction(gg_trg_Magus_Spell_Book, Trig_Magus_Spell_Book_Actions)
+end
+
+function Trig_Magus_Spellbook_CD_Link_Func005C()
+    if (GetSpellAbilityId() == FourCC("A0W5")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0WO")) then
+        return true
+    end
+    if (GetSpellAbilityId() == FourCC("A0WP")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Magus_Spellbook_CD_Link_Conditions()
+    if (not Trig_Magus_Spellbook_CD_Link_Func005C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spellbook_CD_Link_Func002C()
+    if (not (GetSpellAbilityId() == FourCC("A0W5"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spellbook_CD_Link_Func003C()
+    if (not (GetSpellAbilityId() == FourCC("A0WO"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spellbook_CD_Link_Func004C()
+    if (not (GetSpellAbilityId() == FourCC("A0WP"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spellbook_CD_Link_Actions()
+    udg_StatMultUnit = GetTriggerUnit()
+    if (Trig_Magus_Spellbook_CD_Link_Func002C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0W5"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit) - 1)))
+    end
+    if (Trig_Magus_Spellbook_CD_Link_Func003C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0WO"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit) - 1)))
+    end
+    if (Trig_Magus_Spellbook_CD_Link_Func004C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0WP"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit) - 1)))
+    end
+end
+
+function InitTrig_Magus_Spellbook_CD_Link()
+    gg_trg_Magus_Spellbook_CD_Link = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Magus_Spellbook_CD_Link, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Magus_Spellbook_CD_Link, Condition(Trig_Magus_Spellbook_CD_Link_Conditions))
+    TriggerAddAction(gg_trg_Magus_Spellbook_CD_Link, Trig_Magus_Spellbook_CD_Link_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -14250,38 +14318,34 @@ function InitTrig_Disable_Abilities_for_TempPlayer()
     TriggerAddAction(gg_trg_Disable_Abilities_for_TempPlayer, Trig_Disable_Abilities_for_TempPlayer_Actions)
 end
 
+function Trig_Setup_Spawns_Other_Func002Func003Func001C()
+    if (not (GetUnitTypeId(GetEnumUnit()) == FourCC("n001"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Setup_Spawns_Other_Func002Func003A()
+    if (Trig_Setup_Spawns_Other_Func002Func003Func001C()) then
+        udg_TempUnit = GetEnumUnit()
+        udg_TempLoc = GetUnitLoc(udg_TempUnit)
+        udg_HeroPickSpawnX[udg_TempInt] = GetLocationX(udg_TempLoc)
+        udg_HeroPickSpawnY[udg_TempInt] = GetLocationY(udg_TempLoc)
+                RemoveLocation(udg_TempLoc)
+    else
+    end
+end
+
 function Trig_Setup_Spawns_Other_Actions()
     udg_TempInt = 1
-    udg_HeroPickSpawnX[udg_TempInt] = 2100.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22666.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 2424.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22666.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 2100.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22340.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 2424.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22340.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 2100.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22018.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 3131.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22666.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 3458.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22666.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 3131.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22340.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 3458.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22340.00
-    udg_TempInt = (udg_TempInt + 1)
-    udg_HeroPickSpawnX[udg_TempInt] = 3131.00
-    udg_HeroPickSpawnY[udg_TempInt] = 22018.00
-    udg_TempInt = (udg_TempInt + 1)
+    while (true) do
+        if (udg_TempInt > 10) then break end
+        udg_TempPlayer = ConvertedPlayer(udg_TempInt)
+        udg_TempUnitGroup = GetUnitsOfPlayerAll(udg_TempPlayer)
+        ForGroupBJ(udg_TempUnitGroup, Trig_Setup_Spawns_Other_Func002Func003A)
+                DestroyGroup(udg_TempUnitGroup)
+        udg_TempInt = udg_TempInt + 1
+    end
     udg_TempInt = 0
     udg_TransformationCellDroidsX[udg_TempInt] = 11084.00
     udg_TransformationCellDroidsY[udg_TempInt] = -4629.00
@@ -44530,6 +44594,7 @@ function InitCustomTriggers()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()
+    InitTrig_Magus_Spellbook_CD_Link()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()

@@ -99,11 +99,12 @@ export class MultiComponent implements
       const nextAngle = this.angleCurrent + this.angleDifference * this.angleDirection;
       if (nextAngle > this.angleMax || nextAngle < this.angleMin) {  
         if (this.firingMode == MultiComponent.WRAPAROUND_FIRING) {
-          if (this.angleDirection > 0) {
-            this.angleCurrent = this.angleMin;
-          } else {
-            this.angleCurrent = this.angleMax;
-          }
+          this.angleCurrent = nextAngle;
+          // if (this.angleDirection > 0) {
+          //   this.angleCurrent = this.angleMin;
+          // } else {
+          //   this.angleCurrent = this.angleMax;
+          // }
         } else {
           this.angleDirection *= -1;
           this.angleCurrent += this.angleDifference * this.angleDirection;
@@ -205,11 +206,13 @@ export class MultiComponent implements
           this.forceMinDistance + 
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
-      if (this.angleRange > 360) {
-        this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-      } else {
-        this.originalTarget.setVector(this.targettedPoint);
-      }
+
+      this.originalTarget.setVector(this.targettedPoint);
+      // if (this.angleRange > 360) {
+      //   this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      // } else {
+      //   this.originalTarget.setVector(this.targettedPoint);
+      // }
       this.currentDelay = this.delayBetweenComponents;
     }
 
