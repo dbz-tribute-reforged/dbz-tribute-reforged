@@ -34,5 +34,7 @@
     "war3-types": "^1.0.0",
     "war3tstlhelper": "^1.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "typescript": "^3.7.2"
+  }
 }
