@@ -6026,6 +6026,32 @@ export const AbilitiesList = [
       { name: "beam magus ice 2" },
     ],
   },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.DARK_MIST,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 132,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNMagusDarkMist.blp",
+        disabled: "BTNMagusDarkMist.blp",
+      },
+      tooltip: {
+        title:  AbilityNames.Magus.DARK_MIST,
+        body: 
+          AbilityNames.Magus.DARK_MIST,
+      },
+      components: [
+        { name: "beam dark mist" },
+      ],
+    },
   // -------------------------------------------
   {
     name: AbilityNames.Magus.DARK_MATTER,

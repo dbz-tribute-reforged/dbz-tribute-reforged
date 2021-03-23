@@ -289,6 +289,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.magusWater2, AbilityNames.Magus.WATER_2],
     [Id.magusFire2, AbilityNames.Magus.FIRE_2],
     [Id.magusIce2, AbilityNames.Magus.ICE_2],
+    [Id.magusDarkMist, AbilityNames.Magus.DARK_MIST],
     [Id.magusDarkMatter, AbilityNames.Magus.DARK_MATTER],
 
     // babidi

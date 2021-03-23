@@ -180,6 +180,7 @@ export module Id {
   export const magusFire2 = FourCC("A0WO");
   export const magusIce2 = FourCC("A0WP");
   export const magusWater2 = FourCC("A0WQ");
+  export const magusDarkMist = FourCC("A0WR");
   export const magusDarkMatter = FourCC("A0W6");
 
   export const dartFeld = FourCC("H09Y");

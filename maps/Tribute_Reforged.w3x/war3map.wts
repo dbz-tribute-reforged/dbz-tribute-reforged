@@ -116024,3 +116024,153 @@ STRING 18187
 (magus)
 }
 
+STRING 18188
+// Abilities: A0WR (Dark Mist), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18189
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 1|r]
+}
+
+STRING 18190
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18191
+// Abilities: A0WR (Dark Mist), Name (Name)
+{
+Dark Mist
+}
+
+STRING 18192
+// Abilities: A0WR (Dark Mist), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Learn Dark Mist - [|cffffcc00Level %d|r]
+}
+
+STRING 18193
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 2|r]
+}
+
+STRING 18194
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 3|r]
+}
+
+STRING 18195
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 4|r]
+}
+
+STRING 18196
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 5|r]
+}
+
+STRING 18197
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 6|r]
+}
+
+STRING 18198
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 7|r]
+}
+
+STRING 18199
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18200
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18201
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18202
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18203
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18204
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18205
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 8|r]
+}
+
+STRING 18206
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 9|r]
+}
+
+STRING 18207
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18208
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18209
+// Abilities: A0WR (Dark Mist), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 18210
+// Abilities: A0WR (Dark Mist), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Dark Mist - [|cffffcc00Level 10|r]
+}
+
+STRING 18211
+// Abilities: A0WR (Dark Mist), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+
+STRING 18212
+// Abilities: A0WR (Dark Mist), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
+}
+

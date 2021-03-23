@@ -3843,6 +3843,42 @@ export const BeamComponents = [
       { name: "sfx beam dark bomb" },
     ],
   },
+    // -------------------------------------------
+    { 
+      name: "beam dark mist",
+      repeatInterval: 1,
+      startTick: 0,
+      endTick: -1,
+      beamHpMult: BASE_DMG.KAME_DPS * 0.75,
+      beamHpAttribute: bj_HEROSTAT_INT,
+      speed: 15,
+      aoe: 600,
+      clashingDelayTicks: 1,
+      maxDelayTicks: 6,
+      durationIncPerDelay: 12,
+      turnSpeed: 3,
+      heightVariation: {
+        start: 150,
+        finish: 150,
+        scaling: 0,
+      },
+      isTracking: false,
+      isFixedAngle: false,
+      canClashWithHero: false,
+      useLastCastPoint: true,
+      explodeOnDeath: true,
+      explodeAtCastPoint: false,
+      explodeOnContact: false,
+      beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
+      beamUnitType: "hpea",
+      beamUnitSkin: BeamUnitSkin.DEFAULT,
+      components: [
+        { name: "damage brave cannon dps" },
+        { name: "debuff heros song brave cannon" },
+        { name: "sfx beam beam dark mist" },
+      ],
+    },
+  
   // -------------------------------------------
   { 
     name: "beam energy beam",
