@@ -773,7 +773,7 @@ export const AOEDebuffComponents = [
     debuffSource: AOEDebuff.SOURCE_UNIT,
     abilityId: Debuffs.EIS_FROSTBITE,
     orderId: Debuffs.SLOW_ORDER_ID,
-    aoe: 450,
+    aoe: 700,
     keepCasting: true, 
     onlyAffectHeroes: false,
     requireBuff: false,

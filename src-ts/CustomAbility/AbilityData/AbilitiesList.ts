@@ -5916,6 +5916,35 @@ export const AbilitiesList = [
       { name: "beam dark bomb" },
     ],
   },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.WATER_2,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 132,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNFrogWater2.blp",
+        disabled: "BTNFrogWater2.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Magus.WATER_2,
+        body: 
+          AbilityNames.Magus.WATER_2
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "multi magus water 2" },
+        { name: "damage magus water 2 dps charging" },
+        { name: "sfx water 2 caster" },
+      ],
+    },
   // -------------------------------------------
   {
     name: AbilityNames.Magus.LIGHTNING_2,
@@ -5978,7 +6007,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 66,
+    duration: 82,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

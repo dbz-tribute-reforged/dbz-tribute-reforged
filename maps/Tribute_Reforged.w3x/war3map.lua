@@ -474,6 +474,7 @@ gg_trg_Laser_Spin_Copy = nil
 gg_trg_Doom_Scythe_Trigger = nil
 gg_trg_Doom_Scythe_Loop = nil
 gg_trg_Magus_Spell_Book = nil
+gg_trg_Magus_Spellbook_CD_Link = nil
 gg_trg_Doom_Scythe_Buff = nil
 gg_trg_Doom_Scythe_Test = nil
 gg_trg_Play_Ability_Spell_Audio = nil
@@ -873,7 +874,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Magus_Spellbook_CD_Link = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1388,11 +1388,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2005)
+    SetSoundDuration(gg_snd_Hint, 2845)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2548)
+    SetSoundDuration(gg_snd_GoodJob, 2954)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -12915,6 +12915,7 @@ function Trig_Magus_Spell_Book_Actions()
     SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), udg_TempInt)
     SetUnitAbilityLevelSwapped(FourCC("A0WO"), GetTriggerUnit(), udg_TempInt)
     SetUnitAbilityLevelSwapped(FourCC("A0WP"), GetTriggerUnit(), udg_TempInt)
+    SetUnitAbilityLevelSwapped(FourCC("A0WQ"), GetTriggerUnit(), udg_TempInt)
 end
 
 function InitTrig_Magus_Spell_Book()
@@ -12924,7 +12925,7 @@ function InitTrig_Magus_Spell_Book()
     TriggerAddAction(gg_trg_Magus_Spell_Book, Trig_Magus_Spell_Book_Actions)
 end
 
-function Trig_Magus_Spellbook_CD_Link_Func005C()
+function Trig_Magus_Spellbook_CD_Link_Func006C()
     if (GetSpellAbilityId() == FourCC("A0W5")) then
         return true
     end
@@ -12934,11 +12935,14 @@ function Trig_Magus_Spellbook_CD_Link_Func005C()
     if (GetSpellAbilityId() == FourCC("A0WP")) then
         return true
     end
+    if (GetSpellAbilityId() == FourCC("A0WQ")) then
+        return true
+    end
     return false
 end
 
 function Trig_Magus_Spellbook_CD_Link_Conditions()
-    if (not Trig_Magus_Spellbook_CD_Link_Func005C()) then
+    if (not Trig_Magus_Spellbook_CD_Link_Func006C()) then
         return false
     end
     return true
@@ -12965,6 +12969,13 @@ function Trig_Magus_Spellbook_CD_Link_Func004C()
     return true
 end
 
+function Trig_Magus_Spellbook_CD_Link_Func005C()
+    if (not (GetSpellAbilityId() == FourCC("A0WQ"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Magus_Spellbook_CD_Link_Actions()
     udg_StatMultUnit = GetTriggerUnit()
     if (Trig_Magus_Spellbook_CD_Link_Func002C()) then
@@ -12978,6 +12989,10 @@ function Trig_Magus_Spellbook_CD_Link_Actions()
     if (Trig_Magus_Spellbook_CD_Link_Func004C()) then
     else
         BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0WP"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit) - 1)))
+    end
+    if (Trig_Magus_Spellbook_CD_Link_Func005C()) then
+    else
+        BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0WQ"), BlzGetUnitAbilityCooldown(udg_StatMultUnit, GetSpellAbilityId(), (GetUnitAbilityLevelSwapped(GetSpellAbilityId(), udg_StatMultUnit) - 1)))
     end
 end
 

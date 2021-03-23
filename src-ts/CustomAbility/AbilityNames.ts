@@ -330,6 +330,7 @@ export module AbilityNames {
   export module Magus {
     export const DARK_BOMB: string = "Magus Dark Bomb";
     export const LIGHTNING_2: string = "Magus Lightning 2";
+    export const WATER_2: string = "Magus Water 2";
     export const FIRE_2: string = "Magus Fire 2";
     export const ICE_2: string = "Magus Ice 2";
     export const DARK_MATTER: string = "Magus Dark Matter";

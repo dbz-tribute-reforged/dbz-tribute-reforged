@@ -112514,7 +112514,7 @@ STRING 17671
 }
 
 STRING 17672
-// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -112570,13 +112570,13 @@ Fire 2
 }
 
 STRING 17681
-// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
 
 STRING 17682
-// Abilities: A0WO (Fire 2), Researchtip (Tooltip - Learn)
+// Abilities: A0W5 (Lightning 2), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Lightning 2 - [|cffffcc00Level %d|r]
 }
@@ -112594,7 +112594,7 @@ STRING 17684
 }
 
 STRING 17685
-// Abilities: A0WO (Fire 2), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0W5 (Lightning 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Crono calls down a bolt of lightning on every unit in range.
 |cff00ff00Damage: Int * Lvl * ?
@@ -112799,6 +112799,15 @@ STRING 17718
 [|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 1|r]
 }
 
+STRING 17719
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool1> seconds|r
+}
+
 STRING 17720
 // Abilities: A0W5 (Lightning 2), Name (Name)
 {
@@ -112806,19 +112815,19 @@ Lightning 2
 }
 
 STRING 17721
-// Abilities: A0W5 (Lightning 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 17722
-// Abilities: A0W5 (Lightning 2), Researchtip (Tooltip - Learn)
+// Abilities: A0WO (Fire 2), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00E|r] Learn Lightning 2 - [|cffffcc00Level %d|r]
 }
 
 STRING 17723
-// Abilities: A0W5 (Lightning 2), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0WO (Fire 2), Researchubertip (Tooltip - Learn - Extended)
 {
 Crono calls down a bolt of lightning on every unit in range.
 |cff00ff00Damage: Int * Lvl * ?
@@ -112855,10 +112864,82 @@ STRING 17728
 [|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 6|r]
 }
 
+STRING 17729
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur2> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool2> seconds|r
+}
+
+STRING 17730
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur3> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool3> seconds|r
+}
+
+STRING 17731
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur4> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool4> seconds|r
+}
+
+STRING 17732
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur5> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool5> seconds|r
+}
+
+STRING 17733
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur6> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool6> seconds|r
+}
+
 STRING 17734
 // Abilities: A0W5 (Lightning 2), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Lightning 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 17735
+// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur7> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool7> seconds|r
+}
+
+STRING 17736
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 2|r]
+}
+
+STRING 17737
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 17738
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 4|r]
 }
 
 STRING 17739
@@ -113310,13 +113391,13 @@ Slurp
 }
 
 STRING 17810
-// Abilities: A0WB (Slurp), Hotkey (Hotkey - Normal)
+// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
 {
 W
 }
 
 STRING 17811
-// Abilities: A0WB (Slurp), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -113472,7 +113553,7 @@ STRING 17834
 }
 
 STRING 17835
-// Abilities: A0WC (Water), Hotkey (Hotkey - Normal)
+// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113498,7 +113579,7 @@ Water
 }
 
 STRING 17839
-// Abilities: A0WC (Water), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -113774,7 +113855,7 @@ Electrocute
 }
 
 STRING 17877
-// Abilities: A0WD (Water 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -113792,7 +113873,7 @@ STRING 17879
 }
 
 STRING 17880
-// Abilities: A0WD (Water 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114282,7 +114363,7 @@ STRING 17954
 }
 
 STRING 17955
-// Abilities: A0WI (Heal Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114308,7 +114389,7 @@ STRING 17958
 }
 
 STRING 17959
-// Abilities: A0WI (Heal Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114370,7 +114451,7 @@ STRING 17968
 }
 
 STRING 17969
-// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
+// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114450,7 +114531,7 @@ Ice 2
 }
 
 STRING 17982
-// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WO (Fire 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -114716,7 +114797,7 @@ STRING 18022
 }
 
 STRING 18023
-// Abilities: A0WH (Laser Spin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -114734,7 +114815,7 @@ STRING 18025
 }
 
 STRING 18026
-// Abilities: A0WH (Laser Spin), Hotkey (Hotkey - Normal)
+// Abilities: A0WO (Fire 2), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -114761,6 +114842,24 @@ STRING 18030
 // Abilities: A0WP (Ice 2), EditorSuffix (Editor Suffix)
 {
 (magus)
+}
+
+STRING 18031
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 18032
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 6|r]
+}
+
+STRING 18033
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 1|r]
 }
 
 STRING 18034
@@ -114842,7 +114941,7 @@ STRING 18044
 }
 
 STRING 18045
-// Abilities: A0WM (Lightning 3), Hotkey (Hotkey - Normal)
+// Abilities: A0WP (Ice 2), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -114868,7 +114967,7 @@ Frog throws a ball of water at the target area that explodes at its destination,
 }
 
 STRING 18049
-// Abilities: A0WM (Lightning 3), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WP (Ice 2), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -115168,7 +115267,7 @@ STRING 18094
 }
 
 STRING 18095
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur1> seconds|r
@@ -115183,7 +115282,7 @@ STRING 18096
 }
 
 STRING 18097
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur2> seconds|r
@@ -115204,7 +115303,7 @@ STRING 18099
 }
 
 STRING 18100
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur3> seconds|r
@@ -115243,7 +115342,7 @@ STRING 18105
 }
 
 STRING 18106
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur4> seconds|r
@@ -115252,7 +115351,7 @@ The user charges a spell for one second and then unleashes a relentless wave of 
 }
 
 STRING 18107
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur5> seconds|r
@@ -115261,7 +115360,7 @@ The user charges a spell for one second and then unleashes a relentless wave of 
 }
 
 STRING 18108
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur6> seconds|r
@@ -115270,7 +115369,7 @@ The user charges a spell for one second and then unleashes a relentless wave of 
 }
 
 STRING 18109
-// Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
 The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
 |cffff2020Channel Duration: <A0WD,Dur7> seconds|r
@@ -115833,5 +115932,95 @@ STRING 18174
 // Doodads: D01Z (ToP Arena Skybox (Pathing Fix)), Name (Name)
 {
 ToP Arena Skybox (Pathing Fix)
+}
+
+STRING 18175
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 18176
+// Abilities: A0WQ (Water 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18177
+// Abilities: A0WQ (Water 2), Name (Name)
+{
+Water 2
+}
+
+STRING 18178
+// Abilities: A0WQ (Water 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Water 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 18179
+// Abilities: A0WQ (Water 2), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18180
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 9|r]
+}
+
+STRING 18181
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 8|r]
+}
+
+STRING 18182
+// Abilities: A0WQ (Water 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Water 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 18183
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur8> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool8> seconds|r
+}
+
+STRING 18184
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur9> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool9> seconds|r
+}
+
+STRING 18185
+// Abilities: A0WQ (Water 2), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur10> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 18186
+// Abilities: A0WQ (Water 2), Researchubertip (Tooltip - Learn - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool10> seconds|r
+}
+
+STRING 18187
+// Abilities: A0WQ (Water 2), EditorSuffix (Editor Suffix)
+{
+(magus)
 }
 
