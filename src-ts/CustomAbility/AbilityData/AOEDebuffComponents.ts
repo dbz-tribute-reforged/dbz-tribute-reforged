@@ -16,6 +16,7 @@ export module Debuffs {
   export const FROST_CLAWS_BLIND = FourCC("A0P6");
   export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
   export const BRAVE_SLASH = FourCC("A0TV");
+  export const DARK_MIST = FourCC("A0WS");
 
   export const SLOW_ORDER_ID = 852075;
   export const HEROS_SONG = FourCC("A0I6");
@@ -776,6 +777,20 @@ export const AOEDebuffComponents = [
     aoe: 700,
     keepCasting: true, 
     onlyAffectHeroes: false,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff magus dark mist",
+    repeatInterval: 33,
+    startTick: 0,
+    endTick: -1,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: Debuffs.DARK_MIST,
+    orderId: Debuffs.CURSE_ORDER_ID,
+    aoe: 1000,
+    keepCasting: true, 
+    onlyAffectHeroes: true,
     requireBuff: false,
     buffId: 0,
   },

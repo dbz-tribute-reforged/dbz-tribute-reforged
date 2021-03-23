@@ -389,7 +389,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Magus.WATER_2,
       AbilityNames.Magus.FIRE_2,
       AbilityNames.Magus.ICE_2,
-      AbilityNames.Magus.DARK_MIST
+      AbilityNames.Magus.DARK_MIST,
       AbilityNames.Magus.DARK_MATTER,
     ]],
 

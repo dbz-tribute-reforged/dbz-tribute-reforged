@@ -116174,3 +116174,27 @@ STRING 18212
 Magus creates a cloud of dark mist that travels slowly across the battlefield, damaging and blinding enemies caught inside.|n|cffFFFF00Blind Duration: 5s|r|n|cff00FF00Damage: INT * lvl * ??|r|n|cff00FFFFCooldown: <A0WR,Cool1>s
 }
 
+STRING 18213
+// Abilities: A0WS (Dark Mist Blind), Name (Name)
+{
+Dark Mist Blind
+}
+
+STRING 18214
+// Buffs/Effects: B04F (), Bufftip (Tooltip)
+{
+Dark Mist
+}
+
+STRING 18215
+// Buffs/Effects: B04F (), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Dark Mist. It will miss when it attacks.
+}
+
+STRING 18216
+// Abilities: A0WR (Dark Mist), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+

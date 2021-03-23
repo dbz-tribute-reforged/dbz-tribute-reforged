@@ -5632,6 +5632,32 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // dark mist
+  {
+    name: "damage dark mist dps",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: -1,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 1000,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE_DMG.KAME_DPS * 0.33,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
   // magus dark matter
   {
     name: "damage magus dark matter explosion",
