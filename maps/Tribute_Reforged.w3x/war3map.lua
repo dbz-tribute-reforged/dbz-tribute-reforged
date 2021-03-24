@@ -43091,7 +43091,20 @@ function Trig_Transformations_Magus_Func017C()
     return true
 end
 
-function Trig_Transformations_Magus_Func020Func002Func001C()
+function Trig_Transformations_Magus_Func018C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0WU"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Magus_Func021Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -43101,14 +43114,14 @@ function Trig_Transformations_Magus_Func020Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Magus_Func020Func002C()
-    if (not Trig_Transformations_Magus_Func020Func002Func001C()) then
+function Trig_Transformations_Magus_Func021Func002C()
+    if (not Trig_Transformations_Magus_Func021Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Magus_Func020C()
+function Trig_Transformations_Magus_Func021C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -43188,9 +43201,13 @@ function Trig_Transformations_Magus_Actions()
         end
     else
     end
+    if (Trig_Transformations_Magus_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0WU"), udg_StatMultUnit)
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Magus_Func020C()) then
-        if (Trig_Transformations_Magus_Func020Func002C()) then
+    if (Trig_Transformations_Magus_Func021C()) then
+        if (Trig_Transformations_Magus_Func021Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A3')

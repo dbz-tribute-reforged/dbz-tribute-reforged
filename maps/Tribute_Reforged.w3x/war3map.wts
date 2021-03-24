@@ -116228,6 +116228,48 @@ STRING 18222
 [|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 1|r]
 }
 
+STRING 18224
+// Abilities: A0WU (Magus' Amulet), Name (Name)
+{
+Magus' Amulet
+}
+
+STRING 18225
+// Abilities: A0WU (Magus' Amulet), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 18226
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 18227
+// Abilities: A0WU (Magus' Amulet), Tip (Tooltip - Normal)
+{
+[|cffFFFF00F|r] Amulet
+}
+
+STRING 18228
+// Abilities: A0WU (Magus' Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Magus uses his Amulet, becoming immune to negative debuffs for the next 10s.|n|cff00FFFFCooldown: 60s|r
+}
+
+STRING 18229
+// Buffs/Effects: B04H (), Bufftip (Tooltip)
+{
+Magus Amulet
+}
+
+STRING 18230
+// Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
+{
+Magus' Amulet prevents application of negative status effects.
+}
+
 STRING 18233
 // Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
 {
