@@ -116198,3 +116198,177 @@ STRING 18216
 R
 }
 
+STRING 18217
+// Abilities: A0WT (Magic Barrier), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18218
+// Abilities: A0WT (Magic Barrier), Unhotkey (Hotkey - Turn Off)
+{
+E
+}
+
+STRING 18219
+// Abilities: A0WT (Magic Barrier), Name (Name)
+{
+Magic Barrier
+}
+
+STRING 18220
+// Abilities: A0WT (Magic Barrier), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00E|r] Learn Magic Barrier - [|cffffcc00Level %d|r]
+}
+
+STRING 18222
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 1|r]
+}
+
+STRING 18233
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 2|r]
+}
+
+STRING 18234
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 3|r]
+}
+
+STRING 18235
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 4|r]
+}
+
+STRING 18236
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 5|r]
+}
+
+STRING 18237
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 6|r]
+}
+
+STRING 18238
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 7|r]
+}
+
+STRING 18239
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 8|r]
+}
+
+STRING 18240
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 9|r]
+}
+
+STRING 18241
+// Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
+{
+[|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 10|r]
+}
+
+STRING 18242
+// Abilities: A0WT (Magic Barrier), EditorSuffix (Editor Suffix)
+{
+(magus)
+}
+
+STRING 18243
+// Buffs/Effects: B04G (), Bufftip (Tooltip)
+{
+Magic Barrier
+}
+
+STRING 18244
+// Buffs/Effects: B04G (), Buffubertip (Tooltip - Extended)
+{
+This unit has Magic Barrier; its armor is increased.
+}
+
+STRING 18245
+// Abilities: A0WT (Magic Barrier), Researchubertip (Tooltip - Learn - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool1>-<A0WT,Cool10>s
+}
+
+STRING 18246
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool1>s
+}
+
+STRING 18247
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool2>s
+}
+
+STRING 18248
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool3>s
+}
+
+STRING 18249
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool4>s
+}
+
+STRING 18250
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool5>s
+}
+
+STRING 18251
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool6>s
+}
+
+STRING 18252
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool7>s
+}
+
+STRING 18253
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool8>s
+}
+
+STRING 18254
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool9>s
+}
+
+STRING 18255
+// Abilities: A0WT (Magic Barrier), Ubertip (Tooltip - Normal - Extended)
+{
+Magus creates a barrier around the targeted ally, increasing its armor by 20 for 10s.|n|cff00FFFFCooldown: <A0WT,Cool10>s
+}
+
+STRING 18256
+// Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
