@@ -5413,6 +5413,7 @@ export const AbilitiesList = [
       { name: "anim crono cyclone" },
       { name: "damage crono cyclone dps" },
       { name: "dash ground forward crono cyclone" },
+      { name: "knockback cyclone"},
       { name: "sfx crono cyclone" },
     ],
   },

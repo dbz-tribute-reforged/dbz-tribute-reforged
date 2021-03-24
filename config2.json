@@ -1,5 +1,5 @@
 {
   "mapFolder": "Tribute_Reforged.w3x",
-  "gameExecutable": "E:\\Program Files\\Warcraft III\\_retail_\\x86_64\\Warcraft III.exe",
+  "gameExecutable": "C:\\Program Files (x86)\\Warcraft III\\_retail_\\x86_64\\Warcraft III.exe",
   "launchArgs": ["-launch", "-windowmode", "windowed"]
 }
