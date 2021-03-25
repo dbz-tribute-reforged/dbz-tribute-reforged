@@ -822,5 +822,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.RAINBOW_SHELL,
       ]
     )],
+
   ],
 );

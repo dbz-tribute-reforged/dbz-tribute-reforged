@@ -818,7 +818,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 90, 
       angle: 180, 
-      aoe: 400,
+      aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     useLastCastPoint: true,

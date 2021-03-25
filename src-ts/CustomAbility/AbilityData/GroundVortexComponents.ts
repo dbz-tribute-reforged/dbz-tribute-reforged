@@ -98,7 +98,7 @@ export const GroundVortexComponents = [
     startTick: 0,
     endTick: -1,
     damageData: {
-      multiplier: BASE_DMG.SPIRIT_BOMB_DPS * 0.04,
+      multiplier: BASE_DMG.SPIRIT_BOMB_DPS * 0.06,
       attribute: bj_HEROSTAT_INT,
       attackType: 6, 
       damageType: 4, 
@@ -106,7 +106,7 @@ export const GroundVortexComponents = [
     },
     angle: 70,
     distance: 40,
-    aoe: 1000,
+    aoe: 1200,
     closenessAngle: 90 + 12,
     closenessDistanceMult: -0.25,
     closenessDamageMult: 1.0,

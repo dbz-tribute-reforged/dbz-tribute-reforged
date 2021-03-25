@@ -76253,18 +76253,6 @@ STRING 12398
 [|cffFFFF00W|r] Kharge - [|cffffcc00Level 10|r]
 }
 
-STRING 12399
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
-STRING 12400
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
-}
-
 STRING 12401
 // Units: O013 (Kid Buu), Name (Name)
 {
@@ -77732,12 +77720,6 @@ STRING 12635
 // Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
-}
-
-STRING 12636
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
 }
 
 STRING 12637
@@ -95716,12 +95698,6 @@ STRING 15383
 Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
 }
 
-STRING 15384
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +10% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
-}
-
 STRING 15385
 // Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
@@ -107318,7 +107294,7 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Lightning 2]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] Upgrades sword to "Rainbow" - 70% crit rate
+[lvl 200] Upgrades sword to "Rainbow" - 70% crit rate, 30% bonus attack damage
 [lvl 200] [Unlocks Rust Tyranno Quest] - NYI
 }
 
@@ -107418,7 +107394,8 @@ Transformations:
 [lvl 150] 2.50x "fp"
 [lvl 200] [|cff00ffffWeapon Choice|r]
 "|cff808080teraton arm|r" (+50% attack dmg)
-"|cffff2020crisis arm|r" (-50% attack damage on high HP, +250% attack damage on low HP)
+"|cffff2020crisis arm|r" (-50% attack damage on high HP, +20
+0% attack damage on low HP)
 [lvl 200] [Unlocks Atropos Quest] - NYI
 }
 
@@ -113486,7 +113463,7 @@ STRING 17824
 {
 [|cffffcc00Talent|r] Crisis Arm
 When above 50% HP suffer -50% attack damage.
-When below 50% HP gain +250% attack damage.
+When below 50% HP gain +200% attack damage.
 }
 
 STRING 17825
@@ -116222,10 +116199,22 @@ STRING 18220
 [|cffFFFF00E|r] Learn Magic Barrier - [|cffffcc00Level %d|r]
 }
 
+STRING 18221
+// Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
+{
+(10)
+}
+
 STRING 18222
 // Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
 {
 [|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 1|r]
+}
+
+STRING 18223
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
 }
 
 STRING 18224
@@ -116235,7 +116224,7 @@ Magus' Amulet
 }
 
 STRING 18225
-// Abilities: A0WU (Magus' Amulet), EditorSuffix (Editor Suffix)
+// Abilities: A0WT (Magic Barrier), EditorSuffix (Editor Suffix)
 {
 (magus)
 }
@@ -116268,6 +116257,18 @@ STRING 18230
 // Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
 {
 Magus' Amulet prevents application of negative status effects.
+}
+
+STRING 18231
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+}
+
+STRING 18232
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
 }
 
 STRING 18233
@@ -116325,7 +116326,7 @@ STRING 18241
 }
 
 STRING 18242
-// Abilities: A0WT (Magic Barrier), EditorSuffix (Editor Suffix)
+// Abilities: A0WU (Magus' Amulet), EditorSuffix (Editor Suffix)
 {
 (magus)
 }
@@ -116412,5 +116413,321 @@ STRING 18256
 // Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 18257
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
+}
+
+STRING 18258
+// Abilities: A0WV (Crono Attack Passive), Name (Name)
+{
+Crono Attack Passive
+}
+
+STRING 18259
+// Abilities: A0WV (Crono Attack Passive), EditorSuffix (Editor Suffix)
+{
+(crono)
+}
+
+STRING 18260
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A0WW,DataD1,%>% 
+|cffffcc00Critical|r - <A0WW,DataA1>% 
+|cffffcc00Damage|r - <A0WW,DataB1,.> times
+}
+
+STRING 18261
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD2,%>% 
+|cffffcc00Critical|r - <A00S,DataA2>% 
+|cffffcc00Damage|r - <A00S,DataB2,.> times
+}
+
+STRING 18262
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD3,%>% 
+|cffffcc00Critical|r - <A00S,DataA3>% 
+|cffffcc00Damage|r - <A00S,DataB3,.> times
+}
+
+STRING 18263
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD4,%>% 
+|cffffcc00Critical|r - <A00S,DataA4>% 
+|cffffcc00Damage|r - <A00S,DataB4,.> times
+}
+
+STRING 18264
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD5,%>% 
+|cffffcc00Critical|r - <A00S,DataA5>% 
+|cffffcc00Damage|r - <A00S,DataB5,.> times
+}
+
+STRING 18265
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD6,%>% 
+|cffffcc00Critical|r - <A00S,DataA6>% 
+|cffffcc00Damage|r - <A00S,DataB6,.> times
+}
+
+STRING 18266
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD7,%>% 
+|cffffcc00Critical|r - <A00S,DataA7>% 
+|cffffcc00Damage|r - <A00S,DataB7,.> times
+}
+
+STRING 18267
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD8,%>% 
+|cffffcc00Critical|r - <A00S,DataA8>% 
+|cffffcc00Damage|r - <A00S,DataB8,.> times
+}
+
+STRING 18268
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD9,%>% 
+|cffffcc00Critical|r - <A00S,DataA9>% 
+|cffffcc00Damage|r - <A00S,DataB9,.> times
+}
+
+STRING 18269
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD10,%>% 
+|cffffcc00Critical|r - <A00S,DataA10>% 
+|cffffcc00Damage|r - <A00S,DataB10,.> times
+}
+
+STRING 18270
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD11,%>% 
+|cffffcc00Critical|r - <A00S,DataA11>% 
+|cffffcc00Damage|r - <A00S,DataB11,.> times
+}
+
+STRING 18271
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD12,%>% 
+|cffffcc00Critical|r - <A00S,DataA12>% 
+|cffffcc00Damage|r - <A00S,DataB12,.> times
+}
+
+STRING 18272
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD13,%>% 
+|cffffcc00Critical|r - <A00S,DataA13>% 
+|cffffcc00Damage|r - <A00S,DataB13,.> times
+}
+
+STRING 18273
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD14,%>% 
+|cffffcc00Critical|r - <A00S,DataA14>% 
+|cffffcc00Damage|r - <A00S,DataB14,.> times
+}
+
+STRING 18274
+// Abilities: A0WW (Saiyan Blood), Ubertip (Tooltip - Normal - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB15,.> times
+}
+
+STRING 18275
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 3|r]
+}
+
+STRING 18276
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 1|r]
+}
+
+STRING 18277
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 2|r]
+}
+
+STRING 18278
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 4|r]
+}
+
+STRING 18279
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 5|r]
+}
+
+STRING 18280
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 6|r]
+}
+
+STRING 18281
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 7|r]
+}
+
+STRING 18282
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 8|r]
+}
+
+STRING 18283
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 9|r]
+}
+
+STRING 18284
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 10|r]
+}
+
+STRING 18285
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 11|r]
+}
+
+STRING 18286
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 12|r]
+}
+
+STRING 18287
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 13|r]
+}
+
+STRING 18288
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 14|r]
+}
+
+STRING 18289
+// Abilities: A0WW (Saiyan Blood), Tip (Tooltip - Normal)
+{
+Saiyan Blood - [|cffffcc00Level 15|r]
+}
+
+STRING 18290
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 18291
+// Abilities: A0WW (Saiyan Blood), Name (Name)
+{
+Saiyan Blood
+}
+
+STRING 18292
+// Abilities: A0WW (Saiyan Blood), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00F|r] Learn Saiyan Blood - [|cffffcc00Level %d|r]
+}
+
+STRING 18293
+// Abilities: A0WW (Saiyan Blood), Researchubertip (Tooltip - Learn - Extended)
+{
+The blood of the Saiyan race flows through your veins. Saiyan blood can cause the fighter to become far stronger after a near death injury and can also increase their fighting appetite.
+
+|cffffcc00Evasion|r - <A00S,DataD1,%> - <A00S,DataD15,%>% 
+|cffffcc00Critical|r - <A00S,DataA1> - <A00S,DataA15>% 
+|cffffcc00Damage|r - <A00S,DataB1,.> - <A00S,DataB15,.> times
+}
+
+STRING 18294
+// Abilities: A0WW (Saiyan Blood), EditorSuffix (Editor Suffix)
+{
+(basic)
+}
+
+STRING 18295
+// Buffs/Effects: B04J (), Buffubertip (Tooltip - Extended)
+{
+Crono's sword skills grant him increased attack damage and a chance to critically strike enemies.
+}
+
+STRING 18296
+// Buffs/Effects: B04J (), Bufftip (Tooltip)
+{
+Crono's Sword
+}
+
+STRING 18297
+// Abilities: A0WX (GokuBlackRevert), Name (Name)
+{
+GokuBlackRevert
+}
+
+STRING 18298
+// Abilities: A0WY (GokuBlackRose), Name (Name)
+{
+GokuBlackRose
 }
 

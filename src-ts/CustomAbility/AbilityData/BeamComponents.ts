@@ -3852,7 +3852,7 @@ export const BeamComponents = [
       beamHpMult: BASE_DMG.KAME_DPS * 1,
       beamHpAttribute: bj_HEROSTAT_INT,
       speed: 8,
-      aoe: 1000,
+      aoe: 500,
       clashingDelayTicks: 1,
       maxDelayTicks: 6,
       durationIncPerDelay: 12,
