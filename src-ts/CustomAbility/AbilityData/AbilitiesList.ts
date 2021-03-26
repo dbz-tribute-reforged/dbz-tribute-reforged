@@ -5893,6 +5893,113 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Lucca.FLAMETHROWER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFlamethrower.blp",
+      disabled: "BTNLuccaFlamethrower.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FLAMETHROWER,
+      body: 
+        "Kame"
+    },
+    components: [
+      { name: "beam flamethrower" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.NAPALM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaNapalm.blp",
+      disabled: "BTNLuccaNapalm.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.MEGABOMB,
+      body: 
+        AbilityNames.Lucca.MEGABOMB
+    },
+    components: [
+      { name: "beam napalm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.MEGABOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaNapalmMegabomb.blp",
+      disabled: "BTNLuccaMegabomb.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.MEGABOMB,
+      body: 
+        AbilityNames.Lucca.MEGABOMB
+    },
+    components: [
+      { name: "beam mega bomb" },
+    ],
+  },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Lucca.FLARE,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 70,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNLuccaFlare.blp",
+        disabled: "BTNLuccaFlare.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Lucca.FLARE,
+        body: 
+          AbilityNames.Lucca.FLARE
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "damage lucca flare explosion" },
+        { name: "sfx lucca flare" },
+        { name: "sfx lucca flare explode" },
+      ],
+    },
+  // -------------------------------------------
+  {
     name: AbilityNames.Magus.DARK_BOMB,
     currentCd: 0,
     maxCd: 1,
@@ -5972,6 +6079,60 @@ export const AbilitiesList = [
       { name: "damage crono lightning 2 explosion" },
       { name: "multi crono lightning 2 inner" },
       { name: "multi crono lightning 2 outer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFire.blp",
+      disabled: "BTNLuccaFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FIRE,
+      body: 
+        AbilityNames.Lucca.FIRE
+    },
+    components: [
+      { name: "beam lucca fire" },
+      { name: "sfx lucca fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FIRE2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusFire2.blp",
+      disabled: "BTNMagusFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.FIRE_2,
+      body: 
+        AbilityNames.Magus.FIRE_2
+    },
+    components: [
+      { name: "beam lucca fire 2" },
+      { name: "sfx magus fire 2" },
     ],
   },
   // -------------------------------------------

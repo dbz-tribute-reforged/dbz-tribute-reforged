@@ -94670,7 +94670,7 @@ Q
 }
 
 STRING 15234
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -95318,7 +95318,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 15333
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -116778,5 +116778,1221 @@ STRING 18301
 // Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
 {
 A
+}
+
+STRING 18302
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18303
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18304
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18305
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18306
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18307
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18308
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18309
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18310
+// Abilities: A0WZ (Flamethrower), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18311
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 1|r]
+}
+
+STRING 18312
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 2|r]
+}
+
+STRING 18313
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 3|r]
+}
+
+STRING 18314
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 4|r]
+}
+
+STRING 18315
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 5|r]
+}
+
+STRING 18316
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 6|r]
+}
+
+STRING 18317
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 7|r]
+}
+
+STRING 18318
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Flamethrower - [|cffffcc00Level 8|r]
+}
+
+STRING 18319
+// Abilities: A0WZ (Flamethrower), Tip (Tooltip - Normal)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18320
+// Abilities: A0WZ (Flamethrower), Name (Name)
+{
+Flamethrower
+}
+
+STRING 18321
+// Abilities: A0WZ (Flamethrower), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Flamethrower - [|cffffcc00Level %d|r]
+}
+
+STRING 18322
+// Abilities: A0WZ (Flamethrower), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca fires a jet of flame from her gun, burning all enemies in a line. |n|cff00ff00(Damage: (Int * lvl * 2) +100)|r|n|cff00ffff(Cooldown: 14.5 seconds)|r
+}
+
+STRING 18323
+// Abilities: A0WZ (Flamethrower), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18324
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>s|r
+}
+
+STRING 18325
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool2>s|r
+}
+
+STRING 18326
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool3>s|r
+}
+
+STRING 18327
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool4>s|r
+}
+
+STRING 18328
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
+}
+
+STRING 18329
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool6>s|r
+}
+
+STRING 18330
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool7>s|r
+}
+
+STRING 18331
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 2|r]
+}
+
+STRING 18332
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave- [|cffffcc00Level 3|r]
+}
+
+STRING 18333
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 4|r]
+}
+
+STRING 18334
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 5|r]
+}
+
+STRING 18335
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r]Hypnowave - [|cffffcc00Level 6|r]
+}
+
+STRING 18336
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 1|r]
+}
+
+STRING 18337
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 7|r]
+}
+
+STRING 18338
+// Abilities: A0X0 (Hypnowave), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 18339
+// Abilities: A0X0 (Hypnowave), Name (Name)
+{
+Hypnowave
+}
+
+STRING 18340
+// Abilities: A0X0 (Hypnowave), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Hypnowave - [|cffffcc00Level %d|r]
+}
+
+STRING 18341
+// Abilities: A0X0 (Hypnowave), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 18342
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 9|r]
+}
+
+STRING 18343
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 8|r]
+}
+
+STRING 18344
+// Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Hypnowave - [|cffffcc00Level 10|r]
+}
+
+STRING 18345
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool8>s|r
+}
+
+STRING 18346
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool9>s|r
+}
+
+STRING 18347
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool10>s|r
+}
+
+STRING 18348
+// Abilities: A0X0 (Hypnowave), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
+}
+
+STRING 18349
+// Abilities: A0X0 (Hypnowave), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18350
+// Abilities: A0X1 (Fire 2), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18351
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 1|r]
+}
+
+STRING 18352
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18353
+// Abilities: A0X1 (Fire 2), Name (Name)
+{
+Fire 2
+}
+
+STRING 18354
+// Abilities: A0X1 (Fire 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18355
+// Abilities: A0X1 (Fire 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Fire 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 18356
+// Abilities: A0X1 (Fire 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18357
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 2|r]
+}
+
+STRING 18358
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 18359
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 18360
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 18361
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 6|r]
+}
+
+STRING 18362
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18363
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18364
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18365
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18366
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18367
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 18368
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18369
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18370
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18371
+// Abilities: A0X1 (Fire 2), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X1,Cool10>s|r
+}
+
+STRING 18372
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 8|r]
+}
+
+STRING 18373
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 9|r]
+}
+
+STRING 18374
+// Abilities: A0X1 (Fire 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 18375
+// Abilities: A0X1 (Fire 2), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18376
+// Abilities: A0X2 (Fire), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18377
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 1|r]
+}
+
+STRING 18378
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18379
+// Abilities: A0X2 (Fire), Name (Name)
+{
+Fire
+}
+
+STRING 18380
+// Abilities: A0X2 (Fire), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18381
+// Abilities: A0X2 (Fire), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Fire - [|cffffcc00Level %d|r]
+}
+
+STRING 18382
+// Abilities: A0X2 (Fire), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18383
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 2|r]
+}
+
+STRING 18384
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 3|r]
+}
+
+STRING 18385
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 4|r]
+}
+
+STRING 18386
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 5|r]
+}
+
+STRING 18387
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 6|r]
+}
+
+STRING 18388
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18389
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18390
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18391
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18392
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18393
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 7|r]
+}
+
+STRING 18394
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18395
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18396
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18397
+// Abilities: A0X2 (Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca unleashes a barrage of flames upon her enemies.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X2,Cool10>s|r
+}
+
+STRING 18398
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 8|r]
+}
+
+STRING 18399
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 9|r]
+}
+
+STRING 18400
+// Abilities: A0X2 (Fire), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Fire - [|cffffcc00Level 10|r]
+}
+
+STRING 18401
+// Abilities: A0X2 (Fire), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18402
+// Abilities: A0X3 (Napalm), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18403
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 1|r]
+}
+
+STRING 18404
+// Abilities: A0X3 (Napalm), Name (Name)
+{
+Napalm
+}
+
+STRING 18405
+// Abilities: A0X3 (Napalm), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18406
+// Abilities: A0X3 (Napalm), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00R|r] Learn Napalm - [|cffffcc00Level %d|r]
+}
+
+STRING 18407
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18408
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18409
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18410
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18411
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18412
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 2|r]
+}
+
+STRING 18413
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 3|r]
+}
+
+STRING 18414
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 4|r]
+}
+
+STRING 18415
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 5|r]
+}
+
+STRING 18416
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 6|r]
+}
+
+STRING 18417
+// Abilities: A0X3 (Napalm), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18418
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 7|r]
+}
+
+STRING 18419
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 8|r]
+}
+
+STRING 18420
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18421
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18422
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 9|r]
+}
+
+STRING 18423
+// Abilities: A0X3 (Napalm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 10|r]
+}
+
+STRING 18424
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18425
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18426
+// Abilities: A0X3 (Napalm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18427
+// Abilities: A0X4 (Mega Bomb), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18428
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 1|r]
+}
+
+STRING 18429
+// Abilities: A0X4 (Mega Bomb), Name (Name)
+{
+Mega Bomb
+}
+
+STRING 18430
+// Abilities: A0X4 (Mega Bomb), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18431
+// Abilities: A0X4 (Mega Bomb), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00R|r] Learn Napalm - [|cffffcc00Level %d|r]
+}
+
+STRING 18432
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18433
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18434
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18435
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18436
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18437
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 2|r]
+}
+
+STRING 18438
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 3|r]
+}
+
+STRING 18439
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 4|r]
+}
+
+STRING 18440
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 5|r]
+}
+
+STRING 18441
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 6|r]
+}
+
+STRING 18442
+// Abilities: A0X4 (Mega Bomb), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18443
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 7|r]
+}
+
+STRING 18444
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 8|r]
+}
+
+STRING 18445
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18446
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18447
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Napalm - [|cffffcc00Level 9|r]
+}
+
+STRING 18448
+// Abilities: A0X4 (Mega Bomb), Tip (Tooltip - Normal)
+{
+[|cffFFFF00R|r] Mega Bomb - [|cffffcc00Level 10|r]
+}
+
+STRING 18449
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18450
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W4,Cool1>s
+}
+
+STRING 18451
+// Abilities: A0X4 (Mega Bomb), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca throws a bomb at the target area that explodes on impact, dealing damage to all enemies in range.|n|cff00FF00Damage: Str * lvl * ?|r|n|cff00ffffCooldown: <A0W3,Cool1>s
+}
+
+STRING 18452
+// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 18453
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 1|r]
+}
+
+STRING 18454
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18455
+// Abilities: A0X5 (Flare), Name (Name)
+{
+Flare
+}
+
+STRING 18456
+// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 18457
+// Abilities: A0X5 (Flare), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Flare - [|cffffcc00Level %d|r]
+}
+
+STRING 18458
+// Abilities: A0X5 (Flare), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18459
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 2|r]
+}
+
+STRING 18460
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 3|r]
+}
+
+STRING 18461
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 4|r]
+}
+
+STRING 18462
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 5|r]
+}
+
+STRING 18463
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 6|r]
+}
+
+STRING 18464
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18465
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18466
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18467
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18468
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18469
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 7|r]
+}
+
+STRING 18470
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18471
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18472
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18473
+// Abilities: A0X5 (Flare), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca charges a spell at the target area for 2s. After the cast time, Lucca unleashes a gigantic explosion dealing heavy damage to units in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0X5,Cool1>s|r
+}
+
+STRING 18474
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 8|r]
+}
+
+STRING 18475
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 9|r]
+}
+
+STRING 18476
+// Abilities: A0X5 (Flare), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Flare - [|cffffcc00Level 10|r]
+}
+
+STRING 18477
+// Abilities: A0X5 (Flare), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18478
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18479
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18480
+{
+Type "r" to revert.
+Transformations:
+Int multiplier permanently increased by 20%
+[lvl 20]  1.25x "fp"
+[lvl 35]  1.50x "fp"
+[lvl 85]  2.00x "fp"
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.50x "fp"
+[lvl 200] [|cff00ffffWeapon Choice|r]
+"|cff808080wondershot|r" (-90% attack dmg, 10% chance to crit for 100x damage)
+"|cffff2020turboshot|r" (Increased attack rate)
+[lvl 200] [Unlocks Son of Sun Quest] - NYI
+}
+
+STRING 18481
+{
+[|cffffcc00Talent|r] Wondershot
+-90% attack damage. 10% chance to crit for 100x damage.
+}
+
+STRING 18482
+{
+[|cffffcc00Talent|r] Turboshot
+Attack rate greatly increased.
+}
+
+STRING 18483
+// Abilities: A0X6 (Lucca Crit Passive), Name (Name)
+{
+Lucca Crit Passive
+}
+
+STRING 18484
+// Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18486
+// Abilities: A0X8 (Lucca Attack Passive), Name (Name)
+{
+Lucca Attack Passive
+}
+
+STRING 18487
+// Abilities: A0X8 (Lucca Attack Passive), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 18488
+// Buffs/Effects: B04K (), Buffubertip (Tooltip - Extended)
+{
+Lucca's gun is capable of firing from a distance and critically striking enemies.
+}
+
+STRING 18489
+// Buffs/Effects: B04K (), Bufftip (Tooltip)
+{
+Lucca's Gun
+}
+
+STRING 18490
+// Abilities: A0X7 (Book Lucca Passives), Name (Name)
+{
+Book Lucca Passives
+}
+
+STRING 18491
+{
+[|cffffcc00Upgrade|r] Fire 2
+Lucca's Fire has been upgraded to Fire 2, a larger, more damaging version.
+}
+
+STRING 18492
+{
+[|cffffcc00Upgrade|r] Napalm
+Lucca's Napalm has been upgraded to Mega Bomb, a larger, more damaging version.
 }
 

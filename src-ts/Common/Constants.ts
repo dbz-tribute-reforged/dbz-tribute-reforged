@@ -183,6 +183,15 @@ export module Id {
   export const magusDarkMist = FourCC("A0WR");
   export const magusDarkMatter = FourCC("A0W6");
 
+  export const lucca = FourCC("H0A4");
+  export const luccaFlamethrower = FourCC("A0WZ");
+  export const luccaHypnowave = FourCC("A0X0");
+  export const luccaFire2 = FourCC("A0X1");
+  export const luccaFire = FourCC("A0X2");
+  export const luccaNapalm = FourCC("A0X3");
+  export const luccaMegaBomb = FourCC("A0X4");
+  export const luccaFlare = FourCC("A0X5");
+
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");
   export const burningRush = FourCC("A0UR");

@@ -382,6 +382,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Robo.UZZI_PUNCH,
       AbilityNames.Robo.ELECTROCUTE,
     ]],
+
+    [Id.lucca, [
+      AbilityNames.Lucca.FLAMETHROWER,
+      AbilityNames.Lucca.HYPNOWAVE,
+      AbilityNames.Lucca.FIRE,
+      AbilityNames.Lucca.FIRE2,
+      AbilityNames.Lucca.NAPALM,
+      AbilityNames.Lucca.MEGABOMB,
+      AbilityNames.Lucca.FLARE,
+    ]],
     
     [Id.magus, [
       AbilityNames.Magus.DARK_BOMB,

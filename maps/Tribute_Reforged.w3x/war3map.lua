@@ -875,6 +875,7 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Lucca = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -14268,6 +14269,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VV"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0W8"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VX"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0X7"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0W2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
@@ -19655,6 +19657,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A4"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A3"))) then
         return false
@@ -19914,6 +19923,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                     if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                         udg_TempString = "BTNMagus.blp"
                                     else
+                                        if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                            udg_TempString = "BTNLucca.blp"
+                                        else
+                                        end
                                     end
                                 end
                             end
@@ -22447,6 +22460,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A2")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A4")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -22768,6 +22783,10 @@ function Trig_Hero_Pick_Reset_Abilities_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0WC"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0X1"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0X2"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0X4"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(true, FourCC("A0X3"), udg_TempPlayer)
 end
 
 function InitTrig_Hero_Pick_Reset_Abilities()
@@ -26727,6 +26746,10 @@ function Trig_Transformations_Init_Commands_Non_Auto_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommandsNonAuto[udg_TempInt] = "crisis arm"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "turboshot"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "wondershot"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > udg_MaxNumPlayers) then break end
@@ -27177,6 +27200,13 @@ function Trig_Transformations_Parse_String_Func001Func004C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A4"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A3"))) then
         return false
@@ -27536,6 +27566,10 @@ function Trig_Transformations_Parse_String_Func001A()
                                                                                 if (Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                                     TriggerExecute(gg_trg_Transformations_Magus)
                                                                                 else
+                                                                                    if (Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                                        TriggerExecute(gg_trg_Transformations_Lucca)
+                                                                                    else
+                                                                                    end
                                                                                 end
                                                                             end
                                                                         end
@@ -42761,6 +42795,303 @@ function InitTrig_Transformations_Frog()
     TriggerAddAction(gg_trg_Transformations_Frog, Trig_Transformations_Frog_Actions)
 end
 
+function Trig_Transformations_Lucca_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 35)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func016C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 125)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func017C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func018C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0X2"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0X1"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func019C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0X3"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0X4"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func020Func001C()
+    if (not (udg_TransformationString == "wondershot")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func020Func002C()
+    if (not (udg_TransformationString == "turboshot")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func020Func003C()
+    if (udg_TransformationString == "wondershot") then
+        return true
+    end
+    if (udg_TransformationString == "turboshot") then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Lucca_Func020C()
+    if (not Trig_Transformations_Lucca_Func020Func003C()) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 200)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0X8"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func023Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Lucca_Func023Func002C()
+    if (not Trig_Transformations_Lucca_Func023Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Func023C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucca_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Lucca_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18480")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Lucca_Func011C()) then
+        udg_StatMultReal = 1.00
+        udg_StatMultStr = 1.00
+        udg_StatMultAgi = 1.00
+        udg_StatMultInt = 1.20
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func012C()) then
+        udg_StatMultReal = 1.00
+        udg_StatMultStr = 1.00
+        udg_StatMultAgi = 1.00
+        udg_StatMultInt = 1.20
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func013C()) then
+        udg_StatMultReal = 1.25
+        udg_StatMultStr = 1.25
+        udg_StatMultAgi = 1.25
+        udg_StatMultInt = 1.50
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func014C()) then
+        udg_StatMultReal = 1.50
+        udg_StatMultStr = 1.50
+        udg_StatMultAgi = 1.50
+        udg_StatMultInt = 1.80
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func015C()) then
+        udg_StatMultReal = 2.00
+        udg_StatMultStr = 2.00
+        udg_StatMultAgi = 2.00
+        udg_StatMultInt = 2.40
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func016C()) then
+        udg_StatMultReal = 2.25
+        udg_StatMultStr = 2.25
+        udg_StatMultAgi = 2.25
+        udg_StatMultInt = 2.70
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func017C()) then
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+        udg_StatMultReal = 2.50
+        udg_StatMultStr = 2.50
+        udg_StatMultAgi = 2.50
+        udg_StatMultInt = 3.00
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucca_Func018C()) then
+        UnitAddAbilityBJ(FourCC("A0X1"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0X1"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0X1'))
+        UnitRemoveAbilityBJ(FourCC("A0X2"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0X1"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0X2"), udg_TransformationPlayer)
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18491")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Lucca_Func019C()) then
+        UnitAddAbilityBJ(FourCC("A0X4"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0X4"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0X4'))
+        UnitRemoveAbilityBJ(FourCC("A0X3"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0X4"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0X3"), udg_TransformationPlayer)
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18492")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Lucca_Func020C()) then
+        if (Trig_Transformations_Lucca_Func020Func001C()) then
+            SetUnitAbilityLevelSwapped(FourCC("A0X8"), udg_StatMultUnit, 2)
+            SetUnitAbilityLevelSwapped(FourCC("A0X6"), udg_StatMultUnit, 2)
+            udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+            DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18481")
+                        DestroyForce(udg_TempPlayerGroup)
+        else
+        end
+        if (Trig_Transformations_Lucca_Func020Func002C()) then
+            BlzSetUnitAttackCooldown(udg_StatMultUnit, 1.30, R2I(0.00))
+            SetUnitAbilityLevelSwapped(FourCC("A0X8"), udg_StatMultUnit, 3)
+            udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+            DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18482")
+                        DestroyForce(udg_TempPlayerGroup)
+        else
+        end
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Lucca_Func023C()) then
+        if (Trig_Transformations_Lucca_Func023Func002C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+                        udg_TransformationID = FourCC('H0A4')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Lucca()
+    gg_trg_Transformations_Lucca = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Lucca, Trig_Transformations_Lucca_Actions)
+end
+
 function Trig_Transformations_Robo_Func010C()
     if (not (udg_TransformationString == "hs")) then
         return false
@@ -45020,6 +45351,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Rust_Tyranno()
     InitTrig_Transformations_Crono()
     InitTrig_Transformations_Frog()
+    InitTrig_Transformations_Lucca()
     InitTrig_Transformations_Robo()
     InitTrig_Crisis_Arm()
     InitTrig_Transformations_Magus()

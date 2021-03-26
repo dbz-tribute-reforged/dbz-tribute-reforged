@@ -282,6 +282,15 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.roboUzziPunch, AbilityNames.Robo.UZZI_PUNCH],
     [Id.roboElectrocute, AbilityNames.Robo.ELECTROCUTE],
 
+    //lucca
+    [Id.luccaFlamethrower, AbilityNames.Lucca.FLAMETHROWER],
+    [Id.luccaHypnowave, AbilityNames.Lucca.HYPNOWAVE],
+    [Id.luccaFire, AbilityNames.Lucca.FIRE],
+    [Id.luccaFire2, AbilityNames.Lucca.FIRE2],
+    [Id.luccaNapalm, AbilityNames.Lucca.NAPALM],
+    [Id.luccaMegaBomb, AbilityNames.Lucca.MEGABOMB],
+    [Id.luccaFlare, AbilityNames.Lucca.FLARE],
+
 
     //magus
     [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],

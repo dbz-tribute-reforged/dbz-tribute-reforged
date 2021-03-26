@@ -327,6 +327,16 @@ export module AbilityNames {
     export const ELECTROCUTE: string = "Robo Electrocute";
   }
 
+  export module Lucca {
+    export const FLAMETHROWER: string = "Flamethrower";
+    export const HYPNOWAVE: string = "Hypno Wave";
+    export const FIRE: string = "Fire";
+    export const FIRE2: string = "Fire 2";
+    export const NAPALM: string = "Napalm";
+    export const MEGABOMB: string = "Mega Bomb";
+    export const FLARE: string = "Flare";
+  }
+
   export module Magus {
     export const DARK_BOMB: string = "Magus Dark Bomb";
     export const LIGHTNING_2: string = "Magus Lightning 2";
