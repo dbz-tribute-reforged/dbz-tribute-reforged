@@ -411,6 +411,7 @@ gg_trg_Yamcha_Play_Dead_Start = nil
 gg_trg_Yamcha_Play_Dead_Finish = nil
 gg_trg_Yamcha_Sparking = nil
 gg_trg_Guldo_Time_Stop = nil
+gg_trg_Guldo_Time_Stop_Remove = nil
 gg_trg_Roshi_Kamehameha_Charge = nil
 gg_trg_Roshi_Kamehameha_Charge_Finish = nil
 gg_trg_Roshi_Kamehameha_Charge_Loop = nil
@@ -874,7 +875,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Guldo_Time_Stop_Remove = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0

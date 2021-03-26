@@ -51295,7 +51295,7 @@ W
 }
 
 STRING 8337
-// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
+// Units: H0A4 (Brilliant Inventor), Hotkey (Hotkey)
 {
 A
 }
@@ -66002,7 +66002,7 @@ STRING 10713
 }
 
 STRING 10714
-// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
+// Abilities: A05E (Mass Attack Order), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -68078,7 +68078,7 @@ Q
 }
 
 STRING 11056
-// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
+// Abilities: A0D2 (Sample Purified Water), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -68612,7 +68612,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 11144
-// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
+// Abilities: A0E5 (Transform - 100%), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -76253,6 +76253,18 @@ STRING 12398
 [|cffFFFF00W|r] Kharge - [|cffffcc00Level 10|r]
 }
 
+STRING 12399
+// Units: H0A4 (Brilliant Inventor), Name (Name)
+{
+Brilliant Inventor
+}
+
+STRING 12400
+// Units: H0A4 (Brilliant Inventor), Propernames (Proper Names)
+{
+Lucca
+}
+
 STRING 12401
 // Units: O013 (Kid Buu), Name (Name)
 {
@@ -77720,6 +77732,12 @@ STRING 12635
 // Units: H09H (Captain of the Pride Troopers), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
+}
+
+STRING 12636
+// Units: H0A4 (Brilliant Inventor), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00A|r] Choose Lucca
 }
 
 STRING 12637
@@ -95698,6 +95716,19 @@ STRING 15383
 Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
 }
 
+STRING 15384
+// Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
+{
+A hero that has strong ranged damage capabilities.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 15385
 // Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
@@ -97418,7 +97449,7 @@ STRING 15625
 }
 
 STRING 15626
-// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0IK (Wish for Upgrade Points), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -116729,5 +116760,23 @@ STRING 18298
 // Abilities: A0WY (GokuBlackRose), Name (Name)
 {
 GokuBlackRose
+}
+
+STRING 18299
+// Units: H0A4 (Brilliant Inventor), Tip (Tooltip - Basic)
+{
+[|cffffff00A|r] Choose Lucca
+}
+
+STRING 18300
+// Units: H0A4 (Brilliant Inventor), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 18301
+// Abilities: A0OF (Revive - Original Respawn), Hotkey (Hotkey - Normal)
+{
+A
 }
 
