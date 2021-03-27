@@ -117859,7 +117859,7 @@ Int multiplier permanently increased by 20%
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
 [lvl 200] [|cff00ffffWeapon Choice|r]
-"|cff808080wondershot|r" (-50% attack dmg, 10% chance to crit for 20x damage)
+"|cff808080wondershot|r" (-50% attack dmg, 10% chance to crit for 10x damage)
 "|cffff2020turboshot|r" (Increased attack rate)
 [lvl 200] [Unlocks Son of Sun Quest] - NYI
 }
@@ -117867,7 +117867,7 @@ Int multiplier permanently increased by 20%
 STRING 18481
 {
 [|cffffcc00Talent|r] Wondershot
--50% attack damage. 10% chance to crit for 20x damage.
+-50% attack damage. 10% chance to crit for 10x damage.
 }
 
 STRING 18482
