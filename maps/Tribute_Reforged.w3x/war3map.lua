@@ -844,6 +844,7 @@ gg_trg_Transformations_Dart_Feld = nil
 gg_trg_Transformations_Rust_Tyranno = nil
 gg_trg_Transformations_Crono = nil
 gg_trg_Transformations_Frog = nil
+gg_trg_Transformations_Lucca = nil
 gg_trg_Transformations_Robo = nil
 gg_trg_Crisis_Arm = nil
 gg_trg_Transformations_Magus = nil
@@ -875,7 +876,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Lucca = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0

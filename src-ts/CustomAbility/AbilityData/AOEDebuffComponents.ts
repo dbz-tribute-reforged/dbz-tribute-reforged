@@ -35,6 +35,9 @@ export module Debuffs {
   export const ENTANGLING_ROOTS_ORDER_ID = 852171;
   export const CIRCLE_FLASH = FourCC("A0R6");
   export const GALACTIC_DONUT = FourCC("A0U6");
+
+  export const SLEEP_ORDER_ID = 852227;
+  export const HYPNOWAVE_SLEEP = FourCC("A0X9");
 }
 
 export const AOEDebuffComponents = [
@@ -790,6 +793,20 @@ export const AOEDebuffComponents = [
     orderId: Debuffs.CURSE_ORDER_ID,
     aoe: 1000,
     keepCasting: true, 
+    onlyAffectHeroes: true,
+    requireBuff: false,
+    buffId: 0,
+  },
+  {
+    name: "debuff sleep lucca hypnosis",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: 0,
+    debuffSource: AOEDebuff.SOURCE_UNIT,
+    abilityId: Debuffs.HYPNOWAVE_SLEEP,
+    orderId: Debuffs.SLEEP_ORDER_ID,
+    aoe: 700,
+    keepCasting: false, 
     onlyAffectHeroes: true,
     requireBuff: false,
     buffId: 0,

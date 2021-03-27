@@ -14183,6 +14183,42 @@ export const SfxComponents = [
   },
   // --------------------------------------------
   { 
+    name: "sfx lucca hypnowave", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "LuccaHypnowave2.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 5.0,
+        endScale: -1,
+        startHeight: -90,
+        endHeight: -90,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },  
+  // --------------------------------------------
+  { 
     name: "sfx beam napalm", 
     repeatInterval: 1,
     startTick: 0,

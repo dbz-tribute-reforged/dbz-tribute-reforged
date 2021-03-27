@@ -116912,48 +116912,6 @@ STRING 18323
 (lucca)
 }
 
-STRING 18324
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>s|r
-}
-
-STRING 18325
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool2>s|r
-}
-
-STRING 18326
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool3>s|r
-}
-
-STRING 18327
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool4>s|r
-}
-
-STRING 18328
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
-}
-
-STRING 18329
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool6>s|r
-}
-
-STRING 18330
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool7>s|r
-}
-
 STRING 18331
 // Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
 {
@@ -117036,30 +116994,6 @@ STRING 18344
 // Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hypnowave - [|cffffcc00Level 10|r]
-}
-
-STRING 18345
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool8>s|r
-}
-
-STRING 18346
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool9>s|r
-}
-
-STRING 18347
-// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool10>s|r
-}
-
-STRING 18348
-// Abilities: A0X0 (Hypnowave), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucca activates a device that hypnotizes enemies in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
 }
 
 STRING 18349
@@ -117925,7 +117859,7 @@ Int multiplier permanently increased by 20%
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
 [lvl 200] [|cff00ffffWeapon Choice|r]
-"|cff808080wondershot|r" (-90% attack dmg, 10% chance to crit for 100x damage)
+"|cff808080wondershot|r" (-50% attack dmg, 10% chance to crit for 20x damage)
 "|cffff2020turboshot|r" (Increased attack rate)
 [lvl 200] [Unlocks Son of Sun Quest] - NYI
 }
@@ -117933,7 +117867,7 @@ Int multiplier permanently increased by 20%
 STRING 18481
 {
 [|cffffcc00Talent|r] Wondershot
--90% attack damage. 10% chance to crit for 100x damage.
+-50% attack damage. 10% chance to crit for 20x damage.
 }
 
 STRING 18482
@@ -117952,6 +117886,12 @@ STRING 18484
 // Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
 {
 (lucca)
+}
+
+STRING 18485
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>s|r
 }
 
 STRING 18486
@@ -117994,5 +117934,71 @@ STRING 18492
 {
 [|cffffcc00Upgrade|r] Napalm
 Lucca's Napalm has been upgraded to Mega Bomb, a larger, more damaging version.
+}
+
+STRING 18493
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool2>s|r
+}
+
+STRING 18494
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool3>s|r
+}
+
+STRING 18495
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool4>s|r
+}
+
+STRING 18496
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool5>s|r
+}
+
+STRING 18497
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool6>s|r
+}
+
+STRING 18498
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool7>s|r
+}
+
+STRING 18499
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool8>s|r
+}
+
+STRING 18500
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool9>s|r
+}
+
+STRING 18501
+// Abilities: A0X0 (Hypnowave), Ubertip (Tooltip - Normal - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool10>s|r
+}
+
+STRING 18502
+// Abilities: A0X0 (Hypnowave), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucca activates a device that hypnotizes enemy heroes in an area around her, causing them to fall asleep until they receive damage.|n|cff00FF00Duration: 4s|r|n|cff00FFFFCooldown: <A0X0,Cool1>-<A0X0,Cool10>s|r
+}
+
+STRING 18503
+// Abilities: A0X9 (Sleep), EditorSuffix (Editor Suffix)
+{
+(lucca hypnosis)
 }
 

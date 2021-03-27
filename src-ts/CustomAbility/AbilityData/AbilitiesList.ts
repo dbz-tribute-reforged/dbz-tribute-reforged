@@ -5919,6 +5919,33 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Lucca.HYPNOWAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell channel",
+    icon: {
+      enabled: "BTNLuccaHypnowave.blp",
+      disabled: "BTNLuccaHypnowave.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.HYPNOWAVE,
+      body: 
+        AbilityNames.Lucca.HYPNOWAVE
+    },
+    components: [
+      { name: "sfx lucca hypnowave" },
+      { name: "debuff sleep lucca hypnosis"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Lucca.NAPALM,
     currentCd: 0,
     maxCd: 1,
