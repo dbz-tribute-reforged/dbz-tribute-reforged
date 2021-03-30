@@ -97393,13 +97393,13 @@ STRING 15617
 }
 
 STRING 15618
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15619
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -118808,6 +118808,1192 @@ Q
 }
 
 STRING 18612
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18613
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18614
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18615
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18616
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18617
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18618
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18619
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18620
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 2|r]
+}
+
+STRING 18621
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 3|r]
+}
+
+STRING 18622
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 4|r]
+}
+
+STRING 18623
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 5|r]
+}
+
+STRING 18624
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 6|r]
+}
+
+STRING 18625
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 1|r]
+}
+
+STRING 18626
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 7|r]
+}
+
+STRING 18627
+// Abilities: A0XE (Cure), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18628
+// Abilities: A0XE (Cure), Name (Name)
+{
+Cure
+}
+
+STRING 18629
+// Abilities: A0XE (Cure), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Cure - [|cffffcc00Level %d|r]
+}
+
+STRING 18630
+// Abilities: A0XE (Cure), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18631
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 9|r]
+}
+
+STRING 18632
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 8|r]
+}
+
+STRING 18633
+// Abilities: A0XE (Cure), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Cure - [|cffffcc00Level 10|r]
+}
+
+STRING 18634
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18635
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18636
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18637
+// Abilities: A0XE (Cure), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
+}
+
+STRING 18638
+// Abilities: A0XE (Cure), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18639
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool1>s|r
+}
+
+STRING 18640
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool2>s|r
+}
+
+STRING 18641
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool3>s|r
+}
+
+STRING 18642
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool4>s|r
+}
+
+STRING 18643
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool5>s|r
+}
+
+STRING 18644
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool6>s|r
+}
+
+STRING 18645
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool7>s|r
+}
+
+STRING 18646
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
+}
+
+STRING 18647
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
+}
+
+STRING 18648
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
+}
+
+STRING 18649
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
+}
+
+STRING 18650
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
+}
+
+STRING 18651
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 1|r]
+}
+
+STRING 18652
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
+}
+
+STRING 18653
+// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 18654
+// Abilities: A0XF (Haste), Name (Name)
+{
+Haste
+}
+
+STRING 18655
+// Abilities: A0XF (Haste), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 18656
+// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 18657
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 9|r]
+}
+
+STRING 18658
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 8|r]
+}
+
+STRING 18659
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
+}
+
+STRING 18660
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool8>s|r
+}
+
+STRING 18661
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool9>s|r
+}
+
+STRING 18662
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool10>s|r
+}
+
+STRING 18663
+// Abilities: A0XF (Haste), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool1>-<A0XF,Cool10>s|r
+}
+
+STRING 18664
+// Abilities: A0XF (Haste), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18665
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 1|r]
+}
+
+STRING 18666
+// Abilities: A0XG (Boulder Toss), Name (Name)
+{
+Boulder Toss
+}
+
+STRING 18667
+// Abilities: A0XG (Boulder Toss), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00Q|r] Learn Boulder Toss - [|cffffcc00Level %d|r]
+}
+
+STRING 18668
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18669
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18670
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18671
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18672
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18673
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 2|r]
+}
+
+STRING 18674
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 3|r]
+}
+
+STRING 18675
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 4|r]
+}
+
+STRING 18676
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 5|r]
+}
+
+STRING 18677
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 6|r]
+}
+
+STRING 18678
+// Abilities: A0XG (Boulder Toss), Researchubertip (Tooltip - Learn - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18679
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 7|r]
+}
+
+STRING 18680
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 8|r]
+}
+
+STRING 18681
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18682
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18683
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 9|r]
+}
+
+STRING 18684
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
+{
+[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 10|r]
+}
+
+STRING 18685
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18686
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18687
+// Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18688
+// Abilities: A0XG (Boulder Toss), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18689
+// Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 18690
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 1|r]
+}
+
+STRING 18691
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool1>s|r
+}
+
+STRING 18692
+// Abilities: A0XH (Charm), Name (Name)
+{
+Charm
+}
+
+STRING 18693
+// Abilities: A0XH (Charm), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn Charm
+}
+
+STRING 18694
+// Abilities: A0XH (Charm), Researchubertip (Tooltip - Learn - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool1>-<A0XH,Cool10>s|r
+}
+
+STRING 18695
+// Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 18696
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 2|r]
+}
+
+STRING 18697
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 3|r]
+}
+
+STRING 18698
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 4|r]
+}
+
+STRING 18699
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 5|r]
+}
+
+STRING 18700
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 6|r]
+}
+
+STRING 18701
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 7|r]
+}
+
+STRING 18702
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 8|r]
+}
+
+STRING 18703
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 9|r]
+}
+
+STRING 18704
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Charm - [|cffffcc00Level 10|r]
+}
+
+STRING 18705
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool2>s|r
+}
+
+STRING 18706
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool3>s|r
+}
+
+STRING 18707
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool4>s|r
+}
+
+STRING 18708
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool5>s|r
+}
+
+STRING 18709
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool6>s|r
+}
+
+STRING 18710
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool7>s|r
+}
+
+STRING 18711
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool8>s|r
+}
+
+STRING 18712
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool9>s|r
+}
+
+STRING 18713
+// Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool10>s|r
+}
+
+STRING 18714
+// Abilities: A0XI (Tail Spin), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18715
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 1|r]
+}
+
+STRING 18716
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18717
+// Abilities: A0XI (Tail Spin), Name (Name)
+{
+Tail Spin
+}
+
+STRING 18718
+// Abilities: A0XI (Tail Spin), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18719
+// Abilities: A0XI (Tail Spin), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Tail Spin - [|cffffcc00Level %d|r]
+}
+
+STRING 18720
+// Abilities: A0XI (Tail Spin), Researchubertip (Tooltip - Learn - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18721
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 2|r]
+}
+
+STRING 18722
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 3|r]
+}
+
+STRING 18723
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 4|r]
+}
+
+STRING 18724
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 5|r]
+}
+
+STRING 18725
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 6|r]
+}
+
+STRING 18726
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18727
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18728
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18729
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18730
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18731
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 7|r]
+}
+
+STRING 18732
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18733
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18734
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18735
+// Abilities: A0XI (Tail Spin), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla spins around, dealing damage and pulling in all enemies in range.
+|cff00ff00Damage: Agi * Lvl * ?
+|cff00FFFFCooldown: <A0XI,Cool1>s|r
+}
+
+STRING 18736
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 8|r]
+}
+
+STRING 18737
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 9|r]
+}
+
+STRING 18738
+// Abilities: A0XI (Tail Spin), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Tail Spin - [|cffffcc00Level 10|r]
+}
+
+STRING 18739
+// Abilities: A0XI (Tail Spin), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18740
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18741
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18742
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18743
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18744
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18745
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18746
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18747
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18748
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18749
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18750
+// Abilities: A0XJ (Dragon Fist), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18751
+// Abilities: A0XJ (Dragon Fist), Name (Name)
+{
+Dragon Fist
+}
+
+STRING 18752
+// Abilities: A0XJ (Dragon Fist), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level %d|r]
+}
+
+STRING 18753
+// Abilities: A0XJ (Dragon Fist), Researchubertip (Tooltip - Learn - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18754
+// Abilities: A0XJ (Dragon Fist), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18755
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18756
+// Abilities: A0XJ (Dragon Fist), Ubertip (Tooltip - Normal - Extended)
+{
+Goku charges at the opponent calling upon the power of the Eternal Dragon to deliver an almighty punch dealing massive damage! |n|cff00ff00(Damage: (Int * lvl * 5) +100)|r|n|cff00ffff(Cooldown: 25 seconds)|r
+}
+
+STRING 18757
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18758
+// Abilities: A0XJ (Dragon Fist), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] Dragon Fist - [|cffffcc00Level 1|r]
+}
+
+STRING 18759
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18760
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18761
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18762
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18763
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18764
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 1|r]
+}
+
+STRING 18765
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 2|r]
+}
+
+STRING 18766
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 3|r]
+}
+
+STRING 18767
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 4|r]
+}
+
+STRING 18768
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 5|r]
+}
+
+STRING 18769
+// Abilities: A0XK (Dino Tail), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18770
+// Abilities: A0XK (Dino Tail), Name (Name)
+{
+Dino Tail
+}
+
+STRING 18771
+// Abilities: A0XK (Dino Tail), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00R|r] Dino Tail - [|cffffcc00Level %d|r]
+}
+
+STRING 18772
+// Abilities: A0XK (Dino Tail), Researchubertip (Tooltip - Learn - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18773
+// Abilities: A0XK (Dino Tail), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18774
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18775
+// Abilities: A0XK (Dino Tail), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla summons a dinosaur tail that plows through enemies in range, dealing extra damage based on Ayla's missing HP. |n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XJ,Cool1>s|r
+}
+
+STRING 18776
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 6|r]
+}
+
+STRING 18777
+// Abilities: A0XK (Dino Tail), Tip (Tooltip - Normal)
+{
+[|cff00FF00R|r] DIno Tail - [|cffffcc00Level 7|r]
+}
+
+STRING 18778
+// Abilities: A0XK (Dino Tail), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18779
+// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 18780
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 1|r]
+}
+
+STRING 18781
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18782
+// Abilities: A0XL (Triple Kick), Name (Name)
+{
+Triple Kick
+}
+
+STRING 18783
+// Abilities: A0XL (Triple Kick), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00d|r] Learn Triple Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 18784
+// Abilities: A0XL (Triple Kick), Researchubertip (Tooltip - Learn - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18785
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 2|r]
+}
+
+STRING 18786
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 3|r]
+}
+
+STRING 18787
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 4|r]
+}
+
+STRING 18788
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 5|r]
+}
+
+STRING 18789
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18790
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18791
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18792
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18793
+// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 18794
+// Abilities: A0XL (Triple Kick), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18795
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18796
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18797
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18798
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18799
+// Abilities: A0XL (Triple Kick), Ubertip (Tooltip - Normal - Extended)
+{
+Ayla kicks towards the target location, dealing damage to units in her path. Ayla can cast this up to 3 times before triggering the cooldown.|n|cff00FF00Damage: Agi * Lvl * ? |r|n|cff00FFFFCooldown: <A0XL,Cool1>s|r
+}
+
+STRING 18800
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 6|r]
+}
+
+STRING 18801
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 7|r]
+}
+
+STRING 18802
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 8|r]
+}
+
+STRING 18803
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 9|r]
+}
+
+STRING 18804
+// Abilities: A0XL (Triple Kick), Tip (Tooltip - Normal)
+{
+[|cff00FF00D|r] Triple Kick - [|cffffcc00Level 10|r]
+}
+
+STRING 18805
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18806
 // Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
 {
 Q
