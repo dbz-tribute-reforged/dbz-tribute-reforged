@@ -119999,3 +119999,70 @@ STRING 18806
 Q
 }
 
+STRING 18807
+{
+Type "r" to revert.
+Transformations:
+[lvl 20]  1.25x "fp"
+[lvl 35]  1.50x "fp"
+[lvl 85]  2.00x "fp" 
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.50x "fp"
+[lvl 200] 2.6x "fp"
+[lvl 250] Unlocks Stone Fist - +50% attack DMG
+[lvl 300] Unlocks Bronze Fist - 4x critical strike damage
+}
+
+STRING 18810
+{
+Type "r" to revert.
+Transformations:
+[lvl 20]  1.25x "fp"
+[lvl 35]  1.50x "fp"
+[lvl 85]  2.00x "fp" 
+[lvl 125] 2.25x "fp"
+[lvl 150] 2.50x "fp"
+}
+
+STRING 18811
+// Abilities: A0XM (Book Ayla Passives), Name (Name)
+{
+Book Ayla Passives
+}
+
+STRING 18812
+// Abilities: A0XN (Ayla Attack Passive), Name (Name)
+{
+Ayla Attack Passive
+}
+
+STRING 18813
+// Abilities: A0XN (Ayla Attack Passive), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18814
+// Abilities: A0XO (Ayla Crit Passive), Name (Name)
+{
+Ayla Crit Passive
+}
+
+STRING 18815
+// Abilities: A0XO (Ayla Crit Passive), EditorSuffix (Editor Suffix)
+{
+(ayla)
+}
+
+STRING 18816
+// Buffs/Effects: B04L (), Buffubertip (Tooltip - Extended)
+{
+Ayla no need sword. Ayla strong.
+}
+
+STRING 18817
+// Buffs/Effects: B04L (), Bufftip (Tooltip)
+{
+Ayla's Fists
+}
+
