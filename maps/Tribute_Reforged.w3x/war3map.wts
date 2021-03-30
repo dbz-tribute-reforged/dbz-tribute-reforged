@@ -12547,7 +12547,7 @@ STRING 2021
 }
 
 STRING 2022
-// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
+// Units: H0A6 (Princess of Guardia), Hotkey (Hotkey)
 {
 D
 }
@@ -12565,7 +12565,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 2025
-// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
+// Abilities: A080 (Finish Buuster), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -12685,7 +12685,7 @@ STRING 2044
 }
 
 STRING 2045
-// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
+// Abilities: A080 (Finish Buuster), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12709,7 +12709,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2049
-// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
+// Abilities: A031 (Spit), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13069,7 +13069,7 @@ STRING 2108
 }
 
 STRING 2109
-// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A031 (Spit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13093,7 +13093,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 2113
-// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A081 (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13490,7 +13490,7 @@ STRING 2177
 }
 
 STRING 2178
-// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A081 (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13514,7 +13514,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 2182
-// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A032 (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13856,7 +13856,7 @@ S
 }
 
 STRING 2239
-// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A032 (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13880,7 +13880,7 @@ STRING 2242
 }
 
 STRING 2243
-// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A082 (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -13904,7 +13904,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 2247
-// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A082 (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14036,7 +14036,7 @@ STRING 2268
 }
 
 STRING 2269
-// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A083 (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14060,7 +14060,7 @@ Piccolo fires alot of energy blasts hitting any nearby creatures.
 }
 
 STRING 2273
-// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
+// Abilities: A083 (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14714,7 +14714,7 @@ STRING 2381
 }
 
 STRING 2382
-// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
+// Abilities: A015 (Scatter Shot), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -14738,7 +14738,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 2386
-// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A015 (Scatter Shot), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15114,7 +15114,7 @@ STRING 2446
 }
 
 STRING 2447
-// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A085 (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -15126,7 +15126,7 @@ Detonate
 }
 
 STRING 2449
-// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A085 (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -15772,7 +15772,7 @@ Summons Pui Pui, Babidi's weakest henchman.
 }
 
 STRING 2556
-// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -16714,7 +16714,7 @@ STRING 2712
 }
 
 STRING 2713
-// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
+// Abilities: A076 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -16738,7 +16738,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 2717
-// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A018 (Summon Pui Pui), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17428,7 +17428,7 @@ STRING 2831
 }
 
 STRING 2832
-// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A03A (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17452,7 +17452,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2836
-// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A03A (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -17658,7 +17658,7 @@ STRING 2869
 }
 
 STRING 2870
-// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -17670,7 +17670,7 @@ STRING 2871
 }
 
 STRING 2872
-// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19757,7 +19757,7 @@ STRING 3219
 }
 
 STRING 3220
-// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
+// Abilities: A06D (Transform), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19781,7 +19781,7 @@ Piccolo fires many energy balls at his opponent which are made easy to avoid on 
 }
 
 STRING 3224
-// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
+// Abilities: A03G (Hellzone Grenade), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -19956,7 +19956,7 @@ Power Level |cffffcc00R|rising - [|cffffcc00Level 5|r]
 }
 
 STRING 3253
-// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
+// Abilities: A03G (Hellzone Grenade), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19980,7 +19980,7 @@ The Geti Star scans for high power levels.|n|n|cff00ff00Shows the location of al
 }
 
 STRING 3257
-// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
+// Abilities: A00H (Scan for Powers), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -21118,7 +21118,7 @@ Galick gun mastery - [|cffffcc00Level 1|r]
 }
 
 STRING 3445
-// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
+// Abilities: A00H (Scan for Powers), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -22644,7 +22644,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 3696
-// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
+// Abilities: A02K (Galick Gun Mastery), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -23674,7 +23674,7 @@ STRING 3867
 }
 
 STRING 3868
-// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
+// Abilities: A00P (Drain Energy), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -23698,7 +23698,7 @@ Creates Android 19 using spare parts from Gero's other projects.
 }
 
 STRING 3872
-// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -26634,7 +26634,7 @@ STRING 4346
 }
 
 STRING 4347
-// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
+// Abilities: A07R (Create Android 19), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -26658,7 +26658,7 @@ Buu punches the target. |n|cff00ff00(Damage: Str * lvl + 100)|r|n|cff00FFFF(Cool
 }
 
 STRING 4351
-// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
+// Abilities: A03S (Kyodaika Revert), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -27192,7 +27192,7 @@ STRING 4439
 }
 
 STRING 4440
-// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A03S (Kyodaika Revert), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -27216,7 +27216,7 @@ After Guru unlocked his potential, Dende gained the ability to heal others.
 }
 
 STRING 4444
-// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A07X (Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -27988,7 +27988,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A07X (Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28012,7 +28012,7 @@ One of Gotenks' unique abilites. This attack creates little ghost like clones of
 }
 
 STRING 4567
-// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A04Y (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -28181,7 +28181,7 @@ STRING 4594
 }
 
 STRING 4595
-// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A04Y (Kyodaika), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -28193,7 +28193,7 @@ Detonate
 }
 
 STRING 4597
-// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A07Y (Buu's Healing), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -29491,7 +29491,7 @@ STRING 4808
 }
 
 STRING 4809
-// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Y (Buu's Healing), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -29515,7 +29515,7 @@ Buu swings his arms so fast they appear to be windmills on his shoulder and pumm
 }
 
 STRING 4813
-// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -31125,7 +31125,7 @@ STRING 5080
 }
 
 STRING 5081
-// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
+// Abilities: A07Z (Super Buu Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31149,7 +31149,7 @@ Cooler transforms into his final, most powerful form.
 }
 
 STRING 5085
-// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
+// Abilities: A087 (Detonate), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -31371,7 +31371,7 @@ STRING 5121
 }
 
 STRING 5122
-// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A087 (Detonate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -31395,7 +31395,7 @@ Bebi uses this skill to enter the bodies of other creatures through their injuri
 }
 
 STRING 5126
-// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Machine Gun Punch), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -34088,7 +34088,7 @@ Candy Cane
 }
 
 STRING 5567
-// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
+// Abilities: A08O (Machine Gun Punch), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -34100,19 +34100,19 @@ Q
 }
 
 STRING 5569
-// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
+// Abilities: A0A2 (Fuse Parts), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 5570
-// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
+// Abilities: A0A2 (Fuse Parts), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 5571
-// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -37012,7 +37012,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6039
-// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
+// Abilities: A0B1 (Enter Body), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -37378,13 +37378,13 @@ STRING 6099
 }
 
 STRING 6100
-// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
+// Abilities: A0BO (Sense Androids), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6101
-// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
+// Abilities: A0D3 (Sample Pudding), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38016,7 +38016,7 @@ Super Goten Strike
 }
 
 STRING 6206
-// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0D7 (Beerus Food Book), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -38040,7 +38040,7 @@ Buu creates ghost clones of Gotenks that will travel to the target location and 
 }
 
 STRING 6210
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D7 (Beerus Food Book), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -38971,7 +38971,7 @@ STRING 6355
 }
 
 STRING 6356
-// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -39031,7 +39031,7 @@ STRING 6365
 }
 
 STRING 6366
-// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
+// Abilities: A0DI (Super Ghost Kamikaze Attack), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39193,7 +39193,7 @@ STRING 6385
 }
 
 STRING 6386
-// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
+// Abilities: A0DZ (Frieza Transforms), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -39877,7 +39877,7 @@ STRING 6499
 }
 
 STRING 6500
-// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E6 (Call Ship), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40441,7 +40441,7 @@ STRING 6593
 }
 
 STRING 6594
-// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40459,7 +40459,7 @@ STRING 6596
 }
 
 STRING 6597
-// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EJ (Buu Cataclysmic Orb), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40602,13 +40602,13 @@ Deactivate Distortion Field
 }
 
 STRING 6620
-// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EK (Distortion Field), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
 STRING 6621
-// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
+// Abilities: A0EK (Distortion Field), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -40632,7 +40632,7 @@ A Shield that can be used to guard against attacks but can't be used alot. |n[|c
 }
 
 STRING 6625
-// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EK (Distortion Field), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40722,7 +40722,7 @@ STRING 6639
 }
 
 STRING 6640
-// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EL (Energy Absorption Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40746,7 +40746,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6644
-// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EL (Energy Absorption Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40812,7 +40812,7 @@ STRING 6654
 }
 
 STRING 6655
-// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EM (Power Level Rising Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40836,7 +40836,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 6659
-// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EM (Power Level Rising Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -40926,7 +40926,7 @@ STRING 6673
 }
 
 STRING 6674
-// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Pressure Point Attack Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -40950,7 +40950,7 @@ Tao hits a pressure point on the enemy, killing it if it is considerably weaker 
 }
 
 STRING 6678
-// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EN (Pressure Point Attack Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41040,7 +41040,7 @@ STRING 6692
 }
 
 STRING 6693
-// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EO (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41064,7 +41064,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 6697
-// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EO (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41178,7 +41178,7 @@ STRING 6715
 }
 
 STRING 6716
-// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41202,7 +41202,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 6720
-// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -41298,7 +41298,7 @@ STRING 6734
 }
 
 STRING 6735
-// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -41322,7 +41322,7 @@ Janemba bombarbs nearby enemies with shards of glass. Does more damage to nearby
 }
 
 STRING 6739
-// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EQ (Lightning Shower Rain Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44707,7 +44707,7 @@ STRING 7265
 }
 
 STRING 7266
-// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GI (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -44731,7 +44731,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 7270
-// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GI (Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -44983,7 +44983,7 @@ STRING 7311
 }
 
 STRING 7312
-// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
+// Abilities: A0GK (Masenko), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45007,7 +45007,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 7316
-// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GK (Masenko), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45649,7 +45649,7 @@ STRING 7422
 }
 
 STRING 7423
-// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GQ (Special Buu Cannon), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45673,7 +45673,7 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7427
-// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GQ (Special Buu Cannon), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -45895,7 +45895,7 @@ STRING 7463
 }
 
 STRING 7464
-// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
+// Abilities: A0GS (Scattering Buullet), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -45919,7 +45919,7 @@ A technique invented by Krillin.  |n[|cffffcc00History|r] - |cff0066CCIt was use
 }
 
 STRING 7468
-// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GS (Scattering Buullet), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46008,7 +46008,7 @@ STRING 7482
 }
 
 STRING 7483
-// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GT (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46032,7 +46032,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7487
-// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GT (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46146,7 +46146,7 @@ S.S. Deadly Bomber
 }
 
 STRING 7506
-// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GU (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46170,7 +46170,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 7510
-// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (Death Beam), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -46929,7 +46929,7 @@ STRING 7634
 }
 
 STRING 7635
-// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0H0 (Calamity Blaster Buu), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -46953,7 +46953,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7639
-// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H0 (Calamity Blaster Buu), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47497,7 +47497,7 @@ STRING 7728
 }
 
 STRING 7729
-// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -47521,7 +47521,7 @@ STRING 7732
 }
 
 STRING 7733
-// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
+// Abilities: A0HM (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -47732,7 +47732,7 @@ Masenko
 }
 
 STRING 7768
-// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
+// Abilities: A0IG (Transform - Golden), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48206,7 +48206,7 @@ STRING 7846
 }
 
 STRING 7847
-// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
+// Abilities: A0IP (Sorrowful Scythe), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -48230,7 +48230,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7851
-// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
+// Abilities: A0JB (Wish for Dead Zone Fragment), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -51847,7 +51847,7 @@ R
 }
 
 STRING 8429
-// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -53358,7 +53358,7 @@ W
 }
 
 STRING 8667
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
+// Abilities: A0KD (Meditate), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -55625,7 +55625,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 9032
-// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -56343,7 +56343,7 @@ Ultimate Burning Warrior
 }
 
 STRING 9138
-// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0L6 (Gohan Boost Unlock Potential), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62207,7 +62207,7 @@ STRING 10106
 }
 
 STRING 10107
-// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62225,7 +62225,7 @@ Unlock Potential
 }
 
 STRING 10110
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
+// Abilities: A0L7 (Gohan Boost Justice Pose), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62237,7 +62237,7 @@ STRING 10111
 }
 
 STRING 10112
-// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62255,7 +62255,7 @@ Justice Pose
 }
 
 STRING 10115
-// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
+// Abilities: A0L8 (Gohan Boost Potential Unleashed), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -62267,7 +62267,7 @@ Places a nuclear strike at a target location. |n|cff00ff00(Damage: (Int * lvl * 
 }
 
 STRING 10117
-// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0LL (Candy Gobbler), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -62285,7 +62285,7 @@ Potential Unleashed
 }
 
 STRING 10120
-// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
+// Abilities: A0LL (Candy Gobbler), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -64196,7 +64196,7 @@ STRING 10431
 }
 
 STRING 10432
-// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
+// Abilities: A0LN (Future Sight), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66032,7 +66032,7 @@ Gohan follows up with a swift uppercut to the opponent's chin, knocking them awa
 }
 
 STRING 10719
-// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -66314,7 +66314,7 @@ STRING 10763
 }
 
 STRING 10764
-// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LY (Pan Costume Honey Bee), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -67482,7 +67482,7 @@ STRING 10956
 }
 
 STRING 10957
-// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -67500,7 +67500,7 @@ STRING 10959
 }
 
 STRING 10960
-// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
+// Abilities: A0M6 (Frozen D), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73507,7 +73507,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11954
-// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KT (Super Saiyan Rage), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73537,7 +73537,7 @@ Janemba disassembles into cubes and teleports to the target location, reassembli
 }
 
 STRING 11959
-// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73561,7 +73561,7 @@ STRING 11962
 }
 
 STRING 11963
-// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
+// Abilities: A0MZ (Mastered Ultra Instinct), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -74059,7 +74059,7 @@ STRING 12045
 }
 
 STRING 12046
-// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0O0 (Demon's Mark), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -74382,7 +74382,7 @@ STRING 12099
 }
 
 STRING 12100
-// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
+// Abilities: A0O1 (Demon Rush), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -75642,7 +75642,7 @@ Leader of the Pride Troopers
 }
 
 STRING 12303
-// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
+// Abilities: A0OD (Cell-X), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -76811,7 +76811,7 @@ STRING 12482
 }
 
 STRING 12483
-// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OT (Belly Armor), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -78882,7 +78882,7 @@ STRING 12809
 }
 
 STRING 12810
-// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0OT (Belly Armor), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -81481,7 +81481,7 @@ Ribbit. Ribbit. Croak.
 }
 
 STRING 13233
-// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (God of Destruction), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -85199,7 +85199,7 @@ STRING 13816
 }
 
 STRING 13817
-// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0PV (Frog of Namek), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -86040,7 +86040,7 @@ STRING 13948
 }
 
 STRING 13949
-// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
+// Abilities: A0QN (Shadow Dragon Abilities), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -90518,7 +90518,7 @@ Yamcha's strongest basic Ki blast.
 }
 
 STRING 14631
-// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
+// Abilities: A0R1 (Super Maximum Light Speed Mode), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -95788,7 +95788,7 @@ STRING 15392
 }
 
 STRING 15393
-// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
+// Abilities: A0RO (Stance: Base), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -95848,13 +95848,13 @@ STRING 15402
 }
 
 STRING 15403
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15404
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -97164,7 +97164,7 @@ STRING 15581
 }
 
 STRING 15582
-// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
+// Abilities: A0SM (Meditate: Enlightened), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97363,7 +97363,7 @@ Level 10: Zarbon
 }
 
 STRING 15613
-// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
+// Abilities: A0FH (Max Power), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -97687,19 +97687,19 @@ STRING 15660
 }
 
 STRING 15661
-// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
+// Units: H0A5 (Ioka Chief), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 15662
-// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
+// Abilities: A0D1 (Sample Pizza), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 15663
-// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+// Abilities: A0IF (Transform - Mecha), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -97831,7 +97831,7 @@ STRING 15679
 }
 
 STRING 15680
-// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
+// Abilities: A0SV (Energy Blades), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99603,7 +99603,7 @@ Sephiroth delivers a swift sequence of sword slashes.
 }
 
 STRING 15921
-// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
+// Abilities: A0T0 (One For All), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -100453,7 +100453,7 @@ Ground Pound
 }
 
 STRING 16037
-// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
+// Abilities: A0TC (One Winged Angel), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -102702,7 +102702,7 @@ Tien unites his hands at the tips of the fingers and aims a devastatingly powerf
 }
 
 STRING 16351
-// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
+// Abilities: A0TH (Pure Progress), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -106419,13 +106419,13 @@ Dangai
 }
 
 STRING 16834
-// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
+// Abilities: A0TS (Four Fist Technique), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 16835
-// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
+// Abilities: A0U0 (Super Saiyan 3), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -106437,13 +106437,13 @@ STRING 16836
 }
 
 STRING 16837
-// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UF (Shunpo), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 16838
-// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
+// Abilities: A0UF (Shunpo), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -106500,7 +106500,7 @@ Mugetsu
 }
 
 STRING 16847
-// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
+// Abilities: A0V1 (Dragoon Transformation), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -108776,7 +108776,7 @@ STRING 17141
 }
 
 STRING 17142
-// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0VL (Hirenkyaku), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -112179,7 +112179,7 @@ STRING 17620
 }
 
 STRING 17621
-// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Hirenkyaku), Unhotkey (Hotkey - Turn Off)
 {
 D
 }
@@ -112205,7 +112205,7 @@ Luminaire
 }
 
 STRING 17625
-// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VU (Luminaire), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -113053,7 +113053,7 @@ STRING 17755
 }
 
 STRING 17756
-// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
+// Abilities: A0VU (Luminaire), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -113077,7 +113077,7 @@ Dark Matter
 }
 
 STRING 17760
-// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0W6 (Dark Matter), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -113837,7 +113837,7 @@ Magus throws a Dark Bomb at the target area, causing it to explode and deal dama
 }
 
 STRING 17873
-// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
+// Abilities: A0W6 (Dark Matter), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -113887,7 +113887,7 @@ E
 }
 
 STRING 17881
-// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WF (Frog Squash), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -114115,7 +114115,7 @@ STRING 17914
 }
 
 STRING 17915
-// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
+// Abilities: A0WF (Frog Squash), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -114233,7 +114233,7 @@ STRING 17932
 }
 
 STRING 17933
-// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WK (Electrocute), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -116912,6 +116912,55 @@ STRING 18323
 (lucca)
 }
 
+STRING 18324
+// Units: H0A5 (Ioka Chief), Name (Name)
+{
+Ioka Chief
+}
+
+STRING 18325
+// Units: H0A5 (Ioka Chief), Propernames (Proper Names)
+{
+Ayla
+}
+
+STRING 18326
+// Units: H0A5 (Ioka Chief), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00S|r] Choose Ayla
+}
+
+STRING 18327
+// Units: H0A5 (Ioka Chief), Ubertip (Tooltip - Extended)
+{
+A powerful close-range combatant that can charm useful items from NPCs 
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18328
+// Units: H0A5 (Ioka Chief), Tip (Tooltip - Basic)
+{
+[|cffffff00S|r] Choose Ayla
+}
+
+STRING 18329
+// Units: H0A5 (Ioka Chief), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 18330
+// Units: H0A6 (Princess of Guardia), Name (Name)
+{
+Princess of Guardia
+}
+
 STRING 18331
 // Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
 {
@@ -116994,6 +117043,37 @@ STRING 18344
 // Abilities: A0X0 (Hypnowave), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Hypnowave - [|cffffcc00Level 10|r]
+}
+
+STRING 18345
+// Units: H0A6 (Princess of Guardia), Propernames (Proper Names)
+{
+Marle
+}
+
+STRING 18346
+// Units: H0A6 (Princess of Guardia), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00D|r] Choose Marle
+}
+
+STRING 18347
+// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
+{
+A low-damage support hero with a ranged attack and a number of helpful abilities.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18348
+// Units: H0A6 (Princess of Guardia), Tip (Tooltip - Basic)
+{
+[|cffffff00D|r] Choose Marle
 }
 
 STRING 18349
@@ -117659,7 +117739,7 @@ Lucca throws a bomb at the target area that explodes on impact, dealing damage t
 }
 
 STRING 18452
-// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
+// Abilities: A0WK (Electrocute), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -117685,7 +117765,7 @@ Flare
 }
 
 STRING 18456
-// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+// Abilities: A0X5 (Flare), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -118000,5 +118080,736 @@ STRING 18503
 // Abilities: A0X9 (Sleep), EditorSuffix (Editor Suffix)
 {
 (lucca hypnosis)
+}
+
+STRING 18504
+// Units: H0A6 (Princess of Guardia), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 18505
+// Abilities: A0JA (Wish for Dimension Sword), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 18506
+// Abilities: A0X5 (Flare), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 18507
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 18508
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool1>s|r
+}
+
+STRING 18509
+// Abilities: A0XA (Aura), Name (Name)
+{
+Aura
+}
+
+STRING 18510
+// Abilities: A0XA (Aura), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00Q|r] Learn Aura - [|cffffcc00Level %d|r]
+}
+
+STRING 18511
+// Abilities: A0XA (Aura), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool1>-<A0XA,Cool10>s|r
+}
+
+STRING 18512
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 18513
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 18514
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 4|r]
+}
+
+STRING 18515
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 5|r]
+}
+
+STRING 18516
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 6|r]
+}
+
+STRING 18517
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool2>s|r
+}
+
+STRING 18518
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool3>s|r
+}
+
+STRING 18519
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool4>s|r
+}
+
+STRING 18520
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool5>s|r
+}
+
+STRING 18521
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool6>s|r
+}
+
+STRING 18522
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 7|r]
+}
+
+STRING 18523
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool7>s|r
+}
+
+STRING 18524
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool8>s|r
+}
+
+STRING 18525
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool9>s|r
+}
+
+STRING 18526
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
+|cff00ff00Healing: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XA,Cool10>s|r
+}
+
+STRING 18527
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 8|r]
+}
+
+STRING 18528
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 9|r]
+}
+
+STRING 18529
+// Abilities: A0XA (Aura), Tip (Tooltip - Normal)
+{
+[|cff00ff00Q|r] Aura - [|cffffcc00Level 10|r]
+}
+
+STRING 18530
+// Abilities: A0XA (Aura), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18531
+// Abilities: A0XB (Allure), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 18532
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 1|r]
+}
+
+STRING 18533
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA1>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18534
+// Abilities: A0XB (Allure), Name (Name)
+{
+Allure
+}
+
+STRING 18535
+// Abilities: A0XB (Allure), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 18536
+// Abilities: A0XB (Allure), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Allure - [|cffffcc00Level %d|r]
+}
+
+STRING 18537
+// Abilities: A0XB (Allure), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA1>-<A0XB,DataA10>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18538
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 2|r]
+}
+
+STRING 18539
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 3|r]
+}
+
+STRING 18540
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 4|r]
+}
+
+STRING 18541
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 5|r]
+}
+
+STRING 18542
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 6|r]
+}
+
+STRING 18543
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA2>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18544
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA3>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18545
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA4>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18546
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA5>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18547
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA6>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18548
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 7|r]
+}
+
+STRING 18549
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA7>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18550
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA8>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18551
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA9>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18552
+// Abilities: A0XB (Allure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
+|cff00ff00Duration: <A0XB,DataA10>s|N|cff00FFFFCooldown: <A0XB,Cool1>s
+}
+
+STRING 18553
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 8|r]
+}
+
+STRING 18554
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 9|r]
+}
+
+STRING 18555
+// Abilities: A0XB (Allure), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Allure - [|cffffcc00Level 10|r]
+}
+
+STRING 18556
+// Abilities: A0XB (Allure), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18557
+// Abilities: A0XC (Ice), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18558
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 1|r]
+}
+
+STRING 18559
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18560
+// Abilities: A0XC (Ice), Name (Name)
+{
+Ice
+}
+
+STRING 18561
+// Abilities: A0XC (Ice), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18562
+// Abilities: A0XC (Ice), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Ice - [|cffffcc00Level %d|r]
+}
+
+STRING 18563
+// Abilities: A0XC (Ice), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18564
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 2|r]
+}
+
+STRING 18565
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 3|r]
+}
+
+STRING 18566
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 4|r]
+}
+
+STRING 18567
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 5|r]
+}
+
+STRING 18568
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 6|r]
+}
+
+STRING 18569
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18570
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18571
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18572
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18573
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18574
+// Abilities: A0XC (Ice), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18575
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 7|r]
+}
+
+STRING 18576
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18577
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 8|r]
+}
+
+STRING 18578
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18579
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18580
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Marle throws a block of ice at the target area that explodes at its destination, damaging and slowing enemies in range.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XC,Cool1>s|r
+}
+
+STRING 18581
+// Abilities: A0XC (Ice), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
+}
+
+STRING 18582
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 9|r]
+}
+
+STRING 18583
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cff00FF00E|r] Ice - [|cffffcc00Level 10|r]
+}
+
+STRING 18584
+// Abilities: A0XC (Ice), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+
+STRING 18585
+// Abilities: A0XD (Ice 2), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18586
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 1|r]
+}
+
+STRING 18587
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18588
+// Abilities: A0XD (Ice 2), Name (Name)
+{
+Ice 2
+}
+
+STRING 18589
+// Abilities: A0XD (Ice 2), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18590
+// Abilities: A0XD (Ice 2), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Lightning 2 - [|cffffcc00Level %d|r]
+}
+
+STRING 18591
+// Abilities: A0XD (Ice 2), Researchubertip (Tooltip - Learn - Extended)
+{
+Crono calls down a bolt of lightning on every unit in range.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0VS,Cool1>s|r
+}
+
+STRING 18592
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 2|r]
+}
+
+STRING 18593
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 3|r]
+}
+
+STRING 18594
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 4|r]
+}
+
+STRING 18595
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 5|r]
+}
+
+STRING 18596
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 6|r]
+}
+
+STRING 18597
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18598
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18599
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18600
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18601
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18602
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 7|r]
+}
+
+STRING 18603
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18604
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18605
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18606
+// Abilities: A0XD (Ice 2), Ubertip (Tooltip - Normal - Extended)
+{
+Marle spawns giant chunks of jagged ice to crush her enemies. Afflicts enemies with |cff00ccffFrostbite|r, slowing their movement and attack speed.
+|cff00ff00Damage: Int * Lvl * ?
+|cff00FFFFCooldown: <A0XD,Cool1>s|r
+}
+
+STRING 18607
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 8|r]
+}
+
+STRING 18608
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 9|r]
+}
+
+STRING 18609
+// Abilities: A0XD (Ice 2), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Ice 2 - [|cffffcc00Level 10|r]
+}
+
+STRING 18610
+// Abilities: A0XD (Ice 2), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
+STRING 18611
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18612
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
 }
 
