@@ -1230,6 +1230,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 35,
   },
+  // ayla triple kick
+  {
+    name: "dash ground point ayla triple kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 20,
+  },
   // ----------------------------
   // cell-x
   {

@@ -1110,7 +1110,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(freeModeTrig, () => {
     if (GetTriggerPlayer() == hostPlayer) {
       Globals.isFreemode = true;
-      if (SubString(GetEventPlayerChatString(), 0, 9) == "-fbsimtest") {
+      if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
         Globals.isFBSimTest =  true;
       }
     }
@@ -1240,6 +1240,7 @@ export function CustomPlayerTest() {
     SetupDragonFistSfx(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupGinyuChangeNow(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupGinyuTelekinesis(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupGuldoTimeStop(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupOmegaShenronShadowFist(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupKrillinSenzuThrow(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupJirenGlare(independentSpellTrigger, independentSpellHashtable, customPlayers);
@@ -1251,6 +1252,8 @@ export function CustomPlayerTest() {
     SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
     SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
+    // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SoundHelper.SetupSpellSoundEffects();
@@ -1778,6 +1781,29 @@ export function SetupGinyuTelekinesis(
 
     return false;
   });
+}
+
+export function SetupGuldoTimeStop(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const originalBAT: number = 1.8;
+  const timeStopBAT: number = 0.4;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.guldoTimeStop) {
+      const caster = GetTriggerUnit();
+      BlzSetUnitAttackCooldown(caster, timeStopBAT, 0);
+
+      TimerStart(CreateTimer(), 2.0, false, () => {
+        BlzSetUnitAttackCooldown(caster, originalBAT, 0);
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  });
+  
 }
 
 export function SetupOmegaShenronShadowFist(
@@ -2555,6 +2581,38 @@ export function performGroundVortex(
   GroupClear(tmpGroup);
 }
 
+
+// export function SetupAylaTripleKick(
+//   spellTrigger: trigger, 
+//   spellHashtable: hashtable, 
+//   customPlayers: CustomPlayer[]
+// ) {
+//   const tripleKickMaxCast: number = 3;
+//   const tripleKickLongCooldown: number = 30.0;
+
+//   /**
+//    * hashtable
+//    * 0: counter
+//    */
+
+//   TriggerAddAction(spellTrigger, () => {
+//     const spellId = GetSpellAbilityId();
+//     if (spellId == Id.aylaTripleKick) {
+//       const unit = GetTriggerUnit();
+//       const unitId = GetHandleId(unit);
+//       let counter = LoadInteger(spellHashtable, unitId, 0) + 1;
+
+//       if (counter >= tripleKickMaxCast) {
+//         counter = 0;
+//         // force long cd
+//         BlzStartUnitAbilityCooldown(unit, spellId, tripleKickLongCooldown);
+//       }
+
+//       SaveInteger(spellHashtable, unitId, 0, counter);
+//     }
+//   });
+
+// }
 
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 

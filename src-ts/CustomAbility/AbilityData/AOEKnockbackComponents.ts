@@ -1109,7 +1109,7 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
-  // cyclone knock-in
+  // tail spin knock-in
   {
     name: "knockback tail spin",
     repeatInterval: 1, 

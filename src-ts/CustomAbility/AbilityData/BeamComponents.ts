@@ -1007,9 +1007,8 @@ export const BeamComponents = [
     beamUnitSkin: BeamUnitSkin.DEFAULT,
     components: [
       { name: "damage god kame dps" },
-      { name: "damage god kame explosion" },
       { name: "knockback kame" },
-      { name: "sfx beam god kamehameha" },
+      { name: "sfx beam pan god kamehameha" },
     ],
   },
   // -------------------------------------------

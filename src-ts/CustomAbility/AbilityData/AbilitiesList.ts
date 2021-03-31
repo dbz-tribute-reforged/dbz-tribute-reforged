@@ -6083,6 +6083,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Ayla.TRIPLE_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAylaTripleKick.blp",
+      disabled: "BTNAylaTripleKick.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point ayla triple kick" },
+      { name: "damage ayla triple kick dps" },
+      { name: "damage ayla triple kick explosion" },
+      { name: "jump ayla triple kick" },
+      { name: "sfx videl flying kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Magus.DARK_BOMB,
     currentCd: 0,
     maxCd: 1,

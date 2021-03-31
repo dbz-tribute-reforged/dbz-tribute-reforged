@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.61
+DBZ Tribute Reforged 0.61 beta8
 }
 
 STRING 4
@@ -11695,7 +11695,7 @@ Buu lets loose a terrifying scream that weakens his enemies
 }
 
 STRING 1880
-// Abilities: AIcb (Dimension Sword 1), Name (Name)
+// Abilities: A0NP (Dimension Sword 1), Name (Name)
 {
 Dimension Sword 1
 }
@@ -71573,9 +71573,12 @@ STRING 11632
 }
 
 STRING 11633
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
 }
 
 STRING 11634
@@ -72839,9 +72842,12 @@ Wheelo Vamp 1
 }
 
 STRING 11843
-// Abilities: A0NP (Dimension Sword 1), Name (Name)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Dimension Sword 1
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
 }
 
 STRING 11844
@@ -73219,45 +73225,66 @@ STRING 11905
 }
 
 STRING 11906
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool3> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
 }
 
 STRING 11907
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool4> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
 }
 
 STRING 11908
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool5> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
 }
 
 STRING 11909
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool6> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
 }
 
 STRING 11910
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool7> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
 }
 
 STRING 11911
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool8> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
 }
 
 STRING 11912
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool9> seconds|r
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool10> seconds|r
 }
 
 STRING 11913
@@ -73321,27 +73348,27 @@ STRING 11922
 }
 
 STRING 11923
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 1|r]
 }
 
 STRING 11924
-// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XG (Boulder Toss), Researchtip (Tooltip - Learn)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+[|cff00FF00Q|r] Learn Boulder Toss - [|cffffcc00Level %d|r]
 }
 
 STRING 11925
-// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool2> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 2|r]
 }
 
 STRING 11926
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool10> seconds|r|n
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 3|r]
 }
 
 STRING 11927
@@ -73351,9 +73378,9 @@ STRING 11927
 }
 
 STRING 11928
-// Abilities: A0NZ (Devil's Claw), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).|n|cffffff00Auto-attacks trigger this ability with a 1s CD.|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 4|r]
 }
 
 STRING 11929
@@ -74492,57 +74519,58 @@ STRING 12116
 }
 
 STRING 12117
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA1,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 5|r]
 }
 
 STRING 12118
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA2,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool2> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 6|r]
 }
 
 STRING 12119
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA3,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool3> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 7|r]
 }
 
 STRING 12120
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA4,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool4> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 8|r]
 }
 
 STRING 12121
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA5,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool5> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 9|r]
 }
 
 STRING 12122
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA6,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool6> seconds|r
+[|cff00FF00Q|r] Boulder Toss - [|cffffcc00Level 10|r]
 }
 
 STRING 12123
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA7,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool7> seconds|r
+[|cff00FF00W|r] Charm - [|cffffcc00Level 1|r]
 }
 
 STRING 12124
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XH (Charm), Researchtip (Tooltip - Learn)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA8,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool8> seconds|r
+[|cff00FF00Q|r] Learn Charn - [|cffffcc00Level %d|r]
 }
 
 STRING 12125
-// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XH (Charm), Researchubertip (Tooltip - Learn - Extended)
 {
-Janemba performs a deadly sword combo on his opponent that unleashes 3 powerful Ki Slash waves infused with the power of pure evil.|n|cffffff00Auto-attacks automatically trigger this ability (CD: 1s).|nApplies the Demon's Mark debuff (<A0O7,DataA9,%>% blind).|n|cff00ff00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0NZ,Cool9> seconds|r
+Ayla charms the target NPC, causing it to hand her an item if it has one.
+|cff00FFFFCooldown: <A0XH,Cool1> - <A0XH,Cool10>s|r
 }
 
 STRING 12126
@@ -116231,9 +116259,9 @@ STRING 18220
 }
 
 STRING 18221
-// Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
 {
-(10)
+[|cff00FF00W|r] Charm - [|cffffcc00Level 2|r]
 }
 
 STRING 18222
@@ -116273,9 +116301,9 @@ STRING 18227
 }
 
 STRING 18228
-// Abilities: A0WU (Magus' Amulet), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
 {
-Magus uses his Amulet, becoming immune to negative debuffs for the next 10s.|n|cff00FFFFCooldown: 60s|r
+[|cff00FF00W|r] Charm - [|cffffcc00Level 3|r]
 }
 
 STRING 18229
@@ -119125,22 +119153,10 @@ STRING 18664
 (marle)
 }
 
-STRING 18665
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 1|r]
-}
-
 STRING 18666
 // Abilities: A0XG (Boulder Toss), Name (Name)
 {
 Boulder Toss
-}
-
-STRING 18667
-// Abilities: A0XG (Boulder Toss), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00Q|r] Learn Boulder Toss - [|cffffcc00Level %d|r]
 }
 
 STRING 18668
@@ -119173,52 +119189,10 @@ STRING 18672
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
 }
 
-STRING 18673
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 2|r]
-}
-
-STRING 18674
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 3|r]
-}
-
-STRING 18675
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 4|r]
-}
-
-STRING 18676
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 5|r]
-}
-
-STRING 18677
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 6|r]
-}
-
 STRING 18678
 // Abilities: A0XG (Boulder Toss), Researchubertip (Tooltip - Learn - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
-}
-
-STRING 18679
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 7|r]
-}
-
-STRING 18680
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 8|r]
 }
 
 STRING 18681
@@ -119231,18 +119205,6 @@ STRING 18682
 // Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
-}
-
-STRING 18683
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 9|r]
-}
-
-STRING 18684
-// Abilities: A0XG (Boulder Toss), Tip (Tooltip - Normal)
-{
-[|cffFFFF00Q|r]Boulder Toss - [|cffffcc00Level 10|r]
 }
 
 STRING 18685
@@ -119275,12 +119237,6 @@ STRING 18689
 W
 }
 
-STRING 18690
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 1|r]
-}
-
 STRING 18691
 // Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
 {
@@ -119293,76 +119249,10 @@ STRING 18692
 Charm
 }
 
-STRING 18693
-// Abilities: A0XH (Charm), Researchtip (Tooltip - Learn)
-{
-[|cffFFFF00W|r] Learn Charm
-}
-
-STRING 18694
-// Abilities: A0XH (Charm), Researchubertip (Tooltip - Learn - Extended)
-{
-Ayla charms the target NPC, causing it to hand her an item if it has one.|n|cff00FFFFCooldown: <A0XH,Cool1>-<A0XH,Cool10>s|r
-}
-
 STRING 18695
 // Abilities: A0XH (Charm), Researchhotkey (Hotkey - Learn)
 {
 W
-}
-
-STRING 18696
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 2|r]
-}
-
-STRING 18697
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 3|r]
-}
-
-STRING 18698
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 4|r]
-}
-
-STRING 18699
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 5|r]
-}
-
-STRING 18700
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 6|r]
-}
-
-STRING 18701
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 7|r]
-}
-
-STRING 18702
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 8|r]
-}
-
-STRING 18703
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 9|r]
-}
-
-STRING 18704
-// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
-{
-[|cffFFFF00W|r] Charm - [|cffffcc00Level 10|r]
 }
 
 STRING 18705
@@ -119592,7 +119482,7 @@ STRING 18738
 }
 
 STRING 18739
-// Abilities: A0XI (Tail Spin), EditorSuffix (Editor Suffix)
+// Abilities: A0XH (Charm), EditorSuffix (Editor Suffix)
 {
 (ayla)
 }
@@ -119826,7 +119716,7 @@ STRING 18777
 }
 
 STRING 18778
-// Abilities: A0XK (Dino Tail), EditorSuffix (Editor Suffix)
+// Abilities: A0XI (Tail Spin), EditorSuffix (Editor Suffix)
 {
 (ayla)
 }
@@ -119853,12 +119743,6 @@ STRING 18782
 // Abilities: A0XL (Triple Kick), Name (Name)
 {
 Triple Kick
-}
-
-STRING 18783
-// Abilities: A0XL (Triple Kick), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00d|r] Learn Triple Kick - [|cffffcc00Level %d|r]
 }
 
 STRING 18784
@@ -119922,7 +119806,7 @@ D
 }
 
 STRING 18794
-// Abilities: A0XL (Triple Kick), EditorSuffix (Editor Suffix)
+// Abilities: A0XK (Dino Tail), EditorSuffix (Editor Suffix)
 {
 (ayla)
 }
@@ -120013,13 +119897,25 @@ Transformations:
 [lvl 300] Unlocks Bronze Fist - 4x critical strike damage
 }
 
+STRING 18808
+{
+[|cffffcc00Unlock|r] Magus' Amulet
+Magus can now use his amulet's powers to protect himself from debuffs temporarily.
+}
+
+STRING 18809
+{
+[|cffffcc00Unlock|r] Stone Fist
+Ayla's auto attacks deal +50% base damage.
+}
+
 STRING 18810
 {
 Type "r" to revert.
 Transformations:
 [lvl 20]  1.25x "fp"
 [lvl 35]  1.50x "fp"
-[lvl 85]  2.00x "fp" - Upgrade to "Ice 2" if "Ice" at max lvl 
+[lvl 85]  2.00x "fp" [Upgrades Ice at max level]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
 }
@@ -120037,7 +119933,7 @@ Ayla Attack Passive
 }
 
 STRING 18813
-// Abilities: A0XN (Ayla Attack Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0XL (Triple Kick), EditorSuffix (Editor Suffix)
 {
 (ayla)
 }
@@ -120049,7 +119945,7 @@ Ayla Crit Passive
 }
 
 STRING 18815
-// Abilities: A0XO (Ayla Crit Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0XN (Ayla Attack Passive), EditorSuffix (Editor Suffix)
 {
 (ayla)
 }
@@ -120066,9 +119962,241 @@ STRING 18817
 Ayla's Fists
 }
 
+STRING 18818
+{
+[|cffffcc00Unlock|r] Bronze Fist
+Ayla's auto attacks have a 25% chance to critical hit for 4x.
+}
+
+STRING 18819
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+}
+
 STRING 18820
 {
 [|cffffcc00Upgrade|r] Ice 2
 Marle's ice has been upgraded to Ice 2, an ability that rains ice blocks down on the target area, slowing and dealing damage over time.
+}
+
+STRING 18821
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool3> seconds|r
+}
+
+STRING 18822
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool4> seconds|r
+}
+
+STRING 18823
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool5> seconds|r
+}
+
+STRING 18824
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool6> seconds|r
+}
+
+STRING 18825
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool7> seconds|r
+}
+
+STRING 18826
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool8> seconds|r
+}
+
+STRING 18827
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool9> seconds|r
+}
+
+STRING 18828
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool10> seconds|r
+}
+
+STRING 18829
+// Abilities: A0NY (Rakshasa's Claw), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+}
+
+STRING 18830
+// Abilities: A0NY (Rakshasa's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 3
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool2> seconds|r
+}
+
+STRING 18831
+// Abilities: A0NZ (Devil's Claw), Ubertip (Tooltip - Normal - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+}
+
+STRING 18841
+// Abilities: A0NZ (Devil's Claw), Researchubertip (Tooltip - Learn - Extended)
+{
+Janemba slices his opponent with a powerful Ki Slash wave infused with the power of pure evil. Any enemies hit will be cursed with the Demon's Mark (<A0O7,DataA1,%>% blind).
+|cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 10
+|cff00ff00Damage: Agi * Lvl * ?|r
+|cff00ffffCooldown: <A0NY,Cool1> seconds|r
+}
+
+STRING 18842
+// Abilities: A0WU (Magus' Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Magus uses his Amulet, becoming immune to negative debuffs for the next <A0WU,Dur1>s.
+|cff00FFFFCooldown: <A0WU,Cool1>s|r
+}
+
+STRING 18843
+// Abilities: A0XP (Janemba Corruption Passive), Name (Name)
+{
+Janemba Corruption Passive
+}
+
+STRING 18844
+// Abilities: A0XP (Janemba Corruption Passive), EditorSuffix (Editor Suffix)
+{
+(janemba)
+}
+
+STRING 18845
+// Buffs/Effects: B04I (), EditorSuffix (Editor Suffix)
+{
+(6)
+}
+
+STRING 18846
+// Buffs/Effects: B04I (), Buffubertip (Tooltip - Extended)
+{
+This unit was hit by a Janemba's Corruption; its armor is temporarily reduced.
+}
+
+STRING 18847
+// Buffs/Effects: B04I (), Bufftip (Tooltip)
+{
+Janemba's Corruption
+}
+
+STRING 18848
+// Buffs/Effects: B04M (), EditorSuffix (Editor Suffix)
+{
+(3)
+}
+
+STRING 18849
+// Buffs/Effects: B04M (), Buffubertip (Tooltip - Extended)
+{
+This unit was hit by a Janemba's Corruption; its armor is temporarily reduced.
+}
+
+STRING 18850
+// Buffs/Effects: B04M (), Bufftip (Tooltip)
+{
+Janemba's Corruption
+}
+
+STRING 18851
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 4|r]
+}
+
+STRING 18852
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 5|r]
+}
+
+STRING 18853
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 6|r]
+}
+
+STRING 18854
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 7|r]
+}
+
+STRING 18855
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 8|r]
+}
+
+STRING 18856
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 9|r]
+}
+
+STRING 18857
+// Abilities: A0XH (Charm), Tip (Tooltip - Normal)
+{
+[|cff00FF00W|r] Charm - [|cffffcc00Level 10|r]
+}
+
+STRING 18858
+// Abilities: A0XL (Triple Kick), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00D|r] Learn Triple Kick - [|cffffcc00Level %d|r]
+}
+
+STRING 18859
+// Abilities: A0XO (Ayla Crit Passive), EditorSuffix (Editor Suffix)
+{
+(ayla)
 }
 
