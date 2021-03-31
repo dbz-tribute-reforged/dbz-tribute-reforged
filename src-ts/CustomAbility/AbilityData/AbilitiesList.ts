@@ -6088,7 +6088,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 25,
+    duration: 12,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -6108,7 +6108,33 @@ export const AbilitiesList = [
       { name: "damage ayla triple kick dps" },
       { name: "damage ayla triple kick explosion" },
       { name: "jump ayla triple kick" },
-      { name: "sfx videl flying kick" },
+      { name: "sfx ayla triple kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleIce.blp",
+      disabled: "BTNMarleIce.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE,
+      body: 
+        AbilityNames.Marle.ICE,
+    },
+    components: [
+      { name: "beam marle ice" },
     ],
   },
   // -------------------------------------------
@@ -6246,6 +6272,32 @@ export const AbilitiesList = [
     components: [
       { name: "beam lucca fire 2" },
       { name: "sfx magus fire 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE_2ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE_2,
+      body: 
+        AbilityNames.Marle.ICE_2
+    },
+    components: [
+      { name: "beam marle ice 2" },
     ],
   },
   // -------------------------------------------

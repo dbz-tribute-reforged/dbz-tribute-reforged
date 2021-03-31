@@ -13031,7 +13031,7 @@ function Trig_Ayla_Triple_Kick_Actions()
     if (Trig_Ayla_Triple_Kick_Func004C()) then
         SaveIntegerBJ(udg_TempInt, 0, udg_ID, udg_SummonsHashtable)
         BlzEndUnitAbilityCooldown(udg_TempUnit, FourCC("A0XL"))
-        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0XL"), 1.00)
+        BlzStartUnitAbilityCooldown(udg_TempUnit, FourCC("A0XL"), 0.50)
     else
         SaveIntegerBJ(0, 0, udg_ID, udg_SummonsHashtable)
     end

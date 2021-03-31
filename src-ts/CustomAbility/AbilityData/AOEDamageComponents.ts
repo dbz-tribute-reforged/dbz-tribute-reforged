@@ -5863,6 +5863,32 @@ export const AOEDamageComponents = [
     requireBuff: false,
     buffId: 0,
   },
+  // marle ice 2
+  {
+    name: "damage beam marle ice 2 explosion",
+    repeatInterval: 33,
+    startTick: 0,
+    endTick: -1,
+    damageSource: AOEDamage.SOURCE_UNIT,
+    scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
+    sourceHPDamageScale: -1,
+    useInverseDamageScale: true,
+    useLastCastPoint: false,
+    aoe: 800,
+    onlyDamageCapHeroes: true,
+    canDamageCaster: false,
+    maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
+    damageData: {
+      multiplier: BASE_DMG.KAME_EXPLOSION * 3.0,
+      attribute: bj_HEROSTAT_INT,
+      attackType: 6,
+      damageType: 4,
+      weaponType: 0,
+    },
+    maxHealthDamagePercent: 0,
+    requireBuff: false,
+    buffId: 0,
+  },
   // magus ice 2
   {
     name: "damage beam magus ice 2 explosion",
