@@ -248,6 +248,7 @@ udg_RoboLightning2 = {}
 udg_RoboLaserTicks = __jarray(0)
 udg_LaserSpinDMG = __jarray(0.0)
 udg_TransformationCommandsNonAuto = __jarray("")
+udg_MarleAllureGroup = nil
 gg_rct_HeavenZone = nil
 gg_rct_HellZone = nil
 gg_rct_HeroInit = nil
@@ -462,6 +463,9 @@ gg_trg_Ichigo_Mugetsu_Loop = nil
 gg_trg_Ichigo_Getsuga_Auto_Level = nil
 gg_trg_Dart_Feld_Skill_Upg = nil
 gg_trg_Dart_Feld_Spell_Charges = nil
+gg_trg_Marle_Allure_Cast = nil
+gg_trg_Marle_Allure_Loop = nil
+gg_trg_Marle_Allure_Cancel = nil
 gg_trg_CronoCyclone = nil
 gg_trg_CronoCleave = nil
 gg_trg_Crono_Slash = nil
@@ -1229,6 +1233,7 @@ function InitGlobals()
         udg_TransformationCommandsNonAuto[i] = ""
         i = i + 1
     end
+    udg_MarleAllureGroup = CreateGroup()
 end
 
 function playGenericSpellSound(target, soundPath, duration)
@@ -12757,6 +12762,89 @@ function InitTrig_Dart_Feld_Spell_Charges()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dart_Feld_Spell_Charges, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Dart_Feld_Spell_Charges, Condition(Trig_Dart_Feld_Spell_Charges_Conditions))
     TriggerAddAction(gg_trg_Dart_Feld_Spell_Charges, Trig_Dart_Feld_Spell_Charges_Actions)
+end
+
+function Trig_Marle_Allure_Cast_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0XB"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Marle_Allure_Cast_Actions()
+    GroupAddUnitSimple(GetTriggerUnit(), udg_MarleAllureGroup)
+    EnableTrigger(gg_trg_Marle_Allure_Loop)
+end
+
+function InitTrig_Marle_Allure_Cast()
+    gg_trg_Marle_Allure_Cast = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Marle_Allure_Cast, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    TriggerAddCondition(gg_trg_Marle_Allure_Cast, Condition(Trig_Marle_Allure_Cast_Conditions))
+    TriggerAddAction(gg_trg_Marle_Allure_Cast, Trig_Marle_Allure_Cast_Actions)
+end
+
+function Trig_Marle_Allure_Loop_Func001Func005Func001C()
+    if (not (IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), udg_TempPlayer) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Marle_Allure_Loop_Func001Func005A()
+    if (Trig_Marle_Allure_Loop_Func001Func005Func001C()) then
+        IssueTargetOrderBJ(GetEnumUnit(), "attack", udg_TempUnit)
+    else
+    end
+end
+
+function Trig_Marle_Allure_Loop_Func001A()
+    udg_TempUnit = GetEnumUnit()
+    udg_TempPlayer = GetOwningPlayer(udg_TempUnit)
+    udg_TempLoc = GetUnitLoc(udg_TempUnit)
+    udg_TempGroup = GetUnitsInRangeOfLocAll(800.00, udg_TempLoc)
+    ForGroupBJ(udg_TempGroup, Trig_Marle_Allure_Loop_Func001Func005A)
+        RemoveLocation(udg_TempLoc)
+        DestroyGroup(udg_TempGroup)
+end
+
+function Trig_Marle_Allure_Loop_Actions()
+    ForGroupBJ(udg_MarleAllureGroup, Trig_Marle_Allure_Loop_Func001A)
+end
+
+function InitTrig_Marle_Allure_Loop()
+    gg_trg_Marle_Allure_Loop = CreateTrigger()
+    DisableTrigger(gg_trg_Marle_Allure_Loop)
+    TriggerRegisterTimerEventPeriodic(gg_trg_Marle_Allure_Loop, 0.20)
+    TriggerAddAction(gg_trg_Marle_Allure_Loop, Trig_Marle_Allure_Loop_Actions)
+end
+
+function Trig_Marle_Allure_Cancel_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0XB"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Marle_Allure_Cancel_Func002C()
+    if (not (CountUnitsInGroup(udg_MarleAllureGroup) == 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Marle_Allure_Cancel_Actions()
+    GroupRemoveUnitSimple(GetTriggerUnit(), udg_MarleAllureGroup)
+    if (Trig_Marle_Allure_Cancel_Func002C()) then
+        DisableTrigger(gg_trg_Marle_Allure_Loop)
+    else
+    end
+end
+
+function InitTrig_Marle_Allure_Cancel()
+    gg_trg_Marle_Allure_Cancel = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Marle_Allure_Cancel, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    TriggerAddCondition(gg_trg_Marle_Allure_Cancel, Condition(Trig_Marle_Allure_Cancel_Conditions))
+    TriggerAddAction(gg_trg_Marle_Allure_Cancel, Trig_Marle_Allure_Cancel_Actions)
 end
 
 function Trig_Doom_Scythe_Trigger_Conditions()
@@ -45500,6 +45588,9 @@ function InitCustomTriggers()
     InitTrig_Ichigo_Getsuga_Auto_Level()
     InitTrig_Dart_Feld_Skill_Upg()
     InitTrig_Dart_Feld_Spell_Charges()
+    InitTrig_Marle_Allure_Cast()
+    InitTrig_Marle_Allure_Loop()
+    InitTrig_Marle_Allure_Cancel()
     InitTrig_Doom_Scythe_Trigger()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()

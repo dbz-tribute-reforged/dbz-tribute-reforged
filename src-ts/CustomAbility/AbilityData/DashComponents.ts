@@ -1309,6 +1309,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 2,
   },
+  // marle haste
+  {
+    name: "dash forward marle haste",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
+  },
   // bunkai teleport dash
   {
     name: "dash ground point bunkai teleport",

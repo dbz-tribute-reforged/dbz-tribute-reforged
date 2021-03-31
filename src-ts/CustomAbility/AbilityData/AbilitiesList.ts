@@ -6139,6 +6139,90 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Marle.AURA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 164,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleAura.blp",
+      disabled: "BTNMarleAura.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.AURA,
+      body: 
+        AbilityNames.Marle.AURA
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "heal marle aura"},
+      { name: "sfx robo heal beam"},
+    ],
+  },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Marle.CURE,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 70,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNMarleCure.blp",
+        disabled: "BTNMarleCure.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Marle.CURE,
+        body: 
+          AbilityNames.Marle.CURE
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "heal marle cure" },
+        { name: "sfx marle cure" },
+        { name: "sfx marle cure explode" },
+      ],
+    },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.HASTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 396,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleHaste.blp",
+      disabled: "BTNMMarleHaste.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.HASTE,
+      body: 
+        AbilityNames.Marle.HASTE
+    },
+    components: [
+      { name: "aoe apply marle haste" },
+      { name: "sfx marle haste"},
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Magus.DARK_BOMB,
     currentCd: 0,
     maxCd: 1,
@@ -6276,7 +6360,7 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Marle.ICE_2ICE_2,
+    name: AbilityNames.Marle.ICE_2,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
