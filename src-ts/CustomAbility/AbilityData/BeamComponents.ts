@@ -3808,6 +3808,43 @@ export const BeamComponents = [
   },
   // -------------------------------------------
   { 
+    name: "beam boulder toss",
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    beamHpMult: BASE_DMG.KAME_DPS * 1.4,
+    beamHpAttribute: bj_HEROSTAT_STR,
+    speed: BeamComponent.BEAM_SPEED_MEDIUM,
+    aoe: 300,
+    clashingDelayTicks: 0,
+    maxDelayTicks: 0,
+    durationIncPerDelay: 0,
+    turnSpeed: 3,
+    heightVariation: {
+      start: -1,
+      finish: 0,
+      scaling: 0,
+    },
+    isTracking: false,
+    isFixedAngle: true,
+    canClashWithHero: false,
+    useLastCastPoint: true,
+    explodeOnDeath: true,
+    explodeAtCastPoint: true,
+    explodeOnContact: false,
+    beamUnitSpawn: BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
+    beamUnitType: "hpea",
+    beamUnitSkin: BeamUnitSkin.DEFAULT,
+    components: [
+      { name: "hide unit allow movement" },
+      { name: "damage beam boulder toss explosion" },
+      { name: "jump beam kannonblast" },
+      { name: "sfx beam boulder toss" },
+    ],
+  },
+
+  // -------------------------------------------
+  { 
     name: "beam napalm",
     repeatInterval: 1,
     startTick: 0,

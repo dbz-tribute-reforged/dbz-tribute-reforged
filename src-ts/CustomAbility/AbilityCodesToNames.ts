@@ -301,6 +301,21 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.magusDarkMist, AbilityNames.Magus.DARK_MIST],
     [Id.magusDarkMatter, AbilityNames.Magus.DARK_MATTER],
 
+    //Ayla
+    [Id.aylaBoulderToss, AbilityNames.Ayla.BOULDER_TOSS],
+    [Id.aylaCharm, AbilityNames.Ayla.CHARM],
+    [Id.aylaTailSpin, AbilityNames.Ayla.TAIL_SPIN],
+    [Id.aylaDinoTail, AbilityNames.Ayla.DINO_TAIL],
+    [Id.aylaTripleKick, AbilityNames.Ayla.TRIPLE_KICK],
+
+    //Marle
+    [Id.marleAura, AbilityNames.Marle.AURA],
+    [Id.marleAllure, AbilityNames.Marle.ALLURE],
+    [Id.marleIce, AbilityNames.Marle.ICE],
+    [Id.marleIce2, AbilityNames.Marle.ICE_2],
+    [Id.marleCure, AbilityNames.Marle.CURE],
+    [Id.marleHaste, AbilityNames.Marle.HASTE],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],

@@ -192,6 +192,21 @@ export module Id {
   export const luccaMegaBomb = FourCC("A0X4");
   export const luccaFlare = FourCC("A0X5");
 
+  export const ayla = FourCC("H0A5");
+  export const aylaBoulderToss = FourCC("A0XG");
+  export const aylaCharm = FourCC("A0XH");
+  export const aylaTailSpin = FourCC("A0XI");
+  export const aylaDinoTail = FourCC("A0XK");
+  export const aylaTripleKick = FourCC("A0XL");
+
+  export const marle = FourCC("H0A6");
+  export const marleAura = FourCC("A0XA");
+  export const marleAllure = FourCC("A0XB");
+  export const marleIce = FourCC("A0XC");
+  export const marleIce2 = FourCC("A0XD");
+  export const marleCure = FourCC("A0XE");
+  export const marleHaste = FourCC("A0XF");
+
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");
   export const burningRush = FourCC("A0UR");

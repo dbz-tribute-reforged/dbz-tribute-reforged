@@ -14506,6 +14506,42 @@ export const SfxComponents = [
     attachedSfxList: [
     ],
   },
+  // --------------------------------------------
+  { 
+    name: "sfx beam boulder toss", 
+    repeatInterval: 1,
+    startTick: 0,
+    endTick: -1,
+    sfxSource: SfxComponent.SOURCE_UNIT,
+    sfxYawType: SfxComponent.YAW_SOURCE_FACING,
+    useLastCastPoint: false,
+    useHeight: true,
+    sfxList: [
+      {
+        model: "Doodads\\LordaeronSummer\\Terrain\\LoardaeronRockChunks\\LoardaeronRockChunks1.mdl",
+        repeatInterval: 1,
+        group: 0,
+        scale: 1.5,
+        endScale: -1,
+        startHeight: 300,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: true,
+        persistent: true,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+    ],
+  },
   //magus dark mist
   { 
     name: "sfx beam dark mist", 

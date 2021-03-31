@@ -120019,7 +120019,7 @@ Type "r" to revert.
 Transformations:
 [lvl 20]  1.25x "fp"
 [lvl 35]  1.50x "fp"
-[lvl 85]  2.00x "fp" 
+[lvl 85]  2.00x "fp" - Upgrade to "Ice 2" if "Ice" at max lvl 
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
 }
@@ -120064,5 +120064,11 @@ STRING 18817
 // Buffs/Effects: B04L (), Bufftip (Tooltip)
 {
 Ayla's Fists
+}
+
+STRING 18820
+{
+[|cffffcc00Upgrade|r] Ice 2
+Marle's ice has been upgraded to Ice 2, an ability that rains ice blocks down on the target area, slowing and dealing damage over time.
 }
 

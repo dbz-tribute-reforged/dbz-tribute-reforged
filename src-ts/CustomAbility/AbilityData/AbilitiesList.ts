@@ -6027,6 +6027,62 @@ export const AbilitiesList = [
     },
   // -------------------------------------------
   {
+    name: AbilityNames.Ayla.BOULDER_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolHandKannon2.blp",
+      disabled: "BTNKingKRoolHandKannon2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.HAND_KANNON,
+      body: 
+        AbilityNames.KingKRool.HAND_KANNON
+    },
+    components: [
+      { name: "beam boulder toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.TAIL_SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCyclone.blp",
+      disabled: "BTNCronoCyclone.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.CYCLONE,
+      body: 
+        AbilityNames.Crono.CYCLONE,
+    },
+    components: [
+      { name: "anim crono cyclone" },
+      { name: "damage ayla tail spin dps" },
+      { name: "dash ground forward crono cyclone" },
+      { name: "knockback tail spin"},
+      { name: "sfx crono cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Magus.DARK_BOMB,
     currentCd: 0,
     maxCd: 1,

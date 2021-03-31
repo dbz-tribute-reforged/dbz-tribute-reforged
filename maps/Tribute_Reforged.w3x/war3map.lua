@@ -43712,7 +43712,20 @@ function Trig_Transformations_Marle_Func016C()
     return true
 end
 
-function Trig_Transformations_Marle_Func019Func002Func001C()
+function Trig_Transformations_Marle_Func017C()
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 85)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XD"), udg_StatMultUnit) == 0)) then
+        return false
+    end
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XC"), udg_StatMultUnit) == 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Marle_Func020Func002Func001C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -43722,14 +43735,14 @@ function Trig_Transformations_Marle_Func019Func002Func001C()
     return false
 end
 
-function Trig_Transformations_Marle_Func019Func002C()
-    if (not Trig_Transformations_Marle_Func019Func002Func001C()) then
+function Trig_Transformations_Marle_Func020Func002C()
+    if (not Trig_Transformations_Marle_Func020Func002Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Transformations_Marle_Func019C()
+function Trig_Transformations_Marle_Func020C()
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
@@ -43782,9 +43795,20 @@ function Trig_Transformations_Marle_Actions()
         udg_TransformationAbility = FourCC("AUan")
     else
     end
+    if (Trig_Transformations_Marle_Func017C()) then
+        UnitAddAbilityBJ(FourCC("A0XD"), udg_StatMultUnit)
+        SetUnitAbilityLevelSwapped(FourCC("A0XD"), udg_StatMultUnit, 10)
+                UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0XD'))
+        UnitRemoveAbilityBJ(FourCC("A0XC"), udg_StatMultUnit)
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0XD"), udg_TransformationPlayer)
+        SetPlayerAbilityAvailableBJ(false, FourCC("A0XC"), udg_TransformationPlayer)
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18820")
+    else
+    end
         udg_ID = GetHandleId(udg_StatMultUnit)
-    if (Trig_Transformations_Marle_Func019C()) then
-        if (Trig_Transformations_Marle_Func019Func002C()) then
+    if (Trig_Transformations_Marle_Func020C()) then
+        if (Trig_Transformations_Marle_Func020Func002C()) then
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A6')

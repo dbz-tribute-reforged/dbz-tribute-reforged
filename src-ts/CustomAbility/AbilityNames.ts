@@ -347,6 +347,23 @@ export module AbilityNames {
     export const DARK_MATTER: string = "Magus Dark Matter";
   }
 
+  export module Ayla {
+    export const BOULDER_TOSS: string = "Ayla Boulder Toss";
+    export const CHARM: string = "Ayla Charm";
+    export const TAIL_SPIN: string = "Ayla Tail Spin";
+    export const DINO_TAIL: string = "AYla Dino Tail";
+    export const TRIPLE_KICK: string = "Ayla Triple Kick";
+  }
+
+  export module Marle {
+    export const AURA: string = "Marle Aura";
+    export const ALLURE: string = "Marle Allure";
+    export const ICE: string = "Marle Ice";
+    export const ICE_2: string = "Marle Ice 2";
+    export const CURE: string = "Marle Cure";
+    export const HASTE: string = "Marle Haste";
+  }
+
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
     export const BABIDI_BARRIER: string = "Babidi Barrier";

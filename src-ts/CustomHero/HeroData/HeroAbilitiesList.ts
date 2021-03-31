@@ -403,6 +403,23 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Magus.DARK_MATTER,
     ]],
 
+    [Id.ayla, [
+      AbilityNames.Ayla.BOULDER_TOSS,
+      AbilityNames.Ayla.CHARM,
+      AbilityNames.Ayla.TAIL_SPIN,
+      AbilityNames.Ayla.DINO_TAIL,
+      AbilityNames.Ayla.TRIPLE_KICK,
+    ]],
+
+    [Id.marle, [
+      AbilityNames.Marle.AURA,
+      AbilityNames.Marle.ALLURE,
+      AbilityNames.Marle.ICE,
+      AbilityNames.Marle.ICE_2,
+      AbilityNames.Marle.CURE,
+      AbilityNames.Marle.HASTE,
+    ]],
+
 
 
 
