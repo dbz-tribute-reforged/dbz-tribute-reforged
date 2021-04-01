@@ -5946,6 +5946,60 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Lucca.FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFire.blp",
+      disabled: "BTNLuccaFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FIRE,
+      body: 
+        AbilityNames.Lucca.FIRE
+    },
+    components: [
+      { name: "beam lucca fire" },
+      { name: "sfx lucca fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FIRE2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusFire2.blp",
+      disabled: "BTNMagusFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.FIRE_2,
+      body: 
+        AbilityNames.Magus.FIRE_2
+    },
+    components: [
+      { name: "beam lucca fire 2" },
+      { name: "sfx magus fire 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Lucca.NAPALM,
     currentCd: 0,
     maxCd: 1,
@@ -5996,35 +6050,35 @@ export const AbilitiesList = [
       { name: "beam mega bomb" },
     ],
   },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Lucca.FLARE,
-      currentCd: 0,
-      maxCd: 1,
-      costType: "MP",
-      costAmount: 0,
-      duration: 70,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "BTNLuccaFlare.blp",
-        disabled: "BTNLuccaFlare.blp",
-      },
-      tooltip: {
-        title: AbilityNames.Lucca.FLARE,
-        body: 
-          AbilityNames.Lucca.FLARE
-      },
-      components: [
-        { name: "channel caster default" },
-        { name: "damage lucca flare explosion" },
-        { name: "sfx lucca flare" },
-        { name: "sfx lucca flare explode" },
-      ],
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FLARE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFlare.blp",
+      disabled: "BTNLuccaFlare.blp",
     },
+    tooltip: {
+      title: AbilityNames.Lucca.FLARE,
+      body: 
+        AbilityNames.Lucca.FLARE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage lucca flare explosion" },
+      { name: "sfx lucca flare" },
+      { name: "sfx lucca flare explode" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Ayla.BOULDER_TOSS,
@@ -6049,6 +6103,32 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam boulder toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.CHARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBabidiQ.blp",
+      disabled: "BTNBabidiQ.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "sfx ayla charm" },
     ],
   },
   // -------------------------------------------
@@ -6079,6 +6159,35 @@ export const AbilitiesList = [
       { name: "dash ground forward crono cyclone" },
       { name: "knockback tail spin"},
       { name: "sfx crono cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.DINO_TAIL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 48,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAylaDinoTail.blp",
+      disabled: "BTNAylaDinoTail.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point dino tail" },
+      { name: "damage dino tail dps" },
+      { name: "knockback dfist" },
+      { name: "sfx dino tail" },
     ],
   },
   // -------------------------------------------
@@ -6139,12 +6248,64 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Marle.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE_2,
+      body: 
+        AbilityNames.Marle.ICE_2
+    },
+    components: [
+      { name: "beam marle ice 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE_2,
+      body: 
+        AbilityNames.Marle.ICE_2
+    },
+    components: [
+      { name: "beam marle ice 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Marle.AURA,
     currentCd: 0,
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 164,
+    duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -6165,34 +6326,32 @@ export const AbilitiesList = [
       { name: "sfx marle aura"},
     ],
   },
-    // -------------------------------------------
-    {
-      name: AbilityNames.Marle.CURE,
-      currentCd: 0,
-      maxCd: 1,
-      costType: "MP",
-      costAmount: 0,
-      duration: 70,
-      updateRate: 0.03,
-      castTime: 0.0,
-      canMultiCast: true,
-      waitsForNextClick: false,
-      animation: "spell",
-      icon: {
-        enabled: "BTNMarleCure.blp",
-        disabled: "BTNMarleCure.blp",
-      },
-      tooltip: {
-        title: AbilityNames.Marle.CURE,
-        body: 
-          AbilityNames.Marle.CURE
-      },
-      components: [
-        { name: "heal marle cure" },
-        { name: "sfx marle cure" },
-        { name: "sfx marle cure explode" },
-      ],
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.CURE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleCure.blp",
+      disabled: "BTNMarleCure.blp",
     },
+    tooltip: {
+      title: AbilityNames.Marle.CURE,
+      body: 
+        AbilityNames.Marle.CURE
+    },
+    components: [
+      { name: "beam marle cure" },
+    ],
+  },
   // -------------------------------------------
   {
     name: AbilityNames.Marle.HASTE,
@@ -6218,6 +6377,7 @@ export const AbilitiesList = [
     components: [
       { name: "aoe apply marle haste" },
       { name: "sfx marle haste"},
+      { name: "sfx marle haste explosion"},
     ],
   },
   // -------------------------------------------
@@ -6301,86 +6461,6 @@ export const AbilitiesList = [
       { name: "damage crono lightning 2 explosion" },
       { name: "multi crono lightning 2 inner" },
       { name: "multi crono lightning 2 outer" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Lucca.FIRE,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 99,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNLuccaFire.blp",
-      disabled: "BTNLuccaFire.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Lucca.FIRE,
-      body: 
-        AbilityNames.Lucca.FIRE
-    },
-    components: [
-      { name: "beam lucca fire" },
-      { name: "sfx lucca fire" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Lucca.FIRE2,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 99,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNMagusFire2.blp",
-      disabled: "BTNMagusFire2.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Magus.FIRE_2,
-      body: 
-        AbilityNames.Magus.FIRE_2
-    },
-    components: [
-      { name: "beam lucca fire 2" },
-      { name: "sfx magus fire 2" },
-    ],
-  },
-  // -------------------------------------------
-  {
-    name: AbilityNames.Marle.ICE_2,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 82,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNMagusIce2.blp",
-      disabled: "BTNMagusIce2.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Marle.ICE_2,
-      body: 
-        AbilityNames.Marle.ICE_2
-    },
-    components: [
-      { name: "beam marle ice 2" },
     ],
   },
   // -------------------------------------------

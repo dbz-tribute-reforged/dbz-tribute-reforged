@@ -128,9 +128,6 @@ export class CoolerReturnSaga extends AdvancedSaga implements Saga {
 
     if (mc1 && mc2 && mc3) {
       this.metalCoolers.push(mc1, mc2, mc3);
-      UnitAddItemById(mc1, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
-      UnitAddItemById(mc2, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
-      UnitAddItemById(mc3, ItemConstants.SagaDrops.GETI_STAR_FRAGMENT);
       SetUnitAcquireRange(mc1, 4000);
       SetUnitAcquireRange(mc2, 4000);
       SetUnitAcquireRange(mc3, 4000);

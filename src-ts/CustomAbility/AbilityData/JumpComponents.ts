@@ -194,7 +194,7 @@ export const JumpComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    duration: 25,
+    duration: 12,
     maxHeight: 200,
     useSpeedToCastPoint: false,
     speed: -1,

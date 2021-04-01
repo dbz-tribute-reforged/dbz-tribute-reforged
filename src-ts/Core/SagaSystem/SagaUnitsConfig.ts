@@ -256,6 +256,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
     ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
       [
@@ -263,6 +266,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
     ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30100),
       [
@@ -270,6 +276,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
 
     // trunks saga
@@ -463,6 +472,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Broly.GIGANTIC_OMEGASTORM,
       ],
+      [
+        ItemConstants.SagaDrops.BROLY_FUR
+      ]
     )],
 
     // bojack unbound
@@ -567,6 +579,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.SuperJanemba.HELLS_GATE,
         SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
       ],
+      [
+        ItemConstants.SagaDrops.DIMENSION_SWORD
+      ]
     )],
 
     // buu saga

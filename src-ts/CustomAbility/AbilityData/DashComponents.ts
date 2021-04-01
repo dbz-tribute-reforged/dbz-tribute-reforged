@@ -1243,6 +1243,19 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 50,
   },
+  // ayla dino tail
+  {
+    name: "dash ground point dino tail",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 12,
+  },
   // ----------------------------
   // cell-x
   {
@@ -1501,7 +1514,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 17,
   },
   // dragonic rage
   {

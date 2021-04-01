@@ -1251,6 +1251,7 @@ export function CustomPlayerTest() {
     SetupDartSpells(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
+    SetupAylaCharm(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
     // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, customPlayers);
@@ -1473,6 +1474,49 @@ export function SetupDragonFistSfx(
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
 ) {
+  const sfxHeadModel = "DragonHead2.mdl";
+  const sfxSpiralModel = "DragonSegment2.mdl";
+
+  const sfxShadowHeadModel = "RedDragonHead.mdl";
+  const sfxShadowSpiralModel = "RedDragonSegment.mdl";
+
+  const sfxDinoTail = "DinoTail.mdl";
+  const sfxDinoTailSpiral = "DinoSegment.mdl";
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (
+      spellId == Id.dragonFist 
+      || spellId == Id.superDragonFist 
+      || spellId == Id.shadowFist
+      || spellId == Id.aylaDinoTail
+    ) {
+      const caster = GetTriggerUnit();
+      switch (spellId) 
+      {
+        case Id.aylaDinoTail:
+          DoDragonFistSFX(caster, sfxDinoTail, sfxDinoTailSpiral);
+          break;
+        
+        case Id.shadowFist:
+          DoDragonFistSFX(caster, sfxShadowHeadModel, sfxShadowSpiralModel);
+          break;
+
+        case Id.dragonFist:
+        case Id.superDragonFist:
+        default:
+          DoDragonFistSFX(caster, sfxHeadModel, sfxSpiralModel);
+          break;
+      }
+    }
+  });
+}
+
+export function DoDragonFistSFX(
+  caster: unit,
+  headModel: string,
+  spiralModel: string,
+) {
   const tickRate = 0.02;
   const updatesPerTick = 1;
   // const duration = 45;
@@ -1492,127 +1536,107 @@ export function SetupDragonFistSfx(
   const sfxRed = 255;
   const sfxGreen = 205;
   const sfxBlue = 25;
-  const sfxSpiralModel = "DragonSegment2.mdl";
-  const sfxHeadModel = "DragonHead2.mdl";
-  const sfxAltSpiralModel = "RedDragonSegment.mdl";
-  const sfxAltHeadModel = "RedDragonHead.mdl";
 
-  TriggerAddAction(spellTrigger, () => {
-    const spellId = GetSpellAbilityId();
-    if (spellId == Id.dragonFist || spellId == Id.superDragonFist || spellId == Id.shadowFist) {
-      const caster = GetTriggerUnit();
-      let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-      let oldPos = new Vector2D(casterPos.x, casterPos.y);
-      let currentPos = new Vector2D(0, 0);
-      let newPos = new Vector2D(0, 0);
+  let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+  let oldPos = new Vector2D(casterPos.x, casterPos.y);
+  let currentPos = new Vector2D(0, 0);
+  let newPos = new Vector2D(0, 0);
 
-      // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
-      const sfxList: effect[] = [];
-      let sfxIndex = 0;
-      let sfxHead = GetLastCreatedEffectBJ();
-      if (spellId == Id.shadowFist) {
-        sfxHead = AddSpecialEffect(sfxAltHeadModel, casterPos.x, casterPos.y);
-      } else {
-        sfxHead = AddSpecialEffect(sfxHeadModel, casterPos.x, casterPos.y);
-      }
-      BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
-      BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
-      sfxList.push(sfxHead);  
-      ++sfxIndex;
+  // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
+  const sfxList: effect[] = [];
+  let sfxIndex = 0;
+  const sfxHead = AddSpecialEffect(headModel, casterPos.x, casterPos.y);
+  BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
+  BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
+  sfxList.push(sfxHead);  
+  ++sfxIndex;
 
-      let duration = baseDuration;
+  let duration = baseDuration;
 
-      let time = 0; 
-      TimerStart(CreateTimer(), tickRate, true, () => {
-        oldPos.setVector(casterPos);
-        casterPos.setUnit(caster);
-        const distanceTravelled = CoordMath.distance(casterPos, oldPos);
-        let facingAngle = GetUnitFacing(caster);
-        // if (distanceTravelled < 1) {
-        //   facingAngle = GetUnitFacing(caster);
-        // } else {
-        //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
-        // }
-        const bonusUpdates = Math.min(
-          25,
-          Math.floor(distanceTravelled * bonusUpdatesPerDistance)
-        );
-        const updatesThisTick = updatesPerTick + bonusUpdates;
-        const segmentedDistance = distanceTravelled / updatesThisTick;
+  let time = 0; 
+  TimerStart(CreateTimer(), tickRate, true, () => {
+    oldPos.setVector(casterPos);
+    casterPos.setUnit(caster);
+    const distanceTravelled = CoordMath.distance(casterPos, oldPos);
+    let facingAngle = GetUnitFacing(caster);
+    // if (distanceTravelled < 1) {
+    //   facingAngle = GetUnitFacing(caster);
+    // } else {
+    //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
+    // }
+    const bonusUpdates = Math.min(
+      25,
+      Math.floor(distanceTravelled * bonusUpdatesPerDistance)
+    );
+    const updatesThisTick = updatesPerTick + bonusUpdates;
+    const segmentedDistance = distanceTravelled / updatesThisTick;
 
-        duration += updatesThisTick - 1;
-        for (let i = 0; i < updatesThisTick; ++i) {    
-          if (time > duration) {
-            for (const removeSfx of sfxList) {
-              DestroyEffect(removeSfx);
-            }
-            DestroyTimer(GetExpiredTimer());
-          } else {
-            const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
-            const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
-            // const timeRatio = (maxTimeBasedDistanceMult);
-            const x = timeRatio * distanceFromMiddle * Math.cos(angle);
-            const y = timeRatio * distanceFromMiddle * Math.sin(angle);
-            const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
-            (
-              heightOffset + y
-            );
-
-            currentPos.polarProjectCoords(
-              oldPos, 
-              facingAngle, 
-              (i+1) * distanceTravelled / updatesThisTick
-            );
-            newPos.polarProjectCoords(
-              currentPos, 
-              facingAngle - 90, 
-              x
-            );
-            let yawModifier = 1;
-            if (y < 0) {
-              yawModifier = 1;
-            }
-            const yaw = CoordMath.degreesToRadians * (
-              facingAngle + yawModifier * (
-                90 - Math.min(90, segmentedDistance)
-              )
-            );
-            // const targetYaw = facingAngle * CoordMath.degreesToRadians;
-
-            const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
-
-            let sfx = GetLastCreatedEffectBJ();
-            if (spellId == Id.shadowFist) {
-              sfx = AddSpecialEffect(sfxAltSpiralModel, newPos.x, newPos.y);
-            } else {
-              sfx = AddSpecialEffect(sfxSpiralModel, newPos.x, newPos.y);
-            }
-            // sfxList.push(sfx);
-            // ++sfxIndex;
-            DestroyEffect(sfx);
-            BlzSetSpecialEffectScale(sfx, sfxScale);
-            BlzSetSpecialEffectHeight(sfx, height);
-            BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
-            // BlzSetSpecialEffectYaw(sfx, targetYaw);
-            BlzSetSpecialEffectYaw(sfx, yaw);
-            BlzSetSpecialEffectPitch(sfx, pitch);
-            //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
-            //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
-            //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
-            // );
-
-            // update dragon head
-            if (i >= updatesThisTick - 1) {
-              BlzSetSpecialEffectX(sfxHead, newPos.x);
-              BlzSetSpecialEffectY(sfxHead, newPos.y);
-              BlzSetSpecialEffectHeight(sfxHead, height);
-              BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
-              // BlzSetSpecialEffectPitch(sfxHead, pitch);
-            }
-          }
-          ++time;
+    duration += updatesThisTick - 1;
+    for (let i = 0; i < updatesThisTick; ++i) {    
+      if (time > duration) {
+        for (const removeSfx of sfxList) {
+          DestroyEffect(removeSfx);
         }
-      });
+        DestroyTimer(GetExpiredTimer());
+      } else {
+        const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
+        const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
+        // const timeRatio = (maxTimeBasedDistanceMult);
+        const x = timeRatio * distanceFromMiddle * Math.cos(angle);
+        const y = timeRatio * distanceFromMiddle * Math.sin(angle);
+        const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
+        (
+          heightOffset + y
+        );
+
+        currentPos.polarProjectCoords(
+          oldPos, 
+          facingAngle, 
+          (i+1) * distanceTravelled / updatesThisTick
+        );
+        newPos.polarProjectCoords(
+          currentPos, 
+          facingAngle - 90, 
+          x
+        );
+        let yawModifier = 1;
+        if (y < 0) {
+          yawModifier = 1;
+        }
+        const yaw = CoordMath.degreesToRadians * (
+          facingAngle + yawModifier * (
+            90 - Math.min(90, segmentedDistance)
+          )
+        );
+        // const targetYaw = facingAngle * CoordMath.degreesToRadians;
+
+        const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
+
+        const sfx = AddSpecialEffect(spiralModel, newPos.x, newPos.y);
+        // sfxList.push(sfx);
+        // ++sfxIndex;
+        DestroyEffect(sfx);
+        BlzSetSpecialEffectScale(sfx, sfxScale);
+        BlzSetSpecialEffectHeight(sfx, height);
+        BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
+        // BlzSetSpecialEffectYaw(sfx, targetYaw);
+        BlzSetSpecialEffectYaw(sfx, yaw);
+        BlzSetSpecialEffectPitch(sfx, pitch);
+        //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
+        //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
+        //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
+        // );
+
+        // update dragon head
+        if (i >= updatesThisTick - 1) {
+          BlzSetSpecialEffectX(sfxHead, newPos.x);
+          BlzSetSpecialEffectY(sfxHead, newPos.y);
+          BlzSetSpecialEffectHeight(sfxHead, height);
+          BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
+          // BlzSetSpecialEffectPitch(sfxHead, pitch);
+        }
+      }
+      ++time;
     }
   });
 }
@@ -1811,7 +1835,7 @@ export function SetupOmegaShenronShadowFist(
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
 ) {
-  const shadowFistId = FourCC("A0QL");
+  const shadowFistId = Id.shadowFist;
   const shadowFistAOE = 350;
   const shadowFistDuration = 48;
   const tickRate = 0.03;
@@ -2581,6 +2605,76 @@ export function performGroundVortex(
   GroupClear(tmpGroup);
 }
 
+
+export function SetupAylaCharm(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const charmDuration = 10.0;
+  const maxHPReduction = 0.13;
+  const allyHPModifier = 0.5;
+  const stealThreshold = 0.5;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.aylaCharm) {
+      const caster = GetTriggerUnit();
+      const casterPlayer = GetOwningPlayer(caster);
+      const target = GetSpellTargetUnit();
+      
+      if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer, true)) {
+        const targetMaxHP = GetUnitState(target, UNIT_STATE_MAX_LIFE);
+        let hpReduction = maxHPReduction * targetMaxHP;
+        if (IsUnitAlly(target, casterPlayer)) {
+          hpReduction *= allyHPModifier;
+        }
+        // temporarily reduce hp
+        // amount is lesser for allied targets
+        const newHP = Math.max(
+          50,
+          GetUnitState(target, UNIT_STATE_LIFE)
+          - hpReduction
+        );
+        SetUnitState(target, UNIT_STATE_LIFE, newHP);
+        
+        // restore reduced hp
+        TimerStart(CreateTimer(), charmDuration, false, () => {
+          if (UnitHelper.isUnitAlive(target)) {
+            const restoredHP = Math.max(
+              50,
+              GetUnitState(target, UNIT_STATE_LIFE)
+              + maxHPReduction * GetUnitState(target, UNIT_STATE_MAX_LIFE)
+            );
+            SetUnitState(target, UNIT_STATE_LIFE, restoredHP);
+          }
+
+          DestroyTimer(GetExpiredTimer());
+        });
+
+        if (
+          GetOwningPlayer(target) == Constants.sagaPlayer
+          && newHP <= stealThreshold * targetMaxHP
+        ) {
+          const casterInventoryCount = UnitInventoryCount(caster);
+          for (let i = 0; i < 6; ++i) {
+            const item = UnitItemInSlot(target, i);
+            if (item) {
+              if (casterInventoryCount <= 5) {
+                UnitAddItem(caster, item);
+              } else {
+                SetItemPosition(item, GetUnitX(caster), GetUnitY(caster));
+              }
+              break;
+            }
+          }
+        }
+      }
+
+    }
+  });
+
+}
 
 // export function SetupAylaTripleKick(
 //   spellTrigger: trigger, 

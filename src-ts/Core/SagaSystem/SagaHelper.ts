@@ -78,6 +78,9 @@ export module SagaHelper {
 
       if (sagaUnitConfig.itemDrops.length > 0) {
         saga.bossDrops.set(sagaUnit, sagaUnitConfig.itemDrops);
+        for (const itemId of sagaUnitConfig.itemDrops) {
+          UnitAddItemById(sagaUnit, itemId);
+        }
       }
     }
   }
