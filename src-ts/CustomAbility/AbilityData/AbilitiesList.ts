@@ -6162,7 +6162,7 @@ export const AbilitiesList = [
     components: [
       { name: "channel caster default" },
       { name: "heal marle aura"},
-      { name: "sfx robo heal beam"},
+      { name: "sfx marle aura"},
     ],
   },
     // -------------------------------------------
@@ -6188,7 +6188,6 @@ export const AbilitiesList = [
           AbilityNames.Marle.CURE
       },
       components: [
-        { name: "channel caster default" },
         { name: "heal marle cure" },
         { name: "sfx marle cure" },
         { name: "sfx marle cure explode" },
