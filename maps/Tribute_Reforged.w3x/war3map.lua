@@ -603,6 +603,7 @@ gg_trg_Unit_Leaves_Final_Battle_TournamentArea = nil
 gg_trg_Team_System_Init = nil
 gg_trg_Update_Alliances_for_PlayerGroups = nil
 gg_trg_Update_Host = nil
+gg_trg_Update_Host_Check_Players = nil
 gg_trg_Is_Player_New_Host = nil
 gg_trg_Swap_Command = nil
 gg_trg_Swap_Teams_for_SwapPlayer = nil
@@ -1174,7 +1175,7 @@ function InitGlobals()
     udg_RoshiNewTrickUnitGroup = CreateGroup()
     udg_AllMightUnitedStatesOfSmash = CreateGroup()
     udg_AllMightLeftRightSmash = CreateGroup()
-    udg_HostPlayer = Player(0)
+    udg_HostPlayer = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     udg_SephirothOWAUnitGroup = CreateGroup()
     udg_SephirothParryUnitGroup = CreateGroup()
     udg_HitPocketDimensionUnitGroup = CreateGroup()
@@ -14311,7 +14312,7 @@ end
 
 function InitTrig_Setup_Per_Player_Properties()
     gg_trg_Setup_Per_Player_Properties = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.10)
+    TriggerRegisterTimerEventSingle(gg_trg_Setup_Per_Player_Properties, 0.03)
     TriggerAddAction(gg_trg_Setup_Per_Player_Properties, Trig_Setup_Per_Player_Properties_Actions)
 end
 
@@ -20896,13 +20897,13 @@ function Trig_Team_System_Init_Actions()
     end
     udg_TeamAboutToLose[0] = false
     udg_TeamAboutToLose[1] = false
-    TriggerExecute(gg_trg_Update_Host)
     TriggerExecute(gg_trg_Update_Alliances_for_PlayerGroups)
+    TriggerExecute(gg_trg_Update_Host_Check_Players)
 end
 
 function InitTrig_Team_System_Init()
     gg_trg_Team_System_Init = CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_Team_System_Init, 0.00)
+    TriggerRegisterTimerEventSingle(gg_trg_Team_System_Init, 0.10)
     TriggerAddAction(gg_trg_Team_System_Init, Trig_Team_System_Init_Actions)
 end
 
@@ -20936,83 +20937,6 @@ function InitTrig_Update_Alliances_for_PlayerGroups()
     TriggerAddAction(gg_trg_Update_Alliances_for_PlayerGroups, Trig_Update_Alliances_for_PlayerGroups_Actions)
 end
 
-function Trig_Update_Host_Func001Func002C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func003C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func004C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func005C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func006C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func007C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func008C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func009C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func010C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func011C()
-    if (not (udg_TempBool == false)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Update_Host_Func001Func012C()
-    if (not (udg_TempBool == true)) then
-        return false
-    end
-    return true
-end
-
 function Trig_Update_Host_Func001C()
     if (not (GetTriggerPlayer() == udg_HostPlayer)) then
         return false
@@ -21025,62 +20949,7 @@ end
 
 function Trig_Update_Host_Actions()
     if (Trig_Update_Host_Func001C()) then
-        udg_TempBool = false
-        if (Trig_Update_Host_Func001Func002C()) then
-            udg_TempInt = 1
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func003C()) then
-            udg_TempInt = 6
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func004C()) then
-            udg_TempInt = 2
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func005C()) then
-            udg_TempInt = 7
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func006C()) then
-            udg_TempInt = 3
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func007C()) then
-            udg_TempInt = 8
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func008C()) then
-            udg_TempInt = 4
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func009C()) then
-            udg_TempInt = 9
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func010C()) then
-            udg_TempInt = 5
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func011C()) then
-            udg_TempInt = 10
-            TriggerExecute(gg_trg_Is_Player_New_Host)
-        else
-        end
-        if (Trig_Update_Host_Func001Func012C()) then
-            udg_HostPlayer = udg_TempPlayer
-            DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (udg_OriginalPlayerNames[udg_TempInt] .. "|r|cffff6020 is now the new host.")))
-        else
-        end
+        TriggerExecute(gg_trg_Update_Host_Check_Players)
     else
     end
 end
@@ -21098,6 +20967,147 @@ function InitTrig_Update_Host()
     TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(8))
     TriggerRegisterPlayerEventLeave(gg_trg_Update_Host, Player(9))
     TriggerAddAction(gg_trg_Update_Host, Trig_Update_Host_Actions)
+end
+
+function Trig_Update_Host_Check_Players_Func002C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func003C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func004C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func005C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func006C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func007C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func008C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func009C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func010C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func011C()
+    if (not (udg_TempBool == false)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Func012C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Update_Host_Check_Players_Actions()
+    udg_TempBool = false
+    if (Trig_Update_Host_Check_Players_Func002C()) then
+        udg_TempInt = 1
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func003C()) then
+        udg_TempInt = 6
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func004C()) then
+        udg_TempInt = 2
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func005C()) then
+        udg_TempInt = 7
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func006C()) then
+        udg_TempInt = 3
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func007C()) then
+        udg_TempInt = 8
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func008C()) then
+        udg_TempInt = 4
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func009C()) then
+        udg_TempInt = 9
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func010C()) then
+        udg_TempInt = 5
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func011C()) then
+        udg_TempInt = 10
+        TriggerExecute(gg_trg_Is_Player_New_Host)
+    else
+    end
+    if (Trig_Update_Host_Check_Players_Func012C()) then
+        udg_HostPlayer = udg_TempPlayer
+        DisplayTextToForce(GetPlayersAll(), (udg_PlayerColorString[udg_TempInt] .. (udg_OriginalPlayerNames[udg_TempInt] .. "|r|cffff6020 is now the new host.")))
+    else
+    end
+end
+
+function InitTrig_Update_Host_Check_Players()
+    gg_trg_Update_Host_Check_Players = CreateTrigger()
+    TriggerAddAction(gg_trg_Update_Host_Check_Players, Trig_Update_Host_Check_Players_Actions)
 end
 
 function Trig_Is_Player_New_Host_Func003C()
@@ -45828,6 +45838,7 @@ function InitCustomTriggers()
     InitTrig_Team_System_Init()
     InitTrig_Update_Alliances_for_PlayerGroups()
     InitTrig_Update_Host()
+    InitTrig_Update_Host_Check_Players()
     InitTrig_Is_Player_New_Host()
     InitTrig_Swap_Command()
     InitTrig_Swap_Teams_for_SwapPlayer()
