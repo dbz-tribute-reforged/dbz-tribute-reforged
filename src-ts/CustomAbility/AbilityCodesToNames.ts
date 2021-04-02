@@ -258,6 +258,64 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.finalBurst, AbilityNames.DartFeld.FINAL_BURST],
     [Id.redEyedDragonSummoning, AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON],
 
+    //crono
+    [Id.cronoCyclone, AbilityNames.Crono.CYCLONE],
+    [Id.cronoSlash, AbilityNames.Crono.SLASH],
+    [Id.cronoLightning, AbilityNames.Crono.LIGHTNING],
+    [Id.cronoLightning2, AbilityNames.Crono.LIGHTNING_2],
+    [Id.cronoLightning3, AbilityNames.Crono.LIGHTNING_3],
+    [Id.cronoCleave, AbilityNames.Crono.CLEAVE],
+    [Id.cronoLuminaire, AbilityNames.Crono.LUMINAIRE],
+
+    //frog
+    [Id.frogSlurpCut, AbilityNames.Frog.SLURP_CUT],
+    [Id.frogSlurp, AbilityNames.Frog.SLURP],
+    [Id.frogWater, AbilityNames.Frog.WATER],
+    [Id.frogWater2, AbilityNames.Frog.WATER2],
+    [Id.frogAerialStrike, AbilityNames.Frog.AERIAL_STRIKE],
+    [Id.frogSquash, AbilityNames.Frog.FROG_SQUASH],
+
+    //robo
+    [Id.roboTackle, AbilityNames.Robo.ROBO_TACKLE],
+    [Id.roboLaserSpin, AbilityNames.Robo.LASER_SPIN],
+    [Id.roboHealBeam, AbilityNames.Robo.HEAL_BEAM],
+    [Id.roboUzziPunch, AbilityNames.Robo.UZZI_PUNCH],
+    [Id.roboElectrocute, AbilityNames.Robo.ELECTROCUTE],
+
+    //lucca
+    [Id.luccaFlamethrower, AbilityNames.Lucca.FLAMETHROWER],
+    [Id.luccaHypnowave, AbilityNames.Lucca.HYPNOWAVE],
+    [Id.luccaFire, AbilityNames.Lucca.FIRE],
+    [Id.luccaFire2, AbilityNames.Lucca.FIRE2],
+    [Id.luccaNapalm, AbilityNames.Lucca.NAPALM],
+    [Id.luccaMegaBomb, AbilityNames.Lucca.MEGABOMB],
+    [Id.luccaFlare, AbilityNames.Lucca.FLARE],
+
+
+    //magus
+    [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
+    [Id.magusLightning2, AbilityNames.Magus.LIGHTNING_2],
+    [Id.magusWater2, AbilityNames.Magus.WATER_2],
+    [Id.magusFire2, AbilityNames.Magus.FIRE_2],
+    [Id.magusIce2, AbilityNames.Magus.ICE_2],
+    [Id.magusDarkMist, AbilityNames.Magus.DARK_MIST],
+    [Id.magusDarkMatter, AbilityNames.Magus.DARK_MATTER],
+
+    //Ayla
+    [Id.aylaBoulderToss, AbilityNames.Ayla.BOULDER_TOSS],
+    [Id.aylaCharm, AbilityNames.Ayla.CHARM],
+    [Id.aylaTailSpin, AbilityNames.Ayla.TAIL_SPIN],
+    [Id.aylaDinoTail, AbilityNames.Ayla.DINO_TAIL],
+    [Id.aylaTripleKick, AbilityNames.Ayla.TRIPLE_KICK],
+
+    //Marle
+    [Id.marleAura, AbilityNames.Marle.AURA],
+    [Id.marleAllure, AbilityNames.Marle.ALLURE],
+    [Id.marleIce, AbilityNames.Marle.ICE],
+    [Id.marleIce2, AbilityNames.Marle.ICE_2],
+    [Id.marleCure, AbilityNames.Marle.CURE],
+    [Id.marleHaste, AbilityNames.Marle.HASTE],
+
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],
     [FourCC('A0LG'), AbilityNames.Babidi.BABIDI_BARRIER],

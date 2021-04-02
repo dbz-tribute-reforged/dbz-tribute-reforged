@@ -52,11 +52,13 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked." + 
-        "|nCost:25 MP|nCD: 16"
+        "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
+        "Damage is perfectly blocked during ticks 9 to 22, reducing damage by 80% up to 2 * AGI.|n" +
+        "Cost:25 MP|nCD: 16"
     },
     components: [
       { name: "block basic guard" },
+      { name: "block perfect basic guard" },
     ],
   },
   // -------------------------------------------
@@ -5389,6 +5391,1190 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Crono.CYCLONE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCyclone.blp",
+      disabled: "BTNCronoCyclone.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.CYCLONE,
+      body: 
+        AbilityNames.Crono.CYCLONE,
+    },
+    components: [
+      { name: "anim crono cyclone" },
+      { name: "damage crono cyclone dps" },
+      { name: "dash ground forward crono cyclone" },
+      { name: "knockback cyclone"},
+      { name: "sfx crono cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.SLASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoSlash.blp",
+      disabled: "BTNCronoSlash.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.SLASH,
+      body: 
+        AbilityNames.Crono.SLASH,
+    },
+    components: [
+      { name: "anim crono slash" },
+      { name: "multi crono slash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LIGHTNING,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage target crono lightning explosion" },
+      { name: "sfx crono lightning" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LIGHTNING_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage crono lightning 2 explosion" },
+      { name: "multi crono lightning 2 inner" },
+      { name: "multi crono lightning 2 outer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LIGHTNING_3,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning3.blp",
+      disabled: "BTNCronoLightning3.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING_3,
+      body: 
+        AbilityNames.Crono.LIGHTNING_3
+    },
+    components: [
+      { name: "damage target crono lightning 3 explosion" },
+      { name: "debuff slow target crono lightning 3" },
+      { name: "sfx crono lightning 3" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.CLEAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCleave.blp",
+      disabled: "BTNCronoCleave.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.CLEAVE,
+      body: 
+        AbilityNames.Crono.CLEAVE
+    },
+    components: [
+      { name: "anim crono cleave" },
+      { name: "dash ground target crono cleave" },
+      { name: "damage crono cleave explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Crono.LUMINAIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLuminaire.blp",
+      disabled: "BTNCronoLuminaire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LUMINAIRE,
+      body: 
+        AbilityNames.Crono.LUMINAIRE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage crono lumi explosion" },
+      { name: "sfx crono lumi" },
+      { name: "sfx crono lumi explode" },
+    ],
+  },
+  //---------------------------------------
+  {
+    name: AbilityNames.Frog.SLURP_CUT,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNFrogSlurpCut.blp",
+      disabled: "BTNFrogSlurpCut.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.SLURP_CUT,
+      body: 
+        AbilityNames.Frog.SLURP_CUT
+    },
+    components: [
+      { name: "hook slurp cut" },
+    ],
+  },
+  //---------------------------------------
+  {
+    name: AbilityNames.Frog.SLURP,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell slam",
+    icon: {
+      enabled: "BTNFrogSlurp.blp",
+      disabled: "BTNFrogSlurp.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.SLURP,
+      body: 
+        AbilityNames.Frog.SLURP
+    },
+    components: [
+      { name: "beam frog slurp" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.WATER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogWater.blp",
+      disabled: "BTNFrogWater.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.WATER,
+      body: 
+        AbilityNames.Frog.WATER,
+    },
+    components: [
+      { name: "beam frog water" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.WATER2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogWater2.blp",
+      disabled: "BTNFrogWater2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.WATER2,
+      body: 
+        AbilityNames.Frog.WATER2
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi water 2" },
+      { name: "damage water 2 dps charging" },
+      { name: "sfx water 2 caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.FROG_SQUASH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogSquash.blp",
+      disabled: "BTNFrogSquash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.FROG_SQUASH,
+      body: 
+        AbilityNames.Frog.FROG_SQUASH
+    },
+    components: [
+      { name: "beam frog squash" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Frog.AERIAL_STRIKE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNFrogLeapSlash.blp",
+      disabled: "BTNCFrogLeapSlash.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Frog.AERIAL_STRIKE,
+      body: 
+        AbilityNames.Frog.AERIAL_STRIKE
+    },
+    components: [
+      { name: "anim frog cleave" },
+      { name: "dash ground target crono cleave" },
+      { name: "damage frog aerial explosion" },
+      { name: "jump crono cleave" },
+      { name: "sfx crono cleave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ROBO_TACKLE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 25,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboTackle.blp",
+      disabled: "BTNRoboTackle.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Robo.ROBO_TACKLE,
+      body: 
+        AbilityNames.Robo.ROBO_TACKLE,
+    },
+    components: [
+      { name: "anim robo tackle" },
+      { name: "dash ground point robo tackle" },
+      { name: "damage robo tackle" },
+      { name: "sfx robo tackle" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.LASER_SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 100,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboLaserSpin.blp",
+      disabled: "BTNRoboLaserSpin.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.LASER_SPIN,
+      body: 
+        AbilityNames.Robo.LASER_SPIN
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi robo laser spin 1" },
+      { name: "multi robo laser spin 2" },
+      { name: "sfx robo laser spin" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.HEAL_BEAM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboHealBeam.blp",
+      disabled: "BTNRoboHealBeam.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.HEAL_BEAM,
+      body: 
+        AbilityNames.Robo.HEAL_BEAM
+    },
+    components: [
+      { name: "heal robo heal beam" },
+      { name: "sfx robo heal beam"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.UZZI_PUNCH,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 264,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboUzziPunch.blp",
+      disabled: "BTNRoboUzziPunch.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.UZZI_PUNCH,
+      body: 
+        AbilityNames.Robo.UZZI_PUNCH
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage uzzi punch explosion" },
+      { name: "sfx uzzi punch" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Robo.ELECTROCUTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 33,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNRoboShock.blp",
+      disabled: "BTNRoboShock.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Robo.ELECTROCUTE,
+      body: 
+        AbilityNames.Robo.ELECTROCUTE
+    },
+    components: [
+      { name: "damage robo electrocute explosion" },
+      { name: "multi robo electrocute inner" },
+      { name: "multi robo electrocute outer" },
+      { name: "sfx robo electrocute caster"}
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FLAMETHROWER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFlamethrower.blp",
+      disabled: "BTNLuccaFlamethrower.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FLAMETHROWER,
+      body: 
+        "Kame"
+    },
+    components: [
+      { name: "beam flamethrower" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.HYPNOWAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell channel",
+    icon: {
+      enabled: "BTNLuccaHypnowave.blp",
+      disabled: "BTNLuccaHypnowave.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.HYPNOWAVE,
+      body: 
+        AbilityNames.Lucca.HYPNOWAVE
+    },
+    components: [
+      { name: "sfx lucca hypnowave" },
+      { name: "debuff sleep lucca hypnosis"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FIRE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFire.blp",
+      disabled: "BTNLuccaFire.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FIRE,
+      body: 
+        AbilityNames.Lucca.FIRE
+    },
+    components: [
+      { name: "beam lucca fire" },
+      { name: "sfx lucca fire" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FIRE2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusFire2.blp",
+      disabled: "BTNMagusFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.FIRE_2,
+      body: 
+        AbilityNames.Magus.FIRE_2
+    },
+    components: [
+      { name: "beam lucca fire 2" },
+      { name: "sfx magus fire 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.NAPALM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaNapalm.blp",
+      disabled: "BTNLuccaNapalm.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.MEGABOMB,
+      body: 
+        AbilityNames.Lucca.MEGABOMB
+    },
+    components: [
+      { name: "beam napalm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.MEGABOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaNapalmMegabomb.blp",
+      disabled: "BTNLuccaMegabomb.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.MEGABOMB,
+      body: 
+        AbilityNames.Lucca.MEGABOMB
+    },
+    components: [
+      { name: "beam mega bomb" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucca.FLARE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLuccaFlare.blp",
+      disabled: "BTNLuccaFlare.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Lucca.FLARE,
+      body: 
+        AbilityNames.Lucca.FLARE
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage lucca flare explosion" },
+      { name: "sfx lucca flare" },
+      { name: "sfx lucca flare explode" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.BOULDER_TOSS,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNKingKRoolHandKannon2.blp",
+      disabled: "BTNKingKRoolHandKannon2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.KingKRool.HAND_KANNON,
+      body: 
+        AbilityNames.KingKRool.HAND_KANNON
+    },
+    components: [
+      { name: "beam boulder toss" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.CHARM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNBabidiQ.blp",
+      disabled: "BTNBabidiQ.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "sfx ayla charm" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.TAIL_SPIN,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoCyclone.blp",
+      disabled: "BTNCronoCyclone.blp",
+    },
+    tooltip: {
+      title:  AbilityNames.Crono.CYCLONE,
+      body: 
+        AbilityNames.Crono.CYCLONE,
+    },
+    components: [
+      { name: "anim crono cyclone" },
+      { name: "damage ayla tail spin dps" },
+      { name: "dash ground forward crono cyclone" },
+      { name: "knockback tail spin"},
+      { name: "sfx crono cyclone" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.DINO_TAIL,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 48,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAylaDinoTail.blp",
+      disabled: "BTNAylaDinoTail.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point dino tail" },
+      { name: "damage dino tail dps" },
+      { name: "knockback dfist" },
+      { name: "sfx dino tail" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Ayla.TRIPLE_KICK,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 12,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNAylaTripleKick.blp",
+      disabled: "BTNAylaTripleKick.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground point ayla triple kick" },
+      { name: "damage ayla triple kick dps" },
+      { name: "damage ayla triple kick explosion" },
+      { name: "jump ayla triple kick" },
+      { name: "sfx ayla triple kick" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleIce.blp",
+      disabled: "BTNMarleIce.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE,
+      body: 
+        AbilityNames.Marle.ICE,
+    },
+    components: [
+      { name: "beam marle ice" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE_2,
+      body: 
+        AbilityNames.Marle.ICE_2
+    },
+    components: [
+      { name: "beam marle ice 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.ICE_2,
+      body: 
+        AbilityNames.Marle.ICE_2
+    },
+    components: [
+      { name: "beam marle ice 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.AURA,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 165,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleAura.blp",
+      disabled: "BTNMarleAura.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.AURA,
+      body: 
+        AbilityNames.Marle.AURA
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "heal marle aura"},
+      { name: "sfx marle aura"},
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.CURE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleCure.blp",
+      disabled: "BTNMarleCure.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.CURE,
+      body: 
+        AbilityNames.Marle.CURE
+    },
+    components: [
+      { name: "beam marle cure" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Marle.HASTE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 396,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMarleHaste.blp",
+      disabled: "BTNMMarleHaste.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Marle.HASTE,
+      body: 
+        AbilityNames.Marle.HASTE
+    },
+    components: [
+      { name: "aoe apply marle haste" },
+      { name: "sfx marle haste"},
+      { name: "sfx marle haste explosion" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.DARK_BOMB,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusDarkBomb.blp",
+      disabled: "BTNMagusDarkBomb.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.DARK_BOMB,
+      body: 
+        "spirit bomb stuff"
+    },
+    components: [
+      { name: "beam dark bomb" },
+    ],
+  },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.WATER_2,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 132,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNFrogWater2.blp",
+        disabled: "BTNFrogWater2.blp",
+      },
+      tooltip: {
+        title: AbilityNames.Magus.WATER_2,
+        body: 
+          AbilityNames.Magus.WATER_2
+      },
+      components: [
+        { name: "channel caster default" },
+        { name: "multi magus water 2" },
+        { name: "damage magus water 2 dps charging" },
+        { name: "sfx water 2 caster" },
+      ],
+    },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.LIGHTNING_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 16,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNCronoLightning.blp",
+      disabled: "BTNCronoLightning.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Crono.LIGHTNING,
+      body: 
+        AbilityNames.Crono.LIGHTNING
+    },
+    components: [
+      { name: "damage crono lightning 2 explosion" },
+      { name: "multi crono lightning 2 inner" },
+      { name: "multi crono lightning 2 outer" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.FIRE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusFire2.blp",
+      disabled: "BTNMagusFire2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.FIRE_2,
+      body: 
+        AbilityNames.Magus.FIRE_2
+    },
+    components: [
+      { name: "beam magus fire 2" },
+      { name: "sfx magus fire 2" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.ICE_2,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 82,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusIce2.blp",
+      disabled: "BTNMagusIce2.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.ICE_2,
+      body: 
+        AbilityNames.Magus.ICE_2
+    },
+    components: [
+      { name: "beam magus ice 2" },
+    ],
+  },
+    // -------------------------------------------
+    {
+      name: AbilityNames.Magus.DARK_MIST,
+      currentCd: 0,
+      maxCd: 1,
+      costType: "MP",
+      costAmount: 0,
+      duration: 330,
+      updateRate: 0.03,
+      castTime: 0.0,
+      canMultiCast: true,
+      waitsForNextClick: false,
+      animation: "spell",
+      icon: {
+        enabled: "BTNMagusDarkMist.blp",
+        disabled: "BTNMagusDarkMist.blp",
+      },
+      tooltip: {
+        title:  AbilityNames.Magus.DARK_MIST,
+        body: 
+          AbilityNames.Magus.DARK_MIST,
+      },
+      components: [
+        { name: "beam dark mist" },
+      ],
+    },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Magus.DARK_MATTER,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 70,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNMagusDarkMatter.blp",
+      disabled: "BTNMagusDarkMatter.blp",
+    },
+    tooltip: {
+      title: AbilityNames.Magus.DARK_MATTER,
+      body: 
+        AbilityNames.Magus.DARK_MATTER
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "damage magus dark matter explosion" },
+      { name: "sfx magus dark matter" },
+      { name: "sfx magus dark matter explode" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,
@@ -6346,7 +7532,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 99,
+    duration: 165,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -8168,7 +9354,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 33,
+    duration: 66,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,

@@ -419,7 +419,7 @@ export const AOEKnockbackComponents = [
     startTick: 111,
     endTick: -1,
     knockbackData: {
-      speed: 39, 
+      speed: 45, 
       angle: 180, 
       aoe: 500,
     },
@@ -818,7 +818,7 @@ export const AOEKnockbackComponents = [
     knockbackData: {
       speed: 90, 
       angle: 180, 
-      aoe: 400,
+      aoe: 500,
     },
     knockbackSource: AOEKnockback.SOURCE_TARGET_POINT,
     useLastCastPoint: true,
@@ -1075,6 +1075,54 @@ export const AOEKnockbackComponents = [
     knockbackSource: AOEKnockback.SOURCE_UNIT,
     useLastCastPoint: false,
     reflectBeams: true,
+    affectAllies: false,
+  },
+  // water 2
+  {
+    name: "knockback water 2",
+    repeatInterval: 1, 
+    startTick: 44,
+    endTick: -1,
+    knockbackData: {
+      speed: 45, 
+      angle: 180, 
+      aoe: 450,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // cyclone knock-in
+  {
+    name: "knockback cyclone",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 5, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  // tail spin knock-in
+  {
+    name: "knockback tail spin",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 6, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
     affectAllies: false,
   },
 ];

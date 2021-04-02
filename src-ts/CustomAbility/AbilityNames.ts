@@ -300,6 +300,69 @@ export module AbilityNames {
     export const RED_EYED_DRAGON_SUMMON: string = "Red Eyed Dragon Summoning";
   }
 
+  export module Crono {
+    export const CYCLONE: string = "Crono Cyclone";
+    export const SLASH: string = "Crono Slash";
+    export const LIGHTNING: string = "Crono Lightning";
+    export const LIGHTNING_2: string = "Crono Lightning 2";
+    export const LIGHTNING_3: string = "Crono Lightning 3";
+    export const CLEAVE: string = "Crono Cleave";
+    export const LUMINAIRE: string = "Crono Luminaire";
+  }
+
+  export module Frog {
+    export const SLURP_CUT: string = "Frog Slurp Cut";
+    export const SLURP: string = "Frog Slurp";
+    export const WATER: string = "Frog Water";
+    export const WATER2: string = "Frog Water 2";
+    export const AERIAL_STRIKE: string = "Frog Aerial Strike";
+    export const FROG_SQUASH: string = "Frog Squash";
+  }
+
+  export module Robo {
+    export const ROBO_TACKLE: string = "Robo Tackle";
+    export const LASER_SPIN: string = "Robo Laser Spin";
+    export const HEAL_BEAM: string = "Robo Heal Beam";
+    export const UZZI_PUNCH: string = "Robo Uzzi Punch";
+    export const ELECTROCUTE: string = "Robo Electrocute";
+  }
+
+  export module Lucca {
+    export const FLAMETHROWER: string = "Flamethrower";
+    export const HYPNOWAVE: string = "Hypno Wave";
+    export const FIRE: string = "Fire";
+    export const FIRE2: string = "Fire 2";
+    export const NAPALM: string = "Napalm";
+    export const MEGABOMB: string = "Mega Bomb";
+    export const FLARE: string = "Flare";
+  }
+
+  export module Magus {
+    export const DARK_BOMB: string = "Magus Dark Bomb";
+    export const LIGHTNING_2: string = "Magus Lightning 2";
+    export const WATER_2: string = "Magus Water 2";
+    export const FIRE_2: string = "Magus Fire 2";
+    export const ICE_2: string = "Magus Ice 2";
+    export const DARK_MIST: string = "Magus Dark Mist"
+    export const DARK_MATTER: string = "Magus Dark Matter";
+  }
+
+  export module Ayla {
+    export const BOULDER_TOSS: string = "Ayla Boulder Toss";
+    export const CHARM: string = "Ayla Charm";
+    export const TAIL_SPIN: string = "Ayla Tail Spin";
+    export const DINO_TAIL: string = "AYla Dino Tail";
+    export const TRIPLE_KICK: string = "Ayla Triple Kick";
+  }
+
+  export module Marle {
+    export const AURA: string = "Marle Aura";
+    export const ALLURE: string = "Marle Allure";
+    export const ICE: string = "Marle Ice";
+    export const ICE_2: string = "Marle Ice 2";
+    export const CURE: string = "Marle Cure";
+    export const HASTE: string = "Marle Haste";
+  }
 
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";

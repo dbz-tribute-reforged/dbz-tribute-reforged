@@ -23,12 +23,18 @@ export module AbilitySfxHelper {
         BlzSetSpecialEffectX(effect, target.x);
         BlzSetSpecialEffectY(effect, target.y);
 
+        if (sfxData.endScale >= 0) {
+          BlzSetSpecialEffectScale(effect, 
+            sfxData.scale + (sfxData.endScale - sfxData.scale) * timeRatio
+          );
+        }
+
         const newYaw = yaw + sfxData.extraDirectionalYaw * CoordMath.degreesToRadians;
         if (newYaw > 0) {
           BlzSetSpecialEffectYaw(effect, newYaw);
         }
         
-        if (height + sfxData.startHeight > 0) {
+        if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
           BlzSetSpecialEffectHeight(effect, 
             height + sfxData.startHeight + 
             (sfxData.endHeight - sfxData.startHeight) * timeRatio
@@ -47,10 +53,14 @@ export module AbilitySfxHelper {
     }
 
     if (sfxData.extraPitch > 0) {
-      BlzSetSpecialEffectPitch(createdSfx, sfxData.extraPitch);
+      BlzSetSpecialEffectPitch(createdSfx, sfxData.extraPitch * CoordMath.degreesToRadians);
     }
 
-    if (height + sfxData.startHeight > 0) {
+    if (sfxData.extraRoll > 0) {
+      BlzSetSpecialEffectRoll(createdSfx, sfxData.extraRoll * CoordMath.degreesToRadians);
+    }
+
+    if (height + sfxData.startHeight > 0 || sfxData.startHeight <= 0) {
       BlzSetSpecialEffectHeight(createdSfx, 
         height + sfxData.startHeight + 
         (sfxData.endHeight - sfxData.startHeight) * timeRatio

@@ -2,12 +2,12 @@ import { Vector2D } from "Common/Vector2D";
 
 // maybe put all the tournament data into a config file
 export module TournamentData {
-  export const tournamentSpawn1: Vector2D = new Vector2D(22000, 23000);
-  export const tournamentSpawn2: Vector2D = new Vector2D(17200, 18300);
-  export const tournamentWaitRoom1: Vector2D = new Vector2D(23300, 23000);
-  export const tournamentWaitRoom2: Vector2D = new Vector2D(23300, 18500);
-  export const tournamentBottomLeft: Vector2D = new Vector2D(16666, 17750);
-  export const tournamentTopRight: Vector2D = new Vector2D(23848, 23848);
+  export const tournamentSpawn1: Vector2D = new Vector2D(503, 29700);
+  export const tournamentSpawn2: Vector2D = new Vector2D(-4000, 25100);
+  export const tournamentWaitRoom1: Vector2D = new Vector2D(3639, 30584);
+  export const tournamentWaitRoom2: Vector2D = new Vector2D(3639, 25734);
+  export const tournamentBottomLeft: Vector2D = new Vector2D(-5610, 23068);
+  export const tournamentTopRight: Vector2D = new Vector2D(2100, 31300);
   export const tournamentRect: rect = Rect(
     tournamentBottomLeft.x, 
     tournamentBottomLeft.y,
@@ -16,9 +16,9 @@ export module TournamentData {
   );
   export const budokaiArenaBottomLeft: Vector2D = new Vector2D(12930, 19964);
   export const budokaiArenaTopRight: Vector2D = new Vector2D(16737, 23848);
-  export const budokaiSpawn1: Vector2D = new Vector2D(13352, 20467);
-  export const budokaiSpawn2: Vector2D = new Vector2D(16177, 23197);
-  export const finalBattleDetector: Vector2D = new Vector2D(-555, 22860);
+  export const budokaiSpawn1: Vector2D = new Vector2D(13778, 20747);
+  export const budokaiSpawn2: Vector2D = new Vector2D(15775, 22690);
+  export const finalBattleDetector: Vector2D = new Vector2D(11020, 22858);
   export const finalBattleName: string = "Final Battle";
   export const finalBattleTime: number = 36 * 60;
   export const finalBattleInterval: number = 5;

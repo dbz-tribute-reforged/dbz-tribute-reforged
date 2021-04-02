@@ -28,10 +28,10 @@ export module Constants {
   export const heavenHellCreepPlayer: player = Player(heavenHellCreepPlayerId);
   export const heavenHellMaxHeroLevel: number = 10;
   export const heavenHellBottomLeft: Vector2D = new Vector2D(
-    -7000, 20000
+    -8200, 20000
   );
   export const heavenHellTopRight: Vector2D = new Vector2D(
-    6550, 24000
+    9200, 24000
   );
   export const evilFightingSkills: number = FourCC("A03Z");
   export const sagaPingInterval: number = 30;
@@ -66,6 +66,15 @@ export module Constants {
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 }
   
+export module BASE_DMG {
+  export const KAME_DPS = 0.0115;
+  export const KAME_EXPLOSION = 0.053;
+  export const SPIRIT_BOMB_DPS = 0.0075;
+  export const SPIRIT_BOMB_EXPLOSION = 0.25;
+  export const DFIST_DPS = 0.013;
+  export const DFIST_EXPLOSION = 0.25;
+}
+
 export module Id {
   export const summonShenron = FourCC("I01V");
 
@@ -140,6 +149,63 @@ export module Id {
   export const cellJuniors = FourCC("A01Z");
   export const cellSolarKame = FourCC("A0O9");
   export const cellXForm = FourCC("A00D");
+
+  export const crono = FourCC("H0A0");
+  export const cronoCyclone = FourCC("A0VP");
+  export const cronoSlash = FourCC("A0VQ");
+  export const cronoLightning = FourCC("A0VR");
+  export const cronoLightning2 = FourCC("A0VS");
+  export const cronoLightning3 = FourCC("A0WM");
+  export const cronoCleave = FourCC("A0VT");
+  export const cronoLuminaire = FourCC("A0VU");
+
+  export const frog = FourCC("H0A1");
+  export const frogSlurpCut = FourCC("A0WA");
+  export const frogSlurp = FourCC("A0WB");
+  export const frogWater = FourCC("A0WC");
+  export const frogWater2 = FourCC("A0WD");
+  export const frogAerialStrike = FourCC("A0WE");
+  export const frogSquash = FourCC("A0WF");
+
+  export const robo = FourCC("H0A2");
+  export const roboTackle = FourCC("A0WG");
+  export const roboLaserSpin = FourCC("A0WH");
+  export const roboHealBeam = FourCC("A0WI");
+  export const roboUzziPunch = FourCC("A0WJ");
+  export const roboElectrocute = FourCC("A0WK");
+
+  export const magus = FourCC("H0A3");
+  export const darkBomb = FourCC("A0W3");
+  export const magusLightning2 = FourCC("A0W5");
+  export const magusFire2 = FourCC("A0WO");
+  export const magusIce2 = FourCC("A0WP");
+  export const magusWater2 = FourCC("A0WQ");
+  export const magusDarkMist = FourCC("A0WR");
+  export const magusDarkMatter = FourCC("A0W6");
+
+  export const lucca = FourCC("H0A4");
+  export const luccaFlamethrower = FourCC("A0WZ");
+  export const luccaHypnowave = FourCC("A0X0");
+  export const luccaFire2 = FourCC("A0X1");
+  export const luccaFire = FourCC("A0X2");
+  export const luccaNapalm = FourCC("A0X3");
+  export const luccaMegaBomb = FourCC("A0X4");
+  export const luccaFlare = FourCC("A0X5");
+
+  export const ayla = FourCC("H0A5");
+  export const aylaBoulderToss = FourCC("A0XG");
+  export const aylaCharm = FourCC("A0XH");
+  export const aylaTailSpin = FourCC("A0XI");
+  export const aylaDinoTail = FourCC("A0XK");
+  export const aylaTripleKick = FourCC("A0XL");
+
+  export const marle = FourCC("H0A6");
+  export const marleAura = FourCC("A0XA");
+  export const marleAllure = FourCC("A0XB");
+  export const marleIce = FourCC("A0XC");
+  export const marleIce2 = FourCC("A0XD");
+  export const marleCure = FourCC("A0XE");
+  export const marleHaste = FourCC("A0XF");
 
   export const dartFeld = FourCC("H09Y");
   export const doubleSlash = FourCC("A0UQ");

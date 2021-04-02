@@ -99,11 +99,12 @@ export class MultiComponent implements
       const nextAngle = this.angleCurrent + this.angleDifference * this.angleDirection;
       if (nextAngle > this.angleMax || nextAngle < this.angleMin) {  
         if (this.firingMode == MultiComponent.WRAPAROUND_FIRING) {
-          if (this.angleDirection > 0) {
-            this.angleCurrent = this.angleMin;
-          } else {
-            this.angleCurrent = this.angleMax;
-          }
+          this.angleCurrent = nextAngle;
+          // if (this.angleDirection > 0) {
+          //   this.angleCurrent = this.angleMin;
+          // } else {
+          //   this.angleCurrent = this.angleMax;
+          // }
         } else {
           this.angleDirection *= -1;
           this.angleCurrent += this.angleDifference * this.angleDirection;
@@ -128,6 +129,20 @@ export class MultiComponent implements
       }
     } else {
       this.replacementCoords.set(component, new Vector2D(newCoord.x, newCoord.y));
+    }
+  }
+
+  triggerComponent(
+    component: AbilityComponent,
+    ability: CustomAbility,
+    input: CustomAbilityInput,
+    source: unit
+  ) {
+    if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
+      if (this.fixedReplacementCoords) {
+        this.manageFixedReplacementCoords(component, input, this.newCoord);
+      }
+      component.performTickAction(ability, input, source);
     }
   }
   
@@ -191,11 +206,13 @@ export class MultiComponent implements
           this.forceMinDistance + 
           Math.random() * (this.forceMaxDistance - this.forceMinDistance);
       }
-      if (this.angleRange > 360) {
-        this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
-      } else {
-        this.originalTarget.setVector(this.targettedPoint);
-      }
+
+      this.originalTarget.setVector(this.targettedPoint);
+      // if (this.angleRange > 360) {
+      //   this.originalTarget.setPos(GetUnitX(input.caster.unit), GetUnitY(input.caster.unit));
+      // } else {
+      //   this.originalTarget.setVector(this.targettedPoint);
+      // }
       this.currentDelay = this.delayBetweenComponents;
     }
 
@@ -206,7 +223,7 @@ export class MultiComponent implements
 
       if (this.components.length > 0) {
         // add components to active components when ready
-        this.activateComponentsWhenReady();  
+        this.activateComponentsWhenReady();
       }
       
       if (this.forceMaxDistance > this.forceMinDistance && this.forceMinDistance > 0.5) {
@@ -235,12 +252,13 @@ export class MultiComponent implements
       }
 
       // keep showing active components
-      for (const component of this.activeComponents) {
-        if (ability.isReadyToUse(component.repeatInterval, component.startTick, component.endTick)) {
-          if (this.fixedReplacementCoords) {
-            this.manageFixedReplacementCoords(component, input, this.newCoord);
-          }
-          component.performTickAction(ability, input, source);
+      if (this.components.length > 0 && this.activeComponents.length > 0 && this.delayBetweenComponents == 0) {
+        const component = this.activeComponents[this.activeComponents.length-1];
+        this.triggerComponent(component, ability, input, source);
+
+      } else {
+        for (const component of this.activeComponents) {
+          this.triggerComponent(component, ability, input, source);
         }
       }
 

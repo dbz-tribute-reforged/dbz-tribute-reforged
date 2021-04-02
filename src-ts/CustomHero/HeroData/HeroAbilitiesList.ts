@@ -356,6 +356,69 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.DartFeld.RED_EYED_DRAGON_SUMMON,
     ]],
 
+    [Id.crono, [
+      AbilityNames.Crono.CYCLONE,
+      AbilityNames.Crono.SLASH,
+      AbilityNames.Crono.LIGHTNING,
+      AbilityNames.Crono.LIGHTNING_2,
+      AbilityNames.Crono.LIGHTNING_3,
+      AbilityNames.Crono.CLEAVE,
+      AbilityNames.Crono.LUMINAIRE,
+    ]],
+
+    [Id.frog, [
+      AbilityNames.Frog.SLURP_CUT,
+      AbilityNames.Frog.SLURP,
+      AbilityNames.Frog.WATER,
+      AbilityNames.Frog.WATER2,
+      AbilityNames.Frog.AERIAL_STRIKE,
+      AbilityNames.Frog.FROG_SQUASH,
+    ]],
+
+    [Id.robo, [
+      AbilityNames.Robo.ROBO_TACKLE,
+      AbilityNames.Robo.LASER_SPIN,
+      AbilityNames.Robo.HEAL_BEAM,
+      AbilityNames.Robo.UZZI_PUNCH,
+      AbilityNames.Robo.ELECTROCUTE,
+    ]],
+
+    [Id.lucca, [
+      AbilityNames.Lucca.FLAMETHROWER,
+      AbilityNames.Lucca.HYPNOWAVE,
+      AbilityNames.Lucca.FIRE,
+      AbilityNames.Lucca.FIRE2,
+      AbilityNames.Lucca.NAPALM,
+      AbilityNames.Lucca.MEGABOMB,
+      AbilityNames.Lucca.FLARE,
+    ]],
+    
+    [Id.magus, [
+      AbilityNames.Magus.LIGHTNING_2,
+      AbilityNames.Magus.WATER_2,
+      AbilityNames.Magus.FIRE_2,
+      AbilityNames.Magus.ICE_2,
+      AbilityNames.Magus.DARK_BOMB,
+      AbilityNames.Magus.DARK_MIST,
+      AbilityNames.Magus.DARK_MATTER,
+    ]],
+
+    [Id.ayla, [
+      AbilityNames.Ayla.BOULDER_TOSS,
+      AbilityNames.Ayla.CHARM,
+      AbilityNames.Ayla.TAIL_SPIN,
+      AbilityNames.Ayla.DINO_TAIL,
+      AbilityNames.Ayla.TRIPLE_KICK,
+    ]],
+
+    [Id.marle, [
+      AbilityNames.Marle.AURA,
+      AbilityNames.Marle.ALLURE,
+      AbilityNames.Marle.ICE,
+      AbilityNames.Marle.ICE_2,
+      AbilityNames.Marle.CURE,
+      AbilityNames.Marle.HASTE,
+    ]],
 
 
 
@@ -430,6 +493,16 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Tien.DODON_RAY,
       AbilityNames.Ichigo.GETSUGA_JUJISHO, AbilityNames.Ichigo.SHUNPO, AbilityNames.Ichigo.HIRENKYAKU,
       AbilityNames.DartFeld.BURNING_RUSH, AbilityNames.DartFeld.DRAGOON_TRANSFORMATION, AbilityNames.DartFeld.DRAGOON_FLOURISH,
+      AbilityNames.Crono.CYCLONE, AbilityNames.Crono.LUMINAIRE,
+      AbilityNames.Frog.SLURP_CUT, AbilityNames.Frog.FROG_SQUASH,
+      AbilityNames.Robo.ROBO_TACKLE, AbilityNames.Robo.ELECTROCUTE,
+      AbilityNames.Magus.LIGHTNING_2,
+      AbilityNames.Magus.WATER_2,
+      AbilityNames.Magus.FIRE_2,
+      AbilityNames.Magus.ICE_2,
+      AbilityNames.Lucca.FLAMETHROWER, AbilityNames.Lucca.FLARE,
+      AbilityNames.Ayla.BOULDER_TOSS, AbilityNames.Lucca.HYPNOWAVE,
+      AbilityNames.Marle.AURA, AbilityNames.Marle.ALLURE,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,

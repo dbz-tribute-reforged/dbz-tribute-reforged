@@ -17,6 +17,7 @@ import { TeamManager } from 'Core/TeamSystem/TeamManager';
 import { Constants } from 'Common/Constants';
 import { UnitHelper } from 'Common/UnitHelper';
 import { CustomAbilityManager } from 'CustomAbility/CustomAbilityManager';
+import { DragonBallsConstants } from 'Core/DragonBallsSystem/DragonBallsConstants';
 
 let sagaManager: SagaManager;
 let itemAbilityManager: ItemAbilityManager;
@@ -75,7 +76,7 @@ function tsMain() {
     const checkUnit = CreateUnit(
       Player(PLAYER_NEUTRAL_PASSIVE), 
       Constants.gameStartIndicatorUnit,
-      0, 22000, 0
+      DragonBallsConstants.shenronWaitingRoom.x, DragonBallsConstants.shenronWaitingRoom.y, 0
     );
     TimerStart(CreateTimer(), 1, true, () => {
       if (UnitHelper.isUnitDead(checkUnit) || GetUnitTypeId(checkUnit) == 0) {

@@ -43,4 +43,17 @@ export const AOEApplyComponentComponents = [
       { name: "dash forward power level sharing" },
     ],
   },
+  {
+    name: "aoe apply marle haste", 
+    repeatInterval: 1, 
+    startTick: 66,
+    endTick: -1,
+    aoe: 800,
+    affectsNonSummons: true,
+    affectsNonHeroes: false,
+    affectsAllies: true,
+    components: [
+      { name: "dash forward marle haste" },
+    ],
+  },
 ]

@@ -14,6 +14,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
   static readonly SOURCE_TARGET_UNIT = 3;
   static readonly SOURCE_LAST_CAST_UNIT = 4;
 
+  static readonly SCALE_HP_SOURCE_UNIT = 0;
+  static readonly SCALE_HP_CASTER_UNIT = 1;
+
   static readonly UNLIMITED_DAMAGE_TICKS = -1;
   static readonly DEFAULT_MAX_DAMAGE_TICKS = 12;
 
@@ -31,7 +34,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     public startTick: number = 0,
     public endTick: number = -1,
     public damageSource: number = AOEDamage.SOURCE_UNIT,
-    public scaleDamageToSourceHp: boolean = false,
+    public scaleSourceHPType: number = AOEDamage.SCALE_HP_SOURCE_UNIT,
+    public sourceHPDamageScale: number = -1,
+    public useInverseDamageScale: boolean = false,
     public useLastCastPoint: boolean = true,
     public aoe: number = 250,
     public onlyDamageCapHeroes: boolean = true,
@@ -54,7 +59,15 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.damagedGroup = CreateGroup();
   }
 
-  protected calculateDamage(input: CustomAbilityInput, source: unit): number {
+  protected scaleDamageToSourceHP(damage: number, sourceHPPercent: number): number {
+    let percentHP = sourceHPPercent;
+    if (this.useInverseDamageScale) {
+      percentHP = 1 - percentHP;
+    }
+    return damage * (1 + this.sourceHPDamageScale * percentHP);
+  }
+
+  protected calculateDamage(input: CustomAbilityInput, source: unit, sourceHPPercent: number): number {
     let damage = input.level * input.caster.spellPower * this.damageData.multiplier * 
       (
         CustomAbility.BASE_DAMAGE + 
@@ -65,11 +78,11 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "mult " + this.damageData.multiplier);
     // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "stat " + GetHeroStatBJ(this.damageData.attribute, input.caster.unit, true));
     // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "damage " + damage);
-    if (this.scaleDamageToSourceHp) {
-      const percentHP = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-      // damage *= percentHP * percentHP;
-      damage *= percentHP;
+    if (this.sourceHPDamageScale != 0) {
+      damage = this.scaleDamageToSourceHP(damage, sourceHPPercent);
     }
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "damage post scale " + damage);
+    // DisplayTimedTextToForce(bj_FORCE_ALL_PLAYERS, 5, "source hp percent " + sourceHPPercent);
     if (input.isBeamClash && input.isBeamClash == true) {
       damage *= AOEDamage.BEAM_CLASH_DAMAGE_MULTIPLIER;
     }
@@ -79,37 +92,27 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return damage;
   }
 
-  protected performDamage(input: CustomAbilityInput, target: unit, damage: number, sourceHpPercent: number) {
+  protected performDamage(input: CustomAbilityInput, target: unit, damage: number, sourceHPPercent: number) {
+    let bonusMaxHpDamage = 0;
     if (this.maxHealthDamagePercent > 0) {
-      let bonusMaxHpDamage = (
+      bonusMaxHpDamage = (
         GetUnitState(target, UNIT_STATE_MAX_LIFE) * 
         this.maxHealthDamagePercent
       );
-      if (this.scaleDamageToSourceHp) {
-        bonusMaxHpDamage *= sourceHpPercent;
+      if (this.sourceHPDamageScale != 0) {
+        bonusMaxHpDamage = this.scaleDamageToSourceHP(bonusMaxHpDamage, sourceHPPercent);
       }
-      UnitDamageTarget(
-        input.caster.unit, 
-        target, 
-        damage + bonusMaxHpDamage,
-        true,
-        false,
-        this.damageData.attackType,
-        this.damageData.damageType,
-        this.damageData.weaponType,
-      );
-    } else {
-      UnitDamageTarget(
-        input.caster.unit, 
-        target, 
-        damage,
-        true,
-        false,
-        this.damageData.attackType,
-        this.damageData.damageType,
-        this.damageData.weaponType,
-      );
     }
+    UnitDamageTarget(
+      input.caster.unit, 
+      target, 
+      damage + bonusMaxHpDamage,
+      true,
+      false,
+      this.damageData.attackType,
+      this.damageData.damageType,
+      this.damageData.weaponType,
+    );
     // if (input.damageMult) {
     //   TextTagHelper.showTempText(
     //     Colorizer.getPlayerColorText(GetPlayerId(input.casterPlayer)) + R2S(damage) + " --- " + R2S(input.damageMult), 
@@ -160,6 +163,7 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     //   this.damageCoords.x, this.damageCoords.y, 5.0, 4.0
     // );
 
+    GroupClear(this.damagedGroup);
     GroupEnumUnitsInRange(
       this.damagedGroup, 
       this.damageCoords.x, 
@@ -168,12 +172,16 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       null
     );
 
-    const damage = this.calculateDamage(input, source);
-    let sourceHpPercent = 0;
-    if (this.scaleDamageToSourceHp) {
-      sourceHpPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
-      sourceHpPercent *= sourceHpPercent;
+    let sourceHPPercent = 0;
+    if (this.scaleSourceHPType == AOEDamage.SCALE_HP_SOURCE_UNIT) {
+      sourceHPPercent = GetUnitState(source, UNIT_STATE_LIFE) / GetUnitState(source, UNIT_STATE_MAX_LIFE);
+    } else if (this.scaleSourceHPType == AOEDamage.SCALE_HP_CASTER_UNIT) {
+      sourceHPPercent = (
+        GetUnitState(input.caster.unit, UNIT_STATE_LIFE) 
+        / GetUnitState(input.caster.unit, UNIT_STATE_MAX_LIFE)
+      );
     }
+    const damage = this.calculateDamage(input, source, sourceHPPercent);
 
     ForGroup(this.damagedGroup, () => {
       const target = GetEnumUnit();
@@ -194,14 +202,14 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
             if (damageCount) {
               if (damageCount < this.maxDamageTicks) {
                 this.damagedTargets.set(target, damageCount + 1);
-                this.performDamage(input, target, damage, sourceHpPercent);
+                this.performDamage(input, target, damage, sourceHPPercent);
               }
             } else {
               this.damagedTargets.set(target, 1);
-              this.performDamage(input, target, damage, sourceHpPercent);
+              this.performDamage(input, target, damage, sourceHPPercent);
             }
           } else {    
-            this.performDamage(input, target, damage, sourceHpPercent);
+            this.performDamage(input, target, damage, sourceHPPercent);
           }
         }
       }
@@ -228,7 +236,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     return new AOEDamage(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.damageSource, 
-      this.scaleDamageToSourceHp,
+      this.scaleSourceHPType,
+      this.sourceHPDamageScale,
+      this.useInverseDamageScale,
       this.useLastCastPoint,
       this.aoe, 
       this.onlyDamageCapHeroes,
@@ -248,7 +258,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
       startTick: number;
       endTick: number;
       damageSource: number;
-      scaleDamageToSourceHp: boolean;
+      scaleSourceHPType: number;
+      sourceHPDamageScale: number;
+      useInverseDamageScale: boolean;
       useLastCastPoint: boolean;
       aoe: number; 
       onlyDamageCapHeroes: boolean;
@@ -271,7 +283,9 @@ export class AOEDamage implements AbilityComponent, Serializable<AOEDamage> {
     this.startTick = input.startTick;
     this.endTick = input.endTick;
     this.damageSource = input.damageSource;
-    this.scaleDamageToSourceHp = input.scaleDamageToSourceHp;
+    this.scaleSourceHPType = input.scaleSourceHPType;
+    this.sourceHPDamageScale = input.sourceHPDamageScale;
+    this.useInverseDamageScale = input.useInverseDamageScale;
     this.useLastCastPoint = input.useLastCastPoint;
     this.aoe = input.aoe;
     this.onlyDamageCapHeroes = input.onlyDamageCapHeroes;

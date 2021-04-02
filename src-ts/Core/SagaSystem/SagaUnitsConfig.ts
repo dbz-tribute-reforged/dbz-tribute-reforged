@@ -7,7 +7,7 @@ import { Id } from "Common/Constants";
 export const sagaUnitsConfig = new Map<string, SagaUnit>(
   [
     // dead zone
-    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 9, 30, 25, 20, new Vector2D(-2200, 28000),
+    ["Garlic Jr", new SagaUnit(FourCC("U00D"), 9, 30, 25, 20, new Vector2D(24500, 20700),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -16,9 +16,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.POWER_POLE,
       ],
     )],
-    ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(-2500, 27000))],
-    ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(-1000, 26000))],
-    ["Sansho", new SagaUnit(FourCC("N00C"), 3, 10, 5, 5, new Vector2D(-3500, 26000))],
+    ["Ginger", new SagaUnit(FourCC("O002"), 1, 5, 5, 5, new Vector2D(25000, 19500))],
+    ["Nicky", new SagaUnit(FourCC("O003"), 1, 5, 5, 5, new Vector2D(24000, 19000))],
+    ["Sansho", new SagaUnit(FourCC("N00C"), 3, 10, 5, 5, new Vector2D(25500, 19200))],
 
     // raditz
     // ["Raditz", new SagaUnit(FourCC("U01D"), 5, 45, 45, 60, new Vector2D(17333, -7358))],
@@ -223,7 +223,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     )],
 
     // garlic jr
-    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 60, 800, 350, 850, new Vector2D(-2200, 28000),
+    ["Garlic Jr 2", new SagaUnit(FourCC("U00D"), 60, 800, 350, 850, new Vector2D(24500, 20700),
       [
         SagaAbilities.Saga.GENERIC_BEAM, 
         SagaAbilities.Saga.GENERIC_BOMB
@@ -232,10 +232,10 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.DEAD_ZONE_FRAGMENT,
       ]
     )],
-    ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(-2500, 27000))],
-    ["Vinegar", new SagaUnit(FourCC("U00F"), 10, 500, 300, 600, new Vector2D(-1000, 26000))],
-    ["Mustard", new SagaUnit(FourCC("U00G"), 10, 600, 300, 500, new Vector2D(-3500, 26000))],
-    ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(-2000, 27000))],
+    ["Salt", new SagaUnit(FourCC("U00E"), 8, 500, 300, 600, new Vector2D(25000, 19500))],
+    ["Vinegar", new SagaUnit(FourCC("U00F"), 10, 500, 300, 600, new Vector2D(24000, 19000))],
+    ["Mustard", new SagaUnit(FourCC("U00G"), 10, 600, 300, 500, new Vector2D(25500, 19200))],
+    ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(24300, 20100))],
 
     // cooler's revenge
     ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(4400, 9300),
@@ -256,6 +256,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
     ["Metal Cooler 2", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25100, 30000),
       [
@@ -263,6 +266,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
     ["Metal Cooler 3", new SagaUnit(FourCC("H01A"), 25, 1800, 400, 2000, new Vector2D(25000, 30100),
       [
@@ -270,6 +276,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cooler.NOVA_CHARIOT,
         SagaAbilities.Cooler.GETI_STAR_REPAIR,
       ],
+      [
+        ItemConstants.SagaDrops.GETI_STAR_FRAGMENT
+      ]
     )],
 
     // trunks saga
@@ -364,7 +373,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Cell.KAMEHAMEHA,
       ],
     )],
-    ["Semiperfect Cell", new SagaUnit(FourCC("H00F"), 70, 5000, 400, 5000, new Vector2D(30500, 16000),
+    ["Semiperfect Cell", new SagaUnit(FourCC("H00F"), 70, 5000, 400, 5000, new Vector2D(30000, 15500),
       [
         SagaAbilities.Cell.KAMEHAMEHA,
         SagaAbilities.Cell.SPECIAL_BEAM_CANNON,
@@ -463,6 +472,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.Broly.GIGANTIC_ROAR,
         SagaAbilities.Broly.GIGANTIC_OMEGASTORM,
       ],
+      [
+        ItemConstants.SagaDrops.BROLY_FUR
+      ]
     )],
 
     // bojack unbound
@@ -567,6 +579,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         SagaAbilities.SuperJanemba.HELLS_GATE,
         SagaAbilities.SuperJanemba.LIGHTNING_SHOWER_RAIN,
       ],
+      [
+        ItemConstants.SagaDrops.DIMENSION_SWORD
+      ]
     )],
 
     // buu saga
@@ -822,5 +837,6 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
         ItemConstants.SagaDrops.RAINBOW_SHELL,
       ]
     )],
+
   ],
 );

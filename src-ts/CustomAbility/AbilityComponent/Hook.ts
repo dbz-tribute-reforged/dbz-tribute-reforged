@@ -26,6 +26,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   protected nearbyUnitCoord: Vector2D;
 
   protected hookedGroup: group;
+  protected pierceGroup: group;
 
   constructor(
     public name: string = "Hook",
@@ -43,6 +44,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     public speed: number = 120,
     public aoe: number = 120,
     public onlyHookHeroes: boolean = false,
+    public enablePierce: boolean = true,
     public useLastCastPoint: boolean = true,
     public sfxList: SfxData[] = [],
   ) {
@@ -58,6 +60,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.nextCoord = new Vector2D();
     this.nearbyUnitCoord = new Vector2D();
     this.hookedGroup = CreateGroup();
+    this.pierceGroup = CreateGroup();
   }
   
   protected calculateDamage(input: CustomAbilityInput): number {
@@ -79,20 +82,43 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     return this;
   }
   
-  hookClosestUnit(hookedGroup: group, casterPlayer: player): this { 
+  hookClosestUnit(hookedGroup: group, casterPlayer: player, input: CustomAbilityInput): this { 
     let closestDistance = this.aoe + 1;
     ForGroup(hookedGroup, () => {
       const nearbyUnit = GetEnumUnit();
       // change hook condition, if want to hook allies
-      if (UnitHelper.isUnitTargetableForPlayer(nearbyUnit, casterPlayer)) {
-        if (!this.onlyHookHeroes || IsUnitType(nearbyUnit, UNIT_TYPE_HERO)) {
-          this.nearbyUnitCoord.setPos(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit));
-          const distance = CoordMath.distance(
-            this.hookCoords, this.nearbyUnitCoord
+      if (
+        UnitHelper.isUnitTargetableForPlayer(nearbyUnit, casterPlayer)
+        && UnitHelper.isUnitAlive(nearbyUnit)
+      ) {
+
+        if (
+          this.enablePierce && 
+          !IsUnitInGroup(nearbyUnit, this.pierceGroup)
+        ) {
+          GroupAddUnit(this.pierceGroup, nearbyUnit);
+          UnitDamageTarget(
+            input.caster.unit, 
+            nearbyUnit, 
+            this.calculateDamage(input),
+            true,
+            false,
+            this.damageData.attackType,
+            this.damageData.damageType,
+            this.damageData.weaponType,
           );
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            this.hookedUnit = nearbyUnit;
+        }
+
+        if (UnitHelper.isUnitAlive(nearbyUnit)) {
+          if (!this.onlyHookHeroes || IsUnitType(nearbyUnit, UNIT_TYPE_HERO)) {
+            this.nearbyUnitCoord.setPos(GetUnitX(nearbyUnit), GetUnitY(nearbyUnit));
+            const distance = CoordMath.distance(
+              this.hookCoords, this.nearbyUnitCoord
+            );
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              this.hookedUnit = nearbyUnit;
+            }
           }
         }
       }
@@ -100,7 +126,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     return this;
   }
 
-  hookNearbyUnits(aoe: number, casterPlayer: player): this {
+  hookNearbyUnits(aoe: number, casterPlayer: player, input: CustomAbilityInput): this {
     GroupEnumUnitsInRange(
       this.hookedGroup, 
       this.hookCoords.x, 
@@ -108,7 +134,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       aoe,
       null
     );
-    this.hookClosestUnit(this.hookedGroup, casterPlayer);
+    this.hookClosestUnit(this.hookedGroup, casterPlayer, input);
 
     GroupClear(this.hookedGroup);
     return this;
@@ -155,22 +181,24 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       ) {
         // hook forwards
         this.moveHook(this.speed);
-        this.hookNearbyUnits(this.aoe, input.casterPlayer);
+        this.hookNearbyUnits(this.aoe, input.casterPlayer, input);
         if (this.hookedUnit) {
           this.hookPause = IsUnitPaused(this.hookedUnit);
           if (!this.hookPause) {
             PauseUnit(this.hookedUnit, true);
           }
-          UnitDamageTarget(
-            input.caster.unit, 
-            this.hookedUnit, 
-            this.calculateDamage(input),
-            true,
-            false,
-            this.damageData.attackType,
-            this.damageData.damageType,
-            this.damageData.weaponType,
-          )
+          if (!this.enablePierce) {
+            UnitDamageTarget(
+              input.caster.unit, 
+              this.hookedUnit, 
+              this.calculateDamage(input),
+              true,
+              false,
+              this.damageData.attackType,
+              this.damageData.damageType,
+              this.damageData.weaponType,
+            );
+          }
         }
       } else if (this.currentRange > 0) {
         // hook backwards
@@ -204,6 +232,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   }
 
   reset() {
+    GroupClear(this.pierceGroup);
     this.currentRange = 0;
     this.startedHook = false;
     if (this.hookedUnit) {
@@ -218,6 +247,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
   cleanup() {
     this.reset();
     DestroyGroup(this.hookedGroup);
+    DestroyGroup(this.pierceGroup);
   }
   
 
@@ -225,7 +255,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     return new Hook(
       this.name, this.repeatInterval, this.startTick, this.endTick, 
       this.damageData, this.maxRange, this.speed, this.aoe, 
-      this.onlyHookHeroes, this.useLastCastPoint,
+      this.onlyHookHeroes, this.enablePierce, this.useLastCastPoint,
       this.sfxList,
     );
   }
@@ -247,16 +277,19 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
       speed: number,
       aoe: number,
       onlyHookHeroes: boolean,
+      enablePierce: boolean,
       useLastCastPoint: boolean,
       sfxList: {
         model: string;
         repeatInterval: number;
         group: number;
         scale: number;
+        endScale: number;
         startHeight: number;
         endHeight: number;
         extraDirectionalYaw: number;
         extraPitch: number;
+        extraRoll: number;
         animSpeed: number;
         color: {
           x: number,
@@ -278,6 +311,7 @@ export class Hook implements AbilityComponent, Serializable<Hook> {
     this.speed = input.speed;
     this.aoe = input.aoe;
     this.onlyHookHeroes = input.onlyHookHeroes;
+    this.enablePierce = input.enablePierce;
     this.useLastCastPoint = input.useLastCastPoint;
     for (const sfx of input.sfxList) {
       this.sfxList.push(new SfxData().deserialize(sfx));

@@ -1,13 +1,11 @@
-import { CustomAbility, CostType } from "./CustomAbility";
+import { CustomAbility } from "./CustomAbility";
 import { AbilityComponent } from "./AbilityComponent/AbilityComponent";
 import { BeamComponent } from "./AbilityComponent/BeamComponent";
 import { SfxComponent } from "./AbilityComponent/SfxComponent";
-import { GroundVortex } from "./AbilityComponent/GroundVortex";
 import { AOEDamage } from "./AbilityComponent/AOEDamage";
 import { AOEDamageComponents } from "./AbilityData/AOEDamageComponents";
 import { AOEKnockbackComponents } from "./AbilityData/AOEKnockbackComponents";
 import { AOEKnockback } from "./AbilityComponent/AOEKnockback";
-import { GroundVortexComponents } from "./AbilityData/GroundVortexComponents";
 import { SwordSlashComponents } from "./AbilityData/SwordSlashComponents";
 import { SwordSlash } from "./AbilityComponent/SwordSlash";
 import { BeamComponents } from "./AbilityData/BeamComponents";
@@ -27,8 +25,6 @@ import { ChannellingComponents } from "./AbilityData/ChannellingComponents";
 import { Channelling } from "./AbilityComponent/Channelling";
 import { TimedLifeComponents } from "./AbilityData/TimedLifeComponents";
 import { TimedLife } from "./AbilityComponent/TimedLife";
-import { SummonComponents } from "./AbilityData/SummonComponents";
-import { Summon } from "./AbilityComponent/Summon";
 import { DashComponents } from "./AbilityData/DashComponents";
 import { Dash } from "./AbilityComponent/Dash";
 import { HookComponents } from "./AbilityData/HookComponents";
@@ -44,13 +40,15 @@ import { TeleportComponents } from "./AbilityData/TeleportComponents";
 import { Teleport } from "./AbilityComponent/Teleport";
 import { TempAbilityComponents } from "./AbilityData/TempAbilityComponents";
 import { TempAbility } from "./AbilityComponent/TempAbility";
-import { AOEDebuffComponents } from "./AbilityData/AOEDebuffComponents";
 import { AOEDebuff } from "./AbilityComponent/AOEDebuff";
 import { Hooks } from "Libs/TreeLib/Hooks";
 import { JumpComponents } from "./AbilityData/JumpComponents";
 import { Jump } from "./AbilityComponent/Jump";
 import { AOEHeal } from "./AbilityComponent/AOEHeal";
 import { AOEHealComponents } from "./AbilityData/AOEHealComponents";
+import { AOEDebuffComponents } from "./AbilityData/AOEDebuffComponents";
+import { AnimationComponents } from "./AbilityData/AnimationComponents";
+import { AnimationComponent } from "./AbilityComponent/AnimationComponent";
 
 export class CustomAbilityManager {
   private static instance: CustomAbilityManager; 
@@ -77,6 +75,10 @@ export class CustomAbilityManager {
       this.setComponent(new SfxComponent().deserialize(component));
     }
 
+    for (const component of AnimationComponents) {
+      this.setComponent(new AnimationComponent().deserialize(component));
+    }
+
     // create components then
     // save components into the components map
     for (const component of AOEDamageComponents) {
@@ -95,12 +97,6 @@ export class CustomAbilityManager {
       this.setComponent(new AOEKnockback().deserialize(component));
     }
 
-    // this component has been deprecated
-    // it is superseded by the AOEDebuff component
-    // for (const component of AOEStunComponents) {
-    //   this.setComponent(new AOEStun().deserialize(component));
-    // }
-
     for (const component of BarrierComponents) {
       this.setComponent(new Barrier().deserialize(component));
     }
@@ -116,11 +112,6 @@ export class CustomAbilityManager {
     for (const component of DashComponents) {
       this.setComponent(new Dash().deserialize(component));
     }
-
-    // cant add cause of weird error
-    // for (const component of DeflectorComponents) {
-    //   this.setComponent(new Deflector().deserialize(component));
-    // }
 
     for (const component of DodgeComponents) {
       this.setComponent(new Dodge().deserialize(component));

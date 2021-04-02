@@ -298,10 +298,6 @@ export class BrolyDBSSaga extends AdvancedSaga implements Saga {
     
     this.broly = this.bosses[0];
 
-    if (this.broly) {
-      UnitAddItemById(this.broly, ItemConstants.SagaDrops.BROLY_FUR);
-    }
-
     for (const boss of this.bosses) {
       SetUnitAcquireRange(boss, 9000);
     }

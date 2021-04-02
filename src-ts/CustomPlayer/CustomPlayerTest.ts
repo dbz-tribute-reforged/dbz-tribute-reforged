@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id, Globals } from "Common/Constants";
+import { Constants, Id, Globals, BASE_DMG } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -18,6 +18,7 @@ import { CoordMath } from "Common/CoordMath";
 import { PathingCheck } from "Common/PathingCheck";
 import { TournamentData } from "Core/TournamentSystem/TournamentData";
 import { SoundHelper } from "Common/SoundHelper";
+import { DamageData } from "Common/DamageData";
 
 // global?
 export const customPlayers: CustomPlayer[] = [];
@@ -1006,13 +1007,6 @@ export function CustomPlayerTest() {
     }
     */
     // SetPlayerAllianceStateBJ(Constants.sagaPlayer, udg_TempPlayer, bj_ALLIANCE_ALLIED_VISION)
-  
-    // force budokai
-    const forceBudokaiTrig = CreateTrigger();
-    TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
-    TriggerAddAction(forceBudokaiTrig, () => {
-      TournamentManager.getInstance().startTournament(Constants.budokaiName);
-    });
 
     // force set unit skin
     const setUnitSkin = CreateTrigger();
@@ -1116,7 +1110,7 @@ export function CustomPlayerTest() {
   TriggerAddAction(freeModeTrig, () => {
     if (GetTriggerPlayer() == hostPlayer) {
       Globals.isFreemode = true;
-      if (SubString(GetEventPlayerChatString(), 0, 9) == "-fbsimtest") {
+      if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
         Globals.isFBSimTest =  true;
       }
     }
@@ -1127,11 +1121,22 @@ export function CustomPlayerTest() {
   const forceFinalBattleTrig = CreateTrigger();
   TriggerRegisterPlayerChatEvent(forceFinalBattleTrig, Player(0), "-forcefinalbattletest", true);
   TriggerAddAction(forceFinalBattleTrig, () => {
-    TournamentManager.getInstance().addFinalBattle();
-    TimerStart(CreateTimer(), 5.0, false, () => {
-      TournamentManager.getInstance().startTournament(Constants.finalBattleName);
-      DestroyTimer(GetExpiredTimer());
-    })
+    if (Globals.isFBSimTest && Globals.isFreemode) {
+      TournamentManager.getInstance().addFinalBattle();
+      TimerStart(CreateTimer(), 5.0, false, () => {
+        TournamentManager.getInstance().startTournament(Constants.finalBattleName);
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  });
+
+  // force budokai
+  const forceBudokaiTrig = CreateTrigger();
+  TriggerRegisterPlayerChatEvent(forceBudokaiTrig, Player(0), "-forcebudokaitest", true);
+  TriggerAddAction(forceBudokaiTrig, () => {
+    if (Globals.isFBSimTest && Globals.isFreemode) {
+      TournamentManager.getInstance().startTournament(Constants.budokaiName);
+    }
   });
 
   const memesOff = CreateTrigger();
@@ -1235,6 +1240,7 @@ export function CustomPlayerTest() {
     SetupDragonFistSfx(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupGinyuChangeNow(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupGinyuTelekinesis(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupGuldoTimeStop(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupOmegaShenronShadowFist(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupKrillinSenzuThrow(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupJirenGlare(independentSpellTrigger, independentSpellHashtable, customPlayers);
@@ -1244,6 +1250,11 @@ export function CustomPlayerTest() {
 
     SetupDartSpells(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SetupMadnessDebuff(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
+    SetupAylaCharm(independentSpellTrigger, independentSpellHashtable, customPlayers);
+    SetupMagusDarkMatter(independentSpellTrigger, independentSpellHashtable, customPlayers);
+
+    // SetupAylaTripleKick(independentSpellTrigger, independentSpellHashtable, customPlayers);
 
     SetupCustomAbilityRefresh(independentSpellTrigger, independentSpellHashtable, customPlayers);
     SoundHelper.SetupSpellSoundEffects();
@@ -1271,7 +1282,7 @@ export function SetupBraveSwordAttack(
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = 0.25 * 1.45;
+  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.45;
   const braveSwordManaBurnMult = 0.01;
 
   TriggerAddAction(spellTrigger, () => {
@@ -1463,6 +1474,49 @@ export function SetupDragonFistSfx(
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
 ) {
+  const sfxHeadModel = "DragonHead2.mdl";
+  const sfxSpiralModel = "DragonSegment2.mdl";
+
+  const sfxShadowHeadModel = "RedDragonHead.mdl";
+  const sfxShadowSpiralModel = "RedDragonSegment.mdl";
+
+  const sfxDinoTail = "DinoTail.mdl";
+  const sfxDinoTailSpiral = "DinoSegment.mdl";
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (
+      spellId == Id.dragonFist 
+      || spellId == Id.superDragonFist 
+      || spellId == Id.shadowFist
+      || spellId == Id.aylaDinoTail
+    ) {
+      const caster = GetTriggerUnit();
+      switch (spellId) 
+      {
+        case Id.aylaDinoTail:
+          DoDragonFistSFX(caster, sfxDinoTail, sfxDinoTailSpiral);
+          break;
+        
+        case Id.shadowFist:
+          DoDragonFistSFX(caster, sfxShadowHeadModel, sfxShadowSpiralModel);
+          break;
+
+        case Id.dragonFist:
+        case Id.superDragonFist:
+        default:
+          DoDragonFistSFX(caster, sfxHeadModel, sfxSpiralModel);
+          break;
+      }
+    }
+  });
+}
+
+export function DoDragonFistSFX(
+  caster: unit,
+  headModel: string,
+  spiralModel: string,
+) {
   const tickRate = 0.02;
   const updatesPerTick = 1;
   // const duration = 45;
@@ -1482,127 +1536,107 @@ export function SetupDragonFistSfx(
   const sfxRed = 255;
   const sfxGreen = 205;
   const sfxBlue = 25;
-  const sfxSpiralModel = "DragonSegment2.mdl";
-  const sfxHeadModel = "DragonHead2.mdl";
-  const sfxAltSpiralModel = "RedDragonSegment.mdl";
-  const sfxAltHeadModel = "RedDragonHead.mdl";
 
-  TriggerAddAction(spellTrigger, () => {
-    const spellId = GetSpellAbilityId();
-    if (spellId == Id.dragonFist || spellId == Id.superDragonFist || spellId == Id.shadowFist) {
-      const caster = GetTriggerUnit();
-      let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
-      let oldPos = new Vector2D(casterPos.x, casterPos.y);
-      let currentPos = new Vector2D(0, 0);
-      let newPos = new Vector2D(0, 0);
+  let casterPos = new Vector2D(GetUnitX(caster), GetUnitY(caster));
+  let oldPos = new Vector2D(casterPos.x, casterPos.y);
+  let currentPos = new Vector2D(0, 0);
+  let newPos = new Vector2D(0, 0);
 
-      // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
-      const sfxList: effect[] = [];
-      let sfxIndex = 0;
-      let sfxHead = GetLastCreatedEffectBJ();
-      if (spellId == Id.shadowFist) {
-        sfxHead = AddSpecialEffect(sfxAltHeadModel, casterPos.x, casterPos.y);
-      } else {
-        sfxHead = AddSpecialEffect(sfxHeadModel, casterPos.x, casterPos.y);
-      }
-      BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
-      BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
-      sfxList.push(sfxHead);  
-      ++sfxIndex;
+  // const targetPos = customPlayers[GetPlayerId(GetTriggerPlayer())].orderPoint;
+  const sfxList: effect[] = [];
+  let sfxIndex = 0;
+  const sfxHead = AddSpecialEffect(headModel, casterPos.x, casterPos.y);
+  BlzSetSpecialEffectScale(sfxHead, sfxHeadScale);
+  BlzSetSpecialEffectColor(sfxHead, sfxRed, sfxGreen, sfxBlue);
+  sfxList.push(sfxHead);  
+  ++sfxIndex;
 
-      let duration = baseDuration;
+  let duration = baseDuration;
 
-      let time = 0; 
-      TimerStart(CreateTimer(), tickRate, true, () => {
-        oldPos.setVector(casterPos);
-        casterPos.setUnit(caster);
-        const distanceTravelled = CoordMath.distance(casterPos, oldPos);
-        let facingAngle = GetUnitFacing(caster);
-        // if (distanceTravelled < 1) {
-        //   facingAngle = GetUnitFacing(caster);
-        // } else {
-        //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
-        // }
-        const bonusUpdates = Math.min(
-          25,
-          Math.floor(distanceTravelled * bonusUpdatesPerDistance)
-        );
-        const updatesThisTick = updatesPerTick + bonusUpdates;
-        const segmentedDistance = distanceTravelled / updatesThisTick;
+  let time = 0; 
+  TimerStart(CreateTimer(), tickRate, true, () => {
+    oldPos.setVector(casterPos);
+    casterPos.setUnit(caster);
+    const distanceTravelled = CoordMath.distance(casterPos, oldPos);
+    let facingAngle = GetUnitFacing(caster);
+    // if (distanceTravelled < 1) {
+    //   facingAngle = GetUnitFacing(caster);
+    // } else {
+    //   facingAngle = CoordMath.angleBetweenCoords(oldPos, casterPos) + 360;
+    // }
+    const bonusUpdates = Math.min(
+      25,
+      Math.floor(distanceTravelled * bonusUpdatesPerDistance)
+    );
+    const updatesThisTick = updatesPerTick + bonusUpdates;
+    const segmentedDistance = distanceTravelled / updatesThisTick;
 
-        duration += updatesThisTick - 1;
-        for (let i = 0; i < updatesThisTick; ++i) {    
-          if (time > duration) {
-            for (const removeSfx of sfxList) {
-              DestroyEffect(removeSfx);
-            }
-            DestroyTimer(GetExpiredTimer());
-          } else {
-            const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
-            const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
-            // const timeRatio = (maxTimeBasedDistanceMult);
-            const x = timeRatio * distanceFromMiddle * Math.cos(angle);
-            const y = timeRatio * distanceFromMiddle * Math.sin(angle);
-            const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
-            (
-              heightOffset + y
-            );
-
-            currentPos.polarProjectCoords(
-              oldPos, 
-              facingAngle, 
-              (i+1) * distanceTravelled / updatesThisTick
-            );
-            newPos.polarProjectCoords(
-              currentPos, 
-              facingAngle - 90, 
-              x
-            );
-            let yawModifier = 1;
-            if (y < 0) {
-              yawModifier = 1;
-            }
-            const yaw = CoordMath.degreesToRadians * (
-              facingAngle + yawModifier * (
-                90 - Math.min(90, segmentedDistance)
-              )
-            );
-            // const targetYaw = facingAngle * CoordMath.degreesToRadians;
-
-            const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
-
-            let sfx = GetLastCreatedEffectBJ();
-            if (spellId == Id.shadowFist) {
-              sfx = AddSpecialEffect(sfxAltSpiralModel, newPos.x, newPos.y);
-            } else {
-              sfx = AddSpecialEffect(sfxSpiralModel, newPos.x, newPos.y);
-            }
-            // sfxList.push(sfx);
-            // ++sfxIndex;
-            DestroyEffect(sfx);
-            BlzSetSpecialEffectScale(sfx, sfxScale);
-            BlzSetSpecialEffectHeight(sfx, height);
-            BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
-            // BlzSetSpecialEffectYaw(sfx, targetYaw);
-            BlzSetSpecialEffectYaw(sfx, yaw);
-            BlzSetSpecialEffectPitch(sfx, pitch);
-            //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
-            //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
-            //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
-            // );
-
-            // update dragon head
-            if (i >= updatesThisTick - 1) {
-              BlzSetSpecialEffectX(sfxHead, newPos.x);
-              BlzSetSpecialEffectY(sfxHead, newPos.y);
-              BlzSetSpecialEffectHeight(sfxHead, height);
-              BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
-              // BlzSetSpecialEffectPitch(sfxHead, pitch);
-            }
-          }
-          ++time;
+    duration += updatesThisTick - 1;
+    for (let i = 0; i < updatesThisTick; ++i) {    
+      if (time > duration) {
+        for (const removeSfx of sfxList) {
+          DestroyEffect(removeSfx);
         }
-      });
+        DestroyTimer(GetExpiredTimer());
+      } else {
+        const angle = (startingAngle + time * anglesPerTick) * CoordMath.degreesToRadians;
+        const timeRatio = (maxTimeBasedDistanceMult - Math.min(1, time / baseDuration));
+        // const timeRatio = (maxTimeBasedDistanceMult);
+        const x = timeRatio * distanceFromMiddle * Math.cos(angle);
+        const y = timeRatio * distanceFromMiddle * Math.sin(angle);
+        const height = GetUnitFlyHeight(caster) + BlzGetUnitZ(caster) + 
+        (
+          heightOffset + y
+        );
+
+        currentPos.polarProjectCoords(
+          oldPos, 
+          facingAngle, 
+          (i+1) * distanceTravelled / updatesThisTick
+        );
+        newPos.polarProjectCoords(
+          currentPos, 
+          facingAngle - 90, 
+          x
+        );
+        let yawModifier = 1;
+        if (y < 0) {
+          yawModifier = 1;
+        }
+        const yaw = CoordMath.degreesToRadians * (
+          facingAngle + yawModifier * (
+            90 - Math.min(90, segmentedDistance)
+          )
+        );
+        // const targetYaw = facingAngle * CoordMath.degreesToRadians;
+
+        const pitch = (startingAngle - startingPitch + yawModifier *  time * anglesPerTick) * CoordMath.degreesToRadians;
+
+        const sfx = AddSpecialEffect(spiralModel, newPos.x, newPos.y);
+        // sfxList.push(sfx);
+        // ++sfxIndex;
+        DestroyEffect(sfx);
+        BlzSetSpecialEffectScale(sfx, sfxScale);
+        BlzSetSpecialEffectHeight(sfx, height);
+        BlzSetSpecialEffectColor(sfx, sfxRed, sfxGreen, sfxBlue);
+        // BlzSetSpecialEffectYaw(sfx, targetYaw);
+        BlzSetSpecialEffectYaw(sfx, yaw);
+        BlzSetSpecialEffectPitch(sfx, pitch);
+        //   "Angle: " + (angle * CoordMath.radiansToDegrees) + 
+        //   " Yaw: " + (yaw * CoordMath.radiansToDegrees) + 
+        //   " Pitch: " + (pitch * CoordMath.radiansToDegrees)
+        // );
+
+        // update dragon head
+        if (i >= updatesThisTick - 1) {
+          BlzSetSpecialEffectX(sfxHead, newPos.x);
+          BlzSetSpecialEffectY(sfxHead, newPos.y);
+          BlzSetSpecialEffectHeight(sfxHead, height);
+          BlzSetSpecialEffectYaw(sfxHead, facingAngle * CoordMath.degreesToRadians);
+          // BlzSetSpecialEffectPitch(sfxHead, pitch);
+        }
+      }
+      ++time;
     }
   });
 }
@@ -1773,12 +1807,35 @@ export function SetupGinyuTelekinesis(
   });
 }
 
+export function SetupGuldoTimeStop(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const originalBAT: number = 1.8;
+  const timeStopBAT: number = 0.4;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.guldoTimeStop) {
+      const caster = GetTriggerUnit();
+      BlzSetUnitAttackCooldown(caster, timeStopBAT, 0);
+
+      TimerStart(CreateTimer(), 2.0, false, () => {
+        BlzSetUnitAttackCooldown(caster, originalBAT, 0);
+        DestroyTimer(GetExpiredTimer());
+      });
+    }
+  });
+  
+}
+
 export function SetupOmegaShenronShadowFist(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
   customPlayers: CustomPlayer[]
 ) {
-  const shadowFistId = FourCC("A0QL");
+  const shadowFistId = Id.shadowFist;
   const shadowFistAOE = 350;
   const shadowFistDuration = 48;
   const tickRate = 0.03;
@@ -1975,8 +2032,8 @@ export function SetupJirenGlare(
   const dummyStunOrder = 852095;
   const glareDuration = 2.5;
   const maxGlareDistance = 2500;
-  const glareDamageMult = 0.25 * 0.53;
-  const glare2DamageMult = 0.25 * 0.75;
+  const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.53;
+  const glare2DamageMult = BASE_DMG.DFIST_EXPLOSION * 0.75;
   const glare2StrDiffMult = 1.1;
   const sourceLoc = new Vector2D(0,0);
   const targetLoc = new Vector2D(0,0);
@@ -2380,6 +2437,285 @@ export function SetupMadnessDebuff(
   });
 }
 
+export function SetupMagusDarkMatter(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const darkMatterDamage: DamageData = new DamageData(
+    BASE_DMG.SPIRIT_BOMB_DPS * 0.1,
+    bj_HEROSTAT_INT,
+    ATTACK_TYPE_HERO,
+    DAMAGE_TYPE_NORMAL, 
+    WEAPON_TYPE_WHOKNOWS
+  );
+  const closenessDamageMult = 1.0;
+  const durationDamageMult = 1.0;
+  const aoe = 750;
+  const angle = 75;
+  const closenessAngle = 90 + 12;
+  const distance = 40;
+  const closenessDistanceMult = -0.25;
+  const maxDuration = 66;
+  const targetPos = new Vector2D();
+  const tmpGroup = CreateGroup();
+  
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.magusDarkMatter) {
+      const caster = GetTriggerUnit();
+      const player = GetOwningPlayer(caster);
+      const playerId = GetPlayerId(player);
+      const customHero = customPlayers[playerId].getCustomHero(caster);
+      const abilityLevel = GetUnitAbilityLevel(caster, spellId);
+      const currentPos = new Vector2D();
+
+      if (customHero) {
+        currentPos.setUnit(caster);
+        let currentTick = 0;
+        TimerStart(CreateTimer(), 0.03, true, () => {
+          if (currentTick >= maxDuration) {
+            DestroyTimer(GetExpiredTimer());
+          } else {
+            const durationRatio = currentTick / Math.max(1, maxDuration);
+            performGroundVortex(
+              customHero,
+              player,
+              abilityLevel,
+              darkMatterDamage,
+              closenessDamageMult,
+              durationDamageMult,
+              aoe,
+              angle,
+              closenessAngle,
+              distance,
+              closenessDistanceMult,
+              durationRatio,
+              currentPos,
+              targetPos,
+              tmpGroup
+            );
+            ++currentTick;
+          }
+        });
+      }
+    }
+  });
+}
+
+export function groundVortexDamageTarget(
+  target: unit,
+  caster: CustomHero,
+  level: number,
+  damage: DamageData,
+  closenessDamageMult: number,
+  closenessRatio: number,
+  durationDamageMult: number,
+  durationRatio: number,
+) {
+  let damageThisTick = level * caster.spellPower * damage.multiplier * 
+    (
+      CustomAbility.BASE_DAMAGE + 
+      GetHeroStatBJ(damage.attribute, caster.unit, true)
+    ) *
+    (
+      (1 + closenessDamageMult * closenessRatio) * 
+      (1 + durationDamageMult * durationRatio)
+    )
+  ;
+
+  UnitDamageTarget(
+    caster.unit, 
+    target,
+    damageThisTick,
+    true,
+    false,
+    damage.attackType,
+    damage.damageType,
+    damage.weaponType
+  );
+}
+
+export function performGroundVortex(
+  caster: CustomHero,
+  casterPlayer: player,
+  level: number,
+  damage: DamageData,
+  closenessDamageMult: number,
+  durationDamageMult: number,
+  aoe: number,
+  angle: number,
+  closenessAngle: number,
+  distance: number,
+  closenessDistanceMult: number,
+  durationRatio: number,
+  currentPos: Vector2D,
+  targetPos: Vector2D,
+  tmpGroup: group
+) {
+  GroupClear(tmpGroup);
+  GroupEnumUnitsInRange(
+    tmpGroup, 
+    currentPos.x, 
+    currentPos.y, 
+    aoe,
+    null
+  );
+
+  // this.currentCoord.setUnit(input.caster.unit);
+  ForGroup(tmpGroup, () => {
+    const target = GetEnumUnit();
+    if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer)) {
+
+      targetPos.setUnit(target);
+      const targetDistance = CoordMath.distance(currentPos, targetPos);
+
+      // closenessRatio = 1 at 0 distance, 0 at max distance
+      const closenessRatio = 1 - (targetDistance / Math.max(1, aoe));
+
+      const projectionAngle = 
+        angle + 
+        (closenessAngle - angle) * closenessRatio + 
+        CoordMath.angleBetweenCoords(currentPos, targetPos);
+      
+      const projectionDistance = 
+        distance + 
+        (closenessDistanceMult * distance) * closenessRatio;
+      
+      targetPos.polarProjectCoords(
+        targetPos, 
+        projectionAngle,
+        projectionDistance
+      );
+
+      PathingCheck.moveGroundUnitToCoord(target, targetPos);
+      groundVortexDamageTarget(
+        target,
+        caster,
+        level,
+        damage,
+        closenessDamageMult,
+        durationDamageMult,
+        closenessRatio,
+        durationRatio
+      );
+    }
+  });
+
+  GroupClear(tmpGroup);
+}
+
+
+export function SetupAylaCharm(
+  spellTrigger: trigger, 
+  spellHashtable: hashtable, 
+  customPlayers: CustomPlayer[]
+) {
+  const charmDuration = 10.0;
+  const maxHPReduction = 0.13;
+  const allyHPModifier = 0.5;
+  const stealThreshold = 0.5;
+
+  TriggerAddAction(spellTrigger, () => {
+    const spellId = GetSpellAbilityId();
+    if (spellId == Id.aylaCharm) {
+      const caster = GetTriggerUnit();
+      const casterPlayer = GetOwningPlayer(caster);
+      const target = GetSpellTargetUnit();
+      
+      if (UnitHelper.isUnitTargetableForPlayer(target, casterPlayer, true)) {
+        const targetMaxHP = GetUnitState(target, UNIT_STATE_MAX_LIFE);
+        let hpReduction = maxHPReduction * targetMaxHP;
+        if (IsUnitAlly(target, casterPlayer)) {
+          hpReduction *= allyHPModifier;
+        }
+        
+        // temporarily reduce hp
+        // amount is lesser for allied targets
+        const newHP = Math.max(
+          50,
+          GetUnitState(target, UNIT_STATE_LIFE)
+          - hpReduction
+        );
+        SetUnitState(target, UNIT_STATE_LIFE, newHP);
+        
+        // restore reduced hp
+        TimerStart(CreateTimer(), charmDuration, false, () => {
+          if (UnitHelper.isUnitAlive(target)) {
+            const restoredHP = Math.max(
+              50,
+              GetUnitState(target, UNIT_STATE_LIFE)
+              + maxHPReduction * GetUnitState(target, UNIT_STATE_MAX_LIFE)
+            );
+            SetUnitState(target, UNIT_STATE_LIFE, restoredHP);
+
+            DestroyEffect(
+              AddSpecialEffect(
+                "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+                GetUnitX(target), GetUnitY(target)
+              )
+            );
+          }
+
+          DestroyTimer(GetExpiredTimer());
+        });
+
+        if (
+          GetOwningPlayer(target) == Constants.sagaPlayer
+          && newHP <= stealThreshold * targetMaxHP
+        ) {
+          const casterInventoryCount = UnitInventoryCount(caster);
+          for (let i = 0; i < 6; ++i) {
+            const item = UnitItemInSlot(target, i);
+            if (item) {
+              if (casterInventoryCount <= 5) {
+                UnitAddItem(caster, item);
+              } else {
+                SetItemPosition(item, GetUnitX(caster), GetUnitY(caster));
+              }
+              break;
+            }
+          }
+        }
+      }
+
+    }
+  });
+
+}
+
+// export function SetupAylaTripleKick(
+//   spellTrigger: trigger, 
+//   spellHashtable: hashtable, 
+//   customPlayers: CustomPlayer[]
+// ) {
+//   const tripleKickMaxCast: number = 3;
+//   const tripleKickLongCooldown: number = 30.0;
+
+//   /**
+//    * hashtable
+//    * 0: counter
+//    */
+
+//   TriggerAddAction(spellTrigger, () => {
+//     const spellId = GetSpellAbilityId();
+//     if (spellId == Id.aylaTripleKick) {
+//       const unit = GetTriggerUnit();
+//       const unitId = GetHandleId(unit);
+//       let counter = LoadInteger(spellHashtable, unitId, 0) + 1;
+
+//       if (counter >= tripleKickMaxCast) {
+//         counter = 0;
+//         // force long cd
+//         BlzStartUnitAbilityCooldown(unit, spellId, tripleKickLongCooldown);
+//       }
+
+//       SaveInteger(spellHashtable, unitId, 0, counter);
+//     }
+//   });
+
+// }
+
 export function SetupCustomAbilityRefresh(
   spellTrigger: trigger, 
   spellHashtable: hashtable, 
@@ -2414,7 +2750,7 @@ export function SetupCustomAbilityRefresh(
 export function createCdTrigger() {
   // reset cd of custom ability
   const cdTrig = CreateTrigger();
-  for (let i = 0; i < bj_MAX_PLAYERS; ++i) {
+  for (let i = 0; i < Constants.maxActivePlayers; ++i) {
     TriggerRegisterPlayerChatEvent(cdTrig, Player(i), "-cd", true);
   }
   TriggerAddAction(cdTrig, () => {
@@ -2434,3 +2770,4 @@ export function createCdTrigger() {
     }
   });
 }
+

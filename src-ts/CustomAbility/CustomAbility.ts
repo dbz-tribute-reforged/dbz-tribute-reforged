@@ -2,12 +2,10 @@ import { Icon } from "Common/Icon";
 import { Tooltip } from "Common/Tooltip";
 import { AbilityComponent, ComponentConstants } from "./AbilityComponent/AbilityComponent";
 import { CustomAbilityInput } from "./CustomAbilityInput";
-import { AbilitySfxHelper } from "./AbilitySfxHelper";
 import { UnitHelper } from "Common/UnitHelper";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { Colorizer } from "Common/Colorizer";
 import { AddableComponent } from "./AbilityComponent/AddableComponent";
-import { SfxData } from "Common/SfxData";
 
 export enum CostType {
   HP = "Life",

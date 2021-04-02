@@ -29,10 +29,6 @@ export class JanembaSaga extends AdvancedSaga implements Saga {
     this.janemba = this.bosses[0];
     this.superJanemba = this.bosses[1];
 
-    if (this.superJanemba) {
-      UnitAddItemById(this.superJanemba, ItemConstants.SagaDrops.DIMENSION_SWORD);
-    }
-
     SagaHelper.sagaHideUnit(this.superJanemba);
 
     for (const boss of this.bosses) {

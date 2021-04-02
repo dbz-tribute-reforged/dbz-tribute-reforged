@@ -23,15 +23,16 @@ export class BeamComponent implements
 
   static readonly BEAM_HP_MODIFIER = 0.75;
 
-  static readonly BEAM_SPEED_ULTRA_SLOW = 20;
-  static readonly BEAM_SPEED_SUPER_SLOW = 25;
-  static readonly BEAM_SPEED_VERY_SLOW = 30;
-  static readonly BEAM_SPEED_SLOW = 35;
-  static readonly BEAM_SPEED_MEDIUM_SLOW = 40;
-  static readonly BEAM_SPEED_MEDIUM = 45;
-  static readonly BEAM_SPEED_MEDIUM_FAST = 50;
-  static readonly BEAM_SPEED_FAST = 55;
-  static readonly BEAM_SPEED_VERY_FAST = 60;
+  static readonly BEAM_SPEED_ULTRA_SLOW = 25;
+  static readonly BEAM_SPEED_SUPER_SLOW = 30;
+  static readonly BEAM_SPEED_VERY_SLOW = 35;
+  static readonly BEAM_SPEED_SLOW = 40;
+  static readonly BEAM_SPEED_MEDIUM_SLOW = 45;
+  static readonly BEAM_SPEED_MEDIUM = 50;
+  static readonly BEAM_SPEED_MEDIUM_FAST = 55;
+  static readonly BEAM_SPEED_FAST = 60;
+  static readonly BEAM_SPEED_VERY_FAST = 65;
+  static readonly BEAM_SPEED_SUPER_FAST = 70;
 
   public beamUnit: unit | null;
   public delayTicks: number;

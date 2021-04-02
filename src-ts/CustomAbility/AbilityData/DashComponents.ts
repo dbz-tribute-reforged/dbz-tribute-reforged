@@ -1178,6 +1178,84 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 35,
   },
+  // crono cyclone speed boost
+  {
+    name: "dash ground forward crono cyclone",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: true,
+    angleOffset: 0,
+    distance: 1,
+  },
+  // crono cleave
+  {
+    name: "dash ground target crono cleave",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 30,
+  },
+  // frog squash
+  {
+    name: "dash ground forward beam frog squash pushback",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 180,
+    distance: 6,
+  },
+  // robo tackle
+  {
+    name: "dash ground point robo tackle",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 35,
+  },
+  // ayla triple kick
+  {
+    name: "dash ground point ayla triple kick",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 50,
+  },
+  // ayla dino tail
+  {
+    name: "dash ground point dino tail",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_TARGET_POINT,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: false,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 12,
+  },
   // ----------------------------
   // cell-x
   {
@@ -1243,6 +1321,19 @@ export const DashComponents = [
     useLastCastPoint: false,
     angleOffset: 0,
     distance: 2,
+  },
+  // marle haste
+  {
+    name: "dash forward marle haste",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,    
+    targetDirection: Dash.DIRECTION_SOURCE_FORWARD,
+    dashType: Dash.DASH_TYPE_GROUND,
+    checkPreviousCoord: true,
+    useLastCastPoint: false,
+    angleOffset: 0,
+    distance: 3,
   },
   // bunkai teleport dash
   {
@@ -1423,7 +1514,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 15,
+    distance: 17,
   },
   // dragonic rage
   {

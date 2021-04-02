@@ -137,8 +137,13 @@ export class AdvancedSaga {
         if (itemDrops) {
           const x = GetUnitX(deadUnit);
           const y = GetUnitY(deadUnit);
-          for (const item of itemDrops) {
-            CreateItem(item, x, y);
+
+          for (let i = 0; i < 6; ++i) {
+            const item = UnitItemInSlot(deadUnit, i);
+            
+            if (item) {
+              SetItemPosition(item, x, y);
+            }
           }
         }
 

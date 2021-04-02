@@ -1,4 +1,4 @@
-import { BASE } from "./AOEDamageComponents";
+import { BASE_DMG } from "Common/Constants";
 
 /*
 
@@ -51,7 +51,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 40,
     damageData: {
-      multiplier: BASE.KAME_EXPLOSION * 0.45,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 0.45,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6, 
       damageType: 4, 
@@ -68,10 +68,12 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
+        endScale: -1,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -89,10 +91,12 @@ export const SwordSlashComponents = [
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
+        endScale: -1,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -112,7 +116,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 16,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.25,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.25,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
@@ -129,10 +133,12 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
+        endScale: -1,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -154,7 +160,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 24,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.22,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.22,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
@@ -170,10 +176,12 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
+        endScale: -1,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -195,7 +203,7 @@ export const SwordSlashComponents = [
     startTick: 0,
     endTick: 24,
     damageData: {
-      multiplier: BASE.DFIST_EXPLOSION * 0.22,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.22,
       attribute: bj_HEROSTAT_STR,
       attackType: 6, 
       damageType: 4, 
@@ -211,10 +219,12 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
+        endScale: -1,
         startHeight: 50,
         endHeight: 50,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 205,
@@ -252,10 +262,12 @@ export const SwordSlashComponents = [
         repeatInterval: 1,
         group: 0,
         scale: 1.5,
+        endScale: -1,
         startHeight: 25,
         endHeight: 25,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 255,
@@ -273,10 +285,12 @@ export const SwordSlashComponents = [
         repeatInterval: 0,
         group: 0,
         scale: 1.0,
+        endScale: -1,
         startHeight: 0,
         endHeight: 0,
         extraDirectionalYaw: 0,
         extraPitch: 0,
+        extraRoll: 0,
         animSpeed: 1.0,
         color: {
           x: 55,
