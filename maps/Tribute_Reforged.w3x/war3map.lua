@@ -22825,6 +22825,9 @@ function Trig_Hero_Pick_Ban_A_Hero_Conditions()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
+    if (not (udg_TempInt2 <= 5)) then
+        return false
+    end
     if (not (udg_NumGoodBans > 0)) then
         return false
     end
@@ -22832,6 +22835,9 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()
+    if (not (udg_TempInt2 >= 6)) then
+        return false
+    end
     if (not (udg_NumEvilBans > 0)) then
         return false
     end
