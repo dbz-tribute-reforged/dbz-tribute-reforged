@@ -2629,6 +2629,7 @@ export function SetupAylaCharm(
         if (IsUnitAlly(target, casterPlayer)) {
           hpReduction *= allyHPModifier;
         }
+        
         // temporarily reduce hp
         // amount is lesser for allied targets
         const newHP = Math.max(
@@ -2647,7 +2648,7 @@ export function SetupAylaCharm(
               + maxHPReduction * GetUnitState(target, UNIT_STATE_MAX_LIFE)
             );
             SetUnitState(target, UNIT_STATE_LIFE, restoredHP);
-            
+
             DestroyEffect(
               AddSpecialEffect(
                 "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
