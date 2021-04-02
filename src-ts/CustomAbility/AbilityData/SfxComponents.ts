@@ -15205,6 +15205,27 @@ export const SfxComponents = [
     useHeight: true,
     sfxList: [
       {
+        model: "DTBlueNoRingWhite.mdl",
+        repeatInterval: 0,
+        group: 0,
+        scale: 2.2,
+        endScale: -1,
+        startHeight: 50,
+        endHeight: 50,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 25,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+      {
         model: "Abilities\\Spells\\Items\\AIvi\\AIviTarget.mdl",
         repeatInterval: 1,
         group: 0,
@@ -15268,7 +15289,7 @@ export const SfxComponents = [
   // --------------------------------------------
   { 
     name: "sfx marle haste", 
-    repeatInterval: 1,
+    repeatInterval: 0,
     startTick: 0,
     endTick: -1,
     sfxSource: SfxComponent.SOURCE_UNIT,

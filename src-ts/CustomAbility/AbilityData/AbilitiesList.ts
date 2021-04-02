@@ -6460,7 +6460,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.LIGHTNING
     },
     components: [
-      { name: "damage crono lightning 2 explosion" },
+      { name: "damage magus lightning 2 explosion" },
       { name: "multi crono lightning 2 inner" },
       { name: "multi crono lightning 2 outer" },
     ],

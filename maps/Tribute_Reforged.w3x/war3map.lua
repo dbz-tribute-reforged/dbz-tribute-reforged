@@ -13015,8 +13015,41 @@ function Trig_Magus_Spell_Book_Conditions()
     return true
 end
 
+function Trig_Magus_Spell_Book_Func002C()
+    if (not (udg_TempInt == 4)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spell_Book_Func003C()
+    if (not (udg_TempInt == 7)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Magus_Spell_Book_Func004C()
+    if (not (udg_TempInt == 10)) then
+        return false
+    end
+    return true
+end
+
 function Trig_Magus_Spell_Book_Actions()
     udg_TempInt = GetUnitAbilityLevelSwapped(FourCC("A0W4"), GetTriggerUnit())
+    if (Trig_Magus_Spell_Book_Func002C()) then
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0WO"), GetTriggerPlayer())
+    else
+    end
+    if (Trig_Magus_Spell_Book_Func003C()) then
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0WP"), GetTriggerPlayer())
+    else
+    end
+    if (Trig_Magus_Spell_Book_Func004C()) then
+        SetPlayerAbilityAvailableBJ(true, FourCC("A0WQ"), GetTriggerPlayer())
+    else
+    end
     SetUnitAbilityLevelSwapped(FourCC("A0W5"), GetTriggerUnit(), udg_TempInt)
     SetUnitAbilityLevelSwapped(FourCC("A0WO"), GetTriggerUnit(), udg_TempInt)
     SetUnitAbilityLevelSwapped(FourCC("A0WP"), GetTriggerUnit(), udg_TempInt)
@@ -14355,6 +14388,9 @@ end
 
 function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0WO"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0WP"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0WQ"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0A8"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KR"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0MZ"), udg_TempPlayer)
@@ -14392,6 +14428,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VX"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0XM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0X7"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0XR"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0W2"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SW"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0T3"), udg_TempPlayer)
@@ -22901,7 +22938,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Actions()
         else
             udg_NumEvilBans = (udg_NumEvilBans - 1)
             DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00]|r")))
-            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has |cff00ffff" .. (I2S(udg_NumGoodBans) .. "|r|cffffcc00 bans remaining.|r")))
+            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has |cff00ffff" .. (I2S(udg_NumEvilBans) .. "|r|cffffcc00 bans remaining.|r")))
         end
     else
     end
