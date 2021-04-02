@@ -1,6 +1,6 @@
 import { LibraryLoader } from 'war3-library-loader';
 import { CustomUiTest } from './CustomUI/CustomUITest';
-import { CustomPlayerTest, setupHostPlayerTransfer } from 'CustomPlayer/CustomPlayerTest';
+import { CustomPlayerTest, setupHostPlayerTransfer, transferHostPlayer } from 'CustomPlayer/CustomPlayerTest';
 import { PathingCheck } from 'Common/PathingCheck';
 import { SagaManager } from 'Core/SagaSystem/SagaManager';
 import { Logger } from 'Libs/TreeLib/Logger';
@@ -46,6 +46,9 @@ function tsMain() {
   customAbilityManager = CustomAbilityManager.getInstance();
 
   setupHostPlayerTransfer();
+  TimerStart(CreateTimer(), 0.03, false, () => {
+    transferHostPlayer();
+  });
 
   // TimerStart(CreateTimer(), 5.0, false, () => {
   //   // DisplayTextToPlayer(GetLocalPlayer(), 0.0, 0.0, "Host detected=" + GetPlayerName(HostDetectSystem.GetHost()))

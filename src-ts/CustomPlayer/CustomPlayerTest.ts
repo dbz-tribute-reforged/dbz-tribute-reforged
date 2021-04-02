@@ -22,7 +22,7 @@ import { DamageData } from "Common/DamageData";
 
 // global?
 export const customPlayers: CustomPlayer[] = [];
-export let hostPlayer: player = Player(0);
+export let hostPlayer: player = Constants.sagaPlayer;
 
 export function setupHostPlayerTransfer() {
   const hostPlayerTransfer = CreateTrigger();
@@ -34,24 +34,28 @@ export function setupHostPlayerTransfer() {
       GetTriggerPlayer() == hostPlayer && 
       GetPlayerController(GetTriggerPlayer()) == MAP_CONTROL_USER
     ) {
-      for (let i = 0; i < Constants.hostPlayerOrder.length; ++i) {
-        const newHost = Player(Constants.hostPlayerOrder[i]);
-        if (
-          IsPlayerSlotState(newHost, PLAYER_SLOT_STATE_PLAYING) && 
-          GetPlayerController(newHost) == MAP_CONTROL_USER && 
-          newHost != hostPlayer
-        ) {
-          hostPlayer = newHost;
-          DisplayTimedTextToForce(
-            bj_FORCE_ALL_PLAYERS, 
-            15, 
-            "Player " + (Constants.hostPlayerOrder[i]+1).toString() + " is now the host"
-          );
-          break;
-        }
-      }
+      transferHostPlayer();
     }
   });
+}
+
+export function transferHostPlayer() {
+  for (let i = 0; i < Constants.hostPlayerOrder.length; ++i) {
+    const newHost = Player(Constants.hostPlayerOrder[i]);
+    if (
+      IsPlayerSlotState(newHost, PLAYER_SLOT_STATE_PLAYING) && 
+      GetPlayerController(newHost) == MAP_CONTROL_USER && 
+      newHost != hostPlayer
+    ) {
+      hostPlayer = newHost;
+      DisplayTimedTextToForce(
+        bj_FORCE_ALL_PLAYERS, 
+        15, 
+        "Player " + (Constants.hostPlayerOrder[i]+1).toString() + " is now the host"
+      );
+      break;
+    }
+  }
 }
 
 export function addAbilityAction(abilityTrigger: trigger, name: string) {
@@ -1111,6 +1115,12 @@ export function CustomPlayerTest() {
     if (GetTriggerPlayer() == hostPlayer) {
       Globals.isFreemode = true;
       if (SubString(GetEventPlayerChatString(), 0, 10) == "-fbsimtest") {
+
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 
+          15, 
+          "-fbsimtest activated (ts)"
+        );
         Globals.isFBSimTest =  true;
       }
     }
