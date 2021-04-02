@@ -95747,19 +95747,6 @@ STRING 15383
 Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
 }
 
-STRING 15384
-// Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
-{
-A hero that has strong ranged damage capabilities.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 15385
 // Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
@@ -106802,19 +106789,6 @@ STRING 16884
 Q
 }
 
-STRING 16885
-// Units: H0A0 (Silent Protagonist), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 16886
 // Units: H008 (Goku's Youngest Son), Ubertip (Tooltip - Extended)
 {
@@ -107982,19 +107956,6 @@ STRING 17020
 // Units: H0A1 (Legendary Hero), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Frog
-}
-
-STRING 17021
-// Units: H0A1 (Legendary Hero), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 17022
@@ -111160,19 +111121,6 @@ STRING 17471
 (ichigo)
 }
 
-STRING 17472
-// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 17473
 // Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
 {
@@ -112447,19 +112395,6 @@ STRING 17655
 // Units: H0A3 (Dark Mage), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00R|r] Choose Magus
-}
-
-STRING 17656
-// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
-{
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 17657
@@ -116273,12 +116208,6 @@ STRING 18222
 [|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 1|r]
 }
 
-STRING 18223
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
-}
-
 STRING 18224
 // Abilities: A0WU (Magus' Amulet), Name (Name)
 {
@@ -116319,18 +116248,6 @@ STRING 18230
 // Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
 {
 Magus' Amulet prevents application of negative status effects.
-}
-
-STRING 18231
-// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
-{
-Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
-}
-
-STRING 18232
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
 }
 
 STRING 18233
@@ -116475,12 +116392,6 @@ STRING 18256
 // Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
-}
-
-STRING 18257
-// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
-{
-Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 3 seconds.|n|cff2020ffMana Cost: 4k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
 STRING 18258
@@ -116961,19 +116872,6 @@ STRING 18326
 [|cffffff00S|r] Choose Ayla
 }
 
-STRING 18327
-// Units: H0A5 (Ioka Chief), Ubertip (Tooltip - Extended)
-{
-A powerful close-range combatant that can charm useful items from NPCs 
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 18328
 // Units: H0A5 (Ioka Chief), Tip (Tooltip - Basic)
 {
@@ -117086,19 +116984,6 @@ STRING 18346
 // Units: H0A6 (Princess of Guardia), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00D|r] Choose Marle
-}
-
-STRING 18347
-// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
-{
-A low-damage support hero with a ranged attack and a number of helpful abilities.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 18348
@@ -118137,14 +118022,6 @@ STRING 18507
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 1|r]
 }
 
-STRING 18508
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool1>s|r
-}
-
 STRING 18509
 // Abilities: A0XA (Aura), Name (Name)
 {
@@ -118155,14 +118032,6 @@ STRING 18510
 // Abilities: A0XA (Aura), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Aura - [|cffffcc00Level %d|r]
-}
-
-STRING 18511
-// Abilities: A0XA (Aura), Researchubertip (Tooltip - Learn - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Damage: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool1>-<A0XA,Cool10>s|r
 }
 
 STRING 18512
@@ -118195,82 +118064,10 @@ STRING 18516
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 6|r]
 }
 
-STRING 18517
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool2>s|r
-}
-
-STRING 18518
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool3>s|r
-}
-
-STRING 18519
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool4>s|r
-}
-
-STRING 18520
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool5>s|r
-}
-
-STRING 18521
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool6>s|r
-}
-
 STRING 18522
 // Abilities: A0XA (Aura), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 7|r]
-}
-
-STRING 18523
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool7>s|r
-}
-
-STRING 18524
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool8>s|r
-}
-
-STRING 18525
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool9>s|r
-}
-
-STRING 18526
-// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Marle channels for up to 5s, healing herself and nearby allies while she remains casting.
-|cff00ff00Healing: Int * Lvl * ?
-|cff00FFFFCooldown: <A0XA,Cool10>s|r
 }
 
 STRING 18527
@@ -118857,48 +118654,6 @@ STRING 18612
 Q
 }
 
-STRING 18613
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18614
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18615
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18616
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18617
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18618
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18619
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
 STRING 18620
 // Abilities: A0XE (Cure), Tip (Tooltip - Normal)
 {
@@ -118983,34 +118738,79 @@ STRING 18633
 [|cff00ff00R|r] Cure - [|cffffcc00Level 10|r]
 }
 
-STRING 18634
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18635
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18636
-// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
-STRING 18637
-// Abilities: A0XE (Cure), Researchubertip (Tooltip - Learn - Extended)
-{
-Marle casts a heal at the target location that will heal all units in range after a 2s delay.|n|cff00ff00Healing: Lvl * Int * ?|r|n|cff00ffffCooldown: <A0XE,Cool1>s|r
-}
-
 STRING 18638
 // Abilities: A0XE (Cure), EditorSuffix (Editor Suffix)
 {
 (marle)
+}
+
+STRING 18639
+// Units: H0A0 (Silent Protagonist), Ubertip (Tooltip - Extended)
+{
+A close range fighter with high mobility and large AOE nukes. Can quickly clear sagas and gain stats.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18640
+// Units: H0A1 (Legendary Hero), Ubertip (Tooltip - Extended)
+{
+A strong melee hero that struggles in the early game but eventually unlocks powerful auto attacks, supplemented by a strong line-target heal and versatile nukes.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18641
+// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
+{
+A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18642
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 5 seconds.|n|cff00ffffCooldown: <A0MH,Cool1> seconds|r
+}
+
+STRING 18643
+// Abilities: A0MH (Double Sundae), Researchubertip (Tooltip - Learn - Extended)
+{
+Raditz eats a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 5 seconds.|n|cff00ffffCooldown: <A0MH,Cool1>/<A0MH,Cool2>/<A0MH,Cool3> seconds|r
+}
+
+STRING 18644
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 5 seconds.|n|cff00ffffCooldown: <A0MH,Cool2> seconds|r
+}
+
+STRING 18645
+// Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
+{
+Raditz takes some time out to eat a delicious Double Sundae that refreshes the cooldown of his weekend abilities: Saturday Crash and Double Sunday. Provides +20% spell power for the next 5 seconds.|n|cff2020ffMana Cost: 8k + 8% max mana.|n|cff00ffffCooldown: <A0MH,Cool3> seconds|r
 }
 
 STRING 18646
@@ -119097,6 +118897,51 @@ STRING 18659
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
 }
 
+STRING 18660
+// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
+{
+A difficult to play hero with many high utility spells that give him an answer to almost any situation.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18661
+// Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
+{
+A heavy firepower hero that can rain destruction from afar with long range nukes and auto attacks.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as she gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18662
+// Units: H0A5 (Ioka Chief), Ubertip (Tooltip - Extended)
+{
+A powerful close-range combatant with high burst mobility. Has the unique ability to steal items from Sagas while they are still alive.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as she gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 18663
 // Abilities: A0XH (Charm), Ubertip (Tooltip - Normal - Extended)
 {
@@ -119112,10 +118957,33 @@ STRING 18664
 (marle)
 }
 
+STRING 18665
+// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
+{
+A low-damage support hero with few offensive options but comes with multiple heals and buffs for her teammates.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 18666
 // Abilities: A0XG (Boulder Toss), Name (Name)
 {
 Boulder Toss
+}
+
+STRING 18667
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool1>s|r
 }
 
 STRING 18668
@@ -119148,10 +119016,80 @@ STRING 18672
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
 }
 
+STRING 18673
+// Abilities: A0XA (Aura), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool1> - <A0XA,Cool10>s|r
+}
+
+STRING 18674
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool2>s|r
+}
+
+STRING 18675
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool3>s|r
+}
+
+STRING 18676
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool4>s|r
+}
+
+STRING 18677
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool5>s|r
+}
+
 STRING 18678
 // Abilities: A0XG (Boulder Toss), Researchubertip (Tooltip - Learn - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18679
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool6>s|r
+}
+
+STRING 18680
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool7>s|r
 }
 
 STRING 18681
@@ -119164,6 +119102,26 @@ STRING 18682
 // Abilities: A0XG (Boulder Toss), Ubertip (Tooltip - Normal - Extended)
 {
 Ayla throws a rock at the target location that deals damage on impact.|n|cff00FF00Damage: Agi * lvl * ?|r|n|cff00ffffCooldown: <A0XG,Cool1>s
+}
+
+STRING 18683
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool8>s|r
+}
+
+STRING 18684
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool9>s|r
 }
 
 STRING 18685
@@ -119194,6 +119152,16 @@ STRING 18689
 // Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
 {
 W
+}
+
+STRING 18690
+// Abilities: A0XA (Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Marle channels a powerful healing spell that rapidly regenerates herself and nearby allies while she remains casting. 
+|cffffff00Note: Has very low stat scaling.|r
+|cffff3333Channel Duration: <A0XA,Dur1>s
+|cff00ff00Damage: Int * Lvl * ? + 10% Max HP
+|cff00FFFFCooldown: <A0XA,Cool10>s|r
 }
 
 STRING 18691
@@ -119372,6 +119340,15 @@ STRING 18712
 Marle taunts nearby enemies, forcing them to attack her while she remains taunting.
 |cff00ff00Duration: <A0XB,DataA10,.>s
 |cff00FFFFCooldown: <A0XB,Cool10>s
+}
+
+STRING 18713
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool1>s|r
 }
 
 STRING 18714
@@ -119810,6 +119787,15 @@ STRING 18782
 Triple Kick
 }
 
+STRING 18783
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool2>s|r
+}
+
 STRING 18784
 // Abilities: A0XL (Triple Kick), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -120145,6 +120131,87 @@ Janemba slices his opponent with a powerful Ki Slash wave infused with the power
 |cffffff00Auto-attacks trigger this ability with a 1s CD and reduce the armor of the target by 6
 |cff00ff00Damage: Agi * Lvl * ?|r
 |cff00ffffCooldown: <A0NZ,Cool1> seconds|r
+}
+
+STRING 18832
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool3>s|r
+}
+
+STRING 18833
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool4>s|r
+}
+
+STRING 18834
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool5>s|r
+}
+
+STRING 18835
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool6>s|r
+}
+
+STRING 18836
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool7>s|r
+}
+
+STRING 18837
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool8>s|r
+}
+
+STRING 18838
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool9>s|r
+}
+
+STRING 18839
+// Abilities: A0XE (Cure), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool10>s|r
+}
+
+STRING 18840
+// Abilities: A0XE (Cure), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a delayed heal at the target location that activates after 2 seconds to massively heal all nearby allies.
+|cffffff00Note: Has high stat scaling.
+|cff00ff00Healing: Lvl * Int * ? + 2% Max HP|r
+|cff00ffffCooldown: <A0XE,Cool1>s|r
 }
 
 STRING 18841

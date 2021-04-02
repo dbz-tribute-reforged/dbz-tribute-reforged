@@ -799,7 +799,7 @@ export const AOEDebuffComponents = [
   },
   {
     name: "debuff magus dark mist",
-    repeatInterval: 33,
+    repeatInterval: 10,
     startTick: 0,
     endTick: -1,
     debuffSource: AOEDebuff.SOURCE_UNIT,
