@@ -58,6 +58,63 @@ export const DamageBlockComponents = [
       },
     ],
   },
+  // ----------------------------------------
+  {
+    name: "block perfect basic guard",
+    repeatInterval: 1,
+    startTick: 9,
+    endTick: 22,
+    blockPerDamage: 80,
+    isPercentageBlock: true,
+    attribute: bj_HEROSTAT_AGI,
+    multiplier: 2,
+    sfxList: [
+      {
+        model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",
+        repeatInterval: 1,
+        group: 1,
+        scale: 1.5,
+        endScale: -1,
+        startHeight: 25,
+        endHeight: 25,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: false,
+        attachmentPoint: "",
+      },
+    ],
+    attachedSfxList: [
+      {
+        model: "Abilities\\Spells\\Human\\DivineShield\\DivineShieldTarget.mdl",
+        repeatInterval: 12,
+        group: 0,
+        scale: 1.0,
+        endScale: -1,
+        startHeight: 0,
+        endHeight: 0,
+        extraDirectionalYaw: 0,
+        extraPitch: 0,
+        extraRoll: 0,
+        animSpeed: 1.0,
+        color: {
+          x: 255,
+          y: 255,
+          z: 255,
+        },
+        updateCoordsOnly: false,
+        persistent: true,
+        attachmentPoint: "origin",
+      },
+    ],
+  },
   // to here, and replace with unique name
   // ----------------------------------------
   {
@@ -1509,10 +1566,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 90,
+    blockPerDamage: 80,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 10,
+    multiplier: 3,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",

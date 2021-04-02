@@ -291,6 +291,7 @@ gg_rct_HBTC_Entrance = nil
 gg_rct_Lookout_Vision_2 = nil
 gg_rct_HBTC_2_Exit = nil
 gg_rct_FinalBattleArena2 = nil
+gg_rct_FinalBattleArena3 = nil
 gg_cam_Hero_Pick_Camera = nil
 gg_cam_Editor_Camera = nil
 gg_cam_1 = nil
@@ -3304,7 +3305,7 @@ function CreateRegions()
     gg_rct_LookoutEntrance2 = Rect(24480.0, 18880.0, 24672.0, 19072.0)
     gg_rct_HellToLowerHell = Rect(6784.0, 21856.0, 7072.0, 22176.0)
     gg_rct_HeavenToLowerHell = Rect(-6176.0, 21952.0, -5888.0, 22272.0)
-    gg_rct_FinalBattleArena = Rect(-5504.0, 23456.0, -1536.0, 31264.0)
+    gg_rct_FinalBattleArena = Rect(-5568.0, 23360.0, 2464.0, 31328.0)
     gg_rct_Final_Battle_Detector_Region = Rect(10944.0, 22784.0, 11104.0, 22912.0)
     gg_rct_Creep_Vision = Rect(-8160.0, -8192.0, 31712.0, 20448.0)
     gg_rct_Lookout_Vision = Rect(21472.0, 20704.0, 27680.0, 23872.0)
@@ -3339,6 +3340,7 @@ function CreateRegions()
     EnableWeatherEffect(we, true)
     gg_rct_HBTC_2_Exit = Rect(24416.0, 20448.0, 24704.0, 20736.0)
     gg_rct_FinalBattleArena2 = Rect(-1568.0, 23424.0, 2400.0, 31232.0)
+    gg_rct_FinalBattleArena3 = Rect(-5440.0, 23424.0, -1536.0, 31264.0)
 end
 
 function CreateCameras()
@@ -14272,7 +14274,7 @@ function Trig_Setup_Per_Player_Properties_Actions()
     while (true) do
         if (udg_TempInt > udg_MaxNumPlayers) then break end
         udg_TempPlayer = ConvertedPlayer(udg_TempInt)
-        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_FinalBattleArena)
+        CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_FinalBattleArena3)
         FogModifierStart(GetLastCreatedFogModifier())
         CreateFogModifierRectBJ(true, udg_TempPlayer, FOG_OF_WAR_VISIBLE, gg_rct_FinalBattleArena2)
         FogModifierStart(GetLastCreatedFogModifier())

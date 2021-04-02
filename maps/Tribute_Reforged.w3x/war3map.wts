@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.61 beta8
+DBZ Tribute Reforged 0.62
 }
 
 STRING 4
@@ -47527,10 +47527,11 @@ D
 }
 
 STRING 7734
-// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
 {
-Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
-|cff00ff00Damage Blocked: Lvl * Agi * 10 @ 90%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool1>s|r
 }
 
 STRING 7735
@@ -74558,6 +74559,21 @@ STRING 12123
 // Abilities: A0XH (Charm), Tip (Tooltip - Normal)
 {
 [|cff00FF00W|r] Charm - [|cffffcc00Level 1|r]
+}
+
+STRING 12124
+// Abilities: A0VM (Blut Vene), Ubertip (Tooltip - Normal - Extended)
+{
+Ichigo activates his Blut Vene, significantly reducing incoming damage for 0.75s.
+|cff00ff00Damage Blocked: 3 * Agi @ 80%|r|n|cff00ffffCooldown: <A0LG,Cool1> seconds|r
+}
+
+STRING 12125
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool2>s|r
 }
 
 STRING 12126
@@ -118293,6 +118309,14 @@ STRING 18532
 [|cff00ff00W|r] Allure - [|cffffcc00Level 1|r]
 }
 
+STRING 18533
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool3>s|r
+}
+
 STRING 18534
 // Abilities: A0XB (Allure), Name (Name)
 {
@@ -118309,6 +118333,14 @@ STRING 18536
 // Abilities: A0XB (Allure), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00W|r] Learn Allure - [|cffffcc00Level %d|r]
+}
+
+STRING 18537
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool4>s|r
 }
 
 STRING 18538
@@ -118341,10 +118373,66 @@ STRING 18542
 [|cff00ff00W|r] Allure - [|cffffcc00Level 6|r]
 }
 
+STRING 18543
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool5>s|r
+}
+
+STRING 18544
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool6>s|r
+}
+
+STRING 18545
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool7>s|r
+}
+
+STRING 18546
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool8>s|r
+}
+
+STRING 18547
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool9>s|r
+}
+
 STRING 18548
 // Abilities: A0XB (Allure), Tip (Tooltip - Normal)
 {
 [|cff00ff00W|r] Allure - [|cffffcc00Level 7|r]
+}
+
+STRING 18549
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool10>s|r
+}
+
+STRING 18550
+// Abilities: A0XF (Haste), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool1> - <A0XF,Cool10>s|r
 }
 
 STRING 18551
@@ -118925,48 +119013,6 @@ STRING 18638
 (marle)
 }
 
-STRING 18639
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool1>s|r
-}
-
-STRING 18640
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool2>s|r
-}
-
-STRING 18641
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool3>s|r
-}
-
-STRING 18642
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool4>s|r
-}
-
-STRING 18643
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool5>s|r
-}
-
-STRING 18644
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool6>s|r
-}
-
-STRING 18645
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool7>s|r
-}
-
 STRING 18646
 // Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
@@ -119049,24 +119095,6 @@ STRING 18659
 // Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
-}
-
-STRING 18660
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool8>s|r
-}
-
-STRING 18661
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool9>s|r
-}
-
-STRING 18662
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.|n|cff00ff00Duration: 10s|r|n|cff00ffffCooldown: <A0XF,Cool10>s|r
 }
 
 STRING 18663
@@ -119166,14 +119194,6 @@ STRING 18689
 // Abilities: A0XH (Charm), Hotkey (Hotkey - Normal)
 {
 W
-}
-
-STRING 18690
-// Abilities: A0XF (Haste), Researchubertip (Tooltip - Learn - Extended)
-{
-Marle casts a spell at the target location that will buff the move speed and attack rate of all allied heroes in range after 2s.
-|cff00ff00Duration: 10s|r
-|cff00ffffCooldown: <A0XF,Cool1> - <A0XF,Cool10>s|r
 }
 
 STRING 18691

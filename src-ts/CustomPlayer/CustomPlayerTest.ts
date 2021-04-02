@@ -2647,6 +2647,13 @@ export function SetupAylaCharm(
               + maxHPReduction * GetUnitState(target, UNIT_STATE_MAX_LIFE)
             );
             SetUnitState(target, UNIT_STATE_LIFE, restoredHP);
+            
+            DestroyEffect(
+              AddSpecialEffect(
+                "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl",
+                GetUnitX(target), GetUnitY(target)
+              )
+            );
           }
 
           DestroyTimer(GetExpiredTimer());

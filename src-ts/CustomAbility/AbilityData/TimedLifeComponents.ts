@@ -111,4 +111,11 @@ export const TimedLifeComponents = [
     endTick: -1,
     duration: 25,
   },
+  {
+    name: "timed life beam marle haste", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    duration: 70,
+  },
 ];

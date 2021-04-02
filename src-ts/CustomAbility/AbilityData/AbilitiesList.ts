@@ -52,11 +52,13 @@ export const AbilitiesList = [
     tooltip: {
       title: "(X) Guard",
       body: 
-        "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked." + 
-        "|nCost:25 MP|nCD: 16"
+        "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
+        " |n" +
+        "Cost:25 MP|nCD: 16"
     },
     components: [
       { name: "block basic guard" },
+      { name: "block perfect basic guard" },
     ],
   },
   // -------------------------------------------
@@ -6377,7 +6379,7 @@ export const AbilitiesList = [
     components: [
       { name: "aoe apply marle haste" },
       { name: "sfx marle haste"},
-      { name: "sfx marle haste explosion"},
+      { name: "sfx marle haste explosion" },
     ],
   },
   // -------------------------------------------
