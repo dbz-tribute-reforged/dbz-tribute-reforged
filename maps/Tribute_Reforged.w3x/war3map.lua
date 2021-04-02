@@ -22825,9 +22825,6 @@ function Trig_Hero_Pick_Ban_A_Hero_Conditions()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
-    if (not (udg_TempInt2 == 1)) then
-        return false
-    end
     if (not (udg_NumGoodBans > 0)) then
         return false
     end
@@ -22835,9 +22832,6 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func001C()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004Func002Func002C()
-    if (not (udg_TempInt2 == 6)) then
-        return false
-    end
     if (not (udg_NumEvilBans > 0)) then
         return false
     end
@@ -22855,7 +22849,7 @@ function Trig_Hero_Pick_Ban_A_Hero_Func004Func002C()
 end
 
 function Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()
-    if (not (udg_TempInt2 == 1)) then
+    if (not (udg_TempInt2 <= 5)) then
         return false
     end
     return true
@@ -22896,11 +22890,11 @@ function Trig_Hero_Pick_Ban_A_Hero_Actions()
         end
         if (Trig_Hero_Pick_Ban_A_Hero_Func004Func004C()) then
             udg_NumGoodBans = (udg_NumGoodBans - 1)
-            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 1 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00|r")))
+            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 1 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00]|r")))
             DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 1 has |cff00ffff" .. (I2S(udg_NumGoodBans) .. "|r|cffffcc00 bans remaining.|r")))
         else
             udg_NumEvilBans = (udg_NumEvilBans - 1)
-            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00|r")))
+            DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has banned [|cf00fffff" .. (GetHeroProperName(udg_TempUnit) .. "|r|cffffcc00]|r")))
             DisplayTextToForce(GetPlayersAll(), ("|cffffcc00Team 2 has |cff00ffff" .. (I2S(udg_NumGoodBans) .. "|r|cffffcc00 bans remaining.|r")))
         end
     else
