@@ -53,7 +53,7 @@ export const AbilitiesList = [
       title: "(X) Guard",
       body: 
         "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
-        " |n" +
+        "Damage is perfectly blocked during ticks 9 to 22, reducing damage by 80% up to 2 * AGI.|n" +
         "Cost:25 MP|nCD: 16"
     },
     components: [
