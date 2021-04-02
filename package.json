@@ -29,12 +29,12 @@
     "n-readlines": "^1.0.0",
     "npm-watch": "^0.6.0",
     "ts-transformer-imports": "^0.4.3",
-    "typescript-to-lua": "^0.28.1",
+    "typescript-to-lua": "~0.28.1",
     "typescript-transform-paths": "^1.1.13",
     "war3-types": "^1.0.0",
     "war3tstlhelper": "^1.0.0"
   },
   "dependencies": {
-    "typescript": "^3.7.2"
+    "typescript": "~3.7.2"
   }
 }
