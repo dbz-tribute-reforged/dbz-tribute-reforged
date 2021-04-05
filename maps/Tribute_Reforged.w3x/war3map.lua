@@ -1677,7 +1677,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9472.4, -7386.0, 246.343, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 4275.7, 18510.6, 251.645, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 1503.6, -3445.0, 303.926, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -5086.6, 10556.1, -15.948, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -687.1, -4492.9, 239.685, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -635.3, -2732.1, 144.332, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -2425.6, -2421.2, 208.780, FourCC("n019"))
@@ -1727,8 +1727,8 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -103.6, 10517.7, 176.710, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 1030.5, 11001.8, 238.773, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 2924.6, 10346.8, 293.838, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 1548.9, -1956.2, 303.926, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 1250.3, -1644.3, 221.491, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), 1539.6, -1687.3, 303.926, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -6129.5, 12274.2, 1.142, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 3130.4, -369.0, 356.616, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 598.1, 683.3, 300.013, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 773.2, -4810.7, 120.557, FourCC("n015"))
@@ -2209,7 +2209,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n01A"), -646.3, -5187.2, 232.757, FourCC("n01A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -2086.0, -5467.4, 53.993, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -2290.7, -2009.3, 306.843, FourCC("n015"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 998.5, -5818.0, 174.600, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), -1144.8, 7444.2, 174.600, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), -4834.8, 6590.1, 152.070, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n038"), 9627.9, 17574.3, 83.237, FourCC("n038"))
     u = BlzCreateUnitWithSkin(p, FourCC("n014"), 4498.7, 17192.5, 316.994, FourCC("n014"))
@@ -13016,21 +13016,21 @@ function Trig_Magus_Spell_Book_Conditions()
 end
 
 function Trig_Magus_Spell_Book_Func002C()
-    if (not (udg_TempInt == 4)) then
+    if (not (udg_TempInt >= 4)) then
         return false
     end
     return true
 end
 
 function Trig_Magus_Spell_Book_Func003C()
-    if (not (udg_TempInt == 7)) then
+    if (not (udg_TempInt >= 7)) then
         return false
     end
     return true
 end
 
 function Trig_Magus_Spell_Book_Func004C()
-    if (not (udg_TempInt == 10)) then
+    if (not (udg_TempInt >= 10)) then
         return false
     end
     return true
@@ -43849,6 +43849,27 @@ function Trig_Transformations_Magus_Func018C()
 end
 
 function Trig_Transformations_Magus_Func021Func002Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_StatMultUnit) >= 4)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Magus_Func021Func002Func002C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_StatMultUnit) >= 7)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Magus_Func021Func002Func003C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0W4"), udg_StatMultUnit) >= 10)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Magus_Func021Func002Func004C()
     if (udg_TransformationAbility ~= FourCC("ANcl")) then
         return true
     end
@@ -43859,7 +43880,7 @@ function Trig_Transformations_Magus_Func021Func002Func001C()
 end
 
 function Trig_Transformations_Magus_Func021Func002C()
-    if (not Trig_Transformations_Magus_Func021Func002Func001C()) then
+    if (not Trig_Transformations_Magus_Func021Func002Func004C()) then
         return false
     end
     return true
@@ -43955,6 +43976,18 @@ function Trig_Transformations_Magus_Actions()
         udg_ID = GetHandleId(udg_StatMultUnit)
     if (Trig_Transformations_Magus_Func021C()) then
         if (Trig_Transformations_Magus_Func021Func002C()) then
+            if (Trig_Transformations_Magus_Func021Func002Func001C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0WO"), udg_TransformationPlayer)
+            else
+            end
+            if (Trig_Transformations_Magus_Func021Func002Func002C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0WP"), udg_TransformationPlayer)
+            else
+            end
+            if (Trig_Transformations_Magus_Func021Func002Func003C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0WQ"), udg_TransformationPlayer)
+            else
+            end
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
             SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
                         udg_TransformationID = FourCC('H0A3')
@@ -45534,6 +45567,12 @@ end
 
 function Trig_HBTC_Training_Ticket_Pickup_Conditions()
     if (not (GetItemTypeId(GetManipulatedItem()) == FourCC("I04H"))) then
+        return false
+    end
+    if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
+        return false
+    end
+    if (not (GetOwningPlayer(GetTriggerUnit()) ~= Player(PLAYER_NEUTRAL_PASSIVE))) then
         return false
     end
     return true

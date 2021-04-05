@@ -116286,6 +116286,36 @@ STRING 18230
 Magus' Amulet prevents application of negative status effects.
 }
 
+STRING 18231
+// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
+{
+A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18232
+// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
+{
+A difficult to play hero with many high utility spells that give him an answer to almost any situation.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
+}
+
 STRING 18233
 // Abilities: A0WT (Magic Barrier), Tip (Tooltip - Normal)
 {
@@ -116428,6 +116458,21 @@ STRING 18256
 // Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 18257
+// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
+{
+A low-damage support hero with few offensive options but comes with multiple heals and buffs for her teammates.
+
+|cffffff00Has critical strikes and bonus attack damage.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 18258
@@ -118810,21 +118855,6 @@ A strong melee hero that struggles in the early game but eventually unlocks powe
 
 }
 
-STRING 18641
-// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
-{
-A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
-
-|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 18642
 // Abilities: A0MH (Double Sundae), Ubertip (Tooltip - Normal - Extended)
 {
@@ -118933,21 +118963,6 @@ STRING 18659
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
 }
 
-STRING 18660
-// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
-{
-A difficult to play hero with many high utility spells that give him an answer to almost any situation.
-
-|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 18661
 // Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
 {
@@ -118991,19 +119006,6 @@ STRING 18664
 // Abilities: A0XQ (Marle Attack Passive), EditorSuffix (Editor Suffix)
 {
 (marle)
-}
-
-STRING 18665
-// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
-{
-A low-damage support hero with few offensive options but comes with multiple heals and buffs for her teammates.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 18666

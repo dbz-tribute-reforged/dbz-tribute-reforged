@@ -82,7 +82,7 @@ export const AOEHealComponents = [
     onlyHealCaster: false,
     canHealCaster: true,
     maxHealTicks: 10,
-    healMult: BASE_DMG.KAME_DPS * 0.6,
+    healMult: BASE_DMG.KAME_DPS * 0.5,
     healAttribute: bj_HEROSTAT_INT,
     maxHealthHealPercent: 0.002,
     requireBuff: false,

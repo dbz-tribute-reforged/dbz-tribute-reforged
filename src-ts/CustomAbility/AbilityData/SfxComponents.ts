@@ -15289,9 +15289,9 @@ export const SfxComponents = [
   // --------------------------------------------
   { 
     name: "sfx marle haste", 
-    repeatInterval: 0,
+    repeatInterval: 1,
     startTick: 0,
-    endTick: -1,
+    endTick: 0,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,

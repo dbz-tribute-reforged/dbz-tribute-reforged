@@ -1191,19 +1191,6 @@ export const DashComponents = [
     angleOffset: 0,
     distance: 1,
   },
-  // crono cleave
-  {
-    name: "dash ground target crono cleave",
-    repeatInterval: 1, 
-    startTick: 0,
-    endTick: -1,
-    targetDirection: Dash.DIRECTION_TARGET_POINT,
-    dashType: Dash.DASH_TYPE_GROUND,
-    checkPreviousCoord: false,
-    useLastCastPoint: false,
-    angleOffset: 0,
-    distance: 30,
-  },
   // frog squash
   {
     name: "dash ground forward beam frog squash pushback",
