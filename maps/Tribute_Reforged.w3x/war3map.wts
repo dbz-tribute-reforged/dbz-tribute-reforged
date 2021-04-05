@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.62
+DBZ Tribute Reforged 0.62a
 }
 
 STRING 4
@@ -95747,6 +95747,12 @@ STRING 15383
 Full Combos Enabled (QQQ, QQW, QQE, QWW, QEE, WWW, WWE, WEE, EEE)
 }
 
+STRING 15384
+// Abilities: A0XQ (Marle Attack Passive), Name (Name)
+{
+Marle Attack Passive
+}
+
 STRING 15385
 // Abilities: A0FV (Flash Fist), Ubertip (Tooltip - Normal - Extended)
 {
@@ -106789,6 +106795,12 @@ STRING 16884
 Q
 }
 
+STRING 16885
+// Abilities: A0XA (Aura), EditorSuffix (Editor Suffix)
+{
+(marle)
+}
+
 STRING 16886
 // Units: H008 (Goku's Youngest Son), Ubertip (Tooltip - Extended)
 {
@@ -107956,6 +107968,12 @@ STRING 17020
 // Units: H0A1 (Legendary Hero), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00W|r] Choose Frog
+}
+
+STRING 17021
+// Abilities: A0XR (Book Marle Passives), Name (Name)
+{
+Book Marle Passives
 }
 
 STRING 17022
@@ -111121,6 +111139,12 @@ STRING 17471
 (ichigo)
 }
 
+STRING 17472
+// Abilities: A0X7 (Book Lucca Passives), Name (Name)
+{
+Book Lucca Passives
+}
+
 STRING 17473
 // Abilities: A0UU (Madness Hero), Ubertip (Tooltip - Normal - Extended)
 {
@@ -112395,6 +112419,12 @@ STRING 17655
 // Units: H0A3 (Dark Mage), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00R|r] Choose Magus
+}
+
+STRING 17656
+// Buffs/Effects: B04N (), Buffubertip (Tooltip - Extended)
+{
+Marle's Crossbow is capable of firing from a distance and critically striking enemies.
 }
 
 STRING 17657
@@ -116208,6 +116238,12 @@ STRING 18222
 [|cffFFFF00E|r] Magic Barrier - [|cffffcc00Level 1|r]
 }
 
+STRING 18223
+// Buffs/Effects: B04N (), Bufftip (Tooltip)
+{
+Marle's Crossbow
+}
+
 STRING 18224
 // Abilities: A0WU (Magus' Amulet), Name (Name)
 {
@@ -116248,6 +116284,36 @@ STRING 18230
 // Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
 {
 Magus' Amulet prevents application of negative status effects.
+}
+
+STRING 18231
+// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
+{
+A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18232
+// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
+{
+A difficult to play hero with many high utility spells that give him an answer to almost any situation.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 18233
@@ -116392,6 +116458,21 @@ STRING 18256
 // Abilities: A0WT (Magic Barrier), Researchhotkey (Hotkey - Learn)
 {
 E
+}
+
+STRING 18257
+// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
+{
+A low-damage support hero with few offensive options but comes with multiple heals and buffs for her teammates.
+
+|cffffff00Has critical strikes and bonus attack damage.
+
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 18258
@@ -117915,7 +117996,7 @@ Lucca's Gun
 }
 
 STRING 18490
-// Abilities: A0X7 (Book Lucca Passives), Name (Name)
+// Abilities: A0XS (Book Lucca Passives), Name (Name)
 {
 Book Lucca Passives
 }
@@ -118089,7 +118170,7 @@ STRING 18529
 }
 
 STRING 18530
-// Abilities: A0XA (Aura), EditorSuffix (Editor Suffix)
+// Abilities: A0XB (Allure), EditorSuffix (Editor Suffix)
 {
 (marle)
 }
@@ -118269,7 +118350,7 @@ STRING 18555
 }
 
 STRING 18556
-// Abilities: A0XB (Allure), EditorSuffix (Editor Suffix)
+// Abilities: A0XC (Ice), EditorSuffix (Editor Suffix)
 {
 (marle)
 }
@@ -118391,7 +118472,7 @@ Marle throws a block of ice at the target area that explodes at its destination,
 }
 
 STRING 18574
-// Abilities: A0XC (Ice), EditorSuffix (Editor Suffix)
+// Abilities: A0XD (Ice 2), EditorSuffix (Editor Suffix)
 {
 (marle)
 }
@@ -118637,7 +118718,7 @@ STRING 18609
 }
 
 STRING 18610
-// Abilities: A0XD (Ice 2), EditorSuffix (Editor Suffix)
+// Abilities: A0XE (Cure), EditorSuffix (Editor Suffix)
 {
 (marle)
 }
@@ -118739,7 +118820,7 @@ STRING 18633
 }
 
 STRING 18638
-// Abilities: A0XE (Cure), EditorSuffix (Editor Suffix)
+// Abilities: A0XF (Haste), EditorSuffix (Editor Suffix)
 {
 (marle)
 }
@@ -118771,21 +118852,6 @@ A strong melee hero that struggles in the early game but eventually unlocks powe
 |cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
-}
-
-STRING 18641
-// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
-{
-A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
-
-|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
 
 }
 
@@ -118897,21 +118963,6 @@ STRING 18659
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
 }
 
-STRING 18660
-// Units: H0A3 (Dark Mage), Ubertip (Tooltip - Extended)
-{
-A difficult to play hero with many high utility spells that give him an answer to almost any situation.
-
-|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
-
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00Farming|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Difficulty|r
-
-}
-
 STRING 18661
 // Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
 {
@@ -118952,22 +119003,9 @@ Duration: 10s
 }
 
 STRING 18664
-// Abilities: A0XF (Haste), EditorSuffix (Editor Suffix)
+// Abilities: A0XQ (Marle Attack Passive), EditorSuffix (Editor Suffix)
 {
 (marle)
-}
-
-STRING 18665
-// Units: H0A6 (Princess of Guardia), Ubertip (Tooltip - Extended)
-{
-A low-damage support hero with few offensive options but comes with multiple heals and buffs for her teammates.
-
-|cff00FF00I|r|cff383838IIII |r|cffFFFF00PVP|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Teamfight|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 18666

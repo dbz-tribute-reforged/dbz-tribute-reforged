@@ -5553,7 +5553,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim crono cleave" },
-      { name: "dash ground target crono cleave" },
+      { name: "dash ground point 30dist" },
       { name: "damage crono cleave explosion" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
@@ -5745,8 +5745,9 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim frog cleave" },
-      { name: "dash ground target crono cleave" },
+      { name: "dash ground point 30dist" },
       { name: "damage frog aerial explosion" },
+      { name: "damage frog aerial explosion inner" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
     ],
@@ -6276,32 +6277,6 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
-    name: AbilityNames.Marle.ICE_2,
-    currentCd: 0,
-    maxCd: 1,
-    costType: "MP",
-    costAmount: 0,
-    duration: 82,
-    updateRate: 0.03,
-    castTime: 0.0,
-    canMultiCast: true,
-    waitsForNextClick: false,
-    animation: "spell",
-    icon: {
-      enabled: "BTNMagusIce2.blp",
-      disabled: "BTNMagusIce2.blp",
-    },
-    tooltip: {
-      title: AbilityNames.Marle.ICE_2,
-      body: 
-        AbilityNames.Marle.ICE_2
-    },
-    components: [
-      { name: "beam marle ice 2" },
-    ],
-  },
-  // -------------------------------------------
-  {
     name: AbilityNames.Marle.AURA,
     currentCd: 0,
     maxCd: 1,
@@ -6460,7 +6435,7 @@ export const AbilitiesList = [
         AbilityNames.Crono.LIGHTNING
     },
     components: [
-      { name: "damage crono lightning 2 explosion" },
+      { name: "damage magus lightning 2 explosion" },
       { name: "multi crono lightning 2 inner" },
       { name: "multi crono lightning 2 outer" },
     ],
