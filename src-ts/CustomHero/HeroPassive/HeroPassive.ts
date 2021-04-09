@@ -74,6 +74,8 @@ export class HeroPassiveManager {
       case Id.dartFeld:
         dartFeldPassive(customHero);
         break;
+      case Id.lucario:
+        lucarioPassive(customHero);
       default:
         break;
     }
@@ -600,5 +602,61 @@ export function dartFeldPassive(customHero: CustomHero) {
       return false;
     })
   );
+}
 
+
+export function lucarioPassive(customHero: CustomHero) {
+  const extremeSpeedBuff = FourCC("B04O");
+  const player = GetOwningPlayer(customHero.unit);
+  const heroId = GetUnitTypeId(customHero.unit);
+  const onHitTrigger = CreateTrigger();
+  const targetPos = new Vector2D();
+  TriggerRegisterAnyUnitEventBJ(
+    onHitTrigger,
+    EVENT_PLAYER_UNIT_ATTACKED,
+  )
+  TriggerAddCondition(
+    onHitTrigger,
+    Condition(() => {
+
+      const attacker = GetAttacker();
+      if (
+        GetUnitTypeId(attacker) == heroId && 
+        GetOwningPlayer(attacker) == player
+      ) {
+        const target = GetTriggerUnit();
+        
+        if (
+          GetHandleId(attacker) == GetHandleId(customHero.unit) && 
+          GetUnitAbilityLevel(customHero.unit, extremeSpeedBuff) > 0
+        ) {
+          targetPos.setUnit(target);
+
+          const input = new CustomAbilityInput(
+            customHero, 
+            GetOwningPlayer(customHero.unit),
+            GetUnitAbilityLevel(customHero.unit, Id.extremeSpeed),
+            targetPos,
+            targetPos,
+            targetPos,
+            target,
+            target,
+          );
+
+          if (customHero.canCastAbility(AbilityNames.Lucario.EXTREME_SPEED_ON_HIT, input)) {
+            TextTagHelper.showPlayerColorTextOnUnit(
+              AbilityNames.Lucario.EXTREME_SPEED_ON_HIT, 
+              GetPlayerId(GetOwningPlayer(customHero.unit)), 
+              customHero.unit
+            );
+            customHero.useAbility(
+              AbilityNames.Lucario.EXTREME_SPEED_ON_HIT,
+              input
+            );
+          }
+        }
+      }
+      return false;
+    })
+  );
 }

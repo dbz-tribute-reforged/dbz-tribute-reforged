@@ -483,6 +483,7 @@ gg_trg_Magus_Spell_Book = nil
 gg_trg_Magus_Spellbook_CD_Link = nil
 gg_trg_Doom_Scythe_Buff = nil
 gg_trg_Doom_Scythe_Test = nil
+gg_trg_Macho_Brace_Use = nil
 gg_trg_Ayla_Triple_Kick = nil
 gg_trg_Play_Ability_Spell_Audio = nil
 gg_trg_Play_Ability_Spell_Audio_2 = nil
@@ -857,6 +858,7 @@ gg_trg_Crisis_Arm = nil
 gg_trg_Transformations_Magus = nil
 gg_trg_Transformations_Marle = nil
 gg_trg_Transformations_Ayla = nil
+gg_trg_Transformations_Lucario = nil
 gg_trg_Saga_Unit_Init = nil
 gg_trg_Saga_Unit_Loop = nil
 gg_trg_Saga_Unit_Spawn_Protection = nil
@@ -885,8 +887,6 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
-gg_trg_Transformations_Lucario = nil
-gg_trg_Macho_Brace_Use = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1402,11 +1402,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2845)
+    SetSoundDuration(gg_snd_Hint, 2005)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2954)
+    SetSoundDuration(gg_snd_GoodJob, 2548)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -2871,7 +2871,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H09C"), 11053.2, 22282.5, 288.150, FourCC("H09C"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H09D"), 11524.6, 22314.6, 274.930, FourCC("H09D"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H09D"), 11353.9, 22398.1, 274.930, FourCC("H09D"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H01T"), 10580.9, 22403.4, 275.421, FourCC("H01T"))
     SetUnitColor(u, ConvertPlayerColor(12))
@@ -3150,7 +3150,7 @@ function CreateNeutralPassive()
     SetUnitColor(u, ConvertPlayerColor(12))
     u = BlzCreateUnitWithSkin(p, FourCC("H08G"), 11489.8, 21996.6, 288.250, FourCC("H08G"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H08H"), 11474.6, 21643.7, 273.983, FourCC("H08H"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H08H"), 11451.6, 21684.5, 273.983, FourCC("H08H"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("O005"), 21631.0, -4429.6, 245.203, FourCC("O005"))
     SetUnitState(u, UNIT_STATE_MANA, 400)
@@ -3241,7 +3241,7 @@ function CreateNeutralPassive()
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H09R"), 11412.1, 22359.7, 206.150, FourCC("H09R"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
-    u = BlzCreateUnitWithSkin(p, FourCC("H00A"), 11611.4, 22273.7, 271.629, FourCC("H00A"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H00A"), 11020.5, 22635.2, 271.629, FourCC("H00A"))
     SetUnitState(u, UNIT_STATE_MANA, 800)
     u = BlzCreateUnitWithSkin(p, FourCC("H09S"), 11158.0, 21866.7, 283.270, FourCC("H09S"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
@@ -3262,7 +3262,7 @@ function CreateNeutralPassive()
     u = BlzCreateUnitWithSkin(p, FourCC("H0A0"), 11455.5, 21237.0, 268.050, FourCC("H0A0"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
     u = BlzCreateUnitWithSkin(p, FourCC("H0A1"), 11596.2, 21232.3, 269.901, FourCC("H0A1"))
-    u = BlzCreateUnitWithSkin(p, FourCC("H0A2"), 11514.2, 21341.4, 276.919, FourCC("H0A2"))
+    u = BlzCreateUnitWithSkin(p, FourCC("H0A2"), 11569.2, 21339.9, 276.919, FourCC("H0A2"))
     u = BlzCreateUnitWithSkin(p, FourCC("H0A3"), 10304.7, 21425.8, 275.847, FourCC("H0A3"))
     SetUnitState(u, UNIT_STATE_MANA, 650)
 end
@@ -7079,6 +7079,7 @@ function Trig_Ginyu_Change_Now_Ability_Resets_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VH"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Y4"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -13143,27 +13144,6 @@ function InitTrig_Magus_Spellbook_CD_Link()
     TriggerAddAction(gg_trg_Magus_Spellbook_CD_Link, Trig_Magus_Spellbook_CD_Link_Actions)
 end
 
-function Trig_Macho_Brace_Use_Conditions()
-    if (not (GetSpellAbilityId() == FourCC("A0XT"))) then
-        return false
-    end
-    return true
-end
-
-function Trig_Macho_Brace_Use_Actions()
-    UnitRemoveAbilityBJ(FourCC("A0XT"), GetTriggerUnit())
-    udg_StatMultUnit = GetTriggerUnit()
-    udg_TransformationString = "fp"
-    TriggerExecute(gg_trg_Transformations_Lucario)
-end
-
-function InitTrig_Macho_Brace_Use()
-    gg_trg_Macho_Brace_Use = CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Macho_Brace_Use, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Macho_Brace_Use, Condition(Trig_Macho_Brace_Use_Conditions))
-    TriggerAddAction(gg_trg_Macho_Brace_Use, Trig_Macho_Brace_Use_Actions)
-end
-
 function Trig_Ayla_Triple_Kick_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0XL"))) then
         return false
@@ -13196,6 +13176,30 @@ function InitTrig_Ayla_Triple_Kick()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Ayla_Triple_Kick, EVENT_PLAYER_UNIT_SPELL_FINISH)
     TriggerAddCondition(gg_trg_Ayla_Triple_Kick, Condition(Trig_Ayla_Triple_Kick_Conditions))
     TriggerAddAction(gg_trg_Ayla_Triple_Kick, Trig_Ayla_Triple_Kick_Actions)
+end
+
+function Trig_Macho_Brace_Use_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0XT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Macho_Brace_Use_Actions()
+    udg_TempUnit = GetTriggerUnit()
+        udg_ID = GetHandleId(udg_TempUnit)
+    UnitRemoveAbilityBJ(FourCC("A0XT"), GetTriggerUnit())
+    udg_StatMultUnit = GetTriggerUnit()
+    udg_TransformationString = "fp"
+    SaveRealBJ((LoadRealBJ(35, udg_ID, udg_StatMultHashtable) - 0.15), 35, udg_ID, udg_StatMultHashtable)
+    TriggerExecute(gg_trg_Transformations_Lucario)
+end
+
+function InitTrig_Macho_Brace_Use()
+    gg_trg_Macho_Brace_Use = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Macho_Brace_Use, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Macho_Brace_Use, Condition(Trig_Macho_Brace_Use_Conditions))
+    TriggerAddAction(gg_trg_Macho_Brace_Use, Trig_Macho_Brace_Use_Actions)
 end
 
 function Trig_Play_Ability_Spell_Audio_Func001Func001Func001C()
@@ -14523,6 +14527,7 @@ function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VA"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VC"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0VD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0Y4"), udg_TempPlayer)
     TriggerExecute(gg_trg_Frieza_Reset_Abilities)
     TriggerExecute(gg_trg_Yamcha_Disable_Abilities)
     SetPlayerAbilityAvailableBJ(true, FourCC("A0RC"), udg_TempPlayer)
@@ -18110,55 +18115,69 @@ function Trig_Base_Armor_Set_Func009C()
 end
 
 function Trig_Base_Armor_Set_Func010C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03F")) == true)) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A7"))) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func011C()
-    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
-        return false
-    end
-    return true
-end
-
-function Trig_Base_Armor_Set_Func012Func003C()
-    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B04Q")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func012C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03F")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func013C()
-    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+    if (not (UnitHasBuffBJ(udg_StatMultUnit, FourCC("B03S")) == true)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func014Func003C()
-    if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) > 0.00)) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func014C()
-    if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
     return true
 end
 
 function Trig_Base_Armor_Set_Func015C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_HitPocketDimensionUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func016Func003C()
+    if (not (LoadIntegerBJ(8, udg_ID, udg_SummonsHashtable) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func016C()
+    if (not (IsUnitInGroup(udg_StatMultUnit, udg_MarioJumpUnitGroup) == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Base_Armor_Set_Func017C()
     if (not (IsUnitType(udg_StatMultUnit, UNIT_TYPE_SUMMONED) == true)) then
         return false
     end
@@ -18354,38 +18373,46 @@ function Trig_Base_Armor_Set_Actions()
         end
     end
     if (Trig_Base_Armor_Set_Func010C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 7.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + (0.50 * I2R(GetUnitAbilityLevelSwapped(FourCC("A0XV"), udg_StatMultUnit))))
     else
     end
     if (Trig_Base_Armor_Set_Func011C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 100.00)
     else
     end
     if (Trig_Base_Armor_Set_Func012C()) then
-                old = udg_ID
-                udg_ID = GetHandleId(udg_StatMultUnit)
-        if (Trig_Base_Armor_Set_Func012Func003C()) then
-            udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
-        else
-        end
-                udg_ID = old
+        udg_BaseArmorReal = (udg_BaseArmorReal + 7.00)
     else
     end
     if (Trig_Base_Armor_Set_Func013C()) then
-        udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+        udg_BaseArmorReal = (udg_BaseArmorReal + 5.00)
     else
     end
     if (Trig_Base_Armor_Set_Func014C()) then
                 old = udg_ID
                 udg_ID = GetHandleId(udg_StatMultUnit)
         if (Trig_Base_Armor_Set_Func014Func003C()) then
-            udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+            udg_BaseArmorReal = (udg_BaseArmorReal + 10.00)
         else
         end
                 udg_ID = old
     else
     end
     if (Trig_Base_Armor_Set_Func015C()) then
+        udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+    else
+    end
+    if (Trig_Base_Armor_Set_Func016C()) then
+                old = udg_ID
+                udg_ID = GetHandleId(udg_StatMultUnit)
+        if (Trig_Base_Armor_Set_Func016Func003C()) then
+            udg_BaseArmorReal = (udg_BaseArmorReal + 99999.00)
+        else
+        end
+                udg_ID = old
+    else
+    end
+    if (Trig_Base_Armor_Set_Func017C()) then
         udg_BaseArmorReal = (udg_BaseArmorReal * 0.40)
     else
     end
@@ -22731,6 +22758,8 @@ function Trig_Hero_Pick_Init_Available_Heroes_Actions()
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A6")
     udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
+    udg_GoodHeroTypesArray[udg_NumGoodHeroes] = FourCC("H0A7")
+    udg_NumGoodHeroes = (udg_NumGoodHeroes + 1)
     udg_NumEvilHeroes = 0
     udg_EvilHeroTypesArray[udg_NumEvilHeroes] = FourCC("H01V")
     udg_NumEvilHeroes = (udg_NumEvilHeroes + 1)
@@ -23833,7 +23862,14 @@ function Trig_Add_Unit_To_StatMult_Func001Func025C()
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func026Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func026C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A7"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func027Func001C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H008")) then
         return true
     end
@@ -23843,28 +23879,28 @@ function Trig_Add_Unit_To_StatMult_Func001Func026Func001C()
     return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func026C()
-    if (not Trig_Add_Unit_To_StatMult_Func001Func026Func001C()) then
+function Trig_Add_Unit_To_StatMult_Func001Func027C()
+    if (not Trig_Add_Unit_To_StatMult_Func001Func027Func001C()) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func027Func003C()
+function Trig_Add_Unit_To_StatMult_Func001Func028Func003C()
     if (not (udg_TempUnitType == FourCC("H08Y"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func027Func004C()
+function Trig_Add_Unit_To_StatMult_Func001Func028Func004C()
     if (not (udg_TempUnitType == FourCC("E00K"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func027C()
+function Trig_Add_Unit_To_StatMult_Func001Func028C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("O00C"))) then
         return false
     end
@@ -23874,14 +23910,14 @@ function Trig_Add_Unit_To_StatMult_Func001Func027C()
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func028Func008C()
+function Trig_Add_Unit_To_StatMult_Func001Func029Func008C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H00M"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func028Func011C()
+function Trig_Add_Unit_To_StatMult_Func001Func029Func011C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("H08Y")) then
         return true
     end
@@ -23894,35 +23930,35 @@ function Trig_Add_Unit_To_StatMult_Func001Func028Func011C()
     return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func028C()
-    if (not Trig_Add_Unit_To_StatMult_Func001Func028Func011C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Add_Unit_To_StatMult_Func001Func029C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0MX"), udg_StatMultUnit) > 0)) then
+    if (not Trig_Add_Unit_To_StatMult_Func001Func029Func011C()) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func030C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0MX"), udg_StatMultUnit) > 0)) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func031C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09E"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func032C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H09F"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func032Func001C()
+function Trig_Add_Unit_To_StatMult_Func001Func033Func001C()
     if (GetUnitTypeId(udg_StatMultUnit) == FourCC("E01P")) then
         return true
     end
@@ -23938,49 +23974,49 @@ function Trig_Add_Unit_To_StatMult_Func001Func032Func001C()
     return false
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func032C()
-    if (not Trig_Add_Unit_To_StatMult_Func001Func032Func001C()) then
-        return false
-    end
-    return true
-end
-
 function Trig_Add_Unit_To_StatMult_Func001Func033C()
-    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001"))) then
+    if (not Trig_Add_Unit_To_StatMult_Func001Func033Func001C()) then
         return false
     end
     return true
 end
 
 function Trig_Add_Unit_To_StatMult_Func001Func034C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E001"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Add_Unit_To_StatMult_Func001Func035C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H055"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func036C()
+function Trig_Add_Unit_To_StatMult_Func001Func037C()
     if (not (udg_IsAOEFlyingVision == true)) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func037C()
+function Trig_Add_Unit_To_StatMult_Func001Func038C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("E010"))) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func038Func012C()
+function Trig_Add_Unit_To_StatMult_Func001Func039Func012C()
     if (not (udg_TempInt2 > 200)) then
         return false
     end
     return true
 end
 
-function Trig_Add_Unit_To_StatMult_Func001Func038C()
+function Trig_Add_Unit_To_StatMult_Func001Func039C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H06X"))) then
         return false
     end
@@ -24054,23 +24090,27 @@ function Trig_Add_Unit_To_StatMult_Actions()
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func026C()) then
-            SaveRealBJ((LoadRealBJ(34, udg_ID, udg_StatMultHashtable) + 0.05), 35, udg_ID, udg_StatMultHashtable)
+            SaveRealBJ((LoadRealBJ(35, udg_ID, udg_StatMultHashtable) + 0.15), 35, udg_ID, udg_StatMultHashtable)
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func027C()) then
+            SaveRealBJ((LoadRealBJ(35, udg_ID, udg_StatMultHashtable) + 0.05), 35, udg_ID, udg_StatMultHashtable)
+        else
+        end
+        if (Trig_Add_Unit_To_StatMult_Func001Func028C()) then
             udg_TempInt = LoadIntegerBJ(18, udg_ID, udg_StatMultHashtable)
                         udg_TempUnitType = udg_TempInt
-            if (Trig_Add_Unit_To_StatMult_Func001Func027Func003C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func028Func003C()) then
                 udg_TempBool = true
             else
             end
-            if (Trig_Add_Unit_To_StatMult_Func001Func027Func004C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func028Func004C()) then
                 TriggerExecute(gg_trg_Hit_Charges_Add_Unit)
             else
             end
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func028C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func029C()) then
             CreateTextTagUnitBJ("TRIGSTR_3360", udg_StatMultUnit, 10.00, 10, 100, 100, 100, 0)
             ShowTextTagForceBJ(false, GetLastCreatedTextTag(), GetPlayersAll())
             udg_TempPlayerGroup2 = GetForceOfPlayer(GetOwningPlayer(udg_StatMultUnit))
@@ -24078,7 +24118,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
                         DestroyForce(udg_TempPlayerGroup2)
             SetTextTagPermanentBJ(GetLastCreatedTextTag(), true)
             SaveTextTagHandleBJ(GetLastCreatedTextTag(), 20, udg_ID, udg_StatMultHashtable)
-            if (Trig_Add_Unit_To_StatMult_Func001Func028Func008C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func029Func008C()) then
             else
                 GroupAddUnitSimple(udg_StatMultUnit, udg_MoroUnitGroup)
             end
@@ -24086,35 +24126,35 @@ function Trig_Add_Unit_To_StatMult_Actions()
             EnableTrigger(gg_trg_Moro_Text_Tag_Update)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func029C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func030C()) then
             EnableTrigger(gg_trg_Infinite_Energy_Android_Loop)
             GroupAddUnitSimple(udg_StatMultUnit, udg_InfiniteEnergyAndroidUnitGroup)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func030C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
             UnitAddItemByIdSwapped(FourCC("I04N"), udg_StatMultUnit)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func031C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func032C()) then
             EnableTrigger(gg_trg_Omega_Shenron_Loop)
             GroupAddUnitSimple(udg_StatMultUnit, udg_OmegaShenronUnitGroup)
             SaveIntegerBJ(0, 32, udg_ID, udg_StatMultHashtable)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func032C()) then
-            TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
-        else
-        end
         if (Trig_Add_Unit_To_StatMult_Func001Func033C()) then
-            SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
+            TriggerExecute(gg_trg_Add_Unit_To_Text_Tag_Charges)
         else
         end
         if (Trig_Add_Unit_To_StatMult_Func001Func034C()) then
             SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
         else
         end
+        if (Trig_Add_Unit_To_StatMult_Func001Func035C()) then
+            SaveRealBJ(1.00, 12, udg_ID, udg_StatMultHashtable)
+        else
+        end
         GroupAddUnitSimple(udg_StatMultUnit, udg_StatMultPlayerUnits[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])
-        if (Trig_Add_Unit_To_StatMult_Func001Func036C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func037C()) then
             udg_TempLoc = GetUnitLoc(udg_StatMultUnit)
             udg_TempReal = RMinBJ(6666.00, (900.00 + (I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, udg_StatMultUnit, true)) * 0.66)))
             CreateFogModifierRadiusLocBJ(true, GetOwningPlayer(udg_StatMultUnit), FOG_OF_WAR_VISIBLE, udg_TempLoc, udg_TempReal)
@@ -24122,11 +24162,11 @@ function Trig_Add_Unit_To_StatMult_Actions()
                         RemoveLocation(udg_TempLoc)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func037C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func038C()) then
             TriggerExecute(gg_trg_Yamcha_Add_StatMultUnit_To_Yamcha)
         else
         end
-        if (Trig_Add_Unit_To_StatMult_Func001Func038C()) then
+        if (Trig_Add_Unit_To_StatMult_Func001Func039C()) then
             SaveIntegerBJ(4, 31, udg_ID, udg_StatMultHashtable)
             GroupAddUnitSimple(udg_StatMultUnit, udg_FriezaTransformationUnitGroup)
             EnableTrigger(gg_trg_Frieza_Transformation_Loop)
@@ -24138,7 +24178,7 @@ function Trig_Add_Unit_To_StatMult_Actions()
             SetPlayerAbilityAvailableBJ(true, FourCC("A0QA"), GetOwningPlayer(udg_StatMultUnit))
             UnitAddAbilityBJ(FourCC("A0Q8"), udg_StatMultUnit)
                         UnitMakeAbilityPermanent(udg_StatMultUnit, true, FourCC('A0Q8'))
-            if (Trig_Add_Unit_To_StatMult_Func001Func038Func012C()) then
+            if (Trig_Add_Unit_To_StatMult_Func001Func039Func012C()) then
                 SetPlayerAbilityAvailableBJ(false, FourCC("A0Q8"), GetOwningPlayer(udg_StatMultUnit))
                 SetPlayerAbilityAvailableBJ(true, FourCC("A0Q9"), GetOwningPlayer(udg_StatMultUnit))
                 UnitAddAbilityBJ(FourCC("A0Q9"), udg_StatMultUnit)
@@ -27021,7 +27061,7 @@ function Trig_Transformations_Init_Commands_Non_Auto_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommandsNonAuto[udg_TempInt] = "mega"
     udg_TempInt = (udg_TempInt + 1)
-    udg_TransformationCommandsNonAuto[udg_TempInt] = "giganto"
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "giga"
     udg_TempInt = (udg_TempInt + 1)
     udg_TempInt2 = 1
     while (true) do
@@ -46079,8 +46119,8 @@ function InitCustomTriggers()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()
     InitTrig_Magus_Spellbook_CD_Link()
-    InitTrig_Macho_Brace_Use()
     InitTrig_Ayla_Triple_Kick()
+    InitTrig_Macho_Brace_Use()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
     InitTrig_Freemode()

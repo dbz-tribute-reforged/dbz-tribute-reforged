@@ -399,6 +399,18 @@ export module Id {
   export const blasto = FourCC("A0OU");
   export const kingsThrone = FourCC("A0OV");
 
+  export const lucario = FourCC("H0A7");
+  export const vacuumWave = FourCC("A0XU");
+  export const ironDefense = FourCC("A0XV");
+  export const ironDefensePassive = FourCC("A0Y4");
+  export const extremeSpeed = FourCC("A0XW");
+  export const auraSphere = FourCC("A0XX");
+  export const lucarioMegaEvolution = FourCC("A0Y0");
+  export const auraStorm = FourCC("A0Y3");
+  export const lucarioGigantomax = FourCC("A0Y1");
+  export const gigaSphere = FourCC("A0Y2");
+
+
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");
   export const saturdayCrash = FourCC("A0MF");

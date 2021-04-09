@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-DBZ Tribute Reforged 0.62a
+DBZ Tribute Reforged 0.63
 }
 
 STRING 4
@@ -15706,7 +15706,7 @@ This is the technique used by Fat Buu when he tears off a part of his body and h
 }
 
 STRING 2545
-// Items: I000 (Senzu Bean), Hotkey (Hotkey)
+// Units: H0A9 (Demon King), Hotkey (Hotkey)
 {
 Q
 }
@@ -15730,7 +15730,7 @@ Broly packs energy into his punch knocking back and stunning the target opponent
 }
 
 STRING 2549
-// Items: I001 (Roast Ham), Hotkey (Hotkey)
+// Items: I000 (Senzu Bean), Hotkey (Hotkey)
 {
 Q
 }
@@ -18006,7 +18006,7 @@ STRING 2927
 }
 
 STRING 2928
-// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I001 (Roast Ham), Hotkey (Hotkey)
 {
 Q
 }
@@ -18030,7 +18030,7 @@ Shoots a beam of negative energy from the fingertip. |n[|cffffcc00History|r] - |
 }
 
 STRING 2932
-// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I00Z (Train Strength |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -18888,7 +18888,7 @@ STRING 3074
 }
 
 STRING 3075
-// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
+// Items: I01D (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -18912,7 +18912,7 @@ The powerful energy attack Kid Buu uses to blow up the Earth.
 }
 
 STRING 3079
-// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
+// Items: I02U (Travel to ??? |cffffff00(Q)|r), Hotkey (Hotkey)
 {
 Q
 }
@@ -19349,13 +19349,13 @@ Muffin
 }
 
 STRING 3152
-// Items: I044 (Banana), Hotkey (Hotkey)
+// Items: I043 (|cffffcc00Wish for Power|r), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3153
-// Items: I045 (Krabby Patty), Hotkey (Hotkey)
+// Items: I044 (Banana), Hotkey (Hotkey)
 {
 Q
 }
@@ -19565,13 +19565,13 @@ The user creates a straight energy beam with another coiled around it dealing da
 }
 
 STRING 3188
-// Items: I047 (Android Bomb), Hotkey (Hotkey)
+// Items: I045 (Krabby Patty), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3189
-// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
+// Items: I047 (Android Bomb), Hotkey (Hotkey)
 {
 Q
 }
@@ -19854,7 +19854,7 @@ Programmed Into Geti Star Maintence workers is the ability to repair damaged dro
 }
 
 STRING 3236
-// Items: I04F (Banana Generator), Hotkey (Hotkey)
+// Items: I048 (Geti Star Fragment), Hotkey (Hotkey)
 {
 Q
 }
@@ -20070,7 +20070,7 @@ STRING 3271
 }
 
 STRING 3272
-// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
+// Items: I04F (Banana Generator), Hotkey (Hotkey)
 {
 Q
 }
@@ -20094,7 +20094,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 3276
-// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
+// Items: I04M (Moro's Energy Drain), Hotkey (Hotkey)
 {
 Q
 }
@@ -21076,7 +21076,7 @@ STRING 3437
 }
 
 STRING 3438
-// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
+// Abilities: A073 (Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21100,7 +21100,7 @@ An evil spell which blasts an area with dozens of Ki blasts from the finger tips
 }
 
 STRING 3442
-// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A073 (Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21424,7 +21424,7 @@ STRING 3495
 }
 
 STRING 3496
-// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A006 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21448,7 +21448,7 @@ Fires a powerful energy blast from the user's hands.  |n|cff00ff00(Damage: (Int 
 }
 
 STRING 3500
-// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A006 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21802,7 +21802,7 @@ STRING 3558
 }
 
 STRING 3559
-// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A086 (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21826,7 +21826,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 1.25 + 
 }
 
 STRING 3563
-// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A086 (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -21928,7 +21928,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3578
-// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A008 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -21955,7 +21955,7 @@ Gotenks's signature move. Gotenks expels 5 Kamikaze ghosts from his mouth to see
 }
 
 STRING 3582
-// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A008 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -22219,7 +22219,7 @@ STRING 3625
 }
 
 STRING 3626
-// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A06C (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -22243,7 +22243,7 @@ The user gathers some energy with both arms behind his shoulder, then he brings 
 }
 
 STRING 3630
-// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -23374,7 +23374,7 @@ STRING 3817
 }
 
 STRING 3818
-// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -23392,7 +23392,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 3821
-// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24028,7 +24028,7 @@ STRING 3926
 }
 
 STRING 3927
-// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -24052,7 +24052,7 @@ Dende creates a beam of healing energy connecting him and the target unit. If De
 }
 
 STRING 3931
-// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A02F (Haretsu no Majutsu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25153,7 +25153,7 @@ STRING 4104
 }
 
 STRING 4105
-// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -25177,7 +25177,7 @@ Blasts the area with dozens of ki blasts from the finger tips. (|cff66cceeDamage
 }
 
 STRING 4109
-// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
+// Abilities: A06F (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26464,7 +26464,7 @@ STRING 4319
 }
 
 STRING 4320
-// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A05G (Geti Star Repair), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -26497,7 +26497,7 @@ Transformations:
 }
 
 STRING 4324
-// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28348,7 +28348,7 @@ STRING 4622
 }
 
 STRING 4623
-// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A01H (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28372,7 +28372,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 4627
-// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A01K (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -28772,7 +28772,7 @@ STRING 4691
 }
 
 STRING 4692
-// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A01K (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -28886,7 +28886,7 @@ STRING 4710
 }
 
 STRING 4711
-// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A02L (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29377,7 +29377,7 @@ STRING 4789
 }
 
 STRING 4790
-// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A02L (Finish Buster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -29923,7 +29923,7 @@ STRING 4880
 }
 
 STRING 4881
-// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A07M (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -29947,7 +29947,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4885
-// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A07M (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30037,7 +30037,7 @@ STRING 4899
 }
 
 STRING 4900
-// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A00N (Energy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30061,7 +30061,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 4904
-// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A00N (Energy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -30723,7 +30723,7 @@ STRING 5013
 }
 
 STRING 5014
-// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -30741,7 +30741,7 @@ STRING 5016
 }
 
 STRING 5017
-// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A03N (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -31713,7 +31713,7 @@ STRING 5178
 }
 
 STRING 5179
-// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A00R (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -31736,7 +31736,7 @@ You receive +0.04x multiplier from gathering combat data.
 }
 
 STRING 5183
-// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
+// Abilities: A00R (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32134,7 +32134,7 @@ STRING 5248
 }
 
 STRING 5249
-// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
+// Abilities: A06S (Dende's Healing), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32158,7 +32158,7 @@ Tien swings his arms so fast they appear to be windmills on his shoulder and pum
 }
 
 STRING 5253
-// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A06S (Dende's Healing), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32248,7 +32248,7 @@ STRING 5267
 }
 
 STRING 5268
-// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A06U (Finger Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32362,7 +32362,7 @@ STRING 5286
 }
 
 STRING 5287
-// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
+// Abilities: A06U (Finger Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32476,7 +32476,7 @@ STRING 5305
 }
 
 STRING 5306
-// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
+// Abilities: A06X (Dodon Ray), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -32590,7 +32590,7 @@ STRING 5324
 }
 
 STRING 5325
-// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A06X (Dodon Ray), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33200,7 +33200,7 @@ STRING 5421
 }
 
 STRING 5422
-// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A08B (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33225,7 +33225,7 @@ Janemba opens a portal and punches through it, damaging the target area.
 }
 
 STRING 5426
-// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
+// Abilities: A08B (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33346,7 +33346,7 @@ STRING 5445
 }
 
 STRING 5446
-// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A08E (Plant Tree of Might), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33358,7 +33358,7 @@ Cosmic Illusion
 }
 
 STRING 5448
-// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
+// Abilities: A08F (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33540,7 +33540,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A08N (Self-Destruct), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33564,7 +33564,7 @@ Removes corruptions and  weak evil from the area. Forces Bebi out of bodies, rem
 }
 
 STRING 5481
-// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A09O (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33654,7 +33654,7 @@ STRING 5495
 }
 
 STRING 5496
-// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A09O (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33672,7 +33672,7 @@ STRING 5498
 }
 
 STRING 5499
-// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A09P (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33804,7 +33804,7 @@ STRING 5520
 }
 
 STRING 5521
-// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
+// Abilities: A09P (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34076,7 +34076,7 @@ STRING 5564
 }
 
 STRING 5565
-// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
+// Abilities: A09V (Flash Bomber), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34094,7 +34094,7 @@ D
 }
 
 STRING 5568
-// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
+// Abilities: A09V (Flash Bomber), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34556,7 +34556,7 @@ STRING 5644
 }
 
 STRING 5645
-// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
+// Abilities: A0B5 (Kyodaika), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -34580,7 +34580,7 @@ The Kamehameha is a skill learned by the students of Master Roshi. Master Roshi 
 }
 
 STRING 5649
-// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B5 (Kyodaika), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35072,7 +35072,7 @@ Spell Amp: +2% per second up to +10%|r
 }
 
 STRING 5717
-// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
+// Abilities: A0BH (Train Strength), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35168,7 +35168,7 @@ Moves your revive point to the capital, near Capsule Corp.
 }
 
 STRING 5733
-// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BH (Train Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -35216,7 +35216,7 @@ Moves your revive point to Dr. Gero's lab.
 }
 
 STRING 5741
-// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BI (Train Agility), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35902,7 +35902,7 @@ STRING 5853
 }
 
 STRING 5854
-// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BJ (Train Intellect), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -35920,7 +35920,7 @@ STRING 5856
 }
 
 STRING 5857
-// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BK (Focus Ally), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -36328,7 +36328,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 5925
-// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BM (Focus none), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38716,7 +38716,7 @@ Because Cell is made up of the cells of others he has the blood of the Saiyan ra
 }
 
 STRING 6322
-// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0BU (Illusion Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -38989,7 +38989,7 @@ A sweeping kick that damages enemies near the user and knocks away any incoming 
 }
 
 STRING 6359
-// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BU (Illusion Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -39013,7 +39013,7 @@ Hercule punches the target. |n|cff00ff00(Damage: Str * 9 + 100)|r
 }
 
 STRING 6363
-// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BV (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -39313,7 +39313,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6406
-// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BV (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40027,7 +40027,7 @@ STRING 6524
 }
 
 STRING 6525
-// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BL (Janemba Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -40345,13 +40345,13 @@ Saiyan Warrior
 }
 
 STRING 6578
-// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BL (Janemba Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6579
-// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0BX (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -41619,13 +41619,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 6787
-// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BX (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 6788
-// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BY (Train All), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42074,7 +42074,7 @@ STRING 6860
 }
 
 STRING 6861
-// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -42228,7 +42228,7 @@ STRING 6882
 }
 
 STRING 6883
-// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C4 (BeerusBall 3.0), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42338,7 +42338,7 @@ R
 }
 
 STRING 6900
-// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Revive - Krillin Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42470,7 +42470,7 @@ Madara expels a wall of flame from his mouth that damages units caught in its pa
 }
 
 STRING 6922
-// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0CF (Revive - Piccolo Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42842,7 +42842,7 @@ Book Aura Roshi
 }
 
 STRING 6984
-// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CH (Revive - Bebi Spawn), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -42994,7 +42994,7 @@ A combat style taught by Master Roshi.
 }
 
 STRING 7006
-// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -43892,7 +43892,7 @@ The user holds his arm at right angle to his body and lets loose a powerful ball
 }
 
 STRING 7137
-// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
+// Abilities: A0CU (Beerus Generic Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43916,7 +43916,7 @@ Calamity Blaster
 }
 
 STRING 7141
-// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
+// Abilities: A0CX (Sample Eggs and Sausage), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43940,7 +43940,7 @@ Cosmic Illusion
 }
 
 STRING 7145
-// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DV (Release Buu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -43988,7 +43988,7 @@ Dragon Fist
 }
 
 STRING 7153
-// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44012,7 +44012,7 @@ Energy Punch
 }
 
 STRING 7157
-// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
+// Abilities: A0DX (Super Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44148,7 +44148,7 @@ This is a magic spell used by Babidi to make people swell up and explode. Instan
 }
 
 STRING 7176
-// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
+// Abilities: A0E1 (Transform - First), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44196,7 +44196,7 @@ Final Flash
 }
 
 STRING 7184
-// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0E7 (Travel), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44220,7 +44220,7 @@ Galick Gun
 }
 
 STRING 7188
-// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0EI (Candy Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44383,7 +44383,7 @@ CELL
 }
 
 STRING 7212
-// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EI (Candy Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44407,7 +44407,7 @@ Photon Flash
 }
 
 STRING 7216
-// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -44431,7 +44431,7 @@ Power Blitz
 }
 
 STRING 7220
-// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0ES (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44563,7 +44563,7 @@ STRING 7241
 }
 
 STRING 7242
-// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FG (Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -44587,7 +44587,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 7246
-// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
+// Abilities: A0FG (Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45211,7 +45211,7 @@ STRING 7349
 }
 
 STRING 7350
-// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FI (Katon Goka Mekkakyu), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -45235,7 +45235,7 @@ STRING 7353
 }
 
 STRING 7354
-// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
+// Abilities: A0FI (Katon Goka Mekkakyu), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -45553,13 +45553,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7407
-// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FT (Time Skip), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7408
-// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0FT (Time Skip), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46284,7 +46284,7 @@ STRING 7528
 }
 
 STRING 7529
-// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0G4 (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46308,7 +46308,7 @@ The Android puts their hand forward and fires an energy wave.|n|cff00FF00Damage:
 }
 
 STRING 7533
-// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G5 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46407,7 +46407,7 @@ STRING 7547
 }
 
 STRING 7548
-// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0G6 (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46431,7 +46431,7 @@ STRING 7551
 }
 
 STRING 7552
-// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G8 (Energy Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46521,7 +46521,7 @@ STRING 7566
 }
 
 STRING 7567
-// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0G8 (Energy Punch), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -46545,7 +46545,7 @@ Dr. Gero fires two beams from his eyes. |n|cff00ff00(Damage: int * lvl * 2.5+100
 }
 
 STRING 7571
-// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0G9 (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46641,7 +46641,7 @@ STRING 7586
 }
 
 STRING 7587
-// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GB (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46659,7 +46659,7 @@ STRING 7589
 }
 
 STRING 7590
-// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GC (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46791,7 +46791,7 @@ STRING 7611
 }
 
 STRING 7612
-// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GE (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -46815,7 +46815,7 @@ Calamity Blaster is a large and powerful beam of energy used by Turles. |n|cff00
 }
 
 STRING 7616
-// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GF (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47150,7 +47150,7 @@ STRING 7670
 }
 
 STRING 7671
-// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GG (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47174,7 +47174,7 @@ A Combination of Big Bang and Kamehameha. |n[|cffffcc00History|r] - |cff0066CCGo
 }
 
 STRING 7675
-// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0GH (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47264,7 +47264,7 @@ STRING 7689
 }
 
 STRING 7690
-// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GH (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47288,7 +47288,7 @@ A very powerful combination of Vegeta's Final Flash and Goku's Kamehameha wave. 
 }
 
 STRING 7694
-// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
+// Abilities: A0GM (Galick Gun), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47378,7 +47378,7 @@ STRING 7708
 }
 
 STRING 7709
-// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GM (Galick Gun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47390,7 +47390,7 @@ Cosmic Illusion
 }
 
 STRING 7711
-// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0GP (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47631,13 +47631,13 @@ The user creates a straight energy beam with another coiled around it. He charge
 }
 
 STRING 7751
-// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GP (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 7752
-// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0GV (Photon Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -47895,7 +47895,7 @@ STRING 7794
 }
 
 STRING 7795
-// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GV (Photon Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -47919,7 +47919,7 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Damage: (Int * 
 }
 
 STRING 7799
-// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
+// Abilities: A0GW (Power Blitz), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -48865,7 +48865,7 @@ STRING 7953
 }
 
 STRING 7954
-// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GW (Power Blitz), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -48889,13 +48889,13 @@ Combines the effects of Kamehameha and Final Flash. |n|cff00ff00(Kamehameha Dama
 }
 
 STRING 7958
-// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (Eye Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 7959
-// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (Eye Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49033,7 +49033,7 @@ Learn God Splitter (|cffffcc00Q|r)
 }
 
 STRING 7982
-// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0GY (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49622,7 +49622,7 @@ Dummy Stun 2s
 }
 
 STRING 8072
-// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GY (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -49757,7 +49757,7 @@ Tapion fires a sphere of energy in the target direction. The sphere will damage 
 }
 
 STRING 8093
-// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
+// Abilities: A0GZ (Calamity Blaster), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -49875,7 +49875,7 @@ Hit's assassination techniques cause massive damage in hand-to-hand combat.
 }
 
 STRING 8111
-// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GZ (Calamity Blaster), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -51428,7 +51428,7 @@ W
 }
 
 STRING 8359
-// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (Big Bang Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -51452,7 +51452,7 @@ Black Kamehameha
 }
 
 STRING 8363
-// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H2 (Big Bang Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52076,7 +52076,7 @@ STRING 8466
 }
 
 STRING 8467
-// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0H3 (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52100,7 +52100,7 @@ At first the user cups both of his hands to concentrate the energy, then he char
 }
 
 STRING 8471
-// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H3 (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52183,7 +52183,7 @@ STRING 8484
 }
 
 STRING 8485
-// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
+// Abilities: A0H4 (Cosmic Illusion), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -52514,7 +52514,7 @@ Gotenks rapidly fires continuous ki blasts at his enemies, leaving them no room 
 }
 
 STRING 8534
-// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H4 (Cosmic Illusion), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -52544,7 +52544,7 @@ Krown Toss
 }
 
 STRING 8538
-// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0H7 (Special Beam Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53629,7 +53629,7 @@ VegetaSSG
 }
 
 STRING 8712
-// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H7 (Special Beam Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -53917,7 +53917,7 @@ Grants Whis or an ally a shield which absorbs incoming damage.|nShields |cff00ff
 }
 
 STRING 8752
-// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HG (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -53941,7 +53941,7 @@ Symphonic Destruction
 }
 
 STRING 8756
-// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HG (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -54621,7 +54621,7 @@ STRING 8866
 }
 
 STRING 8867
-// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -55602,7 +55602,7 @@ STRING 9027
 }
 
 STRING 9028
-// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
+// Abilities: A0HY (Final Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56109,7 +56109,7 @@ W
 }
 
 STRING 9102
-// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HZ (God Splitter), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56136,7 +56136,7 @@ Power Impact
 }
 
 STRING 9106
-// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0HZ (God Splitter), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -56266,7 +56266,7 @@ STRING 9124
 }
 
 STRING 9125
-// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0I8 (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56584,7 +56584,7 @@ F
 }
 
 STRING 9178
-// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I9 (Brave Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -56944,7 +56944,7 @@ Tapion
 }
 
 STRING 9238
-// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0I9 (Brave Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -57099,7 +57099,7 @@ Hero
 }
 
 STRING 9260
-// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -59209,301 +59209,301 @@ Reduces the cooldown of Cooler's Death Beam and Supernova.
 }
 
 STRING 9608
-// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IL (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9609
-// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9610
-// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0IQ (Black Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9611
-// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IV (Krown Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9612
-// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
+// Abilities: A0IV (Krown Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9613
-// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9614
-// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JI (Symphonic Destruction), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9615
-// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K1 (Consume Fruit), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9616
-// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K9 (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9617
-// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
+// Abilities: A0K9 (Power Impact), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9618
-// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
+// Abilities: A0KA (Power Impact), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9619
-// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0KF (Recall), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9620
-// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KQ (Brave Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9621
-// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KQ (Brave Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9622
-// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0L9 (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9623
-// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L9 (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9624
-// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
+// Abilities: A0LC (S.S. Deadly Hammer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9625
-// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LC (S.S. Deadly Hammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9626
-// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
+// Abilities: A0LO (Tyrant Lancer), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9627
-// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LO (Tyrant Lancer), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9628
-// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0LX (Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9629
-// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LX (Kamehameha), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9630
-// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Frozen Q), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9631
-// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M2 (Frozen Q), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9632
-// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
+// Abilities: A0ME (Double Sunday), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9633
-// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ME (Double Sunday), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9634
-// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9635
-// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (Giant Storm), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9636
-// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9637
-// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MM (Saibaman Bomb), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9638
-// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MN (Saibaman Acid), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9639
-// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
+// Abilities: A0MO (Energy Drain), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9640
-// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MO (Energy Drain), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9641
-// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (Power Blitz Barrage), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9642
-// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MW (Power Blitz Barrage), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9643
-// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0NL (Heat Dome Attack), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9644
-// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NL (Heat Dome Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9645
-// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NY (Rakshasa's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9646
-// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NY (Rakshasa's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9647
-// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (Devil's Claw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9648
-// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NZ (Devil's Claw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9649
-// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
+// Abilities: A0OG (Evil Spear), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9650
-// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OG (Evil Spear), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9651
-// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0OH (Javelin Throw), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9652
-// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OH (Javelin Throw), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9653
-// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
+// Abilities: A0OX (Tyrant Breaker), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9654
-// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OX (Tyrant Breaker), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9655
-// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
+// Abilities: A0P1 (Frost Claws), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 9656
-// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P1 (Frost Claws), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9657
-// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Justice Flash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -60465,7 +60465,7 @@ Goku
 }
 
 STRING 9817
-// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PB (Justice Flash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -65189,25 +65189,25 @@ STRING 10596
 }
 
 STRING 10597
-// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Justice Flash 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10598
-// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PI (Justice Flash 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10599
-// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0PP (Milky Cannon), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 10600
-// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (Milky Cannon), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -66051,7 +66051,7 @@ Pan's best friend.
 }
 
 STRING 10722
-// Buffs/Effects: B01Q (), Bufftip (Tooltip)
+// Units: H0A9 (Demon King), Propernames (Proper Names)
 {
 Dabura
 }
@@ -66577,7 +66577,7 @@ Honey Bee Costume
 }
 
 STRING 10806
-// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0PZ (Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -67591,7 +67591,7 @@ STRING 10974
 }
 
 STRING 10975
-// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PZ (Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -67681,7 +67681,7 @@ STRING 10989
 }
 
 STRING 10990
-// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Golden Death Beam), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -67729,13 +67729,13 @@ STRING 10994
 }
 
 STRING 10995
-// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QD (Golden Death Beam), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 10996
-// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QJ (Dragon Flash Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68073,7 +68073,7 @@ Raditz holds his right hand high in the air and forms a pink energy sphere that 
 }
 
 STRING 11055
-// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QJ (Dragon Flash Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68234,7 +68234,7 @@ Final Battle Simulator Detected. Game is now in testing mode. Automatic Freemode
 }
 
 STRING 11082
-// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -68246,7 +68246,7 @@ Moro manipulates the life energy of the planet to hunt down his enemies. Creates
 }
 
 STRING 11084
-// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
+// Abilities: A0QY (Light Bullet), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -68631,13 +68631,13 @@ Double Sundae
 }
 
 STRING 11147
-// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
+// Abilities: A0RC (Light Punch), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11148
-// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RF (Dash Left), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69275,13 +69275,13 @@ STRING 11252
 }
 
 STRING 11253
-// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
+// Abilities: A0RI (Super Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11254
-// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
+// Abilities: A0RL (Sledgehammer), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -69605,19 +69605,19 @@ STRING 11307
 }
 
 STRING 11308
-// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
+// Abilities: A0RP (Wolf Fang Hurricane), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11309
-// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0RS (Blinding Wolf Fang Fist), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11310
-// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0RV (Spirit Ball), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70085,13 +70085,13 @@ STRING 11387
 }
 
 STRING 11388
-// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
+// Abilities: A0S0 (Wolf Fang Pack Attack), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11389
-// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
+// Abilities: A0S2 (Summon Puar), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70367,7 +70367,7 @@ Lava Pillars
 }
 
 STRING 11435
-// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S5 (Homerun), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -70426,7 +70426,7 @@ STRING 11444
 }
 
 STRING 11445
-// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71062,7 +71062,7 @@ After the user charges green energy in both of their hands, the user throws out 
 }
 
 STRING 11548
-// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SC (Psycho Javelin), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71230,13 +71230,13 @@ STRING 11575
 }
 
 STRING 11576
-// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SI (Power Impact 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11577
-// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SI (Power Impact 2), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -71859,19 +71859,19 @@ Eat Banana
 }
 
 STRING 11680
-// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JE (Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11681
-// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0JE (Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 11682
-// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SO (Super Kamehameha Charge), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -71996,7 +71996,7 @@ Eat Krabby Patty
 }
 
 STRING 11703
-// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0SO (Super Kamehameha Charge), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72491,13 +72491,13 @@ STRING 11784
 }
 
 STRING 11785
-// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11786
-// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SP (Super Kamehameha Fire), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -72930,7 +72930,7 @@ Donate Energy to Moro
 }
 
 STRING 11857
-// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
+// Abilities: A0SR (Divine Authority), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -73070,13 +73070,13 @@ STRING 11879
 }
 
 STRING 11880
-// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0SR (Divine Authority), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 11881
-// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74057,13 +74057,13 @@ This unit is under the effects of Cosmic Illusion; it is invisible, moves faster
 }
 
 STRING 12041
-// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
+// Abilities: A0SX (Detroit Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12042
-// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T3 (Oklahoma Smash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -74183,7 +74183,7 @@ Bee Evasion
 }
 
 STRING 12062
-// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T4 (Carolina Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -74881,13 +74881,13 @@ This unit is under the effects of Upa's Rage; it has increased attack damage.
 }
 
 STRING 12175
-// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T5 (California Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12176
-// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T6 (New Hampshire Smash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -75613,13 +75613,13 @@ STRING 12292
 }
 
 STRING 12293
-// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Octoslash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 12294
-// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
+// Abilities: A0T7 (Octoslash), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -77810,7 +77810,7 @@ Mana burns |cff00ffff3%|r of the enemy's max mana.
 }
 
 STRING 12643
-// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TJ (Jump), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -77828,7 +77828,7 @@ Z
 }
 
 STRING 12646
-// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
+// Abilities: A0TJ (Jump), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -78525,13 +78525,13 @@ Frostbite
 }
 
 STRING 12746
-// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12747
-// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ground Pound), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79384,7 +79384,7 @@ R
 }
 
 STRING 12887
-// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -79504,25 +79504,25 @@ Justice Pose
 }
 
 STRING 12907
-// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
+// Abilities: A0U7 (Getsuga Tensho), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12908
-// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0UD (Mugetsu: Unleash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 12909
-// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UD (Mugetsu: Unleash), Unhotkey (Hotkey - Turn Off)
 {
 Q
 }
 
 STRING 12910
-// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -81554,7 +81554,7 @@ E
 }
 
 STRING 13240
-// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UH (Getsuga Jujisho), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -85161,25 +85161,25 @@ STRING 13805
 }
 
 STRING 13806
-// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UQ (Double Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13807
-// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0UQ (Double Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13808
-// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UR (Burning Rush), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13809
-// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
+// Abilities: A0UR (Burning Rush), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -86215,19 +86215,19 @@ STRING 13972
 }
 
 STRING 13973
-// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UW (Madness Slash), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 13974
-// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
+// Abilities: A0UW (Madness Slash), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 13975
-// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -86576,7 +86576,7 @@ This unit is under the effects of Envoy of the End; it has increased attack dama
 }
 
 STRING 14032
-// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UX (Dragoon Flourish), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -87461,13 +87461,13 @@ Justice Pose
 }
 
 STRING 14163
-// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
+// Abilities: A0V4 (Getsuga Kuroi), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14164
-// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V4 (Getsuga Kuroi), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -88922,25 +88922,25 @@ STRING 14392
 }
 
 STRING 14393
-// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Gran Rey Getsuga), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14394
-// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V5 (Gran Rey Getsuga), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 14395
-// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
+// Abilities: A0VI (Tyranno Flame), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 14396
-// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VI (Tyranno Flame), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -93315,37 +93315,37 @@ Yamcha deflects incoming attacks with his baseball swing.
 }
 
 STRING 15032
-// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15033
-// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A0VN (Kamehameha God), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15034
-// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VP (Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15035
-// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0VP (Cyclone), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15036
-// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15037
-// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
+// Abilities: A0W4 (Elemental Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -94452,19 +94452,19 @@ This unit was recently frozen by Time Stop; its movement speed and attack rate a
 }
 
 STRING 15197
-// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
+// Abilities: A0W5 (Lightning 2), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15198
-// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WA (Slurp Cut), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15199
-// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
+// Abilities: A0WA (Slurp Cut), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -94695,13 +94695,13 @@ Jiren's strength is overwhelming.
 }
 
 STRING 15233
-// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (Robo Tackle), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15234
-// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WG (Robo Tackle), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -95349,7 +95349,7 @@ The user charges with one hand behind the other above the head. The hands are th
 }
 
 STRING 15333
-// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -95872,13 +95872,13 @@ STRING 15402
 }
 
 STRING 15403
-// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
+// Abilities: A0WZ (Flamethrower), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15404
-// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XA (Aura), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -97417,19 +97417,19 @@ STRING 15617
 }
 
 STRING 15618
-// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15619
-// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 15620
-// Abilities: A0XU (Force Palm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Boulder Toss), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -97917,116 +97917,6 @@ STRING 15687
 // Abilities: A0FT (Time Skip), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Time Skip - [|cffffcc00Level 7|r]
-}
-
-STRING 15688
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool1> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15689
-// Abilities: A0T2 (United States of Smash), Researchubertip (Tooltip - Learn - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool1> - <A0T2,Cool10> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15690
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool2> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15691
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool3> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15692
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool4> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15693
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool5> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15694
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool6> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15695
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool7> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15696
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool8> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15697
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool9> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
-}
-
-STRING 15698
-// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
-{
-All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned.
-|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
-|cff00ffffCooldown: <A0T2,Cool10> seconds|r
-
-|cff808080This unstoppable attack was used to defeat All For One and marked the end of All Might's hero career|r
 }
 
 STRING 15699
@@ -98718,13 +98608,13 @@ STRING 15800
 }
 
 STRING 15801
-// Abilities: A0XU (Force Palm), Hotkey (Hotkey - Normal)
+// Abilities: A0XU (Vacuum Wave), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
 
 STRING 15802
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XU (Vacuum Wave), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -115631,105 +115521,6 @@ A strong PvP fighter due to his extremely high mobility, burst damage, and innat
 
 }
 
-STRING 18139
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool1> seconds|r
-}
-
-STRING 18140
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur2> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool2> seconds|r
-}
-
-STRING 18141
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur3> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool3> seconds|r
-}
-
-STRING 18142
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur4> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool4> seconds|r
-}
-
-STRING 18143
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur5> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool5> seconds|r
-}
-
-STRING 18144
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur6> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool6> seconds|r
-}
-
-STRING 18145
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur7> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool7> seconds|r
-}
-
-STRING 18146
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur8> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool8> seconds|r
-}
-
-STRING 18147
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur9> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool9> seconds|r
-}
-
-STRING 18148
-// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur10> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
-}
-
-STRING 18149
-// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
-{
-Robo fires a series of blasts from his fist in front of him. Channeled.
-|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
-|cff00ff00Damage: Str x Int x ?|r
-|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
-}
-
 STRING 18150
 // Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -116284,21 +116075,6 @@ STRING 18230
 // Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
 {
 Magus' Amulet prevents application of negative status effects.
-}
-
-STRING 18231
-// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
-{
-A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
-
-|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
-
-|cff00FF00III|r|cff383838II |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
-
 }
 
 STRING 18232
@@ -116957,15 +116733,14 @@ STRING 18327
 {
 Type "r" to revert.
 Transformations:
-[Lvl 1] - Start with Macho Brace - 1.00x
-[lvl 20] - 1.25x
-[lvl 50] - 1.75x
-[lvl 80] - 2.0x
-[lvl 120] - 2.2x
-[lvl 150] - 2.5x
-[lvl 200] - Ultimate choice 
-"mega" for Mega Lucario
-"giganto" for Gigantomax Lucario
+[lvl 20]  1.25x
+[lvl 50]  1.75x
+[lvl 80]  2.0x
+[lvl 120] 2.2x
+[lvl 150] 2.5x
+[lvl 200] [|cff00ffffUltimate Choice|r]
+"|cff00ff00mega|r" - Mega Lucario
+"|cffffff00giga|r" - Gigantomax Lucario
 
 }
 
@@ -117081,6 +116856,21 @@ STRING 18346
 // Units: H0A6 (Princess of Guardia), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00D|r] Choose Marle
+}
+
+STRING 18347
+// Units: H0A2 (Curious Brobot), Ubertip (Tooltip - Extended)
+{
+A very tanky hero that fights best on the front lines with his high impact nukes while healing himself and his allies.
+
+|cffffff00Has critical strikes and bonus attack damage that upgrade as he gets stronger.
+
+|cff00FF00II|r|cff383838III |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 18348
@@ -117924,7 +117714,7 @@ STRING 18476
 }
 
 STRING 18477
-// Abilities: A0X5 (Flare), EditorSuffix (Editor Suffix)
+// Abilities: A0X3 (Napalm), EditorSuffix (Editor Suffix)
 {
 (lucca)
 }
@@ -117976,7 +117766,7 @@ Lucca Crit Passive
 }
 
 STRING 18484
-// Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0X4 (Mega Bomb), EditorSuffix (Editor Suffix)
 {
 (lucca)
 }
@@ -117994,9 +117784,15 @@ Lucca Attack Passive
 }
 
 STRING 18487
-// Abilities: A0X8 (Lucca Attack Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0X5 (Flare), EditorSuffix (Editor Suffix)
 {
 (lucca)
+}
+
+STRING 18488
+// Units: H0A9 (Demon King), Name (Name)
+{
+Demon King
 }
 
 STRING 18489
@@ -118210,12 +118006,6 @@ STRING 18522
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 7|r]
 }
 
-STRING 18523
-// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
-{
-Gain 15% bonus creep kill stats and +1 to all stats each level. Activate to permanently remove Macho Brace, increasing Lucario's multiplier by 0.4x
-}
-
 STRING 18524
 // Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
 {
@@ -118225,7 +118015,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 18525
-// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -118233,7 +118023,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 18526
-// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -118277,7 +118067,7 @@ STRING 18532
 }
 
 STRING 18533
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -118303,7 +118093,7 @@ STRING 18536
 }
 
 STRING 18537
-// Abilities: A0XF (Haste), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -118849,25 +118639,25 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 18616
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
 }
 
 STRING 18617
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
 }
 
 STRING 18618
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
 }
 
 STRING 18619
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
 }
@@ -118957,7 +118747,7 @@ STRING 18633
 }
 
 STRING 18634
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
 }
@@ -118969,13 +118759,13 @@ STRING 18635
 }
 
 STRING 18636
-// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
 STRING 18637
-// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -119047,31 +118837,31 @@ Raditz takes some time out to eat a delicious Double Sundae that refreshes the c
 }
 
 STRING 18646
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
 }
 
 STRING 18647
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
 }
 
 STRING 18648
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
 }
 
 STRING 18649
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
 }
 
 STRING 18650
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
 }
@@ -119083,13 +118873,13 @@ STRING 18651
 }
 
 STRING 18652
-// Abilities: A0XF (Haste), Tip (Tooltip - Normal)
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
 STRING 18653
-// Abilities: A0XF (Haste), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -119107,7 +118897,7 @@ STRING 18655
 }
 
 STRING 18656
-// Abilities: A0XF (Haste), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -119182,7 +118972,7 @@ STRING 18664
 }
 
 STRING 18665
-// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
+// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -119981,7 +119771,7 @@ STRING 18778
 }
 
 STRING 18779
-// Abilities: A0XL (Triple Kick), Hotkey (Hotkey - Normal)
+// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
 {
 D
 }
@@ -120068,7 +119858,7 @@ Ayla kicks towards the target location, dealing damage to units in her path. Ayl
 }
 
 STRING 18793
-// Abilities: A0XL (Triple Kick), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -120605,237 +120395,10 @@ STRING 18867
 (lucario)
 }
 
-STRING 18868
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
-}
-
-STRING 18869
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool2>s|r
-}
-
-STRING 18870
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool3>s|r
-}
-
-STRING 18871
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool4>s|r
-}
-
-STRING 18872
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool5>s|r
-}
-
-STRING 18873
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool6>s|r
-}
-
-STRING 18874
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool7>s|r
-}
-
-STRING 18875
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool8>s|r
-}
-
-STRING 18876
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool9>s|r
-}
-
-STRING 18877
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 2|r]
-}
-
-STRING 18878
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 3|r]
-}
-
-STRING 18879
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 4|r]
-}
-
-STRING 18880
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 5|r]
-}
-
-STRING 18881
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 6|r]
-}
-
-STRING 18882
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 1|r]
-}
-
-STRING 18883
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 7|r]
-}
-
-STRING 18884
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 8|r]
-}
-
-STRING 18885
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 9|r]
-}
-
-STRING 18886
-// Abilities: A0XU (Force Palm), Name (Name)
-{
-Force Palm
-}
-
-STRING 18887
-// Abilities: A0XU (Force Palm), Researchtip (Tooltip - Learn)
-{
-[|cff00FF00Q|r] Learn Force Palm - [|cffffcc00Level %d|r]
-}
-
-STRING 18888
-// Abilities: A0XU (Force Palm), Researchubertip (Tooltip - Learn - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
-}
-
 STRING 18889
-// Abilities: A0XU (Force Palm), EditorSuffix (Editor Suffix)
+// Abilities: A0XU (Vacuum Wave), EditorSuffix (Editor Suffix)
 {
 (lucario)
-}
-
-STRING 18890
-// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
-{
-[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 10|r]
-}
-
-STRING 18891
-// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cff00FF00Damage: int * lvl * ??|r|
-|cff00FFFFCooldown: <A0XU,Cool10>s|r
-}
-
-STRING 18892
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool1>s
-}
-
-STRING 18893
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool2>s
-}
-
-STRING 18894
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool3>s
-}
-
-STRING 18895
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool4>s
-}
-
-STRING 18896
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool5>s
-}
-
-STRING 18897
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by25%
-|cff00FFFFCooldown: <A0XV,Cool6>s
-}
-
-STRING 18898
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool7>s
 }
 
 STRING 18899
@@ -120922,38 +120485,6 @@ STRING 18912
 [|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 10|r]
 }
 
-STRING 18913
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool8>s
-}
-
-STRING 18914
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool9>s
-}
-
-STRING 18915
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool10>s
-}
-
-STRING 18916
-// Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
-{
-|cffFFFF00Passive:|r Lucario gains +0.5x armor per level, up to a maximum of 5.
-|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
-|cff00FFFFCooldown: <A0XV,Cool1>-<A0XV,Cool10>s
-}
-
 STRING 18917
 // Abilities: A0XV (Iron Defense), EditorSuffix (Editor Suffix)
 {
@@ -120961,25 +120492,13 @@ STRING 18917
 }
 
 STRING 18918
-// Abilities: A0XW (Quick Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 18919
-// Abilities: A0XW (Quick Attack), Name (Name)
-{
-Quick Attack
-}
-
-STRING 18920
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 1|r]
-}
-
 STRING 18921
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -120988,73 +120507,13 @@ Duration: <A0XW,Dur1>
 }
 
 STRING 18922
-// Abilities: A0XW (Quick Attack), EditorSuffix (Editor Suffix)
+// Abilities: A0XW (Extreme Speed), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
 
-STRING 18923
-// Abilities: A0XW (Quick Attack), Researchtip (Tooltip - Learn)
-{
-[|cff00ff00E|r] Learn Quick Attack - [|cffffcc00Level %d|r]
-}
-
-STRING 18924
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 2|r]
-}
-
-STRING 18925
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 3|r]
-}
-
-STRING 18926
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 4|r]
-}
-
-STRING 18927
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 5|r]
-}
-
-STRING 18928
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 6|r]
-}
-
-STRING 18929
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 7|r]
-}
-
-STRING 18930
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 8|r]
-}
-
-STRING 18931
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 9|r]
-}
-
-STRING 18932
-// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
-{
-[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 10|r]
-}
-
 STRING 18933
-// Abilities: A0XW (Quick Attack), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XW (Extreme Speed), Researchubertip (Tooltip - Learn - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121063,7 +120522,7 @@ Duration: <A0XW,Dur1>
 }
 
 STRING 18934
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121072,7 +120531,7 @@ Duration: <A0XW,Dur2>
 }
 
 STRING 18935
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121081,7 +120540,7 @@ Duration: <A0XW,Dur3>
 }
 
 STRING 18936
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121090,7 +120549,7 @@ Duration: <A0XW,Dur4>
 }
 
 STRING 18937
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121099,7 +120558,7 @@ Duration: <A0XW,Dur5>
 }
 
 STRING 18938
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121108,7 +120567,7 @@ Duration: <A0XW,Dur6>
 }
 
 STRING 18939
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121117,7 +120576,7 @@ Duration: <A0XW,Dur7>
 }
 
 STRING 18940
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121126,7 +120585,7 @@ Duration: <A0XW,Dur8>
 }
 
 STRING 18941
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121135,7 +120594,7 @@ Duration: <A0XW,Dur9>
 }
 
 STRING 18942
-// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XW (Extreme Speed), Ubertip (Tooltip - Normal - Extended)
 {
 Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
 |cff00ff00Damage: Agi * Lvl * ?
@@ -121144,7 +120603,7 @@ Duration: <A0XW,Dur10>
 }
 
 STRING 18943
-// Abilities: A0XW (Quick Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XW (Extreme Speed), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -121312,7 +120771,7 @@ Lucario Attack Passive
 }
 
 STRING 18971
-// Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0XX (Aura Sphere), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121327,18 +120786,6 @@ STRING 18973
 // Buffs/Effects: B04K (), Bufftip (Tooltip)
 {
 Aura
-}
-
-STRING 18974
-// Buffs/Effects: B04O (), Bufftip (Tooltip)
-{
-Quick Attack
-}
-
-STRING 18975
-// Buffs/Effects: B04O (), Buffubertip (Tooltip - Extended)
-{
-This unit is under the effects of Quick Attack; it is invisible, moves faster, and the first attack it makes while invisible will deal bonus damage.
 }
 
 STRING 18976
@@ -121584,7 +121031,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19011
-// Abilities: A0Y0 (Mega Evolution), EditorSuffix (Editor Suffix)
+// Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121766,7 +121213,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19037
-// Abilities: A0Y1 (Gigantomax), EditorSuffix (Editor Suffix)
+// Abilities: A0Y0 (Mega Evolution), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121874,7 +121321,7 @@ Goku throws a Spirit Bomb at the target area, causing it to explode and deal dam
 }
 
 STRING 19055
-// Abilities: A0Y2 (Giga Sphere), EditorSuffix (Editor Suffix)
+// Abilities: A0Y1 (Gigantomax), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -122123,8 +121570,674 @@ Lucario consumes all of his mana and to charge a spell for one second and then u
 }
 
 STRING 19091
+// Abilities: A0Y2 (Giga Sphere), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 19092
+// Units: H0A9 (Demon King), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00Q|r] Choose Dabura
+}
+
+STRING 19093
+// Units: H0A9 (Demon King), Ubertip (Tooltip - Extended)
+{
+A powerful PvP hero that gets stronger by defeating his enemies.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00I|r|cff383838IIII |r|cffFFFF00Saga|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 19094
+// Units: H0A9 (Demon King), Tip (Tooltip - Basic)
+{
+[|cffffff00Q|r] Choose Dabura
+}
+
+STRING 19095
+// Units: H0A9 (Demon King), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 19096
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool1> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19097
+// Abilities: A0T2 (United States of Smash), Researchubertip (Tooltip - Learn - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool1> - <A0T2,Cool10> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19098
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool2> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19099
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool3> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19100
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool4> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19101
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool5> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19102
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool6> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19103
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool7> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19104
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool8> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19105
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool9> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19106
+// Abilities: A0T2 (United States of Smash), Ubertip (Tooltip - Normal - Extended)
+{
+All Might's final and strongest move, delivering a massive punch with enough force to reverberate powerful shockwaves all around him. Enemies hit by the collison are stunned. Deals increased damage the less HP All Might has.
+
+|cff00ff00Damage: Agi * Lvl * ? Dash + Str x Lvl x ? Punch |r
+|cff00ffffCooldown: <A0T2,Cool10> seconds|r
+
+|cff808080This unstoppable attack was used to defeat All For One but marked the end of All Might's hero career|r
+}
+
+STRING 19107
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool1> seconds|r
+}
+
+STRING 19108
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur2> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool2> seconds|r
+}
+
+STRING 19109
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur3> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool3> seconds|r
+}
+
+STRING 19110
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur4> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool4> seconds|r
+}
+
+STRING 19111
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur5> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool5> seconds|r
+}
+
+STRING 19112
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur6> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool6> seconds|r
+}
+
+STRING 19113
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur7> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool7> seconds|r
+}
+
+STRING 19114
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur8> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool8> seconds|r
+}
+
+STRING 19115
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur9> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool9> seconds|r
+}
+
+STRING 19116
+// Abilities: A0WJ (Uzzi Punch), Ubertip (Tooltip - Normal - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur10> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 19117
+// Abilities: A0WJ (Uzzi Punch), Researchubertip (Tooltip - Learn - Extended)
+{
+Robo fires a series of blasts from his fist in front of him. Channeled.
+|cffff2020Channel Duration: <A0WJ,Dur1> seconds|r
+|cff00ff00Damage: Str x Lvl x ?|r
+|cff00ffffCooldown: <A0WJ,Cool10> seconds|r
+}
+
+STRING 19127
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 2|r]
+}
+
+STRING 19128
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 3|r]
+}
+
+STRING 19129
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 4|r]
+}
+
+STRING 19130
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 5|r]
+}
+
+STRING 19131
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 6|r]
+}
+
+STRING 19132
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 1|r]
+}
+
+STRING 19133
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 7|r]
+}
+
+STRING 19134
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 8|r]
+}
+
+STRING 19135
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 9|r]
+}
+
+STRING 19136
+// Abilities: A0XU (Vacuum Wave), Name (Name)
+{
+Vacuum Wave
+}
+
+STRING 19137
+// Abilities: A0XU (Vacuum Wave), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Vacuum Wave - [|cffffcc00Level %d|r]
+}
+
+STRING 19139
+// Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 10|r]
+}
+
+STRING 19151
+// Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool1> - <A0XV,Cool10>s
+}
+
+STRING 19152
+// Abilities: A0XW (Extreme Speed), Name (Name)
+{
+Extreme Speed
+}
+
+STRING 19153
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 1|r]
+}
+
+STRING 19154
+// Abilities: A0XW (Extreme Speed), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Extreme Speed - [|cffffcc00Level %d|r]
+}
+
+STRING 19155
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 2|r]
+}
+
+STRING 19156
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 3|r]
+}
+
+STRING 19157
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 4|r]
+}
+
+STRING 19158
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 5|r]
+}
+
+STRING 19159
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 6|r]
+}
+
+STRING 19160
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 7|r]
+}
+
+STRING 19161
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 8|r]
+}
+
+STRING 19162
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 9|r]
+}
+
+STRING 19163
+// Abilities: A0XW (Extreme Speed), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Extreme Speed - [|cffffcc00Level 10|r]
+}
+
+STRING 19164
 // Abilities: A0Y3 (Aura Storm), EditorSuffix (Editor Suffix)
 {
 (lucario)
+}
+
+STRING 19165
+// Abilities: A0Y4 (Iron Defense Bonus Armor), Name (Name)
+{
+Iron Defense Bonus Armor
+}
+
+STRING 19166
+// Abilities: A0Y4 (Iron Defense Bonus Armor), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 19167
+// Buffs/Effects: B01Q (), Bufftip (Tooltip)
+{
+Dabura
+}
+
+STRING 19168
+// Buffs/Effects: B04O (), Bufftip (Tooltip)
+{
+Extreme Speed
+}
+
+STRING 19169
+// Buffs/Effects: B04O (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Extreme Speed; it is invisible, moves faster, and the first attack it makes while invisible will deal bonus damage.
+}
+
+STRING 19170
+// Buffs/Effects: B04Q (), Bufftip (Tooltip)
+{
+Iron Defense
+}
+
+STRING 19171
+// Buffs/Effects: B04Q (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cffffff00Iron Defense|r; it has increased armor.
+}
+
+STRING 19172
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 19173
+// Abilities: A0X6 (Lucca Crit Passive), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 19174
+// Abilities: A0X8 (Lucca Attack Passive), EditorSuffix (Editor Suffix)
+{
+(lucca)
+}
+
+STRING 19175
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
+}
+
+STRING 19176
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool2>s|r
+}
+
+STRING 19177
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool3>s|r
+}
+
+STRING 19178
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool4>s|r
+}
+
+STRING 19179
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool5>s|r
+}
+
+STRING 19180
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool6>s|r
+}
+
+STRING 19181
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool7>s|r
+}
+
+STRING 19182
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool8>s|r
+}
+
+STRING 19183
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool9>s|r
+}
+
+STRING 19184
+// Abilities: A0XU (Vacuum Wave), Researchubertip (Tooltip - Learn - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
+}
+
+STRING 19185
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cff00FF00Damage: int * lvl * ??|r
+|cff00FFFFCooldown: <A0XU,Cool10>s|r
+}
+
+STRING 19186
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool1>
+}
+
+STRING 19187
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool2>
+}
+
+STRING 19188
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool3>
+}
+
+STRING 19189
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool4>
+}
+
+STRING 19190
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool5>
+}
+
+STRING 19191
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool6>
+}
+
+STRING 19192
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool7>
+}
+
+STRING 19193
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool8>
+}
+
+STRING 19194
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool9>
+}
+
+STRING 19195
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat. 
+|cffFFFF00Passive:|r +0.5 armor per level
+|cffFFFF00Active:|r +100 armor and -100ms
+|cff00FFFFCooldown: <A0XV,Cool10>
+}
+
+STRING 19196
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+While holding Macho Brace, Lucario gains +15% creep stats and +1 to all stats each level. 
+Activating this ability permanently removes Macho Brace and provides +0.4x multi.
 }
 
