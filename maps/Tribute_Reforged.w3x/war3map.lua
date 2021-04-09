@@ -885,6 +885,8 @@ gg_trg_Upgrade_Item_Use = nil
 gg_trg_Battle_Armor_Limit_Pickup = nil
 gg_unit_H08K_0422 = nil
 gg_unit_n01H_1159 = nil
+gg_trg_Transformations_Lucario = nil
+gg_trg_Macho_Brace_Use = nil
 function InitGlobals()
     local i = 0
     udg_TempInt = 0
@@ -1400,11 +1402,11 @@ function InitSounds()
     SetSoundVolume(gg_snd_Rescue, 80)
     gg_snd_Hint = CreateSound("Sound/Interface/Hint.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_Hint, "Hint")
-    SetSoundDuration(gg_snd_Hint, 2005)
+    SetSoundDuration(gg_snd_Hint, 2845)
     SetSoundVolume(gg_snd_Hint, 80)
     gg_snd_GoodJob = CreateSound("Sound/Interface/GoodJob.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_GoodJob, "GoodJob")
-    SetSoundDuration(gg_snd_GoodJob, 2548)
+    SetSoundDuration(gg_snd_GoodJob, 2954)
     SetSoundVolume(gg_snd_GoodJob, 127)
     gg_snd_QuestCompleted = CreateSound("Sound/Interface/QuestCompleted.flac", false, false, false, 0, 0, "DefaultEAXON")
     SetSoundParamsFromLabel(gg_snd_QuestCompleted, "QuestCompleted")
@@ -1677,7 +1679,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 9472.4, -7386.0, 246.343, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03B"), 4275.7, 18510.6, 251.645, FourCC("n03B"))
     SetUnitColor(u, ConvertPlayerColor(8))
-    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -5086.6, 10556.1, -15.948, FourCC("n019"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n019"), -5086.6, 10556.1, 344.052, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -687.1, -4492.9, 239.685, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -635.3, -2732.1, 144.332, FourCC("n019"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), -2425.6, -2421.2, 208.780, FourCC("n019"))
@@ -13141,6 +13143,27 @@ function InitTrig_Magus_Spellbook_CD_Link()
     TriggerAddAction(gg_trg_Magus_Spellbook_CD_Link, Trig_Magus_Spellbook_CD_Link_Actions)
 end
 
+function Trig_Macho_Brace_Use_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A0XT"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Macho_Brace_Use_Actions()
+    UnitRemoveAbilityBJ(FourCC("A0XT"), GetTriggerUnit())
+    udg_StatMultUnit = GetTriggerUnit()
+    udg_TransformationString = "fp"
+    TriggerExecute(gg_trg_Transformations_Lucario)
+end
+
+function InitTrig_Macho_Brace_Use()
+    gg_trg_Macho_Brace_Use = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Macho_Brace_Use, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Macho_Brace_Use, Condition(Trig_Macho_Brace_Use_Conditions))
+    TriggerAddAction(gg_trg_Macho_Brace_Use, Trig_Macho_Brace_Use_Actions)
+end
+
 function Trig_Ayla_Triple_Kick_Conditions()
     if (not (GetSpellAbilityId() == FourCC("A0XL"))) then
         return false
@@ -14388,6 +14411,7 @@ end
 
 function Trig_Disable_Abilities_for_TempPlayer_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0BG"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0XY"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WO"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WP"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0WQ"), udg_TempPlayer)
@@ -19816,6 +19840,13 @@ function Trig_Scoreboard_Assign_Hero_Icon_Func002C()
     return true
 end
 
+function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A7"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_TempUnit) == FourCC("H0A6"))) then
         return false
@@ -20105,6 +20136,10 @@ function Trig_Scoreboard_Assign_Hero_Icon_Actions()
                                                 if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                     udg_TempString = "BTNMarle.blp"
                                                 else
+                                                    if (Trig_Scoreboard_Assign_Hero_Icon_Func003Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                        udg_TempString = "BTNLucario.blp"
+                                                    else
+                                                    end
                                                 end
                                             end
                                         end
@@ -26984,6 +27019,10 @@ function Trig_Transformations_Init_Commands_Non_Auto_Actions()
     udg_TempInt = (udg_TempInt + 1)
     udg_TransformationCommandsNonAuto[udg_TempInt] = "wondershot"
     udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "mega"
+    udg_TempInt = (udg_TempInt + 1)
+    udg_TransformationCommandsNonAuto[udg_TempInt] = "giganto"
+    udg_TempInt = (udg_TempInt + 1)
     udg_TempInt2 = 1
     while (true) do
         if (udg_TempInt2 > udg_MaxNumPlayers) then break end
@@ -27434,6 +27473,13 @@ function Trig_Transformations_Parse_String_Func001Func004C()
     return true
 end
 
+function Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
+    if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A7"))) then
+        return false
+    end
+    return true
+end
+
 function Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()
     if (not (GetUnitTypeId(udg_StatMultUnit) == FourCC("H0A6"))) then
         return false
@@ -27823,6 +27869,10 @@ function Trig_Transformations_Parse_String_Func001A()
                                                                                             if (Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
                                                                                                 TriggerExecute(gg_trg_Transformations_Marle)
                                                                                             else
+                                                                                                if (Trig_Transformations_Parse_String_Func001Func005Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001Func001C()) then
+                                                                                                    TriggerExecute(gg_trg_Transformations_Lucario)
+                                                                                                else
+                                                                                                end
                                                                                             end
                                                                                         end
                                                                                     end
@@ -44387,6 +44437,226 @@ function InitTrig_Transformations_Ayla()
     TriggerAddAction(gg_trg_Transformations_Ayla, Trig_Transformations_Ayla_Actions)
 end
 
+function Trig_Transformations_Lucario_Func010C()
+    if (not (udg_TransformationString == "hs")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func011Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func011C()
+    if (not (udg_TransformationString == "r")) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func012Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func012C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 20)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func013Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func013C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 50)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func014Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func014C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 80)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func015Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func015C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 120)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func016Func001C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0XT"), udg_StatMultUnit) == 1)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func016C()
+    if (not (udg_TransformationString == "fp")) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 150)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func019Func002Func001C()
+    if (udg_TransformationAbility ~= FourCC("ANcl")) then
+        return true
+    end
+    if (udg_TransformationAbility2 ~= FourCC("ANcl")) then
+        return true
+    end
+    return false
+end
+
+function Trig_Transformations_Lucario_Func019Func002C()
+    if (not Trig_Transformations_Lucario_Func019Func002Func001C()) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Func019C()
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Transformations_Lucario_Actions()
+    udg_TransformationSFXString = ""
+    udg_TransformationSFXString2 = ""
+    udg_TransformationAbility = FourCC("ANcl")
+    udg_TransformationAbility2 = FourCC("ANcl")
+    udg_StatMultReal = 0.00
+    udg_StatMultStr = 0.00
+    udg_StatMultAgi = 0.00
+    udg_StatMultInt = 0.00
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Lucario_Func010C()) then
+        udg_TempPlayerGroup = GetForceOfPlayer(udg_TransformationPlayer)
+        DisplayTextToForce(udg_TempPlayerGroup, "TRIGSTR_18327")
+                DestroyForce(udg_TempPlayerGroup)
+    else
+    end
+    if (Trig_Transformations_Lucario_Func011C()) then
+        if (Trig_Transformations_Lucario_Func011Func001C()) then
+            udg_StatMultReal = 1.00
+        else
+            udg_StatMultReal = 1.00
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucario_Func012C()) then
+        if (Trig_Transformations_Lucario_Func012Func001C()) then
+            udg_StatMultReal = 1.15
+        else
+            udg_StatMultReal = 1.55
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucario_Func013C()) then
+        if (Trig_Transformations_Lucario_Func013Func001C()) then
+            udg_StatMultReal = 1.30
+        else
+            udg_StatMultReal = 1.80
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucario_Func014C()) then
+        if (Trig_Transformations_Lucario_Func014Func001C()) then
+            udg_StatMultReal = 1.60
+        else
+            udg_StatMultReal = 2.00
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucario_Func015C()) then
+        if (Trig_Transformations_Lucario_Func015Func001C()) then
+            udg_StatMultReal = 1.80
+        else
+            udg_StatMultReal = 2.20
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+    if (Trig_Transformations_Lucario_Func016C()) then
+        if (Trig_Transformations_Lucario_Func016Func001C()) then
+            udg_StatMultReal = 2.10
+        else
+            udg_StatMultReal = 2.50
+        end
+        udg_TransformationAbility = FourCC("AUan")
+    else
+    end
+        udg_ID = GetHandleId(udg_StatMultUnit)
+    if (Trig_Transformations_Lucario_Func019C()) then
+        if (Trig_Transformations_Lucario_Func019Func002C()) then
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility, udg_TransformationPlayer)
+            SetPlayerAbilityAvailableBJ(true, udg_TransformationAbility2, udg_TransformationPlayer)
+                        udg_TransformationID = FourCC('H0A7')
+            BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
+        else
+        end
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+    else
+        udg_StatMultReal = 0.00
+    end
+end
+
+function InitTrig_Transformations_Lucario()
+    gg_trg_Transformations_Lucario = CreateTrigger()
+    TriggerAddAction(gg_trg_Transformations_Lucario, Trig_Transformations_Lucario_Actions)
+end
+
 function Trig_Saga_Unit_Init_Conditions()
     if (not (GetOwningPlayer(GetTriggerUnit()) == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
         return false
@@ -45809,6 +46079,7 @@ function InitCustomTriggers()
     InitTrig_Doom_Scythe_Loop()
     InitTrig_Magus_Spell_Book()
     InitTrig_Magus_Spellbook_CD_Link()
+    InitTrig_Macho_Brace_Use()
     InitTrig_Ayla_Triple_Kick()
     InitTrig_Play_Ability_Spell_Audio()
     InitTrig_Play_Ability_Spell_Audio_2()
@@ -46157,6 +46428,7 @@ function InitCustomTriggers()
     InitTrig_Transformations_Magus()
     InitTrig_Transformations_Marle()
     InitTrig_Transformations_Ayla()
+    InitTrig_Transformations_Lucario()
     InitTrig_Saga_Unit_Init()
     InitTrig_Saga_Unit_Loop()
     InitTrig_Saga_Unit_Spawn_Protection()

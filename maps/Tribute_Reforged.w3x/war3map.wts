@@ -14246,7 +14246,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
+// Units: H0A7 (Fighting / Steel Type), Hotkey (Hotkey)
 {
 F
 }
@@ -14600,7 +14600,7 @@ Hercule is unlikely to land a critical strike, but he is very good at avoiding i
 }
 
 STRING 2363
-// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
+// Units: H0A8 (Fighting / Steel Type), Hotkey (Hotkey)
 {
 F
 }
@@ -15568,7 +15568,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 2522
-// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A061 (Multi Form), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16336,7 +16336,7 @@ Buu Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 2650
-// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A061 (Multi Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16666,7 +16666,7 @@ STRING 2704
 }
 
 STRING 2705
-// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A025 (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16690,7 +16690,7 @@ Yakon is one of Babidi's majin minions. He is from a distant corner of the unive
 }
 
 STRING 2709
-// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Master Roshi's Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -16996,7 +16996,7 @@ STRING 2759
 }
 
 STRING 2760
-// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
+// Abilities: A019 (Buu Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -18414,7 +18414,7 @@ Combat of Strength - [|cffffcc00Level 15|r]
 }
 
 STRING 2996
-// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -20824,7 +20824,7 @@ STRING 3395
 }
 
 STRING 3396
-// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
+// Abilities: A01A (Summon Yakon), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -20848,7 +20848,7 @@ Fires a powerful energy blast from the users hands, to be used in combination wi
 }
 
 STRING 3400
-// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
+// Abilities: A07A (Power Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23068,7 +23068,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 3767
-// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
+// Abilities: A03D (Combat of Strength), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -23884,7 +23884,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 3903
-// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
+// Abilities: A06D (Transform), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24529,7 +24529,7 @@ STRING 4000
 }
 
 STRING 4001
-// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -24775,7 +24775,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 4042
-// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A02J (Finish Buster), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -25369,7 +25369,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4141
-// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
+// Abilities: A00Q (Celluar Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -25903,7 +25903,7 @@ Trunks' Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4230
-// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00S (Saiyan Blood), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27610,7 +27610,7 @@ Cooler Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 4501
-// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A01U (Programming), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -27952,7 +27952,7 @@ A combat style taught by Master Shen. |n|cffffcc00Evasion|r - <A06Z,DataD1,%>% |
 }
 
 STRING 4557
-// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A00V (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -29797,7 +29797,7 @@ STRING 4859
 }
 
 STRING 4860
-// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A00W (Trunks' Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -32014,7 +32014,7 @@ Dende's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5229
-// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
+// Abilities: A02Z (Cooler Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -32926,7 +32926,7 @@ Janemba Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 5378
-// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A06Z (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -35288,7 +35288,7 @@ Moves your revive point to the wooded area in the northwest corner of the map
 }
 
 STRING 5753
-// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A09L (Final Battle Wish), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -36196,7 +36196,7 @@ Placeholder
 }
 
 STRING 5903
-// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BD (Dende's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -37126,7 +37126,7 @@ Causes the user to absorb damage for a short time. If the user is attacked he ga
 }
 
 STRING 6058
-// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
+// Abilities: A0BR (Janemba Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38272,7 +38272,7 @@ Namekian Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6249
-// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -38489,7 +38489,7 @@ Super Masenko
 }
 
 STRING 6284
-// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
+// Abilities: A0C0 (Vanishing Ball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -38693,7 +38693,7 @@ Cellular Enhancement - [|cffffcc00Level 15|r]
 }
 
 STRING 6318
-// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CI (Revive - Center Respawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -41475,7 +41475,7 @@ R
 }
 
 STRING 6763
-// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
+// Abilities: A0CK (Revive - Broly Spawn), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -41493,7 +41493,7 @@ STRING 6765
 }
 
 STRING 6766
-// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CW (Beerus' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -42794,7 +42794,7 @@ Madara's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 6976
-// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D4 (Sample Ice Cream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -43486,7 +43486,7 @@ Goten rapidly throws multiple pebbles at his opponent, dealing minor damage and 
 }
 
 STRING 7075
-// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DS (Namekian Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -43728,7 +43728,7 @@ Eis Shenron's fighting style sacrifices evasion to focus on hitting harder again
 }
 
 STRING 7110
-// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DT (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45127,7 +45127,7 @@ BrolyLSS
 }
 
 STRING 7336
-// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DU (Cellular Enhancement), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -45948,7 +45948,7 @@ Android 17
 }
 
 STRING 7473
-// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FO (Madara's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -49520,7 +49520,7 @@ STRING 8054
 }
 
 STRING 8055
-// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FZ (Crane School Teachings), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -50447,7 +50447,7 @@ Tapion's Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8198
-// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0G0 (Hit's fighting style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53012,7 +53012,7 @@ King K Rool's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 8610
-// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I3 (Zamasu's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -53491,7 +53491,7 @@ W
 }
 
 STRING 8689
-// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
+// Abilities: A0ID (Tapion's Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -54351,7 +54351,7 @@ Whis is a master of ultra instinct, allowing him to avoid incoming attacks. |n|c
 }
 
 STRING 8824
-// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IZ (King K Rool's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -56548,7 +56548,7 @@ STRING 9171
 }
 
 STRING 9172
-// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
+// Abilities: A0JC (Wish for Scouter 2.0), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -56572,13 +56572,13 @@ Ultimate Burning Warrior
 }
 
 STRING 9176
-// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
+// Abilities: A0JL (Whis' Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 9177
-// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
+// Abilities: A0K2 (Overcharge), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -56800,7 +56800,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9214
-// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0K2 (Overcharge), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -56824,7 +56824,7 @@ Goku Black is capable of dealing powerful critical strikes with his energy blade
 }
 
 STRING 9218
-// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KC (Ultimate Burning Warrior), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61675,7 +61675,7 @@ STRING 10018
 }
 
 STRING 10019
-// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0KE (Jiren's fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -61693,7 +61693,7 @@ STRING 10021
 }
 
 STRING 10022
-// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KE (Jiren's fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62724,13 +62724,13 @@ STRING 10187
 }
 
 STRING 10188
-// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
+// Abilities: A0KE (Jiren's fighting Style), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
 
 STRING 10189
-// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
+// Abilities: A0KH (Goku Black's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63264,7 +63264,7 @@ STRING 10277
 }
 
 STRING 10278
-// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
+// Abilities: A0KH (Goku Black's Fighting Style), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -63282,7 +63282,7 @@ STRING 10280
 }
 
 STRING 10281
-// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
+// Abilities: A0H6 (Gigantic Omegastorm), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -63999,7 +63999,7 @@ STRING 10398
 }
 
 STRING 10399
-// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
+// Abilities: A0H6 (Gigantic Omegastorm), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64107,19 +64107,19 @@ STRING 10416
 }
 
 STRING 10417
-// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
+// Abilities: A0L3 (Energy Blast Volley), Researchhotkey (Hotkey - Learn)
 {
 F
 }
 
 STRING 10418
-// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
+// Abilities: A0L3 (Energy Blast Volley), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 10419
-// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LA (Absorb), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65021,7 +65021,7 @@ STRING 10568
 }
 
 STRING 10569
-// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
+// Abilities: A0LA (Absorb), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -65039,7 +65039,7 @@ STRING 10571
 }
 
 STRING 10572
-// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LF (Shining Sword Attack), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -65834,7 +65834,7 @@ STRING 10686
 }
 
 STRING 10687
-// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
+// Abilities: A0LF (Shining Sword Attack), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66517,7 +66517,7 @@ Best Friends Forever - [|cffffcc00Level 15|r]
 }
 
 STRING 10796
-// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -67639,7 +67639,7 @@ STRING 10982
 }
 
 STRING 10983
-// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
+// Abilities: A0LR (Saiyan Spirit), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67657,7 +67657,7 @@ STRING 10985
 }
 
 STRING 10986
-// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
+// Abilities: A0LZ (Best Friends Forever), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68540,7 +68540,7 @@ STRING 11132
 }
 
 STRING 11133
-// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
+// Abilities: A0M7 (Frozen F), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -68583,7 +68583,7 @@ E
 }
 
 STRING 11139
-// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
+// Abilities: A0M7 (Frozen F), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68720,7 +68720,7 @@ STRING 11161
 }
 
 STRING 11162
-// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MH (Double Sundae), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -69203,7 +69203,7 @@ STRING 11240
 }
 
 STRING 11241
-// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
+// Abilities: A0MH (Double Sundae), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69221,7 +69221,7 @@ STRING 11243
 }
 
 STRING 11244
-// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
+// Abilities: A0ML (Break Cannon), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -69983,13 +69983,13 @@ W
 }
 
 STRING 11371
-// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ML (Break Cannon), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 11372
-// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MS (Power Level Sharing), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -71140,7 +71140,7 @@ STRING 11560
 }
 
 STRING 11561
-// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
+// Abilities: A0MS (Power Level Sharing), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -71158,7 +71158,7 @@ STRING 11563
 }
 
 STRING 11564
-// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MV (Super Electric Strike), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -73106,7 +73106,7 @@ STRING 11885
 }
 
 STRING 11886
-// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
+// Abilities: A0MV (Super Electric Strike), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -73124,7 +73124,7 @@ STRING 11888
 }
 
 STRING 11889
-// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O4 (Lightning Shower Rain), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -73973,7 +73973,7 @@ STRING 12026
 }
 
 STRING 12027
-// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0O4 (Lightning Shower Rain), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76103,7 +76103,7 @@ STRING 12370
 }
 
 STRING 12371
-// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0O9 (Solar Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76698,7 +76698,7 @@ STRING 12458
 }
 
 STRING 12459
-// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0O9 (Solar Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76722,7 +76722,7 @@ King K Rool brings out the Blast-o-Matic, a high power laser cannon capable of d
 }
 
 STRING 12463
-// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OM (Summon Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -76962,7 +76962,7 @@ STRING 12502
 }
 
 STRING 12503
-// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
+// Abilities: A0OM (Summon Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -76980,7 +76980,7 @@ STRING 12505
 }
 
 STRING 12506
-// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0OU (Blast-o-Matic), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -77034,7 +77034,7 @@ STRING 12514
 }
 
 STRING 12515
-// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0OU (Blast-o-Matic), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -77052,7 +77052,7 @@ STRING 12517
 }
 
 STRING 12518
-// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OV (King's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79048,7 +79048,7 @@ Eis Shenron's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 12832
-// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
+// Abilities: A0OV (King's Throne), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -79694,7 +79694,7 @@ Toppo bear hugs his opponent, stopping them from moving so long as he stands sti
 }
 
 STRING 12937
-// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OY (Father-Son Kamehameha), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -79724,7 +79724,7 @@ Broly's power level rapidly rises causing the surrounding area to crumble apart 
 }
 
 STRING 12942
-// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0OY (Father-Son Kamehameha), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -79974,7 +79974,7 @@ The multi-purpose tool of Angels, used to assist Gods of Destruction.
 }
 
 STRING 12983
-// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P7 (Eis Shenron's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -81397,7 +81397,7 @@ STRING 13213
 }
 
 STRING 13214
-// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -81433,7 +81433,7 @@ STRING 13219
 }
 
 STRING 13220
-// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PF (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -82108,13 +82108,13 @@ STRING 13327
 }
 
 STRING 13328
-// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Hakai), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 13329
-// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
+// Abilities: A0PN (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82648,7 +82648,7 @@ STRING 13417
 }
 
 STRING 13418
-// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PO (Change Now), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -82684,7 +82684,7 @@ STRING 13423
 }
 
 STRING 13424
-// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (Ginyu Pose Fighting), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83054,7 +83054,7 @@ STRING 13482
 }
 
 STRING 13483
-// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PT (Ginyu Pose Fighting), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83072,7 +83072,7 @@ STRING 13485
 }
 
 STRING 13486
-// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q3 (Emperor's Throne), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83366,7 +83366,7 @@ STRING 13534
 }
 
 STRING 13535
-// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q3 (Emperor's Throne), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83384,7 +83384,7 @@ STRING 13537
 }
 
 STRING 13538
-// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q5 (Impaling Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -83795,7 +83795,7 @@ STRING 13599
 }
 
 STRING 13600
-// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
+// Abilities: A0Q5 (Impaling Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -83839,7 +83839,7 @@ Frieza swiftly attacks his enemies with his nimble tail.
 }
 
 STRING 13606
-// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
+// Abilities: A0Q7 (Nova Rush), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -84173,7 +84173,7 @@ Frieza fires a powerful energy wave that uses up any remaining energy he has in 
 }
 
 STRING 13652
-// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Q7 (Nova Rush), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -84200,7 +84200,7 @@ Death Saucer
 }
 
 STRING 13656
-// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
+// Abilities: A0QA (Tail Whip), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -85005,7 +85005,7 @@ STRING 13779
 }
 
 STRING 13780
-// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QA (Tail Whip), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -87298,7 +87298,7 @@ STRING 14136
 }
 
 STRING 14137
-// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
+// Abilities: A0QC (Death Saucer), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -87332,7 +87332,7 @@ Dypso's signature flying kick.
 }
 
 STRING 14142
-// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QC (Death Saucer), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88102,7 +88102,7 @@ STRING 14269
 }
 
 STRING 14270
-// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
+// Abilities: A0QH (Cage of Light), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -88395,7 +88395,7 @@ STRING 14313
 }
 
 STRING 14314
-// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QH (Cage of Light), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -88413,7 +88413,7 @@ STRING 14316
 }
 
 STRING 14317
-// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R2 (Justice Pose), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -90921,7 +90921,7 @@ Yamcha pretends to meet his own untimely demise, avoiding all incoming damage fo
 }
 
 STRING 14682
-// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
+// Abilities: A0R2 (Justice Pose), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -94239,7 +94239,7 @@ Guldo holds his breath and temporarily freezes the time for all nearby enemies. 
 }
 
 STRING 15167
-// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
+// Abilities: A0RB (Senzu Throw), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -94281,7 +94281,7 @@ Spell Amp: +10% per second up to +50%|r
 }
 
 STRING 15173
-// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
+// Abilities: A0RB (Senzu Throw), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95086,7 +95086,7 @@ STRING 15290
 }
 
 STRING 15291
-// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0S1 (Stance: Dash), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -95842,7 +95842,7 @@ STRING 15397
 }
 
 STRING 15398
-// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -97429,7 +97429,7 @@ Q
 }
 
 STRING 15620
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XU (Force Palm), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -98718,7 +98718,7 @@ STRING 15800
 }
 
 STRING 15801
-// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Abilities: A0XU (Force Palm), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -99662,7 +99662,7 @@ STRING 15925
 }
 
 STRING 15926
-// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
+// Abilities: A0SG (Ginyu Pose Guldo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -99691,7 +99691,7 @@ Parry
 }
 
 STRING 15930
-// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A0SN (Ultimate Burning Warrior 2), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -101573,7 +101573,7 @@ STRING 16195
 }
 
 STRING 16196
-// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
+// Abilities: A0T1 (All Might Smashes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -101591,7 +101591,7 @@ STRING 16198
 }
 
 STRING 16199
-// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TD (Parry), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -105981,7 +105981,7 @@ Ichigo's Fighting Style - [|cffffcc00Level 15|r]
 }
 
 STRING 16770
-// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
+// Abilities: A0TD (Parry), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -107280,7 +107280,7 @@ STRING 16928
 }
 
 STRING 16929
-// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TP (Fireball), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108040,7 +108040,7 @@ STRING 17031
 }
 
 STRING 17032
-// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
+// Abilities: A0TP (Fireball), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108172,7 +108172,7 @@ STRING 17049
 }
 
 STRING 17050
-// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UG (Ichigo's Fighting Style), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -108847,7 +108847,7 @@ STRING 17150
 }
 
 STRING 17151
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0UV (Blazing Dynamo), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -108951,7 +108951,7 @@ STRING 17167
 }
 
 STRING 17168
-// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
+// Abilities: A0UV (Blazing Dynamo), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -116257,7 +116257,7 @@ STRING 18225
 }
 
 STRING 18226
-// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -116728,7 +116728,7 @@ Saiyan Blood - [|cffffcc00Level 15|r]
 }
 
 STRING 18290
-// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+// Abilities: A0V3 (Red-Eyed Dragon Summoning), Researchhotkey (Hotkey - Learn)
 {
 F
 }
@@ -116951,6 +116951,22 @@ STRING 18326
 // Units: H0A5 (Ioka Chief), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00S|r] Choose Ayla
+}
+
+STRING 18327
+{
+Type "r" to revert.
+Transformations:
+[Lvl 1] - Start with Macho Brace - 1.00x
+[lvl 20] - 1.25x
+[lvl 50] - 1.75x
+[lvl 80] - 2.0x
+[lvl 120] - 2.2x
+[lvl 150] - 2.5x
+[lvl 200] - Ultimate choice 
+"mega" for Mega Lucario
+"giganto" for Gigantomax Lucario
+
 }
 
 STRING 18328
@@ -117983,14 +117999,8 @@ STRING 18487
 (lucca)
 }
 
-STRING 18488
-// Buffs/Effects: B04K (), Buffubertip (Tooltip - Extended)
-{
-Lucca's gun is capable of firing from a distance and critically striking enemies.
-}
-
 STRING 18489
-// Buffs/Effects: B04K (), Bufftip (Tooltip)
+// Buffs/Effects: B04P (), Bufftip (Tooltip)
 {
 Lucca's Gun
 }
@@ -118103,6 +118113,12 @@ STRING 18507
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 1|r]
 }
 
+STRING 18508
+// Units: H0A7 (Fighting / Steel Type), Name (Name)
+{
+Fighting / Steel Type
+}
+
 STRING 18509
 // Abilities: A0XA (Aura), Name (Name)
 {
@@ -118113,6 +118129,12 @@ STRING 18510
 // Abilities: A0XA (Aura), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00Q|r] Learn Aura - [|cffffcc00Level %d|r]
+}
+
+STRING 18511
+// Units: H0A7 (Fighting / Steel Type), Propernames (Proper Names)
+{
+Lucario
 }
 
 STRING 18512
@@ -118145,10 +118167,77 @@ STRING 18516
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 6|r]
 }
 
+STRING 18517
+// Units: H0A7 (Fighting / Steel Type), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00F|r] Choose Lucario
+}
+
+STRING 18518
+// Units: H0A7 (Fighting / Steel Type), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18519
+// Units: H0A7 (Fighting / Steel Type), Tip (Tooltip - Basic)
+{
+[|cffffff00F|r] Choose Lucario
+}
+
+STRING 18520
+// Units: H0A7 (Fighting / Steel Type), EditorSuffix (Name - Editor Suffix)
+{
+(Tavern)
+}
+
+STRING 18521
+// Abilities: A0WU (Magus' Amulet), Hotkey (Hotkey - Normal)
+{
+F
+}
+
 STRING 18522
 // Abilities: A0XA (Aura), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 7|r]
+}
+
+STRING 18523
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Gain 15% bonus creep kill stats and +1 to all stats each level. Activate to permanently remove Macho Brace, increasing Lucario's multiplier by 0.4x
+}
+
+STRING 18524
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool2>s|r
+}
+
+STRING 18525
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool3>s|r
+}
+
+STRING 18526
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool4>s|r
 }
 
 STRING 18527
@@ -118735,6 +118824,54 @@ STRING 18612
 Q
 }
 
+STRING 18613
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool5>s|r
+}
+
+STRING 18614
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool6>s|r
+}
+
+STRING 18615
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool7>s|r
+}
+
+STRING 18616
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
+}
+
+STRING 18617
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
+}
+
+STRING 18618
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
+}
+
+STRING 18619
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
+}
+
 STRING 18620
 // Abilities: A0XE (Cure), Tip (Tooltip - Normal)
 {
@@ -118819,6 +118956,30 @@ STRING 18633
 [|cff00ff00R|r] Cure - [|cffffcc00Level 10|r]
 }
 
+STRING 18634
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
+}
+
+STRING 18635
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Macho Brace 
+}
+
+STRING 18636
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
+}
+
+STRING 18637
+// Abilities: A0XT (Macho Brace), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
 STRING 18638
 // Abilities: A0XF (Haste), EditorSuffix (Editor Suffix)
 {
@@ -118853,6 +119014,12 @@ A strong melee hero that struggles in the early game but eventually unlocks powe
 |cff00FF00II|r|cff383838III |r|cffFFFF00Farming|r
 |cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
 
+}
+
+STRING 18641
+// Abilities: A0XT (Macho Brace), Name (Name)
+{
+Macho Brace
 }
 
 STRING 18642
@@ -118963,6 +119130,12 @@ STRING 18659
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
 }
 
+STRING 18660
+// Abilities: A0XT (Macho Brace), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
 STRING 18661
 // Units: H0A4 (Brilliant Inventor), Ubertip (Tooltip - Extended)
 {
@@ -119006,6 +119179,12 @@ STRING 18664
 // Abilities: A0XQ (Marle Attack Passive), EditorSuffix (Editor Suffix)
 {
 (marle)
+}
+
+STRING 18665
+// Abilities: A0XT (Macho Brace), Hotkey (Hotkey - Normal)
+{
+D
 }
 
 STRING 18666
@@ -120368,5 +120547,1584 @@ STRING 18859
 // Abilities: A0XO (Ayla Crit Passive), EditorSuffix (Editor Suffix)
 {
 (ayla)
+}
+
+STRING 18860
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 9|r]
+}
+
+STRING 18861
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 8|r]
+}
+
+STRING 18862
+// Abilities: A0XT (Macho Brace), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
+}
+
+STRING 18863
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool8>s|r
+}
+
+STRING 18864
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool9>s|r
+}
+
+STRING 18865
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool10>s|r
+}
+
+STRING 18866
+// Abilities: A0XT (Macho Brace), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool1> - <A0XF,Cool10>s|r
+}
+
+STRING 18867
+// Abilities: A0XT (Macho Brace), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18868
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
+}
+
+STRING 18869
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool2>s|r
+}
+
+STRING 18870
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool3>s|r
+}
+
+STRING 18871
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool4>s|r
+}
+
+STRING 18872
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool5>s|r
+}
+
+STRING 18873
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool6>s|r
+}
+
+STRING 18874
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool7>s|r
+}
+
+STRING 18875
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool8>s|r
+}
+
+STRING 18876
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool9>s|r
+}
+
+STRING 18877
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 2|r]
+}
+
+STRING 18878
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 3|r]
+}
+
+STRING 18879
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 4|r]
+}
+
+STRING 18880
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 5|r]
+}
+
+STRING 18881
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 6|r]
+}
+
+STRING 18882
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 1|r]
+}
+
+STRING 18883
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 7|r]
+}
+
+STRING 18884
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 8|r]
+}
+
+STRING 18885
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 9|r]
+}
+
+STRING 18886
+// Abilities: A0XU (Force Palm), Name (Name)
+{
+Force Palm
+}
+
+STRING 18887
+// Abilities: A0XU (Force Palm), Researchtip (Tooltip - Learn)
+{
+[|cff00FF00Q|r] Learn Force Palm - [|cffffcc00Level %d|r]
+}
+
+STRING 18888
+// Abilities: A0XU (Force Palm), Researchubertip (Tooltip - Learn - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
+}
+
+STRING 18889
+// Abilities: A0XU (Force Palm), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18890
+// Abilities: A0XU (Force Palm), Tip (Tooltip - Normal)
+{
+[|cff00FF00Q|r] Force Palm - [|cffffcc00Level 10|r]
+}
+
+STRING 18891
+// Abilities: A0XU (Force Palm), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
+|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
+|cff00FF00Damage: int * lvl * ??|r|
+|cff00FFFFCooldown: <A0XU,Cool10>s|r
+}
+
+STRING 18892
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool1>s
+}
+
+STRING 18893
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool2>s
+}
+
+STRING 18894
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool3>s
+}
+
+STRING 18895
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool4>s
+}
+
+STRING 18896
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool5>s
+}
+
+STRING 18897
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by25%
+|cff00FFFFCooldown: <A0XV,Cool6>s
+}
+
+STRING 18898
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool7>s
+}
+
+STRING 18899
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 2|r]
+}
+
+STRING 18900
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 3|r]
+}
+
+STRING 18901
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 4|r]
+}
+
+STRING 18902
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 5|r]
+}
+
+STRING 18903
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 6|r]
+}
+
+STRING 18904
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 1|r]
+}
+
+STRING 18905
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 7|r]
+}
+
+STRING 18906
+// Abilities: A0XV (Iron Defense), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 18907
+// Abilities: A0XV (Iron Defense), Name (Name)
+{
+Iron Defense
+}
+
+STRING 18908
+// Abilities: A0XV (Iron Defense), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00W|r] Learn Iron Defense - [|cffffcc00Level %d|r]
+}
+
+STRING 18909
+// Abilities: A0XV (Iron Defense), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 18910
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 9|r]
+}
+
+STRING 18911
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 8|r]
+}
+
+STRING 18912
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 10|r]
+}
+
+STRING 18913
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool8>s
+}
+
+STRING 18914
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool9>s
+}
+
+STRING 18915
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5 armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool10>s
+}
+
+STRING 18916
+// Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
+{
+|cffFFFF00Passive:|r Lucario gains +0.5x armor per level, up to a maximum of 5.
+|cffFFFF00Active:|r Increases Lucario's armor by +100 but reduces move speed by 25%
+|cff00FFFFCooldown: <A0XV,Cool1>-<A0XV,Cool10>s
+}
+
+STRING 18917
+// Abilities: A0XV (Iron Defense), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18918
+// Abilities: A0XW (Quick Attack), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 18919
+// Abilities: A0XW (Quick Attack), Name (Name)
+{
+Quick Attack
+}
+
+STRING 18920
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 1|r]
+}
+
+STRING 18921
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur1>
+|cff00FFFFCooldown: <A0XW,Cool1>s|r
+}
+
+STRING 18922
+// Abilities: A0XW (Quick Attack), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18923
+// Abilities: A0XW (Quick Attack), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00E|r] Learn Quick Attack - [|cffffcc00Level %d|r]
+}
+
+STRING 18924
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 2|r]
+}
+
+STRING 18925
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 3|r]
+}
+
+STRING 18926
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 4|r]
+}
+
+STRING 18927
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 5|r]
+}
+
+STRING 18928
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 6|r]
+}
+
+STRING 18929
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 7|r]
+}
+
+STRING 18930
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 8|r]
+}
+
+STRING 18931
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 9|r]
+}
+
+STRING 18932
+// Abilities: A0XW (Quick Attack), Tip (Tooltip - Normal)
+{
+[|cff00ff00E|r] Quick Attack - [|cffffcc00Level 10|r]
+}
+
+STRING 18933
+// Abilities: A0XW (Quick Attack), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur1>
+|cff00FFFFCooldown: <A0XW,Cool1>s|r
+}
+
+STRING 18934
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur2>
+|cff00FFFFCooldown: <A0XW,Cool2>s|r
+}
+
+STRING 18935
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur3>
+|cff00FFFFCooldown: <A0XW,Cool3>s|r
+}
+
+STRING 18936
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur4>
+|cff00FFFFCooldown: <A0XW,Cool4>s|r
+}
+
+STRING 18937
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur5>
+|cff00FFFFCooldown: <A0XW,Cool5>s|r
+}
+
+STRING 18938
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur6>
+|cff00FFFFCooldown: <A0XW,Cool6>s|r
+}
+
+STRING 18939
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur7>
+|cff00FFFFCooldown: <A0XW,Cool7>s|r
+}
+
+STRING 18940
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur8>
+|cff00FFFFCooldown: <A0XW,Cool8>s|r
+}
+
+STRING 18941
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur9>
+|cff00FFFFCooldown: <A0XW,Cool9>s|r
+}
+
+STRING 18942
+// Abilities: A0XW (Quick Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario moves so fast that he becomes invisible. His first auto attack while invisible will deal bonus damage.
+|cff00ff00Damage: Agi * Lvl * ?
+Duration: <A0XW,Dur10>
+|cff00FFFFCooldown: <A0XW,Cool10>s|r
+}
+
+STRING 18943
+// Abilities: A0XW (Quick Attack), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 18944
+// Abilities: A0XX (Aura Sphere), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 18945
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 1|r]
+}
+
+STRING 18946
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool1>s|r
+}
+
+STRING 18947
+// Abilities: A0XX (Aura Sphere), Name (Name)
+{
+Aura Sphere
+}
+
+STRING 18948
+// Abilities: A0XX (Aura Sphere), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 18949
+// Abilities: A0XX (Aura Sphere), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00R|r] Learn Aura Sphere - [|cffffcc00Level %d|r]
+}
+
+STRING 18950
+// Abilities: A0XX (Aura Sphere), Researchubertip (Tooltip - Learn - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool1>s|r
+}
+
+STRING 18951
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 2|r]
+}
+
+STRING 18952
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 3|r]
+}
+
+STRING 18953
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 4|r]
+}
+
+STRING 18954
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 5|r]
+}
+
+STRING 18955
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 6|r]
+}
+
+STRING 18956
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool2>s|r
+}
+
+STRING 18957
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool3>s|r
+}
+
+STRING 18958
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool4>s|r
+}
+
+STRING 18959
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool5>s|r
+}
+
+STRING 18960
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool6>s|r
+}
+
+STRING 18961
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 7|r]
+}
+
+STRING 18962
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool7>s|r
+}
+
+STRING 18963
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool8>s|r
+}
+
+STRING 18964
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool9>s|r
+}
+
+STRING 18965
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool10>s|r
+}
+
+STRING 18966
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 8|r]
+}
+
+STRING 18967
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 9|r]
+}
+
+STRING 18968
+// Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
+{
+[|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 10|r]
+}
+
+STRING 18969
+// Abilities: A0XY (Book Lucario Passives), Name (Name)
+{
+Book Lucario Passives
+}
+
+STRING 18970
+// Abilities: A0XZ (Lucario Attack Passive), Name (Name)
+{
+Lucario Attack Passive
+}
+
+STRING 18971
+// Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18972
+// Buffs/Effects: B04K (), Buffubertip (Tooltip - Extended)
+{
+Lucario gains +1 MS / +1% AS / +1% Spell Amp for each 3% of HP missing
+}
+
+STRING 18973
+// Buffs/Effects: B04K (), Bufftip (Tooltip)
+{
+Aura
+}
+
+STRING 18974
+// Buffs/Effects: B04O (), Bufftip (Tooltip)
+{
+Quick Attack
+}
+
+STRING 18975
+// Buffs/Effects: B04O (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Quick Attack; it is invisible, moves faster, and the first attack it makes while invisible will deal bonus damage.
+}
+
+STRING 18976
+// Buffs/Effects: B04P (), Buffubertip (Tooltip - Extended)
+{
+Lucca gains increased attack damage / critical strike and range
+}
+
+STRING 18977
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18978
+// Upgrades: R00A (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 18979
+// Units: H0A8 (Fighting / Steel Type), Name (Name)
+{
+Fighting / Steel Type
+}
+
+STRING 18980
+// Units: H0A8 (Fighting / Steel Type), Propernames (Proper Names)
+{
+Lucario
+}
+
+STRING 18981
+// Units: H0A8 (Fighting / Steel Type), Awakentip (Tooltip - Awaken)
+{
+[|cffffff00F|r] Choose Lucario
+}
+
+STRING 18982
+// Units: H0A8 (Fighting / Steel Type), Ubertip (Tooltip - Extended)
+{
+A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
+
+|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
+|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
+}
+
+STRING 18983
+// Units: H0A8 (Fighting / Steel Type), Tip (Tooltip - Basic)
+{
+[|cffffff00F|r] Choose Lucario
+}
+
+STRING 18984
+// Units: H0A8 (Fighting / Steel Type), EditorSuffix (Name - Editor Suffix)
+{
+(Mega)
+}
+
+STRING 18985
+// Abilities: A0WW (Saiyan Blood), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 18986
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario evolves into Mega Lucario for a short time.
+|cffFFFF00+0.25x Multiplier|r
+|cffFFFF00-0.4s Attack CD
++25 MS
++Maximum Aura stacks
+Enables Aura Storm|r
+}
+
+STRING 18987
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool2>s|r
+}
+
+STRING 18988
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool3>s|r
+}
+
+STRING 18989
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool4>s|r
+}
+
+STRING 18990
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool5>s|r
+}
+
+STRING 18991
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool6>s|r
+}
+
+STRING 18992
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool7>s|r
+}
+
+STRING 18993
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
+}
+
+STRING 18994
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
+}
+
+STRING 18995
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
+}
+
+STRING 18996
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
+}
+
+STRING 18997
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
+}
+
+STRING 18998
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Mega Evolution
+}
+
+STRING 18999
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
+}
+
+STRING 19000
+// Abilities: A0Y0 (Mega Evolution), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 19001
+// Abilities: A0Y0 (Mega Evolution), Name (Name)
+{
+Mega Evolution
+}
+
+STRING 19002
+// Abilities: A0Y0 (Mega Evolution), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 19003
+// Abilities: A0Y0 (Mega Evolution), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 19004
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 9|r]
+}
+
+STRING 19005
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 8|r]
+}
+
+STRING 19006
+// Abilities: A0Y0 (Mega Evolution), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
+}
+
+STRING 19007
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool8>s|r
+}
+
+STRING 19008
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool9>s|r
+}
+
+STRING 19009
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool10>s|r
+}
+
+STRING 19010
+// Abilities: A0Y0 (Mega Evolution), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool1> - <A0XF,Cool10>s|r
+}
+
+STRING 19011
+// Abilities: A0Y0 (Mega Evolution), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 19012
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario becomes huge for a short time, stunning all enemies near him for 2s.
+|cffFFFF00+150 Attack Range
++20 Armor
++15 MS
++0.4x Str Multiplier
++0.2x Agi Multiplier
+Enables Giga Sphere|r
+}
+
+STRING 19013
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool2>s|r
+}
+
+STRING 19014
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool3>s|r
+}
+
+STRING 19015
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool4>s|r
+}
+
+STRING 19016
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool5>s|r
+}
+
+STRING 19017
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool6>s|r
+}
+
+STRING 19018
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool7>s|r
+}
+
+STRING 19019
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
+}
+
+STRING 19020
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
+}
+
+STRING 19021
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
+}
+
+STRING 19022
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
+}
+
+STRING 19023
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
+}
+
+STRING 19024
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Gigantomax
+}
+
+STRING 19025
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
+}
+
+STRING 19026
+// Abilities: A0Y1 (Gigantomax), Researchhotkey (Hotkey - Learn)
+{
+D
+}
+
+STRING 19027
+// Abilities: A0Y1 (Gigantomax), Name (Name)
+{
+Gigantomax
+}
+
+STRING 19028
+// Abilities: A0Y1 (Gigantomax), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
+}
+
+STRING 19029
+// Abilities: A0Y1 (Gigantomax), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 19030
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 9|r]
+}
+
+STRING 19031
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 8|r]
+}
+
+STRING 19032
+// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
+}
+
+STRING 19033
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool8>s|r
+}
+
+STRING 19034
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool9>s|r
+}
+
+STRING 19035
+// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool10>s|r
+}
+
+STRING 19036
+// Abilities: A0Y1 (Gigantomax), Researchubertip (Tooltip - Learn - Extended)
+{
+Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
+|cff00ff00Duration: 10s|r
+|cff00ffffCooldown: <A0XF,Cool1> - <A0XF,Cool10>s|r
+}
+
+STRING 19037
+// Abilities: A0Y1 (Gigantomax), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 19038
+// Abilities: A0Y2 (Giga Sphere), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19039
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 1|r]
+}
+
+STRING 19040
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool1>s|r
+}
+
+STRING 19041
+// Abilities: A0Y2 (Giga Sphere), Name (Name)
+{
+Giga Sphere
+}
+
+STRING 19042
+// Abilities: A0Y2 (Giga Sphere), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 19043
+// Abilities: A0Y2 (Giga Sphere), Researchtip (Tooltip - Learn)
+{
+[|cffFFFF00W|r] Learn Giga Sphere - [|cffffcc00Level %d|r]
+}
+
+STRING 19044
+// Abilities: A0Y2 (Giga Sphere), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0Y2,Cool1>s|r
+}
+
+STRING 19045
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 2|r]
+}
+
+STRING 19046
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 3|r]
+}
+
+STRING 19047
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 4|r]
+}
+
+STRING 19048
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 5|r]
+}
+
+STRING 19049
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 6|r]
+}
+
+STRING 19050
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool2>s|r
+}
+
+STRING 19051
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool3>s|r
+}
+
+STRING 19052
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool4>s|r
+}
+
+STRING 19053
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool5>s|r
+}
+
+STRING 19054
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool6>s|r
+}
+
+STRING 19055
+// Abilities: A0Y2 (Giga Sphere), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 19056
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 7|r]
+}
+
+STRING 19057
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool7>s|r
+}
+
+STRING 19058
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 8|r]
+}
+
+STRING 19059
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool8>s|r
+}
+
+STRING 19060
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool9>s|r
+}
+
+STRING 19061
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0Y2,Cool1>s|r
+}
+
+STRING 19062
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool11>s|r
+}
+
+STRING 19063
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 9|r]
+}
+
+STRING 19064
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00F|r] Giga Sphere - [|cffffcc00Level 10|r]
+}
+
+STRING 19065
+// Abilities: A0Y2 (Giga Sphere), Tip (Tooltip - Normal)
+{
+[|cffFFFF00W|r] Spirit Bomb - [|cffffcc00Level 11|r]
+}
+
+STRING 19066
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool1> seconds|r
+}
+
+STRING 19067
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur2> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool2> seconds|r
+}
+
+STRING 19068
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur3> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool3> seconds|r
+}
+
+STRING 19069
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur4> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool4> seconds|r
+}
+
+STRING 19070
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur5> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool5> seconds|r
+}
+
+STRING 19071
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur6> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool6> seconds|r
+}
+
+STRING 19072
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur7> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool7> seconds|r
+}
+
+STRING 19073
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 2|r]
+}
+
+STRING 19074
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 3|r]
+}
+
+STRING 19075
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 4|r]
+}
+
+STRING 19076
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 5|r]
+}
+
+STRING 19077
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 6|r]
+}
+
+STRING 19078
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 1|r]
+}
+
+STRING 19079
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 7|r]
+}
+
+STRING 19080
+// Abilities: A0Y3 (Aura Storm), Researchhotkey (Hotkey - Learn)
+{
+F
+}
+
+STRING 19081
+// Abilities: A0Y3 (Aura Storm), Name (Name)
+{
+Aura Storm
+}
+
+STRING 19082
+// Abilities: A0Y3 (Aura Storm), Researchtip (Tooltip - Learn)
+{
+[|cff00ff00F|r] Learn Aura Storm - [|cffffcc00Level %d|r]
+}
+
+STRING 19083
+// Abilities: A0Y3 (Aura Storm), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 19084
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 9|r]
+}
+
+STRING 19085
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 8|r]
+}
+
+STRING 19086
+// Abilities: A0Y3 (Aura Storm), Tip (Tooltip - Normal)
+{
+[|cff00ff00F|r] Aura Storm - [|cffffcc00Level 10|r]
+}
+
+STRING 19087
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur8> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool8> seconds|r
+}
+
+STRING 19088
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+The user charges a spell for one second and then unleashes a relentless wave of water while channeling. When the channeling ends, a giant wave of water explodes, damaging enemies in the area.
+|cffff2020Channel Duration: <A0WD,Dur9> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0WD,Cool9> seconds|r
+}
+
+STRING 19089
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario consumes all of his mana and to charge a spell for one second and then unleashes a massive wave of energy while channeling, damaging all enemies in its path.
+|cffff2020Channel Duration: <A0Y3,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+}
+
+STRING 19090
+// Abilities: A0Y3 (Aura Storm), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucario consumes all of his mana and to charge a spell for one second and then unleashes a massive wave of energy while channeling, damaging all enemies in its path.
+|cffff2020Channel Duration: <A0Y3,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+}
+
+STRING 19091
+// Abilities: A0Y3 (Aura Storm), EditorSuffix (Editor Suffix)
+{
+(lucario)
 }
 
