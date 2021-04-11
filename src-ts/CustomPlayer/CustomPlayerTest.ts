@@ -1,6 +1,6 @@
 import { CustomPlayer } from "./CustomPlayer";
 import { CustomHero } from "CustomHero/CustomHero";
-import { Constants, Id, Globals, BASE_DMG } from "Common/Constants";
+import { Constants, Id, Globals, BASE_DMG, DebuffAbilities, Buffs, OrderIds } from "Common/Constants";
 import { ToolTipOrganizer } from "Common/ToolTipOrganizer";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { CustomAbility } from "CustomAbility/CustomAbility";
@@ -1281,8 +1281,6 @@ export function SetupBraveSwordAttack(
   // 1 : target y
   const casterPos: Vector2D = new Vector2D(0, 0);
   const tmpPos: Vector2D = new Vector2D(0, 0);
-  const herosSongDebuff = FourCC("B01H");
-  const dummyStunSpell = FourCC('A0IY');
   const dummyStunOrder = 852095;
   const tickRate = 0.02;
   const jumpDuration = 40;
@@ -1322,7 +1320,7 @@ export function SetupBraveSwordAttack(
         const checkUnit = GetEnumUnit();
         if (
           UnitHelper.isUnitTargetableForPlayer(checkUnit, player) && 
-          GetUnitAbilityLevel(checkUnit, herosSongDebuff) > 0
+          GetUnitAbilityLevel(checkUnit, Buffs.HEROS_SONG) > 0
         ) {
           ++checkCount;
         }
@@ -1346,7 +1344,7 @@ export function SetupBraveSwordAttack(
               casterPos.x, casterPos.y, 
               0
             );
-            UnitAddAbility(castDummy, dummyStunSpell);
+            UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
 
             // PauseUnit(caster, false);
             // SetUnitInvulnerable(caster, false);
@@ -2038,8 +2036,6 @@ export function SetupJirenGlare(
    * 2: ability level
    */
 
-  const dummyStunSpell = FourCC('A0IY');
-  const dummyStunOrder = 852095;
   const glareDuration = 2.5;
   const maxGlareDistance = 2500;
   const glareDamageMult = BASE_DMG.DFIST_EXPLOSION * 0.53;
@@ -2101,7 +2097,7 @@ export function SetupJirenGlare(
           sourceLoc.x, sourceLoc.y, 
           0
         );
-        UnitAddAbility(castDummy, dummyStunSpell);
+        UnitAddAbility(castDummy, DebuffAbilities.STUN_ONE_SECOND);
 
         const customHero = customPlayers[GetPlayerId(player)].getCustomHero(unit);
         let spellPower = 1.0;
@@ -2140,7 +2136,7 @@ export function SetupJirenGlare(
           WEAPON_TYPE_WHOKNOWS
         );
 
-        IssueTargetOrderById(castDummy, dummyStunOrder, source);
+        IssueTargetOrderById(castDummy, OrderIds.THUNDERBOLT, source);
         RemoveUnit(castDummy);
         
         DestroyEffect(

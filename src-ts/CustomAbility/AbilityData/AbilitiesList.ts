@@ -6550,6 +6550,247 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.Lucario.VACUUM_WAVE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 40,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam vacuum wave" },
+      { name: "sfx vacuum wave" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.IRON_DEFENSE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 99,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward cell-x pushback" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.EXTREME_SPEED,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 66,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward max power" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.EXTREME_SPEED_ON_HIT,
+    currentCd: 0,
+    maxCd: 6,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "damage target extreme speed explosion" },
+      { name: "sfx extreme speed on hit" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.AURA_SPHERE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 50,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam aura sphere" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.MEGA_EVOLUTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "spell amp lucario mega evolution" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.AURA_STORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi aura storm" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx aura storm caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.GIGANTAMAX,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "debuff stun lucario gigantamax" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.GIGA_SPHERE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam giga sphere" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Android13.ENERGY_BEAM, // androids 13 14 15 beam
     currentCd: 0,
     maxCd: 1,

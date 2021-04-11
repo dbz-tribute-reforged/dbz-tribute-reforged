@@ -291,7 +291,6 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.luccaMegaBomb, AbilityNames.Lucca.MEGABOMB],
     [Id.luccaFlare, AbilityNames.Lucca.FLARE],
 
-
     //magus
     [Id.darkBomb, AbilityNames.Magus.DARK_BOMB],
     [Id.magusLightning2, AbilityNames.Magus.LIGHTNING_2],
@@ -315,6 +314,16 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.marleIce2, AbilityNames.Marle.ICE_2],
     [Id.marleCure, AbilityNames.Marle.CURE],
     [Id.marleHaste, AbilityNames.Marle.HASTE],
+
+    // lucario
+    [Id.vacuumWave, AbilityNames.Lucario.VACUUM_WAVE],
+    [Id.ironDefense, AbilityNames.Lucario.IRON_DEFENSE],
+    [Id.extremeSpeed, AbilityNames.Lucario.EXTREME_SPEED],
+    [Id.auraSphere, AbilityNames.Lucario.AURA_SPHERE],
+    [Id.lucarioMegaEvolution, AbilityNames.Lucario.MEGA_EVOLUTION],
+    [Id.auraStorm, AbilityNames.Lucario.AURA_STORM],
+    [Id.lucarioGigantomax, AbilityNames.Lucario.GIGANTAMAX],
+    [Id.gigaSphere, AbilityNames.Lucario.GIGA_SPHERE],
 
     // babidi
     [FourCC('A02F'), AbilityNames.Babidi.HARETSU],

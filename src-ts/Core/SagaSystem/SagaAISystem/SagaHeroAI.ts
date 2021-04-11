@@ -2,13 +2,15 @@ import { CustomHero } from "CustomHero/CustomHero";
 import { SagaAIData } from "./SagaAIData";
 import { Vector2D } from "Common/Vector2D";
 import { UnitHelper } from "Common/UnitHelper";
-import { Constants } from "Common/Constants";
+import { Constants, OrderIds } from "Common/Constants";
 import { TextTagHelper } from "Common/TextTagHelper";
 import { CoordMath } from "Common/CoordMath";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { PathingCheck } from "Common/PathingCheck";
 import { SagaAbility } from "../SagaAbility";
+import { ItemConstants } from "Core/ItemAbilitySystem/ItemConstants";
+import { doTimeRingSwap } from "Core/ItemAbilitySystem/ItemActiveAbilitiesConfig";
 
 
 // TODO:
@@ -39,6 +41,8 @@ export class SagaHeroAI {
   protected maxWait: number;
 
   protected isAggroLost: boolean;
+
+  protected canUseItem: boolean;
 
   protected abilitiesNames: string[];
   protected sagaAbilities: SagaAbility[];
@@ -89,6 +93,8 @@ export class SagaHeroAI {
     this.maxWait = 0;
 
     this.isAggroLost = false;
+
+    this.canUseItem = true;
 
     this.abilitiesNames = [];
     this.sagaAbilities = [];
@@ -202,6 +208,9 @@ export class SagaHeroAI {
       case SagaAIData.Action.WAIT:
         this.thinkWait();
         break;
+      case SagaAIData.Action.ITEM:
+        this.thinkItem();
+        break;
       case SagaAIData.Action.REAGGRO:
       default:
         this.thinkReaggro();
@@ -243,7 +252,13 @@ export class SagaHeroAI {
     } else {
       this.numDodges = 0;
       this.timeSinceLastDodge = 0;
-      this.currentAction = SagaAIData.Action.REAGGRO;
+      this.numWaits = 0;
+      this.maxWait = 0;
+      if (this.canUseItem) {
+        this.thinkItem();
+      } else {
+        this.currentAction = SagaAIData.Action.REAGGRO;
+      }
     }
   }
 
@@ -273,6 +288,14 @@ export class SagaHeroAI {
     }
   }
 
+  public thinkItem() {
+    if (this.maxWait == 0 || this.numWaits < this.maxWait) {
+      this.currentAction = SagaAIData.Action.ITEM;
+    } else {
+      this.currentAction = SagaAIData.Action.REAGGRO;
+    }
+  }
+
   public thinkReaggro() {
     if (this.aggroTarget != undefined && UnitHelper.isUnitAlive(this.aggroTarget)) {
       this.currentAction = SagaAIData.Action.ATTACK;
@@ -292,6 +315,9 @@ export class SagaHeroAI {
         break;
       case SagaAIData.Action.WAIT:
         this.performWait();
+        break;
+      case SagaAIData.Action.ITEM:
+        this.performItem();
         break;
       case SagaAIData.Action.REAGGRO:
       default:
@@ -375,6 +401,73 @@ export class SagaHeroAI {
     }
   }
 
+  public performItem() {
+    // wait if casting item
+    if (this.maxWait > 0) {
+      if (this.numWaits < this.maxWait) {
+        ++this.numWaits;
+      }
+      return;
+    }
+      
+    let hasUsedItem = false;
+    const item1 = UnitItemInSlot(this.sagaUnit, 0);
+
+    if (
+      this.canUseItem && 
+      !hasUsedItem
+    ) {
+      if (GetItemTypeId(item1) == ItemConstants.SagaDrops.TIME_RING) {
+        this.bossPos.setPos(GetUnitX(this.sagaUnit), GetUnitY(this.sagaUnit));
+        
+        GroupEnumUnitsInRange(
+          this.nearbyBeams,
+          this.bossPos.x,
+          this.bossPos.y,
+          1300,
+          null
+        );
+
+        ForGroup(this.nearbyBeams, () => {
+          const ally = GetEnumUnit();
+          if (
+            !hasUsedItem
+            && IsUnitType(ally, UNIT_TYPE_HERO)
+            && IsUnitOwnedByPlayer(ally, Constants.sagaPlayer)
+            && ally != this.sagaUnit
+            && UnitHelper.isUnitAlive(ally)
+            && GetUnitLifePercent(ally) < 90
+          ) {
+            TextTagHelper.showPlayerColorTextOnUnit(
+              "Time Ring", 
+              Constants.sagaPlayerId,
+              this.sagaUnit
+            );
+
+            doTimeRingSwap(this.sagaUnit, ally);
+            hasUsedItem = true;
+            this.canUseItem = false;
+
+            TimerStart(CreateTimer(), 40.0, false, () => {
+              this.canUseItem = true;
+              DestroyTimer(GetExpiredTimer());
+            });
+          }
+        });
+
+        GroupClear(this.nearbyBeams);
+      }
+
+    }
+
+    if (hasUsedItem) {
+      this.numWaits = 0;
+      this.maxWait = 0.5 * SagaAIData.DELAY_TO_INTERVALS;
+    } else {
+      this.currentAction = SagaAIData.Action.REAGGRO;
+    }
+  }
+
   public performDodge() {
     const dodgeResult = this.dodgeNearbyBeams();
     if (dodgeResult == SagaAIData.PERFORMED_DODGE) {
@@ -385,6 +478,7 @@ export class SagaHeroAI {
     }
   }
 
+  // really just a helper for beam cast delay
   public performWait() {
     if (this.numWaits < this.maxWait) {
       IssueImmediateOrder(this.sagaUnit, SagaAIData.Order.WAIT);

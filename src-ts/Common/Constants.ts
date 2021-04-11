@@ -75,6 +75,76 @@ export module BASE_DMG {
   export const DFIST_EXPLOSION = 0.25;
 }
 
+export module DebuffAbilities {
+  // thunderbolt
+  export const STUN_MICRO = FourCC('A08K')
+  export const STUN_HALF_SECOND = FourCC('A0NR');
+  export const STUN_ONE_SECOND = FourCC('A0IY');
+  export const STUN_ONE_AND_A_HALF_SECOND = FourCC('A0FY');
+  export const STUN_TWO_SECOND = FourCC('A0I7');
+  export const STUN_THREE_SECOND = FourCC('A08H');
+  export const STUN_FROZEN_EIS_SHENRON = FourCC('A0PA');
+
+  // curse
+  export const DEMONS_MARK = FourCC("A0O7");
+  export const FROST_CLAWS_BLIND = FourCC("A0P6");
+  export const BLINDING_WOLF_FANG_FIST = FourCC("A0S8");
+  export const BRAVE_SLASH = FourCC("A0TV");
+  export const DARK_MIST = FourCC("A0WS");
+
+  // slow
+  export const HEROS_SONG = FourCC("A0I6");
+  export const EIS_FROSTBITE = FourCC("A0P5");
+  export const KROWN_TOSS = FourCC("A0P9");
+  export const MILKY_CANNON = FourCC("A0PU");
+  export const DRAGON_THUNDER = FourCC("A0QT");
+  export const SPIRIT_BALL = FourCC("A0SA");
+  export const BLEED_ZAMASU = FourCC("A0I4");
+  export const FERVENT_WOUND = FourCC("A0TE");
+  export const FLATTEN = FourCC("A0TQ");
+  export const GRAN_REY_SLOW = FourCC("A0V7");
+  export const FINAL_BURST_SLOW = FourCC("A0VE");
+  export const LIGHTNING_3_SLOW = FourCC("A0WN");
+
+  // entangling roots
+  export const CIRCLE_FLASH = FourCC("A0R6");
+  export const GALACTIC_DONUT = FourCC("A0U6");
+
+  // sleep
+  export const HYPNOWAVE_SLEEP = FourCC("A0X9");
+
+  // inner fire
+  export const LUCARIO_FORCE_DEBUFF = FourCC("A0Y5");
+}
+
+export module Buffs {
+  // buffs
+  export const HEROS_SONG = FourCC("B01H");
+
+  export const COSMIC_ILLUSION = FourCC("B025");
+
+  export const PARAGON_OF_FLAME = FourCC("B048");
+  export const DRAGOON_TRANSFORMATION = FourCC("B049");
+
+  export const LUCARIO_FORCE_1 = FourCC("B04R");
+  export const LUCARIO_FORCE_2 = FourCC("B04S");
+  export const LUCARIO_FORCE_3 = FourCC("B04T");
+  export const LUCARIO_FORCE_4 = FourCC("B04U");
+  export const LUCARIO_FORCE_5 = FourCC("B04V");
+
+  export const EXTREME_SPEED = FourCC("B04O");
+}
+
+export module OrderIds {
+  export const THUNDERBOLT = 852095;
+  export const CURSE = 852190;
+  export const SLOW = 852075;
+  export const ENTANGLING_ROOTS = 852171;
+  export const SLEEP = 852227;
+  export const INNER_FIRE = 852066;
+  export const HOLY_BOLT = 852092;
+}
+
 export module Id {
   export const summonShenron = FourCC("I01V");
 
@@ -399,6 +469,18 @@ export module Id {
   export const blasto = FourCC("A0OU");
   export const kingsThrone = FourCC("A0OV");
 
+  export const lucario = FourCC("H0A7");
+  export const vacuumWave = FourCC("A0XU");
+  export const ironDefense = FourCC("A0XV");
+  export const ironDefensePassive = FourCC("A0Y4");
+  export const extremeSpeed = FourCC("A0XW");
+  export const auraSphere = FourCC("A0XX");
+  export const lucarioMegaEvolution = FourCC("A0Y0");
+  export const auraStorm = FourCC("A0Y3");
+  export const lucarioGigantomax = FourCC("A0Y1");
+  export const gigaSphere = FourCC("A0Y2");
+
+
   export const raditz = FourCC("H08U");
   export const doubleSunday = FourCC("A0ME");
   export const saturdayCrash = FourCC("A0MF");
@@ -528,5 +610,4 @@ export module Id {
   export const yamchaRSuperSpiritBall = FourCC("A0RI");
   export const yamchaRFullPowerKame = FourCC("A0RJ");
   export const yamchaRWolfFangBlast = FourCC("A0RK");
-  
 }

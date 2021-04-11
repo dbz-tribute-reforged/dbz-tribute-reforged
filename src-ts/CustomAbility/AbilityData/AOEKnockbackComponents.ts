@@ -1125,4 +1125,35 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // aura storm
+  {
+    name: "knockback aura storm",
+    repeatInterval: 1, 
+    startTick: 44,
+    endTick: -1,
+    knockbackData: {
+      speed: 43, 
+      angle: 180, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
+  {
+    name: "knockback giga sphere",
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    knockbackData: {
+      speed: 15, 
+      angle: 180, 
+      aoe: 700,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: false,
+    affectAllies: false,
+  },
 ];

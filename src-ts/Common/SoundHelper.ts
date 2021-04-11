@@ -30,7 +30,7 @@ export module SoundHelper {
     const unitId = GetUnitTypeId(unit);
     let rng = Math.random() * 100;
 
-    if (spellId == Id.cosmicIllusion) {
+    if (spellId == Id.cosmicIllusion || spellId == Id.extremeSpeed) {
       const nearbyNappa = CreateGroup();
       GroupEnumUnitsInRange(
         nearbyNappa,

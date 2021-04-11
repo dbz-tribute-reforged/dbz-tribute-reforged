@@ -420,6 +420,18 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Marle.HASTE,
     ]],
 
+    [Id.lucario, [
+      AbilityNames.Lucario.VACUUM_WAVE,
+      AbilityNames.Lucario.IRON_DEFENSE,
+      AbilityNames.Lucario.EXTREME_SPEED,
+      AbilityNames.Lucario.EXTREME_SPEED_ON_HIT,
+      AbilityNames.Lucario.AURA_SPHERE,
+      AbilityNames.Lucario.MEGA_EVOLUTION,
+      AbilityNames.Lucario.AURA_STORM,
+      AbilityNames.Lucario.GIGANTAMAX,
+      AbilityNames.Lucario.GIGA_SPHERE,
+    ]],
+
 
 
 

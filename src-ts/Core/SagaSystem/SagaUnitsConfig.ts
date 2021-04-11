@@ -518,7 +518,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // pui pui
     ["Pui Pui", new SagaUnit(FourCC("O004"), 9, 1000, 400, 1000, new Vector2D(16500, 12000))],
     ["Yakon", new SagaUnit(FourCC("O009"), 30, 3600, 400, 3300, new Vector2D(16500, 12000))],
-    ["Dabura", new SagaUnit(FourCC("O000"), 80, 7500, 400, 7500, new Vector2D(16500, 12000),
+    ["Dabura", new SagaUnit(FourCC("H0A9"), 80, 7500, 400, 7500, new Vector2D(16500, 12000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,
@@ -545,7 +545,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Future Pui Pui", new SagaUnit(FourCC("O004"), 7, 1000, 400, 1000, new Vector2D(16800, 26000))],
     ["Future Yakon", new SagaUnit(FourCC("O009"), 20, 3600, 400, 3300, new Vector2D(16900, 26000))],
     // dabura and babidi
-    ["Future Dabura", new SagaUnit(FourCC("O000"), 60, 7500, 400, 7500, new Vector2D(17000, 26000),
+    ["Future Dabura", new SagaUnit(FourCC("H0A9"), 60, 7500, 400, 7500, new Vector2D(17000, 26000),
       [
         SagaAbilities.Saga.GENERIC_BEAM,
         SagaAbilities.Saga.GENERIC_BOMB,

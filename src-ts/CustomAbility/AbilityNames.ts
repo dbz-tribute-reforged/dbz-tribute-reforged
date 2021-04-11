@@ -364,6 +364,20 @@ export module AbilityNames {
     export const HASTE: string = "Marle Haste";
   }
 
+  export module Lucario {
+    export const VACUUM_WAVE: string = "Vacuum Wave";
+    export const IRON_DEFENSE: string = "Iron Defense";
+    export const EXTREME_SPEED: string = "Extreme Speed";
+    export const EXTREME_SPEED_ON_HIT: string = "Extreme Speed!";
+    export const AURA_SPHERE: string = "Aura Sphere";
+    export const MEGA_EVOLUTION: string = "Mega Evolution Lucario";
+    export const AURA_STORM: string = "Aura Storm";
+    export const GIGANTAMAX: string = "Gigantamax Lucario";
+    export const GIGA_SPHERE: string = "Giga Sphere";
+  }
+
+
+
   export module Babidi {
     export const HARETSU: string = "Haretsu no Majutsu";
     export const BABIDI_BARRIER: string = "Babidi Barrier";
