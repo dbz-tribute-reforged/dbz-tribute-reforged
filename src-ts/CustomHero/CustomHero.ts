@@ -15,6 +15,8 @@ export class CustomHero {
   public isCastTimeWaiting: boolean;
   public spellPower: number;
 
+  public passiveTrigger: trigger[];
+
   constructor(
     public readonly unit: unit,
   ) {
@@ -28,6 +30,8 @@ export class CustomHero {
 
     this.isCastTimeWaiting = false;
     this.spellPower = 1.0;
+
+    this.passiveTrigger = [];
 
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
@@ -121,8 +125,15 @@ export class CustomHero {
     this.spellPower -= modifier;
   }
 
+  public addPassiveTrigger(trig: trigger) {
+    this.passiveTrigger.push(trig);
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();
+    for (const trig of this.passiveTrigger) {
+      DestroyTrigger(trig);
+    }
   }
 }

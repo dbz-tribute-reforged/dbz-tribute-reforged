@@ -372,7 +372,7 @@ export module AbilityNames {
     export const AURA_SPHERE: string = "Aura Sphere";
     export const MEGA_EVOLUTION: string = "Mega Evolution Lucario";
     export const AURA_STORM: string = "Aura Storm";
-    export const GIGANTOMAX: string = "Gigantomax Lucario";
+    export const GIGANTAMAX: string = "Gigantamax Lucario";
     export const GIGA_SPHERE: string = "Giga Sphere";
   }
 

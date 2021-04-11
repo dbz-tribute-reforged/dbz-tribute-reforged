@@ -207,4 +207,13 @@ export const SpellAmpComponents = [
     bonus: 0.15,
     rate: 0.0015,
   },
+  // --------------------------------------------
+  { 
+    name: "spell amp lucario mega evolution", 
+    repeatInterval: 1, 
+    startTick: 0,
+    endTick: -1,
+    bonus: 0.2,
+    rate: 0.0015,
+  },
 ];

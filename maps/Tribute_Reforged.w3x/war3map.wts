@@ -13389,8 +13389,9 @@ Transformations:
 [lvl 50]  1.75x "fp"
 [lvl 90]  2.00x "fp" [unlocks Upa's Rage 3]
 [lvl 125] 2.25x "fp"
-[lvl 150] 2.40x "rage" [unlocks Upa's Rage 4]
-[lvl 250] 2.50x "rage" [unlocks Upa's Rage 5]
+[lvl 150] 2.40x "rage" [Unlocks Upa's Rage 4]
+[lvl 250] 2.50x "rage" [Unlocks Upa's Rage 5]
+[lvl 300] [Unlocks Upa's Rage 6]
 }
 
 STRING 2162
@@ -14246,7 +14247,7 @@ Programming - [|cffffcc00Level 15|r]
 }
 
 STRING 2304
-// Units: H0A7 (Fighting / Steel Type), Hotkey (Hotkey)
+// Units: H0A7 (Aura Pokemon), Hotkey (Hotkey)
 {
 F
 }
@@ -15396,69 +15397,39 @@ Bardock's ability to see into the future allows him to dodge most incoming attac
 }
 
 STRING 2494
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NU (Time Ring), EditorSuffix (Editor Suffix)
 {
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool1> seconds|r
+(item)
 }
 
 STRING 2495
-// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
 {
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds.|r
+Lucario uses his Lucarionite to temporarily transform into Mega Lucario.
+|cffFFFF00+0.25x stat mult
+-0.4 base attack time
++5% spell amp per second up to +20%
++33ms and unlocks movement speed cap
+Doubles the effect of |cff00ffffAura|r
+|cffffff00Unlocks Aura Storm ability|r
+
+|cff00ffffCooldown: <A0Y0,Cool1>s
+
+|cff808080In the Kalos region, Lucario is believed to be the first discovered Mega Evolution.|r
 }
 
 STRING 2496
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool2> seconds|r
-}
+Lucario becomes huge for a short time. Nearby enemies are stunned for 1s.
+|cffFFFF00+0.4x Str Mult
++0.2x Agi Mult
++150 Attack Range
++20 Armor
++33ms and unlocks movement speed cap
+Unlocks Giga Sphere|r
 
-STRING 2497
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool3> seconds|r
-}
-
-STRING 2498
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool4> seconds|r
-}
-
-STRING 2499
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool5> seconds|r
-}
-
-STRING 2500
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool6> seconds|r
-}
-
-STRING 2501
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool7> seconds|r
-}
-
-STRING 2502
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool8> seconds|r
-}
-
-STRING 2503
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool9> seconds|r
-}
-
-STRING 2504
-// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
-{
-Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.|n|cff00ff00Duration: 4s|nDamage Block: Int * Lvl * 0.65 @ 65%  |r|n|cff00ffffCooldown: <A0P3,Cool10> seconds|r
+|cff00ffffCooldown: <A0Y1,Cool1>s
 }
 
 STRING 2505
@@ -44357,9 +44328,8 @@ Transformations:
 [lvl 30]  1.50x "fp" [unlocks Energy Blades]
 [lvl 50]  1.75x "fp"
 [lvl 90]  2.00x "fp"
-[lvl 150] 2.20x "god" [unlocks Zamasu's Immortality]
-[lvl 200] 2.40x "god" 
-[lvl 250] 2.50x "god"
+[lvl 150] 2.30x "god" [unlocks Zamasu's Immortality]
+[lvl 200] 2.50x "god" 
 
 |cffff25aaZamasu's Immortality|r: +150% HP regen
 }
@@ -70510,7 +70480,7 @@ STRING 11456
 }
 
 STRING 11457
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
 }
@@ -70522,7 +70492,7 @@ STRING 11458
 }
 
 STRING 11459
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool2>s|r
 }
@@ -70534,7 +70504,7 @@ Power Level Sharing
 }
 
 STRING 11461
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool3>s|r
 }
@@ -70546,7 +70516,7 @@ STRING 11462
 }
 
 STRING 11463
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool4>s|r
 }
@@ -70582,31 +70552,31 @@ STRING 11468
 }
 
 STRING 11469
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool5>s|r
 }
 
 STRING 11470
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool6>s|r
 }
 
 STRING 11471
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool7>s|r
 }
 
 STRING 11472
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool8>s|r
 }
 
 STRING 11473
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool9>s|r
 }
@@ -70618,15 +70588,27 @@ STRING 11474
 }
 
 STRING 11475
-// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+// Units: H0A7 (Aura Pokemon), Ubertip (Tooltip - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool10>s|r
+A fast and versatile hero that can choose between having a strong early-game or strong late-game. Has lower than usual damage before unlocking one of his ultimate forms.
+
+|cff00ffffAura|r: Increased ms when on low life.
+
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00PVP|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Teamfight|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Saga|r
+|cff00FF00IIII|r|cff383838I |r|cffFFFF00Farming|r
+|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
+
 }
 
 STRING 11476
-// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
 }
 
 STRING 11477
@@ -72343,45 +72325,66 @@ STRING 11760
 }
 
 STRING 11761
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool1>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool2>s|r
 }
 
 STRING 11762
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool2>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool3>s|r
 }
 
 STRING 11763
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool3>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool4>s|r
 }
 
 STRING 11764
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool4>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool5>s|r
 }
 
 STRING 11765
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool5>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool6>s|r
 }
 
 STRING 11766
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool6>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool7>s|r
 }
 
 STRING 11767
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool7>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool8>s|r
 }
 
 STRING 11768
@@ -72457,15 +72460,21 @@ STRING 11779
 }
 
 STRING 11780
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool8>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool9>s|r
 }
 
 STRING 11781
-// Abilities: A0NL (Heat Dome Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XU (Vacuum Wave), Researchubertip (Tooltip - Learn - Extended)
 {
-Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.|n|cff00ff00Aura Damage: int * lvl * ?).|r|n|cffFFFF00Aura Duration: 3s|r|n|cff00FFFFCooldown: <A0LU,Cool9>s|r
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool1>s|r
 }
 
 STRING 11782
@@ -76108,12 +76117,6 @@ STRING 12371
 F
 }
 
-STRING 12372
-// Abilities: A0P8 (Absolute Zero Buff Spell), Name (Name)
-{
-Absolute Zero Buff Spell
-}
-
 STRING 12373
 // Abilities: A0G8 (Energy Punch), Tip (Tooltip - Normal)
 {
@@ -78027,8 +78030,7 @@ Transformations:
 [lvl 60]  1.75x "fp"
 [lvl 90]  2.00x "fp"
 [lvl 150] 2.30x "fp"
-[lvl 200] 2.40x "fp"
-[lvl 250] 2.50x "fp"
+[lvl 200] 2.50x "fp"
 
 Gains +0.03x for each dragon ball held.
 Gains +0.03x for holding 3 or more dragon balls.
@@ -78168,7 +78170,7 @@ E
 }
 
 STRING 12692
-// Abilities: A0P8 (Absolute Zero Buff Spell), Tip (Tooltip - Normal)
+// Buffs/Effects: B02U (), Bufftip (Tooltip)
 {
 Absolute Zero
 }
@@ -78838,18 +78840,6 @@ STRING 12797
 // Abilities: A0P6 (Frost Claws Blind), Name (Name)
 {
 Frost Claws Blind
-}
-
-STRING 12798
-// Buffs/Effects: B02U (), Bufftip (Tooltip)
-{
-Absolute Zero
-}
-
-STRING 12799
-// Buffs/Effects: B02U (), Buffubertip (Tooltip - Extended)
-{
-This unit is surrounded by a freezing cold field that will stun any enemey that attacks it.
 }
 
 STRING 12800
@@ -97919,6 +97909,88 @@ STRING 15687
 [|cff00ff00Q|r] Time Skip - [|cffffcc00Level 7|r]
 }
 
+STRING 15688
+{
+[|cffffcc00Ultimate|r] Mega Evolution
+Lucario can now transform into Mega Lucario.
+}
+
+STRING 15689
+// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
+{
+|cffFFFF00Active:|r Lucario whirls his fists to send an invisible wave of pure vacuum at his opponents.
+|cffFFFF00Passive:|r Lucario applies a stacking -1 armor debuff on attack, up to 5 stacks. Auto attacks deal an additional 0.1% of Max HP per stack.
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XU,Cool10>s|r
+}
+
+STRING 15690
+{
+[|cffffcc00Ultimate|r] Gigantamax
+Lucario can now transform into his gigantamax form.
+}
+
+STRING 15692
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool1> seconds
+}
+
+STRING 15693
+// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario consumes all his mana to charge a massive aura sphere for one second before unleashing a powerful wave of energy.
+|cffff2020Channel Duration: <A0Y3,Dur10> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+}
+
+STRING 15694
+// Abilities: A0Y3 (Aura Storm), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucario consumes all his mana to charge a massive aura sphere for one second before unleashing a powerful wave of energy.
+|cffff2020Channel Duration: <A0Y3,Dur1> seconds|r
+|cff00ff00Damage: Lvl x Int x ?|r
+|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+}
+
+STRING 15695
+{
+[|cffffcc00Upgrade|r] |cffff2020R|r|cffff8820a|r|cffffff00i|r|cff00ff00n|r|cff00ffffb|r|cffff44ffo|r|cff882288w|r
+Crono receives an upgraded sword with a 70% chance for a 2.2x crit and +30% base damage.
+}
+
+STRING 15696
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool1>s|r
+}
+
+STRING 15697
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool2>s|r
+}
+
+STRING 15698
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool3>s|r
+}
+
 STRING 15699
 // Abilities: A0T1 (All Might Smashes), Tip (Tooltip - Normal)
 {
@@ -107232,7 +107304,7 @@ Transformations:
 [lvl 85]  2.00x "fp" [Unlocks Lightning 2]
 [lvl 125] 2.25x "fp"
 [lvl 150] 2.50x "fp"
-[lvl 200] Upgrades sword to "Rainbow" - 70% crit rate, 30% bonus attack damage
+[lvl 200] Upgrades sword to "Rainbow" - increased crit and base damage
 [lvl 200] [Unlocks Rust Tyranno Quest] - NYI
 }
 
@@ -115521,6 +115593,94 @@ A strong PvP fighter due to his extremely high mobility, burst damage, and innat
 
 }
 
+STRING 18139
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool4>s|r
+}
+
+STRING 18140
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool5>s|r
+}
+
+STRING 18141
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool6>s|r
+}
+
+STRING 18142
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool7>s|r
+}
+
+STRING 18143
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool8>s|r
+}
+
+STRING 18144
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool9>s|r
+}
+
+STRING 18145
+// Abilities: A0LU (Maiden Blast), Ubertip (Tooltip - Normal - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool10>s|r
+}
+
+STRING 18146
+// Abilities: A0LU (Maiden Blast), Researchubertip (Tooltip - Learn - Extended)
+{
+Fires a blast in your targets direction. Pan gains a temporary damage aura after casting the spell.
+|cff00ff00Aura Damage: Int * Lvl * ? + 1% Max HP|r
+|cffFFFF00Aura Duration: 3s|r
+|cff00FFFFCooldown: <A0LU,Cool1>s|r
+}
+
+STRING 18148
+// Abilities: A0P3 (Absolute Zero), Researchubertip (Tooltip - Learn - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool1> - <A0P3,Cool10> seconds
+}
+
+STRING 18149
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
+{
+[|cff00ff00D|r] Gigantamax
+}
+
 STRING 18150
 // Abilities: A0WD (Water 2), Ubertip (Tooltip - Normal - Extended)
 {
@@ -116075,6 +116235,12 @@ STRING 18230
 // Buffs/Effects: B04H (), Buffubertip (Tooltip - Extended)
 {
 Magus' Amulet prevents application of negative status effects.
+}
+
+STRING 18231
+// Abilities: A0Y1 (Gigantamax), Name (Name)
+{
+Gigantamax
 }
 
 STRING 18232
@@ -116733,14 +116899,16 @@ STRING 18327
 {
 Type "r" to revert.
 Transformations:
-[lvl 20]  1.25x
-[lvl 50]  1.75x
-[lvl 80]  2.0x
-[lvl 120] 2.2x
-[lvl 150] 2.5x
+[lvl 20]  1.10x "fp"
+[lvl 30]  1.30x "fp"
+[lvl 50]  1.50x "fp"
+[lvl 80]  1.80x "fp"
+[lvl 120] 2.00x "fp"
+[lvl 150] 2.10x "fp"
 [lvl 200] [|cff00ffffUltimate Choice|r]
+(Requires removed Macho Brace)
 "|cff00ff00mega|r" - Mega Lucario
-"|cffffff00giga|r" - Gigantomax Lucario
+"|cffffff00giga|r" - Gigantamax Lucario
 
 }
 
@@ -117910,7 +118078,7 @@ STRING 18507
 }
 
 STRING 18508
-// Units: H0A7 (Fighting / Steel Type), Name (Name)
+// Units: H0A8 (Fighting / Steel Type), Name (Name)
 {
 Fighting / Steel Type
 }
@@ -117928,7 +118096,7 @@ STRING 18510
 }
 
 STRING 18511
-// Units: H0A7 (Fighting / Steel Type), Propernames (Proper Names)
+// Units: H0A7 (Aura Pokemon), Propernames (Proper Names)
 {
 Lucario
 }
@@ -117964,13 +118132,13 @@ STRING 18516
 }
 
 STRING 18517
-// Units: H0A7 (Fighting / Steel Type), Awakentip (Tooltip - Awaken)
+// Units: H0A7 (Aura Pokemon), Awakentip (Tooltip - Awaken)
 {
 [|cffffff00F|r] Choose Lucario
 }
 
 STRING 18518
-// Units: H0A7 (Fighting / Steel Type), Ubertip (Tooltip - Extended)
+// Units: H0A8 (Fighting / Steel Type), Ubertip (Tooltip - Extended)
 {
 A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
 
@@ -117983,13 +118151,13 @@ A well-rounded hero who has strong offensive and defensive capabilities, while b
 }
 
 STRING 18519
-// Units: H0A7 (Fighting / Steel Type), Tip (Tooltip - Basic)
+// Units: H0A7 (Aura Pokemon), Tip (Tooltip - Basic)
 {
 [|cffffff00F|r] Choose Lucario
 }
 
 STRING 18520
-// Units: H0A7 (Fighting / Steel Type), EditorSuffix (Name - Editor Suffix)
+// Units: H0A7 (Aura Pokemon), EditorSuffix (Name - Editor Suffix)
 {
 (Tavern)
 }
@@ -118004,6 +118172,14 @@ STRING 18522
 // Abilities: A0XA (Aura), Tip (Tooltip - Normal)
 {
 [|cff00ff00Q|r] Aura - [|cffffcc00Level 7|r]
+}
+
+STRING 18523
+// Abilities: A0Y2 (Giga Sphere), Researchubertip (Tooltip - Learn - Extended)
+{
+Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: 60% Str + 40% Int|r
+|cff00FFFFCooldown: <A0Y2,Cool1>s|r
 }
 
 STRING 18524
@@ -120395,52 +120571,198 @@ STRING 18867
 (lucario)
 }
 
-STRING 18889
+STRING 18868
+// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.
+|cff00FF00Damage: 60% Str + 40% Int|r
+|cff00FFFFCooldown: <A0Y2,Cool10>s|r
+}
+
+STRING 18870
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool2> seconds
+}
+
+STRING 18871
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool3> seconds
+}
+
+STRING 18872
+// Units: H0A7 (Aura Pokemon), Name (Name)
+{
+Aura Pokemon
+}
+
+STRING 18873
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool4> seconds
+}
+
+STRING 18885
+// Abilities: A0Y5 (Lucario Force Debuff), Name (Name)
+{
+Lucario Force Debuff
+}
+
+STRING 18886
 // Abilities: A0XU (Vacuum Wave), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
 
-STRING 18899
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+STRING 18887
+// Buffs/Effects: B04K (Aura Lucario), Buffubertip (Tooltip - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 2|r]
+Lucario gains increased MS when on low life.
+}
+
+STRING 18888
+// Buffs/Effects: B04K (Aura Lucario), EditorName (Name (Editor Only))
+{
+Aura Lucario
+}
+
+STRING 18889
+// Abilities: A0XV (Iron Defense), EditorSuffix (Editor Suffix)
+{
+(lucario)
+}
+
+STRING 18890
+// Buffs/Effects: B04R (), Bufftip (Tooltip)
+{
+Force
+}
+
+STRING 18891
+// Buffs/Effects: B04R (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18892
+// Buffs/Effects: B04R (), EditorSuffix (Editor Suffix)
+{
+1
+}
+
+STRING 18893
+// Buffs/Effects: B04S (), Bufftip (Tooltip)
+{
+Force
+}
+
+STRING 18894
+// Buffs/Effects: B04S (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18895
+// Buffs/Effects: B04S (), EditorSuffix (Editor Suffix)
+{
+2
+}
+
+STRING 18896
+// Buffs/Effects: B04T (), Bufftip (Tooltip)
+{
+Force
+}
+
+STRING 18897
+// Buffs/Effects: B04T (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18898
+// Buffs/Effects: B04T (), EditorSuffix (Editor Suffix)
+{
+3
+}
+
+STRING 18899
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
+{
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool5> seconds
 }
 
 STRING 18900
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 3|r]
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool6> seconds
 }
 
 STRING 18901
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 4|r]
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool7> seconds
 }
 
 STRING 18902
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 5|r]
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool8> seconds
 }
 
 STRING 18903
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 6|r]
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool9> seconds
 }
 
 STRING 18904
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0P3 (Absolute Zero), Ubertip (Tooltip - Normal - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 1|r]
+Eis Shenron lowers his body temperature, preparing his body to reflect incoming attacks and freeze his enemies. Any hero that attacks him within melee range will be stunned and afflicted with |cff00ccffFrostbite|r. Creeps are instantly killed. Provides minor damage block. At the end of the duration, Eis releases a sub-zero pulse that stuns nearby heroes afflicted with |cff00ccffFrostbite|r.
+|cffffff00Passively increases armor by 1 per level.|r
+|cff00ff00Duration: 4s
+Damage Block: Int * Lvl * 0.65 @ 65%  |r
+|cff00ffffCooldown: <A0P3,Cool10> seconds
 }
 
 STRING 18905
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0Y7 (Book Eis Passives), Name (Name)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 7|r]
+Book Eis Passives
 }
 
 STRING 18906
@@ -120468,25 +120790,49 @@ W
 }
 
 STRING 18910
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0Y8 (Eis Absolute Zero Bonus Armor), Name (Name)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 9|r]
+Eis Absolute Zero Bonus Armor
 }
 
 STRING 18911
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Abilities: A0Y8 (Eis Absolute Zero Bonus Armor), EditorSuffix (Editor Suffix)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 8|r]
+(eis shenron)
 }
 
 STRING 18912
-// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+// Buffs/Effects: B02U (), Buffubertip (Tooltip - Extended)
 {
-[|cff00ff00D|r] Iron Defense  - [|cffffcc00Level 10|r]
+This unit is surrounded by a freezing cold field that deters enemies from attacking it.
+}
+
+STRING 18913
+// Buffs/Effects: B04U (), Bufftip (Tooltip)
+{
+Force
+}
+
+STRING 18914
+// Buffs/Effects: B04U (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18915
+// Buffs/Effects: B04U (), EditorSuffix (Editor Suffix)
+{
+4
+}
+
+STRING 18916
+// Buffs/Effects: B04V (), Bufftip (Tooltip)
+{
+Force
 }
 
 STRING 18917
-// Abilities: A0XV (Iron Defense), EditorSuffix (Editor Suffix)
+// Abilities: A0XW (Extreme Speed), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -120495,6 +120841,18 @@ STRING 18918
 // Abilities: A0XW (Extreme Speed), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 18919
+// Buffs/Effects: B04V (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of |cff00ffffForce|r; it has reduced armor.
+}
+
+STRING 18920
+// Buffs/Effects: B04V (), EditorSuffix (Editor Suffix)
+{
+5
 }
 
 STRING 18921
@@ -120507,9 +120865,99 @@ Duration: <A0XW,Dur1>
 }
 
 STRING 18922
-// Abilities: A0XW (Extreme Speed), EditorSuffix (Editor Suffix)
+// Abilities: A0XX (Aura Sphere), EditorSuffix (Editor Suffix)
 {
 (lucario)
+}
+
+STRING 18923
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool1>s
+}
+
+STRING 18924
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool2>s
+}
+
+STRING 18925
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool3>s
+}
+
+STRING 18926
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool4>s
+}
+
+STRING 18927
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool5>s
+}
+
+STRING 18928
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool6>s
+}
+
+STRING 18929
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool7>s
+}
+
+STRING 18930
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool8>s
+}
+
+STRING 18931
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool9>s
+}
+
+STRING 18932
+// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool10>s
 }
 
 STRING 18933
@@ -120620,12 +121068,6 @@ STRING 18945
 [|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 1|r]
 }
 
-STRING 18946
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool1>s|r
-}
-
 STRING 18947
 // Abilities: A0XX (Aura Sphere), Name (Name)
 {
@@ -120642,12 +121084,6 @@ STRING 18949
 // Abilities: A0XX (Aura Sphere), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00R|r] Learn Aura Sphere - [|cffffcc00Level %d|r]
-}
-
-STRING 18950
-// Abilities: A0XX (Aura Sphere), Researchubertip (Tooltip - Learn - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool1>s|r
 }
 
 STRING 18951
@@ -120680,64 +121116,10 @@ STRING 18955
 [|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 6|r]
 }
 
-STRING 18956
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool2>s|r
-}
-
-STRING 18957
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool3>s|r
-}
-
-STRING 18958
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool4>s|r
-}
-
-STRING 18959
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool5>s|r
-}
-
-STRING 18960
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool6>s|r
-}
-
 STRING 18961
 // Abilities: A0XX (Aura Sphere), Tip (Tooltip - Normal)
 {
 [|cff00ff00R|r] Aura Sphere - [|cffffcc00Level 7|r]
-}
-
-STRING 18962
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool7>s|r
-}
-
-STRING 18963
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool8>s|r
-}
-
-STRING 18964
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool9>s|r
-}
-
-STRING 18965
-// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.|n|cffff2020You must target an enemy unit for the tracking to work!|n|cff00FF00Dmg: Int*lvl*?|r|n|cff00FFFFCooldown: <A0XX,Cool10>s|r
 }
 
 STRING 18966
@@ -120771,21 +121153,30 @@ Lucario Attack Passive
 }
 
 STRING 18971
-// Abilities: A0XX (Aura Sphere), EditorSuffix (Editor Suffix)
+// Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
 
-STRING 18972
-// Buffs/Effects: B04K (), Buffubertip (Tooltip - Extended)
-{
-Lucario gains +1 MS / +1% AS / +1% Spell Amp for each 3% of HP missing
-}
-
 STRING 18973
-// Buffs/Effects: B04K (), Bufftip (Tooltip)
+// Buffs/Effects: B04K (Aura Lucario), Bufftip (Tooltip)
 {
 Aura
+}
+
+STRING 18974
+// Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
+{
+The user hardens its body's surface like iron, sharply raising its Defense stat.
+|cffFFFF00Active:|r +100 armor and -100ms for 3 seconds.
+|cffFFFF00Passive:|r +0.5 armor per level
+|cff00FFFFCooldown: <A0XV,Cool1> - <A0XV,Cool10>s
+}
+
+STRING 18975
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 2|r]
 }
 
 STRING 18976
@@ -120806,12 +121197,6 @@ STRING 18978
 Q
 }
 
-STRING 18979
-// Units: H0A8 (Fighting / Steel Type), Name (Name)
-{
-Fighting / Steel Type
-}
-
 STRING 18980
 // Units: H0A8 (Fighting / Steel Type), Propernames (Proper Names)
 {
@@ -120825,16 +121210,9 @@ STRING 18981
 }
 
 STRING 18982
-// Units: H0A8 (Fighting / Steel Type), Ubertip (Tooltip - Extended)
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
 {
-A well-rounded hero who has strong offensive and defensive capabilities, while being consistently strong throughout the game.
-
-|cff00FF00IIIII|r|cff383838 |r|cffFFFF00PVP|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Teamfight|r
-|cff00FF00IIII|r|cff383838I |r|cffFFFF00Saga|r
-|cff00FF00III|r|cff383838II |r|cffFFFF00Farming|r
-|cff00FF00II|r|cff383838III |r|cffFFFF00Difficulty|r
-
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 3|r]
 }
 
 STRING 18983
@@ -120856,14 +121234,9 @@ F
 }
 
 STRING 18986
-// Abilities: A0Y0 (Mega Evolution), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
 {
-Lucario evolves into Mega Lucario for a short time.
-|cffFFFF00+0.25x Multiplier|r
-|cffFFFF00-0.4s Attack CD
-+25 MS
-+Maximum Aura stacks
-Enables Aura Storm|r
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 4|r]
 }
 
 STRING 18987
@@ -121031,25 +121404,13 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19011
-// Abilities: A0XZ (Lucario Attack Passive), EditorSuffix (Editor Suffix)
+// Abilities: A0Y0 (Mega Evolution), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
 
-STRING 19012
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
-{
-Lucario becomes huge for a short time, stunning all enemies near him for 2s.
-|cffFFFF00+150 Attack Range
-+20 Armor
-+15 MS
-+0.4x Str Multiplier
-+0.2x Agi Multiplier
-Enables Giga Sphere|r
-}
-
 STRING 19013
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121057,7 +121418,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19014
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121065,7 +121426,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19015
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121073,7 +121434,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19016
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121081,7 +121442,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19017
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121089,7 +121450,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19018
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121097,91 +121458,79 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19019
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 2|r]
 }
 
 STRING 19020
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 3|r]
 }
 
 STRING 19021
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 4|r]
 }
 
 STRING 19022
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 5|r]
 }
 
 STRING 19023
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 6|r]
 }
 
-STRING 19024
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
-{
-[|cff00ff00D|r] Gigantomax
-}
-
 STRING 19025
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 7|r]
 }
 
 STRING 19026
-// Abilities: A0Y1 (Gigantomax), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y1 (Gigantamax), Researchhotkey (Hotkey - Learn)
 {
 D
 }
 
-STRING 19027
-// Abilities: A0Y1 (Gigantomax), Name (Name)
-{
-Gigantomax
-}
-
 STRING 19028
-// Abilities: A0Y1 (Gigantomax), Researchtip (Tooltip - Learn)
+// Abilities: A0Y1 (Gigantamax), Researchtip (Tooltip - Learn)
 {
 [|cff00ff00D|r] Learn Haste - [|cffffcc00Level %d|r]
 }
 
 STRING 19029
-// Abilities: A0Y1 (Gigantomax), Hotkey (Hotkey - Normal)
+// Abilities: A0Y1 (Gigantamax), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 19030
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 9|r]
 }
 
 STRING 19031
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 8|r]
 }
 
 STRING 19032
-// Abilities: A0Y1 (Gigantomax), Tip (Tooltip - Normal)
+// Abilities: A0Y1 (Gigantamax), Tip (Tooltip - Normal)
 {
 [|cff00ff00D|r] Haste - [|cffffcc00Level 10|r]
 }
 
 STRING 19033
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121189,7 +121538,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19034
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121197,7 +121546,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19035
-// Abilities: A0Y1 (Gigantomax), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0Y1 (Gigantamax), Ubertip (Tooltip - Normal - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121205,7 +121554,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19036
-// Abilities: A0Y1 (Gigantomax), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0Y1 (Gigantamax), Researchubertip (Tooltip - Learn - Extended)
 {
 Marle casts a spell that activates after a 2s delay, increasing the movement speed of all nearby allied heroes by +100ms.
 |cff00ff00Duration: 10s|r
@@ -121213,7 +121562,7 @@ Marle casts a spell that activates after a 2s delay, increasing the movement spe
 }
 
 STRING 19037
-// Abilities: A0Y0 (Mega Evolution), EditorSuffix (Editor Suffix)
+// Abilities: A0Y1 (Gigantamax), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121252,12 +121601,6 @@ STRING 19043
 // Abilities: A0Y2 (Giga Sphere), Researchtip (Tooltip - Learn)
 {
 [|cffFFFF00W|r] Learn Giga Sphere - [|cffffcc00Level %d|r]
-}
-
-STRING 19044
-// Abilities: A0Y2 (Giga Sphere), Researchubertip (Tooltip - Learn - Extended)
-{
-Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0Y2,Cool1>s|r
 }
 
 STRING 19045
@@ -121321,7 +121664,7 @@ Goku throws a Spirit Bomb at the target area, causing it to explode and deal dam
 }
 
 STRING 19055
-// Abilities: A0Y1 (Gigantomax), EditorSuffix (Editor Suffix)
+// Abilities: A0Y2 (Giga Sphere), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121354,12 +121697,6 @@ STRING 19060
 // Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
 {
 Goku throws a Spirit Bomb at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0JP,Cool9>s|r
-}
-
-STRING 19061
-// Abilities: A0Y2 (Giga Sphere), Ubertip (Tooltip - Normal - Extended)
-{
-Lucario throws a giant ball of energy at the target area, causing it to explode and deal damage in a large area.|n|cff00FF00Damage: int*lvl*?|r|n|cff00FFFFCooldown: <A0Y2,Cool1>s|r
 }
 
 STRING 19062
@@ -121552,25 +121889,19 @@ The user charges a spell for one second and then unleashes a relentless wave of 
 }
 
 STRING 19089
-// Abilities: A0Y3 (Aura Storm), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
 {
-Lucario consumes all of his mana and to charge a spell for one second and then unleashes a massive wave of energy while channeling, damaging all enemies in its path.
-|cffff2020Channel Duration: <A0Y3,Dur1> seconds|r
-|cff00ff00Damage: Lvl x Int x ?|r
-|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 5|r]
 }
 
 STRING 19090
-// Abilities: A0Y3 (Aura Storm), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
 {
-Lucario consumes all of his mana and to charge a spell for one second and then unleashes a massive wave of energy while channeling, damaging all enemies in its path.
-|cffff2020Channel Duration: <A0Y3,Dur1> seconds|r
-|cff00ff00Damage: Lvl x Int x ?|r
-|cff00ffffCooldown: <A0Y3,Cool10> seconds|r
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 6|r]
 }
 
 STRING 19091
-// Abilities: A0Y2 (Giga Sphere), EditorSuffix (Editor Suffix)
+// Abilities: A0Y3 (Aura Storm), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121826,6 +122157,70 @@ Robo fires a series of blasts from his fist in front of him. Channeled.
 |cff00ffffCooldown: <A0WJ,Cool10> seconds|r
 }
 
+STRING 19118
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 1|r]
+}
+
+STRING 19119
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 7|r]
+}
+
+STRING 19120
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 9|r]
+}
+
+STRING 19121
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 8|r]
+}
+
+STRING 19122
+// Abilities: A0XV (Iron Defense), Tip (Tooltip - Normal)
+{
+[|cff00ff00W|r] Iron Defense  - [|cffffcc00Level 10|r]
+}
+
+STRING 19123
+// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
+{
+While holding Macho Brace, Lucario gains +15% creep stats and +1 to all stats each level. 
+Activating this ability permanently removes Macho Brace to provide +0.4x stat mult and the ability to select Lucario's Ultimate Form.
+}
+
+STRING 19124
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool1>s|r
+}
+
+STRING 19125
+// Abilities: A0XX (Aura Sphere), Researchubertip (Tooltip - Learn - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool1>s|r
+}
+
+STRING 19126
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool2>s|r
+}
+
 STRING 19127
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
@@ -121892,19 +122287,102 @@ STRING 19137
 [|cff00FF00Q|r] Learn Vacuum Wave - [|cffffcc00Level %d|r]
 }
 
+STRING 19138
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool3>s|r
+}
+
 STRING 19139
 // Abilities: A0XU (Vacuum Wave), Tip (Tooltip - Normal)
 {
 [|cff00FF00Q|r] Vacuum Wave - [|cffffcc00Level 10|r]
 }
 
-STRING 19151
-// Abilities: A0XV (Iron Defense), Researchubertip (Tooltip - Learn - Extended)
+STRING 19140
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
 {
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool1> - <A0XV,Cool10>s
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool4>s|r
+}
+
+STRING 19141
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool5>s|r
+}
+
+STRING 19142
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool6>s|r
+}
+
+STRING 19143
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool7>s|r
+}
+
+STRING 19144
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool8>s|r
+}
+
+STRING 19145
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool9>s|r
+}
+
+STRING 19146
+// Abilities: A0XX (Aura Sphere), Ubertip (Tooltip - Normal - Extended)
+{
+The user fires a beam of energy that will hunt down the enemy and explode on the first enemy hit.
+|cffff2020You must target an enemy unit for the tracking to work!
+|cff00FF00Damage: Int * Lvl * ?|r
+|cff00FFFFCooldown: <A0XX,Cool10>s|r
+}
+
+STRING 19147
+// Abilities: A0Y6 (Upa's Rage 6), Name (Name)
+{
+Upa's Rage 6
+}
+
+STRING 19148
+// Abilities: A0Y6 (Upa's Rage 6), Tip (Tooltip - Normal)
+{
+Upa's Rage - [|cffffcc00Level 6|r]
+}
+
+STRING 19149
+// Abilities: A0Y6 (Upa's Rage 6), Ubertip (Tooltip - Normal - Extended)
+{
+Upa's attacks are empowered by his rage to deal devastating damage to his enemies.
+|cffffff00Whenever Upa uses an ability Upa's Rage increases by 1 level. Casting at max level resets it to level 1.|r
+|cffffcc00Bonus Attack Damage:|r +<A0Y6,DataA1,%>% 
 }
 
 STRING 19152
@@ -121980,7 +122458,7 @@ STRING 19163
 }
 
 STRING 19164
-// Abilities: A0Y3 (Aura Storm), EditorSuffix (Editor Suffix)
+// Abilities: A0Y4 (Iron Defense Bonus Armor), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -121992,7 +122470,7 @@ Iron Defense Bonus Armor
 }
 
 STRING 19166
-// Abilities: A0Y4 (Iron Defense Bonus Armor), EditorSuffix (Editor Suffix)
+// Abilities: A0Y5 (Lucario Force Debuff), EditorSuffix (Editor Suffix)
 {
 (lucario)
 }
@@ -122043,201 +122521,5 @@ STRING 19174
 // Abilities: A0X8 (Lucca Attack Passive), EditorSuffix (Editor Suffix)
 {
 (lucca)
-}
-
-STRING 19175
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
-}
-
-STRING 19176
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool2>s|r
-}
-
-STRING 19177
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool3>s|r
-}
-
-STRING 19178
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool4>s|r
-}
-
-STRING 19179
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool5>s|r
-}
-
-STRING 19180
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool6>s|r
-}
-
-STRING 19181
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool7>s|r
-}
-
-STRING 19182
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool8>s|r
-}
-
-STRING 19183
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool9>s|r
-}
-
-STRING 19184
-// Abilities: A0XU (Vacuum Wave), Researchubertip (Tooltip - Learn - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool1>s|r
-}
-
-STRING 19185
-// Abilities: A0XU (Vacuum Wave), Ubertip (Tooltip - Normal - Extended)
-{
-|cffFFFF00Active:|r Lucario unleashes an energy blast, dealing damage to enemy units in a line.
-|cffFFFF00Passive:|r Lucario applies a -1 armor debuff on attack, stacking up to -5 armor.
-|cff00FF00Damage: int * lvl * ??|r
-|cff00FFFFCooldown: <A0XU,Cool10>s|r
-}
-
-STRING 19186
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool1>
-}
-
-STRING 19187
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool2>
-}
-
-STRING 19188
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool3>
-}
-
-STRING 19189
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool4>
-}
-
-STRING 19190
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool5>
-}
-
-STRING 19191
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool6>
-}
-
-STRING 19192
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool7>
-}
-
-STRING 19193
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool8>
-}
-
-STRING 19194
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool9>
-}
-
-STRING 19195
-// Abilities: A0XV (Iron Defense), Ubertip (Tooltip - Normal - Extended)
-{
-The user hardens its body's surface like iron, sharply raising its Defense stat. 
-|cffFFFF00Passive:|r +0.5 armor per level
-|cffFFFF00Active:|r +100 armor and -100ms
-|cff00FFFFCooldown: <A0XV,Cool10>
-}
-
-STRING 19196
-// Abilities: A0XT (Macho Brace), Ubertip (Tooltip - Normal - Extended)
-{
-While holding Macho Brace, Lucario gains +15% creep stats and +1 to all stats each level. 
-Activating this ability permanently removes Macho Brace and provides +0.4x multi.
 }
 

@@ -428,7 +428,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucario.AURA_SPHERE,
       AbilityNames.Lucario.MEGA_EVOLUTION,
       AbilityNames.Lucario.AURA_STORM,
-      AbilityNames.Lucario.GIGANTOMAX,
+      AbilityNames.Lucario.GIGANTAMAX,
       AbilityNames.Lucario.GIGA_SPHERE,
     ]],
 

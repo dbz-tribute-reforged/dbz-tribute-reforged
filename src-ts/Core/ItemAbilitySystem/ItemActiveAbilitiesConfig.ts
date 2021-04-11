@@ -10,19 +10,22 @@ export const itemActiveAbilityConfig = new Map<number, () => void> (
 );
 
 function performTimeRingAction() {
-  const unit = GetTriggerUnit();
+  const source = GetTriggerUnit();
   const target = GetSpellTargetUnit();
+  doTimeRingSwap(source, target);
+}
 
-  if (unit != target) {
-    const unitX = GetUnitX(unit);
-    const unitY = GetUnitY(unit);
+export function doTimeRingSwap(source: unit, target: unit) {
+  if (source != target) {
+    const unitX = GetUnitX(source);
+    const unitY = GetUnitY(source);
     const targetX = GetUnitX(target);
     const targetY = GetUnitY(target);
   
     const swapLightning = AddLightningEx(
       "MFPB", 
       true, 
-      unitX, unitY, BlzGetUnitZ(unit), 
+      unitX, unitY, BlzGetUnitZ(source), 
       targetX, targetY, BlzGetUnitZ(target),
     )
   
@@ -31,12 +34,12 @@ function performTimeRingAction() {
       DestroyTimer(GetExpiredTimer());
     });
   
-    SetUnitX(unit, targetX);
-    SetUnitY(unit, targetY);
+    SetUnitX(source, targetX);
+    SetUnitY(source, targetY);
     SetUnitX(target, unitX);
     SetUnitY(target, unitY);
   
-    UnitHelper.healMaxHPPercent(unit, 0.05);
+    UnitHelper.healMaxHPPercent(source, 0.05);
     UnitHelper.healMaxHPPercent(target, 0.05);
   
     DestroyEffect(AddSpecialEffect(
@@ -48,5 +51,4 @@ function performTimeRingAction() {
       targetX, targetY
     ));
   }
-
 }

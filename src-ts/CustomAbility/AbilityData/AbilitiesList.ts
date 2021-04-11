@@ -6582,7 +6582,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 40,
+    duration: 99,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -6598,7 +6598,7 @@ export const AbilitiesList = [
         ""
     },
     components: [
-      { name: "temp ability iron defense" },
+      { name: "dash ground forward cell-x pushback" },
     ],
   },
   // -------------------------------------------
@@ -6631,7 +6631,7 @@ export const AbilitiesList = [
   {
     name: AbilityNames.Lucario.EXTREME_SPEED_ON_HIT,
     currentCd: 0,
-    maxCd: 1,
+    maxCd: 6,
     costType: "MP",
     costAmount: 0,
     duration: 1,
@@ -6678,6 +6678,115 @@ export const AbilitiesList = [
     },
     components: [
       { name: "beam aura sphere" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.MEGA_EVOLUTION,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "spell amp lucario mega evolution" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.AURA_STORM,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 132,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "channel caster default" },
+      { name: "multi aura storm" },
+      { name: "damage solar kame dps charging" },
+      { name: "sfx aura storm caster" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.GIGANTAMAX,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 1000,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "dash ground forward last stand" },
+      { name: "debuff stun lucario gigantamax" },
+    ],
+  },
+  // -------------------------------------------
+  {
+    name: AbilityNames.Lucario.GIGA_SPHERE,
+    currentCd: 0,
+    maxCd: 1,
+    costType: "MP",
+    costAmount: 0,
+    duration: 120,
+    updateRate: 0.03,
+    castTime: 0.0,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "BTNLucario.blp",
+      disabled: "BTNLucario.blp",
+    },
+    tooltip: {
+      title: "",
+      body: 
+        ""
+    },
+    components: [
+      { name: "beam giga sphere" },
     ],
   },
   // -------------------------------------------

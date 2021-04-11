@@ -11,6 +11,7 @@ export module SagaAIData {
     BEAM,
     DODGE,
     WAIT,
+    ITEM,
     REAGGRO,
   }
 

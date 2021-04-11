@@ -322,7 +322,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.auraSphere, AbilityNames.Lucario.AURA_SPHERE],
     [Id.lucarioMegaEvolution, AbilityNames.Lucario.MEGA_EVOLUTION],
     [Id.auraStorm, AbilityNames.Lucario.AURA_STORM],
-    [Id.lucarioGigantomax, AbilityNames.Lucario.GIGANTOMAX],
+    [Id.lucarioGigantomax, AbilityNames.Lucario.GIGANTAMAX],
     [Id.gigaSphere, AbilityNames.Lucario.GIGA_SPHERE],
 
     // babidi

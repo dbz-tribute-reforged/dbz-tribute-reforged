@@ -3,10 +3,11 @@ import { Vector2D } from "Common/Vector2D";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { CustomAbilityInput } from "CustomAbility/CustomAbilityInput";
 import { Hooks } from "Libs/TreeLib/Hooks";
-import { Id } from "Common/Constants";
+import { Id, Constants, Buffs, OrderIds, DebuffAbilities } from "Common/Constants";
 import { CustomAbility } from "CustomAbility/CustomAbility";
 import { CoordMath } from "Common/CoordMath";
 import { TextTagHelper } from "Common/TextTagHelper";
+import { UnitHelper } from "Common/UnitHelper";
 
 export module HeroPassiveData {
   export const SUPER_JANEMBA = FourCC("H062");
@@ -92,10 +93,10 @@ export function kidBuuPassive(customHero: CustomHero) {
 }
 
 export function superJanembaPassive(customHero: CustomHero) {
-  const cosmicIllusionBuff = FourCC("B025");
   const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
   const targetPos = new Vector2D();
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
@@ -147,7 +148,7 @@ export function superJanembaPassive(customHero: CustomHero) {
         
         if (
           GetHandleId(attacker) == GetHandleId(customHero.unit) && 
-          GetUnitAbilityLevel(customHero.unit, cosmicIllusionBuff) > 0
+          GetUnitAbilityLevel(customHero.unit, Buffs.COSMIC_ILLUSION) > 0
         ) {
           const input = new CustomAbilityInput(
             customHero, 
@@ -183,6 +184,8 @@ export function tapionPassive(customHero: CustomHero) {
   const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
@@ -272,6 +275,8 @@ export function dyspoPassive(customHero: CustomHero) {
   const targetPos = new Vector2D();
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
@@ -355,6 +360,7 @@ export function ichigoPassive(customHero: CustomHero) {
   // const targetPos: Vector2D = new Vector2D(0, 0);
 
   // const onHitTrigger = CreateTrigger();
+  // customHero.addPassiveTrigger(onHitTrigger);
   // TriggerRegisterAnyUnitEventBJ(
   //   onHitTrigger,
   //   EVENT_PLAYER_UNIT_ATTACKED,
@@ -438,6 +444,7 @@ export function ichigoPassive(customHero: CustomHero) {
   // );
 
   // const onOrderTrigger = CreateTrigger();
+  // customHero.addPassiveTrigger(onOrderTrigger);
   // TriggerRegisterAnyUnitEventBJ(
   //   onOrderTrigger,
   //   EVENT_PLAYER_UNIT_ISSUED_UNIT_ORDER,
@@ -480,8 +487,6 @@ export function ichigoPassive(customHero: CustomHero) {
 export function dartFeldPassive(customHero: CustomHero) {
   const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
-  const paragaonOfFlameBuff = FourCC("B048");
-  const dragoonTransformationBuff = FourCC("B049");
 
   const madnessHero = customHero.getAbility(AbilityNames.DartFeld.MADNESS_HERO);
   const madnessOnHit = customHero.getAbility(AbilityNames.DartFeld.MADNESS_DEBUFF_ON_HIT);
@@ -504,6 +509,8 @@ export function dartFeldPassive(customHero: CustomHero) {
   const targetPos: Vector2D = new Vector2D(0, 0);
 
   const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
     EVENT_PLAYER_UNIT_ATTACKED,
@@ -519,10 +526,10 @@ export function dartFeldPassive(customHero: CustomHero) {
       ) {
         const doMadness = (
           madnessHero.isInUse() && 
-          GetUnitAbilityLevel(attacker, dragoonTransformationBuff) == 0 && 
+          GetUnitAbilityLevel(attacker, Buffs.DRAGOON_TRANSFORMATION) == 0 && 
           !madnessOnHit.isInUse()
         );
-        const doParagonOnHit = GetUnitAbilityLevel(customHero.unit, paragaonOfFlameBuff) > 0;
+        const doParagonOnHit = GetUnitAbilityLevel(customHero.unit, Buffs.PARAGON_OF_FLAME) > 0;
         // const doParagonDash = paragonOfFlame.isInUse() && doParagonOnHit;
         
         // if (doMadness || doParagonDash || doParagonOnHit) {
@@ -606,10 +613,11 @@ export function dartFeldPassive(customHero: CustomHero) {
 
 
 export function lucarioPassive(customHero: CustomHero) {
-  const extremeSpeedBuff = FourCC("B04O");
   const player = GetOwningPlayer(customHero.unit);
   const heroId = GetUnitTypeId(customHero.unit);
   const onHitTrigger = CreateTrigger();
+  customHero.addPassiveTrigger(onHitTrigger);
+
   const targetPos = new Vector2D();
   TriggerRegisterAnyUnitEventBJ(
     onHitTrigger,
@@ -625,13 +633,69 @@ export function lucarioPassive(customHero: CustomHero) {
         GetOwningPlayer(attacker) == player
       ) {
         const target = GetTriggerUnit();
+        targetPos.setUnit(target);
         
+        // force
+        if (UnitHelper.isUnitTargetableForPlayer(target, player)) {
+          const castDummy = CreateUnit(
+            player, 
+            Constants.dummyCasterId, 
+            targetPos.x, targetPos.y, 
+            0
+          );
+          UnitAddAbility(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF);
+          
+          let bonusDamageMult = 0.001;
+          if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_1) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_1);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 2);
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_2) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_2);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 3);
+            bonusDamageMult *= 2;
+          }
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_3) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_3);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 4);
+            bonusDamageMult *= 3;
+          }
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_4) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_4);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 5);
+            bonusDamageMult *= 4;
+          }
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_5) > 0) {
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 5);
+            bonusDamageMult *= 5;
+          } 
+          else {
+            bonusDamageMult *= 0;
+          }
+          
+          IssueTargetOrderById(castDummy, OrderIds.INNER_FIRE, target);
+          RemoveUnit(castDummy);
+
+          const bonusDamage = bonusDamageMult * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+          if (bonusDamage > 0) {
+            UnitDamageTarget(
+              attacker, 
+              target, 
+              bonusDamage, 
+              true,
+              false,
+              ATTACK_TYPE_HERO, 
+              DAMAGE_TYPE_NORMAL, 
+              WEAPON_TYPE_WHOKNOWS
+            );
+          }
+        }
+        
+        // extreme speed
         if (
           GetHandleId(attacker) == GetHandleId(customHero.unit) && 
-          GetUnitAbilityLevel(customHero.unit, extremeSpeedBuff) > 0
+          GetUnitAbilityLevel(customHero.unit, Buffs.EXTREME_SPEED) > 0
         ) {
-          targetPos.setUnit(target);
-
           const input = new CustomAbilityInput(
             customHero, 
             GetOwningPlayer(customHero.unit),
