@@ -2805,7 +2805,7 @@ export const AOEDamageComponents = [
   {
     name: "damage scattering bullet split dps",
     repeatInterval: 1,
-    startTick: 40,
+    startTick: 20,
     endTick: -1,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
@@ -2856,7 +2856,7 @@ export const AOEDamageComponents = [
     name: "damage scattering bullet start dps",
     repeatInterval: 1,
     startTick: 0,
-    endTick: 40,
+    endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
     sourceHPDamageScale: -1,
@@ -2880,8 +2880,8 @@ export const AOEDamageComponents = [
   {
     name: "damage scattering bullet start explosion",
     repeatInterval: 1,
-    startTick: 40,
-    endTick: 40,
+    startTick: 20,
+    endTick: 20,
     damageSource: AOEDamage.SOURCE_UNIT,
     scaleSourceHPType: AOEDamage.SCALE_HP_SOURCE_UNIT,
     sourceHPDamageScale: -1,
@@ -2892,7 +2892,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 0.66,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 0.8,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

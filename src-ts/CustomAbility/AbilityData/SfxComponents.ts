@@ -6544,7 +6544,7 @@ export const SfxComponents = [
     name: "sfx beam scattering bullet start", 
     repeatInterval: 1,
     startTick: 0,
-    endTick: 40,
+    endTick: 20,
     sfxSource: SfxComponent.SOURCE_UNIT,
     sfxYawType: SfxComponent.YAW_SOURCE_FACING,
     useLastCastPoint: false,
