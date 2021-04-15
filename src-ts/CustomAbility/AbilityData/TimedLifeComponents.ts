@@ -4,7 +4,7 @@ export const TimedLifeComponents = [
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
-    duration: 66,
+    duration: 50,
   },
   {
     name: "timed life beam innocence breath", 

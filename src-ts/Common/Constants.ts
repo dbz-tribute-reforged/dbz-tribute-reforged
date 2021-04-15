@@ -131,6 +131,11 @@ export module Buffs {
   export const LUCARIO_FORCE_3 = FourCC("B04T");
   export const LUCARIO_FORCE_4 = FourCC("B04U");
   export const LUCARIO_FORCE_5 = FourCC("B04V");
+  export const LUCARIO_FORCE_6 = FourCC("B04W");
+  export const LUCARIO_FORCE_7 = FourCC("B04X");
+  export const LUCARIO_FORCE_8 = FourCC("B04Y");
+  export const LUCARIO_FORCE_9 = FourCC("B04Z");
+  export const LUCARIO_FORCE_10 = FourCC("B050");
 
   export const EXTREME_SPEED = FourCC("B04O");
 }

@@ -465,6 +465,7 @@ export class SagaHeroAI {
       this.maxWait = 0.5 * SagaAIData.DELAY_TO_INTERVALS;
     } else {
       this.currentAction = SagaAIData.Action.REAGGRO;
+      this.performReaggro();
     }
   }
 

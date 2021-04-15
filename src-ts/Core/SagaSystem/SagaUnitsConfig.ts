@@ -238,7 +238,7 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     ["Spice", new SagaUnit(FourCC("U00H"), 9, 600, 300, 500, new Vector2D(24300, 20100))],
 
     // cooler's revenge
-    ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(4400, 9300),
+    ["Cooler", new SagaUnit(FourCC("H042"), 60, 1500, 400, 1600, new Vector2D(4400, 9200),
       [
         SagaAbilities.Cooler.DEATH_BEAM,
         SagaAbilities.Cooler.SUPERNOVA_COOLER,
@@ -667,9 +667,9 @@ export const sagaUnitsConfig = new Map<string, SagaUnit>(
     // tanks?
 
     // shadow dragon saga
-    ["Haze Shenron", new SagaUnit(FourCC("U00S"), 9, 3500, 400, 3500, new Vector2D(4400, 9500))],
+    ["Haze Shenron", new SagaUnit(FourCC("U00S"), 9, 3500, 400, 3500, new Vector2D(4400, 9200))],
     ["Rage Shenron", new SagaUnit(FourCC("U00V"), 50, 15000, 400, 15000, new Vector2D(-2000, -6000))],
-    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 70, 15000, 400, 15000, new Vector2D(-5000, 3500))],
+    ["Oceanus Shenron", new SagaUnit(FourCC("U00W"), 70, 15000, 400, 15000, new Vector2D(-4500, 2000))],
     ["Naturon Shenron", new SagaUnit(FourCC("U00X"), 70, 15000, 400, 15000, new Vector2D(-3500, -5500), 
       [
         SagaAbilities.Saga.GENERIC_BEAM,
