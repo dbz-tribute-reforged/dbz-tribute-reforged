@@ -64,7 +64,7 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 9,
     endTick: 22,
-    blockPerDamage: 80,
+    blockPerDamage: 75,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
     multiplier: 2,
@@ -1509,10 +1509,10 @@ export const DamageBlockComponents = [
     repeatInterval: 1,
     startTick: 0,
     endTick: -1,
-    blockPerDamage: 75,
+    blockPerDamage: 70,
     isPercentageBlock: true,
     attribute: bj_HEROSTAT_AGI,
-    multiplier: 10,
+    multiplier: 5,
     sfxList: [
       {
         model: "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl",

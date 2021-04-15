@@ -645,7 +645,7 @@ export function lucarioPassive(customHero: CustomHero) {
           );
           UnitAddAbility(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF);
           
-          let bonusDamageMult = 0.001;
+          let bonusDamageMult = 0.0013;
           if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_1) > 0) {
             UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_1);
             SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 2);
@@ -666,8 +666,33 @@ export function lucarioPassive(customHero: CustomHero) {
             bonusDamageMult *= 4;
           }
           else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_5) > 0) {
-            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 5);
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_5);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 6);
             bonusDamageMult *= 5;
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_6) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_6);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 7);
+            bonusDamageMult *= 6;
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_7) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_7);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 8);
+            bonusDamageMult *= 7;
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_8) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_8);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 9);
+            bonusDamageMult *= 8;
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_9) > 0) {
+            UnitRemoveAbility(target, Buffs.LUCARIO_FORCE_9);
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 10);
+            bonusDamageMult *= 9;
+          } 
+          else if (GetUnitAbilityLevel(target, Buffs.LUCARIO_FORCE_10) > 0) {
+            SetUnitAbilityLevel(castDummy, DebuffAbilities.LUCARIO_FORCE_DEBUFF, 10);
+            bonusDamageMult *= 10;
           } 
           else {
             bonusDamageMult *= 0;
@@ -675,19 +700,21 @@ export function lucarioPassive(customHero: CustomHero) {
           
           IssueTargetOrderById(castDummy, OrderIds.INNER_FIRE, target);
           RemoveUnit(castDummy);
-
-          const bonusDamage = bonusDamageMult * GetUnitState(target, UNIT_STATE_MAX_LIFE);
-          if (bonusDamage > 0) {
-            UnitDamageTarget(
-              attacker, 
-              target, 
-              bonusDamage, 
-              true,
-              false,
-              ATTACK_TYPE_HERO, 
-              DAMAGE_TYPE_NORMAL, 
-              WEAPON_TYPE_WHOKNOWS
-            );
+          
+          if (bonusDamageMult > 0) {
+            const bonusDamage = bonusDamageMult * GetUnitState(target, UNIT_STATE_MAX_LIFE);
+            if (bonusDamage > 0) {
+              UnitDamageTarget(
+                attacker, 
+                target, 
+                bonusDamage, 
+                true,
+                false,
+                ATTACK_TYPE_HERO, 
+                DAMAGE_TYPE_NORMAL, 
+                WEAPON_TYPE_WHOKNOWS
+              );
+            }
           }
         }
         
@@ -717,6 +744,8 @@ export function lucarioPassive(customHero: CustomHero) {
               AbilityNames.Lucario.EXTREME_SPEED_ON_HIT,
               input
             );
+
+            UnitRemoveAbility(customHero.unit, Buffs.EXTREME_SPEED);
           }
         }
       }

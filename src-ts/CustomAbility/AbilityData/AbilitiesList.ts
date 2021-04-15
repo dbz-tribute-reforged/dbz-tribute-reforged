@@ -53,7 +53,7 @@ export const AbilitiesList = [
       title: "(X) Guard",
       body: 
         "Basic Guard ability that blocks 50% of incoming damage until more than 3 * AGI damage is blocked.|n" + 
-        "Damage is perfectly blocked during ticks 9 to 22, reducing damage by 80% up to 2 * AGI.|n" +
+        "Damage is perfectly blocked during ticks 9 to 22, reducing damage by 75% up to 2 * AGI.|n" +
         "Cost:25 MP|nCD: 16"
     },
     components: [
@@ -1378,7 +1378,7 @@ export const AbilitiesList = [
         AbilityNames.Vegeta.ANGRY_SHOUT
     },
     components: [
-      { name: "channel caster default" },
+      // { name: "channel caster default" },
       { name: "block angry shout" },
       { name: "damage angry shout dps" },
       { name: "knockback angry shout" },
@@ -2801,7 +2801,7 @@ export const AbilitiesList = [
     maxCd: 1,
     costType: "MP",
     costAmount: 0,
-    duration: 60,
+    duration: 40,
     updateRate: 0.03,
     castTime: 0.0,
     canMultiCast: true,
@@ -5553,7 +5553,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim crono cleave" },
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage crono cleave explosion" },
       { name: "jump crono cleave" },
       { name: "sfx crono cleave" },
@@ -5745,7 +5745,7 @@ export const AbilitiesList = [
     },
     components: [
       { name: "anim frog cleave" },
-      { name: "dash ground point 30dist" },
+      { name: "dash ground point 25dist" },
       { name: "damage frog aerial explosion" },
       { name: "damage frog aerial explosion inner" },
       { name: "jump crono cleave" },

@@ -1281,7 +1281,7 @@ export function SetupBraveSwordAttack(
   // 1 : target y
   const casterPos: Vector2D = new Vector2D(0, 0);
   const tmpPos: Vector2D = new Vector2D(0, 0);
-  const dummyStunOrder = 852095;
+  const dummyStunOrder = OrderIds.THUNDERBOLT;
   const tickRate = 0.02;
   const jumpDuration = 40;
   const jumpHeight = 900;
@@ -1290,7 +1290,7 @@ export function SetupBraveSwordAttack(
   const jumpSpeedModifierMax = 1.33;
   const jumpSpeedModifierMin = 0.15;
   const braveSwordAOE = 400;
-  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.45;
+  const braveSwordDamageMult = BASE_DMG.DFIST_EXPLOSION * 1.25;
   const braveSwordManaBurnMult = 0.01;
 
   TriggerAddAction(spellTrigger, () => {
