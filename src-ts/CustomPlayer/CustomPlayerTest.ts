@@ -1053,16 +1053,18 @@ export function CustomPlayerTest() {
     )
   }));
   TriggerAddAction(allyTrig, () => {
-    const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
-    if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
-      const targetPlayer = Player(targetPlayerId);
-      SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10, 
-        Colorizer.getColoredPlayerName(player) + " |cff00ffffhas allied|r " + 
-        Colorizer.getColoredPlayerName(targetPlayer)
-      );
+    if (Globals.isFBSimTest) {
+      const player = GetTriggerPlayer();
+      const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 6, 8)) - 1;
+      if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
+        const targetPlayer = Player(targetPlayerId);
+        SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_ALLIED_VISION);
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 10, 
+          Colorizer.getColoredPlayerName(player) + " |cff00ffffhas allied|r " + 
+          Colorizer.getColoredPlayerName(targetPlayer)
+        );
+      }
     }
   });
 
@@ -1076,16 +1078,18 @@ export function CustomPlayerTest() {
     )
   }));
   TriggerAddAction(unallyTrig, () => {
-    const player = GetTriggerPlayer();
-    const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 10)) - 1;
-    if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
-      const targetPlayer = Player(targetPlayerId);
-      SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
-      DisplayTimedTextToForce(
-        bj_FORCE_ALL_PLAYERS, 10, 
-        Colorizer.getColoredPlayerName(player) + " |cffff2020has unallied|r " + 
-        Colorizer.getColoredPlayerName(targetPlayer)
-      );
+    if (Globals.isFBSimTest) {
+      const player = GetTriggerPlayer();
+      const targetPlayerId = S2I(SubString(GetEventPlayerChatString(), 8, 10)) - 1;
+      if (targetPlayerId >= 0 && targetPlayerId < bj_MAX_PLAYERS) {
+        const targetPlayer = Player(targetPlayerId);
+        SetPlayerAllianceStateBJ(player, targetPlayer, bj_ALLIANCE_UNALLIED);
+        DisplayTimedTextToForce(
+          bj_FORCE_ALL_PLAYERS, 10, 
+          Colorizer.getColoredPlayerName(player) + " |cffff2020has unallied|r " + 
+          Colorizer.getColoredPlayerName(targetPlayer)
+        );
+      }
     }
   });
 
@@ -1095,10 +1099,12 @@ export function CustomPlayerTest() {
     TriggerRegisterPlayerChatEvent(nameTrig, Player(i), "-name", false);
   }
   TriggerAddAction(nameTrig, () => {
-    const player = GetTriggerPlayer();
-    const newName = SubString(GetEventPlayerChatString(), 6, 20);
-    if (newName.length > 1) {
-      SetPlayerName(player, newName);
+    if (Globals.isFBSimTest) {
+      const player = GetTriggerPlayer();
+      const newName = SubString(GetEventPlayerChatString(), 6, 20);
+      if (newName.length > 1) {
+        SetPlayerName(player, newName);
+      }
     }
   });
 

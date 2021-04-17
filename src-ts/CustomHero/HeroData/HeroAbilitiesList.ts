@@ -515,6 +515,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Lucca.FLAMETHROWER, AbilityNames.Lucca.FLARE,
       AbilityNames.Ayla.BOULDER_TOSS, AbilityNames.Lucca.HYPNOWAVE,
       AbilityNames.Marle.AURA, AbilityNames.Marle.ALLURE,
+      AbilityNames.Lucario.VACUUM_WAVE, AbilityNames.Lucario.MEGA_EVOLUTION,
       AbilityNames.Android13.SS_DEADLY_HAMMER,
       AbilityNames.Babidi.HARETSU, AbilityNames.Babidi.SUMMON_PUI_PUI,
       AbilityNames.Broly.ENERGY_PUNCH,
