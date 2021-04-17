@@ -89,6 +89,8 @@ export function kidBuuPassive(customHero: CustomHero) {
     superJanembaPassive(customHero);
   } else if (GetUnitAbilityLevel(customHero.unit, HeroPassiveData.BRAVE_SLASH) > 0) {
     tapionPassive(customHero);
+  } else if (GetUnitAbilityLevel(customHero.unit, Id.vacuumWave) > 0) {
+    lucarioPassive(customHero);
   }
 }
 

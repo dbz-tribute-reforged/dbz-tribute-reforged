@@ -398,12 +398,12 @@ export const AOEKnockbackComponents = [
   },
   // cooler deafening wave
   {
-    name: "knockback 1tick 25speed 0angle 500aoe",
+    name: "knockback 1tick 20speed 0angle 500aoe",
     repeatInterval: 1, 
     startTick: 0,
     endTick: -1,
     knockbackData: {
-      speed: 25, 
+      speed: 20, 
       angle: 0, 
       aoe: 500,
     },

@@ -256,7 +256,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 17.5,
+    distance: 19,
   },
   {
     name: "dash ground point saiyan spirit",
@@ -419,7 +419,7 @@ export const DashComponents = [
     checkPreviousCoord: false,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 22,
+    distance: 24,
   },
   // last stand
   {
