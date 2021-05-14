@@ -122,6 +122,7 @@ export const abilityCodesToNames = new Map<number, string>(
     [Id.meditate2, AbilityNames.Jiren.MEDITATE_2],
     [Id.ultimateBurningWarrior, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR],
     [Id.ultimateBurningWarrior2, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2],
+    [Id.ultimateBurningWarrior3, AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_3],
 
     // toppo
     [Id.justiceFlash, AbilityNames.Toppo.JUSTICE_FLASH],

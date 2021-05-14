@@ -146,7 +146,7 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 2,
+    distance: 4,
   },
   // bankai
   {
@@ -1619,6 +1619,6 @@ export const DashComponents = [
     checkPreviousCoord: true,
     useLastCastPoint: false,
     angleOffset: 0,
-    distance: 2,
+    distance: 4,
   },
 ]

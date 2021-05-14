@@ -1,8 +1,13 @@
 import { Vector2D } from "./Vector2D";
+import { CustomPlayer } from "CustomPlayer/CustomPlayer";
 
 export module Globals {
   export let isFBSimTest: boolean = false;
   export let isFreemode: boolean = false;
+  
+  export const customPlayers: CustomPlayer[] = [];
+  export let hostPlayer: player = Player(PLAYER_NEUTRAL_AGGRESSIVE);
+  export let canUseCustomUi = true;
 }
 
 export module Constants {
@@ -11,6 +16,8 @@ export module Constants {
   export const maxPlayers = 24;
   export const dummyBeamUnitId = FourCC("hpea");
   export const dummyCasterId = FourCC("h054");
+  export const korinFlag = FourCC("h09A");
+
   export const shortDisplayTextDuration = 5;
   export const mediumDisplayTextDuration = 10;
   export const longDisplayTextDuration = 15;
@@ -64,6 +71,30 @@ export module Constants {
   export const gameStartIndicatorUnit: number = FourCC("hkni");
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
+
+  export const uiButtonSize: number = 0.037;
+  export const uiXButtonSpacing: number = 0.001;
+  export const uiYButtonSpacing: number = 0.001;
+
+  export const BASE_STAMINA = 100.0;
+}
+
+export enum CostType {
+  HP = "Life",
+  MP = "Mana",
+  SP = "Stamina",
+  TMP_SP = "TMP Stamina",
+}
+
+export function stringToCostType(costType: string): CostType {
+  if (costType == "Life" || costType == "HP") {
+    return CostType.HP;
+  } else if (costType == "Mana" || costType == "MP") {
+    return CostType.MP;
+  } else if (costType == "TMP_SP") {
+    return CostType.TMP_SP;
+  }
+  return CostType.SP;
 }
   
 export module BASE_DMG {
@@ -148,6 +179,8 @@ export module OrderIds {
   export const SLEEP = 852227;
   export const INNER_FIRE = 852066;
   export const HOLY_BOLT = 852092;
+  export const STOP = 851972;
+  export const HOLD_POSITION = 851993;
 }
 
 export module Id {
@@ -459,6 +492,7 @@ export module Id {
   export const meditate2 = FourCC("A0SM");
   export const ultimateBurningWarrior = FourCC("A0KC");
   export const ultimateBurningWarrior2 = FourCC("A0SN");
+  export const ultimateBurningWarrior3 = FourCC("A005");
 
   export const krillin = FourCC("H03Y");
   export const scatteringBullet = FourCC("A0R9");
@@ -615,4 +649,9 @@ export module Id {
   export const yamchaRSuperSpiritBall = FourCC("A0RI");
   export const yamchaRFullPowerKame = FourCC("A0RJ");
   export const yamchaRWolfFangBlast = FourCC("A0RK");
+
+  export const yamchaSparking = FourCC("A0SB");
+
+
+  export const itemHealingBuff = FourCC("BIrg");
 }

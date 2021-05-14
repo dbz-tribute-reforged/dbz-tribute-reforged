@@ -117,7 +117,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.DEFAULT_MAX_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_DPS * 1.55,
+      multiplier: BASE_DMG.KAME_DPS * 1.65,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -142,7 +142,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: AOEDamage.UNLIMITED_DAMAGE_TICKS,
     damageData: {
-      multiplier: BASE_DMG.KAME_EXPLOSION * 1.5,
+      multiplier: BASE_DMG.KAME_EXPLOSION * 1.65,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,
@@ -268,9 +268,9 @@ export const AOEDamageComponents = [
     aoe: 350,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
-    maxDamageTicks: 30,
+    maxDamageTicks: 25,
     damageData: {
-      multiplier: BASE_DMG.DFIST_DPS * 1.06,
+      multiplier: BASE_DMG.DFIST_DPS * 1.25,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -290,12 +290,12 @@ export const AOEDamageComponents = [
     sourceHPDamageScale: 0,
     useInverseDamageScale: true,
     useLastCastPoint: false,
-    aoe: 500,
+    aoe: 550,
     onlyDamageCapHeroes: true,
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 1.23,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 1.25,
       attribute: bj_HEROSTAT_AGI,
       attackType: 6,
       damageType: 4,
@@ -9607,7 +9607,7 @@ export const AOEDamageComponents = [
     canDamageCaster: false,
     maxDamageTicks: 1,
     damageData: {
-      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.48,
+      multiplier: BASE_DMG.DFIST_EXPLOSION * 0.51,
       attribute: bj_HEROSTAT_INT,
       attackType: 6,
       damageType: 4,

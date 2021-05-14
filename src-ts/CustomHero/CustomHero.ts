@@ -7,6 +7,7 @@ import { HeroAbilitiesList } from "./HeroData/HeroAbilitiesList";
 import { AbilityNames } from "CustomAbility/AbilityNames";
 import { HeroPassive, HeroPassiveManager } from "./HeroPassive/HeroPassive";
 import { CustomAbilityManager } from "CustomAbility/CustomAbilityManager";
+import { Constants } from "Common/Constants";
 
 export class CustomHero {
   public abilities: CustomHeroAbilityManager;
@@ -14,8 +15,11 @@ export class CustomHero {
 
   public isCastTimeWaiting: boolean;
   public spellPower: number;
+  public currentSp: number;
+  public maxSp: number;
 
   public passiveTrigger: trigger[];
+  public timers: timer[];
 
   constructor(
     public readonly unit: unit,
@@ -30,8 +34,11 @@ export class CustomHero {
 
     this.isCastTimeWaiting = false;
     this.spellPower = 1.0;
+    this.currentSp = Constants.BASE_STAMINA;
+    this.maxSp = Constants.BASE_STAMINA;
 
     this.passiveTrigger = [];
+    this.timers = [];
 
     // TODO: assign basic abilities to all heroes
     // then read some data and apply special abilities for
@@ -129,11 +136,38 @@ export class CustomHero {
     this.passiveTrigger.push(trig);
   }
 
+  public addTimer(timer: timer) {
+    this.timers.push(timer);
+  }
+
+  public setCurrentSP(sp: number) {
+    if (sp < this.maxSp) {
+      this.currentSp = sp;
+    } else {
+      this.currentSp = this.maxSp;
+    }
+  }
+
+  public getCurrentSP(): number {
+    return this.currentSp;
+  }
+
+  public getMaxSP(): number {
+    return this.maxSp;
+  }
+
+  public setMaxSP(sp: number) {
+    this.maxSp = sp;
+  }
+
   public cleanup() {
     this.isCasting.clear();
     this.abilities.cleanup();
     for (const trig of this.passiveTrigger) {
       DestroyTrigger(trig);
+    }
+    for (const timer of this.timers) {
+      DestroyTimer(timer);
     }
   }
 }

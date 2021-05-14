@@ -55,6 +55,7 @@ export class HeroPassiveManager {
   }
 
   public setupHero(customHero: CustomHero) {
+    setupSPData(customHero);
     const unitId = GetUnitTypeId(customHero.unit);
     switch (unitId) {
       case HeroPassiveData.KID_BUU:
@@ -81,7 +82,6 @@ export class HeroPassiveManager {
         break;
     }
   }
-
 }
 
 export function kidBuuPassive(customHero: CustomHero) {
@@ -754,4 +754,29 @@ export function lucarioPassive(customHero: CustomHero) {
       return false;
     })
   );
+}
+
+
+export function setupSPData(customHero: CustomHero) {
+  const spTimer = CreateTimer();
+  customHero.addTimer(spTimer);
+
+  TimerStart(spTimer, 0.03, true, () => {
+    // regen: 1 stam per 6 second base
+    // +1% per 1k AGI
+    let incSp = 0.05 * (1 + 0.00001 * GetHeroAgi(customHero.unit, true));
+    if (GetUnitAbilityLevel(customHero.unit, Id.itemHealingBuff) > 0) {
+      incSp *= 2;
+    }
+    customHero.setCurrentSP(customHero.getCurrentSP() + incSp);
+  });
+
+  const maxSpUpdateTimer = CreateTimer();
+  customHero.addTimer(maxSpUpdateTimer);
+  TimerStart(maxSpUpdateTimer, 5.0, true, () => {
+    customHero.setMaxSP(
+      Constants.BASE_STAMINA + 
+      0.0005 * GetHeroAgi(customHero.unit, true)
+    );
+  });
 }

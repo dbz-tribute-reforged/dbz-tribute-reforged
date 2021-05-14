@@ -720,6 +720,7 @@ gg_trg_Future_Trunks_SS_Rage = nil
 gg_trg_Cell_X_Form = nil
 gg_trg_Jiren_Ultimate_Burning_Warrior = nil
 gg_trg_Jiren_Ultimate_Burning_Warrior_2 = nil
+gg_trg_Jiren_Ultimate_Burning_Warrior_3 = nil
 gg_trg_Toppo_GoD = nil
 gg_trg_Dyspo_Super_Max = nil
 gg_trg_Roshi_Max_Power = nil
@@ -2555,7 +2556,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 27505.9, 15910.8, 301.683, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29580.8, 10610.2, 62.299, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 27695.3, 16210.9, 334.673, FourCC("n03A"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6593.2, -2100.4, -25.800, FourCC("n02F"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 6593.2, -2100.4, 334.200, FourCC("n02F"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02Q"), 24733.9, 13884.0, 35.804, FourCC("n02Q"))
     u = BlzCreateUnitWithSkin(p, FourCC("n03A"), 31080.8, 10767.2, 166.687, FourCC("n03A"))
     u = BlzCreateUnitWithSkin(p, FourCC("n02F"), 29666.2, 11444.2, 74.094, FourCC("n02F"))
@@ -2760,7 +2761,7 @@ function CreateNeutralHostile()
     u = BlzCreateUnitWithSkin(p, FourCC("n015"), 22438.5, 12441.1, 177.728, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 5560.6, 26729.2, 352.584, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n019"), 17898.7, 26117.7, 190.023, FourCC("n019"))
-    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 22400.5, 12015.8, -26.613, FourCC("n015"))
+    u = BlzCreateUnitWithSkin(p, FourCC("n015"), 22400.5, 12015.8, 333.387, FourCC("n015"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01D"), 5897.3, 26949.6, 263.994, FourCC("n01D"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 5590.9, 27164.1, 287.284, FourCC("n01E"))
     u = BlzCreateUnitWithSkin(p, FourCC("n01E"), 6198.3, 31122.4, 285.974, FourCC("n01E"))
@@ -5408,7 +5409,7 @@ function Trig_KKR_Kings_Throne_Actions()
         udg_ID = GetHandleId(udg_TempUnit)
     SaveIntegerBJ(1, 0, udg_ID, udg_SummonsHashtable)
     SaveIntegerBJ(1, 1, udg_ID, udg_SummonsHashtable)
-    SaveRealBJ(30.00, 9, udg_ID, udg_StatMultHashtable)
+    SaveRealBJ(35.00, 9, udg_ID, udg_StatMultHashtable)
     GroupAddUnitSimple(udg_TempUnit, udg_KingsThroneUnitGroup)
     udg_TempLoc = GetUnitLoc(udg_TempUnit)
     udg_TempLoc2 = PolarProjectionBJ(udg_TempLoc, 90.00, (180.00 + GetUnitFacing(udg_TempUnit)))
@@ -8363,17 +8364,34 @@ function Trig_Jiren_Upgrade_Spells_Func001Func009C()
     return true
 end
 
-function Trig_Jiren_Upgrade_Spells_Func001Func011C()
-    if (not (udg_TempInt >= 2)) then
+function Trig_Jiren_Upgrade_Spells_Func001Func010Func001Func001C()
+    if (not (udg_TempInt >= 3)) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_TempUnit) >= 400)) then
+        return false
+    end
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Upgrade_Spells_Func001Func010Func001C()
+    if (not (udg_TempInt == 2)) then
         return false
     end
     if (not (GetHeroLevel(udg_TempUnit) >= 300)) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0KC"), udg_TempUnit) > 0)) then
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
         return false
     end
-    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+    return true
+end
+
+function Trig_Jiren_Upgrade_Spells_Func001Func010C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0KC"), udg_TempUnit) > 0)) then
         return false
     end
     return true
@@ -8429,10 +8447,21 @@ function Trig_Jiren_Upgrade_Spells_Actions()
             TriggerExecute(gg_trg_Jiren_Add_And_CD_Link_Spells)
         else
         end
-        if (Trig_Jiren_Upgrade_Spells_Func001Func011C()) then
-                        udg_TempInt2 = FourCC("A0KC")
-                        udg_TempInt3 = FourCC("A0SN")
-            TriggerExecute(gg_trg_Jiren_Add_And_CD_Link_Spells)
+        if (Trig_Jiren_Upgrade_Spells_Func001Func010C()) then
+            if (Trig_Jiren_Upgrade_Spells_Func001Func010Func001C()) then
+                                udg_TempInt2 = FourCC("A0KC")
+                                udg_TempInt3 = FourCC("A0SN")
+                TriggerExecute(gg_trg_Jiren_Add_And_CD_Link_Spells)
+            else
+                if (Trig_Jiren_Upgrade_Spells_Func001Func010Func001Func001C()) then
+                                        udg_TempInt2 = FourCC("A0KC")
+                                        SetPlayerAbilityAvailable(udg_TempPlayer, udg_TempInt2, false)
+                                        udg_TempInt2 = FourCC("A0SN")
+                                        udg_TempInt3 = FourCC("A005")
+                    TriggerExecute(gg_trg_Jiren_Add_And_CD_Link_Spells)
+                else
+                end
+            end
         else
         end
         if (Trig_Jiren_Upgrade_Spells_Func001Func012C()) then
@@ -8569,17 +8598,34 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func006C()
     return true
 end
 
-function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007Func002Func001C()
     if (not (udg_TempInt <= 1)) then
         return false
     end
     if (not (GetHeroLevel(udg_TempUnit) >= 300)) then
         return false
     end
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0KC"), udg_TempUnit) > 0)) then
+    if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007Func002C()
+    if (not (udg_TempInt == 2)) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_TempUnit) >= 400)) then
         return false
     end
     if (not (LoadRealBJ(9, udg_ID, udg_StatMultHashtable) <= 0.00)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0KC"), udg_TempUnit) > 0)) then
         return false
     end
     return true
@@ -8636,9 +8682,18 @@ function Trig_Jiren_Upgraded_Spells_Update_Old_CD_Actions()
     else
     end
     if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007C()) then
-                udg_TempInt2 = FourCC("A0KC")
-                udg_TempInt3 = FourCC("A0SN")
-        TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
+        if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007Func002C()) then
+                        udg_TempInt2 = FourCC("A0SN")
+                        udg_TempInt3 = FourCC("A005")
+            TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
+        else
+            if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func007Func002Func001C()) then
+                                udg_TempInt2 = FourCC("A0KC")
+                                udg_TempInt3 = FourCC("A0SN")
+                TriggerExecute(gg_trg_Jiren_Disable_And_CD_Link_Spells)
+            else
+            end
+        end
     else
     end
     if (Trig_Jiren_Upgraded_Spells_Update_Old_CD_Func008C()) then
@@ -9497,7 +9552,6 @@ function Trig_Yamcha_Summon_Puar_Actions()
     ModifyHeroStat(bj_HEROSTAT_AGI, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal2))
     ModifyHeroStat(bj_HEROSTAT_INT, udg_TempUnit2, bj_MODIFYMETHOD_SET, R2I(udg_TempReal3))
     SuspendHeroXPBJ(false, udg_TempUnit2)
-    IssueTargetOrderBJ(udg_TempUnit2, "smart", udg_TempUnit)
     udg_StatMultUnit = udg_TempUnit2
     TriggerExecute(gg_trg_Base_Armor_Set)
 end
@@ -25470,6 +25524,7 @@ function Trig_Jiren_Ultimate_Burning_Warrior_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KC"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SN"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A005"), udg_TempPlayer)
 end
 
 function InitTrig_Jiren_Ultimate_Burning_Warrior()
@@ -25517,6 +25572,7 @@ function Trig_Jiren_Ultimate_Burning_Warrior_2_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SM"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0KC"), udg_TempPlayer)
     SetPlayerAbilityAvailableBJ(false, FourCC("A0SN"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A005"), udg_TempPlayer)
 end
 
 function InitTrig_Jiren_Ultimate_Burning_Warrior_2()
@@ -25524,6 +25580,57 @@ function InitTrig_Jiren_Ultimate_Burning_Warrior_2()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Jiren_Ultimate_Burning_Warrior_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddCondition(gg_trg_Jiren_Ultimate_Burning_Warrior_2, Condition(Trig_Jiren_Ultimate_Burning_Warrior_2_Conditions))
     TriggerAddAction(gg_trg_Jiren_Ultimate_Burning_Warrior_2, Trig_Jiren_Ultimate_Burning_Warrior_2_Actions)
+end
+
+function Trig_Jiren_Ultimate_Burning_Warrior_3_Conditions()
+    if (not (GetSpellAbilityId() == FourCC("A005"))) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Ultimate_Burning_Warrior_3_Func005C()
+    if (not (udg_TempBool == true)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Jiren_Ultimate_Burning_Warrior_3_Actions()
+    udg_StatMultUnit = GetSpellAbilityUnit()
+    udg_TempReal = 30.00
+        udg_TempInt = GetSpellAbilityId()
+    TriggerExecute(gg_trg_Temp_Skin_Change_Init)
+    if (Trig_Jiren_Ultimate_Burning_Warrior_3_Func005C()) then
+        TriggerExecute(gg_trg_Get_Stat_Multiplier)
+        udg_TempReal4 = 0.30
+        udg_StatMultReal = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultStr = (udg_StatMultStr + udg_TempReal4)
+        udg_StatMultAgi = (udg_StatMultAgi + udg_TempReal4)
+        udg_StatMultInt = (udg_StatMultInt + udg_TempReal4)
+        udg_TransformationSFXString = "AuraKaox10.mdx"
+        udg_TransformationSFXString2 = "AuraUI3.mdx"
+        TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
+        DisplayTextToForce(GetPlayersAll(), "TRIGSTR_5357")
+    else
+    end
+        udg_TransformationID = FourCC('E01Q')
+    TriggerExecute(gg_trg_Temp_Skin_Change_Add_To_Group)
+    udg_TempUnit = GetSpellAbilityUnit()
+    udg_TempInt = 4
+    TriggerExecute(gg_trg_Jiren_Upgrade_Spells)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0KD"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0SM"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0KC"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A0SN"), udg_TempPlayer)
+    SetPlayerAbilityAvailableBJ(false, FourCC("A005"), udg_TempPlayer)
+end
+
+function InitTrig_Jiren_Ultimate_Burning_Warrior_3()
+    gg_trg_Jiren_Ultimate_Burning_Warrior_3 = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Jiren_Ultimate_Burning_Warrior_3, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddCondition(gg_trg_Jiren_Ultimate_Burning_Warrior_3, Condition(Trig_Jiren_Ultimate_Burning_Warrior_3_Conditions))
+    TriggerAddAction(gg_trg_Jiren_Ultimate_Burning_Warrior_3, Trig_Jiren_Ultimate_Burning_Warrior_3_Actions)
 end
 
 function Trig_Toppo_GoD_Conditions()
@@ -26881,7 +26988,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func004C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func002Func001C()
-    if (not (GetUnitAbilityLevelSwapped(FourCC("A0SN"), udg_StatMultUnit) > 0)) then
+    if (not (udg_TransformationAbility == FourCC("A005"))) then
         return false
     end
     return true
@@ -26895,7 +27002,31 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func002C()
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func003C()
-    if (not (udg_TempInt >= 2)) then
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A0SN"), udg_StatMultUnit) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func004C()
+    if (not (GetUnitAbilityLevelSwapped(FourCC("A005"), udg_StatMultUnit) > 0)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005Func001C()
+    if (not (udg_TempInt >= 3)) then
+        return false
+    end
+    if (not (GetHeroLevel(udg_StatMultUnit) >= 400)) then
+        return false
+    end
+    return true
+end
+
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005C()
+    if (not (udg_TempInt == 2)) then
         return false
     end
     if (not (GetHeroLevel(udg_StatMultUnit) >= 300)) then
@@ -26904,7 +27035,7 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func003C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func004C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func006C()
     if (not (udg_TempInt >= 1)) then
         return false
     end
@@ -26914,18 +27045,21 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func004C()
     return true
 end
 
-function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005C()
+function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func007C()
     if (udg_TransformationAbility == FourCC("A0KC")) then
         return true
     end
     if (udg_TransformationAbility == FourCC("A0SN")) then
         return true
     end
+    if (udg_TransformationAbility == FourCC("A005")) then
+        return true
+    end
     return false
 end
 
 function Trig_Temp_Skin_Transformation_NonUI_Revert_Func005C()
-    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005C()) then
+    if (not Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func007C()) then
         return false
     end
     return true
@@ -27110,16 +27244,28 @@ function Trig_Temp_Skin_Transformation_NonUI_Revert_Actions()
             BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0KC"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0SN")))
         else
             if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func002Func001C()) then
-                BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0SN"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
+                BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0KC"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A005")))
             else
             end
         end
         if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func003C()) then
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0SN"), GetOwningPlayer(udg_StatMultUnit))
+            BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A0SN"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
         else
-            SetPlayerAbilityAvailableBJ(true, FourCC("A0KC"), GetOwningPlayer(udg_StatMultUnit))
         end
         if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func004C()) then
+            BlzStartUnitAbilityCooldown(udg_StatMultUnit, FourCC("A005"), BlzGetUnitAbilityCooldownRemaining(udg_StatMultUnit, FourCC("A0KC")))
+        else
+        end
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005C()) then
+            SetPlayerAbilityAvailableBJ(true, FourCC("A0SN"), GetOwningPlayer(udg_StatMultUnit))
+        else
+            if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func005Func001C()) then
+                SetPlayerAbilityAvailableBJ(true, FourCC("A005"), GetOwningPlayer(udg_StatMultUnit))
+            else
+                SetPlayerAbilityAvailableBJ(true, FourCC("A0KC"), GetOwningPlayer(udg_StatMultUnit))
+            end
+        end
+        if (Trig_Temp_Skin_Transformation_NonUI_Revert_Func005Func006C()) then
             SetPlayerAbilityAvailableBJ(true, FourCC("A0SM"), GetOwningPlayer(udg_StatMultUnit))
         else
             SetPlayerAbilityAvailableBJ(true, FourCC("A0KD"), GetOwningPlayer(udg_StatMultUnit))
@@ -37153,14 +37299,14 @@ function Trig_Transformations_Super_Janemba_Actions()
     else
     end
     if (Trig_Transformations_Super_Janemba_Func017C()) then
-        udg_StatMultReal = 2.00
+        udg_StatMultReal = 2.20
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
         udg_TransformationSFXString2 = "AuraWhite.mdx"
     else
     end
     if (Trig_Transformations_Super_Janemba_Func018C()) then
-        udg_StatMultReal = 2.20
+        udg_StatMultReal = 2.30
         udg_TransformationAbility = FourCC("AUan")
         udg_TransformationSFXString = "AuraPink2.mdx"
         udg_TransformationSFXString2 = "AuraWhite.mdx"
@@ -37196,7 +37342,7 @@ function Trig_Transformations_Super_Janemba_Actions()
                                 udg_TransformationID = FourCC('H062')
             end
             BlzSetUnitSkin(udg_StatMultUnit, udg_TransformationID)
-            udg_StatMultReal = RMinBJ(2.40, (udg_StatMultReal + RMinBJ(0.50, (0.06 * I2R(udg_PlayerKills[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])))))
+            udg_StatMultReal = RMinBJ(2.50, (udg_StatMultReal + RMinBJ(0.50, (0.06 * I2R(udg_PlayerKills[GetConvertedPlayerId(GetOwningPlayer(udg_StatMultUnit))])))))
             TriggerExecute(gg_trg_Set_Transformation_Stat_Mult)
         else
         end
@@ -47022,6 +47168,7 @@ function InitCustomTriggers()
     InitTrig_Cell_X_Form()
     InitTrig_Jiren_Ultimate_Burning_Warrior()
     InitTrig_Jiren_Ultimate_Burning_Warrior_2()
+    InitTrig_Jiren_Ultimate_Burning_Warrior_3()
     InitTrig_Toppo_GoD()
     InitTrig_Dyspo_Super_Max()
     InitTrig_Roshi_Max_Power()

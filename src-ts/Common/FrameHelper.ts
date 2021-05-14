@@ -33,4 +33,17 @@ export module FrameHelper {
 
     return frame;
   }
+
+  export function clearFrameAndSetPoint(
+    src: framehandle,
+    srcPoint: framepointtype,
+    target: framehandle,
+    targetPoint: framepointtype,
+    x: number = 0,
+    y: number = 0,
+  ) {
+    BlzFrameSetVisible(src, true);
+    BlzFrameClearAllPoints(src);
+    BlzFrameSetPoint(src, srcPoint, target, targetPoint, x, y);
+  }
 }

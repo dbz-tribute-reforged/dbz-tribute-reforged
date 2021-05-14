@@ -179,6 +179,7 @@ export const HeroAbilitiesList: Map<number, string[]> = new Map(
       AbilityNames.Jiren.MEDITATE_2, 
       AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR, 
       AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_2,
+      AbilityNames.Jiren.ULTIMATE_BURNING_WARRIOR_3,
     ]],
 
     // toppo

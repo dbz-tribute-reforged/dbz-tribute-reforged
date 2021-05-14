@@ -133,6 +133,7 @@ export module AbilityNames {
     export const MEDITATE_2 = "Meditate 2";
     export const ULTIMATE_BURNING_WARRIOR = "Ultimate Burning Warrior";
     export const ULTIMATE_BURNING_WARRIOR_2 = "Ultimate Burning Warrior 2";
+    export const ULTIMATE_BURNING_WARRIOR_3 = "Ultimate Burning Warrior 3";
   }
 
   export module Toppo {

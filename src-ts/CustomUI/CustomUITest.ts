@@ -14,9 +14,6 @@ import { BasicTitledSlider } from './BasicTitledSlider';
 import { StatusBar } from './StatusBar';
 import { StatusBarData } from './StatusBarData';
 import { TextureData } from './TextureData';
-import { HPBar } from './HPBar';
-import { MPBar } from './MPBar';
-import { LevelBar } from './LevelBar';
 import { ToolTipFrame } from './ToolTipFrame';
 import { StatusBarSimpleFrame } from './StatusBarSimpleFrame';
 import { AbilityButton } from './AbilityButton';
@@ -27,6 +24,7 @@ import { Constants } from 'Common/Constants';
 import { Logger } from 'Libs/TreeLib/Logger';
 import { BasicTitledBackdrop } from './BasicTitledBackdrop';
 import { BasicTextFrame } from './BasicTextFrame';
+import { HPBar, MPBar, SPBar, LevelBar } from './MyBars';
 
 
 // need to add promise + error catching
@@ -261,7 +259,7 @@ export function CustomUiTest() {
 		grandpa,
 		0, 
 		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.16),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.17),
 		new StatusBarData(0, 0, 100)
 	);
 
@@ -269,7 +267,15 @@ export function CustomUiTest() {
 		grandpa,
 		0, 
 		new Vector2D(0.24, 0.02),
-		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.14),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.15),
+		new StatusBarData(0, 0, 100)
+	);
+
+	let spBar = new SPBar(
+		grandpa,
+		0, 
+		new Vector2D(0.24, 0.02),
+		new FramePosition(FRAMEPOINT_BOTTOM, grandpa, FRAMEPOINT_BOTTOM, 0, 0.13),
 		new StatusBarData(0, 0, 100)
 	);
 
@@ -284,16 +290,18 @@ export function CustomUiTest() {
 	// fix for string desync
   BlzFrameSetValue(BlzGetFrameByName("MyHPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MyMPBar", 0), 0);
+  BlzFrameSetValue(BlzGetFrameByName("MySPBar", 0), 0);
   BlzFrameSetValue(BlzGetFrameByName("MyLevelBar", 0), 0);
   BlzFrameSetText(BlzGetFrameByName("MyHPBarText", 0), 0 + " / " + 0);
   BlzFrameSetText(BlzGetFrameByName("MyMPBarText", 0), 0 + " / " + 0);
+  BlzFrameSetText(BlzGetFrameByName("MySPBarText", 0), 0 + " / " + 0);
 	BlzFrameSetText(BlzGetFrameByName("MyLevelBarText", 0), "LVL: " + 0);
 	
 	const abilityHotBar = new AbilityButtonHotbar(
 		"abilityButtonHotBar", 
 		grandpa,
 		0,
-		new Vector2D(0.04 * (Constants.maxSubAbilities) + 0.003, 0.04),
+		new Vector2D(Constants.uiButtonSize * (Constants.maxSubAbilities) + 0.003, Constants.uiButtonSize),
 		new FramePosition(FRAMEPOINT_BOTTOMLEFT, levelBar.frameHandle, FRAMEPOINT_TOPLEFT, -0.06, 0.005),
 	)
 	
@@ -302,17 +310,17 @@ export function CustomUiTest() {
 			"abilityButton" + i,
 			abilityHotBar.frameHandle, 
 			i,
-			new Vector2D(0.04, 0.04), 
-			new FramePosition(FRAMEPOINT_CENTER, grandpa, FRAMEPOINT_CENTER, i*0.04, 0), 
+			new Vector2D(Constants.uiButtonSize, Constants.uiButtonSize), 
+			new FramePosition(FRAMEPOINT_CENTER, grandpa, FRAMEPOINT_CENTER, i*Constants.uiButtonSize, 0), 
 			new Icon(),
 			"No Ability",
 			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"+
-			"I have no ability so I must scream.|n"
+			"...................................|n"+
+			"...................................|n"+
+			"...................................|n"+
+			"...................................|n"+
+			"...................................|n"+
+			"...................................|n"
 		);
 		
 		const abilityButtonTrigger = new FrameTrigger();

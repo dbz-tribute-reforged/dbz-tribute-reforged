@@ -79,8 +79,8 @@ export class BeamComponent implements
     public explodeOnDeath: boolean = false,
     public explodeOnContact: boolean = false,
     public beamUnitSpawn: number = BeamComponent.BEAM_UNIT_SPAWN_SOURCE,
-    public beamUnitType: number = FourCC('hpea'),
-    public beamUnitSkin: number = FourCC('hpea'),
+    public beamUnitType: number = Constants.dummyBeamUnitId,
+    public beamUnitSkin: number = Constants.dummyBeamUnitId,
     public components: AbilityComponent[] = [],
   ) {
     this.beamUnit = null;
@@ -418,7 +418,7 @@ export class BeamComponent implements
       explodeOnDeath: boolean;
       explodeOnContact: boolean;
       beamUnitSpawn: number;
-      beamUnitType: string;
+      beamUnitType: number;
       beamUnitSkin: number;
       components: {
         name: string,
@@ -446,7 +446,7 @@ export class BeamComponent implements
     this.explodeOnDeath = input.explodeOnDeath;
     this.explodeOnContact = input.explodeOnContact;
     this.beamUnitSpawn = input.beamUnitSpawn;
-    this.beamUnitType = FourCC(input.beamUnitType);
+    this.beamUnitType = input.beamUnitType;
     this.beamUnitSkin = input.beamUnitSkin;
     return this;
   }
