@@ -11,7 +11,7 @@ export module Globals {
 }
 
 export module Constants {
-  export const maxSubAbilities = 3;
+  export const maxSubAbilities = 4;
   export const maxActivePlayers = 10;
   export const maxPlayers = 24;
   export const dummyBeamUnitId = FourCC("hpea");
@@ -72,7 +72,7 @@ export module Constants {
   export const silenceBuff: number = FourCC("BNsi");
   export const hostPlayerOrder: number[] = [0,5,1,6,2,7,3,8,4,9];
 
-  export const uiButtonSize: number = 0.037;
+  export const uiButtonSize: number = 0.036;
   export const uiXButtonSpacing: number = 0.001;
   export const uiYButtonSpacing: number = 0.001;
 

@@ -396,6 +396,11 @@ export function CustomPlayerTest() {
   BlzTriggerRegisterFrameEvent(abil2, BlzGetFrameByName("abilityButton2", 2), FRAMEEVENT_CONTROL_CLICK);
   addKeyEvent(abil2, OSKEY_C, 0, true);
   addAbilityAction(abil2, AbilityNames.BasicAbility.MAX_POWER);
+
+  const abil3 = CreateTrigger();
+  BlzTriggerRegisterFrameEvent(abil3, BlzGetFrameByName("abilityButton3", 3), FRAMEEVENT_CONTROL_CLICK);
+  addKeyEvent(abil3, OSKEY_V, 0, true);
+  addAbilityAction(abil3, AbilityNames.BasicAbility.DEFLECT);
   
 
   /*

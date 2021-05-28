@@ -46,6 +46,7 @@ export class CustomHero {
     this.addAbilityFromAll(AbilityNames.BasicAbility.ZANZO_DASH);
     this.addAbilityFromAll(AbilityNames.BasicAbility.GUARD);
     this.addAbilityFromAll(AbilityNames.BasicAbility.MAX_POWER);
+    this.addAbilityFromAll(AbilityNames.BasicAbility.DEFLECT);
     
     // TODO: fix item abilities for heroes... 
     // item workaround.... for now

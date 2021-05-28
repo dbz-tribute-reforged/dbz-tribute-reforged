@@ -36,7 +36,7 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
   }
 
   activate(input: CustomAbilityInput): void {
-    if (!this.takeCosts(input)) return;
+    this.takeCosts(input);
 
     // instant activate, bypasses 0.03s delay for ability to start
     if (this.currentTick <= this.duration) {
@@ -114,9 +114,15 @@ export class CustomAbility implements Serializable<CustomAbility>, AddableCompon
       if (customHero) {
         customHero.setCurrentSP(customHero.getCurrentSP() - this.costAmount);
       }
+    } else if (this.costType == CostType.TMP_SP) {
+      // stamina
+      const playerId = GetPlayerId(input.casterPlayer);
+      const customHero = Globals.customPlayers[playerId].getCustomHero(input.caster.unit);
+      if (customHero) {
+        customHero.setCurrentSP(Math.max(0, customHero.getCurrentSP() - this.costAmount));
+      }
     }
     this.currentCd = this.maxCd;
-    return true;
   }
 
   getName(): string {

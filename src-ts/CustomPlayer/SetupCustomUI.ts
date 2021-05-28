@@ -228,10 +228,10 @@ export function setupCustomUI(player: player) {
 			BlzFrameClearAllPoints(abilityButtonHotbar);
 			BlzFrameSetPoint(
 				abilityButtonHotbar, 
-				FRAMEPOINT_TOP, 
+				FRAMEPOINT_TOPLEFT, 
 				levelBar, 
-				FRAMEPOINT_BOTTOM, 
-				-Constants.uiXButtonSpacing, -Constants.uiYButtonSpacing
+				FRAMEPOINT_BOTTOMLEFT, 
+				-Constants.uiXButtonSpacing - 0.04, -5*Constants.uiYButtonSpacing
 			);
 
 			// buff bar doenst seem to work..., crashes the game unless simple info unit panel is enabled

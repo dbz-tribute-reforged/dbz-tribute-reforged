@@ -93,6 +93,36 @@ export const AbilitiesList = [
   },
   // -------------------------------------------
   {
+    name: AbilityNames.BasicAbility.DEFLECT,
+    currentCd: 0,
+    maxCd: 2,
+    costType: CostType.SP,
+    costAmount: 50,
+    duration: 19,
+    updateRate: 0.03,
+    castTime: 0.25,
+    canMultiCast: true,
+    waitsForNextClick: false,
+    animation: "spell",
+    icon: {
+      enabled: "Replaceabletextures\\CommandButtons\\BTNArcaniteArmor.blp",
+      disabled: "Replaceabletextures\\CommandButtonsDisabled\\DISBTNArcaniteArmor.blp",
+    },
+    tooltip: {
+      title: "(V) Deflect",
+      body: 
+        "After a 0.3s delay, damage is reduced by 90% up to 4 * AGI for the next 0.3s.|n" +
+        "Nearby enemies are repelled and incoming beams are deflected during this period.|n" +
+        "Cost: 50 SP|nCD: 2"
+    },
+    components: [
+      { name: "block perfect basic guard" },
+      { name: "knockback deflect" },
+      { name: "sfx deflect" },
+    ],
+  },
+  // -------------------------------------------
+  {
     name: AbilityNames.Goku.KAMEHAMEHA, // Goku's Kame
     currentCd: 0,
     maxCd: 1,

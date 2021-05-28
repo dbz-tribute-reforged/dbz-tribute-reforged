@@ -3,6 +3,7 @@ export module AbilityNames {
     export const ZANZO_DASH: string = "Zanzo Dash";
     export const GUARD: string = "Guard";
     export const MAX_POWER: string = "Max Power";
+    export const DEFLECT: string = "Deflect";
   }
 
   export module Goku {

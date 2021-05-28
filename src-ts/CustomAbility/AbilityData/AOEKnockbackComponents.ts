@@ -65,6 +65,22 @@ export const AOEKnockbackComponents = [
     reflectBeams: false,
     affectAllies: false,
   },
+  // knockback deflect
+  {
+    name: "knockback deflect",
+    repeatInterval: 1, 
+    startTick: 9,
+    endTick: 18,
+    knockbackData: {
+      speed: 30, 
+      angle: 0, 
+      aoe: 500,
+    },
+    knockbackSource: AOEKnockback.SOURCE_UNIT,
+    useLastCastPoint: false,
+    reflectBeams: true,
+    affectAllies: false,
+  },
   // super dragon flight
   {
     name: "knockback super dragon flight",
